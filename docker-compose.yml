@@ -1,0 +1,90 @@
+services:
+  web:
+    env_file:
+      - .env.local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:?Set NEXT_PUBLIC_SUPABASE_URL in your env file}
+        NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:?Set NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in your env file}
+        NEXT_PUBLIC_BRANDFETCH_CLIENT_ID: ${NEXT_PUBLIC_BRANDFETCH_CLIENT_ID:?Set NEXT_PUBLIC_BRANDFETCH_CLIENT_ID in your env file}
+        AI_ENGINE_URL: http://ai-engine:8000
+        AI_COACH_ENGINE_URL: http://coach-engine:8001
+    environment:
+      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:?Set NEXT_PUBLIC_SUPABASE_URL in your env file}
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:?Set NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in your env file}
+      NEXT_PUBLIC_BRANDFETCH_CLIENT_ID: ${NEXT_PUBLIC_BRANDFETCH_CLIENT_ID:?Set NEXT_PUBLIC_BRANDFETCH_CLIENT_ID in your env file}
+      AI_ENGINE_URL: http://ai-engine:8000
+      AI_COACH_ENGINE_URL: http://coach-engine:8001
+      BREVO_SMTP_HOST: ${BREVO_SMTP_HOST}
+      BREVO_SMTP_PORT: ${BREVO_SMTP_PORT}
+      BREVO_SMTP_USER: ${BREVO_SMTP_USER}
+      BREVO_SMTP_PASSWORD: ${BREVO_SMTP_PASSWORD}
+      BREVO_API_KEY: ${BREVO_API_KEY}
+    depends_on:
+      ai-engine:
+        condition: service_started
+      coach-engine:
+        condition: service_started
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then((res)=>{if(!res.ok) process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+  ai-engine:
+    env_file:
+      - .env.local
+    build:
+      context: ./src/ai-engine
+      dockerfile: Dockerfile
+    environment:
+      AI_ENGINE_HOST: 0.0.0.0
+      AI_ENGINE_PORT: 8000
+      HF_HOME: /models/huggingface
+      TRANSFORMERS_CACHE: /models/huggingface
+      CADENCE_LOG_LEVEL: ${CADENCE_LOG_LEVEL:-INFO}
+      HF_TOKEN: ${HF_TOKEN:-}
+    volumes:
+      - hf-cache:/models/huggingface
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+  coach-engine:
+    env_file:
+      - .env.local
+    build:
+      context: ./src/coach-engine
+      dockerfile: Dockerfile
+    environment:
+      COACH_ENGINE_HOST: 0.0.0.0
+      COACH_ENGINE_PORT: 8001
+      COACH_LLM_MODEL_ID: ${COACH_LLM_MODEL_ID:-Qwen/Qwen2.5-3B-Instruct}
+      COACH_LLM_DEVICE: ${COACH_LLM_DEVICE:-cpu}
+      HF_HOME: /models/huggingface
+      TRANSFORMERS_CACHE: /models/huggingface
+      CADENCE_LOG_LEVEL: ${CADENCE_LOG_LEVEL:-INFO}
+      HF_TOKEN: ${HF_TOKEN:-}
+    volumes:
+      - hf-cache:/models/huggingface
+    expose:
+      - "8001"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health')"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  hf-cache:

@@ -1,0 +1,13 @@
+# FILE: src/ai-engine/requirements.txt
+fastapi
+uvicorn[standard]
+transformers==5.3.0
+torch
+torchaudio
+accelerate==1.12.0
+librosa
+python-multipart
+numpy
+soundfile
+phonemizer
+omnivoice==0.1.2

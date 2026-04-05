@@ -1,0 +1,23 @@
+{
+  "name": "Cadence",
+  "short_name": "Cadence",
+  "description": "AI accent training for non-native English speakers.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#386641",
+  "background_color": "#f2e8cf",
+  "icons": [
+    {
+      "src": "/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

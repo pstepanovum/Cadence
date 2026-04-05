@@ -36,6 +36,20 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local editor / agent notes
+.claude/
+.vscode/
+CLAUDE.md
+GEMINI.md
+Icon
+
+# python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

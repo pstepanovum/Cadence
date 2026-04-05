@@ -1,0 +1,7 @@
+# FILE: src/coach-engine/requirements.txt
+fastapi
+uvicorn[standard]
+torch
+accelerate
+sentencepiece
+git+https://github.com/huggingface/transformers.git
