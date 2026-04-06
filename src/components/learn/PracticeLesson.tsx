@@ -4,6 +4,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Lesson, LessonWord } from "@/lib/learn";
 import type { PronunciationAssessment } from "@/lib/pronunciation";
+import { createPracticeSuccessAudio } from "@/lib/audio-feedback";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
 import { AssessmentResult } from "@/components/learn/AssessmentResult";
 import { LessonSummary } from "@/components/learn/LessonSummary";
@@ -86,7 +87,7 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
   }, [lesson.id, lesson.module_id]);
 
   useEffect(() => {
-    successAudioRef.current = new Audio("/sound/sound.mp3");
+    successAudioRef.current = createPracticeSuccessAudio();
 
     return () => {
       successAudioRef.current?.pause();

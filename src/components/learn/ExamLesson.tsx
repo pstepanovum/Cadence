@@ -1,7 +1,8 @@
 // FILE: src/components/learn/ExamLesson.tsx
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { startTransition, useCallback, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { Lesson, LessonWord } from "@/lib/learn";
 import type { PronunciationAssessment } from "@/lib/pronunciation";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
@@ -25,6 +26,7 @@ export function ExamLesson({
   moduleSlug,
   nextModuleSlug,
 }: ExamLessonProps) {
+  const router = useRouter();
   const words = lesson.words;
   const [wordIndex, setWordIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("recording");
@@ -123,9 +125,13 @@ export function ExamLesson({
         body: JSON.stringify({ module_id: moduleId, exam_score: avg }),
       }).catch(() => {});
 
+      startTransition(() => {
+        router.refresh();
+      });
+
       setPhase("done");
     },
-    [moduleId],
+    [moduleId, router],
   );
 
   async function runAssessment(blob: Blob) {

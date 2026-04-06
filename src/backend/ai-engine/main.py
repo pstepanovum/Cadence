@@ -56,20 +56,45 @@ scorer = PhonemeScorer(
     model_name=MODEL_NAME,
     reference_synthesizer=reference_tts,
 )
-scorer_warmup_lock = Lock()
-tts_warmup_lock = Lock()
-transcriber_warmup_lock = Lock()
+runtime_warmup_lock = Lock()
 
 
-def ensure_scorer_warmup_started(force: bool = False) -> None:
-    if scorer.model_loaded and not force:
+def prime_audio_runtime_imports() -> None:
+    try:
+        from transformers import (
+            AutoFeatureExtractor,
+            WhisperForConditionalGeneration,
+            WhisperProcessor,
+            Wav2Vec2FeatureExtractor,
+            Wav2Vec2ForCTC,
+        )
+
+        logger.info(
+            "Primed transformer audio imports auto=%s whisper=%s wav2vec=%s",
+            AutoFeatureExtractor.__name__,
+            WhisperProcessor.__name__,
+            Wav2Vec2FeatureExtractor.__name__,
+        )
+    except Exception:
+        logger.exception("Failed to prime transformer audio imports")
+
+
+def ensure_runtime_warmup_started(force: bool = False) -> None:
+    all_ready = (
+        scorer.model_loaded
+        and reference_tts.model_loaded
+        and speech_transcriber.model_loaded
+    )
+    if all_ready and not force:
         return
 
-    if scorer_warmup_lock.locked():
+    if runtime_warmup_lock.locked():
         return
 
     def target() -> None:
-        with scorer_warmup_lock:
+        with runtime_warmup_lock:
+            prime_audio_runtime_imports()
+
             scorer_start = time.perf_counter()
             try:
                 scorer.warmup(force=force)
@@ -80,18 +105,6 @@ def ensure_scorer_warmup_started(force: bool = False) -> None:
                     time.perf_counter() - scorer_start,
                 )
 
-    Thread(target=target, daemon=True).start()
-
-
-def ensure_tts_warmup_started(force: bool = False) -> None:
-    if reference_tts.model_loaded and not force:
-        return
-
-    if tts_warmup_lock.locked():
-        return
-
-    def target() -> None:
-        with tts_warmup_lock:
             tts_start = time.perf_counter()
             try:
                 reference_tts.warmup(force=force)
@@ -104,18 +117,6 @@ def ensure_tts_warmup_started(force: bool = False) -> None:
                     time.perf_counter() - tts_start,
                 )
 
-    Thread(target=target, daemon=True).start()
-
-
-def ensure_transcriber_warmup_started(force: bool = False) -> None:
-    if speech_transcriber.model_loaded and not force:
-        return
-
-    if transcriber_warmup_lock.locked():
-        return
-
-    def target() -> None:
-        with transcriber_warmup_lock:
             transcriber_start = time.perf_counter()
             try:
                 speech_transcriber.warmup(force=force)
@@ -137,9 +138,7 @@ async def lifespan(_app: FastAPI):
     logger.info("Initial scorer diagnostics: %s", scorer.get_diagnostics())
     logger.info("Initial reference TTS diagnostics: %s", reference_tts.get_status())
     logger.info("Initial ASR diagnostics: %s", speech_transcriber.get_status())
-    ensure_scorer_warmup_started()
-    ensure_tts_warmup_started()
-    ensure_transcriber_warmup_started()
+    ensure_runtime_warmup_started()
     yield
     logger.info("Cadence AI engine shutting down")
 
@@ -162,14 +161,12 @@ app.add_middleware(
 
 @app.get("/health")
 async def health() -> dict[str, object]:
-    if not scorer.model_loaded:
-        ensure_scorer_warmup_started(force=True)
-
-    if not reference_tts.model_loaded:
-        ensure_tts_warmup_started(force=True)
-
-    if not speech_transcriber.model_loaded:
-        ensure_transcriber_warmup_started(force=True)
+    if (
+        not scorer.model_loaded
+        or not reference_tts.model_loaded
+        or not speech_transcriber.model_loaded
+    ):
+        ensure_runtime_warmup_started(force=True)
 
     tts_status = reference_tts.get_status()
     tts_ready = tts_status.get("ttsReady") is True

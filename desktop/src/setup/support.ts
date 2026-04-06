@@ -673,6 +673,14 @@ export class DesktopSetupSupport {
   }
 
   private resolveRequirementsPath(serviceDir: string): string {
+    const archSpecificRequirementsPath = join(
+      serviceDir,
+      `requirements.desktop.${process.arch}.txt`,
+    )
+    if (existsSync(archSpecificRequirementsPath)) {
+      return archSpecificRequirementsPath
+    }
+
     const desktopRequirementsPath = join(serviceDir, 'requirements.desktop.txt')
     if (existsSync(desktopRequirementsPath)) {
       return desktopRequirementsPath

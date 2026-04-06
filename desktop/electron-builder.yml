@@ -25,10 +25,24 @@ extraResources:
     filter: ["**/*"]
   - from: "../src/backend/ai-engine"
     to: "desktop-runtime/ai-engine"
-    filter: ["**/*"]
+    filter:
+      - "**/*"
+      - "!**/.venv"
+      - "!**/.venv/**"
+      - "!**/.venv*/**"
+      - "!**/__pycache__/**"
+      - "!**/.pytest_cache/**"
+      - "!**/*.pyc"
   - from: "../src/backend/coach-engine"
     to: "desktop-runtime/coach-engine"
-    filter: ["**/*"]
+    filter:
+      - "**/*"
+      - "!**/.venv"
+      - "!**/.venv/**"
+      - "!**/.venv*/**"
+      - "!**/__pycache__/**"
+      - "!**/.pytest_cache/**"
+      - "!**/*.pyc"
   - from: "vendor/python/aarch64-apple-darwin"
     to: "desktop-runtime/python/aarch64-apple-darwin"
     filter: ["**/*"]

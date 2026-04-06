@@ -48,6 +48,8 @@ __pycache__/
 *.pyo
 *.pyd
 .pytest_cache/
+.venv/
+.venv*/
 
 # typescript
 *.tsbuildinfo

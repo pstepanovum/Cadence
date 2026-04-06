@@ -1,7 +1,8 @@
 // FILE: src/components/conversation/ConversationSession.tsx
 "use client";
 
-import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
+import { startTransition, useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Pause, Play } from "griddy-icons";
 import type {
   PronunciationAssessment,
@@ -101,6 +102,7 @@ export function ConversationSession({
   module,
   nextModuleSlug,
 }: ConversationSessionProps) {
+  const router = useRouter();
   const { instruct } = useCoachVoice();
   const [turnIndex, setTurnIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("intro");
@@ -475,6 +477,10 @@ export function ConversationSession({
           passed,
         }),
       }).catch(() => {});
+
+      startTransition(() => {
+        router.refresh();
+      });
 
       setPhase("done");
       return;

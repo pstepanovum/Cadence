@@ -5,6 +5,7 @@ import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { Activity } from "griddy-icons";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { createPracticeSuccessAudio } from "@/lib/audio-feedback";
 import {
   type PronunciationAssessment,
   type PronunciationHighlight,
@@ -71,7 +72,7 @@ export function PracticeStudio({
   }, []);
 
   useEffect(() => {
-    successAudioRef.current = new Audio("/sound/sound.mp3");
+    successAudioRef.current = createPracticeSuccessAudio();
 
     return () => {
       if (successAudioRef.current) {

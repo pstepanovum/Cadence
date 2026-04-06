@@ -6,6 +6,7 @@ import {
   type PronunciationAssessment,
   type PronunciationHighlight,
 } from "@/lib/pronunciation";
+import { configureReferenceWordPlayback } from "@/lib/audio-feedback";
 import { cn } from "@/lib/utils";
 import { ProgressRing } from "@/components/learn/ProgressRing";
 import { Button } from "@/components/ui/button";
@@ -157,7 +158,7 @@ export function AssessmentResult({
         highlightAudioCacheRef.current.set(cacheKey, audioUrl);
       }
 
-      const audio = new Audio(audioUrl);
+      const audio = configureReferenceWordPlayback(new Audio(audioUrl));
       highlightAudioRef.current = audio;
       audio.onended = () => {
         highlightAudioRef.current = null;

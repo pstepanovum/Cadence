@@ -34,7 +34,7 @@ function StatusPill({
   return (
     <div
       className={cn(
-        'rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap',
+        'inline-flex w-auto self-start rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap',
         ready
           ? 'bg-yellow-green text-hunter-green'
           : 'bg-vanilla-cream text-iron-grey',
@@ -264,7 +264,7 @@ export function DesktopSetup() {
   return (
     <div
       className={cn(
-        'bg-[radial-gradient(circle_at_top_left,_rgba(167,201,87,0.3),_transparent_35%),linear-gradient(180deg,_#f2e8cf_0%,_#ece1c3_100%)] px-4 py-4 sm:px-6 sm:py-5 lg:px-8',
+        'bg-vanilla-cream px-4 py-4 sm:px-6 sm:py-5 lg:px-8',
         isElectron ? 'h-[100dvh] overflow-hidden' : 'min-h-screen',
       )}
     >
@@ -278,7 +278,7 @@ export function DesktopSetup() {
           <Card className="h-full bg-hunter-green text-bright-snow">
             <div className="flex h-full flex-col justify-between gap-5">
               <div className="space-y-5">
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-yellow-green">
+                <div className="inline-flex self-start items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-yellow-green">
                   <Microphone size={18} filled color="currentColor" />
                   <span className="eyebrow text-sm">Desktop Setup</span>
                 </div>
@@ -294,15 +294,15 @@ export function DesktopSetup() {
                   </p>
                 </div>
 
-                <div className="rounded-3xl bg-white/10 px-5 py-5">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
+                <div className="h-[11.75rem] rounded-3xl bg-white/10 px-5 py-5">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="h-[4.75rem] flex-1">
                       <p className="eyebrow text-sm text-yellow-green/80">Current step</p>
-                      <p className="mt-2 text-lg font-semibold text-bright-snow">
+                      <p className="mt-2 h-[3.5rem] overflow-hidden text-lg font-semibold leading-7 text-bright-snow">
                         {isLoading ? 'Loading installer state…' : state.currentStep}
                       </p>
                     </div>
-                    <div className="rounded-full bg-white/12 px-4 py-3 text-sm font-semibold text-bright-snow">
+                    <div className="flex h-12 w-16 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-bright-snow">
                       {state.percent}%
                     </div>
                   </div>
@@ -317,13 +317,19 @@ export function DesktopSetup() {
               </div>
 
               <div className="space-y-4">
-                {state.phase === 'idle' ? (
-                  <div className="rounded-3xl bg-white/10 px-4 py-4 text-sm leading-7 text-bright-snow/80">
-                    Nothing is running yet. Click <span className="font-semibold text-bright-snow">Start setup</span> and
-                    Cadence will begin preparing the local speaking tools for
-                    this Mac.
-                  </div>
-                ) : null}
+                <div className="min-h-[5.75rem]">
+                  {state.phase === 'idle' ? (
+                    <div className="rounded-3xl bg-white/10 px-4 py-4 text-sm leading-7 text-bright-snow/80">
+                      Nothing is running yet. Click <span className="font-semibold text-bright-snow">Start setup</span> and
+                      Cadence will begin preparing the local speaking tools for
+                      this Mac.
+                    </div>
+                  ) : state.error || localError ? (
+                    <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+                      {state.error ?? localError}
+                    </div>
+                  ) : null}
+                </div>
 
                 <div className="flex flex-wrap gap-3">
                   <Button
@@ -344,19 +350,13 @@ export function DesktopSetup() {
                     View details
                   </Button>
                 </div>
-
-                {state.error || localError ? (
-                  <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
-                    {state.error ?? localError}
-                  </div>
-                ) : null}
               </div>
             </div>
           </Card>
 
           <Card className="h-full bg-white">
             <div className="flex h-full flex-col gap-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
+              <div className="inline-flex w-auto self-start items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
                 <Activity size={18} filled color="currentColor" />
                 <span className="eyebrow text-sm">Runtime Health</span>
               </div>
