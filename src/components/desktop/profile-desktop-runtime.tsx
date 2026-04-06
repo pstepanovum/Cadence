@@ -12,7 +12,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
-import { useIsElectron } from "@/hooks/use-is-electron";
 import { cn } from "@/lib/utils";
 
 const INITIAL_STATE: DesktopSetupState = {
@@ -220,15 +219,14 @@ function ModelCard({
 }
 
 export function ProfileDesktopRuntime() {
-  const isElectron = useIsElectron();
   const { instruct } = useCoachVoice();
   const [state, setState] = useState<DesktopSetupState>(INITIAL_STATE);
   const [hasResolved, setHasResolved] = useState(false);
+  const hasDesktopBridge =
+    typeof window !== "undefined" && Boolean(window.cadenceDesktopSetup);
   const canReadDesktop =
-    isElectron &&
-    typeof window !== "undefined" &&
-    Boolean(window.cadenceDesktopSetup);
-  const isLoading = canReadDesktop && !hasResolved;
+    hasDesktopBridge;
+  const isLoading = !hasResolved;
 
   useEffect(() => {
     if (!canReadDesktop || !window.cadenceDesktopSetup) {
@@ -287,19 +285,13 @@ export function ProfileDesktopRuntime() {
           <Button
             variant="ghost"
             onClick={() => void window.cadenceDesktopSetup?.openLogs()}
-            disabled={!isElectron}
+            disabled={!hasDesktopBridge}
           >
             Open setup log
           </Button>
         </div>
 
-        {!isElectron ? (
-          <div className="rounded-3xl bg-vanilla-cream px-5 py-5 text-sm leading-7 text-iron-grey">
-            Desktop runtime details show up inside Cadence Desktop. Open the
-            desktop app on this Mac to see the local model stack and setup
-            paths.
-          </div>
-        ) : isLoading ? (
+        {isLoading ? (
           <div className="rounded-3xl bg-vanilla-cream px-5 py-5 text-sm leading-7 text-iron-grey">
             Loading your desktop runtime details…
           </div>

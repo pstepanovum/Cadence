@@ -1,5 +1,6 @@
 // FILE: src/app/dashboard/page.tsx
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import { QuickPracticeHome } from "@/components/audio/QuickPracticeHome";
 
 export const metadata: Metadata = {
@@ -12,21 +13,19 @@ import { SignOutButton } from "@/components/ui/sign-out-button";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import type { ModuleWithProgress } from "@/lib/learn";
 
-async function fetchModulesWithProgress(): Promise<ModuleWithProgress[]> {
+async function fetchModulesWithProgress(userId: string): Promise<ModuleWithProgress[]> {
   try {
     const supabase = await createSupabaseServerClient();
-    const [modulesResult, userResult] = await Promise.all([
-      supabase.from("modules").select("*").order("sort_order"),
-      supabase.auth.getUser(),
-    ]);
+    const modulesResult = await supabase
+      .from("modules")
+      .select("*")
+      .order("sort_order");
     const modules = modulesResult.data ?? [];
-    const user = userResult.data.user;
-    if (!user) return modules.map((m) => ({ ...m, progress: null }));
 
     const { data: progress } = await supabase
       .from("user_progress")
       .select("*")
-      .eq("user_id", user.id);
+      .eq("user_id", userId);
 
     const progressMap = new Map((progress ?? []).map((p) => [p.module_id, p]));
     return modules.map((m) => ({
@@ -40,7 +39,16 @@ async function fetchModulesWithProgress(): Promise<ModuleWithProgress[]> {
 }
 // FILE: src/app/dashboard/page.tsx
 export default async function DashboardPage() {
-  const modules = await fetchModulesWithProgress();
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect("/login");
+  }
+
+  const modules = await fetchModulesWithProgress(user.id);
 
   return (
     <main className="min-h-screen p-4 sm:p-5 lg:p-6 flex flex-col items-center">

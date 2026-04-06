@@ -9,6 +9,7 @@ import { SignOutButton } from "@/components/ui/sign-out-button";
 import { ProfileCoachVoice } from "@/components/audio/ProfileCoachVoice";
 import { ProfileDesktopRuntime } from "@/components/desktop/profile-desktop-runtime";
 import { CancelSubscriptionButton } from "@/components/auth/CancelSubscriptionButton";
+import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -37,6 +38,8 @@ function trialDaysLeft(trialEnd: string | undefined): number | null {
 }
 
 export default async function ProfilePage() {
+  const runtime = await getRequestRuntime();
+  const isDesktop = runtime === "desktop";
   const supabase = await createSupabaseServerClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/login");
@@ -180,7 +183,7 @@ export default async function ProfilePage() {
           </div>
         </section>
 
-        <ProfileDesktopRuntime />
+        {isDesktop ? <ProfileDesktopRuntime /> : null}
         <ProfileCoachVoice />
 
       </div>

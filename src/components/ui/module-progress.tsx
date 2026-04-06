@@ -1,5 +1,6 @@
 // FILE: src/components/ui/module-progress.tsx
 import { cookies } from "next/headers";
+import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { ModuleProgressFrame } from "@/components/ui/module-progress-frame";
 import {
@@ -43,6 +44,7 @@ function ProgressBar({
 
 export async function ModuleProgress({ variant = "default" }: { variant?: "default" | "dark" } = {}) {
   const supabase = await createSupabaseServerClient();
+  const runtime = await getRequestRuntime();
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -77,7 +79,7 @@ export async function ModuleProgress({ variant = "default" }: { variant?: "defau
   if (overallTotal === 0) return null;
 
   return (
-    <ModuleProgressFrame>
+    <ModuleProgressFrame runtime={runtime}>
       <ProgressBar
         label="Module progress"
         countLabel={`${completedModules}/${Math.max(totalModules, 0)}`}

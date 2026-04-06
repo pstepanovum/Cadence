@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Download, Settings } from "griddy-icons";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { NavbarFrame } from "@/components/ui/navbar-frame";
+import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { cn } from "@/lib/utils";
 
@@ -27,6 +28,7 @@ const navBaseClass =
 
 export async function Navbar({ current, variant = "default" }: NavbarProps) {
   const supabase = await createSupabaseServerClient();
+  const runtime = await getRequestRuntime();
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -89,7 +91,7 @@ export async function Navbar({ current, variant = "default" }: NavbarProps) {
     : "bg-yellow-green text-hunter-green hover:bg-[#b5d567]";
 
   return (
-    <NavbarFrame variant={variant}>
+    <NavbarFrame variant={variant} runtime={runtime}>
       <Link
         href={logoHref}
         className="flex h-11 items-center justify-center self-center"

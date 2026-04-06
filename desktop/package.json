@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "prebuild": "node ./scripts/prepare-build.mjs",
-    "dev": "tsc -p tsconfig.json && electron .",
+    "dev": "node ./scripts/dev.mjs",
     "dev:watch": "concurrently \"tsc -p tsconfig.json -w\" \"electron .\"",
     "compile": "tsc -p tsconfig.json",
     "build:next": "pnpm --dir .. build && node ./scripts/fix-standalone.mjs",

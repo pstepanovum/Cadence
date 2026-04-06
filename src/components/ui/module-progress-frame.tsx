@@ -1,10 +1,11 @@
 'use client'
 
-import { useIsElectron } from '@/hooks/use-is-electron'
 import { useInTopBar } from '@/components/ui/desktop-top-bar'
+import type { AppRuntime } from '@/lib/runtime/request-runtime'
 
 interface ModuleProgressFrameProps {
   children: React.ReactNode
+  runtime: AppRuntime
 }
 
 /**
@@ -14,11 +15,13 @@ interface ModuleProgressFrameProps {
  * Desktop/page:  null — DesktopTopBar in (dashboard)/layout renders it instead
  * Desktop/top bar: flat flex row, no wrapper (DesktopTopBar is the container)
  */
-export function ModuleProgressFrame({ children }: ModuleProgressFrameProps) {
-  const isElectron = useIsElectron()
+export function ModuleProgressFrame({
+  children,
+  runtime,
+}: ModuleProgressFrameProps) {
   const inTopBar = useInTopBar()
 
-  if (isElectron) {
+  if (runtime === 'desktop') {
     // Suppress the page-level instance — the layout's DesktopTopBar owns it
     if (!inTopBar) return null
 

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { useIsElectron } from '@/hooks/use-is-electron'
+import type { AppRuntime } from '@/lib/runtime/request-runtime'
 import { SmoothScroll } from '@/components/ui/smooth-scroll'
 
 // Pages that exist on the web but have no place in the desktop app.
@@ -16,8 +16,14 @@ const BLOCKED_ON_DESKTOP = new Set([
   '/download',
 ])
 
-export function AppShell({ children }: { children: React.ReactNode }) {
-  const isElectron = useIsElectron()
+export function AppShell({
+  children,
+  runtime,
+}: {
+  children: React.ReactNode
+  runtime: AppRuntime
+}) {
+  const isElectron = runtime === 'desktop'
   const pathname = usePathname()
   const router = useRouter()
 

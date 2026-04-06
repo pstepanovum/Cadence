@@ -1,6 +1,3 @@
-'use client'
-
-import { useIsElectron } from '@/hooks/use-is-electron'
 import { DesktopSidebar } from '@/components/ui/desktop-sidebar'
 
 /**
@@ -9,10 +6,14 @@ import { DesktopSidebar } from '@/components/ui/desktop-sidebar'
  * Electron: renders the full sidebar + scrollable content layout.
  * Web:      renders children as-is (no-op passthrough).
  */
-export function DesktopShell({ children }: { children: React.ReactNode }) {
-  const isElectron = useIsElectron()
-
-  if (!isElectron) return <>{children}</>
+export function DesktopShell({
+  children,
+  enabled,
+}: {
+  children: React.ReactNode
+  enabled: boolean
+}) {
+  if (!enabled) return <>{children}</>
 
   return (
     <div className="flex h-screen overflow-hidden bg-vanilla-cream">

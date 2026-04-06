@@ -1,6 +1,7 @@
 // FILE: src/app/(auth)/signup/page.tsx
 import type { Metadata } from "next";
 import { AuthForm } from "@/components/auth/AuthForm";
+import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 
 export const metadata: Metadata = {
   title: "Create an Account",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function SignupPage() {
-  return <AuthForm mode="signup" />;
+export default async function SignupPage() {
+  const runtime = await getRequestRuntime();
+  return <AuthForm mode="signup" runtime={runtime} />;
 }

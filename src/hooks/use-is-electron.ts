@@ -1,27 +1,42 @@
 'use client'
 
-import { useState, useEffect, useLayoutEffect } from 'react'
+import { useSyncExternalStore } from 'react'
 
-// useLayoutEffect on client (runs before paint = no flash),
-// useEffect on server (doesn't run during SSR, avoids the warning).
-const useIsomorphicLayoutEffect =
-  typeof window !== 'undefined' ? useLayoutEffect : useEffect
+function subscribe(onStoreChange: () => void) {
+  if (typeof window === 'undefined') {
+    return () => {}
+  }
+
+  const handleReady = () => onStoreChange()
+  window.addEventListener('cadence-electron-ready', handleReady)
+
+  // Force one immediate client-side re-check after hydration so desktop-only
+  // shells update even when the server snapshot started as false.
+  queueMicrotask(onStoreChange)
+
+  return () => {
+    window.removeEventListener('cadence-electron-ready', handleReady)
+  }
+}
+
+function getSnapshot(): boolean {
+  if (typeof window === 'undefined') {
+    return false
+  }
+
+  return Boolean(
+    window.electron?.isElectron ||
+      document.documentElement.classList.contains('electron'),
+  )
+}
 
 /**
  * Returns true when running inside the Cadence Electron desktop app.
  *
- * Uses useLayoutEffect so the sidebar appears synchronously before the first
- * paint — no flash of the web layout. Starts as false on the server so there
- * is no hydration mismatch.
+ * Reads the preload bridge and the eagerly applied `.electron` html class.
+ * This avoids state/effect timing issues in desktop-only shells like the
+ * dashboard sidebar and top bar.
  */
 export function useIsElectron(): boolean {
-  const [isElectron, setIsElectron] = useState(false)
-
-  useIsomorphicLayoutEffect(() => {
-    // window.electron is injected synchronously by the Electron preload script
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    setIsElectron(Boolean((window as any).electron?.isElectron))
-  }, [])
-
-  return isElectron
+  return useSyncExternalStore(subscribe, getSnapshot, () => false)
 }

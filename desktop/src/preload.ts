@@ -28,3 +28,5 @@ contextBridge.exposeInMainWorld('cadenceDesktopSetup', {
     return () => ipcRenderer.removeListener('desktop-setup:state', wrapped)
   },
 })
+
+window.dispatchEvent(new Event('cadence-electron-ready'))

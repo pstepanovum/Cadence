@@ -11,9 +11,13 @@ import { DesktopSetupManager } from './setup-manager'
 const isDev       = !app.isPackaged
 const PORT        = 3000
 const APP_NAME    = 'Cadence'
+const DEV_SERVER_ORIGIN = process.env.CADENCE_DEV_SERVER_URL ?? `http://localhost:${PORT}`
+const APP_ORIGIN = isDev ? DEV_SERVER_ORIGIN : `http://localhost:${PORT}`
 const ICON_PATH   = join(__dirname, '../assets/icon.icns')   // dev; packaging uses electron-builder.yml
 const DEFAULT_WINDOW_SIZE = { width: 1280, height: 800, minWidth: 960, minHeight: 640 }
 const AUTH_WINDOW_SIZE = { width: 1160, height: 760 }
+const DESKTOP_USER_AGENT_TOKEN = 'CadenceDesktop'
+const DESKTOP_USER_AGENT_SUFFIX = `${DESKTOP_USER_AGENT_TOKEN}/${app.getVersion()}`
 const AUTH_PATHS = new Set([
   '/login',
   '/signup',
@@ -98,6 +102,19 @@ function buildMenu(): void {
   Menu.setApplicationMenu(Menu.buildFromTemplate(template))
 }
 
+function debugLog(message: string, detail?: unknown): void {
+  if (!isDev) {
+    return
+  }
+
+  if (typeof detail === 'undefined') {
+    console.log(`[desktop] ${message}`)
+    return
+  }
+
+  console.log(`[desktop] ${message}`, detail)
+}
+
 async function getDesktopHomePath(): Promise<string> {
   try {
     const setupState = setupManager ? await setupManager.getState() : null
@@ -117,7 +134,7 @@ async function navigateToDesktopHome(): Promise<void> {
   }
 
   const nextPath = await getDesktopHomePath()
-  const nextUrl = `http://localhost:${PORT}${nextPath}`
+  const nextUrl = `${APP_ORIGIN}${nextPath}`
   if (mainWindow.webContents.getURL() !== nextUrl) {
     await mainWindow.loadURL(nextUrl)
   }
@@ -130,7 +147,7 @@ async function navigateToDesktopHome(): Promise<void> {
 function waitForServer(retries = 40): Promise<void> {
   return new Promise((resolve, reject) => {
     const attempt = (remaining: number) => {
-      const req = http.get(`http://localhost:${PORT}`, (res) => {
+      const req = http.get(APP_ORIGIN, (res) => {
         if (res.statusCode && res.statusCode < 500) {
           resolve()
         } else {
@@ -253,6 +270,11 @@ async function createWindow(): Promise<void> {
     await startNextServer()
   }
 
+  const baseUserAgent = mainWindow.webContents.getUserAgent()
+  const desktopUserAgent = `${baseUserAgent} ${DESKTOP_USER_AGENT_SUFFIX}`
+  mainWindow.webContents.setUserAgent(desktopUserAgent)
+  debugLog('desktop user agent attached', desktopUserAgent)
+
   // ── Disable zoom completely ──────────────────────────────────────────────
 
   // 1. Clamp visual (pinch-to-zoom) range to exactly 1×
@@ -278,8 +300,10 @@ async function createWindow(): Promise<void> {
   // ── Navigation guards ────────────────────────────────────────────────────
 
   const initialPath = await getDesktopHomePath()
+  const initialUrl = `${APP_ORIGIN}${initialPath}`
 
-  mainWindow.loadURL(`http://localhost:${PORT}${initialPath}`)
+  debugLog('loading desktop window URL', initialUrl)
+  mainWindow.loadURL(initialUrl)
   applyWindowModeForPath(initialPath)
 
   mainWindow.webContents.on('will-navigate', (event, targetUrl) => {
@@ -311,7 +335,7 @@ async function createWindow(): Promise<void> {
 
   // Open external links in the system browser
   mainWindow.webContents.setWindowOpenHandler(({ url: targetUrl }) => {
-    if (!targetUrl.startsWith(`http://localhost:${PORT}`)) {
+    if (!targetUrl.startsWith(APP_ORIGIN)) {
       shell.openExternal(targetUrl)
     }
     return { action: 'deny' }

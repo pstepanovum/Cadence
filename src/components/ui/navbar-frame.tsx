@@ -1,11 +1,10 @@
-'use client'
-
-import { useIsElectron } from '@/hooks/use-is-electron'
 import { cn } from '@/lib/utils'
+import type { AppRuntime } from '@/lib/runtime/request-runtime'
 
 interface NavbarFrameProps {
   children: React.ReactNode
   variant?: 'default' | 'dark'
+  runtime: AppRuntime
 }
 
 /**
@@ -14,10 +13,12 @@ interface NavbarFrameProps {
  * Web:      rounded card — default is white, dark is hunter-green
  * Electron: hidden entirely — the DesktopSidebar takes over navigation
  */
-export function NavbarFrame({ children, variant = 'default' }: NavbarFrameProps) {
-  const isElectron = useIsElectron()
-
-  if (isElectron) return null
+export function NavbarFrame({
+  children,
+  variant = 'default',
+  runtime,
+}: NavbarFrameProps) {
+  if (runtime === 'desktop') return null
 
   return (
     <header

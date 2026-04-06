@@ -4,6 +4,7 @@ import { Funnel_Display, Sour_Gummy } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
 import { AppShell } from "@/components/ui/app-shell";
+import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 
 const funnelDisplay = Funnel_Display({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -73,17 +74,19 @@ export const metadata: Metadata = {
   manifest: "/favicon/site.webmanifest",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const runtime = await getRequestRuntime();
+
   return (
     <html lang="en" className={`${funnelDisplay.variable} ${sourGummy.variable}`}>
       <body
         className={`${funnelDisplay.className} min-h-screen bg-vanilla-cream`}
       >
-        <AppShell>{children}</AppShell>
+        <AppShell runtime={runtime}>{children}</AppShell>
       </body>
     </html>
   );
