@@ -8,6 +8,7 @@ import re
 import time
 from typing import Any
 
+import numpy as np
 import soundfile as sf
 
 TTS_MODEL_NAME = os.getenv("OMNIVOICE_MODEL_NAME", "k2-fsa/OmniVoice")
@@ -73,6 +74,37 @@ VALID_ENGLISH_INSTRUCTS = {
     "young adult",
 }
 
+VOICE_IDENTITY_TOKENS = {
+    "child",
+    "teenager",
+    "young adult",
+    "middle-aged",
+    "elderly",
+    "female",
+    "male",
+}
+
+VOICE_PITCH_TOKENS = {
+    "very low pitch",
+    "low pitch",
+    "moderate pitch",
+    "high pitch",
+    "very high pitch",
+}
+
+VOICE_ACCENT_TOKENS = {
+    "american accent",
+    "australian accent",
+    "british accent",
+    "canadian accent",
+    "chinese accent",
+    "indian accent",
+    "japanese accent",
+    "korean accent",
+    "portuguese accent",
+    "russian accent",
+}
+
 INSTRUCT_NORMALIZATION_MAP = {
     "american": "american accent",
     "american english": "american accent",
@@ -132,6 +164,23 @@ def sanitize_instruct_text(instruct: str) -> str:
     return ", ".join(deduped)
 
 
+def simplify_instruct_text(instruct: str) -> str:
+    sanitized = sanitize_instruct_text(instruct)
+    items = [item.strip() for item in sanitized.split(",") if item.strip()]
+    if len(items) <= 3:
+        return sanitized
+
+    identity = next((item for item in items if item in VOICE_IDENTITY_TOKENS), None)
+    pitch = next((item for item in items if item in VOICE_PITCH_TOKENS), None)
+    accent = next((item for item in items if item in VOICE_ACCENT_TOKENS), None)
+
+    simplified = [item for item in [identity, pitch, accent] if item]
+    if not simplified:
+        return sanitized
+
+    return ", ".join(dict.fromkeys(simplified))
+
+
 def classify_tts_mode(text: str) -> str:
     words = re.findall(r"[A-Za-z']+", text)
     if len(words) <= TTS_WORD_MAX_WORDS and len(text) <= TTS_NARRATION_THRESHOLD:
@@ -166,6 +215,57 @@ class ReferenceSpeechSynthesizer:
         self.import_error: str | None = None
         self.last_warmup_seconds: float | None = None
         self.last_generation_seconds: float | None = None
+
+    def _prepare_audio_output(
+        self,
+        audio: Any,
+    ) -> tuple[np.ndarray, dict[str, float | bool]]:
+        audio_array = np.asarray(audio, dtype=np.float32).squeeze()
+        if audio_array.ndim > 1:
+            audio_array = audio_array.mean(axis=0)
+
+        audio_array = np.nan_to_num(audio_array, nan=0.0, posinf=0.0, neginf=0.0)
+        if audio_array.size == 0:
+            raise RuntimeError("Reference pronunciation generation returned empty audio.")
+
+        audio_array = audio_array - float(np.mean(audio_array))
+        raw_peak = float(np.max(np.abs(audio_array))) if audio_array.size else 0.0
+        if raw_peak <= 1e-4:
+            raise RuntimeError("Reference pronunciation generation returned silent audio.")
+
+        if raw_peak > 1.0:
+            audio_array = audio_array / raw_peak
+
+        audio_array = np.clip(audio_array * 0.92, -0.98, 0.98)
+        rms = float(np.sqrt(np.mean(np.square(audio_array))))
+        zero_crossing_ratio = (
+            float(np.mean(audio_array[:-1] * audio_array[1:] < 0))
+            if audio_array.size > 1
+            else 0.0
+        )
+
+        fade_length = min(256, audio_array.size // 20)
+        if fade_length > 1:
+            fade = np.linspace(0.0, 1.0, fade_length, dtype=np.float32)
+            audio_array[:fade_length] *= fade
+            audio_array[-fade_length:] *= fade[::-1]
+
+        return audio_array.astype(np.float32, copy=False), {
+            "rawPeak": raw_peak,
+            "rms": rms,
+            "zeroCrossingRatio": zero_crossing_ratio,
+            "unstable": bool(rms > 0.16 and zero_crossing_ratio > 0.34),
+        }
+
+    def _build_instruct_candidates(self, instruct: str) -> list[str]:
+        requested = sanitize_instruct_text(instruct)
+        simplified = simplify_instruct_text(requested)
+        candidates = [requested]
+        if simplified != requested:
+            candidates.append(simplified)
+        if self.instruct not in candidates:
+            candidates.append(self.instruct)
+        return candidates
 
     def get_status(self) -> dict[str, Any]:
         return {
@@ -270,14 +370,17 @@ class ReferenceSpeechSynthesizer:
         if not original_text:
             raise ValueError("Target text is required for reference audio.")
 
-        effective_instruct = sanitize_instruct_text(instruct) if instruct and instruct.strip() else self.instruct
+        effective_instruct = (
+            sanitize_instruct_text(instruct)
+            if instruct and instruct.strip()
+            else self.instruct
+        )
 
         mode = classify_tts_mode(original_text)
         if mode == "word":
             normalized_text = normalize_reference_word_text(original_text)
             generation_kwargs: dict[str, Any] = {
                 "text": normalized_text,
-                "instruct": effective_instruct,
                 "num_step": TTS_WORD_NUM_STEP,
                 "speed": TTS_WORD_SPEED,
             }
@@ -285,7 +388,6 @@ class ReferenceSpeechSynthesizer:
             normalized_text = normalize_narration_text(original_text)
             generation_kwargs = {
                 "text": normalized_text,
-                "instruct": effective_instruct,
                 "num_step": TTS_NARRATION_NUM_STEP,
                 "speed": TTS_NARRATION_SPEED,
             }
@@ -310,53 +412,85 @@ class ReferenceSpeechSynthesizer:
         if self.model is None:
             raise RuntimeError(self.load_error or "OmniVoice is not ready.")
 
-        try:
-            generation_start = time.perf_counter()
-            logger.info(
-                "Reference audio generation started mode=%s device=%s original_chars=%s normalized_chars=%s params=%s preview=%s",
-                mode,
-                self.device_label,
-                len(original_text),
-                len(normalized_text),
-                generation_kwargs,
-                _preview_text(normalized_text),
-            )
-            audio = self.model.generate(**generation_kwargs)
+        instruct_candidates = self._build_instruct_candidates(effective_instruct)
+        last_error: Exception | None = None
 
-            first_audio = audio[0]
-            if hasattr(first_audio, "detach"):
-                audio_tensor = first_audio.detach().cpu().float().squeeze(0)
-                audio_array = audio_tensor.numpy()
-            else:
-                audio_array = first_audio
+        for index, instruct_candidate in enumerate(instruct_candidates):
+            candidate_kwargs = {
+                **generation_kwargs,
+                "instruct": instruct_candidate,
+            }
 
-            sample_rate = 24000
-            buffer = io.BytesIO()
-            sf.write(buffer, audio_array, sample_rate, format="WAV")
-            audio_bytes = buffer.getvalue()
-            self.cache[cache_key] = audio_bytes
-            self.last_generation_seconds = round(
-                time.perf_counter() - generation_start,
-                2,
-            )
-            audio_duration_seconds = 0.0
             try:
-                audio_duration_seconds = round(len(audio_array) / sample_rate, 2)
-            except Exception:
+                generation_start = time.perf_counter()
+                logger.info(
+                    "Reference audio generation started mode=%s device=%s original_chars=%s normalized_chars=%s params=%s preview=%s",
+                    mode,
+                    self.device_label,
+                    len(original_text),
+                    len(normalized_text),
+                    candidate_kwargs,
+                    _preview_text(normalized_text),
+                )
+                audio = self.model.generate(**candidate_kwargs)
+
+                first_audio = audio[0]
+                if hasattr(first_audio, "detach"):
+                    audio_tensor = first_audio.detach().cpu().float().squeeze(0)
+                    raw_audio = audio_tensor.numpy()
+                else:
+                    raw_audio = first_audio
+
+                audio_array, diagnostics = self._prepare_audio_output(raw_audio)
+                if diagnostics["unstable"] and index < len(instruct_candidates) - 1:
+                    logger.warning(
+                        "Reference audio looked unstable for instruct=%s diagnostics=%s; retrying with fallback voice conditioning",
+                        instruct_candidate,
+                        diagnostics,
+                    )
+                    continue
+
+                sample_rate = 24000
+                buffer = io.BytesIO()
+                sf.write(buffer, audio_array, sample_rate, format="WAV", subtype="PCM_16")
+                audio_bytes = buffer.getvalue()
+                self.cache[cache_key] = audio_bytes
+                self.last_generation_seconds = round(
+                    time.perf_counter() - generation_start,
+                    2,
+                )
                 audio_duration_seconds = 0.0
-            logger.info(
-                "Reference audio generated mode=%s device=%s original_chars=%s normalized_chars=%s sample_rate=%s duration=%.2fs bytes=%s warmup_wait=%.2fs generation=%.2fs",
-                mode,
-                self.device_label,
-                len(original_text),
-                len(normalized_text),
-                sample_rate,
-                audio_duration_seconds,
-                len(audio_bytes),
-                warmup_elapsed,
-                self.last_generation_seconds,
-            )
-            return audio_bytes
-        except Exception as exc:
-            logger.exception("OmniVoice generation failed")
-            raise RuntimeError(f"Reference pronunciation generation failed: {exc}") from exc
+                try:
+                    audio_duration_seconds = round(len(audio_array) / sample_rate, 2)
+                except Exception:
+                    audio_duration_seconds = 0.0
+                logger.info(
+                    "Reference audio generated mode=%s device=%s instruct=%s original_chars=%s normalized_chars=%s sample_rate=%s duration=%.2fs bytes=%s warmup_wait=%.2fs generation=%.2fs diagnostics=%s",
+                    mode,
+                    self.device_label,
+                    instruct_candidate,
+                    len(original_text),
+                    len(normalized_text),
+                    sample_rate,
+                    audio_duration_seconds,
+                    len(audio_bytes),
+                    warmup_elapsed,
+                    self.last_generation_seconds,
+                    diagnostics,
+                )
+                return audio_bytes
+            except Exception as exc:
+                last_error = exc
+                if index < len(instruct_candidates) - 1:
+                    logger.warning(
+                        "Reference audio generation failed for instruct=%s; retrying with fallback voice conditioning",
+                        instruct_candidate,
+                        exc_info=exc,
+                    )
+                    continue
+
+                logger.exception("OmniVoice generation failed")
+
+        raise RuntimeError(
+            f"Reference pronunciation generation failed: {last_error}"
+        ) from last_error

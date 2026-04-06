@@ -304,7 +304,7 @@ export function ProfileDesktopRuntime() {
               <StatusPill label="Coach replies" ready={state.coachEngineReady} />
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
               <InfoCard
                 label="Desktop mode"
                 value={runtime.isPackaged ? "Packaged app" : "Desktop dev mode"}
@@ -332,6 +332,11 @@ export function ProfileDesktopRuntime() {
                     ? "Extended model access is configured for this machine."
                     : "This Mac is currently using public model access only."
                 }
+              />
+              <InfoCard
+                label="Local performance"
+                value={`${runtime.performance.cpuThreadsPerService} CPU threads`}
+                detail={runtime.performance.note}
               />
             </div>
 
@@ -419,7 +424,7 @@ export function ProfileDesktopRuntime() {
                   modelId={runtime.tts.modelId}
                   ready={runtime.tts.ready}
                   device={runtime.tts.device}
-                  detail={`Language: ${runtime.tts.language}`}
+                  detail={`Language: ${runtime.tts.language} · Cadence now cleans and retries unstable voice outputs automatically.`}
                   error={runtime.tts.loadError}
                 />
                 <ModelCard

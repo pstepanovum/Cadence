@@ -44,6 +44,13 @@ export interface DesktopRuntimeDetails {
   availability: {
     huggingFaceTokenConfigured: boolean
   }
+  performance: {
+    hostCpuCount: number
+    cpuThreadsPerService: number
+    containerCpuLimitsApplied: boolean
+    containerMemoryLimitsApplied: boolean
+    note: string
+  }
   aiEngine: {
     modelId: string
     ready: boolean

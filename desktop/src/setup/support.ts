@@ -2,6 +2,7 @@ import { app, shell } from 'electron'
 import { spawn } from 'child_process'
 import { appendFile, mkdir, readFile, writeFile } from 'fs/promises'
 import { existsSync } from 'fs'
+import { cpus } from 'os'
 import { join } from 'path'
 import {
   AI_ENGINE_URL,
@@ -39,6 +40,10 @@ export class DesktopSetupSupport {
   readonly setupFilePath = join(this.setupRoot, 'setup.json')
   readonly logFilePath = join(this.logsDir, 'desktop-setup.log')
   readonly composeFilePath = join(this.runtimeDir, 'docker-compose.ai.yml')
+
+  getHostCpuCount(): number {
+    return Math.max(1, cpus().length || 1)
+  }
 
   hasExistingSetupArtifacts(): boolean {
     return existsSync(this.setupFilePath) || existsSync(this.composeFilePath)
@@ -386,6 +391,7 @@ export class DesktopSetupSupport {
     await mkdir(huggingFaceDir, { recursive: true })
 
     const quote = (value: string) => JSON.stringify(value)
+    const hostCpuCount = String(this.getHostCpuCount())
 
     const composeYaml = `services:
   ai-engine:
@@ -398,6 +404,13 @@ export class DesktopSetupSupport {
       HF_HOME: "/models/huggingface"
       TRANSFORMERS_CACHE: "/models/huggingface"
       CADENCE_LOG_LEVEL: "INFO"
+      CADENCE_CPU_THREADS: ${quote(hostCpuCount)}
+      OMP_NUM_THREADS: ${quote(hostCpuCount)}
+      OMP_THREAD_LIMIT: ${quote(hostCpuCount)}
+      OPENBLAS_NUM_THREADS: ${quote(hostCpuCount)}
+      MKL_NUM_THREADS: ${quote(hostCpuCount)}
+      VECLIB_MAXIMUM_THREADS: ${quote(hostCpuCount)}
+      NUMEXPR_NUM_THREADS: ${quote(hostCpuCount)}
       HF_TOKEN: ${quote(process.env.HF_TOKEN ?? '')}
     ports:
       - "127.0.0.1:8000:8000"
@@ -416,6 +429,13 @@ export class DesktopSetupSupport {
       HF_HOME: "/models/huggingface"
       TRANSFORMERS_CACHE: "/models/huggingface"
       CADENCE_LOG_LEVEL: "INFO"
+      CADENCE_CPU_THREADS: ${quote(hostCpuCount)}
+      OMP_NUM_THREADS: ${quote(hostCpuCount)}
+      OMP_THREAD_LIMIT: ${quote(hostCpuCount)}
+      OPENBLAS_NUM_THREADS: ${quote(hostCpuCount)}
+      MKL_NUM_THREADS: ${quote(hostCpuCount)}
+      VECLIB_MAXIMUM_THREADS: ${quote(hostCpuCount)}
+      NUMEXPR_NUM_THREADS: ${quote(hostCpuCount)}
       HF_TOKEN: ${quote(process.env.HF_TOKEN ?? '')}
     ports:
       - "127.0.0.1:8001:8001"
@@ -483,6 +503,7 @@ export class DesktopSetupSupport {
     coachPayload: CoachEngineHealthPayload | null
   }): DesktopRuntimeDetails {
     const huggingFaceDir = join(this.modelsDir, 'huggingface')
+    const hostCpuCount = this.getHostCpuCount()
 
     return {
       appVersion: app.getVersion(),
@@ -507,6 +528,14 @@ export class DesktopSetupSupport {
           aiPayload?.hfTokenConfigured === true ||
           aiPayload?.diagnostics?.hfTokenConfigured === true ||
           Boolean(process.env.HF_TOKEN),
+      },
+      performance: {
+        hostCpuCount,
+        cpuThreadsPerService: hostCpuCount,
+        containerCpuLimitsApplied: false,
+        containerMemoryLimitsApplied: false,
+        note:
+          'Cadence does not apply per-container CPU or memory caps. On macOS, Docker Desktop still controls the overall machine budget and local engines run on CPU inside that environment.',
       },
       aiEngine: {
         modelId:

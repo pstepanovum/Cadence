@@ -18,6 +18,34 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("cadence.coach_engine.main")
+
+
+def configure_torch_cpu_threads() -> None:
+    requested = os.getenv("CADENCE_CPU_THREADS", "").strip()
+    if not requested:
+        return
+
+    try:
+        thread_count = max(1, int(requested))
+    except ValueError:
+        logger.warning("Ignoring invalid CADENCE_CPU_THREADS=%s", requested)
+        return
+
+    try:
+        import torch
+
+        torch.set_num_threads(thread_count)
+        if hasattr(torch, "set_num_interop_threads"):
+            try:
+                torch.set_num_interop_threads(max(1, min(4, thread_count)))
+            except RuntimeError:
+                pass
+        logger.info("Configured coach engine torch CPU threads=%s", thread_count)
+    except Exception:
+        logger.exception("Failed to configure coach engine torch CPU threads")
+
+
+configure_torch_cpu_threads()
 coach_llm = GemmaCoachEngine()
 coach_warmup_lock = Lock()
 
