@@ -1,15 +1,14 @@
 // FILE: src/app/api/assess/route.ts
 import { NextResponse } from "next/server";
+import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
 
 export const runtime = "nodejs";
 
-function getEngineUrl() {
-  return process.env.AI_ENGINE_URL?.replace(/\/$/, "") ?? "http://127.0.0.1:8000";
-}
+export async function GET(request: Request) {
+  const engineUrl = getAiEngineUrlForRequest(request);
 
-export async function GET() {
   try {
-    const response = await fetch(`${getEngineUrl()}/health`, {
+    const response = await fetch(`${engineUrl}/health`, {
       cache: "no-store",
     });
 
@@ -79,6 +78,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const engineUrl = getAiEngineUrlForRequest(request);
   const formData = await request.formData();
   const audio = formData.get("audio");
   const text = formData.get("text");
@@ -102,7 +102,7 @@ export async function POST(request: Request) {
   upstreamFormData.set("text", text);
 
   try {
-    const response = await fetch(`${getEngineUrl()}/assess`, {
+    const response = await fetch(`${engineUrl}/assess`, {
       method: "POST",
       body: upstreamFormData,
       cache: "no-store",

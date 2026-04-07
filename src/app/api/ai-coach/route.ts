@@ -1,19 +1,14 @@
 // FILE: src/app/api/ai-coach/route.ts
 import { NextResponse } from "next/server";
+import { getCoachEngineUrlForRequest } from "@/lib/runtime/request-runtime";
 
 export const runtime = "nodejs";
 
-function getCoachEngineUrl() {
-  return (
-    process.env.AI_COACH_ENGINE_URL?.replace(/\/$/, "") ??
-    process.env.AI_ENGINE_URL?.replace(/\/$/, "") ??
-    "http://127.0.0.1:8001"
-  );
-}
+export async function GET(request: Request) {
+  const coachEngineUrl = getCoachEngineUrlForRequest(request);
 
-export async function GET() {
   try {
-    const response = await fetch(`${getCoachEngineUrl()}/coach-status`, {
+    const response = await fetch(`${coachEngineUrl}/coach-status`, {
       cache: "no-store",
     });
 
@@ -54,6 +49,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const coachEngineUrl = getCoachEngineUrlForRequest(request);
   const payload = await request.json().catch(() => null);
 
   if (!payload || typeof payload !== "object") {
@@ -66,7 +62,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const response = await fetch(`${getCoachEngineUrl()}/coach-turn`, {
+    const response = await fetch(`${coachEngineUrl}/coach-turn`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

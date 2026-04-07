@@ -53,6 +53,12 @@ export async function startNextServer({
         PORT: String(port),
         HOSTNAME: '127.0.0.1',
         NODE_ENV: 'production',
+        CADENCE_DESKTOP_AI_ENGINE_URL:
+          process.env.CADENCE_DESKTOP_AI_ENGINE_URL ??
+          `http://127.0.0.1:${process.env.CADENCE_DESKTOP_AI_ENGINE_PORT ?? '8010'}`,
+        CADENCE_DESKTOP_COACH_ENGINE_URL:
+          process.env.CADENCE_DESKTOP_COACH_ENGINE_URL ??
+          `http://127.0.0.1:${process.env.CADENCE_DESKTOP_COACH_ENGINE_PORT ?? '8011'}`,
         NEXT_SHARP_PATH: join(resourcesPath, 'next-server', 'node_modules', 'sharp'),
       },
       stdio: 'pipe',

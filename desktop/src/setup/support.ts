@@ -16,6 +16,8 @@ import {
   DEFAULT_DESKTOP_TTS_LANGUAGE,
   DEFAULT_DESKTOP_TTS_MODEL_ID,
   DESKTOP_WEB_APP_URL,
+  DESKTOP_AI_ENGINE_PORT,
+  DESKTOP_COACH_ENGINE_PORT,
   HEALTH_CHECK_TIMEOUT_MS,
   INSTALL_STRATEGY,
   MIN_DESKTOP_PYTHON_MAJOR,
@@ -715,7 +717,7 @@ export class DesktopSetupSupport {
       return {
         ...shared,
         AI_ENGINE_HOST: '127.0.0.1',
-        AI_ENGINE_PORT: '8000',
+        AI_ENGINE_PORT: String(DESKTOP_AI_ENGINE_PORT),
         CADENCE_TTS_PROVIDER: 'auto',
         CADENCE_TTS_REQUIRE_MODEL: '1',
       }
@@ -724,7 +726,7 @@ export class DesktopSetupSupport {
     return {
       ...shared,
       COACH_ENGINE_HOST: '127.0.0.1',
-      COACH_ENGINE_PORT: '8001',
+      COACH_ENGINE_PORT: String(DESKTOP_COACH_ENGINE_PORT),
       COACH_LLM_MODEL_ID: DEFAULT_DESKTOP_COACH_MODEL_ID,
     }
   }

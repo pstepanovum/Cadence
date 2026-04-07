@@ -1,13 +1,11 @@
 // FILE: src/app/api/transcribe/route.ts
 import { NextResponse } from "next/server";
+import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
 
 export const runtime = "nodejs";
 
-function getEngineUrl() {
-  return process.env.AI_ENGINE_URL?.replace(/\/$/, "") ?? "http://127.0.0.1:8000";
-}
-
 export async function POST(request: Request) {
+  const engineUrl = getAiEngineUrlForRequest(request);
   const formData = await request.formData();
   const audio = formData.get("audio");
 
@@ -22,7 +20,7 @@ export async function POST(request: Request) {
   upstreamFormData.set("audio", audio, audio.name || "attempt.wav");
 
   try {
-    const response = await fetch(`${getEngineUrl()}/transcribe`, {
+    const response = await fetch(`${engineUrl}/transcribe`, {
       method: "POST",
       body: upstreamFormData,
       cache: "no-store",

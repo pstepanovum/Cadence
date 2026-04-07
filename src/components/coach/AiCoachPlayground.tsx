@@ -71,9 +71,11 @@ function buildHistory(turns: AiCoachTurn[]): AiCoachHistoryEntry[] {
     ];
 
     if (turn.assessment) {
+      const spokenReply =
+        turn.assessment.transcript?.trim() || turn.assessment.targetText;
       entries.push({
         role: "user",
-        content: turn.assessment.targetText,
+        content: spokenReply,
         cue: turn.cue,
         score: turn.assessment.overallScore,
         transcript: turn.assessment.transcript,

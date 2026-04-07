@@ -46,6 +46,17 @@ def _extract_json_object(content: str) -> str:
     return trimmed
 
 
+def _repair_json_candidate(content: str) -> str:
+    repaired = content.strip()
+    repaired = re.sub(
+        r'([{,]\s*)([A-Za-z_][A-Za-z0-9_]*)(\s*:)',
+        r'\1"\2"\3',
+        repaired,
+    )
+    repaired = re.sub(r",\s*([}\]])", r"\1", repaired)
+    return repaired
+
+
 def _clean_model_output(content: str) -> str:
     cleaned = re.sub(r"<\|[^|]+?\|>", " ", str(content))
     cleaned = re.sub(r"</?think>", " ", cleaned, flags=re.IGNORECASE)
@@ -53,6 +64,62 @@ def _clean_model_output(content: str) -> str:
     cleaned = re.sub(r"[ \t]+", " ", cleaned)
     cleaned = re.sub(r"\n{3,}", "\n\n", cleaned).strip()
     return cleaned
+
+
+def _latest_history_content(
+    history: list[dict[str, Any]],
+    role: str,
+) -> str:
+    for entry in reversed(history):
+        if str(entry.get("role") or "").lower() != role:
+            continue
+
+        content = re.sub(r"\s+", " ", str(entry.get("content") or "")).strip()
+        if content:
+            return content
+    return ""
+
+
+def _truncate_sentence(value: str, *, limit: int = 140) -> str:
+    normalized = re.sub(r"\s+", " ", value).strip()
+    if not normalized:
+        return normalized
+
+    if len(normalized) <= limit:
+        return normalized
+
+    shortened = normalized[:limit].rsplit(" ", 1)[0].strip()
+    return shortened or normalized[:limit].strip()
+
+
+def _summarize_user_content(value: str) -> str:
+    normalized = re.sub(r"\s+", " ", value).strip()
+    if not normalized:
+        return normalized
+
+    first_clause = re.split(r"[?.!]", normalized, maxsplit=1)[0].strip()
+    return _truncate_sentence(first_clause or normalized, limit=72)
+
+
+def _looks_like_plain_coach_message(content: str) -> bool:
+    candidate = content.strip()
+    if not candidate:
+        return False
+
+    lowered = candidate.lower()
+    if (
+        candidate.startswith("{")
+        or "coachmessage" in lowered
+        or "learnerreply" in lowered
+        or lowered.startswith("coach:")
+        or lowered.startswith("next step:")
+        or lowered.startswith("cue:")
+        or lowered.startswith("checkpoint:")
+        or "[transcript=" in lowered
+    ):
+        return False
+
+    return True
 
 
 def _parse_labeled_turn(content: str) -> dict[str, str] | None:
@@ -78,7 +145,151 @@ def _parse_labeled_turn(content: str) -> dict[str, str] | None:
     if not parsed:
         return None
 
+    coach_message = parsed.get("coachMessage")
+    if coach_message:
+        inline_bracket_cue = re.search(
+            r"\[\s*cue\s*=\s*([^\]]+?)\s*\]",
+            coach_message,
+            flags=re.IGNORECASE,
+        )
+        inline_cue = re.search(
+            r"\bCue\s*:\s*(.+?)(?=\bCheckpoint\s*:|\Z)",
+            coach_message,
+            flags=re.IGNORECASE,
+        )
+        inline_checkpoint_text = re.search(
+            r"\bCheckpoint\s*:\s*(.+?)\s*$",
+            coach_message,
+            flags=re.IGNORECASE,
+        )
+        inline_checkpoint = re.search(
+            r"\[\s*checkpoint\s*:\s*([^\]]+?)\s*\]",
+            coach_message,
+            flags=re.IGNORECASE,
+        )
+        if inline_bracket_cue and not parsed.get("cue"):
+            parsed["cue"] = inline_bracket_cue.group(1).strip()
+        if inline_cue and not parsed.get("cue"):
+            parsed["cue"] = inline_cue.group(1).strip()
+        if inline_checkpoint_text and not parsed.get("checkpoint"):
+            parsed["checkpoint"] = inline_checkpoint_text.group(1).strip()
+        if inline_checkpoint and not parsed.get("checkpoint"):
+            parsed["checkpoint"] = inline_checkpoint.group(1).strip()
+
+        cleaned_message = re.sub(
+            r"\[\s*checkpoint\s*:\s*[^\]]+?\s*\]",
+            "",
+            coach_message,
+            flags=re.IGNORECASE,
+        )
+        cleaned_message = re.sub(
+            r"\[\s*transcript\s*=\s*[^\]]+?\s*\]",
+            "",
+            cleaned_message,
+            flags=re.IGNORECASE,
+        )
+        cleaned_message = re.sub(
+            r"\[\s*cue\s*=\s*[^\]]+?\s*\]",
+            "",
+            cleaned_message,
+            flags=re.IGNORECASE,
+        )
+        cleaned_message = re.sub(
+            r"\bCue\s*:\s*.+?(?=\bCheckpoint\s*:|\Z)",
+            "",
+            cleaned_message,
+            flags=re.IGNORECASE,
+        )
+        cleaned_message = re.sub(
+            r"\bCheckpoint\s*:\s*.+$",
+            "",
+            cleaned_message,
+            flags=re.IGNORECASE,
+        )
+        cleaned_message = re.sub(
+            r"\bLearnerReply\s*:\s*$",
+            "",
+            cleaned_message,
+            flags=re.IGNORECASE,
+        )
+        parsed["coachMessage"] = cleaned_message.strip()
+
     return _coerce_turn(parsed)
+
+
+def _build_contextual_fallback_turn(
+    *,
+    topic: str,
+    action: str,
+    mode: str,
+    history: list[dict[str, Any]],
+    latest_assessment: dict[str, Any] | None = None,
+    draft_coach_message: str | None = None,
+) -> dict[str, str]:
+    latest_user = _latest_history_content(history, "user")
+    normalized_topic = _truncate_sentence(topic, limit=72)
+    normalized_user = _summarize_user_content(latest_user)
+
+    if draft_coach_message and _looks_like_plain_coach_message(draft_coach_message):
+        coach_message = _truncate_sentence(draft_coach_message)
+        if coach_message[-1:] not in ".!?":
+            coach_message = f"{coach_message}."
+    elif action == "start":
+        coach_message = (
+            f"Let's start with {normalized_topic}. What part of it matters most to you right now?"
+            if normalized_topic
+            else "What would you like to talk through first?"
+        )
+    elif normalized_user:
+        coach_message = (
+            f"That makes sense. In a real conversation, what do you want people to notice first when you say, \"{normalized_user}\"?"
+        )
+    else:
+        coach_message = (
+            f"Stay with {normalized_topic} for a moment. What's the main idea you want to get across?"
+            if normalized_topic
+            else "What do you want to explain more clearly next?"
+        )
+
+    next_step = ""
+    score = None
+    if isinstance(latest_assessment, dict):
+        next_step = re.sub(
+            r"\s+",
+            " ",
+            str(latest_assessment.get("nextStep") or ""),
+        ).strip()
+        try:
+            score = float(latest_assessment.get("overallScore"))
+        except (TypeError, ValueError):
+            score = None
+
+    if next_step:
+        cue = _truncate_sentence(next_step, limit=96)
+    elif isinstance(score, (int, float)) and score < 75:
+        cue = "Slow down a touch and finish the key sounds cleanly."
+    elif normalized_topic:
+        cue = f"Keep your phrasing steady while you explain {normalized_topic.lower()}."
+    else:
+        cue = "Keep your pacing steady and finish the thought clearly."
+
+    if mode == "freedom":
+        learner_reply = ""
+    elif normalized_user:
+        learner_reply = f"I want to explain it clearly and use confident body language."
+    elif normalized_topic:
+        learner_reply = f"I want to explain {normalized_topic.lower()} in a clear and confident way."
+    else:
+        learner_reply = "I want to explain this clearly and confidently."
+
+    checkpoint = "next reply" if action == "continue" else "opening turn"
+
+    return {
+        "coachMessage": coach_message,
+        "learnerReply": learner_reply,
+        "cue": cue,
+        "checkpoint": checkpoint,
+    }
 
 
 def _minimal_fallback_turn(mode: str) -> dict[str, str]:
@@ -96,25 +307,66 @@ def _parse_turn_response(
     action: str,
     mode: str,
     history: list[dict[str, Any]],
+    latest_assessment: dict[str, Any] | None = None,
 ) -> dict[str, str]:
     cleaned = _clean_model_output(decoded)
     json_candidate = _extract_json_object(cleaned)
 
     if json_candidate:
         try:
-            return _normalize_turn(_coerce_turn(json.loads(json_candidate)), mode)
+            parsed_turn = _normalize_turn(_coerce_turn(json.loads(json_candidate)), mode)
+            if not _is_echoed_user_message(parsed_turn["coachMessage"], history):
+                return parsed_turn
         except json.JSONDecodeError:
-            pass
+            repaired_json = _repair_json_candidate(json_candidate)
+            if repaired_json != json_candidate:
+                try:
+                    parsed_turn = _normalize_turn(
+                        _coerce_turn(json.loads(repaired_json)),
+                        mode,
+                    )
+                    if not _is_echoed_user_message(parsed_turn["coachMessage"], history):
+                        return parsed_turn
+                except json.JSONDecodeError:
+                    pass
 
     labeled = _parse_labeled_turn(cleaned)
     if labeled:
-        return _normalize_turn(labeled, mode)
+        parsed_turn = _normalize_turn(labeled, mode)
+        if not _is_echoed_user_message(parsed_turn["coachMessage"], history):
+            return parsed_turn
+
+    if _looks_like_plain_coach_message(cleaned):
+        logger.warning(
+            "Coach model returned plain text instead of structured output. Recovering a contextual turn. preview=%s",
+            cleaned[:240],
+        )
+        return _normalize_turn(
+            _build_contextual_fallback_turn(
+                topic=topic,
+                action=action,
+                mode=mode,
+                history=history,
+                latest_assessment=latest_assessment,
+                draft_coach_message=cleaned,
+            ),
+            mode,
+        )
 
     logger.warning(
         "Coach model returned non-JSON output. Falling back to a synthetic turn. preview=%s",
         cleaned[:240],
     )
-    return _normalize_turn(_minimal_fallback_turn(mode), mode)
+    return _normalize_turn(
+        _build_contextual_fallback_turn(
+            topic=topic,
+            action=action,
+            mode=mode,
+            history=history,
+            latest_assessment=latest_assessment,
+        ),
+        mode,
+    )
 
 
 def _sanitize_sentence(value: Any, fallback: str) -> str:
@@ -122,8 +374,41 @@ def _sanitize_sentence(value: Any, fallback: str) -> str:
     return normalized or fallback
 
 
+def _sanitize_coach_message(value: Any, fallback: str) -> str:
+    normalized = _sanitize_sentence(value, fallback)
+    normalized = re.sub(
+        r"\[\s*checkpoint\s*:\s*[^\]]+?\s*\]",
+        "",
+        normalized,
+        flags=re.IGNORECASE,
+    ).strip()
+    normalized = re.sub(
+        r"\[\s*transcript\s*=\s*[^\]]+?\s*\]",
+        "",
+        normalized,
+        flags=re.IGNORECASE,
+    ).strip()
+    return normalized or fallback
+
+
+def _is_echoed_user_message(coach_message: str, history: list[dict[str, Any]]) -> bool:
+    latest_user = _latest_history_content(history, "user")
+    if not latest_user:
+        return False
+
+    def normalize(value: str) -> str:
+        return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+
+    normalized_coach = normalize(coach_message)
+    normalized_user = normalize(latest_user)
+    if not normalized_coach or not normalized_user:
+        return False
+
+    return normalized_coach.startswith(normalized_user)
+
+
 def _normalize_turn(turn: dict[str, str], mode: str) -> dict[str, str]:
-    coach_message = _sanitize_sentence(
+    coach_message = _sanitize_coach_message(
         turn.get("coachMessage"),
         "Tell me a little more about that.",
     )
@@ -157,21 +442,21 @@ def _coerce_turn(raw: Any) -> dict[str, str]:
         raise RuntimeError("Coach response was not valid JSON.")
 
     return {
-        "coachMessage": _sanitize_sentence(
+        "coachMessage": _sanitize_coach_message(
             raw.get("coachMessage"),
-            "Tell me a little more about that.",
+            "",
         ),
         "learnerReply": _sanitize_sentence(
             raw.get("learnerReply") if raw.get("learnerReply") != "" else "",
-            "I can explain that in a simple way.",
+            "",
         ),
         "cue": _sanitize_sentence(
             raw.get("cue"),
-            "Keep the rhythm steady and finish the last consonant clearly.",
+            "",
         ),
         "checkpoint": _sanitize_sentence(
             raw.get("checkpoint"),
-            "next reply",
+            "",
         ).lower(),
     }
 
@@ -201,15 +486,18 @@ def _system_prompt() -> str:
         [
             "You are Cadence Coach, a natural English speaking partner for pronunciation practice.",
             "Generate one conversation turn at a time for open-topic speaking.",
-            "Return strict JSON with coachMessage, learnerReply, cue, and checkpoint.",
+            "Return exactly four lines with these labels: CoachMessage, LearnerReply, Cue, Checkpoint.",
             "coachMessage should sound like a real follow-up in an ongoing conversation.",
             "In target mode, learnerReply should be one natural sentence the learner can repeat next.",
             "In freedom mode, learnerReply can be an empty string.",
             "cue should be one short pronunciation note.",
             "checkpoint should be a short lowercase label.",
-            'Use this JSON shape: {"coachMessage":"...","learnerReply":"...","cue":"...","checkpoint":"..."}',
-            "Return exactly one compact JSON object.",
-            "No markdown and no code fences.",
+            "Do not explain the format and do not add markdown or code fences.",
+            "Example:",
+            "CoachMessage: What part of that feels most important to you?",
+            "LearnerReply: I want to explain the main idea clearly.",
+            "Cue: Keep the key words steady and clear.",
+            "Checkpoint: next reply",
         ]
     )
 
@@ -413,12 +701,16 @@ class GemmaCoachEngine:
         ]
         generation_start = time.perf_counter()
         decoded = self._generate_decoded(messages)
+        logger.info("Coach raw model output preview=%s", _clean_model_output(decoded)[:240])
         turn = _parse_turn_response(
             decoded,
             topic=topic,
             action=str(payload.get("action") or "continue"),
             mode=str(payload.get("mode") or "target"),
             history=history,
+            latest_assessment=payload.get("latestAssessment")
+            if isinstance(payload.get("latestAssessment"), dict)
+            else None,
         )
 
         self.last_generation_seconds = time.perf_counter() - generation_start

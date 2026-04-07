@@ -1,7 +1,13 @@
 import { app } from 'electron'
 
-export const AI_ENGINE_URL = 'http://127.0.0.1:8000/health'
-export const COACH_ENGINE_URL = 'http://127.0.0.1:8001/coach-status'
+export const DESKTOP_AI_ENGINE_PORT = Number(
+  process.env.CADENCE_DESKTOP_AI_ENGINE_PORT ?? '8010',
+)
+export const DESKTOP_COACH_ENGINE_PORT = Number(
+  process.env.CADENCE_DESKTOP_COACH_ENGINE_PORT ?? '8011',
+)
+export const AI_ENGINE_URL = `http://127.0.0.1:${DESKTOP_AI_ENGINE_PORT}/health`
+export const COACH_ENGINE_URL = `http://127.0.0.1:${DESKTOP_COACH_ENGINE_PORT}/coach-status`
 export const DESKTOP_WEB_APP_URL = app.isPackaged
   ? `http://127.0.0.1:${process.env.CADENCE_DESKTOP_PORT ?? '3130'}`
   : `http://localhost:${process.env.CADENCE_DEV_SERVER_PORT ?? '3000'}`

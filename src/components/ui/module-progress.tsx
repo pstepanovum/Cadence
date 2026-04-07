@@ -25,14 +25,20 @@ function ProgressBar({
   return (
     <div className="flex min-w-0 flex-1 flex-col gap-2">
       <div className="flex items-center justify-between gap-3">
-        <span className={`eyebrow text-[10px] whitespace-nowrap ${isDark ? "text-white" : "text-sage-green"}`}>
+        <span
+          className={`eyebrow text-[10px] whitespace-nowrap ${isDark ? "text-white" : "text-sage-green"}`}
+        >
           {label}
         </span>
-        <span className={`text-xs font-semibold tabular-nums ${isDark ? "text-white" : "text-hunter-green"}`}>
+        <span
+          className={`text-xs font-semibold tabular-nums ${isDark ? "text-white" : "text-hunter-green"}`}
+        >
           {countLabel}
         </span>
       </div>
-      <div className={`h-2.5 w-full overflow-hidden rounded-full ${isDark ? "bg-white/20" : "bg-alabaster-grey"}`}>
+      <div
+        className={`h-2.5 w-full overflow-hidden rounded-full ${isDark ? "bg-white/20" : "bg-alabaster-grey"}`}
+      >
         <div
           className="h-full rounded-full bg-sage-green"
           style={{ width: `${percent}%` }}
@@ -42,7 +48,9 @@ function ProgressBar({
   );
 }
 
-export async function ModuleProgress({ variant = "default" }: { variant?: "default" | "dark" } = {}) {
+export async function ModuleProgress({
+  variant = "default",
+}: { variant?: "default" | "dark" } = {}) {
   const supabase = await createSupabaseServerClient();
   const runtime = await getRequestRuntime();
   const {
@@ -55,7 +63,8 @@ export async function ModuleProgress({ variant = "default" }: { variant?: "defau
   const conversationProgress = parseConversationProgress(
     cookieStore.get(CONVERSATION_PROGRESS_COOKIE)?.value,
   );
-  const completedConversation = getCompletedConversationCount(conversationProgress);
+  const completedConversation =
+    getCompletedConversationCount(conversationProgress);
   const totalConversation = CONVERSATION_MODULES.length;
 
   const [modulesResult, completedResult] = await Promise.all([
@@ -86,7 +95,9 @@ export async function ModuleProgress({ variant = "default" }: { variant?: "defau
         percent={modulePercent}
         variant={variant}
       />
-      <div className={`hidden h-10 w-px rounded-full lg:block ${variant === "dark" ? "bg-white/20" : "bg-alabaster-grey"}`} />
+      <div
+        className={`hidden h-10 w-px rounded-full lg:block ${variant === "dark" ? "bg-white/20" : "bg-alabaster-grey"}`}
+      />
       <ProgressBar
         label="Overall progress"
         countLabel={`${overallCompleted}/${overallTotal}`}

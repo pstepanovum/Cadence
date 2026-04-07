@@ -112,8 +112,8 @@ export function ConversationResult({
             </Link>
           </Button>
         ) : (
-          <Button variant="primary" asChild className="flex-1 text-white">
-            <Link href="/conversation" className="text-white">
+          <Button variant="primary" asChild className="flex-1 !text-white">
+            <Link href="/conversation" className="!text-white hover:!text-white">
               All Conversation Modules
             </Link>
           </Button>

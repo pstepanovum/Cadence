@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { createSupabaseBrowserClient } from "@/lib/supabase";
 
 interface Props {
   isCanceling: boolean;
@@ -26,14 +27,26 @@ export function CancelSubscriptionButton({ isCanceling, cancelAt }: Props) {
     setLoading(true);
     setError(null);
     try {
+      const supabase = createSupabaseBrowserClient();
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+
+      const headers: Record<string, string> = {
+        "Content-Type": "application/json",
+      };
+
+      if (session?.access_token) {
+        headers.Authorization = `Bearer ${session.access_token}`;
+      }
+
       const res = await fetch("/api/stripe/cancel", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({ action }),
       });
       if (!res.ok) {
-        const body = await res.json() as { error?: string };
-        throw new Error(body.error ?? "Something went wrong");
+        throw new Error(await readSubscriptionActionError(res));
       }
       setConfirm(false);
       router.refresh();
@@ -111,4 +124,32 @@ export function CancelSubscriptionButton({ isCanceling, cancelAt }: Props) {
       </button>
     </div>
   );
+}
+
+async function readSubscriptionActionError(res: Response) {
+  const contentType = res.headers.get("content-type") ?? "";
+
+  if (contentType.includes("application/json")) {
+    try {
+      const body = (await res.json()) as { error?: string };
+
+      if (body.error?.trim()) {
+        return body.error;
+      }
+    } catch {
+      // Fall through to the plain-text parser below.
+    }
+  }
+
+  const text = (await res.text()).trim();
+
+  if (!text) {
+    return "Something went wrong.";
+  }
+
+  if (text === "Internal Server Error") {
+    return "The server hit an unexpected error while updating your subscription.";
+  }
+
+  return text;
 }

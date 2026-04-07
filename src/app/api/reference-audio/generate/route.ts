@@ -1,13 +1,11 @@
 // FILE: src/app/api/reference-audio/generate/route.ts
 import { NextResponse } from "next/server";
+import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
 
 export const runtime = "nodejs";
 
-function getEngineUrl() {
-  return process.env.AI_ENGINE_URL?.replace(/\/$/, "") ?? "http://127.0.0.1:8000";
-}
-
 export async function POST(request: Request) {
+  const engineUrl = getAiEngineUrlForRequest(request);
   const payload = (await request.json().catch(() => null)) as
     | { text?: string; instruct?: string }
     | null;
@@ -28,7 +26,7 @@ export async function POST(request: Request) {
       formData.set("instruct", instruct);
     }
 
-    const response = await fetch(`${getEngineUrl()}/reference-audio`, {
+    const response = await fetch(`${engineUrl}/reference-audio`, {
       method: "POST",
       body: formData,
       cache: "no-store",
