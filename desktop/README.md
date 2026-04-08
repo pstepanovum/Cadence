@@ -9,18 +9,28 @@ Electron wrapper for the Cadence Next.js app. Packages into a macOS `.dmg`.
 
 ## Development
 
-Run Next.js and Electron in two terminals:
+The easiest way is to run everything from the repo root:
 
 ```bash
-# Terminal 1 — from repo root
-pnpm dev
-
-# Terminal 2 — from desktop/
-pnpm install
-pnpm dev
+pnpm dev:all
 ```
 
-Electron will connect to `http://localhost:3000`.
+This starts the web app, both Python backends, and Electron together — with hot-reload on all layers. See the root [README](../README.md) for full details.
+
+If you want to run only the desktop app (web app must already be on port 3000):
+
+```bash
+# from repo root — install desktop deps first time
+cd desktop && pnpm install && cd ..
+
+# start web app
+pnpm dev
+
+# start Electron (separate terminal)
+cd desktop && pnpm dev
+```
+
+Electron connects to `http://localhost:3000`.
 
 ## Build a DMG
 
@@ -52,7 +62,7 @@ You can convert a PNG using `iconutil` or `electron-icon-builder`.
 
 For distribution outside the App Store, set these env vars before building:
 
-```
+```shell
 APPLE_ID=you@example.com
 APPLE_APP_SPECIFIC_PASSWORD=xxxx-xxxx-xxxx-xxxx
 APPLE_TEAM_ID=XXXXXXXXXX

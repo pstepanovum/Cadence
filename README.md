@@ -144,30 +144,73 @@ If you want the shortest possible first run, use Docker. If you want the fastest
 
 ### Recommended local development flow
 
-Terminal 1 — AI engine:
+One command starts all services — web app, both Python backends, and the desktop Electron app — with hot-reload on every layer:
 
 ```bash
-cd src/backend/ai-engine
-python main.py
-```
-
-Terminal 2 — Coach engine:
-
-```bash
-cd src/backend/coach-engine
-python main.py
-```
-
-Terminal 3 — Web app:
-
-```bash
-pnpm dev
+pnpm dev:all
 ```
 
 Open:
 
-```
+```text
 http://localhost:3000
+```
+
+To clear build and browser caches before starting (models and app state preserved):
+
+```bash
+pnpm dev:all -- --cache
+```
+
+To do a full wipe including AI models, venvs, and all app data:
+
+```bash
+pnpm dev:all -- --clear
+```
+
+`Ctrl-C` shuts everything down cleanly with no leftover processes.
+
+**Hot-reload behaviour:**
+
+| You change | What happens | Desktop restarts? |
+| --- | --- | --- |
+| Any `src/` React / Next.js file | HMR — browser updates instantly | No |
+| `src/backend/ai-engine/*.py` | uvicorn reloads the worker (~0.5 s) | No |
+| `src/backend/coach-engine/*.py` | uvicorn reloads the worker (~0.5 s) | No |
+| `desktop/src/*.ts` | tsc recompiles → Electron respawns | Yes (~1–2 s) |
+
+Each service prints prefixed, colour-coded logs in a single terminal:
+
+```text
+[web-app  ]  ✓ Ready on http://localhost:3000
+[ai-engine]  INFO  Application startup complete.
+[coach-eng]  INFO  Application startup complete.
+[desktop  ]  Electron started
+[tsc-watch]  Found 0 errors. Watching for file changes.
+```
+
+If you use a Python virtual environment, point to it with:
+
+```bash
+PYTHON=/path/to/venv/bin/python pnpm dev:all
+```
+
+#### Running services individually
+
+If you prefer separate terminals or only need a subset of services:
+
+```bash
+# AI engine
+cd src/backend/ai-engine && python main.py
+
+# Coach engine
+cd src/backend/coach-engine && python main.py
+
+# Web app only
+pnpm dev
+
+# Desktop (requires web app already running on port 3000)
+cd desktop && pnpm dev
 ```
 
 ### Full stack with Docker
@@ -242,7 +285,7 @@ Place `desktop/assets/icon.icns` (1024×1024) before building for macOS. The fil
 
 Set the following environment variables before running `pnpm build` to sign and notarize for distribution outside the Mac App Store:
 
-```
+```shell
 APPLE_ID=you@example.com
 APPLE_APP_SPECIFIC_PASSWORD=xxxx-xxxx-xxxx-xxxx
 APPLE_TEAM_ID=XXXXXXXXXX
@@ -254,13 +297,13 @@ CSC_KEY_PASSWORD=yourpassword
 
 The auth confirmation callback is served at:
 
-```
+```text
 /api/auth/confirm
 ```
 
 Make sure your Supabase dashboard email templates (Confirm signup, Magic link, etc.) use this URL:
 
-```
+```text
 https://your-domain.com/api/auth/confirm
 ```
 
@@ -311,7 +354,7 @@ Deploy the Next.js app to Vercel and run the Python services on separate infrast
 
 Then point the web app to those services:
 
-```
+```shell
 AI_ENGINE_URL=https://ai.your-domain.com
 AI_COACH_ENGINE_URL=https://coach.your-domain.com
 ```

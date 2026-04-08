@@ -23,25 +23,46 @@ cp .env.docker.example .env.local
 cp .env.docker.example .env
 ```
 
-Run the full local development flow:
-
-Terminal 1:
+Run all services with one command:
 
 ```bash
-cd src/ai-engine
-python main.py
+pnpm dev:all
 ```
 
-Terminal 2:
+This starts the Next.js web app, both Python backends (with hot-reload via uvicorn), and the Electron desktop app. Logs from all four services appear colour-coded in a single terminal. `Ctrl-C` shuts everything down cleanly.
+
+To clear build and browser caches (models and app state preserved):
 
 ```bash
-cd src/coach-engine
-python main.py
+pnpm dev:all -- --cache
 ```
 
-Terminal 3:
+To do a full wipe including AI models, venvs, and all app data:
 
 ```bash
+pnpm dev:all -- --clear
+```
+
+If you use a Python virtual environment:
+
+```bash
+PYTHON=/path/to/venv/bin/python pnpm dev:all
+```
+
+**Hot-reload behaviour:**
+
+| You change | What happens | Desktop restarts? |
+| --- | --- | --- |
+| Any `src/` React / Next.js file | HMR — browser updates instantly | No |
+| `src/backend/ai-engine/*.py` | uvicorn reloads the worker (~0.5 s) | No |
+| `src/backend/coach-engine/*.py` | uvicorn reloads the worker (~0.5 s) | No |
+| `desktop/src/*.ts` | tsc recompiles → Electron respawns | Yes (~1–2 s) |
+
+If you only need a subset of services, you can still run them individually:
+
+```bash
+cd src/backend/ai-engine && python main.py
+cd src/backend/coach-engine && python main.py
 pnpm dev
 ```
 
@@ -57,7 +78,7 @@ pnpm build
 If you change Python services, also run:
 
 ```bash
-python3 -m py_compile src/ai-engine/main.py src/coach-engine/main.py
+python3 -m py_compile src/backend/ai-engine/main.py src/backend/coach-engine/main.py
 ```
 
 ## Pull request notes

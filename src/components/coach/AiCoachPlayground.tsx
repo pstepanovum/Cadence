@@ -364,6 +364,11 @@ export function AiCoachPlayground({
     phase !== "continuing" &&
     phase !== "assessing";
 
+  // Debug: log state machine transitions to browser console
+  useEffect(() => {
+    console.log(`[coach] phase=${phase} canContinue=${canContinue} turns=${turns.length} latestAssessment=${latestAssessment !== null} latestFreeTranscript="${latestFreeTranscript ?? "null"}"`);
+  }, [phase, canContinue, turns.length, latestAssessment, latestFreeTranscript]);
+
   useEffect(() => {
     setSavedSessions(readSavedAiCoachSessions(userId));
   }, [userId]);
@@ -765,7 +770,11 @@ export function AiCoachPlayground({
   async function requestCoachTurn(action: "start" | "continue") {
     const topic = (action === "start" ? topicDraft : sessionTopic).trim();
     const nextSessionId = action === "start" ? crypto.randomUUID() : activeSessionId;
+
+    console.log(`[coach] requestCoachTurn action=${action} topic="${topic}" phase=${phase} canContinue=${canContinue} sessionId=${activeSessionId}`);
+
     if (!topic) {
+      console.warn("[coach] requestCoachTurn aborted: no topic");
       setError("Add a topic before starting the coach.");
       return;
     }
@@ -787,6 +796,7 @@ export function AiCoachPlayground({
           : null,
     };
 
+    console.log(`[coach] posting to /api/ai-coach mode=${replyMode} historyLen=${payload.history.length}`);
     setError(null);
     setCoachAudioError(null);
     setPhase(action === "start" ? "starting" : "continuing");
@@ -811,11 +821,14 @@ export function AiCoachPlayground({
           }
         | null;
 
+      console.log(`[coach] /api/ai-coach response status=${response.status} hasTurn=${Boolean(data?.turn)} error=${data?.error ?? null}`);
+
       if (!response.ok || !data?.turn) {
         throw new Error(data?.error ?? "AI Coach could not generate the next turn.");
       }
 
       const nextTurn = createTurn(data.turn);
+      console.log(`[coach] new turn id=${nextTurn.id} checkpoint="${nextTurn.checkpoint}" coachMessage="${nextTurn.coachMessage}"`);
       setTurns((previous) =>
         action === "start" ? [nextTurn] : [...previous, nextTurn],
       );
@@ -826,20 +839,20 @@ export function AiCoachPlayground({
       setPhase("coach");
       setRecorderVersion(0);
     } catch (nextError) {
-      setError(
-        nextError instanceof Error
-          ? nextError.message
-          : "AI Coach could not generate the next turn.",
-      );
+      const message = nextError instanceof Error ? nextError.message : "AI Coach could not generate the next turn.";
+      console.error("[coach] requestCoachTurn failed:", message, nextError);
+      setError(message);
       setPhase(turns.length > 0 ? "result" : "idle");
     }
   }
 
   async function handleRecordingComplete(blob: Blob) {
     if (!currentTurn) {
+      console.warn("[coach] handleRecordingComplete called but no currentTurn");
       return;
     }
 
+    console.log(`[coach] recording complete turnId=${currentTurn.id} mode=${replyMode} blobSize=${blob.size}`);
     setPhase("assessing");
     setError(null);
 
@@ -870,6 +883,7 @@ export function AiCoachPlayground({
         }
 
         const nextTranscript = (payload as AiCoachTranscriptPayload).transcript;
+        console.log(`[coach] freedom transcription result="${nextTranscript}"`);
         let freedomAssessment: PronunciationAssessment | null = null;
 
         if (nextTranscript.trim()) {
@@ -893,6 +907,9 @@ export function AiCoachPlayground({
             !("error" in assessmentPayload)
           ) {
             freedomAssessment = assessmentPayload as PronunciationAssessment;
+            console.log(`[coach] freedom phoneme assessment score=${freedomAssessment.overallScore}`);
+          } else {
+            console.warn(`[coach] freedom phoneme assessment skipped/failed status=${assessmentResponse.status}`, assessmentPayload);
           }
         }
 
@@ -946,14 +963,13 @@ export function AiCoachPlayground({
           ),
         );
       }
+      console.log(`[coach] assessment complete → phase=result latestFreeTranscript="${currentTurn.freeTranscript}" latestAssessment=${currentTurn.assessment !== null}`);
       setPhase("result");
     } catch (nextError) {
+      const message = nextError instanceof Error ? nextError.message : "Pronunciation assessment failed.";
+      console.error("[coach] handleRecordingComplete failed:", message, nextError);
       revokeReplyAudioUrl(replyAudioUrl);
-      setError(
-        nextError instanceof Error
-          ? nextError.message
-          : "Pronunciation assessment failed.",
-      );
+      setError(message);
       setPhase("recording");
     }
   }

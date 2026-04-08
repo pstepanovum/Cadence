@@ -29,6 +29,7 @@
   ],
   "scripts": {
     "dev": "node ./scripts/dev.mjs",
+    "dev:all": "node ./scripts/dev-all.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

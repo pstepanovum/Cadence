@@ -73,11 +73,17 @@ export function writeSavedAiCoachSessions(
       getAiCoachStorageKey(userId),
       JSON.stringify(sessions),
     );
-    window.dispatchEvent(
-      new CustomEvent(AI_COACH_SESSIONS_CHANGED_EVENT, {
-        detail: { userId },
-      }),
-    );
+    // Defer the event dispatch so it fires after React's current commit cycle.
+    // Dispatching synchronously here can trigger setSessions() in sibling
+    // components while React is still committing, causing the
+    // "Cannot update a component while rendering a different component" error.
+    setTimeout(() => {
+      window.dispatchEvent(
+        new CustomEvent(AI_COACH_SESSIONS_CHANGED_EVENT, {
+          detail: { userId },
+        }),
+      );
+    }, 0);
   } catch {
     // ignore
   }

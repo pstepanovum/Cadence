@@ -82,7 +82,7 @@ export default async function RootLayout({
   const runtime = await getRequestRuntime();
 
   return (
-    <html lang="en" className={`${funnelDisplay.variable} ${sourGummy.variable}`}>
+    <html lang="en" className={`${funnelDisplay.variable} ${sourGummy.variable}`} suppressHydrationWarning>
       <body
         className={`${funnelDisplay.className} min-h-screen bg-vanilla-cream`}
       >

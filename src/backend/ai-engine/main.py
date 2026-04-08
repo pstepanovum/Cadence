@@ -19,6 +19,7 @@ from speech_transcriber import SpeechTranscriber
 logging.basicConfig(
     level=os.getenv("CADENCE_LOG_LEVEL", "INFO").upper(),
     format="%(asctime)s %(levelname)s [%(name)s] %(message)s",
+    force=True,
 )
 
 logger = logging.getLogger("cadence.ai_engine.main")
@@ -361,4 +362,5 @@ if __name__ == "__main__":
         app,
         host=os.getenv("AI_ENGINE_HOST", "0.0.0.0"),
         port=int(os.getenv("AI_ENGINE_PORT", "8000")),
+        log_config=None,
     )

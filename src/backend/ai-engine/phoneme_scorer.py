@@ -611,6 +611,7 @@ class PhonemeScorer:
         if cached_target:
             return cached_target
 
+        # --- Try phonemizer (fast, no audio needed) ---
         try:
             resolved_target = _phonemize_target_phrase(target_text)
             logger.info(
@@ -618,21 +619,41 @@ class PhonemeScorer:
                 target_text,
                 resolved_target["ipa"],
             )
+            self.dynamic_target_cache[normalized_target] = resolved_target
+            return resolved_target
         except Exception as exc:
             logger.warning(
-                "Dynamic phonemization unavailable for %s: %s",
+                "Dynamic phonemization unavailable for target=%s reason=%s",
                 target_text,
                 exc,
             )
+
+        # --- Try reference-audio derivation (TTS → wav2vec2 decode) ---
+        try:
             resolved_target = self._derive_target_from_reference_audio(target_text)
             logger.info(
                 "Dynamic target derived from reference audio target=%s ipa=%s",
                 target_text,
                 resolved_target["ipa"],
             )
+            self.dynamic_target_cache[normalized_target] = resolved_target
+            return resolved_target
+        except Exception as exc:
+            logger.warning(
+                "Reference-audio target derivation also failed for target=%s reason=%s — "
+                "falling back to word-boundary-only scoring",
+                target_text,
+                exc,
+            )
 
-        self.dynamic_target_cache[normalized_target] = resolved_target
-        return resolved_target
+        # --- Last resort: word-boundary segments, no IPA ---
+        # Scoring will be rough (no phoneme alignment) but won't crash the request.
+        fallback_target: dict[str, Any] = {
+            "ipa": "",
+            "segments": _build_segments_from_words(target_text, 0),
+        }
+        self.dynamic_target_cache[normalized_target] = fallback_target
+        return fallback_target
 
     def assess(
         self,
