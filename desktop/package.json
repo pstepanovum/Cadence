@@ -14,7 +14,7 @@
     "dev:watch": "concurrently \"tsc -p tsconfig.json -w\" \"electron .\"",
     "compile": "tsc -p tsconfig.json",
     "build:next": "pnpm --dir .. build && node ./scripts/fix-standalone.mjs",
-    "build:release": "node ./scripts/prepare-release.mjs && pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --signed --mac",
+    "build:release": "node ./scripts/prepare-release.mjs && pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --mac && node ./scripts/publish-github-release.mjs",
     "build:clean": "pnpm clean:test && pnpm build",
     "build": "pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs",
     "build:mac": "pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --mac",
