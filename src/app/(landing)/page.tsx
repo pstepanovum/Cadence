@@ -1,10 +1,9 @@
 // FILE: src/app/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Activity, Microphone, PlayCircle } from "griddy-icons";
 import { Navbar } from "@/components/ui/navbar";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Footer } from "@/components/ui/footer";
 import { FaqSection } from "@/components/ui/faq-section";
@@ -104,20 +103,12 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/dashboard"
-                  className={buttonVariants({
-                    className: "bg-sage-green text-white hover:bg-[#7aa65f]",
-                  })}
-                >
+                <Button href="/dashboard" className="bg-sage-green text-white hover:bg-[#7aa65f]">
                   Try the practice studio
-                </Link>
-                <Link
-                  href="/signup"
-                  className={buttonVariants({ variant: "secondary" })}
-                >
+                </Button>
+                <Button variant="secondary" href="/signup">
                   Create an account
-                </Link>
+                </Button>
               </div>
             </div>
           </Card>

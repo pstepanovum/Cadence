@@ -1,11 +1,10 @@
 // FILE: src/components/learn/TheoryLesson.tsx
 "use client";
 
-import Link from "next/link";
 import { ArrowLeft, ArrowRight, Volume } from "griddy-icons";
 import { TheoryNarrationButton } from "@/components/learn/TheoryNarrationButton";
 import type { Lesson } from "@/lib/learn";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
 
 interface TheoryLessonProps {
@@ -90,26 +89,15 @@ export function TheoryLesson({
       </Card>
 
       <div className="flex flex-col gap-3 sm:flex-row">
-        <Button variant="ghost" asChild className="flex-1">
-          <Link href={`/learn/${moduleSlug}`} className="flex items-center gap-2">
-            <ArrowLeft size={16} color="currentColor" />
-            Module overview
-          </Link>
+        <Button variant="ghost" href={`/learn/${moduleSlug}`} className="flex-1">
+          <ArrowLeft size={16} color="currentColor" />
+          Module overview
         </Button>
         {nextLessonSlug ? (
-          <Link
-            href={`/learn/${moduleSlug}/${nextLessonSlug}`}
-            className={buttonVariants({
-              variant: "primary",
-              className:
-                "flex-1 justify-center bg-hunter-green text-white [color:white] [&_*]:text-white",
-            })}
-          >
-            <span className="flex items-center gap-2 text-white">
-              Start Practice
-              <ArrowRight size={16} color="currentColor" />
-            </span>
-          </Link>
+          <Button variant="primary" href={`/learn/${moduleSlug}/${nextLessonSlug}`} className="flex-1">
+            Start Practice
+            <ArrowRight size={16} color="currentColor" />
+          </Button>
         ) : null}
       </div>
     </div>

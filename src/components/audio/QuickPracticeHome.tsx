@@ -1,12 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight, Microphone } from "griddy-icons";
 import { useMemo, useState } from "react";
-import { CoachVoiceCard } from "@/components/audio/CoachVoiceCard";
 import { PracticeStudio } from "@/components/audio/PracticeStudio";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Select } from "@/components/ui/select";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
@@ -22,7 +20,7 @@ interface QuickPracticeHomeProps {
 
 export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
   const [selectedWord, setSelectedWord] = useState("think");
-  const { settings: voiceSettings, instruct, updateSettings } = useCoachVoice();
+  const { instruct } = useCoachVoice();
 
   const currentTarget = useMemo(
     () => getPracticeTarget(selectedWord),
@@ -81,16 +79,10 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
               </div>
             </div>
 
-            <Link
-              href="/learn"
-              className={buttonVariants({
-                variant: "secondary",
-                className: "w-fit gap-2",
-              })}
-            >
+            <Button variant="secondary" href="/learn" className="w-fit">
               Open modules
               <ArrowRight size={16} color="currentColor" />
-            </Link>
+            </Button>
           </div>
         </Card>
 
@@ -156,8 +148,6 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
         targetPhonemes={currentTarget.ipa}
         instruct={instruct}
       />
-
-      <CoachVoiceCard settings={voiceSettings} instruct={instruct} onUpdate={updateSettings} />
     </div>
   );
 }

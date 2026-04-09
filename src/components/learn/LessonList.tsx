@@ -1,7 +1,6 @@
 // FILE: src/components/learn/LessonList.tsx
 "use client";
 
-import Link from "next/link";
 import { ArrowLeft } from "griddy-icons";
 import type { LessonWithSummary, ModuleWithProgress } from "@/lib/learn";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -166,11 +165,9 @@ export function LessonList({ module, lessons }: LessonListProps) {
       </Card>
 
       <div className="flex gap-3">
-        <Button variant="ghost" asChild>
-          <Link href="/learn" className="flex items-center gap-2">
-            <ArrowLeft size={16} color="currentColor" />
-            All Modules
-          </Link>
+        <Button variant="ghost" href="/learn">
+          <ArrowLeft size={16} color="currentColor" />
+          All Modules
         </Button>
       </div>
     </div>

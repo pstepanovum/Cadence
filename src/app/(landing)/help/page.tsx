@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Navbar } from "@/components/ui/navbar";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/ui/footer";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Help Center",
@@ -105,12 +104,9 @@ export default function HelpPage() {
                   is one message away.
                 </p>
               </div>
-              <Link
-                href="/contact"
-                className={buttonVariants({ className: "shrink-0" })}
-              >
+              <Button href="/contact" className="shrink-0">
                 Contact Support
-              </Link>
+              </Button>
             </div>
           </Card>
         </section>

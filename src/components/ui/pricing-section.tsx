@@ -3,13 +3,12 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Cursor,
   CursorFollow,
   CursorProvider,
 } from "@/components/animate-ui/components/animate/cursor";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CurvedLoop } from "@/components/ui/curved-loop";
 import { cn } from "@/lib/utils";
@@ -249,19 +248,17 @@ export function PricingSection() {
                 </div>
 
                 <div className="mt-10">
-                  <Link
+                  <Button
                     href={plan.href}
-                    className={buttonVariants({
-                      className: cn(
-                        "h-14 w-full rounded-full text-base font-bold !text-white",
-                        plan.tone === "dark"
-                          ? "bg-sage-green hover:bg-[#5d8a43]"
-                          : "bg-hunter-green hover:bg-[#4a8155]",
-                      ),
-                    })}
+                    className={cn(
+                      "h-14 w-full rounded-full text-base font-bold",
+                      plan.tone === "dark"
+                        ? "bg-sage-green hover:bg-[#5d8a43]"
+                        : "bg-hunter-green hover:bg-[#4a8155]",
+                    )}
                   >
                     {plan.ctaLabel}
-                  </Link>
+                  </Button>
                 </div>
               </Card>
             </CursorProvider>

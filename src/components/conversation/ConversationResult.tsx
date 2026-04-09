@@ -1,7 +1,6 @@
 // FILE: src/components/conversation/ConversationResult.tsx
 "use client";
 
-import Link from "next/link";
 import { ArrowRight, RefreshCcw } from "griddy-icons";
 import type { ConversationModule } from "@/lib/conversation";
 import { ProgressRing } from "@/components/learn/ProgressRing";
@@ -102,20 +101,13 @@ export function ConversationResult({
           Retry Module
         </Button>
         {passed && nextModuleSlug ? (
-          <Button variant="primary" asChild className="flex-1 text-white">
-            <Link
-              href={`/conversation/${nextModuleSlug}`}
-              className="flex items-center gap-2 text-white"
-            >
-              Next Module
-              <ArrowRight size={16} color="currentColor" />
-            </Link>
+          <Button variant="primary" href={`/conversation/${nextModuleSlug}`} className="flex-1">
+            Next Module
+            <ArrowRight size={16} color="currentColor" />
           </Button>
         ) : (
-          <Button variant="primary" asChild className="flex-1 !text-white">
-            <Link href="/conversation" className="!text-white hover:!text-white">
-              All Conversation Modules
-            </Link>
+          <Button variant="primary" href="/conversation" className="flex-1">
+            All Conversation Modules
           </Button>
         )}
       </div>

@@ -1,5 +1,8 @@
 // FILE: src/components/ui/button.tsx
+"use client";
+
 import * as React from "react";
+import Link from "next/link";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
@@ -32,7 +35,7 @@ export function buttonVariants({
   className?: string;
 } = {}) {
   return cn(
-    "inline-flex cursor-pointer items-center justify-center gap-2 rounded-full text-center font-semibold whitespace-nowrap [&>svg]:order-last [&>svg]:shrink-0 disabled:cursor-not-allowed disabled:opacity-60",
+    "inline-flex cursor-pointer items-center justify-center gap-2 rounded-full text-center font-semibold whitespace-nowrap [&>svg]:shrink-0 disabled:cursor-not-allowed disabled:opacity-60",
     variantStyles[variant],
     sizeStyles[size],
     className,
@@ -42,19 +45,31 @@ export function buttonVariants({
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
+  /** Renders as a Next.js Link instead of a button */
+  href?: string;
+  target?: string;
+  rel?: string;
   asChild?: boolean;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant = "primary", size = "default", href, target, rel, asChild = false, children, ...props }, ref) => {
+    const classes = buttonVariants({ variant, size, className });
+
+    if (href) {
+      return (
+        <Link href={href} target={target} rel={rel} className={classes}>
+          {children}
+        </Link>
+      );
+    }
+
     const Comp = asChild ? Slot : "button";
     return (
-      <Comp
-        className={buttonVariants({ variant, size, className })}
-        ref={ref}
-        {...props}
-      />
+      <Comp className={classes} ref={ref} {...props}>
+        {children}
+      </Comp>
     );
-  }
+  },
 );
 Button.displayName = "Button";

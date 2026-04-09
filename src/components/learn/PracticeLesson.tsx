@@ -4,7 +4,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Lesson, LessonWord } from "@/lib/learn";
 import type { PronunciationAssessment } from "@/lib/pronunciation";
-import { createPracticeSuccessAudio } from "@/lib/audio-feedback";
+import { createCorrectAudio, createIncorrectAudio, createCompleteAudio } from "@/lib/audio-feedback";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
 import { AssessmentResult } from "@/components/learn/AssessmentResult";
 import { LessonSummary } from "@/components/learn/LessonSummary";
@@ -28,7 +28,9 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
   const [engineReady, setEngineReady] = useState(false);
   const [attemptNumber, setAttemptNumber] = useState(1);
   const sessionIdRef = useRef<string | null>(null);
-  const successAudioRef = useRef<HTMLAudioElement | null>(null);
+  const correctAudioRef = useRef<HTMLAudioElement | null>(null);
+  const incorrectAudioRef = useRef<HTMLAudioElement | null>(null);
+  const completeAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const currentWord: LessonWord | undefined = words[wordIndex];
 
@@ -87,11 +89,17 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
   }, [lesson.id, lesson.module_id]);
 
   useEffect(() => {
-    successAudioRef.current = createPracticeSuccessAudio();
+    correctAudioRef.current = createCorrectAudio();
+    incorrectAudioRef.current = createIncorrectAudio();
+    completeAudioRef.current = createCompleteAudio();
 
     return () => {
-      successAudioRef.current?.pause();
-      successAudioRef.current = null;
+      correctAudioRef.current?.pause();
+      correctAudioRef.current = null;
+      incorrectAudioRef.current?.pause();
+      incorrectAudioRef.current = null;
+      completeAudioRef.current?.pause();
+      completeAudioRef.current = null;
     };
   }, []);
 
@@ -150,9 +158,9 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
         }),
       }).catch(() => {});
 
-      if (result.overallScore > 50) {
-        successAudioRef.current?.play().catch(() => {});
-      }
+      const wordAudio =
+        result.overallScore > 50 ? correctAudioRef.current : incorrectAudioRef.current;
+      wordAudio?.play().catch(() => {});
     } catch (nextError) {
       setError(nextError instanceof Error ? nextError.message : "Assessment failed.");
       setPhase("recording");
@@ -175,6 +183,12 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
 
     if (wordIndex + 1 >= words.length) {
       void endSession(nextScores, true);
+      const avg = nextScores.length
+        ? nextScores.reduce((sum, s) => sum + s, 0) / nextScores.length
+        : 0;
+      if (avg >= 80) {
+        completeAudioRef.current?.play().catch(() => {});
+      }
       setPhase("done");
       return;
     }

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Navbar } from "@/components/ui/navbar";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/ui/footer";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Contact Support",
@@ -74,14 +73,14 @@ export default function ContactPage() {
                   </h2>
                   <p className="text-sm leading-7 text-iron-grey">{opt.body}</p>
                 </div>
-                <Link
+                <Button
+                  variant="ghost"
                   href={opt.action.href}
-                  className={buttonVariants({ variant: "ghost" })}
                   target={opt.action.href.startsWith("http") ? "_blank" : undefined}
                   rel={opt.action.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   {opt.action.label}
-                </Link>
+                </Button>
               </div>
             </Card>
           ))}
@@ -119,9 +118,9 @@ export default function ContactPage() {
                   practice, scoring, modules, and your account.
                 </p>
               </div>
-              <Link href="/help" className={buttonVariants({ variant: "ghost", className: "shrink-0" })}>
+              <Button variant="ghost" href="/help" className="shrink-0">
                 Visit Help Center
-              </Link>
+              </Button>
             </div>
           </Card>
         </section>

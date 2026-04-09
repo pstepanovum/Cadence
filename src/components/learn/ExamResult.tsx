@@ -1,7 +1,6 @@
 // FILE: src/components/learn/ExamResult.tsx
 "use client";
 
-import Link from "next/link";
 import { ArrowRight, LockOpen, RefreshCcw, Trophy } from "griddy-icons";
 import { Button } from "@/components/ui/button";
 import { ProgressRing } from "@/components/learn/ProgressRing";
@@ -139,7 +138,9 @@ export function ExamResult({
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <div className="rounded-3xl bg-white px-4 py-4">
               <p className="eyebrow text-xs text-sage-green">Pass mark</p>
-              <p className="mt-2 text-2xl font-semibold text-hunter-green">70+</p>
+              <p className="mt-2 text-2xl font-semibold text-hunter-green">
+                70+
+              </p>
             </div>
             <div className="rounded-3xl bg-white px-4 py-4">
               <p className="eyebrow text-xs text-sage-green">Your score</p>
@@ -154,30 +155,24 @@ export function ExamResult({
       <div className="flex flex-col gap-3 sm:flex-row">
         {!passed ? (
           <Button variant="ghost" onClick={onRetry} className="flex-1">
+            <RefreshCcw size={16} color="currentColor" />
             Retry Exam
           </Button>
         ) : null}
 
         {passed && nextModuleSlug ? (
-          <Button variant="primary" asChild className="flex-1 text-white">
-            <Link
-              href={`/learn/${nextModuleSlug}`}
-              className="flex items-center gap-2 text-white"
-            >
-              Next Module
-              <ArrowRight size={16} color="currentColor" />
-            </Link>
+          <Button variant="primary" href={`/learn/${nextModuleSlug}`} className="flex-1">
+            Next Module
+            <ArrowRight size={16} color="currentColor" />
           </Button>
         ) : (
-          <Button variant="primary" asChild className="flex-1 text-white">
-            <Link href="/learn" className="text-white">
-              All Modules
-            </Link>
+          <Button variant="primary" href="/learn" className="flex-1">
+            All Modules
           </Button>
         )}
 
-        <Button variant="ghost" asChild className="flex-1">
-          <Link href={`/learn/${moduleSlug}`}>Module Overview</Link>
+        <Button variant="ghost" href={`/learn/${moduleSlug}`} className="flex-1">
+          Module Overview
         </Button>
       </div>
     </div>

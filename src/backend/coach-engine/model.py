@@ -12,7 +12,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, __version__ as TRANSFORMERS_VERSION
 
 from parsing import clean_model_output, parse_turn_response
-from prompts import revision_prompt, system_prompt, user_prompt
+from prompts import build_messages
 
 logger = logging.getLogger("cadence.coach_engine")
 
@@ -194,49 +194,14 @@ class QwenCoachEngine:
         history = payload.get("history") if isinstance(payload.get("history"), list) else []
         mode = str(payload.get("mode") or "target")
 
-        messages = [
-            {"role": "system", "content": system_prompt()},
-            {"role": "user", "content": user_prompt(payload)},
-        ]
+        messages = build_messages(payload)
 
         generation_start = time.perf_counter()
-        last_error: str | None = None
-        decoded = ""
-        turn: dict[str, str] | None = None
 
-        for attempt in range(2):
-            decoded = self._generate_decoded(messages)
-            logger.info(
-                "Coach raw output attempt=%s:\n%s",
-                attempt + 1,
-                clean_model_output(decoded),
-            )
+        decoded = self._generate_decoded(messages)
+        logger.info("Coach raw output:\n%s", clean_model_output(decoded))
 
-            try:
-                turn = parse_turn_response(decoded, mode=mode, history=history)
-                break
-            except RuntimeError as exc:
-                last_error = str(exc)
-                if attempt == 1:
-                    raise
-
-                # Second attempt: feed the bad output back and ask for a revision
-                messages = [
-                    {"role": "system", "content": system_prompt()},
-                    {"role": "user", "content": user_prompt(payload)},
-                    {"role": "assistant", "content": decoded},
-                    {
-                        "role": "user",
-                        "content": revision_prompt(
-                            payload,
-                            previous_output=decoded,
-                            error_message=last_error,
-                        ),
-                    },
-                ]
-
-        if turn is None:
-            raise RuntimeError(last_error or "Coach model did not return a valid turn.")
+        turn = parse_turn_response(decoded, mode=mode, history=history)
 
         self.last_generation_seconds = time.perf_counter() - generation_start
         logger.info(

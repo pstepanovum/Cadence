@@ -5,7 +5,7 @@ import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { Activity } from "griddy-icons";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { createPracticeSuccessAudio } from "@/lib/audio-feedback";
+import { createCorrectAudio, createIncorrectAudio } from "@/lib/audio-feedback";
 import {
   type PronunciationAssessment,
   type PronunciationHighlight,
@@ -49,7 +49,8 @@ export function PracticeStudio({
   const [isAssessing, setIsAssessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [engineReady, setEngineReady] = useState(false);
-  const successAudioRef = useRef<HTMLAudioElement | null>(null);
+  const correctAudioRef = useRef<HTMLAudioElement | null>(null);
+  const incorrectAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const refreshEngineStatus = useEffectEvent(async () => {
     try {
@@ -72,13 +73,14 @@ export function PracticeStudio({
   }, []);
 
   useEffect(() => {
-    successAudioRef.current = createPracticeSuccessAudio();
+    correctAudioRef.current = createCorrectAudio();
+    incorrectAudioRef.current = createIncorrectAudio();
 
     return () => {
-      if (successAudioRef.current) {
-        successAudioRef.current.pause();
-        successAudioRef.current = null;
-      }
+      correctAudioRef.current?.pause();
+      correctAudioRef.current = null;
+      incorrectAudioRef.current?.pause();
+      incorrectAudioRef.current = null;
     };
   }, []);
 
@@ -95,11 +97,14 @@ export function PracticeStudio({
   }, [engineReady]);
 
   useEffect(() => {
-    if (!assessment || assessment.overallScore <= 50) {
+    if (!assessment) {
       return;
     }
 
-    const audio = successAudioRef.current;
+    const audio =
+      assessment.overallScore > 50
+        ? correctAudioRef.current
+        : incorrectAudioRef.current;
 
     if (!audio) {
       return;
@@ -118,10 +123,10 @@ export function PracticeStudio({
     setAssessment(null);
     setError(null);
 
-    if (successAudioRef.current) {
-      successAudioRef.current.pause();
-      successAudioRef.current.currentTime = 0;
-    }
+    correctAudioRef.current?.pause();
+    if (correctAudioRef.current) correctAudioRef.current.currentTime = 0;
+    incorrectAudioRef.current?.pause();
+    if (incorrectAudioRef.current) incorrectAudioRef.current.currentTime = 0;
   }
 
   async function runAssessment(blob: Blob) {

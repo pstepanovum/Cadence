@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/ui/navbar";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/ui/footer";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -156,9 +156,9 @@ export default function PrivacyPage() {
                   or visit our Contact page.
                 </p>
               </div>
-              <Link href="/contact" className={buttonVariants({ variant: "ghost", className: "shrink-0" })}>
+              <Button variant="ghost" href="/contact" className="shrink-0">
                 Contact Support
-              </Link>
+              </Button>
             </div>
           </Card>
         </section>

@@ -2,7 +2,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Play, Square } from "griddy-icons";
+import { Pause, Play } from "griddy-icons";
 import { Button } from "@/components/ui/button";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
 
@@ -190,14 +190,14 @@ export function TheoryNarrationButton({
         className="text-white"
       >
         {isPlaying ? (
-          <Square size={16} filled color="currentColor" />
+          <Pause size={16} filled color="currentColor" />
         ) : (
           <Play size={16} filled color="currentColor" />
         )}
         {isLoading
           ? "Loading narration..."
           : isPlaying
-            ? "Stop narration"
+            ? "Pause narration"
             : "Hear this lesson"}
       </Button>
 

@@ -183,8 +183,8 @@ export default async function ProfilePage() {
           </div>
         </section>
 
-        {isDesktop ? <ProfileDesktopRuntime /> : null}
         <ProfileCoachVoice />
+        {isDesktop ? <ProfileDesktopRuntime /> : null}
 
       </div>
     </main>

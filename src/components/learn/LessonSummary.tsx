@@ -1,7 +1,6 @@
 // FILE: src/components/learn/LessonSummary.tsx
 "use client";
 
-import Link from "next/link";
 import { ArrowLeft, RefreshCcw } from "griddy-icons";
 import { Button } from "@/components/ui/button";
 import { ProgressRing } from "@/components/learn/ProgressRing";
@@ -96,14 +95,9 @@ export function LessonSummary({
           <RefreshCcw size={16} color="currentColor" />
           Practice Again
         </Button>
-        <Button variant="primary" asChild className="flex-1 text-white">
-          <Link
-            href={`/learn/${moduleSlug}`}
-            className="flex items-center gap-2 text-white"
-          >
-            <ArrowLeft size={16} color="currentColor" />
-            Back to Module
-          </Link>
+        <Button variant="primary" href={`/learn/${moduleSlug}`} className="flex-1">
+          <ArrowLeft size={16} color="currentColor" />
+          Back to Module
         </Button>
       </div>
     </div>

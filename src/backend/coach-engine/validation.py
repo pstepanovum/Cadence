@@ -1,5 +1,5 @@
 """
-Validation helpers: detect echoed / repeated / low-information coach turns.
+Validation helpers: detect echoed / repeated coach turns.
 """
 from __future__ import annotations
 
@@ -22,6 +22,7 @@ def normalize_for_match(value: str) -> str:
 
 
 def looks_like_prompt_echo(content: str) -> bool:
+    """True if the coach output appears to be an echo of the prompt itself."""
     lowered = str(content or "").strip().lower()
     if not lowered:
         return False
@@ -30,29 +31,19 @@ def looks_like_prompt_echo(content: str) -> bool:
         for pattern in (
             r"\btopic\s*:",
             r"\baction\s*:",
-            r"\bturn type\s*:",
             r"\blearner mode\s*:",
             r"\breply mode\b",
-            r"\btarget mode\b",
-            r"\bfreedom mode\b",
             r"\bcoachmessage\b",
             r"\blearnerreply\b",
-            r"\bnextstep\s*=",
-            r"\bnext step\s*[:=]",
-            r"\btarget\s*=",
-            r"\btranscript\s*=",
-            r"\bscore\s*=",
-            r"\bsummary\s*=",
-            # Only flag cue/checkpoint when they appear as standalone line labels,
-            # not when Qwen adds them as inline parenthetical annotations like (Cue: ...).
-            r"(?m)^\s*cue\s*[:=]",
-            r"(?m)^\s*checkpoint\s*[:=]",
-            r"\blatest pronunciation assessment\b",
+            r"\bconversation so far\b",
+            r"\bopen the conversation\b",
+            r"\bcontinue the conversation\b",
         )
     )
 
 
 def is_echoed_user_message(coach_message: str, history: list[dict[str, Any]]) -> bool:
+    """True if the coach message is just a repeat of what the learner said."""
     latest_user = latest_history_content(history, "user")
     if not latest_user:
         return False
@@ -64,6 +55,7 @@ def is_echoed_user_message(coach_message: str, history: list[dict[str, Any]]) ->
 
 
 def is_repeated_coach_message(coach_message: str, history: list[dict[str, Any]]) -> bool:
+    """True if Qwen produced the same message as the previous coach turn."""
     latest_coach = latest_history_content(history, "coach")
     if not latest_coach:
         return False
@@ -78,35 +70,8 @@ def is_repeated_coach_message(coach_message: str, history: list[dict[str, Any]])
     return norm_new.startswith(norm_old) or norm_old.startswith(norm_new)
 
 
-def is_low_information_coach_message(coach_message: str) -> bool:
-    normalized = re.sub(r"\s+", " ", coach_message).strip()
-    if not normalized:
-        return True
-    lowered = normalized.lower()
-    word_count = len(lowered.split())
-    generic_patterns = (
-        r"^continue (your|the) ",
-        r"^continue preparing",
-        r"^continue practicing",
-        r"^keep practicing",
-        r"^keep preparing",
-        r"^keep working on",
-        r"^let'?s continue",
-        r"^let'?s keep going",
-        r"^continue the conversation",
-        r"^continue your preparations",
-    )
-    if any(re.search(p, lowered) for p in generic_patterns):
-        return True
-    if "?" not in normalized and word_count <= 7:
-        return True
-    if "?" not in normalized and lowered.startswith("let's make sure"):
-        return True
-    return False
-
-
 def should_reject_coach_message(coach_message: str, history: list[dict[str, Any]]) -> bool:
-    from parsing import sanitize_coach_message  # avoid circular at module level
+    from parsing import sanitize_coach_message
     normalized = sanitize_coach_message(coach_message, "")
     if not normalized:
         return True
@@ -114,5 +79,4 @@ def should_reject_coach_message(coach_message: str, history: list[dict[str, Any]
         looks_like_prompt_echo(coach_message)
         or is_echoed_user_message(normalized, history)
         or is_repeated_coach_message(normalized, history)
-        or is_low_information_coach_message(normalized)
     )

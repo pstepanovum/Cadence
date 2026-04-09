@@ -1,9 +1,8 @@
 // FILE: src/components/learn/LessonRow.tsx
-import Link from "next/link";
 import { CheckCircle, ChevronRight, Lock, Play } from "griddy-icons";
 import type { LessonWithSummary } from "@/lib/learn";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 interface LessonRowProps {
   lesson: LessonWithSummary;
@@ -124,29 +123,18 @@ export function LessonRow({ lesson, moduleSlug, isLocked }: LessonRowProps) {
           </span>
         </div>
       ) : (
-        <Link
+        <Button
+          variant={passed ? "ghost" : "primary"}
           href={`/learn/${moduleSlug}/${lesson.slug}`}
-          className={cn(
-            buttonVariants({
-              variant: passed ? "ghost" : "primary",
-              size: "default",
-              className: passed ? "w-full justify-center" : "w-full justify-center text-white [&_*]:text-white",
-            }),
-            "inline-flex items-center gap-2 text-sm sm:justify-self-end",
-          )}
+          className="w-full sm:justify-self-end"
         >
           {passed ? (
-            <>
-              <ChevronRight size={15} color="currentColor" />
-              <span>{actionLabel}</span>
-            </>
+            <ChevronRight size={15} color="currentColor" />
           ) : (
-            <>
-              <Play size={15} color="currentColor" />
-              <span className="text-white">{actionLabel}</span>
-            </>
+            <Play size={15} color="currentColor" />
           )}
-        </Link>
+          {actionLabel}
+        </Button>
       )}
     </div>
   );

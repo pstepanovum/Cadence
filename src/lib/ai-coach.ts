@@ -14,10 +14,8 @@ export type AiCoachPhase =
 
 export interface AiCoachTurn {
   id: string;
-  checkpoint: string;
   coachMessage: string;
   learnerReply: string;
-  cue: string;
   assessment: PronunciationAssessment | null;
   freeTranscript: string | null;
   replyAudioUrl: string | null;
@@ -26,25 +24,13 @@ export interface AiCoachTurn {
 export interface AiCoachGeneratedTurn {
   coachMessage: string;
   learnerReply: string;
-  cue: string;
-  checkpoint: string;
 }
 
 export interface AiCoachHistoryEntry {
   role: AiCoachRole;
   content: string;
-  cue?: string | null;
-  checkpoint?: string | null;
   score?: number | null;
   transcript?: string | null;
-}
-
-export interface AiCoachLatestAssessment {
-  targetText: string;
-  transcript: string;
-  overallScore: number;
-  summary: string;
-  nextStep: string;
 }
 
 export interface AiCoachRequestPayload {
@@ -52,7 +38,6 @@ export interface AiCoachRequestPayload {
   topic: string;
   mode?: AiCoachReplyMode;
   history: AiCoachHistoryEntry[];
-  latestAssessment?: AiCoachLatestAssessment | null;
 }
 
 export interface AiCoachResponsePayload {
