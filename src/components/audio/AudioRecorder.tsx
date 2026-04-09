@@ -46,6 +46,8 @@ export function AudioRecorder({
   const referenceAudioUrlRef = useRef<string | null>(null);
   const [referenceError, setReferenceError] = useState<string | null>(null);
   const [isLoadingReference, setIsLoadingReference] = useState(false);
+  const [isPlayingReference, setIsPlayingReference] = useState(false);
+  const [isPlayingTake, setIsPlayingTake] = useState(false);
   const targetIsPhrase =
     typeof targetWord === "string" &&
     targetWord.trim().split(/\s+/).filter(Boolean).length > 2;
@@ -60,6 +62,12 @@ export function AudioRecorder({
     }
   }, [audioBlob]);
 
+  // Reset take playback state when a new recording arrives or is cleared
+  useEffect(() => {
+    audioRef.current?.pause();
+    setIsPlayingTake(false);
+  }, [audioUrl]);
+
   useEffect(() => {
     if (referenceAudioUrlRef.current) {
       URL.revokeObjectURL(referenceAudioUrlRef.current);
@@ -72,6 +80,7 @@ export function AudioRecorder({
     }
 
     setReferenceError(null);
+    setIsPlayingReference(false);
   }, [targetWord, instruct]);
 
   useEffect(() => {
@@ -85,19 +94,31 @@ export function AudioRecorder({
         referenceAudioRef.current.pause();
         referenceAudioRef.current = null;
       }
+
+      audioRef.current?.pause();
     };
   }, []);
 
-  async function playReferenceAudio() {
+  async function handleReferenceAudio() {
     if (!targetWord) {
       return;
     }
 
     setReferenceError(null);
 
+    // Stop if already playing
+    if (referenceAudioRef.current && !referenceAudioRef.current.paused) {
+      referenceAudioRef.current.pause();
+      referenceAudioRef.current.currentTime = 0;
+      setIsPlayingReference(false);
+      return;
+    }
+
+    // Replay cached audio
     if (referenceAudioRef.current) {
       referenceAudioRef.current.currentTime = 0;
       await referenceAudioRef.current.play().catch(() => {});
+      setIsPlayingReference(true);
       return;
     }
 
@@ -119,18 +140,38 @@ export function AudioRecorder({
       const blob = await response.blob();
       const nextUrl = URL.createObjectURL(blob);
       const audio = new Audio(nextUrl);
+      audio.onended = () => setIsPlayingReference(false);
+      audio.onpause = () => setIsPlayingReference(false);
       referenceAudioRef.current = audio;
       referenceAudioUrlRef.current = nextUrl;
       await audio.play().catch(() => {});
+      setIsPlayingReference(true);
     } catch (nextError) {
       setReferenceError(
         nextError instanceof Error
           ? nextError.message
           : "Reference pronunciation is unavailable.",
       );
+      setIsPlayingReference(false);
     } finally {
       setIsLoadingReference(false);
     }
+  }
+
+  function handleTakeAudio() {
+    const el = audioRef.current;
+    if (!el) return;
+
+    if (!el.paused) {
+      el.pause();
+      el.currentTime = 0;
+      setIsPlayingTake(false);
+      return;
+    }
+
+    el.currentTime = 0;
+    void el.play().catch(() => {});
+    setIsPlayingTake(true);
   }
 
   return (
@@ -140,7 +181,13 @@ export function AudioRecorder({
         className,
       )}
     >
-      <audio ref={audioRef} src={audioUrl ?? undefined} className="hidden" />
+      <audio
+        ref={audioRef}
+        src={audioUrl ?? undefined}
+        className="hidden"
+        onEnded={() => setIsPlayingTake(false)}
+        onPause={() => setIsPlayingTake(false)}
+      />
 
       <div className="space-y-5">
         {showIntro ? (
@@ -181,28 +228,36 @@ export function AudioRecorder({
           {targetWord ? (
             <Button
               variant="secondary"
-              onClick={() => void playReferenceAudio()}
+              onClick={() => void handleReferenceAudio()}
               disabled={isLoadingReference || isRecording}
             >
-              <Play size={18} filled color="currentColor" />
-              {isLoadingReference ? "Loading target voice..." : "Hear target"}
+              {isPlayingReference ? (
+                <Square size={18} filled color="currentColor" />
+              ) : (
+                <Play size={18} filled color="currentColor" />
+              )}
+              {isLoadingReference
+                ? "Loading target voice..."
+                : isPlayingReference
+                  ? "Stop target"
+                  : "Hear target"}
             </Button>
           ) : null}
 
           {audioUrl ? (
             <Button
               variant="ghost"
-              aria-label="Play latest take"
-              onClick={() => {
-                audioRef.current?.pause();
-                if (audioRef.current) {
-                  audioRef.current.currentTime = 0;
-                }
-                void audioRef.current?.play();
-              }}
+              aria-label={isPlayingTake ? "Stop take" : "Play latest take"}
+              onClick={handleTakeAudio}
             >
-              <Play size={18} filled color="currentColor" />
-              {targetIsPhrase ? "Play my reply" : "Play my take"}
+              {isPlayingTake ? (
+                <Square size={18} filled color="currentColor" />
+              ) : (
+                <Play size={18} filled color="currentColor" />
+              )}
+              {isPlayingTake
+                ? targetIsPhrase ? "Stop reply" : "Stop take"
+                : targetIsPhrase ? "Play my reply" : "Play my take"}
             </Button>
           ) : null}
 

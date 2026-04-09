@@ -1,9 +1,8 @@
 {
   "version": "1.0",
   "schema": "phoneme_catalog_v1",
-  "description": "Full English phoneme catalog for the Cadence coaching engine. Each entry defines how to teach, describe, and coach a phoneme. Covers General American (GA) as primary target with RP notes where relevant.",
+  "description": "Full English phoneme catalog for the Cadence coaching engine. Each entry defines how to teach, describe, and coach a phoneme. Covers General American (GA) as primary target with RP notes where relevant. https://soundsamerican.net/article/vowel_sound_tense_i_as_in_be",
   "phonemes": {
-
     "æ": {
       "label": "Short A",
       "narration": "short a sound",
@@ -19,7 +18,11 @@
         "Replaced with /ɑː/ by Spanish or Portuguese speakers",
         "Pin-pen merger: sounds like /ɪ/ before nasals in Southern American English"
       ],
-      "minimal_pairs": [["cat","cut"],["bat","bit"],["man","men"]],
+      "minimal_pairs": [
+        ["cat", "cut"],
+        ["bat", "bit"],
+        ["man", "men"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -38,7 +41,11 @@
         "Confused with /eɪ/ — keep it short and pure, no glide",
         "Replaced with /e/ (tenser version) by European speakers"
       ],
-      "minimal_pairs": [["bed","bad"],["pen","pan"],["red","rid"]],
+      "minimal_pairs": [
+        ["bed", "bad"],
+        ["pen", "pan"],
+        ["red", "rid"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -49,7 +56,13 @@
       "ipa": "ɪ",
       "keywords": ["kit", "sit"],
       "example_words": ["sit", "bit", "fish", "thing", "busy", "build"],
-      "spelling_patterns": ["i", "y (gym)", "e (pretty)", "ui (build)", "o (women)"],
+      "spelling_patterns": [
+        "i",
+        "y (gym)",
+        "e (pretty)",
+        "ui (build)",
+        "o (women)"
+      ],
       "articulation": "High front lax vowel. Tongue near the top of the mouth but relaxed, slightly lower than /iː/. Lips spread but loose.",
       "learner_tip": "Say /iː/ then relax and lower your tongue slightly. The sound is shorter and less tense.",
       "common_errors": [
@@ -57,7 +70,11 @@
         "Confused with /ɛ/ by French or Spanish speakers",
         "Merged with /iː/ in some dialects (e.g. feel/fill)"
       ],
-      "minimal_pairs": [["sit","seat"],["bit","beat"],["bin","bean"]],
+      "minimal_pairs": [
+        ["sit", "seat"],
+        ["bit", "beat"],
+        ["bin", "bean"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -75,7 +92,10 @@
         "GA speakers may not distinguish this from /ɑː/",
         "Over-rounded by learners aiming for RP"
       ],
-      "minimal_pairs": [["hot","hat"],["dot","dart"]],
+      "minimal_pairs": [
+        ["hot", "hat"],
+        ["dot", "dart"]
+      ],
       "dialect_note": "In General American, /ɒ/ and /ɑː/ are merged. This phoneme is primarily an RP distinction.",
       "difficulty": "intermediate"
     },
@@ -95,7 +115,11 @@
         "Replaced with /ɑː/ or /a/ by European speakers",
         "Not distinguished from /ʊ/ in some dialects (foot-strut merger)"
       ],
-      "minimal_pairs": [["cup","cap"],["bus","boss"],["cut","cot"]],
+      "minimal_pairs": [
+        ["cup", "cap"],
+        ["bus", "boss"],
+        ["cut", "cot"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -114,7 +138,11 @@
         "Confused with /ʌ/ — /ʊ/ has lip rounding",
         "Not distinguished from /uː/ in some dialects (pool-pull merger)"
       ],
-      "minimal_pairs": [["book","boot"],["good","food"],["full","fool"]],
+      "minimal_pairs": [
+        ["book", "boot"],
+        ["good", "food"],
+        ["full", "fool"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -125,7 +153,14 @@
       "ipa": "ə",
       "keywords": ["comma", "about"],
       "example_words": ["about", "ago", "sofa", "suppose", "the", "a"],
-      "spelling_patterns": ["a (about)", "e (the)", "o (suppose)", "u (support)", "er (butter)", "or (doctor)"],
+      "spelling_patterns": [
+        "a (about)",
+        "e (the)",
+        "o (suppose)",
+        "u (support)",
+        "er (butter)",
+        "or (doctor)"
+      ],
       "articulation": "Mid central neutral vowel. Fully relaxed mouth, tongue in the center, no lip rounding. The most common English sound.",
       "learner_tip": "The schwa only appears in unstressed syllables. Never stress a schwa — it should be quick and throwaway.",
       "common_errors": [
@@ -133,7 +168,7 @@
         "Spelling-based pronunciation: saying 'sup-PORT' with a clear /o/ instead of schwa",
         "Missing it in consonant clusters"
       ],
-      "minimal_pairs": [["about (ə)","a boot (eɪ)"]],
+      "minimal_pairs": [["about (ə)", "a boot (eɪ)"]],
       "difficulty": "advanced"
     },
 
@@ -144,14 +179,25 @@
       "ipa": "iː",
       "keywords": ["fleece", "meet"],
       "example_words": ["feet", "keep", "read", "sea", "machine", "people"],
-      "spelling_patterns": ["ee (feet)", "ea (read)", "e (be)", "ie (believe)", "ei (receive)", "i (machine)"],
+      "spelling_patterns": [
+        "ee (feet)",
+        "ea (read)",
+        "e (be)",
+        "ie (believe)",
+        "ei (receive)",
+        "i (machine)"
+      ],
       "articulation": "Close front tense vowel. Tongue high and forward, lips spread into a smile position. Hold it longer than /ɪ/.",
       "learner_tip": "Spread your lips like a big smile and hold the sound. Your tongue should feel near the roof of your mouth.",
       "common_errors": [
         "Shortened to /ɪ/ — hold the length and tension",
         "Not distinguished from /ɪ/ in some dialects"
       ],
-      "minimal_pairs": [["feet","fit"],["seat","sit"],["bean","bin"]],
+      "minimal_pairs": [
+        ["feet", "fit"],
+        ["seat", "sit"],
+        ["bean", "bin"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -162,14 +208,24 @@
       "ipa": "uː",
       "keywords": ["goose", "food"],
       "example_words": ["food", "cool", "moon", "true", "blue", "through"],
-      "spelling_patterns": ["oo (food)", "u (true)", "ue (blue)", "ou (through)", "o (do)"],
+      "spelling_patterns": [
+        "oo (food)",
+        "u (true)",
+        "ue (blue)",
+        "ou (through)",
+        "o (do)"
+      ],
       "articulation": "Close back tense rounded vowel. Tongue high and back, lips strongly rounded and protruded.",
       "learner_tip": "Round your lips into a tight circle as if kissing. The sound is long and tense.",
       "common_errors": [
         "Shortened to /ʊ/ — hold the length and rounding",
         "Under-rounded by speakers whose L1 lacks rounded vowels"
       ],
-      "minimal_pairs": [["food","foot"],["pool","pull"],["fool","full"]],
+      "minimal_pairs": [
+        ["food", "foot"],
+        ["pool", "pull"],
+        ["fool", "full"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -180,14 +236,23 @@
       "ipa": "ɑː",
       "keywords": ["palm", "start"],
       "example_words": ["card", "dark", "park", "heart", "father", "calm"],
-      "spelling_patterns": ["ar (card)", "a (calm)", "ear (heart)", "al (calm)"],
+      "spelling_patterns": [
+        "ar (card)",
+        "a (calm)",
+        "ear (heart)",
+        "al (calm)"
+      ],
       "articulation": "Open back unrounded vowel. Mouth wide open, tongue low and back, no lip rounding. Like saying 'ah' at the doctor.",
       "learner_tip": "Drop your jaw completely and say 'ah'. Keep it long and open, no movement of tongue or lips.",
       "common_errors": [
         "Shortened by non-rhotic speakers adding /r/ where none exists",
         "Confused with /æ/ — /ɑː/ is further back and longer"
       ],
-      "minimal_pairs": [["cart","cat"],["park","pack"],["barn","ban"]],
+      "minimal_pairs": [
+        ["cart", "cat"],
+        ["park", "pack"],
+        ["barn", "ban"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -198,14 +263,25 @@
       "ipa": "ɔː",
       "keywords": ["thought", "law"],
       "example_words": ["law", "more", "walk", "water", "taught", "caught"],
-      "spelling_patterns": ["aw (law)", "or (more)", "al (walk)", "au (taught)", "ough (thought)", "aught (caught)"],
+      "spelling_patterns": [
+        "aw (law)",
+        "or (more)",
+        "al (walk)",
+        "au (taught)",
+        "ough (thought)",
+        "aught (caught)"
+      ],
       "articulation": "Open-mid back rounded vowel. Mouth open, tongue mid-back, lips loosely rounded.",
       "learner_tip": "Round your lips loosely and push the tongue back slightly. Similar to /ɒ/ but longer and more rounded.",
       "common_errors": [
         "Merged with /ɑː/ in GA (cot-caught merger) — many American speakers don't distinguish these",
         "Under-rounded by non-native speakers"
       ],
-      "minimal_pairs": [["law","la"],["caught","cot"],["thought","that"]],
+      "minimal_pairs": [
+        ["law", "la"],
+        ["caught", "cot"],
+        ["thought", "that"]
+      ],
       "dialect_note": "In many American dialects, /ɔː/ and /ɑː/ have merged (cot-caught merger).",
       "difficulty": "intermediate"
     },
@@ -217,7 +293,14 @@
       "ipa": "ɜː",
       "keywords": ["nurse", "bird"],
       "example_words": ["bird", "turn", "word", "learn", "earth", "work"],
-      "spelling_patterns": ["ir (bird)", "ur (turn)", "er (her)", "or (word)", "ear (learn)", "ar (work)"],
+      "spelling_patterns": [
+        "ir (bird)",
+        "ur (turn)",
+        "er (her)",
+        "or (word)",
+        "ear (learn)",
+        "ar (work)"
+      ],
       "articulation": "Open-mid central unrounded vowel. Tongue in mid-central position. In GA it is r-colored (retroflex).",
       "learner_tip": "In American English, curl the tip of your tongue back slightly while making this sound — it's an r-colored vowel.",
       "common_errors": [
@@ -225,7 +308,11 @@
         "Adding too much r-color in RP, where /ɜː/ is non-rhotic",
         "Confused with /ʌ/ — /ɜː/ is longer and often r-colored"
       ],
-      "minimal_pairs": [["bird","bed"],["turn","tan"],["word","wad"]],
+      "minimal_pairs": [
+        ["bird", "bed"],
+        ["turn", "tan"],
+        ["word", "wad"]
+      ],
       "dialect_note": "In RP (British English) the final r is not pronounced — 'bird' sounds like /bɜːd/. In GA it is rhotic — /bɜːrd/.",
       "difficulty": "advanced"
     },
@@ -237,14 +324,25 @@
       "ipa": "eɪ",
       "keywords": ["face", "day"],
       "example_words": ["face", "day", "rain", "lane", "cake", "say"],
-      "spelling_patterns": ["a_e (face)", "ay (day)", "ai (rain)", "ey (they)", "ei (vein)", "a (table)"],
+      "spelling_patterns": [
+        "a_e (face)",
+        "ay (day)",
+        "ai (rain)",
+        "ey (they)",
+        "ei (vein)",
+        "a (table)"
+      ],
       "articulation": "Starting position: mid front /e/. Glide upward to /ɪ/. The tongue rises and the jaw closes slightly.",
       "learner_tip": "Start with a relaxed /e/ sound then let your tongue glide up. Feel the two positions — don't stop in the middle.",
       "common_errors": [
         "Shortened to a pure /e/ without the glide (common in Spanish/Italian speakers)",
         "Over-gliding so it sounds like 'ay-ee'"
       ],
-      "minimal_pairs": [["face","fess"],["lake","lack"],["late","let"]],
+      "minimal_pairs": [
+        ["face", "fess"],
+        ["lake", "lack"],
+        ["late", "let"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -255,14 +353,25 @@
       "ipa": "aɪ",
       "keywords": ["price", "my"],
       "example_words": ["night", "right", "pie", "buy", "rice", "fire"],
-      "spelling_patterns": ["i_e (rice)", "igh (night)", "ie (pie)", "y (my)", "i (find)", "uy (buy)"],
+      "spelling_patterns": [
+        "i_e (rice)",
+        "igh (night)",
+        "ie (pie)",
+        "y (my)",
+        "i (find)",
+        "uy (buy)"
+      ],
       "articulation": "Starting position: open /a/ (or /ɑ/). Glide up to /ɪ/. Jaw closes, tongue rises.",
       "learner_tip": "Start with an open mouth /ah/, then close and raise your tongue toward /ee/. It's a big movement.",
       "common_errors": [
         "Starting too high — begin with a genuinely open mouth",
         "Monophthongization: reduced to just /aː/ in some Southern American dialects"
       ],
-      "minimal_pairs": [["buy","bay"],["night","net"],["ride","red"]],
+      "minimal_pairs": [
+        ["buy", "bay"],
+        ["night", "net"],
+        ["ride", "red"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -280,7 +389,11 @@
         "Under-rounding the start position",
         "Not completing the glide to /ɪ/"
       ],
-      "minimal_pairs": [["boy","bay"],["coin","can"],["voice","vase"]],
+      "minimal_pairs": [
+        ["boy", "bay"],
+        ["coin", "can"],
+        ["voice", "vase"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -298,7 +411,11 @@
         "Starting too far back like /ɔ/",
         "Not completing the glide — the oo ending is important"
       ],
-      "minimal_pairs": [["town","tone"],["down","dawn"],["mouth","math"]],
+      "minimal_pairs": [
+        ["town", "tone"],
+        ["down", "dawn"],
+        ["mouth", "math"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -309,14 +426,24 @@
       "ipa": "oʊ",
       "keywords": ["goat", "home"],
       "example_words": ["home", "note", "road", "load", "vote", "scroll"],
-      "spelling_patterns": ["o_e (home)", "oa (road)", "ow (snow)", "o (go)", "oe (toe)"],
+      "spelling_patterns": [
+        "o_e (home)",
+        "oa (road)",
+        "ow (snow)",
+        "o (go)",
+        "oe (toe)"
+      ],
       "articulation": "Starting position: mid back /o/. Glide up and back to /ʊ/. Lips begin slightly rounded and increase.",
       "learner_tip": "Begin with rounded lips and let them tighten as the sound glides. Think 'oh-oo' in one smooth motion.",
       "common_errors": [
         "Realized as pure /oː/ without the glide (many European speakers)",
         "Starting position too open like /ɑ/"
       ],
-      "minimal_pairs": [["note","not"],["road","rod"],["coat","caught"]],
+      "minimal_pairs": [
+        ["note", "not"],
+        ["road", "rod"],
+        ["coat", "caught"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -327,14 +454,24 @@
       "ipa": "ɪə",
       "keywords": ["near", "here"],
       "example_words": ["near", "here", "ear", "fear", "real", "beard"],
-      "spelling_patterns": ["ear (near)", "eer (beer)", "ere (here)", "ia (idea)", "ier (tier)"],
+      "spelling_patterns": [
+        "ear (near)",
+        "eer (beer)",
+        "ere (here)",
+        "ia (idea)",
+        "ier (tier)"
+      ],
       "articulation": "Starting position: /ɪ/ (high front). Glide to /ə/ (center). Tongue relaxes and moves back.",
       "learner_tip": "Start with /ɪ/ and let your tongue relax down and back to schwa. It should flow naturally.",
       "common_errors": [
         "GA speakers often produce this as /ɪr/ (rhotic): 'near' = /nɪr/",
         "Over-separating into two distinct vowels"
       ],
-      "minimal_pairs": [["near","knee"],["hear","hay"],["fear","fair"]],
+      "minimal_pairs": [
+        ["near", "knee"],
+        ["hear", "hay"],
+        ["fear", "fair"]
+      ],
       "dialect_note": "In GA this is typically /ɪr/ (rhotic). /ɪə/ is an RP distinction.",
       "difficulty": "advanced"
     },
@@ -346,14 +483,24 @@
       "ipa": "eə",
       "keywords": ["square", "air"],
       "example_words": ["air", "care", "bear", "where", "there", "hair"],
-      "spelling_patterns": ["air (hair)", "are (care)", "ear (bear)", "ere (where)", "er (there)"],
+      "spelling_patterns": [
+        "air (hair)",
+        "are (care)",
+        "ear (bear)",
+        "ere (where)",
+        "er (there)"
+      ],
       "articulation": "Starting position: /e/ (mid front). Glide to /ə/. Tongue relaxes toward center.",
       "learner_tip": "Begin at /e/ then let everything relax. The movement is subtle — don't over-exaggerate.",
       "common_errors": [
         "GA speakers produce this as /ɛr/ — 'care' = /kɛr/",
         "Confused with /eɪ/ by forgetting the schwa glide"
       ],
-      "minimal_pairs": [["hair","hay"],["care","key"],["bear","bay"]],
+      "minimal_pairs": [
+        ["hair", "hay"],
+        ["care", "key"],
+        ["bear", "bay"]
+      ],
       "dialect_note": "In GA this merges with /ɛr/ (rhotic). /eə/ is primarily an RP distinction.",
       "difficulty": "advanced"
     },
@@ -364,7 +511,16 @@
       "category": "th_sounds",
       "ipa": "θ",
       "keywords": ["think", "thin"],
-      "example_words": ["think", "three", "thank", "thin", "throw", "mouth", "math", "both"],
+      "example_words": [
+        "think",
+        "three",
+        "thank",
+        "thin",
+        "throw",
+        "mouth",
+        "math",
+        "both"
+      ],
       "spelling_patterns": ["th (most words)"],
       "articulation": "Voiceless dental fricative. Place the tip of your tongue lightly against or between your upper and lower teeth. Push air through — do NOT vibrate your vocal cords.",
       "learner_tip": "Stick your tongue tip slightly between your teeth and blow air. Feel that it is silent — no buzz from your throat.",
@@ -373,7 +529,12 @@
         "Replaced with /t/ (common in many L1s): 'think' → 'tink'",
         "Voiced incorrectly as /ð/: 'thin' → 'then'"
       ],
-      "minimal_pairs": [["think","sink"],["three","tree"],["thank","tank"],["thin","tin"]],
+      "minimal_pairs": [
+        ["think", "sink"],
+        ["three", "tree"],
+        ["thank", "tank"],
+        ["thin", "tin"]
+      ],
       "difficulty": "advanced"
     },
 
@@ -383,7 +544,16 @@
       "category": "th_sounds",
       "ipa": "ð",
       "keywords": ["the", "this"],
-      "example_words": ["the", "this", "that", "them", "those", "breathe", "father", "smooth"],
+      "example_words": [
+        "the",
+        "this",
+        "that",
+        "them",
+        "those",
+        "breathe",
+        "father",
+        "smooth"
+      ],
       "spelling_patterns": ["th (function words and some content words)"],
       "articulation": "Voiced dental fricative. Same tongue position as /θ/ but add vocal cord vibration — you should feel a buzz.",
       "learner_tip": "Same as /θ/ but hum while you do it. Place your fingers on your throat — you should feel vibration.",
@@ -392,7 +562,12 @@
         "Replaced with /z/ (common in European speakers): 'this' → 'zis'",
         "Devoiced to /θ/: 'breathe' → 'breeth'"
       ],
-      "minimal_pairs": [["this","dis"],["those","doze"],["breathe","breed"],["then","den"]],
+      "minimal_pairs": [
+        ["this", "dis"],
+        ["those", "doze"],
+        ["breathe", "breed"],
+        ["then", "den"]
+      ],
       "difficulty": "advanced"
     },
 
@@ -402,15 +577,34 @@
       "category": "fricatives",
       "ipa": "ʃ",
       "keywords": ["ship", "shoe"],
-      "example_words": ["ship", "shoe", "fish", "wish", "machine", "sugar", "nation"],
-      "spelling_patterns": ["sh (ship)", "ti (nation)", "si (session)", "ci (special)", "ch (machine)"],
+      "example_words": [
+        "ship",
+        "shoe",
+        "fish",
+        "wish",
+        "machine",
+        "sugar",
+        "nation"
+      ],
+      "spelling_patterns": [
+        "sh (ship)",
+        "ti (nation)",
+        "si (session)",
+        "ci (special)",
+        "ch (machine)"
+      ],
       "articulation": "Voiceless postalveolar fricative. Tongue behind the alveolar ridge (not touching), lips slightly rounded. Air rushes through a wider opening than /s/.",
       "learner_tip": "Like /s/ but pull your tongue back slightly and round your lips. It's a hushing sound — 'shh!'",
       "common_errors": [
         "Confused with /s/ — /ʃ/ is further back and has lip rounding",
         "Confused with /tʃ/ — /ʃ/ is continuous, no stop"
       ],
-      "minimal_pairs": [["ship","sip"],["shoe","sue"],["fish","fist"],["wish","wits"]],
+      "minimal_pairs": [
+        ["ship", "sip"],
+        ["shoe", "sue"],
+        ["fish", "fist"],
+        ["wish", "wits"]
+      ],
       "difficulty": "beginner"
     },
 
@@ -420,15 +614,30 @@
       "category": "fricatives",
       "ipa": "ʒ",
       "keywords": ["measure", "vision"],
-      "example_words": ["measure", "vision", "pleasure", "usual", "genre", "beige"],
-      "spelling_patterns": ["si (vision)", "su (measure)", "ge (beige)", "j (genre)"],
+      "example_words": [
+        "measure",
+        "vision",
+        "pleasure",
+        "usual",
+        "genre",
+        "beige"
+      ],
+      "spelling_patterns": [
+        "si (vision)",
+        "su (measure)",
+        "ge (beige)",
+        "j (genre)"
+      ],
       "articulation": "Voiced postalveolar fricative. Same as /ʃ/ but with vocal cord vibration.",
       "learner_tip": "Say /ʃ/ then add voice from your throat. Feel the buzz. It sounds like the middle of 'measure'.",
       "common_errors": [
         "Devoiced to /ʃ/",
         "Replaced with /dʒ/ by adding a stop at the start"
       ],
-      "minimal_pairs": [["measure","mesher"],["leisure","leash-er"]],
+      "minimal_pairs": [
+        ["measure", "mesher"],
+        ["leisure", "leash-er"]
+      ],
       "difficulty": "advanced"
     },
 
@@ -438,15 +647,32 @@
       "category": "affricates",
       "ipa": "tʃ",
       "keywords": ["church", "cheese"],
-      "example_words": ["chip", "choose", "cheese", "watch", "which", "catch", "beach"],
-      "spelling_patterns": ["ch (chip)", "tch (watch)", "t (nature)", "c (cello)"],
+      "example_words": [
+        "chip",
+        "choose",
+        "cheese",
+        "watch",
+        "which",
+        "catch",
+        "beach"
+      ],
+      "spelling_patterns": [
+        "ch (chip)",
+        "tch (watch)",
+        "t (nature)",
+        "c (cello)"
+      ],
       "articulation": "Voiceless postalveolar affricate. Start with the tongue against the ridge like /t/, then release into /ʃ/. It is one sound, not two.",
       "learner_tip": "Press your tongue to the ridge, build pressure, then release into a hush. 'ch' in 'cheese' is one quick motion.",
       "common_errors": [
         "Replaced with /ʃ/ alone (missing the stop onset)",
         "Replaced with /ts/ (common in Japanese speakers)"
       ],
-      "minimal_pairs": [["cheap","sheep"],["chin","shin"],["cheese","she's"]],
+      "minimal_pairs": [
+        ["cheap", "sheep"],
+        ["chin", "shin"],
+        ["cheese", "she's"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -457,14 +683,24 @@
       "ipa": "dʒ",
       "keywords": ["judge", "jump"],
       "example_words": ["jump", "judge", "bridge", "age", "George", "village"],
-      "spelling_patterns": ["j (jump)", "ge (age)", "dge (bridge)", "g (George)", "di (soldier)"],
+      "spelling_patterns": [
+        "j (jump)",
+        "ge (age)",
+        "dge (bridge)",
+        "g (George)",
+        "di (soldier)"
+      ],
       "articulation": "Voiced postalveolar affricate. Same as /tʃ/ but with vocal cord vibration throughout.",
       "learner_tip": "Like /tʃ/ but add voice. Feel the buzz as you release. 'Jump' starts with the tongue on the ridge.",
       "common_errors": [
         "Devoiced to /tʃ/",
         "Replaced with /y/ by some speakers (common in German L1): 'jump' → 'yump'"
       ],
-      "minimal_pairs": [["jump","chump"],["jar","char"],["age","H"]],
+      "minimal_pairs": [
+        ["jump", "chump"],
+        ["jar", "char"],
+        ["age", "H"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -474,7 +710,15 @@
       "category": "nasals",
       "ipa": "ŋ",
       "keywords": ["sing", "thing"],
-      "example_words": ["sing", "think", "thank", "spring", "strong", "ring", "long"],
+      "example_words": [
+        "sing",
+        "think",
+        "thank",
+        "spring",
+        "strong",
+        "ring",
+        "long"
+      ],
       "spelling_patterns": ["ng (sing)", "n before k/g (think, finger)"],
       "articulation": "Velar nasal. Tongue back presses against the soft palate (velum). Air flows through the nose. No lip or tongue-tip movement.",
       "learner_tip": "Say 'ng' like the end of 'sing' — feel the back of your tongue raised and touching the roof. No /g/ at the end in most GA words.",
@@ -483,7 +727,11 @@
         "Replacing with /n/: 'sing' → 'sin'",
         "Nasalizing the preceding vowel instead of producing a proper nasal stop"
       ],
-      "minimal_pairs": [["sing","sin"],["ring","rin"],["bang","ban"]],
+      "minimal_pairs": [
+        ["sing", "sin"],
+        ["ring", "rin"],
+        ["bang", "ban"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -493,7 +741,16 @@
       "category": "approximants",
       "ipa": "ɹ",
       "keywords": ["red", "road"],
-      "example_words": ["red", "road", "rain", "rice", "right", "read", "three", "pretty"],
+      "example_words": [
+        "red",
+        "road",
+        "rain",
+        "rice",
+        "right",
+        "read",
+        "three",
+        "pretty"
+      ],
       "spelling_patterns": ["r", "rr (carry)", "wr (write)", "rh (rhyme)"],
       "articulation": "Voiced alveolar approximant (GA). Curl the tongue tip back (retroflex) or bunch the tongue body up without touching the palate. Lips may be slightly rounded.",
       "learner_tip": "Never let your tongue touch anything for /ɹ/. Curl the tip back or pull the body up — it floats. This is the most uniquely American sound.",
@@ -503,7 +760,12 @@
         "Replaced with /l/ by some East Asian speakers: 'rice' → 'lice'",
         "Over-rhotic: too much curl causing a 'pirate' sound"
       ],
-      "minimal_pairs": [["red","led"],["rice","lice"],["right","light"],["rain","lane"]],
+      "minimal_pairs": [
+        ["red", "led"],
+        ["rice", "lice"],
+        ["right", "light"],
+        ["rain", "lane"]
+      ],
       "difficulty": "advanced"
     },
 
@@ -522,7 +784,12 @@
         "Missing the 'dark L' in final position: 'full' → 'fuh'",
         "Vocalized dark L: 'full' → 'fouw'"
       ],
-      "minimal_pairs": [["light","right"],["led","red"],["load","road"],["lane","rain"]],
+      "minimal_pairs": [
+        ["light", "right"],
+        ["led", "red"],
+        ["load", "road"],
+        ["lane", "rain"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -532,7 +799,16 @@
       "category": "fricatives",
       "ipa": "v",
       "keywords": ["vine", "very"],
-      "example_words": ["vine", "very", "vet", "van", "voice", "vote", "live", "love"],
+      "example_words": [
+        "vine",
+        "very",
+        "vet",
+        "van",
+        "voice",
+        "vote",
+        "live",
+        "love"
+      ],
       "spelling_patterns": ["v", "f (of)", "ph (Stephen)"],
       "articulation": "Voiced labiodental fricative. Upper teeth lightly touch the lower lip. Air flows through creating friction, with vocal cord vibration.",
       "learner_tip": "Rest your upper teeth on your lower lip and push air through while humming. Feel the lip vibrating.",
@@ -541,7 +817,12 @@
         "Replaced with /b/ (common in Spanish speakers): 'van' → 'ban'",
         "Devoiced to /f/: 'live' → 'life'"
       ],
-      "minimal_pairs": [["vine","wine"],["vet","wet"],["very","wary"],["van","ban"]],
+      "minimal_pairs": [
+        ["vine", "wine"],
+        ["vet", "wet"],
+        ["very", "wary"],
+        ["van", "ban"]
+      ],
       "difficulty": "intermediate"
     },
 
@@ -552,14 +833,24 @@
       "ipa": "w",
       "keywords": ["wine", "walk"],
       "example_words": ["wine", "wet", "walk", "worry", "well", "away", "swim"],
-      "spelling_patterns": ["w", "wh (where, in GA)", "u after q (quick)", "o (one)"],
+      "spelling_patterns": [
+        "w",
+        "wh (where, in GA)",
+        "u after q (quick)",
+        "o (one)"
+      ],
       "articulation": "Voiced labial-velar approximant. Lips are tightly rounded and protruded, tongue is raised toward the velum. Then open into the following vowel.",
       "learner_tip": "Start with very rounded lips like /uː/, then quickly open into the next vowel. It is a glide — no friction.",
       "common_errors": [
         "Confused with /v/: not a fricative — no teeth involved",
         "Under-rounded so it sounds like a plain vowel"
       ],
-      "minimal_pairs": [["wine","vine"],["wet","vet"],["walk","vat"],["will","bill"]],
+      "minimal_pairs": [
+        ["wine", "vine"],
+        ["wet", "vet"],
+        ["walk", "vat"],
+        ["will", "bill"]
+      ],
       "difficulty": "beginner"
     }
   }
