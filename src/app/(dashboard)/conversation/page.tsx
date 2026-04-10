@@ -1,12 +1,12 @@
 // FILE: src/app/conversation/page.tsx
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Conversation Practice",
   robots: { index: false, follow: false },
 };
 import { cookies } from "next/headers";
+import { requireAppUser } from "@/lib/app-session";
 import { ConversationModuleGrid } from "@/components/conversation/ConversationModuleGrid";
 import { ModuleProgress } from "@/components/ui/module-progress";
 import { Navbar } from "@/components/ui/navbar";
@@ -15,17 +15,9 @@ import {
   getConversationModulesWithProgress,
   parseConversationProgress,
 } from "@/lib/conversation";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export default async function ConversationPage() {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
+  await requireAppUser("/conversation");
 
   const cookieStore = await cookies();
   const progress = parseConversationProgress(

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Download, Settings } from "griddy-icons";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { NavbarFrame } from "@/components/ui/navbar-frame";
+import { getAppSession } from "@/lib/app-session";
 import { getRequestRuntime } from "@/lib/runtime/request-runtime";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { cn } from "@/lib/utils";
 
 type NavKey =
@@ -27,12 +27,9 @@ const navBaseClass =
   "inline-flex min-h-11 items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap";
 
 export async function Navbar({ current, variant = "default" }: NavbarProps) {
-  const supabase = await createSupabaseServerClient();
+  const session = await getAppSession();
   const runtime = await getRequestRuntime();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  const isAuthenticated = Boolean(user);
+  const isAuthenticated = Boolean(session.user);
   const logoHref = isAuthenticated ? "/dashboard" : "/";
 
   const navItems = isAuthenticated

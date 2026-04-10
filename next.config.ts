@@ -3,7 +3,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Required for Electron packaging: produces .next/standalone/server.js
-  output: 'standalone',
+  output: "standalone",
+  outputFileTracingIncludes: {
+    "/*": ["supabase/seed.sql"],
+  },
   turbopack: {
     root: path.join(__dirname),
   },

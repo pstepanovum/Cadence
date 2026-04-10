@@ -1,7 +1,6 @@
 // FILE: src/app/profile/page.tsx
 import type { Metadata } from "next";
 import Image from "next/image";
-import { redirect } from "next/navigation";
 import { UserCircle } from "griddy-icons";
 import { Navbar } from "@/components/ui/navbar";
 import { Card } from "@/components/ui/card";
@@ -9,8 +8,8 @@ import { SignOutButton } from "@/components/ui/sign-out-button";
 import { ProfileCoachVoice } from "@/components/audio/ProfileCoachVoice";
 import { ProfileDesktopRuntime } from "@/components/desktop/profile-desktop-runtime";
 import { CancelSubscriptionButton } from "@/components/auth/CancelSubscriptionButton";
+import { requireAppUser } from "@/lib/app-session";
 import { getRequestRuntime } from "@/lib/runtime/request-runtime";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Settings",
@@ -38,25 +37,29 @@ function trialDaysLeft(trialEnd: string | undefined): number | null {
 }
 
 export default async function ProfilePage() {
+  const session = await requireAppUser("/profile");
   const runtime = await getRequestRuntime();
   const isDesktop = runtime === "desktop";
-  const supabase = await createSupabaseServerClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) redirect("/login");
-
-  const meta = (user.user_metadata ?? {}) as Record<string, unknown>;
-  const displayName     = (meta.displayName as string | undefined)?.trim() || user.email?.split("@")[0] || "Learner";
-  const practiceFocus   = meta.practiceFocus   as string | undefined;
-  const practiceCadence = meta.practiceCadence as string | undefined;
-  const subStatus       = meta.stripe_subscription_status as string | undefined;
-  const trialEnd        = meta.stripe_trial_end as string | undefined;
+  const meta = session.user.meta;
+  const isLocal = session.mode === "local";
+  const displayName = session.user.displayName;
+  const practiceFocus = session.user.practiceFocus ?? undefined;
+  const practiceCadence = session.user.practiceCadence ?? undefined;
+  const subStatus = isLocal
+    ? undefined
+    : (meta.stripe_subscription_status as string | undefined);
+  const trialEnd = isLocal ? undefined : (meta.stripe_trial_end as string | undefined);
   const daysLeft        = trialDaysLeft(trialEnd);
   const isTrialing        = subStatus === "trialing";
   const isActive          = subStatus === "active";
-  const isCancelingAtEnd  = meta.stripe_cancel_at_period_end as boolean | undefined;
-  const cancelAt          = meta.stripe_cancel_at as string | null | undefined;
+  const isCancelingAtEnd  = isLocal
+    ? false
+    : (meta.stripe_cancel_at_period_end as boolean | undefined);
+  const cancelAt = isLocal
+    ? null
+    : (meta.stripe_cancel_at as string | null | undefined);
 
-  const memberSince = new Date(user.created_at).toLocaleDateString("en-US", {
+  const memberSince = new Date(session.user.createdAt).toLocaleDateString("en-US", {
     month: "long", day: "numeric", year: "numeric",
   });
   const trialEndFormatted = trialEnd
@@ -82,18 +85,30 @@ export default async function ProfilePage() {
                 <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl lg:text-5xl">
                   {displayName}
                 </h1>
-                <p className="text-base text-iron-grey">{user.email}</p>
+                {session.user.email ? (
+                  <p className="text-base text-iron-grey">{session.user.email}</p>
+                ) : (
+                  <p className="text-base text-iron-grey">Local profile only</p>
+                )}
               </div>
 
               <div className="grid gap-3 sm:grid-cols-3">
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
                   <p className="eyebrow text-xs text-sage-green">Plan</p>
-                  <p className="mt-2 text-base font-semibold text-hunter-green">Cadence Pro</p>
+                  <p className="mt-2 text-base font-semibold text-hunter-green">
+                    {isLocal ? "Local mode" : "Cadence Cloud"}
+                  </p>
                 </div>
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
                   <p className="eyebrow text-xs text-sage-green">Status</p>
                   <p className="mt-2 text-base font-semibold text-hunter-green">
-                    {isTrialing ? "Trial" : isActive ? "Active" : (subStatus ?? "—")}
+                    {isLocal
+                      ? "Stored on this machine"
+                      : isTrialing
+                        ? "Trial"
+                        : isActive
+                          ? "Active"
+                          : (subStatus ?? "—")}
                   </p>
                 </div>
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
@@ -112,7 +127,7 @@ export default async function ProfilePage() {
           <div className="flex flex-col gap-4">
 
             {/* Trial / active banner */}
-            {(isTrialing || isActive) && (
+            {!isLocal && (isTrialing || isActive) && (
               <Card className="relative overflow-hidden bg-vanilla-cream">
                 <div className="flex items-center justify-between gap-6">
                   <div className="space-y-1">
@@ -166,16 +181,24 @@ export default async function ProfilePage() {
                     <p className="text-xs text-iron-grey">Member since</p>
                     <p className="mt-1 text-base font-semibold text-hunter-green">{memberSince}</p>
                   </div>
+                  {isLocal ? (
+                    <div className="rounded-3xl bg-vanilla-cream px-5 py-4">
+                      <p className="text-xs text-iron-grey">Storage</p>
+                      <p className="mt-1 text-base font-semibold text-hunter-green">
+                        Local only
+                      </p>
+                    </div>
+                  ) : null}
                 </div>
 
                 <div className="pt-2 flex flex-col gap-4">
-                  {(isTrialing || isActive) && (
+                  {!isLocal && (isTrialing || isActive) && (
                     <CancelSubscriptionButton
                       isCanceling={Boolean(isCancelingAtEnd)}
                       cancelAt={cancelAt ?? null}
                     />
                   )}
-                  <SignOutButton />
+                  <SignOutButton mode={session.mode} />
                 </div>
               </div>
             </Card>

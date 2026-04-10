@@ -1,7 +1,7 @@
 // FILE: src/app/checkout/page.tsx
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getAppSession } from "@/lib/app-session";
 import { stripe, isStripeConfigured } from "@/lib/stripe";
 
 export const metadata: Metadata = {
@@ -10,21 +10,22 @@ export const metadata: Metadata = {
 };
 
 export default async function CheckoutPage() {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const appSession = await getAppSession();
 
-  if (!user) {
+  if (appSession.mode !== "cloud") {
+    redirect("/setup");
+  }
+
+  if (!appSession.user) {
     redirect("/signup");
   }
 
-  const meta = (user.user_metadata ?? {}) as Record<string, unknown>;
+  const meta = appSession.user.meta;
 
   // Already on an active subscription — skip straight to the right page
   const status = meta.stripe_subscription_status as string | undefined;
   if (status === "active" || status === "trialing") {
-    redirect(meta.onboardingCompleted ? "/dashboard" : "/onboarding");
+    redirect(appSession.user.onboardingCompleted ? "/dashboard" : "/onboarding");
   }
 
   // Stripe not configured (local dev without keys) — skip to onboarding
@@ -36,15 +37,15 @@ export default async function CheckoutPage() {
     process.env.NEXT_PUBLIC_APP_URL ??
     `http://localhost:${process.env.PORT ?? 3000}`;
 
-  const session = await stripe.checkout.sessions.create({
+  const stripeSession = await stripe.checkout.sessions.create({
     mode: "subscription",
     payment_method_types: ["card"],
-    customer_email: user.email,
-    client_reference_id: user.id,
+    customer_email: appSession.user.email ?? undefined,
+    client_reference_id: appSession.user.id,
     subscription_data: {
       trial_period_days: 7,
       metadata: {
-        supabase_user_id: user.id,
+        supabase_user_id: appSession.user.id,
       },
     },
     line_items: [
@@ -58,5 +59,5 @@ export default async function CheckoutPage() {
     cancel_url: `${appUrl}/`,
   });
 
-  redirect(session.url!);
+  redirect(stripeSession.url!);
 }

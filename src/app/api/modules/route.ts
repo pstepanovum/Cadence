@@ -1,45 +1,28 @@
 import { NextResponse } from "next/server";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getAppSession } from "@/lib/app-session";
+import { getModulesWithProgressForMode } from "@/lib/learn-data";
+import { getLearnCatalog } from "@/lib/learn-catalog";
 import type { ModuleWithProgress } from "@/lib/learn";
 
 export const runtime = "nodejs";
 
 export async function GET() {
   try {
-    const supabase = await createSupabaseServerClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const session = await getAppSession();
+    const catalog = await getLearnCatalog();
 
-    const { data: modules, error: modulesError } = await supabase
-      .from("modules")
-      .select("*")
-      .order("sort_order");
-
-    if (modulesError) {
-      return NextResponse.json({ error: modulesError.message }, { status: 500 });
-    }
-
-    if (!user) {
-      const result: ModuleWithProgress[] = (modules ?? []).map((m) => ({
-        ...m,
+    if (!session.mode || !session.user) {
+      const result: ModuleWithProgress[] = catalog.modules.map((module) => ({
+        ...module,
         progress: null,
       }));
       return NextResponse.json(result);
     }
 
-    const { data: progress } = await supabase
-      .from("user_progress")
-      .select("*")
-      .eq("user_id", user.id);
-
-    const progressMap = new Map(
-      (progress ?? []).map((p) => [p.module_id, p]),
+    const result = await getModulesWithProgressForMode(
+      session.mode,
+      session.user.id,
     );
-
-    const result: ModuleWithProgress[] = (modules ?? []).map((m) => ({
-      ...m,
-      progress: progressMap.get(m.id) ?? null,
-    }));
-
     return NextResponse.json(result);
   } catch (err) {
     return NextResponse.json(

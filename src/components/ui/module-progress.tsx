@@ -1,7 +1,8 @@
 // FILE: src/components/ui/module-progress.tsx
 import { cookies } from "next/headers";
+import { getAppSession } from "@/lib/app-session";
+import { getModuleProgressStatsForMode } from "@/lib/learn-data";
 import { getRequestRuntime } from "@/lib/runtime/request-runtime";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { ModuleProgressFrame } from "@/components/ui/module-progress-frame";
 import {
   CONVERSATION_MODULES,
@@ -51,13 +52,10 @@ function ProgressBar({
 export async function ModuleProgress({
   variant = "default",
 }: { variant?: "default" | "dark" } = {}) {
-  const supabase = await createSupabaseServerClient();
+  const session = await getAppSession();
   const runtime = await getRequestRuntime();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
 
-  if (!user) return null;
+  if (!session.mode || !session.user) return null;
 
   const cookieStore = await cookies();
   const conversationProgress = parseConversationProgress(
@@ -66,18 +64,10 @@ export async function ModuleProgress({
   const completedConversation =
     getCompletedConversationCount(conversationProgress);
   const totalConversation = CONVERSATION_MODULES.length;
-
-  const [modulesResult, completedResult] = await Promise.all([
-    supabase.from("modules").select("id", { count: "exact", head: true }),
-    supabase
-      .from("user_progress")
-      .select("module_id", { count: "exact", head: true })
-      .eq("user_id", user.id)
-      .eq("is_completed", true),
-  ]);
-
-  const totalModules = modulesResult.count ?? 0;
-  const completedModules = completedResult.count ?? 0;
+  const { totalModules, completedModules } = await getModuleProgressStatsForMode(
+    session.mode,
+    session.user.id,
+  );
   const modulePercent =
     totalModules > 0 ? Math.round((completedModules / totalModules) * 100) : 0;
   const overallTotal = totalModules + totalConversation;

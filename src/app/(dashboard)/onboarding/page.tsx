@@ -5,23 +5,22 @@ export const metadata: Metadata = {
   title: "Get Started",
   robots: { index: false, follow: false },
 };
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getAppSession } from "@/lib/app-session";
 import { OnboardingWizard } from "@/components/auth/OnboardingWizard";
 
 export default async function OnboardingPage() {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const session = await getAppSession();
 
-  if (!user) {
+  if (session.mode !== "cloud") {
+    redirect("/setup");
+  }
+
+  if (!session.user) {
     redirect("/login");
   }
 
   // Skip onboarding if already completed
-  const completed = (user.user_metadata as Record<string, unknown> | null)
-    ?.onboardingCompleted;
-  if (completed) {
+  if (session.user.onboardingCompleted) {
     redirect("/dashboard");
   }
 

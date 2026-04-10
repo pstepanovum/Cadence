@@ -1,10 +1,31 @@
 // FILE: src/lib/supabase/proxy.ts
-import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
-import { assertSupabaseConfig } from "@/lib/supabase/config";
+import { createServerClient } from "@supabase/ssr";
+import { APP_MODE_COOKIE, parseAppMode } from "@/lib/app-mode";
+import { readLocalProfileFromCookies } from "@/lib/local-profile";
+import {
+  isSupabaseConfigured,
+  supabasePublishableKey,
+  supabaseUrl,
+} from "@/lib/supabase/config";
 
-const protectedRoutes = ["/dashboard", "/learn"];
-const authRoutes = ["/login", "/signup", "/forgot-password", "/reset-password"];
+const protectedRoutes = [
+  "/dashboard",
+  "/learn",
+  "/conversation",
+  "/coach",
+  "/profile",
+  "/desktop/setup",
+];
+
+const cloudOnlyRoutes = [
+  "/login",
+  "/signup",
+  "/forgot-password",
+  "/reset-password",
+  "/checkout",
+  "/onboarding",
+];
 
 function copyCookies(from: NextResponse, to: NextResponse) {
   from.cookies.getAll().forEach((cookie) => {
@@ -19,7 +40,47 @@ function matchesRoute(pathname: string, routes: string[]) {
 }
 
 export async function updateSession(request: NextRequest) {
-  const { supabaseUrl, supabasePublishableKey } = assertSupabaseConfig();
+  const pathname = request.nextUrl.pathname;
+  const mode = parseAppMode(request.cookies.get(APP_MODE_COOKIE)?.value);
+  const localProfile = readLocalProfileFromCookies(request.cookies);
+
+  if (!mode) {
+    if (matchesRoute(pathname, protectedRoutes) || matchesRoute(pathname, ["/checkout", "/onboarding"])) {
+      return redirectWithCookies(request, "/setup");
+    }
+
+    return NextResponse.next({
+      request,
+    });
+  }
+
+  if (mode === "local") {
+    if (!localProfile && matchesRoute(pathname, protectedRoutes)) {
+      return redirectWithCookies(request, "/setup");
+    }
+
+    if (matchesRoute(pathname, cloudOnlyRoutes)) {
+      return redirectWithCookies(
+        request,
+        localProfile ? "/dashboard" : "/setup",
+      );
+    }
+
+    return NextResponse.next({
+      request,
+    });
+  }
+
+  if (!isSupabaseConfigured || !supabaseUrl || !supabasePublishableKey) {
+    if (matchesRoute(pathname, protectedRoutes) || matchesRoute(pathname, cloudOnlyRoutes)) {
+      return redirectWithCookies(request, "/setup");
+    }
+
+    return NextResponse.next({
+      request,
+    });
+  }
+
   let response = NextResponse.next({
     request,
   });
@@ -47,7 +108,6 @@ export async function updateSession(request: NextRequest) {
 
   const { data } = await supabase.auth.getClaims();
 
-  const pathname = request.nextUrl.pathname;
   const isAuthenticated = Boolean(data);
 
   if (!isAuthenticated && matchesRoute(pathname, protectedRoutes)) {
@@ -59,7 +119,7 @@ export async function updateSession(request: NextRequest) {
     return redirectResponse;
   }
 
-  if (isAuthenticated && matchesRoute(pathname, authRoutes)) {
+  if (isAuthenticated && matchesRoute(pathname, cloudOnlyRoutes)) {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.pathname = "/dashboard";
     redirectUrl.searchParams.delete("next");
@@ -69,4 +129,11 @@ export async function updateSession(request: NextRequest) {
   }
 
   return response;
+}
+
+function redirectWithCookies(request: NextRequest, pathname: string) {
+  const redirectUrl = request.nextUrl.clone();
+  redirectUrl.pathname = pathname;
+  redirectUrl.searchParams.set("next", request.nextUrl.pathname);
+  return NextResponse.redirect(redirectUrl);
 }

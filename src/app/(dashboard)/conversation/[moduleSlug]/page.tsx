@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 };
 import { cookies } from "next/headers";
 import { ChevronRight } from "griddy-icons";
+import { requireAppUser } from "@/lib/app-session";
 import { ConversationSession } from "@/components/conversation/ConversationSession";
 import { ModuleProgress } from "@/components/ui/module-progress";
 import { Navbar } from "@/components/ui/navbar";
@@ -17,7 +18,6 @@ import {
   isConversationModuleUnlocked,
   parseConversationProgress,
 } from "@/lib/conversation";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 interface PageProps {
   params: Promise<{ moduleSlug: string }>;
@@ -25,14 +25,7 @@ interface PageProps {
 
 export default async function ConversationModulePage({ params }: PageProps) {
   const { moduleSlug } = await params;
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
+  await requireAppUser(`/conversation/${moduleSlug}`);
 
   const conversationModule = getConversationModule(moduleSlug);
   if (!conversationModule) {

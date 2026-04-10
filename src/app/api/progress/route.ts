@@ -1,4 +1,12 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { getAppSession } from "@/lib/app-session";
+import { getLearnCatalog } from "@/lib/learn-catalog";
+import {
+  getLocalLearnState,
+  updateLocalModuleExamProgress,
+  writeLocalLearnState,
+} from "@/lib/local-learn";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
@@ -6,16 +14,23 @@ export const runtime = "nodejs";
 /** Bootstrap module 1 as unlocked for a new user. */
 export async function POST() {
   try {
-    const supabase = await createSupabaseServerClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const session = await getAppSession();
 
-    if (!user) {
+    if (!session.mode || !session.user) {
       return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 
+    if (session.mode === "local") {
+      const cookieStore = await cookies();
+      const localState = await getLocalLearnState();
+      writeLocalLearnState(cookieStore, localState);
+      return NextResponse.json({ ok: true }, { status: 201 });
+    }
+
+    const supabase = await createSupabaseServerClient();
     const { error } = await supabase.from("user_progress").upsert(
       {
-        user_id: user.id,
+        user_id: session.user.id,
         module_id: 1,
         is_unlocked: true,
         unlocked_at: new Date().toISOString(),
@@ -39,22 +54,42 @@ export async function POST() {
 /** Complete a module's exam and unlock the next module. */
 export async function PATCH(request: Request) {
   try {
-    const supabase = await createSupabaseServerClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const session = await getAppSession();
 
-    if (!user) {
+    if (!session.mode || !session.user) {
       return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 
     const body = await request.json() as { module_id: number; exam_score: number };
     const { module_id, exam_score } = body;
+
+    if (session.mode === "local") {
+      const catalog = await getLearnCatalog();
+      const cookieStore = await cookies();
+      const localState = await getLocalLearnState();
+      const nextState = updateLocalModuleExamProgress(
+        localState,
+        module_id,
+        exam_score,
+        catalog.modules.length,
+      );
+      writeLocalLearnState(cookieStore, nextState);
+
+      const moduleProgress = nextState.m[String(module_id)];
+      return NextResponse.json({
+        passed: exam_score >= 70,
+        best_exam_score: moduleProgress?.b ?? Math.round(exam_score),
+      });
+    }
+
+    const supabase = await createSupabaseServerClient();
     const passed = exam_score >= 70;
 
     // Fetch current best score
     const { data: existing } = await supabase
       .from("user_progress")
       .select("best_exam_score")
-      .eq("user_id", user.id)
+      .eq("user_id", session.user.id)
       .eq("module_id", module_id)
       .single();
 
@@ -63,7 +98,7 @@ export async function PATCH(request: Request) {
     // Update this module's progress
     await supabase.from("user_progress").upsert(
       {
-        user_id: user.id,
+        user_id: session.user.id,
         module_id,
         is_unlocked: true,
         is_completed: passed,
@@ -78,7 +113,7 @@ export async function PATCH(request: Request) {
     if (passed && module_id < 10) {
       await supabase.from("user_progress").upsert(
         {
-          user_id: user.id,
+          user_id: session.user.id,
           module_id: module_id + 1,
           is_unlocked: true,
           unlocked_at: new Date().toISOString(),

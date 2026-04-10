@@ -1,14 +1,21 @@
 import { NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
+import { cookies } from "next/headers";
+import { getAppSession } from "@/lib/app-session";
+import {
+  getLocalLearnState,
+  recordLocalAttempt,
+  writeLocalLearnState,
+} from "@/lib/local-learn";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
   try {
-    const supabase = await createSupabaseServerClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const session = await getAppSession();
 
-    if (!user) {
+    if (!session.mode || !session.user) {
       return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 
@@ -23,10 +30,30 @@ export async function POST(request: Request) {
       attempt_number: number;
     };
 
+    if (session.mode === "local") {
+      const cookieStore = await cookies();
+      const localState = await getLocalLearnState();
+      const nextState = recordLocalAttempt(localState, body.score);
+      writeLocalLearnState(cookieStore, nextState);
+
+      return NextResponse.json(
+        {
+          id: randomUUID(),
+          lesson_id: body.lesson_id,
+          lesson_word_id: body.lesson_word_id,
+          word: body.word,
+          score: body.score,
+          attempt_number: body.attempt_number ?? 1,
+        },
+        { status: 201 },
+      );
+    }
+
+    const supabase = await createSupabaseServerClient();
     const { data, error } = await supabase
       .from("lesson_attempts")
       .insert({
-        user_id: user.id,
+        user_id: session.user.id,
         lesson_id: body.lesson_id,
         lesson_word_id: body.lesson_word_id,
         word: body.word,

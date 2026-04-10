@@ -1,7 +1,7 @@
 // FILE: src/app/api/conversation-progress/route.ts
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getAppSession } from "@/lib/app-session";
 import {
   CONVERSATION_PROGRESS_COOKIE,
   getConversationModule,
@@ -13,12 +13,9 @@ export const runtime = "nodejs";
 
 export async function PATCH(request: Request) {
   try {
-    const supabase = await createSupabaseServerClient();
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
+    const session = await getAppSession();
 
-    if (!user) {
+    if (!session.mode || !session.user) {
       return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
     }
 
