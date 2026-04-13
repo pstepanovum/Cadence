@@ -14,6 +14,13 @@ const navItems = [
   { href: '/coach',        label: 'AI Coach'     },
 ]
 
+const exploreItems = [
+  { href: '/just-speak', label: 'Just Speak', isPro: true },
+  { href: '/sound-library', label: 'Sound Library' },
+  { href: '/dictionary', label: 'Dictionary' },
+  { href: '/bookmarks', label: 'Bookmarks' },
+]
+
 export function DesktopSidebar({ userId }: { userId?: string | null }) {
   const pathname = usePathname()
 
@@ -55,7 +62,34 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
           ))}
         </nav>
 
-        <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden pb-5">
+        <div className="mt-5 space-y-2">
+          <p className="px-4 text-xs font-semibold tracking-[0.16em] text-sage-green/80 uppercase">
+            Explore
+          </p>
+          <nav className="flex flex-col gap-0.5">
+            {exploreItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  'flex items-center justify-between gap-2 rounded-full px-4 py-2.5 text-base font-semibold transition-colors',
+                  isActive(item.href)
+                    ? 'bg-yellow-green text-hunter-green'
+                    : 'text-hunter-green hover:bg-vanilla-cream',
+                )}
+              >
+                <span>{item.label}</span>
+                {item.isPro ? (
+                  <span className="rounded-full bg-hunter-green px-2 py-0.5 text-[10px] font-bold tracking-[0.14em] text-bright-snow uppercase">
+                    Pro
+                  </span>
+                ) : null}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div className="mt-3 min-h-0 flex-1 overflow-y-auto overflow-x-hidden pb-5">
           {userId ? <AiCoachSidebarHistory userId={userId} /> : null}
         </div>
       </div>

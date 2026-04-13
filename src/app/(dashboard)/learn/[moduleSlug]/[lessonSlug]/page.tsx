@@ -46,7 +46,7 @@ export default async function LessonPage({ params }: PageProps) {
   if (!lessonData.module.progress?.is_unlocked) redirect("/learn");
 
   return (
-    <main className="min-h-screen p-4 sm:p-5 lg:p-6 flex flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center px-4 pt-4 pb-10 sm:px-5 sm:pt-5 sm:pb-12 lg:px-6 lg:pt-6 lg:pb-14">
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-4">
         <Navbar current="learn" />
         <ModuleProgress />

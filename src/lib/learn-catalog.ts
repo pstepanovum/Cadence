@@ -1,7 +1,9 @@
 import "server-only";
 
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import type { Lesson, LessonWord, Module } from "@/lib/learn";
 
 interface LearnCatalog {
@@ -15,8 +17,15 @@ interface LearnCatalog {
 let catalogPromise: Promise<LearnCatalog> | null = null;
 
 export async function getLearnCatalog(): Promise<LearnCatalog> {
-  catalogPromise ??= loadLearnCatalog();
-  return catalogPromise;
+  if (!catalogPromise) {
+    catalogPromise = loadLearnCatalog();
+  }
+  try {
+    return await catalogPromise;
+  } catch (err) {
+    catalogPromise = null;
+    throw err;
+  }
 }
 
 export async function getModuleFromCatalog(slug: string) {
@@ -34,8 +43,63 @@ export async function getLessonByIdFromCatalog(lessonId: string) {
   return catalog.lessonById.get(lessonId) ?? null;
 }
 
+const CATALOG_FILENAMES = ["modules.sql", "learn_catalog.sql"] as const;
+
+function findCatalogSqlUnderDir(startDir: string): string | null {
+  let current = path.resolve(startDir);
+
+  for (let depth = 0; depth < 16; depth += 1) {
+    for (const name of CATALOG_FILENAMES) {
+      const candidate = path.join(current, "supabase", name);
+      if (existsSync(candidate)) {
+        return candidate;
+      }
+    }
+
+    const parent = path.dirname(current);
+    if (parent === current) {
+      break;
+    }
+    current = parent;
+  }
+
+  return null;
+}
+
+function resolveLearnCatalogSqlPath(): string {
+  const tried: string[] = [];
+
+  const envPath = process.env.CADENCE_MODULES_SQL_PATH;
+  if (envPath) {
+    tried.push(envPath);
+    if (existsSync(envPath)) {
+      return envPath;
+    }
+  }
+
+  const fromCwd = findCatalogSqlUnderDir(process.cwd());
+  if (fromCwd) {
+    return fromCwd;
+  }
+
+  try {
+    const moduleDir = path.dirname(fileURLToPath(import.meta.url));
+    const fromModule = findCatalogSqlUnderDir(moduleDir);
+    if (fromModule) {
+      return fromModule;
+    }
+  } catch {
+    /* import.meta.url unavailable */
+  }
+
+  throw new Error(
+    `Could not find module catalog SQL (supabase/modules.sql). cwd=${process.cwd()}. ` +
+      `Set CADENCE_MODULES_SQL_PATH or ensure supabase/modules.sql exists. Tried env: ${tried.join(", ") || "(none)"}; walked from cwd and from learn-catalog module path.`,
+  );
+}
+
 async function loadLearnCatalog(): Promise<LearnCatalog> {
-  const seedPath = path.join(process.cwd(), "supabase", "seed.sql");
+  const seedPath = resolveLearnCatalogSqlPath();
   const sql = await readFile(seedPath, "utf8");
 
   const modules = parseModules(sql);
@@ -69,8 +133,16 @@ async function loadLearnCatalog(): Promise<LearnCatalog> {
     );
   }
 
+  const sortedModules = modules.sort((left, right) => left.sort_order - right.sort_order);
+
+  if (sortedModules.length === 0 || lessons.length === 0) {
+    throw new Error(
+      "Learn catalog parsed no modules or lessons — check supabase/modules.sql INSERT blocks and file encoding.",
+    );
+  }
+
   return {
-    modules: modules.sort((left, right) => left.sort_order - right.sort_order),
+    modules: sortedModules,
     moduleBySlug,
     lessonById,
     lessonByModuleAndSlug,
@@ -178,6 +250,7 @@ function splitSqlRows(valuesBlock: string) {
     }
 
     if (insideString) {
+      buffer += char;
       continue;
     }
 
@@ -289,5 +362,8 @@ function readSqlArray(token: string) {
   const inner = trimmed.slice("ARRAY[".length, -1);
   return splitSqlValues(inner)
     .map((value) => readSqlString(value))
-    .filter((value): value is string => typeof value === "string");
+    .filter(
+      (value): value is string =>
+        typeof value === "string" && value.trim().length > 0,
+    );
 }

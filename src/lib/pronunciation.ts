@@ -5,6 +5,10 @@ export interface PronunciationHighlight {
   text: string;
   status: PronunciationStatus;
   feedback: string;
+  /** Start time (seconds) in the learner's recording for this word, from the scorer. */
+  replyStartSec?: number;
+  /** End time (seconds) in the learner's recording for this word. */
+  replyEndSec?: number;
 }
 
 export interface PronunciationPhoneme {

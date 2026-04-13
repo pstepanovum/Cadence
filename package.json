@@ -32,7 +32,14 @@
     "dev:all": "node ./scripts/dev-all.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:cloud": "node ./scripts/db-cloud.mjs",
+    "db:cloud:clear": "node ./scripts/db-cloud.mjs --clear",
+    "db:cloud:clear-force": "node ./scripts/db-cloud.mjs --clear-force",
+    "db:cloud:reset": "node ./scripts/db-cloud.mjs --reset",
+    "db:cloud:reset-force": "node ./scripts/db-cloud.mjs --reset --clear-force",
+    "db:cloud:modules": "npx supabase db query -f supabase/modules.sql --linked",
+    "db:cloud:conversation": "npx supabase db query -f supabase/conversation.sql --linked"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

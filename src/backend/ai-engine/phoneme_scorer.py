@@ -341,10 +341,44 @@ def _build_live_assessment(target_text: str, transcription: str) -> dict[str, An
     )
 
 
+def _highlight_reply_window_seconds(
+    segment: dict[str, Any],
+    *,
+    total_target_tokens: int,
+    duration_seconds: float,
+    segment_index: int,
+    segment_count: int,
+) -> tuple[float, float]:
+    """Map a target-phoneme span to an approximate time window in the learner audio."""
+    min_span = 0.06
+    safe_duration = max(duration_seconds, min_span)
+
+    if total_target_tokens > 0:
+        start_idx = _clamp(int(segment["start"]), 0, total_target_tokens)
+        end_idx = _clamp(int(segment["end"]), 0, total_target_tokens)
+        if end_idx <= start_idx:
+            end_idx = min(total_target_tokens, start_idx + 1)
+        t0 = start_idx / total_target_tokens * safe_duration
+        t1 = end_idx / total_target_tokens * safe_duration
+    else:
+        if segment_count <= 0:
+            return 0.0, round(safe_duration, 3)
+        step = safe_duration / segment_count
+        t0 = segment_index * step
+        t1 = safe_duration if segment_index >= segment_count - 1 else (segment_index + 1) * step
+
+    if t1 - t0 < min_span:
+        t1 = min(safe_duration, t0 + min_span)
+    t1 = min(t1, safe_duration)
+    t0 = max(0.0, min(t0, safe_duration - min_span))
+    return round(t0, 3), round(min(t1, safe_duration), 3)
+
+
 def _build_live_assessment_from_target(
     target_text: str,
     practice_target: dict[str, Any],
     transcription: str,
+    audio_duration_seconds: float | None = None,
 ) -> dict[str, Any]:
     heard_tokens = transcription.split()
 
@@ -355,8 +389,17 @@ def _build_live_assessment_from_target(
     overall_score = _clamp(round((1 - (distance / baseline)) * 100), 0, 100)
     target_is_phrase = len(_tokenize_visible_words(target_text)) > 1
 
+    segments = practice_target["segments"]
+    total_tt = len(target_tokens)
+    duration_for_windows = (
+        float(audio_duration_seconds)
+        if audio_duration_seconds is not None and audio_duration_seconds > 0
+        else None
+    )
+    seg_count = len(segments)
+
     highlights = []
-    for segment in practice_target["segments"]:
+    for seg_index, segment in enumerate(segments):
         segment_phonemes = phonemes[segment["start"] : segment["end"]]
         if not segment_phonemes:
             status = "needs-work"
@@ -382,21 +425,31 @@ def _build_live_assessment_from_target(
             else "/—/"
         )
 
-        highlights.append(
-            {
-                "text": segment["text"],
-                "status": status,
-                "feedback": (
-                    f"Expected {expected_segment}, heard {heard_segment}. This segment aligned well with the target phonemes."
-                    if status == "correct"
-                    else (
-                        f"Expected {expected_segment}, heard {heard_segment}. This segment is close, but it still needs another pass."
-                        if status == "mixed"
-                        else f"Expected {expected_segment}, heard {heard_segment}. This segment is where the current take drifts from the target."
-                    )
-                ),
-            }
-        )
+        highlight: dict[str, Any] = {
+            "text": segment["text"],
+            "status": status,
+            "feedback": (
+                f"Expected {expected_segment}, heard {heard_segment}. This segment aligned well with the target phonemes."
+                if status == "correct"
+                else (
+                    f"Expected {expected_segment}, heard {heard_segment}. This segment is close, but it still needs another pass."
+                    if status == "mixed"
+                    else f"Expected {expected_segment}, heard {heard_segment}. This segment is where the current take drifts from the target."
+                )
+            ),
+        }
+        if duration_for_windows is not None:
+            rs, re = _highlight_reply_window_seconds(
+                segment,
+                total_target_tokens=total_tt,
+                duration_seconds=duration_for_windows,
+                segment_index=seg_index,
+                segment_count=seg_count,
+            )
+            highlight["replyStartSec"] = rs
+            highlight["replyEndSec"] = re
+
+        highlights.append(highlight)
 
     weakest = min(phonemes, key=lambda phoneme: phoneme["accuracy"])
 
@@ -693,10 +746,12 @@ class PhonemeScorer:
 
             transcription = self._decode_waveform(waveform)
             practice_target = self._resolve_target_definition(target_text)
+            waveform_duration = float(waveform.shape[0]) / float(TARGET_SAMPLE_RATE)
             assessment = _build_live_assessment_from_target(
                 target_text,
                 practice_target,
                 transcription,
+                audio_duration_seconds=waveform_duration,
             )
             logger.info(
                 "Assessment complete. target=%s score=%s transcript=%s",

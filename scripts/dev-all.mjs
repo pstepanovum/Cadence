@@ -7,12 +7,17 @@
  *   • Electron main    — tsc -w recompiles on change, only Electron respawns
  *
  * Usage:
- *   pnpm dev:all            — start everything
- *   pnpm dev:all --clear    — clear all caches, then start
- *   Ctrl-C                  — graceful shutdown, no leftovers
+ *   pnpm dev:all              — start everything
+ *   pnpm dev:all -- --cache   — clear build/Electron caches (keeps models & app data tree)
+ *   pnpm dev:all -- --clear   — clean Cadence app data + venvs/runtime under userData, but
+ *                               keeps desktop-runtime/models (HF hub cache, often multi‑GB)
+ *   pnpm dev:all -- --clear-all — legacy full wipe including models (slow re-download)
+ *   Ctrl-C                    — graceful shutdown, no leftovers
  */
 
-import { rm } from 'node:fs/promises'
+import { existsSync } from 'node:fs'
+import { mkdir, rename, rm } from 'node:fs/promises'
+import { tmpdir } from 'node:os'
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { fileURLToPath } from 'node:url'
@@ -33,11 +38,13 @@ const electronCli  = path.join(desktopDir, 'node_modules', 'electron', 'cli.js')
 
 // ─── Args ─────────────────────────────────────────────────────────────────────
 
-const rawArgs      = process.argv.slice(2)
-const shouldClear  = rawArgs.includes('--clear')   // full wipe (includes models)
-const shouldCache  = rawArgs.includes('--cache') || shouldClear  // cache-only clear
-const targetPort   = process.env.PORT ?? '3000'
-const python       = process.env.PYTHON ?? 'python3'
+const rawArgs = process.argv.slice(2)
+const shouldClearAll = rawArgs.includes('--clear-all')
+const shouldClear    = rawArgs.includes('--clear') && !shouldClearAll
+const shouldCache    = rawArgs.includes('--cache')
+const runClearStep   = shouldCache || shouldClear || shouldClearAll
+const targetPort     = process.env.PORT ?? '3000'
+const python         = process.env.PYTHON ?? 'python3'
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -93,9 +100,34 @@ function log(msg) {
   process.stdout.write(`\x1b[33m[dev:all]\x1b[0m ${msg}\n`)
 }
 
+/**
+ * Desktop stores HF weights under ~/Library/Application Support/Cadence/desktop-runtime/models
+ * (see desktop/src/setup/support.ts). Move that tree aside, wipe userData, then restore.
+ */
+async function clearElectronUserDataPreservingModels(electronUserData) {
+  const desktopRuntime = path.join(electronUserData, 'desktop-runtime')
+  const modelsDir = path.join(desktopRuntime, 'models')
+  const modelsStash = path.join(tmpdir(), 'cadence-dev-all-preserved-models')
+
+  if (existsSync(modelsDir)) {
+    log('  Preserving desktop-runtime/models (Hugging Face cache)…')
+    await rm(modelsStash, { recursive: true, force: true }).catch(() => {})
+    await rename(modelsDir, modelsStash)
+  }
+
+  await rm(electronUserData, { recursive: true, force: true })
+
+  if (existsSync(modelsStash)) {
+    await mkdir(electronUserData, { recursive: true })
+    await mkdir(desktopRuntime, { recursive: true })
+    await rename(modelsStash, modelsDir)
+    log(`  \u2713 Restored models under ${modelsDir}`)
+  }
+}
+
 // ─── Clear caches ─────────────────────────────────────────────────────────────
 
-if (shouldCache || shouldClear) {
+if (runClearStep) {
   // ── Resolve platform paths ─────────────────────────────────────────────────
   const home = process.env.HOME ?? process.env.USERPROFILE ?? ''
   const electronUserData = process.platform === 'darwin'
@@ -106,14 +138,12 @@ if (shouldCache || shouldClear) {
 
   const desktopRuntime = path.join(electronUserData, 'desktop-runtime')
 
-  if (shouldClear) {
-    // ── Full wipe — removes everything including AI models and venvs ──────────
-    log('Full wipe — clearing all app data, models, and caches…')
+  if (shouldClearAll) {
+    log('Full wipe (--clear-all) — removing all app data including AI models…')
     await Promise.all([
       rm(nextCacheDir,     { recursive: true, force: true }).then(() => log('  ✓ .next cleared')),
       rm(desktopDist,      { recursive: true, force: true }).then(() => log('  ✓ desktop/dist cleared')),
       rm(electronUserData, { recursive: true, force: true }).then(() => log(`  ✓ ${electronUserData} cleared`)),
-      // Additional macOS system cache locations Electron writes to
       ...(process.platform === 'darwin' ? [
         rm(path.join(home, 'Library', 'Caches', 'Cadence'),         { recursive: true, force: true }),
         rm(path.join(home, 'Library', 'Caches', 'com.cadence.app'), { recursive: true, force: true }),
@@ -122,6 +152,21 @@ if (shouldCache || shouldClear) {
       rm(path.join(aiDir,    '__pycache__'), { recursive: true, force: true }),
       rm(path.join(coachDir, '__pycache__'), { recursive: true, force: true }),
     ])
+  } else if (shouldClear) {
+    log('Clean setup (--clear) — reset app data; desktop-runtime/models (HF cache) preserved…')
+    await Promise.all([
+      rm(nextCacheDir, { recursive: true, force: true }).then(() => log('  ✓ .next cleared')),
+      rm(desktopDist,  { recursive: true, force: true }).then(() => log('  ✓ desktop/dist cleared')),
+      ...(process.platform === 'darwin' ? [
+        rm(path.join(home, 'Library', 'Caches', 'Cadence'),         { recursive: true, force: true }),
+        rm(path.join(home, 'Library', 'Caches', 'com.cadence.app'), { recursive: true, force: true }),
+        rm(path.join(home, 'Library', 'WebKit', 'com.cadence.app'), { recursive: true, force: true }),
+      ] : []),
+      rm(path.join(aiDir,    '__pycache__'), { recursive: true, force: true }),
+      rm(path.join(coachDir, '__pycache__'), { recursive: true, force: true }),
+    ])
+    await clearElectronUserDataPreservingModels(electronUserData)
+    log(`  ✓ ${electronUserData} reset (venvs/runtime cleared; models kept if present)`)
   } else {
     // ── Cache-only clear — keeps models, venvs, and user state ───────────────
     log('Clearing caches (models and app data preserved)…')

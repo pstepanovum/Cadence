@@ -1,5 +1,5 @@
 """
-Validation helpers: detect echoed / repeated coach turns.
+Light validation: empty coach lines, prompt-template leaks, verbatim repeat of last coach line.
 """
 from __future__ import annotations
 
@@ -42,41 +42,22 @@ def looks_like_prompt_echo(content: str) -> bool:
     )
 
 
-def is_echoed_user_message(coach_message: str, history: list[dict[str, Any]]) -> bool:
-    """True if the coach message is just a repeat of what the learner said."""
-    latest_user = latest_history_content(history, "user")
-    if not latest_user:
-        return False
-    norm_coach = normalize_for_match(coach_message)
-    norm_user = normalize_for_match(latest_user)
-    if not norm_coach or not norm_user:
-        return False
-    return norm_coach.startswith(norm_user)
-
-
-def is_repeated_coach_message(coach_message: str, history: list[dict[str, Any]]) -> bool:
-    """True if Qwen produced the same message as the previous coach turn."""
-    latest_coach = latest_history_content(history, "coach")
-    if not latest_coach:
-        return False
-    norm_new = normalize_for_match(coach_message)
-    norm_old = normalize_for_match(latest_coach)
-    if not norm_new or not norm_old:
-        return False
-    if norm_new == norm_old:
-        return True
-    if len(norm_new) < 36 or len(norm_old) < 36:
-        return False
-    return norm_new.startswith(norm_old) or norm_old.startswith(norm_new)
-
-
 def should_reject_coach_message(coach_message: str, history: list[dict[str, Any]]) -> bool:
+    """
+    Keep checks minimal so small models are not blocked on valid short replies
+    (e.g. learner said "Sure" and coach said "Sure, how about you?" — old logic
+    treated that as an "echo" because the coach string started with the user string).
+    """
     from parsing import sanitize_coach_message
+
     normalized = sanitize_coach_message(coach_message, "")
     if not normalized:
         return True
-    return (
-        looks_like_prompt_echo(coach_message)
-        or is_echoed_user_message(normalized, history)
-        or is_repeated_coach_message(normalized, history)
-    )
+    if looks_like_prompt_echo(coach_message):
+        return True
+    # Only reject a verbatim repeat of the *previous coach line*, not prefix overlap.
+    latest_coach = latest_history_content(history, "coach")
+    if latest_coach:
+        if normalize_for_match(normalized) == normalize_for_match(latest_coach):
+            return True
+    return False

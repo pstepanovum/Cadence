@@ -9,6 +9,8 @@ interface ConversationSidePanelProps {
   phase: Phase;
   turnIndex: number;
   moduleLength: number;
+  /** Object URL for the take being scored; enables per-word playback in word feedback. */
+  replyAudioUrl: string | null;
   onRetry: () => void;
   onNext: () => void;
 }
@@ -18,6 +20,7 @@ export function ConversationSidePanel({
   phase,
   turnIndex,
   moduleLength,
+  replyAudioUrl,
   onRetry,
   onNext,
 }: ConversationSidePanelProps) {
@@ -26,6 +29,7 @@ export function ConversationSidePanel({
       {assessment ? (
         <AssessmentResult
           assessment={assessment}
+          replyAudioUrl={replyAudioUrl}
           onRetry={onRetry}
           onNext={onNext}
           showActions={false}

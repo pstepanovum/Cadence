@@ -32,6 +32,8 @@ interface CoachSetupCardProps {
   startHelperMessage: string | null;
   onStart: () => void;
   onReset: () => void;
+  /** Local mode: show coach/engine warmup tiles. Cloud: omit for a simpler paid experience. */
+  showEngineDiagnostics?: boolean;
 }
 
 export function CoachSetupCard({
@@ -51,6 +53,7 @@ export function CoachSetupCard({
   startHelperMessage,
   onStart,
   onReset,
+  showEngineDiagnostics = true,
 }: CoachSetupCardProps) {
   // Active session: show compact card with current topic and reset action only.
   if (turnsCount > 0 && sessionTopic) {
@@ -157,28 +160,30 @@ export function CoachSetupCard({
           </div>
         ) : null}
 
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Coach status</p>
-            <p className="mt-2 text-sm leading-6 text-iron-grey">
-              {coachStatus?.message ?? "Checking AI Coach availability..."}
-            </p>
+        {showEngineDiagnostics ? (
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
+              <p className="eyebrow text-xs text-sage-green">Coach status</p>
+              <p className="mt-2 text-sm leading-6 text-iron-grey">
+                {coachStatus?.message ?? "Checking AI Coach availability..."}
+              </p>
+            </div>
+            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
+              <p className="eyebrow text-xs text-sage-green">
+                {replyMode === "target" ? "Pronunciation engine" : "Freedom transcription"}
+              </p>
+              <p className="mt-2 text-sm leading-6 text-iron-grey">
+                {replyMode === "target"
+                  ? engineReady
+                    ? "Scoring is ready for exact target replies."
+                    : "The pronunciation engine is still warming up."
+                  : transcriptionReady
+                    ? "Freedom mode can transcribe your spoken answer."
+                    : transcriptionError ?? "The transcription engine is still warming up."}
+              </p>
+            </div>
           </div>
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">
-              {replyMode === "target" ? "Pronunciation engine" : "Freedom transcription"}
-            </p>
-            <p className="mt-2 text-sm leading-6 text-iron-grey">
-              {replyMode === "target"
-                ? engineReady
-                  ? "Scoring is ready for exact target replies."
-                  : "The pronunciation engine is still warming up."
-                : transcriptionReady
-                  ? "Freedom mode can transcribe your spoken answer."
-                  : transcriptionError ?? "The transcription engine is still warming up."}
-            </p>
-          </div>
-        </div>
+        ) : null}
       </div>
     </Card>
   );

@@ -14,27 +14,55 @@ function getHighlightStyles(status: PronunciationHighlight["status"]) {
   return "bg-blushed-brick text-bright-snow";
 }
 
-function SentenceFeedback({
+function ReplyWordFeedback({
   highlights,
   className,
+  turnId,
+  audioUrl,
+  activeWordKey,
+  onWordClick,
 }: {
   highlights: PronunciationHighlight[];
   className?: string;
+  turnId: string;
+  audioUrl: string | null;
+  activeWordKey: string | null;
+  onWordClick: (
+    turnId: string,
+    audioUrl: string,
+    highlight: PronunciationHighlight,
+    index: number,
+  ) => void;
 }) {
   return (
     <div className={cn("flex flex-wrap gap-x-2 gap-y-2", className)}>
-      {highlights.map((highlight, index) => (
-        <span
-          key={`${highlight.text}-${highlight.status}-${index}`}
-          className={cn(
-            "cursor-help rounded-full px-3 py-1.5 text-sm font-semibold",
-            getHighlightStyles(highlight.status),
-          )}
-          title={highlight.feedback}
-        >
-          {highlight.text}
-        </span>
-      ))}
+      {highlights.map((highlight, index) => {
+        const wordKey = `${turnId}:${index}`;
+        const playable = Boolean(audioUrl);
+        return (
+          <button
+            type="button"
+            key={`${highlight.text}-${highlight.status}-${index}`}
+            disabled={!playable}
+            className={cn(
+              "appearance-none border-0 rounded-full px-3 py-1.5 text-sm font-semibold transition-colors",
+              getHighlightStyles(highlight.status),
+              playable ? "cursor-pointer" : "cursor-default opacity-80",
+              activeWordKey === wordKey && "brightness-95",
+            )}
+            title={
+              playable
+                ? `${highlight.feedback} Tap to hear your recording for this word.`
+                : highlight.feedback
+            }
+            onClick={() => {
+              if (audioUrl) onWordClick(turnId, audioUrl, highlight, index);
+            }}
+          >
+            {highlight.text}
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -72,6 +100,7 @@ interface ConversationFlowCardProps {
   currentTurn: ConversationModule["turns"][number];
   activeCoachTurnId: string | null;
   activeReplyTurnId: string | null;
+  activeReplyWordKey: string | null;
   assessment: PronunciationAssessment | null;
   error: string | null;
   hasStarted: boolean;
@@ -80,6 +109,12 @@ interface ConversationFlowCardProps {
   onPlayCoachMessage: (turn: ConversationModule["turns"][number], unlockOnEnd: boolean) => void;
   onContinueToReply: () => void;
   onPlayReplyAudio: (turnId: string, audioUrl: string | null) => void;
+  onPlayReplyWord: (
+    turnId: string,
+    audioUrl: string,
+    highlight: PronunciationHighlight,
+    index: number,
+  ) => void;
   onRecordingComplete: (blob: Blob) => void;
   onClearRecording: () => void;
   onRetry: () => void;
@@ -98,6 +133,7 @@ export function ConversationFlowCard({
   currentTurn,
   activeCoachTurnId,
   activeReplyTurnId,
+  activeReplyWordKey,
   assessment,
   error,
   hasStarted,
@@ -106,6 +142,7 @@ export function ConversationFlowCard({
   onPlayCoachMessage,
   onContinueToReply,
   onPlayReplyAudio,
+  onPlayReplyWord,
   onRecordingComplete,
   onClearRecording,
   onRetry,
@@ -265,9 +302,16 @@ export function ConversationFlowCard({
                           <p className="text-xs font-semibold text-yellow-green/84">
                             Your scored reply
                           </p>
-                          <SentenceFeedback
+                          <p className="text-xs leading-5 text-yellow-green/70">
+                            Tap a word to hear that part of your recording.
+                          </p>
+                          <ReplyWordFeedback
                             highlights={response.highlights}
                             className="text-left"
+                            turnId={response.turnId}
+                            audioUrl={response.audioUrl}
+                            activeWordKey={activeReplyWordKey}
+                            onWordClick={onPlayReplyWord}
                           />
                         </div>
                       ) : (

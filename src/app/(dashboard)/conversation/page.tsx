@@ -13,20 +13,22 @@ import { Navbar } from "@/components/ui/navbar";
 import {
   CONVERSATION_PROGRESS_COOKIE,
   getConversationModulesWithProgress,
-  parseConversationProgress,
 } from "@/lib/conversation";
+import { loadConversationProgressForMode } from "@/lib/conversation-progress-sync";
 
 export default async function ConversationPage() {
-  await requireAppUser("/conversation");
+  const session = await requireAppUser("/conversation");
 
   const cookieStore = await cookies();
-  const progress = parseConversationProgress(
+  const progress = await loadConversationProgressForMode(
+    session.mode,
+    session.user.id,
     cookieStore.get(CONVERSATION_PROGRESS_COOKIE)?.value,
   );
   const modules = getConversationModulesWithProgress(progress);
 
   return (
-    <main className="min-h-screen p-4 sm:p-5 lg:p-6 flex flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center px-4 pt-4 pb-10 sm:px-5 sm:pt-5 sm:pb-12 lg:px-6 lg:pt-6 lg:pb-14">
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-4">
         <Navbar current="conversation" />
         <ModuleProgress />

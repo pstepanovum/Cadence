@@ -11,6 +11,7 @@ import { ConversationFlowCard } from "@/components/conversation/ConversationFlow
 import { ConversationSidePanel } from "@/components/conversation/ConversationSidePanel";
 import { Card } from "@/components/ui/card";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
+import { playLearnerRecordingSegment } from "@/lib/audio-feedback";
 
 export type Phase = "intro" | "coach" | "recording" | "assessing" | "result" | "done";
 export type CoachAudioState = "idle" | "loading" | "playing" | "ready" | "error";
@@ -48,10 +49,12 @@ export function ConversationSession({
   const [coachPlaybackRequest, setCoachPlaybackRequest] = useState(0);
   const [activeCoachTurnId, setActiveCoachTurnId] = useState<string | null>(null);
   const [activeReplyTurnId, setActiveReplyTurnId] = useState<string | null>(null);
+  const [activeReplyWordKey, setActiveReplyWordKey] = useState<string | null>(null);
   const [pendingReplyAudioUrl, setPendingReplyAudioUrl] = useState<string | null>(null);
   const coachAudioRef = useRef<HTMLAudioElement | null>(null);
   const coachAudioCacheRef = useRef<Map<string, string>>(new Map());
   const replyAudioRef = useRef<HTMLAudioElement | null>(null);
+  const replyWordStopRef = useRef<(() => void) | null>(null);
   const replyAudioUrlsRef = useRef<Set<string>>(new Set());
 
   const currentTurn = module.turns[Math.min(turnIndex, module.turns.length - 1)];
@@ -64,6 +67,8 @@ export function ConversationSession({
     return () => {
       coachAudioRef.current?.pause();
       coachAudioRef.current = null;
+      replyWordStopRef.current?.();
+      replyWordStopRef.current = null;
       replyAudioRef.current?.pause();
       replyAudioRef.current = null;
       for (const url of coachAudioCache.values()) {
@@ -122,7 +127,14 @@ export function ConversationSession({
     setActiveCoachTurnId(null);
   }
 
+  function stopReplyWordPlayback() {
+    replyWordStopRef.current?.();
+    replyWordStopRef.current = null;
+    setActiveReplyWordKey(null);
+  }
+
   function stopReplyAudio() {
+    stopReplyWordPlayback();
     const currentAudio = replyAudioRef.current;
     if (!currentAudio) return;
     currentAudio.onended = null;
@@ -242,7 +254,10 @@ export function ConversationSession({
     }
 
     stopCoachAudio();
-    stopReplyAudio();
+    stopReplyWordPlayback();
+    replyAudioRef.current?.pause();
+    replyAudioRef.current = null;
+    setActiveReplyTurnId(null);
 
     const audio = new Audio(audioUrl);
     replyAudioRef.current = audio;
@@ -250,6 +265,47 @@ export function ConversationSession({
     audio.onended = () => { replyAudioRef.current = null; setActiveReplyTurnId(null); };
     audio.onerror = () => { replyAudioRef.current = null; setActiveReplyTurnId(null); };
     await audio.play().catch(() => { replyAudioRef.current = null; setActiveReplyTurnId(null); });
+  }
+
+  function playReplyWordClip(
+    turnId: string,
+    audioUrl: string,
+    highlight: PronunciationHighlight,
+    index: number,
+  ) {
+    const wordKey = `${turnId}:${index}`;
+    if (activeReplyWordKey === wordKey && replyWordStopRef.current) {
+      stopReplyWordPlayback();
+      return;
+    }
+
+    stopCoachAudio();
+    replyAudioRef.current?.pause();
+    replyAudioRef.current = null;
+    setActiveReplyTurnId(null);
+    stopReplyWordPlayback();
+
+    const replyStart = highlight.replyStartSec;
+    const replyEnd = highlight.replyEndSec;
+    const hasTiming =
+      typeof replyStart === "number" && typeof replyEnd === "number";
+
+    if (!hasTiming) {
+      void playReplyAudio(turnId, audioUrl);
+      return;
+    }
+
+    const { cancel } = playLearnerRecordingSegment(
+      audioUrl,
+      replyStart,
+      replyEnd,
+      () => {
+        replyWordStopRef.current = null;
+        setActiveReplyWordKey(null);
+      },
+    );
+    replyWordStopRef.current = cancel;
+    setActiveReplyWordKey(wordKey);
   }
 
   const autoplayCoachMessage = useEffectEvent(async () => {
@@ -406,6 +462,7 @@ export function ConversationSession({
           currentTurn={currentTurn}
           activeCoachTurnId={activeCoachTurnId}
           activeReplyTurnId={activeReplyTurnId}
+          activeReplyWordKey={activeReplyWordKey}
           assessment={assessment}
           error={error}
           hasStarted={hasStarted}
@@ -414,6 +471,9 @@ export function ConversationSession({
           onPlayCoachMessage={(turn, unlockOnEnd) => void playCoachMessageForTurn(turn, unlockOnEnd)}
           onContinueToReply={() => { setCoachAudioError(null); setPhase("recording"); }}
           onPlayReplyAudio={(turnId, audioUrl) => void playReplyAudio(turnId, audioUrl)}
+          onPlayReplyWord={(turnId, audioUrl, highlight, index) => {
+            playReplyWordClip(turnId, audioUrl, highlight, index);
+          }}
           onRecordingComplete={(blob) => void runAssessment(blob)}
           onClearRecording={() => {
             clearPendingReplyAudio();
@@ -431,6 +491,7 @@ export function ConversationSession({
           phase={phase}
           turnIndex={turnIndex}
           moduleLength={module.turns.length}
+          replyAudioUrl={pendingReplyAudioUrl}
           onRetry={handleRetryTurn}
           onNext={() => void handleNextTurn()}
         />

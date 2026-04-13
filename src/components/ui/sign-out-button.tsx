@@ -20,7 +20,10 @@ export function SignOutButton({ mode }: { mode: AppMode }) {
 
     const supabase = createSupabaseBrowserClient();
     await supabase.auth.signOut();
-    router.replace("/login");
+    await fetch("/api/setup/mode", {
+      method: "DELETE",
+    }).catch(() => {});
+    router.replace("/setup");
     router.refresh();
   }
 

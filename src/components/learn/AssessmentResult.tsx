@@ -6,7 +6,10 @@ import {
   type PronunciationAssessment,
   type PronunciationHighlight,
 } from "@/lib/pronunciation";
-import { configureReferenceWordPlayback } from "@/lib/audio-feedback";
+import {
+  configureReferenceWordPlayback,
+  playLearnerRecordingSegment,
+} from "@/lib/audio-feedback";
 import { cn } from "@/lib/utils";
 import { ProgressRing } from "@/components/learn/ProgressRing";
 import { Button } from "@/components/ui/button";
@@ -27,12 +30,18 @@ function getHighlightStyles(status: PronunciationHighlight["status"]) {
 function SentenceFeedback({
   highlights,
   compact = false,
+  instruct,
   onHighlightClick,
   activeHighlightKey,
 }: {
   highlights: PronunciationHighlight[];
   compact?: boolean;
-  onHighlightClick?: (highlight: PronunciationHighlight, index: number) => void;
+  instruct: string;
+  onHighlightClick?: (
+    highlight: PronunciationHighlight,
+    index: number,
+    event: React.MouseEvent<HTMLButtonElement>,
+  ) => void;
   activeHighlightKey?: string | null;
 }) {
   return (
@@ -42,21 +51,27 @@ function SentenceFeedback({
         compact ? "text-sm leading-6" : "text-base leading-7",
       )}
     >
-      {highlights.map((highlight, index) => (
-        <button
-          type="button"
-          key={`${highlight.text}-${highlight.status}-${index}`}
-          className={cn(
-            "appearance-none border-0 rounded-full px-3 py-1.5 font-semibold transition-colors cursor-pointer",
-            getHighlightStyles(highlight.status),
-            activeHighlightKey === `${highlight.text}-${index}` && "brightness-95",
-          )}
-          title={highlight.feedback}
-          onClick={() => onHighlightClick?.(highlight, index)}
-        >
-          {highlight.text}
-        </button>
-      ))}
+      {highlights.map((highlight, index) => {
+        const refKey = `ref:${instruct}:${highlight.text}-${index}`;
+        const learnerKey = `learner:${index}`;
+        const isActive =
+          activeHighlightKey === refKey || activeHighlightKey === learnerKey;
+        return (
+          <button
+            type="button"
+            key={`${highlight.text}-${highlight.status}-${index}`}
+            className={cn(
+              "appearance-none border-0 rounded-full px-3 py-1.5 font-semibold transition-colors cursor-pointer",
+              getHighlightStyles(highlight.status),
+              isActive && "brightness-95",
+            )}
+            title={highlight.feedback}
+            onClick={(event) => onHighlightClick?.(highlight, index, event)}
+          >
+            {highlight.text}
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -67,6 +82,8 @@ interface AssessmentResultProps {
   onNext: () => void;
   nextLabel?: string;
   showActions?: boolean;
+  /** When set (e.g. conversation take), word taps play this recording for each word when timings exist. */
+  replyAudioUrl?: string | null;
 }
 
 export function AssessmentResult({
@@ -75,11 +92,13 @@ export function AssessmentResult({
   onNext,
   nextLabel = "Next Word",
   showActions = true,
+  replyAudioUrl = null,
 }: AssessmentResultProps) {
   const { instruct } = useCoachVoice();
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [activeHighlightKey, setActiveHighlightKey] = useState<string | null>(null);
   const highlightAudioRef = useRef<HTMLAudioElement | null>(null);
+  const stopLearnerWordRef = useRef<(() => void) | null>(null);
   const highlightAudioCacheRef = useRef<Map<string, string>>(new Map());
   const targetIsPhrase =
     assessment.targetText.trim().split(/\s+/).filter(Boolean).length > 1;
@@ -94,6 +113,8 @@ export function AssessmentResult({
     const audioCache = highlightAudioCacheRef.current;
 
     return () => {
+      stopLearnerWordRef.current?.();
+      stopLearnerWordRef.current = null;
       highlightAudioRef.current?.pause();
       highlightAudioRef.current = null;
       for (const url of audioCache.values()) {
@@ -104,6 +125,8 @@ export function AssessmentResult({
   }, []);
 
   useEffect(() => {
+    stopLearnerWordRef.current?.();
+    stopLearnerWordRef.current = null;
     highlightAudioRef.current?.pause();
     highlightAudioRef.current = null;
     setActiveHighlightKey(null);
@@ -111,6 +134,8 @@ export function AssessmentResult({
 
   // Flush audio cache whenever the voice changes so replays use the new voice.
   useEffect(() => {
+    stopLearnerWordRef.current?.();
+    stopLearnerWordRef.current = null;
     highlightAudioRef.current?.pause();
     highlightAudioRef.current = null;
     setActiveHighlightKey(null);
@@ -123,21 +148,55 @@ export function AssessmentResult({
   async function handleHighlightClick(
     highlight: PronunciationHighlight,
     index: number,
+    event: React.MouseEvent<HTMLButtonElement>,
   ) {
-    const cacheKey = `${instruct}:${highlight.text}-${index}`;
+    const canPlayLearnerClip =
+      Boolean(replyAudioUrl) &&
+      !event.shiftKey &&
+      typeof highlight.replyStartSec === "number" &&
+      typeof highlight.replyEndSec === "number";
 
-    if (activeHighlightKey === cacheKey && highlightAudioRef.current) {
-      highlightAudioRef.current.pause();
+    const playbackKey = canPlayLearnerClip
+      ? `learner:${index}`
+      : `ref:${instruct}:${highlight.text}-${index}`;
+
+    const isSameActive = activeHighlightKey === playbackKey;
+    const hasRefAudio = Boolean(highlightAudioRef.current);
+    const hasLearnerStop = Boolean(stopLearnerWordRef.current);
+
+    if (isSameActive && (hasRefAudio || hasLearnerStop)) {
+      stopLearnerWordRef.current?.();
+      stopLearnerWordRef.current = null;
+      highlightAudioRef.current?.pause();
       highlightAudioRef.current = null;
       setActiveHighlightKey(null);
       return;
     }
 
+    stopLearnerWordRef.current?.();
+    stopLearnerWordRef.current = null;
     highlightAudioRef.current?.pause();
     highlightAudioRef.current = null;
-    setActiveHighlightKey(cacheKey);
+    setActiveHighlightKey(playbackKey);
+
+    if (canPlayLearnerClip && replyAudioUrl) {
+      const { audio, cancel } = playLearnerRecordingSegment(
+        replyAudioUrl,
+        highlight.replyStartSec!,
+        highlight.replyEndSec!,
+        () => {
+          stopLearnerWordRef.current = null;
+          highlightAudioRef.current = null;
+          setActiveHighlightKey(null);
+        },
+      );
+      stopLearnerWordRef.current = cancel;
+      highlightAudioRef.current = audio;
+      return;
+    }
 
     try {
+      const cacheKey = `${instruct}:${highlight.text}-${index}`;
       let audioUrl = highlightAudioCacheRef.current.get(cacheKey);
       if (!audioUrl) {
         const params = new URLSearchParams({ text: highlight.text, instruct });
@@ -233,6 +292,12 @@ export function AssessmentResult({
               <h3 className="text-2xl font-semibold text-hunter-green">
                 See which parts of the reply landed cleanly.
               </h3>
+              {replyAudioUrl ? (
+                <p className="text-sm leading-6 text-iron-grey">
+                  Tap a word to hear your recording for that part. Shift-click for the
+                  reference voice.
+                </p>
+              ) : null}
             </div>
             <div className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-hunter-green">
               {correctHighlights}/{assessment.highlights.length} strong words
@@ -242,6 +307,7 @@ export function AssessmentResult({
           <div className="mt-4 rounded-3xl bg-white px-4 py-4">
             <SentenceFeedback
               highlights={assessment.highlights}
+              instruct={instruct}
               onHighlightClick={handleHighlightClick}
               activeHighlightKey={activeHighlightKey}
             />

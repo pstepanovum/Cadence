@@ -116,7 +116,10 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
 
       <div className="grid gap-4 xl:grid-cols-2">
         {modules.map((module) => (
-          <ModuleCard key={module.id} module={module} />
+          <ModuleCard
+            key={module.slug || `module-${module.sort_order}`}
+            module={module}
+          />
         ))}
       </div>
     </div>

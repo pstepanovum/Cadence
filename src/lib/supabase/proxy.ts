@@ -14,6 +14,10 @@ const protectedRoutes = [
   "/learn",
   "/conversation",
   "/coach",
+  "/just-speak",
+  "/sound-library",
+  "/dictionary",
+  "/bookmarks",
   "/profile",
   "/desktop/setup",
 ];

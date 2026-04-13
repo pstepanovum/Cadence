@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   Activity,
   ArrowUpRight,
+  ChevronDown,
   FileText,
   FolderOpen,
   Microphone,
@@ -304,151 +305,174 @@ export function ProfileDesktopRuntime() {
               <StatusPill label="Coach replies" ready={state.coachEngineReady} />
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-              <InfoCard
-                label="Desktop mode"
-                value={runtime.isPackaged ? "Packaged app" : "Desktop dev mode"}
-                detail={
-                  runtime.isPackaged
-                    ? "Cadence is running from the built desktop app bundle."
-                    : "Cadence is running from your local workspace for development."
-                }
-              />
-              <InfoCard
-                label="Setup state"
-                value={formatPhase(state.phase)}
-                detail={state.currentStep ?? "Cadence is checking the local runtime."}
-              />
-              <InfoCard
-                label="Install style"
-                value="Native local services"
-                detail="Cadence includes its own local runtime and starts the speech and coaching services directly on this Mac."
-              />
-              <InfoCard
-                label="Last ready"
-                value={formatDate(runtime.lastReadyAt)}
-                detail={
-                  runtime.availability.huggingFaceTokenConfigured
-                    ? "Extended model access is configured for this machine."
-                    : "This Mac is currently using public model access only."
-                }
-              />
-              <InfoCard
-                label="Local performance"
-                value={`${runtime.performance.cpuThreadsPerService} CPU threads`}
-                detail={runtime.performance.note}
-              />
-            </div>
+            <p className="text-sm leading-6 text-iron-grey">
+              {state.phase === "ready"
+                ? "Your desktop speech tools are ready. Expand Advanced if you need file paths, model names, or troubleshooting details."
+                : (state.currentStep ?? "Cadence is checking the local runtime.")}
+            </p>
 
-            <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
-                <Activity size={18} filled color="currentColor" />
-                <span className="eyebrow text-sm">Runtime files</span>
-              </div>
-              <PathPane label="Cadence Desktop storage">
-                <RuntimeLocationRow
-                  label="Desktop data folder"
-                  value={runtime.setupRoot}
-                  kind="setupRoot"
-                />
-                <RuntimeLocationRow
-                  label="Runtime folder"
-                  value={runtime.runtimeDir}
-                  kind="runtimeDir"
-                />
-                <RuntimeLocationRow
-                  label="Model cache"
-                  value={runtime.huggingFaceDir}
-                  kind="huggingFaceDir"
-                />
-                <RuntimeLocationRow
-                  label="Setup log"
-                  value={runtime.logsPath}
-                  kind="logsPath"
-                  isFile
-                />
-                <RuntimeLocationRow
-                  label="Runtime manifest"
-                  value={runtime.runtimeManifestPath}
-                  kind="runtimeManifestPath"
-                  isFile
-                />
-                <RuntimeLocationRow
-                  label="Speech service log"
-                  value={runtime.aiEngineLogPath}
-                  kind="aiEngineLogPath"
-                  isFile
-                />
-                <RuntimeLocationRow
-                  label="Coach service log"
-                  value={runtime.coachEngineLogPath}
-                  kind="coachEngineLogPath"
-                  isFile
-                />
-              </PathPane>
-            </div>
-
-            <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-              <div className="flex items-center gap-2 text-sage-green">
-                <Speaker size={18} color="currentColor" />
-                <p className="eyebrow text-sm">Current voice style</p>
-              </div>
-              <div className="mt-4 grid gap-3 lg:grid-cols-2">
-                <div className="rounded-3xl bg-white px-4 py-4">
-                  <p className="text-xs text-iron-grey">Your selected coach voice</p>
-                  <p className="mt-2 text-base font-semibold text-hunter-green">
-                    {instruct || "Default voice"}
+            <details className="group rounded-[28px] bg-vanilla-cream/60 open:bg-vanilla-cream transition-colors">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
+                <div className="min-w-0 space-y-0.5">
+                  <p className="eyebrow text-sm text-sage-green">Advanced</p>
+                  <p className="text-sm text-iron-grey">
+                    Models, folders, logs, and other technical details
                   </p>
                 </div>
-                <div className="rounded-3xl bg-white px-4 py-4">
-                  <p className="text-xs text-iron-grey">Engine default voice</p>
-                  <p className="mt-2 text-base font-semibold text-hunter-green">
-                    {runtime.tts.instruct}
-                  </p>
+                <ChevronDown
+                  size={20}
+                  color="currentColor"
+                  className="shrink-0 text-hunter-green transition-transform duration-200 group-open:rotate-180"
+                />
+              </summary>
+              <div className="space-y-6 px-5 pb-5 pt-4">
+                <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+                  <InfoCard
+                    label="Desktop mode"
+                    value={runtime.isPackaged ? "Packaged app" : "Desktop dev mode"}
+                    detail={
+                      runtime.isPackaged
+                        ? "Cadence is running from the built desktop app bundle."
+                        : "Cadence is running from your local workspace for development."
+                    }
+                  />
+                  <InfoCard
+                    label="Setup state"
+                    value={formatPhase(state.phase)}
+                    detail={state.currentStep ?? "Cadence is checking the local runtime."}
+                  />
+                  <InfoCard
+                    label="Install style"
+                    value="Native local services"
+                    detail="Cadence includes its own local runtime and starts the speech and coaching services directly on this Mac."
+                  />
+                  <InfoCard
+                    label="Last ready"
+                    value={formatDate(runtime.lastReadyAt)}
+                    detail={
+                      runtime.availability.huggingFaceTokenConfigured
+                        ? "Extended model access is configured for this machine."
+                        : "This Mac is currently using public model access only."
+                    }
+                  />
+                  <InfoCard
+                    label="Local performance"
+                    value={`${runtime.performance.cpuThreadsPerService} CPU threads`}
+                    detail={runtime.performance.note}
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
+                    <Activity size={18} filled color="currentColor" />
+                    <span className="eyebrow text-sm">Runtime files</span>
+                  </div>
+                  <PathPane label="Cadence Desktop storage">
+                    <RuntimeLocationRow
+                      label="Desktop data folder"
+                      value={runtime.setupRoot}
+                      kind="setupRoot"
+                    />
+                    <RuntimeLocationRow
+                      label="Runtime folder"
+                      value={runtime.runtimeDir}
+                      kind="runtimeDir"
+                    />
+                    <RuntimeLocationRow
+                      label="Model cache"
+                      value={runtime.huggingFaceDir}
+                      kind="huggingFaceDir"
+                    />
+                    <RuntimeLocationRow
+                      label="Setup log"
+                      value={runtime.logsPath}
+                      kind="logsPath"
+                      isFile
+                    />
+                    <RuntimeLocationRow
+                      label="Runtime manifest"
+                      value={runtime.runtimeManifestPath}
+                      kind="runtimeManifestPath"
+                      isFile
+                    />
+                    <RuntimeLocationRow
+                      label="Speech service log"
+                      value={runtime.aiEngineLogPath}
+                      kind="aiEngineLogPath"
+                      isFile
+                    />
+                    <RuntimeLocationRow
+                      label="Coach service log"
+                      value={runtime.coachEngineLogPath}
+                      kind="coachEngineLogPath"
+                      isFile
+                    />
+                  </PathPane>
+                </div>
+
+                <div className="rounded-3xl bg-[#f5ebd2] px-5 py-5">
+                  <div className="flex items-center gap-2 text-sage-green">
+                    <Speaker size={18} color="currentColor" />
+                    <p className="eyebrow text-sm">Current voice style</p>
+                  </div>
+                  <div className="mt-4 grid gap-3 lg:grid-cols-2">
+                    <div className="rounded-3xl bg-white px-4 py-4">
+                      <p className="text-xs text-iron-grey">Your selected coach voice</p>
+                      <p className="mt-2 text-base font-semibold text-hunter-green">
+                        {instruct || "Default voice"}
+                      </p>
+                    </div>
+                    <div className="rounded-3xl bg-white px-4 py-4">
+                      <p className="text-xs text-iron-grey">Engine default voice</p>
+                      <p className="mt-2 text-base font-semibold text-hunter-green">
+                        {runtime.tts.instruct}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
+                    <Activity size={18} filled color="currentColor" />
+                    <span className="eyebrow text-sm">Current models</span>
+                  </div>
+                  <div className="grid gap-3 xl:grid-cols-2">
+                    <ModelCard
+                      label="Speech checks"
+                      modelId={runtime.aiEngine.modelId}
+                      ready={runtime.aiEngine.ready}
+                      device={runtime.aiEngine.device}
+                      detail={`Endpoint: ${runtime.endpoints.aiEngine}`}
+                      error={runtime.aiEngine.loadError}
+                    />
+                    <ModelCard
+                      label="Listening"
+                      modelId={runtime.transcriber.modelId}
+                      ready={runtime.transcriber.ready}
+                      device={runtime.transcriber.device}
+                      detail="Turns recorded speech into text before coaching feedback."
+                      error={runtime.transcriber.loadError}
+                    />
+                    <ModelCard
+                      label="Coach voice"
+                      modelId={runtime.tts.modelId}
+                      ready={runtime.tts.ready}
+                      device={runtime.tts.device}
+                      detail={`Provider: ${runtime.tts.provider ?? "unknown"} · Language: ${runtime.tts.language}`}
+                      error={runtime.tts.loadError}
+                    />
+                    <ModelCard
+                      label="Coach replies"
+                      modelId={runtime.coach.modelId}
+                      ready={runtime.coach.ready}
+                      device={runtime.coach.device}
+                      detail={`Provider: ${runtime.coach.provider}${runtime.coach.transformersVersion ? ` · Transformers ${runtime.coach.transformersVersion}` : ""}`}
+                      error={runtime.coach.loadError}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
-                <Activity size={18} filled color="currentColor" />
-                <span className="eyebrow text-sm">Current models</span>
-              </div>
-              <div className="grid gap-3 xl:grid-cols-2">
-                <ModelCard
-                  label="Speech checks"
-                  modelId={runtime.aiEngine.modelId}
-                  ready={runtime.aiEngine.ready}
-                  device={runtime.aiEngine.device}
-                  detail={`Endpoint: ${runtime.endpoints.aiEngine}`}
-                  error={runtime.aiEngine.loadError}
-                />
-                <ModelCard
-                  label="Listening"
-                  modelId={runtime.transcriber.modelId}
-                  ready={runtime.transcriber.ready}
-                  device={runtime.transcriber.device}
-                  detail="Turns recorded speech into text before coaching feedback."
-                  error={runtime.transcriber.loadError}
-                />
-                <ModelCard
-                  label="Coach voice"
-                  modelId={runtime.tts.modelId}
-                  ready={runtime.tts.ready}
-                  device={runtime.tts.device}
-                  detail={`Provider: ${runtime.tts.provider ?? "unknown"} · Language: ${runtime.tts.language}`}
-                  error={runtime.tts.loadError}
-                />
-                <ModelCard
-                  label="Coach replies"
-                  modelId={runtime.coach.modelId}
-                  ready={runtime.coach.ready}
-                  device={runtime.coach.device}
-                  detail={`Provider: ${runtime.coach.provider}${runtime.coach.transformersVersion ? ` · Transformers ${runtime.coach.transformersVersion}` : ""}`}
-                  error={runtime.coach.loadError}
-                />
-              </div>
-            </div>
+            </details>
           </>
         ) : (
           <div className="rounded-3xl bg-vanilla-cream px-5 py-5 text-sm leading-7 text-iron-grey">

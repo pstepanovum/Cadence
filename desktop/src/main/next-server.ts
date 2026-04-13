@@ -1,4 +1,5 @@
 import * as http from 'http'
+import { existsSync } from 'node:fs'
 import { join } from 'path'
 import { utilityProcess, type UtilityProcess } from 'electron'
 
@@ -46,12 +47,17 @@ export async function startNextServer({
 }): Promise<UtilityProcess> {
   return new Promise((resolve, reject) => {
     const serverScript = join(resourcesPath, 'next-server', 'server.js')
+    const nextServerRoot = join(resourcesPath, 'next-server')
+    const modulesSqlPath = join(nextServerRoot, 'supabase', 'modules.sql')
     const desktopRuntime = utilityProcess.fork(serverScript, [], {
-      cwd: join(resourcesPath, 'next-server'),
+      cwd: nextServerRoot,
       env: {
         ...process.env,
         PORT: String(port),
         HOSTNAME: '127.0.0.1',
+        ...(existsSync(modulesSqlPath)
+          ? { CADENCE_MODULES_SQL_PATH: modulesSqlPath }
+          : {}),
         NODE_ENV: 'production',
         CADENCE_DESKTOP_AI_ENGINE_URL:
           process.env.CADENCE_DESKTOP_AI_ENGINE_URL ??

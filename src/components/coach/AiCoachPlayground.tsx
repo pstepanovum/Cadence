@@ -74,9 +74,11 @@ function createTurn(turn: AiCoachGeneratedTurn): AiCoachTurn {
 export function AiCoachPlayground({
   userId,
   showOverviewCard = true,
+  showEngineDiagnostics = true,
 }: {
   userId: string;
   showOverviewCard?: boolean;
+  showEngineDiagnostics?: boolean;
 }) {
   const searchParams = useSearchParams();
   const { instruct } = useCoachVoice();
@@ -125,6 +127,21 @@ export function AiCoachPlayground({
 
   const isCoachBusy = phase === "starting" || phase === "continuing";
   const hasStartedSession = turns.length > 0;
+
+  useEffect(() => {
+    if (hasStartedSession) return;
+    const html = document.documentElement;
+    const body = document.body;
+    const prevHtml = html.style.overflow;
+    const prevBody = body.style.overflow;
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    return () => {
+      html.style.overflow = prevHtml;
+      body.style.overflow = prevBody;
+    };
+  }, [hasStartedSession]);
+
   const startDisabled = !trimmedTopicDraft || !coachStatus?.ready || isCoachBusy;
   const startHelperMessage = !trimmedTopicDraft
     ? "Add a topic to unlock the coach."
@@ -139,12 +156,6 @@ export function AiCoachPlayground({
     phase !== "assessing";
 
   // ── Effects ──────────────────────────────────────────────────────────────
-
-  useEffect(() => {
-    console.log(
-      `[coach] phase=${phase} canContinue=${canContinue} turns=${turns.length}`,
-    );
-  }, [phase, canContinue, turns.length]);
 
   useEffect(() => {
     setSavedSessions(readSavedAiCoachSessions(userId));
@@ -639,43 +650,63 @@ export function AiCoachPlayground({
   // ── Render ────────────────────────────────────────────────────────────────
 
   return (
-    <div className="space-y-4">
+    <div
+      data-lenis-prevent
+      className={cn(
+        "flex w-full min-h-0 flex-1 flex-col overflow-hidden overscroll-none",
+        hasStartedSession && "gap-4",
+      )}
+    >
       <section
         className={cn(
-          "grid gap-4",
-          showOverviewCard ? "xl:grid-cols-[1.02fr_0.98fr]" : undefined,
+          "flex w-full min-h-0 overflow-hidden",
+          hasStartedSession
+            ? "shrink-0 flex-col space-y-4"
+            : "min-h-0 flex-1 flex-col items-center justify-center px-1",
         )}
       >
-        {showOverviewCard ? (
-          <CoachOverviewCard
-            completedTurns={completedTurns}
-            averageScore={averageScore}
-            savedSessions={savedSessions}
-          />
-        ) : null}
+        <div
+          className={cn(
+            "grid w-full gap-4",
+            showOverviewCard ? "xl:grid-cols-[1.02fr_0.98fr]" : undefined,
+            !hasStartedSession &&
+              (showOverviewCard
+                ? "mx-auto max-h-full w-full max-w-6xl xl:items-center"
+                : "mx-auto w-full max-w-2xl"),
+          )}
+        >
+          {showOverviewCard ? (
+            <CoachOverviewCard
+              completedTurns={completedTurns}
+              averageScore={averageScore}
+              savedSessions={savedSessions}
+            />
+          ) : null}
 
-        <CoachSetupCard
-          topicDraft={topicDraft}
-          onTopicDraftChange={setTopicDraft}
-          sessionTopic={sessionTopic}
-          phase={phase}
-          replyMode={replyMode}
-          onReplyModeChange={setReplyMode}
-          coachStatus={coachStatus}
-          engineReady={engineReady}
-          transcriptionReady={transcriptionReady}
-          transcriptionError={transcriptionError}
-          error={error}
-          turnsCount={turns.length}
-          startDisabled={startDisabled}
-          startHelperMessage={startHelperMessage}
-          onStart={() => void requestCoachTurn("start")}
-          onReset={resetCoachSession}
-        />
+          <CoachSetupCard
+            topicDraft={topicDraft}
+            onTopicDraftChange={setTopicDraft}
+            sessionTopic={sessionTopic}
+            phase={phase}
+            replyMode={replyMode}
+            onReplyModeChange={setReplyMode}
+            coachStatus={coachStatus}
+            engineReady={engineReady}
+            transcriptionReady={transcriptionReady}
+            transcriptionError={transcriptionError}
+            error={error}
+            turnsCount={turns.length}
+            startDisabled={startDisabled}
+            startHelperMessage={startHelperMessage}
+            onStart={() => void requestCoachTurn("start")}
+            onReset={resetCoachSession}
+            showEngineDiagnostics={showEngineDiagnostics}
+          />
+        </div>
       </section>
 
       {hasStartedSession ? (
-        <section className="grid gap-4 xl:grid-cols-[1.06fr_0.94fr]">
+        <section className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-y-auto overflow-x-hidden xl:grid-cols-[1.06fr_0.94fr]">
           <CoachThread
             turns={turns}
             currentTurn={currentTurn}

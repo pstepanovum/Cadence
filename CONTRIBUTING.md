@@ -37,10 +37,16 @@ To clear build and browser caches (models and app state preserved):
 pnpm dev:all -- --cache
 ```
 
-To do a full wipe including AI models, venvs, and all app data:
+To reset app data and desktop runtime but keep `desktop-runtime/models` (HF weights):
 
 ```bash
 pnpm dev:all -- --clear
+```
+
+To wipe everything including models:
+
+```bash
+pnpm dev:all -- --clear-all
 ```
 
 If you use a Python virtual environment:

@@ -23,6 +23,9 @@ extraResources:
   - from: "../.next/static"
     to: "next-server/.next/static"
     filter: ["**/*"]
+  # Learn catalog: Next dev reads repo supabase/; bundled server cwd is next-server/
+  - from: "../supabase/modules.sql"
+    to: "next-server/supabase/modules.sql"
   - from: "../src/backend/ai-engine"
     to: "desktop-runtime/ai-engine"
     filter:

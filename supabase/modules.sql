@@ -1,6 +1,8 @@
 -- ============================================================
--- Cadence — Supabase schema + seed data
--- Run this in the Supabase SQL editor or via supabase db reset
+-- Cadence — modules (Learn): schema + lesson catalog seed
+-- Cloud: seed with `pnpm db:cloud` or `pnpm db:cloud:modules`; wipe-only `pnpm db:cloud:clear`;
+-- wipe+reseed `pnpm db:cloud:reset`; nuclear public wipe `pnpm db:cloud:clear-force`.
+-- Local: Next.js reads this file from disk (no Supabase required for catalog).
 -- ============================================================
 
 -- ── Tables ──────────────────────────────────────────────────

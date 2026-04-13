@@ -11,6 +11,12 @@ interface ModuleCardProps {
 }
 
 export function ModuleCard({ module }: ModuleCardProps) {
+  const focusChips = Array.isArray(module.phoneme_focus)
+    ? module.phoneme_focus.filter(
+        (p): p is string => typeof p === "string" && p.trim().length > 0,
+      )
+    : [];
+
   const progress = module.progress;
   const isUnlocked = progress?.is_unlocked === true;
   const isCompleted = progress?.is_completed === true;
@@ -91,23 +97,25 @@ export function ModuleCard({ module }: ModuleCardProps) {
         </p>
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-2">
-        {module.phoneme_focus.slice(0, 4).map((phoneme) => (
-          <span
-            key={phoneme}
-            className={cn(
-              "rounded-full px-3 py-1 text-xs font-mono font-semibold",
-              isCompleted
-                ? "bg-white/12 text-bright-snow"
-                : isUnlocked
-                  ? "bg-vanilla-cream text-hunter-green"
-                  : "bg-pale-slate text-slate-grey",
-            )}
-          >
-            {phoneme}
-          </span>
-        ))}
-      </div>
+      {focusChips.length > 0 ? (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {focusChips.slice(0, 4).map((phoneme, index) => (
+            <span
+              key={`${module.id}-focus-${index}`}
+              className={cn(
+                "rounded-full px-3 py-1 text-xs font-mono font-semibold",
+                isCompleted
+                  ? "bg-white/12 text-bright-snow"
+                  : isUnlocked
+                    ? "bg-vanilla-cream text-hunter-green"
+                    : "bg-pale-slate text-slate-grey",
+              )}
+            >
+              {phoneme}
+            </span>
+          ))}
+        </div>
+      ) : null}
 
       <div className="mt-auto space-y-3 pt-6">
         {isUnlocked ? (

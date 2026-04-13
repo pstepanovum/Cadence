@@ -21,37 +21,26 @@ from validation import latest_history_content
 
 def target_system_prompt() -> str:
     return (
-        "You are having a casual spoken conversation with someone.\n"
-        "The topic is given. You MUST talk about that topic — never comment on speaking, language, or pronunciation.\n"
+        "You are a friendly coach in a spoken chat. Stay on the topic you are given.\n"
+        "Do not talk about pronunciation, accents, or English practice.\n"
         "\n"
-        "Output EXACTLY two lines, then stop:\n"
+        "TARGET mode — reply with exactly these two lines and nothing else:\n"
+        "CoachMessage: <short line, question or comment on the topic>\n"
+        "LearnerReply: <one short sentence the human could say next, first person, ends with . ? or !>\n"
         "\n"
-        "CoachMessage: <your question or comment about the topic — under 20 words>\n"
-        "LearnerReply: <a natural first-person reply the speaker will say — under 16 words, ends with . ! or ?>\n"
-        "\n"
-        "Hard rules:\n"
-        "- CoachMessage MUST be about the topic. If a learner message exists, respond to it directly.\n"
-        "- Never say 'let's practice', 'good job', 'you are speaking well', or any language feedback.\n"
-        "- Do NOT write 'Coach:' or 'Learner:' inside the line values.\n"
-        "- LearnerReply is first-person: 'I think...', 'That's...', 'I agree...'\n"
-        "- Two lines only. Nothing before or after."
+        "Do not add labels other than CoachMessage and LearnerReply. No extra text."
     )
 
 
 def freedom_system_prompt() -> str:
     return (
-        "You are having a casual spoken conversation with someone.\n"
-        "The topic is given. You MUST talk about that topic — never comment on speaking, language, or pronunciation.\n"
+        "You are a friendly coach in a spoken chat. Stay on the topic you are given.\n"
+        "Do not talk about pronunciation, accents, or English practice.\n"
         "\n"
-        "Output EXACTLY one line, then stop:\n"
+        "FREEDOM mode — reply with exactly one line and nothing else:\n"
+        "CoachMessage: <short line, question or comment on the topic>\n"
         "\n"
-        "CoachMessage: <your question or comment about the topic — under 20 words>\n"
-        "\n"
-        "Hard rules:\n"
-        "- CoachMessage MUST be about the topic. If a learner message exists, respond to it directly.\n"
-        "- Never say 'let's practice', 'good job', 'you are speaking well', or any language feedback.\n"
-        "- Do NOT write 'Coach:' inside the line value.\n"
-        "- One line only. Nothing before or after."
+        "Do not add any other labels or lines."
     )
 
 
@@ -78,18 +67,16 @@ def _user_prompt(payload: dict[str, Any]) -> str:
     if action == "start":
         return (
             f"Topic: {topic}\n"
-            "\n"
-            f"Open the conversation with a specific question or comment about: {topic}\n"
-            "Do not use a generic greeting. Engage with the topic immediately."
+            f"Ask one specific question about this topic (not a generic hello only)."
         )
 
     latest_user = latest_history_content(history, "user")
     lines = [f"Topic: {topic}", ""]
     if serialized:
-        lines += ["Conversation so far:", serialized, ""]
+        lines += [serialized, ""]
     if latest_user:
-        lines.append(f"The person just said: {latest_user}")
-    lines.append(f"Respond to what they said and keep the conversation about: {topic}")
+        lines.append(f"They said: {latest_user}")
+    lines.append("Answer them and move the topic forward in one coach line.")
     return "\n".join(lines)
 
 

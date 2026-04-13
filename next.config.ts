@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   // Required for Electron packaging: produces .next/standalone/server.js
   output: "standalone",
   outputFileTracingIncludes: {
-    "/*": ["supabase/seed.sql"],
+    "/*": ["supabase/modules.sql"],
   },
   turbopack: {
     root: path.join(__dirname),

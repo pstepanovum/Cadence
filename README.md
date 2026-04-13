@@ -162,10 +162,16 @@ To clear build and browser caches before starting (models and app state preserve
 pnpm dev:all -- --cache
 ```
 
-To do a full wipe including AI models, venvs, and all app data:
+To reset Cadence app data and desktop runtime (venvs, setup manifests) but **keep** the large Hugging Face cache under `desktop-runtime/models`:
 
 ```bash
 pnpm dev:all -- --clear
+```
+
+To wipe **everything** again, including those models (slow re-download):
+
+```bash
+pnpm dev:all -- --clear-all
 ```
 
 `Ctrl-C` shuts everything down cleanly with no leftover processes.
