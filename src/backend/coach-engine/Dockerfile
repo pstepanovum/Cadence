@@ -22,9 +22,15 @@ COPY requirements.txt ./
 RUN pip install --upgrade pip setuptools wheel && \
     pip install -r requirements.txt
 
-COPY . .
+COPY main.py coach_llm.py model.py parsing.py prompts.py validation.py ./
+
+RUN addgroup --system --gid 1001 appgroup && \
+    adduser --system --uid 1001 --ingroup appgroup appuser && \
+    mkdir -p /models/huggingface && \
+    chown -R appuser:appgroup /app /models
+
+USER appuser
 
 EXPOSE 8001
 
 CMD ["python", "main.py"]
-

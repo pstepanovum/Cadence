@@ -1,0 +1,13 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info
+.env
+.venv
+venv/
+models/
+*.log
+.DS_Store
+requirements.desktop.txt
