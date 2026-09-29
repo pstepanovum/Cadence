@@ -14,6 +14,11 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "desktop/dist/**",
     "desktop/packages/**",
+    // Python services: their virtualenvs vendor megabytes of bundled JS, which
+    // ESLint would otherwise parse until it runs out of memory.
+    "src/backend/**",
+    // The Expo app lints itself with `npm run lint` inside mobile/.
+    "mobile/**",
   ]),
 ]);
 

@@ -1,0 +1,6 @@
+{
+  "//": "Marks the test files as ES modules. Node's TypeScript type stripping and import.meta both need this, and the root package is CommonJS.",
+  "name": "cadence-tests",
+  "private": true,
+  "type": "module"
+}

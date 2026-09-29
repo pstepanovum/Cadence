@@ -36,7 +36,7 @@ export async function PATCH(
         avgScore: body.avg_score,
         passed: body.passed,
       });
-      writeLocalLearnState(cookieStore, nextState);
+      await writeLocalLearnState(cookieStore, nextState);
 
       return NextResponse.json({
         id: sessionId,

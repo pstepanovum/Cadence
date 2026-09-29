@@ -9,6 +9,7 @@ import logging
 import os
 import re
 import shutil
+import subprocess
 import sys
 from typing import Any
 
@@ -73,6 +74,49 @@ def _decode_ctc_predictions(
     return _normalize_phoneme_string(" ".join(pieces))
 
 
+def _decode_with_ffmpeg(audio_bytes: bytes) -> tuple[np.ndarray, int] | None:
+    if shutil.which("ffmpeg") is None:
+        return None
+
+    try:
+        result = subprocess.run(
+            [
+                "ffmpeg",
+                "-hide_banner",
+                "-loglevel",
+                "error",
+                "-i",
+                "pipe:0",
+                "-f",
+                "wav",
+                "-ac",
+                "1",
+                "-ar",
+                str(TARGET_SAMPLE_RATE),
+                "pipe:1",
+            ],
+            input=audio_bytes,
+            capture_output=True,
+            timeout=30,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+
+    if result.returncode != 0 or not result.stdout:
+        return None
+
+    try:
+        waveform, sample_rate = sf.read(
+            io.BytesIO(result.stdout),
+            dtype="float32",
+            always_2d=True,
+        )
+    except Exception:
+        return None
+
+    return waveform, sample_rate
+
+
 def _load_audio(audio_bytes: bytes, filename: str | None = None) -> np.ndarray:
     del filename
 
@@ -83,7 +127,15 @@ def _load_audio(audio_bytes: bytes, filename: str | None = None) -> np.ndarray:
             always_2d=True,
         )
     except Exception as exc:
-        raise ValueError("The uploaded file did not contain decodable WAV audio.") from exc
+        # Mobile clients (Android in particular) can only record compressed
+        # formats such as m4a/AAC; fall back to ffmpeg when it is available.
+        decoded = _decode_with_ffmpeg(audio_bytes)
+        if decoded is None:
+            raise ValueError(
+                "The uploaded file did not contain decodable audio. "
+                "Upload WAV, or install ffmpeg to enable m4a/webm support."
+            ) from exc
+        waveform, sample_rate = decoded
 
     if waveform.size == 0:
         raise ValueError("The uploaded file did not contain decodable audio.")

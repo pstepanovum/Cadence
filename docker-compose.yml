@@ -6,15 +6,15 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:?Set NEXT_PUBLIC_SUPABASE_URL in your env file}
-        NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:?Set NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in your env file}
-        NEXT_PUBLIC_BRANDFETCH_CLIENT_ID: ${NEXT_PUBLIC_BRANDFETCH_CLIENT_ID:?Set NEXT_PUBLIC_BRANDFETCH_CLIENT_ID in your env file}
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:-}
+        NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:-}
+        NEXT_PUBLIC_BRANDFETCH_CLIENT_ID: ${NEXT_PUBLIC_BRANDFETCH_CLIENT_ID:-}
         AI_ENGINE_URL: http://ai-engine:8000
         AI_COACH_ENGINE_URL: http://coach-engine:8001
     environment:
-      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:?Set NEXT_PUBLIC_SUPABASE_URL in your env file}
-      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:?Set NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in your env file}
-      NEXT_PUBLIC_BRANDFETCH_CLIENT_ID: ${NEXT_PUBLIC_BRANDFETCH_CLIENT_ID:?Set NEXT_PUBLIC_BRANDFETCH_CLIENT_ID in your env file}
+      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:-}
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:-}
+      NEXT_PUBLIC_BRANDFETCH_CLIENT_ID: ${NEXT_PUBLIC_BRANDFETCH_CLIENT_ID:-}
       AI_ENGINE_URL: http://ai-engine:8000
       AI_COACH_ENGINE_URL: http://coach-engine:8001
       BREVO_SMTP_HOST: ${BREVO_SMTP_HOST}
@@ -22,12 +22,35 @@ services:
       BREVO_SMTP_USER: ${BREVO_SMTP_USER}
       BREVO_SMTP_PASSWORD: ${BREVO_SMTP_PASSWORD}
       BREVO_API_KEY: ${BREVO_API_KEY}
+      # --- Phone pairing over the LAN ---
+      # The container only sees its bridge address, which no phone can reach,
+      # so the host tells it the address to print in the QR. scripts/serve.mjs
+      # fills these in; `docker compose up` on its own still works, it just
+      # cannot guess the Wi-Fi address.
+      CADENCE_LAN_HOST: ${CADENCE_LAN_HOST:-}
+      CADENCE_SERVER_NAME: ${CADENCE_SERVER_NAME:-}
+      CADENCE_PUBLIC_PORT: ${CADENCE_PUBLIC_PORT:-3000}
+      CADENCE_IN_CONTAINER: "1"
+      CADENCE_DATA_DIR: /data
+      CADENCE_PAIRING_ADMIN_TOKEN: ${CADENCE_PAIRING_ADMIN_TOKEN:-}
+    volumes:
+      # Pairing state and paired-device progress live on the host so they
+      # survive `docker compose down` and so `pnpm serve` can read the key.
+      - ${CADENCE_DATA_DIR:-./.cadence-data}:/data
+    # The image's own unprivileged user owns nothing on the host, so on Linux it
+    # cannot write into the bind-mounted data folder. scripts/serve.mjs sets this
+    # to the host user's uid:gid. A bare `docker compose up` keeps the image
+    # default, which is fine on Docker Desktop, where bind mounts are remapped.
+    user: ${CADENCE_RUN_AS:-1001:1001}
     depends_on:
       ai-engine:
         condition: service_started
       coach-engine:
         condition: service_started
     ports:
+      # Bound on every interface on purpose: a phone on the same Wi-Fi has to
+      # be able to reach this. Nothing here is exposed beyond the LAN unless
+      # the router is forwarding the port.
       - "3000:3000"
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then((res)=>{if(!res.ok) process.exit(1)}).catch(()=>process.exit(1))"]

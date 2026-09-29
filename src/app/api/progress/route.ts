@@ -23,7 +23,7 @@ export async function POST() {
     if (session.mode === "local") {
       const cookieStore = await cookies();
       const localState = await getLocalLearnState();
-      writeLocalLearnState(cookieStore, localState);
+      await writeLocalLearnState(cookieStore, localState);
       return NextResponse.json({ ok: true }, { status: 201 });
     }
 
@@ -73,7 +73,7 @@ export async function PATCH(request: Request) {
         exam_score,
         catalog.modules.length,
       );
-      writeLocalLearnState(cookieStore, nextState);
+      await writeLocalLearnState(cookieStore, nextState);
 
       const moduleProgress = nextState.m[String(module_id)];
       return NextResponse.json({

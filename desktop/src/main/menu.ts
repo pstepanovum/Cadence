@@ -1,6 +1,14 @@
 import { Menu } from 'electron'
 
-export function buildMenu(appName: string): void {
+export interface MenuActions {
+  /** Opens the pairing screen, turning on LAN serving first if needed. */
+  onConnectPhone: () => void
+  /** Whether the runtime is currently reachable from the Wi-Fi. */
+  isLanServing: () => boolean
+  onStopSharing: () => void
+}
+
+export function buildMenu(appName: string, actions?: MenuActions): void {
   const template: Electron.MenuItemConstructorOptions[] = [
     {
       label: appName,
@@ -16,6 +24,24 @@ export function buildMenu(appName: string): void {
         { label: `Quit ${appName}`, role: 'quit' },
       ],
     },
+    ...(actions
+      ? ([
+          {
+            label: 'Phone',
+            submenu: [
+              {
+                label: 'Connect a Phone\u2026',
+                click: () => actions.onConnectPhone(),
+              },
+              {
+                label: 'Stop Sharing With Phones',
+                enabled: actions.isLanServing(),
+                click: () => actions.onStopSharing(),
+              },
+            ],
+          },
+        ] as Electron.MenuItemConstructorOptions[])
+      : []),
     {
       label: 'Edit',
       submenu: [

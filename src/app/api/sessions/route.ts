@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       const cookieStore = await cookies();
       const localState = await getLocalLearnState();
       const nextSession = startLocalSession(localState, lesson.slug, body.module_id);
-      writeLocalLearnState(cookieStore, nextSession.state);
+      await writeLocalLearnState(cookieStore, nextSession.state);
       return NextResponse.json({ sessionId: nextSession.sessionId }, { status: 201 });
     }
 

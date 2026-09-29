@@ -251,6 +251,38 @@ Full reset including cached model downloads:
 docker compose --env-file .env.local down --volumes --remove-orphans
 ```
 
+## Practise on Your Phone
+
+The phone app does not need a hosted deployment. Cadence runs on your own
+computer and the phone connects to it over your home Wi-Fi: no hosting bill, no
+account, and recordings never leave the house.
+
+On the computer:
+
+```bash
+pnpm serve
+```
+
+That starts the stack if it is not already running and prints a QR code in the
+terminal, along with a link to the same code in a browser. In the desktop app,
+use **Phone -> Connect a Phone** instead.
+
+On the phone, open Cadence, choose **Connect to my computer**, and scan. The
+one-time code lasts two minutes and works once; scanning it exchanges it for a
+long-lived device token kept in the iOS keychain. After that the phone finds the
+computer again on its own, including after the computer's IP address changes.
+
+The pairing screen lists every paired device and can revoke one immediately.
+
+- [docs/CONNECT_YOUR_PHONE.md](docs/CONNECT_YOUR_PHONE.md) — a guide for someone
+  who does not want to think about networking
+- [docs/PAIRING_PROTOCOL.md](docs/PAIRING_PROTOCOL.md) — the protocol, the TLS
+  decision and what it does and does not protect
+
+The connection is plain HTTP scoped to the local network (iOS
+`NSAllowsLocalNetworking`). The reasoning, including why a self-signed
+certificate is not the better answer here, is written out in the protocol doc.
+
 ## Desktop App (Electron)
 
 Cadence ships a native desktop app for macOS and Windows, built with Electron. It wraps the full Next.js app in a native shell — no browser required.
@@ -326,6 +358,13 @@ Common web-side variables:
 - `NEXT_PUBLIC_BRANDFETCH_CLIENT_ID`
 - `AI_ENGINE_URL`
 - `AI_COACH_ENGINE_URL`
+
+Phone pairing (all optional; `pnpm serve` sets what it needs):
+
+- `CADENCE_DATA_DIR` — where pairing state and paired-device progress live (default `~/.cadence`)
+- `CADENCE_LAN_HOST` — the address to print in the QR; required under Docker, which cannot see the host's Wi-Fi address
+- `CADENCE_SERVER_NAME` — the label the phone shows
+- `CADENCE_PAIRING_ADMIN_TOKEN` — guards the pairing screen; generated into the data directory if unset
 
 Optional billing variables:
 

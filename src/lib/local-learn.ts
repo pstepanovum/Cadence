@@ -3,6 +3,11 @@ import "server-only";
 import { randomUUID } from "node:crypto";
 import { cookies } from "next/headers";
 import type { LessonSessionSummary, Stats, UserProgress } from "@/lib/learn";
+import {
+  readDeviceLearnState,
+  writeDeviceLearnState,
+} from "@/lib/pairing/learn-store";
+import { resolveDeviceFromRequest } from "@/lib/pairing/request";
 
 export const LOCAL_LEARN_STATE_COOKIE = "cadence_local_learn_state";
 
@@ -121,15 +126,36 @@ export function readLocalLearnStateFromCookies(cookieStore: CookieReader) {
   return parseLocalLearnState(cookieStore.get(LOCAL_LEARN_STATE_COOKIE)?.value);
 }
 
+/**
+ * A paired phone has no cookie jar we control, so its progress lives in the
+ * server's data directory instead. Every device paired to this computer shares
+ * one state, which is what a person expects: it is their computer and their
+ * practice. The browser on that computer keeps its own cookie state, because
+ * that is what local mode has always done.
+ */
 export async function getLocalLearnState() {
+  const device = await resolveDeviceFromRequest();
+
+  if (device?.ok) {
+    return parseLocalLearnState(await readDeviceLearnState());
+  }
+
   return readLocalLearnStateFromCookies(await cookies());
 }
 
-export function writeLocalLearnState(
+export async function writeLocalLearnState(
   cookieStore: CookieWriter,
   state: CompactLocalLearnState,
 ) {
-  cookieStore.set(LOCAL_LEARN_STATE_COOKIE, JSON.stringify(state), {
+  const serialized = JSON.stringify(state);
+  const device = await resolveDeviceFromRequest();
+
+  if (device?.ok) {
+    await writeDeviceLearnState(serialized);
+    return;
+  }
+
+  cookieStore.set(LOCAL_LEARN_STATE_COOKIE, serialized, {
     path: "/",
     httpOnly: true,
     sameSite: "lax",

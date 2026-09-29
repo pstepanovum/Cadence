@@ -5,12 +5,45 @@ import { getAppSession } from "@/lib/app-session";
 import {
   CONVERSATION_PROGRESS_COOKIE,
   getConversationModule,
+  getConversationModulesWithProgress,
   parseConversationProgress,
   serializeConversationProgress,
 } from "@/lib/conversation";
+import { loadConversationProgressForMode } from "@/lib/conversation-progress-sync";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
+
+export async function GET() {
+  try {
+    const session = await getAppSession();
+
+    if (!session.mode || !session.user) {
+      return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
+    }
+
+    const cookieStore = await cookies();
+    const progress = await loadConversationProgressForMode(
+      session.mode,
+      session.user.id,
+      cookieStore.get(CONVERSATION_PROGRESS_COOKIE)?.value,
+    );
+
+    return NextResponse.json({
+      modules: getConversationModulesWithProgress(progress),
+    });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to load conversation progress.",
+      },
+      { status: 500 },
+    );
+  }
+}
 
 export async function PATCH(request: Request) {
   try {

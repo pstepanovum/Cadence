@@ -1,0 +1,27 @@
+{
+  // The tests reach across both projects: the Next.js pairing service under
+  // ../src and the Expo app's pairing module under ../mobile/src. Neither
+  // project's tsconfig can describe that, and "@/" means something different in
+  // each, so the tests get their own. "@/" here means the Expo app, matching
+  // mobile/tsconfig.json, because that is the only alias the tested files use.
+  //
+  // Node runs these files directly with type stripping, which is why the
+  // imports carry a .ts extension.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": false,
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../mobile/src/*"]
+    }
+  },
+  "include": ["**/*.ts"]
+}

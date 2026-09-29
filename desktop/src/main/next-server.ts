@@ -40,10 +40,22 @@ export async function startNextServer({
   appOrigin,
   port,
   resourcesPath,
+  pairing,
 }: {
   appOrigin: string
   port: number
   resourcesPath: string
+  /**
+   * Set when the person has turned phone pairing on. It is what moves the
+   * runtime off loopback onto the LAN, so the default stays private.
+   */
+  pairing?: {
+    lanServing: boolean
+    dataDir: string
+    adminToken: string
+    lanHost: string | null
+    serverName: string
+  }
 }): Promise<UtilityProcess> {
   return new Promise((resolve, reject) => {
     const serverScript = join(resourcesPath, 'next-server', 'server.js')
@@ -54,7 +66,18 @@ export async function startNextServer({
       env: {
         ...process.env,
         PORT: String(port),
-        HOSTNAME: '127.0.0.1',
+        // Loopback unless the person asked for phone pairing. Binding the LAN
+        // puts the whole app on the Wi-Fi, so it is never the default.
+        HOSTNAME: pairing?.lanServing ? '0.0.0.0' : '127.0.0.1',
+        ...(pairing
+          ? {
+              CADENCE_DATA_DIR: pairing.dataDir,
+              CADENCE_PAIRING_ADMIN_TOKEN: pairing.adminToken,
+              CADENCE_PUBLIC_PORT: String(port),
+              CADENCE_SERVER_NAME: pairing.serverName,
+              ...(pairing.lanHost ? { CADENCE_LAN_HOST: pairing.lanHost } : {}),
+            }
+          : {}),
         ...(existsSync(modulesSqlPath)
           ? { CADENCE_MODULES_SQL_PATH: modulesSqlPath }
           : {}),

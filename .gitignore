@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# pairing state and paired-device progress (docker-compose default location)
+/.cadence-data/
+
 # local editor / agent notes
 .claude/
 .vscode/

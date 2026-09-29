@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       const cookieStore = await cookies();
       const localState = await getLocalLearnState();
       const nextState = recordLocalAttempt(localState, body.score);
-      writeLocalLearnState(cookieStore, nextState);
+      await writeLocalLearnState(cookieStore, nextState);
 
       return NextResponse.json(
         {

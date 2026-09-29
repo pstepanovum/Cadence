@@ -1,12 +1,16 @@
 import "server-only";
 
 import { redirect } from "next/navigation";
+import { headers } from "next/headers";
 import type { User } from "@supabase/supabase-js";
+import { createClient } from "@supabase/supabase-js";
 import type { AppMode } from "@/lib/app-mode";
 import { getAppMode } from "@/lib/app-mode";
 import type { LocalProfile } from "@/lib/local-profile";
 import { getLocalProfile } from "@/lib/local-profile";
-import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { resolveDeviceFromRequest } from "@/lib/pairing/request";
+import { getSharedProfile } from "@/lib/pairing/service";
+import { assertSupabaseConfig, isSupabaseConfigured } from "@/lib/supabase/config";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export interface AppUser {
@@ -27,6 +31,43 @@ export interface AppSession {
 }
 
 export async function getAppSession(): Promise<AppSession> {
+  // A phone paired to this computer over the LAN presents a Cadence device
+  // token. It is checked before anything else: the token names the identity,
+  // and no cookie or Supabase session on the wire may override it.
+  const device = await resolveDeviceFromRequest();
+  if (device) {
+    if (!device.ok) {
+      // The token was ours but is revoked or expired. Returning "no user"
+      // rather than falling through keeps a stale phone from silently landing
+      // in some other identity; the route answers 401 and the phone unpairs.
+      return { mode: "local", user: null };
+    }
+
+    const profile = await getSharedProfile();
+    return {
+      mode: "local",
+      user: mapLocalProfileToAppUser({
+        id: profile.id,
+        displayName: profile.displayName,
+        practiceFocus: "conversations",
+        practiceCadence: "15-minutes",
+        createdAt: profile.createdAt,
+        onboardingCompleted: true,
+      }),
+    };
+  }
+
+  // Cloud mobile clients send a Supabase access token instead of cookies. The
+  // Bearer branch runs first so stray cookies from a device's OS cookie
+  // jar can never override the token identity.
+  const bearerUser = await getBearerUser();
+  if (bearerUser) {
+    return {
+      mode: "cloud",
+      user: mapSupabaseUserToAppUser(bearerUser),
+    };
+  }
+
   const mode = await getAppMode();
 
   if (mode === "local") {
@@ -71,6 +112,37 @@ export async function requireAppUser(pathname: string) {
   }
 
   redirect(`/setup?next=${encodeURIComponent(pathname)}`);
+}
+
+async function getBearerUser(): Promise<User | null> {
+  if (!isSupabaseConfigured) {
+    return null;
+  }
+
+  const headerStore = await headers();
+  const header = headerStore.get("authorization");
+  if (!header?.startsWith("Bearer ")) {
+    return null;
+  }
+
+  const token = header.slice("Bearer ".length).trim();
+  if (!token) {
+    return null;
+  }
+
+  const { supabaseUrl, supabasePublishableKey } = assertSupabaseConfig();
+  const supabase = createClient(supabaseUrl, supabasePublishableKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+    },
+  });
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser(token);
+
+  return user ?? null;
 }
 
 function mapLocalProfileToAppUser(profile: LocalProfile): AppUser {
