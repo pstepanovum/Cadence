@@ -1,0 +1,26 @@
+# The sounds library and the mouth map, including the compare view for a
+# minimal pair. Static content: free in every mode.
+appId: dev.pstepanov.cadence
+name: Mouth map
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Home, tab, 1 of 5"
+    timeout: 15000
+# The Learn tab lists it below every lesson of the level; the link is quicker.
+- openLink: "cadence:///sounds"
+- assertVisible: "(?i)compare"
+- tapOn: "think / sink"
+- assertVisible: "Side view of the mouth for /θ/ think.*"
+- assertVisible: "Side view of the mouth for /s/ sink.*"
+- takeScreenshot: 03-compare-think-sink
+- tapOn: "Back"
+- tapOn: "ship / sheep"
+- assertVisible: "Front view of the lips.*"
+- takeScreenshot: 03-compare-ship-sheep
+- tapOn: "Back"
+- scrollUntilVisible:
+    element: "[rɹ], as in .*"
+- tapOn: "[rɹ], as in .*"
+- assertVisible: "Replay the shape.*"
+- takeScreenshot: 03-sound-r

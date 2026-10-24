@@ -1,0 +1,42 @@
+# Practice on the device: a lesson, a quiz, flashcards, matching and
+# sentence building, all graded on the phone.
+appId: dev.pstepanov.cadence
+name: Practice
+---
+- launchApp
+- tapOn: "Learn, tab, 2 of 5"
+- tapOn: "A1"
+- assertVisible: "Quiz. Mixed questions"
+- takeScreenshot: 02-learn
+- tapOn: "Quiz. Mixed questions"
+- runFlow: subflows/answer-session.yaml
+- takeScreenshot: 02-quiz-done
+- tapOn: "Done"
+- tapOn: "Flashcards.*"
+- runFlow: subflows/answer-session.yaml
+- tapOn: "Done"
+- tapOn: "Matching. Pair them up"
+- runFlow: subflows/answer-session.yaml
+- tapOn: "Done"
+- tapOn: "Grammar builder. Build sentences"
+- runFlow: subflows/answer-session.yaml
+- takeScreenshot: 02-builder-done
+- tapOn: "Done"
+- tapOn: "Sentence practice. Rewrite and type"
+- runFlow: subflows/answer-session.yaml
+- tapOn: "Done"
+- scrollUntilVisible:
+    element: ".* minutes\\."
+- tapOn: ".* minutes\\."
+- extendedWaitUntil:
+    visible: "Start the lesson"
+    timeout: 10000
+- takeScreenshot: 02-lesson
+- tapOn: "Start the lesson"
+- runFlow: subflows/answer-session.yaml
+- takeScreenshot: 02-lesson-done
+- tapOn: "Done"
+- tapOn: "Home, tab, 1 of 5"
+- tapOn: ".*streak.*Open streak and badges"
+- assertVisible: "Streak and badges"
+- takeScreenshot: 02-badges

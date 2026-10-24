@@ -913,8 +913,8 @@ Run in `mobile/`. Simulators: "iPhone SE (3rd generation)" and
 | --- | --- | --- |
 | Typecheck, unit | `npx tsc --noEmit && npm test` | clean (exists) |
 | Simulator builds | `npx expo run:ios --device "iPhone SE (3rd generation)"` and `npx expo run:ios --device "iPhone 16 Pro Max"` | build, install, launch, no red box |
-| Flows | Maestro (`brew install maestro`), `maestro test e2e/` | connect own server with no paywall shown; cloud sign-in; a lesson; a quiz; flashcards; matching; sentence building; paywall with RevenueCat in sandbox or the offline stub (`EXPO_PUBLIC_PURCHASES_STUB=1`); airplane mode keeps practice working and shows the AI offer instead of an error; mouth map compare view |
-| Screenshots | each flow ends with `takeScreenshot`; `maestro test e2e/ --format junit` writes them to `e2e/screenshots/<device>/` | every screen captured on both devices, light and dark |
+| Flows | Maestro (`brew install mobile-dev-inc/tap/maestro`, JDK 17+), `e2e/run.sh <simulator udid> <name> [light\|dark]` against a release build made with the e2e environment (`.env.example`: a `demo-` Firebase project, `EXPO_PUBLIC_FIREBASE_AUTH_EMULATOR`, `EXPO_PUBLIC_PURCHASES_STUB=1`), a Cadence server and the Auth and Firestore emulators; the script header lists its variables | connect own server with no paywall shown; cloud sign-in; a lesson; a quiz; flashcards; matching; sentence building; paywall with RevenueCat in sandbox or the offline stub (`EXPO_PUBLIC_PURCHASES_STUB=1`); airplane mode keeps practice working and shows the AI offer instead of an error; mouth map compare view |
+| Screenshots | flows call `takeScreenshot`; `e2e/run.sh` writes them to `build/screenshots/<name>-<theme>/` (not committed) | every screen captured on both devices, light and dark |
 | Dynamic Type | `xcrun simctl ui booted content_size accessibility-extra-extra-extra-large`, then the flows again | no clipped or overlapping text, every action reachable, no crash |
 | Crash check | `xcrun simctl spawn booted log show --last 10m --predicate 'process == "Cadence"' \| grep -i -E "fatal\|exception"` after the flows | nothing |
 

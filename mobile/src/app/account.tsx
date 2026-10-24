@@ -128,7 +128,7 @@ export default function AccountScreen() {
               This deletes your account and its progress for good. A subscription bought in the App Store keeps running until you cancel it in your Apple Account settings.
             </Body>
             <Button label="Download my data first" variant="tonal" loading={busy === "export"} disabled={busy !== null} onPress={() => void download()} />
-            <TextField label="Your password" secureTextEntry autoComplete="current-password" value={password} onChangeText={setPassword} />
+            <TextField testID="delete-password" label="Your password" secureTextEntry autoComplete="current-password" returnKeyType="done" submitBehavior="blurAndSubmit" value={password} onChangeText={setPassword} />
             <Button
               label="Delete my account"
               variant="danger"

@@ -1,0 +1,16 @@
+# Maestro flows for the iOS Simulator (docs/PLATFORM.md, section 16, Mobile).
+# Run them with e2e/run.sh, which starts nothing itself: it needs a Cadence
+# server and the Auth emulator already up, and passes their details in.
+flows:
+  - "*.yaml"
+executionOrder:
+  continueOnFailure: true
+  flowsOrder:
+    - 01-own-server-onboarding
+    - 02-practice
+    - 03-mouth-map
+    - 04-pair-link
+    - 05-offline
+    - 06-cloud-onboarding
+    - 07-paywall
+    - 08-account

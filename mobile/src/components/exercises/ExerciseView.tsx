@@ -85,6 +85,7 @@ function MultipleChoice({ exercise, result, onChange }: ExerciseViewProps & { ex
           return (
             <ChoiceButton
               key={option}
+              testID={`choice-${index}`}
               badge={LETTERS[index]}
               label={option}
               state={state}
@@ -124,6 +125,7 @@ function Matching({ exercise, result, onChange }: ExerciseViewProps & { exercise
           return (
             <MatchTile
               key={`l-${pair.left}`}
+              testID={`match-left-${i}`}
               label={pair.left}
               sub={matched !== null ? exercise.pairs[matched].right : undefined}
               selected={left === i}
@@ -135,11 +137,12 @@ function Matching({ exercise, result, onChange }: ExerciseViewProps & { exercise
         })}
       </View>
       <View style={styles.column}>
-        {order.map((right) => {
+        {order.map((right, position) => {
           const used = mapping.includes(right);
           return (
             <MatchTile
               key={`r-${exercise.pairs[right].right}`}
+              testID={`match-right-${position}`}
               label={exercise.pairs[right].right}
               selected={false}
               tone={used ? "used" : "idle"}
@@ -167,7 +170,9 @@ function MatchTile({
   tone,
   onPress,
   hint,
+  testID,
 }: {
+  testID: string;
   label: string;
   sub?: string;
   selected: boolean;
@@ -179,6 +184,7 @@ function MatchTile({
     tone === "correct" ? colors.yellowGreen : tone === "wrong" ? colors.brickSoft : tone === "paired" ? colors.limeSoft : tone === "used" ? colors.platinum : colors.white;
   return (
     <Pressable
+      testID={testID}
       accessibilityRole="button"
       accessibilityLabel={sub ? `${label}, matched with ${sub}` : label}
       accessibilityHint={hint}
@@ -226,6 +232,7 @@ function GapFill({ exercise, result, onChange }: ExerciseViewProps & { exercise:
             {bank.map((word, i) => (
               <Chip
                 key={`${word}-${i}`}
+                testID={`bank-${i}`}
                 label={word}
                 onPress={
                   result
@@ -249,6 +256,7 @@ function GapFill({ exercise, result, onChange }: ExerciseViewProps & { exercise:
         gaps.map((value, i) => (
           <TextField
             key={i}
+            testID={`gap-${i}`}
             label={gapCount > 1 ? `Gap ${i + 1}` : "Your answer"}
             value={value}
             editable={!result}
@@ -295,8 +303,8 @@ function SentenceBuilding({ exercise, result, onChange }: ExerciseViewProps & { 
       <View style={styles.chips}>
         {tokens
           .filter((token) => !built.includes(token.id))
-          .map((token) => (
-            <Chip key={token.id} label={token.text} onPress={result ? undefined : () => update([...built, token.id])} accessibilityHint="Adds this word." />
+          .map((token, position) => (
+            <Chip key={token.id} testID={`token-${position}`} label={token.text} onPress={result ? undefined : () => update([...built, token.id])} accessibilityHint="Adds this word." />
           ))}
       </View>
       {result && !result.correct ? <Expected lines={[exercise.answer.join(" ")]} /> : null}
@@ -320,6 +328,7 @@ function TypedAnswer({
       <Title size={type.title3}>{lead}</Title>
       {hint ? <Body size={type.callout} weight="semibold">{hint}</Body> : null}
       <TextField
+        testID="typed-answer"
         label={kind === "error_correction" ? "Corrected sentence" : "Your sentence"}
         value={text}
         editable={!result}
@@ -341,6 +350,7 @@ function Dictation({ exercise, result, onChange, voice, packId }: ExerciseViewPr
     <View style={styles.wrap}>
       <SpeakerButton label="Play the sentence" playing={voice.speaking === exercise.text} onPress={() => voice.speak(exercise.text, { packId, path: exercise.audio })} />
       <TextField
+        testID="typed-answer"
         label="What you heard"
         value={text}
         editable={!result}
@@ -371,6 +381,7 @@ function MinimalPair({ exercise, result, onChange, voice, packId }: ExerciseView
           return (
             <ChoiceButton
               key={option}
+              testID={`choice-${index}`}
               label={option}
               state={state}
               disabled={result !== null}

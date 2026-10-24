@@ -25,6 +25,7 @@ export function ChoiceButton({
   state = "idle",
   disabled = false,
   onPress,
+  testID,
 }: {
   label: string;
   sublabel?: string;
@@ -33,6 +34,8 @@ export function ChoiceButton({
   state?: ChoiceState;
   disabled?: boolean;
   onPress: () => void;
+  /** For the end-to-end flows. */
+  testID?: string;
 }) {
   const [scale] = useState(() => new Animated.Value(1));
   const tone = palette[state];
@@ -43,6 +46,7 @@ export function ChoiceButton({
 
   return (
     <Pressable
+      testID={testID}
       accessibilityRole="button"
       accessibilityLabel={sublabel ? `${label}. ${sublabel}` : label}
       accessibilityState={{ disabled, selected: state === "selected" || state === "correct" || state === "wrong" }}

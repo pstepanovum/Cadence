@@ -1,0 +1,25 @@
+# Plus from Settings with the offline purchase stub (EXPO_PUBLIC_PURCHASES_STUB=1).
+appId: dev.pstepanov.cadence
+name: Paywall
+---
+- launchApp
+- tapOn: "Profile and settings"
+- scrollUntilVisible:
+    element: "Settings"
+- tapOn: "Settings"
+- scrollUntilVisible:
+    element: "Plan: Free"
+- tapOn: "Plan: Free"
+- tapOn: "See Cadence Plus"
+- assertVisible: "Practise with AI anywhere"
+- scrollUntilVisible:
+    element: "Monthly, .* a month"
+- tapOn: "Monthly, .* a month"
+- assertVisible: "Subscribe"
+- tapOn: "Yearly, 7-day free trial.*"
+- tapOn: "Start free trial"
+- extendedWaitUntil:
+    visible: "You have Plus"
+    timeout: 10000
+- takeScreenshot: 07-plus-active
+- tapOn: "Continue"

@@ -14,6 +14,7 @@ import {
   recordPronunciation,
   reviewCard,
   summaryBatch,
+  syncRefId,
   MAX_PENDING,
 } from "../src/learning/state.ts";
 import { emptySummary } from "../src/platform/progress-model.ts";
@@ -112,5 +113,28 @@ describe("learning state", () => {
     const newer = { ...s.cards.c1, reps: 7, updatedAt: AT + 5 };
     assert.equal(mergeRemoteDetail(s, { cards: { c1: older } }).cards.c1.reps, 1);
     assert.equal(mergeRemoteDetail(s, { cards: { c1: newer } }).cards.c1.reps, 7);
+  });
+});
+
+describe("sync refIds", () => {
+  const SERVER_RULE = /^[a-z0-9][a-z0-9._:-]{0,95}$/;
+
+  it("keeps ids the sync API already accepts", () => {
+    for (const id of ["lesson.a1.x", "game.flashcards", "placement.onboarding", "quiz:gp.present-simple"]) assert.equal(syncRefId(id), id);
+  });
+
+  it("lowercases and cleans the rest", () => {
+    assert.equal(syncRefId("flashcards:B2"), "flashcards:b2");
+    assert.equal(syncRefId("sound./θ/"), "sound.-");
+    assert.equal(syncRefId("--Odd Id"), "odd-id");
+    assert.equal(syncRefId("θ"), "practice");
+    for (const id of ["flashcards:B2", "Word Of The Day", "x".repeat(200)]) assert.match(syncRefId(id), SERVER_RULE);
+  });
+
+  it("fixes queued activities on the way out", () => {
+    const s = finishSession(emptyLearningState(), { kind: "flashcards", refId: "flashcards:B2", level: "B2", score: 100, minutes: 1 }, AT, DAY).state;
+    assert.equal(s.pending[0].refId, "flashcards:b2");
+    const legacy = { ...s, pending: [{ ...s.pending[0], refId: "matching:C1" }] };
+    assert.equal(summaryBatch(legacy)[0].refId, "matching:c1");
   });
 });

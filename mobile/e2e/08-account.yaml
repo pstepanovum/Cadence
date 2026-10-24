@@ -1,0 +1,48 @@
+# Newsletter choice, the data export, then account deletion.
+# env: PASSWORD
+appId: dev.pstepanov.cadence
+name: Account
+---
+- launchApp
+- tapOn: "Profile and settings"
+- scrollUntilVisible:
+    element: "Settings"
+- tapOn: "Settings"
+- scrollUntilVisible:
+    element: "Product news and offers"
+- tapOn:
+    text: "Product news and offers"
+    index: 1
+- extendedWaitUntil:
+    visible: "Check your inbox and tap the link to confirm."
+    timeout: 10000
+- takeScreenshot: 08-newsletter
+- scrollUntilVisible:
+    element: "Plan: .*"
+- tapOn: "Plan: .*"
+- scrollUntilVisible:
+    element: "Download my data"
+- tapOn: "Download my data"
+- extendedWaitUntil:
+    visible: "cadence-data-export"
+    timeout: 10000
+- takeScreenshot: 08-export
+- tapOn: "Close"
+- scrollUntilVisible:
+    element: "Delete account"
+- tapOn: "Delete account"
+- scrollUntilVisible:
+    element:
+      id: "delete-password"
+- tapOn:
+    id: "delete-password"
+- inputText: ${PASSWORD}
+- pressKey: Enter
+- scrollUntilVisible:
+    element: "Delete my account"
+- tapOn: "Delete my account"
+- tapOn: "Delete"
+- extendedWaitUntil:
+    visible: "Welcome back"
+    timeout: 20000
+- takeScreenshot: 08-deleted

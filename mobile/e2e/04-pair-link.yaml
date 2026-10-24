@@ -1,0 +1,16 @@
+# The pairing QR read by the iPhone Camera arrives as a cadence://pair link:
+# the app asks before it connects.
+# env: PAIR_URI (a fresh cadence://pair?... link)
+appId: dev.pstepanov.cadence
+name: Pair from a link
+---
+- launchApp
+- openLink: ${PAIR_URI}
+- extendedWaitUntil:
+    visible: "Connect to .*\\?"
+    timeout: 10000
+- takeScreenshot: 04-pair-link
+- tapOn: "Connect"
+- extendedWaitUntil:
+    visible: "Ready to practise?"
+    timeout: 15000

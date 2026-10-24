@@ -1,3 +1,5 @@
+import { File } from "expo-file-system";
+
 import { api, apiFetch, apiJson } from "@/api/client";
 import { requireAiTransport } from "@/api/transport";
 import { recordPronunciation } from "@/learning/state";
@@ -24,11 +26,14 @@ export interface RecordedAudio {
 
 function audioFormData(audio: RecordedAudio): FormData {
   const form = new FormData();
-  // RN's FormData accepts {uri, name, type} file descriptors.
+  // The global fetch is expo/fetch, which refuses React Native's {uri, name,
+  // type} descriptors ("Unsupported FormDataPart implementation"). It takes
+  // any part with a bytes() method and reads its name and type for the
+  // multipart headers.
   form.append("audio", {
-    uri: audio.uri,
     name: audio.name,
     type: audio.type,
+    bytes: () => new File(audio.uri).bytes(),
   } as unknown as Blob);
   return form;
 }

@@ -175,6 +175,7 @@ function RootNavigator() {
           purpose — the first declared screen becomes the stack's initial route.
         */}
         <Stack.Screen name="connect" />
+        <Stack.Screen name="pair" />
       </Stack>
       {inApp ? <EngagementWatcher /> : null}
     </>

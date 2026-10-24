@@ -93,6 +93,7 @@ export default function ManualConnectScreen() {
       />
 
       <TextField
+        testID="pair-address"
         label="Computer address"
         placeholder="192.168.1.42:3000"
         value={address}
@@ -108,6 +109,7 @@ export default function ManualConnectScreen() {
 
       <TextField
         ref={codeRef}
+        testID="pair-code"
         label="Code"
         placeholder="ABCD-EFGH-JKMN"
         value={code}

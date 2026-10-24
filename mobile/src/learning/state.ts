@@ -12,7 +12,7 @@ import {
   type ActivityKind,
   type ProgressSummary,
 } from "../platform/progress-model.ts";
-import { mergeMastery, recordDrillTake, recordPhonemes, recordReview, type SoundMasteryMap } from "../practice/sound-coach.ts";
+import { emptyMastery, mergeMastery, recordDrillTake, recordPhonemes, recordReview, type SoundMasteryMap } from "../practice/sound-coach.ts";
 import { review, type CardState, type Grade } from "../games/srs.ts";
 
 export const LEARNING_SCHEMA = 1;
@@ -212,6 +212,20 @@ export interface FinishedSession {
   placementLevel?: CefrLevel;
 }
 
+/**
+ * A refId the sync API accepts: a content id, or a lowercase key of letters,
+ * digits and . _ : - (src/lib/server/sync-input.ts). The server refuses a
+ * whole batch over one bad id, so "flashcards:B2" would block the queue.
+ */
+export function syncRefId(refId: string): string {
+  const cleaned = refId
+    .toLowerCase()
+    .replace(/[^a-z0-9._:-]+/g, "-")
+    .replace(/^[^a-z0-9]+/, "")
+    .slice(0, 96);
+  return cleaned || "practice";
+}
+
 /** Ends a practice session: the summary, the pending activity for sync, and the lesson record. */
 export function finishSession(
   state: LearningState,
@@ -231,7 +245,7 @@ export function finishSession(
   }
   const activity: Activity = {
     kind: session.kind,
-    refId: session.refId,
+    refId: syncRefId(session.refId),
     level: session.level,
     score: session.score,
     minutes: Math.max(1, Math.round(session.minutes)),
@@ -324,7 +338,8 @@ export function grammarAccuracy(state: LearningState): Record<string, { attempts
 
 /** The next batch for POST /api/sync/summary. */
 export function summaryBatch(state: LearningState): Activity[] {
-  return state.pending.slice(0, SUMMARY_BATCH);
+  // Activities queued before refIds were normalized are fixed on the way out.
+  return state.pending.slice(0, SUMMARY_BATCH).map((activity) => ({ ...activity, refId: syncRefId(activity.refId) }));
 }
 
 /**
@@ -346,6 +361,117 @@ export function detailSince(state: LearningState, since: number) {
   const grammar = Object.fromEntries(Object.entries(state.grammar).filter(([, m]) => m.lastAt > since));
   const attempts = state.attempts.filter((a) => a.at > since).reverse();
   return { cards, sounds, grammar, attempts };
+}
+
+/** The server keeps device-learned cards and added cards in separate deck documents. */
+export function deckFor(cardId: string): "custom" | "cards" {
+  return cardId.startsWith("card.custom.") || cardId.startsWith("card.mcp.") ? "custom" : "cards";
+}
+
+function attemptKind(kind: string): ActivityKind {
+  switch (kind) {
+    case "matching":
+      return "matching";
+    case "sentence_building":
+      return "sentence_building";
+    case "flashcard":
+      return "flashcards";
+    case "minimal_pair":
+      return "pronunciation";
+    default:
+      return "quiz";
+  }
+}
+
+/** A stable id per attempt, in the server's alphabet. */
+function attemptId(attempt: Attempt): string {
+  let hash = 5381;
+  for (const char of attempt.exerciseId) hash = ((hash * 33) ^ char.charCodeAt(0)) >>> 0;
+  return `${attempt.at.toString(36)}-${hash.toString(36)}`;
+}
+
+export const MAX_CARDS_PER_PUSH = 2000;
+
+export interface PushPayload {
+  installId: string;
+  platform: "ios" | "android";
+  srs: Record<string, Record<string, CardRecord>>;
+  attempts: { id: string; kind: ActivityKind; refId: string; at: number; score: number; detail: { correct: boolean; grammarPointIds: string[] } }[];
+  mastery: {
+    sounds: Record<string, { attempts: number; ema: number; best: number; lastAt: number; history: { day: string; score: number }[] }>;
+    grammar: Record<string, GrammarMastery>;
+  };
+}
+
+/**
+ * Detail in the shape POST /api/sync/import and /api/sync/push take
+ * (src/lib/server/sync-input.ts): cards grouped into decks, attempts with an
+ * id and an activity kind, sound mastery without the phone's ladder state.
+ * Split so no request carries more than MAX_CARDS_PER_PUSH cards; the first
+ * also carries the attempts and mastery.
+ */
+export function pushPayloads(installId: string, platform: PushPayload["platform"], detail: ReturnType<typeof detailSince>): PushPayload[] {
+  const entries = Object.entries(detail.cards);
+  const payloads: PushPayload[] = [];
+  for (let start = 0; start === 0 || start < entries.length; start += MAX_CARDS_PER_PUSH) {
+    const srs: PushPayload["srs"] = {};
+    for (const [id, card] of entries.slice(start, start + MAX_CARDS_PER_PUSH)) {
+      const deck = deckFor(id);
+      srs[deck] = { ...srs[deck], [id]: card };
+    }
+    payloads.push({ installId, platform, srs, attempts: [], mastery: { sounds: {}, grammar: {} } });
+  }
+  payloads[0].attempts = detail.attempts.slice(-500).map((a) => ({
+    id: attemptId(a),
+    kind: attemptKind(a.kind),
+    refId: syncRefId(a.exerciseId),
+    at: a.at,
+    score: Math.max(0, Math.min(100, a.score)),
+    detail: { correct: a.correct, grammarPointIds: a.grammarPointIds.slice(0, 10) },
+  }));
+  payloads[0].mastery = {
+    sounds: Object.fromEntries(
+      Object.entries(detail.sounds).map(([id, m]) => [id, { attempts: m.attempts, ema: m.ema, best: m.best, lastAt: m.lastAt, history: m.history.map((h) => ({ day: h.day, score: h.score })) }]),
+    ),
+    grammar: detail.grammar,
+  };
+  return payloads;
+}
+
+/**
+ * GET /api/sync/pull as RemoteDetail: decks flattened into one card map, and
+ * sound records completed with the phone's own ladder state, which the
+ * server does not keep.
+ */
+export function remoteFromPull(pulled: unknown, localSounds: SoundMasteryMap): RemoteDetail {
+  const isObject = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null && !Array.isArray(value);
+  const body = isObject(pulled) ? pulled : {};
+  const cards: Record<string, CardRecord> = {};
+  for (const deck of Object.values(isObject(body.srs) ? body.srs : {})) {
+    if (!isObject(deck)) continue;
+    for (const [id, card] of Object.entries(deck)) if (isObject(card) && typeof card.updatedAt === "number") cards[id] = card as unknown as CardRecord;
+  }
+  const mastery = isObject(body.mastery) ? body.mastery : {};
+  const sounds: SoundMasteryMap = {};
+  for (const [id, raw] of Object.entries(isObject(mastery.sounds) ? mastery.sounds : {})) {
+    if (!isObject(raw) || typeof raw.lastAt !== "number") continue;
+    const base = localSounds[id] ?? emptyMastery();
+    const history = Array.isArray(raw.history)
+      ? (raw.history as { day?: unknown; score?: unknown }[])
+          .filter((h) => typeof h.day === "string" && typeof h.score === "number")
+          .map((h) => ({ day: h.day as string, score: h.score as number, takes: 1 }))
+      : base.history;
+    sounds[id] = { ...base, attempts: Number(raw.attempts) || base.attempts, ema: Number(raw.ema) || 0, best: Number(raw.best) || base.best, lastAt: raw.lastAt, history };
+  }
+  const grammar = isObject(mastery.grammar) ? (mastery.grammar as Record<string, GrammarMastery>) : undefined;
+  return { cards, sounds, grammar };
+}
+
+/** The pull cursor as the phone stores it; the server sends milliseconds. */
+export function pullCursorOf(pulled: unknown): string | null {
+  const cursor = typeof pulled === "object" && pulled !== null ? (pulled as { cursor?: unknown }).cursor : null;
+  if (typeof cursor === "number" && Number.isFinite(cursor)) return String(cursor);
+  return typeof cursor === "string" && cursor ? cursor : null;
 }
 
 export interface RemoteDetail {

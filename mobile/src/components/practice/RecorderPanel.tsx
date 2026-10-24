@@ -100,7 +100,7 @@ export function RecorderPanel({
 
   const hint = recorder.hint({
     fallback: disabled
-      ? (disabledReason ?? "Recording unlocks by itself as soon as that clears.")
+      ? (disabledReason ?? "Recording opens as soon as scoring is available.")
       : (statusHint ??
         (captureMode === "freedom"
           ? "Tap the microphone and answer in your own words."

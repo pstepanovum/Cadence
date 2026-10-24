@@ -36,14 +36,19 @@ const SITE = process.env.EXPO_PUBLIC_API_URL?.trim().replace(/\/$/, "") || "http
  * mode; it names versions only. A failure reads as "nothing to say".
  */
 export async function getVersionInfo(): Promise<unknown> {
-  const response = await fetch(`${SITE}/api/version`).catch(() => null);
+  // The server allows five minutes of caching, and expo/fetch ignores
+  // `cache: "no-store"`: the shared URL cache kept answering with an old copy
+  // across launches. A fresh query string always reaches the server.
+  const response = await fetch(`${SITE}/api/version?t=${Date.now()}`).catch(() => null);
   if (!response?.ok) return null;
   return response.json().catch(() => null);
 }
 
 // --- Sync ---
 
+/** Sends queued activities, or with none queued reads the account's summary (the route refuses an empty batch). */
 export function syncSummary(activities: Activity[]): Promise<{ summary?: ProgressSummary }> {
+  if (activities.length === 0) return api("/api/sync/summary", {}, appCheck);
   return apiJson("/api/sync/summary", "POST", { activities }, appCheck);
 }
 

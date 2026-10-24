@@ -1,0 +1,55 @@
+# First run choosing Cadence cloud: a free account against the Auth
+# emulator, then the Plus step with store prices and Restore purchases.
+# env: EMAIL, PASSWORD
+appId: dev.pstepanov.cadence
+name: Cloud onboarding
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+      microphone: allow
+- tapOn: "Skip"
+- tapOn: "Better grammar.*"
+- tapOn: "Continue"
+- tapOn: "C1 · Advanced.*"
+- tapOn: "Continue"
+- tapOn: "Continue"
+- tapOn: "Not now"
+- tapOn: "Cadence cloud.*"
+- tapOn: "Continue"
+- assertVisible: "Create your free account"
+- assertNotVisible: "Not now"
+- tapOn:
+    id: "account-email"
+- inputText: ${EMAIL}
+- tapOn:
+    id: "account-password"
+- inputText: ${PASSWORD}
+- hideKeyboard
+- tapOn: "Create account"
+- extendedWaitUntil:
+    visible: "You're signed in"
+    timeout: 20000
+- tapOn: "Continue"
+- assertVisible: "(?i)cadence plus"
+- scrollUntilVisible:
+    element: "Monthly, .* a month"
+- assertVisible: "Yearly, 7-day free trial, then .* a year"
+- scrollUntilVisible:
+    element: "Restore purchases"
+- assertVisible: "Terms of Use"
+- assertVisible: "Privacy Policy"
+- takeScreenshot: 06-paywall
+- tapOn: "Restore purchases"
+- assertVisible: "No Plus subscription found.*"
+- tapOn: "Not now"
+- extendedWaitUntil:
+    visible: "Hi .*"
+    timeout: 15000
+- takeScreenshot: 06-cloud-home
+- scrollUntilVisible:
+    element: "Get Cadence Plus"
+- assertVisible: "Connect your own Cadence server"
+- takeScreenshot: 06-ai-offer

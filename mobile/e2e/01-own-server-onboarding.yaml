@@ -1,0 +1,65 @@
+# First run on a clean phone: setup, then "Connect your own Cadence server"
+# with a typed pairing code. No Plus step and no paywall on this path.
+# env: ADDRESS (host:port of the Cadence server), CODE (a fresh pairing code)
+appId: dev.pstepanov.cadence
+name: Own server onboarding
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+      microphone: allow
+- assertVisible: "Speak English with confidence"
+- takeScreenshot: 01-welcome
+- tapOn: "Get started"
+- tapOn: "Continue"
+- tapOn: "Continue"
+- assertVisible: "What brings you to Cadence?"
+- tapOn: "A clearer accent.*"
+- tapOn: "Continue"
+- assertVisible: "How is your English now?"
+- tapOn: "B1 · Intermediate.*"
+- tapOn: "Continue"
+- assertVisible: "Your daily goal"
+- tapOn: "5 minutes.*"
+- tapOn: "Continue"
+- assertVisible: "When should we remind you?"
+- tapOn: "Turn on reminders"
+- assertVisible: "Where should Cadence run?"
+- takeScreenshot: 01-where
+- tapOn: "Connect your own Cadence server.*"
+- scrollUntilVisible:
+    element: "Scan the code"
+- tapOn: "Scan the code"
+- tapOn: "Type the code instead"
+- tapOn:
+    id: "pair-address"
+- inputText: ${ADDRESS}
+- tapOn:
+    id: "pair-code"
+- inputText: ${CODE}
+- hideKeyboard
+- tapOn: "Connect"
+- extendedWaitUntil:
+    visible: "Connected to .*"
+    timeout: 15000
+- assertNotVisible: "Cadence Plus"
+- scrollUntilVisible:
+    element: "Continue"
+- tapOn: "Continue"
+- assertVisible: "Keep your progress in sync"
+- assertNotVisible: "(?i)cadence plus"
+- scrollUntilVisible:
+    element: "Not now"
+- tapOn: "Not now"
+- extendedWaitUntil:
+    visible: "Ready to practise?"
+    timeout: 15000
+- assertNotVisible: "(?i)cadence plus"
+- assertNotVisible: "Start free trial"
+- takeScreenshot: 01-home
+- scrollUntilVisible:
+    element: "Record a take"
+- assertNotVisible: "Get Cadence Plus"
+- takeScreenshot: 01-home-record

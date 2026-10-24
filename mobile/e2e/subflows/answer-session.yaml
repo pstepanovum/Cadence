@@ -1,0 +1,103 @@
+# Answers whatever exercise is on screen until the session ends. Correctness
+# does not matter here; every kind of input has to work.
+appId: dev.pstepanov.cadence
+---
+- repeat:
+    times: 20
+    while:
+      notVisible: "(?i)session complete"
+    commands:
+      - runFlow:
+          when:
+            visible: "Show the answer"
+          commands:
+            - tapOn: "Show the answer"
+            - tapOn:
+                text: "Got it"
+                optional: true
+      - runFlow:
+          when:
+            visible:
+              id: "choice-0"
+          commands:
+            - tapOn:
+                id: "choice-0"
+      - runFlow:
+          when:
+            visible:
+              id: "match-left-0"
+          file: match-all.yaml
+      - repeat:
+          times: 12
+          while:
+            visible:
+              id: "token-0"
+          commands:
+            - tapOn:
+                id: "token-0"
+      - runFlow:
+          when:
+            visible:
+              id: "bank-0"
+          commands:
+            - tapOn:
+                id: "bank-0"
+            - tapOn:
+                id: "bank-0"
+            - tapOn:
+                id: "bank-0"
+      - runFlow:
+          when:
+            visible:
+              id: "gap-0"
+          commands:
+            - tapOn:
+                id: "gap-0"
+            - inputText: "is"
+      - runFlow:
+          when:
+            visible:
+              id: "gap-1"
+          commands:
+            - tapOn:
+                id: "gap-1"
+            - inputText: "is"
+      - runFlow:
+          when:
+            visible:
+              id: "typed-answer"
+          commands:
+            - tapOn:
+                id: "typed-answer"
+            - inputText: " ok"
+      - scrollUntilVisible:
+          element: "Check|Next|See results"
+          timeout: 4000
+          optional: true
+      - runFlow:
+          when:
+            visible: "Check"
+          commands:
+            - hideKeyboard
+            - tapOn:
+                text: "Check"
+                optional: true
+      - scrollUntilVisible:
+          element: "Next|See results"
+          timeout: 4000
+          optional: true
+      - runFlow:
+          when:
+            visible: "Next"
+          commands:
+            - tapOn:
+                text: "Next"
+                optional: true
+      - runFlow:
+          when:
+            visible: "See results"
+          commands:
+            - tapOn:
+                text: "See results"
+                optional: true
+- assertVisible: "(?i)session complete"

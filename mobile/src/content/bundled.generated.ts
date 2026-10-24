@@ -15,16 +15,35 @@ export interface BundledPack {
 }
 
 /** "fixture" until the content pipeline has built packs into public/packs. */
-export const BUNDLED_SOURCE: "packs" | "fixture" = "fixture";
+export const BUNDLED_SOURCE: "packs" | "fixture" = "packs";
 
 export const BUNDLED_PACKS: BundledPack[] = [
+  {
+    id: "sounds",
+    version: 1,
+    title: "Cadence sounds",
+    bytes: 71407,
+    content: require("../../assets/packs/sounds/content.cpack"),
+    audio: {
+    },
+  },
   {
     id: "core-a1",
     version: 1,
     level: "A1",
-    title: "A1 sample",
-    bytes: 8899,
+    title: "Cadence A1",
+    bytes: 278474,
     content: require("../../assets/packs/core-a1/content.cpack"),
+    audio: {
+    },
+  },
+  {
+    id: "core-a2",
+    version: 1,
+    level: "A2",
+    title: "Cadence A2",
+    bytes: 564038,
+    content: require("../../assets/packs/core-a2/content.cpack"),
     audio: {
     },
   },
@@ -32,9 +51,19 @@ export const BUNDLED_PACKS: BundledPack[] = [
     id: "core-b1",
     version: 1,
     level: "B1",
-    title: "B1 sample",
-    bytes: 7407,
+    title: "Cadence B1",
+    bytes: 678584,
     content: require("../../assets/packs/core-b1/content.cpack"),
+    audio: {
+    },
+  },
+  {
+    id: "core-b2",
+    version: 1,
+    level: "B2",
+    title: "Cadence B2",
+    bytes: 699636,
+    content: require("../../assets/packs/core-b2/content.cpack"),
     audio: {
     },
   },

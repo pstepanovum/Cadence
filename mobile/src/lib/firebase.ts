@@ -32,10 +32,11 @@ export function getFirebaseAuth(): Auth | null {
 
   const app = initializeApp(firebase);
   cached = initializeAuth(app, { persistence: getReactNativePersistence(AsyncStorage) });
-  // Development only: the local Auth emulator (with a demo- project), for
-  // trying the cloud flows on the simulator without a real project.
+  // The local Auth emulator, for trying the cloud flows on the simulator: in
+  // development builds, or in a release build made for the end-to-end flows,
+  // which only ever carries a demo- project that no real backend accepts.
   const emulator = process.env.EXPO_PUBLIC_FIREBASE_AUTH_EMULATOR?.trim();
-  if (__DEV__ && emulator) connectAuthEmulator(cached, `http://${emulator}`, { disableWarnings: true });
+  if (emulator && (__DEV__ || firebase.projectId.startsWith("demo-"))) connectAuthEmulator(cached, `http://${emulator}`, { disableWarnings: true });
   return cached;
 }
 

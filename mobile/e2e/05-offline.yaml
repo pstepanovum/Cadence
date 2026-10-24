@@ -1,0 +1,22 @@
+# Run with the paired server stopped (run.sh does that): practice still
+# works on the phone, and AI practice says why it is off instead of failing.
+appId: dev.pstepanov.cadence
+name: Offline
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Cadence is not running on your computer.*"
+    timeout: 20000
+- takeScreenshot: 05-offline-home
+- scrollUntilVisible:
+    element: "Record a take"
+- assertVisible:
+    text: "Record a take"
+    enabled: false
+- assertNotVisible: "Request failed.*"
+- tapOn: "Learn, tab, 2 of 5"
+- tapOn: "Quiz. Mixed questions"
+- runFlow: subflows/answer-session.yaml
+- assertVisible: "Saved to your progress."
+- takeScreenshot: 05-offline-quiz
+- tapOn: "Done"

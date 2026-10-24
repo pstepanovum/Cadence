@@ -1,0 +1,33 @@
+# Pairs every left tile with the right tile in the same position.
+appId: dev.pstepanov.cadence
+---
+- repeat:
+    times: 1
+    commands:
+      - tapOn: { id: "match-left-0" }
+      - tapOn: { id: "match-right-0" }
+- runFlow:
+    when: { visible: { id: "match-left-1" } }
+    commands:
+      - tapOn: { id: "match-left-1" }
+      - tapOn: { id: "match-right-1" }
+- runFlow:
+    when: { visible: { id: "match-left-2" } }
+    commands:
+      - tapOn: { id: "match-left-2" }
+      - tapOn: { id: "match-right-2" }
+- runFlow:
+    when: { visible: { id: "match-left-3" } }
+    commands:
+      - tapOn: { id: "match-left-3" }
+      - tapOn: { id: "match-right-3" }
+- runFlow:
+    when: { visible: { id: "match-left-4" } }
+    commands:
+      - tapOn: { id: "match-left-4" }
+      - tapOn: { id: "match-right-4" }
+- runFlow:
+    when: { visible: { id: "match-left-5" } }
+    commands:
+      - tapOn: { id: "match-left-5" }
+      - tapOn: { id: "match-right-5" }

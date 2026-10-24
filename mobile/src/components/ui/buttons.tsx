@@ -182,6 +182,7 @@ export function Chip({
   selected,
   accessibilityHint,
   style,
+  testID,
 }: {
   label: string;
   status?: ChipStatus;
@@ -192,6 +193,8 @@ export function Chip({
   selected?: boolean;
   accessibilityHint?: string;
   style?: StyleProp<ViewStyle>;
+  /** For the end-to-end flows. */
+  testID?: string;
 }) {
   const picker = selected !== undefined;
   const interactive = Boolean(onPress || onLongPress);
@@ -224,6 +227,7 @@ export function Chip({
 
   return (
     <Pressable
+      testID={testID}
       accessibilityRole="button"
       accessibilityLabel={label}
       accessibilityHint={accessibilityHint}

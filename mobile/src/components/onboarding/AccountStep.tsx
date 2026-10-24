@@ -78,6 +78,7 @@ export function AccountStep({
     <Card>
       {error ? <Banner tone="error" message={error} /> : null}
       <TextField
+        testID="account-email"
         label="Email"
         placeholder="you@example.com"
         autoCapitalize="none"
@@ -94,6 +95,7 @@ export function AccountStep({
       />
       <TextField
         ref={passwordRef}
+        testID="account-password"
         label="Password"
         placeholder={mode === "create" ? `At least ${MIN_PASSWORD} characters` : "Your password"}
         secureTextEntry
@@ -123,7 +125,13 @@ export function AccountStep({
         <Body size={type.footnote} tone="muted">
           {mode === "create" ? "Already have an account?" : "New to Cadence?"}
         </Body>
-        <TextLink label={mode === "create" ? "Sign in" : "Create one"} onPress={() => setMode(mode === "create" ? "signin" : "create")} />
+        <TextLink
+          label={mode === "create" ? "Sign in" : "Create one"}
+          onPress={() => {
+            setError(null);
+            setMode(mode === "create" ? "signin" : "create");
+          }}
+        />
       </View>
       {optional ? (
         <Body size={type.caption} tone="muted">
