@@ -11,7 +11,8 @@ const lightColors = {
   hunter: "#386641",
   sage: "#6a994e",
   yellowGreen: "#a7c957",
-  cream: "#f2e8cf",
+  /** The page. White in light mode so the greys (snow, platinum, alabaster) read as surfaces. */
+  cream: "#ffffff",
   brick: "#bc4749",
   snow: "#f8f9fa",
   platinum: "#e9ecef",

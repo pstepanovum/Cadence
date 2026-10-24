@@ -19,7 +19,7 @@ import { renewalLine, yearlySavingsPercent, type PlusPlan, type PlusPlanId } fro
 import { loadPlans, PurchaseError, purchasePlan, purchasesStubbed, restorePurchases, storeConfigured } from "@/lib/billing/purchases";
 import { config } from "@/lib/config";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, maxScale, radii, shadows, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 const BENEFITS = [
   "Pronunciation scoring, the coach and transcription anywhere, not only at home",
@@ -139,18 +139,18 @@ export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => v
                   setSelected(item.id);
                 }}
                 style={[styles.plan, chosen && styles.planChosen]}>
-                <View style={[styles.radio, chosen && styles.radioOn]}>{chosen ? <Check color={colors.snow} size={14} strokeWidth={3} /> : null}</View>
+                <View style={[styles.radio, chosen && styles.radioOn]}>{chosen ? <Check color={colors.hunter} size={14} strokeWidth={3} /> : null}</View>
                 <View style={styles.flex}>
-                  <Text maxFontSizeMultiplier={maxScale.control} style={styles.planTitle}>
+                  <Text maxFontSizeMultiplier={maxScale.control} style={[styles.planTitle, chosen && styles.onChosen]}>
                     {planName(item.id)}
                   </Text>
-                  <Text maxFontSizeMultiplier={maxScale.control} style={styles.planDetail}>
+                  <Text maxFontSizeMultiplier={maxScale.control} style={[styles.planDetail, chosen && styles.detailOnChosen]}>
                     {planDetail(item)}
                   </Text>
                 </View>
                 {item.id === "yearly" && savings ? (
-                  <View style={styles.save}>
-                    <Text maxFontSizeMultiplier={maxScale.label} style={styles.saveText}>{`Save ${savings}%`}</Text>
+                  <View style={[styles.save, chosen && styles.saveOnChosen]}>
+                    <Text maxFontSizeMultiplier={maxScale.label} style={[styles.saveText, chosen && styles.saveTextOnChosen]}>{`Save ${savings}%`}</Text>
                   </View>
                 ) : null}
               </Pressable>
@@ -204,17 +204,20 @@ const styles = themed(() =>
       gap: spacing.md,
       minHeight: TAP_TARGET + 16,
       borderRadius: radii.card,
-      backgroundColor: colors.snow,
+      backgroundColor: colors.platinum,
       padding: spacing.lg,
-      boxShadow: shadows.card,
     },
-    planChosen: { backgroundColor: colors.limeSoft },
-    radio: { width: 24, height: 24, borderRadius: radii.pill, borderWidth: 2, borderColor: colors.paleSlate, alignItems: "center", justifyContent: "center" },
-    radioOn: { backgroundColor: colors.hunter, borderColor: colors.hunter },
+    planChosen: { backgroundColor: colors.hunter },
+    radio: { width: 24, height: 24, borderRadius: radii.pill, backgroundColor: colors.alabaster, alignItems: "center", justifyContent: "center" },
+    radioOn: { backgroundColor: colors.snow },
     planTitle: { fontFamily: fonts.bodyBold, fontSize: type.headline, color: colors.carbon },
     planDetail: { fontFamily: fonts.body, fontSize: type.footnote, color: colors.iron },
-    save: { backgroundColor: colors.yellowGreen, borderRadius: radii.pill, paddingHorizontal: spacing.sm, paddingVertical: spacing.xxs },
-    saveText: { fontFamily: fonts.bodyBold, fontSize: type.caption, color: colors.ink },
+    onChosen: { color: colors.snow },
+    detailOnChosen: { color: colors.onDarkMuted },
+    save: { backgroundColor: colors.hunter, borderRadius: radii.pill, paddingHorizontal: spacing.sm, paddingVertical: spacing.xxs },
+    saveOnChosen: { backgroundColor: colors.snow },
+    saveText: { fontFamily: fonts.bodyBold, fontSize: type.caption, color: colors.snow },
+    saveTextOnChosen: { color: colors.hunter },
     footer: { alignItems: "center", gap: spacing.sm },
     links: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", columnGap: spacing.lg },
   }),
