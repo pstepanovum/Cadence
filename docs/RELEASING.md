@@ -113,7 +113,9 @@ releases.
 - It checks 15 seconds after launch, then every 6 hours, and after the computer
   wakes if a check is due.
 - It downloads in the background and then shows a small "Update ready.
-  Restart to install." card with Restart and a close button. It never restarts
+  Restart to install." card with Restart and a close button. On macOS the
+  card waits until Squirrel.Mac has the update verified, so restarting or
+  quitting from then on always installs it. It never restarts
   by itself; if the person quits instead, the update installs on quit.
 - Cadence > Check for Updates… checks now and says when you are up to date. The
   same item becomes "Restart to Install Update" once one is ready. Cadence >
@@ -129,6 +131,16 @@ It serves a `latest-mac.yml` announcing 99.0.0 from 127.0.0.1, runs Electron on
 a throwaway profile with `CADENCE_UPDATE_FEED_URL` set, and checks that the
 update is found, downloaded and verified. The override only accepts loopback
 `http` addresses, so it cannot redirect a real install.
+
+To see an update actually installed, after `cd desktop && pnpm build:mac`:
+`CADENCE_TEST_SIGN_IDENTITY="Apple Development: …" node desktop/scripts/test-update-install.mjs`.
+Squirrel.Mac only installs an update signed like the running app, so the
+script signs two local copies of the built app with that identity (a
+development one is enough; `security find-identity -v -p codesigning` lists
+them): the installed version and a 99.0.0 copy it serves from 127.0.0.1. It
+checks the update is offered, downloaded and shown as "Update ready", that
+quitting installs it, and that the app opens as 99.0.0 afterwards. Everything
+lives in a temporary folder with a throwaway profile and is deleted after.
 
 ### Roll back
 

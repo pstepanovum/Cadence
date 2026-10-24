@@ -618,6 +618,8 @@ codes with the Admin SDK and puts them on `/reset-password` and
 
 Newsletter: list 5, Brevo double opt-in only (`POST /api/newsletter`); list 4
 holds every account for account email and is never used for marketing.
+`BREVO_API_URL` points every Brevo call at a local stub for end-to-end tests;
+only a loopback `http` address is accepted.
 
 ---
 
@@ -671,6 +673,11 @@ Cloud Scheduler ──▶ cadence-web /api/jobs/daily (17:00 UTC), /api/jobs/mai
   `/health` answers 200 while still warming, so Cloud Run's default TCP
   startup probe is used; a `/healthz` that answers 503 until the scorer is
   loaded (ai-engine owner) would let a startup probe hold requests back.
+  `cadence-web`'s `/api/health` is `{ok, service}` there; on your own
+  Cadence it adds `engines: {ai, coach}` (`reachable`, `ready`), probing each
+  engine's `/health` with a 1.5 s timeout. The status probes `GET
+  /api/assess` and `GET /api/ai-coach` answer 200 with `ready: false` when
+  an engine is down, so polling never logs an error.
 - **Secrets** (Secret Manager, mounted as env): `STRIPE_SECRET_KEY`,
   `STRIPE_WEBHOOK_SECRET`, `REVENUECAT_WEBHOOK_SECRET`, `REVENUECAT_API_KEY`,
   `BREVO_API_KEY`, `QUIZ_TOKEN_SECRET`, `EMAIL_UNSUBSCRIBE_SECRET`,
@@ -875,9 +882,9 @@ commands.
 | --- | --- | --- |
 | Typecheck, lint, unit | `pnpm typecheck && pnpm lint && pnpm test` | clean (exists) |
 | Production build | `pnpm build` | succeeds (exists) |
-| Smoke flows | `pnpm exec playwright install chromium` once, then `firebase emulators:exec --only auth,firestore --project demo-cadence "pnpm test:e2e"` (`playwright.config.ts` starts `pnpm start` on a demo build; Stripe Checkout is stubbed by route interception) | landing; sign up and in; a lesson; a quiz; flashcards; checkout redirects to the stubbed URL; local mode with no account; mouth map animates; all at widths 375, 768 and 1280 with no horizontal scroll and no console errors |
+| Smoke flows | `pnpm exec playwright install chromium` once, then `firebase emulators:exec --only auth,firestore --project demo-cadence "pnpm test:e2e"` (JDK 21+; `playwright.config.ts` builds with demo Firebase values and starts `pnpm start` on port 3310; Stripe Checkout is stubbed by route interception, Brevo by `tests/e2e/support/brevo-stub.mjs` through `BREVO_API_URL`; `E2E_REUSE_BUILD=1` skips the build) | landing; sign up and in; a lesson; a quiz; flashcards; checkout redirects to the stubbed URL; local mode with no account; mouth map animates; the newsletter sends one Brevo double opt-in request for list 5 and never adds to list 5 directly; all at widths 375, 768 and 1280 with no horizontal scroll and no console errors; screenshots in `build/test-screenshots/web/<width>/` |
 | Accessibility | in the same run, `@axe-core/playwright` on every visited page | no serious or critical violations |
-| Lighthouse | `pnpm exec lhci autorun` (`lighthouserc.json`, landing and dashboard, mobile preset) | performance at least 85, accessibility at least 95, best practices at least 95 |
+| Lighthouse | `pnpm exec lhci autorun` after `pnpm build` (`lighthouserc.json`: landing and dashboard, Lighthouse's default mobile settings, median of 3; the local-mode cookie is sent on both so the dashboard opens; reports in `build/lighthouse/`) | performance at least 85, accessibility at least 95, best practices at least 95 |
 | Bundle budget | `node scripts/budgets/web.mjs` after `pnpm build` | within the budgets below |
 
 ### Desktop
@@ -885,7 +892,17 @@ commands.
 | What | Command | Pass |
 | --- | --- | --- |
 | Build | `cd desktop && pnpm build:mac` | DMG produced in `desktop/packages/` (exists) |
-| Launch smoke | `node desktop/scripts/smoke.mjs` (Playwright `_electron`) | window opens; local mode reaches the dashboard without an account; `/pair` renders a QR; `/api/health` reports both engines ready within the setup timeout; a lesson works offline |
+| Launch smoke | `node desktop/scripts/smoke.mjs` (Playwright `_electron`, the packaged app on a throwaway profile); `--dmg desktop/packages/Cadence-X.Y.Z-arm64.dmg` installs it from the DMG first, into a temporary folder | window opens; local mode reaches the dashboard without an account; `/pair` renders a QR; `/api/health` reports both engines ready within the setup timeout; a lesson works with every non-loopback request blocked |
+
+### Release
+
+| What | Command | Pass |
+| --- | --- | --- |
+| Version rules, bump plans, manifest | `pnpm test` (`tests/release/`) and `node scripts/release/bump.mjs <product> <kind> --dry-run` for each command in docs/RELEASING.md | all pass; each plan writes the documented files and tag; an empty changelog section is refused |
+| Workflow lint | `actionlint .github/workflows/*.yml` (`brew install actionlint shellcheck`) | no findings |
+| Updater, fake feed | `cd desktop && pnpm test:update-feed` | update found, downloaded and verified |
+| Updater, install | `CADENCE_TEST_SIGN_IDENTITY="Apple Development: …" node desktop/scripts/test-update-install.mjs` after `pnpm build:mac` (Squirrel installs only signed updates; any local development identity works, nothing leaves the machine) | 99.0.0 offered, downloaded, "Update ready" with Restart, applied on quit, and the restarted app reports 99.0.0 |
+| `/api/version` | `curl -s http://127.0.0.1:3310/api/version` during the web run | equals `release/manifest.json` |
 
 ### Mobile
 
@@ -905,7 +922,7 @@ Run in `mobile/`. Simulators: "iPhone SE (3rd generation)" and
 
 | What | How | Budget |
 | --- | --- | --- |
-| Web first-load JS per route | `node scripts/budgets/web.mjs` (reads `.next` build stats) | landing at most 150 KB gzip; app routes at most 250 KB; mouth map chunk at most 25 KB |
+| Web first-load JS per route | `node scripts/budgets/web.mjs` (gzip level 9 of each route's first-load chunks in `.next/diagnostics/route-bundle-stats.json`; the mouth map chunks are those holding the vocal-tract model) | landing at most 150 KB gzip; app routes at most 250 KB; mouth map chunk at most 25 KB |
 | Mobile JS bundle | `npx expo export --platform ios` then size of the Hermes bundle | at most 8 MB |
 | Mobile cold start | launch to first interactive screen on the SE simulator, median of 5 (`xcrun simctl launch` timestamps against the app's first-render log line) | at most 2.5 s |
 | Bundled packs | sum of bundled `public/packs` | at most 30 MB in the iOS app |

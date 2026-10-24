@@ -5,12 +5,14 @@
 // each activity is also sent to POST /api/sync/summary, which keeps the free
 // tier's one summary document; detailed sync for Plus is the server's
 // /api/sync/push. An activity that could not be sent waits (at most 50) and
-// goes with the next one. A 401, 403 or 404 means this browser is not syncing
-// an account, so nothing is queued.
+// goes with the next one. With no one signed in (or no Cadence Cloud in this
+// build, as on your own Cadence) nothing is sent or queued, and a 401, 403 or
+// 404 means the same.
 "use client";
 
 import { useMemo } from "react";
 import { cloudFetch } from "@/hooks/cloud-fetch";
+import { isFirebaseConfigured } from "@/lib/firebase/config";
 import { notifyStored, useStoredString } from "@/hooks/use-stored";
 import { applyActivity, emptySummary, type Activity, type ActivityKind, type ProgressSummary } from "@/lib/platform/progress-model.ts";
 import type { CefrLevel } from "@/lib/platform/content-model.ts";
@@ -94,12 +96,27 @@ export function logActivity(input: ActivityInput): ProgressSummary {
 
 let flushing = false;
 
+/** Whether this browser is signed in to Cadence Cloud (Firebase loads only to ask). */
+async function signedIn(): Promise<boolean> {
+  if (!isFirebaseConfigured) return false;
+  try {
+    const { getCurrentIdToken } = await import("@/lib/firebase/client");
+    return Boolean(await getCurrentIdToken());
+  } catch {
+    return false;
+  }
+}
+
 async function flush() {
   if (flushing) return;
   const queue = read<Activity[]>(QUEUE_KEY, []);
   if (queue.length === 0) return;
   flushing = true;
   try {
+    if (!(await signedIn())) {
+      write(QUEUE_KEY, []);
+      return;
+    }
     const response = await cloudFetch("/api/sync/summary", { method: "POST", json: { activities: queue } });
     if (response.ok || [401, 403, 404, 405].includes(response.status)) {
       const remaining = read<Activity[]>(QUEUE_KEY, []).filter((a) => !queue.some((q) => q.at === a.at && q.refId === a.refId));

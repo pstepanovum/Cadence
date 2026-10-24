@@ -10,9 +10,9 @@
 // progress. The final install step needs a signed app, so it is not run here.
 import { spawn } from 'node:child_process'
 import { createHash, randomBytes } from 'node:crypto'
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { createServer } from 'node:http'
-import { tmpdir } from 'node:os'
+import { homedir, tmpdir } from 'node:os'
 import { dirname, join } from 'node:path'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
@@ -37,6 +37,11 @@ const feed = [
   `releaseDate: '${new Date().toISOString()}'`,
   '',
 ].join('\n')
+
+// electron-updater downloads into ~/Library/Caches/<updaterCacheDirName>
+// whatever the user-data folder; remove it after if this run created it.
+const updaterCache = join(homedir(), 'Library', 'Caches', 'cadence-update-harness')
+const cacheExisted = existsSync(updaterCache)
 
 const requests = []
 const server = createServer((req, res) => {
@@ -102,6 +107,7 @@ child.stderr.on('data', (chunk) => (output += chunk))
 const code = await new Promise((resolve) => child.on('exit', resolve))
 server.close()
 rmSync(appDir, { recursive: true, force: true })
+if (!cacheExisted && process.platform === 'darwin') rmSync(updaterCache, { recursive: true, force: true })
 
 const line = output.split('\n').find((entry) => entry.startsWith('HARNESS '))
 if (!line) {

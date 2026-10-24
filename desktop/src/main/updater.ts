@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain, powerMonitor, shell } from 'electron'
+import { app, autoUpdater as squirrel, BrowserWindow, dialog, ipcMain, powerMonitor, shell } from 'electron'
 import { autoUpdater } from 'electron-updater'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -157,7 +157,23 @@ export function startDesktopUpdater(options: { onMenuChange: () => void }): Desk
     autoUpdater.on('update-available', (info) => dispatch({ type: 'found', version: info.version, kind }))
     autoUpdater.on('update-not-available', () => dispatch({ type: 'none' }))
     autoUpdater.on('download-progress', (progress) => dispatch({ type: 'progress', percent: progress.percent }))
-    autoUpdater.on('update-downloaded', (info) => dispatch({ type: 'downloaded', version: info.version }))
+    // On macOS electron-updater reports the download before Squirrel.Mac has
+    // fetched and verified it, and quitting in that gap installs nothing. So
+    // "Update ready" waits for Squirrel too: once it shows, restarting or
+    // quitting always installs. An unsigned build never gets there.
+    const waitForSquirrel = process.platform === 'darwin' && canSelfUpdate(kind)
+    let squirrelReady = false
+    let downloadedVersion: string | null = null
+    if (waitForSquirrel) {
+      squirrel.on('update-downloaded', () => {
+        squirrelReady = true
+        if (downloadedVersion) dispatch({ type: 'downloaded', version: downloadedVersion })
+      })
+    }
+    autoUpdater.on('update-downloaded', (info) => {
+      downloadedVersion = info.version
+      if (!waitForSquirrel || squirrelReady) dispatch({ type: 'downloaded', version: info.version })
+    })
     autoUpdater.on('error', (error) => dispatch({ type: 'failed', message: error.message }))
 
     if (preferences.autoCheck) {

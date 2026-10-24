@@ -15,16 +15,23 @@ import { isPairingAdmin } from "@/lib/pairing/service";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// A relative Location keeps the browser on the host it used. The standalone
+// server builds request.url with "localhost", so an absolute redirect from it
+// sent http://127.0.0.1 and LAN visitors to another host, where the cookie
+// just set here is not sent.
+function backToPair() {
+  return new NextResponse(null, { status: 303, headers: { Location: "/pair" } });
+}
+
 export async function GET(request: Request) {
   const key = new URL(request.url).searchParams.get("k");
-  const target = new URL("/pair", request.url);
 
   if (!key || !(await isPairingAdmin(key))) {
     // Land on /pair without the cookie: the page explains how to get a link.
-    return NextResponse.redirect(target, { status: 303 });
+    return backToPair();
   }
 
-  const response = NextResponse.redirect(target, { status: 303 });
+  const response = backToPair();
   response.cookies.set(PAIRING_ADMIN_COOKIE, key, getAdminCookieOptions());
   return response;
 }

@@ -768,6 +768,14 @@ export class DesktopSetupSupport {
       .digest('hex')
 
     if (!existsSync(pythonPath)) {
+      // A venv whose interpreter link points at a Python that is gone (the app
+      // was moved, or another copy of it made the venv) cannot be repaired in
+      // place: start it over, packages included.
+      if (existsSync(venvDir)) {
+        await this.writeLog(`Replacing the broken virtual environment for ${serviceName}`)
+        await rm(venvDir, { recursive: true, force: true })
+        await rm(installMarkerPath, { force: true })
+      }
       onStatus?.('Preparing the local Cadence helper on this Mac.', createPercent)
       await this.writeLog(`Creating virtual environment for ${serviceName}`)
       const createVenv = await this.runCommand(

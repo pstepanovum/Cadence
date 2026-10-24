@@ -22,6 +22,19 @@ them into the release. See [docs/RELEASING.md](docs/RELEASING.md).
 
 - Builds no longer change the version; `desktop/package.json` is the single
   source and the release tag must match it.
+- The download is about 165 MB instead of 2 GB: the app no longer carries
+  copies of unrelated project folders.
+- On macOS "Update ready" appears only once the update is verified, so
+  quitting or restarting from then on always installs it.
+
+### Fixed
+
+- Pronunciation scoring starts: the engine's shared data now ships with the
+  app.
+- Phone > Connect a Phone shows the QR code instead of asking for a key.
+- Setup repairs its Python environment when the app has moved, instead of
+  failing on "Retry setup".
+- The startup screen no longer says "Cadence could not open" while opening.
 
 ## [Unreleased: mobile]
 
@@ -31,3 +44,14 @@ them into the release. See [docs/RELEASING.md](docs/RELEASING.md).
 
 - `GET /api/version` reports the latest web, desktop and iOS versions and the
   minimum supported ones.
+
+### Changed
+
+- The landing page loads about a third less JavaScript (149 KB from 218 KB).
+- Text colours meet WCAG AA contrast on every page, in light and dark mode.
+
+### Fixed
+
+- Practice rounds no longer try to sync when no one is signed in.
+- Engine status checks no longer log an error every few seconds when your own
+  Cadence's engines are off.

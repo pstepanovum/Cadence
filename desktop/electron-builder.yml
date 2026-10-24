@@ -40,6 +40,11 @@ extraResources:
       - "!**/*.pyc"
       - "!**/.env"
       - "!**/.env.*"
+  # Shared engine data (practice targets, phoneme catalog, voices): the
+  # engines read it from ../data, next to their own folders.
+  - from: "../src/backend/data"
+    to: "desktop-runtime/data"
+    filter: ["**/*.json"]
   - from: "../src/backend/coach-engine"
     to: "desktop-runtime/coach-engine"
     filter:
