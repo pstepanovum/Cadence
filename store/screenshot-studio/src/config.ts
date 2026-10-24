@@ -1,0 +1,41 @@
+// FILE: store/screenshot-studio/src/config.ts
+//
+// The slides. Defaults live here; the dashboard saves edits to
+// config/slides.config.json, which wins when present. Captions wrap the words
+// for the lime marker in *asterisks*.
+import type { Ground } from "./theme";
+
+export interface Slide {
+  slug: string;
+  kicker: string;
+  caption: string;
+  subtitle: string;
+  ground: Ground;
+  /** An illustration from public/illustration, without ".svg", or "" for none. */
+  illustration: string;
+}
+
+export interface StudioConfig {
+  slides: Slide[];
+  /** The capture used, unframed, as the subscription review screenshot. */
+  iapReviewSlug: string;
+}
+
+export const DEFAULT_CONFIG: StudioConfig = {
+  iapReviewSlug: "plus",
+  slides: [
+    { slug: "mouth-map", kicker: "Mouth map", caption: "See where *every sound* is made", subtitle: "The tongue, lips and jaw for all of English.", ground: "cream", illustration: "analysing-1" },
+    { slug: "sounds-to-fix", kicker: "Sounds to fix", caption: "Fix the sounds *you miss*", subtitle: "Scored sound by sound, then drilled.", ground: "hunter", illustration: "" },
+    { slug: "grammar-builder", kicker: "Grammar", caption: "Build sentences, *level by level*", subtitle: "A1 to C2, in our own words.", ground: "cream", illustration: "figuring-it-out-1" },
+    { slug: "flashcards", kicker: "Flashcards", caption: "Words come back *on time*", subtitle: "Spaced repetition, on every device.", ground: "hunter", illustration: "" },
+    { slug: "coach", kicker: "Coach", caption: "Talk it through with *a coach*", subtitle: "Interviews, work, travel, any topic.", ground: "cream", illustration: "communication-1" },
+    { slug: "own-server", kicker: "Your own Cadence", caption: "*Free* on your own Cadence", subtitle: "Pair with your computer at home. Open source.", ground: "hunter", illustration: "" },
+    { slug: "widgets", kicker: "Widgets", caption: "Your streak on the *Home Screen*", subtitle: "Today's goal at a glance.", ground: "cream", illustration: "" },
+    { slug: "streaks", kicker: "Every day", caption: "Keep the *streak* going", subtitle: "A daily goal, freezes and badges.", ground: "hunter", illustration: "success-1" },
+  ],
+};
+
+export function mergeConfig(saved: Partial<StudioConfig> | null): StudioConfig {
+  if (!saved || !Array.isArray(saved.slides) || saved.slides.length === 0) return DEFAULT_CONFIG;
+  return { iapReviewSlug: saved.iapReviewSlug || DEFAULT_CONFIG.iapReviewSlug, slides: saved.slides as Slide[] };
+}

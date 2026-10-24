@@ -1,0 +1,22 @@
+{
+  "devices": [
+    {
+      "id": "iphone-6.9",
+      "label": "iPhone 6.9\" (1320 x 2868)",
+      "width": 1320,
+      "height": 2868,
+      "exportScale": 2,
+      "simulator": "iPhone 16 Pro Max"
+    },
+    {
+      "id": "iphone-6.5",
+      "label": "iPhone 6.5\" (1284 x 2778)",
+      "width": 1284,
+      "height": 2778,
+      "exportScale": 2,
+      "simulator": "the 6.9\" captures, framed at this size"
+    }
+  ],
+  "capture": { "width": 1320, "height": 2868 },
+  "iapReview": { "id": "iap-review", "width": 1320, "height": 2868, "exportScale": 2 }
+}

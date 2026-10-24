@@ -83,14 +83,28 @@ async function syncOnce(tier: DataTier): Promise<void> {
   updateLearning((s) => ({ ...mergeRemoteDetail(s, remoteFromPull(pulled, s.sounds)), sync: { ...s.sync, pullCursor: cursor ?? s.sync.pullCursor } }));
 }
 
-/** Runs one sync, or joins the one already running. Never throws. */
+let again: DataTier | null = null;
+
+/**
+ * Runs one sync, or joins the one already running. A call that arrives while
+ * a sync runs is run once more afterwards, so a tier learned mid-sync (Plus
+ * from /api/me landing after the first summary round) is not dropped.
+ * Never throws.
+ */
 export function syncProgress(tier: DataTier): Promise<void> {
-  running ??= syncOnce(tier)
+  if (running) {
+    again = tier;
+    return running;
+  }
+  running = syncOnce(tier)
     .catch(() => {
       // Offline or the server is busy; the queue is still on the phone.
     })
     .finally(() => {
       running = null;
+      const next = again;
+      again = null;
+      if (next) void syncProgress(next);
     });
   return running;
 }

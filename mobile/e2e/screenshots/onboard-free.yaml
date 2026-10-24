@@ -1,0 +1,23 @@
+# Store screenshots, part 1 (free account): setup up to the place step for
+# the own-server capture, then sign in and stop on the paywall.
+# env: EMAIL, PASSWORD
+appId: dev.pstepanov.cadence
+name: Screenshots, free account
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+      microphone: allow
+- tapOn: "Skip"
+- tapOn: "A clearer accent.*"
+- tapOn: "Continue"
+- tapOn: "B1 · .*"
+- tapOn: "Continue"
+- tapOn: "Continue"
+- tapOn: "Not now"
+- tapOn: "Connect your own Cadence server.*"
+- extendedWaitUntil:
+    visible: "Connecting your own Cadence is always free."
+    timeout: 5000

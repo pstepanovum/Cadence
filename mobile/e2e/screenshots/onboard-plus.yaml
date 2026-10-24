@@ -1,0 +1,48 @@
+# Store screenshots, part 2 (the staged Plus account): setup, sign in, Home.
+# env: EMAIL, PASSWORD
+appId: dev.pstepanov.cadence
+name: Screenshots, Plus account
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+      microphone: allow
+- tapOn: "Skip"
+- tapOn: "A clearer accent.*"
+- tapOn: "Continue"
+- tapOn: "B1 · .*"
+- tapOn: "Continue"
+- tapOn: "Continue"
+- tapOn: "Not now"
+- tapOn: "Cadence cloud.*"
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Already have an account?"
+    timeout: 10000
+- tapOn: "Sign in"
+- extendedWaitUntil:
+    visible: "New to Cadence?"
+    timeout: 5000
+- tapOn:
+    id: "account-email"
+- inputText: ${EMAIL}
+- tapOn:
+    id: "account-password"
+- waitForAnimationToEnd
+- inputText: ${PASSWORD}
+- pressKey: Enter
+- tapOn:
+    text: "Sign in"
+    optional: true
+- extendedWaitUntil:
+    visible: "You're signed in"
+    timeout: 20000
+- tapOn: "(Continue|Start practising)"
+- tapOn:
+    text: "Not now"
+    optional: true
+- extendedWaitUntil:
+    visible: "Hi .*"
+    timeout: 20000

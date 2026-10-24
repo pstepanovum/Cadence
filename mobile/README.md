@@ -291,6 +291,18 @@ not offer Cadence Cloud. To ship cloud as well, fill in all five values from `.e
 `EXPO_PUBLIC_API_URL` must then point at a host the phone can reach from anywhere, not a LAN
 address: a LAN IP works on your own Wi-Fi and nowhere else, and a reviewer cannot reach it at all.
 
+## End-to-end flows and store captures
+
+`e2e/run.sh` runs the Maestro flows (its header lists what must be running);
+`node scripts/screenshots/capture.mjs` at the repo root drives the flows in
+`e2e/screenshots/` for the store captures (`store/README.md`). Both need a
+Release build made with the e2e environment from `.env.example`.
+
+`EXPO_PUBLIC_*` values are inlined when Metro transforms a file, and Metro's
+cache (`$TMPDIR/metro-cache`) can keep an older build's values. When the API
+URL or the emulator address changes, delete that folder before building, then
+check the bundle: `strings <app>/main.jsbundle | grep 127.0.0.1`.
+
 ## Audio formats
 
 iOS records 16 kHz mono WAV directly. Android records m4a/AAC — the ai-engine transcodes it with ffmpeg (`brew install ffmpeg` for non-Docker local dev; the Docker image already includes it).

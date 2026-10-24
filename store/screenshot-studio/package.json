@@ -1,0 +1,27 @@
+{
+  "name": "cadence-screenshot-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Frames Cadence simulator captures with captions in the Cadence fonts and palette and exports App Store screenshots at exact pixel sizes with no alpha channel.",
+  "scripts": {
+    "dev": "vite",
+    "assets": "node scripts/copy-assets.mjs",
+    "export": "node scripts/export.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "~1.63.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

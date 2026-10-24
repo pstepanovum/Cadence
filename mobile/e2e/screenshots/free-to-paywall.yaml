@@ -1,0 +1,31 @@
+# env: EMAIL, PASSWORD
+appId: dev.pstepanov.cadence
+name: Screenshots, sign in to the paywall
+---
+- tapOn: "Cadence cloud.*"
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Already have an account?"
+    timeout: 10000
+- tapOn: "Sign in"
+- extendedWaitUntil:
+    visible: "New to Cadence?"
+    timeout: 5000
+- tapOn:
+    id: "account-email"
+- inputText: ${EMAIL}
+- tapOn:
+    id: "account-password"
+- waitForAnimationToEnd
+- inputText: ${PASSWORD}
+- pressKey: Enter
+- tapOn:
+    text: "Sign in"
+    optional: true
+- extendedWaitUntil:
+    visible: "You're signed in"
+    timeout: 20000
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Yearly, 7-day free trial.*"
+    timeout: 15000

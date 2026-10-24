@@ -1,0 +1,13 @@
+appId: dev.pstepanov.cadence
+name: Screenshots, grammar builder
+---
+- openLink: "cadence:///practice/builder?level=B1"
+- extendedWaitUntil:
+    visible:
+      id: "token-0"
+    timeout: 10000
+- tapOn:
+    id: "token-0"
+- tapOn:
+    id: "token-0"
+- waitForAnimationToEnd

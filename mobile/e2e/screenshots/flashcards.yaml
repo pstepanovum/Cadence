@@ -1,0 +1,9 @@
+appId: dev.pstepanov.cadence
+name: Screenshots, flashcards
+---
+- openLink: "cadence:///practice/flashcards?level=B1"
+- extendedWaitUntil:
+    visible: "Show the answer"
+    timeout: 10000
+- tapOn: "Show the answer"
+- waitForAnimationToEnd

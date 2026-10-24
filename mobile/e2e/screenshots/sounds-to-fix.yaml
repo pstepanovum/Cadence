@@ -1,0 +1,8 @@
+appId: dev.pstepanov.cadence
+name: Screenshots, sounds to fix
+---
+- openLink: "cadence:///sounds"
+- extendedWaitUntil:
+    visible: "Sounds to fix"
+    timeout: 10000
+- waitForAnimationToEnd

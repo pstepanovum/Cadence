@@ -1,0 +1,9 @@
+appId: dev.pstepanov.cadence
+name: Screenshots, coach
+---
+- openLink: "cadence:///"
+- extendedWaitUntil:
+    visible: "Coach, tab, 4 of 5"
+    timeout: 10000
+- tapOn: "Coach, tab, 4 of 5"
+- waitForAnimationToEnd

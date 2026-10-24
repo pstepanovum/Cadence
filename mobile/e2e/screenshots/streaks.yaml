@@ -1,0 +1,9 @@
+appId: dev.pstepanov.cadence
+name: Screenshots, Home
+---
+- openLink: "cadence:///"
+- tapOn: "Home, tab, 1 of 5"
+- extendedWaitUntil:
+    visible: ".*streak.*"
+    timeout: 15000
+- waitForAnimationToEnd
