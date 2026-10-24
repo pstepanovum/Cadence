@@ -3,9 +3,14 @@
 # Builds the cadence-ai image from src/backend with the models baked in.
 steps:
   - name: gcr.io/cloud-builders/docker
+    # The Dockerfile's heredoc RUN needs BuildKit. Whisper stays out: the
+    # transcription benchmark picked Gemini (docs/PLATFORM.md 6.2).
+    env:
+      - DOCKER_BUILDKIT=1
     args:
       - build
       - --file=ai-engine/Dockerfile.cloud
+      - --build-arg=ASR_MODEL=
       - --tag=${_IMAGE}
       - .
 images:
