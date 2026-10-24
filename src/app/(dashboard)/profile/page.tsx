@@ -30,7 +30,7 @@ const cadenceLabel: Record<string, string> = {
   "weekend-only": "Few times a week",
 };
 
-function trialDaysLeft(trialEnd: string | undefined): number | null {
+function trialDaysLeft(trialEnd: string | null): number | null {
   if (!trialEnd) return null;
   const diff = new Date(trialEnd).getTime() - Date.now();
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
@@ -40,24 +40,18 @@ export default async function ProfilePage() {
   const session = await requireAppUser("/profile");
   const runtime = await getRequestRuntime();
   const isDesktop = runtime === "desktop";
-  const meta = session.user.meta;
+  const billing = session.user.billing;
   const isLocal = session.mode === "local";
   const displayName = session.user.displayName;
   const practiceFocus = session.user.practiceFocus ?? undefined;
   const practiceCadence = session.user.practiceCadence ?? undefined;
-  const subStatus = isLocal
-    ? undefined
-    : (meta.stripe_subscription_status as string | undefined);
-  const trialEnd = isLocal ? undefined : (meta.stripe_trial_end as string | undefined);
+  const subStatus = billing?.status ?? undefined;
+  const trialEnd = billing?.trialEnd ?? null;
   const daysLeft        = trialDaysLeft(trialEnd);
   const isTrialing        = subStatus === "trialing";
   const isActive          = subStatus === "active";
-  const isCancelingAtEnd  = isLocal
-    ? false
-    : (meta.stripe_cancel_at_period_end as boolean | undefined);
-  const cancelAt = isLocal
-    ? null
-    : (meta.stripe_cancel_at as string | null | undefined);
+  const isCancelingAtEnd  = billing?.cancelAtPeriodEnd ?? false;
+  const cancelAt = billing?.cancelAt ?? null;
 
   const memberSince = new Date(session.user.createdAt).toLocaleDateString("en-US", {
     month: "long", day: "numeric", year: "numeric",

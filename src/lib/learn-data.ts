@@ -19,7 +19,18 @@ import {
   getLocalModuleProgress,
   getLocalStats,
 } from "@/lib/local-learn";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import {
+  averageScore,
+  currentStreakDays,
+  summarizeLessonSessions,
+  toUserProgress,
+} from "@/lib/cloud/progress-logic";
+import {
+  getLearningTotals,
+  getModuleProgress,
+  listEndedLessonSessions,
+  listModuleProgress,
+} from "@/lib/cloud/store";
 
 export async function getModulesWithProgressForMode(
   mode: AppMode,
@@ -35,19 +46,12 @@ export async function getModulesWithProgressForMode(
     }));
   }
 
-  const supabase = await createSupabaseServerClient();
-  const { data: progress } = await supabase
-    .from("user_progress")
-    .select("*")
-    .eq("user_id", userId);
+  const progress = await listModuleProgress(userId);
 
-  const progressMap = new Map((progress ?? []).map((entry) => [entry.module_id, entry]));
-
-  return catalog.modules.map((module) => ({
-    ...module,
-    progress:
-      (progressMap.get(module.id) as ModuleWithProgress["progress"]) ?? null,
-  }));
+  return catalog.modules.map((module) => {
+    const record = progress.get(module.id);
+    return { ...module, progress: record ? toUserProgress(record) : null };
+  });
 }
 
 export async function getModuleLessonDataForMode(
@@ -83,29 +87,20 @@ export async function getModuleLessonDataForMode(
     };
   }
 
-  const supabase = await createSupabaseServerClient();
-
-  const [{ data: progress }, { data: sessions }] = await Promise.all([
-    supabase
-      .from("user_progress")
-      .select("*")
-      .eq("user_id", userId)
-      .eq("module_id", moduleEntry.id)
-      .single(),
-    supabase
-      .from("lesson_sessions")
-      .select("lesson_id, avg_score, passed, id")
-      .eq("user_id", userId)
-      .in("lesson_id", lessons.map((lesson) => lesson.id))
-      .not("ended_at", "is", null),
+  const [progress, sessions] = await Promise.all([
+    getModuleProgress(userId, moduleEntry.id),
+    listEndedLessonSessions(
+      userId,
+      lessons.map((lesson) => lesson.id),
+    ),
   ]);
 
-  const sessionMap = buildLessonSummaryMap(sessions ?? []);
+  const sessionMap = summarizeLessonSessions(sessions);
 
   return {
     module: {
       ...moduleEntry,
-      progress: progress ?? null,
+      progress: progress ? toUserProgress(progress) : null,
     } satisfies ModuleWithProgress,
     lessons: lessons.map((lesson) => ({
       ...lesson,
@@ -178,89 +173,14 @@ export async function getLearningStatsForMode(
     return getLocalStats(localState, completedModules);
   }
 
-  const supabase = await createSupabaseServerClient();
-
-  const [attemptsResult, sessionsResult] = await Promise.all([
-    supabase.from("lesson_attempts").select("score").eq("user_id", userId),
-    supabase
-      .from("lesson_sessions")
-      .select("started_at")
-      .eq("user_id", userId)
-      .not("ended_at", "is", null)
-      .order("started_at", { ascending: false })
-      .limit(60),
-  ]);
-
-  const attempts = attemptsResult.data ?? [];
-  const totalAttempts = attempts.length;
-  const averageScore =
-    totalAttempts > 0
-      ? Math.round(
-          attempts.reduce((sum, attempt) => sum + (attempt.score ?? 0), 0) /
-            totalAttempts,
-        )
-      : 0;
-
-  const sessionDays = new Set(
-    (sessionsResult.data ?? []).map((session) =>
-      new Date(session.started_at).toISOString().slice(0, 10),
-    ),
-  );
-
-  let currentStreakDays = 0;
-  const today = new Date();
-
-  for (let offset = 0; offset < 60; offset += 1) {
-    const probe = new Date(today);
-    probe.setDate(today.getDate() - offset);
-
-    if (!sessionDays.has(probe.toISOString().slice(0, 10))) {
-      break;
-    }
-
-    currentStreakDays += 1;
-  }
+  const totals = await getLearningTotals(userId);
 
   return {
-    total_attempts: totalAttempts,
-    average_score: averageScore,
+    total_attempts: totals.attemptCount,
+    average_score: averageScore(totals.attemptCount, totals.scoreSum),
     modules_completed: completedModules,
-    current_streak_days: currentStreakDays,
+    current_streak_days: currentStreakDays(totals.sessionStarts, new Date()),
   };
-}
-
-function buildLessonSummaryMap(
-  sessions: Array<{
-    lesson_id: string;
-    avg_score: number | null;
-    passed: boolean | null;
-    id: string;
-  }>,
-) {
-  const sessionMap = new Map<string, LessonSessionSummary>();
-
-  for (const session of sessions) {
-    const existing = sessionMap.get(session.lesson_id);
-
-    if (!existing) {
-      sessionMap.set(session.lesson_id, {
-        session_id: session.id,
-        attempt_count: 1,
-        best_score: session.avg_score,
-        passed: session.passed,
-      });
-      continue;
-    }
-
-    sessionMap.set(session.lesson_id, {
-      session_id: existing.session_id,
-      attempt_count: existing.attempt_count + 1,
-      best_score: Math.max(existing.best_score ?? 0, session.avg_score ?? 0),
-      passed: existing.passed === true || session.passed === true,
-    });
-  }
-
-  return sessionMap;
 }
 
 export function isModuleUnlocked(module: ModuleWithProgress) {

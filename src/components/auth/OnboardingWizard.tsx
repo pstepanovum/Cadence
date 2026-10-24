@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Select } from "@/components/ui/select";
 import { SplitText } from "@/components/ui/split-text";
-import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 
 export function OnboardingWizard() {
   const router = useRouter();
@@ -24,17 +23,21 @@ export function OnboardingWizard() {
     setError(null);
 
     try {
-      const supabase = createSupabaseBrowserClient();
-      const { error: updateError } = await supabase.auth.updateUser({
-        data: {
+      const response = await fetch("/api/profile", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           onboardingCompleted: true,
           displayName: name.trim(),
           practiceFocus: focus,
           practiceCadence: cadence,
-        },
+        }),
       });
 
-      if (updateError) throw updateError;
+      if (!response.ok) {
+        const body = (await response.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(body?.error ?? "Could not save your onboarding preferences.");
+      }
 
       router.replace("/dashboard");
       router.refresh();

@@ -7,7 +7,7 @@ import {
   startLocalSession,
   writeLocalLearnState,
 } from "@/lib/local-learn";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { startLessonSession } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
 
@@ -21,13 +21,13 @@ export async function POST(request: Request) {
 
     const body = await request.json() as { lesson_id: string; module_id: number };
 
+    const lesson = await getLessonByIdFromCatalog(body.lesson_id);
+
+    if (!lesson) {
+      return NextResponse.json({ error: "Unknown lesson." }, { status: 404 });
+    }
+
     if (session.mode === "local") {
-      const lesson = await getLessonByIdFromCatalog(body.lesson_id);
-
-      if (!lesson) {
-        return NextResponse.json({ error: "Unknown lesson." }, { status: 404 });
-      }
-
       const cookieStore = await cookies();
       const localState = await getLocalLearnState();
       const nextSession = startLocalSession(localState, lesson.slug, body.module_id);
@@ -35,22 +35,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ sessionId: nextSession.sessionId }, { status: 201 });
     }
 
-    const supabase = await createSupabaseServerClient();
-    const { data, error } = await supabase
-      .from("lesson_sessions")
-      .insert({
-        user_id: session.user.id,
-        lesson_id: body.lesson_id,
-        module_id: body.module_id,
-      })
-      .select()
-      .single();
-
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-
-    return NextResponse.json({ sessionId: data.id }, { status: 201 });
+    const sessionId = await startLessonSession(session.user.id, lesson.id, lesson.module_id);
+    return NextResponse.json({ sessionId }, { status: 201 });
   } catch (err) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : "Failed to start session." },

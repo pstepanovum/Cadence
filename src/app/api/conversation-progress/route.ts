@@ -6,11 +6,10 @@ import {
   CONVERSATION_PROGRESS_COOKIE,
   getConversationModule,
   getConversationModulesWithProgress,
-  parseConversationProgress,
   serializeConversationProgress,
 } from "@/lib/conversation";
 import { loadConversationProgressForMode } from "@/lib/conversation-progress-sync";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { saveConversationProgress } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
 
@@ -76,7 +75,11 @@ export async function PATCH(request: Request) {
     }
 
     const cookieStore = await cookies();
-    const progress = parseConversationProgress(
+    // In cloud mode the saved scores count too, so a phone with no cookie jar
+    // never lowers a best score.
+    const progress = await loadConversationProgressForMode(
+      session.mode,
+      session.user.id,
       cookieStore.get(CONVERSATION_PROGRESS_COOKIE)?.value,
     );
 
@@ -105,21 +108,10 @@ export async function PATCH(request: Request) {
     );
 
     if (session.mode === "cloud") {
-      const supabase = await createSupabaseServerClient();
-      const entry = progress[moduleSlug];
-      const { error: upsertError } = await supabase.from("conversation_progress").upsert(
-        {
-          user_id: session.user.id,
-          module_slug: moduleSlug,
-          best_score: entry.bestScore,
-          last_score: entry.lastScore,
-          passed: entry.passed,
-          completed_at: entry.completedAt,
-          updated_at: entry.updatedAt,
-        },
-        { onConflict: "user_id,module_slug" },
-      );
-      if (upsertError) {
+      try {
+        await saveConversationProgress(session.user.id, moduleSlug, progress[moduleSlug]);
+      } catch (saveError) {
+        console.error("Conversation progress save failed:", saveError);
         return NextResponse.json(
           { error: "Could not save conversation progress to the database." },
           { status: 500 },

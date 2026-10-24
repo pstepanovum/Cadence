@@ -3,7 +3,8 @@
 
 import { useRouter } from "next/navigation";
 import type { AppMode } from "@/lib/app-mode";
-import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { signOut } from "firebase/auth";
+import { getFirebaseAuth } from "@/lib/firebase/client";
 
 export function SignOutButton({ mode }: { mode: AppMode }) {
   const router = useRouter();
@@ -18,11 +19,11 @@ export function SignOutButton({ mode }: { mode: AppMode }) {
       return;
     }
 
-    const supabase = createSupabaseBrowserClient();
-    await supabase.auth.signOut();
-    await fetch("/api/setup/mode", {
-      method: "DELETE",
-    }).catch(() => {});
+    await signOut(getFirebaseAuth()).catch(() => {});
+    await Promise.all([
+      fetch("/api/auth/session", { method: "DELETE" }).catch(() => {}),
+      fetch("/api/setup/mode", { method: "DELETE" }).catch(() => {}),
+    ]);
     router.replace("/setup");
     router.refresh();
   }

@@ -50,7 +50,9 @@ function findCatalogSqlUnderDir(startDir: string): string | null {
 
   for (let depth = 0; depth < 16; depth += 1) {
     for (const name of CATALOG_FILENAMES) {
-      const candidate = path.join(current, "supabase", name);
+      // The file is shipped by outputFileTracingIncludes in next.config.ts, so
+      // the bundler need not trace this walk.
+      const candidate = path.join(/* turbopackIgnore: true */ current, "content", name);
       if (existsSync(candidate)) {
         return candidate;
       }
@@ -93,14 +95,14 @@ function resolveLearnCatalogSqlPath(): string {
   }
 
   throw new Error(
-    `Could not find module catalog SQL (supabase/modules.sql). cwd=${process.cwd()}. ` +
-      `Set CADENCE_MODULES_SQL_PATH or ensure supabase/modules.sql exists. Tried env: ${tried.join(", ") || "(none)"}; walked from cwd and from learn-catalog module path.`,
+    `Could not find the learn catalog (content/modules.sql). cwd=${process.cwd()}. ` +
+      `Set CADENCE_MODULES_SQL_PATH or ensure content/modules.sql exists. Tried env: ${tried.join(", ") || "(none)"}; walked from cwd and from learn-catalog module path.`,
   );
 }
 
 async function loadLearnCatalog(): Promise<LearnCatalog> {
   const seedPath = resolveLearnCatalogSqlPath();
-  const sql = await readFile(seedPath, "utf8");
+  const sql = await readFile(/* turbopackIgnore: true */ seedPath, "utf8");
 
   const modules = parseModules(sql);
   const lessons = parseLessons(sql);
@@ -137,7 +139,7 @@ async function loadLearnCatalog(): Promise<LearnCatalog> {
 
   if (sortedModules.length === 0 || lessons.length === 0) {
     throw new Error(
-      "Learn catalog parsed no modules or lessons — check supabase/modules.sql INSERT blocks and file encoding.",
+      "Learn catalog parsed no modules or lessons — check content/modules.sql INSERT blocks and file encoding.",
     );
   }
 

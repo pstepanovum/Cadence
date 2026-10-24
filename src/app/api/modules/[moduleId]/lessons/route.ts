@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { getAppSession } from "@/lib/app-session";
 import { getLearnCatalog } from "@/lib/learn-catalog";
 import { getLocalLearnState, getLocalLessonSummary } from "@/lib/local-learn";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { summarizeLessonSessions } from "@/lib/cloud/progress-logic";
+import { listEndedLessonSessions } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
 
@@ -40,45 +41,19 @@ export async function GET(
       );
     }
 
-    const supabase = await createSupabaseServerClient();
-    const lessonIds = normalizedLessons.map((lesson) => lesson.id);
-    const { data: sessions } = await supabase
-      .from("lesson_sessions")
-      .select("lesson_id, avg_score, passed, id")
-      .eq("user_id", session.user.id)
-      .in("lesson_id", lessonIds)
-      .not("ended_at", "is", null);
+    const summaries = summarizeLessonSessions(
+      await listEndedLessonSessions(
+        session.user.id,
+        normalizedLessons.map((lesson) => lesson.id),
+      ),
+    );
 
-    const sessionMap = new Map<string, { best_score: number | null; passed: boolean | null; attempt_count: number }>();
-    for (const s of sessions ?? []) {
-      const existing = sessionMap.get(s.lesson_id);
-      if (!existing) {
-        sessionMap.set(s.lesson_id, {
-          best_score: s.avg_score,
-          passed: s.passed,
-          attempt_count: 1,
-        });
-      } else {
-        sessionMap.set(s.lesson_id, {
-          best_score: Math.max(existing.best_score ?? 0, s.avg_score ?? 0),
-          passed: existing.passed || s.passed,
-          attempt_count: existing.attempt_count + 1,
-        });
-      }
-    }
-
+    // The cards link to the lesson, not to one run of it.
     const withSummary = normalizedLessons.map((lesson) => {
-      const summary = sessionMap.get(lesson.id);
+      const summary = summaries.get(lesson.id);
       return {
         ...lesson,
-        session_summary: summary
-          ? {
-              session_id: null,
-              attempt_count: summary.attempt_count,
-              best_score: summary.best_score,
-              passed: summary.passed,
-            }
-          : null,
+        session_summary: summary ? { ...summary, session_id: null } : null,
       };
     });
 

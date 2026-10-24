@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { getAppSession } from "@/lib/app-session";
-import { stripe, isStripeConfigured } from "@/lib/stripe";
+import { getStripe, isStripeConfigured } from "@/lib/stripe";
 
 export const metadata: Metadata = {
   title: "Starting your trial",
@@ -20,10 +20,8 @@ export default async function CheckoutPage() {
     redirect("/signup");
   }
 
-  const meta = appSession.user.meta;
-
   // Already on an active subscription — skip straight to the right page
-  const status = meta.stripe_subscription_status as string | undefined;
+  const status = appSession.user.billing?.status;
   if (status === "active" || status === "trialing") {
     redirect(appSession.user.onboardingCompleted ? "/dashboard" : "/onboarding");
   }
@@ -37,7 +35,7 @@ export default async function CheckoutPage() {
     process.env.NEXT_PUBLIC_APP_URL ??
     `http://localhost:${process.env.PORT ?? 3000}`;
 
-  const stripeSession = await stripe.checkout.sessions.create({
+  const stripeSession = await getStripe().checkout.sessions.create({
     mode: "subscription",
     payment_method_types: ["card"],
     customer_email: appSession.user.email ?? undefined,
@@ -45,7 +43,7 @@ export default async function CheckoutPage() {
     subscription_data: {
       trial_period_days: 7,
       metadata: {
-        supabase_user_id: appSession.user.id,
+        firebase_uid: appSession.user.id,
       },
     },
     line_items: [

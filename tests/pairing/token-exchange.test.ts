@@ -68,7 +68,7 @@ describe("generated secrets", () => {
     assert.equal(seen.size, 500, "a generated code collided, which should be astronomically rare");
   });
 
-  it("marks device tokens so they cannot be confused with a Supabase JWT", () => {
+  it("marks device tokens so they cannot be confused with a Firebase ID token", () => {
     const token = generateDeviceToken();
     assert.ok(token.startsWith(DEVICE_TOKEN_PREFIX));
     assert.equal(looksLikeDeviceToken(token), true);

@@ -209,9 +209,9 @@ screenshot of the browser chrome.
 ### Authenticated requests
 
 Device tokens are prefixed `cdnc_dev_` so the server can tell one from a
-Supabase JWT without parsing. `getAppSession()` in `src/lib/app-session.ts`
-checks for a device token **first** — before the Supabase bearer branch and
-before cookies — and returns a local-mode session bound to the server's shared
+Firebase ID token without parsing. `getAppSession()` in `src/lib/app-session.ts`
+checks for a device token **first** — before the Firebase ID-token branch and
+before cookies (`chooseSessionSource` in `src/lib/auth/bearer.ts`) — and returns a local-mode session bound to the server's shared
 local profile. Every existing route (`/api/assess`, `/api/transcribe`,
 `/api/modules`, `/api/stats`, `/api/sessions`, `/api/ai-coach`, …) therefore
 works for a paired phone with no per-route change.

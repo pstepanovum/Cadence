@@ -85,7 +85,7 @@ export function SetupSelection({
                 Choose how this copy of Cadence should work.
               </h1>
               <p className="max-w-2xl text-base leading-7 text-bright-snow/78">
-                Local mode keeps progress on this machine with no Supabase or billing.
+                Local mode keeps progress on this machine with no account or billing.
                 Cadence Cloud keeps the current hosted flow with sign-in, synced data,
                 and Stripe-backed plans.
               </p>
@@ -136,7 +136,7 @@ export function SetupSelection({
 
               <p className="text-sm leading-7 text-iron-grey">
                 Progress stays on this machine, and the open-source build avoids the
-                hosted Supabase flow completely. This is the default path for local
+                hosted account flow completely. This is the default path for local
                 development and self-hosted use.
               </p>
 
@@ -175,7 +175,7 @@ export function SetupSelection({
               </div>
 
               <p className="text-sm leading-7 text-iron-grey">
-                Use the existing Supabase account flow and hosted billing path. This
+                Sign in with a Cadence account and use hosted billing. This
                 is the right option when you want synced progress, account-based
                 access, and the current public deployment behaviour.
               </p>

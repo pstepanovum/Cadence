@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { createSupabaseBrowserClient } from "@/lib/supabase";
+import { getCurrentIdToken } from "@/lib/firebase/client";
 
 interface Props {
   isCanceling: boolean;
@@ -27,17 +27,15 @@ export function CancelSubscriptionButton({ isCanceling, cancelAt }: Props) {
     setLoading(true);
     setError(null);
     try {
-      const supabase = createSupabaseBrowserClient();
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-
+      // The desktop app forwards this to the hosted billing service, which
+      // has no cookie of ours, so it carries the ID token as well.
+      const idToken = await getCurrentIdToken().catch(() => null);
       const headers: Record<string, string> = {
         "Content-Type": "application/json",
       };
 
-      if (session?.access_token) {
-        headers.Authorization = `Bearer ${session.access_token}`;
+      if (idToken) {
+        headers.Authorization = `Bearer ${idToken}`;
       }
 
       const res = await fetch("/api/stripe/cancel", {

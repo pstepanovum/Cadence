@@ -1,20 +1,17 @@
 // FILE: src/app/api/stripe/webhook/route.ts
 import { NextResponse } from "next/server";
 import type Stripe from "stripe";
-import { stripe } from "@/lib/stripe";
-import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { getStripe } from "@/lib/stripe";
+import { updateBilling } from "@/lib/cloud/store";
 
-// Helper: merge stripe fields into user_metadata without clobbering existing keys
-async function updateSubscriptionMeta(
-  userId: string,
-  fields: Record<string, unknown>,
-) {
-  const admin = createSupabaseAdminClient();
-  const { data } = await admin.auth.admin.getUserById(userId);
-  const existing = (data?.user?.user_metadata ?? {}) as Record<string, unknown>;
-  await admin.auth.admin.updateUserById(userId, {
-    user_metadata: { ...existing, ...fields },
-  });
+/** Checkout tags each subscription with the Firebase uid it belongs to. */
+function uidOf(sub: Stripe.Subscription) {
+  return sub.metadata?.firebase_uid || null;
+}
+
+function idOf(value: string | { id: string } | null) {
+  if (!value) return null;
+  return typeof value === "string" ? value : value.id;
 }
 
 export async function POST(request: Request) {
@@ -32,7 +29,7 @@ export async function POST(request: Request) {
 
   let event: Stripe.Event;
   try {
-    event = stripe.webhooks.constructEvent(
+    event = getStripe().webhooks.constructEvent(
       body,
       sig,
       process.env.STRIPE_WEBHOOK_SECRET,
@@ -49,10 +46,10 @@ export async function POST(request: Request) {
         const userId = session.client_reference_id;
         if (!userId) break;
 
-        await updateSubscriptionMeta(userId, {
-          stripe_customer_id: session.customer,
-          stripe_subscription_id: session.subscription,
-          stripe_subscription_status: "trialing",
+        await updateBilling(userId, {
+          stripeCustomerId: idOf(session.customer),
+          stripeSubscriptionId: idOf(session.subscription),
+          status: "trialing",
         });
         break;
       }
@@ -61,18 +58,16 @@ export async function POST(request: Request) {
       case "customer.subscription.created":
       case "customer.subscription.updated": {
         const sub = event.data.object as Stripe.Subscription;
-        const userId = sub.metadata?.supabase_user_id;
+        const userId = uidOf(sub);
         if (!userId) break;
 
-        const trialEnd = sub.trial_end
-          ? new Date(sub.trial_end * 1000).toISOString()
-          : null;
-
-        await updateSubscriptionMeta(userId, {
-          stripe_customer_id: sub.customer as string,
-          stripe_subscription_id: sub.id,
-          stripe_subscription_status: sub.status,
-          stripe_trial_end: trialEnd,
+        await updateBilling(userId, {
+          stripeCustomerId: idOf(sub.customer),
+          stripeSubscriptionId: sub.id,
+          status: sub.status,
+          trialEnd: sub.trial_end ? new Date(sub.trial_end * 1000).toISOString() : null,
+          cancelAtPeriodEnd: sub.cancel_at_period_end,
+          cancelAt: sub.cancel_at ? new Date(sub.cancel_at * 1000).toISOString() : null,
         });
         break;
       }
@@ -80,12 +75,12 @@ export async function POST(request: Request) {
       // ── Subscription canceled ────────────────────────────────────────────
       case "customer.subscription.deleted": {
         const sub = event.data.object as Stripe.Subscription;
-        const userId = sub.metadata?.supabase_user_id;
+        const userId = uidOf(sub);
         if (!userId) break;
 
-        await updateSubscriptionMeta(userId, {
-          stripe_subscription_status: "canceled",
-          stripe_subscription_id: sub.id,
+        await updateBilling(userId, {
+          status: "canceled",
+          stripeSubscriptionId: sub.id,
         });
         break;
       }
@@ -99,13 +94,11 @@ export async function POST(request: Request) {
             : undefined;
         if (!subscriptionId) break;
 
-        const sub = await stripe.subscriptions.retrieve(subscriptionId);
-        const userId = sub.metadata?.supabase_user_id;
+        const sub = await getStripe().subscriptions.retrieve(subscriptionId);
+        const userId = uidOf(sub);
         if (!userId) break;
 
-        await updateSubscriptionMeta(userId, {
-          stripe_subscription_status: sub.status,
-        });
+        await updateBilling(userId, { status: sub.status });
         break;
       }
 
@@ -118,13 +111,11 @@ export async function POST(request: Request) {
             : undefined;
         if (!subscriptionId) break;
 
-        const sub = await stripe.subscriptions.retrieve(subscriptionId);
-        const userId = sub.metadata?.supabase_user_id;
+        const sub = await getStripe().subscriptions.retrieve(subscriptionId);
+        const userId = uidOf(sub);
         if (!userId) break;
 
-        await updateSubscriptionMeta(userId, {
-          stripe_subscription_status: "past_due",
-        });
+        await updateBilling(userId, { status: "past_due" });
         break;
       }
 

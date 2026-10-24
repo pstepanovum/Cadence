@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-19-149eca)](https://react.dev/)
 [![Open Source](https://img.shields.io/badge/open%20source-yes-1f8f5f)](https://github.com/pstepanovum/Cadence)
 
-Cadence is an open-source AI pronunciation coach built with Next.js, Supabase, and Python model services. It combines phoneme-level pronunciation feedback, guided speaking modules, structured conversation practice, and an open-topic AI coach so learners can improve spoken English in one product.
+Cadence is an open-source AI pronunciation coach built with Next.js, Firebase, and Python model services. It combines phoneme-level pronunciation feedback, guided speaking modules, structured conversation practice, and an open-topic AI coach so learners can improve spoken English in one product.
 
 Cadence is designed for people who want more than flashcards: it gives live speech feedback, targeted repetition, theory modules, conversation drills, and a flexible AI coach that keeps the practice loop moving.
 
@@ -46,7 +46,7 @@ Cadence has three main speaking experiences:
 - `Next.js 16` with the App Router
 - `React 19`
 - `Tailwind CSS 4`
-- `Supabase` for auth and user data
+- `Firebase` (Authentication and Cloud Firestore) for accounts and synced progress in cloud mode
 - `Stripe` for billing flows
 - `Python` model services for scoring, transcription, TTS, and coach generation
 - `Electron` for the macOS and Windows desktop app
@@ -116,7 +116,10 @@ The browser only talks to the Next.js app. The Next.js API routes proxy requests
 │   │   └── entitlements.mac.plist
 │   └── electron-builder.yml    # DMG / installer packaging config
 ├── public/                     # static assets
-├── supabase/                   # Supabase project files
+├── content/                    # learn lesson catalog (modules.sql, read from disk)
+├── firestore.rules             # Firestore rules (deny all clients; the server uses the Admin SDK)
+├── firestore.indexes.json      # Firestore composite indexes
+├── firebase.json               # points the Firebase CLI at the two files above
 ├── Dockerfile                  # web image
 └── docker-compose.yml          # full local stack
 ```
@@ -331,19 +334,30 @@ CSC_LINK=path/to/certificate.p12
 CSC_KEY_PASSWORD=yourpassword
 ```
 
-## Supabase Auth Callback
+## Cadence Cloud (Firebase)
 
-The auth confirmation callback is served at:
+Local mode needs none of this. Cloud mode signs people in with Firebase Authentication (email and password) and keeps their progress in Cloud Firestore. The browser signs in with the Firebase JS SDK, then trades its ID token for an httpOnly `__session` cookie at `POST /api/auth/session`; the server verifies that cookie (and the phone's `Authorization: Bearer <ID token>`) with the Firebase Admin SDK. No client reads or writes Firestore directly.
+
+To set up your own project:
+
+1. Create a Firebase project and add a Web app. Copy its config into the `NEXT_PUBLIC_FIREBASE_*` variables.
+2. Under Authentication, enable the Email/Password provider and add your domain to the authorized domains.
+3. Create a Firestore database. Its region decides where learner data is stored, so update the privacy page to match.
+4. Deploy the rules and indexes from this repository: `firebase deploy --only firestore`.
+5. Give the server credentials: set `FIREBASE_PROJECT_ID`, and either `FIREBASE_SERVICE_ACCOUNT` (the service-account JSON on one line) or Application Default Credentials.
+6. Optional: point the password-reset email's action URL at `https://your-domain.com/reset-password` (Authentication > Templates). Without it, Firebase's own page handles the reset and then returns the person to `/login`.
+
+Data model, all under the signed-in user:
 
 ```text
-/api/auth/confirm
+users/{uid}                              profile, onboarding answers, Stripe billing state
+users/{uid}/moduleProgress/{moduleId}    unlocks and best exam score
+users/{uid}/lessonSessions/{id}          one run through a lesson
+users/{uid}/lessonAttempts/{id}          one scored word
+users/{uid}/conversationProgress/{slug}  conversation results
 ```
 
-Make sure your Supabase dashboard email templates (Confirm signup, Magic link, etc.) use this URL:
-
-```text
-https://your-domain.com/api/auth/confirm
-```
+The lesson catalog is not in Firestore; it is read from `content/modules.sql` in every mode. Cadence Cloud used to run on Supabase; nothing is migrated from it, so cloud accounts start fresh.
 
 ## Environment Variables
 
@@ -352,9 +366,9 @@ Cadence does not commit runtime secrets. Use `.env.local` for local development 
 Common web-side variables:
 
 - `NEXT_PUBLIC_APP_URL`
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
-- `SUPABASE_SERVICE_ROLE_KEY`
+- `NEXT_PUBLIC_FIREBASE_API_KEY`, `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`, `NEXT_PUBLIC_FIREBASE_PROJECT_ID`, `NEXT_PUBLIC_FIREBASE_APP_ID` — cloud mode; leave them empty and only local mode is offered
+- `FIREBASE_PROJECT_ID` — server side; falls back to the public project id
+- `FIREBASE_SERVICE_ACCOUNT` — optional service-account JSON; without it the Admin SDK uses Application Default Credentials
 - `NEXT_PUBLIC_BRANDFETCH_CLIENT_ID`
 - `AI_ENGINE_URL`
 - `AI_COACH_ENGINE_URL`
@@ -424,7 +438,7 @@ If you are opening the repo for the first time, start with:
 
 - Cadence is free to use and open source under the MIT license.
 - The repository is meant to be a real product codebase, not a minimal starter.
-- If you fork it, configure your own Supabase, Stripe, email, and model-service credentials.
+- If you fork it, configure your own Firebase, Stripe, and model-service credentials.
 - The desktop app requires the web app to be running locally in development mode.
 
 ## Contributing

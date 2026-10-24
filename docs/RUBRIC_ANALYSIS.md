@@ -1,6 +1,6 @@
 # Rubric Self-Evaluation — Cadence
 
-Cadence is an AI-powered pronunciation and accent training platform available as both a web app (cloud-hosted, Supabase + Stripe) and a native desktop app (Electron, fully offline). The analysis below maps every rubric criterion to concrete evidence in the codebase.
+Cadence is an AI-powered pronunciation and accent training platform available as both a web app (cloud-hosted, Firebase + Stripe) and a native desktop app (Electron, fully offline). The analysis below maps every rubric criterion to concrete evidence in the codebase.
 
 ---
 
@@ -53,7 +53,7 @@ The project uses **Next.js API Routes** (App Router), which are functionally equ
   - `/api/health` — liveness check
 
 **Middleware usage**
-- `src/lib/supabase/proxy.ts` — Next.js `middleware` that enforces auth on protected routes, redirects local-mode users away from cloud-only routes, and handles cookie-based session validation on every request.
+- `src/proxy.ts` and `src/lib/auth/proxy.ts` — Next.js proxy (formerly middleware) that enforces auth on protected routes, redirects local-mode users away from cloud-only routes, and checks the Firebase session cookie on every request. The decisions themselves are pure (`src/lib/auth/route-gate.ts`) and unit tested.
 - `src/lib/runtime/request-runtime.ts` — inspects `User-Agent` to determine `"desktop"` vs `"web"` runtime, used across API routes to pick the correct backend port.
 
 **Proper server setup**
@@ -81,12 +81,12 @@ The project uses **Next.js API Routes** (App Router), which are functionally equ
 
 ### Score: 10 / 10
 
-**Cloud mode — Supabase PostgreSQL**
-- Tables: `user_progress`, `lesson_sessions` (defined in `supabase/modules.sql`, `supabase/conversation.sql`).
-- `src/lib/learn-data.ts` — reads `user_progress` via Supabase client, maps per-module completion state.
-- `src/app/api/sessions/route.ts` and `src/app/api/attempts/route.ts` — write lesson session records and attempt scores to Supabase.
-- `src/app/api/progress/route.ts` — fetches cumulative progress.
-- `src/lib/supabase/server.ts` — typed server-side client with cookie-based session management.
+**Cloud mode — Cloud Firestore**
+- Collections under `users/{uid}`: `moduleProgress`, `lessonSessions`, `lessonAttempts`, `conversationProgress` (all access in `src/lib/cloud/store.ts`, through the Firebase Admin SDK).
+- `src/lib/learn-data.ts` — reads module progress, maps per-module completion state.
+- `src/app/api/sessions/route.ts` and `src/app/api/attempts/route.ts` — write lesson session records and attempt scores.
+- `src/app/api/progress/route.ts` — records exam results and unlocks the next module in one transaction.
+- `firestore.rules` — denies every client; only the server reads and writes.
 
 **Local mode — cookie + localStorage persistence**
 - `src/lib/local-learn.ts` — stores compact learn state in the `cadence_local_learn_state` cookie (1-year expiry).
@@ -154,7 +154,7 @@ The dual-app concept (Desktop for offline/private use, Web for cloud/subscriptio
 
 - **Phoneme-level pronunciation scoring** using PyTorch + Hugging Face Transformers — goes deeper than any consumer pronunciation app (scores individual IPA phonemes, not just a sentence-level float).
 - **Local AI on desktop** — Electron app bundles a Whisper ASR model, OmniVoice TTS, and a Qwen 0.5B LLM that run entirely on the user's machine, no internet required.
-- **Two-mode architecture** — single codebase serves a cloud SaaS (Supabase + Stripe) and an offline desktop app; mode is selected at first launch and persisted.
+- **Two-mode architecture** — single codebase serves a cloud SaaS (Firebase + Stripe) and an offline desktop app; mode is selected at first launch and persisted.
 - **TTS reference audio** — the coach generates spoken reference audio for each target word so users can hear the correct pronunciation before trying.
 - **"Just Speak" free practice** — unstructured open-mic practice mode separate from the structured curriculum.
 

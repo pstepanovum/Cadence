@@ -11,7 +11,8 @@ import {
   readLocalProfileFromCookies,
   writeLocalProfile,
 } from "@/lib/local-profile";
-import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { isFirebaseServerConfigured } from "@/lib/firebase/admin";
+import { isFirebaseConfigured } from "@/lib/firebase/config";
 
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as
@@ -23,11 +24,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid setup mode." }, { status: 400 });
   }
 
-  if (mode === "cloud" && !isSupabaseConfigured) {
+  if (mode === "cloud" && !(isFirebaseConfigured && isFirebaseServerConfigured())) {
     return NextResponse.json(
       {
         error:
-          "Cadence Cloud is not configured in this build yet. Continue in local mode or add Supabase keys.",
+          "Cadence Cloud is not configured in this build yet. Continue in local mode or add the Firebase settings.",
       },
       { status: 503 },
     );

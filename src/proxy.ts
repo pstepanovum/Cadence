@@ -1,9 +1,11 @@
-// FILE: proxy.ts
+// FILE: src/proxy.ts
+//
+// Next.js only picks this file up next to the app directory, which is src/.
 import { type NextRequest } from "next/server";
-import { updateSession } from "@/lib/supabase/proxy";
+import { gateRequest } from "@/lib/auth/proxy";
 
 export async function proxy(request: NextRequest) {
-  return updateSession(request);
+  return gateRequest(request);
 }
 
 export const config = {

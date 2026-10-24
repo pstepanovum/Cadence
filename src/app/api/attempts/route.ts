@@ -7,7 +7,7 @@ import {
   recordLocalAttempt,
   writeLocalLearnState,
 } from "@/lib/local-learn";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { recordLessonAttempt } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
 
@@ -49,28 +49,41 @@ export async function POST(request: Request) {
       );
     }
 
-    const supabase = await createSupabaseServerClient();
-    const { data, error } = await supabase
-      .from("lesson_attempts")
-      .insert({
-        user_id: session.user.id,
+    if (
+      typeof body.lesson_id !== "string" ||
+      typeof body.lesson_word_id !== "string" ||
+      typeof body.word !== "string" ||
+      !Number.isFinite(body.score)
+    ) {
+      return NextResponse.json(
+        { error: "lesson_id, lesson_word_id, word and score are required." },
+        { status: 400 },
+      );
+    }
+
+    const attemptNumber = Number.isFinite(body.attempt_number) ? body.attempt_number : 1;
+    const id = await recordLessonAttempt(session.user.id, {
+      lessonId: body.lesson_id,
+      lessonWordId: body.lesson_word_id,
+      word: body.word,
+      score: body.score,
+      ipaTarget: typeof body.ipa_target === "string" ? body.ipa_target : null,
+      ipaTranscript: typeof body.ipa_transcript === "string" ? body.ipa_transcript : null,
+      phonemeDetail: body.phoneme_detail ?? null,
+      attemptNumber,
+    });
+
+    return NextResponse.json(
+      {
+        id,
         lesson_id: body.lesson_id,
         lesson_word_id: body.lesson_word_id,
         word: body.word,
         score: body.score,
-        ipa_target: body.ipa_target,
-        ipa_transcript: body.ipa_transcript ?? null,
-        phoneme_detail: body.phoneme_detail ?? null,
-        attempt_number: body.attempt_number ?? 1,
-      })
-      .select()
-      .single();
-
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-
-    return NextResponse.json(data, { status: 201 });
+        attempt_number: attemptNumber,
+      },
+      { status: 201 },
+    );
   } catch (err) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : "Failed to save attempt." },

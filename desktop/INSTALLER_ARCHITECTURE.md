@@ -40,12 +40,14 @@ That means any true server-only secret must **not** live inside the desktop bund
 
 Examples already present in this repo that should stay remote:
 
-- `SUPABASE_SERVICE_ROLE_KEY`
+- `FIREBASE_SERVICE_ACCOUNT` (Firebase Admin credentials)
 - `STRIPE_SECRET_KEY`
 - `STRIPE_WEBHOOK_SECRET`
 - email provider secrets
 
-Routes that depend on privileged secrets should not be treated as part of the local desktop runtime. The local desktop app can still use Supabase auth and public API keys, but Stripe webhooks, admin Supabase updates, and other privileged operations should stay on a hosted backend.
+Routes that depend on privileged secrets should not be treated as part of the local desktop runtime. The local desktop app can still sign people in with the public Firebase config, but Stripe webhooks, Firebase Admin operations (minting session cookies, reading and writing Firestore), and other privileged operations should stay on a hosted backend.
+
+This matters more since cloud mode moved to Firebase: Firestore is reached only through the Admin SDK, which needs service-account credentials, so a packaged desktop app without them cannot read or save cloud progress on its own. Until the cloud routes are proxied to the hosted backend (as `/api/stripe/cancel` already is), the desktop app should be used in local mode.
 
 ## Recommended target architecture
 
@@ -57,7 +59,7 @@ Keep these on hosted infrastructure:
 
 - Stripe webhook handling
 - Stripe subscription mutations that require secret keys
-- Supabase admin operations
+- Firebase Admin operations
 - any email-sending routes with provider secrets
 - any other truly server-only business logic
 
@@ -220,7 +222,7 @@ Move privileged routes off the local packaged desktop server:
 
 - Stripe webhook handling
 - Stripe secret-key operations
-- Supabase admin operations
+- Firebase Admin operations
 - email-sending operations with provider secrets
 
 ## Delivery plan

@@ -7,10 +7,9 @@ import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  createSupabaseBrowserClient,
-  isSupabaseConfigured,
-} from "@/lib/supabase";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { describeAuthError } from "@/lib/firebase/auth-errors";
+import { getFirebaseAuth } from "@/lib/firebase/client";
 import type { AppRuntime } from "@/lib/runtime/request-runtime";
 import { cn } from "@/lib/utils";
 
@@ -29,36 +28,15 @@ export function ForgotPasswordForm({ runtime }: { runtime: AppRuntime }) {
     try {
       setIsSubmitting(true);
 
-      if (!isSupabaseConfigured) {
-        throw new Error(
-          "Add your Supabase URL and publishable key in .env.local before testing password recovery.",
-        );
-      }
-
-      const supabase = createSupabaseBrowserClient();
-      const redirectTo =
-        typeof window === "undefined"
-          ? undefined
-          : `${window.location.origin}/reset-password`;
-
-      const { error: authError } = await supabase.auth.resetPasswordForEmail(
-        email,
-        { redirectTo },
-      );
-
-      if (authError) {
-        throw authError;
-      }
+      await sendPasswordResetEmail(getFirebaseAuth(), email, {
+        url: `${window.location.origin}/login`,
+      });
 
       setMessage(
         "Recovery email sent. Open the link in your inbox to choose a new password.",
       );
     } catch (nextError) {
-      setError(
-        nextError instanceof Error
-          ? nextError.message
-          : "Unable to send the password reset email.",
-      );
+      setError(describeAuthError(nextError, "Unable to send the password reset email."));
     } finally {
       setIsSubmitting(false);
     }

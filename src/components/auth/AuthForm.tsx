@@ -9,9 +9,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
-  createSupabaseBrowserClient,
-  isSupabaseConfigured,
-} from "@/lib/supabase";
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { describeAuthError } from "@/lib/firebase/auth-errors";
+import { getFirebaseAuth, startServerSession } from "@/lib/firebase/client";
 import type { AppRuntime } from "@/lib/runtime/request-runtime";
 import { cn } from "@/lib/utils";
 
@@ -38,56 +41,32 @@ export function AuthForm({ mode, runtime }: AuthFormProps) {
     try {
       setIsSubmitting(true);
 
-      if (!isSupabaseConfigured) {
-        throw new Error(
-          "Add your Supabase URL and publishable key in .env.local before testing authentication.",
-        );
-      }
-
-      const supabase = createSupabaseBrowserClient();
+      const auth = getFirebaseAuth();
 
       if (isLogin) {
-        const { error: authError } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
+        const { user } = await signInWithEmailAndPassword(auth, email, password);
+        await startServerSession(user);
 
-        if (authError) {
-          throw authError;
-        }
-
-        setMessage("Login successful. Taking you to the dashboard.");
+        setMessage("Signed in. Taking you to your dashboard.");
         startTransition(() => {
-          router.replace("/dashboard");
+          router.replace(safeNextPath() ?? "/dashboard");
           router.refresh();
         });
         return;
       }
 
-      const { error: authError } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          emailRedirectTo:
-            typeof window === "undefined"
-              ? undefined
-              : `${window.location.origin}/api/auth/confirm?next=/checkout`,
-        },
+      const { user } = await createUserWithEmailAndPassword(auth, email, password);
+      await startServerSession(user);
+      // Verification is offered, not required: the account works right away.
+      void sendEmailVerification(user).catch(() => {});
+
+      setMessage("Account created. Setting up your trial.");
+      startTransition(() => {
+        router.replace("/checkout");
+        router.refresh();
       });
-
-      if (authError) {
-        throw authError;
-      }
-
-      setMessage(
-        "Account created. Check your inbox for the Supabase confirmation email, then sign in.",
-      );
     } catch (nextError) {
-      setError(
-        nextError instanceof Error
-          ? nextError.message
-          : "Something went wrong during authentication.",
-      );
+      setError(describeAuthError(nextError, "Something went wrong during sign-in."));
     } finally {
       setIsSubmitting(false);
     }
@@ -310,4 +289,13 @@ export function AuthForm({ mode, runtime }: AuthFormProps) {
       </div>
     </Card>
   );
+}
+
+/** The `?next=` path the proxy sent us here with, when it is one of ours. */
+function safeNextPath() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+  const next = new URLSearchParams(window.location.search).get("next");
+  return next && next.startsWith("/") && !next.startsWith("//") ? next : null;
 }

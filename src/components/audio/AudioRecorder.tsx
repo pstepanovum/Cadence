@@ -84,6 +84,10 @@ export function AudioRecorder({
   }, [targetWord, instruct]);
 
   useEffect(() => {
+    // The <audio> element is always rendered, so the one present at mount is
+    // the one to pause on unmount.
+    const takeAudio = audioRef.current;
+
     return () => {
       if (referenceAudioUrlRef.current) {
         URL.revokeObjectURL(referenceAudioUrlRef.current);
@@ -95,7 +99,7 @@ export function AudioRecorder({
         referenceAudioRef.current = null;
       }
 
-      audioRef.current?.pause();
+      takeAudio?.pause();
     };
   }, []);
 

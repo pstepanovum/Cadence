@@ -1,12 +1,11 @@
 // FILE: src/app/api/stripe/cancel/route.ts
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 import Stripe from "stripe";
+import { getAppSession } from "@/lib/app-session";
+import { readBearerToken } from "@/lib/auth/bearer";
+import { updateBilling } from "@/lib/cloud/store";
 import { getRequestRuntimeFromRequest } from "@/lib/runtime/request-runtime";
-import { isStripeConfigured, stripe } from "@/lib/stripe";
-import { assertSupabaseConfig } from "@/lib/supabase/config";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
-import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { getStripe, isStripeConfigured } from "@/lib/stripe";
 
 export async function POST(request: Request) {
   try {
@@ -33,21 +32,14 @@ export async function POST(request: Request) {
       );
     }
 
-    const {
-      user,
-      error: userError,
-    } = await getAuthenticatedUser(request);
+    // A Bearer ID token (the desktop proxy, the phone) or the session cookie.
+    const session = await getAppSession();
 
-    if (userError) {
-      throw userError;
-    }
-
-    if (!user) {
+    if (session.mode !== "cloud" || !session.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const meta = (user.user_metadata ?? {}) as Record<string, unknown>;
-    const subscriptionId = meta.stripe_subscription_id as string | undefined;
+    const subscriptionId = session.user.billing?.stripeSubscriptionId;
 
     if (!subscriptionId) {
       return NextResponse.json(
@@ -56,43 +48,21 @@ export async function POST(request: Request) {
       );
     }
 
-    const updated = await stripe.subscriptions.update(subscriptionId, {
+    const updated = await getStripe().subscriptions.update(subscriptionId, {
       cancel_at_period_end: action === "cancel",
     });
 
     let metadataSynced = true;
 
     try {
-      // Sync state back to user metadata immediately instead of waiting for the webhook.
-      const admin = createSupabaseAdminClient();
-      const { data, error: adminReadError } = await admin.auth.admin.getUserById(
-        user.id,
-      );
-
-      if (adminReadError) {
-        throw adminReadError;
-      }
-
-      const existing = (data?.user?.user_metadata ?? {}) as Record<string, unknown>;
-      const { error: adminUpdateError } = await admin.auth.admin.updateUserById(
-        user.id,
-        {
-          user_metadata: {
-            ...existing,
-            stripe_cancel_at_period_end: updated.cancel_at_period_end,
-            stripe_cancel_at: updated.cancel_at
-              ? new Date(updated.cancel_at * 1000).toISOString()
-              : null,
-          },
-        },
-      );
-
-      if (adminUpdateError) {
-        throw adminUpdateError;
-      }
-    } catch (metadataError) {
+      // Record the change now instead of waiting for the webhook.
+      await updateBilling(session.user.id, {
+        cancelAtPeriodEnd: updated.cancel_at_period_end,
+        cancelAt: updated.cancel_at ? new Date(updated.cancel_at * 1000).toISOString() : null,
+      });
+    } catch (billingError) {
       metadataSynced = false;
-      console.error("Stripe subscription metadata sync error:", metadataError);
+      console.error("Stripe subscription billing sync error:", billingError);
     }
 
     return NextResponse.json({
@@ -121,34 +91,6 @@ function getSubscriptionUpdateErrorMessage(error: unknown) {
   return "Failed to update subscription.";
 }
 
-async function getAuthenticatedUser(request: Request) {
-  const accessToken = getBearerToken(request);
-
-  if (accessToken) {
-    const { supabaseUrl, supabasePublishableKey } = assertSupabaseConfig();
-    const supabase = createClient(supabaseUrl, supabasePublishableKey, {
-      auth: {
-        autoRefreshToken: false,
-        persistSession: false,
-      },
-    });
-    const {
-      data: { user },
-      error,
-    } = await supabase.auth.getUser(accessToken);
-
-    return { user, error };
-  }
-
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-    error,
-  } = await supabase.auth.getUser();
-
-  return { user, error };
-}
-
 function shouldProxyDesktopBillingRequest(request: Request) {
   if (getRequestRuntimeFromRequest(request) !== "desktop") {
     return false;
@@ -161,7 +103,7 @@ async function proxyDesktopBillingRequest(
   request: Request,
   payload: { action: "cancel" | "resume" },
 ) {
-  const accessToken = getBearerToken(request);
+  const accessToken = readBearerToken(request.headers.get("authorization"));
 
   if (!accessToken) {
     return NextResponse.json(
@@ -209,16 +151,6 @@ async function proxyDesktopBillingRequest(
       { status: 503 },
     );
   }
-}
-
-function getBearerToken(request: Request) {
-  const header = request.headers.get("authorization");
-  if (!header?.startsWith("Bearer ")) {
-    return null;
-  }
-
-  const token = header.slice("Bearer ".length).trim();
-  return token || null;
 }
 
 function getHostedBillingOrigin() {

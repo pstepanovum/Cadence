@@ -1,0 +1,27 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "lessonSessions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "ended", "order": "ASCENDING" },
+        { "fieldPath": "startedAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "lessonSessions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "ended", "order": "ASCENDING" },
+        { "fieldPath": "lessonId", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "lessonAttempts",
+      "fieldPath": "phonemeDetail",
+      "indexes": []
+    }
+  ]
+}

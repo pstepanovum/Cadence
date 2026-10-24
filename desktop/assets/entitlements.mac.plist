@@ -11,7 +11,7 @@
     <!-- Allow the bundled Python runtime to load local native extensions from Cadence's venv -->
     <key>com.apple.security.cs.disable-library-validation</key>
     <true/>
-    <!-- Allow outbound network connections (Supabase, Stripe, AI APIs) -->
+    <!-- Allow outbound network connections (Firebase, Stripe, AI APIs) -->
     <key>com.apple.security.network.client</key>
     <true/>
     <!-- Allow microphone access for pronunciation recording -->

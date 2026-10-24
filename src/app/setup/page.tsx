@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { SetupSelection } from "@/components/auth/SetupSelection";
 import { getAppSession } from "@/lib/app-session";
 import { getRequestRuntime } from "@/lib/runtime/request-runtime";
-import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { isFirebaseServerConfigured } from "@/lib/firebase/admin";
+import { isFirebaseConfigured } from "@/lib/firebase/config";
 
 export const metadata: Metadata = {
   title: "Choose Your Setup",
@@ -28,7 +29,7 @@ export default async function SetupPage({ searchParams }: SetupPageProps) {
         runtime={runtime}
         nextPath={typeof next === "string" ? next : null}
         currentMode={session.mode}
-        cloudAvailable={isSupabaseConfigured}
+        cloudAvailable={isFirebaseConfigured && isFirebaseServerConfigured()}
         currentDisplayName={session.user?.displayName ?? null}
       />
     </main>

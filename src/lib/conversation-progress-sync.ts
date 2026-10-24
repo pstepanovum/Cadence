@@ -3,11 +3,11 @@ import "server-only";
 import type { AppMode } from "@/lib/app-mode";
 import type { ConversationProgressMap } from "@/lib/conversation";
 import { parseConversationProgress } from "@/lib/conversation";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { listConversationProgress } from "@/lib/cloud/store";
 
 /**
  * Local mode: progress lives in `cadence_conversation_progress` cookie only.
- * Cloud mode: merge cookie with `conversation_progress` rows (database wins per module).
+ * Cloud mode: merge the cookie with users/{uid}/conversationProgress (database wins per module).
  */
 export async function loadConversationProgressForMode(
   mode: AppMode,
@@ -20,25 +20,11 @@ export async function loadConversationProgressForMode(
     return fromCookie;
   }
 
-  const supabase = await createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from("conversation_progress")
-    .select("module_slug,best_score,last_score,passed,completed_at,updated_at")
-    .eq("user_id", userId);
-
-  if (error || !data?.length) {
+  try {
+    // Database wins per module; the cookie fills in anything not saved yet.
+    return { ...fromCookie, ...(await listConversationProgress(userId)) };
+  } catch (error) {
+    console.error("Could not read conversation progress:", error);
     return fromCookie;
   }
-
-  const merged: ConversationProgressMap = { ...fromCookie };
-  for (const row of data) {
-    merged[row.module_slug] = {
-      bestScore: row.best_score,
-      lastScore: row.last_score,
-      passed: row.passed,
-      completedAt: row.completed_at,
-      updatedAt: row.updated_at,
-    };
-  }
-  return merged;
 }

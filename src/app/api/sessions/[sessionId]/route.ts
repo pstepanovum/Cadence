@@ -6,7 +6,7 @@ import {
   getLocalLearnState,
   writeLocalLearnState,
 } from "@/lib/local-learn";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { finishLessonSession } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
 
@@ -46,25 +46,28 @@ export async function PATCH(
       });
     }
 
-    const supabase = await createSupabaseServerClient();
-    const { data, error } = await supabase
-      .from("lesson_sessions")
-      .update({
-        ended_at: new Date().toISOString(),
-        word_count: body.word_count,
-        avg_score: Math.round(body.avg_score),
-        passed: body.passed,
-      })
-      .eq("id", sessionId)
-      .eq("user_id", session.user.id)
-      .select()
-      .single();
-
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+    if (
+      !Number.isFinite(body.word_count) ||
+      !Number.isFinite(body.avg_score) ||
+      typeof body.passed !== "boolean"
+    ) {
+      return NextResponse.json(
+        { error: "word_count, avg_score and passed are required." },
+        { status: 400 },
+      );
     }
 
-    return NextResponse.json(data);
+    const finished = await finishLessonSession(session.user.id, sessionId, {
+      wordCount: Math.round(body.word_count),
+      avgScore: Math.round(body.avg_score),
+      passed: body.passed,
+    });
+
+    if (!finished) {
+      return NextResponse.json({ error: "Unknown session." }, { status: 404 });
+    }
+
+    return NextResponse.json(finished);
   } catch (err) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : "Failed to end session." },

@@ -60,7 +60,7 @@ export async function startNextServer({
   return new Promise((resolve, reject) => {
     const serverScript = join(resourcesPath, 'next-server', 'server.js')
     const nextServerRoot = join(resourcesPath, 'next-server')
-    const modulesSqlPath = join(nextServerRoot, 'supabase', 'modules.sql')
+    const modulesSqlPath = join(nextServerRoot, 'content', 'modules.sql')
     const desktopRuntime = utilityProcess.fork(serverScript, [], {
       cwd: nextServerRoot,
       env: {

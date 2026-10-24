@@ -7,7 +7,7 @@ import {
   updateLocalModuleExamProgress,
   writeLocalLearnState,
 } from "@/lib/local-learn";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { applyExamToProgress, bootstrapModuleProgress } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
 
@@ -27,21 +27,7 @@ export async function POST() {
       return NextResponse.json({ ok: true }, { status: 201 });
     }
 
-    const supabase = await createSupabaseServerClient();
-    const { error } = await supabase.from("user_progress").upsert(
-      {
-        user_id: session.user.id,
-        module_id: 1,
-        is_unlocked: true,
-        unlocked_at: new Date().toISOString(),
-      },
-      { onConflict: "user_id,module_id", ignoreDuplicates: true },
-    );
-
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-
+    await bootstrapModuleProgress(session.user.id);
     return NextResponse.json({ ok: true }, { status: 201 });
   } catch (err) {
     return NextResponse.json(
@@ -63,8 +49,9 @@ export async function PATCH(request: Request) {
     const body = await request.json() as { module_id: number; exam_score: number };
     const { module_id, exam_score } = body;
 
+    const catalog = await getLearnCatalog();
+
     if (session.mode === "local") {
-      const catalog = await getLearnCatalog();
       const cookieStore = await cookies();
       const localState = await getLocalLearnState();
       const nextState = updateLocalModuleExamProgress(
@@ -82,48 +69,24 @@ export async function PATCH(request: Request) {
       });
     }
 
-    const supabase = await createSupabaseServerClient();
-    const passed = exam_score >= 70;
-
-    // Fetch current best score
-    const { data: existing } = await supabase
-      .from("user_progress")
-      .select("best_exam_score")
-      .eq("user_id", session.user.id)
-      .eq("module_id", module_id)
-      .single();
-
-    const newBest = Math.max(exam_score, existing?.best_exam_score ?? 0);
-
-    // Update this module's progress
-    await supabase.from("user_progress").upsert(
-      {
-        user_id: session.user.id,
-        module_id,
-        is_unlocked: true,
-        is_completed: passed,
-        best_exam_score: newBest,
-        completed_at: passed ? new Date().toISOString() : null,
-        updated_at: new Date().toISOString(),
-      },
-      { onConflict: "user_id,module_id" },
-    );
-
-    // Unlock next module if passed
-    if (passed && module_id < 10) {
-      await supabase.from("user_progress").upsert(
-        {
-          user_id: session.user.id,
-          module_id: module_id + 1,
-          is_unlocked: true,
-          unlocked_at: new Date().toISOString(),
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: "user_id,module_id", ignoreDuplicates: false },
+    if (
+      !catalog.modules.some((module) => module.id === module_id) ||
+      !Number.isFinite(exam_score)
+    ) {
+      return NextResponse.json(
+        { error: "A known module_id and an exam_score are required." },
+        { status: 400 },
       );
     }
 
-    return NextResponse.json({ passed, best_exam_score: newBest });
+    const result = await applyExamToProgress(
+      session.user.id,
+      module_id,
+      exam_score,
+      catalog.modules.length,
+    );
+
+    return NextResponse.json({ passed: result.passed, best_exam_score: result.bestExamScore });
   } catch (err) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : "Failed to update progress." },

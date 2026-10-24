@@ -40,7 +40,7 @@ The backend is split into two FastAPI services written in Python. The AI Engine 
 
 Next.js API routes act as a typed proxy layer between the frontend and the Python services — the browser never calls the backends directly. Runtime detection inspects the User-Agent header to distinguish desktop from web and routes requests to the correct port accordingly.
 
-Data storage is mode-dependent. Cloud mode uses Supabase (PostgreSQL with row-level security) for lesson sessions and user progress, and Stripe for subscription billing. Local mode stores progress in an httpOnly cookie and session history in localStorage — both modes share the same data-access interfaces, so UI components are storage-agnostic.
+Data storage is mode-dependent. Cloud mode uses Firebase (Authentication, and Cloud Firestore reached only from the server) for accounts, lesson sessions and user progress, and Stripe for subscription billing. Local mode stores progress in an httpOnly cookie and session history in localStorage — both modes share the same data-access interfaces, so UI components are storage-agnostic.
 
 The desktop app is an Electron wrapper around the Next.js standalone build. A setup manager orchestrates first-run model downloads, service startup, and health polling, storing a manifest so subsequent launches skip the setup entirely.
 
@@ -50,7 +50,7 @@ The desktop app is an Electron wrapper around the Next.js standalone build. A se
 - Next.js 16 · React 19 · Tailwind CSS 4 · TypeScript
 - FastAPI · PyTorch · Hugging Face Transformers · Whisper · OmniVoice
 - Qwen 2.5 (local LLM for AI Coach)
-- Supabase (PostgreSQL + Auth)
+- Firebase (Authentication + Cloud Firestore)
 - Stripe (billing)
 - Electron (desktop app)
 - Vercel (web deployment) · Docker (self-hosted)

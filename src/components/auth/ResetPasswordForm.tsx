@@ -8,10 +8,9 @@ import { startTransition, useEffect, useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  createSupabaseBrowserClient,
-  isSupabaseConfigured,
-} from "@/lib/supabase";
+import { confirmPasswordReset, verifyPasswordResetCode } from "firebase/auth";
+import { describeAuthError } from "@/lib/firebase/auth-errors";
+import { getFirebaseAuth } from "@/lib/firebase/client";
 import type { AppRuntime } from "@/lib/runtime/request-runtime";
 import { cn } from "@/lib/utils";
 
@@ -21,20 +20,29 @@ export function ResetPasswordForm({ runtime }: { runtime: AppRuntime }) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [oobCode, setOobCode] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  // The reset email links here with ?mode=resetPassword&oobCode=... once the
+  // Firebase action URL points at /reset-password.
   useEffect(() => {
-    if (!isSupabaseConfigured) {
+    const code = new URLSearchParams(window.location.search).get("oobCode");
+
+    if (!code) {
+      setError("This page needs the link from your reset email. Request a new one below.");
       return;
     }
 
-    const supabase = createSupabaseBrowserClient();
-
-    void supabase.auth.getSession().then(() => {
-      setReady(true);
-    });
+    verifyPasswordResetCode(getFirebaseAuth(), code)
+      .then(() => {
+        setOobCode(code);
+        setReady(true);
+      })
+      .catch((verifyError: unknown) => {
+        setError(describeAuthError(verifyError, "This reset link is no longer valid."));
+      });
   }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -50,20 +58,11 @@ export function ResetPasswordForm({ runtime }: { runtime: AppRuntime }) {
     try {
       setIsSubmitting(true);
 
-      if (!isSupabaseConfigured) {
-        throw new Error(
-          "Add your Supabase URL and publishable key in .env.local before testing password recovery.",
-        );
+      if (!oobCode) {
+        throw new Error("This page needs the link from your reset email.");
       }
 
-      const supabase = createSupabaseBrowserClient();
-      const { error: authError } = await supabase.auth.updateUser({
-        password,
-      });
-
-      if (authError) {
-        throw authError;
-      }
+      await confirmPasswordReset(getFirebaseAuth(), oobCode, password);
 
       setMessage("Password updated. Taking you back to sign in.");
 
@@ -73,11 +72,7 @@ export function ResetPasswordForm({ runtime }: { runtime: AppRuntime }) {
         }, 900);
       });
     } catch (nextError) {
-      setError(
-        nextError instanceof Error
-          ? nextError.message
-          : "Unable to update your password.",
-      );
+      setError(describeAuthError(nextError, "Unable to update your password."));
     } finally {
       setIsSubmitting(false);
     }
@@ -141,9 +136,9 @@ export function ResetPasswordForm({ runtime }: { runtime: AppRuntime }) {
               />
             </label>
 
-            {!ready ? (
+            {!ready && !error ? (
               <div className="rounded-3xl bg-white px-4 py-3 text-sm text-iron-grey">
-                Loading recovery session...
+                Checking your reset link...
               </div>
             ) : null}
 
@@ -244,9 +239,9 @@ export function ResetPasswordForm({ runtime }: { runtime: AppRuntime }) {
             />
           </label>
 
-          {!ready ? (
+          {!ready && !error ? (
             <div className="rounded-3xl bg-white px-4 py-3 text-sm text-iron-grey">
-              Loading recovery session...
+              Checking your reset link...
             </div>
           ) : null}
 

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "What we collect",
-    body: `When you create an account, we collect your email address and a securely hashed password via Supabase Auth. We also store your learning progress — which modules you have unlocked, lesson session scores, and streak data — so you can pick up where you left off across devices.
+    body: `When you create an account, we collect your email address and a securely hashed password via Firebase Authentication. We also store your learning progress — which modules you have unlocked, lesson session scores, and streak data — so you can pick up where you left off across devices.
 
 Audio recordings you submit for assessment are processed in real time by the AI engine to extract phoneme data. Audio is not permanently stored on our servers after the assessment is complete.
 
@@ -35,7 +35,7 @@ All payment processing is handled by Stripe, Inc. Stripe stores your card detail
   },
   {
     title: "Cookies and tracking",
-    body: `Cadence uses only the cookies necessary for authentication (a Supabase session cookie) and to remember your conversation practice progress (a first-party cookie). We do not use third-party tracking pixels, advertising networks, or cross-site tracking technologies by default.
+    body: `Cadence uses only the cookies necessary for authentication (a Cadence session cookie) and to remember your conversation practice progress (a first-party cookie). We do not use third-party tracking pixels, advertising networks, or cross-site tracking technologies by default.
 
 You can manage optional analytics and marketing preferences at any time via the "Your Privacy Choices" link in the footer.`,
   },
@@ -43,9 +43,9 @@ You can manage optional analytics and marketing preferences at any time via the 
     title: "Third-party services",
     body: `We use the following third-party services:
 
-• Supabase — database and authentication, hosted in the EU. Data is processed under a DPA consistent with GDPR.
+• Google Firebase — authentication and database (Cloud Firestore). Data is processed under Google Cloud's data processing terms, consistent with GDPR.
 • Stripe — payment processing and subscription management. Stripe is PCI DSS Level 1 certified.
-• Brevo — transactional email (confirmation, password reset). Email is only sent when you request it or explicitly opt in.
+• Brevo — transactional email. Email is only sent when you request it or explicitly opt in.
 
 The AI models that power phoneme scoring and the AI coach run locally within our infrastructure and do not transmit your audio or text to third-party AI providers.`,
   },

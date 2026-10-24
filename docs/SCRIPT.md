@@ -13,7 +13,7 @@
 >
 > Most tools give you a score after you speak. Cadence goes one level deeper: it tells you which exact sound is off, and hands you straight back to the microphone with a cue to fix it.
 >
-> We built it as two products that share one codebase — a desktop app that runs entirely offline using local AI models, and a web app that connects to a cloud backend with Supabase auth and Stripe billing.
+> We built it as two products that share one codebase — a desktop app that runs entirely offline using local AI models, and a web app that connects to a cloud backend with Firebase sign-in and Stripe billing.
 >
 > Let's walk through both."
 
@@ -27,7 +27,7 @@
 >
 > Local mode means everything runs on your machine. No account, no internet, no data sent anywhere. Great for privacy or offline use.
 >
-> Cloud mode connects to Supabase for auth and syncs your progress across devices."
+> Cloud mode signs you in with Firebase and syncs your progress across devices."
 
 *[Desktop: click Local → show the desktop setup flow at `/desktop/setup`]*
 
@@ -43,7 +43,7 @@
 
 *[Show the dashboard — web version first]*
 
-> "After login you're on the dashboard. At the top there's a progress bar — module completion on the left, overall completion on the right. These pull live from Supabase in cloud mode, or from a cookie in local mode. Same component, different data source.
+> "After login you're on the dashboard. At the top there's a progress bar — module completion on the left, overall completion on the right. These pull live from Firestore in cloud mode, or from a cookie in local mode. Same component, different data source.
 >
 > Below that is the Quick Practice section — it surfaces the next recommended word from whichever module you're working through."
 
@@ -131,7 +131,7 @@
 >
 > The two Python backends are FastAPI. The AI engine handles pronunciation scoring using a fine-tuned phoneme model, transcription using Whisper, and TTS using OmniVoice. The coach engine runs the Qwen LLM for conversation turn generation.
 >
-> For data, cloud mode uses Supabase — standard PostgreSQL with row-level security. Local mode stores progress in an httpOnly cookie as compact JSON and uses localStorage for session history. Both modes share the same data-access interfaces, so the UI never knows which backend it's talking to.
+> For data, cloud mode uses Cloud Firestore, reached only from the server through the Firebase Admin SDK. Local mode stores progress in an httpOnly cookie as compact JSON and uses localStorage for session history. Both modes share the same data-access interfaces, so the UI never knows which backend it's talking to.
 >
 > The desktop app is Electron wrapping the Next.js standalone build. The setup manager handles downloading models, starting services, and polling health — it stores a setup manifest so on subsequent launches it just starts, it doesn't re-download anything.
 >
@@ -213,12 +213,12 @@ Copy each block below directly into ElevenLabs:
 ---
 
 **INTRO**
-Hey — this is Cadence. It's an AI-powered pronunciation training app for non-native English speakers. Most tools give you a score after you speak. Cadence goes one level deeper: it tells you which exact sound is off, and hands you straight back to the microphone with a cue to fix it. We built it as two products that share one codebase — a desktop app that runs entirely offline using local AI models, and a web app that connects to a cloud backend with Supabase auth and Stripe billing. Let's walk through both.
+Hey — this is Cadence. It's an AI-powered pronunciation training app for non-native English speakers. Most tools give you a score after you speak. Cadence goes one level deeper: it tells you which exact sound is off, and hands you straight back to the microphone with a cue to fix it. We built it as two products that share one codebase — a desktop app that runs entirely offline using local AI models, and a web app that connects to a cloud backend with Firebase sign-in and Stripe billing. Let's walk through both.
 
 ---
 
 **PART 1 — SETUP**
-When you first open Cadence — on either platform — you land on this setup screen. You pick your mode: Local or Cloud. Local mode means everything runs on your machine. No account, no internet, no data sent anywhere. Great for privacy or offline use. Cloud mode connects to Supabase for auth and syncs your progress across devices.
+When you first open Cadence — on either platform — you land on this setup screen. You pick your mode: Local or Cloud. Local mode means everything runs on your machine. No account, no internet, no data sent anywhere. Great for privacy or offline use. Cloud mode signs you in with Firebase and syncs your progress across devices.
 
 On the desktop app, choosing local kicks off a one-time setup — it downloads the AI models and starts the Python backend services. There's a progress indicator that walks through each stage: checking for existing installs, extracting the runtime, starting the engines, warming up the models. Takes a few minutes the first time, then it's instant on relaunch.
 
@@ -227,7 +227,7 @@ On the web, cloud mode takes you through a standard email signup, then a short o
 ---
 
 **PART 2 — DASHBOARD**
-After login you're on the dashboard. At the top there's a progress bar — module completion on the left, overall completion on the right. These pull live from Supabase in cloud mode, or from a cookie in local mode. Same component, different data source. Below that is the Quick Practice section — it surfaces the next recommended word from whichever module you're working through.
+After login you're on the dashboard. At the top there's a progress bar — module completion on the left, overall completion on the right. These pull live from Firestore in cloud mode, or from a cookie in local mode. Same component, different data source. Below that is the Quick Practice section — it surfaces the next recommended word from whichever module you're working through.
 
 On the desktop app the layout shifts. Instead of a top navbar, there's a persistent left sidebar — Home, Modules, Conversation, AI Coach — plus an Explore section with Just Speak, Sound Library, Dictionary, and Bookmarks. The active route gets a yellow-green pill highlight. Same routes, different chrome.
 
@@ -265,7 +265,7 @@ A few things worth calling out on the technical side. The frontend is Next.js 16
 
 The two Python backends are FastAPI. The AI engine handles pronunciation scoring using a fine-tuned phoneme model, transcription using Whisper, and TTS using OmniVoice. The coach engine runs the Qwen LLM for conversation turn generation.
 
-For data, cloud mode uses Supabase — standard PostgreSQL with row-level security. Local mode stores progress in an httpOnly cookie as compact JSON and uses localStorage for session history. Both modes share the same data-access interfaces, so the UI never knows which backend it's talking to.
+For data, cloud mode uses Cloud Firestore, reached only from the server through the Firebase Admin SDK. Local mode stores progress in an httpOnly cookie as compact JSON and uses localStorage for session history. Both modes share the same data-access interfaces, so the UI never knows which backend it's talking to.
 
 The desktop app is Electron wrapping the Next.js standalone build. The setup manager handles downloading models, starting services, and polling health — it stores a setup manifest so on subsequent launches it just starts, it doesn't re-download anything. Deployment: the web app is on Vercel. The Python backends can run in Docker on any container host.
 
