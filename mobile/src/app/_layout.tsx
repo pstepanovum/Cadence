@@ -58,27 +58,29 @@ export function ErrorBoundary({ error, retry }: { error: Error; retry: () => Pro
 }
 
 function RootNavigator() {
-  const { session, loading, profile } = useAuth();
+  const { user, loading, profileReady, profile } = useAuth();
   const { ready: connectionReady, mode, state } = useConnection();
 
   // Local mode has no account: the paired device token *is* the identity, so
   // being connected to a computer is what "signed in" means there.
   const local = mode === "local";
-  const cloudSignedIn = !local && !!session;
+  const cloudSignedIn = mode === "cloud" && !!user;
 
-  // Onboarding writes to a Supabase profile, so it only applies to cloud.
-  const needsOnboarding = cloudSignedIn && !profile.onboardingCompleted;
+  // Onboarding writes to the cloud account's profile, so it only applies there.
+  // Until the profile arrives neither applies, so a fresh sign-in stays on the
+  // sign-in screen for that moment instead of flashing onboarding.
+  const needsOnboarding = cloudSignedIn && profileReady && !profile.onboardingCompleted;
 
-  const inApp = local || (cloudSignedIn && !needsOnboarding);
+  const inApp = local || (cloudSignedIn && profileReady && profile.onboardingCompleted);
 
-  // Nothing chosen yet, and no legacy cloud session to fall back on.
-  const needsSetup = connectionReady && mode === null && !session;
+  // Nothing chosen yet.
+  const needsSetup = connectionReady && mode === null;
 
   // New accounts have no progress rows at all, which renders module 1 as
   // locked and makes Learn a dead end. This is idempotent and cheap. In local
   // mode it has to wait for the computer to answer, or there is nowhere to
   // send it.
-  const canReachServer = local ? state.status === "connected" : !!session;
+  const canReachServer = local ? state.status === "connected" : cloudSignedIn;
 
   useEffect(() => {
     if (!canReachServer) return;
@@ -129,16 +131,16 @@ function RootNavigator() {
 }
 
 function Gate({ children }: { children: React.ReactNode }) {
-  const { loading } = useAuth();
+  const { loading, profileReady } = useAuth();
   const { ready } = useConnection();
 
-  // Hold the splash until the fonts are ready, the stored session has been
+  // Hold the splash until the fonts are ready, the stored sign-in has been
   // restored *and* the keychain has been read for a paired computer. Hiding it
   // earlier shows an empty cream screen, or worse, flashes the setup screen at
   // someone who is already paired.
   useEffect(() => {
-    if (!loading && ready) SplashScreen.hideAsync();
-  }, [loading, ready]);
+    if (!loading && ready && profileReady) SplashScreen.hideAsync();
+  }, [loading, ready, profileReady]);
 
   return <>{children}</>;
 }

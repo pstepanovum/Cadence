@@ -1,4 +1,5 @@
 import { router } from "expo-router";
+import { sendPasswordResetEmail } from "firebase/auth";
 import { ArrowLeft } from "lucide-react-native";
 import { useState } from "react";
 import { KeyboardAvoidingView, Platform, StyleSheet, View } from "react-native";
@@ -15,9 +16,25 @@ import {
 } from "@/components/ui";
 import { config } from "@/lib/config";
 import { LOGO_GREEN_DARK } from "@/data/svg";
-import { describeError } from "@/hooks/useServerStatus";
-import { supabase } from "@/lib/supabase";
+import { authErrorCode, describeAuthError } from "@/copy/auth-errors";
+import { requireFirebaseAuth } from "@/lib/firebase";
 import { colors, spacing } from "@/theme/theme";
+
+async function sendResetEmail(email: string): Promise<void> {
+  const auth = requireFirebaseAuth();
+  if (!config.apiUrl) return sendPasswordResetEmail(auth, email);
+  try {
+    await sendPasswordResetEmail(auth, email, { url: `${config.apiUrl}/login` });
+  } catch (cause) {
+    // The continue link only works once its domain is authorised in the
+    // Firebase project. Until it is, send the plain reset email instead.
+    const code = authErrorCode(cause);
+    if (code !== "auth/unauthorized-continue-uri" && code !== "auth/invalid-continue-uri") {
+      throw cause;
+    }
+    await sendPasswordResetEmail(auth, email);
+  }
+}
 
 export default function ForgotPasswordScreen() {
   const [email, setEmail] = useState("");
@@ -32,17 +49,18 @@ export default function ForgotPasswordScreen() {
     setError(null);
     setSubmitting(true);
     try {
-      const { error: resetError } = await supabase.auth.resetPasswordForEmail(trimmed, {
-        // The reset form is a web page; the email link opens it in a browser.
-        redirectTo: `${config.apiUrl}/reset-password`,
-      });
-      if (resetError) {
-        setError(describeError(resetError, "Could not send the reset email. Try again."));
-        return;
-      }
+      // The reset form is Firebase's own page; once the new password is set it
+      // links back to the web app's sign-in.
+      await sendResetEmail(trimmed);
       setSent(true);
     } catch (cause) {
-      setError(describeError(cause, "Could not send the reset email. Try again."));
+      // Firebase does not say whether an account exists, and neither should
+      // this screen, so a missing account reads the same as a sent link.
+      if (authErrorCode(cause) === "auth/user-not-found") {
+        setSent(true);
+        return;
+      }
+      setError(describeAuthError(cause, "Could not send the reset email. Try again."));
     } finally {
       setSubmitting(false);
     }

@@ -71,8 +71,8 @@ export default function CoachSessionScreen() {
   const topic = params.topic ?? "Everyday conversation";
   const mode: CoachMode = params.mode === "freedom" ? "freedom" : "target";
 
-  const { session } = useAuth();
-  const userId = session?.user.id ?? "anonymous";
+  const { user } = useAuth();
+  const userId = user?.uid ?? "anonymous";
   const navigation = useNavigation();
   const playback = usePlayback();
   const readiness = useAssessReadiness();

@@ -97,12 +97,14 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
         setState({ status: "connecting", attempt: 0, candidate: null });
       } else {
         // Cloud is remembered separately: it needs no keychain entry, only the
-        // Supabase session the auth context already restores.
+        // Firebase sign-in the auth context already restores.
         const { default: AsyncStorage } = await import(
           "@react-native-async-storage/async-storage"
         );
         const savedMode = await AsyncStorage.getItem(MODE_KEY);
-        if (!cancelled && savedMode === "cloud") {
+        // A build without cloud config cannot honour a remembered cloud
+        // choice, so it falls back to the connect screen instead.
+        if (!cancelled && savedMode === "cloud" && config.isCloudConfigured) {
           setMode("cloud");
         }
       }

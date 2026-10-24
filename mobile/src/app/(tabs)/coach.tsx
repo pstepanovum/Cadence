@@ -41,8 +41,8 @@ const MODE_OPTIONS: { value: CoachMode; label: string }[] = [
 ];
 
 export default function CoachScreen() {
-  const { session } = useAuth();
-  const userId = session?.user.id ?? "anonymous";
+  const { user } = useAuth();
+  const userId = user?.uid ?? "anonymous";
   const readiness = useCoachReadiness();
   const server = useServerStatus();
 

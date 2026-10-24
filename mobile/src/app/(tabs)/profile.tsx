@@ -33,7 +33,7 @@ import { normalizeScore } from "@/practice/scoring";
 import { colors, radii, spacing } from "@/theme/theme";
 
 export default function ProfileScreen() {
-  const { session, profile, updateProfile, signOut } = useAuth();
+  const { user, profile, updateProfile, signOut } = useAuth();
   const { mode, state: connectionState } = useConnection();
   const voice = useCoachVoice();
   const server = useServerStatus();
@@ -100,7 +100,7 @@ export default function ProfileScreen() {
             ? connectionState.status === "connected"
               ? `Paired with ${connectionState.serverName}`
               : "Paired with your computer"
-            : (session?.user.email ?? undefined)
+            : (user?.email ?? undefined)
         }
       />
 

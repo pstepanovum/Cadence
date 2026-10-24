@@ -25,9 +25,9 @@ import { spacing } from "@/theme/theme";
 
 /**
  * First run. Mirrors the web app's onboarding: a name, what to work on, and how
- * much time is realistic. The answers live in Supabase user metadata, which is
- * also where the web app reads them, so a learner who signs in on both sees one
- * profile rather than two.
+ * much time is realistic. The answers are saved to the cloud account's profile
+ * on the server, which is also where the web app reads them, so a learner who
+ * signs in on both sees one profile rather than two.
  */
 export default function OnboardingScreen() {
   const { profile, updateProfile, signOut } = useAuth();

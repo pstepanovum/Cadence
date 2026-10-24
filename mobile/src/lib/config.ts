@@ -1,34 +1,39 @@
 // FILE: mobile/src/lib/config.ts
 //
-// Cloud mode needs a hosted API and a Supabase project. Local mode needs
+// Cloud mode needs a hosted API and a Firebase project. Local mode needs
 // neither: the phone learns the address by scanning a QR on the computer, and
-// there is no account at all. So none of these are required to launch any more
-// — the app only complains if someone reaches for cloud mode in a build that
-// has no cloud configured.
-const apiUrl = process.env.EXPO_PUBLIC_API_URL?.replace(/\/$/, "") ?? null;
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL ?? null;
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? null;
+// there is no account at all. So none of these are required to launch. Without
+// them the connect screen offers local pairing only.
+//
+// Expo inlines EXPO_PUBLIC_* only when each is read by its full literal name,
+// so they are spelled out one by one rather than looked up in a loop.
+const apiUrl = process.env.EXPO_PUBLIC_API_URL?.trim().replace(/\/$/, "") || null;
+const apiKey = process.env.EXPO_PUBLIC_FIREBASE_API_KEY?.trim() || null;
+const authDomain = process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN?.trim() || null;
+const projectId = process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID?.trim() || null;
+const appId = process.env.EXPO_PUBLIC_FIREBASE_APP_ID?.trim() || null;
+
+export interface FirebaseConfig {
+  apiKey: string;
+  authDomain: string;
+  projectId: string;
+  appId: string;
+}
+
+const firebase: FirebaseConfig | null =
+  apiKey && authDomain && projectId && appId ? { apiKey, authDomain, projectId, appId } : null;
+
+/**
+ * The hosted origin, only when the build can also sign in to it. An API URL
+ * with no Firebase project behind it is not a usable cloud setup.
+ */
+const cloudApiUrl = apiUrl && firebase ? apiUrl : null;
 
 /** Whether this build can offer the hosted option at all. */
-export const isCloudConfigured = Boolean(apiUrl && supabaseUrl && supabaseAnonKey);
+export const isCloudConfigured = cloudApiUrl !== null;
 
 export const config = {
-  apiUrl,
-  supabaseUrl,
-  supabaseAnonKey,
+  apiUrl: cloudApiUrl,
+  firebase,
   isCloudConfigured,
 };
-
-export function requireCloudConfig(): {
-  apiUrl: string;
-  supabaseUrl: string;
-  supabaseAnonKey: string;
-} {
-  if (!apiUrl || !supabaseUrl || !supabaseAnonKey) {
-    throw new Error(
-      "Cadence Cloud is not set up in this build. Connect to a computer instead, or fill in mobile/.env.",
-    );
-  }
-
-  return { apiUrl, supabaseUrl, supabaseAnonKey };
-}

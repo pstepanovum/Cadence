@@ -12,18 +12,21 @@ leave the house. This is the path described in
 [docs/CONNECT_YOUR_PHONE.md](../docs/CONNECT_YOUR_PHONE.md); the protocol is in
 [docs/PAIRING_PROTOCOL.md](../docs/PAIRING_PROTOCOL.md).
 
-**Cadence Cloud.** Signs in with the same Supabase project as the web app and
-talks to a hosted Next.js API. Available only when `EXPO_PUBLIC_API_URL` and the
-Supabase keys are set at build time.
+**Cadence Cloud.** Signs in with Firebase Authentication (email and password,
+the same Firebase project as the web app) and talks to a hosted Next.js API.
+Available only when `EXPO_PUBLIC_API_URL` and the four `EXPO_PUBLIC_FIREBASE_*`
+values are set at build time; without them the connect screen offers pairing
+with your own computer only.
 
 Either way the phone never runs the Python engines itself — it calls a server
 that does.
 
 ## What's included
 
-- **First run** — three onboarding questions (name, focus, pace) written to the
-  same Supabase user metadata the web app reads, so one account means one
-  profile. Sign in, sign up and password reset all live under `(auth)`.
+- **First run** — three onboarding questions (name, focus, pace) saved through
+  `PATCH /api/profile` to the same profile the web app reads, so one account
+  means one profile. Sign in, sign up and password reset all live under
+  `(auth)`.
 - **Home** — attempts, average score, modules complete and the day streak, plus
   a quick-practice drill over 100+ target words grouped by sound family. The
   family it opens on follows the focus chosen at onboarding.
@@ -66,7 +69,8 @@ npm test            # node --test over tests/*.test.ts
 the pure logic that is easy to get quietly wrong: score display and thresholds
 (`src/practice/scoring.ts`), lesson and scenario progression
 (`src/practice/progression.ts`), the recorder's state machine
-(`src/audio/take-machine.ts`) and error wording (`src/copy/errors.ts`). Anything
+(`src/audio/take-machine.ts`), error wording (`src/copy/errors.ts`,
+`src/copy/auth-errors.ts`) and reading the cloud profile (`src/lib/profile.ts`). Anything
 that needs a device is verified by running the app, not by a test.
 
 ## Development
@@ -170,11 +174,11 @@ App Store Connect record, and no TestFlight build. `npm run ios:archive` passes
 profile on the first run; the App Store Connect record has to exist before `ios:upload` will be
 accepted.
 
-**`.env` has to be filled in first.** `EXPO_PUBLIC_*` values are baked into the JS bundle at
-archive time, and `src/lib/config.ts` throws when they are missing — a build made without them
-installs fine and then dies on the first screen. `EXPO_PUBLIC_API_URL` must point at a host the
-phone can reach from anywhere, not a LAN address: a LAN IP works on your own Wi-Fi and nowhere
-else, and a reviewer cannot reach it at all.
+**Decide on `.env` first.** `EXPO_PUBLIC_*` values are baked into the JS bundle at archive time.
+A build made without them is a local-pairing build: it works, and the connect screen simply does
+not offer Cadence Cloud. To ship cloud as well, fill in all five values from `.env.example`.
+`EXPO_PUBLIC_API_URL` must then point at a host the phone can reach from anywhere, not a LAN
+address: a LAN IP works on your own Wi-Fi and nowhere else, and a reviewer cannot reach it at all.
 
 ## Audio formats
 
@@ -182,7 +186,7 @@ iOS records 16 kHz mono WAV directly. Android records m4a/AAC — the ai-engine 
 
 ## Notes
 
-- In local mode the phone sends a device token (`Authorization: Bearer cdnc_dev_…`) issued by the paired computer; the token lives in the iOS keychain via `expo-secure-store` and the server stores only its SHA-256 digest. In cloud mode it sends a Supabase access token the same way. `getAppSession()` on the server accepts both alongside its cookie flow.
+- In local mode the phone sends a device token (`Authorization: Bearer cdnc_dev_…`) issued by the paired computer; the token lives in the iOS keychain via `expo-secure-store` and the server stores only its SHA-256 digest. In cloud mode it sends a Firebase ID token the same way (`await user.getIdToken()`; the SDK refreshes it, and a 401 is retried once with a forced refresh before the app signs out). `getAppSession()` on the server accepts both alongside its cookie flow.
 - The pairing and discovery layer is `src/pairing/`; `src/api/transport.ts` is what decides where an API call goes.
 - Coach session history lives in AsyncStorage on the device, mirroring the web app's localStorage behavior.
 - Reference (TTS) audio is cached under the app's cache directory, keyed by text + voice.

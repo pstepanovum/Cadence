@@ -87,8 +87,8 @@ export interface GameProgressHandle {
 }
 
 export function useGameProgress(): GameProgressHandle {
-  const { session } = useAuth();
-  const userId = session?.user.id ?? "local";
+  const { user } = useAuth();
+  const userId = user?.uid ?? "local";
 
   useEffect(() => {
     if (snapshot.userId !== userId) {

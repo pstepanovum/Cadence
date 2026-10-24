@@ -1,11 +1,12 @@
 import { Link } from "expo-router";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { KeyboardAvoidingView, Platform, StyleSheet, View } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { Banner, Body, Card, PillButton, Screen, TextField, Title } from "@/components/ui";
 import { LOGO_GREEN_DARK } from "@/data/svg";
-import { describeError } from "@/hooks/useServerStatus";
-import { supabase } from "@/lib/supabase";
+import { describeAuthError } from "@/copy/auth-errors";
+import { requireFirebaseAuth } from "@/lib/firebase";
 import { colors, spacing } from "@/theme/theme";
 
 export default function LoginScreen() {
@@ -21,21 +22,11 @@ export default function LoginScreen() {
     setError(null);
     setSubmitting(true);
     try {
-      const { error: signInError } = await supabase.auth.signInWithPassword({
-        email: email.trim(),
-        password,
-      });
-      if (signInError) {
-        // Supabase says "Invalid login credentials", which reads as an
-        // accusation; say what to do about it instead.
-        setError(
-          /invalid login credentials/i.test(signInError.message)
-            ? "That email and password don't match an account. Check them and try again."
-            : describeError(signInError, "Could not sign in. Try again."),
-        );
-      }
+      // The auth context hears about the sign-in and the navigator moves on;
+      // nothing to do here on success.
+      await signInWithEmailAndPassword(requireFirebaseAuth(), email.trim(), password);
     } catch (cause) {
-      setError(describeError(cause, "Could not sign in. Try again."));
+      setError(describeAuthError(cause, "Could not sign in. Try again."));
     } finally {
       setSubmitting(false);
     }

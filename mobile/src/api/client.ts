@@ -1,6 +1,8 @@
 // FILE: mobile/src/api/client.ts
-import { supabase } from "@/lib/supabase";
+import { signOut } from "firebase/auth";
+
 import { requireTransport, type Transport } from "@/api/transport";
+import { getFirebaseAuth } from "@/lib/firebase";
 
 export class ApiError extends Error {
   constructor(
@@ -14,36 +16,56 @@ export class ApiError extends Error {
   }
 }
 
-async function authHeader(transport: Transport): Promise<Record<string, string>> {
+async function authHeader(
+  transport: Transport,
+  forceRefresh = false,
+): Promise<Record<string, string>> {
   // A paired computer authenticates the device, not a person: there is no
   // account in local mode, and the device token is the whole identity.
   if (transport.mode === "local") {
     return transport.deviceToken ? { Authorization: `Bearer ${transport.deviceToken}` } : {};
   }
 
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
+  // The SDK hands back the cached ID token and refreshes it first when it is
+  // close to expiry, so this is cheap on every call.
+  const user = getFirebaseAuth()?.currentUser;
+  if (!user) return {};
+  const token = await user.getIdToken(forceRefresh);
+  return { Authorization: `Bearer ${token}` };
+}
 
-  return session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {};
+function send(
+  transport: Transport,
+  path: string,
+  init: RequestInit,
+  auth: Record<string, string>,
+): Promise<Response> {
+  return fetch(`${transport.baseUrl}${path}`, {
+    ...init,
+    headers: { ...auth, ...(init.headers as Record<string, string> | undefined) },
+  });
 }
 
 export async function apiFetch(path: string, init: RequestInit = {}): Promise<Response> {
   const transport = requireTransport();
 
-  const headers = {
-    ...(await authHeader(transport)),
-    ...(init.headers as Record<string, string> | undefined),
-  };
+  let response = await send(transport, path, init, await authHeader(transport));
 
-  const response = await fetch(`${transport.baseUrl}${path}`, {
-    ...init,
-    headers,
-  });
+  // A token can be revoked or expire between the SDK's check and the server's,
+  // so a cloud 401 gets one retry with a freshly minted token before the
+  // person is signed out. The retry resends the same body, which is fine for
+  // the strings and FormData this client sends.
+  if (response.status === 401 && transport.mode === "cloud" && getFirebaseAuth()?.currentUser) {
+    const refreshed = await authHeader(transport, true).catch(() => null);
+    if (refreshed) {
+      response = await send(transport, path, init, refreshed);
+    }
+  }
 
   if (response.status === 401) {
     if (transport.mode === "cloud") {
-      await supabase.auth.signOut();
+      const auth = getFirebaseAuth();
+      if (auth) await signOut(auth).catch(() => {});
       throw new ApiError(401, "Your session has expired. Please sign in again.");
     }
 

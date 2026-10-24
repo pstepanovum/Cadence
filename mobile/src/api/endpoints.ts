@@ -156,3 +156,18 @@ export function saveConversationResult(payload: {
 }): Promise<unknown> {
   return apiJson("/api/conversation-progress", "PATCH", payload);
 }
+
+// --- Profile (cloud only) ---
+
+/**
+ * The cloud account's profile, kept server-side under the signed-in user. The
+ * body is parsed by the auth context, which tolerates `{ profile: {...} }` as
+ * well as the fields at the top level.
+ */
+export function getProfile(): Promise<unknown> {
+  return api<unknown>("/api/profile");
+}
+
+export function patchProfile(patch: Record<string, unknown>): Promise<unknown> {
+  return apiJson<unknown>("/api/profile", "PATCH", patch);
+}

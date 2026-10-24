@@ -24,10 +24,6 @@ export function setTransport(next: Transport | null): void {
   active = next;
 }
 
-export function getTransport(): Transport | null {
-  return active;
-}
-
 /** Thrown when a screen asks for data before any server is available. */
 export class NoTransportError extends Error {
   constructor() {

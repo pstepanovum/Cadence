@@ -1,21 +1,20 @@
 import { Link } from "expo-router";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { KeyboardAvoidingView, Platform, StyleSheet, View } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { Banner, Body, Card, PillButton, Screen, TextField, Title } from "@/components/ui";
 import { LOGO_GREEN_DARK } from "@/data/svg";
-import { describeError } from "@/hooks/useServerStatus";
-import { supabase } from "@/lib/supabase";
+import { describeAuthError } from "@/copy/auth-errors";
+import { requireFirebaseAuth } from "@/lib/firebase";
 import { colors, spacing } from "@/theme/theme";
 
 const MIN_PASSWORD = 8;
 
 export default function SignupScreen() {
-  const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [notice, setNotice] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
   const trimmedEmail = email.trim();
@@ -26,32 +25,13 @@ export default function SignupScreen() {
   async function handleSignUp() {
     if (!canSubmit || submitting) return;
     setError(null);
-    setNotice(null);
     setSubmitting(true);
     try {
-      const { data, error: signUpError } = await supabase.auth.signUp({
-        email: trimmedEmail,
-        password,
-        options: {
-          data: {
-            displayName: displayName.trim() || trimmedEmail.split("@")[0],
-            // Left false on purpose: the first run walks through onboarding,
-            // the same three questions the web app asks.
-            onboardingCompleted: false,
-          },
-        },
-      });
-      if (signUpError) {
-        setError(describeError(signUpError, "Could not create your account. Try again."));
-        return;
-      }
-      if (!data.session) {
-        setNotice(
-          "Almost there — check your email for a confirmation link, then come back and sign in.",
-        );
-      }
+      // Firebase signs the new account in straight away, so the navigator
+      // moves on to onboarding, the same three questions the web app asks.
+      await createUserWithEmailAndPassword(requireFirebaseAuth(), trimmedEmail, password);
     } catch (cause) {
-      setError(describeError(cause, "Could not create your account. Try again."));
+      setError(describeAuthError(cause, "Could not create your account. Try again."));
     } finally {
       setSubmitting(false);
     }
@@ -71,16 +51,6 @@ export default function SignupScreen() {
           <Title size={24}>Create your account</Title>
           <Body>Start training your pronunciation in minutes.</Body>
           {error ? <Banner message={error} tone="error" /> : null}
-          {notice ? <Banner message={notice} tone="success" /> : null}
-          <TextField
-            placeholder="Display name"
-            autoCapitalize="words"
-            autoComplete="name"
-            textContentType="name"
-            value={displayName}
-            onChangeText={setDisplayName}
-            editable={!submitting}
-          />
           <TextField
             placeholder="Email"
             autoCapitalize="none"

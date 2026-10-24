@@ -1,77 +1,89 @@
-import type { Session } from "@supabase/supabase-js";
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { supabase } from "@/lib/supabase";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { onAuthStateChanged, signOut as firebaseSignOut } from "firebase/auth";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 
-/**
- * Profile fields the web app keeps in Supabase `user_metadata`. There is no
- * HTTP route for these — onboarding and the profile screen write them straight
- * through `supabase.auth.updateUser`, exactly as the web pages do.
- */
-export interface Profile {
-  displayName: string;
-  practiceFocus: PracticeFocus;
-  practiceCadence: PracticeCadence;
-  onboardingCompleted: boolean;
+import { getProfile, patchProfile } from "@/api/endpoints";
+import { getFirebaseAuth } from "@/lib/firebase";
+import {
+  parseProfile,
+  toProfile,
+  type Profile,
+  type StoredProfile,
+} from "@/lib/profile";
+import { useConnection } from "@/pairing/context";
+
+export {
+  PRACTICE_CADENCE_OPTIONS,
+  PRACTICE_FOCUS_OPTIONS,
+  type PracticeCadence,
+  type PracticeFocus,
+  type Profile,
+} from "@/lib/profile";
+
+/** The signed-in cloud account. Local mode has none. */
+export interface AuthUser {
+  uid: string;
+  email: string | null;
 }
 
-export type PracticeFocus = "conversations" | "vowels" | "work" | "daily";
-export type PracticeCadence = "5-minutes" | "15-minutes" | "30-minutes" | "weekend-only";
-
-export const PRACTICE_FOCUS_OPTIONS: { value: PracticeFocus; label: string }[] = [
-  { value: "conversations", label: "Conversation confidence" },
-  { value: "vowels", label: "Short and long vowel control" },
-  { value: "work", label: "Clearer speaking at work" },
-  { value: "daily", label: "Daily speaking fluency" },
-];
-
-export const PRACTICE_CADENCE_OPTIONS: { value: PracticeCadence; label: string }[] = [
-  { value: "5-minutes", label: "5 minutes a day" },
-  { value: "15-minutes", label: "15 minutes a day" },
-  { value: "30-minutes", label: "30 minutes a day" },
-  { value: "weekend-only", label: "A few times a week" },
-];
-
 interface AuthState {
-  session: Session | null;
-  /** True until the stored session has been restored (or ruled out). */
+  user: AuthUser | null;
+  /** True until the stored sign-in has been restored or ruled out. */
   loading: boolean;
+  /**
+   * False while a signed-in account's profile is still on its way. Until then
+   * nobody can tell whether onboarding is done, so the navigator waits.
+   */
+  profileReady: boolean;
   profile: Profile;
   displayName: string;
-  /** Saves profile fields to user metadata and refreshes the local copy. */
+  /** Saves profile fields on the server and updates the local copy. */
   updateProfile: (patch: Partial<Profile>) => Promise<void>;
   signOut: () => Promise<void>;
 }
 
-function readProfile(session: Session | null): Profile {
-  const meta = (session?.user.user_metadata ?? {}) as Record<string, unknown>;
-  const focus = PRACTICE_FOCUS_OPTIONS.some((option) => option.value === meta.practiceFocus)
-    ? (meta.practiceFocus as PracticeFocus)
-    : "conversations";
-  const cadence = PRACTICE_CADENCE_OPTIONS.some((option) => option.value === meta.practiceCadence)
-    ? (meta.practiceCadence as PracticeCadence)
-    : "15-minutes";
+const FALLBACK_PROFILE = toProfile({}, null);
 
-  return {
-    displayName:
-      (typeof meta.displayName === "string" && meta.displayName.trim()) ||
-      session?.user.email?.split("@")[0] ||
-      "Learner",
-    practiceFocus: focus,
-    practiceCadence: cadence,
-    onboardingCompleted: meta.onboardingCompleted === true,
-  };
+const profileKey = (uid: string) => `cadence.profile.${uid}`;
+
+/** How long a cold start waits on the server before trusting the cached copy. */
+const PROFILE_TIMEOUT_MS = 8_000;
+
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error("Timed out loading your profile.")), ms);
+    promise.then(
+      (value) => {
+        clearTimeout(timer);
+        resolve(value);
+      },
+      (error: unknown) => {
+        clearTimeout(timer);
+        reject(error);
+      },
+    );
+  });
 }
 
-const FALLBACK_PROFILE: Profile = {
-  displayName: "Learner",
-  practiceFocus: "conversations",
-  practiceCadence: "15-minutes",
-  onboardingCompleted: false,
-};
+async function readCachedProfile(uid: string): Promise<StoredProfile | null> {
+  try {
+    const raw = await AsyncStorage.getItem(profileKey(uid));
+    return raw ? parseProfile(JSON.parse(raw)) : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeCachedProfile(uid: string, fields: StoredProfile): void {
+  AsyncStorage.setItem(profileKey(uid), JSON.stringify(fields)).catch(() => {
+    // Only a cold-start convenience; the server copy is the real one.
+  });
+}
 
 const AuthContext = createContext<AuthState>({
-  session: null,
+  user: null,
   loading: true,
+  profileReady: false,
   profile: FALLBACK_PROFILE,
   displayName: FALLBACK_PROFILE.displayName,
   updateProfile: async () => {},
@@ -79,58 +91,92 @@ const AuthContext = createContext<AuthState>({
 });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [session, setSession] = useState<Session | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { ready: connectionReady, mode } = useConnection();
+  const [user, setUser] = useState<AuthUser | null>(null);
+  const [userRestored, setUserRestored] = useState(() => getFirebaseAuth() === null);
+  // Tagged with the account it belongs to, so switching accounts reads as
+  // "not loaded yet" without an effect having to clear it first.
+  const [loaded, setLoaded] = useState<{ uid: string; fields: StoredProfile } | null>(null);
+  // Bumped by every local write, so a profile fetch that started before the
+  // write cannot land after it and put the old values back.
+  const revision = useRef(0);
 
   useEffect(() => {
-    let active = true;
+    const auth = getFirebaseAuth();
+    if (!auth) return;
 
-    supabase.auth
-      .getSession()
-      .then(({ data }) => {
-        if (!active) return;
-        setSession(data.session);
-      })
-      .catch(() => {
-        // A restore failure is the same as being signed out: show the sign-in
-        // screen rather than hanging on the splash forever.
-      })
-      .finally(() => {
-        if (active) setLoading(false);
-      });
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, nextSession) => {
-      setSession(nextSession);
-      setLoading(false);
+    // Fires once with the restored user (or null) and again on every sign-in
+    // and sign-out, so it covers both the cold start and the auth screens.
+    return onAuthStateChanged(auth, (next) => {
+      setUser(next ? { uid: next.uid, email: next.email } : null);
+      setUserRestored(true);
     });
+  }, []);
+
+  const cloud = connectionReady && mode === "cloud";
+  const uid = cloud ? (user?.uid ?? null) : null;
+
+  const fields = uid !== null && loaded?.uid === uid ? loaded.fields : null;
+
+  useEffect(() => {
+    if (!uid) return;
+
+    let active = true;
+    const started = revision.current;
+
+    void (async () => {
+      const cached = await readCachedProfile(uid);
+      if (active && cached && revision.current === started) setLoaded({ uid, fields: cached });
+
+      try {
+        const fresh = parseProfile(await withTimeout(getProfile(), PROFILE_TIMEOUT_MS));
+        if (!active || revision.current !== started) return;
+        setLoaded({ uid, fields: fresh });
+        writeCachedProfile(uid, fresh);
+      } catch {
+        // Offline, slow or the server is down: keep the cached copy, or treat
+        // the account as new so onboarding (which writes it back) can run.
+        if (active && !cached && revision.current === started) setLoaded({ uid, fields: {} });
+      }
+    })();
 
     return () => {
       active = false;
-      subscription.unsubscribe();
     };
-  }, []);
+  }, [uid]);
 
-  const updateProfile = useCallback(async (patch: Partial<Profile>) => {
-    const { data, error } = await supabase.auth.updateUser({ data: patch });
-    if (error) throw error;
-    // updateUser returns the fresh user but not a session, so refresh ours so
-    // every screen reading the profile sees the change immediately.
-    if (data.user) {
-      const { data: refreshed } = await supabase.auth.getSession();
-      setSession(refreshed.session);
-    }
-  }, []);
+  const updateProfile = useCallback(
+    async (patch: Partial<Profile>) => {
+      if (!uid) throw new Error("Sign in to Cadence Cloud to save your profile.");
+      revision.current += 1;
+      const saved = parseProfile(await patchProfile(patch));
+      const next = { ...fields, ...patch, ...saved };
+      setLoaded({ uid, fields: next });
+      writeCachedProfile(uid, next);
+    },
+    [uid, fields],
+  );
 
   const signOut = useCallback(async () => {
-    await supabase.auth.signOut();
+    const auth = getFirebaseAuth();
+    if (auth) await firebaseSignOut(auth);
   }, []);
 
+  const loading = !userRestored;
+  const profileReady = uid === null || fields !== null;
+
   const value = useMemo<AuthState>(() => {
-    const profile = readProfile(session);
-    return { session, loading, profile, displayName: profile.displayName, updateProfile, signOut };
-  }, [session, loading, updateProfile, signOut]);
+    const profile = toProfile(fields ?? {}, user);
+    return {
+      user,
+      loading,
+      profileReady,
+      profile,
+      displayName: profile.displayName,
+      updateProfile,
+      signOut,
+    };
+  }, [user, loading, profileReady, fields, updateProfile, signOut]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

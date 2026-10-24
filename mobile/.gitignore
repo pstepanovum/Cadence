@@ -31,7 +31,10 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+# The template is meant to be committed; the repo root ignores every .env*.
+!.env.example
 
 # typescript
 *.tsbuildinfo
