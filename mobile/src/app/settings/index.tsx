@@ -190,7 +190,7 @@ export default function SettingsScreen() {
             onPress={() => router.push("/account")}
           />
           <Button label="Restore purchases" variant="tonal" loading={restoring} disabled={!storeConfigured || restoring} onPress={() => void restore()} />
-          <Button label="Sign out" variant="outline" onPress={confirmSignOut} />
+          <Button label="Sign out" variant="neutral" onPress={confirmSignOut} />
           <Button label="Delete account" variant="danger" onPress={() => router.push("/account")} />
         </View>
       ) : null}

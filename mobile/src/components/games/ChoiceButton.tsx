@@ -5,12 +5,12 @@ import { colors, fonts, maxScale, radii, shadows, spacing, type, themed } from "
 
 export type ChoiceState = "idle" | "selected" | "correct" | "wrong" | "dimmed";
 
-const palette: Record<ChoiceState, { bg: string; fg: string; sub: string; border: string }> = themed(() => ({
-  idle: { bg: colors.white, fg: colors.hunter, sub: colors.iron, border: colors.platinum },
-  selected: { bg: colors.limeSoft, fg: colors.hunter, sub: colors.iron, border: colors.hunter },
-  correct: { bg: colors.yellowGreen, fg: colors.ink, sub: colors.ink, border: colors.yellowGreen },
-  wrong: { bg: colors.brick, fg: colors.snow, sub: "rgba(248,249,250,0.85)", border: colors.brick },
-  dimmed: { bg: colors.white, fg: colors.slate, sub: colors.slate, border: colors.platinum },
+const palette: Record<ChoiceState, { bg: string; fg: string; sub: string }> = themed(() => ({
+  idle: { bg: colors.white, fg: colors.hunter, sub: colors.iron },
+  selected: { bg: colors.limeSoft, fg: colors.hunter, sub: colors.iron },
+  correct: { bg: colors.yellowGreen, fg: colors.ink, sub: colors.ink },
+  wrong: { bg: colors.brick, fg: colors.snow, sub: "rgba(248,249,250,0.85)" },
+  dimmed: { bg: colors.white, fg: colors.slate, sub: colors.slate },
 }));
 
 /**
@@ -57,7 +57,7 @@ export function ChoiceButton({
       <Animated.View
         style={[
           styles.choice,
-          { backgroundColor: tone.bg, borderColor: tone.border, transform: [{ scale }] },
+          { backgroundColor: tone.bg, transform: [{ scale }] },
           state === "dimmed" && { opacity: 0.55 },
         ]}>
         {badge ? (
@@ -93,7 +93,6 @@ const styles = themed(() =>
       alignItems: "center",
       gap: spacing.md,
       borderRadius: radii.card,
-      borderWidth: 2,
       paddingVertical: spacing.lg,
       paddingHorizontal: spacing.lg,
       minHeight: 60,

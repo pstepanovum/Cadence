@@ -320,7 +320,7 @@ export default function ScrambleScreen() {
       </View>
       <Button
         label="Give up and reveal"
-        variant="outline"
+        variant="neutral"
         icon={<Eye color={colors.hunter} size={16} />}
         disabled={phase !== "building"}
         onPress={reveal}

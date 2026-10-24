@@ -78,7 +78,7 @@ export default function PacksScreen() {
                 <Body size={type.footnote} tone="muted">{`${formatBytes(pack.bytes)} · version ${pack.version}${pack.origin === "bundled" ? " · built in" : ""}`}</Body>
               </View>
               {pack.origin === "downloaded" ? (
-                <Button label={isBundled(pack.id) ? "Use built-in" : "Remove"} variant="outline" onPress={() => void remove(pack.id)} />
+                <Button label={isBundled(pack.id) ? "Use built-in" : "Remove"} variant="neutral" onPress={() => void remove(pack.id)} />
               ) : null}
             </Card>
           ))

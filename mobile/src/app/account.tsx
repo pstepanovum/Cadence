@@ -107,7 +107,7 @@ export default function AccountScreen() {
         ) : (
           <Button label="See Cadence Plus" onPress={() => router.push("/plus")} />
         )}
-        <Button label="Restore purchases" variant="outline" loading={busy === "restore"} disabled={!storeConfigured || busy !== null} onPress={() => void restore()} />
+        <Button label="Restore purchases" variant="neutral" loading={busy === "restore"} disabled={!storeConfigured || busy !== null} onPress={() => void restore()} />
       </Card>
 
       <Card>
@@ -144,7 +144,7 @@ export default function AccountScreen() {
                 ])
               }
             />
-            <Button label="Cancel" variant="outline" onPress={() => setDeleting(false)} />
+            <Button label="Cancel" variant="neutral" onPress={() => setDeleting(false)} />
           </View>
         )}
       </Card>

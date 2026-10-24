@@ -360,7 +360,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
         <View style={styles.footer}>
           {notice ? <Banner tone="info" message={notice} actionLabel="Continue" onAction={() => void advance()} /> : null}
           {primary ? <Button label={primary.label} disabled={primary.disabled} loading={finishing && isLast} onPress={primary.onPress} /> : null}
-          {secondary ? <Button label={secondary.label} variant="outline" onPress={secondary.onPress} /> : null}
+          {secondary ? <Button label={secondary.label} variant="neutral" onPress={secondary.onPress} /> : null}
         </View>
       </ScrollView>
     </SafeAreaView>

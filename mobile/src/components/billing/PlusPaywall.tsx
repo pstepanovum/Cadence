@@ -168,7 +168,7 @@ export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => v
           {plan && !unavailable ? (
             <Button label={plan.trialDays > 0 ? "Start free trial" : "Subscribe"} loading={busy === "buy"} disabled={busy !== null} onPress={() => void buy()} />
           ) : null}
-          <Button label={doneLabel} variant="outline" disabled={busy === "buy"} onPress={onDone} />
+          <Button label={doneLabel} variant="neutral" disabled={busy === "buy"} onPress={onDone} />
         </>
       )}
 
@@ -206,11 +206,9 @@ const styles = themed(() =>
       borderRadius: radii.card,
       backgroundColor: colors.snow,
       padding: spacing.lg,
-      borderWidth: 2,
-      borderColor: "transparent",
       boxShadow: shadows.card,
     },
-    planChosen: { borderColor: colors.sage, backgroundColor: colors.limeSoft },
+    planChosen: { backgroundColor: colors.limeSoft },
     radio: { width: 24, height: 24, borderRadius: radii.pill, borderWidth: 2, borderColor: colors.paleSlate, alignItems: "center", justifyContent: "center" },
     radioOn: { backgroundColor: colors.hunter, borderColor: colors.hunter },
     planTitle: { fontFamily: fonts.bodyBold, fontSize: type.headline, color: colors.carbon },

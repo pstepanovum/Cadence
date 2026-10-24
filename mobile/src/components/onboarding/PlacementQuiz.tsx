@@ -78,7 +78,7 @@ export function PlacementQuiz({ onDone, result }: { onDone: (level: CefrLevel) =
         />
       </Card>
       <Body size={type.footnote} tone="muted">{`Question ${index + 1} of ${PLACEMENT_QUESTIONS.length}. Not sure? Pick your best guess.`}</Body>
-      {index > 0 ? <Button label="Previous question" variant="outline" onPress={() => setIndex(index - 1)} /> : null}
+      {index > 0 ? <Button label="Previous question" variant="neutral" onPress={() => setIndex(index - 1)} /> : null}
     </View>
   );
 }

@@ -351,7 +351,7 @@ export default function CoachSessionScreen() {
               onPress={nextReply}
             />
           </ActionRow>
-          <Button label="End session" variant="outline" onPress={endSession} />
+          <Button label="End session" variant="neutral" onPress={endSession} />
         </>
       ) : null}
     </View>

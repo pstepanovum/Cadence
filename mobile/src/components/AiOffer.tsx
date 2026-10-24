@@ -41,7 +41,7 @@ export function AiOffer({ decision, compact = false }: { decision: Extract<Route
       {offers.length > 0 ? (
         <View style={styles.actions}>
           {offers.map((offer, index) => (
-            <Button key={offer} label={offerLabel(offer)} variant={index === 0 ? "primary" : "outline"} onPress={() => act(offer)} />
+            <Button key={offer} label={offerLabel(offer)} variant={index === 0 ? "primary" : "neutral"} onPress={() => act(offer)} />
           ))}
         </View>
       ) : null}

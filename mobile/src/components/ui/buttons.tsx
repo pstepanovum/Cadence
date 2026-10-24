@@ -14,14 +14,15 @@ import {
 import { haptics } from "@/lib/haptics";
 import { colors, fonts, maxScale, overlays, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
-export type ButtonVariant = "primary" | "secondary" | "tonal" | "danger" | "outline";
+export type ButtonVariant = "primary" | "secondary" | "tonal" | "danger" | "neutral";
 
 const buttonColors: Record<ButtonVariant, { bg: string; fg: string }> = themed(() => ({
   primary: { bg: colors.hunter, fg: colors.snow },
   secondary: { bg: colors.yellowGreen, fg: colors.ink },
   tonal: { bg: overlays.hunterTint, fg: colors.hunter },
   danger: { bg: colors.brick, fg: colors.snow },
-  outline: { bg: "transparent", fg: colors.hunter },
+  /** The quiet choice beside a primary button ("Not now"): filled grey, no stroke. */
+  neutral: { bg: colors.platinum, fg: colors.carbon },
 }));
 
 /** The colour an icon inside a button of this variant should use. */
@@ -56,7 +57,6 @@ export function Button({
       style={({ pressed }) => [
         styles.button,
         { backgroundColor: palette.bg },
-        variant === "outline" && styles.buttonOutline,
         disabled && styles.buttonDisabled,
         pressed && styles.buttonPressed,
         style,
@@ -256,10 +256,6 @@ const styles = themed(() =>
       paddingHorizontal: spacing.lg,
       paddingVertical: spacing.md,
     },
-    buttonOutline: {
-      borderWidth: 1.5,
-      borderColor: colors.paleSlate,
-    },
     buttonDisabled: {
       opacity: 0.45,
     },
@@ -307,8 +303,7 @@ const styles = themed(() =>
       paddingHorizontal: spacing.lg,
     },
     chipPickerIdle: {
-      borderWidth: 1,
-      borderColor: colors.alabaster,
+      backgroundColor: colors.platinum,
     },
     chipActive: {
       opacity: 0.6,

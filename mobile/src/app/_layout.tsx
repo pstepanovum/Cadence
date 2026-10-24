@@ -125,7 +125,7 @@ function RootNavigator() {
           <Title size={type.title2}>{"Can't load your profile"}</Title>
           <Body size={type.callout}>{profileError}</Body>
           <Button label="Try again" onPress={retryProfile} />
-          <Button label="Sign out" variant="outline" onPress={() => void signOut()} />
+          <Button label="Sign out" variant="neutral" onPress={() => void signOut()} />
         </View>
       </View>
     );

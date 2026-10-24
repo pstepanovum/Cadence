@@ -17,7 +17,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary:
     "bg-yellow-green text-hunter-green hover:brightness-105 [&_*]:text-inherit",
   ghost:
-    "bg-vanilla-cream text-hunter-green hover:bg-platinum [&_*]:text-inherit",
+    "bg-platinum text-carbon-black hover:bg-alabaster-grey [&_*]:text-inherit",
   danger:
     "bg-blushed-brick text-white hover:brightness-110 [&_*]:text-inherit",
 };
