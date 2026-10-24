@@ -38,15 +38,75 @@ evidence from the analysis and synthesis of vocal-tract shapes using an
 articulatory model", in W. J. Hardcastle and A. Marchal (eds.), *Speech
 Production and Speech Modelling*, Kluwer, 1990.
 
-## Still to be recorded
+## Mouth map: English articulation targets
 
-These sources are planned (see `docs/PLATFORM.md`) and get their entries,
-with exact URLs and licence checks, in the change that brings them in:
+The English targets in `content/articulation/` are fitted with
+`scripts/content/fit-articulation.mjs` to the sagittal-section drawings by
+**Richard Wright and Dan McCloy** on Wikimedia Commons
+([source repository](https://github.com/drammock/phonetics-teaching-assets)),
+released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+The script confirms the CC0 licence and the authors of every file through the
+Commons API before using it, downloads the drawings into a gitignored cache
+and commits only the traced points (`content/articulation/references.json`).
+No drawing is redistributed. Files used:
 
-- Wikimedia Commons "IPA … Sagittal Section.svg" drawings by Richard Wright and
-  Dan McCloy, used as fitting targets for the English phoneme parameters. Each
-  file is listed with its URL after its CC0 status is confirmed through the
-  Commons API.
-- Literature values for Maeda parameters of English sounds, cited per sound.
-- Tatoeba example sentences ([CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/)),
-  credited with sentence ids and authors.
+- [IPA a Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_a_Sagittal_Section.svg) (SHA-256 `f6e3d8d535c6dea1…`)
+- [IPA æ Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%C3%A6_Sagittal_Section.svg) (SHA-256 `d793a814dddd9ad0…`)
+- [IPA b Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_b_Sagittal_Section.svg) (SHA-256 `c9d6231d3843cfcf…`)
+- [IPA d Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_d_Sagittal_Section.svg) (SHA-256 `e72420e1efb6ba88…`)
+- [IPA ð Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%C3%B0_Sagittal_Section.svg) (SHA-256 `6bc6009bbd04a7cb…`)
+- [IPA Ɛ Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%C6%90_Sagittal_Section.svg) (SHA-256 `87f4596cb888fb4e…`)
+- [IPA F Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_F_Sagittal_Section.svg) (SHA-256 `1d7b5da25f1f34ba…`)
+- [IPA g Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_g_Sagittal_Section.svg) (SHA-256 `c877a85e3c92084d…`)
+- [IPA i Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_i_Sagittal_Section.svg) (SHA-256 `4a1d2b3e2abd6da8…`)
+- [IPA Ɪ Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%EA%9E%AE_Sagittal_Section.svg) (SHA-256 `1285ca99626c7d9c…`)
+- [IPA k Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_k_Sagittal_Section.svg) (SHA-256 `78b14a269d020d42…`)
+- [IPA m Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_m_Sagittal_Section.svg) (SHA-256 `5fc197686b40e144…`)
+- [IPA n Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_n_Sagittal_Section.svg) (SHA-256 `95a3b0420871768b…`)
+- [Neutral Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg) (SHA-256 `5958063a8cebcfb3…`)
+- [IPA ŋ Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%C5%8B_Sagittal_Section.svg) (SHA-256 `e139f636864e92a6…`)
+- [IPA p Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_p_Sagittal_Section.svg) (SHA-256 `ec9124ec9b293c72…`)
+- [IPA ʝ Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%CA%9D_Sagittal_Section.svg) (SHA-256 `c0efa08918adc427…`)
+- [IPA ɽ retroflex Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%C9%BD_retroflex_Sagittal_Section.svg) (SHA-256 `8982dbfbf9901191…`)
+- [IPA s̺ apical Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_s%CC%BA_apical_Sagittal_Section.svg) (SHA-256 `39e7415665db30a2…`)
+- [IPA ʃ laminal Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%CA%83_laminal_Sagittal_Section.svg) (SHA-256 `6c4ee59cc735286f…`)
+- [IPA t Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_t_Sagittal_Section.svg) (SHA-256 `9e5da5d4f4a98123…`)
+- [IPA θ Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%CE%B8_Sagittal_Section.svg) (SHA-256 `884ab6beb24edde6…`)
+- [IPA u Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_u_Sagittal_Section.svg) (SHA-256 `e083a2c2c1476a41…`)
+- [IPA Ʊ Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_%C6%B1_Sagittal_Section.svg) (SHA-256 `e2aa2d91104b7889…`)
+- [IPA v Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_v_Sagittal_Section.svg) (SHA-256 `3bd653fcb32c4918…`)
+- [IPA z apical Sagittal Section.svg](https://commons.wikimedia.org/wiki/File:IPA_z_apical_Sagittal_Section.svg) (SHA-256 `dce5f625479157bf…`)
+
+Two vowel shapes (the start of /eɪ/ and of General American /oʊ/, and the
+base of RP /ɔː/) take their parameters from the package's own demo codebook
+(German /e/ and /o/), published with Ververidis, Schneider and Koehler (2012),
+cited above. Targets that no drawing or published value covers are tuned by
+hand and marked `needsReview` in the JSON.
+
+Not used: Seeing Speech or STAR material (CC BY-NC-ND), or any other drawing
+that does not allow adaptation.
+
+## Tatoeba example sentences
+
+English sentences from [Tatoeba](https://tatoeba.org), licensed under
+[CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/). They are
+the curated sentences in `content/sentences/`, some grammar examples,
+flashcard examples and dictation exercises. Each one keeps its Tatoeba
+sentence id and its author's username, in the content files and in every
+pack (`sentences.json` and the `source` of each example), so any sentence can
+be traced to `https://tatoeba.org/sentences/show/<id>`. Sentences were
+selected from the official export (`eng_sentences_detailed.tsv`), kept only
+when written by a contributor who lists English as a native language, and
+filtered for length, characters and language; the text is unchanged.
+
+## Vocabulary and lessons
+
+Grammar explanations, exercises, flashcard definitions and generated example
+sentences are Cadence's own, drafted with Gemini by `scripts/content/` from
+our own outline and checked by a second, blind pass. Words for the flashcards
+were chosen by frequency in the Tatoeba sentences. No published word list
+(Oxford 3000/5000, Cambridge English Vocabulary Profile or similar) is used,
+imported or referenced.
+
+The minimal pairs in `content/sounds/minimal-pairs.json` come from Cadence's
+own listening game (`mobile/src/data/minimal-pairs.ts`).

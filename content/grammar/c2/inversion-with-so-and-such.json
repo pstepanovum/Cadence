@@ -1,0 +1,392 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "inversion-with-so-and-such",
+ "draftHash": "aa85c3adce71a422",
+ "grammarPoint": {
+  "id": "gp.inversion-with-so-and-such",
+  "level": "C2",
+  "topicId": "topic.emphasis",
+  "title": "Inversion with so and such",
+  "summary": "Use inversion with 'so' and 'such' at the beginning of a sentence to add strong emphasis to an adjective or noun, often followed by a 'that' clause indicating a result.",
+  "explanation": "When we want to emphasize an adjective or a noun phrase, especially in formal contexts, we can move 'so' or 'such' to the beginning of a sentence. This structure creates an inversion, meaning the verb comes before the subject, similar to a question.\n\nWe use *so* followed by an adjective, then the verb 'be' and the subject. This highlights the extreme quality described by the adjective. For example, instead of saying 'The storm was so violent that it caused widespread damage,' we can say 'So violent was the storm that it caused widespread damage.'\n\nSimilarly, we use *such* followed by the verb 'be' and the subject (often a noun phrase). This emphasizes the nature or extent of the noun. For instance, 'The impact was such that it changed the landscape' can be inverted to 'Such was the impact that it changed the landscape.' Both structures are typically followed by a 'that' clause, which explains the consequence or result of the emphasized quality or noun.",
+  "patterns": [
+   "So + adjective + be + subject + that...",
+   "Such + be + subject + that..."
+  ],
+  "examples": [
+   {
+    "text": "So compelling was the evidence that the jury reached a quick verdict.",
+    "note": "Emphasizes the strength of the evidence, leading to a result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Such was the enthusiasm for the project that funding was secured immediately.",
+    "note": "Highlights the high level of enthusiasm, explaining the quick funding.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "So intricate were the details that the artist spent years on the painting.",
+    "note": "Stresses the complexity of the details, explaining the long creation time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Such was her dedication to research that she often worked through the night.",
+    "note": "Emphasizes her strong dedication, explaining her work habits.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "So profound was the silence that you could hear a pin drop.",
+    "note": "Highlights the depth of the silence, describing its effect.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "So the demand was great that tickets sold out.",
+    "right": "So great was the demand that tickets sold out.",
+    "note": "Remember to invert the verb and subject after 'so + adjective'."
+   },
+   {
+    "wrong": "Such the noise we couldn't concentrate.",
+    "right": "Such was the noise that we couldn't concentrate.",
+    "note": "Include 'be' (e.g., 'was') and 'that' after 'such' in this inverted structure."
+   },
+   {
+    "wrong": "So a success was the event that they planned another.",
+    "right": "Such a success was the event that they planned another.",
+    "note": "Use 'such' with a noun phrase (e.g., 'a success'), not 'so'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.inversion-with-so-and-such.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the impact of the new policy that it reshaped the entire industry.",
+   "options": [
+    "So strong was",
+    "Such was",
+    "So was",
+    "Such strong was"
+   ],
+   "answer": 1,
+   "explanation": "'Such was' is used with a noun phrase like 'the impact' to emphasize its extent, followed by 'that'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the complexity of the algorithm that only a few experts could understand it.",
+   "options": [
+    "Such was",
+    "So complex was",
+    "So was complex",
+    "Such complex was"
+   ],
+   "answer": 1,
+   "explanation": "'So complex was' correctly uses 'so' with an adjective and inversion, followed by 'that'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the beauty of the landscape that tourists flocked to the region.",
+   "options": [
+    "So beautiful was",
+    "Such beautiful was",
+    "Such was",
+    "So was beautiful"
+   ],
+   "answer": 2,
+   "explanation": "'Such was' is used with the noun phrase 'the beauty' to emphasize its quality, followed by 'that'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the pressure on the team that they worked overtime for weeks.",
+   "options": [
+    "So intense was",
+    "Such intense was",
+    "So was intense",
+    "Such was"
+   ],
+   "answer": 3,
+   "explanation": "'Such was' is used with the noun phrase 'the pressure' to emphasize its degree, followed by 'that'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ rare ___ the opportunity that she immediately accepted the offer.",
+   "answers": [
+    [
+     "So"
+    ],
+    [
+     "was"
+    ]
+   ],
+   "explanation": "'So rare was' emphasizes the adjective 'rare' with inversion, followed by 'that'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ was the demand for the new smartphone ___ it sold out in minutes.",
+   "answers": [
+    [
+     "Such"
+    ],
+    [
+     "that"
+    ]
+   ],
+   "explanation": "'Such was the demand' emphasizes the noun 'demand', and 'that' introduces the result clause."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ convincing ___ his argument ___ everyone changed their minds.",
+   "answers": [
+    [
+     "So"
+    ],
+    [
+     "was"
+    ],
+    [
+     "that"
+    ]
+   ],
+   "explanation": "'So convincing was' emphasizes the adjective 'convincing' with inversion, and 'that' introduces the result."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "So",
+    "challenging",
+    "was",
+    "the",
+    "climb",
+    "that",
+    "few",
+    "reached",
+    "the",
+    "summit",
+    "."
+   ],
+   "explanation": "This sentence uses 'So + adjective + be + subject + that' to emphasize the difficulty of the climb."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Such",
+    "was",
+    "the",
+    "excitement",
+    "that",
+    "sleep",
+    "was",
+    "impossible",
+    "."
+   ],
+   "explanation": "This sentence uses 'Such + be + subject + that' to emphasize the high level of excitement."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "So the weather was bad that we canceled the picnic.",
+   "answers": [
+    "So bad was the weather that we canceled the picnic."
+   ],
+   "explanation": "The correct inverted structure is 'So + adjective + be + subject'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Such a success the concert was that they planned a tour.",
+   "answers": [
+    "Such a success was the concert that they planned a tour."
+   ],
+   "explanation": "After 'such a success', the verb 'was' should come before the subject 'the concert'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The noise was so loud that it woke up the entire neighborhood.",
+   "instruction": "Rewrite using inversion with 'So'.",
+   "answers": [
+    "So loud was the noise that it woke up the entire neighborhood."
+   ],
+   "explanation": "Move 'So loud' to the beginning and invert 'was the noise'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Her influence was such that she could change opinions easily.",
+   "instruction": "Rewrite using inversion with 'Such'.",
+   "answers": [
+    "Such was her influence that she could change opinions easily."
+   ],
+   "explanation": "Move 'Such' to the beginning and invert 'was her influence'."
+  },
+  {
+   "id": "ex.c2.inversion-with-so-and-such.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.inversion-with-so-and-such"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "So compelling was the story",
+     "right": "that I couldn't put the book down."
+    },
+    {
+     "left": "Such was the urgency of the situation",
+     "right": "that immediate action was required."
+    },
+    {
+     "left": "So vast were the plains",
+     "right": "that the horizon seemed endless."
+    },
+    {
+     "left": "Such was his determination",
+     "right": "that he overcame every obstacle."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "So \\w+ was the \\w+ that",
+  "Such was the \\w+ that",
+  "So \\w+ were the \\w+ that"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.inversion-with-so-and-such.01": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.02": {
+    "status": "drop",
+    "note": "Key judged wrong: \"Such was\" correctly fits the sentence structure, whereas \"So complex was\" creates a redundant and grammatically incorrect phrase with \"the complexity\"."
+   },
+   "ex.c2.inversion-with-so-and-such.03": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.04": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.05": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.06": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.07": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.08": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.09": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.10": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.11": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.12": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.13": {
+    "status": "pass"
+   },
+   "ex.c2.inversion-with-so-and-such.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

@@ -1,0 +1,495 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "future-perfect",
+ "draftHash": "0c2ee65923226dd1",
+ "grammarPoint": {
+  "id": "gp.future-perfect",
+  "level": "B2",
+  "topicId": "topic.future",
+  "title": "Future perfect",
+  "summary": "Use the future perfect to talk about actions that will be completed before a specific time or event in the future.",
+  "explanation": "The future perfect tense describes an action that will be finished *before* a certain point in the future. It emphasizes the completion of an action by a future deadline or event.\n\nWe often use time expressions like *by*, *by the time*, *before*, or *in X years/months* with the future perfect to indicate the future completion point.\n\nThink of it as looking back from a future moment and seeing that an action has already happened. It's not about when the action starts, but when it will be done.",
+  "patterns": [
+   "Subject + will have + past participle",
+   "Subject + will not have + past participle (won't have)",
+   "Will + subject + have + past participle?"
+  ],
+  "examples": [
+   {
+    "text": "By 2025, they will have built the new bridge.",
+    "note": "The building will be completed before the year 2025.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I won't have finished my report by the time you get home.",
+    "note": "The report will still be incomplete when you arrive.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Will you have eaten dinner before the movie starts?",
+    "note": "Asking if the action of eating will be completed before a future event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She will have lived in Paris for five years next month.",
+    "note": "The action of living will reach a five-year duration by next month.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The team will have practiced for hours by the end of the day.",
+    "note": "The practice will be completed, lasting for hours, by the day's end.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "By next week, I will finish the project.",
+    "right": "By next week, I *will have finished* the project.",
+    "note": "Use future perfect to show completion by a future time."
+   },
+   {
+    "wrong": "They will have went to the store already.",
+    "right": "They *will have gone* to the store already.",
+    "note": "Always use the past participle form of the main verb."
+   },
+   {
+    "wrong": "She has have completed her work by then.",
+    "right": "She *will have completed* her work by then.",
+    "note": "The auxiliary verb for future perfect is 'will have', not 'has have'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.future-perfect.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "By the time we arrive, the concert ___.",
+   "options": [
+    "will start",
+    "will be starting",
+    "will have started",
+    "starts"
+   ],
+   "answer": 2,
+   "explanation": "The concert will be completed (started) before our arrival, so the future perfect is correct."
+  },
+  {
+   "id": "ex.b2.future-perfect.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "How many books ___ by the end of the year?",
+   "options": [
+    "will you read",
+    "will you have read",
+    "are you reading",
+    "do you read"
+   ],
+   "answer": 1,
+   "explanation": "The question asks about the completion of reading books by a future point, requiring the future perfect."
+  },
+  {
+   "id": "ex.b2.future-perfect.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'm sure they ___ the new software by Monday.",
+   "options": [
+    "will install",
+    "will have installed",
+    "are installing",
+    "install"
+   ],
+   "answer": 1,
+   "explanation": "The action of installing will be completed before Monday, so 'will have installed' is correct."
+  },
+  {
+   "id": "ex.b2.future-perfect.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Don't worry, I ___ the dishes before you wake up.",
+   "options": [
+    "will wash",
+    "will be washing",
+    "will have washed",
+    "wash"
+   ],
+   "answer": 2,
+   "explanation": "The action of washing the dishes will be completed before the future event of you waking up."
+  },
+  {
+   "id": "ex.b2.future-perfect.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "By next month, I ___ ___ (save) enough money for my trip.",
+   "answers": [
+    [
+     "will have",
+     "saved"
+    ]
+   ],
+   "explanation": "The action of saving will be completed by next month, so 'will have saved' is the correct future perfect form."
+  },
+  {
+   "id": "ex.b2.future-perfect.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ ___ (not finish) her presentation before the deadline.",
+   "answers": [
+    [
+     "will not have",
+     "finished"
+    ],
+    [
+     "won't have",
+     "finished"
+    ]
+   ],
+   "explanation": "The negative future perfect 'will not have finished' (or 'won't have finished') indicates the presentation will still be incomplete by the deadline."
+  },
+  {
+   "id": "ex.b2.future-perfect.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ they ___ (arrive) at the airport by 3 PM?",
+   "answers": [
+    [
+     "Will",
+     "have",
+     "arrived"
+    ]
+   ],
+   "explanation": "This is a question asking about the completion of arrival by a future time, so 'Will they have arrived' is correct."
+  },
+  {
+   "id": "ex.b2.future-perfect.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "By",
+    "next",
+    "year",
+    "we",
+    "will",
+    "have",
+    "moved",
+    "to",
+    "a",
+    "new",
+    "city."
+   ],
+   "distractors": [
+    "moving",
+    "move"
+   ],
+   "explanation": "The sentence uses the future perfect to show that the action of moving will be completed by next year."
+  },
+  {
+   "id": "ex.b2.future-perfect.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "won't",
+    "have",
+    "seen",
+    "the",
+    "movie",
+    "by",
+    "tonight."
+   ],
+   "distractors": [
+    "see",
+    "saw"
+   ],
+   "explanation": "This sentence uses the negative future perfect to indicate that the action of seeing the movie will not be completed by tonight."
+  },
+  {
+   "id": "ex.b2.future-perfect.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "By the time you call, I will eat lunch.",
+   "answers": [
+    "By the time you call, I will have eaten lunch."
+   ],
+   "explanation": "The action of eating lunch will be completed before the future event of you calling, so the future perfect 'will have eaten' is needed."
+  },
+  {
+   "id": "ex.b2.future-perfect.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They will have finish the report before Friday.",
+   "answers": [
+    "They will have finished the report before Friday."
+   ],
+   "explanation": "The future perfect requires the past participle form of the main verb, which is 'finished', not 'finish'."
+  },
+  {
+   "id": "ex.b2.future-perfect.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I will complete my studies in two years.",
+   "instruction": "Rewrite using 'By 2026'.",
+   "answers": [
+    "By 2026, I will have completed my studies."
+   ],
+   "explanation": "The instruction requires expressing completion by a future date, which is the function of the future perfect."
+  },
+  {
+   "id": "ex.b2.future-perfect.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The guests will arrive before 8 PM.",
+   "instruction": "Rewrite to emphasize the completion of their arrival by 8 PM.",
+   "answers": [
+    "The guests will have arrived by 8 PM.",
+    "By 8 PM, the guests will have arrived."
+   ],
+   "explanation": "Changing to the future perfect 'will have arrived' emphasizes that the action of arriving will be completed before the specified future time."
+  },
+  {
+   "id": "ex.b2.future-perfect.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-perfect"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "By the end of the week, we",
+     "right": "will have reviewed all the applications."
+    },
+    {
+     "left": "She won't have learned to drive",
+     "right": "before her birthday next month."
+    },
+    {
+     "left": "Will they have decided on a new plan",
+     "right": "by the time the meeting starts?"
+    },
+    {
+     "left": "I hope I will have saved enough money",
+     "right": "to buy a house in five years."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "will have [a-z]+ed",
+  "will have (?:been|done|gone|seen|taken|written|made|eaten|read)",
+  "won't have [a-z]+ed"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.future-perfect.01": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.02": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.03": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.04": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.future-perfect.05: needs one answer list per gap (2)"
+   },
+   "ex.b2.future-perfect.06": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.future-perfect.07: needs one answer list per gap (2)"
+   },
+   "ex.b2.future-perfect.08": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.09": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.10": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.11": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.12": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences correctly use the future perfect tense to emphasize completion by 8 PM."
+   },
+   "ex.b2.future-perfect.14": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.15": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.16": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.17": {
+    "status": "pass"
+   },
+   "ex.b2.future-perfect.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.future-perfect.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.future-perfect"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "By 2030, scientists ___ a cure for many common diseases.",
+    "options": [
+     "will discover",
+     "will have discovered",
+     "will be discovering",
+     "discover"
+    ],
+    "answer": 1,
+    "explanation": "The discovery will be completed before 2030."
+   },
+   {
+    "id": "ex.b2.future-perfect.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.future-perfect"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She ___ her degree by next summer.",
+    "options": [
+     "will get",
+     "will have gotten",
+     "will be getting",
+     "gets"
+    ],
+    "answer": 1,
+    "explanation": "The action of getting her degree will be completed before next summer."
+   },
+   {
+    "id": "ex.b2.future-perfect.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.future-perfect"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ you ___ your presentation slides before the meeting starts?",
+    "options": [
+     "Will...prepare",
+     "Will...have prepared",
+     "Will...be preparing",
+     "Do...prepare"
+    ],
+    "answer": 1,
+    "explanation": "Asking if the preparation will be completed before the meeting."
+   },
+   {
+    "id": "ex.b2.future-perfect.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.future-perfect"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I can't meet you at 5 PM. By then, I ___ work for the day.",
+    "options": [
+     "will finish",
+     "will have finished",
+     "will be finishing",
+     "finish"
+    ],
+    "answer": 1,
+    "explanation": "The action of finishing work will be completed before 5 PM."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 262143,
+   "text": "I will have finished the work by next week.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 69957,
+   "text": "You will have guessed its meaning by the end of the chapter.",
+   "author": "CM"
+  }
+ ]
+}

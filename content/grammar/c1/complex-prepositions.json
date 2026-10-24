@@ -1,0 +1,405 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "complex-prepositions",
+ "draftHash": "150f050ead6bf5f1",
+ "grammarPoint": {
+  "id": "gp.complex-prepositions",
+  "level": "C1",
+  "topicId": "topic.prepositions",
+  "title": "Complex prepositions",
+  "summary": "Master complex prepositions like 'with regard to', 'on account of', and 'in the light of' to express relationships between ideas formally.",
+  "explanation": "Complex prepositions are groups of words that function like a single preposition. They often add a more formal or specific nuance than simpler prepositions. This lesson focuses on three common ones: 'with regard to', 'on account of', and 'in the light of'.\n\n*With regard to* means 'concerning' or 'about'. It introduces the topic being discussed. For example, \"With regard to your application, we will contact you soon.\" It's a formal way to specify what you are referring to.\n\n*On account of* means 'because of' or 'due to'. It explains the reason or cause for something. For instance, \"The meeting was postponed on account of the unexpected power outage.\" It's often used to give a formal reason for an event or situation.\n\n*In the light of* means 'considering new information' or 'taking into account'. It suggests that a decision or understanding has changed or been influenced by recent developments. For example, \"In the light of new evidence, the investigation was reopened.\" This phrase implies a re-evaluation based on fresh facts.",
+  "patterns": [
+   "with regard to + noun/pronoun",
+   "on account of + noun/pronoun/gerund",
+   "in the light of + noun/pronoun"
+  ],
+  "examples": [
+   {
+    "text": "With regard to the new policy, employees will receive an email next week.",
+    "note": "Introduces the topic of the new policy.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The concert was canceled on account of the severe weather warning.",
+    "note": "Explains the reason for the cancellation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "In the light of recent market trends, we need to adjust our strategy.",
+    "note": "Indicates that market trends are influencing the strategy adjustment.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I have a question with regard to the project timeline.",
+    "note": "Specifies what the question is about.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She was unable to attend the conference on account of a scheduling conflict.",
+    "note": "Provides the reason for her absence.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "With regards to your inquiry, we have no further information.",
+    "right": "With regard to your inquiry, we have no further information.",
+    "note": "The correct form is 'with regard to', not 'with regards to'."
+   },
+   {
+    "wrong": "The event was delayed on account for technical issues.",
+    "right": "The event was delayed on account of technical issues.",
+    "note": "The correct preposition is 'of', not 'for', in 'on account of'."
+   },
+   {
+    "wrong": "In the light for the new data, our hypothesis was confirmed.",
+    "right": "In the light of the new data, our hypothesis was confirmed.",
+    "note": "The correct preposition is 'of', not 'for', in 'in the light of'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.complex-prepositions.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The committee decided to review the budget ___ the unexpected increase in material costs.",
+   "options": [
+    "with regard to",
+    "on account of",
+    "in the light of"
+   ],
+   "answer": 2,
+   "explanation": "'In the light of' is used when a decision or action is influenced by new information or circumstances."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We need to discuss your performance ___ the last quarter.",
+   "options": [
+    "on account of",
+    "with regard to",
+    "in the light of"
+   ],
+   "answer": 1,
+   "explanation": "'With regard to' means 'concerning' or 'about', which fits the context of discussing a specific topic."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Many flights were diverted ___ the volcanic ash cloud.",
+   "options": [
+    "with regard to",
+    "on account of",
+    "in the light of"
+   ],
+   "answer": 1,
+   "explanation": "'On account of' means 'because of' or 'due to', explaining the reason for the flight diversions."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the recent security breach, all passwords must be updated immediately.",
+   "options": [
+    "On account of",
+    "With regard to",
+    "In the light of"
+   ],
+   "answer": 2,
+   "explanation": "'In the light of' is appropriate here, as the security breach is new information prompting an immediate action."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The project deadline was extended ___ the unforeseen technical difficulties.",
+   "answers": [
+    [
+     "on account of"
+    ]
+   ],
+   "explanation": "'On account of' means 'because of', providing the reason for the deadline extension."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Could you provide more details ___ your proposed changes?",
+   "answers": [
+    [
+     "with regard to"
+    ]
+   ],
+   "explanation": "'With regard to' means 'concerning' or 'about', asking for details on a specific topic."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ the latest scientific findings, our understanding of the universe continues to evolve.",
+   "answers": [
+    [
+     "In the light of"
+    ]
+   ],
+   "explanation": "'In the light of' means 'considering new information', indicating that new findings are influencing understanding."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "meeting",
+    "was",
+    "rescheduled",
+    "on",
+    "account",
+    "of",
+    "a",
+    "key",
+    "speaker's",
+    "absence",
+    "."
+   ],
+   "distractors": [
+    "for",
+    "due"
+   ],
+   "explanation": "This sentence uses 'on account of' to explain the reason for the meeting's rescheduling."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "need",
+    "to",
+    "reconsider",
+    "the",
+    "plan",
+    "in",
+    "the",
+    "light",
+    "of",
+    "the",
+    "new",
+    "regulations",
+    "."
+   ],
+   "distractors": [
+    "for",
+    "about"
+   ],
+   "explanation": "The phrase 'in the light of' indicates that the new regulations necessitate a reconsideration of the plan."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "With regards to your recent order, it has been shipped.",
+   "answers": [
+    "With regard to your recent order, it has been shipped."
+   ],
+   "explanation": "The correct complex preposition is 'with regard to', not 'with regards to'."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The company issued a statement in the light for the public concern.",
+   "answers": [
+    "The company issued a statement in the light of the public concern."
+   ],
+   "explanation": "The correct preposition in this phrase is 'of', not 'for'."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Because of the heavy traffic, we arrived late.",
+   "instruction": "Rewrite using 'on account of'.",
+   "answers": [
+    "On account of the heavy traffic, we arrived late.",
+    "We arrived late on account of the heavy traffic."
+   ],
+   "explanation": "'On account of' replaces 'because of' to express the reason for arriving late."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Considering the latest research, the project scope was expanded.",
+   "instruction": "Rewrite using 'in the light of'.",
+   "answers": [
+    "In the light of the latest research, the project scope was expanded.",
+    "The project scope was expanded in the light of the latest research."
+   ],
+   "explanation": "'In the light of' effectively conveys that the project scope was expanded due to new research."
+  },
+  {
+   "id": "ex.c1.complex-prepositions.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.complex-prepositions"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "With regard to your application,",
+     "right": "we will notify you of our decision next week."
+    },
+    {
+     "left": "The event was canceled",
+     "right": "on account of insufficient registrations."
+    },
+    {
+     "left": "In the light of new evidence,",
+     "right": "the police reopened the cold case."
+    },
+    {
+     "left": "We need to discuss the budget",
+     "right": "with regard to the upcoming expenses."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "with regard to",
+  "on account of",
+  "in the light of"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.complex-prepositions.01": {
+    "status": "drop",
+    "note": "Ambiguous: Both options create grammatically correct and natural sentences, making the item ambiguous."
+   },
+   "ex.c1.complex-prepositions.02": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.03": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.04": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.05": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.06": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.07": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.08": {
+    "status": "pass",
+    "note": "Checker slip: The word 'the' is not available in the given token list to form the alternative answer."
+   },
+   "ex.c1.complex-prepositions.09": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.10": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.11": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.12": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.13": {
+    "status": "pass"
+   },
+   "ex.c1.complex-prepositions.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 56740,
+   "text": "What do you have to say with regard to this problem?",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 26742,
+   "text": "We called off the game on account of rain.",
+   "author": "CK"
+  }
+ ]
+}

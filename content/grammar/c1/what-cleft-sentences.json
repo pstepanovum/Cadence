@@ -1,0 +1,487 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "what-cleft-sentences",
+ "draftHash": "4b5abf668e54d689",
+ "grammarPoint": {
+  "id": "gp.what-cleft-sentences",
+  "level": "C1",
+  "topicId": "topic.emphasis",
+  "title": "What-cleft sentences",
+  "summary": "Use 'what-cleft' sentences to emphasize a specific piece of information or to explain an event clearly.",
+  "explanation": "What-cleft sentences are a way to bring special attention to a particular part of a sentence. We move the information we want to emphasize to the end of the sentence, starting the sentence with \"What...\".\n\nThe basic structure is \"What + subject + verb + is/was + emphasized information.\" This structure makes the emphasized part stand out, often because it's new or important information.\n\nFor example, \"What I need is a new laptop\" emphasizes \"a new laptop.\" If you say \"I need a new laptop,\" it's a simple statement. But with the cleft sentence, you highlight *what* you need. Similarly, \"What happened was the train was delayed\" emphasizes the reason for a situation.\n\nThese sentences are very common in both speaking and writing when you want to clarify, explain, or add emphasis to a specific detail or event.",
+  "patterns": [
+   "What + subject + verb + is/was + noun/noun phrase.",
+   "What + happened + was + clause/event.",
+   "What + subject + verb + is/was + to-infinitive."
+  ],
+  "examples": [
+   {
+    "text": "What I really want is a quiet weekend at home.",
+    "note": "Emphasizes the desired outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "What happened was the power went out unexpectedly.",
+    "note": "Explains the cause of an event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "What she needs to do is finish her report by Friday.",
+    "note": "Highlights the necessary action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "What surprised everyone was how quickly the project was completed.",
+    "note": "Emphasizes the surprising fact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "What we discussed was the new marketing strategy.",
+    "note": "Focuses on the topic of discussion.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "What I need a new laptop.",
+    "right": "What I need is a new laptop.",
+    "note": "Always include a form of 'be' (is/was) after the 'what' clause."
+   },
+   {
+    "wrong": "What I want is to buying a new car.",
+    "right": "What I want is to buy a new car.",
+    "note": "After 'is/was', use a noun phrase, a 'to'-infinitive, or a clause."
+   },
+   {
+    "wrong": "That I want is a coffee.",
+    "right": "What I want is a coffee.",
+    "note": "Use 'what' to introduce the cleft sentence, not 'that'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.what-cleft-sentences.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What I appreciate most about my job ___ the collaborative team environment.",
+   "options": [
+    "is",
+    "are",
+    "be",
+    "was"
+   ],
+   "answer": 0,
+   "explanation": "The 'what' clause acts as a singular subject, so it requires the singular verb 'is'."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What happened at the meeting ___ a sudden change in the project's direction.",
+   "options": [
+    "was",
+    "were",
+    "is",
+    "has"
+   ],
+   "answer": 0,
+   "explanation": "The event described by 'what happened' is singular, requiring 'was' for a past event."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What they decided to do ___ postpone the launch until next quarter.",
+   "options": [
+    "is",
+    "are",
+    "be",
+    "was"
+   ],
+   "answer": 0,
+   "explanation": "The 'what' clause refers to a singular decision, so 'is' is the correct linking verb."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What I'm trying to say ___ that we need to reconsider our budget.",
+   "options": [
+    "is",
+    "are",
+    "be",
+    "was"
+   ],
+   "answer": 0,
+   "explanation": "The 'what' clause functions as a singular subject, requiring 'is' to introduce the emphasized clause."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "What I really ___ is a long vacation.",
+   "answers": [
+    [
+     "want",
+     "need"
+    ]
+   ],
+   "explanation": "The verb in the 'what' clause should reflect the subject's desire or requirement."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "What ___ was the alarm didn't go off this morning.",
+   "answers": [
+    [
+     "happened"
+    ]
+   ],
+   "explanation": "'What happened' is a common fixed phrase to introduce an explanation of an event."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "What we should focus on ___ improving customer satisfaction.",
+   "answers": [
+    [
+     "is"
+    ]
+   ],
+   "explanation": "The 'what' clause acts as a singular subject, requiring the singular verb 'is'."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "What",
+    "I",
+    "need",
+    "is",
+    "more",
+    "time",
+    "to",
+    "prepare",
+    "."
+   ],
+   "distractors": [
+    "have",
+    "do"
+   ],
+   "explanation": "This sentence emphasizes \"more time to prepare\" by placing it after the 'what' clause."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "What",
+    "surprised",
+    "him",
+    "was",
+    "the",
+    "unexpected",
+    "promotion",
+    "."
+   ],
+   "distractors": [
+    "did",
+    "had"
+   ],
+   "explanation": "This sentence emphasizes \"the unexpected promotion\" as the surprising event."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "What I want are a new pair of running shoes.",
+   "answers": [
+    "What I want is a new pair of running shoes."
+   ],
+   "explanation": "The 'what' clause acts as a singular subject, so 'is' is required, not 'are'."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "What happened the car broke down on the highway.",
+   "answers": [
+    "What happened was the car broke down on the highway."
+   ],
+   "explanation": "A form of 'be' (was) is needed to link the 'what' clause to the emphasized event."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "A good night's sleep is what I truly desire.",
+   "instruction": "Rewrite using a 'what-cleft' sentence starting with 'What I truly desire...'",
+   "answers": [
+    "What I truly desire is a good night's sleep."
+   ],
+   "explanation": "The 'what-cleft' structure places the emphasized information at the end of the sentence."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The main problem was that we ran out of ingredients.",
+   "instruction": "Rewrite using a 'what-cleft' sentence starting with 'What happened...'",
+   "answers": [
+    "What happened was we ran out of ingredients."
+   ],
+   "explanation": "This transformation uses 'what happened' to introduce the explanation of the problem."
+  },
+  {
+   "id": "ex.c1.what-cleft-sentences.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.what-cleft-sentences"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "What I'm looking for",
+     "right": "is a reliable project manager."
+    },
+    {
+     "left": "What happened",
+     "right": "was the flight was delayed by two hours."
+    },
+    {
+     "left": "What we decided",
+     "right": "was to reschedule the meeting."
+    },
+    {
+     "left": "What she enjoys most",
+     "right": "is spending time in nature."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "what (i|we|he|she|they|you) (want|need|like|love|hate|expect|hope|plan|decide|do|say|see|find|hear|mean|think|believe|realize|understand) is",
+  "what happened was",
+  "what (i|we|he|she|they|you) (did|said|saw|found|heard|felt|thought|believed|realized|understood) was"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.what-cleft-sentences.01": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.02": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.03": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'is' and 'was' are grammatically correct and natural in this context."
+   },
+   "ex.c1.what-cleft-sentences.04": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.05": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.06": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.07": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key fails to use all the provided tokens ('do' and 'have')."
+   },
+   "ex.c1.what-cleft-sentences.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The key fails to use all the provided tokens ('had' and 'did')."
+   },
+   "ex.c1.what-cleft-sentences.10": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.11": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.12": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.13": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.14": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.15": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.16": {
+    "status": "pass"
+   },
+   "ex.c1.what-cleft-sentences.17": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'is' and 'was' (as well as plural forms) are grammatically defensible in this pseudo-cleft construction."
+   },
+   "ex.c1.what-cleft-sentences.18": {
+    "status": "drop",
+    "note": "Ambiguous: A wh-clause subject with a plural complement accepts both singular 'is' and plural 'are'."
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.what-cleft-sentences.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.what-cleft-sentences"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "What I'm hoping for ___ a clear answer by tomorrow.",
+    "options": [
+     "is",
+     "are",
+     "was",
+     "were"
+    ],
+    "answer": 0,
+    "explanation": "The emphasized information 'a clear answer' is singular, so 'is' is the correct form of 'be'."
+   },
+   {
+    "id": "ex.c1.what-cleft-sentences.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.what-cleft-sentences"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "What ___ was the sudden drop in temperature.",
+    "options": [
+     "it happened",
+     "happened",
+     "did happen",
+     "was happening"
+    ],
+    "answer": 1,
+    "explanation": "'What happened' is the correct structure to introduce an event in a what-cleft sentence."
+   },
+   {
+    "id": "ex.c1.what-cleft-sentences.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.what-cleft-sentences"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "What they requested ___ more resources for the research.",
+    "options": [
+     "is",
+     "are",
+     "was",
+     "were"
+    ],
+    "answer": 0,
+    "explanation": "The emphasized information 'more resources' is treated as a singular concept here, referring to the *idea* of needing more resources. If it referred to individual items, 'are' would be possible, but 'is' is more common for general requests."
+   },
+   {
+    "id": "ex.c1.what-cleft-sentences.18",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.what-cleft-sentences"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "What we need to consider ___ the long-term implications.",
+    "options": [
+     "is",
+     "are",
+     "was",
+     "were"
+    ],
+    "answer": 1,
+    "explanation": "The emphasized information 'the long-term implications' is plural, so 'are' is the correct form of 'be'."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2033882,
+   "text": "What we want is a chance to earn a decent living.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 3734765,
+   "text": "What I need is a loan.",
+   "author": "CK"
+  }
+ ]
+}

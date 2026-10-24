@@ -1,0 +1,397 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "passive-all-tenses",
+ "draftHash": "624dd40187ee4ec2",
+ "grammarPoint": {
+  "id": "gp.passive-all-tenses",
+  "level": "B2",
+  "topicId": "topic.passive",
+  "title": "The passive in all tenses",
+  "summary": "Learn how to form and use the passive voice in different tenses, including continuous, perfect, and modal forms, to focus on the action or object.",
+  "explanation": "The passive voice is used when you want to focus on the action itself or the object that receives the action, rather than the person or thing performing the action. It's especially useful when the doer is unknown, unimportant, or obvious from the context.\n\nTo form the passive voice, you use a form of the verb *to be* followed by the *past participle* of the main verb. The form of *to be* changes depending on the tense you want to use.\n\nFor example, in the present continuous passive, we use 'is/are being + past participle'. For the present perfect passive, it's 'has/have been + past participle'. For the future simple passive, we use 'will be + past participle'. And for modal verbs, it's 'modal + be + past participle'. If you need to mention who performed the action, you can use 'by + agent' at the end of the sentence.",
+  "patterns": [
+   "is/are being + past participle",
+   "has/have been + past participle",
+   "will be + past participle",
+   "modal + be + past participle"
+  ],
+  "examples": [
+   {
+    "text": "The new city park is being designed by a famous architect.",
+    "note": "Present continuous passive: describes an action in progress now.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Many new features have been added to the app recently.",
+    "note": "Present perfect passive: describes a completed action with a result relevant now.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The annual conference will be held in Paris next year.",
+    "note": "Future simple passive: describes an action planned for the future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "This ancient artifact must be handled with extreme care.",
+    "note": "Modal passive (obligation): expresses necessity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Important decisions can be made more quickly with this new system.",
+    "note": "Modal passive (ability): expresses possibility or capability.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The report is finish by Friday.",
+    "right": "The report will be finished by Friday.",
+    "note": "Remember to use the correct form of 'be' and the past participle for the future passive."
+   },
+   {
+    "wrong": "The new software has install.",
+    "right": "The new software has been installed.",
+    "note": "The present perfect passive requires 'has/have been' + past participle."
+   },
+   {
+    "wrong": "The documents are being prepare.",
+    "right": "The documents are being prepared.",
+    "note": "Always use the past participle form of the main verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.passive-all-tenses.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The old building ___ down next month.",
+   "options": [
+    "is pulled",
+    "will be pulled",
+    "has been pulled",
+    "is being pulled"
+   ],
+   "answer": 1,
+   "explanation": "The action is planned for the future, so the future simple passive 'will be pulled' is correct."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new policy ___ by the board right now.",
+   "options": [
+    "is discussed",
+    "has been discussed",
+    "is being discussed",
+    "will be discussed"
+   ],
+   "answer": 2,
+   "explanation": "The phrase 'right now' indicates an ongoing action, requiring the present continuous passive 'is being discussed'."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "All the tickets ___ for the concert already.",
+   "options": [
+    "have sold",
+    "have been sold",
+    "are selling",
+    "will be sold"
+   ],
+   "answer": 1,
+   "explanation": "The action is completed and has a present result ('already'), so the present perfect passive 'have been sold' is used."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "This delicate equipment ___ carefully.",
+   "options": [
+    "must handle",
+    "must be handled",
+    "must handling",
+    "must handles"
+   ],
+   "answer": 1,
+   "explanation": "For modal passives, the structure is 'modal + be + past participle', so 'must be handled' is correct."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The new website ___ (design) at the moment.",
+   "answers": [
+    [
+     "is being designed"
+    ]
+   ],
+   "explanation": "The phrase 'at the moment' indicates a continuous action, so the present continuous passive 'is being designed' is needed."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "All the packages ___ (deliver) by 5 PM today.",
+   "answers": [
+    [
+     "will be delivered"
+    ]
+   ],
+   "explanation": "This describes a future action that will be completed by a specific time, requiring the future simple passive 'will be delivered'."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The ancient ruins ___ (can / visit) by tourists every day.",
+   "answers": [
+    [
+     "can be visited"
+    ]
+   ],
+   "explanation": "This expresses a possibility or ability, so a modal passive with 'can' is appropriate: 'can be visited'."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "new",
+    "library",
+    "is",
+    "being",
+    "built",
+    "downtown",
+    "."
+   ],
+   "distractors": [
+    "builds",
+    "was"
+   ],
+   "explanation": "This sentence uses the present continuous passive to describe an ongoing construction."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "report",
+    "must",
+    "be",
+    "submitted",
+    "before",
+    "noon",
+    "."
+   ],
+   "distractors": [
+    "submitting",
+    "should"
+   ],
+   "explanation": "This sentence uses a modal passive to express an obligation."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The new bridge is being build right now.",
+   "answers": [
+    "The new bridge is being built right now."
+   ],
+   "explanation": "The past participle of 'build' is 'built', not 'build'."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The email should send by the end of the day.",
+   "answers": [
+    "The email should be sent by the end of the day."
+   ],
+   "explanation": "For modal passives, the structure is 'modal + be + past participle'."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Someone is cleaning the office right now.",
+   "instruction": "Rewrite in the passive voice.",
+   "answers": [
+    "The office is being cleaned right now."
+   ],
+   "explanation": "To change to passive, the object 'the office' becomes the subject, and the verb changes to 'be' + past participle in the same tense (present continuous)."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They will announce the results tomorrow.",
+   "instruction": "Rewrite in the passive voice.",
+   "answers": [
+    "The results will be announced tomorrow."
+   ],
+   "explanation": "The object 'the results' becomes the subject, and the future simple active verb 'will announce' becomes the future simple passive 'will be announced'."
+  },
+  {
+   "id": "ex.b2.passive-all-tenses.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.passive-all-tenses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The new software update",
+     "right": "is being rolled out to users."
+    },
+    {
+     "left": "The ancient city walls",
+     "right": "have been carefully preserved."
+    },
+    {
+     "left": "All the necessary documents",
+     "right": "will be prepared by the assistant."
+    },
+    {
+     "left": "The delicious meal",
+     "right": "must be enjoyed while it's hot."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "is being (built|done|made)",
+  "has been (seen|written|done)",
+  "will be (announced|held|sent)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.passive-all-tenses.01": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.02": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.03": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.04": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.05": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.06": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.07": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.08": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.09": {
+    "status": "drop",
+    "note": "Ambiguous: Both options form grammatically correct sentences, though the task includes unused distractor tokens."
+   },
+   "ex.b2.passive-all-tenses.10": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.11": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.12": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.13": {
+    "status": "pass"
+   },
+   "ex.b2.passive-all-tenses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 7152908,
+   "text": "Next year's conference will be held in Australia.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 49961,
+   "text": "The festival will be held next week.",
+   "author": "CK"
+  }
+ ]
+}

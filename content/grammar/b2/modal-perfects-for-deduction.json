@@ -1,0 +1,474 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "modal-perfects-for-deduction",
+ "draftHash": "522387f7dbdc9704",
+ "grammarPoint": {
+  "id": "gp.modal-perfects-for-deduction",
+  "level": "B2",
+  "topicId": "topic.modals",
+  "title": "Must have, might have, can't have",
+  "summary": "Use 'must have', 'might have', and 'can't have' to make deductions or guesses about things that happened in the past.",
+  "explanation": "When we want to make a guess or a deduction about something that happened in the past, we use modal verbs followed by 'have' and the past participle of the main verb.\n\nWe use *must have* + past participle when we are almost certain that something happened. It's a strong logical conclusion based on evidence. For example, if you see wet streets, you might say, \"It *must have rained* last night.\"\n\nWe use *can't have* + past participle when we are almost certain that something *didn't* happen. It expresses a strong belief that something was impossible in the past. For instance, \"They *can't have finished* the race already; it just started!\"\n\nWe use *might have* + past participle when we think something was possible, but we are not sure. It expresses uncertainty or a weaker possibility. For example, \"I don't know where my keys are. I *might have left* them at the office.\"",
+  "patterns": [
+   "Subject + must have + past participle",
+   "Subject + can't have + past participle",
+   "Subject + might have + past participle"
+  ],
+  "examples": [
+   {
+    "text": "The lights are off. They must have gone out.",
+    "note": "Expresses a strong deduction that they left.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She might have forgotten her umbrella.",
+    "note": "Indicates a possibility, but not certainty.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He can't have finished the entire book in one hour!",
+    "note": "Shows strong certainty that it was impossible for him to finish.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I saw a new bike in their garage. They must have bought it recently.",
+    "note": "A logical conclusion based on observation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The package isn't here. It might have been delivered to the wrong address.",
+    "note": "Expresses a possible past event in the passive voice.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He must be tired yesterday.",
+    "right": "He must have been tired yesterday.",
+    "note": "Use 'must have' for deductions about the past."
+   },
+   {
+    "wrong": "They can't know about the surprise party last week.",
+    "right": "They can't have known about the surprise party last week.",
+    "note": "'Can't have' expresses impossibility in the past."
+   },
+   {
+    "wrong": "She might have went home early.",
+    "right": "She might have gone home early.",
+    "note": "Always use the past participle after 'have'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ground is completely wet. It ___ rained heavily last night.",
+   "options": [
+    "might have",
+    "can't have",
+    "must have"
+   ],
+   "answer": 2,
+   "explanation": "'Must have' is used for a strong deduction based on clear evidence."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I haven't seen David at work all week. He ___ gone on vacation.",
+   "options": [
+    "can't have",
+    "must have",
+    "might have"
+   ],
+   "answer": 2,
+   "explanation": "'Might have' suggests a possibility, as there's no definite proof he's on vacation."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She looks very happy. She ___ received good news.",
+   "options": [
+    "can't have",
+    "must have",
+    "might have"
+   ],
+   "answer": 1,
+   "explanation": "Her happiness is strong evidence, so 'must have' is the best deduction."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "That restaurant ___ been open yesterday; it was a national holiday.",
+   "options": [
+    "must have",
+    "might have",
+    "can't have"
+   ],
+   "answer": 2,
+   "explanation": "A national holiday makes it highly improbable for the restaurant to be open, so 'can't have' expresses this strong impossibility."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The window is broken. Someone ___ ___ thrown a ball at it.",
+   "answers": [
+    [
+     "must",
+     "have"
+    ]
+   ],
+   "explanation": "The broken window is strong evidence for a past action, so 'must have' is appropriate."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I tried calling her, but there was no answer. She ___ ___ been out.",
+   "answers": [
+    [
+     "might",
+     "have"
+    ]
+   ],
+   "explanation": "No answer suggests a possibility, so 'might have' is used for uncertainty."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ ___ seen us, we were hiding behind the big tree.",
+   "answers": [
+    [
+     "can't",
+     "have"
+    ]
+   ],
+   "explanation": "Hiding behind a big tree makes it impossible for them to have seen us, so 'can't have' is correct."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "must",
+    "have",
+    "forgotten",
+    "his",
+    "keys",
+    "."
+   ],
+   "explanation": "This sentence uses 'must have' to make a strong deduction about a past event."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "might",
+    "have",
+    "missed",
+    "the",
+    "train",
+    "."
+   ],
+   "explanation": "This sentence uses 'might have' to express a possibility about a past event."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She must be left her phone at home.",
+   "answers": [
+    "She must have left her phone at home."
+   ],
+   "explanation": "For past deductions, 'must' is followed by 'have' and the past participle ('left')."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They can't had known about the change.",
+   "answers": [
+    "They can't have known about the change."
+   ],
+   "explanation": "The correct structure for past impossibility is 'can't have' followed by the past participle ('known')."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I'm sure he finished the report.",
+   "instruction": "Use the words 'must have'.",
+   "answers": [
+    "He must have finished the report."
+   ],
+   "explanation": "'Must have' expresses strong certainty about a past action."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Perhaps she didn't receive the message.",
+   "instruction": "Rewrite using 'might have'.",
+   "answers": [
+    "She might not have received the message.",
+    "She might have not received the message."
+   ],
+   "explanation": "'Might have' expresses a possibility about a past event. The negative can be formed with 'might not have'."
+  },
+  {
+   "id": "ex.b2.modal-perfects-for-deduction.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.modal-perfects-for-deduction"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The lights are off in their apartment.",
+     "right": "They must have gone out."
+    },
+    {
+     "left": "She's not answering her phone.",
+     "right": "She might have been busy."
+    },
+    {
+     "left": "The door was unlocked when I arrived.",
+     "right": "Someone must have forgotten to lock it."
+    },
+    {
+     "left": "He looks incredibly tired today.",
+     "right": "He can't have slept well last night."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(must|might|can't) have been",
+  "(must|might|can't) have [a-z]+ed",
+  "(must|might|can't) have (done|gone|seen|taken|made|given|come|found|known|felt|left|put|said|thought|told|understood|written|eaten|forgotten|slept)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.modal-perfects-for-deduction.01": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.02": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'might have' and 'must have' are grammatically correct and contextually natural."
+   },
+   "ex.b2.modal-perfects-for-deduction.03": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.04": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.modal-perfects-for-deduction.05: needs one answer list per gap (2)"
+   },
+   "ex.b2.modal-perfects-for-deduction.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.modal-perfects-for-deduction.06: needs one answer list per gap (2)"
+   },
+   "ex.b2.modal-perfects-for-deduction.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.modal-perfects-for-deduction.07: needs one answer list per gap (2)"
+   },
+   "ex.b2.modal-perfects-for-deduction.08": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.09": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.10": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.11": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.12": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.13": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.14": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.15": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.16": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.17": {
+    "status": "pass"
+   },
+   "ex.b2.modal-perfects-for-deduction.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.modal-perfects-for-deduction.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.modal-perfects-for-deduction"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The restaurant is closed. They ___ decided to take a day off.",
+    "options": [
+     "must have",
+     "can't have",
+     "might have",
+     "should have"
+    ],
+    "answer": 0,
+    "explanation": "'Must have' indicates a strong deduction based on the evidence (the restaurant is closed)."
+   },
+   {
+    "id": "ex.b2.modal-perfects-for-deduction.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.modal-perfects-for-deduction"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I called her phone, but it went straight to voicemail. She ___ turned it off.",
+    "options": [
+     "can't have",
+     "must have",
+     "might have",
+     "would have"
+    ],
+    "answer": 1,
+    "explanation": "'Must have' is used for a strong deduction that she turned off her phone."
+   },
+   {
+    "id": "ex.b2.modal-perfects-for-deduction.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.modal-perfects-for-deduction"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "He didn't answer my email. He ___ received it.",
+    "options": [
+     "must have",
+     "can't have",
+     "might have",
+     "should have"
+    ],
+    "answer": 1,
+    "explanation": "'Can't have' expresses a strong negative deduction, meaning it's highly unlikely he received it."
+   },
+   {
+    "id": "ex.b2.modal-perfects-for-deduction.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.modal-perfects-for-deduction"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I'm not sure why she's late. She ___ missed her bus.",
+    "options": [
+     "must have",
+     "can't have",
+     "might have",
+     "will have"
+    ],
+    "answer": 2,
+    "explanation": "'Might have' expresses a possibility or guess about why she is late."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 9768863,
+   "text": "Yanni's hands are sticky. He must have been eating figs.",
+   "author": "Amastan"
+  },
+  {
+   "sentenceId": 1951815,
+   "text": "Tom can't have gone far.",
+   "author": "CK"
+  }
+ ]
+}

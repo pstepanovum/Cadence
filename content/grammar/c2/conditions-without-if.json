@@ -1,0 +1,382 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "conditions-without-if",
+ "draftHash": "54f2f248a587e5ef",
+ "grammarPoint": {
+  "id": "gp.conditions-without-if",
+  "level": "C2",
+  "topicId": "topic.conditionals",
+  "title": "But for, otherwise, supposing",
+  "summary": "Explore advanced conditional expressions like 'but for', 'otherwise', and 'supposing' to convey conditions and their consequences in various contexts.",
+  "explanation": "Beyond standard 'if' clauses, English offers several sophisticated ways to express conditions. These expressions allow for more nuanced communication, often implying a specific relationship between the condition and the outcome.\n\n*But for* introduces a condition that prevented something from happening. It means 'if it had not been for' or 'except for'. It's typically followed by a noun phrase and then a clause describing a past hypothetical outcome, often negative.\n\n*Otherwise* indicates what will happen if a stated condition or action is not met or performed. It acts as a conjunction, linking a statement to its potential negative consequence if the first part isn't true or doesn't occur. It often implies 'if not'.\n\n*Supposing (that)* introduces a hypothetical situation or assumption, similar to 'what if' or 'imagine if'. It can be used to ask about the consequences of a hypothetical event or to state a condition for a future action. It can refer to present, future, or past hypotheticals.",
+  "patterns": [
+   "But for + noun/noun phrase, [result clause (often past conditional)]",
+   "[statement]; otherwise, [consequence clause]",
+   "Supposing (that) + clause, [question/result clause]"
+  ],
+  "examples": [
+   {
+    "text": "But for the sudden downpour, the outdoor concert would have been a huge success.",
+    "note": "Shows what prevented a positive outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You must complete the registration by Friday; otherwise, your spot will be given away.",
+    "note": "Indicates the consequence if the condition (completing registration) is not met.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He took a different route; otherwise, he would have been caught in the traffic jam.",
+    "note": "Explains what would have happened if a past action hadn't occurred.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Supposing you had unlimited resources, what project would you undertake?",
+    "note": "Introduces a hypothetical past condition to ask about a present/future action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Supposing the flight is delayed, we'll need to find alternative transport.",
+    "note": "Presents a hypothetical future condition and its consequence.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "But for the rain, we go to the park.",
+    "right": "But for the rain, we would have gone to the park.",
+    "note": "Use a conditional perfect tense after 'but for' when referring to a past event."
+   },
+   {
+    "wrong": "Study hard, else you will fail.",
+    "right": "Study hard; otherwise, you will fail.",
+    "note": "'Otherwise' is the correct formal conjunction for 'if not'."
+   },
+   {
+    "wrong": "Supposing if she calls, tell her I'm busy.",
+    "right": "Supposing she calls, tell her I'm busy.",
+    "note": "Do not use 'if' after 'supposing' as it is redundant."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.conditions-without-if.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The expedition would have failed completely ___ the team's exceptional resilience.",
+   "options": [
+    "otherwise",
+    "supposing",
+    "but for",
+    "if not"
+   ],
+   "answer": 2,
+   "explanation": "'But for' is used here to mean 'if it had not been for', indicating that the resilience prevented the failure."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You need to back up your files regularly; ___, you risk losing important data.",
+   "options": [
+    "supposing",
+    "otherwise",
+    "but for",
+    "unless"
+   ],
+   "answer": 1,
+   "explanation": "'Otherwise' correctly introduces the negative consequence of not backing up files."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the experiment yields unexpected results, how should we proceed?",
+   "options": [
+    "But for",
+    "Otherwise",
+    "Supposing",
+    "Unless"
+   ],
+   "answer": 2,
+   "explanation": "'Supposing' is used to introduce a hypothetical situation and ask about the course of action."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.04",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ the early warning system, the city would have suffered far greater damage from the storm.",
+   "answers": [
+    [
+     "But for"
+    ]
+   ],
+   "explanation": "'But for' means 'if it had not been for', indicating the warning system prevented worse damage."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Please confirm your attendance by Tuesday; ___, we'll assume you're not coming.",
+   "answers": [
+    [
+     "otherwise"
+    ]
+   ],
+   "explanation": "'Otherwise' introduces the consequence if the condition (confirming attendance) is not met."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you were offered a job in another country, would you accept it?",
+   "answers": [
+    [
+     "Supposing"
+    ]
+   ],
+   "explanation": "'Supposing' introduces a hypothetical situation to ask about a potential decision."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.07",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "But",
+    "for",
+    "her",
+    "quick",
+    "thinking",
+    ",",
+    "the",
+    "crisis",
+    "would",
+    "have",
+    "escalated",
+    "."
+   ],
+   "distractors": [
+    "if",
+    "then"
+   ],
+   "explanation": "This sentence uses 'but for' to show that her quick thinking prevented the crisis from escalating."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Supposing",
+    "they",
+    "don't",
+    "agree",
+    ",",
+    "what's",
+    "our",
+    "backup",
+    "plan",
+    "?"
+   ],
+   "distractors": [
+    "unless",
+    "however"
+   ],
+   "explanation": "This sentence uses 'supposing' to introduce a hypothetical negative outcome and ask for a contingency plan."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.09",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "You must wear a helmet, else you risk serious injury.",
+   "answers": [
+    "You must wear a helmet; otherwise, you risk serious injury."
+   ],
+   "explanation": "'Otherwise' is the correct and more formal word to express the consequence of not fulfilling a condition."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "But for the excellent navigation, they would get lost in the desert.",
+   "answers": [
+    "But for the excellent navigation, they would have gotten lost in the desert.",
+    "But for the excellent navigation, they would have got lost in the desert."
+   ],
+   "explanation": "When 'but for' refers to a past event that prevented something, the main clause should use the past perfect conditional ('would have + past participle')."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.11",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If it hadn't been for the timely intervention, the project would have failed.",
+   "instruction": "Rewrite using 'But for'.",
+   "answers": [
+    "But for the timely intervention, the project would have failed."
+   ],
+   "explanation": "'But for' concisely replaces 'if it hadn't been for' to express the same conditional meaning."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "What if the power goes out during the presentation?",
+   "instruction": "Rewrite using 'Supposing'.",
+   "answers": [
+    "Supposing the power goes out during the presentation?"
+   ],
+   "explanation": "'Supposing' can introduce a hypothetical question, similar to 'what if'."
+  },
+  {
+   "id": "ex.c2.conditions-without-if.13",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.conditions-without-if"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "But for the unexpected delay,",
+     "right": "we would have arrived at the airport on time."
+    },
+    {
+     "left": "You should double-check the figures;",
+     "right": "otherwise, there might be errors in the report."
+    },
+    {
+     "left": "Supposing the new policy is rejected,",
+     "right": "what will be our next course of action?"
+    },
+    {
+     "left": "He always carries an umbrella;",
+     "right": "otherwise, he'd get soaked in sudden rain."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "but for [a-z ]+, [a-z ]+ would have",
+  "[a-z ]+ otherwise [a-z ]+",
+  "supposing [a-z ]+, [a-z ]+\\?"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.conditions-without-if.01": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.02": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.03": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.04": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.05": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.06": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.07": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.08": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.09": {
+    "status": "pass",
+    "note": "Checker slip: The key correctly uses a semicolon with 'otherwise', whereas the other answer creates a comma splice."
+   },
+   "ex.c2.conditions-without-if.10": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.11": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.12": {
+    "status": "pass"
+   },
+   "ex.c2.conditions-without-if.13": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 289375,
+   "text": "He is noisy, but otherwise a very nice boy.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 8257472,
+   "text": "It's very low impact because they're things that would otherwise go to trash.",
+   "author": "Hybrid"
+  }
+ ]
+}

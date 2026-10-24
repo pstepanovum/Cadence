@@ -1,0 +1,405 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "so-and-such",
+ "draftHash": "b01d272dd52761a5",
+ "grammarPoint": {
+  "id": "gp.so-and-such",
+  "level": "B1",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "So and such",
+  "summary": "Use \"so\" and \"such\" to emphasize adjectives or noun phrases, often with a \"that-clause\" to show a result.",
+  "explanation": "We use *so* and *such* to add emphasis to adjectives or noun phrases. They make our descriptions stronger.\n\nUse *so* before an *adjective* or *adverb*. For example, \"The coffee was *so hot*.\" or \"She sings *so beautifully*.\"\n\nUse *such* before a *noun phrase* (an adjective + a noun, or just a noun). For example, \"It was *such a hot day*.\" or \"They are *such kind people*.\" Remember to use 'a' or 'an' with singular countable nouns after 'such'.\n\nOften, we follow *so* or *such* with a *that-clause* to explain the *result* of the emphasis. For example, \"The coffee was so hot *that I couldn't drink it*.\" or \"It was such a hot day *that we went to the beach*.\" The word 'that' can sometimes be omitted in informal speech, but it's good practice to include it.",
+  "patterns": [
+   "so + adjective/adverb",
+   "such + (a/an) + adjective + noun",
+   "such + plural noun",
+   "such + uncountable noun",
+   "... so + adjective/adverb + that + clause",
+   "... such + (a/an) + adjective + noun + that + clause"
+  ],
+  "examples": [
+   {
+    "text": "The book was so interesting.",
+    "note": "Uses 'so' to emphasize the adjective 'interesting'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It was such an interesting book.",
+    "note": "Uses 'such' to emphasize the noun phrase 'an interesting book'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He spoke so quietly that I couldn't hear him.",
+    "note": "Uses 'so' with an adverb and a 'that-clause' to show a result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They are such friendly neighbors that everyone loves them.",
+    "note": "Uses 'such' with a plural noun phrase and a 'that-clause' to show a result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The weather was such a mess that we stayed inside all day.",
+    "note": "Uses 'such' with an uncountable noun phrase and a 'that-clause' to show a result.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "It was so a good movie.",
+    "right": "It was such a good movie.",
+    "note": "Use 'such' before a noun phrase (a good movie)."
+   },
+   {
+    "wrong": "The soup was such delicious.",
+    "right": "The soup was so delicious.",
+    "note": "Use 'so' before an adjective (delicious)."
+   },
+   {
+    "wrong": "She ran so fast, she won the race.",
+    "right": "She ran so fast that she won the race.",
+    "note": "Include 'that' to introduce the result clause."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.so-and-such.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The concert was ___ loud that my ears hurt.",
+   "options": [
+    "such",
+    "so",
+    "such a"
+   ],
+   "answer": 1,
+   "explanation": "'So' is used before an adjective like 'loud'."
+  },
+  {
+   "id": "ex.b1.so-and-such.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It was ___ beautiful day for a picnic.",
+   "options": [
+    "so",
+    "such",
+    "such a"
+   ],
+   "answer": 2,
+   "explanation": "'Such a' is used before a singular countable noun phrase like 'beautiful day'."
+  },
+  {
+   "id": "ex.b1.so-and-such.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They had ___ many questions that the meeting ran late.",
+   "options": [
+    "so",
+    "such",
+    "such a"
+   ],
+   "answer": 0,
+   "explanation": "'So' is used before 'many' or 'much' when followed by a noun."
+  },
+  {
+   "id": "ex.b1.so-and-such.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The presentation was ___ interesting that everyone paid attention.",
+   "options": [
+    "such",
+    "so",
+    "such an"
+   ],
+   "answer": 1,
+   "explanation": "'So' is used before an adjective like 'interesting'."
+  },
+  {
+   "id": "ex.b1.so-and-such.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The traffic was ___ bad ___ we arrived an hour late.",
+   "answers": [
+    [
+     "so"
+    ],
+    [
+     "that"
+    ]
+   ],
+   "explanation": "'So' emphasizes the adjective 'bad', and 'that' introduces the result clause."
+  },
+  {
+   "id": "ex.b1.so-and-such.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It was ___ difficult decision to make.",
+   "answers": [
+    [
+     "such a"
+    ]
+   ],
+   "explanation": "'Such a' is used before a singular countable noun phrase like 'difficult decision'."
+  },
+  {
+   "id": "ex.b1.so-and-such.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She has ___ good ideas ___ she's always asked to lead projects.",
+   "answers": [
+    [
+     "such"
+    ],
+    [
+     "that"
+    ]
+   ],
+   "explanation": "'Such' is used before a plural noun phrase like 'good ideas', and 'that' introduces the result."
+  },
+  {
+   "id": "ex.b1.so-and-such.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "food",
+    "was",
+    "so",
+    "spicy",
+    "that",
+    "I",
+    "needed",
+    "water",
+    "."
+   ],
+   "distractors": [
+    "much"
+   ],
+   "explanation": "This sentence uses 'so + adjective + that-clause' to show a result."
+  },
+  {
+   "id": "ex.b1.so-and-such.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "was",
+    "such",
+    "a",
+    "long",
+    "journey",
+    "that",
+    "we",
+    "were",
+    "exhausted",
+    "."
+   ],
+   "distractors": [
+    "very"
+   ],
+   "explanation": "This sentence uses 'such + a + noun phrase + that-clause' to show a result."
+  },
+  {
+   "id": "ex.b1.so-and-such.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He is such a talented that he won the competition.",
+   "answers": [
+    "He is so talented that he won the competition."
+   ],
+   "explanation": "'So' should be used before the adjective 'talented' when followed by a 'that-clause'."
+  },
+  {
+   "id": "ex.b1.so-and-such.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The movie was so a sad story.",
+   "answers": [
+    "The movie was such a sad story."
+   ],
+   "explanation": "'Such a' is used before a singular countable noun phrase like 'sad story'."
+  },
+  {
+   "id": "ex.b1.so-and-such.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The problem was very complicated. We couldn't solve it.",
+   "instruction": "Combine the sentences using 'so...that'.",
+   "answers": [
+    "The problem was so complicated that we couldn't solve it."
+   ],
+   "explanation": "Use 'so' before the adjective 'complicated' and 'that' to connect the result."
+  },
+  {
+   "id": "ex.b1.so-and-such.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It was a very exciting game. Everyone cheered loudly.",
+   "instruction": "Combine the sentences using 'such...that'.",
+   "answers": [
+    "It was such an exciting game that everyone cheered loudly."
+   ],
+   "explanation": "Use 'such an' before the noun phrase 'exciting game' and 'that' to connect the result."
+  },
+  {
+   "id": "ex.b1.so-and-such.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.so-and-such"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The music was so loud",
+     "right": "that I couldn't hear myself think."
+    },
+    {
+     "left": "It was such a beautiful view",
+     "right": "that we took many photos."
+    },
+    {
+     "left": "They had so much fun",
+     "right": "that they didn't want to leave."
+    },
+    {
+     "left": "She gave such good advice",
+     "right": "that I followed it immediately."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "so \\w+ that",
+  "such (a|an) \\w+ \\w+ that",
+  "such \\w+ that"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.so-and-such.01": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.02": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.03": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.04": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.05": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.06": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.07": {
+    "status": "pass",
+    "note": "Checker slip: The word 'so' cannot directly modify a noun phrase such as 'good ideas'."
+   },
+   "ex.b1.so-and-such.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits the token 'much', and 'needed much water' in the other answer is unnatural."
+   },
+   "ex.b1.so-and-such.09": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.10": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.11": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.12": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.13": {
+    "status": "pass"
+   },
+   "ex.b1.so-and-such.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 5202404,
+   "text": "I was so hungry that I ate it.",
+   "author": "tabular"
+  },
+  {
+   "sentenceId": 2748842,
+   "text": "That book was so boring that I couldn't finish it.",
+   "author": "CK"
+  }
+ ]
+}

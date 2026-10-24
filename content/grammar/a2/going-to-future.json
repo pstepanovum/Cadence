@@ -1,0 +1,486 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "going-to-future",
+ "draftHash": "5809e86168cbc275",
+ "grammarPoint": {
+  "id": "gp.going-to-future",
+  "level": "A2",
+  "topicId": "topic.future",
+  "title": "Going to",
+  "summary": "Use \"going to\" to talk about future plans you have already made or to make predictions based on what you see now.",
+  "explanation": "We use *going to* to talk about future plans that you have already decided. These are not sudden decisions, but things you have thought about and planned.\n\nWe also use *going to* to make predictions about the future when we have clear evidence in the present. This means you can see or hear something now that tells you what will happen.",
+  "patterns": [
+   "Subject + be (am/is/are) + going to + base verb",
+   "Subject + be (am/is/are) + not + going to + base verb",
+   "Be (Am/Is/Are) + Subject + going to + base verb?"
+  ],
+  "examples": [
+   {
+    "text": "I'm going to start a new hobby next month.",
+    "note": "This shows a plan that has already been decided.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Look at those dark clouds! It's going to rain soon.",
+    "note": "This is a prediction based on current evidence (dark clouds).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They are going to visit their grandparents this summer.",
+    "note": "This describes a future plan they have made.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Be careful! You're going to drop that plate.",
+    "note": "This is a prediction based on what is happening right now.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She isn't going to come to the party tonight.",
+    "note": "This is a negative statement about a future plan.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He going to call me later.",
+    "right": "He *is* going to call me later.",
+    "note": "Remember to use the correct form of 'be' (am/is/are) before 'going to'."
+   },
+   {
+    "wrong": "We are going buy a new TV.",
+    "right": "We are going *to* buy a new TV.",
+    "note": "Always include 'to' after 'going' and before the base verb."
+   },
+   {
+    "wrong": "They is going to travel.",
+    "right": "They *are* going to travel.",
+    "note": "Make sure the 'be' verb agrees with the subject (e.g., 'they are', 'he is')."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.going-to-future.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister ___ going to study abroad next year.",
+   "options": [
+    "am",
+    "is",
+    "are"
+   ],
+   "answer": 1,
+   "explanation": "For the singular subject 'my sister', we use 'is'."
+  },
+  {
+   "id": "ex.a2.going-to-future.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ going to have dinner at home tonight.",
+   "options": [
+    "am",
+    "is",
+    "are"
+   ],
+   "answer": 2,
+   "explanation": "For the plural subject 'we', we use 'are'."
+  },
+  {
+   "id": "ex.a2.going-to-future.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ going to learn how to cook Italian food.",
+   "options": [
+    "am",
+    "is",
+    "are"
+   ],
+   "answer": 0,
+   "explanation": "For the subject 'I', we use 'am'."
+  },
+  {
+   "id": "ex.a2.going-to-future.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Look at the sky! It's very dark. It ___ to snow.",
+   "options": [
+    "going",
+    "is going",
+    "is going to"
+   ],
+   "answer": 2,
+   "explanation": "The full structure is 'be + going to + base verb'. 'Is going to' is correct here."
+  },
+  {
+   "id": "ex.a2.going-to-future.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ ___ buy a new apartment next month.",
+   "answers": [
+    [
+     "are"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "For the subject 'they', use 'are'. The structure requires 'to' before the base verb 'buy'."
+  },
+  {
+   "id": "ex.a2.going-to-future.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ not ___ finish this project today.",
+   "answers": [
+    [
+     "am"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "For the subject 'I', use 'am'. The structure requires 'to' before the base verb 'finish'."
+  },
+  {
+   "id": "ex.a2.going-to-future.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ she ___ visit her friends this weekend?",
+   "answers": [
+    [
+     "Is"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "For the subject 'she', use 'Is' in a question. The structure requires 'to' before the base verb 'visit'."
+  },
+  {
+   "id": "ex.a2.going-to-future.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "is",
+    "going",
+    "to",
+    "start",
+    "a",
+    "new",
+    "job",
+    "soon",
+    "."
+   ],
+   "distractors": [
+    "will"
+   ],
+   "explanation": "This sentence describes a future plan using 'going to'."
+  },
+  {
+   "id": "ex.a2.going-to-future.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It's",
+    "going",
+    "to",
+    "be",
+    "a",
+    "beautiful",
+    "day",
+    "tomorrow",
+    "."
+   ],
+   "distractors": [
+    "was"
+   ],
+   "explanation": "This sentence makes a prediction about the weather using 'going to'."
+  },
+  {
+   "id": "ex.a2.going-to-future.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We going to have a picnic.",
+   "answers": [
+    "We are going to have a picnic."
+   ],
+   "explanation": "The auxiliary verb 'are' is missing before 'going to'."
+  },
+  {
+   "id": "ex.a2.going-to-future.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She is going meet her family.",
+   "answers": [
+    "She is going to meet her family."
+   ],
+   "explanation": "The word 'to' is missing between 'going' and the base verb 'meet'."
+  },
+  {
+   "id": "ex.a2.going-to-future.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I plan to buy a new phone.",
+   "instruction": "Rewrite using 'going to'.",
+   "answers": [
+    "I am going to buy a new phone."
+   ],
+   "explanation": "The instruction asks to use 'going to' to express the future plan."
+  },
+  {
+   "id": "ex.a2.going-to-future.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The baby looks sleepy. He will fall asleep soon.",
+   "instruction": "Rewrite the second sentence using 'going to' for the prediction.",
+   "answers": [
+    "The baby looks sleepy. He is going to fall asleep soon.",
+    "He is going to fall asleep soon."
+   ],
+   "explanation": "The instruction asks to use 'going to' for the prediction based on current evidence."
+  },
+  {
+   "id": "ex.a2.going-to-future.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.going-to-future"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I'm going to",
+     "right": "learn a new language."
+    },
+    {
+     "left": "They are going to",
+     "right": "move to a bigger house."
+    },
+    {
+     "left": "Look out! You're going to",
+     "right": "trip over that box."
+    },
+    {
+     "left": "Is he going to",
+     "right": "join the sports club?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(am|is|are) going to [a-z]+",
+  "(am|is|are) not going to [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.going-to-future.01": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.02": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.03": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.04": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The key incorrectly omits 'going', whereas 'going to' is correct."
+   },
+   "ex.a2.going-to-future.06": {
+    "status": "drop",
+    "note": "Key judged wrong: The key 'am not to finish' is unnatural here, while 'going to' is correct."
+   },
+   "ex.a2.going-to-future.07": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits 'going', making 'going to' the correct response for the second gap."
+   },
+   "ex.a2.going-to-future.08": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.09": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.10": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.11": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.12": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly rewrite the target sentence using 'going to'."
+   },
+   "ex.a2.going-to-future.14": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.15": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.16": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.17": {
+    "status": "pass"
+   },
+   "ex.a2.going-to-future.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.a2.going-to-future.15",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.going-to-future"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My friends ___ going to help me move next weekend.",
+    "options": [
+     "are",
+     "is",
+     "am"
+    ],
+    "answer": 0,
+    "explanation": "'My friends' is plural, so we use 'are'."
+   },
+   {
+    "id": "ex.a2.going-to-future.16",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.going-to-future"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I ___ going to learn how to play the guitar.",
+    "options": [
+     "am",
+     "is",
+     "are"
+    ],
+    "answer": 0,
+    "explanation": "With 'I', we use 'am'."
+   },
+   {
+    "id": "ex.a2.going-to-future.17",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.going-to-future"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Be careful! You ___ going to drop that glass!",
+    "options": [
+     "are",
+     "is",
+     "am"
+    ],
+    "answer": 0,
+    "explanation": "With 'you', we use 'are'."
+   },
+   {
+    "id": "ex.a2.going-to-future.18",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.going-to-future"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "What ___ he going to do after work?",
+    "options": [
+     "is",
+     "are",
+     "am"
+    ],
+    "answer": 0,
+    "explanation": "With 'he', we use 'is'."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 754673,
+   "text": "This afternoon the weather is going to get worse.",
+   "author": "Zifre"
+  },
+  {
+   "sentenceId": 262159,
+   "text": "I am going to Hawaii next year.",
+   "author": "CK"
+  }
+ ]
+}

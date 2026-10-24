@@ -1,0 +1,481 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "and-but-or-because-so",
+ "draftHash": "d38dc5c6ea6a2152",
+ "grammarPoint": {
+  "id": "gp.and-but-or-because-so",
+  "level": "A2",
+  "topicId": "topic.linking",
+  "title": "And, but, or, because, so",
+  "summary": "Learn to connect two simple ideas or sentences into one longer sentence using 'and', 'but', 'or', 'because', and 'so'.",
+  "explanation": "We often want to join two short sentences or ideas together to make one longer, more complete sentence. We use linking words like *and*, *but*, *or*, *because*, and *so* to do this. These words help show the relationship between the two ideas.\n\n*And* adds more information. It connects two similar ideas or things. *But* shows a contrast or something unexpected. It connects two ideas that are different or opposite. *Or* gives a choice between two options.\n\n*Because* tells us the reason for something. It answers the question \"Why?\". *So* tells us the result or consequence of something. It answers the question \"What happened next?\" or \"What was the effect?\".",
+  "patterns": [
+   "Idea 1, and Idea 2",
+   "Idea 1, but Idea 2",
+   "Idea 1, or Idea 2",
+   "Idea 1, because Idea 2",
+   "Idea 1, so Idea 2"
+  ],
+  "examples": [
+   {
+    "text": "I like to read books, and I enjoy watching movies.",
+    "note": "'And' adds a similar idea.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It was sunny, but it was still cold outside.",
+    "note": "'But' shows a contrast between the two ideas.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you want to eat pizza, or would you prefer pasta?",
+    "note": "'Or' offers a choice between two options.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She was happy because she got a new job.",
+    "note": "'Because' gives the reason for her happiness.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He studied hard, so he passed the exam easily.",
+    "note": "'So' shows the result of studying hard.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I was tired, so I went to bed early because I was tired.",
+    "right": "I was tired, so I went to bed early.",
+    "note": "Avoid repeating the reason when using 'so'."
+   },
+   {
+    "wrong": "She likes apples, but she likes oranges.",
+    "right": "She likes apples, and she likes oranges.",
+    "note": "Use 'and' to connect two similar positive ideas."
+   },
+   {
+    "wrong": "He didn't come because he was sick.",
+    "right": "He didn't come, because he was sick.",
+    "note": "Remember to use a comma before 'because' when it connects two independent clauses."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.and-but-or-because-so.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I wanted to go to the park, ___ it started raining.",
+   "options": [
+    "and",
+    "but",
+    "so"
+   ],
+   "answer": 1,
+   "explanation": "'But' shows a contrast between wanting to go and the rain stopping it."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We can meet at 7 PM, ___ we can meet at 8 PM.",
+   "options": [
+    "and",
+    "because",
+    "or"
+   ],
+   "answer": 2,
+   "explanation": "'Or' offers a choice between two different times."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He was hungry, ___ he made a sandwich.",
+   "options": [
+    "because",
+    "so",
+    "but"
+   ],
+   "answer": 1,
+   "explanation": "'So' shows the result of being hungry."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She loves to travel, ___ she visits a new country every year.",
+   "options": [
+    "and",
+    "but",
+    "or"
+   ],
+   "answer": 0,
+   "explanation": "'And' adds more information that supports the first idea."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I need to buy some milk ___ some bread.",
+   "answers": [
+    [
+     "and"
+    ]
+   ],
+   "explanation": "'And' connects two items that are both needed."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They missed the bus ___ they woke up late.",
+   "answers": [
+    [
+     "because"
+    ]
+   ],
+   "explanation": "'Because' gives the reason why they missed the bus."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It was very cold, ___ we decided to stay inside.",
+   "answers": [
+    [
+     "so"
+    ]
+   ],
+   "explanation": "'So' shows the result of the cold weather."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "was",
+    "tired",
+    ",",
+    "so",
+    "I",
+    "went",
+    "to",
+    "bed",
+    "early",
+    "."
+   ],
+   "explanation": "The sentence uses 'so' to show the result of being tired."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Do",
+    "you",
+    "want",
+    "coffee",
+    ",",
+    "or",
+    "tea",
+    "?"
+   ],
+   "distractors": [
+    "and"
+   ],
+   "explanation": "The sentence uses 'or' to offer a choice."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He likes cats, but he also likes dogs.",
+   "answers": [
+    "He likes cats, and he also likes dogs."
+   ],
+   "explanation": "'And' is used to connect two similar positive preferences, not 'but'."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She didn't eat the cake because it was too sweet.",
+   "answers": [
+    "She didn't eat the cake, because it was too sweet."
+   ],
+   "explanation": "A comma is needed before 'because' when it connects two independent clauses."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I was hungry. I ate a big lunch.",
+   "instruction": "Combine using 'so'.",
+   "answers": [
+    "I was hungry, so I ate a big lunch."
+   ],
+   "explanation": "'So' connects the reason (hungry) to the result (ate lunch)."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He wanted to go out. It was raining.",
+   "instruction": "Combine using 'but'.",
+   "answers": [
+    "He wanted to go out, but it was raining."
+   ],
+   "explanation": "'But' shows the contrast between wanting to go out and the rain."
+  },
+  {
+   "id": "ex.a2.and-but-or-because-so.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.and-but-or-because-so"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I like summer,",
+     "right": "but I don't like hot weather."
+    },
+    {
+     "left": "She studied hard,",
+     "right": "so she passed the test."
+    },
+    {
+     "left": "We can go to the beach,",
+     "right": "or we can visit the museum."
+    },
+    {
+     "left": "He was late,",
+     "right": "because his car broke down."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "and [a-z ]+",
+  "but [a-z ]+",
+  "or [a-z ]+",
+  "because [a-z ]+",
+  "so [a-z ]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.and-but-or-because-so.01": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.02": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.03": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.04": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.05": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.06": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.07": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.08": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all the provided tokens."
+   },
+   "ex.a2.and-but-or-because-so.10": {
+    "status": "drop",
+    "note": "Key judged wrong: The original sentence contains no mistake."
+   },
+   "ex.a2.and-but-or-because-so.11": {
+    "status": "drop",
+    "note": "Key judged wrong: The original sentence contains no mistake."
+   },
+   "ex.a2.and-but-or-because-so.12": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.13": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.14": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.15": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.16": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.17": {
+    "status": "pass"
+   },
+   "ex.a2.and-but-or-because-so.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.a2.and-but-or-because-so.15",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.and-but-or-because-so"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I bought some fruit ___ some vegetables at the market.",
+    "options": [
+     "but",
+     "or",
+     "and",
+     "so"
+    ],
+    "answer": 2,
+    "explanation": "'And' is used to add more items to a list."
+   },
+   {
+    "id": "ex.a2.and-but-or-because-so.16",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.and-but-or-because-so"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The movie was long, ___ it was very interesting.",
+    "options": [
+     "so",
+     "because",
+     "but",
+     "or"
+    ],
+    "answer": 2,
+    "explanation": "'But' is used to show a contrast or something unexpected."
+   },
+   {
+    "id": "ex.a2.and-but-or-because-so.17",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.and-but-or-because-so"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We can go to the beach, ___ we can visit the museum.",
+    "options": [
+     "and",
+     "so",
+     "because",
+     "or"
+    ],
+    "answer": 3,
+    "explanation": "'Or' is used to offer a choice between two options."
+   },
+   {
+    "id": "ex.a2.and-but-or-because-so.18",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.and-but-or-because-so"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "He felt sick, ___ he stayed home from work.",
+    "options": [
+     "because",
+     "but",
+     "so",
+     "and"
+    ],
+    "answer": 2,
+    "explanation": "'So' is used to show the result of an action or situation."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 19687,
+   "text": "Hurry up, or you'll be late.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 17466,
+   "text": "I was going to write to you, but I was too busy.",
+   "author": "rul"
+  }
+ ]
+}

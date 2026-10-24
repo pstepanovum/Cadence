@@ -1,0 +1,391 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "past-simple-irregular",
+ "draftHash": "510cac178aac7dee",
+ "grammarPoint": {
+  "id": "gp.past-simple-irregular",
+  "level": "A2",
+  "topicId": "topic.tenses",
+  "title": "Past simple: irregular verbs",
+  "summary": "Learn how to use common irregular verbs in the past simple to talk about finished actions and events.",
+  "explanation": "In English, most verbs form the past simple by adding '-ed' (e.g., 'walk' becomes 'walked'). However, many common verbs are *irregular*.\n\nIrregular verbs do not follow this rule. Instead, they change their form in different ways (e.g., 'go' becomes 'went', 'eat' becomes 'ate'). You need to learn these forms by heart.\n\nWe use the past simple for actions that started and finished at a specific time in the past.",
+  "patterns": [
+   "Subject + irregular verb (past form)",
+   "Did + subject + base verb?",
+   "Subject + did not + base verb"
+  ],
+  "examples": [
+   {
+    "text": "I *went* to the market this morning.",
+    "note": "Describes a completed action in the past.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She *ate* a delicious meal last night.",
+    "note": "Shows a finished event at a specific past time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They *had* a lot of fun on their trip.",
+    "note": "Talks about a past experience.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He *saw* his friends at the park yesterday.",
+    "note": "Indicates a past observation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We *made* a cake for the party.",
+    "note": "Refers to an action completed in the past.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I goed to the store.",
+    "right": "I went to the store.",
+    "note": "The past simple of 'go' is 'went', not 'goed'."
+   },
+   {
+    "wrong": "She eated breakfast.",
+    "right": "She ate breakfast.",
+    "note": "The past simple of 'eat' is 'ate', not 'eated'."
+   },
+   {
+    "wrong": "Did you saw the movie?",
+    "right": "Did you see the movie?",
+    "note": "Use the base form of the verb after 'did' or 'didn't'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.past-simple-irregular.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My brother ___ a new bike last week.",
+   "options": [
+    "buyed",
+    "bought",
+    "buys",
+    "buy"
+   ],
+   "answer": 1,
+   "explanation": "'Bought' is the correct irregular past simple form of 'buy'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ a great time at the concert.",
+   "options": [
+    "have",
+    "had",
+    "having",
+    "has"
+   ],
+   "answer": 1,
+   "explanation": "'Had' is the correct irregular past simple form of 'have'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ a letter to her grandmother.",
+   "options": [
+    "write",
+    "writes",
+    "wrote",
+    "written"
+   ],
+   "answer": 2,
+   "explanation": "'Wrote' is the correct irregular past simple form of 'write'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They ___ home late last night.",
+   "options": [
+    "came",
+    "come",
+    "comes",
+    "coming"
+   ],
+   "answer": 0,
+   "explanation": "'Came' is the correct irregular past simple form of 'come'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ (drink) a lot of water after my run.",
+   "answers": [
+    [
+     "drank"
+    ]
+   ],
+   "explanation": "The past simple of 'drink' is 'drank'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ (make) dinner for everyone yesterday.",
+   "answers": [
+    [
+     "made"
+    ]
+   ],
+   "explanation": "The past simple of 'make' is 'made'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We ___ (see) a beautiful sunset on our vacation.",
+   "answers": [
+    [
+     "saw"
+    ]
+   ],
+   "explanation": "The past simple of 'see' is 'saw'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "went",
+    "to",
+    "the",
+    "park",
+    "."
+   ],
+   "distractors": [
+    "go",
+    "goes"
+   ],
+   "explanation": "The correct order uses the irregular past form 'went' for a past action."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "ate",
+    "pizza",
+    "for",
+    "lunch",
+    "."
+   ],
+   "distractors": [
+    "eat",
+    "eating"
+   ],
+   "explanation": "The sentence describes a past action using the irregular verb 'ate'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My friend gived me a present.",
+   "answers": [
+    "My friend gave me a present."
+   ],
+   "explanation": "The past simple of 'give' is 'gave', not 'gived'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We runned a marathon last year.",
+   "answers": [
+    "We ran a marathon last year."
+   ],
+   "explanation": "The past simple of 'run' is 'ran', not 'runned'."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I go to the library every week.",
+   "instruction": "Rewrite the sentence for last week.",
+   "answers": [
+    "I went to the library last week."
+   ],
+   "explanation": "Change 'go' to its irregular past simple form 'went' and adjust the time phrase."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She eats an apple every day.",
+   "instruction": "Rewrite the sentence for yesterday.",
+   "answers": [
+    "She ate an apple yesterday."
+   ],
+   "explanation": "Change 'eats' to its irregular past simple form 'ate' and adjust the time phrase."
+  },
+  {
+   "id": "ex.a2.past-simple-irregular.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-irregular"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I saw",
+     "right": "a shooting star last night."
+    },
+    {
+     "left": "He drank",
+     "right": "all the juice in the fridge."
+    },
+    {
+     "left": "They made",
+     "right": "a big decision yesterday."
+    },
+    {
+     "left": "We had",
+     "right": "a wonderful time at the beach."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "I (went|saw|ate|drank|bought|made|had) ",
+  "(He|She|They|We) (went|saw|ate|drank|bought|made|had) ",
+  "Did (you|he|she|they|we) (go|see|eat|drink|buy|make|have) "
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.past-simple-irregular.01": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.02": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.03": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.04": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.05": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.06": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.07": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.08": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.09": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.10": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.11": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.12": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.13": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-irregular.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 244367,
+   "text": "I had some engine trouble yesterday.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 73951,
+   "text": "\"When did you buy it?\" \"Let's see. I bought it last week.\"",
+   "author": "CK"
+  }
+ ]
+}

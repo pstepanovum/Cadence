@@ -1,0 +1,398 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "reported-statements",
+ "draftHash": "5948fa751b6ca561",
+ "grammarPoint": {
+  "id": "gp.reported-statements",
+  "level": "B1",
+  "topicId": "topic.reported-speech",
+  "title": "Reported statements",
+  "summary": "Learn how to report what someone said using 'said that' or 'told me that', often changing the original verb tense.",
+  "explanation": "When we want to tell someone what another person said, we use *reported speech*. This is also called indirect speech. We often change the original words slightly, especially the verb tense and pronouns.\n\nWe use *said* when we don't mention who the person spoke to. For example, \"She said that she was happy.\" If we mention the person who was spoken to, we use *told* followed by an object pronoun (like 'me', 'him', 'her', 'us', 'them') or a noun. For example, \"She told me that she was happy.\"\n\nWhen reporting statements, the verb tense usually shifts back one step into the past. For instance, present simple becomes past simple, present continuous becomes past continuous, and 'will' becomes 'would'. The word 'that' is often used after 'said' or 'told' but it is optional.",
+  "patterns": [
+   "Subject + said (that) + clause (with tense change)",
+   "Subject + told + object + (that) + clause (with tense change)"
+  ],
+  "examples": [
+   {
+    "text": "She said that she liked the new movie.",
+    "note": "Reports a present simple statement ('I like the new movie') as past simple.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He told me that he was working on a new project.",
+    "note": "Reports a present continuous statement ('I am working') as past continuous, using 'told me'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They said they would arrive by noon.",
+    "note": "Reports a future statement ('We will arrive') using 'would'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My friend told us that she could help with the party.",
+    "note": "Reports a statement with 'can' ('I can help') using 'could', with 'told us'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The manager said that he had already sent the email.",
+    "note": "Reports a past simple statement ('I sent the email') as past perfect.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He told that he was busy.",
+    "right": "He said that he was busy.",
+    "note": "Use 'said' when there is no object after the verb."
+   },
+   {
+    "wrong": "She said she is tired.",
+    "right": "She said she was tired.",
+    "note": "Remember to change the tense from present to past."
+   },
+   {
+    "wrong": "They told me they will come.",
+    "right": "They told me they would come.",
+    "note": "Change 'will' to 'would' in reported speech."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.reported-statements.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister ___ that she was going to visit next month.",
+   "options": [
+    "told",
+    "said",
+    "tell",
+    "say"
+   ],
+   "answer": 1,
+   "explanation": "Since there is no object (like 'me' or 'him') after the verb, 'said' is the correct choice."
+  },
+  {
+   "id": "ex.b1.reported-statements.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He ___ me that he had finished his homework.",
+   "options": [
+    "said",
+    "say",
+    "told",
+    "tell"
+   ],
+   "answer": 2,
+   "explanation": "Because there is an object ('me') after the verb, 'told' is the correct choice."
+  },
+  {
+   "id": "ex.b1.reported-statements.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The teacher said that the exam ___ difficult.",
+   "options": [
+    "is",
+    "was",
+    "will be",
+    "has been"
+   ],
+   "answer": 1,
+   "explanation": "The original statement 'The exam is difficult' changes to past simple in reported speech."
+  },
+  {
+   "id": "ex.b1.reported-statements.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They told us that they ___ to the beach the next day.",
+   "options": [
+    "go",
+    "will go",
+    "would go",
+    "are going"
+   ],
+   "answer": 2,
+   "explanation": "The original statement 'We will go to the beach tomorrow' changes 'will go' to 'would go' and 'tomorrow' to 'the next day'."
+  },
+  {
+   "id": "ex.b1.reported-statements.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ me that she ___ busy.",
+   "answers": [
+    [
+     "told"
+    ],
+    [
+     "was"
+    ]
+   ],
+   "explanation": "Use 'told' because there is an object 'me'. The original 'I am busy' becomes 'she was busy'."
+  },
+  {
+   "id": "ex.b1.reported-statements.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ that he ___ call later.",
+   "answers": [
+    [
+     "said"
+    ],
+    [
+     "would"
+    ]
+   ],
+   "explanation": "Use 'said' as there is no object. The original 'I will call later' becomes 'he would call later'."
+  },
+  {
+   "id": "ex.b1.reported-statements.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ that they ___ seen that movie before.",
+   "answers": [
+    [
+     "said"
+    ],
+    [
+     "had"
+    ]
+   ],
+   "explanation": "Use 'said' as there is no object. The original 'We saw that movie before' or 'We have seen that movie before' becomes 'they had seen that movie before'."
+  },
+  {
+   "id": "ex.b1.reported-statements.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "said",
+    "he",
+    "was",
+    "feeling",
+    "better",
+    "."
+   ],
+   "explanation": "This sentence reports what someone said, changing the tense from present continuous ('I am feeling better') to past continuous."
+  },
+  {
+   "id": "ex.b1.reported-statements.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "told",
+    "him",
+    "she",
+    "could",
+    "meet",
+    "at",
+    "six",
+    "."
+   ],
+   "explanation": "This sentence reports a statement using 'told' with an object, and changes 'can' to 'could'."
+  },
+  {
+   "id": "ex.b1.reported-statements.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My mom told that she was proud of me.",
+   "answers": [
+    "My mom said that she was proud of me."
+   ],
+   "explanation": "When there is no object after the verb, use 'said' instead of 'told'."
+  },
+  {
+   "id": "ex.b1.reported-statements.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He said he will finish the report tomorrow.",
+   "answers": [
+    "He said he would finish the report the next day.",
+    "He said he would finish the report tomorrow."
+   ],
+   "explanation": "In reported speech, 'will' changes to 'would'. 'Tomorrow' can also change to 'the next day'."
+  },
+  {
+   "id": "ex.b1.reported-statements.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Direct speech: \"I am going to the gym.\"",
+   "instruction": "Report this statement using 'She said'.",
+   "answers": [
+    "She said that she was going to the gym.",
+    "She said she was going to the gym."
+   ],
+   "explanation": "The present continuous 'am going' changes to past continuous 'was going' in reported speech."
+  },
+  {
+   "id": "ex.b1.reported-statements.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Direct speech: \"We can meet on Friday.\"",
+   "instruction": "Report this statement using 'They told me'.",
+   "answers": [
+    "They told me that they could meet on Friday.",
+    "They told me they could meet on Friday."
+   ],
+   "explanation": "The modal verb 'can' changes to 'could' in reported speech, and 'told me' is used with the object."
+  },
+  {
+   "id": "ex.b1.reported-statements.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-statements"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "He said that he",
+     "right": "was feeling tired."
+    },
+    {
+     "left": "She told me that she",
+     "right": "would call later."
+    },
+    {
+     "left": "They mentioned they",
+     "right": "had visited Rome."
+    },
+    {
+     "left": "The student said he",
+     "right": "could not understand."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "said that he was",
+  "told me that she would",
+  "said they had"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.reported-statements.01": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.02": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.03": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.04": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.05": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.06": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.07": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.08": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.09": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.10": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.11": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.12": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.13": {
+    "status": "pass"
+   },
+   "ex.b1.reported-statements.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 6225576,
+   "text": "Tom said that he wasn't planning to do that.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 6496055,
+   "text": "Tom and Mary didn't want to do that, but they said they had to.",
+   "author": "CT"
+  }
+ ]
+}

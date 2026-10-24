@@ -1,0 +1,385 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "question-words",
+ "draftHash": "1a2963036a2aa6ce",
+ "grammarPoint": {
+  "id": "gp.question-words",
+  "level": "A1",
+  "topicId": "topic.questions-negation",
+  "title": "Question words",
+  "summary": "Learn to ask for specific information using question words like what, where, when, who, why, and how.",
+  "explanation": "We use *question words* to ask for particular information. They usually come at the beginning of a question.\n\n*What* asks about things or actions. *Where* asks about places. *When* asks about time. *Who* asks about people.\n\n*Why* asks about reasons. *How* asks about the way something happens or the condition of something.",
+  "patterns": [
+   "Question word + is/are + subject?",
+   "Question word + do/does + subject + verb?"
+  ],
+  "examples": [
+   {
+    "text": "What is your favorite food?",
+    "note": "Asks about a thing (food).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Where do you work?",
+    "note": "Asks about a place.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "When is your birthday?",
+    "note": "Asks about a time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Who is that woman?",
+    "note": "Asks about a person.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Why are you learning English?",
+    "note": "Asks about a reason.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Where you live?",
+    "right": "Where do you live?",
+    "note": "Remember to use 'do' or 'does' in questions with most verbs."
+   },
+   {
+    "wrong": "Who is he?",
+    "right": "Who is he?",
+    "note": "The word order for 'be' verbs is 'Question word + is/are + subject'."
+   },
+   {
+    "wrong": "What your name is?",
+    "right": "What is your name?",
+    "note": "The verb 'is' comes before the subject 'your name'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.question-words.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ is your name?",
+   "options": [
+    "Where",
+    "What",
+    "Who"
+   ],
+   "answer": 1,
+   "explanation": "'What' asks for information about a thing, like a name."
+  },
+  {
+   "id": "ex.a1.question-words.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ do you live?",
+   "options": [
+    "When",
+    "Why",
+    "Where"
+   ],
+   "answer": 2,
+   "explanation": "'Where' asks about a place."
+  },
+  {
+   "id": "ex.a1.question-words.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ is your brother?",
+   "options": [
+    "Who",
+    "How",
+    "What"
+   ],
+   "answer": 0,
+   "explanation": "'Who' asks about a person."
+  },
+  {
+   "id": "ex.a1.question-words.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ do you go to work?",
+   "options": [
+    "Why",
+    "How",
+    "When"
+   ],
+   "answer": 1,
+   "explanation": "'How' asks about the way you do something."
+  },
+  {
+   "id": "ex.a1.question-words.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ do you eat lunch?",
+   "answers": [
+    [
+     "When"
+    ]
+   ],
+   "explanation": "'When' asks about time."
+  },
+  {
+   "id": "ex.a1.question-words.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ is your favorite color?",
+   "answers": [
+    [
+     "What"
+    ]
+   ],
+   "explanation": "'What' asks about a thing."
+  },
+  {
+   "id": "ex.a1.question-words.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ does she like pizza?",
+   "answers": [
+    [
+     "Why"
+    ]
+   ],
+   "explanation": "'Why' asks for a reason."
+  },
+  {
+   "id": "ex.a1.question-words.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Where",
+    "do",
+    "you",
+    "study",
+    "?"
+   ],
+   "distractors": [
+    "is"
+   ],
+   "explanation": "This question asks about the place where someone studies."
+  },
+  {
+   "id": "ex.a1.question-words.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "What",
+    "is",
+    "your",
+    "hobby",
+    "?"
+   ],
+   "distractors": [
+    "are"
+   ],
+   "explanation": "This question asks about a person's hobby."
+  },
+  {
+   "id": "ex.a1.question-words.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "When you go to bed?",
+   "answers": [
+    "When do you go to bed?"
+   ],
+   "explanation": "The auxiliary verb 'do' is needed for questions with 'go'."
+  },
+  {
+   "id": "ex.a1.question-words.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Who is that man name?",
+   "answers": [
+    "What is that man's name?"
+   ],
+   "explanation": "'What' asks about a thing (the name), and 'man's' shows possession."
+  },
+  {
+   "id": "ex.a1.question-words.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My favorite color is blue.",
+   "instruction": "Ask a question about the color.",
+   "answers": [
+    "What is your favorite color?"
+   ],
+   "explanation": "'What' is used to ask about a thing, like a color."
+  },
+  {
+   "id": "ex.a1.question-words.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I live in a big city.",
+   "instruction": "Ask a question about the place.",
+   "answers": [
+    "Where do you live?"
+   ],
+   "explanation": "'Where' is used to ask about a place, and 'do' is needed for the verb 'live'."
+  },
+  {
+   "id": "ex.a1.question-words.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.question-words"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "What is",
+     "right": "your job?"
+    },
+    {
+     "left": "Where do",
+     "right": "you work?"
+    },
+    {
+     "left": "When is",
+     "right": "the meeting?"
+    },
+    {
+     "left": "Who is",
+     "right": "your friend?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "what is your",
+  "where do you",
+  "when does",
+  "who is that",
+  "why are you",
+  "how do you"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.question-words.01": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.02": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.03": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.04": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.05": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.06": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.07": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.08": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.09": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.10": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.11": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.12": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.13": {
+    "status": "pass"
+   },
+   "ex.a1.question-words.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 3822541,
+   "text": "Why are you so nice to me?",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 2647300,
+   "text": "When does Tom leave?",
+   "author": "CK"
+  }
+ ]
+}

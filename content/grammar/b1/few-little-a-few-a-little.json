@@ -1,0 +1,394 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "few-little-a-few-a-little",
+ "draftHash": "8931917b15a39309",
+ "grammarPoint": {
+  "id": "gp.few-little-a-few-a-little",
+  "level": "B1",
+  "topicId": "topic.articles-determiners",
+  "title": "Few, little, a few, a little",
+  "summary": "Learn to use 'few', 'little', 'a few', and 'a little' to talk about small quantities of countable and uncountable nouns.",
+  "explanation": "We use *few* and *a few* with *countable nouns* (things you can count, like 'books' or 'friends'). We use *little* and *a little* with *uncountable nouns* (things you can't count individually, like 'water' or 'information').\n\nThe difference between 'few/little' and 'a few/a little' is important. *Few* and *little* mean 'not many' or 'not much' and often suggest a negative idea – almost none. For example, 'I have few friends' means I don't have many friends, and it might make me feel sad.\n\n*A few* and *a little* mean 'some' or 'a small amount' and usually have a more positive or neutral meaning. For example, 'I have a few friends' means I have some friends, which is a positive thing.",
+  "patterns": [
+   "a few + countable noun (plural)",
+   "few + countable noun (plural)",
+   "a little + uncountable noun",
+   "little + uncountable noun"
+  ],
+  "examples": [
+   {
+    "text": "We have a few apples left, so we can make a pie.",
+    "note": "Uses 'a few' with a countable noun ('apples') to mean 'some', with a positive outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There were few people at the concert, which was a shame.",
+    "note": "Uses 'few' with a countable noun ('people') to mean 'not many', with a negative feeling.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Could I have a little milk in my coffee, please?",
+    "note": "Uses 'a little' with an uncountable noun ('milk') to mean 'some', a neutral request.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She had little time to prepare for the presentation.",
+    "note": "Uses 'little' with an uncountable noun ('time') to mean 'not much', implying difficulty.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Even a little effort can make a big difference.",
+    "note": "Uses 'a little' with an uncountable noun ('effort') to mean 'some', with a positive impact.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I have little books on my shelf.",
+    "right": "I have few books on my shelf.",
+    "note": "'Books' are countable, so use 'few' or 'a few'."
+   },
+   {
+    "wrong": "There is few water in the bottle.",
+    "right": "There is little water in the bottle.",
+    "note": "'Water' is uncountable, so use 'little' or 'a little'."
+   },
+   {
+    "wrong": "I have few money, so I can buy a coffee.",
+    "right": "I have a little money, so I can buy a coffee.",
+    "note": "If you can buy something, you have 'some' money, which is 'a little'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.few-little-a-few-a-little.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We only have ___ eggs left, so I can't make an omelet for everyone.",
+   "options": [
+    "a little",
+    "little",
+    "a few",
+    "few"
+   ],
+   "answer": 3,
+   "explanation": "'Eggs' are countable, and the sentence implies a negative situation (not enough for everyone), so 'few' is correct."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need ___ advice about my new project.",
+   "options": [
+    "a few",
+    "few",
+    "a little",
+    "little"
+   ],
+   "answer": 2,
+   "explanation": "'Advice' is an uncountable noun, and the speaker wants 'some' advice, so 'a little' is correct."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Despite the rain, there were still ___ tourists visiting the museum.",
+   "options": [
+    "little",
+    "few",
+    "a little",
+    "a few"
+   ],
+   "answer": 3,
+   "explanation": "'Tourists' are countable. The phrase 'despite the rain' suggests that having 'some' tourists is a positive or surprising fact, so 'a few' is correct."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He has ___ patience for people who are always late.",
+   "options": [
+    "a few",
+    "few",
+    "a little",
+    "little"
+   ],
+   "answer": 3,
+   "explanation": "'Patience' is an uncountable noun. The sentence implies he has 'not much' patience, which is a negative idea, so 'little' is correct."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Could you add just ___ salt to the soup?",
+   "answers": [
+    [
+     "a little"
+    ]
+   ],
+   "explanation": "'Salt' is uncountable, and the request is for 'some' (a small amount), so 'a little' is correct."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "There were ___ chairs available, so some people had to stand.",
+   "answers": [
+    [
+     "few"
+    ]
+   ],
+   "explanation": "'Chairs' are countable, and the situation is negative (not enough chairs), so 'few' is correct."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I've made ___ progress on my essay, but I still have a lot to do.",
+   "answers": [
+    [
+     "a little"
+    ]
+   ],
+   "explanation": "'Progress' is uncountable. 'A little' indicates 'some' progress, which is a positive step, even if there's more work ahead."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "has",
+    "a",
+    "few",
+    "good",
+    "ideas",
+    "."
+   ],
+   "distractors": [
+    "little"
+   ],
+   "explanation": "This sentence uses 'a few' with the countable noun 'ideas' to mean 'some good ideas'."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "have",
+    "little",
+    "information",
+    "about",
+    "the",
+    "incident",
+    "."
+   ],
+   "distractors": [
+    "few"
+   ],
+   "explanation": "This sentence uses 'little' with the uncountable noun 'information' to mean 'not much information', implying a lack."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "There was a few traffic on the road this morning.",
+   "answers": [
+    "There was a little traffic on the road this morning."
+   ],
+   "explanation": "'Traffic' is an uncountable noun, so 'a little' should be used instead of 'a few'."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He has a little friends in his new city.",
+   "answers": [
+    "He has a few friends in his new city."
+   ],
+   "explanation": "'Friends' are countable, so 'a few' should be used instead of 'a little'."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I don't have much time to finish this task.",
+   "instruction": "Rewrite using 'little'.",
+   "answers": [
+    "I have little time to finish this task."
+   ],
+   "explanation": "'Little' means 'not much' and is used with uncountable nouns like 'time'."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "There are some chairs available, but not many.",
+   "instruction": "Rewrite using 'a few'.",
+   "answers": [
+    "There are a few chairs available."
+   ],
+   "explanation": "'A few' means 'some' and is used with countable nouns like 'chairs'."
+  },
+  {
+   "id": "ex.b1.few-little-a-few-a-little.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.few-little-a-few-a-little"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I only have a few",
+     "right": "coins in my pocket."
+    },
+    {
+     "left": "She needs a little",
+     "right": "help with her homework."
+    },
+    {
+     "left": "There were few",
+     "right": "options left for dinner."
+    },
+    {
+     "left": "He has little",
+     "right": "interest in politics."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "a few \\w+",
+  "few \\w+",
+  "a little \\w+",
+  "little \\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.few-little-a-few-a-little.01": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.02": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.03": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.04": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.05": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.06": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.07": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.08": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.09": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.10": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.11": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.12": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.13": {
+    "status": "pass"
+   },
+   "ex.b1.few-little-a-few-a-little.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 258942,
+   "text": "I hope to get away from Tokyo for a few days.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 61448,
+   "text": "There is a little water in the glass.",
+   "author": "CK"
+  }
+ ]
+}

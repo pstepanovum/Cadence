@@ -1,0 +1,408 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "second-conditional",
+ "draftHash": "66c0d6b1e108957a",
+ "grammarPoint": {
+  "id": "gp.second-conditional",
+  "level": "B1",
+  "topicId": "topic.conditionals",
+  "title": "Second conditional",
+  "summary": "The second conditional describes imagined or unlikely situations in the present or future and their hypothetical results.",
+  "explanation": "We use the second conditional to talk about situations that are *unreal* or *imagined* in the present or future. These are things that are not happening now, or are very unlikely to happen.\n\nThe structure is usually an 'if' clause with a past simple verb, and a main clause with 'would' + the base form of a verb. The 'if' clause describes the imagined condition, and the main clause describes the hypothetical result.\n\nFor example, \"If I *had* a million dollars, I *would travel* the world.\" This means I don't have a million dollars, so traveling the world is just an imagined possibility. We can also use 'could' or 'might' instead of 'would' to show different levels of possibility for the result.",
+  "patterns": [
+   "If + subject + past simple, subject + would + base verb",
+   "Subject + would + base verb + if + subject + past simple",
+   "If + subject + past simple, subject + could/might + base verb"
+  ],
+  "examples": [
+   {
+    "text": "If I won the lottery, I would buy a big house.",
+    "note": "Describes an imagined future situation and its result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She would be happier if she had more free time.",
+    "note": "Describes an unreal present situation and its hypothetical outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If we lived closer to the beach, we could go swimming every day.",
+    "note": "Uses 'could' to show a possible result of an imagined situation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "What would you do if you saw a ghost?",
+    "note": "Asks about a hypothetical situation in the future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If he didn't work so much, he might have more energy.",
+    "note": "Uses 'might' to show a less certain result of an unreal present situation.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If I will have time, I would visit you.",
+    "right": "If I had time, I would visit you.",
+    "note": "Use the past simple in the 'if' clause, not 'will'."
+   },
+   {
+    "wrong": "If I would be taller, I could reach that shelf.",
+    "right": "If I were taller, I could reach that shelf.",
+    "note": "Do not use 'would' in the 'if' clause. Use 'were' for 'be' in hypothetical situations for all subjects, though 'was' is also common for I/he/she/it."
+   },
+   {
+    "wrong": "If she studied harder, she will pass the exam.",
+    "right": "If she studied harder, she would pass the exam.",
+    "note": "Use 'would' in the main clause for the second conditional, not 'will'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.second-conditional.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If I ___ a car, I would drive to work every day.",
+   "options": [
+    "have",
+    "had",
+    "will have"
+   ],
+   "answer": 1,
+   "explanation": "For the second conditional, we use the past simple form of the verb in the 'if' clause."
+  },
+  {
+   "id": "ex.b1.second-conditional.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ you do if you found a wallet on the street?",
+   "options": [
+    "will",
+    "would",
+    "do"
+   ],
+   "answer": 1,
+   "explanation": "We use 'would' in the main clause to talk about the hypothetical result."
+  },
+  {
+   "id": "ex.b1.second-conditional.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If it ___ sunny tomorrow, we could go for a picnic.",
+   "options": [
+    "is",
+    "was",
+    "will be"
+   ],
+   "answer": 1,
+   "explanation": "Even for a future imagined situation, we use the past simple ('was' or 'were') in the 'if' clause for the second conditional."
+  },
+  {
+   "id": "ex.b1.second-conditional.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They ___ happier if they lived in a bigger apartment.",
+   "options": [
+    "are",
+    "will be",
+    "would be"
+   ],
+   "answer": 2,
+   "explanation": "The main clause of a second conditional uses 'would' + base verb to describe the hypothetical result."
+  },
+  {
+   "id": "ex.b1.second-conditional.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If I ___ (know) her number, I ___ (call) her.",
+   "answers": [
+    [
+     "knew"
+    ],
+    [
+     "would call",
+     "would've called"
+    ]
+   ],
+   "explanation": "Use the past simple 'knew' in the 'if' clause and 'would call' in the main clause for the second conditional. 'would've called' is also acceptable as a common contraction for 'would have called', though 'would call' is the primary form for the second conditional."
+  },
+  {
+   "id": "ex.b1.second-conditional.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ (not be) so tired if she ___ (go) to bed earlier.",
+   "answers": [
+    [
+     "would not be",
+     "wouldn't be"
+    ],
+    [
+     "went"
+    ]
+   ],
+   "explanation": "The main clause uses 'would not be' for the hypothetical result, and the 'if' clause uses the past simple 'went'."
+  },
+  {
+   "id": "ex.b1.second-conditional.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If we ___ (have) more money, we ___ (buy) a new car.",
+   "answers": [
+    [
+     "had"
+    ],
+    [
+     "would buy",
+     "would've bought"
+    ]
+   ],
+   "explanation": "The 'if' clause requires the past simple 'had', and the main clause uses 'would buy' for the hypothetical outcome. 'would've bought' is also acceptable as a common contraction for 'would have bought', though 'would buy' is the primary form for the second conditional."
+  },
+  {
+   "id": "ex.b1.second-conditional.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "I",
+    "were",
+    "you",
+    ",",
+    "I",
+    "would",
+    "take",
+    "that",
+    "job",
+    "."
+   ],
+   "explanation": "This sentence uses the second conditional to give advice about a hypothetical situation."
+  },
+  {
+   "id": "ex.b1.second-conditional.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "would",
+    "travel",
+    "more",
+    "if",
+    "he",
+    "had",
+    "more",
+    "vacation",
+    "time",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "traveling"
+   ],
+   "explanation": "This sentence describes a hypothetical situation and its imagined result, with the 'if' clause at the end."
+  },
+  {
+   "id": "ex.b1.second-conditional.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If I will live in a big city, I would visit museums often.",
+   "answers": [
+    "If I lived in a big city, I would visit museums often."
+   ],
+   "explanation": "The 'if' clause of a second conditional requires the past simple verb, not 'will live'."
+  },
+  {
+   "id": "ex.b1.second-conditional.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She would be very happy if she would get a promotion.",
+   "answers": [
+    "She would be very happy if she got a promotion."
+   ],
+   "explanation": "Do not use 'would' in the 'if' clause; use the past simple verb 'got'."
+  },
+  {
+   "id": "ex.b1.second-conditional.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I don't have a map, so I can't find the way.",
+   "instruction": "Rewrite using the second conditional.",
+   "answers": [
+    "If I had a map, I would find the way.",
+    "If I had a map, I could find the way."
+   ],
+   "explanation": "The second conditional expresses an imagined situation (having a map) and its hypothetical result (finding the way)."
+  },
+  {
+   "id": "ex.b1.second-conditional.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He doesn't speak French, so he won't understand them.",
+   "instruction": "Rewrite using the second conditional.",
+   "answers": [
+    "If he spoke French, he would understand them.",
+    "If he spoke French, he could understand them."
+   ],
+   "explanation": "This transforms a real present situation into an imagined one, showing a hypothetical outcome."
+  },
+  {
+   "id": "ex.b1.second-conditional.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.second-conditional"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If I had more money,",
+     "right": "I would buy a new laptop."
+    },
+    {
+     "left": "She would learn to cook",
+     "right": "if she had more time."
+    },
+    {
+     "left": "If it rained tomorrow,",
+     "right": "we would stay home."
+    },
+    {
+     "left": "What would you do",
+     "right": "if you lost your phone?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "if .* (?:were|was|had|did|knew|went|saw|spoke|lived|came|thought|felt|could) .* would",
+  "would .* if .* (?:were|was|had|did|knew|went|saw|spoke|lived|came|thought|felt|could)",
+  "if I were you, I would"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.second-conditional.01": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.02": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.03": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.04": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.05": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.06": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.07": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.08": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.09": {
+    "status": "pass",
+    "note": "Checker slip: The key is grammatically correct, whereas the other answer unnecessarily omits the token 'vacation'."
+   },
+   "ex.b1.second-conditional.10": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.11": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.12": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.13": {
+    "status": "pass"
+   },
+   "ex.b1.second-conditional.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 31109,
+   "text": "If I were you, I would paint it blue.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 3821432,
+   "text": "What would you do if you were in Tom's position?",
+   "author": "CK"
+  }
+ ]
+}

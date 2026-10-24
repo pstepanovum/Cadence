@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "articles-with-abstract-nouns",
+ "draftHash": "834b545c2e9e2020",
+ "grammarPoint": {
+  "id": "gp.articles-with-abstract-nouns",
+  "level": "C1",
+  "topicId": "topic.articles-determiners",
+  "title": "Articles with abstract nouns",
+  "summary": "Learn how to use articles (a/an, the) or no article with abstract nouns like 'life' and 'knowledge' depending on whether they are general or specific.",
+  "explanation": "Abstract nouns, such as *life*, *freedom*, or *knowledge*, often do not take an article when we are talking about them in a general sense. For example, we say \"Life is short\" to refer to life in general, not a specific life.\n\nHowever, when we refer to a *specific* instance or aspect of an abstract noun, we often use the definite article \"the\". This is common when the abstract noun is followed by \"of\" to specify what kind or whose. For instance, \"the life of a musician\" refers to a particular type of life.\n\nSome abstract nouns, like *knowledge*, can also take an indefinite article \"a/an\" when referring to a *particular type* or *instance* of that quality or experience. A common example is \"a knowledge of something,\" which means a specific understanding or familiarity with it.",
+  "patterns": [
+   "Abstract Noun (general)",
+   "the + Abstract Noun + of + Noun",
+   "a/an + Abstract Noun + of + Noun"
+  ],
+  "examples": [
+   {
+    "text": "Happiness is a state of mind.",
+    "note": "No article is used because 'happiness' is a general concept.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The life of a professional athlete requires immense discipline.",
+    "note": "'The' is used to specify a particular kind of life.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She has a deep knowledge of classical literature.",
+    "note": "'A' is used to refer to a specific instance or amount of knowledge.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Freedom is a fundamental human right.",
+    "note": "No article is used because 'freedom' is a general concept.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We need to gain a better understanding of the local culture.",
+    "note": "'A' is used for a specific instance of 'understanding'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The life is beautiful.",
+    "right": "Life is beautiful.",
+    "note": "Do not use 'the' when talking about abstract concepts in general."
+   },
+   {
+    "wrong": "Life of a scientist is often busy.",
+    "right": "The life of a scientist is often busy.",
+    "note": "Use 'the' to specify whose life or what kind of life."
+   },
+   {
+    "wrong": "He has good knowledge of ancient history.",
+    "right": "He has a good knowledge of ancient history.",
+    "note": "Some abstract nouns take 'a/an' when referring to a specific type or amount of that quality."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ patience is a virtue.",
+   "options": [
+    "A",
+    "The",
+    "No article"
+   ],
+   "answer": 2,
+   "explanation": "'Patience' is an abstract noun used in a general sense, so no article is needed."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ life of a migratory bird is full of long journeys.",
+   "options": [
+    "A",
+    "The",
+    "No article"
+   ],
+   "answer": 1,
+   "explanation": "'The' is used to specify the life of a particular type of bird."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "To succeed, you need ___ strong belief in yourself.",
+   "options": [
+    "a",
+    "the",
+    "no article"
+   ],
+   "answer": 0,
+   "explanation": "'A' is used here to refer to a specific instance or type of belief."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She demonstrated ___ remarkable courage during the crisis.",
+   "options": [
+    "a",
+    "the",
+    "no article"
+   ],
+   "answer": 0,
+   "explanation": "'A' is used to describe a specific instance or amount of courage."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ creativity is essential for innovation.",
+   "answers": [
+    [
+     "No article"
+    ]
+   ],
+   "explanation": "'Creativity' is an abstract noun used in a general sense, so no article is needed."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ knowledge of multiple languages can open many doors.",
+   "answers": [
+    [
+     "A"
+    ]
+   ],
+   "explanation": "'A knowledge of' refers to a specific skill or understanding."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ life of a deep-sea diver involves unique challenges.",
+   "answers": [
+    [
+     "The"
+    ]
+   ],
+   "explanation": "'The' is used to specify the life of a particular person or group."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "life",
+    "of",
+    "a",
+    "traveler",
+    "is",
+    "often",
+    "unpredictable",
+    "."
+   ],
+   "distractors": [
+    "an"
+   ],
+   "explanation": "This sentence uses 'the life of' to refer to a specific type of life."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "has",
+    "a",
+    "good",
+    "knowledge",
+    "of",
+    "local",
+    "history",
+    "."
+   ],
+   "distractors": [
+    "the"
+   ],
+   "explanation": "This sentence uses 'a knowledge of' to refer to a specific understanding."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The happiness is a choice.",
+   "answers": [
+    "Happiness is a choice."
+   ],
+   "explanation": "'Happiness' is an abstract noun used generally, so no article is needed."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She has deep knowledge of astrophysics.",
+   "answers": [
+    "She has a deep knowledge of astrophysics."
+   ],
+   "explanation": "When referring to a specific understanding, 'a knowledge of' is the correct form."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "People generally find life challenging.",
+   "instruction": "Rewrite the sentence to refer to a specific type of life, using 'the life of'.",
+   "answers": [
+    "The life of a student can be challenging."
+   ],
+   "explanation": "The original sentence refers to 'life' generally. The rewritten sentence uses 'the life of' to specify a particular kind of life."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He understands ancient languages well.",
+   "instruction": "Rewrite the sentence using 'a knowledge of'.",
+   "answers": [
+    "He has a good knowledge of ancient languages."
+   ],
+   "explanation": "The phrase 'a knowledge of' is used to express a specific understanding or familiarity."
+  },
+  {
+   "id": "ex.c1.articles-with-abstract-nouns.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.articles-with-abstract-nouns"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Patience",
+     "right": "is a valuable quality."
+    },
+    {
+     "left": "The life of a chef",
+     "right": "is often demanding and creative."
+    },
+    {
+     "left": "She has a strong knowledge",
+     "right": "of environmental science."
+    },
+    {
+     "left": "Love",
+     "right": "is a powerful emotion."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "life is",
+  "the life of a",
+  "a knowledge of"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.articles-with-abstract-nouns.01": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.02": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.03": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.04": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.05": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly indicate that no article should be placed in the gap."
+   },
+   "ex.c1.articles-with-abstract-nouns.06": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.07": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.08": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key omits the token 'the', whereas the other answer uses all tokens correctly."
+   },
+   "ex.c1.articles-with-abstract-nouns.10": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.11": {
+    "status": "pass"
+   },
+   "ex.c1.articles-with-abstract-nouns.12": {
+    "status": "pass",
+    "note": "Checker slip: 'A person' does not specify a type of life as instructed, unlike 'a student'."
+   },
+   "ex.c1.articles-with-abstract-nouns.13": {
+    "status": "pass",
+    "note": "Checker slip: The other answer misses the meaning of 'well', which requires a modifier like 'good'."
+   },
+   "ex.c1.articles-with-abstract-nouns.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 8830848,
+   "text": "Life isn't supposed to be fair.",
+   "author": "Amastan"
+  },
+  {
+   "sentenceId": 5821598,
+   "text": "My life is a mess.",
+   "author": "Hybrid"
+  }
+ ]
+}

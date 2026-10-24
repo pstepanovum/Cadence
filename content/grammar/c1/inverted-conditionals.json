@@ -1,0 +1,404 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "inverted-conditionals",
+ "draftHash": "05159b83c5dbec34",
+ "grammarPoint": {
+  "id": "gp.inverted-conditionals",
+  "level": "C1",
+  "topicId": "topic.conditionals",
+  "title": "Conditionals without if",
+  "summary": "Learn to form formal or emphatic conditional sentences without 'if' by using inversion with 'had', 'should', and 'were'.",
+  "explanation": "Sometimes, especially in more formal English, we can form conditional sentences without using the word 'if'. We do this by inverting the subject and an auxiliary verb, creating a structure that sounds more formal or emphasizes the condition.\n\nFor third conditional sentences, we can invert 'had' and the subject. This structure, like 'Had I known', replaces 'If I had known' and is used to talk about hypothetical situations in the past and their hypothetical results.\n\nFor first conditional sentences, we can invert 'should' and the subject. This form, like 'Should you need', replaces 'If you should need' or 'If you need' and is often used for polite requests or to suggest a less likely future condition. It implies that the condition might happen, but it's not certain.\n\nFor second conditional sentences, particularly with the fixed phrase 'were it not for', we can invert 'were' and the subject. This phrase means 'if it were not for' or 'but for' and is used to say that one thing is dependent on another, often to express how something prevented a negative outcome.",
+  "patterns": [
+   "Had + subject + past participle (+ object/complement), ...",
+   "Should + subject + base verb (+ object/complement), ...",
+   "Were it not for + noun/pronoun (+ ...), ..."
+  ],
+  "examples": [
+   {
+    "text": "Had I known about the road closure, I would have taken a different route.",
+    "note": "This is a third conditional without 'if', expressing a past regret.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Should you require further assistance, please do not hesitate to contact us.",
+    "note": "A formal first conditional, offering help for a possible future need.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Were it not for the quick response of the firefighters, the entire building would have burned down.",
+    "note": "A second conditional expressing dependence on a past event for a present/past outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Had they invested earlier, their profits would be much higher now.",
+    "note": "A mixed conditional (third condition, second result) using inversion.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Should there be any changes to the schedule, we will notify everyone by email.",
+    "note": "A formal first conditional, indicating a possible future event and its consequence.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If I had known, I would have helped.",
+    "right": "Had I known, I would have helped.",
+    "note": "To remove 'if', invert 'had' and the subject."
+   },
+   {
+    "wrong": "If you should need anything, call me.",
+    "right": "Should you need anything, call me.",
+    "note": "When using 'should' for a conditional without 'if', 'if' is omitted."
+   },
+   {
+    "wrong": "If it were not for her support, I couldn't have finished.",
+    "right": "Were it not for her support, I couldn't have finished.",
+    "note": "The phrase 'Were it not for' already includes the conditional meaning."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.inverted-conditionals.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ I seen the warning sign, I would have slowed down.",
+   "options": [
+    "If",
+    "Had",
+    "Should",
+    "Were"
+   ],
+   "answer": 1,
+   "explanation": "For a third conditional without 'if', we invert 'had' and the subject."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you encounter any problems, please report them immediately.",
+   "options": [
+    "If",
+    "Had",
+    "Should",
+    "Were"
+   ],
+   "answer": 2,
+   "explanation": "'Should' is used for formal or less likely first conditional statements without 'if'."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ it not for the strong winds, we could have gone sailing.",
+   "options": [
+    "If",
+    "Had",
+    "Should",
+    "Were"
+   ],
+   "answer": 3,
+   "explanation": "'Were it not for' is a fixed phrase used for second conditional dependence."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ he accepted the offer, he would be living in Paris now.",
+   "options": [
+    "If",
+    "Had",
+    "Should",
+    "Were"
+   ],
+   "answer": 1,
+   "explanation": "This is a mixed conditional (past condition, present result) using 'had' inversion."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ I known about the party, I would have brought a gift.",
+   "answers": [
+    [
+     "Had"
+    ]
+   ],
+   "explanation": "This is a third conditional without 'if', requiring 'Had' for inversion."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you have any questions, feel free to ask.",
+   "answers": [
+    [
+     "Should"
+    ]
+   ],
+   "explanation": "'Should' is used for a polite, formal first conditional without 'if'."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ it not for your timely advice, I would have made a huge mistake.",
+   "answers": [
+    [
+     "Were"
+    ]
+   ],
+   "explanation": "'Were it not for' is the correct fixed phrase for this type of conditional."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Had",
+    "I",
+    "known",
+    "the",
+    "truth",
+    ",",
+    "I",
+    "wouldn't",
+    "have",
+    "trusted",
+    "him",
+    "."
+   ],
+   "distractors": [
+    "if",
+    "should"
+   ],
+   "explanation": "This forms a third conditional sentence using 'Had' inversion."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Should",
+    "you",
+    "change",
+    "your",
+    "mind",
+    ",",
+    "let",
+    "me",
+    "know",
+    "."
+   ],
+   "distractors": [
+    "had",
+    "were"
+   ],
+   "explanation": "This forms a first conditional sentence using 'Should' inversion for a polite request."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If I had more time, I would visit you.",
+   "answers": [
+    "Had I more time, I would visit you."
+   ],
+   "explanation": "For a second conditional without 'if', 'were' or 'had' can be inverted. Here, 'had' is inverted."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Were not for the rain, we would go hiking.",
+   "answers": [
+    "Were it not for the rain, we would go hiking."
+   ],
+   "explanation": "The fixed phrase is 'Were it not for', requiring 'it'."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If you need any help, just ask.",
+   "instruction": "Rewrite using 'should' without 'if'.",
+   "answers": [
+    "Should you need any help, just ask."
+   ],
+   "explanation": "Replace 'If you need' with 'Should you need' for a more formal conditional."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If I had realized the difficulty, I wouldn't have started.",
+   "instruction": "Rewrite using 'had' without 'if'.",
+   "answers": [
+    "Had I realized the difficulty, I wouldn't have started."
+   ],
+   "explanation": "Invert 'had' and the subject to remove 'if' in a third conditional."
+  },
+  {
+   "id": "ex.c1.inverted-conditionals.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inverted-conditionals"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Had I known about the sale,",
+     "right": "I would have bought more."
+    },
+    {
+     "left": "Should you encounter any issues,",
+     "right": "contact our support team."
+    },
+    {
+     "left": "Were it not for her encouragement,",
+     "right": "he would have given up."
+    },
+    {
+     "left": "Had they listened to the advice,",
+     "right": "they wouldn't be in this situation."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "had I known",
+  "should you need",
+  "were it not for"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.inverted-conditionals.01": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.02": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.03": {
+    "status": "pass",
+    "note": "Checker slip: Had requires been to form Had it not been for."
+   },
+   "ex.c1.inverted-conditionals.04": {
+    "status": "pass",
+    "note": "Checker slip: Were cannot directly precede the past participle accepted."
+   },
+   "ex.c1.inverted-conditionals.05": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.06": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.07": {
+    "status": "pass",
+    "note": "Checker slip: Had requires been to form Had it not been for."
+   },
+   "ex.c1.inverted-conditionals.08": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.09": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.10": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.11": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.12": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.13": {
+    "status": "pass"
+   },
+   "ex.c1.inverted-conditionals.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 25445,
+   "text": "Were it not for music, the world would be a dull place.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 322217,
+   "text": "Had I known the truth, I would have told it to you.",
+   "author": "CM"
+  }
+ ]
+}

@@ -1,0 +1,507 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "reporting-verbs",
+ "draftHash": "ac03c47144699bcd",
+ "grammarPoint": {
+  "id": "gp.reporting-verbs",
+  "level": "B2",
+  "topicId": "topic.reported-speech",
+  "title": "Reporting verbs",
+  "summary": "Learn how to use specific reporting verbs like 'suggest', 'deny', 'admit', 'warn', and 'refuse' with their correct grammatical patterns.",
+  "explanation": "When we report what someone said, we often use verbs like 'say' or 'tell'. However, there are many other reporting verbs that give more detail about the speaker's intention or the type of message. These verbs help us understand if someone was making a suggestion, denying a fact, admitting a mistake, giving a warning, or refusing to do something.\n\nEach of these specific reporting verbs is followed by a particular grammatical structure. For example, some verbs are followed by a gerund (verb-ing), others by a 'that' clause, and some by an infinitive (to + verb). Knowing these patterns is key to using them correctly.\n\nUsing these verbs makes your reported speech more precise and natural. Instead of just saying \"He said he didn't do it,\" you can say \"He *denied doing* it,\" which is more concise and informative.",
+  "patterns": [
+   "suggest + verb-ing",
+   "suggest + that + clause (with or without 'should')",
+   "deny + verb-ing",
+   "deny + that + clause",
+   "admit + verb-ing",
+   "admit + that + clause",
+   "warn + (someone) + (not) to-infinitive",
+   "warn + (someone) + about + noun/verb-ing",
+   "warn + that + clause",
+   "refuse + to-infinitive"
+  ],
+  "examples": [
+   {
+    "text": "My colleague *suggested trying* the new coffee shop.",
+    "note": "Uses 'suggest' followed by a gerund (verb-ing).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The suspect *denied that* he was at the scene of the crime.",
+    "note": "Uses 'deny' followed by a 'that' clause.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "After a long discussion, she *admitted making* a mistake.",
+    "note": "Uses 'admit' followed by a gerund (verb-ing).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The park ranger *warned us not to feed* the wild animals.",
+    "note": "Uses 'warn' with an object and a negative to-infinitive.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He *refused to answer* any more questions from the reporters.",
+    "note": "Uses 'refuse' followed by a to-infinitive.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "She suggested to go to the beach.",
+    "right": "She suggested going to the beach.",
+    "note": "'Suggest' is followed by a gerund (verb-ing), not a to-infinitive."
+   },
+   {
+    "wrong": "They warned about to be careful.",
+    "right": "They warned us to be careful.",
+    "note": "'Warn' often takes an object before the to-infinitive, or 'about' with a noun/gerund."
+   },
+   {
+    "wrong": "I denied to know anything about it.",
+    "right": "I denied knowing anything about it.",
+    "note": "'Deny' is followed by a gerund (verb-ing), not a to-infinitive."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.reporting-verbs.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The manager ___ working overtime to finish the project.",
+   "options": [
+    "suggested us",
+    "suggested to work",
+    "suggested working",
+    "suggested that working"
+   ],
+   "answer": 2,
+   "explanation": "'Suggest' is followed by a gerund (verb-ing) or a 'that' clause. \"Suggested working\" is the correct pattern here."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He ___ that he had copied the answers.",
+   "options": [
+    "refused",
+    "warned",
+    "admitted",
+    "suggested"
+   ],
+   "answer": 2,
+   "explanation": "'Admitted' is the correct verb here, followed by a 'that' clause, indicating he confessed to something."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The sign ___ visitors not to touch the exhibits.",
+   "options": [
+    "refused",
+    "denied",
+    "warned",
+    "admitted"
+   ],
+   "answer": 2,
+   "explanation": "'Warned' is the correct verb to indicate a caution or advice against doing something, followed by an object and a negative to-infinitive."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ to apologize for her rude behavior.",
+   "options": [
+    "denied",
+    "refused",
+    "admitted",
+    "suggested"
+   ],
+   "answer": 1,
+   "explanation": "'Refused' is followed by a to-infinitive, meaning she would not apologize."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The children ___ ___ playing with the broken toy.",
+   "answers": [
+    [
+     "admitted"
+    ],
+    [
+     "to have been",
+     "having been"
+    ]
+   ],
+   "explanation": "'Admit' can be followed by a gerund or a 'that' clause. \"Having been playing\" or \"to have been playing\" are both possible perfect gerund/infinitive forms, but \"having been\" is more common after 'admit'."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ ___ to lend him any more money.",
+   "answers": [
+    [
+     "refused"
+    ],
+    [
+     "to lend"
+    ]
+   ],
+   "explanation": "'Refuse' is always followed by a to-infinitive."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The doctor ___ me ___ too much sugar.",
+   "answers": [
+    [
+     "warned"
+    ],
+    [
+     "not to eat",
+     "against eating"
+    ]
+   ],
+   "explanation": "'Warn' can be followed by an object and a (negative) to-infinitive to advise against an action."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "denied",
+    "ever",
+    "seeing",
+    "the",
+    "woman",
+    "."
+   ],
+   "distractors": [
+    "to",
+    "said"
+   ],
+   "explanation": "The correct structure for 'deny' is followed by a gerund (verb-ing). 'Ever' is an adverb modifying 'seeing'."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "suggested",
+    "that",
+    "we",
+    "should",
+    "take",
+    "a",
+    "break",
+    "."
+   ],
+   "distractors": [
+    "to",
+    "for"
+   ],
+   "explanation": "'Suggest' can be followed by a 'that' clause, often with 'should' (which can also be omitted)."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The teacher warned the students about to cheat on the exam.",
+   "answers": [
+    "The teacher warned the students not to cheat on the exam.",
+    "The teacher warned the students about cheating on the exam."
+   ],
+   "explanation": "'Warn' can take an object + to-infinitive (often negative) or 'about' + gerund/noun. \"About to cheat\" is incorrect."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My friend refused helping me move the heavy boxes.",
+   "answers": [
+    "My friend refused to help me move the heavy boxes."
+   ],
+   "explanation": "'Refuse' is always followed by a to-infinitive, not a gerund."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "\"No, I didn't break the vase,\" said Tom.",
+   "instruction": "Rewrite using 'deny'.",
+   "answers": [
+    "Tom denied breaking the vase.",
+    "Tom denied that he had broken the vase."
+   ],
+   "explanation": "'Deny' can be followed by a gerund or a 'that' clause to report a negative statement."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "\"You should check your tires before the trip,\" she told me.",
+   "instruction": "Rewrite using 'suggest'.",
+   "answers": [
+    "She suggested checking my tires before the trip.",
+    "She suggested that I check my tires before the trip.",
+    "She suggested that I should check my tires before the trip."
+   ],
+   "explanation": "'Suggest' can be followed by a gerund or a 'that' clause (with or without 'should')."
+  },
+  {
+   "id": "ex.b2.reporting-verbs.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-verbs"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "He admitted",
+     "right": "to feeling nervous before the presentation."
+    },
+    {
+     "left": "The lifeguard warned us",
+     "right": "not to swim too far from the shore."
+    },
+    {
+     "left": "I refused",
+     "right": "to discuss the matter any further."
+    },
+    {
+     "left": "They suggested",
+     "right": "ordering pizza for dinner tonight."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "suggested (?:that|to|verb-ing)",
+  "denied (?:that|verb-ing)",
+  "admitted (?:that|verb-ing)",
+  "warned (?:me|us|him|her|them|people) (?:not to|to|about)",
+  "refused to"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.reporting-verbs.01": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.02": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.03": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.04": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The verb \"admit\" requires a gerund or \"to\" plus gerund, so \"to have been\" is ungrammatical."
+   },
+   "ex.b2.reporting-verbs.06": {
+    "status": "drop",
+    "note": "Key judged wrong: The sentence text already includes \"to lend\", making both options redundant."
+   },
+   "ex.b2.reporting-verbs.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both \"warned me not to eat\" and \"warned me against eating\" are natural and grammatically correct."
+   },
+   "ex.b2.reporting-verbs.08": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.09": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.10": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.11": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.12": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.13": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.14": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.15": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.16": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.17": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-verbs.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.reporting-verbs.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-verbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The children ___ playing with the broken toy.",
+    "options": [
+     "refused",
+     "warned",
+     "denied",
+     "suggested"
+    ],
+    "answer": 2,
+    "explanation": "'Deny' is followed by a gerund (-ing form), which fits 'playing'."
+   },
+   {
+    "id": "ex.b2.reporting-verbs.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-verbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My friend ___ to lend me any more money.",
+    "options": [
+     "admitted",
+     "refused",
+     "suggested",
+     "denied"
+    ],
+    "answer": 1,
+    "explanation": "'Refuse' is followed by a 'to' + infinitive, which fits 'to lend'."
+   },
+   {
+    "id": "ex.b2.reporting-verbs.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-verbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The doctor ___ me ___ too much sugar.",
+    "options": [
+     "suggested / eating",
+     "admitted / eating",
+     "warned / not to eat",
+     "denied / eating"
+    ],
+    "answer": 2,
+    "explanation": "'Warn' with an object is followed by 'not to' + infinitive when advising against something."
+   },
+   {
+    "id": "ex.b2.reporting-verbs.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-verbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She ___ that she had forgotten her keys at home.",
+    "options": [
+     "refused",
+     "warned",
+     "suggested",
+     "admitted"
+    ],
+    "answer": 3,
+    "explanation": "'Admit' can be followed by a 'that' clause, which fits the sentence structure."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2642083,
+   "text": "Tom refused to sign the contract.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 253936,
+   "text": "I suggested that John be called.",
+   "author": "Dejo"
+  }
+ ]
+}

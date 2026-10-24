@@ -1,0 +1,407 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "past-continuous",
+ "draftHash": "282449aaabdfb164",
+ "grammarPoint": {
+  "id": "gp.past-continuous",
+  "level": "A2",
+  "topicId": "topic.tenses",
+  "title": "Past continuous",
+  "summary": "Use the past continuous to talk about actions that were happening at a specific time in the past, often interrupted or happening at the same time as another action.",
+  "explanation": "We use the *past continuous* to describe actions that were in progress at a particular moment in the past. It focuses on the duration of an action, not its completion. Think of it as a snapshot of an ongoing activity.\n\nThe form of the past continuous is *was* or *were* + the *verb-ing* (present participle). We use 'was' for singular subjects (I, he, she, it) and 'were' for plural subjects (you, we, they).\n\nWe often use the past continuous with *when* to show that one action interrupted another. For example, \"I was sleeping *when* the phone rang.\" We use *while* to show two actions happening at the same time. For example, \"*While* I was cooking, my brother was watching TV.\"",
+  "patterns": [
+   "Subject + was/were + verb-ing",
+   "Subject + was/were + not + verb-ing",
+   "Was/Were + Subject + verb-ing?"
+  ],
+  "examples": [
+   {
+    "text": "At 8 PM last night, I was eating dinner.",
+    "note": "Describes an action in progress at a specific past time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She was reading a book when her friend called.",
+    "note": "Shows an ongoing action interrupted by another past action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "While they were walking, it started to rain.",
+    "note": "Connects two actions, one ongoing, one starting.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He wasn't listening to the teacher.",
+    "note": "Negative form, showing an action was not in progress.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Were you working on your project all afternoon?",
+    "note": "Question form, asking about an ongoing past action.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I walked to the store when I saw my friend.",
+    "right": "I was walking to the store when I saw my friend.",
+    "note": "Use past continuous for the ongoing action that was interrupted."
+   },
+   {
+    "wrong": "They was playing soccer.",
+    "right": "They were playing soccer.",
+    "note": "Use 'were' for plural subjects."
+   },
+   {
+    "wrong": "She was watch TV.",
+    "right": "She was watching TV.",
+    "note": "Remember to add '-ing' to the main verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.past-continuous.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ you doing when I called?",
+   "options": [
+    "was",
+    "were",
+    "are",
+    "did"
+   ],
+   "answer": 1,
+   "explanation": "For the subject 'you' in the past continuous, we use 'were'."
+  },
+  {
+   "id": "ex.a2.past-continuous.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "While I ___ breakfast, my dog was barking loudly.",
+   "options": [
+    "ate",
+    "was eating",
+    "eat",
+    "am eating"
+   ],
+   "answer": 1,
+   "explanation": "Two actions happening at the same time in the past require the past continuous for both, or one past continuous and one past simple if one interrupts the other. Here, 'was eating' shows the ongoing action."
+  },
+  {
+   "id": "ex.a2.past-continuous.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The children ___ quietly when their parents arrived.",
+   "options": [
+    "played",
+    "were playing",
+    "play",
+    "are playing"
+   ],
+   "answer": 1,
+   "explanation": "The children were in the middle of playing when their parents arrived, so past continuous is correct."
+  },
+  {
+   "id": "ex.a2.past-continuous.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ a movie when the power went out.",
+   "options": [
+    "watched",
+    "was watching",
+    "watch",
+    "am watching"
+   ],
+   "answer": 1,
+   "explanation": "The action of watching was in progress and was interrupted by the power going out."
+  },
+  {
+   "id": "ex.a2.past-continuous.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My sister ___ ___ (read) a magazine while I was studying.",
+   "answers": [
+    [
+     "was"
+    ],
+    [
+     "reading"
+    ]
+   ],
+   "explanation": "The action of reading was happening at the same time as studying, so past continuous is needed."
+  },
+  {
+   "id": "ex.a2.past-continuous.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ ___ (not sleep) when the alarm rang.",
+   "answers": [
+    [
+     "were",
+     "weren't"
+    ],
+    [
+     "sleeping"
+    ]
+   ],
+   "explanation": "This describes an action that was not in progress at a specific past moment. 'Were not' or 'weren't' is correct for 'they'."
+  },
+  {
+   "id": "ex.a2.past-continuous.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "What ___ you ___ (do) at 7 PM yesterday?",
+   "answers": [
+    [
+     "were"
+    ],
+    [
+     "doing"
+    ]
+   ],
+   "explanation": "This is a question asking about an action in progress at a specific time in the past."
+  },
+  {
+   "id": "ex.a2.past-continuous.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "was",
+    "cooking",
+    "dinner",
+    "when",
+    "I",
+    "called",
+    "."
+   ],
+   "distractors": [
+    "cooks"
+   ],
+   "explanation": "The past continuous 'was cooking' describes the ongoing action, interrupted by the past simple 'called'."
+  },
+  {
+   "id": "ex.a2.past-continuous.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "While",
+    "we",
+    "were",
+    "traveling",
+    ",",
+    "we",
+    "saw",
+    "many",
+    "new",
+    "places",
+    "."
+   ],
+   "distractors": [
+    "travel"
+   ],
+   "explanation": "The past continuous 'were traveling' sets the scene for what happened during that ongoing activity."
+  },
+  {
+   "id": "ex.a2.past-continuous.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I was watch a movie last night.",
+   "answers": [
+    "I was watching a movie last night."
+   ],
+   "explanation": "The main verb in the past continuous must end in '-ing'."
+  },
+  {
+   "id": "ex.a2.past-continuous.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They was talking loudly in the cafe.",
+   "answers": [
+    "They were talking loudly in the cafe."
+   ],
+   "explanation": "For the plural subject 'they', the auxiliary verb should be 'were', not 'was'."
+  },
+  {
+   "id": "ex.a2.past-continuous.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I read a book. The phone rang.",
+   "instruction": "Combine these sentences using 'when'.",
+   "answers": [
+    "I was reading a book when the phone rang."
+   ],
+   "explanation": "The ongoing action ('reading') is interrupted by a shorter, completed action ('the phone rang')."
+  },
+  {
+   "id": "ex.a2.past-continuous.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She cooked. He cleaned.",
+   "instruction": "Combine these sentences using 'while' to show simultaneous actions.",
+   "answers": [
+    "While she was cooking, he was cleaning.",
+    "She was cooking while he was cleaning."
+   ],
+   "explanation": "Both actions were happening at the same time, so both should be in the past continuous."
+  },
+  {
+   "id": "ex.a2.past-continuous.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-continuous"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I was walking home",
+     "right": "when I saw an old friend."
+    },
+    {
+     "left": "While the children were playing,",
+     "right": "their parents were preparing lunch."
+    },
+    {
+     "left": "He wasn't paying attention",
+     "right": "when the teacher asked a question."
+    },
+    {
+     "left": "Were you sleeping",
+     "right": "when the storm started?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(was|were) [a-z]+ing",
+  "(was|were) [a-z]+ing (when|while)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.past-continuous.01": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.02": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.03": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.04": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.05": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.06": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key ignores the negation required by the prompt, whereas the other answer correctly includes it."
+   },
+   "ex.a2.past-continuous.07": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.08": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.09": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.10": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.11": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.12": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.13": {
+    "status": "pass"
+   },
+   "ex.a2.past-continuous.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 37336,
+   "text": "Tom was walking slowly with his head down.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 246638,
+   "text": "When I came home, he was cooking dinner.",
+   "author": "CK"
+  }
+ ]
+}

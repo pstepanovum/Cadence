@@ -1,0 +1,389 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "much-many-a-lot-of",
+ "draftHash": "01772820d49bfc29",
+ "grammarPoint": {
+  "id": "gp.much-many-a-lot-of",
+  "level": "A2",
+  "topicId": "topic.articles-determiners",
+  "title": "Much, many and a lot of",
+  "summary": "Learn to use 'much', 'many', and 'a lot of' to talk about quantities of things, distinguishing between countable and uncountable nouns.",
+  "explanation": "We use *much*, *many*, and *a lot of* to talk about quantities. The choice depends on whether the noun is *countable* or *uncountable*.\n\nUse *many* with *countable nouns* (things you can count, like 'apples', 'friends'). Use *much* with *uncountable nouns* (things you can't count individually, like 'water', 'information'). We often use *much* and *many* in questions and negative sentences.\n\n*A lot of* can be used with *both countable and uncountable nouns*. It's very common in positive sentences, but you can also use it in questions and negatives. *Lots of* means the same thing and is also very common.",
+  "patterns": [
+   "much + uncountable noun",
+   "many + plural countable noun",
+   "a lot of + uncountable noun",
+   "a lot of + plural countable noun"
+  ],
+  "examples": [
+   {
+    "text": "Do you have much time today?",
+    "note": "Uses 'much' with the uncountable noun 'time' in a question.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There aren't many chairs in the room.",
+    "note": "Uses 'many' with the plural countable noun 'chairs' in a negative sentence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We have a lot of work to do this week.",
+    "note": "Uses 'a lot of' with the uncountable noun 'work' in a positive sentence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She bought a lot of new clothes for her trip.",
+    "note": "Uses 'a lot of' with the plural countable noun 'clothes' in a positive sentence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I don't drink much coffee in the evenings.",
+    "note": "Uses 'much' with the uncountable noun 'coffee' in a negative sentence.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I don't have much friends.",
+    "right": "I don't have many friends.",
+    "note": "'Friends' is countable, so use 'many'."
+   },
+   {
+    "wrong": "Do you need many sugar?",
+    "right": "Do you need much sugar?",
+    "note": "'Sugar' is uncountable, so use 'much'."
+   },
+   {
+    "wrong": "They have a lot problems.",
+    "right": "They have a lot of problems.",
+    "note": "Always use 'of' after 'a lot' when it comes before a noun."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.much-many-a-lot-of.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "How ___ money do you need for the concert?",
+   "options": [
+    "many",
+    "much",
+    "a lot"
+   ],
+   "answer": 1,
+   "explanation": "'Money' is an uncountable noun, so we use 'much' in questions."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "There are ___ interesting places to visit in this city.",
+   "options": [
+    "much",
+    "a lot of",
+    "a lot"
+   ],
+   "answer": 1,
+   "explanation": "'Places' is a plural countable noun. 'A lot of' works for both countable and uncountable nouns in positive sentences."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She doesn't eat ___ vegetables.",
+   "options": [
+    "much",
+    "many",
+    "a lot"
+   ],
+   "answer": 1,
+   "explanation": "'Vegetables' is a plural countable noun, so we use 'many' in negative sentences."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We didn't get ___ information about the new project.",
+   "options": [
+    "many",
+    "a lot",
+    "much"
+   ],
+   "answer": 2,
+   "explanation": "'Information' is an uncountable noun, so we use 'much' in negative sentences."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Do you have ___ free time this weekend?",
+   "answers": [
+    [
+     "much"
+    ]
+   ],
+   "explanation": "'Time' is uncountable, and it's a question, so 'much' is appropriate."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My brother has ___ books in his room.",
+   "answers": [
+    [
+     "a lot of",
+     "lots of"
+    ]
+   ],
+   "explanation": "'Books' is a plural countable noun. 'A lot of' or 'lots of' are good choices for positive sentences."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "There isn't ___ milk left in the fridge.",
+   "answers": [
+    [
+     "much"
+    ]
+   ],
+   "explanation": "'Milk' is uncountable, and it's a negative sentence, so 'much' is correct."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "don't",
+    "have",
+    "many",
+    "pets",
+    "."
+   ],
+   "distractors": [
+    "much"
+   ],
+   "explanation": "This sentence uses 'many' with the plural countable noun 'pets' in a negative statement."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "need",
+    "a",
+    "lot",
+    "of",
+    "sugar",
+    "."
+   ],
+   "distractors": [
+    "many"
+   ],
+   "explanation": "This sentence uses 'a lot of' with the uncountable noun 'sugar' in a positive statement."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "How many water do you drink every day?",
+   "answers": [
+    "How much water do you drink every day?"
+   ],
+   "explanation": "'Water' is an uncountable noun, so 'much' should be used instead of 'many'."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I don't have a lot patience for this.",
+   "answers": [
+    "I don't have a lot of patience for this."
+   ],
+   "explanation": "When 'a lot' is followed by a noun, it must be 'a lot of'."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She doesn't have many ideas.",
+   "instruction": "Rewrite using 'a lot of'.",
+   "answers": [
+    "She doesn't have a lot of ideas."
+   ],
+   "explanation": "'A lot of' can replace 'many' in negative sentences and works with countable nouns."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "There is a lot of noise outside.",
+   "instruction": "Rewrite using 'much'.",
+   "answers": [
+    "There isn't much noise outside."
+   ],
+   "explanation": "To use 'much' with an uncountable noun like 'noise', the sentence usually needs to be negative or a question."
+  },
+  {
+   "id": "ex.a2.much-many-a-lot-of.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.much-many-a-lot-of"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Do you have much",
+     "right": "experience with this software?"
+    },
+    {
+     "left": "There aren't many",
+     "right": "students in the classroom today."
+    },
+    {
+     "left": "I bought a lot of",
+     "right": "fresh fruit at the market."
+    },
+    {
+     "left": "He doesn't eat much",
+     "right": "meat for dinner."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "much [a-z]+",
+  "many [a-z]+s",
+  "a lot of [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.much-many-a-lot-of.01": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.02": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.03": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.04": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.05": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.06": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.07": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.08": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.09": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.10": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.11": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.12": {
+    "status": "pass"
+   },
+   "ex.a2.much-many-a-lot-of.13": {
+    "status": "drop",
+    "note": "Key judged wrong: The key changes the sentence to a negative meaning, while the other answer uses 'much' unnaturally in an affirmative statement."
+   },
+   "ex.a2.much-many-a-lot-of.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 50971,
+   "text": "I think that there are many places to see there.",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 245668,
+   "text": "With your children away, you must have a lot of free time.",
+   "author": "CK"
+  }
+ ]
+}

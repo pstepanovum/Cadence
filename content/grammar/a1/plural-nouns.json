@@ -1,0 +1,390 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "plural-nouns",
+ "draftHash": "39e4857af02b1724",
+ "grammarPoint": {
+  "id": "gp.plural-nouns",
+  "level": "A1",
+  "topicId": "topic.nouns-pronouns",
+  "title": "Plural nouns",
+  "summary": "Learn how to make nouns plural to talk about more than one thing, including regular -s/-es endings and common irregular forms.",
+  "explanation": "Most nouns become plural by adding *-s* to the end. For example, one \"cat\" becomes two \"cats.\" One \"apple\" becomes many \"apples.\" This is the most common way to form plurals.\n\nIf a noun ends with *-s, -sh, -ch, -x,* or *-z*, we add *-es* to make it plural. For instance, one \"bus\" becomes two \"buses.\" One \"box\" becomes many \"boxes.\" This rule helps with pronunciation.\n\nSome nouns have irregular plural forms. This means they do not follow the -s or -es rules. For example, one \"man\" becomes two \"men,\" and one \"child\" becomes many \"children.\" You need to learn these special words.",
+  "patterns": [
+   "noun + s (e.g., book -> books)",
+   "noun ending in s, sh, ch, x, z + es (e.g., bus -> buses)",
+   "irregular forms (e.g., man -> men)"
+  ],
+  "examples": [
+   {
+    "text": "I have two books.",
+    "note": "Shows a regular plural with -s.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She eats many apples.",
+    "note": "Shows a regular plural with -s.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There are three buses at the station.",
+    "note": "Shows a plural with -es for a noun ending in -s.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The children play in the park.",
+    "note": "Shows an irregular plural form of 'child'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My feet are tired after walking.",
+    "note": "Shows an irregular plural form of 'foot'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I see two dog.",
+    "right": "I see two dogs.",
+    "note": "Remember to add -s for most plural nouns."
+   },
+   {
+    "wrong": "She has three watchs.",
+    "right": "She has three watches.",
+    "note": "Add -es to nouns ending in -ch."
+   },
+   {
+    "wrong": "There are many womans in the room.",
+    "right": "There are many women in the room.",
+    "note": "Some nouns have irregular plural forms."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.plural-nouns.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "How do you make \"cat\" plural?",
+   "options": [
+    "cat",
+    "cats",
+    "cates",
+    "cat's"
+   ],
+   "answer": 1,
+   "explanation": "Most nouns add -s to become plural."
+  },
+  {
+   "id": "ex.a1.plural-nouns.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Choose the correct plural form for \"box.\"",
+   "options": [
+    "boxs",
+    "boxes",
+    "boxies",
+    "box's"
+   ],
+   "answer": 1,
+   "explanation": "Nouns ending in -x add -es to become plural."
+  },
+  {
+   "id": "ex.a1.plural-nouns.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What is the plural of \"man\"?",
+   "options": [
+    "mans",
+    "men",
+    "manes",
+    "menes"
+   ],
+   "answer": 1,
+   "explanation": "\"Man\" has an irregular plural form: \"men.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I have two ___ in my bag.",
+   "options": [
+    "pen",
+    "pens",
+    "penes",
+    "pen's"
+   ],
+   "answer": 1,
+   "explanation": "\"Pens\" is the correct plural form for \"pen.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I see many ___ in the garden.",
+   "answers": [
+    [
+     "flowers"
+    ]
+   ],
+   "explanation": "\"Flowers\" is the regular plural form of \"flower.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She has two ___ for her new dress.",
+   "answers": [
+    [
+     "matches"
+    ]
+   ],
+   "explanation": "Nouns ending in -ch add -es to form the plural."
+  },
+  {
+   "id": "ex.a1.plural-nouns.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "There are five ___ in the car.",
+   "answers": [
+    [
+     "people"
+    ]
+   ],
+   "explanation": "\"People\" is the irregular plural form of \"person.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "girl",
+    "has",
+    "two",
+    "apples",
+    "."
+   ],
+   "distractors": [
+    "apple's"
+   ],
+   "explanation": "This sentence uses the regular plural form \"apples.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Many",
+    "children",
+    "like",
+    "to",
+    "play",
+    "."
+   ],
+   "distractors": [
+    "childs"
+   ],
+   "explanation": "\"Children\" is the irregular plural form of \"child.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I have three book.",
+   "answers": [
+    "I have three books."
+   ],
+   "explanation": "The plural form of \"book\" is \"books.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The woman are happy.",
+   "answers": [
+    "The women are happy."
+   ],
+   "explanation": "The plural form of \"woman\" is \"women.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "This is one bus.",
+   "instruction": "Rewrite the sentence to talk about two.",
+   "answers": [
+    "These are two buses."
+   ],
+   "explanation": "Change \"this\" to \"these,\" \"is\" to \"are,\" and \"bus\" to its plural form \"buses.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I see many mice.",
+   "instruction": "Rewrite the sentence to talk about one.",
+   "answers": [
+    "I see one mouse."
+   ],
+   "explanation": "Change \"many\" to \"one\" and \"mice\" to its singular form \"mouse.\""
+  },
+  {
+   "id": "ex.a1.plural-nouns.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.plural-nouns"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I have many",
+     "right": "friends."
+    },
+    {
+     "left": "She sees two",
+     "right": "foxes."
+    },
+    {
+     "left": "The small",
+     "right": "child."
+    },
+    {
+     "left": "My two",
+     "right": "feet."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\b(two|three|many|some|five|ten) (books|cars|apples|friends|dogs|cats|houses|pens|chairs)\\b",
+  "\\b(two|three|many|some|five|ten) (buses|boxes|watches|dishes)\\b",
+  "\\b(two|three|many|some|five|ten) (men|women|children|feet|people|mice)\\b"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.plural-nouns.01": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.02": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.03": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.04": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.05": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.06": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither 'matches' nor 'shoes' is natural here, as standard English requires 'matching accessories' or 'pairs of shoes'."
+   },
+   "ex.a1.plural-nouns.07": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.08": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.09": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.10": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.11": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.12": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.13": {
+    "status": "pass"
+   },
+   "ex.a1.plural-nouns.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 1585709,
+   "text": "He's got two cars.",
+   "author": "Gulliver"
+  },
+  {
+   "sentenceId": 5318344,
+   "text": "Three children are playing in the park.",
+   "author": "cliff900"
+  }
+ ]
+}

@@ -1,0 +1,507 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "purpose-clauses",
+ "draftHash": "34fdcf067cee86b7",
+ "grammarPoint": {
+  "id": "gp.purpose-clauses",
+  "level": "B2",
+  "topicId": "topic.clauses",
+  "title": "So that and in order to",
+  "summary": "Learn to use 'so that' and 'in order to' to explain the purpose or reason behind an action.",
+  "explanation": "We use 'so that' and 'in order to' to explain *why* someone does something. They both introduce the purpose or intention of an action.\n\n'In order to' is followed by the base form of a verb. It is generally more formal than 'so that' and is often used in written English or formal speech. You can also use 'to' + base verb for the same purpose, which is less formal than 'in order to'.\n\n'So that' is followed by a clause (a subject and a verb). We often use a modal verb like 'can', 'could', 'will', or 'would' after 'so that' to express possibility or intention. For example, 'She studies hard so that she *can* pass the exam.'",
+  "patterns": [
+   "Subject + verb + in order to + base verb",
+   "Subject + verb + so that + subject + modal verb + base verb"
+  ],
+  "examples": [
+   {
+    "text": "He woke up early in order to catch the first train.",
+    "note": "Explains the purpose of waking up early.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She wears a hat so that she doesn't get sunburned.",
+    "note": "Shows the reason for wearing a hat, using 'so that' with a negative clause.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They saved money in order to buy a new apartment.",
+    "note": "States the goal of saving money.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'll send you the report so that you can review it before the meeting.",
+    "note": "Indicates the intention behind sending the report, using 'can'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We left a note on the door so that the delivery driver would know we were out.",
+    "note": "Explains the reason for leaving a note, using 'would'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I study hard so I pass the test.",
+    "right": "I study hard so that I can pass the test.",
+    "note": "Remember to include 'that' and a modal verb after 'so' when expressing purpose."
+   },
+   {
+    "wrong": "She works extra hours in order to she earns more money.",
+    "right": "She works extra hours in order to earn more money.",
+    "note": "After 'in order to', use the base form of the verb, not a full clause."
+   },
+   {
+    "wrong": "He bought a map for not get lost.",
+    "right": "He bought a map in order not to get lost.",
+    "note": "For negative purpose with 'in order to', place 'not' before 'to'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.purpose-clauses.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They started the project early ___ meet the deadline.",
+   "options": [
+    "so they can",
+    "in order to",
+    "so that to",
+    "for to"
+   ],
+   "answer": 1,
+   "explanation": "'In order to' is followed by the base form of the verb and correctly expresses purpose here."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'm learning Spanish ___ I can travel more easily in South America.",
+   "options": [
+    "in order",
+    "so that",
+    "to order",
+    "for that"
+   ],
+   "answer": 1,
+   "explanation": "'So that' is used with a clause (I can travel) to express purpose."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She wore comfortable shoes ___ she could walk around the city all day.",
+   "options": [
+    "in order",
+    "so that",
+    "to order to",
+    "for"
+   ],
+   "answer": 1,
+   "explanation": "'So that' correctly introduces the purpose clause with a modal verb."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He saved money ___ buy a new bicycle.",
+   "options": [
+    "so that",
+    "in order",
+    "in order to",
+    "so"
+   ],
+   "answer": 2,
+   "explanation": "'In order to' is followed by the base verb 'buy' to express purpose."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We need to leave now ___ ___ miss our flight.",
+   "answers": [
+    [
+     "in",
+     "order",
+     "not",
+     "to"
+    ],
+    [
+     "so",
+     "that",
+     "we",
+     "don't"
+    ]
+   ],
+   "explanation": "Both 'in order not to' and 'so that we don't' correctly express a negative purpose."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The chef prepared the ingredients carefully ___ ___ the dish perfectly.",
+   "answers": [
+    [
+     "in",
+     "order",
+     "to",
+     "cook"
+    ],
+    [
+     "so",
+     "that",
+     "he",
+     "could",
+     "cook"
+    ]
+   ],
+   "explanation": "Both options correctly express the chef's purpose. 'In order to' is followed by the base verb, and 'so that' by a clause with a modal."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Please speak clearly ___ ___ everyone can understand you.",
+   "answers": [
+    [
+     "so",
+     "that"
+    ]
+   ],
+   "explanation": "'So that' is needed here because it introduces a clause with a subject and a modal verb."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "studies",
+    "hard",
+    "in",
+    "order",
+    "to",
+    "pass",
+    "his",
+    "exams",
+    "."
+   ],
+   "distractors": [
+    "for",
+    "passing"
+   ],
+   "explanation": "This sentence uses 'in order to' to explain the purpose of studying hard."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "wears",
+    "glasses",
+    "so",
+    "that",
+    "she",
+    "can",
+    "see",
+    "better",
+    "."
+   ],
+   "distractors": [
+    "for",
+    "seeing"
+   ],
+   "explanation": "This sentence uses 'so that' with a modal verb to explain the purpose of wearing glasses."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I called him so I could ask about the meeting.",
+   "answers": [
+    "I called him so that I could ask about the meeting."
+   ],
+   "explanation": "When expressing purpose with 'so', 'that' is usually included, especially with a modal verb."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They arrived early in order to they get good seats.",
+   "answers": [
+    "They arrived early in order to get good seats."
+   ],
+   "explanation": "After 'in order to', use the base form of the verb, not a full clause."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He exercises daily so that he can stay healthy.",
+   "instruction": "Rewrite using 'in order to'.",
+   "answers": [
+    "He exercises daily in order to stay healthy."
+   ],
+   "explanation": "Both 'so that' and 'in order to' can express purpose. 'In order to' is followed by the base verb."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She saved money to buy a new laptop.",
+   "instruction": "Rewrite using 'so that'.",
+   "answers": [
+    "She saved money so that she could buy a new laptop.",
+    "She saved money so that she can buy a new laptop."
+   ],
+   "explanation": "'So that' introduces a clause with a subject and a modal verb (could/can) to express purpose."
+  },
+  {
+   "id": "ex.b2.purpose-clauses.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.purpose-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I set an alarm",
+     "right": "in order to wake up on time."
+    },
+    {
+     "left": "She studies late",
+     "right": "so that she can finish her assignments."
+    },
+    {
+     "left": "They wore warm coats",
+     "right": "so that they wouldn't get cold."
+    },
+    {
+     "left": "He took a break",
+     "right": "in order to clear his mind."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "so that (?:he|she|it|we|they|you|I) (?:can|could|will|would|may|might) [a-z]+",
+  "in order to [a-z]+",
+  "so that [a-z]+ (?:can|could|will|would|may|might) [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.purpose-clauses.01": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.02": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.03": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.04": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical, whereas the other answer creates a correct sentence."
+   },
+   "ex.b2.purpose-clauses.06": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical, whereas the other answer creates a correct sentence."
+   },
+   "ex.b2.purpose-clauses.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.purpose-clauses.07: needs one answer list per gap (2)"
+   },
+   "ex.b2.purpose-clauses.08": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.09": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.10": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.11": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.12": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.13": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.14": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.15": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.16": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.17": {
+    "status": "pass"
+   },
+   "ex.b2.purpose-clauses.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.purpose-clauses.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.purpose-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The team held extra meetings ___ everyone understood the new strategy.",
+    "options": [
+     "in order to",
+     "so that",
+     "for",
+     "to"
+    ],
+    "answer": 1,
+    "explanation": "'So that' is followed by a clause (subject + verb) to express purpose."
+   },
+   {
+    "id": "ex.b2.purpose-clauses.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.purpose-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "He took a cooking class ___ learn how to make pasta from scratch.",
+    "options": [
+     "so that",
+     "in order",
+     "in order to",
+     "for to"
+    ],
+    "answer": 2,
+    "explanation": "'In order to' is followed by a base verb to express purpose."
+   },
+   {
+    "id": "ex.b2.purpose-clauses.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.purpose-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We packed a picnic lunch ___ we wouldn't have to buy food at the park.",
+    "options": [
+     "in order to",
+     "so that",
+     "to",
+     "for"
+    ],
+    "answer": 1,
+    "explanation": "'So that' is used with a clause (subject + verb) to show purpose, especially negative purpose."
+   },
+   {
+    "id": "ex.b2.purpose-clauses.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.purpose-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She uses a planner ___ organize her daily tasks efficiently.",
+    "options": [
+     "so that",
+     "in order",
+     "in order to",
+     "for"
+    ],
+    "answer": 2,
+    "explanation": "'In order to' is followed by a base verb to state the purpose of an action."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 11579137,
+   "text": "I'm breathing so that I can calm down.",
+   "author": "Amastan"
+  },
+  {
+   "sentenceId": 12283831,
+   "text": "Plants need warmth and light in order to grow.",
+   "author": "Lebensfreude"
+  }
+ ]
+}

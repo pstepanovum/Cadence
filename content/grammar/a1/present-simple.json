@@ -1,0 +1,394 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "present-simple",
+ "draftHash": "4a6dfa18f9cddbf8",
+ "grammarPoint": {
+  "id": "gp.present-simple",
+  "level": "A1",
+  "topicId": "topic.tenses",
+  "title": "Present simple",
+  "summary": "Use the present simple to talk about daily routines, habits, and general facts.",
+  "explanation": "We use the present simple to talk about things that happen regularly, like your daily routine or habits. It's also used for general truths or facts that are always true.\n\nFor most subjects (I, you, we, they), the verb stays in its base form. For example, \"I eat breakfast.\" or \"They play soccer.\"\n\nWhen the subject is *he*, *she*, or *it*, we add an \"-s\" to the end of the verb. For example, \"He eats breakfast.\" or \"She plays soccer.\"\n\nTo ask questions in the present simple, we use \"do\" or \"does.\" Use \"do\" for I, you, we, and they. Use \"does\" for he, she, and it. The main verb then goes back to its base form. For example, \"Do you like coffee?\" or \"Does she live here?\"",
+  "patterns": [
+   "Subject + verb (base form)",
+   "He/She/It + verb-s",
+   "Do/Does + subject + verb (base form)?"
+  ],
+  "examples": [
+   {
+    "text": "I wake up at 7 AM every weekday.",
+    "note": "This describes a regular routine.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The Earth goes around the sun.",
+    "note": "This states a general fact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She works in a big office downtown.",
+    "note": "The verb 'works' has -s because the subject is 'she'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you speak French?",
+    "note": "This asks about a general ability or habit using 'do'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Does he play the guitar?",
+    "note": "This asks about a habit for 'he' using 'does'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He work very hard.",
+    "right": "He works very hard.",
+    "note": "Remember to add -s to the verb for 'he', 'she', and 'it'."
+   },
+   {
+    "wrong": "They likes pizza.",
+    "right": "They like pizza.",
+    "note": "Only add -s for 'he', 'she', and 'it'. For 'they', use the base form."
+   },
+   {
+    "wrong": "Do she live in London?",
+    "right": "Does she live in London?",
+    "note": "Use 'does' for questions with 'he', 'she', and 'it'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.present-simple.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My brother ___ a lot of books.",
+   "options": [
+    "read",
+    "reads",
+    "is read",
+    "reading"
+   ],
+   "answer": 1,
+   "explanation": "For 'my brother' (he), we add -s to the verb."
+  },
+  {
+   "id": "ex.a1.present-simple.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ to the park on weekends.",
+   "options": [
+    "goes",
+    "go",
+    "is going",
+    "went"
+   ],
+   "answer": 1,
+   "explanation": "For 'we', the verb stays in its base form."
+  },
+  {
+   "id": "ex.a1.present-simple.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you like tea?",
+   "options": [
+    "Is",
+    "Does",
+    "Do",
+    "Are"
+   ],
+   "answer": 2,
+   "explanation": "To ask a question with 'you' in the present simple, use 'do'."
+  },
+  {
+   "id": "ex.a1.present-simple.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My cat ___ all day.",
+   "options": [
+    "sleep",
+    "sleeping",
+    "sleeps",
+    "is sleep"
+   ],
+   "answer": 2,
+   "explanation": "For 'my cat' (it), we add -s to the verb."
+  },
+  {
+   "id": "ex.a1.present-simple.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ coffee every morning.",
+   "answers": [
+    [
+     "drink"
+    ]
+   ],
+   "explanation": "For 'I', use the base form of the verb."
+  },
+  {
+   "id": "ex.a1.present-simple.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ her dog for a walk every evening.",
+   "answers": [
+    [
+     "takes"
+    ]
+   ],
+   "explanation": "For 'she', add -s to the verb."
+  },
+  {
+   "id": "ex.a1.present-simple.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ he ___ in this building?",
+   "answers": [
+    [
+     "Does"
+    ],
+    [
+     "work",
+     "live"
+    ]
+   ],
+   "explanation": "For a question with 'he', use 'does' and the base form of the verb."
+  },
+  {
+   "id": "ex.a1.present-simple.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "watch",
+    "movies",
+    "on",
+    "Fridays",
+    "."
+   ],
+   "distractors": [
+    "watches"
+   ],
+   "explanation": "This sentence describes a regular activity for 'they'."
+  },
+  {
+   "id": "ex.a1.present-simple.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "eats",
+    "lunch",
+    "at",
+    "noon",
+    "."
+   ],
+   "distractors": [
+    "eat"
+   ],
+   "explanation": "This sentence describes a routine for 'he', so 'eats' is used."
+  },
+  {
+   "id": "ex.a1.present-simple.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My sister live in a small town.",
+   "answers": [
+    "My sister lives in a small town."
+   ],
+   "explanation": "For 'my sister' (she), the verb needs an -s."
+  },
+  {
+   "id": "ex.a1.present-simple.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Do he play soccer?",
+   "answers": [
+    "Does he play soccer?"
+   ],
+   "explanation": "For questions with 'he', use 'does' instead of 'do'."
+  },
+  {
+   "id": "ex.a1.present-simple.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You speak English well.",
+   "instruction": "Rewrite as a question.",
+   "answers": [
+    "Do you speak English well?"
+   ],
+   "explanation": "To form a question with 'you', add 'do' at the beginning."
+  },
+  {
+   "id": "ex.a1.present-simple.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I like to cook.",
+   "instruction": "Change the subject to 'She'.",
+   "answers": [
+    "She likes to cook."
+   ],
+   "explanation": "When the subject changes to 'she', the verb 'like' becomes 'likes'."
+  },
+  {
+   "id": "ex.a1.present-simple.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-simple"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Birds",
+     "right": "fly in the sky."
+    },
+    {
+     "left": "My friend",
+     "right": "studies every night."
+    },
+    {
+     "left": "We",
+     "right": "walk to school."
+    },
+    {
+     "left": "The store",
+     "right": "opens at 9 AM."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "I (?:work|live|eat|drink|play|read|go) (?:every day|often|usually|at home|in the city)",
+  "(?:He|She|It) (?:works|lives|eats|drinks|plays|reads|goes) (?:here|there|fast|well|often)",
+  "(?:Do|Does) (?:you|he|she|it|we|they) (?:like|play|go|eat|live)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.present-simple.01": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.02": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.03": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.04": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.05": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.06": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both verbs form correct and natural questions in the given sentence structure."
+   },
+   "ex.a1.present-simple.08": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.09": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.10": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.11": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.12": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.13": {
+    "status": "pass"
+   },
+   "ex.a1.present-simple.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 5131549,
+   "text": "He lives here now.",
+   "author": "Barra"
+  },
+  {
+   "sentenceId": 6029712,
+   "text": "How often do you go to movies?",
+   "author": "CK"
+  }
+ ]
+}

@@ -1,0 +1,404 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "had-better",
+ "draftHash": "df4d5d0db3613436",
+ "grammarPoint": {
+  "id": "gp.had-better",
+  "level": "B2",
+  "topicId": "topic.modals",
+  "title": "Had better",
+  "summary": "Use 'had better' to give strong advice or warnings, often implying a negative consequence if the advice is not followed.",
+  "explanation": "We use *had better* to give strong advice or a warning. It suggests that there will be a negative consequence if the advice is not followed. It's stronger than 'should' and often refers to an immediate or specific situation.\n\nEven though it uses 'had', it refers to the present or future, not the past. The 'had' is almost always contracted to 'd, especially in spoken English (e.g., 'You'd better go').\n\nTo form the negative, we put 'not' after 'had better': *had better not*. We use the base form of the verb after 'had better' or 'had better not'.",
+  "patterns": [
+   "Subject + had better + base verb",
+   "Subject + 'd better + base verb",
+   "Subject + had better not + base verb",
+   "Subject + 'd better not + base verb"
+  ],
+  "examples": [
+   {
+    "text": "You'd better finish that report by five o'clock.",
+    "note": "This is a strong warning about a deadline.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We had better leave now, or we'll miss the train.",
+    "note": "Giving urgent advice to avoid a negative outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She'd better not forget her passport for the trip.",
+    "note": "A warning about a potential problem.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They had better apologize for their behavior.",
+    "note": "Strong advice about what someone should do.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'd better call my parents; they might be worried.",
+    "note": "Expressing a strong personal obligation or necessity.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "You have better study for the exam.",
+    "right": "You had better study for the exam.",
+    "note": "Always use 'had' (or 'd) with 'better', not 'have'."
+   },
+   {
+    "wrong": "We had better to hurry.",
+    "right": "We had better hurry.",
+    "note": "Use the base form of the verb directly after 'had better', without 'to'."
+   },
+   {
+    "wrong": "He had not better be late.",
+    "right": "He had better not be late.",
+    "note": "For the negative, 'not' comes after 'had better'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.had-better.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's getting late. We ___ go home soon.",
+   "options": [
+    "should",
+    "had better",
+    "must",
+    "could"
+   ],
+   "answer": 1,
+   "explanation": "'Had better' is the best choice here because it implies a potential negative consequence (e.g., getting stuck in traffic, being too tired) if they don't go home soon, making it stronger than 'should'."
+  },
+  {
+   "id": "ex.b2.had-better.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ tell your boss about the mistake before it's too late.",
+   "options": [
+    "had better",
+    "should to",
+    "have better",
+    "must to"
+   ],
+   "answer": 0,
+   "explanation": "'Had better' is correct for strong advice with a potential negative outcome. 'Should to', 'have better', and 'must to' are grammatically incorrect."
+  },
+  {
+   "id": "ex.b2.had-better.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The forecast says it will rain. You ___ take an umbrella.",
+   "options": [
+    "had better",
+    "should have",
+    "might",
+    "can"
+   ],
+   "answer": 0,
+   "explanation": "'Had better' is used for a strong warning about a future event (rain) and the consequence of not taking an umbrella (getting wet). 'Should have' refers to the past, and 'might'/'can' are less direct advice."
+  },
+  {
+   "id": "ex.b2.had-better.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ forget to lock the doors when we leave.",
+   "options": [
+    "had better not",
+    "shouldn't to",
+    "don't better",
+    "must not to"
+   ],
+   "answer": 0,
+   "explanation": "'Had better not' is the correct way to form a negative warning, implying a serious consequence if the doors are not locked. The other options are grammatically incorrect."
+  },
+  {
+   "id": "ex.b2.had-better.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's a long drive. We ___ fill up the gas tank now.",
+   "answers": [
+    [
+     "had better",
+     "'d better"
+    ]
+   ],
+   "explanation": "'Had better' is used for strong advice to avoid running out of gas."
+  },
+  {
+   "id": "ex.b2.had-better.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You ___ be late for the interview, or you might not get the job.",
+   "answers": [
+    [
+     "had better not",
+     "'d better not"
+    ]
+   ],
+   "explanation": "'Had better not' gives a strong warning about the negative consequence of being late."
+  },
+  {
+   "id": "ex.b2.had-better.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My phone battery is low. I ___ charge it soon.",
+   "answers": [
+    [
+     "had better",
+     "'d better"
+    ]
+   ],
+   "explanation": "'Had better' expresses a strong personal necessity to avoid the phone dying."
+  },
+  {
+   "id": "ex.b2.had-better.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You'd",
+    "better",
+    "wear",
+    "a",
+    "coat",
+    "today",
+    "."
+   ],
+   "distractors": [
+    "should",
+    "to"
+   ],
+   "explanation": "This sentence gives strong advice to wear a coat, implying it's cold or will be cold."
+  },
+  {
+   "id": "ex.b2.had-better.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "had",
+    "better",
+    "not",
+    "miss",
+    "the",
+    "deadline",
+    "."
+   ],
+   "distractors": [
+    "don't",
+    "to"
+   ],
+   "explanation": "This is a strong warning not to miss the deadline, suggesting serious consequences."
+  },
+  {
+   "id": "ex.b2.had-better.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We have better check the train schedule.",
+   "answers": [
+    "We had better check the train schedule.",
+    "We'd better check the train schedule."
+   ],
+   "explanation": "The correct form is 'had better', not 'have better'."
+  },
+  {
+   "id": "ex.b2.had-better.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She had better to finish her homework.",
+   "answers": [
+    "She had better finish her homework.",
+    "She'd better finish her homework."
+   ],
+   "explanation": "The base form of the verb follows 'had better' directly, without 'to'."
+  },
+  {
+   "id": "ex.b2.had-better.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You should really apologize to him.",
+   "instruction": "Rewrite using 'had better' to make the advice stronger.",
+   "answers": [
+    "You had better apologize to him.",
+    "You'd better apologize to him."
+   ],
+   "explanation": "'Had better' makes the advice stronger, implying a negative consequence if the apology isn't made."
+  },
+  {
+   "id": "ex.b2.had-better.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Don't forget your keys, or you won't get in.",
+   "instruction": "Rewrite using 'had better not'.",
+   "answers": [
+    "You had better not forget your keys.",
+    "You'd better not forget your keys.",
+    "You had better not forget your keys, or you won't get in."
+   ],
+   "explanation": "'Had better not' expresses a strong warning about forgetting the keys and the resulting problem."
+  },
+  {
+   "id": "ex.b2.had-better.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.had-better"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "It's getting dark; we'd better",
+     "right": "head back to the camp."
+    },
+    {
+     "left": "You'd better not",
+     "right": "touch that hot stove."
+    },
+    {
+     "left": "They had better submit",
+     "right": "their applications by Friday."
+    },
+    {
+     "left": "I'd better call the restaurant",
+     "right": "to confirm our reservation."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "had better [a-z]+",
+  "'d better [a-z]+",
+  "had better not [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.had-better.01": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.02": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.03": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.04": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.05": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.06": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.07": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.08": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.09": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.10": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.11": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.12": {
+    "status": "pass"
+   },
+   "ex.b2.had-better.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options are natural and correct rewrites of the original sentence."
+   },
+   "ex.b2.had-better.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 16505,
+   "text": "You'd better go home as soon as possible.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 4663007,
+   "text": "You'd better hurry. If you don't, you'll be late.",
+   "author": "CK"
+  }
+ ]
+}

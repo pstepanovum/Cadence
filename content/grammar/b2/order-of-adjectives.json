@@ -1,0 +1,495 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "order-of-adjectives",
+ "draftHash": "dfb6950b85668e97",
+ "grammarPoint": {
+  "id": "gp.order-of-adjectives",
+  "level": "B2",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "Order of adjectives",
+  "summary": "Learn the common order for adjectives like opinion, size, age, color, origin, and material when describing a noun.",
+  "explanation": "When you use more than one adjective to describe a noun, they usually follow a specific order. While it might feel natural to native speakers, there's a general pattern that helps make sentences clear and easy to understand.\n\nThe most common order starts with adjectives that express your *opinion* (like 'beautiful' or 'ugly'), followed by *size* ('large', 'small'), then *age* ('old', 'new'), *color* ('red', 'blue'), *origin* ('French', 'American'), and finally *material* ('wooden', 'silk').\n\nIt's rare to use more than three or four adjectives before a noun, but knowing this order helps you sound more natural and avoid confusion.",
+  "patterns": [
+   "Opinion + Size + Age + Color + Origin + Material + Noun",
+   "Opinion + Size + Noun",
+   "Age + Color + Noun",
+   "Color + Material + Noun"
+  ],
+  "examples": [
+   {
+    "text": "She bought a beautiful small antique silver mirror.",
+    "note": "Opinion (beautiful), Size (small), Age (antique), Material (silver) are in order.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They live in a spacious modern brick house.",
+    "note": "Opinion (spacious), Age (modern), Material (brick) are correctly ordered.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He wore a comfortable old blue cotton shirt.",
+    "note": "Opinion (comfortable), Age (old), Color (blue), Material (cotton) follow the pattern.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We saw a magnificent huge ancient stone temple.",
+    "note": "Opinion (magnificent), Size (huge), Age (ancient), Material (stone) are in the correct sequence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I found a charming little green ceramic mug.",
+    "note": "Opinion (charming), Size (little), Color (green), Material (ceramic) are ordered correctly.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "She has a red old car.",
+    "right": "She has an old red car.",
+    "note": "Age (old) comes before Color (red)."
+   },
+   {
+    "wrong": "They bought a wooden big table.",
+    "right": "They bought a big wooden table.",
+    "note": "Size (big) comes before Material (wooden)."
+   },
+   {
+    "wrong": "He admired the French beautiful painting.",
+    "right": "He admired the beautiful French painting.",
+    "note": "Opinion (beautiful) comes before Origin (French)."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.order-of-adjectives.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My aunt gave me a ___ scarf.",
+   "options": [
+    "silk lovely new",
+    "lovely new silk",
+    "new lovely silk",
+    "silk new lovely"
+   ],
+   "answer": 1,
+   "explanation": "The correct order is Opinion (lovely), Age (new), Material (silk)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We visited a ___ castle.",
+   "options": [
+    "stone ancient impressive",
+    "impressive ancient stone",
+    "ancient impressive stone",
+    "impressive stone ancient"
+   ],
+   "answer": 1,
+   "explanation": "The correct order is Opinion (impressive), Age (ancient), Material (stone)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They found a ___ box in the attic.",
+   "options": [
+    "small old metal",
+    "metal small old",
+    "old small metal",
+    "small metal old"
+   ],
+   "answer": 0,
+   "explanation": "The correct order is Size (small), Age (old), Material (metal)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He ordered a ___ coffee table.",
+   "options": [
+    "round modern glass",
+    "glass round modern",
+    "modern round glass",
+    "round glass modern"
+   ],
+   "answer": 2,
+   "explanation": "The correct order is Age (modern), Shape/Size (round), Material (glass)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She wore a ___ ___ ___ dress to the party.",
+   "answers": [
+    [
+     "elegant"
+    ],
+    [
+     "long"
+    ],
+    [
+     "black"
+    ]
+   ],
+   "explanation": "The correct order is Opinion (elegant), Size (long), Color (black)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They bought a ___ ___ ___ rug for their living room.",
+   "answers": [
+    [
+     "soft",
+     "beautiful"
+    ],
+    [
+     "large"
+    ],
+    [
+     "wool",
+     "Persian"
+    ]
+   ],
+   "explanation": "The correct order is Opinion (soft), Size (large), Material (wool)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I saw a ___ ___ ___ car parked outside.",
+   "answers": [
+    [
+     "shiny"
+    ],
+    [
+     "new"
+    ],
+    [
+     "red",
+     "black"
+    ]
+   ],
+   "explanation": "The correct order is Opinion (shiny), Age (new), Color (red)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "a",
+    "comfortable",
+    "leather",
+    "chair",
+    "bought",
+    "."
+   ],
+   "explanation": "The correct order is Opinion (comfortable) then Material (leather)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "a",
+    "delicious",
+    "Italian",
+    "meal",
+    "ate",
+    "."
+   ],
+   "explanation": "The correct order is Opinion (delicious) then Origin (Italian)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My friend has a big friendly black dog.",
+   "answers": [
+    "My friend has a friendly big black dog."
+   ],
+   "explanation": "Opinion (friendly) should come before Size (big)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They found a old beautiful wooden chest.",
+   "answers": [
+    "They found a beautiful old wooden chest."
+   ],
+   "explanation": "Opinion (beautiful) should come before Age (old)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The vase is made of glass. It's small and pretty.",
+   "instruction": "Combine the sentences into one, describing the vase.",
+   "answers": [
+    "It's a pretty small glass vase.",
+    "The vase is a pretty small glass vase."
+   ],
+   "explanation": "The correct order is Opinion (pretty), Size (small), Material (glass)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I need a table. It should be round and wooden.",
+   "instruction": "Rewrite the sentence using adjectives before the noun.",
+   "answers": [
+    "I need a round wooden table."
+   ],
+   "explanation": "The correct order is Shape/Size (round), Material (wooden)."
+  },
+  {
+   "id": "ex.b2.order-of-adjectives.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.order-of-adjectives"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "She bought a charming",
+     "right": "old ceramic bowl."
+    },
+    {
+     "left": "He drives a fast",
+     "right": "red sports car."
+    },
+    {
+     "left": "They live in a spacious",
+     "right": "modern brick apartment."
+    },
+    {
+     "left": "I saw a tiny",
+     "right": "blue plastic toy."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\b(beautiful|lovely|nice)\\s+(big|small|tiny|large)\\s+\\w+",
+  "\\b(old|new|ancient|modern)\\s+(red|blue|green|black|white)\\s+\\w+",
+  "\\b(red|blue|green|black|white)\\s+(wooden|plastic|metal|silk|cotton)\\s+\\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.order-of-adjectives.01": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.02": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.03": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.04": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key creates an article mismatch because 'elegant' requires 'an' rather than 'a'."
+   },
+   "ex.b2.order-of-adjectives.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both adjective sequences follow correct standard adjective order."
+   },
+   "ex.b2.order-of-adjectives.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both adjective sequences are grammatically correct and natural."
+   },
+   "ex.b2.order-of-adjectives.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key incorrectly places the verb at the end of the sentence."
+   },
+   "ex.b2.order-of-adjectives.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key places the main verb at the end of the sentence."
+   },
+   "ex.b2.order-of-adjectives.10": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.11": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options correctly combine the given sentences into a single natural sentence."
+   },
+   "ex.b2.order-of-adjectives.13": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.14": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.15": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.16": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.17": {
+    "status": "pass"
+   },
+   "ex.b2.order-of-adjectives.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.order-of-adjectives.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.order-of-adjectives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My friend adopted a ___ dog.",
+    "options": [
+     "friendly big black",
+     "big friendly black",
+     "black big friendly"
+    ],
+    "answer": 0,
+    "explanation": "Opinion (friendly) comes before Size (big) and Color (black)."
+   },
+   {
+    "id": "ex.b2.order-of-adjectives.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.order-of-adjectives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We admired the ___ sculpture.",
+    "options": [
+     "ancient stone impressive",
+     "impressive ancient stone",
+     "stone impressive ancient"
+    ],
+    "answer": 1,
+    "explanation": "Opinion (impressive) comes before Age (ancient) and Material (stone)."
+   },
+   {
+    "id": "ex.b2.order-of-adjectives.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.order-of-adjectives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The museum acquired a ___ painting.",
+    "options": [
+     "small old French oil",
+     "French small old oil",
+     "old small French oil"
+    ],
+    "answer": 0,
+    "explanation": "Size (small) comes before Age (old), Origin (French), and Material (oil)."
+   },
+   {
+    "id": "ex.b2.order-of-adjectives.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.order-of-adjectives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She wore a ___ hat to the garden party.",
+    "options": [
+     "straw lovely wide",
+     "lovely wide straw",
+     "wide lovely straw"
+    ],
+    "answer": 1,
+    "explanation": "Opinion (lovely) comes before Size (wide) and Material (straw)."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2819799,
+   "text": "A nice big glass of water is a good way to start the day.",
+   "author": "memries"
+  },
+  {
+   "sentenceId": 2134063,
+   "text": "He's wearing a white cotton shirt.",
+   "author": "Hybrid"
+  }
+ ]
+}

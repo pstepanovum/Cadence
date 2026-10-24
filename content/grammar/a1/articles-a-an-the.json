@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "articles-a-an-the",
+ "draftHash": "587a5a82114c50f9",
+ "grammarPoint": {
+  "id": "gp.articles-a-an-the",
+  "level": "A1",
+  "topicId": "topic.articles-determiners",
+  "title": "A, an and the",
+  "summary": "Learn to use 'a' and 'an' for one non-specific thing, and 'the' for a specific thing that is already known.",
+  "explanation": "We use *a* or *an* when we talk about one thing that is not specific. It means \"any one\" of something. We use *a* before words that start with a consonant sound (e.g., a book, a cat). We use *an* before words that start with a vowel sound (e.g., an apple, an hour).\n\nWe use *the* when we talk about a specific thing. This means the listener or reader knows exactly which thing we are talking about. It can be one thing or many things (singular or plural).\n\nFor example, if you say \"I want *a* banana,\" it means any banana. If you say \"I want *the* banana on the table,\" it means a specific banana that everyone can see.",
+  "patterns": [
+   "a + consonant sound noun (singular)",
+   "an + vowel sound noun (singular)",
+   "the + noun (singular or plural)"
+  ],
+  "examples": [
+   {
+    "text": "I need a pen for my class.",
+    "note": "Refers to any pen, not a specific one.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She wants an orange from the basket.",
+    "note": "Refers to any orange, not a specific one. 'Orange' starts with a vowel sound.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Can you close the door, please?",
+    "note": "Refers to a specific door that is understood by both speakers.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The sun is very bright today.",
+    "note": "Refers to a unique thing (there is only one sun).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He bought a new car. The car is red.",
+    "note": "First mention uses 'a' (any new car), second mention uses 'the' (the specific car he bought).",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I want apple.",
+    "right": "I want an apple.",
+    "note": "Always use 'a' or 'an' with singular countable nouns."
+   },
+   {
+    "wrong": "She has a old book.",
+    "right": "She has an old book.",
+    "note": "Use 'an' before words starting with a vowel sound, even if it's an adjective."
+   },
+   {
+    "wrong": "Where is a key?",
+    "right": "Where is the key?",
+    "note": "Use 'the' when referring to a specific item that is known."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.articles-a-an-the.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I saw ___ interesting movie last night.",
+   "options": [
+    "a",
+    "an",
+    "the"
+   ],
+   "answer": 1,
+   "explanation": "'Interesting' starts with a vowel sound, so 'an' is correct. It's the first mention of the movie."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Please pass me ___ salt.",
+   "options": [
+    "a",
+    "an",
+    "the"
+   ],
+   "answer": 2,
+   "explanation": "We use 'the' because it refers to the specific salt shaker on the table, known to both speakers."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My brother is ___ engineer.",
+   "options": [
+    "a",
+    "an",
+    "the"
+   ],
+   "answer": 1,
+   "explanation": "'Engineer' starts with a vowel sound, so 'an' is correct. It describes his profession generally."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you have ___ pen I can borrow?",
+   "options": [
+    "a",
+    "an",
+    "the"
+   ],
+   "answer": 0,
+   "explanation": "We use 'a' because it refers to any pen, not a specific one. 'Pen' starts with a consonant sound."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I need ___ new phone. ___ old one is broken.",
+   "answers": [
+    [
+     "a"
+    ],
+    [
+     "The"
+    ]
+   ],
+   "explanation": "First, 'a' for any new phone. Then, 'The' for the specific old phone that is broken."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She lives in ___ apartment on ___ third floor.",
+   "answers": [
+    [
+     "an"
+    ],
+    [
+     "the"
+    ]
+   ],
+   "explanation": "'Apartment' starts with a vowel sound, so 'an'. 'Third floor' is a specific location, so 'the'."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He wants to buy ___ dog. He likes ___ big dogs.",
+   "answers": [
+    [
+     "a"
+    ],
+    [
+     "the"
+    ]
+   ],
+   "explanation": "First, 'a' for any dog. Then, 'the' because it refers to big dogs in general, a specific type."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "have",
+    "a",
+    "cat",
+    "."
+   ],
+   "distractors": [
+    "an",
+    "the"
+   ],
+   "explanation": "This sentence uses 'a' to introduce a non-specific cat."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Where",
+    "is",
+    "the",
+    "book",
+    "?"
+   ],
+   "distractors": [
+    "a",
+    "an"
+   ],
+   "explanation": "This sentence uses 'the' to ask about a specific book."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I need a umbrella for the rain.",
+   "answers": [
+    "I need an umbrella for the rain."
+   ],
+   "explanation": "'Umbrella' starts with a vowel sound, so 'an' is correct."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Can you open a window?",
+   "answers": [
+    "Can you open the window?"
+   ],
+   "explanation": "When asking to open a window, it's usually a specific window known to both speakers, so 'the' is correct."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I saw a bird. The bird was singing.",
+   "instruction": "Combine the sentences, referring to the bird only once.",
+   "answers": [
+    "I saw a bird singing."
+   ],
+   "explanation": "The second sentence specifies the bird from the first, so we can combine them and keep 'a' for the first mention."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She wants a new dress. She saw a dress in the store.",
+   "instruction": "Rewrite the second sentence to refer to the specific dress she saw.",
+   "answers": [
+    "She wants a new dress. She saw the dress in the store."
+   ],
+   "explanation": "The second mention of the dress is specific, so 'the' is used."
+  },
+  {
+   "id": "ex.a1.articles-a-an-the.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.articles-a-an-the"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I want",
+     "right": "a cup of tea."
+    },
+    {
+     "left": "Please give me",
+     "right": "the keys on the table."
+    },
+    {
+     "left": "She needs",
+     "right": "an hour to finish."
+    },
+    {
+     "left": "Look at",
+     "right": "the moon tonight."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "a (?:[a-z]+ )?[a-z]+",
+  "an (?:[a-z]+ )?[a-z]+",
+  "the (?:[a-z]+ )?[a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.articles-a-an-the.01": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.02": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.03": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.04": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.05": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.06": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.07": {
+    "status": "drop",
+    "note": "Key judged wrong: General preferences with plural nouns require no article, so the zero article is correct rather than 'the'."
+   },
+   "ex.a1.articles-a-an-the.08": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.09": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.10": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.11": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.12": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.13": {
+    "status": "pass"
+   },
+   "ex.a1.articles-a-an-the.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 16403,
+   "text": "You are not a child any more.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 29826,
+   "text": "Please turn off the light.",
+   "author": "CK"
+  }
+ ]
+}

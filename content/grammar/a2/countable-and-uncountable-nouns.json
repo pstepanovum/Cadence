@@ -1,0 +1,393 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "countable-and-uncountable-nouns",
+ "draftHash": "6b0a3fbfbdbc1c60",
+ "grammarPoint": {
+  "id": "gp.countable-and-uncountable-nouns",
+  "level": "A2",
+  "topicId": "topic.nouns-pronouns",
+  "title": "Countable and uncountable nouns",
+  "summary": "Learn to use 'a', 'an', and plural forms correctly with nouns you can count (countable) and nouns you cannot count (uncountable).",
+  "explanation": "Nouns are words for people, places, things, or ideas. In English, nouns can be *countable* or *uncountable*. Knowing the difference helps you use them correctly with 'a', 'an', 'some', and plural forms.\n\n*Countable nouns* are things you can count. They have both a singular form (one) and a plural form (more than one). For example, 'apple' is singular, 'apples' is plural. You can use 'a' or 'an' with singular countable nouns: 'a book', 'an orange'.\n\n*Uncountable nouns* are things you cannot count individually. These often include liquids, abstract ideas, or materials. For example, 'water', 'information', 'music'. They usually don't have a plural form and you don't use 'a' or 'an' directly before them. Instead, you might use words like 'some' or 'a lot of'.",
+  "patterns": [
+   "a/an + singular countable noun",
+   "number + plural countable noun",
+   "some/any + countable plural noun",
+   "some/any + uncountable noun"
+  ],
+  "examples": [
+   {
+    "text": "I need *a new pen* for my class.",
+    "note": "'Pen' is a singular countable noun, so we use 'a'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She bought *three apples* at the market.",
+    "note": "'Apples' is a plural countable noun, so we use a number.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Can I have *some water*, please?",
+    "note": "'Water' is an uncountable noun, so we use 'some' instead of 'a/an'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There are *many chairs* in the meeting room.",
+    "note": "'Chairs' is a plural countable noun, so we use 'many'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He always listens to *music* when he works.",
+    "note": "'Music' is an uncountable noun; it doesn't take 'a/an' or a plural form here.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I need an advice.",
+    "right": "I need some advice.",
+    "note": "'Advice' is an uncountable noun, so we use 'some'."
+   },
+   {
+    "wrong": "She has many informations.",
+    "right": "She has a lot of information.",
+    "note": "'Information' is an uncountable noun and does not have a plural form."
+   },
+   {
+    "wrong": "Can I have a water?",
+    "right": "Can I have some water?",
+    "note": "'Water' is an uncountable noun, so we use 'some' or 'a glass of'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'd like ___ coffee, please.",
+   "options": [
+    "a",
+    "an",
+    "some",
+    "many"
+   ],
+   "answer": 2,
+   "explanation": "'Coffee' is an uncountable noun, so 'some' is the correct quantifier."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you have ___ umbrella?",
+   "options": [
+    "a",
+    "an",
+    "some",
+    "-"
+   ],
+   "answer": 1,
+   "explanation": "'Umbrella' is a singular countable noun starting with a vowel sound, so 'an' is correct."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "There are ___ interesting books on the shelf.",
+   "options": [
+    "a",
+    "an",
+    "much",
+    "some"
+   ],
+   "answer": 3,
+   "explanation": "'Books' is a plural countable noun, so 'some' is appropriate. 'Much' is for uncountables."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister needs ___ new job.",
+   "options": [
+    "a",
+    "an",
+    "some",
+    "many"
+   ],
+   "answer": 0,
+   "explanation": "'Job' is a singular countable noun, so 'a' is the correct article."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We need to buy ___ new furniture for the living room.",
+   "answers": [
+    [
+     "some"
+    ]
+   ],
+   "explanation": "'Furniture' is an uncountable noun, so 'some' is used."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She has ___ interesting idea for the project.",
+   "answers": [
+    [
+     "an"
+    ]
+   ],
+   "explanation": "'Idea' is a singular countable noun starting with a vowel sound, so 'an' is correct."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "How many ___ do you have?",
+   "answers": [
+    [
+     "friends"
+    ]
+   ],
+   "explanation": "'Friends' is a plural countable noun, which fits with 'how many'."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "need",
+    "some",
+    "information",
+    "."
+   ],
+   "distractors": [
+    "an",
+    "many"
+   ],
+   "explanation": "'Information' is uncountable, so 'some' is used, not 'a' or a plural form."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "bought",
+    "a",
+    "new",
+    "car",
+    "."
+   ],
+   "distractors": [
+    "some",
+    "cars"
+   ],
+   "explanation": "'Car' is a singular countable noun, so 'a' is used."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Can I have a milk, please?",
+   "answers": [
+    "Can I have some milk, please?",
+    "Can I have a glass of milk, please?"
+   ],
+   "explanation": "'Milk' is an uncountable noun, so 'a' is incorrect. Use 'some' or a container like 'a glass of'."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "There are much people at the party.",
+   "answers": [
+    "There are many people at the party.",
+    "There are a lot of people at the party."
+   ],
+   "explanation": "'People' is a countable noun (plural of 'person'), so 'many' or 'a lot of' should be used, not 'much'."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I want a glass of water.",
+   "instruction": "Rewrite the sentence using 'some' instead of 'a glass of'.",
+   "answers": [
+    "I want some water."
+   ],
+   "explanation": "'Water' is uncountable, so 'some' is used when not specifying a container."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She has a lot of money.",
+   "instruction": "Rewrite the sentence using 'much' (keep the same meaning).",
+   "answers": [
+    "She has much money."
+   ],
+   "explanation": "'Money' is an uncountable noun, so 'much' can be used to express a large quantity."
+  },
+  {
+   "id": "ex.a2.countable-and-uncountable-nouns.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.countable-and-uncountable-nouns"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I need a new",
+     "right": "laptop for work."
+    },
+    {
+     "left": "Do you have any",
+     "right": "sugar for my tea?"
+    },
+    {
+     "left": "There are many",
+     "right": "flowers in the garden."
+    },
+    {
+     "left": "He gave me some good",
+     "right": "advice about my career."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "a (book|car|apple|idea|chair)",
+  "(books|cars|apples|ideas|chairs)",
+  "(some|much|little) (water|coffee|milk|sugar|rice|money|information|advice|music|time)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.countable-and-uncountable-nouns.01": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.02": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.03": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.04": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.05": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.06": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.07": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.08": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.09": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.10": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.11": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.12": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.13": {
+    "status": "pass"
+   },
+   "ex.a2.countable-and-uncountable-nouns.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 33542,
+   "text": "I want some money.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 250686,
+   "text": "My brother has many more good books than I do.",
+   "author": "CK"
+  }
+ ]
+}

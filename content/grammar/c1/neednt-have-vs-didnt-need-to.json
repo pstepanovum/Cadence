@@ -1,0 +1,481 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "neednt-have-vs-didnt-need-to",
+ "draftHash": "7c21f2de004da16a",
+ "grammarPoint": {
+  "id": "gp.neednt-have-vs-didnt-need-to",
+  "level": "C1",
+  "topicId": "topic.modals",
+  "title": "Needn't have or didn't need to",
+  "summary": "Explains how to talk about actions that were performed unnecessarily (needn't have) or not performed because they were unnecessary (didn't need to).",
+  "explanation": "We use *needn't have + past participle* to talk about an action that you performed, but which you later realized was unnecessary. It often implies a sense of regret or wasted effort.\n\nIn contrast, we use *didn't need to + base verb* when an action was not necessary. This can mean two things: either you *didn't do* the action because it wasn't necessary, or you *did do* the action, but it turned out to be unnecessary.\n\nWhen both 'needn't have' and 'didn't need to' describe an unnecessary action that *did* happen, 'needn't have' often emphasizes the regret or the fact that the effort was wasted. 'Didn't need to' can be more neutral, simply stating the fact that the action wasn't required, regardless of whether it was performed or not.",
+  "patterns": [
+   "Subject + needn't have + past participle",
+   "Subject + didn't need to + base verb"
+  ],
+  "examples": [
+   {
+    "text": "You needn't have bought me a gift; your presence is enough!",
+    "note": "The gift was bought (action happened), but it was unnecessary.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I didn't need to bring my laptop to the meeting, so I left it at home.",
+    "note": "Bringing the laptop was unnecessary, so the action didn't happen.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They needn't have waited for me; I told them I'd be late.",
+    "note": "They waited (action happened), but it was unnecessary and perhaps a waste of their time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We didn't need to book tickets in advance, but we did anyway to be safe.",
+    "note": "Booking was unnecessary (action happened), but it's a neutral statement of fact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She didn't need to apologize, as it wasn't her fault.",
+    "note": "Apologizing was unnecessary, implying she either didn't apologize or did but it wasn't required.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I needn't to have gone to the store.",
+    "right": "I needn't have gone to the store.",
+    "note": "Use 'needn't have' directly, not 'needn't to have'."
+   },
+   {
+    "wrong": "He didn't need have finished the report.",
+    "right": "He didn't need to finish the report.",
+    "note": "Use 'didn't need to + base verb' for actions that were unnecessary."
+   },
+   {
+    "wrong": "We needn't have gone, so we stayed home.",
+    "right": "We didn't need to go, so we stayed home.",
+    "note": "'Needn't have' implies the action happened; 'didn't need to' implies it didn't happen here."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ bought extra snacks; everyone brought their own.",
+   "options": [
+    "didn't need to",
+    "needn't have",
+    "didn't need have",
+    "needn't to have"
+   ],
+   "answer": 1,
+   "explanation": "'Needn't have bought' means you bought them, but it was unnecessary. 'Didn't need to' could also work if the action didn't happen, but 'bought' indicates it did."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ rush to the airport; our flight was delayed.",
+   "options": [
+    "needn't have",
+    "didn't need to",
+    "needn't to have",
+    "didn't need have"
+   ],
+   "answer": 1,
+   "explanation": "'Didn't need to rush' implies that because the flight was delayed, the rushing was unnecessary, and perhaps they didn't rush, or if they did, it was a neutral statement of fact."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ worried about the presentation; it went perfectly.",
+   "options": [
+    "didn't need to",
+    "needn't have",
+    "needn't to have",
+    "didn't need have"
+   ],
+   "answer": 1,
+   "explanation": "'Needn't have worried' means you worried, but it was unnecessary. This expresses a common sentiment of wasted anxiety."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ call the plumber; my neighbor fixed the leak for me.",
+   "options": [
+    "needn't have",
+    "didn't need to",
+    "needn't to have",
+    "didn't need have"
+   ],
+   "answer": 1,
+   "explanation": "'Didn't need to call' means the action of calling the plumber was unnecessary, and therefore you didn't do it."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ ___ ___ a taxi; I could have given her a ride.",
+   "answers": [
+    [
+     "needn't",
+     "have",
+     "taken"
+    ]
+   ],
+   "explanation": "The action of taking a taxi happened, but it was unnecessary. 'Needn't have taken' is the correct form."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We ___ ___ ___ extra blankets, as the hotel provided plenty.",
+   "answers": [
+    [
+     "didn't",
+     "need",
+     "to",
+     "pack"
+    ]
+   ],
+   "explanation": "Packing extra blankets was unnecessary. This implies they either didn't pack them or packed them but it wasn't required."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You ___ ___ ___ so much effort into that report; it was only a draft.",
+   "answers": [
+    [
+     "needn't",
+     "have",
+     "put"
+    ]
+   ],
+   "explanation": "The effort was put in (action happened), but it was unnecessary. 'Needn't have put' expresses this regret."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "needn't",
+    "have",
+    "apologized",
+    "."
+   ],
+   "explanation": "This sentence means he apologized, but it was not necessary."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "didn't",
+    "need",
+    "to",
+    "wait",
+    "for",
+    "us",
+    "."
+   ],
+   "distractors": [
+    "have"
+   ],
+   "explanation": "This means waiting was unnecessary, so they either didn't wait or waited but it wasn't required."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I didn't need have bought a new coat; my old one is fine.",
+   "answers": [
+    "I needn't have bought a new coat; my old one is fine.",
+    "I didn't need to buy a new coat; my old one is fine."
+   ],
+   "explanation": "For an unnecessary action that happened, use 'needn't have + past participle' or 'didn't need to + base verb'."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She needn't to have worried about the exam results.",
+   "answers": [
+    "She needn't have worried about the exam results."
+   ],
+   "explanation": "The correct form is 'needn't have + past participle', not 'needn't to have'."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It wasn't necessary for you to bring a dessert, but you did.",
+   "instruction": "Rewrite using 'needn't have'.",
+   "answers": [
+    "You needn't have brought a dessert."
+   ],
+   "explanation": "'Needn't have' is used for an action that happened but was unnecessary."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I didn't have to get up early today, so I slept in.",
+   "instruction": "Rewrite using 'didn't need to'.",
+   "answers": [
+    "I didn't need to get up early today, so I slept in."
+   ],
+   "explanation": "'Didn't need to' is used for an action that was unnecessary and therefore didn't happen."
+  },
+  {
+   "id": "ex.c1.neednt-have-vs-didnt-need-to.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.neednt-have-vs-didnt-need-to"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "You needn't have called",
+     "right": "I was already on my way."
+    },
+    {
+     "left": "We didn't need to reserve",
+     "right": "a table, as the restaurant was empty."
+    },
+    {
+     "left": "He needn't have bought",
+     "right": "such an expensive present."
+    },
+    {
+     "left": "I didn't need to study",
+     "right": "all night for that easy test."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "needn't have (?:been|done|gone|said|worried|bought)",
+  "didn't need to (?:be|do|go|say|worry|buy|call|take)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.neednt-have-vs-didnt-need-to.01": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.02": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.03": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.04": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.05": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.neednt-have-vs-didnt-need-to.05: needs one answer list per gap (3)"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.06": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.neednt-have-vs-didnt-need-to.06: needs one answer list per gap (3)"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.neednt-have-vs-didnt-need-to.07: needs one answer list per gap (3)"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.08": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.09": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.10": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.11": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.12": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.13": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.14": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.15": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.16": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.17": {
+    "status": "pass"
+   },
+   "ex.c1.neednt-have-vs-didnt-need-to.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.neednt-have-vs-didnt-need-to.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.neednt-have-vs-didnt-need-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I ___ packed a heavy coat; the weather was surprisingly warm.",
+    "options": [
+     "didn't need to",
+     "needn't have",
+     "don't need to",
+     "haven't needed to"
+    ],
+    "answer": 1,
+    "explanation": "'Needn't have packed' indicates that the action of packing happened, but it was unnecessary."
+   },
+   {
+    "id": "ex.c1.neednt-have-vs-didnt-need-to.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.neednt-have-vs-didnt-need-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We ___ buy tickets in advance because there were plenty available at the door.",
+    "options": [
+     "needn't have",
+     "didn't need to",
+     "mustn't have",
+     "shouldn't have"
+    ],
+    "answer": 1,
+    "explanation": "'Didn't need to buy' means the action of buying tickets didn't happen because it wasn't necessary."
+   },
+   {
+    "id": "ex.c1.neednt-have-vs-didnt-need-to.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.neednt-have-vs-didnt-need-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "You ___ apologized for the small mistake; no one even noticed.",
+    "options": [
+     "didn't need to",
+     "needn't have",
+     "don't need to",
+     "haven't needed to"
+    ],
+    "answer": 1,
+    "explanation": "'Needn't have apologized' implies the apology happened, but it was unnecessary."
+   },
+   {
+    "id": "ex.c1.neednt-have-vs-didnt-need-to.18",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.neednt-have-vs-didnt-need-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Which sentence implies the action was done, but it was unnecessary?",
+    "options": [
+     "I didn't need to bring my own lunch.",
+     "She needn't have called a taxi.",
+     "They didn't need to rush.",
+     "We didn't need to wait."
+    ],
+    "answer": 1,
+    "explanation": "'Needn't have called' clearly states that the action of calling a taxi happened, but it was unnecessary."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 6676380,
+   "text": "I suspect that Tom didn't need to be there.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 9686105,
+   "text": "It turns out that we didn't need to do that anyway.",
+   "author": "CK"
+  }
+ ]
+}

@@ -1,0 +1,378 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "possessive-s",
+ "draftHash": "fb49ff02bfc0b2ce",
+ "grammarPoint": {
+  "id": "gp.possessive-s",
+  "level": "A2",
+  "topicId": "topic.nouns-pronouns",
+  "title": "Possessive 's",
+  "summary": "Use 's or ' to show that something belongs to someone or something.",
+  "explanation": "We use an apostrophe and 's' (*'s*) to show possession for *singular* nouns. This means that one person or thing owns something. For example, \"David's car\" means the car belongs to David.\n\nFor *plural* nouns that end in 's', we just add an apostrophe after the 's' (*s'*). For example, \"the students' books\" means the books belong to many students. If a plural noun does *not* end in 's' (like \"children\" or \"people\"), we add *'s* just like with singular nouns. For example, \"the children's toys.\"\n\nPossessive 's helps us make sentences shorter and clearer. Instead of saying \"the bag of my friend,\" we can say \"my friend's bag.\"",
+  "patterns": [
+   "singular noun + 's",
+   "plural noun ending in 's' + '",
+   "irregular plural noun + 's"
+  ],
+  "examples": [
+   {
+    "text": "My sister's name is Elena.",
+    "note": "Shows that the name belongs to one sister.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The students' project is due tomorrow.",
+    "note": "Shows that the project belongs to many students (plural noun ending in 's').",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The children's playground is very big.",
+    "note": "Shows that the playground belongs to many children (irregular plural noun).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Is this your friend's phone?",
+    "note": "Asks if the phone belongs to one friend.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The cats' toys were all over the floor.",
+    "note": "Shows that the toys belong to multiple cats (plural noun ending in 's').",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The boys bikes are new.",
+    "right": "The boys' bikes are new.",
+    "note": "For plural possessive, the apostrophe comes after the 's'."
+   },
+   {
+    "wrong": "My mothers car is red.",
+    "right": "My mother's car is red.",
+    "note": "For singular possessive, add 's."
+   },
+   {
+    "wrong": "The peoples opinions matter.",
+    "right": "The people's opinions matter.",
+    "note": "For irregular plural nouns, add 's."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.possessive-s.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "That is my ___ jacket.",
+   "options": [
+    "brothers",
+    "brother's",
+    "brothers'"
+   ],
+   "answer": 1,
+   "explanation": "The jacket belongs to one brother, so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ___ uniforms are blue.",
+   "options": [
+    "team's",
+    "teams",
+    "teams'"
+   ],
+   "answer": 0,
+   "explanation": "The uniforms belong to one team, so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ___ classroom is on the second floor.",
+   "options": [
+    "teachers",
+    "teacher's",
+    "teachers'"
+   ],
+   "answer": 2,
+   "explanation": "The classroom belongs to many teachers, so we use s'."
+  },
+  {
+   "id": "ex.a2.possessive-s.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I like the ___ new album.",
+   "options": [
+    "band's",
+    "bands",
+    "bands'"
+   ],
+   "answer": 0,
+   "explanation": "The album belongs to one band, so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The ___ (dog) tail was wagging happily.",
+   "answers": [
+    [
+     "dog's"
+    ]
+   ],
+   "explanation": "The tail belongs to one dog, so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The ___ (children) books are in the library.",
+   "answers": [
+    [
+     "children's"
+    ]
+   ],
+   "explanation": "The books belong to many children (an irregular plural noun), so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My ___ (parents) car is very old.",
+   "answers": [
+    [
+     "parents'"
+    ]
+   ],
+   "explanation": "The car belongs to both parents (a plural noun ending in 's'), so we use s'."
+  },
+  {
+   "id": "ex.a2.possessive-s.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "My",
+    "friend's",
+    "house",
+    "is",
+    "big",
+    "."
+   ],
+   "distractors": [
+    "friends",
+    "house's"
+   ],
+   "explanation": "The house belongs to one friend, so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "girls'",
+    "names",
+    "are",
+    "similar",
+    "."
+   ],
+   "distractors": [
+    "girl's",
+    "name"
+   ],
+   "explanation": "The names belong to many girls, so we use s'."
+  },
+  {
+   "id": "ex.a2.possessive-s.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The students homework is on the table.",
+   "answers": [
+    "The students' homework is on the table."
+   ],
+   "explanation": "The homework belongs to many students, so the apostrophe should come after the 's'."
+  },
+  {
+   "id": "ex.a2.possessive-s.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "This is my mothers favorite recipe.",
+   "answers": [
+    "This is my mother's favorite recipe."
+   ],
+   "explanation": "The recipe belongs to one mother, so we need 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The toys belong to the baby.",
+   "instruction": "Rewrite using a possessive noun.",
+   "answers": [
+    "These are the baby's toys."
+   ],
+   "explanation": "The toys belong to one baby, so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The office of the manager is on the third floor.",
+   "instruction": "Rewrite using a possessive noun.",
+   "answers": [
+    "The manager's office is on the third floor."
+   ],
+   "explanation": "The office belongs to one manager, so we use 's."
+  },
+  {
+   "id": "ex.a2.possessive-s.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.possessive-s"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "My neighbor's",
+     "right": "dog barks a lot."
+    },
+    {
+     "left": "The boys'",
+     "right": "soccer team won the game."
+    },
+    {
+     "left": "The women's",
+     "right": "meeting starts at 10 AM."
+    },
+    {
+     "left": "My parents'",
+     "right": "anniversary is next month."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\w+'s \\w+",
+  "\\w+s' \\w+",
+  "children's \\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.possessive-s.01": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.02": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.03": {
+    "status": "drop",
+    "note": "Ambiguous: Both possessive forms make grammatically correct and natural sentences here."
+   },
+   "ex.a2.possessive-s.04": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.05": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.06": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.07": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.08": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.09": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.10": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.11": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.12": {
+    "status": "pass",
+    "note": "Checker slip: The key is a complete sentence rewriting the original statement, whereas the other answer is a fragment."
+   },
+   "ex.a2.possessive-s.13": {
+    "status": "pass"
+   },
+   "ex.a2.possessive-s.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

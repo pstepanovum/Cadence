@@ -1,0 +1,399 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "should-have-and-could-have",
+ "draftHash": "3fe1eab023f32a6a",
+ "grammarPoint": {
+  "id": "gp.should-have-and-could-have",
+  "level": "B2",
+  "topicId": "topic.modals",
+  "title": "Should have and could have",
+  "summary": "Use 'should have' to express regret or criticism about past actions, and 'could have' for missed opportunities or possibilities that didn't happen.",
+  "explanation": "We use *should have* + past participle to talk about things that didn't happen in the past, but we think they were a good idea or the right thing to do. It often expresses regret about our own actions or criticism of someone else's actions.\n\nWe use *could have* + past participle to talk about something that was possible in the past but didn't happen. It suggests a missed opportunity or an alternative action that was available but not taken.\n\nBoth structures refer to hypothetical situations in the past, meaning they describe what might have happened or what would have been better, but did not actually occur.",
+  "patterns": [
+   "Subject + should have + past participle",
+   "Subject + could have + past participle",
+   "Subject + shouldn't have + past participle",
+   "Subject + couldn't have + past participle"
+  ],
+  "examples": [
+   {
+    "text": "I should have studied harder for the exam.",
+    "note": "Expresses regret about a past action (not studying enough).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They shouldn't have left the door unlocked.",
+    "note": "Shows criticism of a past action (leaving the door unlocked).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We could have taken the earlier train.",
+    "note": "Indicates a missed opportunity or alternative possibility in the past.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She could have helped us, but she chose not to.",
+    "note": "Suggests a past ability or option that was not used.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He couldn't have known about the surprise party.",
+    "note": "Expresses a past impossibility or a strong belief that something wasn't possible.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I should studied more.",
+    "right": "I should have studied more.",
+    "note": "Remember to use 'have' after 'should' or 'could'."
+   },
+   {
+    "wrong": "They could of gone to the concert.",
+    "right": "They could have gone to the concert.",
+    "note": "The correct auxiliary verb is 'have', not 'of'."
+   },
+   {
+    "wrong": "She should has called me.",
+    "right": "She should have called me.",
+    "note": "Always use 'have' (not 'has') after 'should' or 'could', regardless of the subject."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.should-have-and-could-have.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I didn't bring an umbrella, and now I'm wet. I ___ brought one.",
+   "options": [
+    "could bring",
+    "should have brought",
+    "could have bring",
+    "should bring"
+   ],
+   "answer": 1,
+   "explanation": "'Should have brought' expresses regret about not doing something that would have been a good idea."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ gone to the mountains, but we decided to stay home instead.",
+   "options": [
+    "should go",
+    "could have gone",
+    "should have go",
+    "could go"
+   ],
+   "answer": 1,
+   "explanation": "'Could have gone' indicates a past possibility or alternative that was available but not chosen."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ told me you were coming. I would have prepared dinner.",
+   "options": [
+    "should tell",
+    "could tell",
+    "should have told",
+    "could have tell"
+   ],
+   "answer": 2,
+   "explanation": "'Should have told' expresses criticism or regret that the person didn't inform them."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team played poorly. They ___ won the game.",
+   "options": [
+    "could have",
+    "should have",
+    "could have won",
+    "should have win"
+   ],
+   "answer": 2,
+   "explanation": "'Could have won' suggests that winning was a possibility, but it didn't happen due to their poor performance."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ (call) me earlier if he needed help.",
+   "answers": [
+    [
+     "could have called"
+    ]
+   ],
+   "explanation": "'Could have called' indicates a missed opportunity for him to get help."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ (not / eat) so much cake. Now I feel sick.",
+   "answers": [
+    [
+     "shouldn't have eaten",
+     "should not have eaten"
+    ]
+   ],
+   "explanation": "'Shouldn't have eaten' expresses regret about a past action."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ (arrive) on time, but their flight was delayed.",
+   "answers": [
+    [
+     "should have arrived",
+     "could have arrived"
+    ]
+   ],
+   "explanation": "'Should have arrived' suggests that arriving on time was the expected or planned outcome, but it didn't happen."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "should",
+    "have",
+    "listened",
+    "to",
+    "my",
+    "advice",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "listen"
+   ],
+   "explanation": "This sentence expresses criticism or regret that the person didn't follow the advice."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "could",
+    "have",
+    "visited",
+    "the",
+    "museum",
+    "."
+   ],
+   "distractors": [
+    "can",
+    "visit"
+   ],
+   "explanation": "This sentence indicates a missed opportunity or an alternative activity that was possible."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I should of told her the truth.",
+   "answers": [
+    "I should have told her the truth."
+   ],
+   "explanation": "The correct auxiliary verb is 'have', not 'of'."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He could went to the party if he wanted.",
+   "answers": [
+    "He could have gone to the party if he wanted."
+   ],
+   "explanation": "After 'could have', we need the past participle form of the verb, which is 'gone'."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It was a mistake not to book tickets in advance.",
+   "instruction": "Rewrite using 'should have'.",
+   "answers": [
+    "I should have booked tickets in advance."
+   ],
+   "explanation": "The original sentence expresses regret, which 'should have' conveys perfectly."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "There was a chance for us to see the northern lights, but we missed it.",
+   "instruction": "Rewrite using 'could have'.",
+   "answers": [
+    "We could have seen the northern lights."
+   ],
+   "explanation": "'Could have' is used to express a missed opportunity or possibility in the past."
+  },
+  {
+   "id": "ex.b2.should-have-and-could-have.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.should-have-and-could-have"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I should have",
+     "right": "worn a warmer coat."
+    },
+    {
+     "left": "They could have",
+     "right": "finished the project on time."
+    },
+    {
+     "left": "You shouldn't have",
+     "right": "eaten all the cookies."
+    },
+    {
+     "left": "We couldn't have",
+     "right": "known about the traffic jam."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "should have [a-z]+ed",
+  "could have [a-z]+ed",
+  "should have been",
+  "could have been"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.should-have-and-could-have.01": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.02": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.03": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.04": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.05": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.06": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options are grammatically correct and make sense in this context."
+   },
+   "ex.b2.should-have-and-could-have.08": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.09": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.10": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.11": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.12": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.13": {
+    "status": "pass"
+   },
+   "ex.b2.should-have-and-could-have.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 6735978,
+   "text": "I'm sorry. I should have been more careful.",
+   "author": "Hybrid"
+  },
+  {
+   "sentenceId": 10742893,
+   "text": "You could have shared your feelings with me.",
+   "author": "Danika_Dakika"
+  }
+ ]
+}

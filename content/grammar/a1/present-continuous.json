@@ -1,0 +1,398 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "present-continuous",
+ "draftHash": "9f6c51cf8e32f35f",
+ "grammarPoint": {
+  "id": "gp.present-continuous",
+  "level": "A1",
+  "topicId": "topic.tenses",
+  "title": "Present continuous",
+  "summary": "Use the present continuous to talk about actions happening right now, using 'am/is/are' + verb-ing.",
+  "explanation": "We use the *present continuous* to describe actions that are happening at the exact moment of speaking. It tells us what someone is doing right now.\n\nTo form the present continuous, we use a form of the verb 'to be' (am, is, or are) followed by the main verb with '-ing' at the end.\n\nFor example, if you are reading a book at this moment, you say, \"I *am reading* a book.\" If your friend is eating, you say, \"She *is eating* lunch.\"",
+  "patterns": [
+   "I + am + verb-ing",
+   "You/We/They + are + verb-ing",
+   "He/She/It + is + verb-ing",
+   "Am/Is/Are + subject + verb-ing? (Questions)",
+   "Subject + am/is/are + not + verb-ing (Negatives)"
+  ],
+  "examples": [
+   {
+    "text": "I am listening to music.",
+    "note": "Describes an action happening now with 'I'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She is drawing a picture.",
+    "note": "Describes an action happening now with 'she'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They are playing outside.",
+    "note": "Describes an action happening now with 'they'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We are not watching TV.",
+    "note": "Describes a negative action happening now.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Is he sleeping?",
+    "note": "Asks about an action happening now.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I read a book now.",
+    "right": "I am reading a book now.",
+    "note": "Remember to use 'am' with 'I' for actions happening now."
+   },
+   {
+    "wrong": "He is cook dinner.",
+    "right": "He is cooking dinner.",
+    "note": "The main verb needs the '-ing' ending."
+   },
+   {
+    "wrong": "They are not work.",
+    "right": "They are not working.",
+    "note": "Always add '-ing' to the main verb in the present continuous."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.present-continuous.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Look! The cat ___ on the sofa.",
+   "options": [
+    "sleeps",
+    "is sleeping",
+    "sleeping"
+   ],
+   "answer": 1,
+   "explanation": "'Is sleeping' correctly forms the present continuous for an action happening now."
+  },
+  {
+   "id": "ex.a1.present-continuous.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ you doing?",
+   "options": [
+    "are",
+    "is",
+    "am"
+   ],
+   "answer": 0,
+   "explanation": "Use 'are' with the subject 'you' in questions."
+  },
+  {
+   "id": "ex.a1.present-continuous.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ not eating breakfast.",
+   "options": [
+    "is",
+    "are",
+    "am"
+   ],
+   "answer": 1,
+   "explanation": "The correct form of 'to be' for 'we' is 'are'."
+  },
+  {
+   "id": "ex.a1.present-continuous.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ a letter to her friend.",
+   "options": [
+    "is writing",
+    "writes",
+    "writing"
+   ],
+   "answer": 0,
+   "explanation": "'Is writing' correctly shows an action happening at this moment."
+  },
+  {
+   "id": "ex.a1.present-continuous.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ ___ a new song.",
+   "answers": [
+    [
+     "am"
+    ],
+    [
+     "listening to",
+     "singing"
+    ]
+   ],
+   "explanation": "'Am listening to' is the correct present continuous form for 'I'."
+  },
+  {
+   "id": "ex.a1.present-continuous.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ ___ lunch right now.",
+   "answers": [
+    [
+     "are"
+    ],
+    [
+     "eating",
+     "having"
+    ]
+   ],
+   "explanation": "'Are eating' is the correct present continuous form for 'they'."
+  },
+  {
+   "id": "ex.a1.present-continuous.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ not ___ today.",
+   "answers": [
+    [
+     "is"
+    ],
+    [
+     "working"
+    ]
+   ],
+   "explanation": "'Is not working' is the correct negative present continuous form for 'he'."
+  },
+  {
+   "id": "ex.a1.present-continuous.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "is",
+    "reading",
+    "a",
+    "book",
+    "."
+   ],
+   "explanation": "This sentence describes an action happening at this moment."
+  },
+  {
+   "id": "ex.a1.present-continuous.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Are",
+    "they",
+    "waiting",
+    "for",
+    "the",
+    "bus",
+    "?"
+   ],
+   "distractors": [
+    "is"
+   ],
+   "explanation": "This is a question about an action happening now."
+  },
+  {
+   "id": "ex.a1.present-continuous.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He is watch TV.",
+   "answers": [
+    "He is watching TV."
+   ],
+   "explanation": "The main verb needs the '-ing' ending for the present continuous."
+  },
+  {
+   "id": "ex.a1.present-continuous.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We am talking.",
+   "answers": [
+    "We are talking."
+   ],
+   "explanation": "The correct form of 'to be' for 'we' is 'are'."
+  },
+  {
+   "id": "ex.a1.present-continuous.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I eat dinner now.",
+   "instruction": "Rewrite using the present continuous.",
+   "answers": [
+    "I am eating dinner now."
+   ],
+   "explanation": "The present continuous uses 'am/is/are' + verb-ing to show an action happening now."
+  },
+  {
+   "id": "ex.a1.present-continuous.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They play soccer.",
+   "instruction": "Change to a question about now.",
+   "answers": [
+    "Are they playing soccer now?"
+   ],
+   "explanation": "To form a question in the present continuous, put 'Am/Is/Are' before the subject and add '-ing' to the verb."
+  },
+  {
+   "id": "ex.a1.present-continuous.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.present-continuous"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I am",
+     "right": "studying English."
+    },
+    {
+     "left": "He is",
+     "right": "talking on the phone."
+    },
+    {
+     "left": "They are",
+     "right": "walking in the park."
+    },
+    {
+     "left": "The dog is",
+     "right": "sleeping under the table."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "am \\w+ing",
+  "is \\w+ing",
+  "are \\w+ing"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.present-continuous.01": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.02": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.03": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.04": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.05": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options form correct and natural present continuous sentences."
+   },
+   "ex.a1.present-continuous.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'eating' and 'having' form correct and natural sentences in this context."
+   },
+   "ex.a1.present-continuous.07": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.08": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.09": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.10": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.11": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.12": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.13": {
+    "status": "pass"
+   },
+   "ex.a1.present-continuous.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 257487,
+   "text": "I am studying English now.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 289834,
+   "text": "He is playing here.",
+   "author": "CK"
+  }
+ ]
+}

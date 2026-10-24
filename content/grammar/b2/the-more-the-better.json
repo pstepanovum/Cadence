@@ -1,0 +1,412 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "the-more-the-better",
+ "draftHash": "73a8e4dfe446f240",
+ "grammarPoint": {
+  "id": "gp.the-more-the-better",
+  "level": "B2",
+  "topicId": "topic.comparison",
+  "title": "The more ..., the better",
+  "summary": "Use \"The more..., the more...\" or \"The more..., the less...\" to show how two things change together proportionally.",
+  "explanation": "This structure is used to show that one thing depends on another. As one thing increases or decreases, the other thing also increases or decreases in proportion. It's a way to express cause and effect concisely.\n\nWe use \"the\" before each comparative adjective or adverb. It's like saying \"to the extent that one thing changes, to that same extent the other thing changes.\" For example, \"The more you read, the more you learn.\"\n\nYou can use \"more\" or \"less\" with longer adjectives and adverbs (e.g., *the more difficult*, *the less interesting*), or the \"-er\" ending for shorter ones (e.g., *the faster*, *the colder*).",
+  "patterns": [
+   "The + comparative adjective/adverb, the + comparative adjective/adverb",
+   "The more + noun, the more + noun",
+   "The less + noun, the less + noun"
+  ],
+  "examples": [
+   {
+    "text": "The warmer the weather gets, the happier I feel.",
+    "note": "Shows a direct relationship between temperature and happiness.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The more you practice, the better you become.",
+    "note": "Explains that improvement comes with effort.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The less sugar you eat, the healthier you'll be.",
+    "note": "Indicates a proportional decrease in sugar leads to better health.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The faster the car goes, the more fuel it uses.",
+    "note": "Describes how speed affects fuel consumption.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The more books I read, the more I want to learn.",
+    "note": "Expresses an increasing desire for knowledge with more reading.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "More you study, more you learn.",
+    "right": "The more you study, the more you learn.",
+    "note": "Always use \"the\" before each comparative."
+   },
+   {
+    "wrong": "The most I eat, the fatter I get.",
+    "right": "The more I eat, the fatter I get.",
+    "note": "Use the comparative form \"more,\" not the superlative \"most.\""
+   },
+   {
+    "wrong": "The more quickly you finish, the soon you can leave.",
+    "right": "The more quickly you finish, the sooner you can leave.",
+    "note": "Both parts of the structure need to be in the comparative form."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.the-more-the-better.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you practice, ___ you'll improve.",
+   "options": [
+    "The more / the more",
+    "More / more",
+    "The most / the most",
+    "More / the more"
+   ],
+   "answer": 0,
+   "explanation": "Both parts of the structure require \"the\" followed by a comparative."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the project gets, ___ details we need to consider.",
+   "options": [
+    "The bigger / the more",
+    "Bigger / more",
+    "The biggest / the most",
+    "The bigger / more"
+   ],
+   "answer": 0,
+   "explanation": "Both parts of the structure require \"the\" followed by a comparative."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you wait, ___ difficult it will be to find tickets.",
+   "options": [
+    "The longer / the more",
+    "Longer / more",
+    "The longest / the most",
+    "The longer / more"
+   ],
+   "answer": 0,
+   "explanation": "Both parts of the structure require \"the\" followed by a comparative."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ money you spend on quality, ___ you save in the long run.",
+   "options": [
+    "The more / the more",
+    "More / more",
+    "The most / the most",
+    "The more / more"
+   ],
+   "answer": 0,
+   "explanation": "Both parts of the structure require \"the\" followed by a comparative."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ colder it gets, ___ more layers I need to wear.",
+   "answers": [
+    [
+     "The"
+    ],
+    [
+     "the"
+    ]
+   ],
+   "explanation": "Both clauses need \"the\" before the comparative to show a proportional relationship."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ earlier we leave, ___ traffic we will avoid.",
+   "answers": [
+    [
+     "The"
+    ],
+    [
+     "the less"
+    ]
+   ],
+   "explanation": "\"The less\" is used here to show a decrease in traffic."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ more experience you gain, ___ confident you become.",
+   "answers": [
+    [
+     "The"
+    ],
+    [
+     "the more"
+    ]
+   ],
+   "explanation": "Both parts of the structure require \"the\" followed by a comparative."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "harder",
+    "you",
+    "work",
+    ",",
+    "the",
+    "greater",
+    "your",
+    "reward",
+    "."
+   ],
+   "distractors": [
+    "most",
+    "best"
+   ],
+   "explanation": "This structure shows that increased effort leads to a larger reward."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "more",
+    "I",
+    "travel",
+    ",",
+    "the",
+    "more",
+    "I",
+    "appreciate",
+    "my",
+    "home",
+    "."
+   ],
+   "distractors": [
+    "most",
+    "much"
+   ],
+   "explanation": "This sentence expresses that increased travel leads to a greater appreciation for home."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The more money I earn, more I can save.",
+   "answers": [
+    "The more money I earn, the more I can save."
+   ],
+   "explanation": "The second part of the double comparative also needs \"the.\""
+  },
+  {
+   "id": "ex.b2.the-more-the-better.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The faster you drive, the most dangerous it is.",
+   "answers": [
+    "The faster you drive, the more dangerous it is."
+   ],
+   "explanation": "Use the comparative form \"more dangerous,\" not the superlative \"most dangerous.\""
+  },
+  {
+   "id": "ex.b2.the-more-the-better.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If you start early, you will finish early.",
+   "instruction": "Combine these ideas using \"The..., the...\" structure.",
+   "answers": [
+    "The earlier you start, the earlier you will finish."
+   ],
+   "explanation": "The structure \"The + comparative, the + comparative\" shows how two things change together."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "When the price goes up, demand goes down.",
+   "instruction": "Rewrite this sentence using \"The..., the...\" structure.",
+   "answers": [
+    "The higher the price, the lower the demand."
+   ],
+   "explanation": "This structure effectively shows a proportional inverse relationship between price and demand."
+  },
+  {
+   "id": "ex.b2.the-more-the-better.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.the-more-the-better"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The higher the quality,",
+     "right": "the more expensive it is."
+    },
+    {
+     "left": "The more sleep you get,",
+     "right": "the better you'll feel."
+    },
+    {
+     "left": "The less time we have,",
+     "right": "the faster we need to work."
+    },
+    {
+     "left": "The more people who attend,",
+     "right": "the more lively the event will be."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "the (more|less|better|worse|older|younger|faster|slower|higher|lower|sooner|later) .*, the (more|less|better|worse|older|younger|faster|slower|higher|lower|sooner|later)",
+  "the more (you|we|they|he|she|it) .*, the more (you|we|they|he|she|it)",
+  "the more .*, the better"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.the-more-the-better.01": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.02": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.03": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.04": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.05": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.06": {
+    "status": "drop",
+    "note": "Key judged wrong: Leaving earlier allows one to avoid more traffic, making the key semantically unnatural and the other answer correct."
+   },
+   "ex.b2.the-more-the-better.07": {
+    "status": "pass",
+    "note": "Checker slip: The key forms a correct double comparative structure, whereas the other answer is ungrammatical."
+   },
+   "ex.b2.the-more-the-better.08": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.09": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.10": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.11": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.12": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.13": {
+    "status": "pass"
+   },
+   "ex.b2.the-more-the-better.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 10282388,
+   "text": "The less I know about Tom, the better.",
+   "author": "ddnktr"
+  },
+  {
+   "sentenceId": 11864708,
+   "text": "The more you know about something, the more interesting it becomes.",
+   "author": "CK"
+  }
+ ]
+}

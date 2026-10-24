@@ -1,0 +1,487 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "fronting-for-emphasis",
+ "draftHash": "5eab776554dfa2e9",
+ "grammarPoint": {
+  "id": "gp.fronting-for-emphasis",
+  "level": "C1",
+  "topicId": "topic.emphasis",
+  "title": "Fronting",
+  "summary": "Fronting moves words or phrases to the beginning of a sentence for emphasis or stylistic effect, often creating a more formal or dramatic tone.",
+  "explanation": "Fronting is a stylistic technique where a word or phrase is moved to the beginning of a sentence, away from its usual position. This is done to give it more emphasis, create a sense of drama, or establish a particular tone, often more formal or literary.\n\nOne common and effective way to use fronting is with an adjective or adverbial phrase at the start, followed by 'as' or 'though', and then the subject and verb. This structure often expresses a concession or a surprising fact, highlighting the initial adjective or adverb.\n\nFor example, instead of saying 'Although it seems strange, the new policy is effective,' you can use fronting: 'Strange as it seems, the new policy is effective.' This emphasizes the 'strangeness' and makes the statement more impactful. It's a sophisticated way to present information.",
+  "patterns": [
+   "Adjective + as/though + subject + verb",
+   "Adverb + as/though + subject + verb",
+   "Noun phrase + as/though + subject + verb"
+  ],
+  "examples": [
+   {
+    "text": "Tired as she was, she continued working on the project late into the night.",
+    "note": "Emphasizes her tiredness despite her actions.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Difficult though the task proved, the team eventually succeeded in solving the complex problem.",
+    "note": "Highlights the difficulty of the task.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Much as I appreciate your offer, I have to decline due to prior commitments.",
+    "note": "Emphasizes the appreciation before the refusal.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Fast as he ran, he couldn't catch the bus that was already pulling away from the stop.",
+    "note": "Stresses the speed of his running.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Strange as it may sound, I actually prefer working on weekends when it's quieter.",
+    "note": "Draws attention to the unusual nature of the preference.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Strange it seems, the results are in.",
+    "right": "Strange as it seems, the results are in.",
+    "note": "Remember to include 'as' or 'though' after the fronted element."
+   },
+   {
+    "wrong": "Tired as was she, she kept going.",
+    "right": "Tired as she was, she kept going.",
+    "note": "Maintain standard subject-verb order after 'as' or 'though'."
+   },
+   {
+    "wrong": "Although tired she was, she kept going.",
+    "right": "Tired as she was, she kept going.",
+    "note": "Do not use 'although' in this specific fronted structure."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.fronting-for-emphasis.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ it may seem, the new restaurant is already fully booked for months.",
+   "options": [
+    "Unlikely as",
+    "As unlikely",
+    "Unlikely though",
+    "Though unlikely"
+   ],
+   "answer": 2,
+   "explanation": "The structure 'Adjective + though + subject + verb' is correct for fronting. 'Unlikely though it may seem' emphasizes the unlikelihood."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which sentence uses fronting for emphasis?",
+   "options": [
+    "He was very skilled, but he lost the competition.",
+    "Skilled as he was, he lost the competition.",
+    "Although he was skilled, he lost the competition.",
+    "He lost the competition, even though he was skilled."
+   ],
+   "answer": 1,
+   "explanation": "Moving 'Skilled' to the front with 'as' emphasizes his skill before the contrasting outcome."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the weather was, we still decided to go for a hike.",
+   "options": [
+    "Bad as",
+    "As bad",
+    "Bad although",
+    "Though bad"
+   ],
+   "answer": 0,
+   "explanation": "The correct fronting structure is 'Adjective + as + subject + verb'. 'Bad as the weather was' emphasizes the poor weather."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which option correctly completes the sentence: '___ the journey proved, they reached their destination safely.'",
+   "options": [
+    "Long and difficult as",
+    "As long and difficult",
+    "Long and difficult though",
+    "Though long and difficult"
+   ],
+   "answer": 2,
+   "explanation": "Both 'as' and 'though' work in this fronted structure. 'Long and difficult though the journey proved' is a correct and emphatic construction."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ as it sounds, I've never seen snow in my life.",
+   "answers": [
+    [
+     "Strange"
+    ]
+   ],
+   "explanation": "The adjective 'Strange' is fronted to emphasize the unusual nature of the statement."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ as she was, she still managed to finish the marathon.",
+   "answers": [
+    [
+     "Exhausted",
+     "Tired"
+    ]
+   ],
+   "explanation": "The adjective 'Exhausted' is fronted to highlight her state despite her achievement."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ as I tried, I couldn't open the jar.",
+   "answers": [
+    [
+     "Hard"
+    ]
+   ],
+   "explanation": "The adverb 'Hard' is fronted to emphasize the effort made."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Tired",
+    "as",
+    "he",
+    "was",
+    ",",
+    "he",
+    "still",
+    "helped",
+    "his",
+    "friend",
+    "."
+   ],
+   "distractors": [
+    "very"
+   ],
+   "explanation": "This sentence uses fronting to emphasize how tired he was, contrasting it with his action."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Much",
+    "as",
+    "I",
+    "enjoy",
+    "cooking",
+    ",",
+    "I",
+    "prefer",
+    "eating",
+    "out",
+    "tonight",
+    "."
+   ],
+   "distractors": [
+    "always"
+   ],
+   "explanation": "The phrase 'Much as I enjoy cooking' is fronted to emphasize the enjoyment before stating a preference for eating out."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Difficult it was, they never gave up hope.",
+   "answers": [
+    "Difficult as it was, they never gave up hope.",
+    "Difficult though it was, they never gave up hope."
+   ],
+   "explanation": "The fronted adjective needs 'as' or 'though' to connect it to the rest of the clause."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Good as was the movie, I wouldn't watch it again.",
+   "answers": [
+    "Good as the movie was, I wouldn't watch it again."
+   ],
+   "explanation": "After 'as' or 'though', the subject-verb order should be standard (subject then verb)."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Although the weather was cold, we still went for a walk.",
+   "instruction": "Rewrite using fronting with 'cold'.",
+   "answers": [
+    "Cold as the weather was, we still went for a walk.",
+    "Cold though the weather was, we still went for a walk."
+   ],
+   "explanation": "Moving 'cold' to the front with 'as' or 'though' emphasizes the weather condition."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I appreciate your advice a lot, but I've already made a decision.",
+   "instruction": "Rewrite using fronting with 'much'.",
+   "answers": [
+    "Much as I appreciate your advice, I've already made a decision."
+   ],
+   "explanation": "Fronting 'Much as I appreciate your advice' emphasizes the appreciation before the contrasting statement."
+  },
+  {
+   "id": "ex.c1.fronting-for-emphasis.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.fronting-for-emphasis"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Strange as it may",
+     "right": "seem, the cat loves water."
+    },
+    {
+     "left": "Tired though she",
+     "right": "was, she finished the race."
+    },
+    {
+     "left": "Much as I enjoy",
+     "right": "it, I can't eat any more cake."
+    },
+    {
+     "left": "Difficult as the exam",
+     "right": "was, everyone passed."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\w+ as (?:he|she|it|they|we|you|I) (?:is|was|were|are|seem|seems|proved|did|do|may)",
+  "\\w+ though (?:he|she|it|they|we|you|I) (?:is|was|were|are|seem|seems|proved|did|do|may)",
+  "(?:much|little) as (?:he|she|it|they|we|you|I) (?:do|did|does|appreciate|like|enjoy)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.fronting-for-emphasis.01": {
+    "status": "drop",
+    "note": "Ambiguous: Both \"Unlikely though\" and \"Unlikely as\" are grammatically correct choices."
+   },
+   "ex.c1.fronting-for-emphasis.02": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.03": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.04": {
+    "status": "drop",
+    "note": "Ambiguous: Both \"Long and difficult though\" and \"Long and difficult as\" are correct concession structures."
+   },
+   "ex.c1.fronting-for-emphasis.05": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both \"Exhausted\" and \"Tired\" correctly complete the concession structure."
+   },
+   "ex.c1.fronting-for-emphasis.07": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.08": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key omits the token \"always\", whereas the other answer correctly uses all tokens."
+   },
+   "ex.c1.fronting-for-emphasis.10": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.11": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.12": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.13": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.14": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.15": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.16": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.17": {
+    "status": "pass"
+   },
+   "ex.c1.fronting-for-emphasis.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.fronting-for-emphasis.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.fronting-for-emphasis"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ the movie was, I still found it quite boring.",
+    "options": [
+     "Good as",
+     "As good",
+     "Good although",
+     "Although good"
+    ],
+    "answer": 0,
+    "explanation": "The correct fronting structure is 'Adjective + as + subject + verb'."
+   },
+   {
+    "id": "ex.c1.fronting-for-emphasis.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.fronting-for-emphasis"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ she tried, she couldn't solve the complex puzzle.",
+    "options": [
+     "Hard as",
+     "As hard",
+     "Hard although",
+     "Although hard"
+    ],
+    "answer": 0,
+    "explanation": "The correct fronting structure is 'Adverb + as + subject + verb'."
+   },
+   {
+    "id": "ex.c1.fronting-for-emphasis.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.fronting-for-emphasis"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ I respect his opinion, I have to disagree on this particular point.",
+    "options": [
+     "Much as",
+     "As much",
+     "Much although",
+     "Although much"
+    ],
+    "answer": 0,
+    "explanation": "'Much as' is used to emphasize a strong feeling before a contrasting idea."
+   },
+   {
+    "id": "ex.c1.fronting-for-emphasis.18",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.fronting-for-emphasis"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ the weather was, we decided to have our picnic indoors.",
+    "options": [
+     "Chilly as",
+     "As chilly",
+     "Chilly although",
+     "Although chilly"
+    ],
+    "answer": 0,
+    "explanation": "The correct fronting structure is 'Adjective + as + subject + verb'."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 300180,
+   "text": "Living as he did in the remote countryside, he seldom came into town.",
+   "author": "AlanF_US"
+  }
+ ]
+}

@@ -1,0 +1,492 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "present-perfect-just-already-yet",
+ "draftHash": "0ca0e2f3d1b3d281",
+ "grammarPoint": {
+  "id": "gp.present-perfect-just-already-yet",
+  "level": "A2",
+  "topicId": "topic.tenses",
+  "title": "Just, already and yet",
+  "summary": "Learn to use 'just,' 'already,' and 'yet' with the present perfect to talk about recent actions and news.",
+  "explanation": "We use the present perfect with *just*, *already*, and *yet* to talk about things that happened a short time ago, or to ask if something has happened up to now.\n\n*Just* means 'a very short time ago.' It tells us that an action happened very recently. We put *just* between 'have/has' and the past participle.\n\n*Already* means 'before now' or 'sooner than expected.' It shows that an action has happened. We also put *already* between 'have/has' and the past participle.\n\n*Yet* means 'up to now.' We use *yet* in questions and negative sentences. It usually goes at the end of the sentence.",
+  "patterns": [
+   "Subject + have/has + just + past participle",
+   "Subject + have/has + already + past participle",
+   "Subject + have/has + not + past participle + yet",
+   "Have/Has + Subject + past participle + yet?"
+  ],
+  "examples": [
+   {
+    "text": "I've just seen the new movie trailer.",
+    "note": "Shows the action happened a very short time ago.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They have already finished their lunch.",
+    "note": "Indicates the action happened before now, perhaps sooner than expected.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Has she arrived at the airport yet?",
+    "note": "Asks if the action has happened up to this point.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We haven't decided on a vacation spot yet.",
+    "note": "States that the action has not happened up to this point.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He has just called to say he's running late.",
+    "note": "Emphasizes the recentness of the phone call.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I just ate breakfast.",
+    "right": "I've just eaten breakfast.",
+    "note": "Remember to use 'have' or 'has' with 'just' for recent actions."
+   },
+   {
+    "wrong": "Have you already yet bought the tickets?",
+    "right": "Have you bought the tickets yet?",
+    "note": "Do not use 'already' and 'yet' together in the same question."
+   },
+   {
+    "wrong": "She hasn't yet started her new job.",
+    "right": "She hasn't started her new job yet.",
+    "note": "'Yet' usually goes at the end of negative sentences."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister ___ called me with some exciting news.",
+   "options": [
+    "just",
+    "has just",
+    "have just",
+    "just has"
+   ],
+   "answer": 1,
+   "explanation": "For 'my sister' (third person singular), we use 'has'. 'Just' goes between 'has' and the past participle 'called'."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Have you packed your suitcase ___?",
+   "options": [
+    "already",
+    "just",
+    "yet",
+    "ever"
+   ],
+   "answer": 2,
+   "explanation": "'Yet' is used in questions to ask if something has happened up to now."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They've ___ finished painting the living room.",
+   "options": [
+    "yet",
+    "just",
+    "already",
+    "never"
+   ],
+   "answer": 1,
+   "explanation": "'Just' indicates the action happened a very short time ago."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I haven't seen that movie ___.",
+   "options": [
+    "just",
+    "already",
+    "yet",
+    "ever"
+   ],
+   "answer": 2,
+   "explanation": "'Yet' is used in negative sentences to mean 'up to now'."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The train ___ ___ (arrive) at the station.",
+   "answers": [
+    [
+     "has",
+     "just",
+     "arrived"
+    ]
+   ],
+   "explanation": "Use 'has' for 'the train', 'just' for recentness, and the past participle 'arrived'."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We ___ ___ (not eat) dinner ___.",
+   "answers": [
+    [
+     "haven't",
+     "eaten",
+     "yet"
+    ],
+    [
+     "have",
+     "not",
+     "eaten",
+     "yet"
+    ]
+   ],
+   "explanation": "Use 'haven't eaten' for the negative present perfect and 'yet' at the end for 'up to now'."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ ___ (already / learn) how to drive.",
+   "answers": [
+    [
+     "has",
+     "already",
+     "learned"
+    ],
+    [
+     "has",
+     "already",
+     "learnt"
+    ]
+   ],
+   "explanation": "Use 'has' for 'she', 'already' between 'has' and the past participle 'learned' (or 'learnt')."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He's",
+    "just",
+    "bought",
+    "a",
+    "new",
+    "bike",
+    "."
+   ],
+   "explanation": "The correct order places 'just' between the auxiliary verb 'has' (contracted to 'He's') and the past participle 'bought'."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Have",
+    "you",
+    "finished",
+    "your",
+    "report",
+    "yet",
+    "?"
+   ],
+   "explanation": "In a question with 'yet', 'yet' usually comes at the end of the sentence."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I haven't yet seen the new art exhibit.",
+   "answers": [
+    "I haven't seen the new art exhibit yet."
+   ],
+   "explanation": "'Yet' typically goes at the end of negative sentences."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They already have booked their flight.",
+   "answers": [
+    "They have already booked their flight."
+   ],
+   "explanation": "'Already' goes between 'have/has' and the past participle."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The movie started a few minutes ago.",
+   "instruction": "Use 'just' and the present perfect.",
+   "answers": [
+    "The movie has just started."
+   ],
+   "explanation": "To express a very recent action, use 'has just' + past participle."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Is Maria here?",
+   "instruction": "Ask if Maria has arrived using 'yet'.",
+   "answers": [
+    "Has Maria arrived yet?"
+   ],
+   "explanation": "Use 'Has + Subject + past participle + yet?' for questions about whether something has happened up to now."
+  },
+  {
+   "id": "ex.a2.present-perfect-just-already-yet.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-just-already-yet"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I've just",
+     "right": "received an email from work."
+    },
+    {
+     "left": "They haven't",
+     "right": "cleaned the kitchen yet."
+    },
+    {
+     "left": "Has he",
+     "right": "already left for the meeting?"
+    },
+    {
+     "left": "We've already",
+     "right": "packed everything we need."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "have just [a-z]+ed",
+  "has just [a-z]+ed",
+  "have already [a-z]+ed",
+  "has already [a-z]+ed",
+  "haven't [a-z]+ed yet",
+  "hasn't [a-z]+ed yet",
+  "have you [a-z]+ed yet",
+  "has he [a-z]+ed yet"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.present-perfect-just-already-yet.01": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.02": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.03": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.04": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.05": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.present-perfect-just-already-yet.05: needs one answer list per gap (2)"
+   },
+   "ex.a2.present-perfect-just-already-yet.06": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.present-perfect-just-already-yet.06: needs one answer list per gap (3)"
+   },
+   "ex.a2.present-perfect-just-already-yet.07": {
+    "status": "drop",
+    "note": "Key judged wrong: The key incorrectly repeats 'has', whereas the other answer correctly completes the sentence."
+   },
+   "ex.a2.present-perfect-just-already-yet.08": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.09": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.10": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.11": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.12": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.13": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.14": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.15": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.16": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.17": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-just-already-yet.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.a2.present-perfect-just-already-yet.15",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-perfect-just-already-yet"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The train ___ left the station.",
+    "options": [
+     "yet",
+     "just",
+     "already"
+    ],
+    "answer": 1,
+    "explanation": "'Just' means a very short time ago, which fits the context of a train recently leaving."
+   },
+   {
+    "id": "ex.a2.present-perfect-just-already-yet.16",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-perfect-just-already-yet"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Have you packed your bag for the trip ___?",
+    "options": [
+     "just",
+     "already",
+     "yet"
+    ],
+    "answer": 2,
+    "explanation": "'Yet' is used in questions to ask if something has happened up to now."
+   },
+   {
+    "id": "ex.a2.present-perfect-just-already-yet.17",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-perfect-just-already-yet"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My friends have ___ bought tickets for the concert.",
+    "options": [
+     "yet",
+     "just",
+     "already"
+    ],
+    "answer": 2,
+    "explanation": "'Already' suggests the action happened before now, perhaps sooner than expected."
+   },
+   {
+    "id": "ex.a2.present-perfect-just-already-yet.18",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-perfect-just-already-yet"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I haven't seen the new movie ___.",
+    "options": [
+     "just",
+     "yet",
+     "already"
+    ],
+    "answer": 1,
+    "explanation": "'Yet' is used in negative sentences to say something has not happened up to this point."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 4415529,
+   "text": "Just a moment. I haven't finished yet.",
+   "author": "meerkat"
+  },
+  {
+   "sentenceId": 291731,
+   "text": "He has just arrived at New Tokyo International Airport.",
+   "author": "CK"
+  }
+ ]
+}

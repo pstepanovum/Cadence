@@ -1,0 +1,407 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "concession-clauses",
+ "draftHash": "1940650c80aca232",
+ "grammarPoint": {
+  "id": "gp.concession-clauses",
+  "level": "C1",
+  "topicId": "topic.linking",
+  "title": "Concession",
+  "summary": "Learn to express concession or contrast using advanced linking words like 'much as', 'albeit', 'even though', and 'however much' to connect ideas.",
+  "explanation": "When you want to show that one idea contrasts with another, especially when the contrast is surprising, you can use words of concession. These words help you acknowledge a fact or situation while still presenting a different, often unexpected, outcome or perspective.\n\n*Even though* is a strong way to introduce a surprising contrast. It's similar to 'although' but carries more emphasis. *Much as* is used to acknowledge a fact or feeling before presenting a contrasting idea, often with verbs of liking, disliking, or other emotions. It means 'although' or 'even if it is true that'.\n\n*Albeit* is a more formal word, meaning 'although it is/was'. It's typically followed by a single word, an adjective, an adverb, or a short phrase, rather than a full clause. It adds a qualification or a slight correction to the preceding statement. *However much* emphasizes the degree or extent of something, showing that despite a large amount or effort, a particular result still occurs or doesn't occur.",
+  "patterns": [
+   "Even though + clause",
+   "Much as + clause",
+   "Albeit + adjective/adverb/noun phrase",
+   "However much + noun/adjective/adverb + clause"
+  ],
+  "examples": [
+   {
+    "text": "Even though it was raining, we decided to go for a walk.",
+    "note": "Shows a surprising contrast: rain usually stops walks, but we went anyway.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Much as I appreciate your help, I need to finish this task myself.",
+    "note": "Acknowledges appreciation before stating a contrasting need.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The project was a success, albeit a small one.",
+    "note": "Qualifies the success, indicating it was not a huge success.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "However much effort he put in, he couldn't solve the puzzle.",
+    "note": "Emphasizes the great amount of effort, yet the puzzle remained unsolved.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She continued her research, albeit slowly, due to lack of funding.",
+    "note": "Adds a qualification (slowly) to how the research continued.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Albeit he was tired, he kept working.",
+    "right": "Even though he was tired, he kept working.",
+    "note": "Albeit is usually followed by a phrase, not a full clause."
+   },
+   {
+    "wrong": "However he much studied, he still found the exam difficult.",
+    "right": "However much he studied, he still found the exam difficult.",
+    "note": "However much should be followed directly by the noun or verb it modifies."
+   },
+   {
+    "wrong": "Much as I like coffee, but I prefer tea in the evenings.",
+    "right": "Much as I like coffee, I prefer tea in the evenings.",
+    "note": "Do not use 'but' after 'much as' as it already implies contrast."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.concession-clauses.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ she tried to deny it, her smile gave away her true feelings.",
+   "options": [
+    "Albeit",
+    "However much",
+    "Much as",
+    "Even if"
+   ],
+   "answer": 1,
+   "explanation": "'However much' emphasizes the extent of her denial, showing that despite her efforts, her smile revealed the truth."
+  },
+  {
+   "id": "ex.c1.concession-clauses.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He accepted the criticism, ___ with a slight frown.",
+   "options": [
+    "even though",
+    "much as",
+    "albeit",
+    "however much"
+   ],
+   "answer": 2,
+   "explanation": "'Albeit' is correctly used here to introduce a short qualifying phrase ('with a slight frown')."
+  },
+  {
+   "id": "ex.c1.concession-clauses.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ I understand your concerns, I cannot change the decision.",
+   "options": [
+    "However much",
+    "Albeit",
+    "Even though",
+    "Much as"
+   ],
+   "answer": 3,
+   "explanation": "'Much as' is used to acknowledge understanding before presenting a contrasting inability to change the decision."
+  },
+  {
+   "id": "ex.c1.concession-clauses.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new policy is controversial, ___ it aims to improve efficiency.",
+   "options": [
+    "however much",
+    "albeit",
+    "even though",
+    "much as"
+   ],
+   "answer": 2,
+   "explanation": "'Even though' introduces a surprising contrast: despite its good aim, the policy is controversial."
+  },
+  {
+   "id": "ex.c1.concession-clauses.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ it was a challenging year, the team achieved remarkable results.",
+   "answers": [
+    [
+     "Even though"
+    ]
+   ],
+   "explanation": "'Even though' is used to introduce a surprising contrast, highlighting the team's success despite the difficulty."
+  },
+  {
+   "id": "ex.c1.concession-clauses.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She finished the marathon, ___ exhausted, but proud.",
+   "answers": [
+    [
+     "albeit"
+    ]
+   ],
+   "explanation": "'Albeit' is used to add a qualification (exhausted) to the statement about finishing the marathon."
+  },
+  {
+   "id": "ex.c1.concession-clauses.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ he practiced, his tennis serve didn't improve significantly.",
+   "answers": [
+    [
+     "However much"
+    ]
+   ],
+   "explanation": "'However much' emphasizes the extent of his practice, showing that despite his efforts, there was no significant improvement."
+  },
+  {
+   "id": "ex.c1.concession-clauses.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Even",
+    "though",
+    "it",
+    "was",
+    "late",
+    ",",
+    "they",
+    "continued",
+    "the",
+    "discussion",
+    "."
+   ],
+   "distractors": [
+    "always"
+   ],
+   "explanation": "This sentence uses 'even though' to show a surprising contrast between the late hour and the continuation of the discussion."
+  },
+  {
+   "id": "ex.c1.concession-clauses.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Much",
+    "as",
+    "I",
+    "admire",
+    "his",
+    "work",
+    ",",
+    "I",
+    "disagree",
+    "with",
+    "his",
+    "methods",
+    "."
+   ],
+   "distractors": [
+    "very"
+   ],
+   "explanation": "'Much as' acknowledges admiration before presenting a contrasting disagreement."
+  },
+  {
+   "id": "ex.c1.concession-clauses.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Albeit he tried hard, he couldn't convince them.",
+   "answers": [
+    "Even though he tried hard, he couldn't convince them.",
+    "Although he tried hard, he couldn't convince them."
+   ],
+   "explanation": "'Albeit' is typically followed by a phrase, not a full clause. 'Even though' is appropriate here to introduce the contrasting clause."
+  },
+  {
+   "id": "ex.c1.concession-clauses.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "However much money he has, but he never seems happy.",
+   "answers": [
+    "However much money he has, he never seems happy."
+   ],
+   "explanation": "The conjunction 'but' is redundant after 'however much' as the concession is already established."
+  },
+  {
+   "id": "ex.c1.concession-clauses.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He is very wealthy, but he lives a simple life.",
+   "instruction": "Rewrite using 'even though'.",
+   "answers": [
+    "Even though he is very wealthy, he lives a simple life."
+   ],
+   "explanation": "'Even though' effectively connects the two contrasting ideas, emphasizing the surprising nature of his simple life despite his wealth."
+  },
+  {
+   "id": "ex.c1.concession-clauses.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I respect her opinion, but I can't agree with her on this point.",
+   "instruction": "Rewrite using 'much as'.",
+   "answers": [
+    "Much as I respect her opinion, I can't agree with her on this point."
+   ],
+   "explanation": "'Much as' acknowledges the respect for her opinion before introducing the contrasting disagreement."
+  },
+  {
+   "id": "ex.c1.concession-clauses.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.concession-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Even though the forecast predicted rain,",
+     "right": "we still planned our outdoor picnic."
+    },
+    {
+     "left": "Much as I enjoy cooking,",
+     "right": "I sometimes prefer to order takeout."
+    },
+    {
+     "left": "The presentation was excellent,",
+     "right": "albeit a bit too long."
+    },
+    {
+     "left": "However much they complained,",
+     "right": "the new rules remained in effect."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "even though",
+  "much as I",
+  "albeit [a-z]+",
+  "however much"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.concession-clauses.01": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.02": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.03": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.04": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.05": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.06": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.07": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits the token 'always' and the alternative omits 'they'."
+   },
+   "ex.c1.concession-clauses.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits the token 'very' and the alternative inserts an extra word."
+   },
+   "ex.c1.concession-clauses.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'Even though' and 'Although' correctly replace 'Albeit' to introduce the clause."
+   },
+   "ex.c1.concession-clauses.11": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.12": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.13": {
+    "status": "pass"
+   },
+   "ex.c1.concession-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 7169530,
+   "text": "I think that Tom wants to do that, even though he says he doesn't.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 3619166,
+   "text": "Tom went to work today even though he wasn't feeling well.",
+   "author": "CK"
+  }
+ ]
+}

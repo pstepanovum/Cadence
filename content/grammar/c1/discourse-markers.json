@@ -1,0 +1,412 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "discourse-markers",
+ "draftHash": "5d1a8fe6eaf481d7",
+ "grammarPoint": {
+  "id": "gp.discourse-markers",
+  "level": "C1",
+  "topicId": "topic.linking",
+  "title": "Discourse markers",
+  "summary": "Learn to use discourse markers like 'admittedly', 'by contrast', 'as a result', and 'that said' to link ideas and show relationships between sentences.",
+  "explanation": "Discourse markers are words or phrases that help connect ideas and show the relationship between different parts of a text or conversation. They guide the reader or listener through your thoughts.\n\n*Admittedly* is used to concede a point, meaning you accept something is true, often before introducing a contrasting idea. It shows you acknowledge a potential counter-argument.\n\n*By contrast* highlights a significant difference or opposition between two things or ideas. It's stronger than simply saying \"however\" and emphasizes the distinction.\n\n*As a result* indicates a consequence or outcome. It shows that one event or situation directly caused another.\n\n*That said* is used to introduce a statement that qualifies or contrasts with something you've just said, even if you've just conceded a point. It's similar to \"nevertheless\" or \"however\" but often follows an acknowledgment.",
+  "patterns": [
+   "Admittedly, [statement].",
+   "[Statement 1]. By contrast, [statement 2].",
+   "[Statement 1]. As a result, [statement 2].",
+   "[Statement 1]. That said, [statement 2]."
+  ],
+  "examples": [
+   {
+    "text": "Admittedly, the initial plan was ambitious, but we managed to adapt.",
+    "note": "Concedes a point before a contrasting idea.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The northern region is very dry. By contrast, the south receives heavy rainfall.",
+    "note": "Highlights a strong difference.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The train was delayed for hours. As a result, we missed our connecting flight.",
+    "note": "Shows a direct consequence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new policy is unpopular with some staff. That said, it's necessary for long-term growth.",
+    "note": "Acknowledges a point, then introduces a contrasting qualification.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She's a talented artist. Admittedly, her early work was a bit rough, but she's improved immensely.",
+    "note": "Concedes a minor flaw.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The weather was bad. By contrast, we stayed home.",
+    "right": "The weather was bad. As a result, we stayed home.",
+    "note": "\"By contrast\" shows opposition, not a consequence."
+   },
+   {
+    "wrong": "Admittedly, it's a good idea, but I don't agree.",
+    "right": "Admittedly, it's a good idea. That said, I don't agree.",
+    "note": "\"That said\" is better for introducing a contrasting opinion after a concession."
+   },
+   {
+    "wrong": "The cost was high, as a result the quality was excellent.",
+    "right": "The cost was high. That said, the quality was excellent.",
+    "note": "\"As a result\" implies cause, not a contrasting observation."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.discourse-markers.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The first half of the concert was quite slow. ___, the second half was full of energy.",
+   "options": [
+    "As a result",
+    "Admittedly",
+    "By contrast",
+    "That said"
+   ],
+   "answer": 2,
+   "explanation": "\"By contrast\" is used to highlight a strong difference between the two halves of the concert."
+  },
+  {
+   "id": "ex.c1.discourse-markers.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team worked tirelessly on the presentation. ___, they secured the new client.",
+   "options": [
+    "By contrast",
+    "As a result",
+    "Admittedly",
+    "That said"
+   ],
+   "answer": 1,
+   "explanation": "\"As a result\" indicates that securing the client was a direct consequence of the team's tireless work."
+  },
+  {
+   "id": "ex.c1.discourse-markers.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new restaurant is very popular. ___, the service can be a bit slow during peak hours.",
+   "options": [
+    "By contrast",
+    "As a result",
+    "Admittedly",
+    "That said"
+   ],
+   "answer": 3,
+   "explanation": "\"That said\" acknowledges the restaurant's popularity but introduces a contrasting or qualifying point about the service."
+  },
+  {
+   "id": "ex.c1.discourse-markers.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___, the task seemed impossible at first, but we found a solution.",
+   "options": [
+    "By contrast",
+    "As a result",
+    "Admittedly",
+    "That said"
+   ],
+   "answer": 2,
+   "explanation": "\"Admittedly\" is used to concede a point, acknowledging that the task initially seemed impossible."
+  },
+  {
+   "id": "ex.c1.discourse-markers.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old system was complicated and slow. ___, the new software is intuitive and fast.",
+   "answers": [
+    [
+     "By contrast"
+    ]
+   ],
+   "explanation": "\"By contrast\" is used to show a strong difference between the old and new systems."
+  },
+  {
+   "id": "ex.c1.discourse-markers.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The company invested heavily in research and development. ___, they launched several innovative products.",
+   "answers": [
+    [
+     "As a result"
+    ]
+   ],
+   "explanation": "\"As a result\" indicates that the innovative products were a direct consequence of the investment."
+  },
+  {
+   "id": "ex.c1.discourse-markers.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The movie received mixed reviews. ___, the cinematography was stunning.",
+   "answers": [
+    [
+     "That said"
+    ],
+    [
+     "Admittedly"
+    ]
+   ],
+   "explanation": "\"That said\" acknowledges the mixed reviews but introduces a positive contrasting point. \"Admittedly\" also works here to concede a positive aspect despite the mixed reviews."
+  },
+  {
+   "id": "ex.c1.discourse-markers.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "traffic",
+    "was",
+    "terrible",
+    ".",
+    "As",
+    "a",
+    "result",
+    ",",
+    "we",
+    "arrived",
+    "late",
+    "."
+   ],
+   "distractors": [
+    "however"
+   ],
+   "explanation": "\"As a result\" introduces the consequence of the terrible traffic."
+  },
+  {
+   "id": "ex.c1.discourse-markers.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "job",
+    "is",
+    "demanding",
+    ".",
+    "That",
+    "said",
+    ",",
+    "it's",
+    "also",
+    "very",
+    "rewarding",
+    "."
+   ],
+   "distractors": [
+    "therefore"
+   ],
+   "explanation": "\"That said\" introduces a contrasting positive point after acknowledging a negative one."
+  },
+  {
+   "id": "ex.c1.discourse-markers.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The new phone is expensive. As a result, it has excellent features.",
+   "answers": [
+    "The new phone is expensive. That said, it has excellent features."
+   ],
+   "explanation": "\"As a result\" implies cause, but expense doesn't cause features. \"That said\" introduces a contrasting positive point."
+  },
+  {
+   "id": "ex.c1.discourse-markers.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Admittedly, the weather was cold, by contrast we still enjoyed the hike.",
+   "answers": [
+    "Admittedly, the weather was cold. That said, we still enjoyed the hike.",
+    "Admittedly, the weather was cold; however, we still enjoyed the hike."
+   ],
+   "explanation": "\"By contrast\" is for strong opposition between two distinct things. \"That said\" is better for qualifying a previous statement."
+  },
+  {
+   "id": "ex.c1.discourse-markers.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The project had many challenges. We learned a lot from them.",
+   "instruction": "Combine using 'admittedly' and 'that said'.",
+   "answers": [
+    "Admittedly, the project had many challenges. That said, we learned a lot from them."
+   ],
+   "explanation": "\"Admittedly\" concedes the challenges, and \"that said\" introduces the contrasting positive outcome."
+  },
+  {
+   "id": "ex.c1.discourse-markers.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The old building was dark and cramped. The new office is bright and spacious.",
+   "instruction": "Combine using 'by contrast'.",
+   "answers": [
+    "The old building was dark and cramped. By contrast, the new office is bright and spacious."
+   ],
+   "explanation": "\"By contrast\" highlights the strong difference between the two offices."
+  },
+  {
+   "id": "ex.c1.discourse-markers.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.discourse-markers"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The city center is always noisy.",
+     "right": "By contrast, the suburbs are much quieter."
+    },
+    {
+     "left": "The experiment failed.",
+     "right": "As a result, we had to start over."
+    },
+    {
+     "left": "Admittedly, the instructions were unclear.",
+     "right": "But we eventually figured it out."
+    },
+    {
+     "left": "The presentation was long.",
+     "right": "That said, it contained valuable information."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "admittedly, [^.?!]*",
+  "by contrast, [^.?!]*",
+  "as a result, [^.?!]*",
+  "that said, [^.?!]*"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.discourse-markers.01": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.02": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.03": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.04": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.05": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.06": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.discourse-markers.07: needs one answer list per gap (1)"
+   },
+   "ex.c1.discourse-markers.08": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens, as 'therefore' is omitted in both."
+   },
+   "ex.c1.discourse-markers.10": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly fix the comma splice and awkward phrasing of the original sentence."
+   },
+   "ex.c1.discourse-markers.12": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.13": {
+    "status": "pass"
+   },
+   "ex.c1.discourse-markers.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 13714324,
+   "text": "That said, some sentences should be revised.",
+   "author": "zogwarg"
+  },
+  {
+   "sentenceId": 10309323,
+   "text": "As a result, the company is expanding its business.",
+   "author": "sundown"
+  }
+ ]
+}

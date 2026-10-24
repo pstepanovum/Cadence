@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "there-is-there-are",
+ "draftHash": "ba64f80fbb28ba4e",
+ "grammarPoint": {
+  "id": "gp.there-is-there-are",
+  "level": "A1",
+  "topicId": "topic.clauses",
+  "title": "There is and there are",
+  "summary": "Use 'there is' and 'there are' to talk about the existence of something or to say where something is.",
+  "explanation": "We use *there is* for singular nouns and *there are* for plural nouns. This structure helps us say that something exists or is present in a certain place.\n\nFor example, if you want to say that a book is on the table, you can say \"There is a book on the table.\" If there are many books, you say \"There are many books on the table.\"\n\nWe often use contractions: *there's* for 'there is' and *there aren't* for 'there are not'. We don't usually contract 'there are' to 'there're'.",
+  "patterns": [
+   "There is + singular noun",
+   "There are + plural noun",
+   "Is there + singular noun?",
+   "Are there + plural noun?",
+   "There isn't + singular noun",
+   "There aren't + plural noun"
+  ],
+  "examples": [
+   {
+    "text": "There is a small cafe on this street.",
+    "note": "States the existence of one cafe.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There are many flowers in the garden.",
+    "note": "States the existence of multiple flowers.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Is there a bus stop near here?",
+    "note": "Asks about the existence of one bus stop.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There isn't any sugar left.",
+    "note": "States that no sugar exists (singular).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There aren't any empty seats.",
+    "note": "States that no empty seats exist (plural).",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Is a cat in the box.",
+    "right": "There is a cat in the box.",
+    "note": "Remember to use 'there' to introduce the existence of something."
+   },
+   {
+    "wrong": "There is two apples.",
+    "right": "There are two apples.",
+    "note": "Use 'are' for plural nouns."
+   },
+   {
+    "wrong": "There are not a problem.",
+    "right": "There isn't a problem.",
+    "note": "Use 'isn't' for singular negative statements."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.there-is-there-are.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ a big park in the city center.",
+   "options": [
+    "There are",
+    "There is",
+    "Is there"
+   ],
+   "answer": 1,
+   "explanation": "'Park' is singular, so we use 'there is'."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ any milk in the fridge?",
+   "options": [
+    "Are there",
+    "There is",
+    "Is there"
+   ],
+   "answer": 2,
+   "explanation": "'Milk' is an uncountable noun, treated as singular, and this is a question."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Look! ___ three birds on the roof.",
+   "options": [
+    "There is",
+    "There are",
+    "Is there"
+   ],
+   "answer": 1,
+   "explanation": "'Three birds' is plural, so we use 'there are'."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Sorry, ___ no tickets left for the show.",
+   "options": [
+    "there is",
+    "there are",
+    "is there"
+   ],
+   "answer": 1,
+   "explanation": "'Tickets' is plural, so we use 'there are'."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ a new restaurant opening next week.",
+   "answers": [
+    [
+     "There's",
+     "There is"
+    ]
+   ],
+   "explanation": "'Restaurant' is singular, so we use 'there is' or its contraction."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ any good movies on TV tonight?",
+   "answers": [
+    [
+     "Are there"
+    ]
+   ],
+   "explanation": "'Movies' is plural, and this is a question, so we use 'are there'."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ many people at the beach today.",
+   "answers": [
+    [
+     "There are"
+    ]
+   ],
+   "explanation": "'Many people' is plural, so we use 'there are'."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "There",
+    "is",
+    "a",
+    "cat",
+    "under",
+    "the",
+    "chair",
+    "."
+   ],
+   "distractors": [
+    "are",
+    "many"
+   ],
+   "explanation": "This sentence states the existence and location of one cat."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Are",
+    "there",
+    "any",
+    "shops",
+    "open",
+    "now",
+    "?"
+   ],
+   "distractors": [
+    "is",
+    "a"
+   ],
+   "explanation": "This is a question asking about the existence of multiple shops."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "There are a big problem with the car.",
+   "answers": [
+    "There is a big problem with the car."
+   ],
+   "explanation": "'Problem' is singular, so 'there is' should be used."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Is there many books on the shelf?",
+   "answers": [
+    "Are there many books on the shelf?"
+   ],
+   "explanation": "'Books' is plural, so 'are there' should be used for the question."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "A small dog is in the yard.",
+   "instruction": "Rewrite using 'there is'.",
+   "answers": [
+    "There is a small dog in the yard."
+   ],
+   "explanation": "We use 'there is' to introduce the existence of the dog in the yard."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "No chairs are available.",
+   "instruction": "Rewrite using 'there aren't'.",
+   "answers": [
+    "There aren't any chairs available."
+   ],
+   "explanation": "We use 'there aren't' for a negative statement about plural items."
+  },
+  {
+   "id": "ex.a1.there-is-there-are.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.there-is-there-are"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "There is a",
+     "right": "new cafe downtown."
+    },
+    {
+     "left": "Are there any",
+     "right": "tickets left?"
+    },
+    {
+     "left": "There aren't",
+     "right": "many clouds today."
+    },
+    {
+     "left": "Is there a",
+     "right": "bathroom on this floor?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "there is a",
+  "there are",
+  "is there a",
+  "are there any"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.there-is-there-are.01": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.02": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.03": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.04": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.05": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.06": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.07": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.08": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.09": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.10": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.11": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.12": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.13": {
+    "status": "pass"
+   },
+   "ex.a1.there-is-there-are.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2663463,
+   "text": "Is there a problem with it?",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 282641,
+   "text": "There are some eggs in the box.",
+   "author": "CK"
+  }
+ ]
+}

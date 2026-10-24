@@ -1,0 +1,391 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "indirect-questions",
+ "draftHash": "e42fc8671339c805",
+ "grammarPoint": {
+  "id": "gp.indirect-questions",
+  "level": "B1",
+  "topicId": "topic.questions-negation",
+  "title": "Indirect questions",
+  "summary": "Learn to ask polite questions using phrases like 'Could you tell me where...' followed by statement word order.",
+  "explanation": "When we ask a direct question, we often invert the subject and verb, like 'Where *is* the bus stop?' or 'What time *does* the store open?'.\n\nHowever, when we want to be more polite, we can use an *indirect question*. We start with a polite phrase, such as 'Could you tell me...' or 'Do you know...'. After this phrase, the question changes to *statement word order* (subject + verb), and we do not use 'do', 'does', or 'did'.\n\nFor example, instead of 'Where is the bus stop?', you would say 'Could you tell me where the bus stop *is*?'. Notice that 'is' comes after 'the bus stop'. Similarly, 'What time does the store open?' becomes 'Could you tell me what time the store *opens*?'.",
+  "patterns": [
+   "Could you tell me + question word + subject + verb...?",
+   "Do you know + question word + subject + verb...?"
+  ],
+  "examples": [
+   {
+    "text": "Could you tell me where the nearest cafe is?",
+    "note": "The verb 'is' comes after the subject 'the nearest cafe'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you know what time the train leaves?",
+    "note": "We use statement order 'the train leaves', not 'does the train leave'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Could you tell me how much this book costs?",
+    "note": "The verb 'costs' follows the subject 'this book', without 'does'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I wonder when the meeting starts.",
+    "note": "Even without 'Could you tell me', the word order is subject + verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you know why she left early?",
+    "note": "The past tense verb 'left' is used directly after the subject 'she', without 'did'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Could you tell me where is the restroom?",
+    "right": "Could you tell me where the restroom is?",
+    "note": "Remember to use statement word order (subject + verb) after the question word."
+   },
+   {
+    "wrong": "Do you know what time does the museum close?",
+    "right": "Do you know what time the museum closes?",
+    "note": "Do not use 'do', 'does', or 'did' in indirect questions."
+   },
+   {
+    "wrong": "Could you tell me how I can get to the airport?",
+    "right": "Could you tell me how I can get to the airport?",
+    "note": "Modal verbs like 'can' also follow the subject in statement order."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.indirect-questions.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Excuse me, could you tell me where ___?",
+   "options": [
+    "is the post office",
+    "the post office is",
+    "does the post office is"
+   ],
+   "answer": 1,
+   "explanation": "After 'Could you tell me where', we use statement word order: subject ('the post office') followed by the verb ('is')."
+  },
+  {
+   "id": "ex.b1.indirect-questions.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you know what time ___?",
+   "options": [
+    "the concert starts",
+    "does the concert start",
+    "starts the concert"
+   ],
+   "answer": 0,
+   "explanation": "Indirect questions use statement word order (subject + verb) and do not include 'do' or 'does'."
+  },
+  {
+   "id": "ex.b1.indirect-questions.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Could you tell me ___?",
+   "options": [
+    "how much costs this shirt",
+    "how much this shirt costs",
+    "how much does this shirt cost"
+   ],
+   "answer": 1,
+   "explanation": "The correct structure for an indirect question is 'question word + subject + verb', so 'how much this shirt costs'."
+  },
+  {
+   "id": "ex.b1.indirect-questions.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'd like to know ___.",
+   "options": [
+    "when the next bus arrives",
+    "when does the next bus arrive",
+    "when arrives the next bus"
+   ],
+   "answer": 0,
+   "explanation": "The phrase 'I'd like to know' also introduces an indirect question, requiring statement word order: 'the next bus arrives'."
+  },
+  {
+   "id": "ex.b1.indirect-questions.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Could you tell me where the nearest ATM ___?",
+   "answers": [
+    [
+     "is"
+    ]
+   ],
+   "explanation": "After 'where the nearest ATM', we need the verb 'is' to complete the statement word order."
+  },
+  {
+   "id": "ex.b1.indirect-questions.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Do you know what time the store ___ on Sundays?",
+   "answers": [
+    [
+     "opens"
+    ]
+   ],
+   "explanation": "For an indirect question, we use statement word order (subject + verb) and omit 'does'. So, 'the store opens'."
+  },
+  {
+   "id": "ex.b1.indirect-questions.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Could you tell me how I ___ to the train station from here?",
+   "answers": [
+    [
+     "can get",
+     "get"
+    ]
+   ],
+   "explanation": "The modal verb 'can' comes after the subject 'I' in statement word order."
+  },
+  {
+   "id": "ex.b1.indirect-questions.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Could",
+    "you",
+    "tell",
+    "me",
+    "what",
+    "your",
+    "name",
+    "is",
+    "?"
+   ],
+   "distractors": [
+    "are"
+   ],
+   "explanation": "The correct order for an indirect question is 'Could you tell me + question word + subject + verb'."
+  },
+  {
+   "id": "ex.b1.indirect-questions.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Do",
+    "you",
+    "know",
+    "when",
+    "the",
+    "movie",
+    "starts",
+    "?"
+   ],
+   "distractors": [
+    "start"
+   ],
+   "explanation": "After 'Do you know when', the sentence uses statement word order: 'the movie starts'."
+  },
+  {
+   "id": "ex.b1.indirect-questions.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Could you tell me where is the exit?",
+   "answers": [
+    "Could you tell me where the exit is?"
+   ],
+   "explanation": "In an indirect question, the verb ('is') comes after the subject ('the exit')."
+  },
+  {
+   "id": "ex.b1.indirect-questions.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Do you know what time does the bank open?",
+   "answers": [
+    "Do you know what time the bank opens?"
+   ],
+   "explanation": "We do not use 'do', 'does', or 'did' in indirect questions. The verb 'open' becomes 'opens' for third person singular."
+  },
+  {
+   "id": "ex.b1.indirect-questions.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Where is the nearest supermarket?",
+   "instruction": "Rewrite as an indirect question starting with 'Could you tell me...'.",
+   "answers": [
+    "Could you tell me where the nearest supermarket is?"
+   ],
+   "explanation": "Change the direct question into an indirect one by using 'Could you tell me' and statement word order (subject + verb)."
+  },
+  {
+   "id": "ex.b1.indirect-questions.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "What time does the flight depart?",
+   "instruction": "Rewrite as an indirect question starting with 'Do you know...'.",
+   "answers": [
+    "Do you know what time the flight departs?"
+   ],
+   "explanation": "Use 'Do you know' and change the question to statement word order, removing 'does' and adding 's' to the verb 'depart'."
+  },
+  {
+   "id": "ex.b1.indirect-questions.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.indirect-questions"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Could you tell me where",
+     "right": "the bus stop is?"
+    },
+    {
+     "left": "Do you know what time",
+     "right": "the library closes?"
+    },
+    {
+     "left": "I'd like to know how",
+     "right": "I can get a taxi."
+    },
+    {
+     "left": "Could you explain why",
+     "right": "the meeting was canceled?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "could you tell me where [a-z ]+ is",
+  "do you know what time [a-z ]+ (starts|opens|closes|leaves)",
+  "could you tell me how [a-z ]+ (can|could) [a-z ]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.indirect-questions.01": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.02": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.03": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.04": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.05": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.06": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options form standard and natural indirect questions."
+   },
+   "ex.b1.indirect-questions.08": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.09": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.10": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.11": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.12": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.13": {
+    "status": "pass"
+   },
+   "ex.b1.indirect-questions.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 10674279,
+   "text": "Do you know what time the shopping centre closes?",
+   "author": "sundown"
+  },
+  {
+   "sentenceId": 11602028,
+   "text": "Could you tell me where the post office is?",
+   "author": "CK"
+  }
+ ]
+}

@@ -1,0 +1,411 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "nominalisation",
+ "draftHash": "7f8260752a71bed2",
+ "grammarPoint": {
+  "id": "gp.nominalisation",
+  "level": "C1",
+  "topicId": "topic.clauses",
+  "title": "Nominalisation",
+  "summary": "Nominalisation transforms verbs or adjectives into nouns, making writing more formal, concise, and objective, especially in academic or professional contexts.",
+  "explanation": "Nominalisation is a linguistic process where a verb or an adjective is converted into a noun. This transformation allows you to express an action or a quality as a concept or an entity, often making sentences sound more formal and less personal.\n\nThis technique is widely used in academic writing, scientific reports, business documents, and legal texts. It helps to condense information, create a more objective tone, and focus on the action or concept itself rather than the agent performing it.\n\nTo nominalise, you often add suffixes like *-tion*, *-ment*, *-al*, *-ence*, or *-ity* to verbs or adjectives (e.g., 'decide' becomes 'decision', 'important' becomes 'importance'). Sometimes, a completely different noun form is used (e.g., 'grow' becomes 'growth').",
+  "patterns": [
+   "Verb + suffix (-tion, -ment, -al, -ence) -> Noun",
+   "Adjective + suffix (-ness, -ity, -ance) -> Noun",
+   "Verb phrase -> Noun phrase (e.g., 'when we investigate' -> 'our investigation of')",
+   "Adjective phrase -> Noun phrase (e.g., 'it is important' -> 'the importance of')"
+  ],
+  "examples": [
+   {
+    "text": "The committee *discussed* the proposal for hours.",
+    "note": "Original sentence using a verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The committee held a *discussion* of the proposal for hours.",
+    "note": "Nominalised: 'discussed' becomes 'discussion', making the sentence more formal.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It is *important* to consider all perspectives.",
+    "note": "Original sentence using an adjective.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The *importance* of considering all perspectives cannot be overstated.",
+    "note": "Nominalised: 'important' becomes 'importance', shifting focus to the concept.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We *analyzed* the data thoroughly before drawing conclusions.",
+    "note": "Nominalised: 'analyzed' becomes 'analysis', creating a more concise and objective statement.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "We need to *decide* on the next steps quickly.",
+    "right": "We need to make a *decision* on the next steps quickly.",
+    "note": "Using a verb where a nominalised form creates a more formal expression."
+   },
+   {
+    "wrong": "The *develop* of new technologies is rapid.",
+    "right": "The *development* of new technologies is rapid.",
+    "note": "Using the incorrect noun form for nominalisation."
+   },
+   {
+    "wrong": "The *assess* of the *perform* of the *employ* was difficult.",
+    "right": "The *assessment* of employee *performance* was difficult.",
+    "note": "Incorrectly nominalising multiple words or using the wrong noun form."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.nominalisation.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The company's recent ___ in market share is a positive sign.",
+   "options": [
+    "grow",
+    "growing",
+    "growth",
+    "grew"
+   ],
+   "answer": 2,
+   "explanation": "The noun form 'growth' is required here to complete the nominalised phrase 'the company's recent growth'."
+  },
+  {
+   "id": "ex.c1.nominalisation.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Instead of saying 'We will *evaluate* the project,' a more formal way using nominalisation would be:",
+   "options": [
+    "We will make an *evaluation* of the project.",
+    "We will *evaluate* of the project.",
+    "We will be *evaluating* the project.",
+    "We will have *evaluated* the project."
+   ],
+   "answer": 0,
+   "explanation": "To nominalise 'evaluate', we use the noun 'evaluation' and typically pair it with a verb like 'make' or 'conduct'."
+  },
+  {
+   "id": "ex.c1.nominalisation.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ___ of the new policy will take effect next month.",
+   "options": [
+    "implement",
+    "implementing",
+    "implementation",
+    "implemented"
+   ],
+   "answer": 2,
+   "explanation": "The noun 'implementation' is the correct nominalised form of the verb 'implement', fitting the formal context."
+  },
+  {
+   "id": "ex.c1.nominalisation.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which sentence uses nominalisation most effectively for a formal report?",
+   "options": [
+    "When we *analyze* the data, we find interesting patterns.",
+    "Our *analysis* of the data reveals interesting patterns.",
+    "We *analyzed* the data and found interesting patterns.",
+    "The data *was analyzed*, and interesting patterns were found."
+   ],
+   "answer": 1,
+   "explanation": "Option B uses the nominalised form 'analysis' to create a more concise and formal statement, typical of reports."
+  },
+  {
+   "id": "ex.c1.nominalisation.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The committee's ___ of the budget proposal led to several revisions.",
+   "answers": [
+    [
+     "discussion",
+     "review"
+    ]
+   ],
+   "explanation": "The noun 'discussion' is the nominalised form of 'discuss' and fits the context of a formal review."
+  },
+  {
+   "id": "ex.c1.nominalisation.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "There was a significant ___ in the company's profits after the marketing campaign's ___.",
+   "answers": [
+    [
+     "increase"
+    ],
+    [
+     "launch"
+    ]
+   ],
+   "explanation": "'Increase' (from 'to increase') and 'launch' (from 'to launch') are the correct nominalised forms to describe changes and events formally."
+  },
+  {
+   "id": "ex.c1.nominalisation.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The ___ of the new software requires careful ___ by the IT department.",
+   "answers": [
+    [
+     "installation"
+    ],
+    [
+     "monitoring"
+    ]
+   ],
+   "explanation": "'Installation' (from 'to install') and 'monitoring' (from 'to monitor') are the appropriate nominalised forms for this technical context."
+  },
+  {
+   "id": "ex.c1.nominalisation.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "assessment",
+    "of",
+    "the",
+    "risks",
+    "is",
+    "crucial",
+    "."
+   ],
+   "distractors": [
+    "assess",
+    "risk"
+   ],
+   "explanation": "This sentence uses the nominalised form 'assessment' to refer to the act of assessing, making it formal and concise."
+  },
+  {
+   "id": "ex.c1.nominalisation.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Their",
+    "commitment",
+    "to",
+    "quality",
+    "is",
+    "evident",
+    "."
+   ],
+   "distractors": [
+    "commit",
+    "quality's"
+   ],
+   "explanation": "The nominalised form 'commitment' (from 'commit') is used here to express a dedication to quality."
+  },
+  {
+   "id": "ex.c1.nominalisation.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The team need to analyze the results before making a decide.",
+   "answers": [
+    "The team needs to analyze the results before making a decision.",
+    "The team needs to analyze the results before deciding.",
+    "The team need to analyze the results before making a decision."
+   ],
+   "explanation": "The verb 'decide' should be nominalised to 'decision' to fit the phrase 'making a decision', or the sentence can be rephrased to use the verb directly."
+  },
+  {
+   "id": "ex.c1.nominalisation.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It is importance to follow the safety guidelines strictly.",
+   "answers": [
+    "It is important to follow the safety guidelines strictly.",
+    "The importance of following the safety guidelines strictly is clear."
+   ],
+   "explanation": "The adjective 'important' is needed here, or the sentence can be nominalised to 'The importance of...' for a more formal tone."
+  },
+  {
+   "id": "ex.c1.nominalisation.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We will investigate the cause of the problem.",
+   "instruction": "Rewrite using nominalisation.",
+   "answers": [
+    "Our investigation into the cause of the problem will begin.",
+    "An investigation into the cause of the problem will be conducted."
+   ],
+   "explanation": "The verb 'investigate' is nominalised to 'investigation', creating a more formal and objective statement."
+  },
+  {
+   "id": "ex.c1.nominalisation.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The government decided to reduce carbon emissions.",
+   "instruction": "Rewrite using nominalisation for 'decided' and 'reduce'.",
+   "answers": [
+    "The government's decision was to reduce carbon emissions.",
+    "The government made a decision regarding the reduction of carbon emissions."
+   ],
+   "explanation": "Both 'decided' and 'reduce' are nominalised to 'decision' and 'reduction' respectively, making the sentence more formal and concise."
+  },
+  {
+   "id": "ex.c1.nominalisation.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.nominalisation"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The company announced its",
+     "right": "commitment to environmental sustainability."
+    },
+    {
+     "left": "A thorough",
+     "right": "analysis of the market trends is required."
+    },
+    {
+     "left": "The rapid",
+     "right": "development of AI has transformed industries."
+    },
+    {
+     "left": "We need to reach a",
+     "right": "decision on the project timeline soon."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\b(the|our|their|its) \\w+(tion|ment|al|ence|ity)\\b",
+  "\\b(a|an) \\w+(tion|ment|al|ence|ity) of\\b",
+  "\\b(decision|analysis|development|explanation|conclusion|importance|growth|improvement|implementation|assessment|evaluation|consideration|discussion|production|reduction|creation|application|observation|recognition|understanding|management|agreement|commitment|proposal|response|solution|contribution|preparation|presentation|recommendation|requirement|statement|suggestion|treatment|variation|visibility|willingness|ability|activity|complexity|difficulty|flexibility|generosity|hostility|identity|intensity|majority|necessity|opportunity|possibility|priority|reality|responsibility|sensitivity|stability|uncertainty|validity|variety)\\b"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.nominalisation.01": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.02": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.03": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.04": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.05": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'discussion' and 'review' fit the sentence context naturally and grammatically."
+   },
+   "ex.c1.nominalisation.06": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.07": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.08": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.09": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers are correct because British English allows plural verbs with collective nouns like 'team'."
+   },
+   "ex.c1.nominalisation.11": {
+    "status": "pass"
+   },
+   "ex.c1.nominalisation.12": {
+    "status": "drop",
+    "note": "Key judged wrong: The key alters the original meaning by introducing the verb 'will begin'."
+   },
+   "ex.c1.nominalisation.13": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key fails to nominalise 'reduce' into 'reduction'."
+   },
+   "ex.c1.nominalisation.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 38611,
+   "text": "In making a decision, I rely not on logic but on instinct.",
+   "author": "AlanF_US"
+  },
+  {
+   "sentenceId": 28085,
+   "text": "The doctor's careful treatment of the patient brought about her quick recovery.",
+   "author": "Lumi_alt"
+  }
+ ]
+}

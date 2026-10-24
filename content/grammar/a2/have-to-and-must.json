@@ -1,0 +1,481 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "have-to-and-must",
+ "draftHash": "14a6b32f46a8baab",
+ "grammarPoint": {
+  "id": "gp.have-to-and-must",
+  "level": "A2",
+  "topicId": "topic.modals",
+  "title": "Have to and must",
+  "summary": "Learn to use \"have to\" and \"must\" to talk about things that are necessary or rules you need to follow.",
+  "explanation": "We use *have to* and *must* to say that something is necessary or that there is an obligation. Both can be used for rules.\n\n*Must* often shows a strong personal feeling of obligation or a rule that comes directly from the speaker. For example, \"I *must* remember her birthday\" shows a personal decision. *Have to* often shows an obligation that comes from outside, like a rule or a schedule. For example, \"I *have to* wear a uniform at work\" is an external rule.\n\nFor negative sentences, there is a big difference. *Don't have to* means something is *not necessary*. For example, \"You *don't have to* come if you're busy.\" *Must not* means something is *forbidden* or not allowed. For example, \"You *must not* touch the art.\" This is a strong prohibition.",
+  "patterns": [
+   "Subject + must + base verb",
+   "Subject + have/has to + base verb",
+   "Subject + don't/doesn't have to + base verb",
+   "Subject + must not + base verb"
+  ],
+  "examples": [
+   {
+    "text": "You must finish your homework before watching TV.",
+    "note": "Shows a strong obligation, perhaps from a parent or teacher.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I have to go to the dentist tomorrow morning.",
+    "note": "Shows an external obligation due to an appointment.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She doesn't have to work on Saturdays.",
+    "note": "Indicates that working on Saturdays is not necessary for her.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Visitors must not feed the animals at the zoo.",
+    "note": "Shows a strong rule or prohibition.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We have to buy tickets for the concert soon.",
+    "note": "Shows an external necessity to get tickets before they sell out.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "You must to listen carefully.",
+    "right": "You must listen carefully.",
+    "note": "Do not use 'to' after 'must'."
+   },
+   {
+    "wrong": "He don't have to leave yet.",
+    "right": "He doesn't have to leave yet.",
+    "note": "Use 'doesn't' with 'he/she/it' for 'have to'."
+   },
+   {
+    "wrong": "You must not to talk during the exam.",
+    "right": "You must not talk during the exam.",
+    "note": "Do not use 'to' after 'must not'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.have-to-and-must.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ wear a helmet when riding a bicycle. It's the law.",
+   "options": [
+    "must not",
+    "don't have to",
+    "have to"
+   ],
+   "answer": 2,
+   "explanation": "'Have to' is used for an external obligation or rule, like a law."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ forget your passport. It's very important for your trip.",
+   "options": [
+    "must",
+    "must not",
+    "don't have to"
+   ],
+   "answer": 1,
+   "explanation": "'Must not' is used to say something is forbidden or strongly advised against."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ finish this project by Friday. My boss is waiting for it.",
+   "options": [
+    "must",
+    "don't have to",
+    "must not"
+   ],
+   "answer": 0,
+   "explanation": "'Must' can be used for a strong personal obligation or an important external deadline."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ pay for the water. It's included with the meal.",
+   "options": [
+    "must",
+    "must not",
+    "don't have to"
+   ],
+   "answer": 2,
+   "explanation": "'Don't have to' means something is not necessary."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Students ___ be quiet in the library. It's a rule.",
+   "answers": [
+    [
+     "must"
+    ],
+    [
+     "have to"
+    ]
+   ],
+   "explanation": "Both 'must' and 'have to' can express a rule. 'Must' emphasizes the strong nature of the rule, while 'have to' indicates an external obligation."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ ___ work late tonight. Her tasks are all done.",
+   "answers": [
+    [
+     "doesn't",
+     "have to"
+    ]
+   ],
+   "explanation": "'Doesn't have to' means it's not necessary for her to work late."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You ___ ___ park your car here. It's a no-parking zone.",
+   "answers": [
+    [
+     "must",
+     "not"
+    ]
+   ],
+   "explanation": "'Must not' means it is forbidden to park here."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "have",
+    "to",
+    "buy",
+    "groceries",
+    "today",
+    "."
+   ],
+   "distractors": [
+    "will"
+   ],
+   "explanation": "This sentence expresses an external necessity to buy groceries."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "must",
+    "not",
+    "talk",
+    "on",
+    "your",
+    "phone",
+    "here",
+    "."
+   ],
+   "distractors": [
+    "can"
+   ],
+   "explanation": "This sentence expresses a strong prohibition."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I must to call my parents this evening.",
+   "answers": [
+    "I must call my parents this evening."
+   ],
+   "explanation": "The word 'to' is not used after 'must'."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He don't have to wear a tie for the meeting.",
+   "answers": [
+    "He doesn't have to wear a tie for the meeting."
+   ],
+   "explanation": "For 'he/she/it', use 'doesn't' with 'have to'."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It is necessary for us to leave early.",
+   "instruction": "Use 'have to'.",
+   "answers": [
+    "We have to leave early."
+   ],
+   "explanation": "'Have to' expresses external necessity."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You are not allowed to run in the hallways.",
+   "instruction": "Use 'must not'.",
+   "answers": [
+    "You must not run in the hallways."
+   ],
+   "explanation": "'Must not' expresses a strong prohibition or something that is forbidden."
+  },
+  {
+   "id": "ex.a2.have-to-and-must.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.have-to-and-must"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I must remember",
+     "right": "to send that email."
+    },
+    {
+     "left": "We have to pay",
+     "right": "the rent by Friday."
+    },
+    {
+     "left": "You don't have to bring",
+     "right": "a gift."
+    },
+    {
+     "left": "She must not forget",
+     "right": "her appointment."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "must [a-z]+",
+  "have to [a-z]+",
+  "don't have to [a-z]+",
+  "must not [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.have-to-and-must.01": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.02": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.03": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.04": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.05": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.have-to-and-must.05: needs one answer list per gap (1)"
+   },
+   "ex.a2.have-to-and-must.06": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.have-to-and-must.06: needs one answer list per gap (2)"
+   },
+   "ex.a2.have-to-and-must.07": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.have-to-and-must.07: needs one answer list per gap (2)"
+   },
+   "ex.a2.have-to-and-must.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key fails to use the token will, whereas the other answer correctly uses all tokens."
+   },
+   "ex.a2.have-to-and-must.09": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.10": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.11": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.12": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.13": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.14": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.15": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.16": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.17": {
+    "status": "pass"
+   },
+   "ex.a2.have-to-and-must.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.a2.have-to-and-must.15",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.have-to-and-must"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Drivers ___ stop at a red light. It's the law.",
+    "options": [
+     "don't have to",
+     "must",
+     "doesn't have to"
+    ],
+    "answer": 1,
+    "explanation": "'Must' is used for strong obligations and laws."
+   },
+   {
+    "id": "ex.a2.have-to-and-must.16",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.have-to-and-must"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I ___ remember to buy bread on my way home.",
+    "options": [
+     "don't have to",
+     "must",
+     "has to"
+    ],
+    "answer": 1,
+    "explanation": "'Must' expresses a strong personal obligation."
+   },
+   {
+    "id": "ex.a2.have-to-and-must.17",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.have-to-and-must"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "You ___ bring a gift to the party, but it's a nice gesture.",
+    "options": [
+     "must not",
+     "must",
+     "don't have to"
+    ],
+    "answer": 2,
+    "explanation": "'Don't have to' means it's not necessary."
+   },
+   {
+    "id": "ex.a2.have-to-and-must.18",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.have-to-and-must"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Students ___ cheat on tests. It's against the rules.",
+    "options": [
+     "don't have to",
+     "must not",
+     "has to"
+    ],
+    "answer": 1,
+    "explanation": "'Must not' is used for prohibitions or things that are forbidden."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2392,
+   "text": "We must think about friends.",
+   "author": "Zifre"
+  },
+  {
+   "sentenceId": 241787,
+   "text": "I have to do my homework.",
+   "author": "CK"
+  }
+ ]
+}

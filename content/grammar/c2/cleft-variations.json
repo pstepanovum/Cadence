@@ -1,0 +1,413 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "cleft-variations",
+ "draftHash": "f9038e10c24e9fa7",
+ "grammarPoint": {
+  "id": "gp.cleft-variations",
+  "level": "C2",
+  "topicId": "topic.emphasis",
+  "title": "More cleft sentences",
+  "summary": "Learn to use 'All I want is...' and 'It's not that... it's that...' to emphasize specific information, clarify intentions, or correct misunderstandings.",
+  "explanation": "Cleft sentences like \"All I want is...\" and \"It's not that... it's that...\" are powerful tools for adding emphasis and clarity to your communication. They allow you to highlight a particular piece of information, making it stand out from the rest of the sentence.\n\n\"*All I want is...*\" (or \"All I need is...\", \"All I did was...\") focuses on a single desire, requirement, or action. It implies that everything else is secondary or irrelevant, drawing the listener's attention directly to the emphasized element. This structure often simplifies a complex situation to its core.\n\n\"*It's not that... it's that...*\" is used to correct a potential misunderstanding or to clarify the true reason or situation behind something. The first clause (after \"not that\") states what is *not* the case, while the second clause (after \"it's that\") provides the actual, emphasized truth or explanation. This construction is excellent for nuanced explanations.",
+  "patterns": [
+   "All + subject + want/need/do + is + (to) infinitive/noun phrase",
+   "It's not that + clause + it's that + clause"
+  ],
+  "examples": [
+   {
+    "text": "All I want is a moment of peace and quiet after a long day.",
+    "note": "Emphasizes the singular desire for peace and quiet.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "All she did was nod her head, offering no further comment.",
+    "note": "Highlights the specific, limited action performed.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It's not that I disagree with your proposal; it's that I foresee some logistical challenges.",
+    "note": "Clarifies the speaker's true concern, correcting a potential misinterpretation of disagreement.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "All we need is a clear directive to proceed with the next phase.",
+    "note": "Stresses the essential requirement for moving forward.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It's not that the team lacks talent; it's that they haven't had enough time to gel.",
+    "note": "Explains the real reason for a situation, dismissing a common assumption.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "All I want a new laptop.",
+    "right": "All I want *is* a new laptop.",
+    "note": "Remember to include the verb 'is' after the 'All... verb' phrase."
+   },
+   {
+    "wrong": "It's not that I am busy, it's I am tired.",
+    "right": "It's not that I am busy; *it's that* I am tired.",
+    "note": "Ensure 'it's that' introduces the clarifying clause."
+   },
+   {
+    "wrong": "All he did was to complain about the weather.",
+    "right": "All he did was complain about the weather.",
+    "note": "After 'all... did was', the infinitive 'to' is usually omitted, though it's sometimes acceptable."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.cleft-variations.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "All I ___ is a chance to prove myself.",
+   "options": [
+    "want",
+    "wanted",
+    "wanting",
+    "to want"
+   ],
+   "answer": 0,
+   "explanation": "The present tense 'want' is correct here, as the desire is current. 'Is' already provides the main verb for the cleft structure."
+  },
+  {
+   "id": "ex.c2.cleft-variations.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's not that she's unwilling to help; ___ she's simply overwhelmed with her own tasks.",
+   "options": [
+    "it's that",
+    "it's",
+    "that",
+    "but that"
+   ],
+   "answer": 0,
+   "explanation": "The structure 'it's not that... it's that...' requires 'it's that' to introduce the clarifying clause."
+  },
+  {
+   "id": "ex.c2.cleft-variations.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "All they ___ was ask for directions, nothing more.",
+   "options": [
+    "did",
+    "do",
+    "doing",
+    "have done"
+   ],
+   "answer": 0,
+   "explanation": "The past tense 'did' correctly forms the cleft sentence, indicating a completed action in the past."
+  },
+  {
+   "id": "ex.c2.cleft-variations.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which sentence correctly uses the 'It's not that... it's that...' structure?",
+   "options": [
+    "It's not that I don't like the food, it's that I'm full.",
+    "It's not that I don't like the food, it's I'm full.",
+    "It's not I don't like the food, it's that I'm full.",
+    "It's not that I don't like the food, that I'm full."
+   ],
+   "answer": 0,
+   "explanation": "The correct structure is 'It's not that + clause; it's that + clause', with 'it's that' introducing the second part."
+  },
+  {
+   "id": "ex.c2.cleft-variations.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "All I ___ ___ a quiet place to read my book.",
+   "answers": [
+    [
+     "want"
+    ],
+    [
+     "is"
+    ]
+   ],
+   "explanation": "The structure 'All I want is...' emphasizes the singular desire. 'Want' is the verb for the subject 'I', and 'is' connects the emphasized noun phrase."
+  },
+  {
+   "id": "ex.c2.cleft-variations.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's not that he ___ understand the instructions; ___ ___ he finds them too complicated.",
+   "answers": [
+    [
+     "doesn't"
+    ],
+    [
+     "it's"
+    ],
+    [
+     "that"
+    ]
+   ],
+   "explanation": "The first gap needs 'doesn't' to form the negative clause. The second and third gaps require 'it's that' to introduce the clarifying clause."
+  },
+  {
+   "id": "ex.c2.cleft-variations.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "All she ___ ___ apologize for her mistake.",
+   "answers": [
+    [
+     "did"
+    ],
+    [
+     "was"
+    ]
+   ],
+   "explanation": "This structure emphasizes the single action she performed. 'Did' is the auxiliary for the past action, and 'was' connects to the base form of the verb 'apologize'."
+  },
+  {
+   "id": "ex.c2.cleft-variations.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "All",
+    "we",
+    "need",
+    "is",
+    "more",
+    "information",
+    "."
+   ],
+   "distractors": [
+    "are",
+    "some"
+   ],
+   "explanation": "This sentence uses the 'All... is...' cleft structure to emphasize the singular requirement: more information."
+  },
+  {
+   "id": "ex.c2.cleft-variations.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It's",
+    "not",
+    "that",
+    "I'm",
+    "unhappy",
+    ";",
+    "it's",
+    "that",
+    "I'm",
+    "tired",
+    "."
+   ],
+   "distractors": [
+    "but",
+    "so"
+   ],
+   "explanation": "This sentence uses the 'It's not that... it's that...' structure to clarify the true reason for the speaker's state."
+  },
+  {
+   "id": "ex.c2.cleft-variations.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "All I want is to travel the world, not just visiting one city.",
+   "answers": [
+    "All I want is to travel the world, not just visit one city.",
+    "All I want is to travel the world, not just to visit one city."
+   ],
+   "explanation": "After 'All I want is to...', the verb should remain in the infinitive form, parallel to 'travel'."
+  },
+  {
+   "id": "ex.c2.cleft-variations.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It's not that they don't care, it's they are busy.",
+   "answers": [
+    "It's not that they don't care; it's that they are busy.",
+    "It's not that they don't care, it's that they are busy."
+   ],
+   "explanation": "The second clause in this cleft structure must be introduced by 'it's that' for clarity and grammatical correctness."
+  },
+  {
+   "id": "ex.c2.cleft-variations.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I only want a simple explanation.",
+   "instruction": "Rewrite using 'All I want is...'.",
+   "answers": [
+    "All I want is a simple explanation."
+   ],
+   "explanation": "The 'All I want is...' structure emphasizes the singular desire for a simple explanation."
+  },
+  {
+   "id": "ex.c2.cleft-variations.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She isn't rude; she's just shy.",
+   "instruction": "Rewrite using 'It's not that... it's that...'.",
+   "answers": [
+    "It's not that she's rude; it's that she's just shy."
+   ],
+   "explanation": "This transformation clarifies the situation by stating what she is not, and then what she truly is, using the specified cleft structure."
+  },
+  {
+   "id": "ex.c2.cleft-variations.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.cleft-variations"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "All I need",
+     "right": "is a moment to think."
+    },
+    {
+     "left": "It's not that I forgot",
+     "right": "it's that I was never told."
+    },
+    {
+     "left": "All he did",
+     "right": "was follow the instructions."
+    },
+    {
+     "left": "It's not that the task is difficult",
+     "right": "it's that it's very time-consuming."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "all (?:i|we|he|she|they|you) (?:want|need|do|wanted|needed|did) (?:is|was)",
+  "it's not that .* it's that"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.cleft-variations.01": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.02": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.03": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.04": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.05": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.06": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.07": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.08": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.c2.cleft-variations.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.c2.cleft-variations.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'visit' and 'to visit' form grammatically correct parallel structures."
+   },
+   "ex.c2.cleft-variations.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers successfully correct the sentence into natural English."
+   },
+   "ex.c2.cleft-variations.12": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.13": {
+    "status": "pass"
+   },
+   "ex.c2.cleft-variations.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 5738451,
+   "text": "All I want is the antidote.",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 4718444,
+   "text": "All I want is some camaraderie.",
+   "author": "AlanF_US"
+  }
+ ]
+}

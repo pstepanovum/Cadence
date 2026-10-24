@@ -1,0 +1,388 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "defining-relative-clauses",
+ "draftHash": "25bfd799be498fba",
+ "grammarPoint": {
+  "id": "gp.defining-relative-clauses",
+  "level": "B1",
+  "topicId": "topic.relative-clauses",
+  "title": "Defining relative clauses",
+  "summary": "Defining relative clauses use words like 'who', 'which', 'that', and 'where' to give essential information about a noun, telling us exactly which one you mean.",
+  "explanation": "We use *defining relative clauses* to add important information about a noun. This information tells us exactly *which* person, thing, or place we are talking about. If you remove a defining relative clause, the meaning of the sentence changes or becomes unclear.\n\nWe use *who* for people, *which* for things, and *where* for places. The word *that* can be used for both people and things. We do not use commas with defining relative clauses.\n\nFor example, in \"The student *who sits next to me* is very smart,\" the clause \"who sits next to me\" tells us exactly which student. Without it, \"The student is very smart\" is less specific.",
+  "patterns": [
+   "Noun + who + verb/subject + verb",
+   "Noun + which + verb/subject + verb",
+   "Noun + that + verb/subject + verb",
+   "Place + where + subject + verb"
+  ],
+  "examples": [
+   {
+    "text": "The woman who called earlier wants to reschedule.",
+    "note": " 'who called earlier' identifies which woman.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I bought the book that you recommended.",
+    "note": " 'that you recommended' specifies which book.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "This is the park where we had our first picnic.",
+    "note": " 'where we had our first picnic' tells us which park.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She fixed the computer which was making a strange noise.",
+    "note": " 'which was making a strange noise' identifies the specific computer.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you know the person who designed this building?",
+    "note": " 'who designed this building' clarifies which person.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I like movies who have a lot of action.",
+    "right": "I like movies that have a lot of action.",
+    "note": "Use 'that' or 'which' for things, not 'who'."
+   },
+   {
+    "wrong": "The city, where I grew up, is very small.",
+    "right": "The city where I grew up is very small.",
+    "note": "Do not use commas with defining relative clauses."
+   },
+   {
+    "wrong": "He is the man works at the cafe.",
+    "right": "He is the man who works at the cafe.",
+    "note": "A relative pronoun is needed to connect the clause to the noun."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.defining-relative-clauses.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The restaurant ___ serves the best pizza is always crowded.",
+   "options": [
+    "who",
+    "where",
+    "which",
+    "what"
+   ],
+   "answer": 2,
+   "explanation": "The restaurant is a thing, so 'which' is the correct relative pronoun. 'That' would also be correct here."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you remember the day ___ we first met?",
+   "options": [
+    "who",
+    "which",
+    "where",
+    "when"
+   ],
+   "answer": 3,
+   "explanation": "While 'where' is for places, 'when' is used for time. 'The day' refers to a point in time, so 'when' is appropriate. 'That' could also be used here."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need to find the person ___ can help me with this problem.",
+   "options": [
+    "which",
+    "where",
+    "who",
+    "what"
+   ],
+   "answer": 2,
+   "explanation": "'The person' is a human, so 'who' is the correct relative pronoun. 'That' would also be correct here."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "This is the library ___ I study every weekend.",
+   "options": [
+    "who",
+    "which",
+    "that",
+    "where"
+   ],
+   "answer": 3,
+   "explanation": "'The library' is a place, so 'where' is the correct relative pronoun to introduce the clause about an activity happening there."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The movie ___ we watched last night was very exciting.",
+   "answers": [
+    [
+     "that",
+     "which"
+    ]
+   ],
+   "explanation": "'The movie' is a thing, so 'that' or 'which' are correct."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She knows a painter ___ work is displayed in the gallery.",
+   "answers": [
+    [
+     "whose"
+    ]
+   ],
+   "explanation": "'Whose' is used to show possession for people or things. The work belongs to the painter."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The cafe ___ has outdoor seating is my favorite.",
+   "answers": [
+    [
+     "that",
+     "which"
+    ]
+   ],
+   "explanation": "'The cafe' is a place/thing, so 'that' or 'which' are correct."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "man",
+    "who",
+    "lives",
+    "next",
+    "door",
+    "is",
+    "a",
+    "teacher."
+   ],
+   "distractors": [
+    "where"
+   ],
+   "explanation": "The relative clause 'who lives next door' identifies which man is being discussed."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "love",
+    "the",
+    "shoes",
+    "that",
+    "you",
+    "bought",
+    "yesterday."
+   ],
+   "distractors": [
+    "who"
+   ],
+   "explanation": "The relative clause 'that you bought yesterday' specifies which shoes are loved."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "This is the park which we play soccer.",
+   "answers": [
+    "This is the park where we play soccer."
+   ],
+   "explanation": "'The park' is a place, so 'where' is the correct relative pronoun to describe an activity happening there."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The student, who got the highest score, received a scholarship.",
+   "answers": [
+    "The student who got the highest score received a scholarship."
+   ],
+   "explanation": "This is a defining relative clause, providing essential information, so no commas are needed."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I met a woman. She works at the university.",
+   "instruction": "Combine into one sentence using 'who'.",
+   "answers": [
+    "I met a woman who works at the university."
+   ],
+   "explanation": "The relative pronoun 'who' connects the two sentences, identifying the woman."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The car broke down. It was parked outside.",
+   "instruction": "Combine into one sentence using 'that'.",
+   "answers": [
+    "The car that was parked outside broke down.",
+    "The car which was parked outside broke down."
+   ],
+   "explanation": "The relative pronoun 'that' (or 'which') connects the two sentences, identifying the car."
+  },
+  {
+   "id": "ex.b1.defining-relative-clauses.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.defining-relative-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I visited the city",
+     "right": "where my grandparents were born."
+    },
+    {
+     "left": "The book",
+     "right": "that I'm reading is very interesting."
+    },
+    {
+     "left": "She knows a chef",
+     "right": "who creates amazing desserts."
+    },
+    {
+     "left": "I need to find the keys",
+     "right": "which I left on the table."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "who (is|was|lives|works|has)",
+  "which (is|was|has|had)",
+  "that (is|was|has|had)",
+  "where (i|we|he|she|they) (live|lived|go|went|work|worked)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.defining-relative-clauses.01": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.02": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.03": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.04": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.05": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.06": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.07": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.08": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.09": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.10": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.11": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.12": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.13": {
+    "status": "pass"
+   },
+   "ex.b1.defining-relative-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

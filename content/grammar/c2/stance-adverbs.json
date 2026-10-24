@@ -1,0 +1,486 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "stance-adverbs",
+ "draftHash": "4b1227c7904ac075",
+ "grammarPoint": {
+  "id": "gp.stance-adverbs",
+  "level": "C2",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "Stance adverbs",
+  "summary": "Stance adverbs like 'arguably', 'presumably', 'admittedly', and 'frankly' express the speaker's attitude or opinion about an entire statement.",
+  "explanation": "Stance adverbs, also known as sentence adverbs, modify a whole clause or sentence rather than just a verb, adjective, or another adverb. They convey the speaker's perspective, judgment, or attitude towards the information being presented. These adverbs often appear at the beginning of a sentence, separated by a comma, but can also be found in other positions.\n\n*Arguably* suggests that something can be supported by strong arguments or evidence, even if it's not universally accepted as fact. *Presumably* indicates that something is assumed to be true based on reasonable evidence or likelihood, but without absolute certainty. It implies a logical inference.\n\n*Admittedly* is used to concede a point, often one that might weaken one's own argument or is slightly inconvenient. It acknowledges a truth that might be difficult to accept. *Frankly* expresses honesty and directness, often used when the speaker is about to say something blunt or potentially unwelcome.",
+  "patterns": [
+   "Stance adverb, + sentence.",
+   "Subject + stance adverb + verb + object.",
+   "Sentence + , + stance adverb + ."
+  ],
+  "examples": [
+   {
+    "text": "Arguably, the new policy will lead to significant improvements in efficiency.",
+    "note": "Suggests a strong case can be made for the policy's positive impact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The package, presumably, contains the documents we've been waiting for.",
+    "note": "Indicates an assumption based on available information.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Admittedly, the initial design was flawed, but we've made major revisions.",
+    "note": "Concedes a negative point about the design.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Frankly, I find the current approach to be quite ineffective.",
+    "note": "Expresses a direct and honest, possibly blunt, opinion.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She's arguably the most talented artist of her generation.",
+    "note": "Positions her as someone whose talent can be strongly argued for.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Admitted, the project was challenging.",
+    "right": "Admittedly, the project was challenging.",
+    "note": "Use the adverb form 'admittedly' to modify the entire statement."
+   },
+   {
+    "wrong": "I frankly don't understand the decision.",
+    "right": "Frankly, I don't understand the decision.",
+    "note": "Stance adverbs often begin the sentence, followed by a comma, for emphasis."
+   },
+   {
+    "wrong": "The data is presumably the most important factor.",
+    "right": "Arguably, the data is the most important factor.",
+    "note": "'Arguably' is better here to suggest a point that can be debated and supported, not just assumed."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.stance-adverbs.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___, the new software has a steep learning curve, but its benefits are undeniable.",
+   "options": [
+    "Presumably",
+    "Arguably",
+    "Admittedly",
+    "Frankly"
+   ],
+   "answer": 2,
+   "explanation": "'Admittedly' is used to concede a difficult or negative point, which fits the context of acknowledging a steep learning curve."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ancient ruins are ___, the most significant archaeological discovery of the decade.",
+   "options": [
+    "frankly",
+    "presumably",
+    "arguably"
+   ],
+   "answer": 2,
+   "explanation": "'Arguably' suggests that a strong case can be made for the ruins being the most significant discovery, inviting discussion rather than stating a fact or assumption."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She didn't respond to my email, so ___, she hasn't seen it yet.",
+   "options": [
+    "arguably",
+    "frankly",
+    "admittedly",
+    "presumably"
+   ],
+   "answer": 3,
+   "explanation": "'Presumably' indicates an assumption based on a logical inference (no response means she hasn't seen it)."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___, I think we need to reconsider our entire strategy.",
+   "options": [
+    "Admittedly",
+    "Presumably",
+    "Frankly"
+   ],
+   "answer": 2,
+   "explanation": "'Frankly' is used to express a direct and honest opinion, often a blunt one, which fits the strong statement about reconsidering the strategy."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The company's decision to expand into new markets is ___, a risky move.",
+   "answers": [
+    [
+     "arguably"
+    ]
+   ],
+   "explanation": "'Arguably' suggests that one could make a strong case for the expansion being risky, implying a debatable point."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___, I'm not entirely satisfied with the outcome of the negotiations.",
+   "answers": [
+    [
+     "Frankly"
+    ]
+   ],
+   "explanation": "'Frankly' expresses a direct and honest, possibly critical, opinion about the negotiation outcome."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He missed the deadline, so ___, he won't be eligible for the bonus. ___, he should have started earlier.",
+   "answers": [
+    [
+     "presumably"
+    ],
+    [
+     "Admittedly",
+     "Frankly"
+    ]
+   ],
+   "explanation": "'Presumably' indicates an assumption based on the missed deadline. For the second gap, 'Admittedly' concedes a point about his responsibility, while 'Frankly' offers a direct, honest opinion."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Admittedly,",
+    "the",
+    "presentation",
+    "was",
+    "a",
+    "bit",
+    "too",
+    "long",
+    "."
+   ],
+   "distractors": [
+    "always"
+   ],
+   "explanation": "The adverb 'admittedly' introduces a concession about the presentation's length."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Frankly,",
+    "I",
+    "don't",
+    "see",
+    "any",
+    "other",
+    "viable",
+    "option",
+    "."
+   ],
+   "distractors": [
+    "really"
+   ],
+   "explanation": "'Frankly' is used to express a direct and honest opinion about the lack of other options."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Presumable, the train will arrive on time.",
+   "answers": [
+    "Presumably, the train will arrive on time."
+   ],
+   "explanation": "The adverb form 'presumably' is needed to modify the entire sentence, indicating an assumption."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The new system is arguably the most efficient, but it's also the most complex.",
+   "answers": [
+    "Arguably, the new system is the most efficient, but it's also the most complex.",
+    "The new system is, arguably, the most efficient, but it's also the most complex."
+   ],
+   "explanation": "While 'arguably' can appear mid-sentence, placing it at the beginning or with commas often improves flow and emphasizes its role as a stance adverb."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's possible to argue that this strategy is the best one.",
+   "instruction": "Use the word 'arguably'.",
+   "answers": [
+    "Arguably, this strategy is the best one.",
+    "This strategy is arguably the best one."
+   ],
+   "explanation": "'Arguably' concisely expresses that a strong case can be made for the strategy being the best."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I must admit that the experiment yielded unexpected results.",
+   "instruction": "Rewrite using 'admittedly'.",
+   "answers": [
+    "Admittedly, the experiment yielded unexpected results."
+   ],
+   "explanation": "'Admittedly' serves as a concise way to concede the point about the unexpected results."
+  },
+  {
+   "id": "ex.c2.stance-adverbs.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.stance-adverbs"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Arguably, the novel's ending",
+     "right": "is its most controversial aspect."
+    },
+    {
+     "left": "Presumably, the conference",
+     "right": "will start at 9 AM as scheduled."
+    },
+    {
+     "left": "Admittedly, the journey was long,",
+     "right": "but the destination was worth it."
+    },
+    {
+     "left": "Frankly, I'm tired",
+     "right": "of discussing the same issue repeatedly."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "arguably, [a-z ]+",
+  "presumably, [a-z ]+",
+  "admittedly, [a-z ]+",
+  "frankly, [a-z ]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.stance-adverbs.01": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.02": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.03": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.04": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.05": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.06": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.07": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key fails to use the token 'always'."
+   },
+   "ex.c2.stance-adverbs.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key omits the token 'really'."
+   },
+   "ex.c2.stance-adverbs.10": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.11": {
+    "status": "drop",
+    "note": "Ambiguous: The original sentence has no mistake, so both answers are correct."
+   },
+   "ex.c2.stance-adverbs.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both rewrites are grammatically correct and natural."
+   },
+   "ex.c2.stance-adverbs.13": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.14": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.15": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.16": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.17": {
+    "status": "pass"
+   },
+   "ex.c2.stance-adverbs.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c2.stance-adverbs.15",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.stance-adverbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The new art installation is ___, the most thought-provoking piece in the gallery.",
+    "options": [
+     "admittedly",
+     "presumably",
+     "arguably",
+     "frankly"
+    ],
+    "answer": 2,
+    "explanation": "'Arguably' suggests that it's a strong opinion that can be debated or supported by argument."
+   },
+   {
+    "id": "ex.c2.stance-adverbs.16",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.stance-adverbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She hasn't replied to any messages, so ___, she's out of town.",
+    "options": [
+     "frankly",
+     "presumably",
+     "admittedly"
+    ],
+    "answer": 1,
+    "explanation": "'Presumably' is used to express a logical assumption based on the available information."
+   },
+   {
+    "id": "ex.c2.stance-adverbs.17",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.stance-adverbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___, I'm not sure this approach will yield the desired results.",
+    "options": [
+     "Arguably",
+     "Admittedly",
+     "Frankly"
+    ],
+    "answer": 2,
+    "explanation": "'Frankly' introduces a direct and honest opinion, often one that might be unwelcome or critical."
+   },
+   {
+    "id": "ex.c2.stance-adverbs.18",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.stance-adverbs"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The team's performance was ___, below their usual standard.",
+    "options": [
+     "arguably",
+     "presumably",
+     "admittedly"
+    ],
+    "answer": 2,
+    "explanation": "'Admittedly' is used to acknowledge a fact, especially one that is slightly negative or a concession."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 8913638,
+   "text": "Frankly, I don't think so.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 5282311,
+   "text": "Presumably, he buys them abroad.",
+   "author": "Objectivesea"
+  }
+ ]
+}

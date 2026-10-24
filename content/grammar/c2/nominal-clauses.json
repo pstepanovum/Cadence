@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "nominal-clauses",
+ "draftHash": "ede41e4872c78377",
+ "grammarPoint": {
+  "id": "gp.nominal-clauses",
+  "level": "C2",
+  "topicId": "topic.clauses",
+  "title": "Nominal clauses",
+  "summary": "Nominal clauses function as nouns, acting as subjects or objects, often introduced by 'what', 'whether', or 'the fact that' to convey information, uncertainty, or established truths.",
+  "explanation": "Nominal clauses are dependent clauses that function like nouns within a sentence. This means they can act as the subject of a verb, the object of a verb or preposition, or a complement. They provide essential information, often replacing a simple noun phrase.\n\nWhen we use a 'what' clause, we are referring to an unspecified thing or idea that is the focus of the statement. It often answers the question \"What?\" and can be quite versatile in its placement. For example, \"What he said\" refers to the content of his speech.\n\n'Whether' clauses are used to express uncertainty or to present alternatives, similar to how we might use 'if' in some contexts, but 'whether' is generally preferred in more formal writing and when the clause is a subject or object of a preposition. They often follow verbs related to knowing, asking, or deciding. For instance, \"whether she agrees\" implies a choice or an unknown outcome.\n\n'The fact that' clauses introduce a known or accepted truth. This structure emphasizes the factual nature of the information and is often used to elaborate on a point or to underscore its significance. It clearly states that the following information is a fact.",
+  "patterns": [
+   "What + subject + verb (as subject/object)",
+   "Whether + subject + verb (as subject/object)",
+   "The fact that + subject + verb (as subject/object)"
+  ],
+  "examples": [
+   {
+    "text": "What truly matters in life is often overlooked.",
+    "note": "The 'what' clause functions as the subject of the sentence, referring to an unspecified concept.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The committee will consider whether the proposal is viable.",
+    "note": "The 'whether' clause acts as the object of the verb 'consider', expressing uncertainty.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The fact that the project was completed ahead of schedule impressed everyone.",
+    "note": "The 'the fact that' clause serves as the subject, highlighting a known achievement.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They couldn't agree on what the next step should be.",
+    "note": "The 'what' clause is the object of the preposition 'on', referring to an unknown action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Her main concern was whether she had enough time.",
+    "note": "The 'whether' clause functions as a subject complement, clarifying her concern.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "What she said it was confusing.",
+    "right": "What she said was confusing.",
+    "note": "The 'what' clause itself is the subject; no extra pronoun 'it' is needed."
+   },
+   {
+    "wrong": "I wonder if he will come or not.",
+    "right": "I wonder whether he will come or not.",
+    "note": "'Whether' is preferred when expressing alternatives, especially with 'or not'."
+   },
+   {
+    "wrong": "The fact which he resigned surprised us.",
+    "right": "The fact that he resigned surprised us.",
+    "note": "Use 'that' to introduce a nominal clause after 'the fact'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.nominal-clauses.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team debated ___ the new strategy would yield better results.",
+   "options": [
+    "what",
+    "whether",
+    "the fact that",
+    "which"
+   ],
+   "answer": 1,
+   "explanation": "'Whether' is used here to express uncertainty or a choice between alternatives regarding the strategy's outcome."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ he achieved so much without formal training is truly remarkable.",
+   "options": [
+    "What",
+    "Whether",
+    "The fact that",
+    "How"
+   ],
+   "answer": 2,
+   "explanation": "'The fact that' introduces a known truth or achievement, emphasizing its remarkable nature."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She didn't understand ___ the professor was trying to explain.",
+   "options": [
+    "what",
+    "whether",
+    "the fact that",
+    "which"
+   ],
+   "answer": 0,
+   "explanation": "'What' refers to the unspecified thing or concept the professor was explaining, functioning as the object of 'understand'."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ they decided to postpone the event was a surprise to everyone.",
+   "options": [
+    "What",
+    "Whether",
+    "The fact that",
+    "How"
+   ],
+   "answer": 2,
+   "explanation": "'The fact that' introduces a known event or decision, acting as the subject of the sentence."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The main issue is ___ we can secure enough funding.",
+   "answers": [
+    [
+     "whether"
+    ]
+   ],
+   "explanation": "'Whether' is used to introduce a question of possibility or choice, functioning as a subject complement."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ he said about the economy was quite insightful.",
+   "answers": [
+    [
+     "What"
+    ]
+   ],
+   "explanation": "'What' introduces the specific content of his speech, acting as the subject of the sentence."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We need to consider ___ the project will be completed on time.",
+   "answers": [
+    [
+     "whether"
+    ]
+   ],
+   "explanation": "'Whether' expresses uncertainty about the project's completion, functioning as the object of 'consider'."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "What",
+    "they",
+    "discovered",
+    "was",
+    "a",
+    "new",
+    "species",
+    "."
+   ],
+   "distractors": [
+    "how"
+   ],
+   "explanation": "The 'what' clause acts as the subject of the sentence, referring to the unspecified discovery."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "fact",
+    "that",
+    "she",
+    "excelled",
+    "was",
+    "no",
+    "surprise",
+    "."
+   ],
+   "distractors": [
+    "which"
+   ],
+   "explanation": "The 'the fact that' clause functions as the subject, stating a known truth."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "What she needs it is a long vacation.",
+   "answers": [
+    "What she needs is a long vacation."
+   ],
+   "explanation": "The pronoun 'it' is redundant because the 'what' clause already functions as the subject of the verb 'is'."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The question is if he will accept the challenge.",
+   "answers": [
+    "The question is whether he will accept the challenge."
+   ],
+   "explanation": "'Whether' is more appropriate than 'if' when expressing alternatives or uncertainty, especially in formal contexts or when the clause is a subject complement."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "His sudden departure surprised everyone.",
+   "instruction": "Rewrite using 'the fact that'.",
+   "answers": [
+    "The fact that he departed suddenly surprised everyone.",
+    "The fact that he left suddenly surprised everyone."
+   ],
+   "explanation": "The nominal clause 'the fact that he departed suddenly' replaces the noun phrase 'His sudden departure' and acts as the subject."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I don't know if she will attend the conference.",
+   "instruction": "Rewrite using 'whether'.",
+   "answers": [
+    "I don't know whether she will attend the conference."
+   ],
+   "explanation": "'Whether' is used to introduce the nominal clause, expressing uncertainty about her attendance, functioning as the object of 'know'."
+  },
+  {
+   "id": "ex.c2.nominal-clauses.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nominal-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "What the scientist presented",
+     "right": "was a groundbreaking theory."
+    },
+    {
+     "left": "The team discussed at length",
+     "right": "whether the new design was feasible."
+    },
+    {
+     "left": "The fact that the ancient city was rediscovered",
+     "right": "fascinated archaeologists worldwide."
+    },
+    {
+     "left": "She couldn't decide",
+     "right": "what to wear for the gala."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "what [a-z]+ (is|was|will be|has been)",
+  "(wonder|ask|know|decide) whether",
+  "the fact that"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.nominal-clauses.01": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.02": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.03": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.04": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.05": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.06": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.07": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.08": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.09": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.10": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.11": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.12": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.13": {
+    "status": "pass"
+   },
+   "ex.c2.nominal-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 6524123,
+   "text": "I wonder whether Tom is unmarried or not.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 2732127,
+   "text": "We dismissed what Mary was saying.",
+   "author": "Amastan"
+  }
+ ]
+}

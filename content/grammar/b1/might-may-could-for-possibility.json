@@ -1,0 +1,492 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "might-may-could-for-possibility",
+ "draftHash": "703f65f449592325",
+ "grammarPoint": {
+  "id": "gp.might-may-could-for-possibility",
+  "level": "B1",
+  "topicId": "topic.modals",
+  "title": "Might, may and could",
+  "summary": "Use 'might', 'may', and 'could' to talk about things that are possible now or in the future, but not certain.",
+  "explanation": "We use *might*, *may*, and *could* to express that something is possible. This means there's a chance something will happen or is true, but it's not definite. These three modal verbs are often interchangeable when you're talking about general possibility.\n\nFor example, saying \"It might rain later,\" \"It may rain later,\" or \"It could rain later\" all convey the same idea: there's a possibility of rain, but it's not guaranteed.\n\nTo form negative sentences, we add 'not' after the modal verb: *might not*, *may not*, *could not*. Remember to always use the base form of the main verb after these modals.",
+  "patterns": [
+   "Subject + may/might/could + base verb",
+   "Subject + may/might/could + not + base verb",
+   "May/Might/Could + Subject + base verb?"
+  ],
+  "examples": [
+   {
+    "text": "The train may be delayed due to the snow.",
+    "note": "Expresses a future possibility.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She might be at the library right now.",
+    "note": "Indicates a present possibility.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We could not finish the project on time.",
+    "note": "Shows a negative possibility in the past (could not = was not possible).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Could it be true that they're moving?",
+    "note": "Asks about the possibility of something.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I might go hiking this weekend if the weather is good.",
+    "note": "Talks about a future possibility that depends on a condition.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He might to call us later.",
+    "right": "He might call us later.",
+    "note": "Do not use 'to' after modal verbs."
+   },
+   {
+    "wrong": "She may arrives late.",
+    "right": "She may arrive late.",
+    "note": "Always use the base form of the verb after modal verbs."
+   },
+   {
+    "wrong": "They don't could find a solution.",
+    "right": "They could not find a solution.",
+    "note": "Form negatives by adding 'not' directly after the modal verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.might-may-could-for-possibility.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'm not sure, but I ___ visit my aunt next month.",
+   "options": [
+    "can",
+    "might",
+    "should"
+   ],
+   "answer": 1,
+   "explanation": "'Might' expresses possibility, which fits the uncertainty of the sentence."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The restaurant ___ be closed on Mondays, so let's check online.",
+   "options": [
+    "must",
+    "may",
+    "will"
+   ],
+   "answer": 1,
+   "explanation": "'May' indicates a possibility that needs to be confirmed."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If you don't hurry, you ___ miss your flight.",
+   "options": [
+    "could",
+    "must",
+    "would"
+   ],
+   "answer": 0,
+   "explanation": "'Could' expresses a possible negative outcome if a condition isn't met."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's cloudy, so it ___ rain later this afternoon.",
+   "options": [
+    "will",
+    "may",
+    "has to"
+   ],
+   "answer": 1,
+   "explanation": "'May' is used to talk about a future possibility based on current conditions."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'm not sure if I can make it, but I ___ try to come to the party.",
+   "answers": [
+    [
+     "might"
+    ],
+    [
+     "may"
+    ],
+    [
+     "could"
+    ]
+   ],
+   "explanation": "Any of these modals express possibility when you are not certain."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The delivery ___ not arrive today because of the bad weather.",
+   "answers": [
+    [
+     "might"
+    ],
+    [
+     "may"
+    ],
+    [
+     "could"
+    ]
+   ],
+   "explanation": "Use 'might not', 'may not', or 'could not' to express a negative possibility."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ be busy, so I'll call her back in an hour.",
+   "answers": [
+    [
+     "might"
+    ],
+    [
+     "may"
+    ],
+    [
+     "could"
+    ]
+   ],
+   "explanation": "These modals indicate a present possibility or reason for an action."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "might",
+    "go",
+    "camping",
+    "this",
+    "summer",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "to"
+   ],
+   "explanation": "This sentence expresses a future possibility using 'might'."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "could",
+    "be",
+    "a",
+    "good",
+    "idea",
+    "."
+   ],
+   "distractors": [
+    "is",
+    "have"
+   ],
+   "explanation": "This sentence uses 'could' to suggest a possibility."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They may to cancel the event.",
+   "answers": [
+    "They may cancel the event."
+   ],
+   "explanation": "Modal verbs are followed directly by the base form of the verb, without 'to'."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He might not comes to the meeting.",
+   "answers": [
+    "He might not come to the meeting."
+   ],
+   "explanation": "After a modal verb, the main verb always stays in its base form, even in negative sentences."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Perhaps she is at home.",
+   "instruction": "Rewrite using 'may'.",
+   "answers": [
+    "She may be at home."
+   ],
+   "explanation": "'May' expresses possibility, replacing 'perhaps she is'."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's possible that they won't accept our offer.",
+   "instruction": "Rewrite using 'might not'.",
+   "answers": [
+    "They might not accept our offer."
+   ],
+   "explanation": "'Might not' expresses a negative possibility."
+  },
+  {
+   "id": "ex.b1.might-may-could-for-possibility.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.might-may-could-for-possibility"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I'm not sure, but I might",
+     "right": "order pizza tonight."
+    },
+    {
+     "left": "The bus may",
+     "right": "be late due to traffic."
+    },
+    {
+     "left": "If you don't study, you could",
+     "right": "fail the exam."
+    },
+    {
+     "left": "She might not",
+     "right": "have enough time."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "may (?:not )?(?!have)[a-z]{2,}",
+  "might (?:not )?(?!have)[a-z]{2,}",
+  "could (?:not )?(?!have)[a-z]{2,}"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.might-may-could-for-possibility.01": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.02": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.03": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.04": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.might-may-could-for-possibility.05: needs one answer list per gap (1)"
+   },
+   "ex.b1.might-may-could-for-possibility.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.might-may-could-for-possibility.06: needs one answer list per gap (1)"
+   },
+   "ex.b1.might-may-could-for-possibility.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.might-may-could-for-possibility.07: needs one answer list per gap (1)"
+   },
+   "ex.b1.might-may-could-for-possibility.08": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.09": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.10": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.11": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.12": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.13": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.14": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.15": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.16": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.17": {
+    "status": "pass"
+   },
+   "ex.b1.might-may-could-for-possibility.18": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'might' and 'can' are grammatically correct and natural options here."
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b1.might-may-could-for-possibility.15",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.might-may-could-for-possibility"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I'm not sure, but the new cafe ___ open next week.",
+    "options": [
+     "might",
+     "is",
+     "will"
+    ],
+    "answer": 0,
+    "explanation": "'Might' expresses possibility or uncertainty about a future event."
+   },
+   {
+    "id": "ex.b1.might-may-could-for-possibility.16",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.might-may-could-for-possibility"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Where's David? He ___ be in the library studying.",
+    "options": [
+     "can",
+     "could",
+     "must"
+    ],
+    "answer": 1,
+    "explanation": "'Could' is used here to suggest a possibility about David's current location. 'Can' is for ability, 'must' for strong deduction."
+   },
+   {
+    "id": "ex.b1.might-may-could-for-possibility.17",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.might-may-could-for-possibility"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We ___ not have enough time to visit the museum.",
+    "options": [
+     "may",
+     "will",
+     "should"
+    ],
+    "answer": 0,
+    "explanation": "'May not' expresses a negative possibility or uncertainty."
+   },
+   {
+    "id": "ex.b1.might-may-could-for-possibility.18",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.might-may-could-for-possibility"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "If you don't feel well, you ___ stay home from work today.",
+    "options": [
+     "might",
+     "must",
+     "can"
+    ],
+    "answer": 0,
+    "explanation": "'Might' suggests it's a possibility or a gentle suggestion, not a strong obligation ('must') or ability ('can')."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 18145,
+   "text": "Judging from the look of the sky, it may rain at any moment.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 20620,
+   "text": "It may sound strange, but what she said is true.",
+   "author": "CK"
+  }
+ ]
+}

@@ -1,0 +1,398 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "regrets-and-hypothetical-past",
+ "draftHash": "593fc1124a77ed58",
+ "grammarPoint": {
+  "id": "gp.regrets-and-hypothetical-past",
+  "level": "C2",
+  "topicId": "topic.conditionals",
+  "title": "Regrets and the hypothetical past",
+  "summary": "Express deep regret or a strong wish for a past situation to have been different using 'if only I had,' 'would that,' and 'I'd sooner you hadn't.'",
+  "explanation": "When we want to express a strong regret or a wish that something in the past had been different, we often use specific structures that involve the past perfect tense. These phrases allow us to look back at a past event and imagine an alternative outcome.\n\n*If only I had...* is used to express a personal regret about something you did or didn't do. It implies a strong desire for a different past reality. For example, 'If only I had saved more money' means you regret not saving money.\n\n*Would that...* is a more formal or emphatic way to express a wish about a past event, often one that was beyond your control. It conveys a sense of longing for a different past. For instance, 'Would that the rain had stopped' expresses a strong wish for the weather to have been different.\n\n*I'd sooner you hadn't...* expresses a preference that someone else had acted differently in the past. It's used to show disapproval or disappointment about another person's past action. For example, 'I'd sooner you hadn't told him' means you preferred that he hadn't been told.",
+  "patterns": [
+   "If only + subject + had + past participle",
+   "Would that + subject + had + past participle",
+   "I'd sooner + subject + hadn't + past participle"
+  ],
+  "examples": [
+   {
+    "text": "If only I had studied harder for the exam, I would have passed.",
+    "note": "Expresses personal regret about a past action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Would that the rain had stopped earlier, so we could have enjoyed the picnic.",
+    "note": "A formal wish for a past event to be different.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'd sooner you hadn't told him my secret; now everyone knows.",
+    "note": "Expresses a preference for someone else's past action to be different.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If only they had arrived on time, we wouldn't have missed the beginning of the play.",
+    "note": "Regret about others' past actions.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Would that I had known about the concert sooner; I would have bought tickets.",
+    "note": "A strong wish for personal past knowledge.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If only I studied harder.",
+    "right": "If only I had studied harder.",
+    "note": "For past regrets, 'if only' requires the past perfect (had + past participle)."
+   },
+   {
+    "wrong": "Would that he didn't leave.",
+    "right": "Would that he hadn't left.",
+    "note": "After 'would that' for a past wish, use the past perfect."
+   },
+   {
+    "wrong": "I'd sooner you didn't say that.",
+    "right": "I'd sooner you hadn't said that.",
+    "note": "To express a preference about a past action, use 'hadn't + past participle'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I really regret not taking that job offer. ___ accepted it.",
+   "options": [
+    "If only I had",
+    "Would that I have",
+    "I'd sooner I didn't"
+   ],
+   "answer": 0,
+   "explanation": "'If only I had' expresses personal regret about a past action."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The project failed. ___ the team had followed my advice.",
+   "options": [
+    "If only",
+    "Would that",
+    "I'd sooner"
+   ],
+   "answer": 1,
+   "explanation": "'Would that' is used for a strong, often formal, wish about a past event."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I wish you hadn't mentioned my past mistakes. I'd sooner you ___.",
+   "options": [
+    "didn't",
+    "hadn't",
+    "wouldn't"
+   ],
+   "answer": 1,
+   "explanation": "'I'd sooner you hadn't' expresses a preference for someone else's past action to be different."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ I had remembered to lock the door before leaving.",
+   "options": [
+    "Would that",
+    "If only",
+    "I'd sooner"
+   ],
+   "answer": 1,
+   "explanation": "'If only' is used for personal regret about a past action."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If only I ___ (know) about the sale, I ___ (buy) those shoes.",
+   "answers": [
+    [
+     "had known"
+    ],
+    [
+     "would have bought"
+    ]
+   ],
+   "explanation": "'If only' for past regret requires the past perfect. The consequence uses 'would have + past participle'."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Would that the company ___ (invest) more in research and development years ago.",
+   "answers": [
+    [
+     "had invested"
+    ]
+   ],
+   "explanation": "'Would that' for a past wish requires the past perfect."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'd sooner you ___ (not interrupt) me during the presentation.",
+   "answers": [
+    [
+     "hadn't interrupted",
+     "didn't interrupt"
+    ]
+   ],
+   "explanation": "'I'd sooner you hadn't' expresses a preference for someone else's past action to be different."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "only",
+    "I",
+    "had",
+    "saved",
+    "more",
+    "money",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "should"
+   ],
+   "explanation": "This sentence expresses regret about not saving money in the past."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Would",
+    "that",
+    "they",
+    "had",
+    "listened",
+    "to",
+    "our",
+    "warnings",
+    "."
+   ],
+   "distractors": [
+    "listen",
+    "could"
+   ],
+   "explanation": "This expresses a strong wish that they had listened in the past."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If only I would have taken that opportunity.",
+   "answers": [
+    "If only I had taken that opportunity."
+   ],
+   "explanation": "For past regrets with 'if only,' use the past perfect (had + past participle)."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I'd sooner you didn't mention my past.",
+   "answers": [
+    "I'd sooner you hadn't mentioned my past."
+   ],
+   "explanation": "To express a preference about a past action, use 'hadn't + past participle'."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I regret not telling her how I felt.",
+   "instruction": "Rewrite using 'If only'.",
+   "answers": [
+    "If only I had told her how I felt."
+   ],
+   "explanation": "'If only' followed by the past perfect expresses regret about a past action."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's a pity he didn't apologize.",
+   "instruction": "Rewrite using 'Would that'.",
+   "answers": [
+    "Would that he had apologized."
+   ],
+   "explanation": "'Would that' followed by the past perfect expresses a strong wish for a past event to be different."
+  },
+  {
+   "id": "ex.c2.regrets-and-hypothetical-past.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.regrets-and-hypothetical-past"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If only I had known",
+     "right": "about the traffic jam earlier."
+    },
+    {
+     "left": "Would that the weather",
+     "right": "had been better for our trip."
+    },
+    {
+     "left": "I'd sooner you hadn't",
+     "right": "shared that personal detail."
+    },
+    {
+     "left": "If only they had arrived",
+     "right": "before the store closed."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "if only I had [a-z ]+",
+  "would that [a-z ]+ had [a-z ]+",
+  "I'd sooner you hadn't [a-z ]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.regrets-and-hypothetical-past.01": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.02": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'Would that' and 'If only' correctly express regret about the past."
+   },
+   "ex.c2.regrets-and-hypothetical-past.03": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.04": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.05": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.06": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both forms are correct depending on whether the presentation is in the past or future."
+   },
+   "ex.c2.regrets-and-hypothetical-past.08": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.09": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.10": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.11": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.12": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.13": {
+    "status": "pass"
+   },
+   "ex.c2.regrets-and-hypothetical-past.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 13848036,
+   "text": "A retiree says, \"If only I had more time to do nothing!\"",
+   "author": "rul"
+  },
+  {
+   "sentenceId": 13764325,
+   "text": "If only I had half as much willpower as you!",
+   "author": "frpzzd"
+  }
+ ]
+}

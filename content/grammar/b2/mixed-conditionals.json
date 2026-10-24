@@ -1,0 +1,415 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "mixed-conditionals",
+ "draftHash": "28b0b66fbd7e3439",
+ "grammarPoint": {
+  "id": "gp.mixed-conditionals",
+  "level": "B2",
+  "topicId": "topic.conditionals",
+  "title": "Mixed conditionals",
+  "summary": "Mixed conditionals combine past and present tenses in 'if' sentences to show how a past action affects the present, or how a present situation affects the past.",
+  "explanation": "Mixed conditionals allow us to talk about hypothetical situations where the condition and the result happen at different times. We often use them to connect a past event or decision to a present consequence, or a present general truth to a past outcome.\n\nOne common type describes a *past condition* and its *present result*. For example, if something had happened differently in the past, the situation now would be different. The 'if' clause uses the past perfect, and the main clause uses 'would/could/might' + base verb.\n\nAnother type describes a *present or general condition* and its *past result*. This means if a current situation or characteristic were different, a past event would have turned out differently. The 'if' clause uses the simple past (often 'were' for all subjects), and the main clause uses 'would/could/might' + 'have' + past participle.",
+  "patterns": [
+   "If + past perfect, would/could/might + base verb",
+   "If + simple past (or 'were'), would/could/might + have + past participle"
+  ],
+  "examples": [
+   {
+    "text": "If I had taken that job offer, I would be living in a different city now.",
+    "note": "A past decision (not taking the job) has a present consequence (living here).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If she weren't so shy, she would have spoken up at the meeting yesterday.",
+    "note": "A present characteristic (being shy) affected a past action (not speaking up).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If he had remembered his umbrella, he wouldn't be wet right now.",
+    "note": "A past action (forgetting the umbrella) has a present result (being wet).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If we didn't have this deadline, we would have spent more time on the design.",
+    "note": "A present situation (having a deadline) influenced a past action (spending less time).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If they had trained harder, they might be champions today.",
+    "note": "A past effort (training) could have led to a present status (being champions).",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If I would have known, I would be there.",
+    "right": "If I had known, I would be there.",
+    "note": "Do not use 'would have' in the 'if' clause."
+   },
+   {
+    "wrong": "If she was taller, she would have reached the shelf now.",
+    "right": "If she were taller, she would have reached the shelf now.",
+    "note": "Use 'were' for all subjects in the 'if' clause when talking about hypothetical present situations."
+   },
+   {
+    "wrong": "If he had studied, he would have passed the exam today.",
+    "right": "If he had studied, he would pass the exam today.",
+    "note": "For a present result, use 'would' + base verb, not 'would have' + past participle."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.mixed-conditionals.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If I ___ more careful, I wouldn't have broken my phone last week.",
+   "options": [
+    "were",
+    "had been",
+    "am",
+    "would be"
+   ],
+   "answer": 0,
+   "explanation": "The 'if' clause describes a present, ongoing condition (being careful) that would have affected a past event. 'Were' is used for hypothetical present conditions."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If she had accepted the promotion, she ___ a manager now.",
+   "options": [
+    "is",
+    "would be",
+    "would have been",
+    "will be"
+   ],
+   "answer": 1,
+   "explanation": "The 'if' clause describes a past condition (accepting the promotion) that has a present result. 'Would be' expresses this present hypothetical result."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ lost if you had brought the map.",
+   "options": [
+    "wouldn't be",
+    "aren't",
+    "wouldn't have been",
+    "won't be"
+   ],
+   "answer": 0,
+   "explanation": "The 'if' clause describes a past condition (bringing the map) that would prevent a present situation (being lost). 'Wouldn't be' is correct for a present result."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If he ___ so busy, he would have helped us yesterday.",
+   "options": [
+    "isn't",
+    "wasn't",
+    "weren't",
+    "hadn't been"
+   ],
+   "answer": 2,
+   "explanation": "The 'if' clause describes a hypothetical present condition (not being busy) that would have affected a past action. 'Weren't' is used for hypothetical present conditions for all subjects."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If I ___ (not have) a meeting, I ___ (come) to your party last night.",
+   "answers": [
+    [
+     "didn't have",
+     "did not have"
+    ],
+    [
+     "would have come"
+    ]
+   ],
+   "explanation": "The first gap describes a hypothetical present condition, so 'didn't have' is correct. The second gap describes a past result of that condition, requiring 'would have come'."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If they ___ (take) the earlier train, they ___ (not be) late for work today.",
+   "answers": [
+    [
+     "had taken"
+    ],
+    [
+     "wouldn't be",
+     "would not be"
+    ]
+   ],
+   "explanation": "The first gap describes a past condition, so 'had taken' is correct. The second gap describes a present result, requiring 'wouldn't be'."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If she ___ (be) more organized, she ___ (not forget) her passport last week.",
+   "answers": [
+    [
+     "were"
+    ],
+    [
+     "wouldn't have forgotten",
+     "would not have forgotten"
+    ]
+   ],
+   "explanation": "The first gap describes a hypothetical present characteristic, so 'were' is correct. The second gap describes a past result, requiring 'wouldn't have forgotten'."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "I",
+    "had",
+    "saved",
+    "money",
+    ",",
+    "I",
+    "would",
+    "be",
+    "rich",
+    "now",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "was"
+   ],
+   "explanation": "This sentence combines a past condition ('If I had saved money') with a present result ('I would be rich now')."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "he",
+    "were",
+    "taller",
+    ",",
+    "he",
+    "would",
+    "have",
+    "joined",
+    "the",
+    "team",
+    "last",
+    "year",
+    "."
+   ],
+   "distractors": [
+    "is",
+    "had"
+   ],
+   "explanation": "This sentence combines a present hypothetical condition ('If he were taller') with a past result ('he would have joined the team last year')."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If she had studied harder, she would have a better job now.",
+   "answers": [],
+   "explanation": "The sentence is already correct. It uses a past condition ('had studied harder') to explain a present result ('would have a better job now')."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If I wasn't so tired, I would have gone to the concert last night.",
+   "answers": [
+    "If I weren't so tired, I would have gone to the concert last night."
+   ],
+   "explanation": "For hypothetical present conditions, 'were' is used for all subjects, including 'I'."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He didn't listen to my advice, so he's in trouble now.",
+   "instruction": "Rewrite using a mixed conditional.",
+   "answers": [
+    "If he had listened to my advice, he wouldn't be in trouble now."
+   ],
+   "explanation": "The past action (not listening) caused a present result (being in trouble). The mixed conditional connects these with 'If + past perfect, would + base verb'."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I don't speak French, so I didn't understand the movie.",
+   "instruction": "Rewrite using a mixed conditional.",
+   "answers": [
+    "If I spoke French, I would have understood the movie."
+   ],
+   "explanation": "The present condition (not speaking French) affected a past event (not understanding the movie). The mixed conditional connects these with 'If + simple past, would + have + past participle'."
+  },
+  {
+   "id": "ex.b2.mixed-conditionals.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.mixed-conditionals"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If I had saved more money,",
+     "right": "I wouldn't be struggling financially today."
+    },
+    {
+     "left": "If she were more confident,",
+     "right": "she would have applied for that leadership role."
+    },
+    {
+     "left": "If they hadn't missed the flight,",
+     "right": "they would be enjoying their vacation right now."
+    },
+    {
+     "left": "If he didn't have a fear of heights,",
+     "right": "he would have tried bungee jumping with us."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "if .* had .* would be",
+  "if .* were .* would have",
+  "if .* didn't .* would have"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.mixed-conditionals.01": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.02": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.03": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.04": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.05": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.06": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.07": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.08": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.09": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.10": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.mixed-conditionals.10: needs an accepted answer"
+   },
+   "ex.b2.mixed-conditionals.11": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.12": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.13": {
+    "status": "pass"
+   },
+   "ex.b2.mixed-conditionals.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 31070,
+   "text": "If I had been in time for the train, I would be there now.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 68696,
+   "text": "If he had trained himself harder at that time, he would be healthier now.",
+   "author": "CM"
+  }
+ ]
+}

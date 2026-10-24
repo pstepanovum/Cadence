@@ -1,0 +1,378 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "its-time-and-would-rather",
+ "draftHash": "38f62f00e8452949",
+ "grammarPoint": {
+  "id": "gp.its-time-and-would-rather",
+  "level": "B2",
+  "topicId": "topic.conditionals",
+  "title": "It's time, would rather",
+  "summary": "Use 'it's time' and 'would rather' with past tense forms to express that something should happen now, or to state a preference for the present or future.",
+  "explanation": "We use the structure *It's time + subject + past simple* to say that something should happen now, or that it's already a bit late for it to happen. Even though we use a past simple verb, the meaning refers to the present or near future.\n\nWe use *would rather + subject + past simple* to express a preference for someone else to do (or not do) something in the present or future. Again, the past simple verb refers to present or future time, not the past.\n\nIf you are talking about your own preference, you can use *would rather + base verb* (without 'to'). For example, \"I'd rather stay home.\" This structure doesn't use a past form.",
+  "patterns": [
+   "It's time + subject + past simple",
+   "would rather + subject + past simple",
+   "would rather + base verb"
+  ],
+  "examples": [
+   {
+    "text": "It's time we left for the concert.",
+    "note": "Expresses that we should leave now; 'left' refers to the present/future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'd rather you didn't tell anyone about our plans.",
+    "note": "Shows a preference for someone else's action in the present/future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It's time the children went to bed.",
+    "note": "Indicates that the children should go to bed now.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Would you rather I ordered takeout tonight?",
+    "note": "Asks about a preference for someone else's action in the present/future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'd rather walk than take the bus.",
+    "note": "Expresses a personal preference using the base verb.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "It's time we go home.",
+    "right": "It's time we *went* home.",
+    "note": "Use the past simple after 'It's time + subject'."
+   },
+   {
+    "wrong": "She'd rather he doesn't call her late.",
+    "right": "She'd rather he *didn't call* her late.",
+    "note": "Use the past simple (negative 'didn't + base verb') after 'would rather + subject'."
+   },
+   {
+    "wrong": "I'd rather to eat pasta.",
+    "right": "I'd rather *eat* pasta.",
+    "note": "Use the base form of the verb directly after 'would rather' for personal preferences."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.its-time-and-would-rather.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's time we ___ a new strategy.",
+   "options": [
+    "discuss",
+    "are discussing",
+    "discussed",
+    "will discuss"
+   ],
+   "answer": 2,
+   "explanation": "After 'It's time + subject', we use the past simple form of the verb to refer to a present or future action."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'd rather you ___ the meeting until tomorrow.",
+   "options": [
+    "postpone",
+    "postponed",
+    "will postpone",
+    "are postponing"
+   ],
+   "answer": 1,
+   "explanation": "To express a preference for someone else's action in the present or future, use 'would rather + subject + past simple'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My parents would rather I ___ a more stable career.",
+   "options": [
+    "chose",
+    "choose",
+    "will choose",
+    "am choosing"
+   ],
+   "answer": 0,
+   "explanation": "When expressing a preference for someone else's action, use the past simple form after 'would rather + subject'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Would you rather ___ out tonight or stay in?",
+   "options": [
+    "to go",
+    "went",
+    "go",
+    "going"
+   ],
+   "answer": 2,
+   "explanation": "For a personal preference, use 'would rather + base verb' (without 'to')."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's time the government ___ action on climate change.",
+   "answers": [
+    [
+     "took"
+    ]
+   ],
+   "explanation": "After 'It's time + subject', use the past simple form 'took' to indicate that action should happen now."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'd rather you ___ me the truth, even if it's difficult.",
+   "answers": [
+    [
+     "told"
+    ]
+   ],
+   "explanation": "To express a preference for someone else's action, use 'would rather + subject + past simple'. The past simple of 'tell' is 'told'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My boss ___ rather I ___ the report by Friday.",
+   "answers": [
+    [
+     "would"
+    ],
+    [
+     "finished"
+    ]
+   ],
+   "explanation": "The structure 'would rather + subject + past simple' expresses a preference for someone else's action. 'Would' is the auxiliary, and 'finished' is the past simple of 'finish'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It's",
+    "time",
+    "we",
+    "ordered",
+    "some",
+    "food",
+    "."
+   ],
+   "explanation": "The correct structure is 'It's time + subject + past simple' to express that something should happen now."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I'd",
+    "rather",
+    "you",
+    "didn't",
+    "wait",
+    "for",
+    "me",
+    "."
+   ],
+   "explanation": "To express a preference for someone else's action, use 'would rather + subject + past simple'. The negative form is 'didn't + base verb'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It's time we start planning our vacation.",
+   "answers": [
+    "It's time we started planning our vacation."
+   ],
+   "explanation": "After 'It's time + subject', use the past simple form of the verb ('started') to refer to a present or future action."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She'd rather he doesn't leave his shoes in the hallway.",
+   "answers": [
+    "She'd rather he didn't leave his shoes in the hallway."
+   ],
+   "explanation": "To express a preference for someone else's action, use 'would rather + subject + past simple'. The negative past simple is 'didn't leave'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We should really go to bed now.",
+   "instruction": "Rewrite using 'It's time'.",
+   "answers": [
+    "It's time we went to bed."
+   ],
+   "explanation": "The phrase 'It's time + subject + past simple' expresses that something should happen now. 'Went' is the past simple of 'go'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I prefer that you don't mention this to anyone.",
+   "instruction": "Rewrite using 'would rather'.",
+   "answers": [
+    "I'd rather you didn't mention this to anyone."
+   ],
+   "explanation": "To express a preference for someone else's action, use 'would rather + subject + past simple'. The negative past simple is 'didn't mention'."
+  },
+  {
+   "id": "ex.b2.its-time-and-would-rather.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.its-time-and-would-rather"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "It's time we",
+     "right": "cleaned the apartment."
+    },
+    {
+     "left": "I'd rather you",
+     "right": "didn't interrupt me."
+    },
+    {
+     "left": "Would you rather I",
+     "right": "cooked dinner tonight?"
+    },
+    {
+     "left": "It's time the kids",
+     "right": "helped with chores."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "it's time (i|you|he|she|we|they) (?:[a-z]+ed|went|came|had|made|took|spoke|saw|knew|thought|felt|gave|found|told|left|put|read|ran|sat|stood|wrote)",
+  "(i|you|he|she|we|they)'d rather (i|you|he|she|we|they) (?:didn't [a-z]+|[a-z]+ed|went|came|had|made|took|spoke|saw|knew|thought|felt|gave|found|told|left|put|read|ran|sat|stood|wrote)",
+  "(i|you|he|she|we|they)'d rather [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.its-time-and-would-rather.01": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.02": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.03": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.04": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.05": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.06": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.07": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.08": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.09": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.10": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.11": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.12": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.13": {
+    "status": "pass"
+   },
+   "ex.b2.its-time-and-would-rather.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

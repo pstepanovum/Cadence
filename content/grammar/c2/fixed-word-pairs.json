@@ -1,0 +1,398 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "fixed-word-pairs",
+ "draftHash": "7c4364712f55266c",
+ "grammarPoint": {
+  "id": "gp.fixed-word-pairs",
+  "level": "C2",
+  "topicId": "topic.linking",
+  "title": "Fixed word pairs",
+  "summary": "Fixed word pairs like 'by and large' or 'sooner or later' are idiomatic expressions that add nuance and precision to your English.",
+  "explanation": "Fixed word pairs are expressions where two words are joined, often by 'and' or 'or', and always appear in a specific order. They function as a single unit, carrying a meaning that might not be obvious from the individual words. These pairs are common in everyday English and are essential for sounding natural and fluent.\n\n*By and large* means 'generally' or 'mostly'. It's used to express a general truth or overall impression, acknowledging that there might be minor exceptions. For example, if you say \"By and large, the weather here is pleasant,\" you mean it's usually pleasant, even if there are occasional bad days.\n\n*Sooner or later* means 'eventually' or 'at some point in the future'. It implies that something is inevitable, even if the exact timing is unknown. For instance, \"Sooner or later, everyone has to learn to manage their finances\" suggests this is an unavoidable life skill.\n\n*Odds and ends* refers to various small, miscellaneous items or tasks. It's used when you're talking about a collection of small, often unimportant things. If you're cleaning out a drawer and find \"odds and ends,\" you're finding a variety of small, unrelated objects.",
+  "patterns": [
+   "by and large",
+   "sooner or later",
+   "odds and ends"
+  ],
+  "examples": [
+   {
+    "text": "By and large, the new software update has improved system performance.",
+    "note": "Indicates a general positive outcome despite potential minor issues.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We knew that sooner or later, the truth about the incident would come out.",
+    "note": "Expresses the inevitability of an event happening at some future time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Her desk was covered with various odds and ends: paper clips, old notes, and a few forgotten pens.",
+    "note": "Describes a collection of small, miscellaneous items.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The company's expansion plans will, sooner or later, require a larger office space.",
+    "note": "Highlights that a future need is certain, even if the timing is flexible.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "By and large, people prefer to work from home at least a few days a week now.",
+    "note": "Conveys a widespread preference or general trend.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "By or large, the team achieved its goals.",
+    "right": "By and large, the team achieved its goals.",
+    "note": "The correct conjunction in this fixed pair is 'and', not 'or'."
+   },
+   {
+    "wrong": "Later or sooner, we'll finish the report.",
+    "right": "Sooner or later, we'll finish the report.",
+    "note": "The words in fixed pairs must maintain their specific order."
+   },
+   {
+    "wrong": "I need to sort out the ends and odds in my garage.",
+    "right": "I need to sort out the odds and ends in my garage.",
+    "note": "The correct order for this fixed pair is 'odds and ends'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.fixed-word-pairs.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new restaurant is quite popular; ___, the food is excellent, though the service can be slow.",
+   "options": [
+    "sooner or later",
+    "odds and ends",
+    "by and large",
+    "here and there"
+   ],
+   "answer": 2,
+   "explanation": "'By and large' means 'generally' or 'mostly', fitting the context of an overall positive assessment with a minor caveat."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After years of hard work, she knew that ___ her efforts would be recognized.",
+   "options": [
+    "by and large",
+    "sooner or later",
+    "odds and ends",
+    "back and forth"
+   ],
+   "answer": 1,
+   "explanation": "'Sooner or later' means 'eventually' or 'at some point in the future', indicating the inevitable recognition of her efforts."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I spent the morning tidying up my workshop, putting away all the ___.",
+   "options": [
+    "sooner or later",
+    "by and large",
+    "odds and ends",
+    "ups and downs"
+   ],
+   "answer": 2,
+   "explanation": "'Odds and ends' refers to small, miscellaneous items, which fits the context of tidying a workshop."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which phrase means 'mostly' or 'generally'?",
+   "options": [
+    "sooner or later",
+    "by and large",
+    "odds and ends",
+    "through and through"
+   ],
+   "answer": 1,
+   "explanation": "'By and large' is the fixed word pair that means 'mostly' or 'generally'."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old box in the attic contained a collection of forgotten ___ from her childhood.",
+   "answers": [
+    [
+     "odds and ends"
+    ]
+   ],
+   "explanation": "'Odds and ends' correctly describes a collection of small, miscellaneous items."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's a complex problem, but ___ we'll find a solution.",
+   "answers": [
+    [
+     "sooner or later"
+    ]
+   ],
+   "explanation": "'Sooner or later' implies that a solution is inevitable, even if the timing is uncertain."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___, the feedback on the presentation was positive, though a few points needed clarification.",
+   "answers": [
+    [
+     "By and large"
+    ]
+   ],
+   "explanation": "'By and large' means 'generally' or 'mostly', fitting the context of an overall positive assessment with minor exceptions."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "By",
+    "and",
+    "large",
+    ",",
+    "the",
+    "event",
+    "was",
+    "a",
+    "success",
+    "."
+   ],
+   "distractors": [
+    "or"
+   ],
+   "explanation": "The fixed phrase 'by and large' functions as an adverbial phrase at the beginning of the sentence, meaning 'generally'."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "will",
+    "have",
+    "to",
+    "deal",
+    "with",
+    "this",
+    "sooner",
+    "or",
+    "later",
+    "."
+   ],
+   "distractors": [
+    "then"
+   ],
+   "explanation": "'Sooner or later' is a fixed phrase meaning 'eventually', indicating the inevitability of dealing with the issue."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The old drawer was full of ends and odds.",
+   "answers": [
+    "The old drawer was full of odds and ends."
+   ],
+   "explanation": "The correct order for the fixed word pair is 'odds and ends'."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "By or large, the project stayed within budget.",
+   "answers": [
+    "By and large, the project stayed within budget."
+   ],
+   "explanation": "The correct conjunction in the fixed word pair is 'and', not 'or'."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Eventually, the truth about the missing documents will be revealed.",
+   "instruction": "Rewrite using a fixed word pair.",
+   "answers": [
+    "Sooner or later, the truth about the missing documents will be revealed."
+   ],
+   "explanation": "'Sooner or later' means 'eventually', making it a suitable replacement."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Mostly, the new policy has been effective.",
+   "instruction": "Rewrite using a fixed word pair.",
+   "answers": [
+    "By and large, the new policy has been effective."
+   ],
+   "explanation": "'By and large' means 'mostly' or 'generally', fitting the context perfectly."
+  },
+  {
+   "id": "ex.c2.fixed-word-pairs.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.fixed-word-pairs"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "By and large, the city's public transport system",
+     "right": "is efficient and reliable."
+    },
+    {
+     "left": "Don't worry, you'll understand the complex instructions",
+     "right": "sooner or later."
+    },
+    {
+     "left": "I need to clear out the garage and get rid of all these",
+     "right": "odds and ends."
+    },
+    {
+     "left": "The committee decided that, by and large, the proposal",
+     "right": "was acceptable."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "by and large",
+  "sooner or later",
+  "odds and ends"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.fixed-word-pairs.01": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.02": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.03": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.04": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.05": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.06": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.07": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.08": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.09": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.10": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.11": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.12": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.13": {
+    "status": "pass"
+   },
+   "ex.c2.fixed-word-pairs.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 4838168,
+   "text": "This was bound to happen sooner or later.",
+   "author": "Hybrid"
+  },
+  {
+   "sentenceId": 27149,
+   "text": "The drawer is stuffed full of odds and ends.",
+   "author": "CK"
+  }
+ ]
+}

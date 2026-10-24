@@ -1,0 +1,412 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "advanced-relative-clauses",
+ "draftHash": "6712410dbd02a28a",
+ "grammarPoint": {
+  "id": "gp.advanced-relative-clauses",
+  "level": "C1",
+  "topicId": "topic.relative-clauses",
+  "title": "Advanced relative clauses",
+  "summary": "Learn to use advanced relative clauses like 'whereby', 'in which', 'whose', 'of whom', and 'all of which' to add precise, detailed information to sentences.",
+  "explanation": "Advanced relative clauses allow you to connect ideas more formally and precisely, often providing extra details about a noun. They help to create more sophisticated and concise sentences by combining two related statements into one.\n\n*Whereby* introduces a method or process. *In which* can refer to a place or an abstract context. *Whose* indicates possession for both people and things, while *of whom* is a more formal way to show possession or a relationship, usually with people, especially when referring to a quantity from a group.\n\nPhrases like *all of which*, *some of which*, or *many of whom* are used to refer to a part of a previously mentioned group of people or things. These clauses are typically non-defining, meaning they add extra, non-essential information and are usually separated by commas.",
+  "patterns": [
+   "noun, whereby + clause",
+   "noun, in which + clause",
+   "noun, whose + noun + clause",
+   "noun, [quantity] of whom + clause",
+   "noun, [quantity] of which + clause"
+  ],
+  "examples": [
+   {
+    "text": "The company implemented a new system, whereby employees can access their files remotely.",
+    "note": "Explains the method or process of the new system.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The ancient manuscript, in which rare botanical illustrations were found, is now on display.",
+    "note": "Refers to the location or context where something was found.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Dr. Anya Sharma, whose groundbreaking research was published last month, will give the keynote speech.",
+    "note": "Shows possession, indicating the research belongs to Dr. Sharma.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The board interviewed ten candidates, three of whom were highly qualified for the position.",
+    "note": "Refers to a specific number from a group of people.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She presented several innovative proposals, all of which received positive feedback from the committee.",
+    "note": "Refers to the entirety of a group of things mentioned previously.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The new policy, by which employees can work from home, is popular.",
+    "right": "The new policy, whereby employees can work from home, is popular.",
+    "note": "Use 'whereby' to introduce the method or means by which something happens."
+   },
+   {
+    "wrong": "The artist, who's paintings are very abstract, has a new exhibition.",
+    "right": "The artist, whose paintings are very abstract, has a new exhibition.",
+    "note": "'Whose' shows possession; 'who's' is a contraction of 'who is' or 'who has'."
+   },
+   {
+    "wrong": "He has two brothers, both of them live abroad.",
+    "right": "He has two brothers, both of whom live abroad.",
+    "note": "Use 'of whom' (for people) or 'of which' (for things) after a quantity to refer back to the noun."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.advanced-relative-clauses.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The university introduced a new scholarship program, ___ students from low-income backgrounds can receive full tuition.",
+   "options": [
+    "by which",
+    "whereby",
+    "in that",
+    "which"
+   ],
+   "answer": 1,
+   "explanation": "'Whereby' is used to introduce the method or means by which something is achieved."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ancient city, ___ many historical artifacts were discovered, is a popular tourist destination.",
+   "options": [
+    "where",
+    "in which",
+    "which",
+    "that"
+   ],
+   "answer": 1,
+   "explanation": "'In which' is used to refer to a place or context, often more formally than 'where'."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The author, ___ latest novel won a major award, will be signing books tomorrow.",
+   "options": [
+    "who's",
+    "who",
+    "whose",
+    "of whom"
+   ],
+   "answer": 2,
+   "explanation": "'Whose' is the possessive form of 'who' and is used to show that the novel belongs to the author."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team presented five solutions to the problem, only two ___ were considered viable.",
+   "options": [
+    "of them",
+    "of which",
+    "which",
+    "that"
+   ],
+   "answer": 1,
+   "explanation": "'Of which' is used after a quantity to refer back to a group of things previously mentioned."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The new software includes a feature ___ users can customize their interface.",
+   "answers": [
+    [
+     "whereby"
+    ]
+   ],
+   "explanation": "'Whereby' introduces the method or means by which users can customize their interface."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old factory, ___ my grandfather used to work, has been converted into apartments.",
+   "answers": [
+    [
+     "in which",
+     "where"
+    ]
+   ],
+   "explanation": "'In which' refers to the location (the factory) where the action took place."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The research group consists of six scientists, four ___ are experts in climate modeling.",
+   "answers": [
+    [
+     "of whom"
+    ]
+   ],
+   "explanation": "'Of whom' is used after a quantity to refer to a specific number from a group of people."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "professor",
+    ",",
+    "whose",
+    "lectures",
+    "are",
+    "always",
+    "engaging",
+    ",",
+    "is",
+    "retiring",
+    "."
+   ],
+   "distractors": [
+    "who",
+    "her"
+   ],
+   "explanation": "This sentence uses 'whose' to show that the lectures belong to the professor, adding extra information about him."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "offered",
+    "three",
+    "suggestions",
+    ",",
+    "all",
+    "of",
+    "which",
+    "were",
+    "excellent",
+    "."
+   ],
+   "distractors": [
+    "them",
+    "some"
+   ],
+   "explanation": "This sentence uses 'all of which' to refer to the entire group of suggestions previously mentioned."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The contract, by which both parties agreed to terms, was signed yesterday.",
+   "answers": [
+    "The contract, whereby both parties agreed to terms, was signed yesterday.",
+    "The contract, under which both parties agreed to terms, was signed yesterday."
+   ],
+   "explanation": "'Whereby' is the correct word to introduce the method or means by which the agreement was reached."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He introduced his colleagues, two of them I had met before.",
+   "answers": [
+    "He introduced his colleagues, two of whom I had met before."
+   ],
+   "explanation": "When referring to a quantity from a group of people, use 'of whom' to connect the clause."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The architect designed a building. Its innovative features won an award.",
+   "instruction": "Combine the sentences using 'whose'.",
+   "answers": [
+    "The architect, whose innovative features won an award, designed a building."
+   ],
+   "explanation": "'Whose' connects the building to its features, showing possession and combining the ideas smoothly."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The report contained several key findings. All of them were surprising.",
+   "instruction": "Rewrite the sentence using 'all of which'.",
+   "answers": [
+    "The report contained several key findings, all of which were surprising."
+   ],
+   "explanation": "'All of which' refers back to the 'key findings' and introduces additional information about them."
+  },
+  {
+   "id": "ex.c1.advanced-relative-clauses.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-relative-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The new policy, whereby",
+     "right": "staff can choose their working hours, has been very popular."
+    },
+    {
+     "left": "The old theater, in which",
+     "right": "many famous plays were performed, is now a museum."
+    },
+    {
+     "left": "The scientist, whose",
+     "right": "latest discovery changed our understanding of physics, received a Nobel Prize."
+    },
+    {
+     "left": "The delegation included ten members, five of whom",
+     "right": "were fluent in both English and French."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "whereby [a-z]+",
+  "in which [a-z]+",
+  "whose [a-z]+",
+  "[0-9]+ of whom",
+  "all of which"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.advanced-relative-clauses.01": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.02": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.03": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.04": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.05": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'in which' and 'where' are grammatically correct in this relative clause."
+   },
+   "ex.c1.advanced-relative-clauses.07": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.08": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.c1.advanced-relative-clauses.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'whereby' and 'under which' are grammatically correct replacements."
+   },
+   "ex.c1.advanced-relative-clauses.11": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.12": {
+    "status": "drop",
+    "note": "Key judged wrong: The key incorrectly attributes the innovative features to the architect instead of the building."
+   },
+   "ex.c1.advanced-relative-clauses.13": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-relative-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 246887,
+   "text": "The town in which I was born is famous for its old castle.",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 1696,
+   "text": "My eyes are an ocean in which my dreams are reflected.",
+   "author": "Zifre"
+  }
+ ]
+}

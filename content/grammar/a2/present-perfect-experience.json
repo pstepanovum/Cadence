@@ -1,0 +1,400 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "present-perfect-experience",
+ "draftHash": "08ce3835625df897",
+ "grammarPoint": {
+  "id": "gp.present-perfect-experience",
+  "level": "A2",
+  "topicId": "topic.tenses",
+  "title": "Present perfect for experience",
+  "summary": "Use the present perfect to talk about experiences you've had (or haven't had) at any time in your life, without saying exactly when.",
+  "explanation": "We use the *present perfect* to talk about experiences that happened at some point in your life, but we don't say *when* exactly. It connects a past action to the present moment because the experience is still part of your life.\n\nTo form the present perfect, we use *have* or *has* followed by the *past participle* of the main verb. For example, \"I *have visited* Paris.\" or \"She *has tried* sushi.\"\n\nWe often use *ever* in questions to ask if someone has had an experience: \"Have you *ever* eaten durian?\" And we use *never* to say we haven't had an experience: \"I've *never* seen snow.\"",
+  "patterns": [
+   "Subject + have/has + past participle",
+   "Have/Has + subject + ever + past participle?",
+   "Subject + have/has + never + past participle"
+  ],
+  "examples": [
+   {
+    "text": "I have traveled to many different countries.",
+    "note": "Talking about general life experience.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She has never tried spicy food before.",
+    "note": "Stating an experience she hasn't had.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Have you ever seen a shooting star?",
+    "note": "Asking about a past experience at any time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My brother has learned to play the guitar.",
+    "note": "An experience that happened in the past and is still relevant.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We have visited that museum twice.",
+    "note": "An experience that happened in the past, without a specific time.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I never saw a whale.",
+    "right": "I have never seen a whale.",
+    "note": "Use present perfect with 'never' for life experiences."
+   },
+   {
+    "wrong": "He has went to London.",
+    "right": "He has gone to London.",
+    "note": "Use the correct past participle form."
+   },
+   {
+    "wrong": "You ever eaten sushi?",
+    "right": "Have you ever eaten sushi?",
+    "note": "Remember 'have' for questions in present perfect."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.present-perfect-experience.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister ___ to Japan. She wants to go next year.",
+   "options": [
+    "has never been",
+    "never went",
+    "didn't ever go",
+    "isn't ever"
+   ],
+   "answer": 0,
+   "explanation": "\"Has never been\" correctly uses the present perfect to describe an experience she hasn't had yet."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you ever ___ a famous person?",
+   "options": [
+    "Have / meet",
+    "Did / met",
+    "Have / met",
+    "Do / meet"
+   ],
+   "answer": 2,
+   "explanation": "For present perfect questions about experience, use \"Have\" + subject + \"ever\" + past participle."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ that movie before. It's really good!",
+   "options": [
+    "saw",
+    "have seen",
+    "see",
+    "am seeing"
+   ],
+   "answer": 1,
+   "explanation": "\"Have seen\" correctly uses the present perfect to talk about a past experience without a specific time."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He ___ a lot of interesting books.",
+   "options": [
+    "read",
+    "has read",
+    "is reading",
+    "reads"
+   ],
+   "answer": 1,
+   "explanation": "\"Has read\" uses the present perfect to describe a general life experience."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ never ___ on an airplane.",
+   "answers": [
+    [
+     "have"
+    ],
+    [
+     "flown"
+    ]
+   ],
+   "explanation": "Use \"have\" for \"they\" and the past participle \"flown\" for \"fly\"."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ she ever ___ a marathon?",
+   "answers": [
+    [
+     "Has"
+    ],
+    [
+     "run"
+    ]
+   ],
+   "explanation": "Use \"Has\" for \"she\" and the past participle \"run\" for \"run\"."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ never ___ to that restaurant.",
+   "answers": [
+    [
+     "have"
+    ],
+    [
+     "been"
+    ]
+   ],
+   "explanation": "Use \"have\" for \"I\" and the past participle \"been\" for \"be\"."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Have",
+    "you",
+    "ever",
+    "eaten",
+    "octopus?"
+   ],
+   "distractors": [
+    "eat",
+    "did"
+   ],
+   "explanation": "This forms a question about a past experience using the present perfect."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "My",
+    "parents",
+    "have",
+    "never",
+    "visited",
+    "Canada."
+   ],
+   "distractors": [
+    "visit",
+    "didn't"
+   ],
+   "explanation": "This sentence uses the present perfect to state an experience they haven't had."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She never saw a desert.",
+   "answers": [
+    "She has never seen a desert."
+   ],
+   "explanation": "For a life experience that hasn't happened, use the present perfect with \"has never\" and the past participle."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Have you ever go to Paris?",
+   "answers": [
+    "Have you ever been to Paris?"
+   ],
+   "explanation": "The past participle of \"go\" when talking about visiting a place is usually \"been\"."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I didn't try surfing.",
+   "instruction": "Rewrite using 'never'.",
+   "answers": [
+    "I have never tried surfing."
+   ],
+   "explanation": "Use the present perfect with \"have never\" to express a lack of experience."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Did he visit Rome?",
+   "instruction": "Ask if he has *ever* visited Rome.",
+   "answers": [
+    "Has he ever visited Rome?"
+   ],
+   "explanation": "Use \"Has\" + subject + \"ever\" + past participle for questions about past experiences."
+  },
+  {
+   "id": "ex.a2.present-perfect-experience.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-perfect-experience"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Have you ever",
+     "right": "climbed a mountain?"
+    },
+    {
+     "left": "I have never",
+     "right": "flown in a helicopter."
+    },
+    {
+     "left": "She has",
+     "right": "traveled to many countries."
+    },
+    {
+     "left": "We have",
+     "right": "eaten at that cafe before."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "have you ever (been|eaten|seen|tried)",
+  "i (have|'ve) never (been|eaten|seen|tried)",
+  "has [a-z]+ (been|eaten|seen|tried)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.present-perfect-experience.01": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.02": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.03": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.04": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.05": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.06": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.07": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.08": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.09": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.10": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.11": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.12": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.13": {
+    "status": "pass"
+   },
+   "ex.a2.present-perfect-experience.14": {
+    "status": "drop",
+    "note": "Ambiguous: Both matching combinations form completely correct and natural sentences."
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 5752075,
+   "text": "Have you ever seen it?",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 5806798,
+   "text": "Have you ever been here before?",
+   "author": "Hybrid"
+  }
+ ]
+}

@@ -1,0 +1,397 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "question-tags",
+ "draftHash": "17632b9ab5e941c4",
+ "grammarPoint": {
+  "id": "gp.question-tags",
+  "level": "B1",
+  "topicId": "topic.questions-negation",
+  "title": "Question tags",
+  "summary": "Question tags are short questions at the end of a statement, used to check information or invite agreement from the listener.",
+  "explanation": "We use question tags at the end of a statement to ask for confirmation or to invite someone to agree with us. They make a conversation more friendly and engaging.\n\nTo form a question tag, we usually use an auxiliary verb (like *be*, *do*, *have*) or a modal verb (like *can*, *will*) and a pronoun. The general rule is: if the main statement is positive, the tag is negative. If the main statement is negative, the tag is positive.\n\nFor example, \"It's a beautiful day, *isn't it*?\" (positive statement, negative tag). Or, \"You don't like spicy food, *do you*?\" (negative statement, positive tag). The auxiliary verb in the tag matches the verb in the main statement.",
+  "patterns": [
+   "Statement (positive) + auxiliary/modal (negative) + pronoun?",
+   "Statement (negative) + auxiliary/modal (positive) + pronoun?",
+   "You like pizza, don't you?",
+   "She isn't coming, is she?"
+  ],
+  "examples": [
+   {
+    "text": "The movie was really good, wasn't it?",
+    "note": "Checks if the listener agrees about the movie.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You haven't finished your homework yet, have you?",
+    "note": "Asks for confirmation about the homework status.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They live in a big city, don't they?",
+    "note": "Invites agreement about their living situation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He can't speak French, can he?",
+    "note": "Confirms a piece of information about his language ability.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It's quite cold today, isn't it?",
+    "note": "Checks if the listener feels the same about the weather.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "You are busy, are you?",
+    "right": "You are busy, aren't you?",
+    "note": "Use a negative tag after a positive statement."
+   },
+   {
+    "wrong": "She didn't come, didn't she?",
+    "right": "She didn't come, did she?",
+    "note": "Use a positive tag after a negative statement."
+   },
+   {
+    "wrong": "He likes coffee, isn't he?",
+    "right": "He likes coffee, doesn't he?",
+    "note": "Use the correct auxiliary verb ('do' for present simple verbs, 'be' for 'be' verbs)."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.question-tags.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's a lovely evening, ___?",
+   "options": [
+    "isn't it",
+    "is it",
+    "doesn't it",
+    "wasn't it"
+   ],
+   "answer": 0,
+   "explanation": "The statement is positive (\"It's\"), so the tag must be negative (\"isn't\"). The verb is \"is\", so the tag uses \"is\"."
+  },
+  {
+   "id": "ex.b1.question-tags.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You don't like broccoli, ___?",
+   "options": [
+    "don't you",
+    "do you",
+    "are you",
+    "didn't you"
+   ],
+   "answer": 1,
+   "explanation": "The statement is negative (\"don't like\"), so the tag must be positive (\"do\"). The auxiliary verb is \"do\"."
+  },
+  {
+   "id": "ex.b1.question-tags.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They went to the concert last night, ___?",
+   "options": [
+    "didn't they",
+    "did they",
+    "weren't they",
+    "don't they"
+   ],
+   "answer": 0,
+   "explanation": "The statement is positive (\"went\" - past simple), so the tag must be negative (\"didn't\")."
+  },
+  {
+   "id": "ex.b1.question-tags.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She can't swim very well, ___?",
+   "options": [
+    "can she",
+    "can't she",
+    "does she",
+    "is she"
+   ],
+   "answer": 0,
+   "explanation": "The statement is negative (\"can't\"), so the tag must be positive (\"can\"). The modal verb is \"can\"."
+  },
+  {
+   "id": "ex.b1.question-tags.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You live near the park, ___ ___?",
+   "answers": [
+    [
+     "don't"
+    ],
+    [
+     "you"
+    ]
+   ],
+   "explanation": "The statement \"You live near the park\" is positive and in the present simple, so the tag is negative \"don't you\"."
+  },
+  {
+   "id": "ex.b1.question-tags.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He wasn't at the meeting, ___ ___?",
+   "answers": [
+    [
+     "was"
+    ],
+    [
+     "he"
+    ]
+   ],
+   "explanation": "The statement \"He wasn't at the meeting\" is negative and uses \"was\", so the tag is positive \"was he\"."
+  },
+  {
+   "id": "ex.b1.question-tags.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They've finished their project, ___ ___?",
+   "answers": [
+    [
+     "haven't"
+    ],
+    [
+     "they"
+    ]
+   ],
+   "explanation": "The statement \"They've finished their project\" is positive and uses \"have\", so the tag is negative \"haven't they\"."
+  },
+  {
+   "id": "ex.b1.question-tags.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It's",
+    "a",
+    "beautiful",
+    "day",
+    ",",
+    "isn't",
+    "it",
+    "?"
+   ],
+   "distractors": [
+    "is",
+    "not"
+   ],
+   "explanation": "This sentence uses a positive statement with a negative question tag to invite agreement."
+  },
+  {
+   "id": "ex.b1.question-tags.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "didn't",
+    "forget",
+    "your",
+    "keys",
+    ",",
+    "did",
+    "you",
+    "?"
+   ],
+   "distractors": [
+    "do",
+    "forgetting"
+   ],
+   "explanation": "This sentence uses a negative statement with a positive question tag to check information."
+  },
+  {
+   "id": "ex.b1.question-tags.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She is a doctor, is she?",
+   "answers": [
+    "She is a doctor, isn't she?"
+   ],
+   "explanation": "A positive statement requires a negative question tag."
+  },
+  {
+   "id": "ex.b1.question-tags.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They don't like vegetables, don't they?",
+   "answers": [
+    "They don't like vegetables, do they?"
+   ],
+   "explanation": "A negative statement requires a positive question tag."
+  },
+  {
+   "id": "ex.b1.question-tags.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You like classical music.",
+   "instruction": "Add a question tag to invite agreement.",
+   "answers": [
+    "You like classical music, don't you?"
+   ],
+   "explanation": "The statement is positive present simple, so the tag is negative \"don't you\"."
+  },
+  {
+   "id": "ex.b1.question-tags.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He didn't call you back.",
+   "instruction": "Add a question tag to check this information.",
+   "answers": [
+    "He didn't call you back, did he?"
+   ],
+   "explanation": "The statement is negative past simple, so the tag is positive \"did he\"."
+  },
+  {
+   "id": "ex.b1.question-tags.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.question-tags"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "It's getting late,",
+     "right": "isn't it?"
+    },
+    {
+     "left": "You can help me,",
+     "right": "can't you?"
+    },
+    {
+     "left": "They didn't arrive,",
+     "right": "did they?"
+    },
+    {
+     "left": "She works here,",
+     "right": "doesn't she?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "isn't it",
+  "don't you",
+  "didn't you",
+  "is he",
+  "are you"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.question-tags.01": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.02": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.03": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.04": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.05": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.06": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.07": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.08": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.09": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.10": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.11": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.12": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.13": {
+    "status": "pass"
+   },
+   "ex.b1.question-tags.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

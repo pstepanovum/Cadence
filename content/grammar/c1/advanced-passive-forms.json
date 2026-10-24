@@ -1,0 +1,405 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "advanced-passive-forms",
+ "draftHash": "a47f9b359f6f6323",
+ "grammarPoint": {
+  "id": "gp.advanced-passive-forms",
+  "level": "C1",
+  "topicId": "topic.passive",
+  "title": "Advanced passive forms",
+  "summary": "Learn to use passive infinitives, passive -ing forms, and the 'get' passive to express actions received by the subject in complex sentences.",
+  "explanation": "Beyond the basic passive voice, English uses more advanced passive forms to express actions received by the subject in various contexts. These include passive infinitives and passive -ing forms, which allow for greater flexibility in sentence structure.\n\n*Passive infinitives* (to be + past participle) are often used after certain verbs, adjectives, or nouns, especially when talking about obligations, plans, or expectations. For example, \"The work needs *to be completed* soon.\" *Passive -ing forms* (being + past participle) are typically found after prepositions or verbs that take an -ing form, such as 'avoid', 'imagine', or 'dislike'. For instance, \"She dislikes *being interrupted*.\"\n\nThe *'get' passive* (get + past participle) is another common form, especially in informal English. It often implies that something happened unexpectedly, accidentally, or that the subject was actively involved in the outcome, often with a sense of difficulty or consequence. For example, \"They *got caught* in the rain.\" While 'be' passive describes a state or action, 'get' passive often emphasizes the process or the event itself.",
+  "patterns": [
+   "to be + past participle",
+   "being + past participle",
+   "get + past participle"
+  ],
+  "examples": [
+   {
+    "text": "The new software is *to be installed* by the end of the week.",
+    "note": "Uses a passive infinitive to express a plan or obligation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He hates *being told* what to do all the time.",
+    "note": "Uses a passive -ing form after the verb 'hates' to show dislike of receiving an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My phone *got stolen* while I was at the cafe.",
+    "note": "Uses the 'get' passive to describe an unexpected, negative event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She hopes *to be chosen* for the team captain position.",
+    "note": "Uses a passive infinitive to express a future expectation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Don't risk *getting caught* without your passport.",
+    "note": "Uses the 'get' passive in an -ing form after 'risk' to warn about a potential negative outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The car needs to repair.",
+    "right": "The car needs *to be repaired*.",
+    "note": "Use the passive infinitive 'to be repaired' because the car receives the action."
+   },
+   {
+    "wrong": "She avoids telling what to do.",
+    "right": "She avoids *being told* what to do.",
+    "note": "Use the passive -ing form 'being told' because she is the one receiving the instruction."
+   },
+   {
+    "wrong": "They got injure in the accident.",
+    "right": "They *got injured* in the accident.",
+    "note": "The 'get' passive requires the past participle form of the verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.advanced-passive-forms.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ancient artifact is believed ___ in the desert.",
+   "options": [
+    "to find",
+    "to be found",
+    "finding",
+    "being found"
+   ],
+   "answer": 1,
+   "explanation": "The artifact receives the action of finding, so a passive infinitive 'to be found' is correct after 'is believed'."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After ___ by the sudden noise, the cat ran under the bed.",
+   "options": [
+    "startling",
+    "being startled",
+    "to be startled",
+    "get startled"
+   ],
+   "answer": 1,
+   "explanation": "The cat received the action of startling, and the phrase follows 'After', requiring a passive -ing form 'being startled'."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He was careful not to ___ in the argument.",
+   "options": [
+    "get involved",
+    "be involved",
+    "getting involved",
+    "to be involved"
+   ],
+   "answer": 0,
+   "explanation": "The 'get' passive 'get involved' is commonly used here to express becoming part of something, often unintentionally or with effort."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new policy is expected ___ next month.",
+   "options": [
+    "to announce",
+    "to be announced",
+    "announcing",
+    "being announced"
+   ],
+   "answer": 1,
+   "explanation": "The policy receives the action of announcing, so the passive infinitive 'to be announced' is correct after 'is expected'."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old bridge needs ___ ___ before winter.",
+   "answers": [
+    [
+     "to",
+     "be"
+    ],
+    [
+     "repaired"
+    ]
+   ],
+   "explanation": "The bridge receives the action of repairing, so the passive infinitive 'to be repaired' is needed after 'needs'."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She dislikes ___ ___ attention when she's out.",
+   "answers": [
+    [
+     "being"
+    ],
+    [
+     "given"
+    ]
+   ],
+   "explanation": "She receives the attention, so the passive -ing form 'being given' is correct after 'dislikes'."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ ___ in a traffic jam for hours.",
+   "answers": [
+    [
+     "got"
+    ],
+    [
+     "stuck"
+    ]
+   ],
+   "explanation": "The 'get' passive 'got stuck' describes an unexpected or difficult situation they experienced."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "documents",
+    "are",
+    "to",
+    "be",
+    "reviewed",
+    "today",
+    "."
+   ],
+   "distractors": [
+    "reviewing"
+   ],
+   "explanation": "This sentence uses a passive infinitive to state an obligation or plan for the documents."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "avoids",
+    "being",
+    "criticized",
+    "by",
+    "his",
+    "peers",
+    "."
+   ],
+   "distractors": [
+    "to",
+    "criticize"
+   ],
+   "explanation": "This sentence uses a passive -ing form after 'avoids' to show he doesn't like receiving criticism."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The package is supposed to deliver by noon.",
+   "answers": [
+    "The package is supposed to be delivered by noon."
+   ],
+   "explanation": "The package receives the action of delivery, so the passive infinitive 'to be delivered' is required."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I don't like getting interrupt during my work.",
+   "answers": [
+    "I don't like getting interrupted during my work."
+   ],
+   "explanation": "The 'get' passive requires the past participle form of the verb, which is 'interrupted'."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Someone needs to clean the kitchen.",
+   "instruction": "Rewrite using a passive infinitive.",
+   "answers": [
+    "The kitchen needs to be cleaned."
+   ],
+   "explanation": "The kitchen is the object of the action, so it becomes the subject of the passive infinitive 'to be cleaned'."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They caught him cheating on the test.",
+   "instruction": "Rewrite using the 'get' passive.",
+   "answers": [
+    "He got caught cheating on the test."
+   ],
+   "explanation": "The 'get' passive 'got caught' emphasizes the unexpected or negative event that happened to him."
+  },
+  {
+   "id": "ex.c1.advanced-passive-forms.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.advanced-passive-forms"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The old building is scheduled",
+     "right": "to be demolished next month."
+    },
+    {
+     "left": "She dislikes",
+     "right": "being treated like a child."
+    },
+    {
+     "left": "My car",
+     "right": "got scratched in the parking lot."
+    },
+    {
+     "left": "He expects",
+     "right": "to be offered a new position soon."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "to be [a-z]+ed",
+  "being [a-z]+ed",
+  "get [a-z]+ed"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.advanced-passive-forms.01": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.02": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.03": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.04": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical because 'needs' requires 'to be repaired' rather than 'to repaired'."
+   },
+   "ex.c1.advanced-passive-forms.06": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.07": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.08": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.09": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.10": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.11": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.12": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.13": {
+    "status": "pass"
+   },
+   "ex.c1.advanced-passive-forms.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 56784,
+   "text": "This order is to be obeyed to the letter.",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 49820,
+   "text": "I object to being treated like that.",
+   "author": "CK"
+  }
+ ]
+}

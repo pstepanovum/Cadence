@@ -1,0 +1,377 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "imperatives",
+ "draftHash": "16dfcb47db9ea004",
+ "grammarPoint": {
+  "id": "gp.imperatives",
+  "level": "A2",
+  "topicId": "topic.clauses",
+  "title": "Imperatives",
+  "summary": "Imperatives tell someone to do something. We use them for instructions, warnings, and invitations, and 'don't' for negative commands.",
+  "explanation": "Imperatives are verbs that give a direct command, instruction, warning, or invitation. They tell someone what to do or not to do. We use the base form of the verb for positive imperatives.\n\nFor example, if you want someone to open a book, you say, \"Open the book.\" If you want to invite someone to sit, you say, \"Have a seat.\"\n\nTo make an imperative negative, we use *don't* before the base form of the verb. For example, \"Don't touch that!\" is a warning not to touch something. We usually don't use a subject with imperatives because it's clear who you are talking to.",
+  "patterns": [
+   "Verb (base form)",
+   "Don't + verb (base form)"
+  ],
+  "examples": [
+   {
+    "text": "Turn left at the next traffic light.",
+    "note": "This is an instruction for giving directions.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Don't forget your umbrella today.",
+    "note": "This is a warning or a reminder.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Come in and make yourself comfortable.",
+    "note": "This is an invitation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Be careful when you cross the street.",
+    "note": "This is a warning.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Please wait here for a moment.",
+    "note": "This is a polite instruction or request.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "You close the window.",
+    "right": "Close the window.",
+    "note": "Do not use a subject with imperatives."
+   },
+   {
+    "wrong": "Not run in the hallway.",
+    "right": "Don't run in the hallway.",
+    "note": "Use 'don't' for negative imperatives."
+   },
+   {
+    "wrong": "To be quiet, please.",
+    "right": "Be quiet, please.",
+    "note": "Use the base form of the verb, not the infinitive."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.imperatives.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ your name and phone number here.",
+   "options": [
+    "Write",
+    "Writes",
+    "To write"
+   ],
+   "answer": 0,
+   "explanation": "Use the base form of the verb for a positive imperative."
+  },
+  {
+   "id": "ex.a2.imperatives.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's cold outside. ___ your jacket.",
+   "options": [
+    "Wear",
+    "Wears",
+    "Wearing"
+   ],
+   "answer": 0,
+   "explanation": "The base form 'Wear' is correct for an instruction."
+  },
+  {
+   "id": "ex.a2.imperatives.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ late for your appointment.",
+   "options": [
+    "Not be",
+    "Don't be",
+    "Aren't"
+   ],
+   "answer": 1,
+   "explanation": "Use 'Don't be' for a negative imperative with the verb 'to be'."
+  },
+  {
+   "id": "ex.a2.imperatives.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The soup is hot. ___ it too quickly.",
+   "options": [
+    "Eat",
+    "Don't eat",
+    "Not eat"
+   ],
+   "answer": 1,
+   "explanation": "'Don't eat' is the correct negative imperative for a warning."
+  },
+  {
+   "id": "ex.a2.imperatives.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ the door when you leave, please.",
+   "answers": [
+    [
+     "Close"
+    ]
+   ],
+   "explanation": "The base form 'Close' is used for a polite instruction."
+  },
+  {
+   "id": "ex.a2.imperatives.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ worry, everything will be fine.",
+   "answers": [
+    [
+     "Don't"
+    ]
+   ],
+   "explanation": "'Don't' is used to form a negative imperative, offering comfort."
+  },
+  {
+   "id": "ex.a2.imperatives.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ quiet! The baby is sleeping.",
+   "answers": [
+    [
+     "Be"
+    ]
+   ],
+   "explanation": "The base form 'Be' is used for an imperative with the verb 'to be'."
+  },
+  {
+   "id": "ex.a2.imperatives.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "your",
+    "hands",
+    "Wash",
+    "."
+   ],
+   "distractors": [
+    "you"
+   ],
+   "explanation": "This is a simple instruction using the imperative form."
+  },
+  {
+   "id": "ex.a2.imperatives.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "touch",
+    "that",
+    "Don't",
+    "!"
+   ],
+   "distractors": [
+    "not"
+   ],
+   "explanation": "This is a negative warning using 'Don't' and the base verb."
+  },
+  {
+   "id": "ex.a2.imperatives.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Please, you sit down.",
+   "answers": [
+    "Please, sit down."
+   ],
+   "explanation": "Imperatives do not use a subject like 'you'."
+  },
+  {
+   "id": "ex.a2.imperatives.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Not open the box.",
+   "answers": [
+    "Don't open the box."
+   ],
+   "explanation": "Use 'Don't' to make a negative imperative."
+  },
+  {
+   "id": "ex.a2.imperatives.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You should turn off the lights.",
+   "instruction": "Rewrite as an imperative.",
+   "answers": [
+    "Turn off the lights."
+   ],
+   "explanation": "An imperative gives a direct command without 'should' or a subject."
+  },
+  {
+   "id": "ex.a2.imperatives.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It is important not to make noise.",
+   "instruction": "Rewrite as a negative imperative.",
+   "answers": [
+    "Don't make noise."
+   ],
+   "explanation": "Use 'Don't' followed by the base verb for a negative imperative."
+  },
+  {
+   "id": "ex.a2.imperatives.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.imperatives"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Close the window,",
+     "right": "it's getting cold."
+    },
+    {
+     "left": "Don't forget",
+     "right": "to call me later."
+    },
+    {
+     "left": "Be careful",
+     "right": "on the wet floor."
+    },
+    {
+     "left": "Come in,",
+     "right": "the door is open."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "do [a-z ]+",
+  "don't [a-z ]+",
+  "be [a-z ]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.imperatives.01": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.02": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.03": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.04": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.05": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.06": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.07": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical and the alternative answer fails to use the token 'you'."
+   },
+   "ex.a2.imperatives.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical and the alternative answer fails to use the token 'not'."
+   },
+   "ex.a2.imperatives.10": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.11": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.12": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.13": {
+    "status": "pass"
+   },
+   "ex.a2.imperatives.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 19648,
+   "text": "Hurry up. You'll be late for school.",
+   "author": "CK"
+  }
+ ]
+}

@@ -1,0 +1,403 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "each-every-all",
+ "draftHash": "0b37fd7ec7369c34",
+ "grammarPoint": {
+  "id": "gp.each-every-all",
+  "level": "B2",
+  "topicId": "topic.articles-determiners",
+  "title": "Each, every and all",
+  "summary": "Learn to use 'each', 'every', and 'all' to talk about all members of a group, focusing on individual items or the group as a whole.",
+  "explanation": "We use *each*, *every*, and *all* to refer to all members of a group. While they all convey a sense of completeness, they are used differently depending on whether we are focusing on individuals or the group as a whole, and on the type of noun.\n\n*Each* focuses on individual items within a group, one by one. It is always followed by a singular countable noun. For example, \"Each participant received a badge.\" You can also use \"each of the\" before a plural noun or pronoun: \"Each of the books was interesting.\"\n\n*Every* refers to all members of a group as a whole, emphasizing completeness. It is also always followed by a singular countable noun. For example, \"Every car needs fuel.\" Unlike 'each', 'every' cannot be directly followed by 'of the' + plural noun/pronoun (you would say \"every one of the\"). 'Every' usually implies a group of three or more.\n\n*All* refers to the entire group, emphasizing the totality. It can be followed by plural countable nouns or uncountable nouns. For example, \"All the students passed the exam\" or \"All the water evaporated.\" You can also use \"all of the\" before plural nouns, uncountable nouns, or pronouns: \"All of the ingredients are fresh.\"",
+  "patterns": [
+   "Each + singular countable noun",
+   "Every + singular countable noun",
+   "All + plural countable noun",
+   "All + uncountable noun",
+   "Each of the + plural noun/pronoun",
+   "All of the + plural noun/uncountable noun/pronoun"
+  ],
+  "examples": [
+   {
+    "text": "Each flower in the garden has a unique color.",
+    "note": "Focuses on individual flowers, one by one.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Every employee attended the mandatory training session.",
+    "note": "Refers to all employees as a complete group.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "All the windows were cleaned before the party.",
+    "note": "Refers to the entire group of windows.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "All the equipment needs to be checked regularly.",
+    "note": "Refers to the entire amount of uncountable equipment.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Each of the proposals was carefully reviewed by the committee.",
+    "note": "Highlights individual proposals from a larger group.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Every of the students passed the test.",
+    "right": "Each of the students passed the test.",
+    "note": "Use 'each of the' or 'every one of the' before a plural noun."
+   },
+   {
+    "wrong": "Each cars need regular maintenance.",
+    "right": "Each car needs regular maintenance.",
+    "note": "'Each' is followed by a singular countable noun."
+   },
+   {
+    "wrong": "All the student received a certificate.",
+    "right": "All the students received a certificate.",
+    "note": "'All' with countable nouns is followed by a plural noun."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.each-every-all.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ participant received a small gift at the end of the conference.",
+   "options": [
+    "All",
+    "Every",
+    "Each of the"
+   ],
+   "answer": 1,
+   "explanation": "'Every' is used with a singular countable noun to refer to all members of a group."
+  },
+  {
+   "id": "ex.b2.each-every-all.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the ingredients are fresh, so the meal will be delicious.",
+   "options": [
+    "Each",
+    "Every",
+    "All"
+   ],
+   "answer": 2,
+   "explanation": "'All' is used with plural countable nouns like 'ingredients' to refer to the entire group."
+  },
+  {
+   "id": "ex.b2.each-every-all.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The teacher spoke to ___ child individually about their progress.",
+   "options": [
+    "all",
+    "every",
+    "each"
+   ],
+   "answer": 2,
+   "explanation": "'Each' emphasizes individual members, which fits the idea of speaking to them 'individually'."
+  },
+  {
+   "id": "ex.b2.each-every-all.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the information you need is available on our website.",
+   "options": [
+    "Each",
+    "Every",
+    "All"
+   ],
+   "answer": 2,
+   "explanation": "'All' is used with uncountable nouns like 'information' to refer to the entire quantity."
+  },
+  {
+   "id": "ex.b2.each-every-all.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ student in the class submitted their assignment on time.",
+   "answers": [
+    [
+     "Every"
+    ],
+    [
+     "Each"
+    ]
+   ],
+   "explanation": "'Every' or 'Each' can be used here with a singular noun to refer to all students. 'Every' emphasizes the group, 'Each' emphasizes individuals."
+  },
+  {
+   "id": "ex.b2.each-every-all.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ of the team members contributed to the project's success.",
+   "answers": [
+    [
+     "Each"
+    ],
+    [
+     "All"
+    ]
+   ],
+   "explanation": "'Each of the' focuses on individual members, while 'All of the' refers to the entire group. Both are grammatically correct here."
+  },
+  {
+   "id": "ex.b2.each-every-all.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We checked ___ the doors and windows before leaving the house.",
+   "answers": [
+    [
+     "all"
+    ]
+   ],
+   "explanation": "'All' is used with plural countable nouns like 'doors and windows' to refer to the entire set."
+  },
+  {
+   "id": "ex.b2.each-every-all.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Each",
+    "of",
+    "the",
+    "flowers",
+    "smells",
+    "sweet",
+    "."
+   ],
+   "distractors": [
+    "every"
+   ],
+   "explanation": "This sentence correctly uses 'each of the' with a plural noun and a singular verb to focus on individual flowers."
+  },
+  {
+   "id": "ex.b2.each-every-all.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "All",
+    "the",
+    "guests",
+    "enjoyed",
+    "the",
+    "delicious",
+    "food",
+    "."
+   ],
+   "distractors": [
+    "every"
+   ],
+   "explanation": "This sentence correctly uses 'all the' with a plural noun to refer to the entire group of guests."
+  },
+  {
+   "id": "ex.b2.each-every-all.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Every of the books on the shelf is a classic.",
+   "answers": [
+    "Each of the books on the shelf is a classic.",
+    "Every one of the books on the shelf is a classic."
+   ],
+   "explanation": "'Every' cannot be directly followed by 'of the'. Use 'each of the' or 'every one of the'."
+  },
+  {
+   "id": "ex.b2.each-every-all.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "All the student must complete the final project.",
+   "answers": [
+    "All the students must complete the final project.",
+    "Every student must complete the final project."
+   ],
+   "explanation": "'All' with countable nouns requires a plural noun. Alternatively, 'every' can be used with a singular noun."
+  },
+  {
+   "id": "ex.b2.each-every-all.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Every person in the room agreed with the decision.",
+   "instruction": "Rewrite using 'all'.",
+   "answers": [
+    "All the people in the room agreed with the decision."
+   ],
+   "explanation": "To use 'all', the singular noun 'person' must become the plural 'people', and 'the' is often used."
+  },
+  {
+   "id": "ex.b2.each-every-all.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "All the children received a small toy.",
+   "instruction": "Rewrite using 'each'.",
+   "answers": [
+    "Each child received a small toy.",
+    "Each of the children received a small toy."
+   ],
+   "explanation": "When using 'each', the plural noun 'children' becomes the singular 'child'. 'Each of the' is also an option."
+  },
+  {
+   "id": "ex.b2.each-every-all.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.each-every-all"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Each student",
+     "right": "has a different learning style."
+    },
+    {
+     "left": "Every car",
+     "right": "on the road needs insurance."
+    },
+    {
+     "left": "All the furniture",
+     "right": "was delivered this morning."
+    },
+    {
+     "left": "All the documents",
+     "right": "are stored in the cloud."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "each [a-z]+ (is|was|has)",
+  "every [a-z]+ (is|was|has)",
+  "all the [a-z]+ (are|were|have)",
+  "all [a-z]+ (is|was|has)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.each-every-all.01": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.02": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.03": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.04": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.each-every-all.05: needs one answer list per gap (1)"
+   },
+   "ex.b2.each-every-all.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.each-every-all.06: needs one answer list per gap (1)"
+   },
+   "ex.b2.each-every-all.07": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.08": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.09": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.10": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.11": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.12": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.13": {
+    "status": "pass"
+   },
+   "ex.b2.each-every-all.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 3893153,
+   "text": "In the house of his father, every prince is great.",
+   "author": "AlanF_US"
+  },
+  {
+   "sentenceId": 5596083,
+   "text": "All the seats are reserved.",
+   "author": "zumley"
+  }
+ ]
+}

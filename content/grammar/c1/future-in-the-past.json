@@ -1,0 +1,407 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "future-in-the-past",
+ "draftHash": "f90db69906d949c8",
+ "grammarPoint": {
+  "id": "gp.future-in-the-past",
+  "level": "C1",
+  "topicId": "topic.future",
+  "title": "Future in the past",
+  "summary": "Future in the past describes actions or states that were in the future from a past perspective, often indicating plans, predictions, or intentions that may or may not have happened.",
+  "explanation": "We use the future in the past to talk about something that was expected, planned, or predicted to happen at a point in the past. It allows us to narrate events from a past viewpoint, maintaining the correct tense sequence.\n\n*Was going to* expresses an intention or plan from the past that either didn't happen or changed. It highlights the original plan. *Would* is often used for predictions, promises, or general future events from a past perspective, similar to how 'will' is used for the present future.\n\n*Was about to* indicates an action that was going to happen very soon in the past. It emphasizes immediacy. *Was to* is more formal and is used for arrangements, obligations, or destiny, often implying a pre-determined event or instruction.",
+  "patterns": [
+   "subject + was/were + going to + base verb",
+   "subject + would + base verb",
+   "subject + was/were + about to + base verb",
+   "subject + was/were + to + base verb"
+  ],
+  "examples": [
+   {
+    "text": "I was going to visit the museum, but it was closed.",
+    "note": "Shows an unfulfilled past intention.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She promised she would call me later that day.",
+    "note": "Reports a past promise or prediction.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The movie was about to start when we finally found our seats.",
+    "note": "Indicates an action that was imminent in the past.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new policy was to be implemented by the end of the month.",
+    "note": "Refers to a formal arrangement or obligation from the past.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He knew his life would never be the same after that decision.",
+    "note": "Expresses a past prediction about the future.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "She said she will arrive soon.",
+    "right": "She said she would arrive soon.",
+    "note": "Use 'would' to report a future event from a past perspective."
+   },
+   {
+    "wrong": "I would call you, but I forgot.",
+    "right": "I was going to call you, but I forgot.",
+    "note": "Use 'was going to' for unfulfilled past intentions."
+   },
+   {
+    "wrong": "The meeting was to started at noon.",
+    "right": "The meeting was to start at noon.",
+    "note": "After 'was to', use the base form of the verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.future-in-the-past.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The scientists believed the experiment ___ yield groundbreaking results.",
+   "options": [
+    "is going to",
+    "was about to",
+    "would",
+    "is to"
+   ],
+   "answer": 2,
+   "explanation": "'Would' is used here to express a past prediction about a future outcome."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ leave for the airport when my flight was suddenly canceled.",
+   "options": [
+    "would",
+    "was to",
+    "was about to",
+    "am going to"
+   ],
+   "answer": 2,
+   "explanation": "'Was about to' indicates an action that was going to happen very soon in the past."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The ancient prophecy stated that a new era ___ begin after the comet's return.",
+   "options": [
+    "is going to",
+    "was to",
+    "is about to",
+    "will"
+   ],
+   "answer": 1,
+   "explanation": "'Was to' is used for formal statements, destiny, or pre-determined events from a past perspective."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ redesign the entire website, but the client changed their mind.",
+   "options": [
+    "would",
+    "were going to",
+    "were about to",
+    "were to"
+   ],
+   "answer": 1,
+   "explanation": "'Were going to' expresses a past intention or plan that did not happen."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The director announced that the play ___ ___ postponed until next month.",
+   "answers": [
+    [
+     "would"
+    ],
+    [
+     "be"
+    ]
+   ],
+   "explanation": "'Would be' reports a past announcement about a future event."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ ___ finish her report, but her computer crashed.",
+   "answers": [
+    [
+     "was"
+    ],
+    [
+     "going to"
+    ]
+   ],
+   "explanation": "'Was going to' expresses an unfulfilled past intention."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The delegates ___ ___ meet at the conference center at 9 AM.",
+   "answers": [
+    [
+     "were"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Were to' indicates a formal arrangement or obligation from the past."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "was",
+    "about",
+    "to",
+    "reveal",
+    "the",
+    "secret",
+    "."
+   ],
+   "distractors": [
+    "will"
+   ],
+   "explanation": "This sentence uses 'was about to' to show an action that was imminent in the past."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "were",
+    "going",
+    "to",
+    "travel",
+    "to",
+    "Japan",
+    "."
+   ],
+   "distractors": [
+    "will"
+   ],
+   "explanation": "This sentence uses 'were going to' to express a past intention."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I thought the concert will start at eight.",
+   "answers": [
+    "I thought the concert would start at eight."
+   ],
+   "explanation": "When reporting a past thought about a future event, 'will' changes to 'would'."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The team was to finishing the project by Friday.",
+   "answers": [
+    "The team was to finish the project by Friday."
+   ],
+   "explanation": "After 'was to', the base form of the verb is used."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She plans to launch her new business next month.",
+   "instruction": "Rewrite the sentence from a past perspective, using 'was going to'.",
+   "answers": [
+    "She was going to launch her new business the following month.",
+    "She was going to launch her new business next month."
+   ],
+   "explanation": "Changing the perspective to the past requires 'was going to' for the plan and 'next month' becomes 'the following month'."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The train was scheduled to depart at 3 PM.",
+   "instruction": "Rewrite the sentence using 'was to'.",
+   "answers": [
+    "The train was to depart at 3 PM."
+   ],
+   "explanation": "'Was to' is a more formal way to express a scheduled or arranged event from the past."
+  },
+  {
+   "id": "ex.c1.future-in-the-past.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.future-in-the-past"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I was going to bake a cake,",
+     "right": "but I ran out of flour."
+    },
+    {
+     "left": "He said he would help me,",
+     "right": "so I waited for his call."
+    },
+    {
+     "left": "The meeting was about to begin",
+     "right": "when the fire alarm sounded."
+    },
+    {
+     "left": "The new bridge was to be completed",
+     "right": "by the end of the year."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "was going to",
+  "would be",
+  "was about to",
+  "was to"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.future-in-the-past.01": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.02": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.03": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.04": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.05": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.06": {
+    "status": "pass",
+    "note": "Checker slip: The other answer is ungrammatical because 'about' requires 'to' before the verb."
+   },
+   "ex.c1.future-in-the-past.07": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.08": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.09": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.10": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.11": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers are correct depending on whether 'next month' remains relative to the present."
+   },
+   "ex.c1.future-in-the-past.13": {
+    "status": "pass"
+   },
+   "ex.c1.future-in-the-past.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 1938845,
+   "text": "I thought Tom would be nervous, but he was very relaxed.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 2326257,
+   "text": "I figured Tom would be here.",
+   "author": "CK"
+  }
+ ]
+}

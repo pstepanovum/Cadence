@@ -1,0 +1,409 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "hedging-language",
+ "draftHash": "a8e9099586b7911a",
+ "grammarPoint": {
+  "id": "gp.hedging-language",
+  "level": "C1",
+  "topicId": "topic.linking",
+  "title": "Hedging",
+  "summary": "Use 'seem to', 'tend to', and 'it appears that' to express ideas more cautiously, making your statements less direct and more nuanced.",
+  "explanation": "When you want to make a statement less direct, more polite, or express a degree of uncertainty, you can use hedging language. This is especially useful in academic writing, professional communication, or when you don't have complete certainty about a fact.\n\n*Seem to* is used to express an impression or an observation that might not be a definite fact. It suggests that something appears to be true based on available evidence or a subjective feeling, but you're not stating it as an absolute truth.\n\n*Tend to* describes a general tendency or a common behavior. It indicates that something usually happens or is typically true, but it's not always the case. It softens a generalization, acknowledging exceptions.\n\n*It appears that* introduces a statement that is based on observation, inference, or information, but again, it's not presented as a confirmed fact. It suggests that something is likely true, but leaves room for doubt or further evidence.",
+  "patterns": [
+   "Subject + seem(s) to + base verb",
+   "Subject + tend(s) to + base verb",
+   "It appears that + clause"
+  ],
+  "examples": [
+   {
+    "text": "The new policy *seems to* be causing some confusion among employees.",
+    "note": "Expresses an impression or observation about the policy's effect.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "People *tend to* avoid rush hour traffic if they can manage their schedules.",
+    "note": "Describes a common, but not absolute, behavior.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "*It appears that* the project will be delayed due to unforeseen technical issues.",
+    "note": "Introduces an inference or observation cautiously.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She *seems to* understand the complex instructions quite well.",
+    "note": "Gives an impression of her comprehension, not a definite statement.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Our team *tends to* perform better when there's a clear deadline.",
+    "note": "States a general characteristic or behavior of the team.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The data is showing that prices increase.",
+    "right": "The data *seems to show* that prices increase.",
+    "note": "Use 'seems to' for cautious interpretation of data or observations."
+   },
+   {
+    "wrong": "He is always late for meetings.",
+    "right": "He *tends to be* late for meetings.",
+    "note": "Use 'tends to' to soften a generalization about someone's behavior."
+   },
+   {
+    "wrong": "It is that the meeting is canceled.",
+    "right": "*It appears that* the meeting is canceled.",
+    "note": "Use the full phrase 'it appears that' to introduce a cautious statement."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.hedging-language.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The research ___ suggest a strong link between diet and mood.",
+   "options": [
+    "is",
+    "seems to",
+    "definitely",
+    "must"
+   ],
+   "answer": 1,
+   "explanation": "'Seems to' is used to present research findings cautiously, indicating an impression rather than a definitive conclusion."
+  },
+  {
+   "id": "ex.c1.hedging-language.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "When faced with uncertainty, many individuals ___ seek comfort in routine.",
+   "options": [
+    "always",
+    "tend to",
+    "will",
+    "are"
+   ],
+   "answer": 1,
+   "explanation": "'Tend to' expresses a common, but not absolute, behavior or inclination."
+  },
+  {
+   "id": "ex.c1.hedging-language.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the new software has significantly improved team efficiency.",
+   "options": [
+    "It is clear that",
+    "It appears that",
+    "It knows that",
+    "It proves that"
+   ],
+   "answer": 1,
+   "explanation": "'It appears that' introduces an observation or inference cautiously, without stating it as an absolute fact."
+  },
+  {
+   "id": "ex.c1.hedging-language.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The manager ___ be quite busy with the quarterly reports this week.",
+   "options": [
+    "is",
+    "seems to",
+    "has",
+    "will"
+   ],
+   "answer": 1,
+   "explanation": "'Seems to' expresses an impression or observation about someone's current state or activity."
+  },
+  {
+   "id": "ex.c1.hedging-language.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The weather ___ ___ improve by tomorrow afternoon, according to the forecast.",
+   "answers": [
+    [
+     "seems"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Seems to' expresses a cautious prediction based on available information."
+  },
+  {
+   "id": "ex.c1.hedging-language.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Students ___ ___ ask questions when they don't fully understand a concept.",
+   "answers": [
+    [
+     "tend"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Tend to' describes a common behavior among students."
+  },
+  {
+   "id": "ex.c1.hedging-language.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ ___ that the company will announce its new strategy at the upcoming conference.",
+   "answers": [
+    [
+     "It"
+    ],
+    [
+     "appears"
+    ]
+   ],
+   "explanation": "'It appears that' introduces an observation or inference about a future event."
+  },
+  {
+   "id": "ex.c1.hedging-language.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "economy",
+    "seems",
+    "to",
+    "be",
+    "recovering",
+    "."
+   ],
+   "distractors": [
+    "is",
+    "will"
+   ],
+   "explanation": "'Seems to be recovering' softens the statement about the economy, presenting it as an observation rather than a definite fact."
+  },
+  {
+   "id": "ex.c1.hedging-language.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "appears",
+    "that",
+    "the",
+    "train",
+    "is",
+    "delayed",
+    "."
+   ],
+   "distractors": [
+    "knows",
+    "shows"
+   ],
+   "explanation": "'It appears that' introduces a cautious statement about the train's status, based on available information."
+  },
+  {
+   "id": "ex.c1.hedging-language.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The new system is causing some issues.",
+   "answers": [
+    "The new system seems to be causing some issues.",
+    "The new system tends to cause some issues.",
+    "It appears that the new system is causing some issues."
+   ],
+   "explanation": "Hedging makes the statement less definitive and more appropriate for an ongoing situation where the full impact might not be certain."
+  },
+  {
+   "id": "ex.c1.hedging-language.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He always forgets his keys when he leaves the house.",
+   "answers": [
+    "He tends to forget his keys when he leaves the house."
+   ],
+   "explanation": "'Tends to' softens the strong generalization 'always forgets', making it more nuanced and realistic."
+  },
+  {
+   "id": "ex.c1.hedging-language.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The report suggests a strong correlation between exercise and well-being.",
+   "instruction": "Rewrite using 'it appears that'.",
+   "answers": [
+    "It appears that the report suggests a strong correlation between exercise and well-being.",
+    "It appears that there is a strong correlation between exercise and well-being."
+   ],
+   "explanation": "'It appears that' introduces the suggestion from the report cautiously, indicating it's an observation rather than a definitive claim."
+  },
+  {
+   "id": "ex.c1.hedging-language.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She is often late for meetings, especially on Mondays.",
+   "instruction": "Use 'tend to'.",
+   "answers": [
+    "She tends to be late for meetings, especially on Mondays."
+   ],
+   "explanation": "'Tends to' expresses a common habit or characteristic without being an absolute statement."
+  },
+  {
+   "id": "ex.c1.hedging-language.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.hedging-language"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The new software",
+     "right": "seems to have a few bugs."
+    },
+    {
+     "left": "People often",
+     "right": "tend to prefer familiar options."
+    },
+    {
+     "left": "It appears that",
+     "right": "the weather will clear up later."
+    },
+    {
+     "left": "He",
+     "right": "seems to be enjoying his new role."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\b(seem(s)? to)\\b",
+  "\\b(tend(s)? to)\\b",
+  "\\b(it appears that)\\b"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.hedging-language.01": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.02": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.03": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.04": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.05": {
+    "status": "pass",
+    "note": "Checker slip: The alternative 'is likely' is ungrammatical because it requires 'to' before 'improve'."
+   },
+   "ex.c1.hedging-language.06": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.07": {
+    "status": "pass",
+    "note": "Checker slip: The alternative contains three words ('It is likely') and does not fit the two gaps."
+   },
+   "ex.c1.hedging-language.08": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.09": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.10": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.11": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both rewrites are grammatically correct and naturally express the sentence's meaning."
+   },
+   "ex.c1.hedging-language.13": {
+    "status": "pass"
+   },
+   "ex.c1.hedging-language.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 313771,
+   "text": "Her health seems to have improved considerably of late.",
+   "author": "sundown"
+  },
+  {
+   "sentenceId": 1024112,
+   "text": "Tom tends to exaggerate.",
+   "author": "CK"
+  }
+ ]
+}

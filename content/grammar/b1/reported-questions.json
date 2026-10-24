@@ -1,0 +1,401 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "reported-questions",
+ "draftHash": "f9ee20b683ebf1da",
+ "grammarPoint": {
+  "id": "gp.reported-questions",
+  "level": "B1",
+  "topicId": "topic.reported-speech",
+  "title": "Reported questions",
+  "summary": "Learn how to report questions someone asked, using words like \"asked if\" or \"wanted to know where,\" and keeping normal sentence word order.",
+  "explanation": "When we tell someone what another person asked, we use *reported questions*. We don't use quotation marks, and the structure changes from a direct question.\n\nFor *yes/no questions* (questions that can be answered with \"yes\" or \"no\"), we use \"asked *if*\" or \"asked *whether*\". For *wh-questions* (questions starting with words like \"what,\" \"where,\" \"when,\" \"why,\" \"how\"), we use the *wh-word* itself.\n\nA key rule for reported questions is to use *normal sentence word order* (subject + verb), not question word order. Also, the verb tense often shifts back one step (e.g., present simple becomes past simple).",
+  "patterns": [
+   "subject + asked + if/whether + subject + verb (past tense)",
+   "subject + wanted to know + if/whether + subject + verb (past tense)",
+   "subject + asked + wh-word + subject + verb (past tense)",
+   "subject + wanted to know + wh-word + subject + verb (past tense)"
+  ],
+  "examples": [
+   {
+    "text": "She asked if I was busy.",
+    "note": "A yes/no question uses 'if', and the word order is subject + verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He wanted to know where the library was.",
+    "note": "A wh-question uses the wh-word, and the word order is subject + verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They asked whether I had enjoyed the movie.",
+    "note": "Another option for yes/no questions is 'whether', and the tense shifts.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I asked what time the store opened.",
+    "note": "The wh-phrase 'what time' is used, and the word order is subject + verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My friend asked if I could help her.",
+    "note": "The modal verb 'can' changes to 'could' in reported speech.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He asked where was the station.",
+    "right": "He asked where the station was.",
+    "note": "Remember to use normal subject-verb order after the wh-word."
+   },
+   {
+    "wrong": "She wanted to know you liked the food.",
+    "right": "She wanted to know if I liked the food.",
+    "note": "Use 'if' or 'whether' for reported yes/no questions."
+   },
+   {
+    "wrong": "They asked do you want coffee.",
+    "right": "They asked if I wanted coffee.",
+    "note": "The auxiliary verb 'do' is not used in reported questions, and the tense shifts."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.reported-questions.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The teacher asked the students ___ understood the instructions.",
+   "options": [
+    "if they",
+    "did they",
+    "if did they"
+   ],
+   "answer": 0,
+   "explanation": "For a reported yes/no question, use 'if' followed by normal subject-verb order."
+  },
+  {
+   "id": "ex.b1.reported-questions.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My colleague wanted to know ___ the meeting was.",
+   "options": [
+    "when was",
+    "when the meeting",
+    "when the meeting was"
+   ],
+   "answer": 2,
+   "explanation": "After a wh-word in a reported question, use normal subject-verb order."
+  },
+  {
+   "id": "ex.b1.reported-questions.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I asked him ___ he could help me with my project.",
+   "options": [
+    "that",
+    "if",
+    "what"
+   ],
+   "answer": 1,
+   "explanation": "For a reported yes/no question (Can you help me?), use 'if' or 'whether'."
+  },
+  {
+   "id": "ex.b1.reported-questions.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She asked me ___ I was going.",
+   "options": [
+    "where",
+    "where was",
+    "where did"
+   ],
+   "answer": 0,
+   "explanation": "Use the wh-word 'where' followed by subject-verb order for a reported wh-question."
+  },
+  {
+   "id": "ex.b1.reported-questions.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He asked ___ I ___ free on Saturday.",
+   "answers": [
+    [
+     "if",
+     "whether"
+    ],
+    [
+     "was"
+    ]
+   ],
+   "explanation": "For a reported yes/no question, use 'if' or 'whether' and shift the verb 'am' to 'was'."
+  },
+  {
+   "id": "ex.b1.reported-questions.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My sister wanted to know ___ I ___ her book.",
+   "answers": [
+    [
+     "where",
+     "if"
+    ],
+    [
+     "put",
+     "had seen"
+    ]
+   ],
+   "explanation": "For a reported wh-question, use the wh-word 'where' and shift 'did you put' to 'I put'."
+  },
+  {
+   "id": "ex.b1.reported-questions.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The tourist asked ___ the museum ___.",
+   "answers": [
+    [
+     "when",
+     "where"
+    ],
+    [
+     "opened",
+     "was"
+    ]
+   ],
+   "explanation": "Use the wh-word 'when' and shift 'does the museum open' to 'the museum opened' with normal word order."
+  },
+  {
+   "id": "ex.b1.reported-questions.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "asked",
+    "if",
+    "I",
+    "needed",
+    "any",
+    "help",
+    "."
+   ],
+   "distractors": [
+    "did"
+   ],
+   "explanation": "The correct order for a reported yes/no question is 'asked if' followed by subject + verb."
+  },
+  {
+   "id": "ex.b1.reported-questions.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "wanted",
+    "to",
+    "know",
+    "what",
+    "my",
+    "favorite",
+    "color",
+    "was",
+    "."
+   ],
+   "distractors": [
+    "is"
+   ],
+   "explanation": "For a reported wh-question, use the wh-word followed by subject + verb."
+  },
+  {
+   "id": "ex.b1.reported-questions.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My friend asked me where was the party.",
+   "answers": [
+    "My friend asked me where the party was."
+   ],
+   "explanation": "In reported questions, the word order after the wh-word should be subject + verb, not verb + subject."
+  },
+  {
+   "id": "ex.b1.reported-questions.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The manager wanted to know you finished the report.",
+   "answers": [
+    "The manager wanted to know if I finished the report.",
+    "The manager wanted to know whether I finished the report.",
+    "The manager wanted to know if you finished the report."
+   ],
+   "explanation": "For reported yes/no questions, you must use 'if' or 'whether' after the reporting verb."
+  },
+  {
+   "id": "ex.b1.reported-questions.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Direct question: \"Are you coming to the concert?\"",
+   "instruction": "Report the question starting with \"He asked...\"",
+   "answers": [
+    "He asked if I was coming to the concert.",
+    "He asked whether I was coming to the concert."
+   ],
+   "explanation": "Use 'if' or 'whether' for a reported yes/no question, and change the tense and pronoun."
+  },
+  {
+   "id": "ex.b1.reported-questions.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Direct question: \"When did they arrive?\"",
+   "instruction": "Report the question starting with \"She wanted to know...\"",
+   "answers": [
+    "She wanted to know when they had arrived."
+   ],
+   "explanation": "Use the wh-word 'when' and shift the past simple tense to past perfect in reported speech."
+  },
+  {
+   "id": "ex.b1.reported-questions.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reported-questions"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "He asked",
+     "right": "if I liked coffee."
+    },
+    {
+     "left": "She wanted to know",
+     "right": "where I lived."
+    },
+    {
+     "left": "I asked them",
+     "right": "what their names were."
+    },
+    {
+     "left": "They asked",
+     "right": "whether I had seen the movie."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "asked if (?:i|you|he|she|we|they) (?:was|were|had|could|would|should|might|did|went|came|saw|knew|liked|wanted|needed|thought|felt|heard|read|wrote|spoke|talked|ate|drank|slept|woke|got|gave|took|made|found|lost|met|left|started|finished|worked|studied|played|watched|listened|helped|asked|told|showed|bought|sold|paid|sent|received|opened|closed|cleaned|cooked|drove|rode|flew|walked|ran|swam|danced|sang|laughed|cried|smiled|frowned|nodded|shook|pointed|waved|called|answered|waited|hurried|relaxed|enjoyed|hated|loved|hoped|wished|dreamed|remembered|forgot|understood|believed|trusted|doubted|promised|refused|agreed|disagreed|apologized|thanked|congratulated|invited|suggested|recommended|explained|described|compared|contrasted|analyzed|evaluated|criticized|praised|supported|opposed|defended|attacked|protected|saved|destroyed|built|repaired|fixed|changed|improved|developed|created|invented|discovered|explored|traveled|visited|stayed|returned|arrived|departed|entered|exited|climbed|fell|stood|sat|lay|slept|woke|ate|drank|cooked|cleaned|washed|ironed|mended|sewed|knitted|painted|drew|sculpted|composed|performed|practiced|trained|exercised|meditated|prayed|read|wrote|studied|learned|taught|explained|discussed|debated|argued|negotiated|compromised|cooperated|competed|won|lost|succeeded|failed|achieved|missed|caught|threw|hit|kicked|pushed|pulled|lifted|carried|dropped|picked|placed|put|took|gave|sent|received|borrowed|lent|rented|bought|sold|paid|cost|earned|spent|saved|invested|donated|contributed|shared|divided|multiplied|added|subtracted|compared|contrasted|matched|differed|related|connected|separated|joined|combined|mixed|stirred|shook|poured|filled|emptied|covered|uncovered|wrapped|unwrapped|packed|unpacked|loaded|unloaded|stored|organized|arranged|sorted|categorized|classified|grouped|selected|chosen|picked|rejected|accepted|declined|approved|disapproved|allowed|forbidden|permitted|prohibited|encouraged|discouraged|persuaded|convinced|influenced|motivated|inspired|guided|led|followed|obeyed|disobeyed|respected|disrespected|admired|envied|pitied|sympathized|comforted|consoled|reassured|warned|threatened|punished|rewarded|praised|criticized|blamed|forgave|apologized|thanked|greeted|welcomed|farewelled|introduced|met|visited|invited|attended|hosted|celebrated|mourned|remembered|forgot|dreamed|wished|hoped|feared|worried|cared|loved|hated|liked|disliked|enjoyed|preferred|detested|adored|admired|respected|trusted|believed|doubted|understood|knew|learned|taught|explained|described|reported|announced|stated|said|told|asked|replied|answered|responded|commented|remarked|observed|noticed|saw|heard|felt|smelled|tasted|touched|looked|watched|listened|read|wrote|spoke|talked|sang|shouted|whispered|mumbled|grumbled|complained|praised|criticized|argued|debated|discussed|negotiated|agreed|disagreed|promised|refused|accepted|declined|offered|requested|demanded|suggested|recommended|advised|warned|threatened|ordered|commanded|forbade|allowed|permitted|enabled|disabled|helped|assisted|supported|cooperated|collaborated|contributed|participated|joined|attended|hosted|organized|arranged|planned|prepared|executed|completed|finished|started|began|continued|stopped|paused|resumed|repeated|restarted|reorganized|rearranged|replanned|reprepared|reexecuted|recompleted|refinished|restated|resaid|retold|reasked|replied|reanswered|responded|recommented|remarked|reobserved|renoticed|resaw|reheard|refelt|resmelled|retasted|retouched|relooked|rewatched|relistened|reread|rewrote|respoke|retalked|resang|reshouted|rewhispered|remumbled|regrumbled|recomplained|repraised|recriticized|reargued|redebated|rediscussed|renegotiated|reagreed|redisagreed|repromised|refused|reaccepted|redeclined|reoffered|rerequested|redemanded|resuggested|recommended|readvised|rewarned|rethreatened|reordered|recommanded|reforbade|reallowed|repermitted|reenabled|redisa",
+  "wanted to know where (?:i|you|he|she|we|they) (?:was|were|had|could|would|should|might|did|went|came|saw|knew|liked|wanted|needed|thought|felt|heard|read|wrote|spoke|talked|ate|drank|slept|woke|got|gave|took|made|found|lost|met|left|started|finished|worked|studied|played|watched|listened|helped|asked|told|showed|bought|sold|paid|sent|received|opened|closed|cleaned|cooked|drove|rode|flew|walked|ran|swam|danced|sang|laughed|cried|smiled|frowned|nodded|shook|pointed|waved|called|answered|waited|hurried|relaxed|enjoyed|hated|loved|hoped|wished|dreamed|remembered|forgot|understood|believed|trusted|doubted|promised|refused|agreed|disagreed|apologized|thanked|congratulated|invited|suggested|recommended|explained|described|compared|contrasted|analyzed|evaluated|criticized|praised|supported|opposed|defended|attacked|protected|saved|destroyed|built|repaired|fixed|changed|improved|developed|created|invented|discovered|explored|traveled|visited|stayed|returned|arrived|departed|entered|exited|climbed|fell|stood|sat|lay|slept|woke|ate|drank|cooked|cleaned|washed|ironed|mended|sewed|knitted|painted|drew|sculpted|composed|performed|practiced|trained|exercised|meditated|prayed|read|wrote|studied|learned|taught|explained|discussed|debated|argued|negotiated|compromised|cooperated|competed|won|lost|succeeded|failed|achieved|missed|caught|threw|hit|kicked|pushed|pulled|lifted|carried|dropped|picked|placed|put|took|gave|sent|received|borrowed|lent|rented|bought|sold|paid|cost|earned|spent|saved|invested|donated|contributed|shared|divided|multiplied|added|subtracted|compared|contrasted|matched|differed|related|connected|separated|joined|combined|mixed|stirred|shook|poured|filled|emptied|covered|uncovered|wrapped|unwrapped|packed|unpacked|loaded|unloaded|stored|organized|arranged|sorted|categorized|classified|grouped|selected|chosen|picked|rejected|accepted|declined|approved|disapproved|allowed|forbidden|permitted|prohibited|encouraged|discouraged|persuaded|convinced|influenced|motivated|inspired|guided|led|followed|obeyed|disobeyed|respected|disrespected|admired|envied|pitied|sympathized|comforted|consoled|reassured|warned|threatened|punished|rewarded|praised|criticized|blamed|forgave|apologized|thanked|greeted|welcomed|farewelled|introduced|met|visited|invited|attended|hosted|celebrated|mourned|remembered|forgot|dreamed|wished|hoped|feared|worried|cared|loved|hated|liked|disliked|enjoyed|preferred|detested|adored|admired|respected|trusted|believed|doubted|understood|knew|learned|taught|explained|described|reported|announced|stated|said|told|asked|replied|answered|responded|commented|remarked|observed|noticed|saw|heard|felt|smelled|tasted|touched|looked|watched|listened|read|wrote|spoke|talked|sang|shouted|whispered|mumbled|grumbled|complained|praised|criticized|argued|debated|discussed|negotiated|agreed|disagreed|promised|refused|accepted|declined|offered|requested|demanded|suggested|recommended|advised|warned|threatened|ordered|commanded|forbade|allowed|permitted|enabled|disabled|helped|assisted|supported|cooperated|collaborated|contributed|participated|joined|attended|hosted|organized|arranged|planned|prepared|executed|completed|finished|started|began|continued|stopped|paused|resumed|repeated|restarted|reorganized|rearranged|replanned|reprepared|reexecuted|recompleted|refinished|restated|resaid|retold|reasked|replied|reanswered|responded|recommented|remarked|reobserved|renoticed|resaw|reheard|refelt|resmelled|retasted|retouched|relooked|rewatched|relistened|reread|rewrote|respoke|retalked|resang|reshouted|rewhispered|remumbled|regrumbled|recomplained|repraised|recriticized|reargued|redebated|rediscussed|renegotiated|reagreed|redisagreed|repromised|refused|reaccepted|redeclined|reoffered|rerequested|redemanded|resuggested|recommended|readvised|rewarned|rethreatened|reordered|recommanded|reforbade|reallowed|repermitted|reenabled|redisa",
+  "asked what (?:i|you|he|she|we|they) (?:was|were|had|could|would|should|might|did|went|came|saw|knew|liked|wanted|needed|thought|felt|heard|read|wrote|spoke|talked|ate|drank|slept|woke|got|gave|took|made|found|lost|met|left|started|finished|worked|studied|played|watched|listened|helped|asked|told|showed|bought|sold|paid|sent|received|opened|closed|cleaned|cooked|drove|rode|flew|walked|ran|swam|danced|sang|laughed|cried|smiled|frowned|nodded|shook|pointed|waved|called|answered|waited|hurried|relaxed|enjoyed|hated|loved|hoped|wished|dreamed|remembered|forgot|understood|believed|trusted|doubted|promised|refused|agreed|disagreed|apologized|thanked|congratulated|invited|suggested|recommended|explained|described|compared|contrasted|analyzed|evaluated|criticized|praised|supported|opposed|defended|attacked|protected|saved|destroyed|built|repaired|fixed|changed|improved|developed|created|invented|discovered|explored|traveled|visited|stayed|returned|arrived|departed|entered|exited|climbed|fell|stood|sat|lay|slept|woke|ate|drank|cooked|cleaned|washed|ironed|mended|sewed|knitted|painted|drew|sculpted|composed|performed|practiced|trained|exercised|meditated|prayed|read|wrote|studied|learned|taught|explained|discussed|debated|argued|negotiated|compromised|cooperated|competed|won|lost|succeeded|failed|achieved|missed|caught|threw|hit|kicked|pushed|pulled|lifted|carried|dropped|picked|placed|put|took|gave|sent|received|borrowed|lent|rented|bought|sold|paid|cost|earned|spent|saved|invested|donated|contributed|shared|divided|multiplied|added|subtracted|compared|contrasted|matched|differed|related|connected|separated|joined|combined|mixed|stirred|shook|poured|filled|emptied|covered|uncovered|wrapped|unwrapped|packed|unpacked|loaded|unloaded|stored|organized|arranged|sorted|categorized|classified|grouped|selected|chosen|picked|rejected|accepted|declined|approved|disapproved|allowed|forbidden|permitted|prohibited|encouraged|discouraged|persuaded|convinced|influenced|motivated|inspired|guided|led|followed|obeyed|disobeyed|respected|disrespected|admired|envied|pitied|sympathized|comforted|consoled|reassured|warned|threatened|punished|rewarded|praised|criticized|blamed|forgave|apologized|thanked|greeted|welcomed|farewelled|introduced|met|visited|invited|attended|hosted|celebrated|mourned|remembered|forgot|dreamed|wished|hoped|feared|worried|cared|loved|hated|liked|disliked|enjoyed|preferred|detested|adored|admired|respected|trusted|believed|doubted|understood|knew|learned|taught|explained|described|reported|announced|stated|said|told|asked|replied|answered|responded|commented|remarked|observed|noticed|saw|heard|felt|smelled|tasted|touched|looked|watched|listened|read|wrote|spoke|talked|sang|shouted|whispered|mumbled|grumbled|complained|praised|criticized|argued|debated|discussed|negotiated|agreed|disagreed|promised|refused|accepted|declined|offered|requested|demanded|suggested|recommended|advised|warned|threatened|ordered|commanded|forbade|allowed|permitted|enabled|disabled|helped|assisted|supported|cooperated|collaborated|contributed|participated|joined|attended|hosted|organized|arranged|planned|prepared|executed|completed|finished|started|began|continued|stopped|paused|resumed|repeated|restarted|reorganized|rearranged|replanned|reprepared|reexecuted|recompleted|refinished|restated|resaid|retold|reasked|replied|reanswered|responded|recommented|remarked|reobserved|renoticed|resaw|reheard|refelt|resmelled|retasted|retouched|relooked|rewatched|relistened|reread|rewrote|respoke|retalked|resang|reshouted|rewhispered|remumbled|regrumbled|recomplained|repraised|recriticized|reargued|redebated|rediscussed|renegotiated|reagreed|redisagreed|repromised|refused|reaccepted|redeclined|reoffered|rerequested|redemanded|resuggested|recommended|readvised|rewarned|rethreatened|reordered|recommanded|reforbade|reallowed|repermitted|reenabled|redisa"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.reported-questions.01": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.02": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.03": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.04": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.05": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both completions create grammatically correct and natural reported questions."
+   },
+   "ex.b1.reported-questions.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both completions create grammatically correct and natural sentences."
+   },
+   "ex.b1.reported-questions.08": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.09": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.10": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly insert 'if' to fix the sentence, making both options valid."
+   },
+   "ex.b1.reported-questions.12": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.13": {
+    "status": "pass"
+   },
+   "ex.b1.reported-questions.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

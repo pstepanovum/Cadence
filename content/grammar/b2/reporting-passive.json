@@ -1,0 +1,505 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "reporting-passive",
+ "draftHash": "ae814b8e0b0d7da8",
+ "grammarPoint": {
+  "id": "gp.reporting-passive",
+  "level": "B2",
+  "topicId": "topic.passive",
+  "title": "It is said that, he is thought to",
+  "summary": "Use passive structures like 'It is said that' or 'He is thought to' to report general beliefs, claims, or opinions without stating who said them.",
+  "explanation": "We often use passive reporting verbs to talk about what people generally believe, say, or know. This structure allows us to share information or opinions without needing to name the specific person or group who holds that belief.\n\nThere are two main ways to form these sentences. The first uses \"It is + reporting verb (past participle) + that + clause.\" This is a common way to introduce a general statement or fact. The second way uses \"Subject + is/are + reporting verb (past participle) + to + infinitive.\" This structure focuses on a specific person or thing that is the subject of the belief or claim.\n\nCommon reporting verbs used in this way include *say*, *think*, *believe*, *know*, *report*, *understand*, and *expect*. When the reported action happened before the reporting verb, we use the perfect infinitive: \"to have + past participle.\"",
+  "patterns": [
+   "It is + said/thought/believed + that + clause",
+   "Subject + is/are + said/thought/believed + to + infinitive (base form)",
+   "Subject + is/are + said/thought/believed + to + have + past participle (perfect infinitive)"
+  ],
+  "examples": [
+   {
+    "text": "It is believed that the new restaurant will open next month.",
+    "note": "Reports a general belief about a future event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The ancient ruins are said to be over a thousand years old.",
+    "note": "Reports a general claim about the age of the ruins.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She is thought to have traveled extensively in her youth.",
+    "note": "Reports a belief about a past action using the perfect infinitive.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It is understood that the project will require more funding.",
+    "note": "Reports a general understanding or expectation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new policy is expected to improve efficiency.",
+    "note": "Reports an expectation about the policy's effect.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "People say that he is a great leader.",
+    "right": "It is said that he is a great leader.",
+    "note": "Use the passive 'It is said that' for general reports."
+   },
+   {
+    "wrong": "He is believed be a talented musician.",
+    "right": "He is believed to be a talented musician.",
+    "note": "Remember to include 'to' before the infinitive."
+   },
+   {
+    "wrong": "It is thought him to be very intelligent.",
+    "right": "He is thought to be very intelligent.",
+    "note": "The subject of the reported action becomes the subject of the passive verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.reporting-passive.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It ___ that the company will announce its new product next week.",
+   "options": [
+    "is expected",
+    "expects",
+    "expected",
+    "is expecting"
+   ],
+   "answer": 0,
+   "explanation": "The passive structure 'It is expected that' is used to report a general expectation."
+  },
+  {
+   "id": "ex.b2.reporting-passive.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The old bridge ___ to have been built in the 19th century.",
+   "options": [
+    "is known",
+    "knows",
+    "is knowing",
+    "knew"
+   ],
+   "answer": 0,
+   "explanation": "The passive structure 'is known to have been built' correctly reports a general belief about a past event."
+  },
+  {
+   "id": "ex.b2.reporting-passive.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ to be a very skilled negotiator.",
+   "options": [
+    "is said",
+    "says",
+    "said",
+    "is saying"
+   ],
+   "answer": 0,
+   "explanation": "The passive 'is said to be' is used to report what people generally say about her."
+  },
+  {
+   "id": "ex.b2.reporting-passive.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It is reported ___ the local economy is growing rapidly.",
+   "options": [
+    "that",
+    "to",
+    "for",
+    "which"
+   ],
+   "answer": 0,
+   "explanation": "The structure 'It is reported that' introduces a clause with the reported information."
+  },
+  {
+   "id": "ex.b2.reporting-passive.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The new policy ___ ___ to reduce traffic congestion.",
+   "answers": [
+    [
+     "is",
+     "expected"
+    ],
+    [
+     "is",
+     "thought"
+    ]
+   ],
+   "explanation": "We use 'is expected to' or 'is thought to' to report a general expectation or belief about the policy."
+  },
+  {
+   "id": "ex.b2.reporting-passive.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It ___ ___ that the ancient civilization had advanced knowledge of astronomy.",
+   "answers": [
+    [
+     "is",
+     "believed"
+    ],
+    [
+     "is",
+     "thought"
+    ],
+    [
+     "is",
+     "said"
+    ]
+   ],
+   "explanation": "The structure 'It is believed that' (or thought/said) is used to report a general belief or claim."
+  },
+  {
+   "id": "ex.b2.reporting-passive.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ ___ to have discovered the hidden treasure.",
+   "answers": [
+    [
+     "is",
+     "said"
+    ],
+    [
+     "is",
+     "believed"
+    ],
+    [
+     "is",
+     "thought"
+    ]
+   ],
+   "explanation": "The passive 'is said to have discovered' (or believed/thought) reports a claim about a past action."
+  },
+  {
+   "id": "ex.b2.reporting-passive.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "is",
+    "believed",
+    "that",
+    "exercise",
+    "improves",
+    "mood",
+    "."
+   ],
+   "distractors": [
+    "always"
+   ],
+   "explanation": "This sentence uses the 'It is believed that' structure to report a general belief."
+  },
+  {
+   "id": "ex.b2.reporting-passive.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "manager",
+    "is",
+    "expected",
+    "to",
+    "arrive",
+    "soon",
+    "."
+   ],
+   "distractors": [
+    "will"
+   ],
+   "explanation": "This sentence uses the 'Subject + is expected to + infinitive' structure to report an expectation."
+  },
+  {
+   "id": "ex.b2.reporting-passive.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It is said him to be a very kind person.",
+   "answers": [
+    "He is said to be a very kind person."
+   ],
+   "explanation": "When reporting about a specific person, that person becomes the subject of the passive verb, not 'it'."
+  },
+  {
+   "id": "ex.b2.reporting-passive.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The new building is thought have been designed by a famous architect.",
+   "answers": [
+    "The new building is thought to have been designed by a famous architect."
+   ],
+   "explanation": "The infinitive form requires 'to' before 'have been designed'."
+  },
+  {
+   "id": "ex.b2.reporting-passive.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "People say that the climate is changing rapidly.",
+   "instruction": "Rewrite using 'It is said that'.",
+   "answers": [
+    "It is said that the climate is changing rapidly."
+   ],
+   "explanation": "The instruction requires transforming the active 'People say' into the passive 'It is said that'."
+  },
+  {
+   "id": "ex.b2.reporting-passive.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They believe that the ancient city was located near the river.",
+   "instruction": "Rewrite using 'The ancient city is believed to...'.",
+   "answers": [
+    "The ancient city is believed to have been located near the river."
+   ],
+   "explanation": "The instruction requires transforming the sentence into the 'Subject + is believed to + perfect infinitive' structure because the action (was located) happened in the past."
+  },
+  {
+   "id": "ex.b2.reporting-passive.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.reporting-passive"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "It is reported that",
+     "right": "the flight has been delayed."
+    },
+    {
+     "left": "The new software is expected",
+     "right": "to be released next quarter."
+    },
+    {
+     "left": "She is believed",
+     "right": "to have won several awards."
+    },
+    {
+     "left": "It is thought that",
+     "right": "the universe is constantly expanding."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "it is (said|believed|thought) that",
+  "is (said|believed|thought) to be",
+  "are (said|believed|thought) to have"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.reporting-passive.01": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.02": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.03": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.04": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The key incorrectly repeats 'is', while the alternative answer forms a correct passive sentence."
+   },
+   "ex.b2.reporting-passive.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.reporting-passive.06: needs one answer list per gap (2)"
+   },
+   "ex.b2.reporting-passive.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.reporting-passive.07: needs one answer list per gap (2)"
+   },
+   "ex.b2.reporting-passive.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits the token 'always', whereas the other answer uses all given tokens correctly."
+   },
+   "ex.b2.reporting-passive.09": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.10": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.11": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.12": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.13": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.14": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.15": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.16": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.17": {
+    "status": "pass"
+   },
+   "ex.b2.reporting-passive.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.reporting-passive.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-passive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "It ___ that the new art exhibit is very popular.",
+    "options": [
+     "is said",
+     "said",
+     "says",
+     "was saying"
+    ],
+    "answer": 0,
+    "explanation": "The impersonal passive form 'It is said that' is used to report a general opinion or belief."
+   },
+   {
+    "id": "ex.b2.reporting-passive.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-passive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The old legend ___ to be true by many locals.",
+    "options": [
+     "is believed",
+     "believes",
+     "is believing",
+     "believed"
+    ],
+    "answer": 0,
+    "explanation": "The personal passive structure 'Subject + is believed to' is correct here to report a widely held belief."
+   },
+   {
+    "id": "ex.b2.reporting-passive.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-passive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "It ___ that the company will launch its new product next month.",
+    "options": [
+     "is expected",
+     "expects",
+     "expected",
+     "was expecting"
+    ],
+    "answer": 0,
+    "explanation": "The impersonal passive 'It is expected that' is used to report a general expectation or plan."
+   },
+   {
+    "id": "ex.b2.reporting-passive.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.reporting-passive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The scientist ___ to have made a significant discovery.",
+    "options": [
+     "is known",
+     "knows",
+     "knew",
+     "is knowing"
+    ],
+    "answer": 0,
+    "explanation": "The personal passive structure 'Subject + is known to have + past participle' is used to report a past achievement or fact about the scientist."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 8276225,
+   "text": "His new novel is said to be based on personal experience.",
+   "author": "sundown"
+  },
+  {
+   "sentenceId": 291242,
+   "text": "It is said that he knows the secret.",
+   "author": "CM"
+  }
+ ]
+}

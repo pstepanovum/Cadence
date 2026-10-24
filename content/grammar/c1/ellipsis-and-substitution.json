@@ -1,0 +1,469 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "ellipsis-and-substitution",
+ "draftHash": "497a7e4d7a40dfdc",
+ "grammarPoint": {
+  "id": "gp.ellipsis-and-substitution",
+  "level": "C1",
+  "topicId": "topic.linking",
+  "title": "Ellipsis and substitution",
+  "summary": "Use ellipsis and substitution with words like 'so', 'not', 'do so', and 'one' to avoid repetition and make sentences more concise.",
+  "explanation": "Ellipsis and substitution are powerful tools for making your English more natural and concise. They help you avoid repeating words or phrases that are already clear from the context. This makes your communication more efficient and fluent.\n\n*Ellipsis* means simply leaving words out. For example, instead of saying \"Are you going to the meeting? Yes, I am going to the meeting,\" you can say \"Are you going to the meeting? Yes, I am.\" The listener understands \"going to the meeting\" is implied.\n\n*Substitution* involves replacing a longer phrase with a shorter word or expression. Common substitutes include 'so' (to replace a positive statement), 'not' (for a negative statement), 'do so' (to replace a verb phrase), and 'one' or 'ones' (to replace a noun or noun phrase). Mastering these techniques will significantly improve your C1 fluency.",
+  "patterns": [
+   "verb + so (e.g., think so, hope so)",
+   "verb + not (e.g., hope not, think not)",
+   "do so / did so / done so",
+   "one / ones (replacing a noun)",
+   "leaving out repeated words"
+  ],
+  "examples": [
+   {
+    "text": "Will you be at the conference? I expect so.",
+    "note": "Using 'so' to replace \"I will be at the conference.\"",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Did you finish the report? No, I haven't yet.",
+    "note": "Ellipsis: \"finished the report\" is understood.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He asked me to review the proposal, and I did so immediately.",
+    "note": "Using 'did so' to replace \"reviewed the proposal.\"",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I need a new laptop. This old one is too slow.",
+    "note": "Using 'one' to replace \"laptop.\"",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Is it going to rain? I hope not.",
+    "note": "Using 'not' to replace \"it is going to rain.\"",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Do you think it will rain? I think yes.",
+    "right": "Do you think it will rain? I think so.",
+    "note": "Use 'so' to substitute for a positive clause after verbs like 'think', 'hope', 'believe'."
+   },
+   {
+    "wrong": "She wanted me to help, but I couldn't help.",
+    "right": "She wanted me to help, but I couldn't.",
+    "note": "Omit the repeated verb when the meaning is clear."
+   },
+   {
+    "wrong": "I prefer the blue shirt, not the red shirt.",
+    "right": "I prefer the blue shirt, not the red one.",
+    "note": "Use 'one' to substitute for a singular countable noun."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.ellipsis-and-substitution.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Are you coming to the party? I'm afraid ___.",
+   "options": [
+    "no",
+    "not",
+    "don't",
+    "won't"
+   ],
+   "answer": 1,
+   "explanation": "'Not' is used to substitute for a negative clause, meaning \"I'm afraid I'm not coming.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Did you remember to lock the door? I think ___.",
+   "options": [
+    "yes",
+    "so",
+    "did",
+    "it"
+   ],
+   "answer": 1,
+   "explanation": "'So' substitutes for the positive clause \"I remembered to lock the door.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He told me to wait, and I ___.",
+   "options": [
+    "did",
+    "did so",
+    "waited",
+    "do"
+   ],
+   "answer": 1,
+   "explanation": "'Did so' replaces the verb phrase \"waited\" or \"did wait\" in a more formal way, specifically demonstrating substitution."
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need a new pair of running shoes. These old ___ are worn out.",
+   "options": [
+    "ones",
+    "pair",
+    "them",
+    "shoes"
+   ],
+   "answer": 0,
+   "explanation": "'Ones' substitutes for the plural noun \"running shoes.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Do you think the project will be successful? I certainly hope ___.",
+   "answers": [
+    [
+     "so"
+    ]
+   ],
+   "explanation": "'So' substitutes for the positive clause \"the project will be successful.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She asked him to help with the heavy boxes, but he refused to ___.",
+   "answers": [
+    [
+     "do so"
+    ]
+   ],
+   "explanation": "'Do so' replaces the verb phrase \"help with the heavy boxes.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I don't have a blue pen, but I have a red ___.",
+   "answers": [
+    [
+     "one"
+    ]
+   ],
+   "explanation": "'One' substitutes for the singular countable noun \"pen.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "think",
+    "so",
+    "too",
+    "."
+   ],
+   "distractors": [
+    "not"
+   ],
+   "explanation": "'Think so' is a common substitution for agreeing with a positive statement."
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "asked",
+    "her",
+    "to",
+    "call",
+    "him",
+    ",",
+    "and",
+    "she",
+    "did",
+    "."
+   ],
+   "distractors": [
+    "do",
+    "will"
+   ],
+   "explanation": "'Did' is used here as an elliptical form, replacing \"called him.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Are you going to the concert? I don't think.",
+   "answers": [
+    "Are you going to the concert? I don't think so."
+   ],
+   "explanation": "'So' is needed to complete the substitution for the positive clause \"I am going to the concert.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I bought a new car, but the old car was still good.",
+   "answers": [
+    "I bought a new car, but the old one was still good."
+   ],
+   "explanation": "'One' is used to avoid repeating the noun \"car.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Will you be able to finish the task by Friday? I hope I will be able to finish the task by Friday.",
+   "instruction": "Rewrite the second sentence using substitution.",
+   "answers": [
+    "Will you be able to finish the task by Friday? I hope so."
+   ],
+   "explanation": "'So' replaces the entire positive clause \"I will be able to finish the task by Friday.\""
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He wanted me to help him move, but I couldn't help him move.",
+   "instruction": "Rewrite the second clause using ellipsis.",
+   "answers": [
+    "He wanted me to help him move, but I couldn't."
+   ],
+   "explanation": "The repeated verb phrase \"help him move\" is omitted because the meaning is clear from context."
+  },
+  {
+   "id": "ex.c1.ellipsis-and-substitution.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.ellipsis-and-substitution"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Do you think it's going to rain?",
+     "right": "I hope not."
+    },
+    {
+     "left": "She asked me to close the window,",
+     "right": "and I did so."
+    },
+    {
+     "left": "I prefer the red jacket,",
+     "right": "not the blue one."
+    },
+    {
+     "left": "Are you coming to the meeting?",
+     "right": "I think so."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "I (hope|think|believe) so",
+  "did so",
+  "the (new|old|big|small) one",
+  "I (hope|think|believe) not"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.ellipsis-and-substitution.01": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.02": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.03": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.04": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.05": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.06": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.07": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key fails to use all provided tokens, omitting 'not'."
+   },
+   "ex.c1.ellipsis-and-substitution.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key fails to use all provided tokens, omitting 'do' and 'will'."
+   },
+   "ex.c1.ellipsis-and-substitution.10": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.11": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.12": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.13": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.14": {
+    "status": "drop",
+    "note": "Ambiguous: Both matchings are grammatically valid and natural, making the item ambiguous."
+   },
+   "ex.c1.ellipsis-and-substitution.15": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.16": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.17": {
+    "status": "pass"
+   },
+   "ex.c1.ellipsis-and-substitution.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.ellipsis-and-substitution.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.ellipsis-and-substitution"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Will the company expand next year? I certainly hope ___.",
+    "options": [
+     "so",
+     "it",
+     "yes",
+     "that"
+    ],
+    "answer": 0,
+    "explanation": "'So' is used to replace the positive clause 'the company will expand next year' after 'hope'."
+   },
+   {
+    "id": "ex.c1.ellipsis-and-substitution.16",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.ellipsis-and-substitution"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "She needed a new pair of glasses, as her old ___ were scratched.",
+    "answers": [
+     [
+      "ones"
+     ]
+    ],
+    "explanation": "'Ones' substitutes for 'glasses' to avoid repetition."
+   },
+   {
+    "id": "ex.c1.ellipsis-and-substitution.17",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.ellipsis-and-substitution"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "Did you remember to submit the application? I believe I ___.",
+    "answers": [
+     [
+      "did so",
+      "did"
+     ]
+    ],
+    "explanation": "'Did so' or 'did' replaces the verb phrase 'submitted the application'."
+   },
+   {
+    "id": "ex.c1.ellipsis-and-substitution.18",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.ellipsis-and-substitution"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "Is it possible to reschedule the appointment? I'm afraid ___.",
+    "answers": [
+     [
+      "not"
+     ]
+    ],
+    "explanation": "'Not' replaces the negative clause 'it is not possible to reschedule the appointment'."
+   }
+  ]
+ },
+ "tatoebaExamples": []
+}

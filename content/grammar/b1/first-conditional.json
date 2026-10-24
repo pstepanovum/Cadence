@@ -1,0 +1,409 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "first-conditional",
+ "draftHash": "8dae2498ca23fbfc",
+ "grammarPoint": {
+  "id": "gp.first-conditional",
+  "level": "B1",
+  "topicId": "topic.conditionals",
+  "title": "First conditional",
+  "summary": "The first conditional describes real possibilities in the future: if something happens, something else will happen.",
+  "explanation": "We use the *first conditional* to talk about future situations that are likely or possible. It describes a real condition and its probable result. We often use it to talk about plans, warnings, or predictions.\n\nThe structure is usually 'if' + a verb in the *present simple* in the condition clause, and 'will' + the *base form* of the verb in the result clause. For example, \"If it rains, we will stay inside.\"\n\nYou can also reverse the order of the clauses. If the 'if' clause comes first, we use a comma to separate the two clauses. If the 'will' clause comes first, we don't use a comma. For example, \"We will stay inside if it rains.\"",
+  "patterns": [
+   "If + subject + present simple, subject + will + base verb",
+   "Subject + will + base verb + if + subject + present simple"
+  ],
+  "examples": [
+   {
+    "text": "If I finish work early, I will go to the gym.",
+    "note": "This shows a possible future condition and its likely result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She will call you if she needs help with the project.",
+    "note": "The 'will' clause comes first, so no comma is needed.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If they don't hurry, they will miss the bus.",
+    "note": "This is a warning about a negative future possibility.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We will have a picnic if the weather is good tomorrow.",
+    "note": "This expresses a plan that depends on a future condition.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If you study hard, you will pass the exam easily.",
+    "note": "This is a prediction based on a real possibility.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If it will rain, we will cancel the game.",
+    "right": "If it rains, we will cancel the game.",
+    "note": "Do not use 'will' in the 'if' clause."
+   },
+   {
+    "wrong": "If I am hungry, I eat a snack.",
+    "right": "If I am hungry, I will eat a snack.",
+    "note": "Use 'will' in the main clause for a specific future possibility."
+   },
+   {
+    "wrong": "If he comes, I will going too.",
+    "right": "If he comes, I will go too.",
+    "note": "After 'will', always use the base form of the verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.first-conditional.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If you ___ late, you will miss the beginning of the movie.",
+   "options": [
+    "arrive",
+    "will arrive",
+    "arrived",
+    "are arriving"
+   ],
+   "answer": 0,
+   "explanation": "In the 'if' clause of a first conditional, we use the present simple tense."
+  },
+  {
+   "id": "ex.b1.first-conditional.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What will happen if the train is delayed?",
+   "options": [
+    "I miss my appointment.",
+    "I will miss my appointment.",
+    "I would miss my appointment.",
+    "I missed my appointment."
+   ],
+   "answer": 1,
+   "explanation": "For a real future possibility, the result clause uses 'will' + base verb."
+  },
+  {
+   "id": "ex.b1.first-conditional.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If she ___ enough money, she will buy a new laptop.",
+   "options": [
+    "has",
+    "will have",
+    "had",
+    "is having"
+   ],
+   "answer": 0,
+   "explanation": "The 'if' clause requires the present simple tense."
+  },
+  {
+   "id": "ex.b1.first-conditional.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They ___ happy if you visit them next weekend.",
+   "options": [
+    "are",
+    "will be",
+    "would be",
+    "were"
+   ],
+   "answer": 1,
+   "explanation": "The main clause of a first conditional uses 'will' + base verb to express a future result."
+  },
+  {
+   "id": "ex.b1.first-conditional.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If it ___ sunny tomorrow, we ___ to the beach.",
+   "answers": [
+    [
+     "is"
+    ],
+    [
+     "will go",
+     "willgo"
+    ]
+   ],
+   "explanation": "The 'if' clause uses present simple ('is'), and the main clause uses 'will' + base verb ('will go')."
+  },
+  {
+   "id": "ex.b1.first-conditional.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You ___ better if you ___ more water.",
+   "answers": [
+    [
+     "will feel",
+     "willfeel"
+    ],
+    [
+     "drink"
+    ]
+   ],
+   "explanation": "The main clause uses 'will' + base verb ('will feel'), and the 'if' clause uses present simple ('drink')."
+  },
+  {
+   "id": "ex.b1.first-conditional.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If I ___ time, I ___ you with your homework.",
+   "answers": [
+    [
+     "have"
+    ],
+    [
+     "will help",
+     "willhelp"
+    ]
+   ],
+   "explanation": "The 'if' clause uses present simple ('have'), and the main clause uses 'will' + base verb ('will help')."
+  },
+  {
+   "id": "ex.b1.first-conditional.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "you",
+    "don't",
+    "eat",
+    "breakfast",
+    ",",
+    "you",
+    "will",
+    "be",
+    "hungry",
+    "."
+   ],
+   "distractors": [
+    "ate",
+    "are"
+   ],
+   "explanation": "This sentence correctly forms a first conditional, stating a possible future condition and its result."
+  },
+  {
+   "id": "ex.b1.first-conditional.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "will",
+    "pass",
+    "the",
+    "test",
+    "if",
+    "she",
+    "studies",
+    "hard",
+    "."
+   ],
+   "distractors": [
+    "passed",
+    "study"
+   ],
+   "explanation": "This sentence correctly forms a first conditional, with the 'will' clause first."
+  },
+  {
+   "id": "ex.b1.first-conditional.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If he will arrive early, we can start the meeting.",
+   "answers": [
+    "If he arrives early, we can start the meeting."
+   ],
+   "explanation": "The 'if' clause in the first conditional uses the present simple, not 'will'."
+  },
+  {
+   "id": "ex.b1.first-conditional.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They will be late if they don't hurry up.",
+   "answers": [],
+   "explanation": "The original sentence is already correct. The 'if' clause uses present simple ('don't hurry up') and the main clause uses 'will' + base verb ('will be late')."
+  },
+  {
+   "id": "ex.b1.first-conditional.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It might rain, so I'll bring an umbrella.",
+   "instruction": "Rewrite using the first conditional.",
+   "answers": [
+    "If it rains, I will bring an umbrella."
+   ],
+   "explanation": "The first conditional connects a possible future condition ('if it rains') with its likely result ('I will bring an umbrella')."
+  },
+  {
+   "id": "ex.b1.first-conditional.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If you don't practice, you won't improve.",
+   "instruction": "Rewrite starting with 'You won't improve...'",
+   "answers": [
+    "You won't improve if you don't practice."
+   ],
+   "explanation": "The order of the clauses can be reversed without changing the meaning. No comma is needed when the 'will' clause comes first."
+  },
+  {
+   "id": "ex.b1.first-conditional.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.first-conditional"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If I save enough money,",
+     "right": "I will buy a new bicycle."
+    },
+    {
+     "left": "She will be upset",
+     "right": "if you forget her birthday."
+    },
+    {
+     "left": "If the restaurant is full,",
+     "right": "we will find another place to eat."
+    },
+    {
+     "left": "You will feel much better",
+     "right": "if you get some rest."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "if .* will",
+  "will .* if"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.first-conditional.01": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.02": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.03": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.04": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.05": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.06": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.07": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.08": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.09": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.10": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.11": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.first-conditional.11: needs an accepted answer"
+   },
+   "ex.b1.first-conditional.12": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.13": {
+    "status": "pass"
+   },
+   "ex.b1.first-conditional.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 30590,
+   "text": "If it rains tomorrow, the baseball game will be put off.",
+   "author": "AlanF_US"
+  },
+  {
+   "sentenceId": 2464834,
+   "text": "If you just work hard, your grades will improve a lot.",
+   "author": "FeuDRenais2"
+  }
+ ]
+}

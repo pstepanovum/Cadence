@@ -1,0 +1,506 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "be-used-to-and-get-used-to",
+ "draftHash": "5b85829534215c4c",
+ "grammarPoint": {
+  "id": "gp.be-used-to-and-get-used-to",
+  "level": "B2",
+  "topicId": "topic.verb-patterns",
+  "title": "Be used to and get used to",
+  "summary": "Learn to talk about being familiar with something or becoming familiar with it using 'be used to' and 'get used to'.",
+  "explanation": "We use *be used to* + noun or verb-ing to say that something is normal or familiar for us. It describes a state of being accustomed to something.\n\nWe use *get used to* + noun or verb-ing to talk about the process of becoming familiar with something. It describes the change from something being new or difficult to becoming normal or easy.\n\nBoth 'be used to' and 'get used to' are followed by a noun, a pronoun, or a verb in the -ing form (gerund). The 'to' here is a preposition, not part of an infinitive.",
+  "patterns": [
+   "Subject + be + used to + noun/pronoun",
+   "Subject + be + used to + verb-ing",
+   "Subject + get + used to + noun/pronoun",
+   "Subject + get + used to + verb-ing"
+  ],
+  "examples": [
+   {
+    "text": "I'm used to the city noise now; it doesn't bother me.",
+    "note": "Describes a current state of familiarity with city noise.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It took her a while to get used to working from home.",
+    "note": "Describes the process of becoming familiar with a new work situation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Are you used to eating spicy food?",
+    "note": "Asks about someone's current familiarity with spicy food.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My dog is getting used to his new bed.",
+    "note": "Describes an ongoing process of the dog becoming familiar with something new.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They weren't used to the cold weather in Canada.",
+    "note": "Describes a past state of not being familiar with the cold weather.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I am used to work long hours.",
+    "right": "I am used to working long hours.",
+    "note": "After 'be used to' or 'get used to', use the -ing form of the verb."
+   },
+   {
+    "wrong": "She used to the quiet life.",
+    "right": "She is used to the quiet life.",
+    "note": "Remember to include 'be' or 'get' before 'used to' when talking about familiarity."
+   },
+   {
+    "wrong": "It's hard to be used to waking up early.",
+    "right": "It's hard to get used to waking up early.",
+    "note": "Use 'get used to' for the process of becoming familiar, especially when it's difficult."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After living in the mountains for years, I'm completely ___ the quiet.",
+   "options": [
+    "used to",
+    "get used to",
+    "use to",
+    "used for"
+   ],
+   "answer": 0,
+   "explanation": "'Be used to' describes a current state of being familiar with something. 'Used to' is the correct form here."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My new colleague is still ___ the company's software.",
+   "options": [
+    "getting used to",
+    "be used to",
+    "get used to",
+    "used to"
+   ],
+   "answer": 0,
+   "explanation": "The colleague is in the process of becoming familiar, so 'getting used to' is correct."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It took me a month to ___ the local accent.",
+   "options": [
+    "get used to",
+    "be used to",
+    "used to",
+    "getting used to"
+   ],
+   "answer": 0,
+   "explanation": "The phrase 'It took me a month' indicates a process of becoming familiar, so 'get used to' is appropriate."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Are you ___ the cold winters here?",
+   "options": [
+    "used to",
+    "get used to",
+    "using to",
+    "used for"
+   ],
+   "answer": 0,
+   "explanation": "This question asks about a current state of familiarity, so 'be used to' (in this case, 'are used to') is correct."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'm not ___ ___ working on weekends yet.",
+   "answers": [
+    [
+     "used",
+     "to"
+    ]
+   ],
+   "explanation": "The sentence describes a current state of not being familiar with something, so 'used to' is correct after 'am not'."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's hard to ___ ___ ___ such a different culture.",
+   "answers": [
+    [
+     "get",
+     "used",
+     "to"
+    ]
+   ],
+   "explanation": "The phrase 'It's hard to' suggests a process of adaptation, making 'get used to' the correct choice."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My cat ___ ___ ___ the new puppy, but it's taking time.",
+   "answers": [
+    [
+     "is",
+     "getting",
+     "used",
+     "to"
+    ],
+    [
+     "'s",
+     "getting",
+     "used",
+     "to"
+    ]
+   ],
+   "explanation": "The phrase 'but it's taking time' indicates an ongoing process, so 'is getting used to' is correct."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "is",
+    "used",
+    "to",
+    "the",
+    "early",
+    "mornings",
+    "."
+   ],
+   "distractors": [
+    "get",
+    "for"
+   ],
+   "explanation": "This sentence describes a current state of familiarity with early mornings."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "took",
+    "him",
+    "a",
+    "while",
+    "to",
+    "get",
+    "used",
+    "to",
+    "driving",
+    "on",
+    "the",
+    "left",
+    "."
+   ],
+   "distractors": [
+    "be",
+    "for"
+   ],
+   "explanation": "This sentence describes the process of becoming familiar with a new driving habit."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I'm slowly getting used to wake up early.",
+   "answers": [
+    "I'm slowly getting used to waking up early."
+   ],
+   "explanation": "After 'get used to', a verb must be in the -ing form (gerund)."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They weren't use to the cold weather.",
+   "answers": [
+    "They weren't used to the cold weather."
+   ],
+   "explanation": "The correct form is 'used to', not 'use to', when talking about familiarity."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The loud music doesn't bother me anymore.",
+   "instruction": "Rewrite using 'be used to'.",
+   "answers": [
+    "I am used to the loud music now.",
+    "I'm used to the loud music now.",
+    "I am used to the loud music."
+   ],
+   "explanation": "'Be used to' expresses that something is no longer bothersome because you are accustomed to it."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It was difficult for her to adapt to the new schedule.",
+   "instruction": "Rewrite using 'get used to'.",
+   "answers": [
+    "It was difficult for her to get used to the new schedule."
+   ],
+   "explanation": "'Get used to' describes the process of adapting or becoming familiar with something."
+  },
+  {
+   "id": "ex.b2.be-used-to-and-get-used-to.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.be-used-to-and-get-used-to"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I'm not used to",
+     "right": "eating dinner so late."
+    },
+    {
+     "left": "It takes time to get used to",
+     "right": "living in a different country."
+    },
+    {
+     "left": "Are you used to",
+     "right": "the humid climate?"
+    },
+    {
+     "left": "My eyes are getting used to",
+     "right": "the darkness."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "be used to (the|a) [a-z]+",
+  "get used to (the|a) [a-z]+",
+  "be used to [a-z]+ing",
+  "get used to [a-z]+ing"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.be-used-to-and-get-used-to.01": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.02": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.03": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.04": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.be-used-to-and-get-used-to.05: needs one answer list per gap (2)"
+   },
+   "ex.b2.be-used-to-and-get-used-to.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.be-used-to-and-get-used-to.06: needs one answer list per gap (3)"
+   },
+   "ex.b2.be-used-to-and-get-used-to.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.be-used-to-and-get-used-to.07: needs one answer list per gap (3)"
+   },
+   "ex.b2.be-used-to-and-get-used-to.08": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.09": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.10": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.11": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both rewrites accurately convey the original meaning using 'be used to'."
+   },
+   "ex.b2.be-used-to-and-get-used-to.13": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.14": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.15": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.16": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.17": {
+    "status": "pass"
+   },
+   "ex.b2.be-used-to-and-get-used-to.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.be-used-to-and-get-used-to.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.be-used-to-and-get-used-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "After a few weeks, I finally ___ used to the humid climate.",
+    "options": [
+     "am",
+     "get",
+     "got",
+     "was"
+    ],
+    "answer": 2,
+    "explanation": "'Got used to' describes the completion of the process of becoming familiar in the past."
+   },
+   {
+    "id": "ex.b2.be-used-to-and-get-used-to.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.be-used-to-and-get-used-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My dog isn't ___ used to being alone all day yet.",
+    "options": [
+     "get",
+     "getting",
+     "got",
+     "gets"
+    ],
+    "answer": 1,
+    "explanation": "'Getting used to' describes an ongoing process of becoming familiar. 'Isn't getting' is the correct negative present continuous form."
+   },
+   {
+    "id": "ex.b2.be-used-to-and-get-used-to.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.be-used-to-and-get-used-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She ___ used to the quiet life in the countryside.",
+    "options": [
+     "is",
+     "gets",
+     "get",
+     "got"
+    ],
+    "answer": 0,
+    "explanation": "'Is used to' describes a current state of being familiar with something."
+   },
+   {
+    "id": "ex.b2.be-used-to-and-get-used-to.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.be-used-to-and-get-used-to"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "It's hard to ___ used to such a different way of working.",
+    "options": [
+     "be",
+     "get",
+     "being",
+     "getting"
+    ],
+    "answer": 1,
+    "explanation": "'Get used to' describes the process of becoming familiar with something. 'It's hard to get used to' is a common expression."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 1096398,
+   "text": "It'll take some time to get used to wearing a wig.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 6343824,
+   "text": "Tom didn't seem to be used to doing that.",
+   "author": "CK"
+  }
+ ]
+}

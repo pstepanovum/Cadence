@@ -1,0 +1,616 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "distancing-with-passive-infinitives",
+ "draftHash": "1bb1c61f0445e06b",
+ "grammarPoint": {
+  "id": "gp.distancing-with-passive-infinitives",
+  "level": "C1",
+  "topicId": "topic.passive",
+  "title": "Distancing",
+  "summary": "Use distancing structures like 'is believed to' or 'is reported to' to present information as an opinion, rumor, or unconfirmed fact, often in formal contexts.",
+  "explanation": "Distancing structures allow you to report information without fully endorsing its truth. They are commonly used in news reports, academic writing, or when discussing general opinions or rumors. This helps to maintain a neutral tone or to indicate that the information comes from another source.\n\nThese structures typically use a passive verb (like 'is believed', 'is reported', 'is said', 'is thought', 'is known', 'is expected') followed by a *to-infinitive* clause. The choice of infinitive depends on the timing of the reported action or state relative to the reporting verb.\n\nFor actions or states happening at the same time as the reporting verb, or generally true, we use *to be* or the *base form* of the verb. For actions or states that happened before the reporting verb, we use the *perfect infinitive* (*to have + past participle*). If the past action was ongoing, we use *to have been + verb-ing*.",
+  "patterns": [
+   "Subject + is/are + believed/said/reported + to be + noun/adjective",
+   "Subject + is/are + believed/said/reported + to + verb (base form)",
+   "Subject + is/are + believed/said/reported + to have + past participle",
+   "Subject + is/are + believed/said/reported + to have been + verb-ing"
+  ],
+  "examples": [
+   {
+    "text": "The new bridge is expected to be completed by next year.",
+    "note": "Reports a future event using 'to be' for a state.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The ancient artifact is believed to have been discovered in a hidden cave.",
+    "note": "Reports a past action using the perfect infinitive 'to have been discovered'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She is reported to be living in Paris now.",
+    "note": "Reports a current ongoing action using 'to be living'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The company's profits are said to have increased significantly last quarter.",
+    "note": "Reports a past action using the perfect infinitive 'to have increased'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He is thought to be a brilliant scientist.",
+    "note": "Reports a current state or general truth using 'to be'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The problem is believed solving soon.",
+    "right": "The problem is believed to be solved soon.",
+    "note": "Use 'to be' + past participle for passive infinitive, or 'to solve' for active."
+   },
+   {
+    "wrong": "They are reported have left the country.",
+    "right": "They are reported to have left the country.",
+    "note": "Always include 'to' before the infinitive."
+   },
+   {
+    "wrong": "The building is thought to be built in the 18th century.",
+    "right": "The building is thought to have been built in the 18th century.",
+    "note": "Use the perfect infinitive 'to have been' for actions completed in the past."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The rare bird ___ to have migrated earlier this year.",
+   "options": [
+    "is known",
+    "is known be",
+    "is known to",
+    "is known to have"
+   ],
+   "answer": 3,
+   "explanation": "The structure requires 'to have' before the past participle 'migrated' to indicate a past action."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new software update ___ to fix several bugs.",
+   "options": [
+    "is expected",
+    "is expected to",
+    "is expected to be",
+    "is expected to have"
+   ],
+   "answer": 1,
+   "explanation": "The correct structure is 'is expected to' followed by the base form of the verb 'fix'."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Many ancient texts ___ to contain hidden messages.",
+   "options": [
+    "are believed",
+    "are believed to",
+    "are believed to be",
+    "are believed to have"
+   ],
+   "answer": 2,
+   "explanation": "The structure 'are believed to be' is used to report a current state or general truth."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The athlete ___ to be training intensely for the upcoming competition.",
+   "options": [
+    "is said",
+    "is said to",
+    "is said to be",
+    "is said to have"
+   ],
+   "answer": 2,
+   "explanation": "The structure 'is said to be training' indicates an ongoing action at the time of reporting."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old legend ___ ___ ___ true for centuries.",
+   "answers": [
+    [
+     "is",
+     "believed",
+     "to be"
+    ]
+   ],
+   "explanation": "To express a long-held belief about a current state, 'is believed to be' is the correct distancing structure."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The missing documents ___ ___ ___ found in the archives last week.",
+   "answers": [
+    [
+     "are",
+     "reported",
+     "to have been"
+    ]
+   ],
+   "explanation": "To report a past action, the perfect infinitive 'to have been found' is used after 'are reported'."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The CEO ___ ___ ___ considering a merger with another company.",
+   "answers": [
+    [
+     "is",
+     "thought",
+     "to be"
+    ]
+   ],
+   "explanation": "To report an ongoing consideration, 'is thought to be considering' is the appropriate form."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "new",
+    "discovery",
+    "is",
+    "expected",
+    "to",
+    "change",
+    "our",
+    "understanding",
+    "of",
+    "the",
+    "universe",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "changing"
+   ],
+   "explanation": "This sentence uses the distancing structure 'is expected to' to report a future expectation."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "ancient",
+    "ruins",
+    "are",
+    "believed",
+    "to",
+    "have",
+    "been",
+    "a",
+    "sacred",
+    "site",
+    "."
+   ],
+   "distractors": [
+    "being",
+    "was"
+   ],
+   "explanation": "This sentence uses 'are believed to have been' to report a past state or condition.",
+   "alternatives": [
+    [
+     "The",
+     "ruins",
+     "are",
+     "believed",
+     "to",
+     "have",
+     "been",
+     "a",
+     "sacred",
+     "ancient",
+     "site",
+     "."
+    ]
+   ]
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The project is reported to be finished by next month.",
+   "answers": [
+    "The project is reported to finish by next month."
+   ],
+   "explanation": "The original sentence is grammatically correct. 'To be finished' is a passive infinitive, correctly indicating the project will be completed. 'To finish' would imply the project itself is doing the finishing, which is less common for projects."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The documents are said have been destroyed in the fire.",
+   "answers": [
+    "The documents are said to have been destroyed in the fire."
+   ],
+   "explanation": "The infinitive 'to have been destroyed' requires 'to' before 'have'."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "People believe that the treasure was hidden centuries ago.",
+   "instruction": "Rewrite using a distancing structure starting with 'The treasure'.",
+   "answers": [
+    "The treasure is believed to have been hidden centuries ago."
+   ],
+   "explanation": "The past action 'was hidden' becomes the perfect infinitive 'to have been hidden' after 'is believed'."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It is reported that the new species lives in the deep ocean.",
+   "instruction": "Rewrite using a distancing structure starting with 'The new species'.",
+   "answers": [
+    "The new species is reported to live in the deep ocean.",
+    "The new species is reported to be living in the deep ocean."
+   ],
+   "explanation": "The present state 'lives' becomes 'to live' or 'to be living' after 'is reported'."
+  },
+  {
+   "id": "ex.c1.distancing-with-passive-infinitives.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.distancing-with-passive-infinitives"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The ancient prophecy is believed",
+     "right": "to foretell a significant event."
+    },
+    {
+     "left": "The new policy is expected",
+     "right": "to be implemented by the end of the year."
+    },
+    {
+     "left": "The CEO is reported",
+     "right": "to have resigned unexpectedly."
+    },
+    {
+     "left": "The rare plant is known",
+     "right": "to grow only in this region."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(is|are) (believed|said|reported|thought|known|expected) to (be|have|have been)",
+  "(was|were) (believed|said|reported|thought|known|expected) to (be|have|have been)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.distancing-with-passive-infinitives.01": {
+    "status": "drop",
+    "note": "Key judged wrong: The key duplicates 'to have', whereas 'is known' correctly completes the sentence."
+   },
+   "ex.c1.distancing-with-passive-infinitives.02": {
+    "status": "drop",
+    "note": "Key judged wrong: The key results in a duplicate 'to', whereas 'is expected' forms a correct sentence."
+   },
+   "ex.c1.distancing-with-passive-infinitives.03": {
+    "status": "drop",
+    "note": "Key judged wrong: The key creates an ungrammatical sequence 'to be to contain', whereas 'are believed' is correct."
+   },
+   "ex.c1.distancing-with-passive-infinitives.04": {
+    "status": "drop",
+    "note": "Key judged wrong: The key creates an ungrammatical repetition of 'to be', whereas 'is said' correctly completes the sentence."
+   },
+   "ex.c1.distancing-with-passive-infinitives.05": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.distancing-with-passive-infinitives.05: needs one answer list per gap (3)"
+   },
+   "ex.c1.distancing-with-passive-infinitives.06": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.distancing-with-passive-infinitives.06: needs one answer list per gap (3)"
+   },
+   "ex.c1.distancing-with-passive-infinitives.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.distancing-with-passive-infinitives.07: needs one answer list per gap (3)"
+   },
+   "ex.c1.distancing-with-passive-infinitives.08": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.09": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both placements of 'ancient' yield grammatically correct and natural English sentences."
+   },
+   "ex.c1.distancing-with-passive-infinitives.10": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'finished' and 'completed' are grammatically correct and natural in this context."
+   },
+   "ex.c1.distancing-with-passive-infinitives.11": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.12": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.13": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.14": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.15": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.16": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.17": {
+    "status": "pass"
+   },
+   "ex.c1.distancing-with-passive-infinitives.18": {
+    "status": "drop",
+    "note": "Key judged wrong: The key is unnatural, whereas 'is reported to have fixed' is standard and correct."
+   },
+   "ex.c1.distancing-with-passive-infinitives.19": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'is believed' and 'is said' fit the context perfectly."
+   },
+   "ex.c1.distancing-with-passive-infinitives.20": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'is reported' and 'is believed' are fully correct and natural."
+   },
+   "ex.c1.distancing-with-passive-infinitives.21": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'are believed' and 'are reported' are correct and natural."
+   },
+   "ex.c1.distancing-with-passive-infinitives.22": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The rare comet ___ visible from Earth next month.",
+    "options": [
+     "is believed",
+     "is believed to",
+     "is believed to be",
+     "is believed to have been"
+    ],
+    "answer": 2,
+    "explanation": "\"Is believed to be\" correctly reports a future event or current expectation."
+   },
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The CEO ___ considering a merger with another company.",
+    "options": [
+     "is reported to",
+     "is reported to be",
+     "is reported to have",
+     "is reported to had been"
+    ],
+    "answer": 1,
+    "explanation": "\"Is reported to be considering\" correctly reports an ongoing action."
+   },
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The ancient artifact ___ created over a thousand years ago.",
+    "options": [
+     "is believed to be",
+     "is believed to have been",
+     "is believed to has been",
+     "is believed to being"
+    ],
+    "answer": 1,
+    "explanation": "\"Is believed to have been created\" correctly reports a past action."
+   },
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.18",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The new software update ___ several bugs.",
+    "options": [
+     "is reported to fix",
+     "is reported to be fix",
+     "is reported to have fixed",
+     "is reported to be fixing"
+    ],
+    "answer": 3,
+    "explanation": "\"Is reported to be fixing\" indicates an ongoing process of fixing bugs."
+   },
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.19",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The old factory ___ to have been a textile mill in the 1950s.",
+    "answers": [
+     [
+      "is believed",
+      "is said"
+     ]
+    ],
+    "explanation": "This structure reports a past state or identity that is believed now."
+   },
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.20",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The local economy ___ to be recovering slowly after the downturn.",
+    "answers": [
+     [
+      "is reported",
+      "is believed"
+     ]
+    ],
+    "explanation": "This reports a current, ongoing situation."
+   },
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.21",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The missing documents ___ to have been found in the archives last week.",
+    "answers": [
+     [
+      "are believed",
+      "are reported"
+     ]
+    ],
+    "explanation": "This reports a past event that is now believed to have happened."
+   },
+   {
+    "id": "ex.c1.distancing-with-passive-infinitives.22",
+    "kind": "sentence_building",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.distancing-with-passive-infinitives"
+    ],
+    "prompt": "Put the words in the right order.",
+    "answer": [
+     "The",
+     "new",
+     "species",
+     "is",
+     "reported",
+     "to",
+     "be",
+     "thriving",
+     "in",
+     "the",
+     "wild",
+     "."
+    ],
+    "distractors": [
+     "was",
+     "will"
+    ],
+    "explanation": "This sentence uses distancing to report a current, ongoing situation."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 13404873,
+   "text": "Arabic is said to be very hard to learn.",
+   "author": "Lebensfreude"
+  },
+  {
+   "sentenceId": 12365366,
+   "text": "In the past the world was thought to be a disk.",
+   "author": "AlanF_US"
+  }
+ ]
+}

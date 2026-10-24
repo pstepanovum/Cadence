@@ -1,0 +1,486 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "absolute-constructions",
+ "draftHash": "50ff33c6ed2303ba",
+ "grammarPoint": {
+  "id": "gp.absolute-constructions",
+  "level": "C2",
+  "topicId": "topic.clauses",
+  "title": "Absolute constructions",
+  "summary": "Absolute constructions are independent clauses that modify the entire main clause, providing context, cause, or condition without a conjunction or finite verb.",
+  "explanation": "Absolute constructions are independent clauses that modify the entire main clause of a sentence, providing additional context, cause, or condition. They are \"absolute\" because they do not grammatically depend on the main clause, often lacking a finite verb and a conjunction.\n\nThey typically consist of a noun or pronoun followed by a participle (present or past), an adjective, or a prepositional phrase. These constructions add detail, making sentences more concise and sophisticated by integrating related information smoothly.\n\nCommonly found at the beginning or end of a sentence, they are usually separated from the main clause by a comma. Fixed expressions like *weather permitting* or *all things considered* are also examples of absolute constructions.",
+  "patterns": [
+   "Noun/Pronoun + Present Participle (verb-ing)",
+   "Noun/Pronoun + Past Participle (verb-ed)",
+   "Noun/Pronoun + Adjective",
+   "Noun/Pronoun + Prepositional Phrase"
+  ],
+  "examples": [
+   {
+    "text": "The concert being cancelled, we decided to go home.",
+    "note": "Noun + present participle, indicating cause.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "All things considered, the new policy has been quite successful.",
+    "note": "Fixed expression, offering a general perspective.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Her eyes sparkling with excitement, she unwrapped the gift.",
+    "note": "Noun + present participle, describing an accompanying circumstance.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The report finished, the team submitted it to the manager.",
+    "note": "Noun + past participle, indicating completion and sequence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Weather permitting, the outdoor market will open at 9 AM.",
+    "note": "Fixed expression, stating a condition.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The sun shining we went for a walk.",
+    "right": "The sun shining, we went for a walk.",
+    "note": "An absolute construction is usually separated by a comma from the main clause."
+   },
+   {
+    "wrong": "His work finish, he left the office.",
+    "right": "His work finished, he left the office.",
+    "note": "Use the past participle to indicate a completed action."
+   },
+   {
+    "wrong": "The storm was approaching, we cancelled the trip.",
+    "right": "The storm approaching, we cancelled the trip.",
+    "note": "An absolute construction uses a participle, not a finite verb, to modify the main clause."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.absolute-constructions.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___, the team decided to postpone the launch.",
+   "options": [
+    "The budget cuts announced",
+    "The budget cuts announcing",
+    "The budget cuts were announced",
+    "The budget cuts being announced"
+   ],
+   "answer": 3,
+   "explanation": "The absolute construction requires 'being announced' to indicate the passive voice of the ongoing or recent action."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___, the restaurant offers a diverse menu.",
+   "options": [
+    "Its reputation growing",
+    "Its reputation grown",
+    "Its reputation grows",
+    "Its reputation grow"
+   ],
+   "answer": 0,
+   "explanation": "The present participle 'growing' correctly forms an absolute construction, indicating an ongoing circumstance."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___, the hikers continued their ascent.",
+   "options": [
+    "Their spirits high",
+    "Their spirits were high",
+    "Their spirits being high",
+    "Their spirits are high"
+   ],
+   "answer": 0,
+   "explanation": "An absolute construction can use a noun + adjective without 'being' when the meaning is clear, implying 'being'."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___, the project was completed ahead of schedule.",
+   "options": [
+    "All factors considered",
+    "All factors considering",
+    "All factors were considered",
+    "All factors consider"
+   ],
+   "answer": 0,
+   "explanation": "'All factors considered' is a common absolute construction using the past participle to mean 'after considering all factors'."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The weather ___, we decided to have our picnic indoors.",
+   "answers": [
+    [
+     "worsening",
+     "being bad"
+    ]
+   ],
+   "explanation": "The present participle 'worsening' correctly forms an absolute construction, indicating an ongoing condition."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___, the company's future looks promising.",
+   "answers": [
+    [
+     "All",
+     "things",
+     "considered"
+    ]
+   ],
+   "explanation": "'All things considered' is a common fixed absolute construction meaning 'taking everything into account'."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Her voice ___, she delivered a powerful speech.",
+   "answers": [
+    [
+     "trembling",
+     "resonating"
+    ]
+   ],
+   "explanation": "The present participle 'trembling' describes an accompanying circumstance, forming an absolute construction."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "meeting",
+    "over",
+    ",",
+    "everyone",
+    "left",
+    "."
+   ],
+   "distractors": [
+    "was"
+   ],
+   "explanation": "This forms an absolute construction 'The meeting over' followed by the main clause."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "His",
+    "eyes",
+    "closed",
+    ",",
+    "he",
+    "listened",
+    "to",
+    "the",
+    "music",
+    "."
+   ],
+   "distractors": [
+    "closing"
+   ],
+   "explanation": "The absolute construction 'His eyes closed' describes an accompanying state."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The storm approaching, we had to cancel our flight.",
+   "answers": [],
+   "explanation": "The sentence is already correct. 'The storm approaching' is a valid absolute construction."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Her homework done, she watched TV.",
+   "answers": [],
+   "explanation": "The sentence is already correct. 'Her homework done' is a valid absolute construction."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Because the weather was bad, we stayed indoors.",
+   "instruction": "Rewrite using an absolute construction.",
+   "answers": [
+    "The weather being bad, we stayed indoors."
+   ],
+   "explanation": "The absolute construction 'The weather being bad' replaces the causal clause, making the sentence more concise."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They finished their work and then went home.",
+   "instruction": "Rewrite using an absolute construction.",
+   "answers": [
+    "Their work finished, they went home."
+   ],
+   "explanation": "The absolute construction 'Their work finished' indicates the completion of the action before the main clause."
+  },
+  {
+   "id": "ex.c2.absolute-constructions.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.absolute-constructions"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The sun setting,",
+     "right": "the sky turned a beautiful orange."
+    },
+    {
+     "left": "His leg broken,",
+     "right": "he couldn't play in the match."
+    },
+    {
+     "left": "All things considered,",
+     "right": "it was a successful event."
+    },
+    {
+     "left": "Weather permitting,",
+     "right": "we'll have dinner on the patio."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\b(weather permitting|all things considered|the work done|his eyes closed|her hands trembling|the meeting over|the sun shining|the storm approaching)\\b",
+  "\\b(noun|pronoun) (being|having been|verb-ing|verb-ed),",
+  "\\b(noun|pronoun) (adjective|prepositional phrase), (main clause)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.absolute-constructions.01": {
+    "status": "drop",
+    "note": "Ambiguous: Both options form grammatically correct absolute clauses, making the multiple-choice item ambiguous."
+   },
+   "ex.c2.absolute-constructions.02": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.03": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.04": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.05": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'worsening' and 'being bad' create correct absolute clauses in this sentence."
+   },
+   "ex.c2.absolute-constructions.06": {
+    "status": "drop",
+    "note": "Key judged wrong: 'All' is incomplete on its own here, whereas 'Its growth steady' forms a valid absolute clause."
+   },
+   "ex.c2.absolute-constructions.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'trembling' and 'resonating' form valid and natural absolute clauses."
+   },
+   "ex.c2.absolute-constructions.08": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.09": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.10": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.absolute-constructions.10: needs an accepted answer"
+   },
+   "ex.c2.absolute-constructions.11": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.absolute-constructions.11: needs an accepted answer"
+   },
+   "ex.c2.absolute-constructions.12": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.13": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.14": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.15": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.16": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.17": {
+    "status": "pass"
+   },
+   "ex.c2.absolute-constructions.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c2.absolute-constructions.15",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.absolute-constructions"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___, the company decided to invest in renewable energy.",
+    "options": [
+     "The market trends analyzed",
+     "The market trends analyzing",
+     "The market trends to analyze",
+     "The market trends analyzes"
+    ],
+    "answer": 0,
+    "explanation": "The past participle 'analyzed' correctly indicates that the market trends were examined before the decision was made."
+   },
+   {
+    "id": "ex.c2.absolute-constructions.16",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.absolute-constructions"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___, the hikers continued their journey despite the challenging terrain.",
+    "options": [
+     "Their spirits high",
+     "Their spirits highly",
+     "Their spirits were high",
+     "Their spirits to be high"
+    ],
+    "answer": 0,
+    "explanation": "The absolute construction 'Their spirits high' uses an adjective to describe their state, providing context for their perseverance."
+   },
+   {
+    "id": "ex.c2.absolute-constructions.17",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.absolute-constructions"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___, the chef prepared a special meal for the guests.",
+    "options": [
+     "All ingredients fresh",
+     "All ingredients freshly",
+     "All ingredients are fresh",
+     "All ingredients to be fresh"
+    ],
+    "answer": 0,
+    "explanation": "'All ingredients fresh' uses an adjective to describe the state of the ingredients, setting the scene for the meal preparation."
+   },
+   {
+    "id": "ex.c2.absolute-constructions.18",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.absolute-constructions"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___, the city council approved the new urban development plan.",
+    "options": [
+     "Public opinion considered",
+     "Public opinion considering",
+     "Public opinion considers",
+     "Public opinion to consider"
+    ],
+    "answer": 0,
+    "explanation": "The past participle 'considered' correctly indicates that public opinion was taken into account before the approval."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 278811,
+   "text": "Weather permitting, we'll start on our trip tomorrow.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 278837,
+   "text": "We will start tomorrow, weather permitting.",
+   "author": "CM"
+  }
+ ]
+}

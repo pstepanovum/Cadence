@@ -1,0 +1,385 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "should-for-advice",
+ "draftHash": "33c80b032c0429c3",
+ "grammarPoint": {
+  "id": "gp.should-for-advice",
+  "level": "A2",
+  "topicId": "topic.modals",
+  "title": "Should for advice",
+  "summary": "Learn how to use 'should' to give and ask for advice or to make recommendations in English.",
+  "explanation": "We use the modal verb *should* to give advice or to say what we think is a good idea. It's a suggestion, not a strong obligation. For example, \"You should try this new cafe.\" means it's a good idea to try it.\n\nTo give negative advice, we use *shouldn't* (should not). This means we think something is not a good idea. For instance, \"You shouldn't eat too much sugar.\" is a recommendation to avoid it.\n\nTo ask for advice, we put *should* before the subject. For example, \"Should I wear a jacket?\" means you are asking for a recommendation about clothing.",
+  "patterns": [
+   "Subject + should + base verb",
+   "Subject + shouldn't + base verb",
+   "Should + subject + base verb?"
+  ],
+  "examples": [
+   {
+    "text": "You should drink more water every day.",
+    "note": "Giving positive advice about health.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He shouldn't work so late tonight.",
+    "note": "Giving negative advice about work hours.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Should I call her to apologize?",
+    "note": "Asking for advice about a situation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We should visit the museum while we are in Rome.",
+    "note": "Making a recommendation for an activity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They shouldn't forget their passports for the trip.",
+    "note": "Warning or advising against forgetting something important.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "You should to study more.",
+    "right": "You should study more.",
+    "note": "After 'should', use the base form of the verb without 'to'."
+   },
+   {
+    "wrong": "He must go to the doctor.",
+    "right": "He should go to the doctor.",
+    "note": "'Must' is a strong obligation; 'should' is advice."
+   },
+   {
+    "wrong": "Should he goes to the party?",
+    "right": "Should he go to the party?",
+    "note": "The verb after 'should' is always in its base form, even for 'he/she/it'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.should-for-advice.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's very cold outside. You ___ wear a warm coat.",
+   "options": [
+    "must",
+    "should",
+    "can"
+   ],
+   "answer": 1,
+   "explanation": "'Should' is used to give advice or a recommendation, which fits the context of suggesting a warm coat."
+  },
+  {
+   "id": "ex.a2.should-for-advice.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I feel tired. What ___ I do?",
+   "options": [
+    "must",
+    "should",
+    "will"
+   ],
+   "answer": 1,
+   "explanation": "To ask for advice or a recommendation, we use 'should'."
+  },
+  {
+   "id": "ex.a2.should-for-advice.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ eat too much fast food; it's not healthy.",
+   "options": [
+    "shouldn't",
+    "don't should",
+    "should not to"
+   ],
+   "answer": 0,
+   "explanation": "'Shouldn't' is the correct negative form for giving advice."
+  },
+  {
+   "id": "ex.a2.should-for-advice.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ leave early to avoid traffic.",
+   "options": [
+    "shoulds",
+    "should to",
+    "should"
+   ],
+   "answer": 2,
+   "explanation": "The correct form is 'should' followed by the base verb, without 'to' or an 's'."
+  },
+  {
+   "id": "ex.a2.should-for-advice.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You ___ try that new restaurant; the food is delicious!",
+   "answers": [
+    [
+     "should"
+    ]
+   ],
+   "explanation": "We use 'should' to give a positive recommendation."
+  },
+  {
+   "id": "ex.a2.should-for-advice.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ forget his umbrella today. It's going to rain.",
+   "answers": [
+    [
+     "shouldn't",
+     "should not"
+    ]
+   ],
+   "explanation": "'Shouldn't' is used for negative advice, meaning it's not a good idea to forget it."
+  },
+  {
+   "id": "ex.a2.should-for-advice.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ I wear a suit to the interview?",
+   "answers": [
+    [
+     "Should"
+    ]
+   ],
+   "explanation": "To ask for advice, 'should' comes before the subject."
+  },
+  {
+   "id": "ex.a2.should-for-advice.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "should",
+    "relax",
+    "more",
+    "."
+   ],
+   "distractors": [
+    "to"
+   ],
+   "explanation": "This sentence gives advice to someone to relax more."
+  },
+  {
+   "id": "ex.a2.should-for-advice.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Should",
+    "we",
+    "buy",
+    "tickets",
+    "online",
+    "?"
+   ],
+   "distractors": [
+    "to"
+   ],
+   "explanation": "This sentence asks for advice about buying tickets."
+  },
+  {
+   "id": "ex.a2.should-for-advice.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She should to call her parents.",
+   "answers": [
+    "She should call her parents."
+   ],
+   "explanation": "After 'should', we use the base form of the verb without 'to'."
+  },
+  {
+   "id": "ex.a2.should-for-advice.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "You shouldn't eats so much candy.",
+   "answers": [
+    "You shouldn't eat so much candy."
+   ],
+   "explanation": "The verb after 'shouldn't' must be in its base form."
+  },
+  {
+   "id": "ex.a2.should-for-advice.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's a good idea for you to save some money.",
+   "instruction": "Rewrite using 'should'.",
+   "answers": [
+    "You should save some money."
+   ],
+   "explanation": "'Should' expresses that something is a good idea or advice."
+  },
+  {
+   "id": "ex.a2.should-for-advice.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Is it a good idea for me to take a break?",
+   "instruction": "Rewrite using 'should'.",
+   "answers": [
+    "Should I take a break?"
+   ],
+   "explanation": "To ask for advice, 'should' comes before the subject."
+  },
+  {
+   "id": "ex.a2.should-for-advice.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.should-for-advice"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "You should",
+     "right": "visit the library."
+    },
+    {
+     "left": "He shouldn't",
+     "right": "worry so much."
+    },
+    {
+     "left": "Should I",
+     "right": "bring a gift?"
+    },
+    {
+     "left": "We should always",
+     "right": "be kind to others."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "should (?:go|try|eat|wear|study|call|see|take|do|be)",
+  "shouldn't (?:go|try|eat|wear|study|call|see|take|do|be)",
+  "should i (?:go|try|eat|wear|study|call|see|take|do|be)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.should-for-advice.01": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.02": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.03": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.04": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.05": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.06": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.07": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.08": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.09": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.10": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.11": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.12": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.13": {
+    "status": "pass"
+   },
+   "ex.a2.should-for-advice.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 411289,
+   "text": "Please tell me what I should do.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 419660,
+   "text": "You should wear a coat.",
+   "author": "CK"
+  }
+ ]
+}

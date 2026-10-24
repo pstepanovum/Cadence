@@ -1,0 +1,399 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "whatever-wherever-however",
+ "draftHash": "c902871398844ada",
+ "grammarPoint": {
+  "id": "gp.whatever-wherever-however",
+  "level": "C1",
+  "topicId": "topic.clauses",
+  "title": "Whatever, wherever, however",
+  "summary": "Learn to use 'whatever,' 'wherever,' and 'however' to mean 'any' or 'no matter which' in various situations.",
+  "explanation": "We use words like *whatever*, *wherever*, and *however* to express a sense of 'any' or 'no matter which.' These words introduce clauses and show that something is true regardless of the specific choice, place, or manner.\n\n*Whatever* means 'anything that' or 'no matter what.' It can refer to objects, ideas, or actions. For example, 'Whatever you decide, I'll support you' means 'No matter what you decide.'\n\n*Wherever* means 'any place that' or 'no matter where.' It refers to locations. For instance, 'You can sit wherever you want' means 'You can sit in any place you want.'\n\n*However* means 'in whatever way' or 'no matter how.' It describes the manner or degree of something. It's important not to confuse this with 'however' used as a conjunction meaning 'but.' For example, 'However busy she is, she always makes time for friends' means 'No matter how busy she is.'",
+  "patterns": [
+   "Whatever + noun/pronoun + verb...",
+   "Wherever + subject + verb...",
+   "However + adjective/adverb + subject + verb..."
+  ],
+  "examples": [
+   {
+    "text": "Whatever challenges arise, we'll face them together.",
+    "note": "Expresses 'no matter what challenges'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You can park your car wherever you find a space.",
+    "note": "Indicates 'any place that you find a space'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "However late it gets, I need to finish this report.",
+    "note": "Emphasizes 'no matter how late'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Take whatever books you need for your research.",
+    "note": "Means 'any books that you need'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She always finds a way to succeed, however difficult the situation.",
+    "note": "Shows 'no matter how difficult the situation'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "What you say, I won't change my mind.",
+    "right": "Whatever you say, I won't change my mind.",
+    "note": "'Whatever' is used to mean 'no matter what'."
+   },
+   {
+    "wrong": "However you are tired, you must finish this.",
+    "right": "However tired you are, you must finish this.",
+    "note": "When 'however' modifies an adjective or adverb, it usually comes before it."
+   },
+   {
+    "wrong": "I tried hard, however I couldn't solve it.",
+    "right": "However hard I tried, I couldn't solve it.",
+    "note": "This 'however' means 'no matter how', not the conjunction 'but'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.whatever-wherever-however.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the weather is like, we're going hiking tomorrow.",
+   "options": [
+    "However",
+    "Wherever",
+    "Whatever",
+    "Whichever"
+   ],
+   "answer": 2,
+   "explanation": "'Whatever' means 'no matter what' and refers to the condition of the weather."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You can set up the projector ___ you think it will be most visible.",
+   "options": [
+    "however",
+    "whatever",
+    "wherever",
+    "whichever"
+   ],
+   "answer": 2,
+   "explanation": "'Wherever' means 'any place that' and refers to the location for the projector."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ challenging the project seems, we'll approach it step by step.",
+   "options": [
+    "Whatever",
+    "However",
+    "Wherever",
+    "Whichever"
+   ],
+   "answer": 1,
+   "explanation": "'However' means 'no matter how' and modifies the adjective 'challenging'."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Please take ___ you need from the supply closet.",
+   "options": [
+    "however",
+    "wherever",
+    "whatever",
+    "whichever"
+   ],
+   "answer": 2,
+   "explanation": "'Whatever' means 'anything that' and refers to items in the closet."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We'll support your decision, ___ it may be.",
+   "answers": [
+    [
+     "whatever"
+    ]
+   ],
+   "explanation": "'Whatever' means 'no matter what' and refers to the decision."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You can travel ___ you wish; the world is your oyster.",
+   "answers": [
+    [
+     "wherever"
+    ]
+   ],
+   "explanation": "'Wherever' means 'any place that' and refers to travel destinations."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ much effort it takes, we must complete this task on time.",
+   "answers": [
+    [
+     "however"
+    ]
+   ],
+   "explanation": "'However' means 'no matter how' and modifies the adverb 'much'."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "However",
+    "busy",
+    "she",
+    "is",
+    ",",
+    "she",
+    "always",
+    "finds",
+    "time",
+    "to",
+    "read",
+    "."
+   ],
+   "distractors": [
+    "much"
+   ],
+   "explanation": "This sentence uses 'however' to mean 'no matter how busy' she is."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "can",
+    "eat",
+    "whatever",
+    "you",
+    "like",
+    "from",
+    "the",
+    "menu",
+    "."
+   ],
+   "distractors": [
+    "which"
+   ],
+   "explanation": "'Whatever you like' means 'anything that you like' from the menu."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Wherever difficult the problem is, we will solve it.",
+   "answers": [
+    "However difficult the problem is, we will solve it."
+   ],
+   "explanation": "'However' is used to modify an adjective like 'difficult' to mean 'no matter how'."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I'll meet you what time is convenient.",
+   "answers": [
+    "I'll meet you whatever time is convenient."
+   ],
+   "explanation": "'Whatever' is used as a determiner here, meaning 'any time that' is convenient."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "No matter what you decide, I'll support you.",
+   "instruction": "Rewrite using 'whatever'.",
+   "answers": [
+    "Whatever you decide, I'll support you."
+   ],
+   "explanation": "'Whatever' replaces 'no matter what' to express the same meaning."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "No matter how far it is, we'll walk there.",
+   "instruction": "Rewrite using 'however'.",
+   "answers": [
+    "However far it is, we'll walk there."
+   ],
+   "explanation": "'However' replaces 'no matter how' to modify the adjective 'far'."
+  },
+  {
+   "id": "ex.c1.whatever-wherever-however.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.whatever-wherever-however"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Whatever happens,",
+     "right": "we'll face it together."
+    },
+    {
+     "left": "You can live wherever",
+     "right": "you feel most comfortable."
+    },
+    {
+     "left": "However challenging the task,",
+     "right": "she always gives her best."
+    },
+    {
+     "left": "Take whatever route",
+     "right": "you think is fastest."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "whatever (?:you|he|she|it|we|they|I) (?:want|wants|like|likes|do|does|say|says|think|thinks)",
+  "wherever (?:you|he|she|it|we|they|I) (?:go|goes|want|wants|live|lives|are|is)",
+  "however (?:hard|much|difficult|long|late) (?:you|he|she|it|we|they|I) (?:try|tries|work|works|are|is)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.whatever-wherever-however.01": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.02": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.03": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.04": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.05": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.06": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.07": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.08": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.09": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.10": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.11": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.12": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.13": {
+    "status": "pass"
+   },
+   "ex.c1.whatever-wherever-however.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 6241447,
+   "text": "Whatever you do, don't forget to do that.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 6241408,
+   "text": "You can do that wherever you want, right?",
+   "author": "CK"
+  }
+ ]
+}

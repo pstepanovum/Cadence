@@ -1,0 +1,404 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "would-like-and-want",
+ "draftHash": "aed00be8af4fdd1a",
+ "grammarPoint": {
+  "id": "gp.would-like-and-want",
+  "level": "A2",
+  "topicId": "topic.verb-patterns",
+  "title": "Would like and want",
+  "summary": "Learn to use 'would like' to politely express wishes for things or actions, and to make polite offers.",
+  "explanation": "We use *would like* to express a polite wish or desire. It is much more polite and softer than simply using *want*. For example, if you are in a restaurant, saying \"I would like a glass of water\" is more polite than \"I want a glass of water.\"\n\nWe also use *would like* to make polite offers. For example, \"Would you like some tea?\" is a common way to offer a drink.\n\nWhen you want to talk about an action, you use *would like to* followed by the base form of the verb. For example, \"I would like to travel next year.\" or \"Would you like to join us?\"",
+  "patterns": [
+   "Subject + would like + noun",
+   "Subject + would like to + verb (base form)",
+   "Would you like + noun?",
+   "Would you like to + verb (base form)?"
+  ],
+  "examples": [
+   {
+    "text": "I would like a new book for my birthday.",
+    "note": "Expresses a polite wish for a thing.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Would you like some more cake?",
+    "note": "Makes a polite offer of a thing.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My sister would like to learn to play the guitar.",
+    "note": "Expresses a polite wish for an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Would you like to go to the park this afternoon?",
+    "note": "Makes a polite offer for an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They would like to order pizza for dinner.",
+    "note": "Expresses a polite wish for an action.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I want a coffee, please.",
+    "right": "I would like a coffee, please.",
+    "note": "Use 'would like' for polite requests, especially in formal situations."
+   },
+   {
+    "wrong": "She would like go to the beach.",
+    "right": "She would like to go to the beach.",
+    "note": "Remember 'to' before the base verb when expressing an action."
+   },
+   {
+    "wrong": "Would you like drinking some water?",
+    "right": "Would you like to drink some water?",
+    "note": "Use the base form of the verb after 'would like to'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.would-like-and-want.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ a glass of juice, please.",
+   "options": [
+    "want",
+    "would like",
+    "like",
+    "am wanting"
+   ],
+   "answer": 1,
+   "explanation": "'Would like' is the most polite way to ask for something."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you like to watch a movie tonight?",
+   "options": [
+    "Do",
+    "Are",
+    "Would",
+    "Can"
+   ],
+   "answer": 2,
+   "explanation": "We use 'Would you like to' for polite offers of actions."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My friends ___ to visit the new museum.",
+   "options": [
+    "would like",
+    "wanting",
+    "like",
+    "would like to"
+   ],
+   "answer": 3,
+   "explanation": "For an action (visit), we need 'would like to' followed by the base verb."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ you like for dinner?",
+   "options": [
+    "do",
+    "would",
+    "are",
+    "can"
+   ],
+   "answer": 1,
+   "explanation": "'What would you like' is a common polite question for preferences."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We ___ ___ to try the new restaurant downtown.",
+   "answers": [
+    [
+     "would"
+    ],
+    [
+     "like"
+    ]
+   ],
+   "explanation": "'Would like to' expresses a polite desire to do something."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you ___ some help with your bags?",
+   "answers": [
+    [
+     "Would"
+    ],
+    [
+     "like"
+    ]
+   ],
+   "explanation": "'Would you like' is used to make a polite offer."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ ___ a quiet evening at home tonight.",
+   "answers": [
+    [
+     "would"
+    ],
+    [
+     "like"
+    ]
+   ],
+   "explanation": "'Would like' expresses a polite wish for a thing or situation."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "would",
+    "like",
+    "to",
+    "learn",
+    "Spanish",
+    "."
+   ],
+   "distractors": [
+    "am",
+    "learns"
+   ],
+   "explanation": "This sentence expresses a polite desire to learn a new skill."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Would",
+    "you",
+    "like",
+    "a",
+    "cup",
+    "of",
+    "tea",
+    "?"
+   ],
+   "distractors": [
+    "do",
+    "some"
+   ],
+   "explanation": "This is a polite offer for a drink."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My brother would like go to the concert.",
+   "answers": [
+    "My brother would like to go to the concert."
+   ],
+   "explanation": "The infinitive 'to go' is needed after 'would like'."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I want a ticket for the train, please.",
+   "answers": [
+    "I would like a ticket for the train, please."
+   ],
+   "explanation": "'Would like' is more polite than 'want' when making a request."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I want to eat some fruit.",
+   "instruction": "Rewrite using 'would like' to be more polite.",
+   "answers": [
+    "I would like to eat some fruit."
+   ],
+   "explanation": "Changing 'want' to 'would like' makes the sentence more polite."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Do you want to come with us?",
+   "instruction": "Rewrite using 'would like' to make a polite offer.",
+   "answers": [
+    "Would you like to come with us?"
+   ],
+   "explanation": "'Would you like to' is a polite way to offer an invitation."
+  },
+  {
+   "id": "ex.a2.would-like-and-want.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.would-like-and-want"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I would like",
+     "right": "a window seat, please."
+    },
+    {
+     "left": "Would you like to",
+     "right": "order dessert now?"
+    },
+    {
+     "left": "My parents would like",
+     "right": "to visit us next month."
+    },
+    {
+     "left": "Would you like",
+     "right": "some coffee?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "I would like to",
+  "would you like to",
+  "would like a"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.would-like-and-want.01": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.02": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.03": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.04": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.05": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.06": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.07": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.08": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.09": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.10": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.11": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.12": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.13": {
+    "status": "pass"
+   },
+   "ex.a2.would-like-and-want.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 1341101,
+   "text": "Would you like to eat lunch together?",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 3735289,
+   "text": "I would like to go, too.",
+   "author": "CK"
+  }
+ ]
+}

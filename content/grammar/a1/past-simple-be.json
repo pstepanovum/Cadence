@@ -1,0 +1,386 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "past-simple-be",
+ "draftHash": "82daad6eaf02e90a",
+ "grammarPoint": {
+  "id": "gp.past-simple-be",
+  "level": "A1",
+  "topicId": "topic.tenses",
+  "title": "Past simple of be",
+  "summary": "Learn to use 'was' and 'were' to talk about past states, locations, and facts for singular and plural subjects, including negatives and questions.",
+  "explanation": "We use *was* and *were* to talk about things that happened or were true in the past. They are the past forms of the verb 'to be'.\n\nUse *was* for singular subjects: I, he, she, it, or one person/thing. For example, \"I was tired.\" or \"She was at home.\"\n\nUse *were* for plural subjects: you, we, they, or more than one person/thing. For example, \"You were busy.\" or \"They were friends.\"\n\nTo make a negative sentence, add *not* after 'was' or 'were' (wasn't, weren't). To ask a question, put 'was' or 'were' at the beginning of the sentence.",
+  "patterns": [
+   "Subject + was/were + (adjective/noun/place)",
+   "Subject + was/were + not + (adjective/noun/place)",
+   "Was/Were + subject + (adjective/noun/place)?"
+  ],
+  "examples": [
+   {
+    "text": "I was happy yesterday.",
+    "note": "Shows a past state for a singular subject (I).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They were at the park this morning.",
+    "note": "Shows a past location for a plural subject (they).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She wasn't hungry after lunch.",
+    "note": "Shows a negative past state for a singular subject (she).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We weren't late for the meeting.",
+    "note": "Shows a negative past fact for a plural subject (we).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Was he a good student?",
+    "note": "Asks a question about a past fact for a singular subject (he).",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I were at home.",
+    "right": "I was at home.",
+    "note": "'I' takes 'was', not 'were'."
+   },
+   {
+    "wrong": "They not were here.",
+    "right": "They weren't here.",
+    "note": "Use 'weren't' for negative past plural."
+   },
+   {
+    "wrong": "You was tired?",
+    "right": "Were you tired?",
+    "note": "For questions with 'you', 'were' comes before the subject."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.past-simple-be.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My brother ___ sick last week.",
+   "options": [
+    "were",
+    "was",
+    "is"
+   ],
+   "answer": 1,
+   "explanation": "'My brother' is singular, so we use 'was'."
+  },
+  {
+   "id": "ex.a1.past-simple-be.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ not ready for the test.",
+   "options": [
+    "was",
+    "were",
+    "am"
+   ],
+   "answer": 1,
+   "explanation": "'We' is plural, so we use 'were'."
+  },
+  {
+   "id": "ex.a1.past-simple-be.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you busy on Saturday?",
+   "options": [
+    "Was",
+    "Were",
+    "Are"
+   ],
+   "answer": 1,
+   "explanation": "For the subject 'you' in the past, we use 'were'."
+  },
+  {
+   "id": "ex.a1.past-simple-be.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The movie ___ very interesting.",
+   "options": [
+    "were",
+    "wasn't",
+    "aren't"
+   ],
+   "answer": 1,
+   "explanation": "'The movie' is singular, so 'wasn't' is the correct negative past form."
+  },
+  {
+   "id": "ex.a1.past-simple-be.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The children ___ happy to play outside.",
+   "answers": [
+    [
+     "were"
+    ]
+   ],
+   "explanation": "'The children' is plural, so 'were' is correct."
+  },
+  {
+   "id": "ex.a1.past-simple-be.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ not at work yesterday. She ___ sick.",
+   "answers": [
+    [
+     "was"
+    ],
+    [
+     "was"
+    ]
+   ],
+   "explanation": "'She' is singular, so 'was' is used for both gaps."
+  },
+  {
+   "id": "ex.a1.past-simple-be.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ it cold last night? No, it ___ not.",
+   "answers": [
+    [
+     "Was"
+    ],
+    [
+     "was"
+    ]
+   ],
+   "explanation": "'It' is singular, so 'was' is used for the question and the negative answer."
+  },
+  {
+   "id": "ex.a1.past-simple-be.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "was",
+    "a",
+    "teacher",
+    "."
+   ],
+   "explanation": "This sentence describes a past profession for a singular subject."
+  },
+  {
+   "id": "ex.a1.past-simple-be.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Were",
+    "they",
+    "friends",
+    "?"
+   ],
+   "explanation": "This is a question about a past relationship for a plural subject."
+  },
+  {
+   "id": "ex.a1.past-simple-be.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My parents was on vacation.",
+   "answers": [
+    "My parents were on vacation."
+   ],
+   "explanation": "'My parents' is plural, so 'were' is the correct past form of 'be'."
+  },
+  {
+   "id": "ex.a1.past-simple-be.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Was you busy this morning?",
+   "answers": [
+    "Were you busy this morning?"
+   ],
+   "explanation": "For the subject 'you', the past form of 'be' is 'were', even in questions."
+  },
+  {
+   "id": "ex.a1.past-simple-be.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The food was delicious.",
+   "instruction": "Make it negative.",
+   "answers": [
+    "The food wasn't delicious.",
+    "The food was not delicious."
+   ],
+   "explanation": "To make it negative, add 'not' after 'was'. Both contracted and full forms are correct."
+  },
+  {
+   "id": "ex.a1.past-simple-be.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They were at the library.",
+   "instruction": "Rewrite as a question.",
+   "answers": [
+    "Were they at the library?"
+   ],
+   "explanation": "To form a question, put 'were' before the subject 'they'."
+  },
+  {
+   "id": "ex.a1.past-simple-be.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.past-simple-be"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The weather was",
+     "right": "cold yesterday."
+    },
+    {
+     "left": "My keys were",
+     "right": "on the table."
+    },
+    {
+     "left": "She wasn't",
+     "right": "happy with the news."
+    },
+    {
+     "left": "Were you",
+     "right": "at the party?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "was [a-z]+",
+  "were [a-z]+",
+  "wasn't [a-z]+",
+  "weren't [a-z]+",
+  "was I",
+  "were you"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.past-simple-be.01": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.02": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.03": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.04": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.05": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.06": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.07": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.08": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.09": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.10": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.11": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.12": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.13": {
+    "status": "pass"
+   },
+   "ex.a1.past-simple-be.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 28830,
+   "text": "We were all very happy at breakfast.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 246467,
+   "text": "It was in London that I last saw her.",
+   "author": "CK"
+  }
+ ]
+}

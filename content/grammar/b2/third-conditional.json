@@ -1,0 +1,417 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "third-conditional",
+ "draftHash": "bb709ea828f1a72c",
+ "grammarPoint": {
+  "id": "gp.third-conditional",
+  "level": "B2",
+  "topicId": "topic.conditionals",
+  "title": "Third conditional",
+  "summary": "The third conditional describes imagined past situations and their hypothetical results, often expressing regret or speculation.",
+  "explanation": "We use the third conditional to talk about things that *didn't happen* in the past and their *imagined results*. It describes a hypothetical situation in the past and what *would have happened* if that situation had been different.\n\nThis structure often expresses regret, criticism, or speculation about past events. It helps us consider alternative outcomes for past actions or circumstances.\n\nThe 'if' clause uses the past perfect (had + past participle), and the main clause uses 'would have' + past participle. The order of the clauses can be reversed without changing the meaning.",
+  "patterns": [
+   "If + subject + had + past participle, subject + would have + past participle.",
+   "Subject + would have + past participle + if + subject + had + past participle."
+  ],
+  "examples": [
+   {
+    "text": "If I had known about the sale, I would have bought a new laptop.",
+    "note": "Imagined past knowledge (I didn't know), imagined past action (I didn't buy).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They wouldn't have missed their flight if they had left for the airport earlier.",
+    "note": "Imagined past result (they missed it), imagined past action (they left late).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If she had studied more, she would have passed the difficult exam.",
+    "note": "Imagined past action (she didn't study), imagined past result (she failed).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We would have gone to the concert if we had found tickets.",
+    "note": "Imagined past action (we didn't go), imagined past condition (we didn't find tickets).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If the weather hadn't been so bad, we would have had a picnic.",
+    "note": "Imagined past condition (the weather was bad), imagined past result (we didn't have a picnic).",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If I would have known, I would have helped.",
+    "right": "If I had known, I would have helped.",
+    "note": "Use the past perfect (had + past participle) in the 'if' clause."
+   },
+   {
+    "wrong": "If she had called, I would answer.",
+    "right": "If she had called, I would have answered.",
+    "note": "Use 'would have' + past participle in the main clause."
+   },
+   {
+    "wrong": "If they had went to the party, they would have met him.",
+    "right": "If they had gone to the party, they would have met him.",
+    "note": "Ensure the correct past participle form of the verb is used."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.third-conditional.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If he ___ the instructions carefully, he ___ the recipe correctly.",
+   "options": [
+    "had followed, would have made",
+    "followed, would make",
+    "would have followed, had made",
+    "had followed, would make"
+   ],
+   "answer": 0,
+   "explanation": "The 'if' clause requires the past perfect ('had followed'), and the main clause requires 'would have' + past participle ('would have made')."
+  },
+  {
+   "id": "ex.b2.third-conditional.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ the bus if we ___ the house five minutes earlier.",
+   "options": [
+    "would have caught, had left",
+    "had caught, would have left",
+    "would catch, left",
+    "caught, would leave"
+   ],
+   "answer": 0,
+   "explanation": "The main clause describes the imagined result ('would have caught'), and the 'if' clause describes the imagined past condition ('had left')."
+  },
+  {
+   "id": "ex.b2.third-conditional.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If I ___ more time, I ___ that book you recommended.",
+   "options": [
+    "had had, would have read",
+    "had, would read",
+    "would have had, had read",
+    "have had, would read"
+   ],
+   "answer": 0,
+   "explanation": "The 'if' clause needs the past perfect ('had had'), and the main clause needs 'would have' + past participle ('would have read')."
+  },
+  {
+   "id": "ex.b2.third-conditional.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ if you ___ the lottery last year?",
+   "options": [
+    "would you have done, had won",
+    "would you do, won",
+    "had you done, would have won",
+    "would you have done, would have won"
+   ],
+   "answer": 0,
+   "explanation": "The question uses 'would have done' for the imagined result, and the 'if' clause uses the past perfect 'had won' for the imagined past condition."
+  },
+  {
+   "id": "ex.b2.third-conditional.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If she ___ (not miss) the train, she ___ (arrive) on time for the meeting.",
+   "answers": [
+    [
+     "hadn't missed",
+     "had not missed"
+    ],
+    [
+     "would have arrived",
+     "would've arrived"
+    ]
+   ],
+   "explanation": "The 'if' clause needs the past perfect negative ('hadn't missed'), and the main clause needs 'would have' + past participle ('would have arrived')."
+  },
+  {
+   "id": "ex.b2.third-conditional.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ (not get) lost if they ___ (use) a GPS.",
+   "answers": [
+    [
+     "wouldn't have gotten",
+     "would not have gotten",
+     "wouldn't have got",
+     "would not have got"
+    ],
+    [
+     "had used"
+    ]
+   ],
+   "explanation": "The main clause describes the imagined negative result ('wouldn't have gotten lost'), and the 'if' clause describes the imagined past action ('had used')."
+  },
+  {
+   "id": "ex.b2.third-conditional.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If I ___ (know) you were coming, I ___ (bake) a cake.",
+   "answers": [
+    [
+     "had known"
+    ],
+    [
+     "would have baked",
+     "would've baked"
+    ]
+   ],
+   "explanation": "The 'if' clause requires the past perfect ('had known'), and the main clause requires 'would have' + past participle ('would have baked')."
+  },
+  {
+   "id": "ex.b2.third-conditional.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "we",
+    "had",
+    "left",
+    "earlier",
+    ",",
+    "we",
+    "would",
+    "have",
+    "avoided",
+    "the",
+    "traffic",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "avoid"
+   ],
+   "explanation": "This sentence correctly forms a third conditional, describing an imagined past action and its hypothetical result."
+  },
+  {
+   "id": "ex.b2.third-conditional.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "wouldn't",
+    "have",
+    "been",
+    "tired",
+    "if",
+    "she",
+    "had",
+    "slept",
+    "more",
+    "."
+   ],
+   "distractors": [
+    "sleeps",
+    "is"
+   ],
+   "explanation": "This sentence correctly uses the third conditional to express an imagined past condition and its hypothetical outcome."
+  },
+  {
+   "id": "ex.b2.third-conditional.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If I would have seen him, I would have said hello.",
+   "answers": [
+    "If I had seen him, I would have said hello."
+   ],
+   "explanation": "The 'if' clause in the third conditional must use the past perfect ('had seen'), not 'would have seen'."
+  },
+  {
+   "id": "ex.b2.third-conditional.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They would have won the game if they practiced harder.",
+   "answers": [
+    "They would have won the game if they had practiced harder."
+   ],
+   "explanation": "The 'if' clause in the third conditional requires the past perfect ('had practiced'), not the simple past."
+  },
+  {
+   "id": "ex.b2.third-conditional.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He didn't save money, so he couldn't buy the new car.",
+   "instruction": "Rewrite using the third conditional.",
+   "answers": [
+    "If he had saved money, he would have bought the new car."
+   ],
+   "explanation": "The original sentence describes a past reality. The third conditional imagines the opposite past action ('had saved money') and its hypothetical result ('would have bought')."
+  },
+  {
+   "id": "ex.b2.third-conditional.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I didn't bring an umbrella, and I got wet.",
+   "instruction": "Rewrite using the third conditional.",
+   "answers": [
+    "If I had brought an umbrella, I wouldn't have gotten wet.",
+    "If I had brought an umbrella, I wouldn't have got wet."
+   ],
+   "explanation": "The third conditional expresses an imagined past action ('had brought an umbrella') and its hypothetical negative result ('wouldn't have gotten wet')."
+  },
+  {
+   "id": "ex.b2.third-conditional.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.third-conditional"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If I had saved more money,",
+     "right": "I would have bought that car."
+    },
+    {
+     "left": "If she hadn't forgotten her passport,",
+     "right": "she wouldn't have missed her flight."
+    },
+    {
+     "left": "We would have finished earlier",
+     "right": "if we had started on time."
+    },
+    {
+     "left": "They wouldn't have gotten lost",
+     "right": "if they had used a map."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "if .* had .* would have",
+  "would have .* if .* had"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.third-conditional.01": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.02": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.03": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.04": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.05": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.06": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.07": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.08": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.09": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.10": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.11": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.12": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.13": {
+    "status": "pass"
+   },
+   "ex.b2.third-conditional.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 31689,
+   "text": "If he had come five minutes later, he would have missed the train.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 30468,
+   "text": "If you had studied harder, you would have passed the examination.",
+   "author": "CK"
+  }
+ ]
+}

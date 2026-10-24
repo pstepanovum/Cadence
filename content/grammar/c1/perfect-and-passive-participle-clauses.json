@@ -1,0 +1,396 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "perfect-and-passive-participle-clauses",
+ "draftHash": "19785d867b6c5d78",
+ "grammarPoint": {
+  "id": "gp.perfect-and-passive-participle-clauses",
+  "level": "C1",
+  "topicId": "topic.clauses",
+  "title": "Perfect participle clauses",
+  "summary": "Perfect participle clauses describe an action that was completed before another action, making sentences more concise and formal.",
+  "explanation": "Perfect participle clauses allow you to combine two sentences or clauses when one action is completed *before* another. They make your writing more concise and are often used in formal contexts. The subject of the participle clause is usually the same as the subject of the main clause.\n\nThere are two main forms: active and passive. The active form, *having + past participle*, shows that the subject performed the completed action. For example, \"Having finished her work, she went home.\" This means she finished her work, and *then* she went home.\n\nThe passive form, *having been + past participle*, shows that the subject received the action. For instance, \"Having been informed of the delay, passengers waited patiently.\" This means passengers were informed, and *then* they waited. These clauses can appear at the beginning or end of a sentence.",
+  "patterns": [
+   "Having + past participle (active)",
+   "Having been + past participle (passive)"
+  ],
+  "examples": [
+   {
+    "text": "Having prepared all the ingredients, she started cooking dinner.",
+    "note": "Active form: The subject 'she' completed the preparation before starting to cook.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Having been praised for his presentation, Mark felt confident.",
+    "note": "Passive form: Mark received the praise before feeling confident.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The team celebrated, having successfully launched the new product.",
+    "note": "Active form at the end of the sentence, showing the completed action led to the celebration.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Having lived in several countries, she had a broad perspective.",
+    "note": "Active form describing a completed state or experience that influences the present.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He apologized for his mistake, having realized the impact of his words.",
+    "note": "Active form showing the realization happened before the apology.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Finishing the report, he submitted it.",
+    "right": "Having finished the report, he submitted it.",
+    "note": "Use the perfect participle to clearly show one action was completed before another."
+   },
+   {
+    "wrong": "Having told the news, she burst into tears.",
+    "right": "Having been told the news, she burst into tears.",
+    "note": "Use the passive form 'having been told' when the subject receives the action."
+   },
+   {
+    "wrong": "Having worked all day, the bed felt wonderful.",
+    "right": "Having worked all day, I found the bed felt wonderful.",
+    "note": "Ensure the subject of the participle clause is the same as the main clause's subject."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the entire novel, she finally understood the author's message.",
+   "options": [
+    "Reading",
+    "Having read",
+    "To read",
+    "Read"
+   ],
+   "answer": 1,
+   "explanation": "The perfect participle 'Having read' indicates that the action of reading was completed before she understood the message."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ about the changes, the employees asked many questions.",
+   "options": [
+    "Having informed",
+    "Informing",
+    "Having been informed",
+    "To inform"
+   ],
+   "answer": 2,
+   "explanation": "The employees received the information, so the passive perfect participle 'Having been informed' is correct."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The hikers were exhausted, ___ for hours without a break.",
+   "options": [
+    "having walked",
+    "walking",
+    "to walk",
+    "walked"
+   ],
+   "answer": 0,
+   "explanation": "The action of walking was completed over a period before they became exhausted, requiring 'having walked'."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ by the committee, the proposal moved forward.",
+   "options": [
+    "Having approved",
+    "Having been approved",
+    "Approving",
+    "To approve"
+   ],
+   "answer": 1,
+   "explanation": "The proposal received the approval, so the passive perfect participle 'Having been approved' is correct."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ (finish) her presentation, Sarah felt a sense of relief.",
+   "answers": [
+    [
+     "Having finished"
+    ]
+   ],
+   "explanation": "The action of finishing was completed before she felt relief, so 'Having finished' is correct."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ (warn) about the icy roads, drivers proceeded with caution.",
+   "answers": [
+    [
+     "Having been warned"
+    ]
+   ],
+   "explanation": "Drivers received the warning, so the passive form 'Having been warned' is needed."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He decided to take a break, ___ (work) on the project all morning.",
+   "answers": [
+    [
+     "having worked"
+    ]
+   ],
+   "explanation": "The action of working was completed over a period before he took a break, so 'having worked' is correct."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Having",
+    "been",
+    "delayed",
+    "by",
+    "traffic",
+    ",",
+    "they",
+    "missed",
+    "the",
+    "start",
+    "of",
+    "the",
+    "show",
+    "."
+   ],
+   "distractors": [
+    "being",
+    "delay"
+   ],
+   "explanation": "This sentence uses a passive perfect participle clause to explain why they missed the show."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "felt",
+    "proud",
+    ",",
+    "having",
+    "overcome",
+    "many",
+    "challenges",
+    "."
+   ],
+   "distractors": [
+    "overcoming",
+    "proudly"
+   ],
+   "explanation": "The perfect participle clause explains the reason for her pride, showing a completed action."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Having saw the movie, I understood the references.",
+   "answers": [
+    "Having seen the movie, I understood the references."
+   ],
+   "explanation": "The past participle of 'see' is 'seen', not 'saw'."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Having been gave the instructions, he started the task.",
+   "answers": [
+    "Having been given the instructions, he started the task."
+   ],
+   "explanation": "The past participle of 'give' is 'given', not 'gave'."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She had practiced for months. Then she won the competition.",
+   "instruction": "Combine into one sentence using a perfect participle clause.",
+   "answers": [
+    "Having practiced for months, she won the competition."
+   ],
+   "explanation": "The perfect participle 'Having practiced' shows the practice was completed before she won."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The old building was neglected for years. It finally collapsed.",
+   "instruction": "Rewrite using a passive perfect participle clause.",
+   "answers": [
+    "Having been neglected for years, the old building finally collapsed."
+   ],
+   "explanation": "The building received the action of neglect, so the passive perfect participle 'Having been neglected' is appropriate."
+  },
+  {
+   "id": "ex.c1.perfect-and-passive-participle-clauses.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.perfect-and-passive-participle-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Having completed her degree,",
+     "right": "she applied for several jobs."
+    },
+    {
+     "left": "Having been informed of the change,",
+     "right": "we adjusted our plans accordingly."
+    },
+    {
+     "left": "He felt much better,",
+     "right": "having taken a long nap."
+    },
+    {
+     "left": "Having been praised by her manager,",
+     "right": "she felt motivated to work harder."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "Having been [a-z]+ed",
+  "Having [a-z]+ed",
+  "Having [a-z]+ed [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.perfect-and-passive-participle-clauses.01": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.02": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.03": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.04": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.05": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.06": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.07": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.08": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.09": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.10": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.11": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.12": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.13": {
+    "status": "pass"
+   },
+   "ex.c1.perfect-and-passive-participle-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 7760791,
+   "text": "Having uttered these words, he turned on his heel and left the apartment.",
+   "author": "Hybrid"
+  }
+ ]
+}

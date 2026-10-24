@@ -1,0 +1,404 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "comparative-adjectives",
+ "draftHash": "b9c4bf290ba5dabb",
+ "grammarPoint": {
+  "id": "gp.comparative-adjectives",
+  "level": "A2",
+  "topicId": "topic.comparison",
+  "title": "Comparative adjectives",
+  "summary": "Learn to compare two things using adjectives like 'taller', 'more interesting', 'better', and 'worse'.",
+  "explanation": "When you want to compare two people, places, or things, you use *comparative adjectives*. These adjectives show which item has more of a certain quality than the other.\n\nFor most short adjectives (one or two syllables), you add *-er* to the end. For example, 'tall' becomes 'taller', and 'fast' becomes 'faster'. If the adjective ends in 'y', change 'y' to 'i' before adding '-er' (e.g., 'happy' becomes 'happier').\n\nFor longer adjectives (usually two or more syllables), you use the word *more* before the adjective. For example, 'beautiful' becomes 'more beautiful', and 'expensive' becomes 'more expensive'. After the comparative adjective, we often use *than* to introduce the second item in the comparison.\n\nSome common adjectives have irregular comparative forms. 'Good' becomes *better*, and 'bad' becomes *worse*. Remember these special forms when you are comparing.",
+  "patterns": [
+   "adjective-er + than",
+   "more + adjective + than",
+   "better + than",
+   "worse + than"
+  ],
+  "examples": [
+   {
+    "text": "My new apartment is *bigger* than my old one.",
+    "note": "Uses '-er' for a short adjective to compare two apartments.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "This book is *more interesting* than the movie.",
+    "note": "Uses 'more' for a longer adjective to compare a book and a movie.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Today's weather is *better* than yesterday's.",
+    "note": "Uses the irregular comparative form of 'good'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The traffic was *worse* than I expected.",
+    "note": "Uses the irregular comparative form of 'bad'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She runs *faster* than her brother.",
+    "note": "Uses '-er' and 'than' to compare two people's running speed.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "This car is more faster than that one.",
+    "right": "This car is *faster* than that one.",
+    "note": "Do not use 'more' with adjectives that already have '-er'."
+   },
+   {
+    "wrong": "He is taller I am.",
+    "right": "He is taller *than* I am.",
+    "note": "Always use 'than' after a comparative adjective when comparing two things."
+   },
+   {
+    "wrong": "My English is gooder now.",
+    "right": "My English is *better* now.",
+    "note": "Use the irregular form 'better' for 'good'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.comparative-adjectives.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The blue shirt is ___ the red one.",
+   "options": [
+    "cheaper than",
+    "more cheap than",
+    "cheaper"
+   ],
+   "answer": 0,
+   "explanation": "'Cheap' is a short adjective, so we add '-er'. We use 'than' to complete the comparison."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "This new restaurant is ___ the old one.",
+   "options": [
+    "more good than",
+    "better than",
+    "gooder than"
+   ],
+   "answer": 1,
+   "explanation": "'Good' has an irregular comparative form, which is 'better'."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Learning a new language is ___ learning a new sport.",
+   "options": [
+    "more difficult",
+    "difficulter than",
+    "more difficult than"
+   ],
+   "answer": 2,
+   "explanation": "'Difficult' is a long adjective, so we use 'more difficult'. We need 'than' to compare the two activities."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My old phone was slow, but my new one is ___.",
+   "options": [
+    "faster",
+    "more fast",
+    "fastest"
+   ],
+   "answer": 0,
+   "explanation": "'Fast' is a short adjective, so we add '-er' to make it comparative. 'Faster' compares the new phone to the old one."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The city is ___ (noisy) ___ the countryside.",
+   "answers": [
+    [
+     "noisier"
+    ],
+    [
+     "than"
+    ]
+   ],
+   "explanation": "'Noisy' is a two-syllable adjective ending in 'y', so it becomes 'noisier'. We use 'than' to complete the comparison."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "This movie is ___ (boring) ___ the last one.",
+   "answers": [
+    [
+     "more boring"
+    ],
+    [
+     "than"
+    ]
+   ],
+   "explanation": "'Boring' is a two-syllable adjective, so we use 'more boring'. We need 'than' to compare the two movies."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My headache is ___ (bad) today than it was yesterday.",
+   "answers": [
+    [
+     "worse"
+    ]
+   ],
+   "explanation": "'Bad' has an irregular comparative form, which is 'worse'."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "My",
+    "new",
+    "laptop",
+    "is",
+    "faster",
+    "than",
+    "my",
+    "old",
+    "one",
+    "."
+   ],
+   "distractors": [
+    "most",
+    "fastest"
+   ],
+   "explanation": "This sentence compares two laptops using the comparative adjective 'faster' and 'than'."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "This",
+    "task",
+    "is",
+    "more",
+    "difficult",
+    "than",
+    "the",
+    "last",
+    "one",
+    "."
+   ],
+   "distractors": [
+    "difficulter",
+    "most"
+   ],
+   "explanation": "This sentence compares two tasks using 'more difficult' and 'than'."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The train is more quicker than the bus.",
+   "answers": [
+    "The train is quicker than the bus."
+   ],
+   "explanation": "For short adjectives like 'quick', we add '-er' and do not use 'more'."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Eating vegetables is gooder for you than eating candy.",
+   "answers": [
+    "Eating vegetables is better for you than eating candy."
+   ],
+   "explanation": "The comparative form of 'good' is 'better', not 'gooder'."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The small dog is friendly. The big dog is also friendly.",
+   "instruction": "Compare the two dogs using a comparative adjective.",
+   "answers": [
+    "The small dog is friendlier than the big dog.",
+    "The big dog is friendlier than the small dog."
+   ],
+   "explanation": "'Friendly' becomes 'friendlier' when comparing two things. Both comparisons are grammatically correct depending on the intended meaning."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The red car is expensive. The black car is very expensive.",
+   "instruction": "Use 'more expensive' to compare the cars.",
+   "answers": [
+    "The black car is more expensive than the red car."
+   ],
+   "explanation": "'Expensive' is a long adjective, so we use 'more expensive' to compare the two cars."
+  },
+  {
+   "id": "ex.a2.comparative-adjectives.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.comparative-adjectives"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "My new shoes are more comfortable",
+     "right": "than my old ones."
+    },
+    {
+     "left": "The mountain path was steeper",
+     "right": "than we expected."
+    },
+    {
+     "left": "This coffee tastes better",
+     "right": "than the one I had yesterday."
+    },
+    {
+     "left": "The traffic was worse",
+     "right": "on Friday than on Thursday."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "is (a-z)+er than",
+  "is more (a-z)+ than",
+  "is better than",
+  "is worse than"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.comparative-adjectives.01": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.02": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.03": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.04": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.05": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.06": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.07": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.08": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.09": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.10": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.11": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.12": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.13": {
+    "status": "pass"
+   },
+   "ex.a2.comparative-adjectives.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 8898515,
+   "text": "This hotel is better than that other one.",
+   "author": "dzouras"
+  },
+  {
+   "sentenceId": 8881299,
+   "text": "My camera is better than yours.",
+   "author": "CK"
+  }
+ ]
+}

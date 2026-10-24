@@ -1,0 +1,409 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "inversion-after-negative-adverbials",
+ "draftHash": "dc2e11b7fef0f9b0",
+ "grammarPoint": {
+  "id": "gp.inversion-after-negative-adverbials",
+  "level": "C1",
+  "topicId": "topic.emphasis",
+  "title": "Inversion after negative adverbials",
+  "summary": "Use inversion after negative adverbials at the beginning of a sentence to add emphasis, often in formal or literary contexts.",
+  "explanation": "Inversion after negative adverbials is a grammatical structure used to create *emphasis* or a more *formal* and *dramatic* style. When a negative adverbial phrase (like \"never,\" \"rarely,\" \"not only,\" \"hardly,\" \"under no circumstances\") begins a sentence, the subject and auxiliary verb swap positions, similar to how they do in a question.\n\nThis structure is not common in everyday spoken English but is frequently found in written language, speeches, and formal declarations. It draws attention to the negative aspect of the statement, making it sound stronger and more impactful.\n\nThe inversion always involves an auxiliary verb (do/does/did, have/has/had, be, or a modal verb like can/could, will/would, should/must). If there is no auxiliary verb in the original statement, you must add \"do,\" \"does,\" or \"did\" before the subject, just like in a question.",
+  "patterns": [
+   "Negative adverbial + auxiliary verb + subject + main verb",
+   "Never + have/has/had + subject + past participle",
+   "Not only + do/does/did + subject + base verb",
+   "Hardly/Scarcely + had + subject + past participle + when/before...",
+   "Under no circumstances + modal verb + subject + base verb"
+  ],
+  "examples": [
+   {
+    "text": "Never have I seen such a breathtaking sunset.",
+    "note": "Emphasizes the uniqueness of the experience.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Not only did she win the competition, but she also broke a world record.",
+    "note": "Highlights two impressive achievements.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Rarely do we encounter such complex problems in our research.",
+    "note": "Stresses the infrequency of difficult issues.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Hardly had the concert started when the power went out.",
+    "note": "Shows one event immediately followed by another, with emphasis.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Under no circumstances should you open that package.",
+    "note": "Gives a strong warning or prohibition.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Seldom I travel abroad for work.",
+    "right": "Seldom do I travel abroad for work.",
+    "note": "Remember to add an auxiliary verb (do/does/did) if there isn't one."
+   },
+   {
+    "wrong": "Not only she is talented, but she is also very kind.",
+    "right": "Not only is she talented, but she is also very kind.",
+    "note": "Invert the auxiliary verb and subject."
+   },
+   {
+    "wrong": "Never I have felt so relieved.",
+    "right": "Never have I felt so relieved.",
+    "note": "The auxiliary verb 'have' must come before the subject 'I'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ had the train left the station when the passenger realized he had forgotten his wallet.",
+   "options": [
+    "No sooner",
+    "Not only",
+    "Rarely",
+    "Little"
+   ],
+   "answer": 0,
+   "explanation": "\"No sooner... than\" is a common inverted structure indicating one event immediately followed by another."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Under no circumstances ___ leave your belongings unattended.",
+   "options": [
+    "you should",
+    "should you",
+    "you must",
+    "must you"
+   ],
+   "answer": 1,
+   "explanation": "After a negative adverbial like \"Under no circumstances,\" the auxiliary verb (should) comes before the subject (you)."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Not only ___ the project on time, but they also exceeded expectations.",
+   "options": [
+    "they finished",
+    "did they finish",
+    "finished they",
+    "they did finish"
+   ],
+   "answer": 1,
+   "explanation": "\"Not only\" requires inversion with an auxiliary verb (did) before the subject (they) and the base form of the main verb (finish)."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Little ___ about the true impact of the new policy.",
+   "options": [
+    "we know",
+    "do we know",
+    "we do know",
+    "know we"
+   ],
+   "answer": 1,
+   "explanation": "\"Little\" as a negative adverbial requires inversion with \"do\" before the subject \"we\" and the base verb \"know.\""
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Rarely ___ I ___ such dedication from a team.",
+   "answers": [
+    [
+     "do",
+     "have"
+    ],
+    [
+     "see",
+     "seen"
+    ]
+   ],
+   "explanation": "\"Rarely\" requires inversion with \"do\" and the base form of the main verb."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Not only ___ the company expand its market, but it also increased its profits.",
+   "answers": [
+    [
+     "did"
+    ]
+   ],
+   "explanation": "\"Not only\" requires inversion with \"did\" for past simple tense."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Under no circumstances ___ you ___ your password.",
+   "answers": [
+    [
+     "should"
+    ],
+    [
+     "share",
+     "reveal"
+    ]
+   ],
+   "explanation": "\"Under no circumstances\" requires inversion with a modal verb like \"should\" before the subject, followed by the base verb."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Never",
+    "have",
+    "I",
+    "tasted",
+    "such",
+    "delicious",
+    "food",
+    "."
+   ],
+   "distractors": [
+    "always",
+    "eat"
+   ],
+   "explanation": "The negative adverbial \"Never\" at the start of the sentence triggers inversion of the auxiliary verb \"have\" and the subject \"I\"."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Not",
+    "only",
+    "did",
+    "he",
+    "apologize",
+    ",",
+    "but",
+    "he",
+    "also",
+    "offered",
+    "to",
+    "help",
+    "."
+   ],
+   "distractors": [
+    "apologizes",
+    "then"
+   ],
+   "explanation": "\"Not only\" at the beginning of the sentence requires inversion with the auxiliary \"did\" before the subject \"he\" and the base verb \"apologize\"."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Seldom she visits her family in the countryside.",
+   "answers": [
+    "Seldom does she visit her family in the countryside."
+   ],
+   "explanation": "When \"Seldom\" begins a sentence, the auxiliary verb \"does\" must come before the subject \"she\"."
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Hardly they had finished the report when the deadline was extended.",
+   "answers": [
+    "Hardly had they finished the report when the deadline was extended."
+   ],
+   "explanation": "After \"Hardly,\" the auxiliary verb \"had\" must be inverted with the subject \"they.\""
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She had never experienced such intense pressure before.",
+   "instruction": "Start the sentence with \"Never.\"",
+   "answers": [
+    "Never had she experienced such intense pressure before."
+   ],
+   "explanation": "Starting with the negative adverbial \"Never\" requires inversion of the auxiliary verb \"had\" and the subject \"she.\""
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You should not, under any circumstances, reveal this information.",
+   "instruction": "Begin the sentence with \"Under no circumstances.\"",
+   "answers": [
+    "Under no circumstances should you reveal this information."
+   ],
+   "explanation": "When \"Under no circumstances\" begins a sentence, the modal verb \"should\" must be inverted with the subject \"you.\""
+  },
+  {
+   "id": "ex.c1.inversion-after-negative-adverbials.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-negative-adverbials"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Little did I know",
+     "right": "that my life was about to change."
+    },
+    {
+     "left": "Not only was the movie exciting,",
+     "right": "but it also had a profound message."
+    },
+    {
+     "left": "Rarely have I seen",
+     "right": "such a vibrant display of colors."
+    },
+    {
+     "left": "No sooner had he arrived",
+     "right": "than the party started."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(never|rarely|seldom|little) (have|has|had|do|does|did|can|could|will|would|should|must) [a-z]+ [a-z]+",
+  "not only (do|does|did|is|are|was|were|have|has|had|can|could|will|would|should|must) [a-z]+ [a-z]+",
+  "(hardly|scarcely|no sooner) had [a-z]+ [a-z]+",
+  "under no circumstances (do|does|did|is|are|was|were|have|has|had|can|could|will|would|should|must) [a-z]+ [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.inversion-after-negative-adverbials.01": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.02": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.03": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.04": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.05": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options form correct inverted structures."
+   },
+   "ex.c1.inversion-after-negative-adverbials.06": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options create correct and natural sentences."
+   },
+   "ex.c1.inversion-after-negative-adverbials.08": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.09": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.10": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.11": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.12": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.13": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-negative-adverbials.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 244538,
+   "text": "Not only were there strong winds yesterday, but also it rained heavily.",
+   "author": "CK"
+  }
+ ]
+}

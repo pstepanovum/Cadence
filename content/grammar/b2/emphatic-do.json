@@ -1,0 +1,384 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "emphatic-do",
+ "draftHash": "bc01c0d9c785c6a3",
+ "grammarPoint": {
+  "id": "gp.emphatic-do",
+  "level": "B2",
+  "topicId": "topic.emphasis",
+  "title": "Emphatic do",
+  "summary": "Use 'do', 'does', or 'did' before a main verb to add emphasis, confirming that something is true, often in response to doubt or a contradiction.",
+  "explanation": "We use *emphatic do* (do, does, or did) to stress that a statement is true, especially when someone might doubt it or has said the opposite. It adds strength to your words, making your affirmation more forceful.\n\nThis structure is common when you want to correct a misunderstanding, express strong feelings, or confirm a fact. The auxiliary verb (do, does, or did) comes before the main verb, which is always in its base form.\n\nFor example, if someone says, \"You don't like vegetables,\" you might reply, \"I *do* like vegetables!\" to strongly contradict them. It's a way to show conviction in what you're saying.",
+  "patterns": [
+   "Subject + do + base verb (for I, you, we, they)",
+   "Subject + does + base verb (for he, she, it)",
+   "Subject + did + base verb (for all subjects in the past)"
+  ],
+  "examples": [
+   {
+    "text": "I do enjoy cooking for my friends.",
+    "note": "Emphasizes the speaker's enjoyment, perhaps correcting a misconception.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She does understand the new software.",
+    "note": "Confirms her understanding, possibly against someone's doubt.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They did finish the report before the deadline.",
+    "note": "Stresses that the action was completed, contradicting a belief it wasn't.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It does seem like a good idea to me.",
+    "note": "Highlights the speaker's opinion, adding conviction.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We did try our best to solve the problem.",
+    "note": "Emphasizes the effort made, perhaps in a difficult situation.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He does likes to read sci-fi novels.",
+    "right": "He does like to read sci-fi novels.",
+    "note": "After 'do', 'does', or 'did', the main verb must be in its base form."
+   },
+   {
+    "wrong": "I do am tired after that long flight.",
+    "right": "I am tired after that long flight.",
+    "note": "Emphatic 'do' is not used with the verb 'to be'."
+   },
+   {
+    "wrong": "They did went to the concert last night.",
+    "right": "They did go to the concert last night.",
+    "note": "Use 'did' for past tense emphasis, but the main verb remains in its base form."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.emphatic-do.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Even though you think I don't care, I ___ care about your feelings.",
+   "options": [
+    "do",
+    "am",
+    "have",
+    "will"
+   ],
+   "answer": 0,
+   "explanation": "To emphasize that the speaker cares, 'do' is used before the base verb 'care'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My brother said he didn't get the message, but he ___ get it.",
+   "options": [
+    "does",
+    "did",
+    "do",
+    "is"
+   ],
+   "answer": 1,
+   "explanation": "For past tense emphasis, 'did' is used before the base verb 'get'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ want to join us for dinner, despite what she said earlier.",
+   "options": [
+    "do",
+    "did",
+    "does",
+    "is"
+   ],
+   "answer": 2,
+   "explanation": "For third person singular present tense emphasis, 'does' is used before the base verb 'want'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I know it sounds strange, but I ___ believe in luck.",
+   "options": [
+    "am",
+    "do",
+    "have",
+    "will"
+   ],
+   "answer": 1,
+   "explanation": "To emphasize the speaker's belief, 'do' is used before the base verb 'believe'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You might think I forgot, but I ___ ___ remember your birthday!",
+   "answers": [
+    [
+     "do"
+    ],
+    [
+     "remember"
+    ]
+   ],
+   "explanation": "To emphasize remembering, use 'do' with the base form of the verb 'remember'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ ___ to finish his work on time, even with all the distractions.",
+   "answers": [
+    [
+     "did"
+    ],
+    [
+     "manage"
+    ]
+   ],
+   "explanation": "For past tense emphasis, use 'did' with the base form of the verb 'manage'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My cat ___ ___ enjoy playing with that new toy.",
+   "answers": [
+    [
+     "does"
+    ],
+    [
+     "enjoy"
+    ]
+   ],
+   "explanation": "For third person singular present tense emphasis, use 'does' with the base form of the verb 'enjoy'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "do",
+    "appreciate",
+    "your",
+    "help",
+    "."
+   ],
+   "explanation": "The emphatic 'do' is placed before the base form of the verb 'appreciate' to stress gratitude."
+  },
+  {
+   "id": "ex.b2.emphatic-do.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "did",
+    "call",
+    "you",
+    "back",
+    "."
+   ],
+   "distractors": [
+    "calls"
+   ],
+   "explanation": "The emphatic 'did' is placed before the base form of the verb 'call' to confirm the action in the past."
+  },
+  {
+   "id": "ex.b2.emphatic-do.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He does likes to listen to classical music.",
+   "answers": [
+    "He does like to listen to classical music."
+   ],
+   "explanation": "After 'does', the main verb must be in its base form ('like'), not with an -s ending."
+  },
+  {
+   "id": "ex.b2.emphatic-do.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We did went to the museum yesterday.",
+   "answers": [
+    "We did go to the museum yesterday."
+   ],
+   "explanation": "When using 'did' for emphasis, the main verb must be in its base form ('go'), not the past tense ('went')."
+  },
+  {
+   "id": "ex.b2.emphatic-do.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I like your new hairstyle.",
+   "instruction": "Add emphasis to the verb 'like'.",
+   "answers": [
+    "I do like your new hairstyle."
+   ],
+   "explanation": "To add emphasis, insert 'do' before the base form of the verb 'like'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He remembered to lock the door.",
+   "instruction": "Rewrite the sentence to emphasize that he remembered.",
+   "answers": [
+    "He did remember to lock the door."
+   ],
+   "explanation": "To emphasize a past action, use 'did' before the base form of the verb 'remember'."
+  },
+  {
+   "id": "ex.b2.emphatic-do.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.emphatic-do"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "You think I don't care, but I",
+     "right": "do care about this project."
+    },
+    {
+     "left": "They said she wasn't there, but she",
+     "right": "did attend the meeting."
+    },
+    {
+     "left": "It might seem difficult, but it",
+     "right": "does get easier with practice."
+    },
+    {
+     "left": "I know you're busy, but please",
+     "right": "do try to come."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(I|You|We|They) do [a-z]+",
+  "(He|She|It) does [a-z]+",
+  "(I|You|He|She|It|We|They) did [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.emphatic-do.01": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.02": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.03": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.04": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.05": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.06": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.07": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.08": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.09": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.10": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.11": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.12": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.13": {
+    "status": "pass"
+   },
+   "ex.b2.emphatic-do.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

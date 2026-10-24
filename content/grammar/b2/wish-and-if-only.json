@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "wish-and-if-only",
+ "draftHash": "85757426b5590397",
+ "grammarPoint": {
+  "id": "gp.wish-and-if-only",
+  "level": "B2",
+  "topicId": "topic.conditionals",
+  "title": "Wish and if only",
+  "summary": "Use 'wish' and 'if only' to express desires for things to be different in the present or future, or regrets about the past.",
+  "explanation": "We use 'wish' and 'if only' to talk about situations we want to change. These situations are usually not true or not possible at the moment, or they are things we regret from the past. 'If only' is often stronger and more dramatic than 'wish'.\n\nTo express a wish about the *present* or *future*, we use 'wish' or 'if only' followed by the *past simple* tense. This shows that we want a current situation to be different. For example, if you don't have a car, you might say, \"I wish I had a car.\"\n\nTo express a *regret about the past*, we use 'wish' or 'if only' followed by the *past perfect* tense. This shows that we are sorry about something that happened or didn't happen. For example, \"I wish I had studied harder for the exam.\"\n\nWe can also use 'wish' or 'if only' with *would* to talk about things we want other people or situations to change, especially if we are annoyed. For example, \"I wish the bus would arrive soon.\" We generally don't use 'would' to talk about our own actions.",
+  "patterns": [
+   "wish/if only + subject + past simple (for present/future wishes)",
+   "wish/if only + subject + past perfect (for past regrets)",
+   "wish/if only + subject + would + base verb (for other people's behavior/situations)"
+  ],
+  "examples": [
+   {
+    "text": "I wish I spoke French fluently.",
+    "note": "Expresses a wish about a present ability.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If only it weren't raining right now!",
+    "note": "Expresses a strong wish for a present situation to be different.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She wishes she had saved more money last year.",
+    "note": "Expresses regret about a past action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They wish their neighbors would turn down the music.",
+    "note": "Expresses a desire for someone else's behavior to change.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I wish I hadn't forgotten my umbrella this morning.",
+    "note": "Expresses regret about a past event.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I wish I am taller.",
+    "right": "I wish I were taller.",
+    "note": "Use the past simple (or 'were' for 'be') for present wishes."
+   },
+   {
+    "wrong": "If only I didn't eat so much cake yesterday.",
+    "right": "If only I hadn't eaten so much cake yesterday.",
+    "note": "Use the past perfect for regrets about the past."
+   },
+   {
+    "wrong": "He wishes he would have more free time.",
+    "right": "He wishes he had more free time.",
+    "note": "Don't use 'would' for wishes about your own present situation."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.wish-and-if-only.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I wish I ___ a bigger apartment; this one is too small.",
+   "options": [
+    "have",
+    "had",
+    "would have",
+    "will have"
+   ],
+   "answer": 1,
+   "explanation": "For wishes about the present, we use the past simple tense. 'Had' is the past simple of 'have'."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If only I ___ the train, I wouldn't be late for work.",
+   "options": [
+    "didn't miss",
+    "hadn't missed",
+    "wouldn't miss",
+    "don't miss"
+   ],
+   "answer": 1,
+   "explanation": "This expresses regret about a past event (missing the train), so we use the past perfect tense."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My parents wish I ___ them more often.",
+   "options": [
+    "call",
+    "called",
+    "would call",
+    "had called"
+   ],
+   "answer": 2,
+   "explanation": "When wishing for someone else's behavior to change, especially if there's a hint of annoyance or desire for action, we use 'would + base verb'."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I wish I ___ about the party sooner; I missed all the fun!",
+   "options": [
+    "knew",
+    "had known",
+    "would know",
+    "know"
+   ],
+   "answer": 1,
+   "explanation": "This is a regret about not knowing something in the past, so the past perfect 'had known' is correct."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If only I ___ (be) taller, I could reach that shelf.",
+   "answers": [
+    [
+     "were",
+     "was"
+    ]
+   ],
+   "explanation": "For wishes about the present, we use the past simple. 'Were' is often preferred for 'be' in hypothetical situations, but 'was' is also common."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He wishes he ___ (not spend) so much money on that old car.",
+   "answers": [
+    [
+     "hadn't spent",
+     "had not spent"
+    ]
+   ],
+   "explanation": "This expresses regret about a past action, so the past perfect negative 'hadn't spent' is used."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I wish the children ___ (play) more quietly.",
+   "answers": [
+    [
+     "would play"
+    ]
+   ],
+   "explanation": "This expresses a desire for someone else's behavior to change, so 'would + base verb' is appropriate."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "wish",
+    "I",
+    "had",
+    "a",
+    "dog",
+    "."
+   ],
+   "distractors": [
+    "have"
+   ],
+   "explanation": "This sentence expresses a wish about a present situation using 'wish + past simple'."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "only",
+    "they",
+    "hadn't",
+    "left",
+    "so",
+    "early",
+    "."
+   ],
+   "distractors": [
+    "didn't"
+   ],
+   "explanation": "This sentence expresses regret about a past action using 'if only + past perfect'."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I wish I would speak Spanish.",
+   "answers": [
+    "I wish I spoke Spanish."
+   ],
+   "explanation": "We use the past simple (spoke) for wishes about our own present abilities, not 'would speak'."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She wishes she didn't forget her passport.",
+   "answers": [
+    "She wishes she hadn't forgotten her passport."
+   ],
+   "explanation": "For regrets about the past, we use the past perfect tense ('hadn't forgotten')."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's a shame I don't live closer to the beach.",
+   "instruction": "Rewrite using 'I wish'.",
+   "answers": [
+    "I wish I lived closer to the beach."
+   ],
+   "explanation": "To express a wish about a present situation, use 'wish + past simple'."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I regret not telling him the truth.",
+   "instruction": "Rewrite using 'If only'.",
+   "answers": [
+    "If only I had told him the truth."
+   ],
+   "explanation": "To express regret about a past action, use 'if only + past perfect'."
+  },
+  {
+   "id": "ex.b2.wish-and-if-only.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.wish-and-if-only"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I wish I",
+     "right": "had more free time."
+    },
+    {
+     "left": "If only I",
+     "right": "hadn't lost my keys."
+    },
+    {
+     "left": "She wishes her brother",
+     "right": "would visit more often."
+    },
+    {
+     "left": "They wish it",
+     "right": "weren't so cold today."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "wish I had",
+  "if only I had",
+  "wish it were",
+  "wish you would"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.wish-and-if-only.01": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.02": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.03": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.04": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.05": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.06": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.07": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.08": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.09": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.10": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.11": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.12": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.13": {
+    "status": "pass"
+   },
+   "ex.b2.wish-and-if-only.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 6347917,
+   "text": "I wish I hadn't agreed to do that.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 5156211,
+   "text": "I wish I had more energy.",
+   "author": "CK"
+  }
+ ]
+}

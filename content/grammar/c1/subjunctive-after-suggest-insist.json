@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "subjunctive-after-suggest-insist",
+ "draftHash": "45f6663850ebec2c",
+ "grammarPoint": {
+  "id": "gp.subjunctive-after-suggest-insist",
+  "level": "C1",
+  "topicId": "topic.verb-patterns",
+  "title": "The subjunctive",
+  "summary": "Learn to use the subjunctive mood after certain verbs and impersonal expressions to convey demands, suggestions, or importance, using the base form of the verb.",
+  "explanation": "The subjunctive mood is used in English to express wishes, demands, suggestions, or statements of importance. It often appears in a 'that'-clause following specific verbs or impersonal expressions.\n\nThe key characteristic of the subjunctive is that the verb in the 'that'-clause always takes its *base form*, regardless of the subject. This means there is no '-s' for third person singular subjects (he, she, it), and the verb 'to be' becomes 'be' for all subjects.\n\nCommon verbs that trigger the subjunctive include *suggest, insist, recommend, demand, propose, request*, and *advise*. Impersonal expressions like *It is important that, It is essential that, It is vital that*, or *It is crucial that* also use the subjunctive. This structure is generally more formal.",
+  "patterns": [
+   "verb (suggest, insist, recommend) + that + subject + base form of verb",
+   "It is + adjective (important, essential, vital) + that + subject + base form of verb"
+  ],
+  "examples": [
+   {
+    "text": "The committee insisted that he *submit* his report by Friday.",
+    "note": "Expresses a demand; 'submit' is the base form, not 'submits'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I suggest that she *reconsider* her travel plans.",
+    "note": "Expresses a suggestion; 'reconsider' is the base form, not 'reconsiders'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It is essential that everyone *be* present for the training session.",
+    "note": "Expresses importance; 'be' is used for all subjects, not 'is' or 'are'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They demanded that the new policy *be* implemented immediately.",
+    "note": "Expresses a demand in the passive voice; 'be' is the base form.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My doctor advised that I *take* a break from work.",
+    "note": "Expresses advice; 'take' is the base form, not 'takes'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The manager requested that he *finishes* the task.",
+    "right": "The manager requested that he *finish* the task.",
+    "note": "Use the base form 'finish', not 'finishes', for the subjunctive."
+   },
+   {
+    "wrong": "It's crucial that she *is* aware of the risks.",
+    "right": "It's crucial that she *be* aware of the risks.",
+    "note": "Use the base form 'be', not 'is', for the verb 'to be' in the subjunctive."
+   },
+   {
+    "wrong": "They proposed *him to join* the team.",
+    "right": "They proposed *that he join* the team.",
+    "note": "The subjunctive uses 'that + subject + base form', not an infinitive."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The board recommended that the company ___ its marketing strategy.",
+   "options": [
+    "revises",
+    "revise",
+    "to revise",
+    "is revising"
+   ],
+   "answer": 1,
+   "explanation": "After 'recommended that', the subjunctive requires the base form of the verb, which is 'revise'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It is vital that he ___ informed of any changes.",
+   "options": [
+    "is",
+    "be",
+    "was",
+    "to be"
+   ],
+   "answer": 1,
+   "explanation": "After 'It is vital that', the subjunctive requires the base form 'be' for the verb 'to be'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I insist that you ___ the instructions carefully.",
+   "options": [
+    "reads",
+    "read",
+    "are reading",
+    "to read"
+   ],
+   "answer": 1,
+   "explanation": "After 'insist that', the subjunctive requires the base form of the verb, which is 'read'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The architect proposed that the new building ___ more energy-efficient.",
+   "options": [
+    "is",
+    "was",
+    "be",
+    "will be"
+   ],
+   "answer": 2,
+   "explanation": "After 'proposed that', the subjunctive requires the base form 'be' for the verb 'to be'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It is important that she ___ her decision before the deadline.",
+   "answers": [
+    [
+     "make"
+    ]
+   ],
+   "explanation": "After 'It is important that', the subjunctive requires the base form of the verb, 'make'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The regulations demand that every visitor ___ a valid ID.",
+   "answers": [
+    [
+     "show",
+     "have"
+    ]
+   ],
+   "explanation": "After 'demand that', the subjunctive requires the base form of the verb, 'show'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My supervisor suggested that I ___ more proactive in team meetings.",
+   "answers": [
+    [
+     "be"
+    ]
+   ],
+   "explanation": "After 'suggested that', the subjunctive requires the base form 'be' for the verb 'to be'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "is",
+    "crucial",
+    "that",
+    "we",
+    "act",
+    "now",
+    "."
+   ],
+   "distractors": [
+    "acting",
+    "to"
+   ],
+   "explanation": "The sentence uses the subjunctive 'act' after 'It is crucial that we' to express importance."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "requested",
+    "that",
+    "he",
+    "attend",
+    "the",
+    "conference",
+    "."
+   ],
+   "distractors": [
+    "attends",
+    "for"
+   ],
+   "explanation": "The sentence uses the subjunctive 'attend' after 'They requested that he' to express a request."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The company policy requires that each employee completes the training.",
+   "answers": [
+    "The company policy requires that each employee complete the training."
+   ],
+   "explanation": "After 'requires that', the subjunctive requires the base form 'complete', not 'completes'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It is essential that the data is accurate.",
+   "answers": [
+    "It is essential that the data be accurate."
+   ],
+   "explanation": "After 'It is essential that', the subjunctive requires the base form 'be', not 'is', for the verb 'to be'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The manager said it was important for him to sign the document.",
+   "instruction": "Rewrite using the subjunctive mood with 'It is important that'.",
+   "answers": [
+    "It is important that he sign the document."
+   ],
+   "explanation": "The instruction requires changing the sentence to use the subjunctive structure 'It is important that + subject + base form of verb'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She advised me to take a break.",
+   "instruction": "Rewrite using 'She advised that I'.",
+   "answers": [
+    "She advised that I take a break."
+   ],
+   "explanation": "The instruction requires changing the sentence to use the subjunctive structure 'She advised that + subject + base form of verb'."
+  },
+  {
+   "id": "ex.c1.subjunctive-after-suggest-insist.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.subjunctive-after-suggest-insist"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The landlord insisted that the rent",
+     "right": "be paid on time."
+    },
+    {
+     "left": "It is crucial that every student",
+     "right": "understand the instructions."
+    },
+    {
+     "left": "I propose that the meeting",
+     "right": "start at 9 AM."
+    },
+    {
+     "left": "They requested that he",
+     "right": "attend the ceremony."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(suggest|insist|recommend|demand|propose|request|advise) that \\w+ (be|go|do|have|make|take|submit|reconsider|understand|attend|start|pay)",
+  "it is (important|essential|vital|crucial) that \\w+ (be|go|do|have|make|take|understand|act)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.subjunctive-after-suggest-insist.01": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.02": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.03": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.04": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.05": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options correctly use the mandative subjunctive base verb form after demand."
+   },
+   "ex.c1.subjunctive-after-suggest-insist.07": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.08": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.09": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.10": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.11": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.12": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.13": {
+    "status": "pass"
+   },
+   "ex.c1.subjunctive-after-suggest-insist.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 4664234,
+   "text": "What would you recommend that I do?",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 9353371,
+   "text": "I recommend that you go by bus.",
+   "author": "CK"
+  }
+ ]
+}

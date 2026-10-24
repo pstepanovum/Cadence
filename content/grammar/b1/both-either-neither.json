@@ -1,0 +1,409 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "both-either-neither",
+ "draftHash": "b7f302fe068d0b3f",
+ "grammarPoint": {
+  "id": "gp.both-either-neither",
+  "level": "B1",
+  "topicId": "topic.articles-determiners",
+  "title": "Both, either and neither",
+  "summary": "Learn to use 'both', 'either', and 'neither' to talk about two people or things, making choices, or saying that something is not true for two options.",
+  "explanation": "We use *both* to refer to two people or things together. It means 'the two' or 'the one and the other'. When you use 'both', the verb is always plural.\n\nWe use *either* to talk about one of two choices. It means 'one or the other'. When 'either' is the subject, the verb is usually singular. We also use 'either... or...' to connect two options.\n\nWe use *neither* to say that something is not true for two people or things. It means 'not one and not the other'. When 'neither' is the subject, the verb is usually singular. We also use 'neither... nor...' to connect two negative options.",
+  "patterns": [
+   "Both + plural noun + plural verb",
+   "Both of + pronoun/determiner + plural noun + plural verb",
+   "Either + singular noun + singular verb",
+   "Either of + pronoun/determiner + plural noun + singular verb",
+   "Neither + singular noun + singular verb",
+   "Neither of + pronoun/determiner + plural noun + singular verb",
+   "Both X and Y + plural verb",
+   "Either X or Y + verb (agrees with Y)",
+   "Neither X nor Y + verb (agrees with Y)"
+  ],
+  "examples": [
+   {
+    "text": "Both sisters enjoy hiking in the mountains.",
+    "note": "Refers to two sisters, and the verb 'enjoy' is plural.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You can choose either path to reach the lake.",
+    "note": "Indicates a choice between two paths.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Neither of the restaurants serves vegetarian options.",
+    "note": "Means not one and not the other restaurant serves vegetarian food. The verb 'serves' is singular.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Both the blue shirt and the green shirt are on sale.",
+    "note": "Connects two items, meaning both are on sale.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Neither my brother nor my sister lives in this city anymore.",
+    "note": "Connects two people, meaning neither of them lives here. The verb 'lives' agrees with 'sister'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Both of the students is ready for the exam.",
+    "right": "Both of the students are ready for the exam.",
+    "note": "Use a plural verb with 'both'."
+   },
+   {
+    "wrong": "Neither of the options are correct.",
+    "right": "Neither of the options is correct.",
+    "note": "Use a singular verb with 'neither' when it's the subject."
+   },
+   {
+    "wrong": "I don't like neither of these colors.",
+    "right": "I don't like either of these colors.",
+    "note": "Avoid double negatives; 'neither' already implies a negative."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.both-either-neither.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My parents are coming to visit. ___ of them has seen my new apartment yet.",
+   "options": [
+    "Both",
+    "Either",
+    "Neither"
+   ],
+   "answer": 2,
+   "explanation": "'Neither' is correct because the verb 'has seen' is singular, and it implies that not one and not the other parent has seen the apartment."
+  },
+  {
+   "id": "ex.b1.both-either-neither.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We have two tickets for the concert. ___ of us can go.",
+   "options": [
+    "Both",
+    "Either",
+    "Neither"
+   ],
+   "answer": 0,
+   "explanation": "'Both' is correct because it refers to two people (us) and the verb 'can go' implies that both are able to attend."
+  },
+  {
+   "id": "ex.b1.both-either-neither.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You can choose ___ coffee or tea with your breakfast.",
+   "options": [
+    "both",
+    "either",
+    "neither"
+   ],
+   "answer": 1,
+   "explanation": "'Either... or...' is used to present two choices."
+  },
+  {
+   "id": "ex.b1.both-either-neither.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The two books were very interesting. I enjoyed ___ of them.",
+   "options": [
+    "both",
+    "either",
+    "neither"
+   ],
+   "answer": 0,
+   "explanation": "'Both' is correct because it means you enjoyed the two books together."
+  },
+  {
+   "id": "ex.b1.both-either-neither.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I asked two friends to help, but ___ of them was available.",
+   "answers": [
+    [
+     "neither"
+    ]
+   ],
+   "explanation": "'Neither' is correct because it means not one and not the other friend was available, and it takes a singular verb 'was'."
+  },
+  {
+   "id": "ex.b1.both-either-neither.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ my brother ___ my sister likes spicy food.",
+   "answers": [
+    [
+     "Neither"
+    ],
+    [
+     "nor"
+    ]
+   ],
+   "explanation": "'Neither... nor...' is used to say that two things are not true. The verb 'likes' agrees with 'sister'."
+  },
+  {
+   "id": "ex.b1.both-either-neither.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ of the proposals seems like a good solution.",
+   "answers": [
+    [
+     "Neither"
+    ],
+    [
+     "Either"
+    ]
+   ],
+   "explanation": "Both 'Neither' (meaning not one and not the other) and 'Either' (meaning one of the two) work here, as 'seems' is singular. The meaning changes slightly."
+  },
+  {
+   "id": "ex.b1.both-either-neither.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Both",
+    "my",
+    "parents",
+    "speak",
+    "French",
+    "."
+   ],
+   "distractors": [
+    "every",
+    "speaks"
+   ],
+   "explanation": "This sentence correctly uses 'both' to refer to two parents, followed by a plural verb."
+  },
+  {
+   "id": "ex.b1.both-either-neither.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "can",
+    "take",
+    "either",
+    "the",
+    "bus",
+    "or",
+    "the",
+    "train",
+    "."
+   ],
+   "distractors": [
+    "and",
+    "nor"
+   ],
+   "explanation": "This sentence uses 'either... or...' to offer two transportation choices."
+  },
+  {
+   "id": "ex.b1.both-either-neither.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Neither of the options are acceptable.",
+   "answers": [
+    "Neither of the options is acceptable."
+   ],
+   "explanation": "When 'neither' is the subject, the verb should be singular."
+  },
+  {
+   "id": "ex.b1.both-either-neither.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I like both coffee or tea.",
+   "answers": [
+    "I like both coffee and tea."
+   ],
+   "explanation": "When using 'both' to connect two items, use 'and', not 'or'."
+  },
+  {
+   "id": "ex.b1.both-either-neither.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I don't want the red shirt, and I don't want the blue shirt.",
+   "instruction": "Rewrite using 'neither'.",
+   "answers": [
+    "I want neither the red shirt nor the blue shirt.",
+    "I want neither of the shirts."
+   ],
+   "explanation": "'Neither... nor...' is used to express that two negative options are true. 'Neither of the shirts' is a more concise alternative."
+  },
+  {
+   "id": "ex.b1.both-either-neither.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The two restaurants are closed today.",
+   "instruction": "Rewrite using 'both'.",
+   "answers": [
+    "Both restaurants are closed today.",
+    "Both of the restaurants are closed today."
+   ],
+   "explanation": "'Both' refers to the two restaurants, and the verb 'are closed' is plural."
+  },
+  {
+   "id": "ex.b1.both-either-neither.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.both-either-neither"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Both my parents",
+     "right": "work in the medical field."
+    },
+    {
+     "left": "You can choose either",
+     "right": "apples or oranges for your snack."
+    },
+    {
+     "left": "Neither of the movies",
+     "right": "was very interesting."
+    },
+    {
+     "left": "They both",
+     "right": "decided to stay home."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "both \\w+ and \\w+",
+  "either \\w+ or \\w+",
+  "neither \\w+ nor \\w+",
+  "both of (them|us|you|the|my|his|her|our|their)",
+  "either of (the|my|his|her|our|their)",
+  "neither of (the|my|his|her|our|their)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.both-either-neither.01": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.02": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.03": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.04": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.05": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.06": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.both-either-neither.07: needs one answer list per gap (1)"
+   },
+   "ex.b1.both-either-neither.08": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.09": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.10": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.11": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.12": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.13": {
+    "status": "pass"
+   },
+   "ex.b1.both-either-neither.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 1093897,
+   "text": "Tom grew up speaking both English and French.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 3410746,
+   "text": "Tom walked down the street without looking either left or right.",
+   "author": "CK"
+  }
+ ]
+}

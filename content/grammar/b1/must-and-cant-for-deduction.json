@@ -1,0 +1,390 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "must-and-cant-for-deduction",
+ "draftHash": "b21b83d8e9b99ecb",
+ "grammarPoint": {
+  "id": "gp.must-and-cant-for-deduction",
+  "level": "B1",
+  "topicId": "topic.modals",
+  "title": "Must and can't for deduction",
+  "summary": "Use 'must' and 'can't' to express strong certainty about what is or isn't true in the present moment.",
+  "explanation": "When you are very sure about something based on evidence or logic, you can use *must* to say it's true. It means you believe it's almost certainly a fact right now.\n\nFor example, if someone is yawning a lot, you might say, \"They *must* be tired.\" You're making a logical guess based on what you see.\n\nOn the other hand, if you are very sure that something is *not* true, you use *can't*. This shows you believe it's impossible or highly unlikely. For instance, if you know your friend is on vacation, you might say, \"She *can't* be at work today.\"\n\nRemember, 'must' and 'can't' here are about *deduction* – making a logical conclusion – not about obligation or ability.",
+  "patterns": [
+   "Subject + must + base verb",
+   "Subject + can't + base verb"
+  ],
+  "examples": [
+   {
+    "text": "The restaurant is full. The food must be delicious.",
+    "note": "Deducing the food's quality from the number of customers.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He's wearing a uniform. He must work here.",
+    "note": "Concluding his profession based on his clothes.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She just ran a marathon. She must be exhausted.",
+    "note": "Inferring her state from a recent intense activity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "That can't be true; I saw him leave an hour ago.",
+    "note": "Expressing strong disbelief based on prior knowledge.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They can't be home. Their car isn't in the driveway.",
+    "note": "Deducing their absence from a missing item.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He is tired, he must sleep.",
+    "right": "He must be tired.",
+    "note": "Use 'must be' for deduction about a state, not 'must' for obligation."
+   },
+   {
+    "wrong": "She must not be at the office.",
+    "right": "She can't be at the office.",
+    "note": "Use 'can't' for deduction that something is impossible or untrue, not 'must not' (which means prohibition)."
+   },
+   {
+    "wrong": "It must true.",
+    "right": "It must be true.",
+    "note": "Always use the base form 'be' after 'must' when talking about a state or quality."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The lights are off and the door is locked. They ___ be out.",
+   "options": [
+    "can't",
+    "must",
+    "might"
+   ],
+   "answer": 1,
+   "explanation": "'Must' is used for a strong logical conclusion based on the evidence."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She just ate a huge dinner. She ___ be hungry.",
+   "options": [
+    "must",
+    "can't",
+    "is"
+   ],
+   "answer": 1,
+   "explanation": "'Can't' is used to express strong certainty that something is not true."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Look at all the snow! It ___ be very cold outside.",
+   "options": [
+    "can't",
+    "must",
+    "is"
+   ],
+   "answer": 1,
+   "explanation": "'Must' is used to make a strong deduction based on the visual evidence."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He's only five years old. He ___ be the new manager.",
+   "options": [
+    "must",
+    "can't",
+    "is"
+   ],
+   "answer": 1,
+   "explanation": "'Can't' expresses that it's impossible for a five-year-old to be a manager."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My neighbor's car isn't here. He ___ be on vacation.",
+   "answers": [
+    [
+     "must"
+    ]
+   ],
+   "explanation": "'Must' indicates a strong deduction based on the car's absence."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "That ___ be the right answer; it doesn't make any sense.",
+   "answers": [
+    [
+     "can't"
+    ]
+   ],
+   "explanation": "'Can't' expresses strong certainty that something is incorrect."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She's been studying all night. She ___ ___ tired.",
+   "answers": [
+    [
+     "must"
+    ],
+    [
+     "be"
+    ]
+   ],
+   "explanation": "'Must be' is used to deduce her current state based on her actions."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "must",
+    "be",
+    "a",
+    "mistake",
+    "."
+   ],
+   "distractors": [
+    "not"
+   ],
+   "explanation": "This sentence uses 'must be' to express a strong deduction that something is incorrect."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "can't",
+    "be",
+    "serious",
+    "about",
+    "that",
+    "."
+   ],
+   "distractors": [
+    "will"
+   ],
+   "explanation": "'Can't be' shows strong disbelief or impossibility regarding their seriousness."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He must not be home, his lights are off.",
+   "answers": [
+    "He can't be home, his lights are off."
+   ],
+   "explanation": "Use 'can't be' for a deduction that something is not true, not 'must not be' (which implies prohibition)."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She is very busy, she must finish the report.",
+   "answers": [
+    "She must be very busy, she has to finish the report.",
+    "She must be very busy."
+   ],
+   "explanation": "To deduce her state, use 'must be'. 'Must finish' implies obligation, not deduction about her current state."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I'm sure he is at the library.",
+   "instruction": "Rewrite using 'must'.",
+   "answers": [
+    "He must be at the library."
+   ],
+   "explanation": "'Must be' expresses strong certainty, replacing 'I'm sure he is'."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's impossible that she knows the answer.",
+   "instruction": "Rewrite using 'can't'.",
+   "answers": [
+    "She can't know the answer."
+   ],
+   "explanation": "'Can't know' expresses strong certainty that something is impossible, replacing 'It's impossible that she knows'."
+  },
+  {
+   "id": "ex.b1.must-and-cant-for-deduction.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.must-and-cant-for-deduction"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The music is very loud.",
+     "right": "They must be having a party."
+    },
+    {
+     "left": "He's never late for work.",
+     "right": "He can't be stuck in traffic."
+    },
+    {
+     "left": "She looks very happy.",
+     "right": "She must have received good news."
+    },
+    {
+     "left": "That story sounds unbelievable.",
+     "right": "It can't be true."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "must be (a|an|the|very|really|so) [a-z]+",
+  "can't be (a|an|the|very|really|so) [a-z]+",
+  "must (feel|think|know|have|like|want|mean|seem|look|sound|taste|smell) [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.must-and-cant-for-deduction.01": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.02": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.03": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.04": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.05": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.06": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.07": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.08": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.09": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.10": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.11": {
+    "status": "drop",
+    "note": "Key judged wrong: The key retains a comma splice, whereas the other answer correctly fixes the punctuation error."
+   },
+   "ex.b1.must-and-cant-for-deduction.12": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.13": {
+    "status": "pass"
+   },
+   "ex.b1.must-and-cant-for-deduction.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2640570,
+   "text": "I know this must be very difficult for you.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 3178592,
+   "text": "It must be very lonely here all by yourself.",
+   "author": "CK"
+  }
+ ]
+}

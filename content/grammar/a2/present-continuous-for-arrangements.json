@@ -1,0 +1,460 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "present-continuous-for-arrangements",
+ "draftHash": "57d85785d6676300",
+ "grammarPoint": {
+  "id": "gp.present-continuous-for-arrangements",
+  "level": "A2",
+  "topicId": "topic.future",
+  "title": "Present continuous for arrangements",
+  "summary": "Use the present continuous to talk about future plans that are already arranged, often with a specific time or place.",
+  "explanation": "We use the *present continuous* to talk about future plans that are already decided and arranged. These are not just ideas, but plans that have a specific time, date, or place.\n\nThink of it like looking at your calendar or schedule. If you have an appointment or a meeting written down, you can use the present continuous to talk about it.\n\nIt's common to use time expressions like \"tomorrow,\" \"next week,\" \"on Friday,\" or \"at 7 PM\" with this grammar point to make it clear you are talking about the future.",
+  "patterns": [
+   "Subject + am/is/are + verb-ing + (future time/place)"
+  ],
+  "examples": [
+   {
+    "text": "I'm meeting my sister for lunch tomorrow.",
+    "note": "This is a fixed arrangement for a specific time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They are flying to Paris next month.",
+    "note": "This describes a planned trip with tickets likely booked.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We're having dinner at the new restaurant on Saturday.",
+    "note": "A specific plan for a specific evening.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He's starting his new job on Monday.",
+    "note": "A definite event in the near future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Are you coming to the party tonight?",
+    "note": "Asking about a planned event.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I meet my friend tomorrow.",
+    "right": "I'm meeting my friend tomorrow.",
+    "note": "Remember to use 'am/is/are' before the -ing verb for future arrangements."
+   },
+   {
+    "wrong": "She is go to the dentist next Tuesday.",
+    "right": "She is going to the dentist next Tuesday.",
+    "note": "The main verb needs to be in the -ing form."
+   },
+   {
+    "wrong": "We are having a party.",
+    "right": "We are having a party on Saturday.",
+    "note": "Add a future time expression to make it clear you're talking about a future arrangement."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My parents ___ us next weekend.",
+   "options": [
+    "visit",
+    "are visiting",
+    "will visit"
+   ],
+   "answer": 1,
+   "explanation": "The present continuous 'are visiting' is used for a planned future arrangement."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ after work today?",
+   "options": [
+    "you do",
+    "are you doing",
+    "do you do"
+   ],
+   "answer": 1,
+   "explanation": "To ask about a future arrangement, use the present continuous: 'are you doing'."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I can't meet you on Friday. I ___ to the doctor.",
+   "options": [
+    "go",
+    "am going",
+    "will go"
+   ],
+   "answer": 1,
+   "explanation": "'Am going' shows a fixed appointment with the doctor."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team ___ a meeting at 10 AM tomorrow.",
+   "options": [
+    "has",
+    "is having",
+    "will have"
+   ],
+   "answer": 1,
+   "explanation": "'Is having' indicates a scheduled and arranged meeting."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We ___ ___ a movie at the cinema tonight.",
+   "answers": [
+    [
+     "are",
+     "watching"
+    ]
+   ],
+   "explanation": "Use 'are watching' for a planned activity tonight."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ ___ his friends for coffee on Sunday morning.",
+   "answers": [
+    [
+     "is",
+     "meeting"
+    ]
+   ],
+   "explanation": "'Is meeting' shows a definite plan for Sunday."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you ___ to the concert next week?",
+   "answers": [
+    [
+     "Are",
+     "going"
+    ]
+   ],
+   "explanation": "To ask about a future arrangement, use 'Are you going'."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She's",
+    "traveling",
+    "to",
+    "Japan",
+    "next",
+    "month",
+    "."
+   ],
+   "explanation": "This sentence uses the present continuous to describe a planned trip."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "are",
+    "having",
+    "a",
+    "party",
+    "on",
+    "Saturday",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "had"
+   ],
+   "explanation": "This shows a definite arrangement for a party on Saturday."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I am visit my grandparents next weekend.",
+   "answers": [
+    "I am visiting my grandparents next weekend."
+   ],
+   "explanation": "The verb 'visit' needs to be in the -ing form for the present continuous."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Are you work tomorrow?",
+   "answers": [
+    "Are you working tomorrow?"
+   ],
+   "explanation": "The verb 'work' needs to be in the -ing form when asking about a future arrangement."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My brother plans to move to a new apartment in July.",
+   "instruction": "Rewrite using the present continuous for a fixed arrangement.",
+   "answers": [
+    "My brother is moving to a new apartment in July."
+   ],
+   "explanation": "The present continuous 'is moving' shows a definite, arranged plan."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We have a reservation for dinner at 8 PM.",
+   "instruction": "Rewrite using the present continuous.",
+   "answers": [
+    "We are having dinner at 8 PM."
+   ],
+   "explanation": "The present continuous 'are having' expresses the fixed dinner reservation."
+  },
+  {
+   "id": "ex.a2.present-continuous-for-arrangements.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.present-continuous-for-arrangements"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I'm meeting my friend",
+     "right": "at the cafe on Tuesday."
+    },
+    {
+     "left": "They are playing soccer",
+     "right": "after school today."
+    },
+    {
+     "left": "She's starting her new course",
+     "right": "in September."
+    },
+    {
+     "left": "Are you cooking dinner",
+     "right": "for us tonight?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "am (\\w+)ing (\\w+)",
+  "is (\\w+)ing (\\w+)",
+  "are (\\w+)ing (\\w+)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.present-continuous-for-arrangements.01": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.02": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.03": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.04": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.05": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.present-continuous-for-arrangements.05: needs one answer list per gap (2)"
+   },
+   "ex.a2.present-continuous-for-arrangements.06": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.present-continuous-for-arrangements.06: needs one answer list per gap (2)"
+   },
+   "ex.a2.present-continuous-for-arrangements.07": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.present-continuous-for-arrangements.07: needs one answer list per gap (2)"
+   },
+   "ex.a2.present-continuous-for-arrangements.08": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.09": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.10": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.11": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.12": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.13": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.14": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.15": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.16": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.17": {
+    "status": "pass"
+   },
+   "ex.a2.present-continuous-for-arrangements.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.a2.present-continuous-for-arrangements.15",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-continuous-for-arrangements"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My sister ___ a new job next month.",
+    "options": [
+     "starts",
+     "is starting",
+     "start"
+    ],
+    "answer": 1,
+    "explanation": "Use 'is starting' for a fixed future arrangement."
+   },
+   {
+    "id": "ex.a2.present-continuous-for-arrangements.16",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-continuous-for-arrangements"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "What ___ you ___ this evening?",
+    "options": [
+     "do, do",
+     "are, doing",
+     "are, do"
+    ],
+    "answer": 1,
+    "explanation": "The correct question form for present continuous is 'Are you doing?'"
+   },
+   {
+    "id": "ex.a2.present-continuous-for-arrangements.17",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-continuous-for-arrangements"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We ___ to the beach on Sunday. The weather will be great!",
+    "options": [
+     "go",
+     "are going",
+     "goes"
+    ],
+    "answer": 1,
+    "explanation": "'Are going' shows a definite plan for Sunday."
+   },
+   {
+    "id": "ex.a2.present-continuous-for-arrangements.18",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.present-continuous-for-arrangements"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "He ___ his dentist appointment at 3 PM.",
+    "options": [
+     "has",
+     "is having",
+     "have"
+    ],
+    "answer": 1,
+    "explanation": "'Is having' correctly expresses a scheduled appointment."
+   }
+  ]
+ },
+ "tatoebaExamples": []
+}

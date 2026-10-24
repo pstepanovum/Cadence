@@ -1,0 +1,411 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "phrasal-verbs-basics",
+ "draftHash": "28024324a0ef991a",
+ "grammarPoint": {
+  "id": "gp.phrasal-verbs-basics",
+  "level": "B1",
+  "topicId": "topic.verb-patterns",
+  "title": "Phrasal verbs",
+  "summary": "Learn how to use phrasal verbs, which combine a verb and a particle to create new meanings, and understand when to separate them.",
+  "explanation": "Phrasal verbs are combinations of a verb and a small word, often a preposition or an adverb, called a *particle*. Together, they create a new meaning that is often different from the individual words. For example, \"look\" means to see, but \"look *for*\" means to search.\n\nSome phrasal verbs are *separable*. This means you can put the object of the verb either between the verb and the particle, or after the particle. If the object is a pronoun (like \"it,\" \"them,\" \"him\"), it *must* go between the verb and the particle. For example, \"turn on the light\" or \"turn the light on,\" but only \"turn *it* on.\"\n\nOther phrasal verbs are *inseparable*. With these, the verb and the particle always stay together. The object must always come *after* the particle. For example, \"look *after* the children\" is correct, but \"look the children after\" is not. You also say \"look *after* them,\" not \"look them after.\"",
+  "patterns": [
+   "verb + particle + object (inseparable)",
+   "verb + particle + object (separable, with noun object)",
+   "verb + object + particle (separable, with noun object)",
+   "verb + pronoun + particle (separable, with pronoun object)"
+  ],
+  "examples": [
+   {
+    "text": "Could you turn on the radio?",
+    "note": "Separable: object 'the radio' comes after the particle.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Please turn it on.",
+    "note": "Separable: pronoun 'it' must go between the verb and particle.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I need to look for my keys.",
+    "note": "Inseparable: 'my keys' comes after the particle.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She ran into an old friend at the store.",
+    "note": "Inseparable: 'an old friend' comes after the particle.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He gave back the book yesterday.",
+    "note": "Separable: object 'the book' comes after the particle.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I picked up it from the floor.",
+    "right": "I picked it up from the floor.",
+    "note": "When the object is a pronoun, it must go between the verb and the particle for separable phrasal verbs."
+   },
+   {
+    "wrong": "She looks the children after.",
+    "right": "She looks after the children.",
+    "note": "For inseparable phrasal verbs, the object always comes after the particle."
+   },
+   {
+    "wrong": "Can you turn the light?",
+    "right": "Can you turn on the light?",
+    "note": "The particle is essential for the phrasal verb's meaning."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.phrasal-verbs-basics.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need to ___ this form before Friday.",
+   "options": [
+    "fill in",
+    "fill it in",
+    "fill in it",
+    "fill"
+   ],
+   "answer": 0,
+   "explanation": "'Fill in' is a separable phrasal verb. 'Fill in this form' is correct. 'Fill it in' would also be correct if 'it' replaced 'this form'."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister is going to ___ my cat while I'm on vacation.",
+   "options": [
+    "look",
+    "look for",
+    "look after",
+    "look at"
+   ],
+   "answer": 2,
+   "explanation": "'Look after' is an inseparable phrasal verb meaning to take care of someone or something."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The meeting was ___ until next week.",
+   "options": [
+    "put off",
+    "put it off",
+    "put off it",
+    "put"
+   ],
+   "answer": 0,
+   "explanation": "'Put off' is a separable phrasal verb meaning to postpone. In the passive voice, the verb and particle stay together."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Could you please ___ the music? It's too loud.",
+   "options": [
+    "turn down",
+    "turn it down",
+    "turn down it",
+    "turn"
+   ],
+   "answer": 0,
+   "explanation": "'Turn down' is a separable phrasal verb. 'Turn down the music' is correct. 'Turn the music down' or 'Turn it down' would also be correct."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I need to ___ ___ my old clothes.",
+   "answers": [
+    [
+     "give"
+    ],
+    [
+     "away"
+    ]
+   ],
+   "explanation": "'Give away' is a separable phrasal verb meaning to donate or get rid of something."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We should ___ ___ the new plan carefully.",
+   "answers": [
+    [
+     "go"
+    ],
+    [
+     "over"
+    ]
+   ],
+   "explanation": "'Go over' is an inseparable phrasal verb meaning to review or examine something."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Please ___ ___ the TV when you're finished watching.",
+   "answers": [
+    [
+     "turn"
+    ],
+    [
+     "off"
+    ]
+   ],
+   "explanation": "'Turn off' is a separable phrasal verb meaning to stop a device from working."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "up",
+    "gave",
+    "smoking",
+    "."
+   ],
+   "distractors": [
+    "away"
+   ],
+   "explanation": "'Give up' is an inseparable phrasal verb meaning to stop doing something. The object 'smoking' comes after the particle."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "the",
+    "on",
+    "Please",
+    "radio",
+    "turn",
+    "."
+   ],
+   "alternatives": [
+    [
+     "Please",
+     "turn",
+     "the",
+     "radio",
+     "on",
+     "."
+    ]
+   ],
+   "distractors": [
+    "off"
+   ],
+   "explanation": "'Turn on' is a separable phrasal verb. The noun object 'the radio' can go either after the particle or between the verb and particle."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I will call back you later.",
+   "answers": [
+    "I will call you back later."
+   ],
+   "explanation": "The pronoun 'you' must go between the verb and particle for separable phrasal verbs like 'call back'."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She is looking her keys for.",
+   "answers": [
+    "She is looking for her keys."
+   ],
+   "explanation": "'Look for' is an inseparable phrasal verb, so the object 'her keys' always comes after the particle."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I need to search for my wallet.",
+   "instruction": "Use a phrasal verb with 'look'.",
+   "answers": [
+    "I need to look for my wallet."
+   ],
+   "explanation": "'Look for' is an inseparable phrasal verb that means to search for something."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Can you reduce the volume of the TV?",
+   "instruction": "Use a separable phrasal verb.",
+   "answers": [
+    "Can you turn down the TV?",
+    "Can you turn the TV down?"
+   ],
+   "explanation": "'Turn down' is a separable phrasal verb meaning to reduce the volume. The noun object can go after the particle or between the verb and particle."
+  },
+  {
+   "id": "ex.b1.phrasal-verbs-basics.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.phrasal-verbs-basics"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I need to fill",
+     "right": "out this application form."
+    },
+    {
+     "left": "Don't forget to pick",
+     "right": "up your dry cleaning."
+    },
+    {
+     "left": "She always looks",
+     "right": "after her younger brother."
+    },
+    {
+     "left": "We had to put",
+     "right": "off the meeting until Friday."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(turn|pick|put|give|call|try) (it|them|him|her|us|you) (on|off|up|down|back|in|out)",
+  "(look|get|run|go) (for|up|into|over) (the|a|my|your|his|her|our|their) \\w+",
+  "(turn|pick|put|give|call|try) (on|off|up|down|back|in|out) (the|a|my|your|his|her|our|their) \\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.phrasal-verbs-basics.01": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.02": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.03": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.04": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.05": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.06": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.07": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical, whereas the other answer forms a valid sentence."
+   },
+   "ex.b1.phrasal-verbs-basics.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical, whereas the other answer forms a valid sentence."
+   },
+   "ex.b1.phrasal-verbs-basics.10": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.11": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.12": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.13": {
+    "status": "pass"
+   },
+   "ex.b1.phrasal-verbs-basics.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 243209,
+   "text": "I'll call you up this evening.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 322984,
+   "text": "Put out the light.",
+   "author": "CM"
+  }
+ ]
+}

@@ -1,0 +1,402 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "future-continuous",
+ "draftHash": "953bf8aed53ad7c6",
+ "grammarPoint": {
+  "id": "gp.future-continuous",
+  "level": "B2",
+  "topicId": "topic.future",
+  "title": "Future continuous",
+  "summary": "Use the future continuous to talk about actions that will be in progress at a specific time or over a period in the future.",
+  "explanation": "The future continuous describes an action that will be ongoing at a particular moment or over a period in the future. It emphasizes the duration of the action rather than its completion.\n\nWe often use it to set the scene for another future event, or to talk about something that will be happening when something else occurs. It can also be used to ask politely about someone's future plans.\n\nThink of it as looking back from a point in the future and seeing an action in progress. For example, \"This time tomorrow, I'll be flying to Rome\" means that at that exact moment, the action of flying will be happening.",
+  "patterns": [
+   "Subject + will be + verb-ing",
+   "Subject + will not be + verb-ing (won't be)",
+   "Will + subject + be + verb-ing?"
+  ],
+  "examples": [
+   {
+    "text": "This time next week, I'll be relaxing on the beach.",
+    "note": "Describes an action that will be in progress at a specific future time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They won't be attending the meeting tomorrow morning.",
+    "note": "Shows an action that will not be ongoing in the future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Will you be working late tonight?",
+    "note": "Asks about an ongoing activity or plan in the future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "When you call, I'll probably be cooking dinner.",
+    "note": "Indicates an action that will be in progress when another future event happens.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "By 5 PM, she will be finishing her presentation.",
+    "note": "Refers to an action that will be ongoing up to or at a specific future point.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Tomorrow at 3 PM, I will work.",
+    "right": "Tomorrow at 3 PM, I will be working.",
+    "note": "Use future continuous for an action ongoing at a specific future time."
+   },
+   {
+    "wrong": "When you arrive, I will cook.",
+    "right": "When you arrive, I will be cooking.",
+    "note": "Use future continuous for an action in progress when another event happens."
+   },
+   {
+    "wrong": "She won't be finish her report by Friday.",
+    "right": "She won't be finishing her report by Friday.",
+    "note": "Remember to use the -ing form after 'be'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.future-continuous.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Don't call me at 7 PM. I ___ dinner with my family.",
+   "options": [
+    "will eat",
+    "will be eating",
+    "am eating"
+   ],
+   "answer": 1,
+   "explanation": "The future continuous describes an action that will be in progress at a specific future time."
+  },
+  {
+   "id": "ex.b2.future-continuous.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "By this time next year, she ___ her master's degree.",
+   "options": [
+    "will complete",
+    "will be completing",
+    "completes"
+   ],
+   "answer": 1,
+   "explanation": "The future continuous shows an action that will be ongoing over a period leading up to or at a future point."
+  },
+  {
+   "id": "ex.b2.future-continuous.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ when the guests arrive?",
+   "options": [
+    "will you do",
+    "will you be doing",
+    "are you doing"
+   ],
+   "answer": 1,
+   "explanation": "Use the future continuous to ask about an action that will be in progress at a future moment."
+  },
+  {
+   "id": "ex.b2.future-continuous.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I can't meet you on Saturday morning. I ___ the garden.",
+   "options": [
+    "will work in",
+    "will be working in",
+    "work in"
+   ],
+   "answer": 1,
+   "explanation": "The future continuous indicates an activity that will be ongoing at a specific future time."
+  },
+  {
+   "id": "ex.b2.future-continuous.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "This evening, I ___ (read) a new novel.",
+   "answers": [
+    [
+     "will be reading"
+    ],
+    [
+     "'ll be reading"
+    ]
+   ],
+   "explanation": "The future continuous shows an action in progress at a specific time in the future."
+  },
+  {
+   "id": "ex.b2.future-continuous.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ (not / wait) for us when we get there.",
+   "answers": [
+    [
+     "will not be waiting"
+    ],
+    [
+     "won't be waiting"
+    ]
+   ],
+   "explanation": "Use the negative future continuous to describe an action that will not be in progress."
+  },
+  {
+   "id": "ex.b2.future-continuous.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you ___ (travel) much next month?",
+   "answers": [
+    [
+     "Will"
+    ],
+    [
+     "be traveling"
+    ]
+   ],
+   "explanation": "The future continuous is used to ask about ongoing actions in the future."
+  },
+  {
+   "id": "ex.b2.future-continuous.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "will",
+    "be",
+    "studying",
+    "all",
+    "evening",
+    "."
+   ],
+   "distractors": [
+    "studies",
+    "is"
+   ],
+   "explanation": "This sentence uses the future continuous to describe an action that will be ongoing throughout the evening."
+  },
+  {
+   "id": "ex.b2.future-continuous.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "What",
+    "will",
+    "they",
+    "be",
+    "discussing",
+    "at",
+    "the",
+    "meeting",
+    "?"
+   ],
+   "distractors": [
+    "discussed",
+    "do"
+   ],
+   "explanation": "This question uses the future continuous to ask about an action that will be in progress at a future event."
+  },
+  {
+   "id": "ex.b2.future-continuous.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "At 10 AM tomorrow, I will drive to the airport.",
+   "answers": [
+    "At 10 AM tomorrow, I will be driving to the airport."
+   ],
+   "explanation": "Use the future continuous for an action that will be in progress at a specific future time."
+  },
+  {
+   "id": "ex.b2.future-continuous.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She won't be finish her presentation by then.",
+   "answers": [
+    "She won't be finishing her presentation by then."
+   ],
+   "explanation": "The future continuous requires the -ing form of the main verb after 'be'."
+  },
+  {
+   "id": "ex.b2.future-continuous.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I will watch a movie at 9 PM.",
+   "instruction": "Rewrite using the future continuous.",
+   "answers": [
+    "I will be watching a movie at 9 PM."
+   ],
+   "explanation": "The future continuous emphasizes the ongoing nature of the action at that specific future time."
+  },
+  {
+   "id": "ex.b2.future-continuous.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Are you going to work on Saturday?",
+   "instruction": "Rewrite using the future continuous.",
+   "answers": [
+    "Will you be working on Saturday?"
+   ],
+   "explanation": "The future continuous can be used to ask politely about someone's plans or an ongoing activity."
+  },
+  {
+   "id": "ex.b2.future-continuous.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.future-continuous"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "This time next week,",
+     "right": "we'll be relaxing on the beach."
+    },
+    {
+     "left": "Don't call me at 8,",
+     "right": "I'll be having dinner."
+    },
+    {
+     "left": "When you arrive,",
+     "right": "they will be preparing for the party."
+    },
+    {
+     "left": "Will you be using",
+     "right": "the car tomorrow morning?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "will be [a-z]+ing",
+  "won't be [a-z]+ing",
+  "will [a-z]+ be [a-z]+ing"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.future-continuous.01": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.02": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.03": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.04": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.future-continuous.05: needs one answer list per gap (1)"
+   },
+   "ex.b2.future-continuous.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.future-continuous.06: needs one answer list per gap (1)"
+   },
+   "ex.b2.future-continuous.07": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.08": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.09": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.10": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.11": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.12": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.13": {
+    "status": "pass"
+   },
+   "ex.b2.future-continuous.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 304085,
+   "text": "He will be playing tennis tomorrow afternoon.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 5088449,
+   "text": "Someone will be meeting you.",
+   "author": "CK"
+  }
+ ]
+}

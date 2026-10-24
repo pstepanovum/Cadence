@@ -1,0 +1,5923 @@
+{
+ "format": 1,
+ "level": "A1",
+ "source": "Tatoeba word frequency; definitions generated",
+ "cards": [
+  {
+   "id": "ex.vocab.about",
+   "word": "about",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "On the subject of something.",
+   "example": {
+    "text": "Tell me about your plan.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17260,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.after",
+   "word": "after",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "Later than something else.",
+   "example": {
+    "text": "She was very brown after her holiday.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19820,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.afternoon",
+   "word": "afternoon",
+   "pos": "noun",
+   "forms": [
+    "afternoons"
+   ],
+   "definition": "The part of the day between noon and evening.",
+   "example": {
+    "text": "Will it rain this afternoon?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 240052,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.again",
+   "word": "again",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Another time; once more.",
+   "example": {
+    "text": "I want to see you again.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17494,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.age",
+   "word": "age",
+   "pos": "noun",
+   "forms": [
+    "aged",
+    "ageing",
+    "ages",
+    "aging"
+   ],
+   "definition": "How old a person or thing is.",
+   "example": {
+    "text": "He doesn't look his age.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2309,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.ago",
+   "word": "ago",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Referring to a time in the past, before now.",
+   "example": {
+    "text": "I met her an hour ago.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27746,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.air",
+   "word": "air",
+   "pos": "noun",
+   "forms": [
+    "aired",
+    "airs"
+   ],
+   "definition": "The mixture of gases around the Earth that we breathe.",
+   "example": {
+    "text": "Air is a mixture of gases.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18235,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.all",
+   "word": "all",
+   "pos": "determiner",
+   "forms": [
+    "alls"
+   ],
+   "definition": "Every single one of a group of things or people.",
+   "example": {
+    "text": "Have you solved all the problems yet?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16381,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.also",
+   "word": "also",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "In addition; too.",
+   "example": {
+    "text": "Do you also want a shave?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34806,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.always",
+   "word": "always",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "At all times; on every occasion.",
+   "example": {
+    "text": "To see you is always a great pleasure.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17483,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.and",
+   "word": "and",
+   "pos": "conjunction",
+   "forms": [],
+   "definition": "Used to connect two words, phrases, or clauses.",
+   "example": {
+    "text": "This day was just a waste of time and money.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2029,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.animal",
+   "word": "animal",
+   "pos": "noun",
+   "forms": [
+    "animals"
+   ],
+   "definition": "A living creature that is not a plant, bird, fish, or insect.",
+   "example": {
+    "text": "A fox is a wild animal.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 63324,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.answer",
+   "word": "answer",
+   "pos": "noun",
+   "forms": [
+    "answered",
+    "answering",
+    "answers"
+   ],
+   "definition": "What you say or write when someone asks you something.",
+   "example": {
+    "text": "I think your answer is correct.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16955,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.any",
+   "word": "any",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Used in questions or negative sentences to mean \"some\" or \"a single one\".",
+   "example": {
+    "text": "Were there any stars in the sky?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18306,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.anything",
+   "word": "anything",
+   "pos": "pronoun",
+   "forms": [],
+   "definition": "Any thing at all. Used in questions or negative sentences.",
+   "example": {
+    "text": "I could not see anything.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24810,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.apple",
+   "word": "apple",
+   "pos": "noun",
+   "forms": [
+    "apples"
+   ],
+   "definition": "A round fruit with red, yellow, or green skin.",
+   "example": {
+    "text": "I am eating an apple.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 29612,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.arm",
+   "word": "arm",
+   "pos": "noun",
+   "forms": [
+    "arming",
+    "arms"
+   ],
+   "definition": "The part of your body between your shoulder and your hand.",
+   "example": {
+    "text": "I've got mosquito bites all over my arm.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 6140,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.ask",
+   "word": "ask",
+   "pos": "verb",
+   "forms": [
+    "asked",
+    "asking",
+    "asks"
+   ],
+   "definition": "To say something to someone as a question.",
+   "example": {
+    "text": "May I ask a question?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1594,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.at",
+   "word": "at",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "Showing a specific place or time.",
+   "example": {
+    "text": "You must practice it at regular intervals.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16550,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.away",
+   "word": "away",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "To or at a different place; not here.",
+   "example": {
+    "text": "My family will be away for a week.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24090,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.baby",
+   "word": "baby",
+   "pos": "noun",
+   "forms": [
+    "babies"
+   ],
+   "definition": "A very young child or animal.",
+   "example": {
+    "text": "The baby cried for milk.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 45842,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.back",
+   "word": "back",
+   "pos": "adverb",
+   "forms": [
+    "backed",
+    "backing",
+    "backs"
+   ],
+   "definition": "To or toward the place where someone or something was before.",
+   "example": {
+    "text": "Go back to your seat.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17013,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bad",
+   "word": "bad",
+   "pos": "adjective",
+   "forms": [
+    "worse",
+    "worst"
+   ],
+   "definition": "Not good; unpleasant or harmful.",
+   "example": {
+    "text": "The milk has gone bad.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19478,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bag",
+   "word": "bag",
+   "pos": "noun",
+   "forms": [
+    "bags"
+   ],
+   "definition": "A container made of soft material, used for carrying things.",
+   "example": {
+    "text": "Will you open the bag?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21225,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.be",
+   "word": "be",
+   "pos": "verb",
+   "forms": [
+    "am",
+    "are",
+    "been",
+    "being",
+    "is",
+    "was",
+    "wasn",
+    "were",
+    "weren"
+   ],
+   "definition": "To exist or to describe someone or something.",
+   "example": {
+    "text": "You are in my way.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1296,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.beach",
+   "word": "beach",
+   "pos": "noun",
+   "forms": [
+    "beached",
+    "beaches"
+   ],
+   "definition": "An area of sand or stones next to the sea or a lake.",
+   "example": {
+    "text": "Let's go to the beach.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34867,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.because",
+   "word": "because",
+   "pos": "conjunction",
+   "forms": [],
+   "definition": "For the reason that; used to explain why something happens.",
+   "example": {
+    "text": "Don't stay indoors because it is cold outside.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22031,
+     "author": "Mrew2Vier"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bed",
+   "word": "bed",
+   "pos": "noun",
+   "forms": [
+    "beds"
+   ],
+   "definition": "A piece of furniture where you sleep.",
+   "example": {
+    "text": "You must go to bed now.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16391,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.before",
+   "word": "before",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "At an earlier time than something else.",
+   "example": {
+    "text": "The bridge had been built before that time.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18985,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.begin",
+   "word": "begin",
+   "pos": "verb",
+   "forms": [
+    "began",
+    "begins",
+    "begun"
+   ],
+   "definition": "To start doing something or to happen.",
+   "example": {
+    "text": "What time does the play begin?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22058,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.behind",
+   "word": "behind",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "At the back of someone or something.",
+   "example": {
+    "text": "The child was hiding behind a big tree.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 35735,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.between",
+   "word": "between",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "In the space that separates two things or people.",
+   "example": {
+    "text": "A canal flowed between two rows of houses.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24031,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.big",
+   "word": "big",
+   "pos": "adjective",
+   "forms": [
+    "bigger",
+    "biggest"
+   ],
+   "definition": "Large in size or amount.",
+   "example": {
+    "text": "New York is a big city.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 35894,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bird",
+   "word": "bird",
+   "pos": "noun",
+   "forms": [
+    "birds"
+   ],
+   "definition": "An animal with wings and feathers that can fly.",
+   "example": {
+    "text": "The bird is in its nest.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 45011,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.birthday",
+   "word": "birthday",
+   "pos": "noun",
+   "forms": [
+    "birthdays"
+   ],
+   "definition": "The day in the year when someone was born.",
+   "example": {
+    "text": "My birthday is coming soon.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 31606,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.black",
+   "word": "black",
+   "pos": "adjective",
+   "forms": [
+    "blacked",
+    "blackest",
+    "blacks"
+   ],
+   "definition": "The darkest color, like the color of night or coal.",
+   "example": {
+    "text": "Tom keeps a black cat.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 37146,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.blue",
+   "word": "blue",
+   "pos": "adjective",
+   "forms": [
+    "bluest"
+   ],
+   "definition": "The color of a clear sky or the ocean.",
+   "example": {
+    "text": "I like this blue dress.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 253679,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.body",
+   "word": "body",
+   "pos": "noun",
+   "forms": [
+    "bodies"
+   ],
+   "definition": "The whole physical structure of a person or animal.",
+   "example": {
+    "text": "My whole body is sore.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 273774,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.book",
+   "word": "book",
+   "pos": "noun",
+   "forms": [
+    "booked",
+    "booking",
+    "books"
+   ],
+   "definition": "A set of printed pages fastened together inside a cover.",
+   "example": {
+    "text": "Take a book and read it.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1803,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bottle",
+   "word": "bottle",
+   "pos": "noun",
+   "forms": [
+    "bottled",
+    "bottles"
+   ],
+   "definition": "A container, usually made of glass or plastic, with a narrow neck.",
+   "example": {
+    "text": "The bottle is filled with water.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 49871,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.box",
+   "word": "box",
+   "pos": "noun",
+   "forms": [
+    "boxed",
+    "boxes"
+   ],
+   "definition": "A container, usually square or rectangular, with a lid.",
+   "example": {
+    "text": "Pack them in the box.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 41935,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.boy",
+   "word": "boy",
+   "pos": "noun",
+   "forms": [
+    "boys"
+   ],
+   "definition": "A young male child or young man.",
+   "example": {
+    "text": "Don't be a bad boy.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 28660,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bread",
+   "word": "bread",
+   "pos": "noun",
+   "forms": [
+    "breads"
+   ],
+   "definition": "A common food made from flour and water, baked in an oven.",
+   "example": {
+    "text": "On what kind of bread?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34937,
+     "author": "Jesse"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.breakfast",
+   "word": "breakfast",
+   "pos": "noun",
+   "forms": [],
+   "definition": "The first meal you eat in the morning.",
+   "example": {
+    "text": "I ate breakfast at eight.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 252628,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bring",
+   "word": "bring",
+   "pos": "verb",
+   "forms": [
+    "bringing",
+    "brings",
+    "brought"
+   ],
+   "definition": "To take something or someone with you to a place.",
+   "example": {
+    "text": "Bring me a dry towel.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21186,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.brother",
+   "word": "brother",
+   "pos": "noun",
+   "forms": [
+    "brothers"
+   ],
+   "definition": "A boy or man who has the same parents as you.",
+   "example": {
+    "text": "Bring your brother with you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16981,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.building",
+   "word": "building",
+   "pos": "noun",
+   "forms": [
+    "buildings"
+   ],
+   "definition": "A structure with walls and a roof, like a house or a school.",
+   "example": {
+    "text": "The new building is enormous.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 46116,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.bus",
+   "word": "bus",
+   "pos": "noun",
+   "forms": [
+    "buses"
+   ],
+   "definition": "A large road vehicle that carries many passengers.",
+   "example": {
+    "text": "You'd better go by bus.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16433,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.but",
+   "word": "but",
+   "pos": "conjunction",
+   "forms": [
+    "buts"
+   ],
+   "definition": "Used to introduce something that is different or opposite to what was said before.",
+   "example": {
+    "text": "You can see it, but you cannot take it away.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16548,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.buy",
+   "word": "buy",
+   "pos": "verb",
+   "forms": [
+    "bought",
+    "buying",
+    "buys"
+   ],
+   "definition": "To get something by paying money for it.",
+   "example": {
+    "text": "I bought the same shirt as yours.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17600,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.by",
+   "word": "by",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "Near or next to something.",
+   "example": {
+    "text": "The book is by the window.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.cake",
+   "word": "cake",
+   "pos": "noun",
+   "forms": [
+    "cakes"
+   ],
+   "definition": "A sweet baked food, often made with flour, sugar, and eggs.",
+   "example": {
+    "text": "I want to eat some cake first.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 32812,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.can",
+   "word": "can",
+   "pos": "verb",
+   "forms": [
+    "canned",
+    "cans",
+    "could"
+   ],
+   "definition": "To be able to do something.",
+   "example": {
+    "text": "\"Can somebody help me?\" \"I will.\"",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2466,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.cannot",
+   "word": "cannot",
+   "pos": "verb",
+   "forms": [],
+   "definition": "The negative form of 'can'; it means you are not able to do something.",
+   "example": {
+    "text": "I cannot see you behaving like that.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18025,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.car",
+   "word": "car",
+   "pos": "noun",
+   "forms": [
+    "cars"
+   ],
+   "definition": "A road vehicle, usually with four wheels, for one to five people.",
+   "example": {
+    "text": "Can you drive a car?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16020,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.cat",
+   "word": "cat",
+   "pos": "noun",
+   "forms": [
+    "cats"
+   ],
+   "definition": "A small, furry animal often kept as a pet.",
+   "example": {
+    "text": "Tom keeps a black cat.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 37146,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.child",
+   "word": "child",
+   "pos": "noun",
+   "forms": [
+    "children"
+   ],
+   "definition": "A young human who is not yet an adult.",
+   "example": {
+    "text": "You are not a child any more.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16403,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.city",
+   "word": "city",
+   "pos": "noun",
+   "forms": [
+    "cities"
+   ],
+   "definition": "A large and important town where many people live and work.",
+   "example": {
+    "text": "Rome is an old city.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 29410,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.class",
+   "word": "class",
+   "pos": "noun",
+   "forms": [
+    "classes"
+   ],
+   "definition": "A group of students who are taught together.",
+   "example": {
+    "text": "I must hurry to class.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19714,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.close",
+   "word": "close",
+   "pos": "verb",
+   "forms": [
+    "closed",
+    "closer",
+    "closes",
+    "closest",
+    "closing"
+   ],
+   "definition": "To shut something so that it is no longer open.",
+   "example": {
+    "text": "Please close the door when you leave.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.clothes",
+   "word": "clothes",
+   "pos": "noun",
+   "forms": [],
+   "definition": "Things you wear, like shirts, pants, and dresses.",
+   "example": {
+    "text": "Those clothes suit you well.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 44171,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.coat",
+   "word": "coat",
+   "pos": "noun",
+   "forms": [
+    "coated",
+    "coating",
+    "coats"
+   ],
+   "definition": "A piece of clothing worn over other clothes to keep warm or for fashion.",
+   "example": {
+    "text": "The coat is not mine.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 50498,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.coffee",
+   "word": "coffee",
+   "pos": "noun",
+   "forms": [
+    "coffees"
+   ],
+   "definition": "A dark brown hot drink made from roasted and ground beans.",
+   "example": {
+    "text": "I prefer coffee to tea.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 29020,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.cold",
+   "word": "cold",
+   "pos": "adjective",
+   "forms": [
+    "colder",
+    "coldest",
+    "colds"
+   ],
+   "definition": "Having a low temperature; not warm.",
+   "example": {
+    "text": "I'm cold. May I close the window?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21175,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.come",
+   "word": "come",
+   "pos": "verb",
+   "forms": [
+    "came",
+    "comes",
+    "coming"
+   ],
+   "definition": "To move towards the speaker or a specific place.",
+   "example": {
+    "text": "You must not come in.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 15866,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.computer",
+   "word": "computer",
+   "pos": "noun",
+   "forms": [
+    "computers"
+   ],
+   "definition": "An electronic machine that stores and processes information.",
+   "example": {
+    "text": "The computer is up to date.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 50354,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.cook",
+   "word": "cook",
+   "pos": "verb",
+   "forms": [
+    "cooked",
+    "cooking",
+    "cooks"
+   ],
+   "definition": "To prepare food by heating it.",
+   "example": {
+    "text": "Shall I cook dinner today?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 243060,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.cookie",
+   "word": "cookie",
+   "pos": "noun",
+   "forms": [
+    "cookies"
+   ],
+   "definition": "A small, flat, sweet baked food, often with chocolate chips.",
+   "example": {
+    "text": "Do you want a cookie?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1230192,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.country",
+   "word": "country",
+   "pos": "noun",
+   "forms": [
+    "countries"
+   ],
+   "definition": "An area of land that has its own government and laws.",
+   "example": {
+    "text": "English is spoken in a lot of countries.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26251,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.cup",
+   "word": "cup",
+   "pos": "noun",
+   "forms": [
+    "cups"
+   ],
+   "definition": "A small, round container with a handle, used for drinking.",
+   "example": {
+    "text": "The cup has a crack.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 45104,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.dad",
+   "word": "dad",
+   "pos": "noun",
+   "forms": [
+    "dads"
+   ],
+   "definition": "A common, informal word for father.",
+   "example": {
+    "text": "But Dad won't like it.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 39303,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.dance",
+   "word": "dance",
+   "pos": "verb",
+   "forms": [
+    "danced",
+    "dances",
+    "dancing"
+   ],
+   "definition": "To move your body rhythmically to music.",
+   "example": {
+    "text": "Let me dance with you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 40312,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.date",
+   "word": "date",
+   "pos": "noun",
+   "forms": [
+    "dated",
+    "dates",
+    "dating"
+   ],
+   "definition": "A particular day of the month or year.",
+   "example": {
+    "text": "What's the date of the letter?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 46766,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.daughter",
+   "word": "daughter",
+   "pos": "noun",
+   "forms": [
+    "daughters",
+    "daugther"
+   ],
+   "definition": "A female child of a person.",
+   "example": {
+    "text": "How tall do you think my daughter will be in three years?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 251948,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.day",
+   "word": "day",
+   "pos": "noun",
+   "forms": [
+    "days"
+   ],
+   "definition": "A period of 24 hours, or the time when there is light.",
+   "example": {
+    "text": "How many times a day do you look at yourself in the mirror?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1889,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.dinner",
+   "word": "dinner",
+   "pos": "noun",
+   "forms": [
+    "dinners"
+   ],
+   "definition": "The main meal of the day, usually eaten in the evening.",
+   "example": {
+    "text": "Tom was late for dinner.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 36996,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.do",
+   "word": "do",
+   "pos": "verb",
+   "forms": [
+    "did",
+    "does",
+    "doesn",
+    "doing",
+    "don",
+    "done",
+    "dost"
+   ],
+   "definition": "To perform an action or task.",
+   "example": {
+    "text": "I don't know what to do anymore.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1443,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.doctor",
+   "word": "doctor",
+   "pos": "noun",
+   "forms": [
+    "doctored",
+    "doctors"
+   ],
+   "definition": "A person trained to help sick or injured people.",
+   "example": {
+    "text": "Please call me a doctor.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27897,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.dog",
+   "word": "dog",
+   "pos": "noun",
+   "forms": [
+    "dogging",
+    "dogs"
+   ],
+   "definition": "A common pet animal with fur, four legs, and a tail.",
+   "example": {
+    "text": "What a big dog it is!",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 36070,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.dollar",
+   "word": "dollar",
+   "pos": "noun",
+   "forms": [
+    "dollars"
+   ],
+   "definition": "A unit of money used in many countries, like the USA or Canada.",
+   "example": {
+    "text": "I owe you ten dollars.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17572,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.door",
+   "word": "door",
+   "pos": "noun",
+   "forms": [
+    "doors"
+   ],
+   "definition": "A movable barrier in a wall or opening, used for entering or leaving.",
+   "example": {
+    "text": "Shall I close the door?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 38983,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.down",
+   "word": "down",
+   "pos": "adverb",
+   "forms": [
+    "downed",
+    "downs"
+   ],
+   "definition": "To a lower place or position.",
+   "example": {
+    "text": "We skied down the slope.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22959,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.dress",
+   "word": "dress",
+   "pos": "noun",
+   "forms": [
+    "dressed",
+    "dresses"
+   ],
+   "definition": "A piece of clothing worn by women and girls, covering the body and legs.",
+   "example": {
+    "text": "Your dress is very nice.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17363,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.drink",
+   "word": "drink",
+   "pos": "verb",
+   "forms": [
+    "drank",
+    "drinking",
+    "drinks"
+   ],
+   "definition": "To take liquid into your mouth and swallow it.",
+   "example": {
+    "text": "Would you like to drink anything?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 25196,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.drive",
+   "word": "drive",
+   "pos": "verb",
+   "forms": [
+    "driven",
+    "drives",
+    "driving",
+    "drove"
+   ],
+   "definition": "To control a car, bus, or other vehicle.",
+   "example": {
+    "text": "Can you drive a car?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16020,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.early",
+   "word": "early",
+   "pos": "adverb",
+   "forms": [
+    "earlier",
+    "earliest"
+   ],
+   "definition": "Before the usual or expected time.",
+   "example": {
+    "text": "Go early in order to get a good seat.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 30065,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.easy",
+   "word": "easy",
+   "pos": "adjective",
+   "forms": [
+    "easier",
+    "easiest"
+   ],
+   "definition": "Not difficult to do or understand.",
+   "example": {
+    "text": "It is easy to swim.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26405,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.eat",
+   "word": "eat",
+   "pos": "verb",
+   "forms": [
+    "ate",
+    "eaten",
+    "eating",
+    "eats"
+   ],
+   "definition": "To put food into your mouth and swallow it.",
+   "example": {
+    "text": "Bring me something to eat.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 25074,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.egg",
+   "word": "egg",
+   "pos": "noun",
+   "forms": [
+    "egging",
+    "eggs"
+   ],
+   "definition": "A round or oval object laid by a female bird, used as food.",
+   "example": {
+    "text": "It looks like an egg.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 42039,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.evening",
+   "word": "evening",
+   "pos": "noun",
+   "forms": [
+    "evenings"
+   ],
+   "definition": "The part of the day between afternoon and night.",
+   "example": {
+    "text": "Are you free this evening?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 243208,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.every",
+   "word": "every",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "All the people or things in a group.",
+   "example": {
+    "text": "The instructor advised me to get exercise every day.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19077,
+     "author": "shekitten"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.everything",
+   "word": "everything",
+   "pos": "pronoun",
+   "forms": [],
+   "definition": "All things; all the things of a group or type.",
+   "example": {
+    "text": "Everything went better than I had expected.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24831,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.eye",
+   "word": "eye",
+   "pos": "noun",
+   "forms": [
+    "eyed",
+    "eyeing",
+    "eyes"
+   ],
+   "definition": "The part of your body that you use to see.",
+   "example": {
+    "text": "My right eye feels hot.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27052,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.face",
+   "word": "face",
+   "pos": "noun",
+   "forms": [
+    "faced",
+    "faces",
+    "facing"
+   ],
+   "definition": "The front part of your head, with your eyes, nose, and mouth.",
+   "example": {
+    "text": "We stood face to face.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22990,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.family",
+   "word": "family",
+   "pos": "noun",
+   "forms": [
+    "families"
+   ],
+   "definition": "A group of people who are related to each other, like parents and children.",
+   "example": {
+    "text": "My family are all well.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24072,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.father",
+   "word": "father",
+   "pos": "noun",
+   "forms": [
+    "fathered",
+    "fathers"
+   ],
+   "definition": "A male parent.",
+   "example": {
+    "text": "I wish to see my father.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 33478,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.feel",
+   "word": "feel",
+   "pos": "verb",
+   "forms": [
+    "feeling",
+    "feels",
+    "felt"
+   ],
+   "definition": "To experience an emotion or a physical sensation.",
+   "example": {
+    "text": "How do you feel now?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20283,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.find",
+   "word": "find",
+   "pos": "verb",
+   "forms": [
+    "finding",
+    "finds",
+    "found"
+   ],
+   "definition": "To discover something or someone unexpectedly.",
+   "example": {
+    "text": "You'll find the shop around the corner.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21667,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.fine",
+   "word": "fine",
+   "pos": "adjective",
+   "forms": [
+    "fined",
+    "finer",
+    "fines",
+    "finest"
+   ],
+   "definition": "Good, healthy, or acceptable.",
+   "example": {
+    "text": "It was fine all day.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27403,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.first",
+   "word": "first",
+   "pos": "adjective",
+   "forms": [],
+   "definition": "Coming before all others in order, time, or importance.",
+   "example": {
+    "text": "This is the first time I've had seaweed.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22164,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.fish",
+   "word": "fish",
+   "pos": "noun",
+   "forms": [
+    "fished",
+    "fishes"
+   ],
+   "definition": "An animal that lives in water and has fins and scales.",
+   "example": {
+    "text": "Fish live in the sea.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19350,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.floor",
+   "word": "floor",
+   "pos": "noun",
+   "forms": [
+    "floored",
+    "floors"
+   ],
+   "definition": "The flat surface you walk on inside a room or building.",
+   "example": {
+    "text": "Don't scrape your chair on the floor.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 66487,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.food",
+   "word": "food",
+   "pos": "noun",
+   "forms": [
+    "foods"
+   ],
+   "definition": "What people and animals eat to live.",
+   "example": {
+    "text": "Pizza is my favorite food.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34792,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.foot",
+   "word": "foot",
+   "pos": "noun",
+   "forms": [
+    "feet"
+   ],
+   "definition": "The part of your leg that you stand on.",
+   "example": {
+    "text": "The boy stepped on my foot on purpose.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 46378,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.friend",
+   "word": "friend",
+   "pos": "noun",
+   "forms": [
+    "friends"
+   ],
+   "definition": "A person you know and like, not a family member.",
+   "example": {
+    "text": "You are my best friend.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20116,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.from",
+   "word": "from",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "Showing the starting point of a journey, time, or source.",
+   "example": {
+    "text": "Is it far from here?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1651,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.fun",
+   "word": "fun",
+   "pos": "noun",
+   "forms": [],
+   "definition": "Enjoyment or pleasure.",
+   "example": {
+    "text": "The party was a lot of fun.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 35638,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.game",
+   "word": "game",
+   "pos": "noun",
+   "forms": [
+    "games"
+   ],
+   "definition": "An activity or sport with rules, played for fun or competition.",
+   "example": {
+    "text": "Our team won the game.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 23458,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.garden",
+   "word": "garden",
+   "pos": "noun",
+   "forms": [
+    "gardens"
+   ],
+   "definition": "An area of land, often next to a house, used for growing plants.",
+   "example": {
+    "text": "There is a small garden in front of my house.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 23574,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.get",
+   "word": "get",
+   "pos": "verb",
+   "forms": [
+    "gets",
+    "getting",
+    "got",
+    "gotten"
+   ],
+   "definition": "To receive or obtain something.",
+   "example": {
+    "text": "You're still too young to get a driver's license.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16303,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.girl",
+   "word": "girl",
+   "pos": "noun",
+   "forms": [
+    "girls"
+   ],
+   "definition": "A young female child or young woman.",
+   "example": {
+    "text": "What a cute little girl!",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24957,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.give",
+   "word": "give",
+   "pos": "verb",
+   "forms": [
+    "gave",
+    "given",
+    "gives",
+    "giving"
+   ],
+   "definition": "To hand something to someone, or to provide something.",
+   "example": {
+    "text": "I will give you the money tomorrow.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18575,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.glass",
+   "word": "glass",
+   "pos": "noun",
+   "forms": [],
+   "definition": "A hard, clear material used for windows or drinking containers.",
+   "example": {
+    "text": "The window is made of glass.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.go",
+   "word": "go",
+   "pos": "verb",
+   "forms": [
+    "goes",
+    "going",
+    "gone",
+    "went"
+   ],
+   "definition": "To move from one place to another.",
+   "example": {
+    "text": "Why don't we go home?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1540,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.good",
+   "word": "good",
+   "pos": "adjective",
+   "forms": [
+    "best",
+    "better"
+   ],
+   "definition": "Of high quality or pleasant.",
+   "example": {
+    "text": "No news is good news.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2352,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.great",
+   "word": "great",
+   "pos": "adjective",
+   "forms": [
+    "greater",
+    "greatest",
+    "greatly"
+   ],
+   "definition": "Very large in amount, size, or degree; excellent.",
+   "example": {
+    "text": "Everyone regarded him as a great singer.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22131,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hair",
+   "word": "hair",
+   "pos": "noun",
+   "forms": [
+    "hairs"
+   ],
+   "definition": "The fine threads that grow on the head and body of people and animals.",
+   "example": {
+    "text": "Your hair is too long.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16926,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hand",
+   "word": "hand",
+   "pos": "noun",
+   "forms": [
+    "handed",
+    "handing",
+    "hands"
+   ],
+   "definition": "The part of your body at the end of your arm, used for holding things.",
+   "example": {
+    "text": "My hands are numb from the cold.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21141,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.happy",
+   "word": "happy",
+   "pos": "adjective",
+   "forms": [
+    "happier",
+    "happiest",
+    "happily"
+   ],
+   "definition": "Feeling or showing pleasure or satisfaction.",
+   "example": {
+    "text": "I am happy about your good luck.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26629,
+     "author": "Lily_at_School"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hard",
+   "word": "hard",
+   "pos": "adjective",
+   "forms": [
+    "harder",
+    "hardest"
+   ],
+   "definition": "Difficult to do or understand.",
+   "example": {
+    "text": "It's hard to handle crying babies.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19572,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hat",
+   "word": "hat",
+   "pos": "noun",
+   "forms": [
+    "hats"
+   ],
+   "definition": "A covering for the head, often worn for warmth or fashion.",
+   "example": {
+    "text": "This hat doesn't fit me.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 57125,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.have",
+   "word": "have",
+   "pos": "verb",
+   "forms": [
+    "had",
+    "has",
+    "hast",
+    "hath",
+    "having",
+    "ve"
+   ],
+   "definition": "To own or possess something.",
+   "example": {
+    "text": "I am not an artist. I never had the knack for it.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1369,
+     "author": "human600"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.he",
+   "word": "he",
+   "pos": "pronoun",
+   "forms": [
+    "him"
+   ],
+   "definition": "A male person or animal that has been mentioned before.",
+   "example": {
+    "text": "\"How do you feel?\" he inquired.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1595,
+     "author": "kebukebu"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.head",
+   "word": "head",
+   "pos": "noun",
+   "forms": [
+    "headed",
+    "heading",
+    "heads"
+   ],
+   "definition": "The top part of your body, where your brain, eyes, nose, and mouth are.",
+   "example": {
+    "text": "My head aches so much.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34693,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hear",
+   "word": "hear",
+   "pos": "verb",
+   "forms": [
+    "heard",
+    "hearing",
+    "hears"
+   ],
+   "definition": "To perceive sound with your ears.",
+   "example": {
+    "text": "I can hardly hear you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16857,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.help",
+   "word": "help",
+   "pos": "verb",
+   "forms": [
+    "helped",
+    "helping",
+    "helps"
+   ],
+   "definition": "To make it easier for someone to do something.",
+   "example": {
+    "text": "The strong must help the weak.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19219,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.here",
+   "word": "here",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "In, at, or to this place.",
+   "example": {
+    "text": "Are you going to sing here?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16718,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.his",
+   "word": "his",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Belonging to or connected with a male person or animal.",
+   "example": {
+    "text": "You should have accepted his advice.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 15809,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.home",
+   "word": "home",
+   "pos": "noun",
+   "forms": [
+    "homes"
+   ],
+   "definition": "The place where a person lives, especially with their family.",
+   "example": {
+    "text": "My home is a small apartment.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.homework",
+   "word": "homework",
+   "pos": "noun",
+   "forms": [],
+   "definition": "School work that students do at home.",
+   "example": {
+    "text": "Do your homework at once.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 52176,
+     "author": "Luornu"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hot",
+   "word": "hot",
+   "pos": "adjective",
+   "forms": [
+    "hotter",
+    "hottest"
+   ],
+   "definition": "Having a high temperature.",
+   "example": {
+    "text": "What a hot day it is!",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 36080,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hotel",
+   "word": "hotel",
+   "pos": "noun",
+   "forms": [
+    "hotels"
+   ],
+   "definition": "A building where you pay to sleep and eat meals.",
+   "example": {
+    "text": "Please book me a room in a first-class hotel.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27187,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hour",
+   "word": "hour",
+   "pos": "noun",
+   "forms": [
+    "hours"
+   ],
+   "definition": "A period of 60 minutes.",
+   "example": {
+    "text": "I waited for an hour, but he didn't appear.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27744,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.house",
+   "word": "house",
+   "pos": "noun",
+   "forms": [
+    "houses"
+   ],
+   "definition": "A building for people to live in.",
+   "example": {
+    "text": "The house on the corner is ours.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21672,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.how",
+   "word": "how",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "In what way or by what method.",
+   "example": {
+    "text": "How are you? Did you have a good trip?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1716,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.hungry",
+   "word": "hungry",
+   "pos": "adjective",
+   "forms": [
+    "hungrier"
+   ],
+   "definition": "Feeling a need to eat food.",
+   "example": {
+    "text": "I'm not hungry at all.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 258658,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.husband",
+   "word": "husband",
+   "pos": "noun",
+   "forms": [
+    "husbands"
+   ],
+   "definition": "A married man.",
+   "example": {
+    "text": "He'll be a good husband.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 241918,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.ice",
+   "word": "ice",
+   "pos": "noun",
+   "forms": [
+    "iced"
+   ],
+   "definition": "Water that has frozen and become solid.",
+   "example": {
+    "text": "The ice is too hard to crack.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 44325,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.idea",
+   "word": "idea",
+   "pos": "noun",
+   "forms": [
+    "ideas"
+   ],
+   "definition": "A thought or suggestion about what to do or how to do something.",
+   "example": {
+    "text": "I liked your idea and adopted it.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17184,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.if",
+   "word": "if",
+   "pos": "conjunction",
+   "forms": [
+    "ifs"
+   ],
+   "definition": "Used to say that something will happen only when something else happens.",
+   "example": {
+    "text": "You ought to be on time if you start now.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16138,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.in",
+   "word": "in",
+   "pos": "preposition",
+   "forms": [
+    "ins"
+   ],
+   "definition": "Showing a position inside a space or container.",
+   "example": {
+    "text": "You are in my way.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1296,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.into",
+   "word": "into",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "Moving to the inside of a container, place, or area.",
+   "example": {
+    "text": "He walked into the room.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.it",
+   "word": "it",
+   "pos": "pronoun",
+   "forms": [],
+   "definition": "A thing, animal, or idea that has been mentioned before.",
+   "example": {
+    "text": "Is it far from here?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1651,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.its",
+   "word": "its",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Belonging to or connected with a thing, animal, or baby.",
+   "example": {
+    "text": "Please put it back in its place.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 30356,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.job",
+   "word": "job",
+   "pos": "noun",
+   "forms": [
+    "jobs"
+   ],
+   "definition": "The regular work that a person does to earn money.",
+   "example": {
+    "text": "I finally got a job.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 30231,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.keep",
+   "word": "keep",
+   "pos": "verb",
+   "forms": [
+    "keeping",
+    "keeps",
+    "kept"
+   ],
+   "definition": "To have or hold something, or to continue to have it.",
+   "example": {
+    "text": "Do you keep a diary?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 15872,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.key",
+   "word": "key",
+   "pos": "noun",
+   "forms": [
+    "keyed",
+    "keys"
+   ],
+   "definition": "A metal object used to open or close a lock.",
+   "example": {
+    "text": "May I have the key?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 239401,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.kind",
+   "word": "kind",
+   "pos": "noun",
+   "forms": [
+    "kinder",
+    "kindest",
+    "kinds"
+   ],
+   "definition": "A group of things or people that are similar in some way; a type.",
+   "example": {
+    "text": "On what kind of bread?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34937,
+     "author": "Jesse"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.kitchen",
+   "word": "kitchen",
+   "pos": "noun",
+   "forms": [
+    "kitchens"
+   ],
+   "definition": "A room where food is cooked.",
+   "example": {
+    "text": "My sister is cooking in the kitchen.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 245594,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.know",
+   "word": "know",
+   "pos": "verb",
+   "forms": [
+    "knew",
+    "knowing",
+    "known",
+    "knows"
+   ],
+   "definition": "To have information or understanding about something.",
+   "example": {
+    "text": "Do you know who he is?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 15845,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.large",
+   "word": "large",
+   "pos": "adjective",
+   "forms": [
+    "larger",
+    "largest"
+   ],
+   "definition": "Big in size or amount.",
+   "example": {
+    "text": "There was a large garden behind the house.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24197,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.last",
+   "word": "last",
+   "pos": "adjective",
+   "forms": [
+    "lasted",
+    "lasts"
+   ],
+   "definition": "Coming after all others in order or time; most recent.",
+   "example": {
+    "text": "I had a stroke last year.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19409,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.late",
+   "word": "late",
+   "pos": "adjective",
+   "forms": [
+    "latest"
+   ],
+   "definition": "Arriving after the expected or usual time.",
+   "example": {
+    "text": "I was late to school.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2025,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.later",
+   "word": "later",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "At a time after the present or after the time mentioned.",
+   "example": {
+    "text": "I have tennis practice later.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 240117,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.learn",
+   "word": "learn",
+   "pos": "verb",
+   "forms": [
+    "learned",
+    "learning",
+    "learns",
+    "learnt"
+   ],
+   "definition": "To get new knowledge or a new skill.",
+   "example": {
+    "text": "Remember well what you learn at school.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21605,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.leave",
+   "word": "leave",
+   "pos": "verb",
+   "forms": [
+    "leaves",
+    "leaving",
+    "left"
+   ],
+   "definition": "To go away from a place.",
+   "example": {
+    "text": "You had better hurry. The train leaves at three.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19745,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.leg",
+   "word": "leg",
+   "pos": "noun",
+   "forms": [
+    "legs"
+   ],
+   "definition": "A part of the body that people and animals use to stand and walk.",
+   "example": {
+    "text": "A dog has four legs.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 239195,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.letter",
+   "word": "letter",
+   "pos": "noun",
+   "forms": [
+    "letters"
+   ],
+   "definition": "A written message sent to someone, usually by mail.",
+   "example": {
+    "text": "Here is a letter for you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18067,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.library",
+   "word": "library",
+   "pos": "noun",
+   "forms": [
+    "libraries"
+   ],
+   "definition": "A place where you can borrow books, or read them.",
+   "example": {
+    "text": "Excuse me, but where is the library?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 51441,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.light",
+   "word": "light",
+   "pos": "noun",
+   "forms": [
+    "lighted",
+    "lights",
+    "lit"
+   ],
+   "definition": "The energy from the sun, a lamp, etc., that makes things visible.",
+   "example": {
+    "text": "Whoever leaves the office last should turn off the light.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22357,
+     "author": "orcrist"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.like",
+   "word": "like",
+   "pos": "verb",
+   "forms": [
+    "liked",
+    "likes",
+    "liking"
+   ],
+   "definition": "To find something pleasant or enjoyable.",
+   "example": {
+    "text": "I always liked mysterious characters more.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1310,
+     "author": "human600"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.listen",
+   "word": "listen",
+   "pos": "verb",
+   "forms": [
+    "listened",
+    "listening",
+    "listens"
+   ],
+   "definition": "To pay attention to sounds with your ears.",
+   "example": {
+    "text": "Let's listen to the tape.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 50239,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.little",
+   "word": "little",
+   "pos": "adjective",
+   "forms": [],
+   "definition": "Small in size or amount.",
+   "example": {
+    "text": "\"What's the matter?\" asked the little white rabbit.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1507,
+     "author": "imjcooper"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.live",
+   "word": "live",
+   "pos": "verb",
+   "forms": [
+    "lived",
+    "lives",
+    "living"
+   ],
+   "definition": "To have your home in a particular place.",
+   "example": {
+    "text": "More people live in the northern part of the city.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21774,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.long",
+   "word": "long",
+   "pos": "adjective",
+   "forms": [
+    "longed",
+    "longer",
+    "longest",
+    "longs"
+   ],
+   "definition": "Measuring a great distance from one end to the other.",
+   "example": {
+    "text": "She has very long hair.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.look",
+   "word": "look",
+   "pos": "verb",
+   "forms": [
+    "looked",
+    "looking",
+    "looks"
+   ],
+   "definition": "To direct your eyes in a particular direction.",
+   "example": {
+    "text": "Please look at the board.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.love",
+   "word": "love",
+   "pos": "verb",
+   "forms": [
+    "loved",
+    "loves"
+   ],
+   "definition": "To feel a deep affection for someone or something.",
+   "example": {
+    "text": "I'll always love you, no matter what happens.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20106,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.lunch",
+   "word": "lunch",
+   "pos": "noun",
+   "forms": [
+    "lunches"
+   ],
+   "definition": "A meal eaten in the middle of the day.",
+   "example": {
+    "text": "Have you eaten lunch yet?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 31190,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.make",
+   "word": "make",
+   "pos": "verb",
+   "forms": [
+    "made",
+    "makes",
+    "making"
+   ],
+   "definition": "To create or build something.",
+   "example": {
+    "text": "I'll make a model plane for you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17369,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.man",
+   "word": "man",
+   "pos": "noun",
+   "forms": [
+    "men"
+   ],
+   "definition": "An adult male human.",
+   "example": {
+    "text": "You had better not associate with those men.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16816,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.many",
+   "word": "many",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "A large number of things or people.",
+   "example": {
+    "text": "How many books do you have?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16254,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.may",
+   "word": "may",
+   "pos": "verb",
+   "forms": [],
+   "definition": "Used to say that something is possible or allowed.",
+   "example": {
+    "text": "You may go at once.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16640,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.meet",
+   "word": "meet",
+   "pos": "verb",
+   "forms": [
+    "meets",
+    "met"
+   ],
+   "definition": "To come together with someone by chance or by arrangement.",
+   "example": {
+    "text": "I've been anxious to meet you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20133,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.milk",
+   "word": "milk",
+   "pos": "noun",
+   "forms": [
+    "milked",
+    "milking",
+    "milks"
+   ],
+   "definition": "A white liquid from cows that people drink.",
+   "example": {
+    "text": "A cow gives us milk.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19505,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.mine",
+   "word": "mine",
+   "pos": "pronoun",
+   "forms": [
+    "mined",
+    "mines"
+   ],
+   "definition": "Belonging to me.",
+   "example": {
+    "text": "The calculator on the table is mine.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 39596,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.minute",
+   "word": "minute",
+   "pos": "noun",
+   "forms": [
+    "minutes"
+   ],
+   "definition": "A unit of time equal to sixty seconds.",
+   "example": {
+    "text": "It only takes a few minutes.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 33057,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.mom",
+   "word": "mom",
+   "pos": "noun",
+   "forms": [
+    "moms"
+   ],
+   "definition": "A common, informal word for mother.",
+   "example": {
+    "text": "Is your mom at home?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2369535,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.money",
+   "word": "money",
+   "pos": "noun",
+   "forms": [],
+   "definition": "Coins or notes used to buy things.",
+   "example": {
+    "text": "How much money did you spend in total?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17841,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.month",
+   "word": "month",
+   "pos": "noun",
+   "forms": [
+    "months"
+   ],
+   "definition": "One of the twelve periods of time that a year is divided into.",
+   "example": {
+    "text": "The meeting was last month.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22429,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.more",
+   "word": "more",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "A greater amount or number of something.",
+   "example": {
+    "text": "There are more stars in the sky than I can count.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18318,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.morning",
+   "word": "morning",
+   "pos": "noun",
+   "forms": [
+    "mornings"
+   ],
+   "definition": "The part of the day from when the sun rises until noon.",
+   "example": {
+    "text": "Isn't it a lovely morning?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20319,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.most",
+   "word": "most",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "The largest number or amount of something.",
+   "example": {
+    "text": "Most people think I'm crazy.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1322,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.mother",
+   "word": "mother",
+   "pos": "noun",
+   "forms": [
+    "mothers"
+   ],
+   "definition": "A female parent.",
+   "example": {
+    "text": "\"Who is it?\" \"It's your mother.\"",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1505,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.move",
+   "word": "move",
+   "pos": "verb",
+   "forms": [
+    "moved",
+    "moves",
+    "moving"
+   ],
+   "definition": "To change from one place or position to another.",
+   "example": {
+    "text": "Please move your chair closer to the table.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.movie",
+   "word": "movie",
+   "pos": "noun",
+   "forms": [
+    "movies"
+   ],
+   "definition": "A story shown in moving pictures, usually at a cinema or on TV.",
+   "example": {
+    "text": "How did you enjoy the movie?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26463,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.much",
+   "word": "much",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "A large amount of something.",
+   "example": {
+    "text": "How much money did you spend in total?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17841,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.music",
+   "word": "music",
+   "pos": "noun",
+   "forms": [],
+   "definition": "Sounds that are arranged in a pleasing or expressive way.",
+   "example": {
+    "text": "Are you fond of music?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 25421,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.must",
+   "word": "must",
+   "pos": "verb",
+   "forms": [],
+   "definition": "Used to say that something is necessary or very important.",
+   "example": {
+    "text": "You must take things as they are.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16349,
+     "author": "kebukebu"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.my",
+   "word": "my",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Belonging to or connected with me.",
+   "example": {
+    "text": "You are in my way.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1296,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.name",
+   "word": "name",
+   "pos": "noun",
+   "forms": [
+    "named",
+    "names",
+    "naming"
+   ],
+   "definition": "The word or words that a person, animal, or thing is known by.",
+   "example": {
+    "text": "What was the name of the hotel? I can't recall it.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 33361,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.near",
+   "word": "near",
+   "pos": "preposition",
+   "forms": [
+    "neared",
+    "nearer",
+    "nearest",
+    "nearing"
+   ],
+   "definition": "A short distance from something or someone.",
+   "example": {
+    "text": "There's one just near the station.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26060,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.need",
+   "word": "need",
+   "pos": "verb",
+   "forms": [
+    "needed",
+    "needing",
+    "needs"
+   ],
+   "definition": "To require something because it is essential or very important.",
+   "example": {
+    "text": "I need a bag. Will you lend me one?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21227,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.never",
+   "word": "never",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Not at any time; at no time in the past or future.",
+   "example": {
+    "text": "We never work on Sunday.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22774,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.new",
+   "word": "new",
+   "pos": "adjective",
+   "forms": [
+    "newer",
+    "newest",
+    "newly"
+   ],
+   "definition": "Not old; recently made, bought, or found.",
+   "example": {
+    "text": "You may use my new car.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16082,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.news",
+   "word": "news",
+   "pos": "noun",
+   "forms": [],
+   "definition": "New information about recent events.",
+   "example": {
+    "text": "We broadcast news on the hour.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 35950,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.next",
+   "word": "next",
+   "pos": "adjective",
+   "forms": [],
+   "definition": "Coming immediately after the present one.",
+   "example": {
+    "text": "It may freeze next week.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1398,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.nice",
+   "word": "nice",
+   "pos": "adjective",
+   "forms": [
+    "nicer",
+    "nicest"
+   ],
+   "definition": "Pleasant, kind, or enjoyable.",
+   "example": {
+    "text": "Nice to see you again!",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 32636,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.night",
+   "word": "night",
+   "pos": "noun",
+   "forms": [
+    "nights"
+   ],
+   "definition": "The part of the day when it is dark and most people sleep.",
+   "example": {
+    "text": "It was a dark night.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 28390,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.no",
+   "word": "no",
+   "pos": "determiner",
+   "forms": [
+    "nooo"
+   ],
+   "definition": "Not any; the opposite of yes.",
+   "example": {
+    "text": "I have no more time to talk with you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17584,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.not",
+   "word": "not",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Used to make a verb or statement negative.",
+   "example": {
+    "text": "No I'm not; you are!",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1323,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.nothing",
+   "word": "nothing",
+   "pos": "pronoun",
+   "forms": [
+    "nothin"
+   ],
+   "definition": "Not anything; no single thing.",
+   "example": {
+    "text": "Without air and water, nothing could live.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18247,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.now",
+   "word": "now",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "At the present time.",
+   "example": {
+    "text": "You may go home now.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16405,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.number",
+   "word": "number",
+   "pos": "noun",
+   "forms": [
+    "numbered",
+    "numbers"
+   ],
+   "definition": "A word or symbol that shows a quantity.",
+   "example": {
+    "text": "If he knew her phone number, he could call her.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 30675,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.off",
+   "word": "off",
+   "pos": "adverb",
+   "forms": [
+    "offs"
+   ],
+   "definition": "Away from a place; no longer connected or working.",
+   "example": {
+    "text": "Soon the plane begins to move, and then it takes off.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20883,
+     "author": "fishda"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.often",
+   "word": "often",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Many times; happening frequently.",
+   "example": {
+    "text": "We often eat fish raw.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 23113,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.old",
+   "word": "old",
+   "pos": "adjective",
+   "forms": [
+    "ol",
+    "older",
+    "oldest",
+    "olds"
+   ],
+   "definition": "Having lived or existed for a long time; not new.",
+   "example": {
+    "text": "You are old enough to understand this.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16690,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.on",
+   "word": "on",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "Showing a position touching a surface.",
+   "example": {
+    "text": "The book is on the table.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.open",
+   "word": "open",
+   "pos": "adjective",
+   "forms": [
+    "opened",
+    "opening",
+    "opens"
+   ],
+   "definition": "Not closed; allowing things to go in or out.",
+   "example": {
+    "text": "The door was open, so I walked in.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.other",
+   "word": "other",
+   "pos": "adjective",
+   "forms": [
+    "others"
+   ],
+   "definition": "Different from the one already mentioned; additional.",
+   "example": {
+    "text": "Can other people catch it?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21039,
+     "author": "fishda"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.our",
+   "word": "our",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Belonging to or connected with us.",
+   "example": {
+    "text": "Our school begins at eight.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21550,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.out",
+   "word": "out",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Away from the inside of a place or container.",
+   "example": {
+    "text": "I suggest that we go out on Friday.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2222,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.over",
+   "word": "over",
+   "pos": "preposition",
+   "forms": [
+    "overs"
+   ],
+   "definition": "Above something else, sometimes touching it or covering it.",
+   "example": {
+    "text": "I have spots coming out all over my face.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20744,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.paper",
+   "word": "paper",
+   "pos": "noun",
+   "forms": [
+    "papers"
+   ],
+   "definition": "Thin material used for writing, drawing, or printing.",
+   "example": {
+    "text": "Did you cut the paper?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16591,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.parent",
+   "word": "parent",
+   "pos": "noun",
+   "forms": [
+    "parents"
+   ],
+   "definition": "A mother or father.",
+   "example": {
+    "text": "We should obey our parents.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22632,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.park",
+   "word": "park",
+   "pos": "noun",
+   "forms": [
+    "parked",
+    "parks"
+   ],
+   "definition": "A public area with grass and trees, for recreation.",
+   "example": {
+    "text": "Many children were playing in the park.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 41032,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.party",
+   "word": "party",
+   "pos": "noun",
+   "forms": [
+    "partied",
+    "parties",
+    "partying"
+   ],
+   "definition": "A social event where people meet to enjoy themselves, often with food and music.",
+   "example": {
+    "text": "We will soon be ready for the party.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20895,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.people",
+   "word": "people",
+   "pos": "noun",
+   "forms": [
+    "peopled",
+    "peoples"
+   ],
+   "definition": "All the men, women, and children in a place or group.",
+   "example": {
+    "text": "Can other people catch it?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21039,
+     "author": "fishda"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.person",
+   "word": "person",
+   "pos": "noun",
+   "forms": [
+    "persons"
+   ],
+   "definition": "A human being; an individual man, woman, or child.",
+   "example": {
+    "text": "The admission is ten dollars a person.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27665,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.phone",
+   "word": "phone",
+   "pos": "noun",
+   "forms": [
+    "phoned",
+    "phones",
+    "phoning"
+   ],
+   "definition": "A device used to talk to someone who is in another place.",
+   "example": {
+    "text": "May I use your phone?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16969,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.picture",
+   "word": "picture",
+   "pos": "noun",
+   "forms": [
+    "pics",
+    "pictured",
+    "pictures",
+    "picturing"
+   ],
+   "definition": "A drawing, painting, or photograph.",
+   "example": {
+    "text": "May I take your picture?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17088,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.place",
+   "word": "place",
+   "pos": "noun",
+   "forms": [
+    "placed",
+    "places",
+    "placing"
+   ],
+   "definition": "A specific area, location, or position.",
+   "example": {
+    "text": "You are in a safe place.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16326,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.plan",
+   "word": "plan",
+   "pos": "noun",
+   "forms": [
+    "planned",
+    "planning",
+    "plans"
+   ],
+   "definition": "A detailed idea for doing or achieving something.",
+   "example": {
+    "text": "My wife and I agreed on a holiday plan.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19813,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.play",
+   "word": "play",
+   "pos": "verb",
+   "forms": [
+    "played",
+    "playing",
+    "plays"
+   ],
+   "definition": "To engage in an activity for enjoyment, like a game.",
+   "example": {
+    "text": "Let's play a game together.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.problem",
+   "word": "problem",
+   "pos": "noun",
+   "forms": [
+    "problems"
+   ],
+   "definition": "A situation that causes difficulty or worry.",
+   "example": {
+    "text": "Could you solve the problem?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16569,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.put",
+   "word": "put",
+   "pos": "verb",
+   "forms": [
+    "puts",
+    "putting"
+   ],
+   "definition": "To move something to a particular place or position.",
+   "example": {
+    "text": "I put money in a safe.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18545,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.question",
+   "word": "question",
+   "pos": "noun",
+   "forms": [
+    "questioned",
+    "questioning",
+    "questions"
+   ],
+   "definition": "A sentence or phrase used to ask for information.",
+   "example": {
+    "text": "May I ask a question?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1594,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.rain",
+   "word": "rain",
+   "pos": "noun",
+   "forms": [
+    "rained",
+    "raining",
+    "rains"
+   ],
+   "definition": "Water that falls from the sky in drops.",
+   "example": {
+    "text": "The picnic was called off because of the rain.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 25802,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.read",
+   "word": "read",
+   "pos": "verb",
+   "forms": [
+    "reading",
+    "reads"
+   ],
+   "definition": "To look at written words and understand what they mean.",
+   "example": {
+    "text": "I want you to read this book.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17440,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.red",
+   "word": "red",
+   "pos": "adjective",
+   "forms": [
+    "redder"
+   ],
+   "definition": "A primary color, like the color of blood or a stop sign.",
+   "example": {
+    "text": "The girl had a large red hat on.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 46434,
+     "author": "CS"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.restaurant",
+   "word": "restaurant",
+   "pos": "noun",
+   "forms": [
+    "restaurants"
+   ],
+   "definition": "A place where you can buy and eat meals.",
+   "example": {
+    "text": "We had lunch at a roadside restaurant.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21767,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.right",
+   "word": "right",
+   "pos": "adjective",
+   "forms": [
+    "rights"
+   ],
+   "definition": "Correct or true; on the side of your stronger hand.",
+   "example": {
+    "text": "That is the right answer.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.river",
+   "word": "river",
+   "pos": "noun",
+   "forms": [
+    "rivers"
+   ],
+   "definition": "A large natural flow of water that goes towards the sea.",
+   "example": {
+    "text": "The boat goes down the river.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 33729,
+     "author": "orcrist"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.room",
+   "word": "room",
+   "pos": "noun",
+   "forms": [
+    "roomed",
+    "rooms"
+   ],
+   "definition": "A part of a building with walls, a floor, and a ceiling.",
+   "example": {
+    "text": "I'd like a corner room.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21662,
+     "author": "shekitten"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.run",
+   "word": "run",
+   "pos": "verb",
+   "forms": [
+    "ran",
+    "running",
+    "runs"
+   ],
+   "definition": "To move quickly using your legs.",
+   "example": {
+    "text": "We ran down the hill.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 23282,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.same",
+   "word": "same",
+   "pos": "adjective",
+   "forms": [],
+   "definition": "Not different; exactly alike.",
+   "example": {
+    "text": "Are they all the same?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1563,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.say",
+   "word": "say",
+   "pos": "verb",
+   "forms": [
+    "said",
+    "saying",
+    "says"
+   ],
+   "definition": "To speak words or express something with words.",
+   "example": {
+    "text": "How do you say that in Italian?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1649,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.school",
+   "word": "school",
+   "pos": "noun",
+   "forms": [
+    "schooled",
+    "schools"
+   ],
+   "definition": "A place where children or adults go to learn.",
+   "example": {
+    "text": "I was late to school.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2025,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.see",
+   "word": "see",
+   "pos": "verb",
+   "forms": [
+    "saw",
+    "seeing",
+    "seen",
+    "sees"
+   ],
+   "definition": "To use your eyes to notice something or someone.",
+   "example": {
+    "text": "I never see you but I think of my brother.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17571,
+     "author": "Hans_Adler"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.she",
+   "word": "she",
+   "pos": "pronoun",
+   "forms": [
+    "her"
+   ],
+   "definition": "A female person or animal that has been mentioned before.",
+   "example": {
+    "text": "She is mad at me.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 6130,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.shirt",
+   "word": "shirt",
+   "pos": "noun",
+   "forms": [
+    "shirts"
+   ],
+   "definition": "A piece of clothing for the upper body, often with a collar and buttons.",
+   "example": {
+    "text": "I don't like this shirt. Show me another.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 61033,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.shoe",
+   "word": "shoe",
+   "pos": "noun",
+   "forms": [
+    "shoes"
+   ],
+   "definition": "Something you wear on your foot.",
+   "example": {
+    "text": "My shoes are worn out.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18117,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.shop",
+   "word": "shop",
+   "pos": "noun",
+   "forms": [
+    "shopped",
+    "shops"
+   ],
+   "definition": "A place where you can buy things.",
+   "example": {
+    "text": "The shop is closed today.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 44880,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.short",
+   "word": "short",
+   "pos": "adjective",
+   "forms": [
+    "shorter",
+    "shortest"
+   ],
+   "definition": "Not long or tall.",
+   "example": {
+    "text": "My brother is quite short.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.show",
+   "word": "show",
+   "pos": "verb",
+   "forms": [
+    "showed",
+    "showing",
+    "shown",
+    "shows"
+   ],
+   "definition": "To let someone see something, or to explain how to do something.",
+   "example": {
+    "text": "Show me a better one.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 30429,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.side",
+   "word": "side",
+   "pos": "noun",
+   "forms": [
+    "sided",
+    "sides"
+   ],
+   "definition": "A flat outer surface of an object, or a position next to something.",
+   "example": {
+    "text": "The garage is at the side of the house.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 63493,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.sing",
+   "word": "sing",
+   "pos": "verb",
+   "forms": [
+    "sang",
+    "singing",
+    "sings",
+    "sung"
+   ],
+   "definition": "To make musical sounds with your voice.",
+   "example": {
+    "text": "Let us sing a song.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 23921,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.sister",
+   "word": "sister",
+   "pos": "noun",
+   "forms": [
+    "sisters"
+   ],
+   "definition": "A girl or woman who has the same parents as another person.",
+   "example": {
+    "text": "How pretty your sister is!",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16902,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.sit",
+   "word": "sit",
+   "pos": "verb",
+   "forms": [
+    "sat",
+    "sits",
+    "sitting"
+   ],
+   "definition": "To rest your body on a chair or the ground with your bottom down.",
+   "example": {
+    "text": "The visitor sat across from me.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19901,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.sleep",
+   "word": "sleep",
+   "pos": "verb",
+   "forms": [
+    "sleeping",
+    "sleeps",
+    "slept"
+   ],
+   "definition": "To rest your mind and body, usually at night, with your eyes closed.",
+   "example": {
+    "text": "I sleep on my side.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 25666,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.small",
+   "word": "small",
+   "pos": "adjective",
+   "forms": [
+    "smaller",
+    "smallest"
+   ],
+   "definition": "Not large in size, amount, or degree.",
+   "example": {
+    "text": "There was a small audience in the hall.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 33672,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.snow",
+   "word": "snow",
+   "pos": "noun",
+   "forms": [
+    "snowed",
+    "snowing",
+    "snows"
+   ],
+   "definition": "Soft, white pieces of frozen water that fall from the sky in winter.",
+   "example": {
+    "text": "We have snow in January.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27824,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.so",
+   "word": "so",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "To a great extent; very.",
+   "example": {
+    "text": "When we are small, everything seems so big.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2033,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.some",
+   "word": "some",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "An unspecified amount or number.",
+   "example": {
+    "text": "Do you have some milk?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19455,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.someone",
+   "word": "someone",
+   "pos": "pronoun",
+   "forms": [],
+   "definition": "An unknown or unspecified person.",
+   "example": {
+    "text": "Someone is at the door.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 40433,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.something",
+   "word": "something",
+   "pos": "pronoun",
+   "forms": [],
+   "definition": "An unknown or unspecified thing.",
+   "example": {
+    "text": "I want something to read.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 25049,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.sometimes",
+   "word": "sometimes",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Not always, but on some occasions.",
+   "example": {
+    "text": "The door is sometimes open.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 50209,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.son",
+   "word": "son",
+   "pos": "noun",
+   "forms": [
+    "sons"
+   ],
+   "definition": "A male child of a parent.",
+   "example": {
+    "text": "Mr Wood had no sons.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 65481,
+     "author": "sundown"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.song",
+   "word": "song",
+   "pos": "noun",
+   "forms": [
+    "songs"
+   ],
+   "definition": "A short piece of music with words that are sung.",
+   "example": {
+    "text": "Let us sing a song.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 23921,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.soon",
+   "word": "soon",
+   "pos": "adverb",
+   "forms": [
+    "sooner",
+    "soonest"
+   ],
+   "definition": "In a short time from now.",
+   "example": {
+    "text": "I hope to see you soon.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18711,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.sorry",
+   "word": "sorry",
+   "pos": "adjective",
+   "forms": [],
+   "definition": "Feeling sad or regretful about something you did or something bad that happened.",
+   "example": {
+    "text": "I'm sorry I can't go.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 28662,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.speak",
+   "word": "speak",
+   "pos": "verb",
+   "forms": [
+    "speaking",
+    "speaks",
+    "spoke",
+    "spoken"
+   ],
+   "definition": "To say words, to talk to someone.",
+   "example": {
+    "text": "Go and speak to my colleague.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 5943,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.stand",
+   "word": "stand",
+   "pos": "verb",
+   "forms": [
+    "standing",
+    "stands",
+    "stood"
+   ],
+   "definition": "To be upright on your feet.",
+   "example": {
+    "text": "When the visitor entered the room, we stood to greet him.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19912,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.start",
+   "word": "start",
+   "pos": "verb",
+   "forms": [
+    "started",
+    "starting",
+    "starts"
+   ],
+   "definition": "To begin to do something.",
+   "example": {
+    "text": "What time does it start?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24572,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.stay",
+   "word": "stay",
+   "pos": "verb",
+   "forms": [
+    "stayed",
+    "staying",
+    "stays"
+   ],
+   "definition": "To remain in a place or condition.",
+   "example": {
+    "text": "You are to stay here.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16713,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.stop",
+   "word": "stop",
+   "pos": "verb",
+   "forms": [
+    "stopped",
+    "stopping",
+    "stops"
+   ],
+   "definition": "To finish doing something, or to make something finish.",
+   "example": {
+    "text": "Let's wait for the rain to stop.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26982,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.store",
+   "word": "store",
+   "pos": "noun",
+   "forms": [
+    "stored",
+    "stores",
+    "storing"
+   ],
+   "definition": "A place where you can buy things.",
+   "example": {
+    "text": "There used to be a store right here.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 28358,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.story",
+   "word": "story",
+   "pos": "noun",
+   "forms": [
+    "stories"
+   ],
+   "definition": "A description of events, real or imagined, told to entertain or inform.",
+   "example": {
+    "text": "I'll tell you a story.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27849,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.street",
+   "word": "street",
+   "pos": "noun",
+   "forms": [
+    "streets"
+   ],
+   "definition": "A public road in a city or town with buildings on one or both sides.",
+   "example": {
+    "text": "A cat ran across the street.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27237,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.student",
+   "word": "student",
+   "pos": "noun",
+   "forms": [
+    "students"
+   ],
+   "definition": "A person who is learning at a school or university.",
+   "example": {
+    "text": "I am a student at this school.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.study",
+   "word": "study",
+   "pos": "verb",
+   "forms": [
+    "studied",
+    "studies",
+    "studying"
+   ],
+   "definition": "To spend time learning about a subject, usually at school or university.",
+   "example": {
+    "text": "How often do you study English at school?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21604,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.summer",
+   "word": "summer",
+   "pos": "noun",
+   "forms": [
+    "summers"
+   ],
+   "definition": "The warmest season of the year, between spring and autumn.",
+   "example": {
+    "text": "She went there last summer.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19433,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.sun",
+   "word": "sun",
+   "pos": "noun",
+   "forms": [
+    "sunned",
+    "sunning",
+    "suns"
+   ],
+   "definition": "The star that gives light and heat to Earth.",
+   "example": {
+    "text": "The clouds hid the sun.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26522,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.swim",
+   "word": "swim",
+   "pos": "verb",
+   "forms": [
+    "swam",
+    "swimming",
+    "swims",
+    "swum"
+   ],
+   "definition": "To move through water using your arms and legs.",
+   "example": {
+    "text": "It is easy to swim.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26405,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.table",
+   "word": "table",
+   "pos": "noun",
+   "forms": [
+    "tables"
+   ],
+   "definition": "A piece of furniture with a flat top and legs, used for eating or working.",
+   "example": {
+    "text": "There is a vase on the table.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 39604,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.take",
+   "word": "take",
+   "pos": "verb",
+   "forms": [
+    "taken",
+    "takes",
+    "taketh",
+    "taking",
+    "took"
+   ],
+   "definition": "To get or pick up something, or to use a form of transport.",
+   "example": {
+    "text": "You took the wrong key.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2416,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.talk",
+   "word": "talk",
+   "pos": "verb",
+   "forms": [
+    "talked",
+    "talking",
+    "talks"
+   ],
+   "definition": "To speak to someone, or to have a conversation.",
+   "example": {
+    "text": "It's been nice talking to you, but I really must go now.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21308,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.tall",
+   "word": "tall",
+   "pos": "adjective",
+   "forms": [
+    "taller",
+    "tallest"
+   ],
+   "definition": "Having a greater than average height.",
+   "example": {
+    "text": "Bill is not tall like you.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34515,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.tea",
+   "word": "tea",
+   "pos": "noun",
+   "forms": [
+    "teas"
+   ],
+   "definition": "A hot drink made by pouring hot water over dried leaves.",
+   "example": {
+    "text": "Would you like coffee or tea?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 62273,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.teach",
+   "word": "teach",
+   "pos": "verb",
+   "forms": [
+    "taught",
+    "teaches",
+    "teaching"
+   ],
+   "definition": "To give knowledge or skills to someone.",
+   "example": {
+    "text": "Teach me how you do it.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2351,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.teacher",
+   "word": "teacher",
+   "pos": "noun",
+   "forms": [
+    "teachers"
+   ],
+   "definition": "A person whose job is to teach students, especially in a school.",
+   "example": {
+    "text": "Mr Kato is a teacher.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24411,
+     "author": "RJH"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.tell",
+   "word": "tell",
+   "pos": "verb",
+   "forms": [
+    "telling",
+    "tells",
+    "told"
+   ],
+   "definition": "To give information to someone by speaking or writing.",
+   "example": {
+    "text": "Please tell us where there is a grocery store.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2234,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.test",
+   "word": "test",
+   "pos": "noun",
+   "forms": [
+    "tested",
+    "testing",
+    "tests"
+   ],
+   "definition": "An examination to see how much you know or can do.",
+   "example": {
+    "text": "Tom made some mistakes in the test.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 37240,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.thank",
+   "word": "thank",
+   "pos": "verb",
+   "forms": [
+    "thanked",
+    "thanking"
+   ],
+   "definition": "To express gratitude or appreciation to someone.",
+   "example": {
+    "text": "You ought to thank him.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 15838,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.that",
+   "word": "that",
+   "pos": "determiner",
+   "forms": [
+    "those"
+   ],
+   "definition": "Used to point to a specific thing or person far away from you.",
+   "example": {
+    "text": "Look at that big tree.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.the",
+   "word": "the",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Used before a noun when you are talking about a specific thing or person.",
+   "example": {
+    "text": "Could you dial for me? The telephone is too high.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1661,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.their",
+   "word": "their",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Belonging to or connected with them.",
+   "example": {
+    "text": "It is the students' duty to clean their classrooms.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19031,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.then",
+   "word": "then",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "At that time, or next in a sequence of events.",
+   "example": {
+    "text": "Just then, the bus stopped.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 40171,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.there",
+   "word": "there",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "In, at, or to that place.",
+   "example": {
+    "text": "Open the cupboard to the left, the bottles are in there.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2219,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.they",
+   "word": "they",
+   "pos": "pronoun",
+   "forms": [
+    "them"
+   ],
+   "definition": "People, animals, or things that have been mentioned before.",
+   "example": {
+    "text": "Are they all the same?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1563,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.thing",
+   "word": "thing",
+   "pos": "noun",
+   "forms": [
+    "things"
+   ],
+   "definition": "An object, idea, or action that is not alive.",
+   "example": {
+    "text": "Don't buy things on credit.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21244,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.think",
+   "word": "think",
+   "pos": "verb",
+   "forms": [
+    "thinking",
+    "thinks",
+    "thought"
+   ],
+   "definition": "To form an idea or opinion in your mind.",
+   "example": {
+    "text": "I think I have a theory about that.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1378,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.this",
+   "word": "this",
+   "pos": "determiner",
+   "forms": [
+    "these"
+   ],
+   "definition": "Used to point to a specific thing or person near you.",
+   "example": {
+    "text": "Why do you want to buy this book?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16457,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.time",
+   "word": "time",
+   "pos": "noun",
+   "forms": [
+    "timed",
+    "times"
+   ],
+   "definition": "The period during which something happens or exists.",
+   "example": {
+    "text": "What time will you leave?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18072,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.tired",
+   "word": "tired",
+   "pos": "adjective",
+   "forms": [],
+   "definition": "Feeling that you want to rest or sleep.",
+   "example": {
+    "text": "Why are you so tired today?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 36484,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.today",
+   "word": "today",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "On this present day.",
+   "example": {
+    "text": "Who else is gone today?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 33626,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.tomorrow",
+   "word": "tomorrow",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "The day after today.",
+   "example": {
+    "text": "The rent is due tomorrow.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24049,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.tonight",
+   "word": "tonight",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "On the evening of the present day.",
+   "example": {
+    "text": "What are you going to do tonight?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 69405,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.too",
+   "word": "too",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "More than is needed or wanted; also.",
+   "example": {
+    "text": "Your hair is too long.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16926,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.town",
+   "word": "town",
+   "pos": "noun",
+   "forms": [
+    "towns"
+   ],
+   "definition": "A place where people live and work, smaller than a city.",
+   "example": {
+    "text": "I saw a town in the distance.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 25798,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.train",
+   "word": "train",
+   "pos": "noun",
+   "forms": [
+    "trained",
+    "trains"
+   ],
+   "definition": "A vehicle that runs on rails, carrying passengers or goods.",
+   "example": {
+    "text": "The train was due at six.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20259,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.tree",
+   "word": "tree",
+   "pos": "noun",
+   "forms": [
+    "trees"
+   ],
+   "definition": "A tall plant with a thick stem and branches.",
+   "example": {
+    "text": "It's fruit fresh from the tree.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 31119,
+     "author": "Dejo"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.try",
+   "word": "try",
+   "pos": "verb",
+   "forms": [
+    "tried",
+    "tries",
+    "trying"
+   ],
+   "definition": "To attempt to do something.",
+   "example": {
+    "text": "Students should try not to be late.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21359,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.turn",
+   "word": "turn",
+   "pos": "verb",
+   "forms": [
+    "turned",
+    "turning",
+    "turns"
+   ],
+   "definition": "To move around a central point; to change direction.",
+   "example": {
+    "text": "Turn your face this way.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20759,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.under",
+   "word": "under",
+   "pos": "preposition",
+   "forms": [],
+   "definition": "In a position directly below something.",
+   "example": {
+    "text": "It is under the chair.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 28185,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.understand",
+   "word": "understand",
+   "pos": "verb",
+   "forms": [
+    "understanding",
+    "understands",
+    "understood"
+   ],
+   "definition": "To know the meaning of something or how something works.",
+   "example": {
+    "text": "I understand how you feel.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 20315,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.up",
+   "word": "up",
+   "pos": "adverb",
+   "forms": [
+    "upped",
+    "ups"
+   ],
+   "definition": "Towards a higher place or position.",
+   "example": {
+    "text": "Look up to the skies.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18270,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.use",
+   "word": "use",
+   "pos": "verb",
+   "forms": [
+    "used",
+    "uses",
+    "using"
+   ],
+   "definition": "To take something and do something with it for a purpose.",
+   "example": {
+    "text": "Can I use your pen?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17354,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.very",
+   "word": "very",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Used to make an adjective or adverb stronger.",
+   "example": {
+    "text": "You write a very good hand.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16066,
+     "author": "Objectivesea"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.wait",
+   "word": "wait",
+   "pos": "verb",
+   "forms": [
+    "waited",
+    "waiting",
+    "waits"
+   ],
+   "definition": "To stay in one place or not do something until something else happens.",
+   "example": {
+    "text": "Please wait for me at the station.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26092,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.walk",
+   "word": "walk",
+   "pos": "verb",
+   "forms": [
+    "walked",
+    "walking",
+    "walks"
+   ],
+   "definition": "To move forward by putting one foot in front of the other.",
+   "example": {
+    "text": "Will you walk down to the school with me?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 21491,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.want",
+   "word": "want",
+   "pos": "verb",
+   "forms": [
+    "wanted",
+    "wanting",
+    "wants"
+   ],
+   "definition": "To have a desire or wish for something.",
+   "example": {
+    "text": "What do you want now?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16275,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.warm",
+   "word": "warm",
+   "pos": "adjective",
+   "forms": [
+    "warmed",
+    "warmer",
+    "warmest",
+    "warming",
+    "warms"
+   ],
+   "definition": "A little hot, not cold.",
+   "example": {
+    "text": "Scotland can be very warm in September.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 51994,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.wash",
+   "word": "wash",
+   "pos": "verb",
+   "forms": [
+    "washed",
+    "washes",
+    "washing"
+   ],
+   "definition": "To clean something with water and often soap.",
+   "example": {
+    "text": "Wash your hands before eating.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 54335,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.watch",
+   "word": "watch",
+   "pos": "verb",
+   "forms": [
+    "watched",
+    "watches",
+    "watching"
+   ],
+   "definition": "To look at something for a period of time, often to see what happens.",
+   "example": {
+    "text": "Did you watch the game?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16590,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.water",
+   "word": "water",
+   "pos": "noun",
+   "forms": [
+    "watered",
+    "watering",
+    "waters"
+   ],
+   "definition": "The clear liquid that has no color, taste, or smell, and is essential for life.",
+   "example": {
+    "text": "What a waste of water!",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24945,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.way",
+   "word": "way",
+   "pos": "noun",
+   "forms": [
+    "ways"
+   ],
+   "definition": "A path or route; a method or style of doing something.",
+   "example": {
+    "text": "You are in my way.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1296,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.we",
+   "word": "we",
+   "pos": "pronoun",
+   "forms": [
+    "us"
+   ],
+   "definition": "You and one or more other people.",
+   "example": {
+    "text": "Why don't we go home?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1540,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.weather",
+   "word": "weather",
+   "pos": "noun",
+   "forms": [
+    "weathered"
+   ],
+   "definition": "The conditions outside, like sun, rain, or wind.",
+   "example": {
+    "text": "Bad weather discouraged them from going on a picnic.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 28544,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.week",
+   "word": "week",
+   "pos": "noun",
+   "forms": [
+    "weeks"
+   ],
+   "definition": "A period of seven days.",
+   "example": {
+    "text": "There are seven days in a week.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27727,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.weekend",
+   "word": "weekend",
+   "pos": "noun",
+   "forms": [
+    "weekends"
+   ],
+   "definition": "The days of Saturday and Sunday.",
+   "example": {
+    "text": "See you on the weekend.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 266424,
+     "author": "CM"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.well",
+   "word": "well",
+   "pos": "adverb",
+   "forms": [
+    "welled",
+    "welling",
+    "wells"
+   ],
+   "definition": "In a good or satisfactory way.",
+   "example": {
+    "text": "She speaks English very well.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.what",
+   "word": "what",
+   "pos": "pronoun",
+   "forms": [],
+   "definition": "Asking for information about a thing or action.",
+   "example": {
+    "text": "What grade are you in?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16248,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.when",
+   "word": "when",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "At what time, or at the time that.",
+   "example": {
+    "text": "When will you be free?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16758,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.where",
+   "word": "where",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "Asking about the place something is or goes.",
+   "example": {
+    "text": "Where do you come from?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17150,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.which",
+   "word": "which",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Used to ask or talk about one or more things from a group.",
+   "example": {
+    "text": "Which way is the beach?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 22175,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.white",
+   "word": "white",
+   "pos": "adjective",
+   "forms": [
+    "whiter",
+    "whites"
+   ],
+   "definition": "The color of fresh snow or milk.",
+   "example": {
+    "text": "The doctor was wearing a white coat over a blue suit.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 27985,
+     "author": "Lumi"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.who",
+   "word": "who",
+   "pos": "pronoun",
+   "forms": [],
+   "definition": "Used to ask about a person, or to refer to a person.",
+   "example": {
+    "text": "Do you know who he is?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 15845,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.why",
+   "word": "why",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "For what reason or purpose.",
+   "example": {
+    "text": "Why do you think so?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 24655,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.wife",
+   "word": "wife",
+   "pos": "noun",
+   "forms": [
+    "wives"
+   ],
+   "definition": "The woman a man is married to.",
+   "example": {
+    "text": "Please come over with your wife.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 54333,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.window",
+   "word": "window",
+   "pos": "noun",
+   "forms": [
+    "windows"
+   ],
+   "definition": "An opening in a wall or door, usually with glass, to let in light.",
+   "example": {
+    "text": "The room has two windows.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 44240,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.winter",
+   "word": "winter",
+   "pos": "noun",
+   "forms": [
+    "winters"
+   ],
+   "definition": "The coldest season of the year, after autumn and before spring.",
+   "example": {
+    "text": "It was a very cold winter.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 41140,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.woman",
+   "word": "woman",
+   "pos": "noun",
+   "forms": [
+    "women"
+   ],
+   "definition": "An adult female person.",
+   "example": {
+    "text": "A woman fell from a ship into the sea.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 34660,
+     "author": "Lumi_alt"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.word",
+   "word": "word",
+   "pos": "noun",
+   "forms": [
+    "words"
+   ],
+   "definition": "A single unit of language that has meaning and can be spoken or written.",
+   "example": {
+    "text": "You've left out a word in copying the textbook.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16204,
+     "author": "Zifre"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.work",
+   "word": "work",
+   "pos": "verb",
+   "forms": [
+    "worked",
+    "working",
+    "works"
+   ],
+   "definition": "To do a job, usually to earn money.",
+   "example": {
+    "text": "He works for a bank.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 18452,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.world",
+   "word": "world",
+   "pos": "noun",
+   "forms": [
+    "worlds"
+   ],
+   "definition": "The planet Earth, and all the people and things on it.",
+   "example": {
+    "text": "English is by far the most widely-spoken language in the world.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 26263,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.would",
+   "word": "would",
+   "pos": "verb",
+   "forms": [],
+   "definition": "Used to talk about possible situations or to make polite requests.",
+   "example": {
+    "text": "Would you like to come?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 2398,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.write",
+   "word": "write",
+   "pos": "verb",
+   "forms": [
+    "writes",
+    "writing",
+    "written",
+    "wrote"
+   ],
+   "definition": "To make letters or words on a surface, usually with a pen or pencil.",
+   "example": {
+    "text": "I will wait till you have written the letter.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 17817,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.year",
+   "word": "year",
+   "pos": "noun",
+   "forms": [
+    "years"
+   ],
+   "definition": "A period of 365 or 366 days, divided into 12 months.",
+   "example": {
+    "text": "I had a stroke last year.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 19409,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.yesterday",
+   "word": "yesterday",
+   "pos": "adverb",
+   "forms": [],
+   "definition": "The day before today.",
+   "example": {
+    "text": "Why were you absent yesterday?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 16117,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.you",
+   "word": "you",
+   "pos": "pronoun",
+   "forms": [
+    "thee",
+    "ya",
+    "ye",
+    "yous"
+   ],
+   "definition": "The person or people being spoken to.",
+   "example": {
+    "text": "You are in my way.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 1296,
+     "author": "CK"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.young",
+   "word": "young",
+   "pos": "adjective",
+   "forms": [
+    "younger",
+    "youngest"
+   ],
+   "definition": "Not old; in an early stage of life or development.",
+   "example": {
+    "text": "Of course, I'm young, and politics is conducted by grown-ups.",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 30551,
+     "author": "AlanF_US"
+    }
+   }
+  },
+  {
+   "id": "ex.vocab.your",
+   "word": "your",
+   "pos": "determiner",
+   "forms": [],
+   "definition": "Belonging to or connected with you.",
+   "example": {
+    "text": "Did you do your homework by yourself?",
+    "source": {
+     "kind": "tatoeba",
+     "sentenceId": 15999,
+     "author": "CK"
+    }
+   }
+  }
+ ]
+}

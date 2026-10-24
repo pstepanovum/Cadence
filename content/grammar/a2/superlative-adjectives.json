@@ -1,0 +1,396 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "superlative-adjectives",
+ "draftHash": "9f55c74d56e35653",
+ "grammarPoint": {
+  "id": "gp.superlative-adjectives",
+  "level": "A2",
+  "topicId": "topic.comparison",
+  "title": "Superlative adjectives",
+  "summary": "Use superlative adjectives to say something is the highest, lowest, or most extreme in a group of three or more.",
+  "explanation": "We use superlative adjectives to compare three or more things and say which one has the most or least of a quality. For most short adjectives (one or two syllables), we add *-est* to the end of the adjective. Remember to use *the* before the superlative adjective.\n\nFor longer adjectives (three or more syllables), we use *the most* before the adjective. We do not change the adjective itself.\n\nSome common adjectives have irregular superlative forms. The superlative of 'good' is *the best*, and the superlative of 'bad' is *the worst*. Always use *the* with these forms too.",
+  "patterns": [
+   "the + adjective-est",
+   "the most + adjective",
+   "the best",
+   "the worst"
+  ],
+  "examples": [
+   {
+    "text": "Mount Everest is the highest mountain in the world.",
+    "note": "Shows that Mount Everest is at the top of a quality (height) compared to all other mountains.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "This is the smallest phone I've ever seen.",
+    "note": "Indicates this phone is at the bottom of a quality (size) compared to all other phones seen.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "That movie was the most interesting one this year.",
+    "note": "Highlights that the movie had the highest degree of 'interesting' compared to other movies this year.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She makes the best cookies in the neighborhood.",
+    "note": "Uses the irregular superlative 'best' to show her cookies are superior to all others.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The traffic today is the worst I've experienced.",
+    "note": "Uses the irregular superlative 'worst' to describe the lowest quality of traffic.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Tokyo is biggest city.",
+    "right": "Tokyo is the biggest city.",
+    "note": "Always use 'the' before a superlative adjective."
+   },
+   {
+    "wrong": "This is the more beautiful song.",
+    "right": "This is the most beautiful song.",
+    "note": "Use 'most' for longer adjectives, not 'more'."
+   },
+   {
+    "wrong": "He is the most tall student.",
+    "right": "He is the tallest student.",
+    "note": "Use '-est' for short adjectives, not 'most'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.superlative-adjectives.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My dog is ___ in the park.",
+   "options": [
+    "fastest",
+    "the most fast",
+    "the fastest"
+   ],
+   "answer": 2,
+   "explanation": "For short adjectives like 'fast', we add '-est' and use 'the' before it to form the superlative."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "This book is ___ I've read all year.",
+   "options": [
+    "the interesting",
+    "the most interesting",
+    "most interesting"
+   ],
+   "answer": 1,
+   "explanation": "For longer adjectives like 'interesting', we use 'the most' before the adjective."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "That was ___ meal I've ever had!",
+   "options": [
+    "the goodest",
+    "the best",
+    "the better"
+   ],
+   "answer": 1,
+   "explanation": "The superlative form of 'good' is 'best'."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which is ___ animal on Earth?",
+   "options": [
+    "the biggest",
+    "the most big",
+    "the bigger"
+   ],
+   "answer": 0,
+   "explanation": "For short adjectives like 'big', we add '-est' and double the consonant before adding '-est'."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "This is ___ (tall) building in the city.",
+   "answers": [
+    [
+     "the tallest"
+    ]
+   ],
+   "explanation": "For the short adjective 'tall', we add '-est' and 'the' to form the superlative."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She thinks math is ___ (difficult) subject.",
+   "answers": [
+    [
+     "the most difficult"
+    ]
+   ],
+   "explanation": "For the long adjective 'difficult', we use 'the most' before it to form the superlative."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Yesterday was ___ (bad) day of the week.",
+   "answers": [
+    [
+     "the worst"
+    ]
+   ],
+   "explanation": "The irregular superlative form of 'bad' is 'worst'."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "This",
+    "is",
+    "the",
+    "fastest",
+    "car",
+    "."
+   ],
+   "explanation": "The sentence uses 'the fastest' to describe the car as having the highest speed compared to others.",
+   "alternatives": [
+    [
+     "This",
+     "car",
+     "is",
+     "the",
+     "fastest",
+     "."
+    ]
+   ]
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "is",
+    "the",
+    "most",
+    "careful",
+    "driver",
+    "."
+   ],
+   "distractors": [
+    "more",
+    "carefully"
+   ],
+   "explanation": "The sentence uses 'the most careful' to describe the driver as having the highest degree of carefulness."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "That was the more delicious cake.",
+   "answers": [
+    "That was the most delicious cake."
+   ],
+   "explanation": "For longer adjectives like 'delicious', we use 'the most' to form the superlative, not 'the more'."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She is the goodest student in the class.",
+   "answers": [
+    "She is the best student in the class."
+   ],
+   "explanation": "The superlative form of 'good' is 'best', not 'goodest'."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "No other city is as big as Tokyo.",
+   "instruction": "Use a superlative adjective.",
+   "answers": [
+    "Tokyo is the biggest city."
+   ],
+   "explanation": "The superlative form 'the biggest' shows that Tokyo is unmatched in size compared to other cities."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "This is a very bad movie.",
+   "instruction": "Rewrite using 'worst'.",
+   "answers": [
+    "This is the worst movie."
+   ],
+   "explanation": "The word 'worst' is the superlative form of 'bad', indicating the lowest quality."
+  },
+  {
+   "id": "ex.a2.superlative-adjectives.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.superlative-adjectives"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The Amazon River is",
+     "right": "the longest river."
+    },
+    {
+     "left": "For me, summer is",
+     "right": "the best season."
+    },
+    {
+     "left": "This old computer is",
+     "right": "the slowest one."
+    },
+    {
+     "left": "Learning a new language can be",
+     "right": "the most challenging."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "the \\w+est",
+  "the most \\w+",
+  "the (best|worst)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.superlative-adjectives.01": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.02": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.03": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.04": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.05": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.06": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.07": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.08": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences are grammatically correct and use all the given tokens."
+   },
+   "ex.a2.superlative-adjectives.09": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.10": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.11": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.12": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.13": {
+    "status": "pass"
+   },
+   "ex.a2.superlative-adjectives.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 246757,
+   "text": "Of all the places I've been, Alaska is the most beautiful.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 35897,
+   "text": "New York is the biggest city in the world.",
+   "author": "shekitten"
+  }
+ ]
+}

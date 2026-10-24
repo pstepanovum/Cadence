@@ -1,0 +1,411 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "nuanced-reporting-verbs",
+ "draftHash": "489bc0caea1152ab",
+ "grammarPoint": {
+  "id": "gp.nuanced-reporting-verbs",
+  "level": "C2",
+  "topicId": "topic.reported-speech",
+  "title": "Nuanced reporting verbs",
+  "summary": "Learn to use nuanced reporting verbs like 'allege,' 'concede,' 'contend,' and 'dismiss' to convey specific tones and implications in reported speech.",
+  "explanation": "When reporting what someone has said, choosing the right verb can add significant nuance beyond simply using 'said' or 'stated.' Verbs like *allege*, *concede*, *contend*, and *dismiss* each carry a specific implication about the speaker's certainty, the evidence available, or their attitude towards the statement.\n\nTo *allege* means to claim that someone has done something wrong, typically without proof. It suggests that the statement is unverified or disputed. To *concede* means to admit that something is true or valid, often reluctantly or after initially denying it. It implies a yielding of a point.\n\nTo *contend* means to assert or argue a point, often in a debate or discussion, suggesting a strong belief or a formal argument. To *dismiss* means to reject something as unworthy of consideration, untrue, or unimportant. It conveys a strong sense of rejection or disregard.",
+  "patterns": [
+   "subject + allege(s/d) + that + clause",
+   "subject + concede(s/d) + that + clause",
+   "subject + contend(s/ed) + that + clause",
+   "subject + dismiss(es/ed) + noun phrase + as + adjective/noun"
+  ],
+  "examples": [
+   {
+    "text": "The journalist alleged that the politician had accepted illegal donations.",
+    "note": "Suggests the claim is unproven or suspected, not confirmed.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "After reviewing the data, the team leader conceded that their initial hypothesis was flawed.",
+    "note": "Indicates a reluctant admission of a mistake or weakness.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Environmental scientists contend that urgent action is needed to combat climate change.",
+    "note": "Shows a strong assertion or argument based on evidence or belief.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The board dismissed his concerns as mere speculation.",
+    "note": "Implies that the concerns were rejected as unimportant or untrue.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She conceded the point about the budget, but still contended that the timeline was unrealistic.",
+    "note": "Combines a reluctant admission with a strong counter-argument.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He dismissed that the report was inaccurate.",
+    "right": "He dismissed the report as inaccurate.",
+    "note": "Dismiss usually takes a noun phrase object, often followed by 'as'."
+   },
+   {
+    "wrong": "The company contended to have violated regulations.",
+    "right": "The company contended that it had violated regulations.",
+    "note": "Contend is typically followed by 'that' + clause, not an infinitive."
+   },
+   {
+    "wrong": "She alleged to be innocent.",
+    "right": "She alleged that she was innocent.",
+    "note": "Allege is usually followed by 'that' + clause, or 'allege + noun phrase'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The defense lawyer tried to ___ the witness's testimony, calling it unreliable.",
+   "options": [
+    "allege",
+    "concede",
+    "dismiss",
+    "contend"
+   ],
+   "answer": 2,
+   "explanation": "'Dismiss' means to reject as unworthy or unreliable, which fits the context of a lawyer trying to discredit testimony."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Despite strong evidence, the suspect continued to ___ his innocence.",
+   "options": [
+    "concede",
+    "allege",
+    "dismiss",
+    "contend"
+   ],
+   "answer": 1,
+   "explanation": "'Allege' means to claim something, often without proof or against evidence, which fits the suspect's situation."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After a long debate, the mayor finally ___ that the new policy had some unforeseen drawbacks.",
+   "options": [
+    "dismissed",
+    "contended",
+    "conceded",
+    "alleged"
+   ],
+   "answer": 2,
+   "explanation": "'Conceded' implies a reluctant admission of a negative point, which fits the mayor's situation after a debate."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The research team ___ that their findings could revolutionize medical treatment.",
+   "options": [
+    "dismissed",
+    "conceded",
+    "alleged",
+    "contended"
+   ],
+   "answer": 3,
+   "explanation": "'Contended' means to assert or argue a point strongly, which is appropriate for a research team presenting significant findings."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The company's CEO ___ that the accusations were completely unfounded, but later had to ___ some minor accounting errors.",
+   "answers": [
+    [
+     "contended",
+     "alleged"
+    ],
+    [
+     "concede"
+    ]
+   ],
+   "explanation": "'Contended' or 'alleged' fits the CEO's initial strong denial, while 'concede' fits the later reluctant admission of errors."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Critics ___ the new art exhibit as pretentious, while the artist ___ it offered a fresh perspective.",
+   "answers": [
+    [
+     "dismissed"
+    ],
+    [
+     "contended"
+    ]
+   ],
+   "explanation": "'Dismissed' shows rejection by critics, and 'contended' shows the artist's strong assertion of their view."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The report ___ that the software had a critical vulnerability, but the developers ___ the claim as exaggerated.",
+   "answers": [
+    [
+     "alleged"
+    ],
+    [
+     "dismissed"
+    ]
+   ],
+   "explanation": "'Alleged' implies an unproven claim about the vulnerability, and 'dismissed' shows the developers' rejection of that claim."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "witness",
+    "alleged",
+    "that",
+    "he",
+    "saw",
+    "the",
+    "incident",
+    "."
+   ],
+   "distractors": [
+    "sawing"
+   ],
+   "explanation": "This sentence uses 'alleged that' to report an unproven claim by the witness."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "conceded",
+    "the",
+    "difficulty",
+    "of",
+    "the",
+    "task",
+    "."
+   ],
+   "distractors": [
+    "difficult"
+   ],
+   "explanation": "This sentence uses 'conceded' to show a reluctant admission of the task's difficulty."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The manager dismissed to consider the employee's innovative idea.",
+   "answers": [
+    "The manager dismissed the employee's innovative idea.",
+    "The manager dismissed the employee's innovative idea as impractical.",
+    "The manager refused to consider the employee's innovative idea."
+   ],
+   "explanation": "'Dismiss' typically takes a noun phrase object, not an infinitive. It means to reject something."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He contended that he was innocent, but the evidence was overwhelming.",
+   "answers": [
+    "He alleged that he was innocent, but the evidence was overwhelming."
+   ],
+   "explanation": "'Contend' implies arguing a point, often with some basis. 'Allege' is more appropriate when claiming innocence against overwhelming evidence, suggesting the claim is unproven or disputed."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The company claimed without proof that their competitor copied their design.",
+   "instruction": "Use the verb 'allege'.",
+   "answers": [
+    "The company alleged that their competitor copied their design."
+   ],
+   "explanation": "'Allege' perfectly captures the idea of claiming something without proof."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Even though she didn't want to, she admitted that her argument had a weak point.",
+   "instruction": "Rewrite using 'concede'.",
+   "answers": [
+    "She conceded that her argument had a weak point."
+   ],
+   "explanation": "'Concede' means to admit something, often reluctantly, which fits the original meaning."
+  },
+  {
+   "id": "ex.c2.nuanced-reporting-verbs.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.nuanced-reporting-verbs"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The politician alleged",
+     "right": "that the media had misrepresented his statements."
+    },
+    {
+     "left": "The scientist conceded",
+     "right": "that more research was needed to confirm the results."
+    },
+    {
+     "left": "The activist contended",
+     "right": "that the new law would harm local communities."
+    },
+    {
+     "left": "The committee dismissed",
+     "right": "the proposal as financially unfeasible."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "allege(d)? that",
+  "concede(d)? that",
+  "contend(ed)? that",
+  "dismiss(ed)? (it|them|his|her|their|the) as"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.nuanced-reporting-verbs.01": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.02": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither verb collocates naturally with 'his innocence' as a direct object; verbs like 'maintain' or 'assert' are required."
+   },
+   "ex.c2.nuanced-reporting-verbs.03": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.04": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.05": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.06": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.07": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.08": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.09": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both deleting 'to consider' and replacing 'dismissed' with 'refused' produce correct sentences."
+   },
+   "ex.c2.nuanced-reporting-verbs.11": {
+    "status": "drop",
+    "note": "Ambiguous: The original sentence contains no grammar error, so both versions are correct."
+   },
+   "ex.c2.nuanced-reporting-verbs.12": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.13": {
+    "status": "pass"
+   },
+   "ex.c2.nuanced-reporting-verbs.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 20861,
+   "text": "We must concede that we committed an error.",
+   "author": "Zifre"
+  },
+  {
+   "sentenceId": 7961432,
+   "text": "I dismissed it as something that's not important.",
+   "author": "Amastan"
+  }
+ ]
+}

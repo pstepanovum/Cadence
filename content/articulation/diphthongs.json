@@ -1,0 +1,534 @@
+{
+ "format": 1,
+ "title": "English diphthongs",
+ "model": "Maeda's articulatory model via the VocalTract LaTeX package port (src/lib/platform/vocal-tract)",
+ "generatedBy": "scripts/content/fit-articulation.mjs",
+ "targets": [
+  {
+   "soundId": "sound.ey",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close-mid",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1,
+      "tonguePosition": -1,
+      "tongueShape": 1,
+      "tongueApex": -2,
+      "lipAperture": 1,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": -0.567,
+      "tonguePosition": -0.32,
+      "tongueShape": 0.535,
+      "tongueApex": -0.547,
+      "lipAperture": 0.668,
+      "lipProtrusion": -0.3,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "literature",
+    "references": [
+     "Ververidis, Schneider and Koehler (2012), The vocal tract LaTeX package, The PracTeX Journal 2012/1: demo codebook, German /e/",
+     "https://commons.wikimedia.org/wiki/File:IPA_%EA%9E%AE_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ay",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1.512,
+      "tonguePosition": 0.166,
+      "tongueShape": -0.08,
+      "tongueApex": -1.945,
+      "lipAperture": 1.588,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": -0.567,
+      "tonguePosition": -0.32,
+      "tongueShape": 0.535,
+      "tongueApex": -0.547,
+      "lipAperture": 0.668,
+      "lipProtrusion": -0.3,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_a_Sagittal_Section.svg",
+     "https://commons.wikimedia.org/wiki/File:IPA_%EA%9E%AE_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.oy",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -0.2,
+      "tonguePosition": 3,
+      "tongueShape": 1.5,
+      "tongueApex": 0,
+      "lipAperture": -0.3,
+      "lipProtrusion": 1.2,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": -0.567,
+      "tonguePosition": -0.32,
+      "tongueShape": 0.535,
+      "tongueApex": -0.547,
+      "lipAperture": 0.668,
+      "lipProtrusion": -0.3,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "Ververidis, Schneider and Koehler (2012), The vocal tract LaTeX package, The PracTeX Journal 2012/1: demo codebook, German /o/",
+     "https://commons.wikimedia.org/wiki/File:IPA_%EA%9E%AE_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ow",
+   "variant": "GA",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close-mid",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -0.4,
+      "tonguePosition": 3,
+      "tongueShape": 1.5,
+      "tongueApex": 0,
+      "lipAperture": -0.3,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0.189,
+      "tonguePosition": 1.205,
+      "tongueShape": 0.726,
+      "tongueApex": -2.518,
+      "lipAperture": -0.068,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "literature",
+    "references": [
+     "Ververidis, Schneider and Koehler (2012), The vocal tract LaTeX package, The PracTeX Journal 2012/1: demo codebook, German /o/",
+     "https://commons.wikimedia.org/wiki/File:IPA_%C6%B1_Sagittal_Section.svg"
+    ],
+    "setByRule": [
+     "lipProtrusion"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ow",
+   "variant": "RP",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 0,
+      "tongueShape": 0,
+      "tongueApex": 0,
+      "lipAperture": 0,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0.189,
+      "tonguePosition": 1.205,
+      "tongueShape": 0.726,
+      "tongueApex": -2.518,
+      "lipAperture": -0.068,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg",
+     "https://commons.wikimedia.org/wiki/File:IPA_%C6%B1_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.aw",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1.512,
+      "tonguePosition": 0.166,
+      "tongueShape": -0.08,
+      "tongueApex": -1.945,
+      "lipAperture": 1.588,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0.189,
+      "tonguePosition": 1.205,
+      "tongueShape": 0.726,
+      "tongueApex": -2.518,
+      "lipAperture": -0.068,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_a_Sagittal_Section.svg",
+     "https://commons.wikimedia.org/wiki/File:IPA_%C6%B1_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ia",
+   "variant": "RP",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -0.567,
+      "tonguePosition": -0.32,
+      "tongueShape": 0.535,
+      "tongueApex": -0.547,
+      "lipAperture": 0.668,
+      "lipProtrusion": -0.3,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 0,
+      "tongueShape": 0,
+      "tongueApex": 0,
+      "lipAperture": 0,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%EA%9E%AE_Sagittal_Section.svg",
+     "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ea",
+   "variant": "RP",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -0.945,
+      "tonguePosition": -0.178,
+      "tongueShape": 0.383,
+      "tongueApex": -0.956,
+      "lipAperture": 1.036,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 0,
+      "tongueShape": 0,
+      "tongueApex": 0,
+      "lipAperture": 0,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%C6%90_Sagittal_Section.svg",
+     "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ua",
+   "variant": "RP",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": 0.189,
+      "tonguePosition": 1.205,
+      "tongueShape": 0.726,
+      "tongueApex": -2.518,
+      "lipAperture": -0.068,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 0,
+      "tongueShape": 0,
+      "tongueApex": 0,
+      "lipAperture": 0,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%C6%B1_Sagittal_Section.svg",
+     "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg"
+    ]
+   },
+   "needsReview": false
+  }
+ ]
+}

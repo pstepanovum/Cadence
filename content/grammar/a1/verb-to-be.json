@@ -1,0 +1,396 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "verb-to-be",
+ "draftHash": "d2e87ee591762630",
+ "grammarPoint": {
+  "id": "gp.verb-to-be",
+  "level": "A1",
+  "topicId": "topic.tenses",
+  "title": "The verb be",
+  "summary": "Learn to use 'am', 'is', and 'are' for positive sentences, negatives, and questions to talk about people, things, and states.",
+  "explanation": "The verb *be* is very common in English. It changes its form depending on the subject of the sentence. We use *am* with 'I', *is* with 'he', 'she', 'it', and singular nouns, and *are* with 'you', 'we', 'they', and plural nouns.\n\nWe use *be* to talk about who someone is, what something is, where someone or something is, or how someone feels. For example, 'I am a student' or 'She is happy'.\n\nTo make a negative sentence, we add *not* after 'am', 'is', or 'are'. For example, 'I am not tired'. For questions, we put 'am', 'is', or 'are' before the subject. For example, 'Are you ready?'.",
+  "patterns": [
+   "I + am (+ not)",
+   "He/She/It + is (+ not)",
+   "You/We/They + are (+ not)",
+   "Am + I...?",
+   "Is + he/she/it...?",
+   "Are + you/we/they...?"
+  ],
+  "examples": [
+   {
+    "text": "I am from Spain.",
+    "note": "Uses 'am' with 'I' to state origin.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She is a new teacher.",
+    "note": "Uses 'is' with 'she' to describe a person.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They are not at home.",
+    "note": "Uses 'are not' with 'they' for a negative location.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Is he busy today?",
+    "note": "Uses 'is' before 'he' to ask a question about his state.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We are happy with the results.",
+    "note": "Uses 'are' with 'we' to describe a feeling.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He am a student.",
+    "right": "He is a student.",
+    "note": "Use 'is' with 'he', 'she', 'it', and singular nouns."
+   },
+   {
+    "wrong": "They not ready.",
+    "right": "They are not ready.",
+    "note": "Always include 'am', 'is', or 'are' in negative sentences."
+   },
+   {
+    "wrong": "You are happy?",
+    "right": "Are you happy?",
+    "note": "For questions, put 'am', 'is', or 'are' before the subject."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.verb-to-be.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister ___ very tall.",
+   "options": [
+    "am",
+    "is",
+    "are"
+   ],
+   "answer": 1,
+   "explanation": "'My sister' is a singular subject, so we use 'is'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ not tired.",
+   "options": [
+    "am",
+    "is",
+    "are"
+   ],
+   "answer": 2,
+   "explanation": "With 'we', the correct form of 'be' is 'are'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you a doctor?",
+   "options": [
+    "Am",
+    "Is",
+    "Are"
+   ],
+   "answer": 2,
+   "explanation": "For questions with 'you', we use 'Are'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The books ___ on the table.",
+   "options": [
+    "am",
+    "is",
+    "are"
+   ],
+   "answer": 2,
+   "explanation": "'The books' is a plural subject, so we use 'are'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ not hungry.",
+   "answers": [
+    [
+     "am"
+    ]
+   ],
+   "explanation": "With 'I', the correct form of 'be' is 'am'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The cat ___ sleeping. It ___ very quiet.",
+   "answers": [
+    [
+     "is"
+    ],
+    [
+     "is"
+    ]
+   ],
+   "explanation": "'The cat' and 'it' are singular subjects, so we use 'is'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ they ready for the trip? No, they ___ not.",
+   "answers": [
+    [
+     "Are"
+    ],
+    [
+     "are",
+     "aren't"
+    ]
+   ],
+   "explanation": "For questions with 'they', we use 'Are'. For the negative, 'are not' or 'aren't' is correct."
+  },
+  {
+   "id": "ex.a1.verb-to-be.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "is",
+    "a",
+    "good",
+    "friend",
+    "."
+   ],
+   "distractors": [
+    "are"
+   ],
+   "explanation": "The correct order is subject + 'is' + article + adjective + noun."
+  },
+  {
+   "id": "ex.a1.verb-to-be.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Are",
+    "we",
+    "late",
+    "?"
+   ],
+   "distractors": [
+    "is"
+   ],
+   "explanation": "For a question, 'Are' comes before the subject 'we'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My parents is happy.",
+   "answers": [
+    "My parents are happy."
+   ],
+   "explanation": "'My parents' is plural, so 'are' is the correct form of 'be'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She am not here.",
+   "answers": [
+    "She is not here.",
+    "She isn't here."
+   ],
+   "explanation": "With 'she', the correct form of 'be' is 'is'. 'Is not' can be contracted to 'isn't'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They are students.",
+   "instruction": "Make it a question.",
+   "answers": [
+    "Are they students?"
+   ],
+   "explanation": "To form a question, move 'are' to the beginning of the sentence."
+  },
+  {
+   "id": "ex.a1.verb-to-be.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I am tired.",
+   "instruction": "Make it negative.",
+   "answers": [
+    "I am not tired."
+   ],
+   "explanation": "To make a negative sentence, add 'not' after 'am'."
+  },
+  {
+   "id": "ex.a1.verb-to-be.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.verb-to-be"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I am",
+     "right": "from Italy."
+    },
+    {
+     "left": "She is",
+     "right": "a doctor."
+    },
+    {
+     "left": "We are",
+     "right": "friends."
+    },
+    {
+     "left": "Is it",
+     "right": "cold today?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "I am (a|an|the|not|very|so|too|here|there|happy|sad|tired|hungry|thirsty|cold|hot|ready|busy|sorry|sure|fine|okay|good|bad|sick|well|from|in|on|at)",
+  "(He|She|It) is (a|an|the|not|very|so|too|here|there|happy|sad|tired|hungry|thirsty|cold|hot|ready|busy|sorry|sure|fine|okay|good|bad|sick|well|from|in|on|at)",
+  "(You|We|They) are (a|an|the|not|very|so|too|here|there|happy|sad|tired|hungry|thirsty|cold|hot|ready|busy|sorry|sure|fine|okay|good|bad|sick|well|from|in|on|at)",
+  "(Am|Is|Are) (I|he|she|it|you|we|they) (a|an|the|not|very|so|too|here|there|happy|sad|tired|hungry|thirsty|cold|hot|ready|busy|sorry|sure|fine|okay|good|bad|sick|well|from|in|on|at)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.verb-to-be.01": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.02": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.03": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.04": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.05": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.06": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.07": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.08": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.09": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.10": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.11": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.12": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.13": {
+    "status": "pass"
+   },
+   "ex.a1.verb-to-be.14": {
+    "status": "drop",
+    "note": "Ambiguous: All sentences in both the answer key and the alternative option are grammatically correct and natural."
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 313016,
+   "text": "She is a student.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 241565,
+   "text": "Now I am too old to walk.",
+   "author": "CM"
+  }
+ ]
+}

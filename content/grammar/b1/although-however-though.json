@@ -1,0 +1,492 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "although-however-though",
+ "draftHash": "3e8552bb8e5e5e88",
+ "grammarPoint": {
+  "id": "gp.although-however-though",
+  "level": "B1",
+  "topicId": "topic.linking",
+  "title": "Although, however and though",
+  "summary": "Learn to use 'although', 'however', and 'though' to show a contrast between two ideas in or across sentences.",
+  "explanation": "We use words like *although*, *however*, and *though* to connect two ideas that are different or surprising when put together. They help us show a contrast.\n\n*Although* and *though* are conjunctions. They connect two clauses within the same sentence. 'Though' is often used in more informal situations. You can place them at the beginning of a sentence or in the middle. When 'although' or 'though' starts a sentence, we usually use a comma after the first clause.\n\n*However* is an adverb. It connects two separate sentences or two independent clauses. When 'however' starts a new sentence, it's followed by a comma. If it connects two independent clauses, it's usually placed after a semicolon and followed by a comma.",
+  "patterns": [
+   "Although + clause, clause.",
+   "Clause, although + clause.",
+   "Clause. However, clause.",
+   "Clause; however, clause.",
+   "Though + clause, clause."
+  ],
+  "examples": [
+   {
+    "text": "Although it was late, we decided to finish the project.",
+    "note": "Shows a contrast between the time and the action, 'although' starts the sentence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She enjoyed the concert, though the tickets were expensive.",
+    "note": "Connects two contrasting ideas, 'though' is used informally in the middle.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The restaurant was fully booked. However, they found us a table.",
+    "note": "Connects two contrasting sentences, 'however' starts the second sentence.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He trained for months; however, he didn't win the race.",
+    "note": "Connects two independent clauses with a semicolon before 'however' and a comma after.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They tried their best, although the task was very difficult.",
+    "note": "Connects two contrasting ideas, 'although' is in the middle of the sentence.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "However it was raining, we still went out.",
+    "right": "Although it was raining, we still went out.",
+    "note": "'However' cannot introduce a dependent clause like 'although'."
+   },
+   {
+    "wrong": "The food was delicious however it was a bit cold.",
+    "right": "The food was delicious; however, it was a bit cold.",
+    "note": "'However' needs proper punctuation (semicolon before, comma after) when connecting two clauses."
+   },
+   {
+    "wrong": "She felt tired. Although she had slept well.",
+    "right": "She felt tired, although she had slept well.",
+    "note": "'Although' connects two clauses within one sentence, not two separate sentences."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.although-however-though.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The weather was terrible. ___, we still had a great time at the beach.",
+   "options": [
+    "Although",
+    "However",
+    "Though"
+   ],
+   "answer": 1,
+   "explanation": "'However' is used here to connect two separate sentences and show contrast."
+  },
+  {
+   "id": "ex.b1.although-however-though.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ she studied hard, she didn't pass the exam.",
+   "options": [
+    "However",
+    "Although",
+    "But"
+   ],
+   "answer": 1,
+   "explanation": "'Although' is a conjunction that can start a sentence to introduce a contrasting idea."
+  },
+  {
+   "id": "ex.b1.although-however-though.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I don't usually like spicy food, ___ I really enjoyed this curry.",
+   "options": [
+    "however",
+    "though",
+    "so"
+   ],
+   "answer": 1,
+   "explanation": "'Though' is an informal conjunction that can connect two contrasting clauses within a sentence."
+  },
+  {
+   "id": "ex.b1.although-however-though.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He promised to help me; ___, he never showed up.",
+   "options": [
+    "although",
+    "however",
+    "despite"
+   ],
+   "answer": 1,
+   "explanation": "'However' is correctly used here after a semicolon and before a comma to connect two contrasting independent clauses."
+  },
+  {
+   "id": "ex.b1.although-however-though.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The movie was very long; ___, it was quite entertaining.",
+   "answers": [
+    [
+     "however"
+    ]
+   ],
+   "explanation": "'However' is used to connect two independent clauses, preceded by a semicolon and followed by a comma."
+  },
+  {
+   "id": "ex.b1.although-however-though.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ the restaurant was busy, we managed to get a table quickly.",
+   "answers": [
+    [
+     "Although"
+    ],
+    [
+     "Though"
+    ]
+   ],
+   "explanation": "'Although' or 'though' can start a sentence to introduce a contrasting idea."
+  },
+  {
+   "id": "ex.b1.although-however-though.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She tried her best, ___ she couldn't solve the puzzle.",
+   "answers": [
+    [
+     "although"
+    ],
+    [
+     "though"
+    ]
+   ],
+   "explanation": "'Although' or 'though' can connect two contrasting clauses within a sentence."
+  },
+  {
+   "id": "ex.b1.although-however-though.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Although",
+    "it",
+    "was",
+    "cold",
+    ",",
+    "we",
+    "went",
+    "swimming",
+    "."
+   ],
+   "distractors": [
+    "warm"
+   ],
+   "explanation": "This sentence correctly uses 'although' to introduce a contrasting idea at the beginning of the sentence."
+  },
+  {
+   "id": "ex.b1.although-however-though.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "was",
+    "tired",
+    ".",
+    "However",
+    ",",
+    "he",
+    "finished",
+    "the",
+    "report",
+    "."
+   ],
+   "distractors": [
+    "then"
+   ],
+   "explanation": "This sentence correctly uses 'however' to connect two contrasting sentences."
+  },
+  {
+   "id": "ex.b1.although-however-though.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I like the city. However it is too noisy.",
+   "answers": [
+    "I like the city; however, it is too noisy.",
+    "I like the city. However, it is too noisy."
+   ],
+   "explanation": "'However' needs a semicolon before it and a comma after when connecting two independent clauses, or a full stop before and a comma after when starting a new sentence."
+  },
+  {
+   "id": "ex.b1.although-however-though.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Though the weather was bad, however we still went hiking.",
+   "answers": [
+    "Though the weather was bad, we still went hiking.",
+    "Although the weather was bad, we still went hiking."
+   ],
+   "explanation": "You should not use 'though' and 'however' together to express contrast in the same sentence."
+  },
+  {
+   "id": "ex.b1.although-however-though.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It was raining, but we still went for a walk.",
+   "instruction": "Rewrite using 'although'.",
+   "answers": [
+    "Although it was raining, we still went for a walk.",
+    "We still went for a walk, although it was raining."
+   ],
+   "explanation": "'Although' can replace 'but' to connect the two contrasting ideas within one sentence."
+  },
+  {
+   "id": "ex.b1.although-however-though.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She didn't study much. She passed the test.",
+   "instruction": "Combine into one sentence using 'however'.",
+   "answers": [
+    "She didn't study much; however, she passed the test."
+   ],
+   "explanation": "'However' can connect two independent clauses, preceded by a semicolon and followed by a comma."
+  },
+  {
+   "id": "ex.b1.although-however-though.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.although-however-though"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Although the food was delicious,",
+     "right": "it was quite expensive."
+    },
+    {
+     "left": "He tried to fix the car;",
+     "right": "however, he couldn't do it."
+    },
+    {
+     "left": "The concert was amazing,",
+     "right": "though it started late."
+    },
+    {
+     "left": "It was a difficult decision.",
+     "right": "However, she made the right choice."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "although [^,]+, [^.]+",
+  "however, [^.]+",
+  "though [^,]+, [^.]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.although-however-though.01": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.02": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.03": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.04": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.05": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.although-however-though.06: needs one answer list per gap (1)"
+   },
+   "ex.b1.although-however-though.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.although-however-though.07: needs one answer list per gap (1)"
+   },
+   "ex.b1.although-however-though.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The task requires ordering all provided tokens, but neither answer uses all of them."
+   },
+   "ex.b1.although-however-though.09": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.10": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.11": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.12": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.13": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.14": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.15": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.16": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.17": {
+    "status": "pass"
+   },
+   "ex.b1.although-however-though.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b1.although-however-though.15",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.although-however-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The concert tickets were very expensive. ___, we bought them anyway.",
+    "options": [
+     "Although",
+     "Though",
+     "However",
+     "Despite"
+    ],
+    "answer": 2,
+    "explanation": "\"However\" is used to connect two independent sentences, showing a contrast."
+   },
+   {
+    "id": "ex.b1.although-however-though.16",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.although-however-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ the weather was cold, we still enjoyed our picnic.",
+    "options": [
+     "However",
+     "Although",
+     "But",
+     "In spite of"
+    ],
+    "answer": 1,
+    "explanation": "\"Although\" introduces a dependent clause that contrasts with the main clause."
+   },
+   {
+    "id": "ex.b1.although-however-though.17",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.although-however-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She said she would be late. She arrived on time, ___.",
+    "options": [
+     "although",
+     "however",
+     "though",
+     "but"
+    ],
+    "answer": 2,
+    "explanation": "\"Though\" can be used informally at the end of a sentence to add a contrasting idea."
+   },
+   {
+    "id": "ex.b1.although-however-though.18",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.although-however-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The book was quite long. ___, I finished it in one day.",
+    "options": [
+     "Although",
+     "Despite",
+     "However",
+     "Even if"
+    ],
+    "answer": 2,
+    "explanation": "\"However\" connects two independent sentences, indicating a contrast."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 388708,
+   "text": "Though she was alone, I didn't think she was lonely.",
+   "author": "sundown"
+  },
+  {
+   "sentenceId": 292152,
+   "text": "Although he is very old, he is strong.",
+   "author": "Zifre"
+  }
+ ]
+}

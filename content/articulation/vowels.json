@@ -1,0 +1,629 @@
+{
+ "format": 1,
+ "title": "English vowels",
+ "model": "Maeda's articulatory model via the VocalTract LaTeX package port (src/lib/platform/vocal-tract)",
+ "generatedBy": "scripts/content/fit-articulation.mjs",
+ "targets": [
+  {
+   "soundId": "sound.iy",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipSpreading"
+   ],
+   "anchor": "palatal",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.718,
+    "tongueShape": 0.685,
+    "tongueApex": -0.312,
+    "lipAperture": 0.116,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_i_Sagittal_Section.svg"
+    ],
+    "fitRms": 0.035,
+    "setByRule": [
+     "lipProtrusion"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ih",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "params": {
+    "jaw": -0.567,
+    "tonguePosition": -0.32,
+    "tongueShape": 0.535,
+    "tongueApex": -0.547,
+    "lipAperture": 0.668,
+    "lipProtrusion": -0.3,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%EA%9E%AE_Sagittal_Section.svg"
+    ],
+    "fitRms": 0.024,
+    "setByRule": [
+     "lipProtrusion"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.eh",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "params": {
+    "jaw": -0.945,
+    "tonguePosition": -0.178,
+    "tongueShape": 0.383,
+    "tongueApex": -0.956,
+    "lipAperture": 1.036,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%C6%90_Sagittal_Section.svg"
+    ],
+    "fitRms": 0.029
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ae",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-open",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "params": {
+    "jaw": -1.323,
+    "tonguePosition": 0.15,
+    "tongueShape": 0.157,
+    "tongueApex": -1.112,
+    "lipAperture": 1.404,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%C3%A6_Sagittal_Section.svg"
+    ],
+    "fitRms": 0.034
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.aa",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "back",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueRoot",
+    "jaw"
+   ],
+   "overlays": [],
+   "anchor": "uvular",
+   "params": {
+    "jaw": -1.512,
+    "tonguePosition": 1.366,
+    "tongueShape": 0.22,
+    "tongueApex": -1.945,
+    "lipAperture": 1.588,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_a_Sagittal_Section.svg"
+    ],
+    "tuned": [
+     "tonguePosition",
+     "tongueShape"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.oh",
+   "variant": "RP",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueRoot",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "uvular",
+   "params": {
+    "jaw": -1.312,
+    "tonguePosition": 1.566,
+    "tongueShape": 0.32,
+    "tongueApex": -1.945,
+    "lipAperture": 1.588,
+    "lipProtrusion": 0.6,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_a_Sagittal_Section.svg"
+    ],
+    "setByRule": [
+     "lipProtrusion"
+    ],
+    "tuned": [
+     "tonguePosition",
+     "tongueShape",
+     "jaw"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ao",
+   "variant": "GA",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "params": {
+    "jaw": -1.112,
+    "tonguePosition": 1.666,
+    "tongueShape": 0.52,
+    "tongueApex": -1.945,
+    "lipAperture": 1.588,
+    "lipProtrusion": 0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_a_Sagittal_Section.svg"
+    ],
+    "setByRule": [
+     "lipProtrusion"
+    ],
+    "tuned": [
+     "tonguePosition",
+     "tongueShape",
+     "jaw"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ao",
+   "variant": "RP",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "params": {
+    "jaw": -0.2,
+    "tonguePosition": 3,
+    "tongueShape": 1.5,
+    "tongueApex": 0,
+    "lipAperture": -0.3,
+    "lipProtrusion": 1.2,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "Ververidis, Schneider and Koehler (2012), The vocal tract LaTeX package, The PracTeX Journal 2012/1: demo codebook, German /o/"
+    ],
+    "setByRule": [
+     "lipProtrusion"
+    ],
+    "tuned": [
+     "jaw"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.uh",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "params": {
+    "jaw": 0.189,
+    "tonguePosition": 1.205,
+    "tongueShape": 0.726,
+    "tongueApex": -2.518,
+    "lipAperture": -0.068,
+    "lipProtrusion": 1,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%C6%B1_Sagittal_Section.svg"
+    ],
+    "fitRms": 0.049,
+    "setByRule": [
+     "lipProtrusion"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.uw",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "velar",
+   "params": {
+    "jaw": 0.189,
+    "tonguePosition": 1.008,
+    "tongueShape": 1.671,
+    "tongueApex": -2.49,
+    "lipAperture": -0.184,
+    "lipProtrusion": 1.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_u_Sagittal_Section.svg"
+    ],
+    "fitRms": 0.044,
+    "setByRule": [
+     "lipProtrusion"
+    ]
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.ah",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [],
+   "anchor": "velar",
+   "params": {
+    "jaw": -0.8,
+    "tonguePosition": 0.4,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg"
+    ],
+    "tuned": [
+     "jaw",
+     "tonguePosition"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ax",
+   "variant": "both",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "fitted",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg"
+    ],
+    "fitRms": 0.001
+   },
+   "needsReview": false
+  },
+  {
+   "soundId": "sound.er",
+   "variant": "GA",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueTip",
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "bunchedTongue"
+   ],
+   "anchor": "postalveolar",
+   "params": {
+    "jaw": -0.028,
+    "tonguePosition": 0.077,
+    "tongueShape": -0.961,
+    "tongueApex": -1.949,
+    "lipAperture": -0.228,
+    "lipProtrusion": 0.8,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%C9%BD_retroflex_Sagittal_Section.svg"
+    ],
+    "setByRule": [
+     "lipProtrusion"
+    ],
+    "tuned": [
+     "tongueApex",
+     "jaw"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.er",
+   "variant": "RP",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody"
+   ],
+   "overlays": [],
+   "anchor": "palatal",
+   "params": {
+    "jaw": -0.4,
+    "tonguePosition": 0,
+    "tongueShape": 0.2,
+    "tongueApex": 0,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg"
+    ],
+    "tuned": [
+     "jaw",
+     "tongueShape"
+    ]
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.axr",
+   "variant": "GA",
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueTip",
+    "tongueBody"
+   ],
+   "overlays": [
+    "bunchedTongue"
+   ],
+   "anchor": "postalveolar",
+   "params": {
+    "jaw": 0.472,
+    "tonguePosition": 0.077,
+    "tongueShape": -0.961,
+    "tongueApex": -1.949,
+    "lipAperture": -0.228,
+    "lipProtrusion": 0.6,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "source": {
+    "method": "hand-tuned",
+    "references": [
+     "https://commons.wikimedia.org/wiki/File:IPA_%C9%BD_retroflex_Sagittal_Section.svg"
+    ],
+    "setByRule": [
+     "lipProtrusion"
+    ],
+    "tuned": [
+     "tongueApex"
+    ]
+   },
+   "needsReview": true
+  }
+ ]
+}

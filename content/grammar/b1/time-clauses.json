@@ -1,0 +1,397 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "time-clauses",
+ "draftHash": "4d9b07144d1e4f86",
+ "grammarPoint": {
+  "id": "gp.time-clauses",
+  "level": "B1",
+  "topicId": "topic.clauses",
+  "title": "Time clauses",
+  "summary": "Learn to use time clauses with 'when', 'while', 'as soon as', 'until', and 'before' to talk about future events, using the present simple in the time clause.",
+  "explanation": "Time clauses tell us *when* something will happen. They often start with words like *when*, *while*, *as soon as*, *until*, or *before*. The main part of the sentence usually talks about a future action.\n\nIt's important to remember that even though the action in the time clause refers to the future, we use the *present simple* tense in that clause. We do not use 'will' in the time clause itself.\n\nFor example, you say \"I'll call you *when I arrive*\" (not \"when I will arrive\"). The present simple verb 'arrive' refers to a future action.",
+  "patterns": [
+   "Future action + when/while/as soon as/until/before + present simple",
+   "When/while/as soon as/until/before + present simple, + future action"
+  ],
+  "examples": [
+   {
+    "text": "I'll send you the details as soon as I finish the report.",
+    "note": "The action 'finish' happens in the future, but uses present simple after 'as soon as'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "When the movie starts, please turn off your phone.",
+    "note": "The time clause comes first, using present simple 'starts' for a future event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She won't leave until her brother arrives.",
+    "note": "'Until' shows that the action 'won't leave' continues up to the point her brother arrives.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "While you are waiting, you can read this magazine.",
+    "note": "'While' indicates an action happening at the same time as another future action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Make sure you lock the door before you go to bed.",
+    "note": "'Before' shows one future action must happen before another.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I will call you when I will arrive.",
+    "right": "I will call you when I arrive.",
+    "note": "Do not use 'will' in the time clause."
+   },
+   {
+    "wrong": "As soon as he will get home, we'll eat dinner.",
+    "right": "As soon as he gets home, we'll eat dinner.",
+    "note": "Use the present simple (gets) for third person singular subjects."
+   },
+   {
+    "wrong": "She waits until the bus will come.",
+    "right": "She will wait until the bus comes.",
+    "note": "The main clause needs a future tense if the action is in the future."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.time-clauses.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We'll start the meeting ___ everyone is here.",
+   "options": [
+    "when will",
+    "when",
+    "when is",
+    "when will be"
+   ],
+   "answer": 1,
+   "explanation": "After 'when' in a time clause referring to the future, we use the present simple tense. 'Everyone is here' is the correct present simple form."
+  },
+  {
+   "id": "ex.b1.time-clauses.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Please don't open the box ___ I tell you.",
+   "options": [
+    "until I will tell",
+    "until I told",
+    "until I tell",
+    "until I am telling"
+   ],
+   "answer": 2,
+   "explanation": "For future actions in time clauses with 'until', use the present simple. 'I tell' is the correct form."
+  },
+  {
+   "id": "ex.b1.time-clauses.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She'll practice her presentation ___ she feels confident.",
+   "options": [
+    "before she will feel",
+    "before she feels",
+    "before she felt",
+    "before she is feeling"
+   ],
+   "answer": 1,
+   "explanation": "In a time clause with 'before' referring to the future, use the present simple. 'She feels' is the correct present simple form for a third-person singular subject."
+  },
+  {
+   "id": "ex.b1.time-clauses.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you are cooking dinner, I'll set the table.",
+   "options": [
+    "When",
+    "As soon as",
+    "While",
+    "Until"
+   ],
+   "answer": 2,
+   "explanation": "'While' is used for actions happening at the same time. 'Cooking dinner' and 'setting the table' are simultaneous actions."
+  },
+  {
+   "id": "ex.b1.time-clauses.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "As soon as the concert ___ (start), we'll find our seats.",
+   "answers": [
+    [
+     "starts"
+    ]
+   ],
+   "explanation": "For a future event in a time clause with 'as soon as', use the present simple. 'Starts' is the correct form for 'the concert'."
+  },
+  {
+   "id": "ex.b1.time-clauses.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'll wait here until my train ___ (arrive).",
+   "answers": [
+    [
+     "arrives"
+    ]
+   ],
+   "explanation": "After 'until' in a time clause referring to the future, use the present simple. 'Arrives' is the correct form for 'my train'."
+  },
+  {
+   "id": "ex.b1.time-clauses.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Before you ___ (leave) for work, please water the plants.",
+   "answers": [
+    [
+     "leave"
+    ]
+   ],
+   "explanation": "In a time clause with 'before' referring to the future, use the present simple. 'Leave' is the correct form for 'you'."
+  },
+  {
+   "id": "ex.b1.time-clauses.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I'll",
+    "call",
+    "you",
+    "when",
+    "I",
+    "get",
+    "home",
+    "."
+   ],
+   "explanation": "The main clause 'I'll call you' is in the future, and the time clause 'when I get home' uses the present simple for a future action."
+  },
+  {
+   "id": "ex.b1.time-clauses.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "As",
+    "soon",
+    "as",
+    "it",
+    "stops",
+    "raining",
+    ",",
+    "we'll",
+    "go",
+    "outside",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "stopped"
+   ],
+   "explanation": "The time clause 'As soon as it stops raining' uses the present simple for a future event, followed by the future main clause."
+  },
+  {
+   "id": "ex.b1.time-clauses.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We will have dinner when Dad will arrive.",
+   "answers": [
+    "We will have dinner when Dad arrives."
+   ],
+   "explanation": "In a time clause referring to the future, use the present simple, not 'will'."
+  },
+  {
+   "id": "ex.b1.time-clauses.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Don't forget to turn off the lights before you will leave.",
+   "answers": [
+    "Don't forget to turn off the lights before you leave."
+   ],
+   "explanation": "The time clause with 'before' uses the present simple for a future action."
+  },
+  {
+   "id": "ex.b1.time-clauses.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I will finish my work. Then I will go to the gym.",
+   "instruction": "Combine these sentences using 'as soon as'.",
+   "answers": [
+    "As soon as I finish my work, I'll go to the gym.",
+    "I'll go to the gym as soon as I finish my work.",
+    "As soon as I finish my work, I will go to the gym."
+   ],
+   "explanation": "Use 'as soon as' to connect the two future actions, with the present simple in the time clause."
+  },
+  {
+   "id": "ex.b1.time-clauses.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You can't watch TV now. You must wait until your homework is done.",
+   "instruction": "Rewrite using 'until'.",
+   "answers": [
+    "You can't watch TV until your homework is done."
+   ],
+   "explanation": "The time clause with 'until' uses the present simple 'is done' to refer to a future state."
+  },
+  {
+   "id": "ex.b1.time-clauses.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.time-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I'll call you",
+     "right": "when I get to the office."
+    },
+    {
+     "left": "She won't start the movie",
+     "right": "until her friends arrive."
+    },
+    {
+     "left": "As soon as the bell rings,",
+     "right": "the students will leave."
+    },
+    {
+     "left": "While you are packing,",
+     "right": "I'll make some sandwiches."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "will [a-z]+ when [a-z]+ [a-z]+",
+  "as soon as [a-z]+ [a-z]+, [a-z]+ will",
+  "until [a-z]+ [a-z]+",
+  "before [a-z]+ [a-z]+, [a-z]+ will"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.time-clauses.01": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.02": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.03": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.04": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.05": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.06": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.07": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.08": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.09": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.10": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.11": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences are correct and natural combinations using 'as soon as'."
+   },
+   "ex.b1.time-clauses.13": {
+    "status": "pass"
+   },
+   "ex.b1.time-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 266981,
+   "text": "Wait until your turn comes.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 322950,
+   "text": "Please have a seat and wait until your name is called.",
+   "author": "CK"
+  }
+ ]
+}

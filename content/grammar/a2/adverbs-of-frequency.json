@@ -1,0 +1,502 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "adverbs-of-frequency",
+ "draftHash": "c680d8a6d7baa9de",
+ "grammarPoint": {
+  "id": "gp.adverbs-of-frequency",
+  "level": "A2",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "Adverbs of frequency",
+  "summary": "Adverbs of frequency like 'always' and 'never' tell us how often something happens and usually go before the main verb or after the verb 'be'.",
+  "explanation": "Adverbs of frequency like *always*, *usually*, *often*, *sometimes*, and *never* tell us how frequently an action happens. They help us describe routines and habits.\n\nThese adverbs usually go *before* the main verb in a sentence. For example: \"I *always* drink coffee in the morning.\" \"She *never* eats meat.\"\n\nIf the verb is \"be\" (am, is, are), the adverb of frequency usually goes *after* the \"be\" verb. For example: \"He *is usually* happy.\" \"They *are often* late.\"\n\nThe adverb \"sometimes\" can also go at the beginning or end of a sentence for emphasis, but the most common placement is before the main verb.",
+  "patterns": [
+   "Subject + adverb of frequency + main verb",
+   "Subject + be (am/is/are) + adverb of frequency",
+   "Sometimes + Subject + verb...",
+   "Subject + verb... + sometimes"
+  ],
+  "examples": [
+   {
+    "text": "I *always* eat breakfast before work.",
+    "note": "The adverb 'always' comes before the main verb 'eat'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She *is usually* on time for meetings.",
+    "note": "The adverb 'usually' comes after the 'be' verb 'is'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We *often* visit our grandparents on weekends.",
+    "note": "The adverb 'often' comes before the main verb 'visit'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "*Sometimes* they go for a walk in the park.",
+    "note": "The adverb 'sometimes' is at the beginning for emphasis.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He *never* forgets his keys.",
+    "note": "The adverb 'never' comes before the main verb 'forgets'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I eat always breakfast.",
+    "right": "I *always* eat breakfast.",
+    "note": "Adverbs of frequency go before the main verb."
+   },
+   {
+    "wrong": "She usually is late.",
+    "right": "She *is usually* late.",
+    "note": "Adverbs of frequency go after the 'be' verb."
+   },
+   {
+    "wrong": "Never I go there.",
+    "right": "I *never* go there.",
+    "note": "Adverbs of frequency usually go before the main verb, not at the beginning."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.adverbs-of-frequency.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My brother ___ plays video games after school.",
+   "options": [
+    "plays usually",
+    "usually plays",
+    "is usually plays"
+   ],
+   "answer": 1,
+   "explanation": "The adverb of frequency 'usually' goes before the main verb 'plays'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They ___ happy when they travel.",
+   "options": [
+    "are always",
+    "always are",
+    "always be"
+   ],
+   "answer": 0,
+   "explanation": "The adverb 'always' goes after the 'be' verb 'are'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ eat dinner at 7 PM.",
+   "options": [
+    "sometimes",
+    "eat sometimes",
+    "are sometimes"
+   ],
+   "answer": 0,
+   "explanation": "The adverb 'sometimes' goes before the main verb 'eat'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ forgets her umbrella.",
+   "options": [
+    "never is",
+    "is never",
+    "never"
+   ],
+   "answer": 2,
+   "explanation": "The adverb 'never' goes before the main verb 'forgets'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ ___ late for dinner.",
+   "answers": [
+    [
+     "are",
+     "never"
+    ],
+    [
+     "'re",
+     "never"
+    ]
+   ],
+   "explanation": "The adverb 'never' goes after the 'be' verb 'are'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ ___ to the gym on Mondays.",
+   "answers": [
+    [
+     "often",
+     "goes"
+    ]
+   ],
+   "explanation": "The adverb 'often' goes before the main verb 'goes'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ ___ coffee in the morning.",
+   "answers": [
+    [
+     "always",
+     "drink"
+    ]
+   ],
+   "explanation": "The adverb 'always' goes before the main verb 'drink'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "never",
+    "eats",
+    "meat",
+    "."
+   ],
+   "distractors": [
+    "always",
+    "often"
+   ],
+   "explanation": "The adverb 'never' comes before the main verb 'eats'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "are",
+    "usually",
+    "at",
+    "home",
+    "."
+   ],
+   "distractors": [
+    "always",
+    "often"
+   ],
+   "explanation": "The adverb 'usually' comes after the 'be' verb 'are'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We often are late for work.",
+   "answers": [
+    "We are often late for work."
+   ],
+   "explanation": "The adverb 'often' should come after the 'be' verb 'are'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She drinks usually tea.",
+   "answers": [
+    "She usually drinks tea."
+   ],
+   "explanation": "The adverb 'usually' should come before the main verb 'drinks'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I drink coffee in the morning.",
+   "instruction": "Use the word 'always'.",
+   "answers": [
+    "I always drink coffee in the morning."
+   ],
+   "explanation": "The adverb 'always' goes before the main verb 'drink'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He is tired after work.",
+   "instruction": "Use the word 'often'.",
+   "answers": [
+    "He is often tired after work."
+   ],
+   "explanation": "The adverb 'often' goes after the 'be' verb 'is'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-frequency.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-frequency"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I always",
+     "right": "eat pizza on Fridays."
+    },
+    {
+     "left": "She is never",
+     "right": "late for class."
+    },
+    {
+     "left": "We often",
+     "right": "watch movies."
+    },
+    {
+     "left": "They sometimes",
+     "right": "go to the beach."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(I|You|He|She|It|We|They) (always|usually|often|sometimes|never) [a-z]+",
+  "(am|is|are) (always|usually|often|sometimes|never)",
+  "sometimes (I|you|he|she|it|we|they)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.adverbs-of-frequency.01": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.02": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.03": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.04": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key results in an ungrammatical sentence while the other answer is correct."
+   },
+   "ex.a2.adverbs-of-frequency.06": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.adverbs-of-frequency.06: needs one answer list per gap (2)"
+   },
+   "ex.a2.adverbs-of-frequency.07": {
+    "status": "drop",
+    "note": "Invalid: ex.a2.adverbs-of-frequency.07: needs one answer list per gap (2)"
+   },
+   "ex.a2.adverbs-of-frequency.08": {
+    "status": "drop",
+    "note": "Key judged wrong: Not all tokens can be used together to form a valid sentence."
+   },
+   "ex.a2.adverbs-of-frequency.09": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.10": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.11": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.12": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.13": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.14": {
+    "status": "drop",
+    "note": "Ambiguous: Both pairings create grammatically correct and natural sentences."
+   },
+   "ex.a2.adverbs-of-frequency.15": {
+    "status": "drop",
+    "note": "Duplicate of an earlier exercise."
+   },
+   "ex.a2.adverbs-of-frequency.16": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.17": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.18": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-frequency.19": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.a2.adverbs-of-frequency.15",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.adverbs-of-frequency"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My brother ___ plays video games after school.",
+    "options": [
+     "plays usually",
+     "usually plays",
+     "is usually plays"
+    ],
+    "answer": 1,
+    "explanation": "The adverb 'usually' comes before the main verb 'plays'."
+   },
+   {
+    "id": "ex.a2.adverbs-of-frequency.16",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.adverbs-of-frequency"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "They ___ happy when they travel.",
+    "options": [
+     "are often",
+     "often are",
+     "often"
+    ],
+    "answer": 0,
+    "explanation": "The adverb 'often' comes after the 'be' verb 'are'."
+   },
+   {
+    "id": "ex.a2.adverbs-of-frequency.17",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.adverbs-of-frequency"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We ___ eat dinner at 7 PM.",
+    "options": [
+     "sometimes",
+     "eat sometimes",
+     "are sometimes eat"
+    ],
+    "answer": 0,
+    "explanation": "The adverb 'sometimes' comes before the main verb 'eat'."
+   },
+   {
+    "id": "ex.a2.adverbs-of-frequency.18",
+    "kind": "multiple_choice",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.adverbs-of-frequency"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She ___ forgets her umbrella.",
+    "options": [
+     "forgets never",
+     "never forgets",
+     "is never forgets"
+    ],
+    "answer": 1,
+    "explanation": "The adverb 'never' comes before the main verb 'forgets'."
+   },
+   {
+    "id": "ex.a2.adverbs-of-frequency.19",
+    "kind": "gap_fill",
+    "level": "A2",
+    "grammarPointIds": [
+     "gp.adverbs-of-frequency"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "My parents ___ visit us on weekends.",
+    "answers": [
+     [
+      "often",
+      "usually",
+      "sometimes"
+     ]
+    ],
+    "explanation": "The adverb of frequency goes before the main verb 'visit'."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 253113,
+   "text": "I usually have dinner at seven.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 289046,
+   "text": "He is always full of ideas.",
+   "author": "CK"
+  }
+ ]
+}

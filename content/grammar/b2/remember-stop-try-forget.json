@@ -1,0 +1,490 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "remember-stop-try-forget",
+ "draftHash": "705e161d4693dbb3",
+ "grammarPoint": {
+  "id": "gp.remember-stop-try-forget",
+  "level": "B2",
+  "topicId": "topic.verb-patterns",
+  "title": "Verbs that change meaning",
+  "summary": "Learn how verbs like 'remember,' 'stop,' 'try,' and 'forget' change meaning when followed by an -ing form or a to-infinitive.",
+  "explanation": "Some verbs in English can be followed by either an *-ing* form (gerund) or a *to-infinitive*, but the choice changes the meaning of the sentence. It's important to understand these differences to express yourself accurately.\n\nFor example, *remember to do something* means you recall a task you need to complete. *Remember doing something* means you have a memory of a past event. Similarly, *forget to do something* means you didn't do a task, while *forget doing something* means you don't recall a past action.\n\nWith 'stop,' *stop to do something* means you pause one activity to start another. *Stop doing something* means you finish or cease an activity completely. Finally, *try to do something* means you make an effort to achieve something, often difficult. *Try doing something* means you experiment with an action to see what happens or if it helps.",
+  "patterns": [
+   "remember + to + verb (task)",
+   "remember + verb-ing (memory)",
+   "stop + to + verb (purpose)",
+   "stop + verb-ing (cease activity)",
+   "try + to + verb (effort)",
+   "try + verb-ing (experiment)",
+   "forget + to + verb (missed task)",
+   "forget + verb-ing (no memory)"
+  ],
+  "examples": [
+   {
+    "text": "Did you remember to lock the door before you left?",
+    "note": "Recalling a necessary action for the future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I remember visiting that museum when I was a child.",
+    "note": "Recalling a past experience or memory.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We stopped to admire the beautiful sunset.",
+    "note": "Pausing one activity (traveling) to do another (admire).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He stopped smoking five years ago.",
+    "note": "Ceasing the activity of smoking completely.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I tried calling her, but her phone was off.",
+    "note": "Experimenting with an action (calling) to see the result.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I stopped smoking to take a break.",
+    "right": "I stopped to smoke to take a break.",
+    "note": "Use 'to smoke' to show the purpose of stopping."
+   },
+   {
+    "wrong": "Don't forget buying milk on your way home.",
+    "right": "Don't forget to buy milk on your way home.",
+    "note": "Use 'to buy' for a task you need to remember for the future."
+   },
+   {
+    "wrong": "She tried opening the jar, but it was too tight.",
+    "right": "She tried to open the jar, but it was too tight.",
+    "note": "Use 'to open' to describe making an effort to do something difficult."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.remember-stop-try-forget.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'll never forget ___ my first marathon.",
+   "options": [
+    "to run",
+    "running",
+    "run"
+   ],
+   "answer": 1,
+   "explanation": "'Forget running' refers to a past memory that will never be forgotten."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Please remember ___ your passport when you travel.",
+   "options": [
+    "bringing",
+    "to bring",
+    "bring"
+   ],
+   "answer": 1,
+   "explanation": "'Remember to bring' refers to a necessary action for the future."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The car started making a strange noise, so I stopped ___ it.",
+   "options": [
+    "driving",
+    "to drive",
+    "drive"
+   ],
+   "answer": 0,
+   "explanation": "'Stopped driving' means ceasing the activity of driving."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If you're still hungry, try ___ this new recipe.",
+   "options": [
+    "to make",
+    "making",
+    "make"
+   ],
+   "answer": 1,
+   "explanation": "'Try making' suggests experimenting with a new recipe."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I need to remember ___ the plants before I leave for vacation.",
+   "answers": [
+    [
+     "to water"
+    ]
+   ],
+   "explanation": "This refers to a future task that needs to be remembered."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He tried ___ the heavy box, but it was too heavy. He should try ___ a friend for help.",
+   "answers": [
+    [
+     "to lift"
+    ],
+    [
+     "asking"
+    ]
+   ],
+   "explanation": "'Tried to lift' means making an effort. 'Try asking' means experimenting with a solution."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Don't forget ___ your keys when you go out. I remember ___ them on the table this morning.",
+   "answers": [
+    [
+     "to take"
+    ],
+    [
+     "seeing",
+     "leaving"
+    ]
+   ],
+   "explanation": "'Forget to take' refers to a future task. 'Remember seeing' refers to a past memory."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "stopped",
+    "to",
+    "buy",
+    "some",
+    "groceries",
+    "."
+   ],
+   "distractors": [
+    "buying",
+    "for"
+   ],
+   "explanation": "This sentence means the speaker paused their journey or activity in order to purchase groceries."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "will",
+    "never",
+    "forget",
+    "traveling",
+    "to",
+    "Japan",
+    "."
+   ],
+   "distractors": [
+    "travel"
+   ],
+   "explanation": "This means she will always remember the experience of traveling to Japan."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I tried to open the window, but it was stuck.",
+   "answers": [],
+   "explanation": "The original sentence is correct. 'Tried to open' means making an effort."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Did you remember turning off the lights?",
+   "answers": [
+    "Did you remember to turn off the lights?"
+   ],
+   "explanation": "'Remember to turn off' refers to recalling a task that needed to be done."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I paused my work so I could drink some water.",
+   "instruction": "Rewrite using 'stop'.",
+   "answers": [
+    "I stopped to drink some water.",
+    "I stopped working to drink some water."
+   ],
+   "explanation": "'Stop to drink' means pausing one activity to do another."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I can't recall ever meeting him before.",
+   "instruction": "Rewrite using 'forget'.",
+   "answers": [
+    "I forget meeting him before."
+   ],
+   "explanation": "'Forget meeting' means not having a memory of a past event."
+  },
+  {
+   "id": "ex.b2.remember-stop-try-forget.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.remember-stop-try-forget"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I remember",
+     "right": "seeing that movie last year."
+    },
+    {
+     "left": "Don't forget",
+     "right": "to send that email."
+    },
+    {
+     "left": "He stopped",
+     "right": "to tie his shoelace."
+    },
+    {
+     "left": "If you have a headache, try",
+     "right": "taking some pain relievers."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "remember to (?:do|buy|call|turn|lock|send|take|bring)",
+  "stop (?:smoking|drinking|eating|talking|working|raining|running)",
+  "try to (?:open|find|reach|understand|explain|learn|sleep|help)",
+  "forget to (?:lock|call|buy|send|turn|take|bring|do)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.remember-stop-try-forget.01": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.02": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.03": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.04": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.05": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.06": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers are grammatically correct and contextually appropriate."
+   },
+   "ex.b2.remember-stop-try-forget.08": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.09": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.10": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.remember-stop-try-forget.10: needs an accepted answer"
+   },
+   "ex.b2.remember-stop-try-forget.11": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both rewrites are natural and accurately convey the original meaning."
+   },
+   "ex.b2.remember-stop-try-forget.13": {
+    "status": "drop",
+    "note": "Key judged wrong: 'Forget' with a gerund is not naturally used in the simple present to mean inability to recall an event."
+   },
+   "ex.b2.remember-stop-try-forget.14": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.15": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.16": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.17": {
+    "status": "pass"
+   },
+   "ex.b2.remember-stop-try-forget.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.remember-stop-try-forget.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.remember-stop-try-forget"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I'll never forget ___ that incredible meteor shower last night.",
+    "options": [
+     "to see",
+     "seeing",
+     "see",
+     "saw"
+    ],
+    "answer": 1,
+    "explanation": "Use the -ing form after 'forget' when referring to a past memory or experience."
+   },
+   {
+    "id": "ex.b2.remember-stop-try-forget.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.remember-stop-try-forget"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Please remember ___ the oven after you finish baking.",
+    "options": [
+     "turning off",
+     "to turn off",
+     "turn off",
+     "turned off"
+    ],
+    "answer": 1,
+    "explanation": "Use the to-infinitive after 'remember' for an action you need to do in the future."
+   },
+   {
+    "id": "ex.b2.remember-stop-try-forget.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.remember-stop-try-forget"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The car started making a strange noise, so I stopped ___ it.",
+    "options": [
+     "to drive",
+     "driving",
+     "drive",
+     "drove"
+    ],
+    "answer": 1,
+    "explanation": "Use the -ing form after 'stop' to indicate ceasing an activity completely."
+   },
+   {
+    "id": "ex.b2.remember-stop-try-forget.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.remember-stop-try-forget"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "If you can't solve the puzzle, try ___ the pieces differently.",
+    "options": [
+     "to arrange",
+     "arranging",
+     "arrange",
+     "arranged"
+    ],
+    "answer": 1,
+    "explanation": "Use the -ing form after 'try' when suggesting an experiment or a different approach."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 8426963,
+   "text": "I wanted Tom to stop eating so much junk food.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 6062412,
+   "text": "Did you really forget to take your medicine this morning?",
+   "author": "CK"
+  }
+ ]
+}

@@ -1,0 +1,405 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "verb-object-infinitive",
+ "draftHash": "2c8eb9e9015ce51c",
+ "grammarPoint": {
+  "id": "gp.verb-object-infinitive",
+  "level": "B1",
+  "topicId": "topic.verb-patterns",
+  "title": "Verb + object + to",
+  "summary": "Learn how to use verbs like 'want', 'ask', and 'tell' when you want someone else to do something.",
+  "explanation": "When you want, ask, or tell another person to do an action, you use a specific structure: the verb, followed by the *object* (the person), and then *to* + the base form of the verb.\n\nThis structure helps you clearly state who you are talking to and what action you expect or desire from them. For example, if you want your friend to help you, you would say, \"I *want my friend to help* me.\"\n\nRemember that the object is always the person or people who will perform the action. The 'to' before the second verb is essential in this pattern.",
+  "patterns": [
+   "want + object + to + verb",
+   "ask + object + to + verb",
+   "tell + object + to + verb"
+  ],
+  "examples": [
+   {
+    "text": "I want you to finish your report by Friday.",
+    "note": "Expresses a desire for someone else to do an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She asked her brother to pick up some groceries.",
+    "note": "Shows a request made to another person.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The teacher told the students to open their books.",
+    "note": "Gives an instruction or command to a group.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We don't want them to leave so early.",
+    "note": "Uses the negative form to express a lack of desire.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Did you ask him to join us for dinner?",
+    "note": "Forms a question using this verb pattern.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He wants me go to the store.",
+    "right": "He wants me *to go* to the store.",
+    "note": "Always use 'to' before the second verb in this structure."
+   },
+   {
+    "wrong": "They told waiting for them.",
+    "right": "They told *us to wait* for them.",
+    "note": "Don't forget the object (the person) after 'tell' or 'ask'."
+   },
+   {
+    "wrong": "I asked to help me.",
+    "right": "I asked *him to help* me.",
+    "note": "Specify who you are asking to do the action."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.verb-object-infinitive.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My parents ___ me to study harder for my exams.",
+   "options": [
+    "want",
+    "wanting",
+    "wants",
+    "wanted"
+   ],
+   "answer": 0,
+   "explanation": "The base form 'want' is correct here, matching the subject 'My parents' and followed by 'me to study'."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The manager ___ us to arrive on time for the meeting.",
+   "options": [
+    "ask",
+    "asked",
+    "asking",
+    "asks"
+   ],
+   "answer": 1,
+   "explanation": "The past tense 'asked' fits the context of a completed request. 'Asks' would also be grammatically correct but 'asked' is a common choice for a general statement."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Please don't ___ me to do that again.",
+   "options": [
+    "tell",
+    "telling",
+    "told",
+    "tells"
+   ],
+   "answer": 0,
+   "explanation": "After 'don't', we use the base form of the verb, 'tell'."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ her friend to lend her a book.",
+   "options": [
+    "want",
+    "asked",
+    "told",
+    "wants"
+   ],
+   "answer": 1,
+   "explanation": "'Asked' is the most natural fit for requesting a loan. 'Wants' would also work but 'asked' implies a direct request."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ my neighbor ___ water my plants while I'm away.",
+   "answers": [
+    [
+     "want",
+     "asked"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "You can either 'want' or 'ask' your neighbor to water your plants. The structure requires 'to' before the action verb."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The coach ___ the team ___ practice every day.",
+   "answers": [
+    [
+     "told"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Told' is the most appropriate verb for a coach giving an instruction to a team. The structure requires 'to' before the action verb."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Did you ___ them ___ bring their own snacks?",
+   "answers": [
+    [
+     "ask"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Ask' is used for making a request. The structure requires 'to' before the action verb."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "wants",
+    "us",
+    "to",
+    "help",
+    "him",
+    "."
+   ],
+   "distractors": [
+    "for",
+    "with"
+   ],
+   "explanation": "The correct order is 'He wants us to help him.', following the pattern 'want + object + to + verb'."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "asked",
+    "me",
+    "to",
+    "call",
+    "her",
+    "later",
+    "."
+   ],
+   "distractors": [
+    "called",
+    "then"
+   ],
+   "explanation": "The correct order is 'She asked me to call her later.', following the pattern 'ask + object + to + verb'."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My boss told me working late tonight.",
+   "answers": [
+    "My boss told me to work late tonight."
+   ],
+   "explanation": "The correct structure is 'tell + object + to + verb', so 'working' should be 'to work'."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I want you helping me with this project.",
+   "answers": [
+    "I want you to help me with this project."
+   ],
+   "explanation": "The correct structure is 'want + object + to + verb', so 'helping' should be 'to help'."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Could you please close the window?",
+   "instruction": "Rewrite using 'I want you to'.",
+   "answers": [
+    "I want you to close the window."
+   ],
+   "explanation": "The instruction changes a polite request into a direct statement of desire using the target structure."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The teacher said, \"Everyone, read page 20.\"",
+   "instruction": "Rewrite using 'The teacher told us to'.",
+   "answers": [
+    "The teacher told us to read page 20."
+   ],
+   "explanation": "The instruction changes a direct command into a reported instruction using the target structure."
+  },
+  {
+   "id": "ex.b1.verb-object-infinitive.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.verb-object-infinitive"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I want you",
+     "right": "to listen carefully."
+    },
+    {
+     "left": "He asked his sister",
+     "right": "to lend him her car."
+    },
+    {
+     "left": "The doctor told me",
+     "right": "to get more rest."
+    },
+    {
+     "left": "They don't want us",
+     "right": "to make too much noise."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "want (him|her|them|us|me|you) to",
+  "ask (him|her|them|us|me|you) to",
+  "tell (him|her|them|us|me|you) to"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.verb-object-infinitive.01": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.02": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.03": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.04": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.05": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.06": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.07": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key fails to use all provided tokens, ignoring 'for' and 'with'."
+   },
+   "ex.b1.verb-object-infinitive.09": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.10": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.11": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.12": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.13": {
+    "status": "pass"
+   },
+   "ex.b1.verb-object-infinitive.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 1887289,
+   "text": "I don't want you to change.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 2011541,
+   "text": "Do you want me to go?",
+   "author": "CK"
+  }
+ ]
+}

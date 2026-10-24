@@ -1,0 +1,520 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "formulaic-subjunctive",
+ "draftHash": "dde6740cfcf59b6f",
+ "grammarPoint": {
+  "id": "gp.formulaic-subjunctive",
+  "level": "C2",
+  "topicId": "topic.verb-patterns",
+  "title": "Fixed subjunctive phrases",
+  "summary": "Learn advanced fixed subjunctive phrases like 'be that as it may', 'come what may', and 'suffice it to say' to express concessions, determination, or to summarize.",
+  "explanation": "Fixed subjunctive phrases are idiomatic expressions that retain an older grammatical form, the subjunctive mood, which is less common in modern English. These phrases are used to convey specific nuanced meanings, often adding a formal or emphatic tone to your communication.\n\n*Be that as it may* is used to acknowledge a previous statement or fact, but then introduce a contrasting or more important point. It signals that while something might be true, it doesn't change the speaker's main argument or intention.\n\n*Come what may* expresses a strong sense of determination or resolve. It means that regardless of any difficulties or obstacles that might arise in the future, a particular action or outcome will still happen. It emphasizes unwavering commitment.\n\n*Suffice it to say* is used to indicate that enough has been said about a topic, or that further details are unnecessary or could be inferred. It's a way to summarize or conclude a point without going into extensive explanation, often implying that more could be said but isn't required.",
+  "patterns": [
+   "be that as it may",
+   "come what may",
+   "suffice it to say"
+  ],
+  "examples": [
+   {
+    "text": "The report has some valid criticisms; be that as it may, we still need to proceed with the plan.",
+    "note": "Acknowledges a point but emphasizes moving forward despite it.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Come what may, I will always support my family through any challenge.",
+    "note": "Expresses strong determination regardless of future difficulties.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The negotiations were complex and lengthy. Suffice it to say, we reached a mutually beneficial agreement.",
+    "note": "Summarizes the outcome without detailing the process.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Her arguments were compelling, but be that as it may, I remain unconvinced by her overall conclusion.",
+    "note": "Concedes a point while maintaining a differing opinion.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He promised to complete the marathon, come what may, even if he had to walk the last few miles.",
+    "note": "Highlights an unwavering commitment to an objective.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Be that as it is, I still think we should try.",
+    "right": "Be that as it may, I still think we should try.",
+    "note": "The fixed phrase uses 'may', not 'is'."
+   },
+   {
+    "wrong": "Come what happens, we will be ready.",
+    "right": "Come what may, we will be ready.",
+    "note": "The fixed phrase uses 'may', not 'happens'."
+   },
+   {
+    "wrong": "Suffice to say, the meeting was productive.",
+    "right": "Suffice it to say, the meeting was productive.",
+    "note": "The fixed phrase includes 'it'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.formulaic-subjunctive.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The weather forecast predicts heavy rain, but ___ we will still go hiking.",
+   "options": [
+    "be that as it may",
+    "come what may",
+    "suffice it to say"
+   ],
+   "answer": 1,
+   "explanation": "'Come what may' expresses determination despite potential difficulties, which fits the context of going hiking despite bad weather."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The budget is tight this quarter; ___, we must prioritize essential expenses.",
+   "options": [
+    "come what may",
+    "suffice it to say",
+    "be that as it may"
+   ],
+   "answer": 2,
+   "explanation": "'Be that as it may' acknowledges a fact (tight budget) but introduces a necessary action (prioritizing expenses)."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I won't go into all the details of the project's challenges. ___, we successfully launched on time.",
+   "options": [
+    "Come what may",
+    "Suffice it to say",
+    "Be that as it may"
+   ],
+   "answer": 1,
+   "explanation": "'Suffice it to say' is used to summarize an outcome without needing to elaborate on the preceding difficulties."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which phrase emphasizes unwavering resolve?",
+   "options": [
+    "Be that as it may",
+    "Come what may",
+    "Suffice it to say"
+   ],
+   "answer": 1,
+   "explanation": "'Come what may' specifically conveys strong determination regardless of future events."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The initial results were disappointing; ___ __ ___, we learned valuable lessons from the experiment.",
+   "answers": [
+    [
+     "be"
+    ],
+    [
+     "that"
+    ],
+    [
+     "as"
+    ],
+    [
+     "it"
+    ],
+    [
+     "may"
+    ]
+   ],
+   "explanation": "'Be that as it may' acknowledges a negative outcome but shifts focus to a positive learning experience."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The journey was long and arduous. ___ __ ___, we finally reached the summit.",
+   "answers": [
+    [
+     "Suffice"
+    ],
+    [
+     "it"
+    ],
+    [
+     "to"
+    ],
+    [
+     "say"
+    ]
+   ],
+   "explanation": "'Suffice it to say' summarizes the successful completion of a difficult journey without needing to describe every detail."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She vowed to complete her research, ___ ___ ___, even if it meant working through the holidays.",
+   "answers": [
+    [
+     "come"
+    ],
+    [
+     "what"
+    ],
+    [
+     "may"
+    ]
+   ],
+   "explanation": "'Come what may' expresses her strong determination to finish the research regardless of personal sacrifice."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "meeting",
+    "was",
+    "tense",
+    ".",
+    "Suffice",
+    "it",
+    "to",
+    "say",
+    ",",
+    "no",
+    "agreement",
+    "was",
+    "reached",
+    "."
+   ],
+   "distractors": [
+    "enough",
+    "said"
+   ],
+   "explanation": "This sentence uses 'suffice it to say' to summarize the outcome of a tense meeting without elaborating on the details."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "His",
+    "arguments",
+    "are",
+    "persuasive",
+    ";",
+    "be",
+    "that",
+    "as",
+    "it",
+    "may",
+    ",",
+    "I",
+    "still",
+    "disagree",
+    "."
+   ],
+   "distractors": [
+    "is",
+    "however"
+   ],
+   "explanation": "'Be that as it may' acknowledges the persuasiveness of the arguments but maintains a differing opinion."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The project is behind schedule, but come what happens, we will deliver.",
+   "answers": [
+    "The project is behind schedule, but come what may, we will deliver."
+   ],
+   "explanation": "The correct fixed phrase for expressing determination is 'come what may', not 'come what happens'."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Suffice to say, the concert was a huge success.",
+   "answers": [
+    "Suffice it to say, the concert was a huge success."
+   ],
+   "explanation": "The correct fixed phrase is 'suffice it to say', including the pronoun 'it'."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Despite the challenges, she was determined to achieve her goals.",
+   "instruction": "Rewrite using 'come what may'.",
+   "answers": [
+    "Come what may, she was determined to achieve her goals."
+   ],
+   "explanation": "'Come what may' effectively replaces 'despite the challenges' to express unwavering determination."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I won't detail the entire discussion, but we decided to postpone the decision.",
+   "instruction": "Rewrite using 'suffice it to say'.",
+   "answers": [
+    "Suffice it to say, we decided to postpone the decision."
+   ],
+   "explanation": "'Suffice it to say' concisely summarizes the outcome without needing to elaborate on the discussion."
+  },
+  {
+   "id": "ex.c2.formulaic-subjunctive.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.formulaic-subjunctive"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The evidence is compelling; be that as it may,",
+     "right": "we need more data to confirm the theory."
+    },
+    {
+     "left": "Come what may,",
+     "right": "I will always stand by my principles."
+    },
+    {
+     "left": "The meeting was quite heated. Suffice it to say,",
+     "right": "not everyone agreed on the next steps."
+    },
+    {
+     "left": "Her performance was flawless, but be that as it may,",
+     "right": "the judges still gave her a low score."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "be that as it may",
+  "come what may",
+  "suffice it to say"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.formulaic-subjunctive.01": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.02": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.03": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.04": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.05": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.formulaic-subjunctive.05: needs one answer list per gap (2)"
+   },
+   "ex.c2.formulaic-subjunctive.06": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.formulaic-subjunctive.06: needs one answer list per gap (2)"
+   },
+   "ex.c2.formulaic-subjunctive.07": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key fails to use all the provided tokens and includes an unused token."
+   },
+   "ex.c2.formulaic-subjunctive.09": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.10": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.11": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.12": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.13": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.14": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.15": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.16": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.17": {
+    "status": "pass"
+   },
+   "ex.c2.formulaic-subjunctive.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c2.formulaic-subjunctive.15",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.formulaic-subjunctive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The initial plan had some flaws; ___, we adapted quickly and achieved our goals.",
+    "options": [
+     "come what may",
+     "suffice it to say",
+     "be that as it may",
+     "whatever happens"
+    ],
+    "answer": 2,
+    "explanation": "\"Be that as it may\" acknowledges the flaws but introduces a contrasting positive outcome."
+   },
+   {
+    "id": "ex.c2.formulaic-subjunctive.16",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.formulaic-subjunctive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She was determined to pursue her dream of becoming an astronaut, ___, no matter the obstacles.",
+    "options": [
+     "be that as it may",
+     "suffice it to say",
+     "come what may",
+     "it is enough to say"
+    ],
+    "answer": 2,
+    "explanation": "\"Come what may\" emphasizes unwavering resolve despite difficulties."
+   },
+   {
+    "id": "ex.c2.formulaic-subjunctive.17",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.formulaic-subjunctive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I won't go into the specifics of the negotiation. ___, we secured a favorable deal.",
+    "options": [
+     "Be that as it may",
+     "Come what may",
+     "Suffice it to say",
+     "Despite that"
+    ],
+    "answer": 2,
+    "explanation": "\"Suffice it to say\" indicates that the general outcome is sufficient information without needing details."
+   },
+   {
+    "id": "ex.c2.formulaic-subjunctive.18",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.formulaic-subjunctive"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Which phrase acknowledges a previous statement while introducing a contrasting idea?",
+    "options": [
+     "Come what may",
+     "Suffice it to say",
+     "Be that as it may",
+     "No matter what"
+    ],
+    "answer": 2,
+    "explanation": "This is the specific function of \"be that as it may\"."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 238636,
+   "text": "Suffice it to say that, after all, this won't do.",
+   "author": "Dejo"
+  },
+  {
+   "sentenceId": 10169226,
+   "text": "Come what may, I'm determined to accomplish it.",
+   "author": "CK"
+  }
+ ]
+}

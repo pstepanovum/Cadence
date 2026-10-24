@@ -1,0 +1,403 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "used-to",
+ "draftHash": "33eb687d07b74e27",
+ "grammarPoint": {
+  "id": "gp.used-to",
+  "level": "B1",
+  "topicId": "topic.tenses",
+  "title": "Used to",
+  "summary": "Use 'used to' to talk about past habits or states that are no longer true in the present.",
+  "explanation": "We use *used to* to describe actions or situations that happened regularly or were true in the past, but are not true or do not happen anymore. It helps us compare the past with the present.\n\nFor example, if you say \"I used to live in a small town,\" it means you lived there for some time in the past, but now you live somewhere else. If you say \"My brother used to play soccer every weekend,\" it means he played regularly in the past, but he doesn't play anymore.\n\nWe use the base form of the verb after 'used to'. For negative sentences and questions, we use 'did' or 'didn't' and change 'used to' to *use to* (without the 'd').",
+  "patterns": [
+   "Subject + used to + base verb",
+   "Subject + didn't use to + base verb",
+   "Did + subject + use to + base verb?"
+  ],
+  "examples": [
+   {
+    "text": "I used to walk to school every day when I was a child.",
+    "note": "Describes a past habit that no longer happens.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There used to be a small cafe on this corner.",
+    "note": "Describes a past state that is no longer true.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My parents didn't use to travel much before they retired.",
+    "note": "Describes a past habit that didn't happen.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Did you use to enjoy classical music?",
+    "note": "Asks about a past preference or state.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She used to have long hair, but now it's short.",
+    "note": "Describes a past state that has changed.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I use to live in Paris.",
+    "right": "I used to live in Paris.",
+    "note": "Remember the 'd' in 'used to' for positive statements."
+   },
+   {
+    "wrong": "Did you used to like pizza?",
+    "right": "Did you use to like pizza?",
+    "note": "In questions with 'did', use 'use to' (without 'd')."
+   },
+   {
+    "wrong": "He didn't used to eat vegetables.",
+    "right": "He didn't use to eat vegetables.",
+    "note": "In negative sentences with 'didn't', use 'use to' (without 'd')."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.used-to.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "When I was younger, I ___ play video games all the time.",
+   "options": [
+    "use to",
+    "used to",
+    "am used to"
+   ],
+   "answer": 1,
+   "explanation": "'Used to' is correct for a past habit. 'Use to' is for questions/negatives, and 'am used to' means accustomed to."
+  },
+  {
+   "id": "ex.b1.used-to.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "There ___ a lot of trees here, but they were cut down.",
+   "options": [
+    "used to be",
+    "use to be",
+    "would be"
+   ],
+   "answer": 0,
+   "explanation": "'Used to be' correctly describes a past state that no longer exists. 'Use to be' is incorrect in a positive statement."
+  },
+  {
+   "id": "ex.b1.used-to.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister ___ like coffee, but now she drinks it every morning.",
+   "options": [
+    "didn't used to",
+    "didn't use to",
+    "wouldn't use to"
+   ],
+   "answer": 1,
+   "explanation": "For negative sentences, we use 'didn't use to' (without the 'd' on 'use')."
+  },
+  {
+   "id": "ex.b1.used-to.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you ___ wear glasses when you were a child?",
+   "options": [
+    "Did / used to",
+    "Did / use to",
+    "Were / used to"
+   ],
+   "answer": 1,
+   "explanation": "In questions with 'Did', we use the base form 'use to'."
+  },
+  {
+   "id": "ex.b1.used-to.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My family ___ ___ live in a big city, but now we prefer the countryside.",
+   "answers": [
+    [
+     "used"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Used to' describes a past state that is no longer true."
+  },
+  {
+   "id": "ex.b1.used-to.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ ___ play the guitar, but I stopped practicing years ago.",
+   "answers": [
+    [
+     "used"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Used to' describes a past habit that no longer happens."
+  },
+  {
+   "id": "ex.b1.used-to.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ your brother ___ ___ enjoy hiking before he moved?",
+   "answers": [
+    [
+     "Did"
+    ],
+    [
+     "use"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "For questions, we use 'Did + subject + use to + base verb'."
+  },
+  {
+   "id": "ex.b1.used-to.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "used",
+    "to",
+    "work",
+    "at",
+    "the",
+    "library",
+    "."
+   ],
+   "distractors": [
+    "working",
+    "is"
+   ],
+   "explanation": "This sentence describes a past habit or state that is no longer true."
+  },
+  {
+   "id": "ex.b1.used-to.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "didn't",
+    "use",
+    "to",
+    "like",
+    "spicy",
+    "food",
+    "."
+   ],
+   "distractors": [
+    "used",
+    "likes"
+   ],
+   "explanation": "This sentence describes a past preference that has changed."
+  },
+  {
+   "id": "ex.b1.used-to.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My cat use to sleep on my bed.",
+   "answers": [
+    "My cat used to sleep on my bed."
+   ],
+   "explanation": "In positive statements, 'used to' needs the 'd'."
+  },
+  {
+   "id": "ex.b1.used-to.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Did you used to visit your grandparents often?",
+   "answers": [
+    "Did you use to visit your grandparents often?"
+   ],
+   "explanation": "In questions with 'Did', 'used to' becomes 'use to'."
+  },
+  {
+   "id": "ex.b1.used-to.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "When I was young, I often rode my bike to the park.",
+   "instruction": "Rewrite using 'used to'.",
+   "answers": [
+    "When I was young, I used to ride my bike to the park."
+   ],
+   "explanation": "'Used to' replaces 'often rode' to express a past habit."
+  },
+  {
+   "id": "ex.b1.used-to.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "There was a cinema in our town, but it closed last year.",
+   "instruction": "Rewrite using 'used to'.",
+   "answers": [
+    "There used to be a cinema in our town, but it closed last year."
+   ],
+   "explanation": "'Used to be' expresses a past state that no longer exists."
+  },
+  {
+   "id": "ex.b1.used-to.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.used-to"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I used to live in the city,",
+     "right": "but now I prefer the quiet countryside."
+    },
+    {
+     "left": "Did you use to play any sports",
+     "right": "when you were in high school?"
+    },
+    {
+     "left": "There didn't use to be so many cars",
+     "right": "on this road in the mornings."
+    },
+    {
+     "left": "My brother used to have a pet rabbit,",
+     "right": "but it ran away a few years ago."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "used to (?:be|have|live|play|work|go)",
+  "didn't use to (?:be|have|live|play|work|go)",
+  "did (?:he|she|it|you|we|they) use to (?:be|have|live|play|work|go)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.used-to.01": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.02": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.03": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.04": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.05": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.06": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.07": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.08": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.09": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.10": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.11": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.12": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.13": {
+    "status": "pass"
+   },
+   "ex.b1.used-to.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 3148400,
+   "text": "I used to work at a restaurant in Boston.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 2539076,
+   "text": "Tom used to be a country music singer.",
+   "author": "CK"
+  }
+ ]
+}

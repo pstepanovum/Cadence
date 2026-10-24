@@ -1,0 +1,415 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "were-to-and-should-conditionals",
+ "draftHash": "89a37e30c1af7d0f",
+ "grammarPoint": {
+  "id": "gp.were-to-and-should-conditionals",
+  "level": "C1",
+  "topicId": "topic.conditionals",
+  "title": "Were to and should in conditionals",
+  "summary": "Learn to use 'were to' and 'should' in 'if' clauses to discuss unlikely or hypothetical future events, often adding formality or a sense of remote possibility.",
+  "explanation": "When we talk about future events that are unlikely or purely hypothetical, we can use 'were to' or 'should' in the 'if' clause. This makes the condition sound less probable or more formal than a simple present conditional.\n\nUsing *'were to'* emphasizes that the event is a remote possibility or a hypothetical scenario. It's often used for situations that are very unlikely to happen. For example, 'If I *were to win* the lottery...' implies it's a dream, not a realistic expectation.\n\nUsing *'should'* suggests a slight possibility, or it can be used to give polite instructions or warnings about something that might happen. It's less strong than 'were to' in terms of unlikelihood but still indicates that the event is not expected. For instance, 'If you *should need* assistance...' is a polite way to offer help.\n\nBoth forms can be inverted for increased formality, especially in written English. For 'were to', we move 'were' to the beginning of the clause: 'Were I to win...'. For 'should', we move 'should' to the beginning: 'Should you need...'.",
+  "patterns": [
+   "If + subject + were to + base verb, ...",
+   "If + subject + should + base verb, ...",
+   "Were + subject + to + base verb, ... (inverted)",
+   "Should + subject + base verb, ... (inverted)"
+  ],
+  "examples": [
+   {
+    "text": "If the company were to relocate, many employees would be affected.",
+    "note": "Shows a hypothetical, unlikely future event with significant consequences.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Were I to accept the offer, I would have to move to another city.",
+    "note": "An inverted, more formal way to express a remote possibility.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If you should encounter any technical issues, please contact support.",
+    "note": "A polite way to refer to a possible, but not expected, future problem.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Should the weather worsen, we will cancel the outdoor concert.",
+    "note": "An inverted, formal way to state a condition for a future action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If the experiment were to fail, we would need to redesign the entire process.",
+    "note": "Highlights a very unlikely or undesirable hypothetical outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If he would arrive late, we would start without him.",
+    "right": "If he were to arrive late, we would start without him.",
+    "note": "Do not use 'would' in the 'if' clause for unlikely future events."
+   },
+   {
+    "wrong": "Were she to calling, I would tell her the news.",
+    "right": "Were she to call, I would tell her the news.",
+    "note": "Use the base form of the verb after 'to' in 'were to'."
+   },
+   {
+    "wrong": "If should you have questions, ask me.",
+    "right": "Should you have questions, ask me.",
+    "note": "When inverting 'should', 'if' is omitted."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If the new policy ___ to be implemented, it would significantly change our operations.",
+   "options": [
+    "is",
+    "were",
+    "should",
+    "will be"
+   ],
+   "answer": 1,
+   "explanation": "'Were to' is used for hypothetical or unlikely future events. 'Is' is for real conditionals, 'should' implies a slight possibility, and 'will be' is incorrect here."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you require further assistance, do not hesitate to reach out.",
+   "options": [
+    "If",
+    "Were",
+    "Should",
+    "Would"
+   ],
+   "answer": 2,
+   "explanation": "'Should' is used here in an inverted conditional to politely refer to a possible future need."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If the ancient artifact ___ to be discovered, it would rewrite history.",
+   "options": [
+    "was",
+    "is",
+    "were",
+    "should"
+   ],
+   "answer": 2,
+   "explanation": "'Were to' expresses a remote or hypothetical future possibility. 'Was' is incorrect for this conditional structure."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the project fail, we would need a backup plan.",
+   "options": [
+    "If",
+    "Were",
+    "Should",
+    "Would"
+   ],
+   "answer": 2,
+   "explanation": "'Should' is used in an inverted conditional to indicate a slight possibility of failure."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If the train ___ to be delayed, we ___ miss our connection.",
+   "answers": [
+    [
+     "were"
+    ],
+    [
+     "would",
+     "wouldn't"
+    ]
+   ],
+   "explanation": "'Were to' expresses an unlikely future event. 'Would' is used in the main clause for the consequence."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you ___ to change your mind, please let us know immediately.",
+   "answers": [
+    [
+     "Should"
+    ],
+    [
+     "happen"
+    ]
+   ],
+   "explanation": "'Should' in an inverted conditional indicates a slight possibility. 'Happen to' can be used with 'should' for emphasis on chance."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Were the negotiations ___ to break down, the consequences ___ be severe.",
+   "answers": [
+    [
+     "to"
+    ],
+    [
+     "would"
+    ]
+   ],
+   "explanation": "'Were to' is the correct structure for a hypothetical future event. 'Would' forms the consequence in the main clause."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Were",
+    "the",
+    "economy",
+    "to",
+    "improve",
+    ",",
+    "unemployment",
+    "would",
+    "fall",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "had"
+   ],
+   "explanation": "This sentence uses the inverted 'were to' conditional to describe a hypothetical future economic improvement."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Should",
+    "you",
+    "require",
+    "any",
+    "assistance",
+    ",",
+    "our",
+    "team",
+    "is",
+    "ready",
+    "to",
+    "help",
+    "."
+   ],
+   "distractors": [
+    "if",
+    "would"
+   ],
+   "explanation": "This sentence uses the inverted 'should' conditional to politely offer help for a possible future need."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If the system would crash, we would lose all our data.",
+   "answers": [
+    "If the system were to crash, we would lose all our data.",
+    "Should the system crash, we would lose all our data.",
+    "If the system crashed, we would lose all our data."
+   ],
+   "explanation": "For unlikely future events, use 'were to' or 'should' in the 'if' clause, not 'would'."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Were she to calling, I would tell her the news.",
+   "answers": [
+    "Were she to call, I would tell her the news."
+   ],
+   "explanation": "After 'were to', the base form of the verb is required."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If it happens that you need a ride, call me.",
+   "instruction": "Rewrite using 'should' in an inverted conditional.",
+   "answers": [
+    "Should you need a ride, call me."
+   ],
+   "explanation": "The inverted 'should' conditional makes the request more formal and concise, implying a slight possibility."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If the company decided to merge, it would create a huge new entity.",
+   "instruction": "Rewrite using 'were to' in the 'if' clause.",
+   "answers": [
+    "If the company were to merge, it would create a huge new entity.",
+    "If the company were to decide to merge, it would create a huge new entity."
+   ],
+   "explanation": "'Were to' emphasizes the hypothetical and potentially unlikely nature of the merger."
+  },
+  {
+   "id": "ex.c1.were-to-and-should-conditionals.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.were-to-and-should-conditionals"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Were the climate",
+     "right": "to change drastically, many species would disappear."
+    },
+    {
+     "left": "Should you find",
+     "right": "any errors in the report, please highlight them."
+    },
+    {
+     "left": "If the new technology",
+     "right": "were to fail, the project would be delayed."
+    },
+    {
+     "left": "Should the flight",
+     "right": "be canceled, we will arrange alternative transport."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "if .* were to [a-z]+",
+  "were (i|you|he|she|it|we|they) to [a-z]+",
+  "if .* should [a-z]+",
+  "should (i|you|he|she|it|we|they) [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.were-to-and-should-conditionals.01": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.02": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.03": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.04": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.05": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.06": {
+    "status": "pass",
+    "note": "Checker slip: The other answer results in an ungrammatical repetition of 'to'."
+   },
+   "ex.c1.were-to-and-should-conditionals.07": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.08": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.09": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers successfully correct the invalid use of 'would' in the if-clause."
+   },
+   "ex.c1.were-to-and-should-conditionals.11": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.12": {
+    "status": "pass"
+   },
+   "ex.c1.were-to-and-should-conditionals.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly use 'were to' in the conditional clause."
+   },
+   "ex.c1.were-to-and-should-conditionals.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 30905,
+   "text": "Should you change your mind, let me know.",
+   "author": "Dejo"
+  }
+ ]
+}

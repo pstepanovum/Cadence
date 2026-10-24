@@ -1,0 +1,394 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "subject-and-object-pronouns",
+ "draftHash": "2b9784695111adb2",
+ "grammarPoint": {
+  "id": "gp.subject-and-object-pronouns",
+  "level": "A1",
+  "topicId": "topic.nouns-pronouns",
+  "title": "Subject and object pronouns",
+  "summary": "Learn to use 'I' and 'me', 'he' and 'him', 'they' and 'them' correctly in sentences. These words change depending on their role.",
+  "explanation": "Pronouns are words like 'I', 'he', 'they', 'me', 'him', and 'them'. They replace nouns to avoid repetition. For example, instead of saying \"Anna likes coffee. Anna drinks coffee every morning,\" you can say \"Anna likes coffee. *She* drinks coffee every morning.\"\n\nWe use *subject pronouns* (I, he, they) when the pronoun is doing the action in the sentence. They usually come before the verb. For example, \"*I* like pizza\" or \"*He* works here.\"\n\nWe use *object pronouns* (me, him, them) when the pronoun receives the action. They usually come after the verb or after a preposition like 'to' or 'for'. For example, \"She saw *me*\" or \"I gave the book to *him*.\"",
+  "patterns": [
+   "Subject pronoun + verb",
+   "Verb + object pronoun",
+   "Preposition + object pronoun"
+  ],
+  "examples": [
+   {
+    "text": "I like to read books.",
+    "note": "'I' is the subject pronoun, doing the action of liking.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She helped him with his homework.",
+    "note": "'Him' is the object pronoun, receiving the action of helping.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They are going to the park.",
+    "note": "'They' is the subject pronoun, doing the action of going.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My friend called me yesterday.",
+    "note": "'Me' is the object pronoun, receiving the action of calling.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I saw them at the store.",
+    "note": "'Them' is the object pronoun, receiving the action of seeing.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Me like coffee.",
+    "right": "I like coffee.",
+    "note": "Use 'I' as the subject of the sentence."
+   },
+   {
+    "wrong": "She gave the gift to he.",
+    "right": "She gave the gift to him.",
+    "note": "Use 'him' as the object of the preposition 'to'."
+   },
+   {
+    "wrong": "Him is a good student.",
+    "right": "He is a good student.",
+    "note": "Use 'he' as the subject of the sentence."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.subject-and-object-pronouns.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ like to eat apples.",
+   "options": [
+    "Me",
+    "I",
+    "Him"
+   ],
+   "answer": 1,
+   "explanation": "'I' is the subject pronoun, performing the action of liking."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Can you help ___?",
+   "options": [
+    "I",
+    "he",
+    "me"
+   ],
+   "answer": 2,
+   "explanation": "'Me' is the object pronoun, receiving the action of helping."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She knows ___ very well.",
+   "options": [
+    "they",
+    "them",
+    "he"
+   ],
+   "answer": 1,
+   "explanation": "'Them' is the object pronoun, receiving the action of knowing."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ is my brother.",
+   "options": [
+    "Him",
+    "He",
+    "Me"
+   ],
+   "answer": 1,
+   "explanation": "'He' is the subject pronoun, performing the action of being."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My sister and ___ went to the cinema.",
+   "answers": [
+    [
+     "I"
+    ]
+   ],
+   "explanation": "'I' is the subject pronoun, performing the action of going with the sister."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The teacher gave the book to ___.",
+   "answers": [
+    [
+     "him"
+    ],
+    [
+     "them"
+    ]
+   ],
+   "explanation": "'Him' or 'them' are object pronouns, receiving the book after the preposition 'to'."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ saw ___ at the park.",
+   "answers": [
+    [
+     "I"
+    ],
+    [
+     "him"
+    ]
+   ],
+   "explanation": "'I' is the subject pronoun, and 'him' is the object pronoun receiving the action of seeing."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "saw",
+    "him",
+    "yesterday",
+    "."
+   ],
+   "distractors": [
+    "she"
+   ],
+   "explanation": "The correct order is subject, verb, object, time expression."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "like",
+    "to",
+    "play",
+    "games",
+    "."
+   ],
+   "distractors": [
+    "them"
+   ],
+   "explanation": "The correct order is subject, verb, infinitive, object."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Me want to learn English.",
+   "answers": [
+    "I want to learn English."
+   ],
+   "explanation": "Use 'I' as the subject of the sentence."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She talked to he about the project.",
+   "answers": [
+    "She talked to him about the project."
+   ],
+   "explanation": "Use 'him' as the object of the preposition 'to'."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My friend helped me.",
+   "instruction": "Change the subject to 'I'.",
+   "answers": [
+    "I helped my friend."
+   ],
+   "explanation": "When 'I' becomes the subject, 'my friend' becomes the object."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He gave the ball to her.",
+   "instruction": "Replace 'her' with a pronoun that refers to multiple people.",
+   "answers": [
+    "He gave the ball to them."
+   ],
+   "explanation": "'Them' is the object pronoun for multiple people."
+  },
+  {
+   "id": "ex.a1.subject-and-object-pronouns.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.subject-and-object-pronouns"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I like",
+     "right": "to read books."
+    },
+    {
+     "left": "She called",
+     "right": "me this morning."
+    },
+    {
+     "left": "He gave the gift",
+     "right": "to them."
+    },
+    {
+     "left": "They are",
+     "right": "my new neighbors."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "I like",
+  "he is",
+  "they are",
+  "saw me",
+  "with him",
+  "for them"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.subject-and-object-pronouns.01": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.02": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.03": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.04": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.05": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.06": {
+    "status": "drop",
+    "note": "Invalid: ex.a1.subject-and-object-pronouns.06: needs one answer list per gap (1)"
+   },
+   "ex.a1.subject-and-object-pronouns.07": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.08": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.09": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.10": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.11": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.12": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.13": {
+    "status": "pass"
+   },
+   "ex.a1.subject-and-object-pronouns.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 262352,
+   "text": "I like English, too.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 288763,
+   "text": "He is going to help you.",
+   "author": "CK"
+  }
+ ]
+}

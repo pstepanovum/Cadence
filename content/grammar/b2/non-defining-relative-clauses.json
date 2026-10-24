@@ -1,0 +1,410 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "non-defining-relative-clauses",
+ "draftHash": "7944b5004e5b8071",
+ "grammarPoint": {
+  "id": "gp.non-defining-relative-clauses",
+  "level": "B2",
+  "topicId": "topic.relative-clauses",
+  "title": "Non-defining relative clauses",
+  "summary": "Non-defining relative clauses give extra, non-essential information about a noun, always separated by commas.",
+  "explanation": "Non-defining relative clauses add *extra information* about a noun in a sentence. This information isn't essential to understand who or what you're talking about; the sentence would still make sense without it. Think of it as a helpful side note.\n\nThese clauses are always separated from the rest of the sentence by *commas*. If the clause is in the middle of a sentence, it will have a comma before and after it. If it's at the end, it will have a comma before it.\n\nWe use relative pronouns like *who* (for people), *which* (for things), *whose* (for possession), *where* (for places), and *when* (for times). Remember, you *cannot* use \"that\" in non-defining relative clauses.",
+  "patterns": [
+   "Noun, who + verb/subject + verb, ...",
+   "Noun, which + verb/subject + verb, ...",
+   "Noun, whose + noun + verb, ...",
+   "Noun, where + subject + verb, ...",
+   "Noun, when + subject + verb, ..."
+  ],
+  "examples": [
+   {
+    "text": "My sister, who lives in Berlin, is visiting next month.",
+    "note": "Adds extra information about \"my sister\".",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new cafe, which opened last week, serves excellent coffee.",
+    "note": "Gives more detail about \"the new cafe\".",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Mr. Henderson, whose car broke down, had to take the bus.",
+    "note": "Shows possession related to \"Mr. Henderson\".",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Paris, where I spent my honeymoon, is a beautiful city.",
+    "note": "Provides extra information about \"Paris\" as a place.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Last summer, when we traveled to Italy, was unforgettable.",
+    "note": "Adds detail about \"last summer\" as a time.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "My friend that works at the library is very helpful.",
+    "right": "My friend, who works at the library, is very helpful.",
+    "note": "Use \"who\" for people and separate with commas for non-essential information."
+   },
+   {
+    "wrong": "The old house, which is on the hill is for sale.",
+    "right": "The old house, which is on the hill, is for sale.",
+    "note": "A non-defining clause in the middle of a sentence needs a comma before and after it."
+   },
+   {
+    "wrong": "My new laptop, that I bought yesterday, is very fast.",
+    "right": "My new laptop, which I bought yesterday, is very fast.",
+    "note": "Do not use \"that\" in non-defining relative clauses."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.non-defining-relative-clauses.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My neighbor, ___ is a talented artist, painted this portrait.",
+   "options": [
+    "that",
+    "who",
+    "which",
+    "whose"
+   ],
+   "answer": 1,
+   "explanation": "\"Who\" is used for people, and the commas indicate that the information is extra."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The Amazon River, ___ flows through South America, is the second longest river.",
+   "options": [
+    "that",
+    "where",
+    "which",
+    "who"
+   ],
+   "answer": 2,
+   "explanation": "\"Which\" is used for things (like a river), and the commas indicate extra information."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We visited the museum, ___ was closed for renovations.",
+   "options": [
+    "that",
+    "where",
+    "which",
+    "when"
+   ],
+   "answer": 2,
+   "explanation": "\"Which\" refers to the museum, and the clause provides extra information about it."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Sarah, ___ brother is a famous chef, gave me a cooking tip.",
+   "options": [
+    "who",
+    "which",
+    "whose",
+    "where"
+   ],
+   "answer": 2,
+   "explanation": "\"Whose\" correctly shows possession, and the clause adds extra information about Sarah."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old bridge, ___ was built in 1880, needs repairs.",
+   "answers": [
+    [
+     "which"
+    ]
+   ],
+   "explanation": "\"Which\" refers to the bridge, and the commas indicate extra information."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My cousin, ___ lives in Canada, sent me a postcard.",
+   "answers": [
+    [
+     "who"
+    ]
+   ],
+   "explanation": "\"Who\" refers to a person, and the commas indicate extra information."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The restaurant, ___ we had dinner last night, has amazing reviews.",
+   "answers": [
+    [
+     "where"
+    ]
+   ],
+   "explanation": "\"Where\" refers to the place where an action happened, providing extra detail about the restaurant."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "My",
+    "dog",
+    ",",
+    "who",
+    "loves",
+    "to",
+    "play",
+    ",",
+    "is",
+    "very",
+    "energetic",
+    "."
+   ],
+   "distractors": [
+    "and",
+    "then"
+   ],
+   "explanation": "The clause \"who loves to play\" adds extra information about \"My dog\" and is correctly separated by commas."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "new",
+    "park",
+    ",",
+    "which",
+    "has",
+    "a",
+    "large",
+    "playground",
+    ",",
+    "will",
+    "open",
+    "soon",
+    "."
+   ],
+   "distractors": [
+    "also",
+    "for"
+   ],
+   "explanation": "\"Which has a large playground\" provides extra detail about \"The new park\" and is enclosed by commas."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My uncle, that lives in Sydney, is coming to visit.",
+   "answers": [
+    "My uncle, who lives in Sydney, is coming to visit."
+   ],
+   "explanation": "\"That\" cannot be used in non-defining relative clauses; \"who\" is correct for people."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The ancient city, which was discovered recently needs protection.",
+   "answers": [
+    "The ancient city, which was discovered recently, needs protection."
+   ],
+   "explanation": "A non-defining clause in the middle of a sentence requires a comma before and after it."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My car is a classic model. It often breaks down.",
+   "instruction": "Combine these sentences using a non-defining relative clause.",
+   "answers": [
+    "My car, which is a classic model, often breaks down.",
+    "My car, which often breaks down, is a classic model."
+   ],
+   "explanation": "The clause \"which is a classic model\" or \"which often breaks down\" adds extra information about \"my car\" and is set off by commas."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I met Anna yesterday. Her sister is a famous musician.",
+   "instruction": "Rewrite using 'whose'.",
+   "answers": [
+    "I met Anna, whose sister is a famous musician, yesterday."
+   ],
+   "explanation": "\"Whose\" correctly shows possession, and the clause provides extra information about Anna, separated by commas."
+  },
+  {
+   "id": "ex.b2.non-defining-relative-clauses.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.non-defining-relative-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "My brother, who works as a doctor,",
+     "right": "is very busy."
+    },
+    {
+     "left": "The old bookstore, which has been there for decades,",
+     "right": "is closing next month."
+    },
+    {
+     "left": "Our vacation to Japan, when we saw Mount Fuji,",
+     "right": "was truly memorable."
+    },
+    {
+     "left": "The professor, whose research is groundbreaking,",
+     "right": "will give a lecture."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\w+, (who|which|whose|where|when) [^,]+,",
+  "\\w+, (who|which|whose|where|when) [^,]+[.?!]"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.non-defining-relative-clauses.01": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.02": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.03": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.04": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.05": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.06": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.07": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.08": {
+    "status": "drop",
+    "note": "Key judged wrong: Both answers fail to use the provided tokens 'and' and 'then'."
+   },
+   "ex.b2.non-defining-relative-clauses.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Both answers fail to use the provided token 'for'."
+   },
+   "ex.b2.non-defining-relative-clauses.10": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.11": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.12": {
+    "status": "pass"
+   },
+   "ex.b2.non-defining-relative-clauses.13": {
+    "status": "pass",
+    "note": "Checker slip: The relative clause in the second answer is improperly separated from its antecedent 'Anna'."
+   },
+   "ex.b2.non-defining-relative-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 7798131,
+   "text": "We're studying English, which is an important subject nowadays.",
+   "author": "AlanF_US"
+  },
+  {
+   "sentenceId": 6698082,
+   "text": "The ball, which is red, is pretty.",
+   "author": "Eccles17"
+  }
+ ]
+}

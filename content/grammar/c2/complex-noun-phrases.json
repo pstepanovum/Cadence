@@ -1,0 +1,477 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "complex-noun-phrases",
+ "draftHash": "d6510a93f2994d48",
+ "grammarPoint": {
+  "id": "gp.complex-noun-phrases",
+  "level": "C2",
+  "topicId": "topic.clauses",
+  "title": "Complex noun phrases",
+  "summary": "Learn to construct sophisticated noun phrases using a variety of pre- and post-modifiers to convey precise and detailed information concisely.",
+  "explanation": "Complex noun phrases allow you to pack a lot of information into a single grammatical unit, making your writing more precise and efficient. They consist of a head noun modified by other words or phrases that come before it (pre-modifiers) or after it (post-modifiers).\n\nPre-modifiers can include determiners, adjectives (including compound adjectives), participles (e.g., *running*, *broken*), and noun adjuncts (nouns acting as adjectives, e.g., *research* in *research project*). These elements provide essential details about the noun before it is even introduced.\n\nPost-modifiers add further specificity and context. Common types include prepositional phrases, relative clauses (both full and reduced), participial phrases, infinitive phrases, and appositives. Mastering the combination and placement of these modifiers is key to building long, precise, and grammatically sound noun phrases.",
+  "patterns": [
+   "Determiner + (Adjective/Participle/Noun Adjunct) + Noun + (Prepositional Phrase)",
+   "Determiner + Noun + (Relative Clause/Reduced Relative Clause)",
+   "Determiner + Noun + (Participial Phrase)",
+   "Determiner + Noun + (Infinitive Phrase)",
+   "Determiner + Noun, (Appositive Phrase), ..."
+  ],
+  "examples": [
+   {
+    "text": "The *newly installed, energy-efficient solar panels*, *designed to power the entire building*, are expected to significantly reduce electricity costs.",
+    "note": "Uses an adverb+adjective pre-modifier and a participial phrase as a post-modifier.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Her *profound insights into quantum physics*, *a field she has dedicated her life to studying*, were presented at the conference.",
+    "note": "Combines an adjective and prepositional phrase with an appositive for detailed description.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The *intricate network of underground tunnels*, *built by ancient civilizations for unknown purposes*, remains a mystery to archaeologists.",
+    "note": "Features an adjective and a prepositional phrase, followed by a participial phrase as a post-modifier.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "A *comprehensive analysis of the recent economic downturn*, *published last week by the national research institute*, highlighted several key factors.",
+    "note": "Illustrates an adjective and prepositional phrase, with a participial phrase providing additional information.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The *urgent need for global cooperation*, *to address the escalating climate crisis*, was emphasized by the delegates.",
+    "note": "Demonstrates an adjective and prepositional phrase, followed by an infinitive phrase as a post-modifier.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Having finished the experiment, the data was analyzed by the scientists.",
+    "right": "Having finished the experiment, the scientists analyzed the data.",
+    "note": "Ensure participial phrases clearly modify the correct subject to avoid dangling modifiers."
+   },
+   {
+    "wrong": "The report which was written by the team and which contained many important findings was presented.",
+    "right": "The report, written by the team and containing many important findings, was presented.",
+    "note": "Condense relative clauses into more concise participial phrases for better flow."
+   },
+   {
+    "wrong": "He saw a dog with one eye running down the street.",
+    "right": "He saw a one-eyed dog running down the street.",
+    "note": "Place modifiers clearly to avoid ambiguity about what is being modified."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.complex-noun-phrases.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.complex-noun-phrases"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which option best completes the sentence, forming a precise and concise noun phrase?\nThe company introduced a ___ to streamline internal communications.",
+   "options": [
+    "new system which was designed",
+    "newly designed system",
+    "system that was new and designed",
+    "system, new and designed"
+   ],
+   "answer": 1,
+   "explanation": "The option 'newly designed system' is the most concise and precise, using an adverb and a past participle as pre-modifiers to form a complex noun phrase."
+  },
+  {
+   "id": "ex.c2.complex-noun-phrases.02",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.complex-noun-phrases"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The ___ (recently/discover) artifact, ___ (believed/be) from an ancient civilization, offers new insights into their culture.",
+   "answers": [
+    [
+     "recently discovered"
+    ],
+    [
+     "believed to be"
+    ]
+   ],
+   "explanation": "The first gap requires an adverb-participle combination as a pre-modifier. The second gap needs a participial phrase with an infinitive to modify 'artifact'."
+  },
+  {
+   "id": "ex.c2.complex-noun-phrases.03",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.complex-noun-phrases"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "innovative",
+    "software",
+    "solution",
+    "developed",
+    "by",
+    "our",
+    "team",
+    "received",
+    "acclaim",
+    "."
+   ],
+   "distractors": [
+    "quickly",
+    "always"
+   ],
+   "explanation": "This sentence correctly places the participial phrase 'developed by our team' as a post-modifier to 'software solution', creating a complex noun phrase."
+  },
+  {
+   "id": "ex.c2.complex-noun-phrases.04",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.complex-noun-phrases"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The decision, which was made by the board and was controversial, led to widespread debate.",
+   "answers": [
+    "The decision, made by the board and controversial, led to widespread debate.",
+    "The controversial decision, made by the board, led to widespread debate."
+   ],
+   "explanation": "The original sentence is wordy. Reducing the relative clause 'which was made' to a participial phrase 'made' and placing 'controversial' more directly improves conciseness and flow."
+  },
+  {
+   "id": "ex.c2.complex-noun-phrases.05",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.complex-noun-phrases"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The scientist presented a theory that had been carefully formulated over many years.",
+   "instruction": "Rewrite the sentence, condensing the relative clause into a more concise noun phrase.",
+   "answers": [
+    "The scientist presented a theory carefully formulated over many years.",
+    "The scientist presented a carefully formulated theory over many years."
+   ],
+   "explanation": "The relative clause 'that had been carefully formulated' can be reduced to the participial phrase 'carefully formulated', making the noun phrase more concise."
+  },
+  {
+   "id": "ex.c2.complex-noun-phrases.06",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.complex-noun-phrases"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The meticulously crafted wooden sculpture",
+     "right": "from the local artisan's workshop won first prize."
+    },
+    {
+     "left": "Her insightful commentary on the documentary",
+     "right": "sparked a lively discussion among the viewers."
+    },
+    {
+     "left": "The recently published research paper",
+     "right": "detailing the effects of climate change is highly influential."
+    },
+    {
+     "left": "A comprehensive guide to urban gardening",
+     "right": "designed for beginners, is now available online."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "the [a-z]+ [a-z]+ [a-z]+, [a-z]+ by",
+  "a [a-z]+ [a-z]+ [a-z]+ to [a-z]+",
+  "the [a-z]+ [a-z]+ [a-z]+ of [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.complex-noun-phrases.01": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.02": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.03": {
+    "status": "drop",
+    "note": "Key judged wrong: Both answers fail to use all provided tokens, as the key omits 'always' and 'quickly' while the other answer omits 'always'."
+   },
+   "ex.c2.complex-noun-phrases.04": {
+    "status": "drop",
+    "note": "Key judged wrong: The original sentence has no grammatical mistake, and the key creates an awkward coordination between a participle and an adjective."
+   },
+   "ex.c2.complex-noun-phrases.05": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.06": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.07": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.08": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.09": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.10": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.11": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.12": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.13": {
+    "status": "pass"
+   },
+   "ex.c2.complex-noun-phrases.14": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits the token 'quickly', whereas the other answer uses all tokens correctly."
+   },
+   "ex.c2.complex-noun-phrases.15": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits the token 'story', whereas the other answer uses all tokens correctly."
+   },
+   "ex.c2.complex-noun-phrases.16": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly fix the misplaced relative clause to make the sentence clear and natural."
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c2.complex-noun-phrases.07",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The ___ offers a fresh perspective on sustainable urban planning.",
+    "options": [
+     "innovative research conducted by the university team",
+     "research innovative conducted by the university team",
+     "university team's research innovative conducted",
+     "conducted research innovative by the university team"
+    ],
+    "answer": 0,
+    "explanation": "\"Innovative\" is an adjective pre-modifying \"research,\" and \"conducted by the university team\" is a participial phrase post-modifying it."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.08",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The company implemented a ___ to enhance employee well-being.",
+    "options": [
+     "newly designed comprehensive wellness program",
+     "wellness program comprehensive newly designed",
+     "comprehensive newly designed wellness program",
+     "program wellness newly designed comprehensive"
+    ],
+    "answer": 0,
+    "explanation": "Adverbs (\"newly\") modify participles (\"designed\"), and adjectives (\"comprehensive\") precede the head noun (\"program\")."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.09",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The ___ is expected to significantly impact global trade relations.",
+    "options": [
+     "recently signed trade agreement between the two nations",
+     "trade agreement recently signed between the two nations",
+     "agreement trade recently signed between the two nations",
+     "between the two nations recently signed trade agreement"
+    ],
+    "answer": 0,
+    "explanation": "\"Recently signed\" is a participial pre-modifier, and \"between the two nations\" is a prepositional phrase post-modifier."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.10",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The ___ requires careful consideration before implementation.",
+    "options": [
+     "complex ethical dilemma presented by the new technology",
+     "ethical dilemma complex presented by the new technology",
+     "dilemma ethical complex presented by the new technology",
+     "new technology presented by the complex ethical dilemma"
+    ],
+    "answer": 0,
+    "explanation": "\"Complex ethical\" are adjectives pre-modifying \"dilemma,\" and \"presented by the new technology\" is a participial phrase post-modifying it."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.11",
+    "kind": "gap_fill",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The ___ (careful/review) of the ___ (proposed/budget) revealed several discrepancies.",
+    "answers": [
+     [
+      "careful review"
+     ],
+     [
+      "proposed budget"
+     ]
+    ],
+    "explanation": "\"Careful\" is an adjective modifying \"review,\" and \"proposed\" is a participle modifying \"budget.\""
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.12",
+    "kind": "gap_fill",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The ___ (long-awaited/decision) ___ (made/the board) was finally announced.",
+    "answers": [
+     [
+      "long-awaited decision"
+     ],
+     [
+      "made by the board"
+     ]
+    ],
+    "explanation": "\"Long-awaited\" is a compound adjective pre-modifier, and \"made by the board\" is a participial phrase post-modifier."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.13",
+    "kind": "gap_fill",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "Scientists are studying the ___ (newly/discovered/species) ___ (living/deep ocean).",
+    "answers": [
+     [
+      "newly discovered species"
+     ],
+     [
+      "living in the deep ocean"
+     ]
+    ],
+    "explanation": "\"Newly discovered\" is an adverb + participle pre-modifier, and \"living in the deep ocean\" is a participial phrase post-modifier."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.14",
+    "kind": "sentence_building",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Put the words in the right order.",
+    "answer": [
+     "The",
+     "innovative",
+     "solution",
+     "developed",
+     "by",
+     "the",
+     "team",
+     "received",
+     "praise",
+     "."
+    ],
+    "distractors": [
+     "quickly"
+    ],
+    "explanation": "\"Innovative\" is a pre-modifier, and \"developed by the team\" is a post-modifier."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.15",
+    "kind": "sentence_building",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Put the words in the right order.",
+    "answer": [
+     "Her",
+     "latest",
+     "novel",
+     ",",
+     "a",
+     "gripping",
+     "mystery",
+     "set",
+     "in",
+     "Paris",
+     ",",
+     "became",
+     "a",
+     "bestseller",
+     "."
+    ],
+    "distractors": [
+     "story"
+    ],
+    "explanation": "\"Latest\" is a pre-modifier, and \"a gripping mystery set in Paris\" is an appositive phrase post-modifier."
+   },
+   {
+    "id": "ex.c2.complex-noun-phrases.16",
+    "kind": "error_correction",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.complex-noun-phrases"
+    ],
+    "prompt": "Find the mistake and write the sentence correctly.",
+    "sentence": "The *report, which was published recently, on the economic forecast* is highly anticipated.",
+    "answers": [
+     "The *recently published report on the economic forecast* is highly anticipated.",
+     "The report on the economic forecast, which was published recently, is highly anticipated."
+    ],
+    "explanation": "Combine \"recently published\" as a pre-modifier for conciseness and better flow."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2267901,
+   "text": "That was a very inconvenient time to bring up the subject.",
+   "author": "_undertoad"
+  },
+  {
+   "sentenceId": 270905,
+   "text": "It's a good idea to bring something to slip on over your bathing suit.",
+   "author": "CK"
+  }
+ ]
+}

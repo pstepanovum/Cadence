@@ -1,0 +1,407 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "articles-in-general-statements",
+ "draftHash": "6c0d93a6e3f6c187",
+ "grammarPoint": {
+  "id": "gp.articles-in-general-statements",
+  "level": "B2",
+  "topicId": "topic.articles-determiners",
+  "title": "Articles in general statements",
+  "summary": "Learn when to use 'the' or no article at all when talking about things in general, including institutions like school or hospital.",
+  "explanation": "When we talk about things in general, we often use articles differently than when we talk about specific items. For *plural countable nouns* and *uncountable nouns*, we usually use no article (the zero article) to make a general statement.\n\nHowever, for a *singular countable noun*, we can use 'the' to refer to an entire class or species. This is called the generic 'the'. It treats one example as representative of all of them.\n\nFinally, with certain institutions like *school*, *hospital*, *church*, *prison*, or *work*, we use the zero article when we are talking about their *purpose* or the activity that happens there. If we are talking about the specific building itself, we use 'the'.",
+  "patterns": [
+   "Zero article + plural countable noun (general)",
+   "Zero article + uncountable noun (general)",
+   "The + singular countable noun (generic class)",
+   "Zero article + institution (purpose)"
+  ],
+  "examples": [
+   {
+    "text": "Dogs are loyal companions.",
+    "note": "No article is used because 'dogs' refers to all dogs in general.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Water is essential for life.",
+    "note": "No article is used because 'water' is an uncountable noun used in a general sense.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The internet has changed how we communicate.",
+    "note": "'The internet' refers to the concept or system as a whole, representing its class.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My cousin is still in school.",
+    "note": "No article is used because 'school' refers to the activity of studying, not a specific building.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The hospital across the street is very modern.",
+    "note": "'The hospital' refers to a specific building, not the general concept of receiving medical care.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The happiness is important.",
+    "right": "Happiness is important.",
+    "note": "Do not use 'the' with uncountable nouns when speaking generally."
+   },
+   {
+    "wrong": "I love cat.",
+    "right": "I love the cat. / I love cats.",
+    "note": "Use 'the' for a generic singular noun or no article for a general plural noun."
+   },
+   {
+    "wrong": "She went to the hospital for an emergency.",
+    "right": "She went to hospital for an emergency.",
+    "note": "Use the zero article when referring to the purpose of an institution."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.articles-in-general-statements.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ books are a great source of knowledge.",
+   "options": [
+    "A",
+    "The",
+    "An",
+    "___"
+   ],
+   "answer": 3,
+   "explanation": "When talking about plural nouns in a general sense, we use the zero article."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ piano is a beautiful instrument.",
+   "options": [
+    "A",
+    "The",
+    "An",
+    "___"
+   ],
+   "answer": 1,
+   "explanation": "We use 'the' to refer to a class of instruments or inventions in general."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Many people go to ___ church on Sundays.",
+   "options": [
+    "a",
+    "the",
+    "___"
+   ],
+   "answer": 2,
+   "explanation": "When referring to the purpose of an institution like 'church' (to worship), we use the zero article."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ pollution is a serious global problem.",
+   "options": [
+    "A",
+    "The",
+    "___"
+   ],
+   "answer": 2,
+   "explanation": "'Pollution' is an uncountable noun, so we use the zero article when speaking generally."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ coffee helps me wake up in ___ morning.",
+   "answers": [
+    [
+     "Coffee"
+    ],
+    [
+     "the"
+    ]
+   ],
+   "explanation": "'Coffee' is an uncountable noun used generally, so it takes the zero article. 'The morning' is a specific time of day."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ elephant is ___ largest land animal.",
+   "answers": [
+    [
+     "The",
+     "An"
+    ],
+    [
+     "the"
+    ]
+   ],
+   "explanation": "We use 'the' for a singular noun representing a whole species ('the elephant') and with superlatives ('the largest')."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "After the accident, he was taken to ___ hospital.",
+   "answers": [
+    [
+     "hospital"
+    ]
+   ],
+   "explanation": "When referring to the purpose of going to 'hospital' (for treatment), we use the zero article."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Children",
+    "need",
+    "love",
+    "and",
+    "support",
+    "."
+   ],
+   "distractors": [
+    "A",
+    "The"
+   ],
+   "explanation": "When talking about 'children' in general, no article is needed. 'Love' and 'support' are uncountable nouns used generally."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "bicycle",
+    "is",
+    "an",
+    "efficient",
+    "way",
+    "to",
+    "travel",
+    "."
+   ],
+   "distractors": [
+    "A",
+    "Some"
+   ],
+   "explanation": "'The bicycle' refers to the invention or type of vehicle in general. 'An efficient way' uses 'an' because 'efficient' starts with a vowel sound."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The birds fly south for the winter.",
+   "answers": [
+    "Birds fly south for the winter."
+   ],
+   "explanation": "When talking about 'birds' in general, no article is needed."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My sister is at the work right now.",
+   "answers": [
+    "My sister is at work right now."
+   ],
+   "explanation": "When referring to the activity of 'work', we use the zero article."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I saw a specific tiger at the zoo.",
+   "instruction": "Rewrite the sentence to talk about tigers in general.",
+   "answers": [
+    "The tiger is a powerful animal.",
+    "Tigers are powerful animals.",
+    "Tigers are majestic animals."
+   ],
+   "explanation": "To talk about tigers in general, you can use 'the' with the singular noun or no article with the plural noun."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She is going to the specific building where lessons are taught.",
+   "instruction": "Rewrite the sentence to talk about the purpose of going to school.",
+   "answers": [
+    "She is going to school."
+   ],
+   "explanation": "When referring to the purpose of attending 'school', the zero article is used."
+  },
+  {
+   "id": "ex.b2.articles-in-general-statements.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.articles-in-general-statements"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Computers have changed",
+     "right": "our lives dramatically."
+    },
+    {
+     "left": "The computer is",
+     "right": "a complex machine."
+    },
+    {
+     "left": "He was sent to prison",
+     "right": "for his crimes."
+    },
+    {
+     "left": "The prison is located",
+     "right": "on an island."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "the (lion|computer|internet|piano|bicycle)",
+  "(go to|at|in) (school|hospital|work|church|prison)",
+  "(love|like|hate|enjoy) (music|books|travel|nature|coffee)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.articles-in-general-statements.01": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.02": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.03": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.04": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.05": {
+    "status": "pass",
+    "note": "Checker slip: The key is correct, whereas the other answer leaves the first gap unfilled."
+   },
+   "ex.b2.articles-in-general-statements.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'The' and 'An' are grammatically valid choices for generic reference here."
+   },
+   "ex.b2.articles-in-general-statements.07": {
+    "status": "drop",
+    "note": "Key judged wrong: The key incorrectly repeats the noun instead of providing an article or zero article."
+   },
+   "ex.b2.articles-in-general-statements.08": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.09": {
+    "status": "drop",
+    "note": "Ambiguous: Both sentences are grammatically correct and validly formed from the available tokens."
+   },
+   "ex.b2.articles-in-general-statements.10": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.11": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences correctly generalize the topic using generic singular and plural forms."
+   },
+   "ex.b2.articles-in-general-statements.13": {
+    "status": "pass"
+   },
+   "ex.b2.articles-in-general-statements.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 21636,
+   "text": "Success in school calls for hard study.",
+   "author": "Zifre"
+  },
+  {
+   "sentenceId": 69787,
+   "text": "Do you like the piano?",
+   "author": "CK"
+  }
+ ]
+}

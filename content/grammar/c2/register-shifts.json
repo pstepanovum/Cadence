@@ -1,0 +1,413 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "register-shifts",
+ "draftHash": "0e3369853a597467",
+ "grammarPoint": {
+  "id": "gp.register-shifts",
+  "level": "C2",
+  "topicId": "topic.emphasis",
+  "title": "Formal and informal register",
+  "summary": "Learn to adapt your language to different social contexts by choosing between formal and informal English expressions and structures for the same idea.",
+  "explanation": "The *register* of your language refers to how formal or informal it is. Choosing the appropriate register is crucial for effective communication, as it signals your relationship with the audience and the context of the interaction.\n\n*Formal English* is typically used in academic writing, professional settings, official documents, and when addressing someone in a position of authority. It is characterized by precise vocabulary, complex sentence structures, avoidance of contractions, phrasal verbs, and slang. The tone is often objective and impersonal.\n\n*Informal English* is used in casual conversations, personal emails, social media, and with friends and family. It features simpler vocabulary, contractions, phrasal verbs, idioms, and a more direct, personal style. It allows for a relaxed and conversational tone.\n\nUnderstanding the nuances between formal and informal expressions for the same idea allows you to navigate various social and professional situations with confidence and appropriateness. It's not about one being 'better' than the other, but about selecting the most suitable option for the given circumstances.",
+  "patterns": [
+   "Formal: complex sentence structures, passive voice, nominalization",
+   "Informal: simpler sentences, active voice, phrasal verbs",
+   "Formal: Latinate vocabulary, precise terms",
+   "Informal: Germanic vocabulary, common words, contractions"
+  ],
+  "examples": [
+   {
+    "text": "Formal: We *endeavor to ascertain* the root cause of the issue. Informal: We *try to find out* why it happened.",
+    "note": "Formal uses a more complex verb phrase; informal uses a common phrasal verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Formal: We *regret to inform you* that your application was unsuccessful. Informal: Sorry, your application *didn't make it*.",
+    "note": "Formal is polite and indirect; informal is direct and uses an idiom.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Formal: It is *imperative that we commence* the project promptly. Informal: We *really need to start* the project soon.",
+    "note": "Formal uses a strong adjective and subjunctive; informal uses simpler adverbs and verbs.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Formal: The *aforementioned data indicates* a significant trend. Informal: The *data we just talked about shows* a big trend.",
+    "note": "Formal uses a specific adjective and nominalization; informal uses a simpler phrase and active verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Formal: Kindly *submit your request* prior to the deadline. Informal: *Please get your request in* before the deadline.",
+    "note": "Formal uses a polite adverb and nominalization; informal uses a phrasal verb and direct address.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Hey boss, I gotta bounce early today.",
+    "right": "Excuse me, I need to leave early today.",
+    "note": "Avoid contractions and slang in formal settings."
+   },
+   {
+    "wrong": "I shall endeavor to ascertain the whereabouts of my keys.",
+    "right": "I'll try to find my keys.",
+    "note": "Overly formal language can sound unnatural in casual conversation."
+   },
+   {
+    "wrong": "The committee convened to discuss the proposal, but then we all chilled out for a bit.",
+    "right": "The committee convened to discuss the proposal, and then we took a short break.",
+    "note": "Maintain a consistent register throughout your communication."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.register-shifts.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The research team will ___ the implications of these findings.",
+   "options": [
+    "look into",
+    "check out",
+    "investigate",
+    "dig into"
+   ],
+   "answer": 2,
+   "explanation": "'Investigate' is the most appropriate formal verb for a research context, unlike the more informal phrasal verbs."
+  },
+  {
+   "id": "ex.c2.register-shifts.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Could you please ___ the document by Friday?",
+   "options": [
+    "hand in",
+    "submit",
+    "turn in",
+    "give in"
+   ],
+   "answer": 1,
+   "explanation": "'Submit' is the most formal and professional option for requesting a document, suitable for a workplace or academic setting."
+  },
+  {
+   "id": "ex.c2.register-shifts.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'm really ___ about the concert tonight!",
+   "options": [
+    "enthusiastic",
+    "thrilled",
+    "stoked",
+    "delighted"
+   ],
+   "answer": 2,
+   "explanation": "'Stoked' is a very informal and enthusiastic way to express excitement, fitting for a casual conversation about a concert."
+  },
+  {
+   "id": "ex.c2.register-shifts.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The manager ___ the new policy to the staff.",
+   "options": [
+    "laid out",
+    "explained",
+    "spelled out",
+    "put across"
+   ],
+   "answer": 1,
+   "explanation": "'Explained' is a neutral and professional verb, suitable for a manager communicating a policy to staff without being overly formal or informal."
+  },
+  {
+   "id": "ex.c2.register-shifts.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The company decided to ___ the project due to budget constraints.",
+   "answers": [
+    [
+     "terminate"
+    ]
+   ],
+   "explanation": "'Terminate' is a formal verb suitable for a business context, meaning to end something."
+  },
+  {
+   "id": "ex.c2.register-shifts.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'll ___ you later to discuss the details.",
+   "answers": [
+    [
+     "catch up with",
+     "call"
+    ]
+   ],
+   "explanation": "'Catch up with' is a common informal phrasal verb for meeting or talking to someone after a period."
+  },
+  {
+   "id": "ex.c2.register-shifts.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It is ___ that all employees adhere to the safety regulations.",
+   "answers": [
+    [
+     "essential"
+    ],
+    [
+     "imperative"
+    ]
+   ],
+   "explanation": "'Essential' or 'imperative' are formal adjectives emphasizing the critical importance of adhering to regulations."
+  },
+  {
+   "id": "ex.c2.register-shifts.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "must",
+    "endeavor",
+    "to",
+    "resolve",
+    "this",
+    "issue",
+    "promptly",
+    "."
+   ],
+   "distractors": [
+    "try",
+    "quickly"
+   ],
+   "explanation": "This sentence uses formal vocabulary ('endeavor', 'resolve', 'promptly') and structure, suitable for a professional context."
+  },
+  {
+   "id": "ex.c2.register-shifts.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Could",
+    "you",
+    "please",
+    "look",
+    "into",
+    "this",
+    "for",
+    "me",
+    "?"
+   ],
+   "distractors": [
+    "investigate",
+    "kindly"
+   ],
+   "explanation": "This is a polite but informal request, using the phrasal verb 'look into'."
+  },
+  {
+   "id": "ex.c2.register-shifts.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The CEO kicked off the meeting with a formal address.",
+   "answers": [
+    "The CEO commenced the meeting with a formal address.",
+    "The CEO began the meeting with a formal address."
+   ],
+   "explanation": "'Kicked off' is too informal for describing a CEO's formal address. 'Commenced' or 'began' are more appropriate."
+  },
+  {
+   "id": "ex.c2.register-shifts.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I would like to express my profound gratitude for the awesome party last night.",
+   "answers": [
+    "I would like to express my profound gratitude for the wonderful party last night.",
+    "Thanks for the awesome party last night!",
+    "I would like to express my profound gratitude for the excellent party last night."
+   ],
+   "explanation": "The formal phrase 'profound gratitude' clashes with the informal adjective 'awesome'. You can either make the party description formal or the gratitude informal."
+  },
+  {
+   "id": "ex.c2.register-shifts.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We need to figure out the problem.",
+   "instruction": "Rewrite in a more formal style.",
+   "answers": [
+    "We need to ascertain the problem.",
+    "We need to determine the problem.",
+    "We need to identify the problem."
+   ],
+   "explanation": "Replace the informal phrasal verb 'figure out' with a more formal equivalent like 'ascertain', 'determine', or 'identify'."
+  },
+  {
+   "id": "ex.c2.register-shifts.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It is requested that all personnel refrain from utilizing personal electronic devices during working hours.",
+   "instruction": "Rewrite in a more informal style.",
+   "answers": [
+    "Please don't use your personal electronic devices at work.",
+    "Don't use your phones or other personal gadgets during work."
+   ],
+   "explanation": "Simplify the vocabulary and sentence structure, use contractions, and make the tone more direct and less bureaucratic."
+  },
+  {
+   "id": "ex.c2.register-shifts.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.register-shifts"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "We must endeavor",
+     "right": "to mitigate the potential risks."
+    },
+    {
+     "left": "The committee will convene",
+     "right": "to deliberate on the proposed changes."
+    },
+    {
+     "left": "It is imperative",
+     "right": "that all protocols are strictly adhered to."
+    },
+    {
+     "left": "Kindly provide",
+     "right": "the requisite documentation by Friday."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "endeavor to",
+  "ascertain the",
+  "it is imperative that"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.register-shifts.01": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.02": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.03": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.04": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.05": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options complete the sentence naturally and grammatically."
+   },
+   "ex.c2.register-shifts.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.register-shifts.07: needs one answer list per gap (1)"
+   },
+   "ex.c2.register-shifts.08": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.09": {
+    "status": "drop",
+    "note": "Ambiguous: Both sentences are natural and grammatically correct."
+   },
+   "ex.c2.register-shifts.10": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both adjectives appropriately fix the register clash in the sentence."
+   },
+   "ex.c2.register-shifts.12": {
+    "status": "pass"
+   },
+   "ex.c2.register-shifts.13": {
+    "status": "pass",
+    "note": "Checker slip: The key is natural, whereas 'during work' in the alternative is unidiomatic."
+   },
+   "ex.c2.register-shifts.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 258093,
+   "text": "I am going to ascertain the truth of the matter.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 69661,
+   "text": "You must endeavor to improve your English.",
+   "author": "Auride"
+  }
+ ]
+}

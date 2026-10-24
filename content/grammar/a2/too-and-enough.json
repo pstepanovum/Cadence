@@ -1,0 +1,399 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "too-and-enough",
+ "draftHash": "8daeb673ea884aa6",
+ "grammarPoint": {
+  "id": "gp.too-and-enough",
+  "level": "A2",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "Too and enough",
+  "summary": "Use 'too' to say something is more than needed, and 'enough' to say there is the right amount or not enough.",
+  "explanation": "We use *too* to mean 'more than necessary' or 'more than wanted'. It shows that something is excessive. For example, if a shirt is \"too small,\" it means it's smaller than you need or want.\n\nWe use *enough* to mean 'the right amount' or 'sufficient'. It shows that something is the correct amount or degree. If a room is \"big enough,\" it means it has the size you need.\n\n'Too' comes *before* an adjective or an adverb. 'Enough' comes *after* an adjective or an adverb. We also use 'enough' *before* a noun to talk about quantity. For example, \"enough time\" or \"not enough money.\"",
+  "patterns": [
+   "too + adjective",
+   "too + adverb",
+   "adjective + enough",
+   "adverb + enough",
+   "enough + noun"
+  ],
+  "examples": [
+   {
+    "text": "The music is too loud.",
+    "note": "The volume is more than necessary or comfortable.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He drives too fast on this road.",
+    "note": "His speed is excessive or dangerous.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "This jacket isn't warm enough for winter.",
+    "note": "It doesn't have the necessary warmth.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You didn't explain it clearly enough.",
+    "note": "Your explanation wasn't clear to the necessary degree.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do we have enough food for all the guests?",
+    "note": "Are there a sufficient quantity of food?",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I don't have money enough.",
+    "right": "I don't have *enough money*.",
+    "note": "'Enough' comes before a noun."
+   },
+   {
+    "wrong": "This coffee is enough hot.",
+    "right": "This coffee is *hot enough*.",
+    "note": "'Enough' comes after an adjective."
+   },
+   {
+    "wrong": "It's very cold to go outside.",
+    "right": "It's *too cold* to go outside.",
+    "note": "Use 'too' to show something is excessive, not just 'very'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.too-and-enough.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "This box is ___ heavy for me to lift alone.",
+   "options": [
+    "enough",
+    "too",
+    "very",
+    "much"
+   ],
+   "answer": 1,
+   "explanation": "'Too' is used before an adjective to mean 'more than necessary' or 'excessive'."
+  },
+  {
+   "id": "ex.a2.too-and-enough.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The movie wasn't interesting ___ for me to watch until the end.",
+   "options": [
+    "too",
+    "enough",
+    "very",
+    "much"
+   ],
+   "answer": 1,
+   "explanation": "'Enough' comes after an adjective to mean 'sufficient' or 'to the necessary degree'."
+  },
+  {
+   "id": "ex.a2.too-and-enough.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We don't have ___ time to finish this project today.",
+   "options": [
+    "too",
+    "enough",
+    "very",
+    "much"
+   ],
+   "answer": 1,
+   "explanation": "'Enough' comes before a noun to indicate quantity."
+  },
+  {
+   "id": "ex.a2.too-and-enough.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She speaks ___ quietly. I can't hear her.",
+   "options": [
+    "enough",
+    "too",
+    "very",
+    "much"
+   ],
+   "answer": 1,
+   "explanation": "'Too' is used before an adverb to mean 'more than necessary' or 'excessive'."
+  },
+  {
+   "id": "ex.a2.too-and-enough.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The jacket is not big ___ for me.",
+   "answers": [
+    [
+     "enough"
+    ]
+   ],
+   "explanation": "'Enough' comes after the adjective 'big'."
+  },
+  {
+   "id": "ex.a2.too-and-enough.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I can't buy this car; it's ___ expensive.",
+   "answers": [
+    [
+     "too"
+    ]
+   ],
+   "explanation": "'Too' comes before the adjective 'expensive' to show it's excessive."
+  },
+  {
+   "id": "ex.a2.too-and-enough.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Do you have ___ chairs for everyone to sit?",
+   "answers": [
+    [
+     "enough"
+    ]
+   ],
+   "explanation": "'Enough' comes before the noun 'chairs' to ask about quantity."
+  },
+  {
+   "id": "ex.a2.too-and-enough.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "This",
+    "soup",
+    "is",
+    "too",
+    "salty",
+    "."
+   ],
+   "distractors": [
+    "very"
+   ],
+   "explanation": "'Too' comes before the adjective 'salty' to indicate an excessive amount."
+  },
+  {
+   "id": "ex.a2.too-and-enough.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "doesn't",
+    "run",
+    "fast",
+    "enough",
+    "."
+   ],
+   "distractors": [
+    "slow"
+   ],
+   "explanation": "'Enough' comes after the adverb 'fast' to indicate a lack of sufficient speed."
+  },
+  {
+   "id": "ex.a2.too-and-enough.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "This coffee is not enough hot to drink.",
+   "answers": [
+    "This coffee is not *hot enough* to drink.",
+    "This coffee is not hot enough to drink."
+   ],
+   "explanation": "'Enough' comes after the adjective 'hot'."
+  },
+  {
+   "id": "ex.a2.too-and-enough.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She speaks quiet too in meetings.",
+   "answers": [
+    "She speaks *too quietly* in meetings.",
+    "She speaks too quietly in meetings."
+   ],
+   "explanation": "'Too' comes before the adverb 'quietly'."
+  },
+  {
+   "id": "ex.a2.too-and-enough.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I can't wear these shoes because they are small.",
+   "instruction": "Use the word 'too'.",
+   "answers": [
+    "I can't wear these shoes because they are *too small*.",
+    "I can't wear these shoes because they are too small."
+   ],
+   "explanation": "'Too small' means they are excessively small for me."
+  },
+  {
+   "id": "ex.a2.too-and-enough.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We need more milk for the recipe.",
+   "instruction": "Use the word 'enough'.",
+   "answers": [
+    "We don't have *enough milk* for the recipe.",
+    "We don't have enough milk for the recipe."
+   ],
+   "explanation": "'Not enough' indicates a lack of the necessary quantity."
+  },
+  {
+   "id": "ex.a2.too-and-enough.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.too-and-enough"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "This jacket is too big,",
+     "right": "I need a smaller size."
+    },
+    {
+     "left": "I don't have enough sleep,",
+     "right": "so I feel tired today."
+    },
+    {
+     "left": "The soup isn't hot enough,",
+     "right": "I'll warm it up."
+    },
+    {
+     "left": "He works too slowly,",
+     "right": "he won't finish on time."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "too (?:big|small|hot|cold|fast|slow|much|many|expensive|tired)",
+  "(?:big|small|hot|cold|fast|slow|warm|loud) enough",
+  "enough (?:time|money|food|chairs|sleep|water)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.too-and-enough.01": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.02": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.03": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.04": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.05": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.06": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.07": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.08": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.09": {
+    "status": "pass"
+   },
+   "ex.a2.too-and-enough.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly place 'enough' after the adjective."
+   },
+   "ex.a2.too-and-enough.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly fix the word order and adverb form."
+   },
+   "ex.a2.too-and-enough.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly rewrite the sentence using 'too'."
+   },
+   "ex.a2.too-and-enough.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly rewrite the sentence using 'enough'."
+   },
+   "ex.a2.too-and-enough.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 46828,
+   "text": "The car is too expensive for me to buy.",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 41776,
+   "text": "He has enough money to buy it.",
+   "author": "CK"
+  }
+ ]
+}

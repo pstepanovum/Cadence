@@ -1,0 +1,382 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "gradable-and-extreme-adjectives",
+ "draftHash": "d11f53578180e3a8",
+ "grammarPoint": {
+  "id": "gp.gradable-and-extreme-adjectives",
+  "level": "B2",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "Very or absolutely",
+  "summary": "Learn to use 'very' with gradable adjectives and 'absolutely' with extreme adjectives to intensify their meaning.",
+  "explanation": "We use intensifiers like 'very' and 'absolutely' to make adjectives stronger. The choice depends on the type of adjective.\n\n*Gradable adjectives* describe qualities that can vary in degree (e.g., good, tired, big, cold). With these, we use *'very'* to make them stronger. For example, 'very good' or 'very tired'.\n\n*Extreme adjectives* describe qualities that are already at their maximum degree (e.g., fantastic, exhausted, enormous, freezing). These adjectives already mean 'very + gradable adjective'. For example, 'fantastic' means 'very good', and 'exhausted' means 'very tired'. With extreme adjectives, we use *'absolutely'* (or 'completely', 'totally') to emphasize them. For example, 'absolutely fantastic' or 'absolutely exhausted'. You cannot use 'very' with extreme adjectives.",
+  "patterns": [
+   "very + gradable adjective",
+   "absolutely + extreme adjective",
+   "absolutely + gradable adjective (for strong emphasis)"
+  ],
+  "examples": [
+   {
+    "text": "The movie was very interesting, so I watched it twice.",
+    "note": "'Interesting' is a gradable adjective, intensified by 'very'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The view from the mountain top was absolutely breathtaking.",
+    "note": "'Breathtaking' is an extreme adjective, intensified by 'absolutely'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'm very hungry; I haven't eaten all day.",
+    "note": "'Hungry' is a gradable adjective, intensified by 'very'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "After the long hike, I was absolutely starving.",
+    "note": "'Starving' is an extreme adjective (meaning 'very hungry'), intensified by 'absolutely'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "That's absolutely true! I agree with you completely.",
+    "note": "'True' is a gradable adjective, but 'absolutely' is used here for strong emphasis.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The weather was very freezing yesterday.",
+    "right": "The weather was absolutely freezing yesterday.",
+    "note": "'Freezing' is an extreme adjective, so it needs 'absolutely', not 'very'."
+   },
+   {
+    "wrong": "I'm absolutely tired after running a marathon.",
+    "right": "I'm absolutely exhausted after running a marathon.",
+    "note": "'Tired' is gradable; 'exhausted' is extreme. Use 'absolutely' with 'exhausted'."
+   },
+   {
+    "wrong": "Her new car is absolutely nice.",
+    "right": "Her new car is very nice.",
+    "note": "'Nice' is a gradable adjective, so 'very' is the correct intensifier."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The concert was ___ amazing; everyone loved it.",
+   "options": [
+    "very",
+    "absolutely",
+    "quite"
+   ],
+   "answer": 1,
+   "explanation": "'Amazing' is an extreme adjective, so 'absolutely' is the correct intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I felt ___ happy when I heard the good news.",
+   "options": [
+    "absolutely",
+    "very",
+    "totally"
+   ],
+   "answer": 1,
+   "explanation": "'Happy' is a gradable adjective, so 'very' is the appropriate intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The old bridge is ___ ancient; it's been there for centuries.",
+   "options": [
+    "very",
+    "absolutely",
+    "a little"
+   ],
+   "answer": 1,
+   "explanation": "'Ancient' is an extreme adjective, meaning 'very old', so 'absolutely' is used."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's ___ difficult to learn a new language, but it's rewarding.",
+   "options": [
+    "absolutely",
+    "very",
+    "completely"
+   ],
+   "answer": 1,
+   "explanation": "'Difficult' is a gradable adjective, so 'very' is the correct intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The food at the new restaurant was ___ delicious.",
+   "answers": [
+    [
+     "absolutely"
+    ]
+   ],
+   "explanation": "'Delicious' is an extreme adjective, meaning 'very tasty', so 'absolutely' is the correct intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'm feeling ___ cold today; I need a warm jacket.",
+   "answers": [
+    [
+     "very"
+    ]
+   ],
+   "explanation": "'Cold' is a gradable adjective, so 'very' is the appropriate intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The professor's lecture was ___ fascinating.",
+   "answers": [
+    [
+     "absolutely"
+    ]
+   ],
+   "explanation": "'Fascinating' is an extreme adjective, meaning 'very interesting', so 'absolutely' is the correct intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "movie",
+    "was",
+    "absolutely",
+    "hilarious",
+    "."
+   ],
+   "explanation": "The sentence uses 'absolutely' to intensify the extreme adjective 'hilarious'."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "was",
+    "very",
+    "upset",
+    "about",
+    "the",
+    "news",
+    "."
+   ],
+   "explanation": "The sentence uses 'very' to intensify the gradable adjective 'upset'."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The test was absolutely hard, but I think I passed.",
+   "answers": [
+    "The test was very hard, but I think I passed."
+   ],
+   "explanation": "'Hard' is a gradable adjective, so it should be intensified with 'very', not 'absolutely'."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I was very furious when I found out what happened.",
+   "answers": [
+    "I was absolutely furious when I found out what happened."
+   ],
+   "explanation": "'Furious' is an extreme adjective, meaning 'very angry', so it should be intensified with 'absolutely'."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The weather is very bad today.",
+   "instruction": "Rewrite the sentence using an extreme adjective and the correct intensifier.",
+   "answers": [
+    "The weather is absolutely awful today.",
+    "The weather is absolutely terrible today."
+   ],
+   "explanation": "The gradable adjective 'bad' is replaced by the extreme adjective 'awful', requiring 'absolutely' as the intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The book was absolutely brilliant.",
+   "instruction": "Rewrite the sentence using a gradable adjective and the correct intensifier.",
+   "answers": [
+    "The book was very good."
+   ],
+   "explanation": "The extreme adjective 'brilliant' is replaced by the gradable adjective 'good', requiring 'very' as the intensifier."
+  },
+  {
+   "id": "ex.b2.gradable-and-extreme-adjectives.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.gradable-and-extreme-adjectives"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The concert was",
+     "right": "absolutely fantastic."
+    },
+    {
+     "left": "I'm feeling",
+     "right": "very tired today."
+    },
+    {
+     "left": "The view from the top was",
+     "right": "absolutely stunning."
+    },
+    {
+     "left": "Her new apartment is",
+     "right": "very spacious."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "very [a-z]+",
+  "absolutely [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.gradable-and-extreme-adjectives.01": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.02": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.03": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.04": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.05": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.06": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.07": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.08": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.09": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.10": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.11": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly use an extreme adjective with the appropriate intensifier."
+   },
+   "ex.b2.gradable-and-extreme-adjectives.13": {
+    "status": "pass"
+   },
+   "ex.b2.gradable-and-extreme-adjectives.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2217,
+   "text": "Time has passed very fast.",
+   "author": "Zifre"
+  },
+  {
+   "sentenceId": 54702,
+   "text": "It's absolutely impossible for me to go on like this.",
+   "author": "CM"
+  }
+ ]
+}

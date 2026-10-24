@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "causative-have-and-get",
+ "draftHash": "73bb68f184ba70af",
+ "grammarPoint": {
+  "id": "gp.causative-have-and-get",
+  "level": "B2",
+  "topicId": "topic.passive",
+  "title": "Have and get something done",
+  "summary": "Learn to use 'have something done' and 'get something done' to talk about arranging for someone else to perform a service for you.",
+  "explanation": "When you *have something done* or *get something done*, it means you arrange for another person to do a task or service for you, rather than doing it yourself. This structure is very common when talking about professional services like repairs, cleaning, or beauty treatments.\n\nThe main difference between 'have' and 'get' in this structure is often one of formality. 'Have something done' is generally more neutral or formal, while 'get something done' can be slightly more informal or conversational. Both are grammatically correct and widely used.\n\nRemember that the verb after the object is always in the *past participle* form. The focus is on the result of the action, not who performed it.",
+  "patterns": [
+   "subject + have + object + past participle",
+   "subject + get + object + past participle"
+  ],
+  "examples": [
+   {
+    "text": "I had my car serviced last week.",
+    "note": "This means someone else serviced the car for me.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She's getting her hair cut tomorrow.",
+    "note": "She is arranging for a hairdresser to cut her hair.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We need to have the broken window replaced.",
+    "note": "We need to arrange for someone to replace the window.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He got his teeth whitened at the dentist.",
+    "note": "The dentist whitened his teeth, not him.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They are having a new fence built in their backyard.",
+    "note": "They hired someone to build the fence.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I had repaired my computer.",
+    "right": "I had my computer repaired.",
+    "note": "The object 'my computer' comes before the past participle 'repaired'."
+   },
+   {
+    "wrong": "She got clean her apartment.",
+    "right": "She got her apartment cleaned.",
+    "note": "Use the past participle 'cleaned', not the base form 'clean'."
+   },
+   {
+    "wrong": "We will have painted the house.",
+    "right": "We will have the house painted.",
+    "note": "The structure is 'have + object + past participle', not 'have + past participle + object'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.causative-have-and-get.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need to ___ my passport renewed before my trip.",
+   "options": [
+    "have",
+    "had",
+    "having",
+    "to have"
+   ],
+   "answer": 0,
+   "explanation": "The correct structure is 'have + object + past participle'. 'Have' is the base form needed here."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They're going to ___ their kitchen completely redesigned.",
+   "options": [
+    "get",
+    "got",
+    "getting",
+    "to get"
+   ],
+   "answer": 0,
+   "explanation": "After 'going to', we use the base form 'get' to form the causative structure 'get + object + past participle'."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ our old sofa delivered to charity last weekend.",
+   "options": [
+    "had",
+    "have",
+    "get",
+    "getting"
+   ],
+   "answer": 0,
+   "explanation": "The action happened 'last weekend', so the past tense 'had' is required for the causative structure."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Before the party, I always ___ my nails done.",
+   "options": [
+    "have",
+    "had",
+    "having",
+    "to have"
+   ],
+   "answer": 0,
+   "explanation": "This is a regular action, so the simple present 'have' is correct for the causative structure."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My laptop was running slowly, so I ___ it ___ by a technician.",
+   "answers": [
+    [
+     "had",
+     "got"
+    ],
+    [
+     "fixed",
+     "repaired"
+    ]
+   ],
+   "explanation": "Use 'had' or 'got' for the past tense causative, and 'fixed' or 'repaired' as the past participle."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She's planning to ___ her house ___ next month.",
+   "answers": [
+    [
+     "have",
+     "get"
+    ],
+    [
+     "painted",
+     "decorated"
+    ]
+   ],
+   "explanation": "Use 'have' or 'get' for the causative, and 'painted' as the past participle."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We usually ___ our groceries ___ to our door.",
+   "answers": [
+    [
+     "have",
+     "get"
+    ],
+    [
+     "delivered"
+    ]
+   ],
+   "explanation": "Use 'have' or 'get' for the present tense causative, and 'delivered' as the past participle."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "had",
+    "my",
+    "bike",
+    "serviced",
+    "."
+   ],
+   "distractors": [
+    "fix"
+   ],
+   "explanation": "The correct order is 'subject + had + object + past participle'."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "are",
+    "getting",
+    "a",
+    "new",
+    "pool",
+    "built",
+    "."
+   ],
+   "distractors": [
+    "build"
+   ],
+   "explanation": "The correct order is 'subject + are getting + object + past participle'."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I need to have cleaned my apartment before the guests arrive.",
+   "answers": [
+    "I need to have my apartment cleaned before the guests arrive."
+   ],
+   "explanation": "The object 'my apartment' must come between 'have' and the past participle 'cleaned'."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He got his car wash yesterday.",
+   "answers": [
+    "He got his car washed yesterday."
+   ],
+   "explanation": "The verb after the object must be in the past participle form, 'washed'."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "A professional photographer took our family portrait.",
+   "instruction": "Rewrite using 'had something done'.",
+   "answers": [
+    "We had our family portrait taken by a professional photographer.",
+    "We had our family portrait taken."
+   ],
+   "explanation": "The original sentence describes someone doing a service for 'us'. We use 'had' + object + past participle."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The tailor will shorten my trousers.",
+   "instruction": "Rewrite using 'get something done'.",
+   "answers": [
+    "I will get my trousers shortened by the tailor.",
+    "I will get my trousers shortened."
+   ],
+   "explanation": "The original sentence describes a service being done for 'me'. We use 'will get' + object + past participle."
+  },
+  {
+   "id": "ex.b2.causative-have-and-get.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.causative-have-and-get"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I always have my car",
+     "right": "serviced at the same garage."
+    },
+    {
+     "left": "She's going to get her hair",
+     "right": "dyed a new color next week."
+    },
+    {
+     "left": "We had our old fence",
+     "right": "removed by a landscaping company."
+    },
+    {
+     "left": "He needs to have his eyes",
+     "right": "checked by an optometrist soon."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "have (?:my|your|his|her|our|their|its) [a-z]+(?:ed|en|t)",
+  "get (?:my|your|his|her|our|their|its) [a-z]+(?:ed|en|t)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.causative-have-and-get.01": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.02": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.03": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.04": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.05": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options are grammatically correct and natural uses of the causative structure."
+   },
+   "ex.b2.causative-have-and-get.07": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.08": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.09": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.10": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.11": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.12": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.13": {
+    "status": "pass"
+   },
+   "ex.b2.causative-have-and-get.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

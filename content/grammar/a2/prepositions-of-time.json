@@ -1,0 +1,393 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "prepositions-of-time",
+ "draftHash": "fec45dfcd8b86fd2",
+ "grammarPoint": {
+  "id": "gp.prepositions-of-time",
+  "level": "A2",
+  "topicId": "topic.prepositions",
+  "title": "At, on and in for time",
+  "summary": "Learn to use 'at' for specific times, 'on' for days and dates, and 'in' for months, seasons, and years.",
+  "explanation": "We use *at* for very specific times. This includes clock times like 'at 7 PM' or 'at noon'. Think of it as a precise point in time.\n\nWe use *on* for days of the week and specific dates. For example, 'on Monday' or 'on July 4th'. If you can put 'day' after it, you probably use 'on'.\n\nWe use *in* for longer periods of time. This includes months ('in August'), seasons ('in summer'), and years ('in 2023'). We also use 'in' for parts of the day like 'in the morning' or 'in the evening'.",
+  "patterns": [
+   "at + specific time (e.g., at 8 AM, at noon)",
+   "on + day of the week (e.g., on Tuesday, on Friday)",
+   "on + specific date (e.g., on May 1st, on Christmas Day)",
+   "in + month (e.g., in January, in October)",
+   "in + season/year/part of day (e.g., in summer, in 2025, in the morning)"
+  ],
+  "examples": [
+   {
+    "text": "The store opens at 9 AM every day.",
+    "note": "Uses 'at' for a specific clock time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I have a meeting on Wednesday.",
+    "note": "Uses 'on' for a day of the week.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Her birthday is in September.",
+    "note": "Uses 'in' for a month.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We usually go on vacation in the summer.",
+    "note": "Uses 'in' for a season.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new building was finished in 2024.",
+    "note": "Uses 'in' for a year.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Let's meet in 7 o'clock.",
+    "right": "Let's meet at 7 o'clock.",
+    "note": "Use 'at' for specific clock times."
+   },
+   {
+    "wrong": "I will call you at Friday.",
+    "right": "I will call you on Friday.",
+    "note": "Use 'on' for days of the week."
+   },
+   {
+    "wrong": "My vacation is on August.",
+    "right": "My vacation is in August.",
+    "note": "Use 'in' for months."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.prepositions-of-time.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The train leaves ___ 6:30 PM.",
+   "options": [
+    "on",
+    "at",
+    "in"
+   ],
+   "answer": 1,
+   "explanation": "Use 'at' for specific clock times."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We celebrate holidays ___ December.",
+   "options": [
+    "on",
+    "at",
+    "in"
+   ],
+   "answer": 2,
+   "explanation": "Use 'in' for months."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I always go for a walk ___ the morning.",
+   "options": [
+    "on",
+    "at",
+    "in"
+   ],
+   "answer": 2,
+   "explanation": "Use 'in' for parts of the day like 'the morning'."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Her appointment is ___ Tuesday.",
+   "options": [
+    "at",
+    "on",
+    "in"
+   ],
+   "answer": 1,
+   "explanation": "Use 'on' for days of the week."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The concert starts ___ 8 PM.",
+   "answers": [
+    [
+     "at"
+    ]
+   ],
+   "explanation": "Use 'at' for specific clock times."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My birthday is ___ May 10th.",
+   "answers": [
+    [
+     "on"
+    ]
+   ],
+   "explanation": "Use 'on' for specific dates."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They moved to a new city ___ 2023.",
+   "answers": [
+    [
+     "in"
+    ]
+   ],
+   "explanation": "Use 'in' for years."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "meeting",
+    "is",
+    "at",
+    "noon",
+    "."
+   ],
+   "distractors": [
+    "on",
+    "for"
+   ],
+   "explanation": "Build a sentence using 'at' for a specific time."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "will",
+    "travel",
+    "in",
+    "July",
+    "."
+   ],
+   "distractors": [
+    "at",
+    "from"
+   ],
+   "explanation": "Build a sentence using 'in' for a month."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I usually wake up on 6 AM.",
+   "answers": [
+    "I usually wake up at 6 AM."
+   ],
+   "explanation": "Use 'at' for specific clock times."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The party is in Saturday.",
+   "answers": [
+    "The party is on Saturday."
+   ],
+   "explanation": "Use 'on' for days of the week."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My vacation starts in the month of August.",
+   "instruction": "Use a shorter form.",
+   "answers": [
+    "My vacation starts in August."
+   ],
+   "explanation": "It's more natural to say 'in August' than 'in the month of August'."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We will meet at 4 o'clock. It will be on Monday.",
+   "instruction": "Combine the sentences using 'at' and 'on'.",
+   "answers": [
+    "We will meet at 4 o'clock on Monday.",
+    "We will meet on Monday at 4 o'clock."
+   ],
+   "explanation": "Combine the time and day into one sentence using the correct prepositions."
+  },
+  {
+   "id": "ex.a2.prepositions-of-time.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.prepositions-of-time"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I have a dentist appointment",
+     "right": "on Friday."
+    },
+    {
+     "left": "The store closes",
+     "right": "at 5 PM."
+    },
+    {
+     "left": "My favorite season is",
+     "right": "in autumn."
+    },
+    {
+     "left": "They got married",
+     "right": "in 2020."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "at \\d{1,2} (am|pm|o'clock)",
+  "on (monday|tuesday|wednesday|thursday|friday|saturday|sunday)",
+  "in (january|february|march|april|may|june|july|august|september|october|november|december)",
+  "in \\d{4}",
+  "in the (morning|afternoon|evening)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.prepositions-of-time.01": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.02": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.03": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.04": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.05": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.06": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.07": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.08": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.09": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.10": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.11": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.12": {
+    "status": "pass"
+   },
+   "ex.a2.prepositions-of-time.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences correctly combine the original sentences using 'at' and 'on'."
+   },
+   "ex.a2.prepositions-of-time.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 249145,
+   "text": "We often play cards on Sunday.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 1023895,
+   "text": "Tom will be thirty in March.",
+   "author": "CK"
+  }
+ ]
+}

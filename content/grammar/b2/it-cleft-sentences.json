@@ -1,0 +1,405 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "it-cleft-sentences",
+ "draftHash": "0541f744901f9e2e",
+ "grammarPoint": {
+  "id": "gp.it-cleft-sentences",
+  "level": "B2",
+  "topicId": "topic.emphasis",
+  "title": "It-cleft sentences",
+  "summary": "It-cleft sentences emphasize a specific part of a sentence, like a person, thing, time, or reason, using the structure 'It + be + emphasized part + relative clause'.",
+  "explanation": "We use *it-cleft sentences* to draw attention to a particular piece of information in a sentence. This structure makes that specific detail stand out, making it the main focus of the message. It's a way to add emphasis, often in spoken English or when you want to correct a misunderstanding.\n\nThe basic structure starts with 'It' followed by a form of 'be' (is/was). After 'be', you place the part of the sentence you want to emphasize. This emphasized part is then followed by a relative pronoun like 'who', 'that', or 'which', which introduces the rest of the sentence as a clause.\n\nFor example, if you say \"Sam fixed the computer,\" it's a simple statement. But if you say, \"*It was Sam who fixed the computer*,\" you are specifically highlighting Sam as the person responsible, perhaps because someone thought it was someone else, or because Sam's effort was particularly noteworthy.",
+  "patterns": [
+   "It + is/was + [person] + who/that + [verb phrase]",
+   "It + is/was + [thing] + that/which + [verb phrase]",
+   "It + is/was + [time/place/reason] + that + [clause]"
+  ],
+  "examples": [
+   {
+    "text": "It was *the new software* that caused the system crash.",
+    "note": "Emphasizes the specific thing that caused the problem.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It's *my sister* who always remembers everyone's birthday.",
+    "note": "Highlights the person who performs the action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It was *last Tuesday* that we finally signed the contract.",
+    "note": "Focuses on the specific time an event happened.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It's *in the main office* that you'll find the meeting schedule.",
+    "note": "Draws attention to the location of something.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It was *because of the heavy traffic* that I arrived late.",
+    "note": "Emphasizes the reason for an action or event.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "It was my friend *which* helped me.",
+    "right": "It was my friend *who* helped me.",
+    "note": "Use 'who' or 'that' for people, not 'which'."
+   },
+   {
+    "wrong": "It *are* the small details that make a difference.",
+    "right": "It *is* the small details that make a difference.",
+    "note": "The verb 'be' always agrees with 'it' (singular), not the emphasized plural noun."
+   },
+   {
+    "wrong": "Was the manager who approved the plan.",
+    "right": "*It was* the manager who approved the plan.",
+    "note": "An 'it-cleft' sentence must begin with 'It'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.it-cleft-sentences.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It was the loud music ___ kept me awake all night.",
+   "options": [
+    "who",
+    "which",
+    "what"
+   ],
+   "answer": 1,
+   "explanation": "For things, 'which' or 'that' are used. 'Who' is for people, and 'what' is not used in this structure."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the team leader who suggested the new strategy.",
+   "options": [
+    "It are",
+    "It was",
+    "They were"
+   ],
+   "answer": 1,
+   "explanation": "The 'be' verb must agree with 'It' (singular) and the past tense 'was' is appropriate for a completed action."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's the unexpected challenges ___ make life interesting.",
+   "options": [
+    "who",
+    "what",
+    "that"
+   ],
+   "answer": 2,
+   "explanation": "For things, 'that' or 'which' are used. 'Who' is for people, and 'what' is not used in this structure."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It ___ my neighbor who found my lost cat.",
+   "options": [
+    "is",
+    "are",
+    "were"
+   ],
+   "answer": 0,
+   "explanation": "The verb 'be' must agree with 'It' (singular). 'Is' is the correct present tense form."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ was the strong wind ___ knocked down the old tree.",
+   "answers": [
+    [
+     "It"
+    ],
+    [
+     "that",
+     "which"
+    ]
+   ],
+   "explanation": "The sentence needs 'It' to start the cleft structure, and 'that' or 'which' to refer to the 'strong wind'."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ is the delicious food ___ makes this restaurant so popular.",
+   "answers": [
+    [
+     "It"
+    ],
+    [
+     "that",
+     "which"
+    ]
+   ],
+   "explanation": "The sentence needs 'It' to start the cleft structure, and 'that' or 'which' to refer to the 'delicious food'."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ was Sarah ___ volunteered to organize the charity event.",
+   "answers": [
+    [
+     "It"
+    ],
+    [
+     "who",
+     "that"
+    ]
+   ],
+   "explanation": "The sentence needs 'It' to start the cleft structure, and 'who' or 'that' to refer to 'Sarah' (a person)."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "was",
+    "the",
+    "manager",
+    "who",
+    "approved",
+    "the",
+    "budget",
+    "."
+   ],
+   "distractors": [
+    "they"
+   ],
+   "explanation": "This sentence uses an it-cleft to emphasize 'the manager' as the person who approved the budget."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It's",
+    "the",
+    "bright",
+    "colors",
+    "that",
+    "make",
+    "this",
+    "painting",
+    "unique",
+    "."
+   ],
+   "distractors": [
+    "which"
+   ],
+   "explanation": "This sentence uses an it-cleft to emphasize 'the bright colors' as the reason the painting is unique."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It are the small details that often get overlooked.",
+   "answers": [
+    "It is the small details that often get overlooked."
+   ],
+   "explanation": "The verb 'be' in an it-cleft sentence always agrees with 'It' (singular), so 'is' is correct, not 'are'."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It was my colleague which helped me with the presentation.",
+   "answers": [
+    "It was my colleague who helped me with the presentation.",
+    "It was my colleague that helped me with the presentation."
+   ],
+   "explanation": "For people, use 'who' or 'that' as the relative pronoun, not 'which'."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The heavy rain caused the flood.",
+   "instruction": "Rewrite the sentence to emphasize 'the heavy rain' using an it-cleft.",
+   "answers": [
+    "It was the heavy rain that caused the flood."
+   ],
+   "explanation": "The original sentence is transformed into an it-cleft to highlight 'the heavy rain' as the cause."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My brother taught me how to play chess.",
+   "instruction": "Rewrite the sentence to emphasize 'my brother' using an it-cleft.",
+   "answers": [
+    "It was my brother who taught me how to play chess.",
+    "It was my brother that taught me how to play chess."
+   ],
+   "explanation": "The original sentence is transformed into an it-cleft to highlight 'my brother' as the person who taught chess."
+  },
+  {
+   "id": "ex.b2.it-cleft-sentences.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.it-cleft-sentences"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "It was the unexpected guest",
+     "right": "who brought the delicious cake."
+    },
+    {
+     "left": "It's the clear instructions",
+     "right": "that make this recipe easy to follow."
+    },
+    {
+     "left": "It was yesterday morning",
+     "right": "that we received the good news."
+    },
+    {
+     "left": "It's in the top drawer",
+     "right": "that you'll find the spare keys."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "it (is|was) \\w+ (who|that|which)",
+  "it's \\w+ (who|that|which)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.it-cleft-sentences.01": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.02": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.03": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.04": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.05": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.06": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.07": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.08": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.09": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.10": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.11": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.12": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.13": {
+    "status": "pass"
+   },
+   "ex.b2.it-cleft-sentences.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 244386,
+   "text": "It was Alice who went to the concert yesterday.",
+   "author": "sundown"
+  },
+  {
+   "sentenceId": 3126716,
+   "text": "I forgot it was Tom who taught you how to play the guitar.",
+   "author": "CK"
+  }
+ ]
+}

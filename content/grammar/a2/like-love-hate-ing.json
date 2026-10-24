@@ -1,0 +1,393 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "like-love-hate-ing",
+ "draftHash": "34a3657b98ec3b72",
+ "grammarPoint": {
+  "id": "gp.like-love-hate-ing",
+  "level": "A2",
+  "topicId": "topic.verb-patterns",
+  "title": "Like, love and hate + -ing",
+  "summary": "Use 'like', 'love', and 'hate' followed by a verb ending in '-ing' to talk about things you enjoy or dislike doing.",
+  "explanation": "We use verbs like *like*, *love*, and *hate* to express our feelings about activities. When we want to say what activity we like, love, or hate, we follow these verbs with another verb that ends in *-ing*.\n\nFor example, if you enjoy reading, you say \"I like *reading*\". If you really enjoy cooking, you say \"She loves *cooking*\". If you really dislike waiting, you say \"They hate *waiting*\".\n\nRemember to use the correct form of 'like', 'love', or 'hate' (e.g., 'likes' for 'he/she/it') and always add '-ing' to the second verb.",
+  "patterns": [
+   "Subject + like/likes + verb-ing",
+   "Subject + love/loves + verb-ing",
+   "Subject + hate/hates + verb-ing",
+   "Subject + do/does not like/love/hate + verb-ing"
+  ],
+  "examples": [
+   {
+    "text": "I like listening to music in the evenings.",
+    "note": "Shows a general enjoyment of an activity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My brother loves playing video games.",
+    "note": "Expresses strong enjoyment for an activity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We hate waiting in long lines at the store.",
+    "note": "Indicates a strong dislike for an activity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She doesn't like waking up early on weekends.",
+    "note": "Shows a mild dislike for an activity in the negative form.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you like traveling to new places?",
+    "note": "Asks about someone's enjoyment of an activity.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He likes to read books.",
+    "right": "He likes reading books.",
+    "note": "Remember to use the -ing form after 'like' for general activities."
+   },
+   {
+    "wrong": "They love cook dinner.",
+    "right": "They love cooking dinner.",
+    "note": "The second verb needs to end in -ing."
+   },
+   {
+    "wrong": "She hate cleaning her room.",
+    "right": "She hates cleaning her room.",
+    "note": "Don't forget the -s for 'he/she/it' with 'hate'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.like-love-hate-ing.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My sister really enjoys ___ new recipes.",
+   "options": [
+    "try",
+    "to try",
+    "trying",
+    "tries"
+   ],
+   "answer": 2,
+   "explanation": "After 'enjoys', we use the -ing form of the verb."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We don't like ___ in the rain.",
+   "options": [
+    "walk",
+    "walking",
+    "to walk",
+    "walks"
+   ],
+   "answer": 1,
+   "explanation": "After 'don't like', the verb takes the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you hate ___ up early?",
+   "options": [
+    "get",
+    "getting",
+    "to get",
+    "gets"
+   ],
+   "answer": 1,
+   "explanation": "After 'hate', we use the -ing form of the verb."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He loves ___ movies on Friday nights.",
+   "options": [
+    "watch",
+    "to watch",
+    "watching",
+    "watches"
+   ],
+   "answer": 2,
+   "explanation": "After 'loves', the verb should be in the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My parents love ___ in their garden.",
+   "answers": [
+    [
+     "working"
+    ]
+   ],
+   "explanation": "After 'love', the verb takes the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I don't like ___ my clothes by hand.",
+   "answers": [
+    [
+     "washing"
+    ]
+   ],
+   "explanation": "After 'don't like', the verb takes the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She hates ___ late for appointments.",
+   "answers": [
+    [
+     "being"
+    ]
+   ],
+   "explanation": "After 'hates', the verb takes the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "My",
+    "friends",
+    "like",
+    "playing",
+    "board",
+    "games",
+    "."
+   ],
+   "distractors": [
+    "play",
+    "to"
+   ],
+   "explanation": "The correct order is 'Subject + like + verb-ing + object'."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "hates",
+    "doing",
+    "the",
+    "dishes",
+    "."
+   ],
+   "distractors": [
+    "do",
+    "did"
+   ],
+   "explanation": "The correct order is 'Subject + hates + verb-ing + object'."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My cat loves sleep on the sofa.",
+   "answers": [
+    "My cat loves sleeping on the sofa."
+   ],
+   "explanation": "After 'loves', the verb should be in the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "They don't likes eating spicy food.",
+   "answers": [
+    "They don't like eating spicy food."
+   ],
+   "explanation": "With 'don't', 'like' does not need an -s."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I enjoy reading books.",
+   "instruction": "Rewrite using 'like'.",
+   "answers": [
+    "I like reading books."
+   ],
+   "explanation": "Replace 'enjoy' with 'like' and keep the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She finds waiting for the bus very annoying.",
+   "instruction": "Rewrite using 'hates'.",
+   "answers": [
+    "She hates waiting for the bus."
+   ],
+   "explanation": "Replace 'finds annoying' with 'hates' and keep the -ing form."
+  },
+  {
+   "id": "ex.a2.like-love-hate-ing.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.like-love-hate-ing"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I like",
+     "right": "watching old movies."
+    },
+    {
+     "left": "My mom loves",
+     "right": "baking cakes for us."
+    },
+    {
+     "left": "We hate",
+     "right": "losing our keys."
+    },
+    {
+     "left": "He doesn't like",
+     "right": "working on weekends."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "like .*ing",
+  "love .*ing",
+  "hate .*ing"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.like-love-hate-ing.01": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.02": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.03": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.04": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.05": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.06": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.07": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.08": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.09": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.10": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.11": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.12": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.13": {
+    "status": "pass"
+   },
+   "ex.a2.like-love-hate-ing.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 1094393,
+   "text": "Tom doesn't like washing dishes.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 1026044,
+   "text": "Tom doesn't like doing homework.",
+   "author": "CK"
+  }
+ ]
+}

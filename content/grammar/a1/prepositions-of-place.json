@@ -1,0 +1,513 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "prepositions-of-place",
+ "draftHash": "48fb690da4c4f00e",
+ "grammarPoint": {
+  "id": "gp.prepositions-of-place",
+  "level": "A1",
+  "topicId": "topic.prepositions",
+  "title": "In, on, under, next to",
+  "summary": "Learn to describe where things are using 'in', 'on', 'under', and 'next to'.",
+  "explanation": "We use prepositions like *in*, *on*, *under*, and *next to* to say where something is located. They help us understand the position of one object in relation to another.\n\n*In* means something is inside or surrounded by something else. For example, a book can be *in* a bag. *On* means something is on the surface of another object, usually touching it. For example, a cup can be *on* the table.\n\n*Under* means something is below another object. For example, a ball can be *under* the chair. *Next to* means something is beside or very close to another object. For example, a lamp can be *next to* the bed.",
+  "patterns": [
+   "noun + is/are + in + noun",
+   "noun + is/are + on + noun",
+   "noun + is/are + under + noun",
+   "noun + is/are + next to + noun"
+  ],
+  "examples": [
+   {
+    "text": "The keys are in my pocket.",
+    "note": "Shows the keys are inside the pocket.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My phone is on the desk.",
+    "note": "Shows the phone is on the surface of the desk.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The cat is sleeping under the bed.",
+    "note": "Shows the cat is below the bed.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The remote control is next to the TV.",
+    "note": "Shows the remote is beside the TV.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Is the milk in the fridge?",
+    "note": "Asks if the milk is inside the fridge.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The book is on the bag.",
+    "right": "The book is in the bag.",
+    "note": "Use 'in' when something is inside a container."
+   },
+   {
+    "wrong": "The dog is under the table.",
+    "right": "The dog is under the table.",
+    "note": "No, this is actually correct. Let's change the wrong example."
+   },
+   {
+    "wrong": "The dog is under the table.",
+    "right": "The dog is under the table.",
+    "note": "This example is correct. I need to change it to a common error."
+   },
+   {
+    "wrong": "The dog is under the table.",
+    "right": "The dog is under the table.",
+    "note": "I need to make sure the wrong sentence actually has a mistake related to the grammar point."
+   },
+   {
+    "wrong": "The dog is under the table.",
+    "right": "The dog is under the table.",
+    "note": "Okay, let's restart these common errors to be correct."
+   },
+   {
+    "wrong": "The book is on the bag.",
+    "right": "The book is in the bag.",
+    "note": "Use 'in' when something is inside a container."
+   },
+   {
+    "wrong": "The picture is in the wall.",
+    "right": "The picture is on the wall.",
+    "note": "Use 'on' for things attached to a vertical surface."
+   },
+   {
+    "wrong": "The chair is next the table.",
+    "right": "The chair is next to the table.",
+    "note": "Remember to use 'to' after 'next'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.prepositions-of-place.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The apple is ___ the bowl.",
+   "options": [
+    "on",
+    "in",
+    "under"
+   ],
+   "answer": 1,
+   "explanation": "The apple is inside the bowl, so 'in' is the correct preposition."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My shoes are ___ the bed.",
+   "options": [
+    "in",
+    "on",
+    "under"
+   ],
+   "answer": 2,
+   "explanation": "Shoes are often placed below the bed, so 'under' is the best fit."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The clock is ___ the wall.",
+   "options": [
+    "in",
+    "on",
+    "next to"
+   ],
+   "answer": 1,
+   "explanation": "For items attached to a vertical surface like a wall, we use 'on'."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The pen is ___ the notebook.",
+   "options": [
+    "under",
+    "in",
+    "next to"
+   ],
+   "answer": 2,
+   "explanation": "If the pen is beside the notebook, 'next to' is the correct choice."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The remote is ___ the sofa.",
+   "answers": [
+    [
+     "on"
+    ],
+    [
+     "in"
+    ],
+    [
+     "under"
+    ],
+    [
+     "next to"
+    ]
+   ],
+   "explanation": "Many prepositions could work depending on the exact location. 'On' (on the cushion), 'in' (between cushions), 'under' (below the sofa), or 'next to' (beside the sofa) are all possible."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Is the cat ___ the box?",
+   "answers": [
+    [
+     "in"
+    ]
+   ],
+   "explanation": "Cats often sit inside boxes, so 'in' is the most common and logical choice here."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The picture is ___ the door, ___ the wall.",
+   "answers": [
+    [
+     "next to"
+    ],
+    [
+     "on"
+    ]
+   ],
+   "explanation": "The picture is beside the door ('next to') and attached to the wall ('on')."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "ball",
+    "is",
+    "under",
+    "the",
+    "chair",
+    "."
+   ],
+   "distractors": [
+    "a",
+    "big"
+   ],
+   "explanation": "This sentence correctly places the ball below the chair."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "My",
+    "keys",
+    "are",
+    "in",
+    "my",
+    "bag",
+    "."
+   ],
+   "distractors": [
+    "your",
+    "new"
+   ],
+   "explanation": "This sentence correctly states that the keys are inside the bag."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The book is in the table.",
+   "answers": [
+    "The book is on the table."
+   ],
+   "explanation": "Books are typically placed on the surface of a table, not inside it."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The dog is next the car.",
+   "answers": [
+    "The dog is next to the car."
+   ],
+   "explanation": "The preposition 'next' always needs 'to' when indicating proximity."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The remote is on the table.",
+   "instruction": "Change the location to 'under the table'.",
+   "answers": [
+    "The remote is under the table."
+   ],
+   "explanation": "We change 'on' to 'under' to indicate a different location."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The lamp is beside the bed.",
+   "instruction": "Use 'next to'.",
+   "answers": [
+    "The lamp is next to the bed."
+   ],
+   "explanation": "'Next to' means the same as 'beside' and is a common way to express this location."
+  },
+  {
+   "id": "ex.a1.prepositions-of-place.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.prepositions-of-place"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The cat is sleeping",
+     "right": "under the blanket."
+    },
+    {
+     "left": "My wallet is",
+     "right": "in my backpack."
+    },
+    {
+     "left": "The picture is",
+     "right": "on the wall."
+    },
+    {
+     "left": "The chair is",
+     "right": "next to the window."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "is in the",
+  "is on the",
+  "is under the",
+  "is next to the"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.prepositions-of-place.01": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.02": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.03": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.04": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.05": {
+    "status": "drop",
+    "note": "Invalid: ex.a1.prepositions-of-place.05: needs one answer list per gap (1)"
+   },
+   "ex.a1.prepositions-of-place.06": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.07": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.08": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.a1.prepositions-of-place.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.a1.prepositions-of-place.10": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.11": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.12": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.13": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.14": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.15": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'next to' and 'on' are grammatically correct and plausible prepositions here."
+   },
+   "ex.a1.prepositions-of-place.16": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.17": {
+    "status": "pass"
+   },
+   "ex.a1.prepositions-of-place.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.a1.prepositions-of-place.15",
+    "kind": "multiple_choice",
+    "level": "A1",
+    "grammarPointIds": [
+     "gp.prepositions-of-place"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The remote control is ___ the TV.",
+    "options": [
+     "in",
+     "on",
+     "next to"
+    ],
+    "answer": 2,
+    "explanation": "'Next to' means beside, which is a common position for a remote control near a TV."
+   },
+   {
+    "id": "ex.a1.prepositions-of-place.16",
+    "kind": "multiple_choice",
+    "level": "A1",
+    "grammarPointIds": [
+     "gp.prepositions-of-place"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "My hat is ___ the shelf.",
+    "options": [
+     "in",
+     "on",
+     "under"
+    ],
+    "answer": 1,
+    "explanation": "'On' is used for objects resting on a surface like a shelf."
+   },
+   {
+    "id": "ex.a1.prepositions-of-place.17",
+    "kind": "multiple_choice",
+    "level": "A1",
+    "grammarPointIds": [
+     "gp.prepositions-of-place"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The dog sleeps ___ the blanket.",
+    "options": [
+     "on",
+     "next to",
+     "under"
+    ],
+    "answer": 2,
+    "explanation": "'Under' describes the dog being covered by or below the blanket."
+   },
+   {
+    "id": "ex.a1.prepositions-of-place.18",
+    "kind": "multiple_choice",
+    "level": "A1",
+    "grammarPointIds": [
+     "gp.prepositions-of-place"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The juice is ___ the glass.",
+    "options": [
+     "in",
+     "on",
+     "next to"
+    ],
+    "answer": 0,
+    "explanation": "'In' is used for liquids or items contained within something like a glass."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 11637700,
+   "text": "Karl is in the living room now.",
+   "author": "Amastan"
+  },
+  {
+   "sentenceId": 3368834,
+   "text": "A book is on the table.",
+   "author": "daveoily"
+  }
+ ]
+}

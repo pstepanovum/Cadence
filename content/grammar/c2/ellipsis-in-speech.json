@@ -1,0 +1,375 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "ellipsis-in-speech",
+ "draftHash": "2dd604805521acab",
+ "grammarPoint": {
+  "id": "gp.ellipsis-in-speech",
+  "level": "C2",
+  "topicId": "topic.linking",
+  "title": "Ellipsis in conversation",
+  "summary": "Ellipsis in conversation allows speakers to omit subjects and auxiliary verbs when the meaning is clear from context, making speech more natural and concise.",
+  "explanation": "In informal spoken English, we often use *ellipsis* to make our sentences shorter and more natural. This means we leave out words that are easily understood from the context, without losing any meaning. It's a common feature of spontaneous conversation.\n\nMost often, we omit the subject pronoun (like 'I', 'you', 'it') and/or an auxiliary verb (like 'is', 'are', 'have', 'do'). This usually happens at the beginning of a sentence. The listener can easily infer the missing words because the situation or previous conversation makes them obvious.\n\nFor example, instead of saying \"Are you coming to the meeting?\" we might just say \"Coming to the meeting?\" The listener knows 'you' is the subject and 'are' is the auxiliary verb. This makes the conversation flow more smoothly and sound less formal.",
+  "patterns": [
+   "(Subject) + (Auxiliary) + Main Verb",
+   "(Subject) + (Auxiliary) + Verb-ing",
+   "(Subject) + (Auxiliary) + Adjective/Noun"
+  ],
+  "examples": [
+   {
+    "text": "Sounds like a great idea!",
+    "note": "The subject 'It' and auxiliary 'does' are omitted, understood from context.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Seen my keys anywhere?",
+    "note": "The subject 'Have you' is omitted, common in questions.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Feeling better today?",
+    "note": "The subject 'Are you' is omitted, making the question more direct.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Must be tired after that long flight.",
+    "note": "The subject 'You' is omitted, common when giving an observation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Hope you had a good trip.",
+    "note": "The subject 'I' is omitted, frequent in expressions of hope or opinion.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Is very important to finish this by Friday.",
+    "right": "It's very important to finish this by Friday.",
+    "note": "Ellipsis is generally avoided with 'it' as a dummy subject in formal statements."
+   },
+   {
+    "wrong": "Think I'll go home now.",
+    "right": "I think I'll go home now.",
+    "note": "While 'I' can be omitted, it's less common with 'think' unless it's a direct response."
+   },
+   {
+    "wrong": "Want to grab some coffee?",
+    "right": "Do you want to grab some coffee?",
+    "note": "Omitting 'Do you' is common, but 'Want' alone can sound too abrupt in some contexts."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.ellipsis-in-speech.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which sentence correctly uses ellipsis in an informal context?",
+   "options": [
+    "Ate all the cake.",
+    "He ate all the cake.",
+    "All the cake was eaten.",
+    "The cake ate all."
+   ],
+   "answer": 0,
+   "explanation": "In informal conversation, 'I' is often omitted when the speaker is referring to themselves, making 'Ate all the cake' a natural elliptical phrase."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What is the most likely omitted subject and auxiliary in 'Going to the concert tonight?'",
+   "options": [
+    "I am",
+    "He is",
+    "Are you",
+    "We are"
+   ],
+   "answer": 2,
+   "explanation": "The question 'Going to the concert tonight?' most commonly implies 'Are you going to the concert tonight?', with 'Are you' being omitted."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which of these sentences is *least* likely to use ellipsis in a natural conversation?",
+   "options": [
+    "Looks like rain.",
+    "Must be time to go.",
+    "The report needs to be submitted by noon.",
+    "Heard about the new project?"
+   ],
+   "answer": 2,
+   "explanation": "'The report needs to be submitted by noon' is a more formal statement where omitting the subject 'The report' would make it unclear or grammatically awkward."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Complete the elliptical sentence: '___ a good time at the party?'",
+   "options": [
+    "You had",
+    "Did you have",
+    "Having",
+    "Had"
+   ],
+   "answer": 3,
+   "explanation": "'Had a good time at the party?' is a common elliptical question, omitting 'Did you'."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ been waiting long?",
+   "answers": [
+    [
+     "Have you"
+    ]
+   ],
+   "explanation": "The full question would be 'Have you been waiting long?', so 'Have you' is the omitted part."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ a bit chilly in here, isn't it?",
+   "answers": [
+    [
+     "It's",
+     "It is"
+    ]
+   ],
+   "explanation": "The full sentence is 'It's a bit chilly in here, isn't it?', where 'It's' is often omitted in informal speech."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ to finish this by tomorrow, right?",
+   "answers": [
+    [
+     "Need",
+     "Got"
+    ]
+   ],
+   "explanation": "The full question would be 'Do you need to finish this by tomorrow, right?', so 'Need' is the elliptical form."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Sounds",
+    "like",
+    "a",
+    "plan",
+    "."
+   ],
+   "explanation": "This is a common elliptical phrase, omitting 'It' before 'Sounds'."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Coming",
+    "to",
+    "the",
+    "meeting",
+    "?"
+   ],
+   "explanation": "This elliptical question omits 'Are you' before 'Coming'."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Is important to remember your passport.",
+   "answers": [
+    "It's important to remember your passport.",
+    "It is important to remember your passport."
+   ],
+   "explanation": "The dummy subject 'It' cannot be omitted in this context; it's not an informal conversational ellipsis."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Think I'll take a break now.",
+   "answers": [
+    "I think I'll take a break now."
+   ],
+   "explanation": "While 'I' can be omitted, it's more natural to include it with 'think' in this type of statement, especially when initiating a new thought."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Are you feeling hungry?",
+   "instruction": "Rewrite using ellipsis.",
+   "answers": [
+    "Feeling hungry?"
+   ],
+   "explanation": "The subject 'you' and auxiliary 'Are' are omitted, which is common in informal questions."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It looks like we're going to be late.",
+   "instruction": "Rewrite using ellipsis.",
+   "answers": [
+    "Looks like we're going to be late."
+   ],
+   "explanation": "The subject 'It' is omitted, a common elliptical form for observations."
+  },
+  {
+   "id": "ex.c2.ellipsis-in-speech.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.ellipsis-in-speech"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Seen the new movie",
+     "right": "yet?"
+    },
+    {
+     "left": "Sounds",
+     "right": "like a good idea."
+    },
+    {
+     "left": "Hope",
+     "right": "you have a great day."
+    },
+    {
+     "left": "Need a hand",
+     "right": "with that box?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "sounds (good|great|nice|like)",
+  "(seen|heard|got|finished) (it|that|anything|anyone)",
+  "(coming|going|working|eating) (to|on|at|for)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.ellipsis-in-speech.01": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.02": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.03": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.04": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'Had' and 'Having' form correct and natural elliptical questions."
+   },
+   "ex.c2.ellipsis-in-speech.05": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.06": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'Need' and 'Got' naturally complete the informal elliptical sentence."
+   },
+   "ex.c2.ellipsis-in-speech.08": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.09": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.10": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.11": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.12": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.13": {
+    "status": "pass"
+   },
+   "ex.c2.ellipsis-in-speech.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

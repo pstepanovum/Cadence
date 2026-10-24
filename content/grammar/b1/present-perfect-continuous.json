@@ -1,0 +1,509 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "present-perfect-continuous",
+ "draftHash": "be2965c352a81c5b",
+ "grammarPoint": {
+  "id": "gp.present-perfect-continuous",
+  "level": "B1",
+  "topicId": "topic.tenses",
+  "title": "Present perfect continuous",
+  "summary": "Use the present perfect continuous to talk about activities that started in the past and are still happening, or have just stopped.",
+  "explanation": "We use the *present perfect continuous* to describe an action that began in the past and is still continuing in the present. It often emphasizes the *duration* of the activity.\n\nWe also use it for actions that have just finished, but their *results or effects are visible now*. In this case, the focus is on the activity itself and its recent completion.\n\nThis tense is formed with *have/has + been + the -ing form* of the main verb. It helps us connect a past activity to the present moment.",
+  "patterns": [
+   "Subject + have/has + been + verb-ing",
+   "Subject + have/has + not + been + verb-ing",
+   "Have/Has + subject + been + verb-ing?"
+  ],
+  "examples": [
+   {
+    "text": "I've been waiting for you for over an hour!",
+    "note": "Shows an action that started in the past and is still continuing.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She has been practicing the piano all morning.",
+    "note": "Emphasizes the duration of an ongoing activity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Why are your clothes wet? Have you been swimming?",
+    "note": "Asks about a recently finished action with a visible result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They haven't been feeling well lately.",
+    "note": "Describes a state or activity that started in the past and continues up to now.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The children have been playing outside, so they're tired.",
+    "note": "Explains the cause of a present situation (tiredness) due to a recent activity.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I am waiting for two hours.",
+    "right": "I have been waiting for two hours.",
+    "note": "Use present perfect continuous for actions continuing for a duration."
+   },
+   {
+    "wrong": "She has worked here since 2010.",
+    "right": "She has been working here since 2010.",
+    "note": "Use continuous for ongoing activities, especially with 'for' or 'since'."
+   },
+   {
+    "wrong": "They been studying all night.",
+    "right": "They have been studying all night.",
+    "note": "Remember to include 'have' or 'has' before 'been'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.present-perfect-continuous.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My eyes are tired because I ___ on the computer all day.",
+   "options": [
+    "am working",
+    "have been working",
+    "worked",
+    "have worked"
+   ],
+   "answer": 1,
+   "explanation": "The action started in the past ('all day') and has just stopped or continues, with a visible result ('tired eyes')."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "How long ___ for the bus?",
+   "options": [
+    "are you waiting",
+    "you have waited",
+    "have you been waiting",
+    "did you wait"
+   ],
+   "answer": 2,
+   "explanation": "This question asks about the duration of an ongoing activity, requiring the present perfect continuous."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It ___ all morning, but now the sun is out.",
+   "options": [
+    "has rained",
+    "is raining",
+    "has been raining",
+    "rained"
+   ],
+   "answer": 2,
+   "explanation": "The rain started in the past ('all morning') and continued until recently, with a clear end point mentioned ('but now the sun is out')."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He looks exhausted. He ___ for his exam.",
+   "options": [
+    "studies",
+    "has studied",
+    "has been studying",
+    "is studying"
+   ],
+   "answer": 2,
+   "explanation": "His exhaustion is a result of a recent, continuous activity (studying) that has just stopped or is still ongoing."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'm so hungry! I ___ ___ ___ since breakfast.",
+   "answers": [
+    [
+     "have",
+     "been",
+     "cooking"
+    ],
+    [
+     "'ve",
+     "been",
+     "cooking"
+    ]
+   ],
+   "explanation": "The action of cooking started in the past and has continued up to the present, causing hunger."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ ___ ___ a new language for six months.",
+   "answers": [
+    [
+     "has",
+     "been",
+     "learning"
+    ],
+    [
+     "'s",
+     "been",
+     "learning"
+    ]
+   ],
+   "explanation": "This describes an activity that started in the past and is still ongoing, emphasizing its duration."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "What ___ you ___ ___? Your hands are dirty!",
+   "answers": [
+    [
+     "have",
+     "been",
+     "doing"
+    ]
+   ],
+   "explanation": "The question asks about a recent activity that explains the current state (dirty hands)."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "have",
+    "been",
+    "traveling",
+    "for",
+    "weeks",
+    "."
+   ],
+   "distractors": [
+    "travel",
+    "are"
+   ],
+   "explanation": "This sentence describes an activity that started in the past and is still ongoing, emphasizing its duration."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "hasn't",
+    "been",
+    "sleeping",
+    "well",
+    "lately",
+    "."
+   ],
+   "distractors": [
+    "sleeps",
+    "did"
+   ],
+   "explanation": "This sentence describes a continuous activity that has not been happening successfully recently."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The kids are playing video games for hours.",
+   "answers": [
+    "The kids have been playing video games for hours."
+   ],
+   "explanation": "For an activity that started in the past and continues for a duration, use the present perfect continuous."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I'm tired because I have run.",
+   "answers": [
+    "I'm tired because I have been running."
+   ],
+   "explanation": "The present perfect continuous emphasizes the recent activity that caused the current state (tiredness)."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She started reading that book two hours ago and is still reading it.",
+   "instruction": "Rewrite using the present perfect continuous.",
+   "answers": [
+    "She has been reading that book for two hours."
+   ],
+   "explanation": "The present perfect continuous effectively combines the past start and ongoing nature of the action."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My car is making a strange noise. It started yesterday.",
+   "instruction": "Combine into one sentence using the present perfect continuous.",
+   "answers": [
+    "My car has been making a strange noise since yesterday."
+   ],
+   "explanation": "The present perfect continuous shows that the noise started in the past and continues up to the present."
+  },
+  {
+   "id": "ex.b1.present-perfect-continuous.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.present-perfect-continuous"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I'm out of breath because",
+     "right": "I've been climbing the stairs."
+    },
+    {
+     "left": "They look happy because",
+     "right": "they've been celebrating their anniversary."
+    },
+    {
+     "left": "The garden is wet because",
+     "right": "it has been raining all night."
+    },
+    {
+     "left": "He's very skilled because",
+     "right": "he has been practicing for years."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "has been \\w+ing",
+  "have been \\w+ing",
+  "been \\w+ing for"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.present-perfect-continuous.01": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.02": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.03": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.04": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.present-perfect-continuous.05: needs one answer list per gap (3)"
+   },
+   "ex.b1.present-perfect-continuous.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.present-perfect-continuous.06: needs one answer list per gap (3)"
+   },
+   "ex.b1.present-perfect-continuous.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.present-perfect-continuous.07: needs one answer list per gap (3)"
+   },
+   "ex.b1.present-perfect-continuous.08": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.09": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.10": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.11": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.12": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.13": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.14": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.15": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.16": {
+    "status": "pass"
+   },
+   "ex.b1.present-perfect-continuous.17": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both singular 'has' and plural 'have' are acceptable with the collective noun 'team'."
+   },
+   "ex.b1.present-perfect-continuous.18": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'saving' and 'waiting' form grammatically correct and natural sentences in this context."
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b1.present-perfect-continuous.15",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.present-perfect-continuous"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Why is the ground so muddy? It ___ all night.",
+    "options": [
+     "is raining",
+     "has rained",
+     "has been raining",
+     "rained"
+    ],
+    "answer": 2,
+    "explanation": "The muddy ground is the result of an activity (raining) that started in the past and continued for a period, possibly just stopping."
+   },
+   {
+    "id": "ex.b1.present-perfect-continuous.16",
+    "kind": "multiple_choice",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.present-perfect-continuous"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I'm exhausted because I ___ on this report since morning.",
+    "options": [
+     "am working",
+     "have worked",
+     "have been working",
+     "worked"
+    ],
+    "answer": 2,
+    "explanation": "The exhaustion is a result of an activity (working) that started in the past and continued until now."
+   },
+   {
+    "id": "ex.b1.present-perfect-continuous.17",
+    "kind": "gap_fill",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.present-perfect-continuous"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The team ___ ___ ___ hard to prepare for the competition.",
+    "answers": [
+     [
+      "have",
+      "has"
+     ],
+     [
+      "been"
+     ],
+     [
+      "working"
+     ]
+    ],
+    "explanation": "The team started working hard in the past and is still working hard, or just finished, with the preparation as a result."
+   },
+   {
+    "id": "ex.b1.present-perfect-continuous.18",
+    "kind": "gap_fill",
+    "level": "B1",
+    "grammarPointIds": [
+     "gp.present-perfect-continuous"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "How long ___ you ___ ___ for your new laptop?",
+    "answers": [
+     [
+      "have"
+     ],
+     [
+      "been"
+     ],
+     [
+      "saving",
+      "waiting"
+     ]
+    ],
+    "explanation": "This asks about the duration of an ongoing activity (saving money)."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 3342742,
+   "text": "Tom has been acting odd lately.",
+   "author": "Hybrid"
+  },
+  {
+   "sentenceId": 1177519,
+   "text": "Tom has been waiting for you.",
+   "author": "CK"
+  }
+ ]
+}

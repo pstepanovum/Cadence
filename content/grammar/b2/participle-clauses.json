@@ -1,0 +1,414 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "participle-clauses",
+ "draftHash": "087eb1635d4f7d03",
+ "grammarPoint": {
+  "id": "gp.participle-clauses",
+  "level": "B2",
+  "topicId": "topic.clauses",
+  "title": "Participle clauses",
+  "summary": "Participle clauses use -ing or -ed forms of verbs to add information about reason, time, or result, making sentences more concise.",
+  "explanation": "Participle clauses help combine two sentences or clauses into one, making your writing more concise and fluent. They often replace conjunctions like 'because,' 'when,' 'while,' or 'as a result.' The subject of the participle clause is usually the same as the subject of the main clause.\n\nWe use the *present participle* (-ing form) for active actions or actions happening at the same time as the main verb. For example, \"*Feeling hungry*, I made a sandwich\" means \"Because I felt hungry, I made a sandwich.\"\n\nWe use the *past participle* (-ed form) for passive actions or actions that happened before the main verb. For example, \"*Motivated by the challenge*, she worked harder\" means \"Because she was motivated by the challenge, she worked harder.\" You can also use \"*Having + past participle*\" to emphasize that one action was completed before another, like \"*Having finished her work*, she went home.\"",
+  "patterns": [
+   "Verb-ing + , + main clause (reason, time, result)",
+   "Past participle + , + main clause (reason, time)",
+   "Having + past participle + , + main clause (time, reason)",
+   "Main clause + , + verb-ing (result)"
+  ],
+  "examples": [
+   {
+    "text": "Walking along the beach, they found some interesting shells.",
+    "note": "Shows an action happening at the same time (time).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Having completed the project, the team celebrated their success.",
+    "note": "Shows an action completed before another (time/reason).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Surprised by the sudden noise, the cat jumped off the sofa.",
+    "note": "Explains the reason for the cat's action (reason).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The heavy rain caused flooding, damaging several roads.",
+    "note": "Describes the result of the heavy rain (result).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Built in the 18th century, the old house has a lot of history.",
+    "note": "Provides information about the house (reason/description).",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Running late, the bus was missed.",
+    "right": "Running late, I missed the bus.",
+    "note": "The subject of the participle clause must be the same as the main clause."
+   },
+   {
+    "wrong": "Having finish the book, she started a new one.",
+    "right": "Having finished the book, she started a new one.",
+    "note": "Use the past participle form after 'having'."
+   },
+   {
+    "wrong": "Known for its beauty, people visit the park.",
+    "right": "Known for its beauty, the park attracts many visitors.",
+    "note": "Ensure the participle clause clearly refers to the correct noun."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.participle-clauses.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ by the strong winds, the old tree finally fell.",
+   "options": [
+    "Weakening",
+    "Weakened",
+    "To weaken",
+    "Weakens"
+   ],
+   "answer": 1,
+   "explanation": "The tree was affected by the winds, so the passive past participle 'weakened' is correct."
+  },
+  {
+   "id": "ex.b2.participle-clauses.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the instructions carefully, she assembled the furniture without any problems.",
+   "options": [
+    "Reading",
+    "Read",
+    "To read",
+    "Having read"
+   ],
+   "answer": 3,
+   "explanation": "'Having read' emphasizes that the action of reading was completed before assembling the furniture."
+  },
+  {
+   "id": "ex.b2.participle-clauses.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The chef prepared the meal, ___ fresh ingredients.",
+   "options": [
+    "using",
+    "used",
+    "to use",
+    "uses"
+   ],
+   "answer": 0,
+   "explanation": "The '-ing' form 'using' describes an action happening at the same time or as a consequence of the main action."
+  },
+  {
+   "id": "ex.b2.participle-clauses.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ from a long journey, he decided to rest for the afternoon.",
+   "options": [
+    "Tiring",
+    "Tired",
+    "To tire",
+    "Having tired"
+   ],
+   "answer": 1,
+   "explanation": "'Tired' is the past participle used as an adjective, indicating the reason for his rest."
+  },
+  {
+   "id": "ex.b2.participle-clauses.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ (see) the forecast, we decided to bring umbrellas.",
+   "answers": [
+    [
+     "Seeing"
+    ],
+    [
+     "Having seen"
+    ]
+   ],
+   "explanation": "'Seeing' indicates a simultaneous action or reason, while 'Having seen' emphasizes completion before the decision."
+  },
+  {
+   "id": "ex.b2.participle-clauses.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The package, ___ (deliver) this morning, contained a new book.",
+   "answers": [
+    [
+     "delivered"
+    ]
+   ],
+   "explanation": "The past participle 'delivered' acts as an adjective describing the package, indicating a passive action."
+  },
+  {
+   "id": "ex.b2.participle-clauses.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ (live) in the city for years, she knew all the best places.",
+   "answers": [
+    [
+     "Living"
+    ],
+    [
+     "Having lived"
+    ]
+   ],
+   "explanation": "'Living' describes a continuous state or reason, while 'Having lived' emphasizes the duration of the experience as a reason."
+  },
+  {
+   "id": "ex.b2.participle-clauses.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Feeling",
+    "unwell",
+    ",",
+    "she",
+    "left",
+    "work",
+    "early",
+    "."
+   ],
+   "distractors": [
+    "to",
+    "had"
+   ],
+   "explanation": "The participle clause 'Feeling unwell' explains the reason for her leaving work early."
+  },
+  {
+   "id": "ex.b2.participle-clauses.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Built",
+    "in",
+    "the",
+    "19th",
+    "century",
+    ",",
+    "the",
+    "bridge",
+    "is",
+    "a",
+    "historic",
+    "landmark",
+    "."
+   ],
+   "distractors": [
+    "build",
+    "was"
+   ],
+   "explanation": "The past participle clause 'Built in the 19th century' provides descriptive information about the bridge."
+  },
+  {
+   "id": "ex.b2.participle-clauses.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Having finish the report, he submitted it to his manager.",
+   "answers": [
+    "Having finished the report, he submitted it to his manager."
+   ],
+   "explanation": "The correct form after 'having' is the past participle 'finished'."
+  },
+  {
+   "id": "ex.b2.participle-clauses.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Opening the door, a strong wind blew in.",
+   "answers": [
+    "Opening the door, I felt a strong wind blow in.",
+    "As I opened the door, a strong wind blew in.",
+    "Opening the door, he felt a strong wind blow in."
+   ],
+   "explanation": "The subject of 'opening' must be the same as the main clause. The original sentence implies the wind opened the door."
+  },
+  {
+   "id": "ex.b2.participle-clauses.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Because she was exhausted, she fell asleep quickly.",
+   "instruction": "Rewrite using a participle clause.",
+   "answers": [
+    "Exhausted, she fell asleep quickly.",
+    "Being exhausted, she fell asleep quickly."
+   ],
+   "explanation": "The past participle 'exhausted' or 'Being exhausted' can replace 'Because she was exhausted' to show reason."
+  },
+  {
+   "id": "ex.b2.participle-clauses.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He walked into the room and smiled at everyone.",
+   "instruction": "Combine the sentences using a participle clause.",
+   "answers": [
+    "Walking into the room, he smiled at everyone."
+   ],
+   "explanation": "The '-ing' participle 'Walking' shows an action happening immediately before or at the same time as the main action."
+  },
+  {
+   "id": "ex.b2.participle-clauses.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.participle-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Not knowing the answer,",
+     "right": "I had to guess."
+    },
+    {
+     "left": "Damaged by the storm,",
+     "right": "the roof needed repairs."
+    },
+    {
+     "left": "Having studied all night,",
+     "right": "she felt prepared for the exam."
+    },
+    {
+     "left": "The car sped away,",
+     "right": "leaving a cloud of dust."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\w+ing, \\w+",
+  "\\w+ed, \\w+",
+  "having \\w+ed, \\w+",
+  "\\w+, \\w+ing \\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.participle-clauses.01": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.02": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.03": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.04": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.participle-clauses.05: needs one answer list per gap (1)"
+   },
+   "ex.b2.participle-clauses.06": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.participle-clauses.07: needs one answer list per gap (1)"
+   },
+   "ex.b2.participle-clauses.08": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.09": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.10": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences successfully correct the dangling modifier by providing an appropriate subject."
+   },
+   "ex.b2.participle-clauses.12": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.13": {
+    "status": "pass"
+   },
+   "ex.b2.participle-clauses.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 247774,
+   "text": "We walked along the busy street, singing old songs.",
+   "author": "CM"
+  },
+  {
+   "sentenceId": 51664,
+   "text": "All things considered, she is a fairly good wife.",
+   "author": "CM"
+  }
+ ]
+}

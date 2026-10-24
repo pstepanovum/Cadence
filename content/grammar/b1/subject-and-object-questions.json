@@ -1,0 +1,381 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "subject-and-object-questions",
+ "draftHash": "b7f2ac2d3a0673b6",
+ "grammarPoint": {
+  "id": "gp.subject-and-object-questions",
+  "level": "B1",
+  "topicId": "topic.questions-negation",
+  "title": "Subject and object questions",
+  "summary": "Learn how to ask questions about the subject (who or what performs the action) or the object (who or what receives the action) of a sentence.",
+  "explanation": "When we ask a question, sometimes we want to know *who* or *what* performed the action. This is called a *subject question*. In these questions, 'who' or 'what' is the subject of the sentence, so we don't use 'do', 'does', or 'did'. The word order is similar to a statement: Who/What + verb + object?\n\nOther times, we want to know *who* or *what* received the action. This is an *object question*. In these questions, 'who' or 'what' is the object, and we use 'do', 'does', or 'did' to form the question, just like with most other questions. The word order is: Who/What + do/does/did + subject + base verb?\n\nThe key difference is whether 'who' or 'what' is doing the action (subject question, no 'do/did') or receiving the action (object question, use 'do/did').",
+  "patterns": [
+   "Subject question: Who/What + verb (in correct tense) + (object)?",
+   "Object question: Who/What + do/does/did + subject + base verb?"
+  ],
+  "examples": [
+   {
+    "text": "Who called you this morning?",
+    "note": "Subject question: 'Who' performed the action of calling.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "What made that loud noise?",
+    "note": "Subject question: 'What' performed the action of making the noise.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Who did you invite to the party?",
+    "note": "Object question: 'You' performed the action; 'who' received the invitation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "What did they eat for lunch?",
+    "note": "Object question: 'They' performed the action; 'what' was eaten.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Who wants another slice of pizza?",
+    "note": "Subject question: 'Who' performs the action of wanting.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Who did open the door?",
+    "right": "Who opened the door?",
+    "note": "Do not use 'do/did' in subject questions."
+   },
+   {
+    "wrong": "What you saw at the museum?",
+    "right": "What did you see at the museum?",
+    "note": "Use 'do/did' and correct word order for object questions."
+   },
+   {
+    "wrong": "Who you helped with the project?",
+    "right": "Who helped you with the project?",
+    "note": "If 'who' is the subject, don't use 'do/did' and keep statement-like order."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.subject-and-object-questions.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Someone left a message. ___?",
+   "options": [
+    "Who did leave a message?",
+    "Who left a message?",
+    "Who a message left?"
+   ],
+   "answer": 1,
+   "explanation": "This is a subject question because 'who' is the one who left the message. We don't use 'did' in subject questions."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You saw something interesting. ___?",
+   "options": [
+    "What saw you?",
+    "What did you see?",
+    "What you saw?"
+   ],
+   "answer": 1,
+   "explanation": "This is an object question because 'what' is the thing you saw. We use 'did' and the base form of the verb."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ broke the coffee machine?",
+   "options": [
+    "Who did",
+    "Who",
+    "Who does"
+   ],
+   "answer": 1,
+   "explanation": "This is a subject question because 'who' performed the action of breaking. No 'do/did' is needed."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ did you talk to at the conference?",
+   "options": [
+    "What",
+    "Who",
+    "Which"
+   ],
+   "answer": 1,
+   "explanation": "This is an object question about a person, so 'who' is the correct word. 'You' did the talking."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ ate the last piece of cake?",
+   "answers": [
+    [
+     "Who"
+    ]
+   ],
+   "explanation": "This is a subject question; 'who' performed the action of eating. No 'do/did' is needed."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ did you ___ for your birthday?",
+   "answers": [
+    [
+     "What"
+    ],
+    [
+     "get",
+     "buy"
+    ]
+   ],
+   "explanation": "This is an object question; 'what' is the thing you received. We use 'did' and the base form of the verb."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ caused the delay?",
+   "answers": [
+    [
+     "What"
+    ]
+   ],
+   "explanation": "This is a subject question; 'what' performed the action of causing the delay. No 'do/did' is needed."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Who",
+    "sent",
+    "that",
+    "email",
+    "?"
+   ],
+   "explanation": "This is a subject question. 'Who' is the sender, so no 'did' is used."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "What",
+    "did",
+    "you",
+    "read",
+    "?"
+   ],
+   "explanation": "This is an object question. 'What' is the thing you read, so 'did' is used."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Who did win the competition?",
+   "answers": [
+    "Who won the competition?"
+   ],
+   "explanation": "This is a subject question, so 'did' is not used. The verb 'win' should be in the past simple form 'won'."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "What you want for dinner?",
+   "answers": [
+    "What do you want for dinner?"
+   ],
+   "explanation": "This is an object question, so 'do' is needed before the subject 'you'."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Someone helped Maria with her homework.",
+   "instruction": "Ask a question about 'someone'.",
+   "answers": [
+    "Who helped Maria with her homework?"
+   ],
+   "explanation": "This is a subject question, asking about the person who performed the action. No 'do/did' is used."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They bought a new car.",
+   "instruction": "Ask a question about 'a new car'.",
+   "answers": [
+    "What did they buy?"
+   ],
+   "explanation": "This is an object question, asking about the thing they bought. 'Did' is used because 'what' is the object."
+  },
+  {
+   "id": "ex.b1.subject-and-object-questions.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.subject-and-object-questions"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Who wants",
+     "right": "to go first?"
+    },
+    {
+     "left": "What did you",
+     "right": "do last weekend?"
+    },
+    {
+     "left": "Who broke",
+     "right": "the coffee cup?"
+    },
+    {
+     "left": "What happened",
+     "right": "after the meeting?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "who \\w+s \\w+",
+  "who \\w+ed \\w+",
+  "what did \\w+ \\w+",
+  "who did \\w+ \\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.subject-and-object-questions.01": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.02": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.03": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.04": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.05": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.06": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.07": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.08": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.09": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.10": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.11": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.12": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.13": {
+    "status": "pass"
+   },
+   "ex.b1.subject-and-object-questions.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 16543,
+   "text": "Who did you give it to?",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 680672,
+   "text": "Who designed that museum?",
+   "author": "Source_VOA"
+  }
+ ]
+}

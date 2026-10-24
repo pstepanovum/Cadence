@@ -1,0 +1,425 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "advanced-modality",
+ "draftHash": "9df71ea8a02e243b",
+ "grammarPoint": {
+  "id": "gp.advanced-modality",
+  "level": "C2",
+  "topicId": "topic.modals",
+  "title": "Advanced modality",
+  "summary": "Explore advanced modal expressions like 'may well' for strong probability, 'might as well' for reluctant acceptance, 'would have had to' for hypothetical past obligation.",
+  "explanation": "Advanced modality allows for more nuanced expression of probability, necessity, and obligation. These phrases add specific shades of meaning that go beyond basic modal verbs.\n\n*May well* indicates a strong probability or a logical expectation, often implying a reasonable basis for the prediction. It suggests that something is very likely to happen or be true.\n\n*Might as well* is used to suggest an action when there are no better alternatives, or when one feels resigned to doing something. It often implies a lack of enthusiasm but a practical acceptance of the situation.\n\n*Would have had to* refers to a necessary action or obligation in a hypothetical past situation that did not occur. It describes what *would have been required* under different past circumstances.\n\n*Can't but* is a formal expression meaning 'cannot help but' or 'cannot avoid'. It conveys an unavoidable action, feeling, or conclusion, emphasizing that there is no other option.",
+  "patterns": [
+   "subject + may well + base verb",
+   "subject + might as well + base verb",
+   "subject + would have had to + base verb",
+   "subject + can't but + base verb"
+  ],
+  "examples": [
+   {
+    "text": "Given the current market trends, the company may well decide to invest in new technology.",
+    "note": "Shows strong probability based on current information.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The concert was canceled, so we might as well go home and watch a movie instead.",
+    "note": "Expresses resignation and acceptance of the next best alternative.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If the project had failed, we would have had to start from scratch, losing months of work.",
+    "note": "Describes a necessary action in a hypothetical past scenario.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "After hearing her compelling argument, I can't but agree with her perspective.",
+    "note": "Indicates an unavoidable agreement or conclusion.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He may well be exhausted after working all night on the presentation.",
+    "note": "Suggests a logical deduction about his state.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "It may be well true.",
+    "right": "It *may well* be true.",
+    "note": "The adverb 'well' modifies the probability, not the verb 'be'."
+   },
+   {
+    "wrong": "We might as good go.",
+    "right": "We *might as well* go.",
+    "note": "The correct idiom is 'might as well'."
+   },
+   {
+    "wrong": "If I had gone, I would had to pay.",
+    "right": "If I had gone, I *would have had to* pay.",
+    "note": "The correct structure for past hypothetical obligation is 'would have had to'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.advanced-modality.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The traffic is terrible; we ___ be late for the meeting.",
+   "options": [
+    "might as well",
+    "would have had to",
+    "may well",
+    "can't but"
+   ],
+   "answer": 2,
+   "explanation": "'May well' expresses a strong probability based on the current situation (terrible traffic)."
+  },
+  {
+   "id": "ex.c2.advanced-modality.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Since the restaurant is closed, we ___ cook dinner at home.",
+   "options": [
+    "may well",
+    "might as well",
+    "would have had to",
+    "can't but"
+   ],
+   "answer": 1,
+   "explanation": "'Might as well' suggests doing something because there's no better alternative, often with a sense of resignation."
+  },
+  {
+   "id": "ex.c2.advanced-modality.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If she hadn't found a new job, she ___ move back with her parents.",
+   "options": [
+    "may well",
+    "might as well",
+    "would have had to",
+    "can't but"
+   ],
+   "answer": 2,
+   "explanation": "'Would have had to' describes a necessary action in a hypothetical past situation that didn't happen."
+  },
+  {
+   "id": "ex.c2.advanced-modality.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After witnessing the accident, I ___ feel sympathy for the victims.",
+   "options": [
+    "may well",
+    "might as well",
+    "would have had to",
+    "can't but"
+   ],
+   "answer": 3,
+   "explanation": "'Can't but' means 'cannot help but' or 'cannot avoid', expressing an unavoidable feeling."
+  },
+  {
+   "id": "ex.c2.advanced-modality.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Given the evidence, the jury ___ ___ ___ conclude he is guilty.",
+   "answers": [
+    [
+     "can't"
+    ],
+    [
+     "but"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Can't but' is followed by the base form of the verb. The 'to' is a distractor."
+  },
+  {
+   "id": "ex.c2.advanced-modality.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If the flight had been canceled, we ___ ___ ___ ___ stay an extra night.",
+   "answers": [
+    [
+     "would"
+    ],
+    [
+     "have"
+    ],
+    [
+     "had"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Would have had to' expresses a past hypothetical obligation."
+  },
+  {
+   "id": "ex.c2.advanced-modality.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's raining, so we ___ ___ stay indoors.",
+   "answers": [
+    [
+     "might"
+    ],
+    [
+     "as"
+    ],
+    [
+     "well"
+    ]
+   ],
+   "explanation": "'Might as well' suggests an action when there's no better alternative."
+  },
+  {
+   "id": "ex.c2.advanced-modality.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "can't",
+    "but",
+    "admire",
+    "her",
+    "determination",
+    "."
+   ],
+   "distractors": [
+    "to",
+    "will"
+   ],
+   "explanation": "The phrase 'can't but' is followed by the base form of the verb."
+  },
+  {
+   "id": "ex.c2.advanced-modality.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "I",
+    "had",
+    "missed",
+    "it",
+    ",",
+    "I",
+    "would",
+    "have",
+    "had",
+    "to",
+    "wait",
+    "."
+   ],
+   "distractors": [
+    "must",
+    "should"
+   ],
+   "explanation": "'Would have had to' expresses a hypothetical past obligation."
+  },
+  {
+   "id": "ex.c2.advanced-modality.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The project may well to succeed if they get enough funding.",
+   "answers": [
+    "The project may well succeed if they get enough funding."
+   ],
+   "explanation": "'May well' is followed by the base form of the verb without 'to'."
+  },
+  {
+   "id": "ex.c2.advanced-modality.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Since we're already here, we might as good visit the museum.",
+   "answers": [
+    "Since we're already here, we might as well visit the museum."
+   ],
+   "explanation": "The correct idiom is 'might as well', not 'might as good'."
+  },
+  {
+   "id": "ex.c2.advanced-modality.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's very probable that she will accept the offer.",
+   "instruction": "Use 'may well'.",
+   "answers": [
+    "She may well accept the offer."
+   ],
+   "explanation": "'May well' expresses strong probability."
+  },
+  {
+   "id": "ex.c2.advanced-modality.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "There was no other choice but to cancel the event.",
+   "instruction": "Use 'can't but'.",
+   "answers": [
+    "We couldn't but cancel the event."
+   ],
+   "explanation": "'Can't but' (or 'couldn't but' in the past) means 'cannot avoid' or 'had no choice but'."
+  },
+  {
+   "id": "ex.c2.advanced-modality.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.advanced-modality"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Given the circumstances, he may well",
+     "right": "be promoted next year."
+    },
+    {
+     "left": "The movie was boring, so we might as well",
+     "right": "leave early."
+    },
+    {
+     "left": "If I had known, I would have had to",
+     "right": "prepare a speech."
+    },
+    {
+     "left": "One can't but",
+     "right": "admire her resilience."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "may well [a-z]+",
+  "might as well [a-z]+",
+  "would have had to [a-z]+",
+  "can't but [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.advanced-modality.01": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.02": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.03": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.04": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.05": {
+    "status": "drop",
+    "note": "Key judged wrong: The key is ungrammatical because 'can't but' takes a bare infinitive, and the other answer supplies only two words for three gaps."
+   },
+   "ex.c2.advanced-modality.06": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.advanced-modality.07: needs one answer list per gap (2)"
+   },
+   "ex.c2.advanced-modality.08": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.09": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.10": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.11": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.12": {
+    "status": "pass"
+   },
+   "ex.c2.advanced-modality.13": {
+    "status": "pass",
+    "note": "Checker slip: The key correctly retains the past tense of the original sentence, whereas the other answer incorrectly shifts to the present tense."
+   },
+   "ex.c2.advanced-modality.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 291959,
+   "text": "He won't listen. I might as well talk to a brick wall.",
+   "author": "sundown"
+  },
+  {
+   "sentenceId": 50640,
+   "text": "The rumor may well be true.",
+   "author": "CK"
+  }
+ ]
+}

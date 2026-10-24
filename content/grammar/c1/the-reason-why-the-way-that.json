@@ -1,0 +1,406 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "the-reason-why-the-way-that",
+ "draftHash": "73a7dd40b353c906",
+ "grammarPoint": {
+  "id": "gp.the-reason-why-the-way-that",
+  "level": "C1",
+  "topicId": "topic.emphasis",
+  "title": "The reason why, the way that",
+  "summary": "Learn to use \"the reason why\" and \"the way that\" to emphasize causes and methods, adding clarity and a more formal tone.",
+  "explanation": "When you want to highlight *why* something happened or *how* it was done, you can use the phrases \"the reason why\" and \"the way that.\" These structures bring attention to the cause or manner, making your statement more precise and often more emphatic.\n\n\"The reason why\" introduces a clause that explains the cause. While \"why\" can sometimes be omitted, including it adds a degree of emphasis or formality. Similarly, \"the way that\" introduces a clause describing the manner or method. \"That\" can also be omitted, but its inclusion can make the sentence clearer or more deliberate.\n\nThese phrases are useful in both spoken and written English, especially when you want to ensure your audience fully understands the specific cause or method you are referring to. They help to structure information clearly and can make your communication more impactful.",
+  "patterns": [
+   "The reason (why) + subject + verb...",
+   "The way (that) + subject + verb..."
+  ],
+  "examples": [
+   {
+    "text": "The reason why the project failed was a lack of funding.",
+    "note": "Emphasizes the specific cause of the project's failure.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I admire the way that she handles difficult conversations.",
+    "note": "Highlights the particular manner in which she manages discussions.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "That's the reason I decided to move to a new city.",
+    "note": "Here, 'why' is omitted, but the meaning of cause is still clear.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Could you explain the way the new software operates?",
+    "note": "The word 'that' is omitted, focusing on the method of operation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The reason why we need more data is to make an informed decision.",
+    "note": "Clearly states the purpose or justification for needing more data.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The reason because I was late was traffic.",
+    "right": "The reason why I was late was traffic.",
+    "note": "Avoid using 'because' after 'the reason'; use 'why' or omit it."
+   },
+   {
+    "wrong": "I don't like the way how he talks to people.",
+    "right": "I don't like the way that he talks to people.",
+    "note": "Use 'that' or omit it after 'the way', not 'how'."
+   },
+   {
+    "wrong": "The reason for his success is hard work.",
+    "right": "The reason why he succeeded is hard work.",
+    "note": "To emphasize the action, use 'the reason why' with a clause."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Could you tell me ___ you managed to finish the report so quickly?",
+   "options": [
+    "the way how",
+    "the way that",
+    "the reason why",
+    "the way for"
+   ],
+   "answer": 1,
+   "explanation": "'The way that' is the correct phrase to ask about the method or manner. 'How' is redundant after 'the way'."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The main ___ I chose this university was its excellent reputation.",
+   "options": [
+    "reason because",
+    "reason why",
+    "way that",
+    "reason for"
+   ],
+   "answer": 1,
+   "explanation": "'The reason why' correctly introduces the cause. 'Reason because' is grammatically incorrect."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I appreciate ___ you always find a solution to problems.",
+   "options": [
+    "the way how",
+    "the reason why",
+    "the way that",
+    "the way for"
+   ],
+   "answer": 2,
+   "explanation": "'The way that' is used to express appreciation for the manner in which someone does something. 'How' is not used with 'the way'."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the company decided to expand was to reach new markets.",
+   "options": [
+    "The way that",
+    "The reason why",
+    "The reason for",
+    "The way how"
+   ],
+   "answer": 1,
+   "explanation": "'The reason why' correctly introduces the cause or motivation behind the company's decision."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The ___ why she resigned was a disagreement with management.",
+   "answers": [
+    [
+     "reason"
+    ]
+   ],
+   "explanation": "'The reason why' is the correct structure to explain the cause of her resignation."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I like ___ way ___ you organize your workspace; it's very efficient.",
+   "answers": [
+    [
+     "the"
+    ],
+    [
+     "that",
+     ""
+    ]
+   ],
+   "explanation": "'The way that' (or 'the way' without 'that') is used to describe the manner of organization."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Can you explain ___ reason ___ the meeting was postponed?",
+   "answers": [
+    [
+     "the"
+    ],
+    [
+     "why",
+     ""
+    ]
+   ],
+   "explanation": "'The reason why' (or 'the reason' without 'why') is used to ask for the cause of the postponement."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "reason",
+    "why",
+    "I",
+    "called",
+    "was",
+    "to",
+    "confirm",
+    "our",
+    "appointment",
+    "."
+   ],
+   "explanation": "This sentence uses 'the reason why' to clearly state the purpose of the call."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "explained",
+    "the",
+    "way",
+    "that",
+    "the",
+    "new",
+    "system",
+    "works",
+    "."
+   ],
+   "distractors": [
+    "how"
+   ],
+   "explanation": "This sentence uses 'the way that' to describe the method of operation for the new system."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The reason because he left early was an emergency.",
+   "answers": [
+    "The reason why he left early was an emergency.",
+    "The reason he left early was an emergency."
+   ],
+   "explanation": "The word 'because' is redundant after 'the reason'. Use 'why' or omit it."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I like the way how you decorated your apartment.",
+   "answers": [
+    "I like the way that you decorated your apartment.",
+    "I like the way you decorated your apartment."
+   ],
+   "explanation": "After 'the way', use 'that' or omit it, but not 'how'."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He succeeded due to his incredible dedication.",
+   "instruction": "Rewrite using 'The reason why'.",
+   "answers": [
+    "The reason why he succeeded was his incredible dedication."
+   ],
+   "explanation": "The phrase 'the reason why' introduces the cause of his success."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She solved the puzzle by thinking outside the box.",
+   "instruction": "Rewrite using 'the way that'.",
+   "answers": [
+    "The way that she solved the puzzle was by thinking outside the box.",
+    "The way she solved the puzzle was by thinking outside the box."
+   ],
+   "explanation": "'The way that' describes the method she used to solve the puzzle."
+  },
+  {
+   "id": "ex.c1.the-reason-why-the-way-that.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.the-reason-why-the-way-that"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The reason why I enjoy hiking",
+     "right": "is the peace and quiet of nature."
+    },
+    {
+     "left": "I appreciate the way that you always",
+     "right": "listen carefully to my ideas."
+    },
+    {
+     "left": "Could you explain the way",
+     "right": "the new payment system works?"
+    },
+    {
+     "left": "The reason why they postponed the event",
+     "right": "was the unexpected heavy rain."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "the reason why",
+  "the way that",
+  "the reason he",
+  "the way she"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.the-reason-why-the-way-that.01": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.02": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.03": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.04": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.05": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.06": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.07": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.08": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.09": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.10": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.11": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.12": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.13": {
+    "status": "pass"
+   },
+   "ex.c1.the-reason-why-the-way-that.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 9826146,
+   "text": "I envy the way that Tom can talk to girls.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 260037,
+   "text": "I don't know the reason why he was absent.",
+   "author": "CK"
+  }
+ ]
+}

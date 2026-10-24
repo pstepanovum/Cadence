@@ -1,0 +1,500 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "subtle-quantifiers",
+ "draftHash": "1b423b1e5a1475ba",
+ "grammarPoint": {
+  "id": "gp.subtle-quantifiers",
+  "level": "C2",
+  "topicId": "topic.articles-determiners",
+  "title": "Subtle quantifiers",
+  "summary": "Explore subtle quantifiers like \"many a,\" \"the odd,\" \"a good few,\" and \"nowhere near\" to express nuanced quantities, frequencies, and degrees.",
+  "explanation": "These quantifiers allow for more precise and often more emphatic expressions of quantity, frequency, or proximity than simpler alternatives. They add a layer of subtlety to your communication.\n\n*Many a* emphasizes individual instances within a large, often unspecified, group. It is always followed by a singular countable noun and a singular verb, even though it implies a large number. It can sound slightly formal or literary.\n\n*The odd* refers to something that happens or appears infrequently, irregularly, or in small, scattered numbers. It suggests a scarcity or randomness rather than a consistent pattern.\n\n*A good few* means a surprisingly or significantly large number, more than just 'a few' but perhaps not 'many'. It highlights that the quantity is notable or substantial. *Nowhere near* indicates a significant distance or difference, meaning 'not at all close to' or 'far from'. It can be used for physical distance, time, or abstract concepts like quality or completion.",
+  "patterns": [
+   "many a + singular noun + singular verb",
+   "the odd + singular/plural noun",
+   "a good few + plural noun",
+   "nowhere near + noun/adjective/adverb"
+  ],
+  "examples": [
+   {
+    "text": "Many a scientist has dedicated their life to this research.",
+    "note": "Emphasizes the individual effort of each scientist within a large group.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I only see the odd wild flower growing in this urban garden.",
+    "note": "Indicates that wild flowers are rare and scattered.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "A good few students managed to solve the complex problem.",
+    "note": "Suggests that a surprisingly large number of students succeeded.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new software is nowhere near ready for public release.",
+    "note": "Expresses that the software is far from being complete or perfect.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Many a time I've wondered about the mysteries of the universe.",
+    "note": "A common idiomatic use of 'many a' to mean 'often' or 'frequently'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Many a students have struggled with the advanced calculus.",
+    "right": "Many a student has struggled with the advanced calculus.",
+    "note": "\"Many a\" requires a singular countable noun and a singular verb."
+   },
+   {
+    "wrong": "I found few odd coins in the old chest.",
+    "right": "I found the odd coin in the old chest.",
+    "note": "\"The odd\" is used to describe infrequent or scattered items, not \"few odd.\""
+   },
+   {
+    "wrong": "The project is nowhere close to finished.",
+    "right": "The project is nowhere near finished.",
+    "note": "\"Nowhere near\" is the standard idiomatic expression for 'far from'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.subtle-quantifiers.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After hours of searching, I finally found ___ useful information.",
+   "options": [
+    "many a",
+    "the odd",
+    "a good few",
+    "nowhere near"
+   ],
+   "answer": 1,
+   "explanation": "\"The odd\" implies finding a small, infrequent piece of information after a long search."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new policy is ___ as effective as the old one.",
+   "options": [
+    "many a",
+    "the odd",
+    "a good few",
+    "nowhere near"
+   ],
+   "answer": 3,
+   "explanation": "\"Nowhere near\" means 'not at all close to' or 'far from', indicating a significant lack of effectiveness."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ traveler has shared stories of the hidden village.",
+   "options": [
+    "Many a",
+    "The odd",
+    "A good few",
+    "Nowhere near"
+   ],
+   "answer": 0,
+   "explanation": "\"Many a\" is used with a singular noun and verb to emphasize individual instances within a large group."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Despite the rain, ___ people still showed up for the outdoor concert.",
+   "options": [
+    "many a",
+    "the odd",
+    "a good few",
+    "nowhere near"
+   ],
+   "answer": 2,
+   "explanation": "\"A good few\" suggests a surprisingly or notably large number of people attended despite the adverse conditions."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ a politician has promised change, but delivered ___.",
+   "answers": [
+    [
+     "Many"
+    ],
+    [
+     "nowhere near"
+    ]
+   ],
+   "explanation": "\"Many a\" emphasizes individual politicians, and \"nowhere near\" indicates a significant lack of delivery on promises."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I only hear ___ bird singing in the city, unlike the countryside where there are ___.",
+   "answers": [
+    [
+     "the",
+     "odd"
+    ],
+    [
+     "a",
+     "good",
+     "few"
+    ]
+   ],
+   "explanation": "\"The odd\" describes infrequent occurrences in the city, while \"a good few\" implies a substantial number in the countryside."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The team's performance was ___ its best, and ___ player seemed to lack motivation.",
+   "answers": [
+    [
+     "nowhere",
+     "near"
+    ],
+    [
+     "many",
+     "a"
+    ]
+   ],
+   "explanation": "\"Nowhere near\" indicates the performance was far from optimal, and \"many a\" highlights the individual lack of motivation among players."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Many",
+    "a",
+    "dream",
+    "has",
+    "been",
+    "realized",
+    "."
+   ],
+   "distractors": [
+    "some",
+    "dreams"
+   ],
+   "explanation": "This sentence uses \"many a\" to emphasize the individual realization of numerous dreams."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "new",
+    "proposal",
+    "is",
+    "nowhere",
+    "near",
+    "perfect",
+    "."
+   ],
+   "distractors": [
+    "close",
+    "almost"
+   ],
+   "explanation": "This sentence uses \"nowhere near\" to state that the proposal is far from perfect."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Many a times I've seen that movie, but I still enjoy it.",
+   "answers": [
+    "Many a time I've seen that movie, but I still enjoy it."
+   ],
+   "explanation": "\"Many a\" is followed by a singular countable noun, so \"time\" is correct, not \"times.\""
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "There were good a few complaints about the service.",
+   "answers": [
+    "There were a good few complaints about the service."
+   ],
+   "explanation": "\"A good few\" is a fixed phrase; the article \"a\" comes before \"good few.\""
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I rarely see a shooting star in the night sky.",
+   "instruction": "Rewrite using 'the odd'.",
+   "answers": [
+    "I see the odd shooting star in the night sky.",
+    "I only see the odd shooting star in the night sky."
+   ],
+   "explanation": "\"The odd\" conveys the meaning of something happening infrequently or rarely."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The marathon runner was far from the finish line when he collapsed.",
+   "instruction": "Rewrite using 'nowhere near'.",
+   "answers": [
+    "The marathon runner was nowhere near the finish line when he collapsed."
+   ],
+   "explanation": "\"Nowhere near\" effectively expresses that the runner was a significant distance from the finish line."
+  },
+  {
+   "id": "ex.c2.subtle-quantifiers.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.subtle-quantifiers"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Many a challenge",
+     "right": "has been overcome by sheer determination."
+    },
+    {
+     "left": "I only hear the odd",
+     "right": "car passing by late at night."
+    },
+    {
+     "left": "A good few colleagues",
+     "right": "volunteered to help with the charity event."
+    },
+    {
+     "left": "The budget for the project is",
+     "right": "nowhere near what we actually need."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "many a \\w+",
+  "the odd \\w+",
+  "a good few \\w+",
+  "nowhere near"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.subtle-quantifiers.01": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.02": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.03": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.04": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.05": {
+    "status": "drop",
+    "note": "Key judged wrong: Both options produce ungrammatical sentences because the second gap lacks a proper complement."
+   },
+   "ex.c2.subtle-quantifiers.06": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key creates an ungrammatical second clause, while the other option is correct."
+   },
+   "ex.c2.subtle-quantifiers.07": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical in both gaps, whereas the alternative is correct."
+   },
+   "ex.c2.subtle-quantifiers.08": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.09": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.10": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.11": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers are grammatically correct and naturally express the intended meaning."
+   },
+   "ex.c2.subtle-quantifiers.13": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.14": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.15": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.16": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.17": {
+    "status": "pass"
+   },
+   "ex.c2.subtle-quantifiers.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c2.subtle-quantifiers.15",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.subtle-quantifiers"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The antique shop owner said that ___ customer appreciates the true value of these items.",
+    "options": [
+     "a good few",
+     "the odd",
+     "many a",
+     "nowhere near"
+    ],
+    "answer": 2,
+    "explanation": "\"Many a\" is used with a singular noun and verb to emphasize that each individual customer appreciates the value."
+   },
+   {
+    "id": "ex.c2.subtle-quantifiers.16",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.subtle-quantifiers"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Despite the heavy traffic, we arrived ___ late for the meeting.",
+    "options": [
+     "many a",
+     "the odd",
+     "a good few",
+     "nowhere near"
+    ],
+    "answer": 3,
+    "explanation": "\"Nowhere near\" means \"not at all\" or \"far from,\" indicating they were not late."
+   },
+   {
+    "id": "ex.c2.subtle-quantifiers.17",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.subtle-quantifiers"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I only hear ___ car pass by this quiet street at night.",
+    "options": [
+     "many a",
+     "the odd",
+     "a good few",
+     "nowhere near"
+    ],
+    "answer": 1,
+    "explanation": "\"The odd\" suggests that cars pass by occasionally, but not frequently."
+   },
+   {
+    "id": "ex.c2.subtle-quantifiers.18",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.subtle-quantifiers"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "After the storm, ___ trees had fallen across the hiking trails.",
+    "options": [
+     "many a",
+     "the odd",
+     "a good few",
+     "nowhere near"
+    ],
+    "answer": 2,
+    "explanation": "\"A good few\" indicates a considerable number of trees had fallen."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 13259201,
+   "text": "I'm nowhere near her caliber.",
+   "author": "martinhe543"
+  },
+  {
+   "sentenceId": 66507,
+   "text": "Many a day did she spend knitting a sweater for him.",
+   "author": "Dejo"
+  }
+ ]
+}

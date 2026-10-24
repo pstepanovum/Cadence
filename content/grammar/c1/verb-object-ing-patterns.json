@@ -1,0 +1,402 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "verb-object-ing-patterns",
+ "draftHash": "93fd748e28551dc1",
+ "grammarPoint": {
+  "id": "gp.verb-object-ing-patterns",
+  "level": "C1",
+  "topicId": "topic.verb-patterns",
+  "title": "Verb + object + -ing",
+  "summary": "Learn how to use specific verbs like 'prevent' and 'object' followed by an object and an -ing form, often with a preposition, to express stopping or disapproving actions.",
+  "explanation": "Some verbs in English require a specific structure when followed by an object and another action. This often involves a preposition before the -ing form of the verb. Two common examples are *prevent* and *object*.\n\nWhen you want to say that something stops someone from doing an action, you use *prevent* followed by the object (the person or thing being stopped), then the preposition *from*, and finally the -ing form of the verb. For instance, \"The bad weather prevented us *from leaving*.\"\n\nSimilarly, when you express disapproval or opposition to someone doing something, you use *object* followed by the preposition *to*, then the object (the person or thing whose action you disapprove of), and finally the -ing form of the verb. For example, \"Many residents object *to the city building* a new highway.\" Note that 'to' here is a preposition, not part of an infinitive.",
+  "patterns": [
+   "prevent + object + from + verb-ing",
+   "object + to + object + verb-ing"
+  ],
+  "examples": [
+   {
+    "text": "The heavy snow prevented the team from traveling to the game.",
+    "note": "Shows something stopping an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My parents always objected to me staying out late on school nights.",
+    "note": "Expresses disapproval of an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "A new security system will prevent unauthorized users from accessing the data.",
+    "note": "Describes stopping an action in the future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you object to us using your meeting room for an hour?",
+    "note": "Asks if someone disapproves of an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The loud music prevented me from concentrating on my work.",
+    "note": "Explains what stopped an action.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The loud noise prevented us to sleep.",
+    "right": "The loud noise prevented us from sleeping.",
+    "note": "Use 'from' after 'prevent' when followed by an -ing form."
+   },
+   {
+    "wrong": "She objects my dog barking.",
+    "right": "She objects to my dog barking.",
+    "note": "'Object' in this structure requires the preposition 'to'."
+   },
+   {
+    "wrong": "They prevented him to enter the building.",
+    "right": "They prevented him from entering the building.",
+    "note": "The -ing form is used after 'from' in this construction."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.verb-object-ing-patterns.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new policy aims to ___ employees from sharing confidential information.",
+   "options": [
+    "prevent",
+    "prevent to",
+    "prevent from",
+    "prevent for"
+   ],
+   "answer": 0,
+   "explanation": "The verb 'prevent' is followed by an object and then 'from + verb-ing'. Since 'from' is already present, only 'prevent' is needed."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I don't ___ you borrowing my car, as long as you fill up the tank.",
+   "options": [
+    "object",
+    "object to",
+    "object from",
+    "object for"
+   ],
+   "answer": 1,
+   "explanation": "The verb 'object' requires the preposition 'to' before the object and -ing form."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What ___ you from pursuing your dream career?",
+   "options": [
+    "prevented",
+    "prevented from",
+    "prevented to",
+    "prevented for"
+   ],
+   "answer": 0,
+   "explanation": "The structure is 'prevent + object + from + verb-ing'. 'From' is already in the sentence, so only 'prevented' is needed."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Many people ___ the city council raising taxes again.",
+   "options": [
+    "object",
+    "object from",
+    "object to",
+    "object for"
+   ],
+   "answer": 2,
+   "explanation": "The verb 'object' requires the preposition 'to' before the object and -ing form."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The heavy traffic ___ us ___ arriving on time.",
+   "answers": [
+    [
+     "prevented"
+    ],
+    [
+     "from"
+    ]
+   ],
+   "explanation": "'Prevent' is followed by an object and 'from + verb-ing'."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Do you ___ ___ me using your laptop for a moment?",
+   "answers": [
+    [
+     "object"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Object' requires 'to' before the object and -ing form."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "His shyness often ___ him ___ speaking up in meetings.",
+   "answers": [
+    [
+     "prevents"
+    ],
+    [
+     "from"
+    ]
+   ],
+   "explanation": "'Prevent' is followed by an object and 'from + verb-ing'."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "loud",
+    "music",
+    "prevented",
+    "us",
+    "from",
+    "studying",
+    "."
+   ],
+   "distractors": [
+    "to"
+   ],
+   "explanation": "This sentence uses 'prevented + object + from + verb-ing' to show what stopped an action."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "objects",
+    "to",
+    "her",
+    "neighbors",
+    "making",
+    "so much",
+    "noise",
+    "."
+   ],
+   "distractors": [
+    "for"
+   ],
+   "explanation": "This sentence uses 'objects + to + object + verb-ing' to express disapproval."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The bad weather prevented them to go hiking.",
+   "answers": [
+    "The bad weather prevented them from going hiking."
+   ],
+   "explanation": "After 'prevent + object', use 'from + verb-ing'."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I object your proposal changing.",
+   "answers": [
+    "I object to your proposal changing."
+   ],
+   "explanation": "The verb 'object' in this context requires the preposition 'to' before the object and -ing form."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The security guard stopped me entering the building.",
+   "instruction": "Use the verb 'prevent'.",
+   "answers": [
+    "The security guard prevented me from entering the building."
+   ],
+   "explanation": "'Prevent' is used with 'from + verb-ing' to mean 'stop'."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They don't like us parking our bikes here.",
+   "instruction": "Use the verb 'object'.",
+   "answers": [
+    "They object to us parking our bikes here."
+   ],
+   "explanation": "'Object' is used with 'to + object + verb-ing' to express disapproval."
+  },
+  {
+   "id": "ex.c1.verb-object-ing-patterns.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.verb-object-ing-patterns"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The new rules will prevent",
+     "right": "students from cheating on exams."
+    },
+    {
+     "left": "My colleague objects",
+     "right": "to me taking a longer lunch break."
+    },
+    {
+     "left": "What prevented you",
+     "right": "from joining the team meeting?"
+    },
+    {
+     "left": "Do you object",
+     "right": "to the company implementing new software?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "prevent .* from .*ing",
+  "object to .* .*ing"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.verb-object-ing-patterns.01": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.02": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.03": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.04": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.05": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.06": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.07": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.08": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.09": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.10": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.11": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.12": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.13": {
+    "status": "pass"
+   },
+   "ex.c1.verb-object-ing-patterns.14": {
+    "status": "pass",
+    "note": "Checker slip: The key is correct, but the other option pairs statements and questions with incorrect punctuation marks."
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 10699358,
+   "text": "Let's not let the lack of money prevent us from doing that.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 311086,
+   "text": "She tried to prevent the rumor from spreading.",
+   "author": "CK"
+  }
+ ]
+}

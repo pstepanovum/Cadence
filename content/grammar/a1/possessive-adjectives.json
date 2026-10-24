@@ -1,0 +1,393 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "possessive-adjectives",
+ "draftHash": "12520caebff6819e",
+ "grammarPoint": {
+  "id": "gp.possessive-adjectives",
+  "level": "A1",
+  "topicId": "topic.nouns-pronouns",
+  "title": "My, your, his, her",
+  "summary": "Learn to use 'my', 'your', 'his', and 'her' to show who something belongs to.",
+  "explanation": "We use words like *my*, *your*, *his*, and *her* to show who something belongs to. They tell us about possession. These words always come *before* a noun.\n\nUse *my* for things that belong to \"I\" (the speaker). Use *your* for things that belong to \"you\" (the listener).\n\nUse *his* for things that belong to a male person. Use *her* for things that belong to a female person.",
+  "patterns": [
+   "my + noun",
+   "your + noun",
+   "his + noun",
+   "her + noun"
+  ],
+  "examples": [
+   {
+    "text": "This is my book.",
+    "note": "Shows the book belongs to the speaker.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Is that your car?",
+    "note": "Asks if the car belongs to the listener.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He likes his new job.",
+    "note": "Shows the job belongs to him (a male person).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She lives with her family.",
+    "note": "Shows the family belongs to her (a female person).",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Where is my phone?",
+    "note": "Asks about the speaker's phone.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "This is I book.",
+    "right": "This is my book.",
+    "note": "Use 'my' (possessive adjective) before a noun, not 'I' (subject pronoun)."
+   },
+   {
+    "wrong": "This is her.",
+    "right": "This is her bag.",
+    "note": "Possessive adjectives like 'her' need a noun after them."
+   },
+   {
+    "wrong": "He has a dog. Her dog is big.",
+    "right": "He has a dog. His dog is big.",
+    "note": "Use 'his' for a male owner, not 'her'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.possessive-adjectives.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I have a cat. ___ cat is black.",
+   "options": [
+    "My",
+    "Your",
+    "His",
+    "Her"
+   ],
+   "answer": 0,
+   "explanation": "'My' shows that the cat belongs to 'I'."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "This is Maria. ___ bag is red.",
+   "options": [
+    "My",
+    "Your",
+    "His",
+    "Her"
+   ],
+   "answer": 3,
+   "explanation": "'Her' shows that the bag belongs to Maria (a female person)."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you like ___ new shoes?",
+   "options": [
+    "my",
+    "your",
+    "his",
+    "her"
+   ],
+   "answer": 1,
+   "explanation": "'Your' asks if the shoes belong to 'you'."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He is John. ___ bike is fast.",
+   "options": [
+    "My",
+    "Your",
+    "His",
+    "Her"
+   ],
+   "answer": 2,
+   "explanation": "'His' shows that the bike belongs to John (a male person)."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I like ___ new apartment.",
+   "answers": [
+    [
+     "my"
+    ]
+   ],
+   "explanation": "'My' shows the apartment belongs to 'I'."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "This is Sarah. ___ brother is tall.",
+   "answers": [
+    [
+     "her"
+    ]
+   ],
+   "explanation": "'Her' shows the brother belongs to Sarah (a female person)."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Do you know ___ address?",
+   "answers": [
+    [
+     "your"
+    ]
+   ],
+   "explanation": "'Your' asks about the address belonging to 'you'."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "This",
+    "is",
+    "my",
+    "friend",
+    "."
+   ],
+   "distractors": [
+    "a",
+    "he"
+   ],
+   "explanation": "This sentence uses 'my' to show the friend belongs to the speaker."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "likes",
+    "her",
+    "new",
+    "hat",
+    "."
+   ],
+   "distractors": [
+    "his",
+    "a"
+   ],
+   "explanation": "This sentence uses 'her' to show the hat belongs to her (a female person)."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "This is I book.",
+   "answers": [
+    "This is my book."
+   ],
+   "explanation": "Use 'my' (possessive adjective) before a noun, not 'I' (subject pronoun)."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She has a dog. His dog is small.",
+   "answers": [
+    "She has a dog. Her dog is small."
+   ],
+   "explanation": "Use 'her' for a female owner, not 'his'."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I have a new phone.",
+   "instruction": "Use 'my'.",
+   "answers": [
+    "This is my new phone."
+   ],
+   "explanation": "'My' shows that the new phone belongs to 'I'."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You have a nice car.",
+   "instruction": "Use 'your'.",
+   "answers": [
+    "This is your nice car."
+   ],
+   "explanation": "'Your' shows that the nice car belongs to 'you'."
+  },
+  {
+   "id": "ex.a1.possessive-adjectives.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.possessive-adjectives"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "This is my",
+     "right": "favorite song."
+    },
+    {
+     "left": "Is that your",
+     "right": "new jacket?"
+    },
+    {
+     "left": "He lost his",
+     "right": "keys yesterday."
+    },
+    {
+     "left": "She loves her",
+     "right": "pet rabbit."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "my \\w+",
+  "your \\w+",
+  "his \\w+",
+  "her \\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.possessive-adjectives.01": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.02": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.03": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.04": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.05": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.06": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.07": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.08": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.09": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.10": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.11": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.12": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.13": {
+    "status": "pass"
+   },
+   "ex.a1.possessive-adjectives.14": {
+    "status": "drop",
+    "note": "Ambiguous: Both matchings create grammatically correct and natural English sentences."
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 21501,
+   "text": "I met Tom on my way to school.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 37039,
+   "text": "Tom is the tallest in his class.",
+   "author": "CK"
+  }
+ ]
+}

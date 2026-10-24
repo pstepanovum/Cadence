@@ -1,0 +1,395 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "zero-conditional",
+ "draftHash": "77995c6651109f46",
+ "grammarPoint": {
+  "id": "gp.zero-conditional",
+  "level": "B1",
+  "topicId": "topic.conditionals",
+  "title": "Zero conditional",
+  "summary": "The zero conditional describes general truths, scientific facts, and things that always happen under certain conditions.",
+  "explanation": "We use the *zero conditional* to talk about things that are always true or generally accepted facts. This includes scientific facts, general rules, and habits. The result of the condition is certain and predictable.\n\nThe structure uses the *present simple* in both parts of the sentence: the 'if' clause (the condition) and the main clause (the result). You can also use 'when' instead of 'if' in zero conditional sentences, as they both express a situation that always leads to the same outcome.\n\nThe order of the clauses can be changed. If the 'if' clause comes first, we use a comma before the main clause. If the main clause comes first, we usually don't use a comma.",
+  "patterns": [
+   "If + present simple, present simple",
+   "Present simple if + present simple",
+   "When + present simple, present simple",
+   "Present simple when + present simple"
+  ],
+  "examples": [
+   {
+    "text": "If you heat water to 100 degrees Celsius, it boils.",
+    "note": "This is a scientific fact that is always true.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "When I don't get enough sleep, I feel tired the next day.",
+    "note": "This describes a personal habit or a general truth for the speaker.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Plants die if they don't get water.",
+    "note": "The main clause comes first, stating a general truth.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If you press this button, the machine turns off.",
+    "note": "This explains a general instruction or how a device always works.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My cat purrs when she is happy.",
+    "note": "This describes a consistent behavior of the cat.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If it will rain, the ground gets wet.",
+    "right": "If it rains, the ground gets wet.",
+    "note": "Use the present simple in the 'if' clause, not the future simple."
+   },
+   {
+    "wrong": "If you study hard, you will learn a lot.",
+    "right": "If you study hard, you learn a lot.",
+    "note": "For general truths, use the present simple in the result clause, not the future simple."
+   },
+   {
+    "wrong": "When I am hungry, I eat something.",
+    "right": "When I am hungry, I eat something.",
+    "note": "Ensure correct present simple verb forms for both clauses."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.zero-conditional.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If you mix red and blue, you ___ purple.",
+   "options": [
+    "get",
+    "will get",
+    "got"
+   ],
+   "answer": 0,
+   "explanation": "The zero conditional uses the present simple in both clauses to describe a general truth."
+  },
+  {
+   "id": "ex.b1.zero-conditional.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "When the sun sets, it ___ dark.",
+   "options": [
+    "gets",
+    "will get",
+    "got"
+   ],
+   "answer": 0,
+   "explanation": "This is a natural phenomenon that always happens, so we use the present simple."
+  },
+  {
+   "id": "ex.b1.zero-conditional.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If I eat too much chocolate, I ___ a stomachache.",
+   "options": [
+    "get",
+    "will get",
+    "am getting"
+   ],
+   "answer": 0,
+   "explanation": "This describes a consistent personal reaction, requiring the present simple in both clauses."
+  },
+  {
+   "id": "ex.b1.zero-conditional.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "What happens if you don't water plants?",
+   "options": [
+    "They die.",
+    "They will die.",
+    "They died."
+   ],
+   "answer": 0,
+   "explanation": "This is a general truth about plants, so the present simple is used in the result clause."
+  },
+  {
+   "id": "ex.b1.zero-conditional.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If you ___ (freeze) water, it ___ (turn) into ice.",
+   "answers": [
+    [
+     "freeze"
+    ],
+    [
+     "turns"
+    ]
+   ],
+   "explanation": "This is a scientific fact, so both verbs must be in the present simple."
+  },
+  {
+   "id": "ex.b1.zero-conditional.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "When I ___ (feel) stressed, I usually ___ (listen) to music.",
+   "answers": [
+    [
+     "feel"
+    ],
+    [
+     "listen"
+    ]
+   ],
+   "explanation": "This describes a regular habit, so both verbs are in the present simple."
+  },
+  {
+   "id": "ex.b1.zero-conditional.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "People ___ (get) thirsty if they ___ (not drink) enough water.",
+   "answers": [
+    [
+     "get"
+    ],
+    [
+     "don't drink",
+     "do not drink"
+    ]
+   ],
+   "explanation": "This is a general truth about human physiology, requiring the present simple in both clauses."
+  },
+  {
+   "id": "ex.b1.zero-conditional.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "you",
+    "don't",
+    "wear",
+    "a",
+    "coat,",
+    "you",
+    "get",
+    "cold",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "would"
+   ],
+   "explanation": "This sentence describes a general consequence of not wearing a coat."
+  },
+  {
+   "id": "ex.b1.zero-conditional.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "When",
+    "it",
+    "rains,",
+    "the",
+    "streets",
+    "get",
+    "wet",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "is"
+   ],
+   "explanation": "This describes a natural and consistent outcome when it rains."
+  },
+  {
+   "id": "ex.b1.zero-conditional.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If you will touch fire, you get burned.",
+   "answers": [
+    "If you touch fire, you get burned."
+   ],
+   "explanation": "In the zero conditional, the 'if' clause uses the present simple, not the future simple."
+  },
+  {
+   "id": "ex.b1.zero-conditional.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "When I am hungry, I will eat something.",
+   "answers": [
+    "When I am hungry, I eat something."
+   ],
+   "explanation": "For general truths or habits, both clauses in the zero conditional use the present simple."
+  },
+  {
+   "id": "ex.b1.zero-conditional.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "When you heat metal, it expands.",
+   "instruction": "Rewrite using 'if'.",
+   "answers": [
+    "If you heat metal, it expands."
+   ],
+   "explanation": "'If' and 'when' can often be used interchangeably in the zero conditional to express general truths."
+  },
+  {
+   "id": "ex.b1.zero-conditional.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Plants don't grow without sunlight.",
+   "instruction": "Rewrite using 'if'.",
+   "answers": [
+    "If plants don't get sunlight, they don't grow.",
+    "If plants don't get sunlight, they die."
+   ],
+   "explanation": "The instruction requires forming a zero conditional sentence with an 'if' clause and a result clause, both in the present simple."
+  },
+  {
+   "id": "ex.b1.zero-conditional.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.zero-conditional"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If you drop a glass,",
+     "right": "it breaks."
+    },
+    {
+     "left": "When I travel,",
+     "right": "I always pack light."
+    },
+    {
+     "left": "If you don't brush your teeth,",
+     "right": "you get cavities."
+    },
+    {
+     "left": "The alarm rings",
+     "right": "if there's a fire."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "if .* present simple .* present simple",
+  "present simple .* if .* present simple",
+  "when .* present simple .* present simple",
+  "present simple .* when .* present simple"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.zero-conditional.01": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.02": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.03": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.04": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.05": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.06": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.07": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.08": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.09": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.10": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.11": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.12": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.13": {
+    "status": "pass"
+   },
+   "ex.b1.zero-conditional.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

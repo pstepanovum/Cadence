@@ -1,0 +1,411 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "dont-have-to-vs-mustnt",
+ "draftHash": "472f068ed9380c56",
+ "grammarPoint": {
+  "id": "gp.dont-have-to-vs-mustnt",
+  "level": "B1",
+  "topicId": "topic.modals",
+  "title": "Don't have to or mustn't",
+  "summary": "Learn to use 'don't have to' for no obligation and 'mustn't' for prohibition, understanding the difference between not needing to do something and not being allowed to.",
+  "explanation": "We use *don't have to* (or *doesn't have to* for third person singular) when something is not necessary or there is no obligation. It means you have a choice; you can do it if you want, but it's not required.\n\nWe use *mustn't* (or *must not*) when something is forbidden or not allowed. It's a strong prohibition, meaning you absolutely cannot do it.\n\nThe key difference is choice. With 'don't have to', you have the option to do something or not. With 'mustn't', you do not have that option; the action is prohibited.",
+  "patterns": [
+   "Subject + don't/doesn't + have to + base verb",
+   "Subject + mustn't + base verb"
+  ],
+  "examples": [
+   {
+    "text": "You don't have to wear a uniform at this company.",
+    "note": "It's not necessary to wear a uniform; you have a choice.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Visitors mustn't touch the artwork in the museum.",
+    "note": "Touching the artwork is forbidden.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She doesn't have to work late tonight.",
+    "note": "It's not obligatory for her to work late.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You mustn't forget your passport when you travel.",
+    "note": "Forgetting your passport is strongly advised against/prohibited by necessity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We don't have to rush, but we mustn't be late for the meeting.",
+    "note": "Rushing isn't necessary, but being late is forbidden.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "You mustn't pay for the water, it's free.",
+    "right": "You don't have to pay for the water, it's free.",
+    "note": "It's not forbidden to pay, just not necessary."
+   },
+   {
+    "wrong": "Students don't have to cheat on exams.",
+    "right": "Students mustn't cheat on exams.",
+    "note": "Cheating is forbidden, not just unnecessary."
+   },
+   {
+    "wrong": "He not have to work on Sundays.",
+    "right": "He doesn't have to work on Sundays.",
+    "note": "Use 'doesn't' as the auxiliary for 'have to' with 'he/she/it'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ park your car here; it's a no-parking zone.",
+   "options": [
+    "don't have to",
+    "mustn't",
+    "doesn't have to"
+   ],
+   "answer": 1,
+   "explanation": "'Mustn't' is correct because parking in a no-parking zone is forbidden."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ buy tickets in advance; we can get them at the door.",
+   "options": [
+    "mustn't",
+    "don't have to",
+    "doesn't have to"
+   ],
+   "answer": 1,
+   "explanation": "'Don't have to' is correct because buying tickets in advance is not necessary."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She ___ tell anyone about the surprise party.",
+   "options": [
+    "doesn't have to",
+    "mustn't",
+    "don't have to"
+   ],
+   "answer": 1,
+   "explanation": "'Mustn't' is correct because telling people about a surprise party is forbidden."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ come to the meeting if you're too busy.",
+   "options": [
+    "mustn't",
+    "don't have to",
+    "doesn't have to"
+   ],
+   "answer": 1,
+   "explanation": "'Don't have to' is correct because coming to the meeting is not obligatory if you're busy."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You ___ forget to lock the door when you leave.",
+   "answers": [
+    [
+     "mustn't"
+    ],
+    [
+     "must not"
+    ]
+   ],
+   "explanation": "Forgetting to lock the door is a strong prohibition for safety."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He ___ work on Saturdays, but he often chooses to.",
+   "answers": [
+    [
+     "doesn't have to"
+    ]
+   ],
+   "explanation": "Working on Saturdays is not necessary for him, so he has a choice."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We ___ make a lot of noise in the library, but we ___ whisper.",
+   "answers": [
+    [
+     "mustn't",
+     "must not"
+    ],
+    [
+     "don't have to"
+    ]
+   ],
+   "explanation": "Making noise is forbidden, but whispering is not necessary."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "don't",
+    "have",
+    "to",
+    "pay",
+    "for",
+    "the",
+    "extra",
+    "baggage",
+    "."
+   ],
+   "explanation": "This sentence means paying for extra baggage is not necessary.",
+   "alternatives": [
+    [
+     "You",
+     "don't",
+     "have",
+     "to",
+     "pay",
+     "extra",
+     "for",
+     "the",
+     "baggage",
+     "."
+    ]
+   ]
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Students",
+    "mustn't",
+    "use",
+    "their",
+    "phones",
+    "during",
+    "class",
+    "."
+   ],
+   "distractors": [
+    "not",
+    "should"
+   ],
+   "explanation": "This sentence means using phones during class is forbidden for students."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "You mustn't get up early tomorrow, it's a holiday.",
+   "answers": [
+    "You don't have to get up early tomorrow, it's a holiday."
+   ],
+   "explanation": "Getting up early is not necessary on a holiday, not forbidden."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Visitors don't have to feed the animals at the zoo.",
+   "answers": [
+    "Visitors mustn't feed the animals at the zoo."
+   ],
+   "explanation": "Feeding zoo animals is usually forbidden for their safety and health."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It is not necessary for us to bring a gift.",
+   "instruction": "Rewrite using 'don't have to'.",
+   "answers": [
+    "We don't have to bring a gift."
+   ],
+   "explanation": "The instruction requires changing 'it is not necessary' to 'don't have to'."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Smoking is forbidden inside the building.",
+   "instruction": "Rewrite using 'mustn't'.",
+   "answers": [
+    "You mustn't smoke inside the building."
+   ],
+   "explanation": "The instruction requires changing 'forbidden' to 'mustn't'."
+  },
+  {
+   "id": "ex.b1.dont-have-to-vs-mustnt.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.dont-have-to-vs-mustnt"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "You don't have to",
+     "right": "finish the report today if you're busy."
+    },
+    {
+     "left": "We mustn't",
+     "right": "talk during the performance."
+    },
+    {
+     "left": "She doesn't have to",
+     "right": "attend the optional workshop."
+    },
+    {
+     "left": "They mustn't",
+     "right": "cross the road when the light is red."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "don't have to",
+  "doesn't have to",
+  "mustn't"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.dont-have-to-vs-mustnt.01": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.02": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.03": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.04": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.dont-have-to-vs-mustnt.05: needs one answer list per gap (1)"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.06": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.07": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.08": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences are grammatically correct and use all given tokens."
+   },
+   "ex.b1.dont-have-to-vs-mustnt.09": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.10": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.11": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.12": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.13": {
+    "status": "pass"
+   },
+   "ex.b1.dont-have-to-vs-mustnt.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2208603,
+   "text": "You don't have to do this alone.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 69910,
+   "text": "You don't have to get up so early.",
+   "author": "CK"
+  }
+ ]
+}

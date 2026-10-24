@@ -1,0 +1,386 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "gerund-or-infinitive",
+ "draftHash": "4b757c26fd773632",
+ "grammarPoint": {
+  "id": "gp.gerund-or-infinitive",
+  "level": "B1",
+  "topicId": "topic.verb-patterns",
+  "title": "-ing or to after verbs",
+  "summary": "Learn when to use a verb ending in -ing or 'to' + infinitive after another verb.",
+  "explanation": "Some verbs are followed by another verb ending in *-ing*. For example, you *enjoy reading* or *finish working*.\n\nOther verbs are followed by *to* and the base form of the verb (the infinitive). For instance, you *decide to go* or *plan to visit*.\n\nIt's important to learn which verbs take -ing and which take 'to' + infinitive, as there isn't a simple rule. Common verbs followed by -ing include: enjoy, finish, mind, suggest, avoid, practice. Common verbs followed by 'to' + infinitive include: decide, plan, want, hope, need, agree, promise.",
+  "patterns": [
+   "verb + verb-ing",
+   "verb + to + verb"
+  ],
+  "examples": [
+   {
+    "text": "I enjoy cooking for my friends.",
+    "note": "The verb 'enjoy' is followed by -ing.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They decided to travel to Italy next summer.",
+    "note": "The verb 'decide' is followed by 'to' + infinitive.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you mind helping me with this box?",
+    "note": "The verb 'mind' is followed by -ing.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She hopes to learn a new language soon.",
+    "note": "The verb 'hope' is followed by 'to' + infinitive.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We finished eating dinner late last night.",
+    "note": "The verb 'finish' is followed by -ing.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I enjoy to cook.",
+    "right": "I enjoy cooking.",
+    "note": "'Enjoy' is always followed by the -ing form."
+   },
+   {
+    "wrong": "They decided traveling to Italy.",
+    "right": "They decided to travel to Italy.",
+    "note": "'Decide' is always followed by 'to' + infinitive."
+   },
+   {
+    "wrong": "He wants go home now.",
+    "right": "He wants to go home now.",
+    "note": "'Want' is followed by 'to' + infinitive."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.gerund-or-infinitive.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My brother avoids ___ fast food.",
+   "options": [
+    "to eat",
+    "eating",
+    "eat"
+   ],
+   "answer": 1,
+   "explanation": "The verb 'avoid' is followed by the -ing form."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We plan ___ a new project next month.",
+   "options": [
+    "starting",
+    "to start",
+    "start"
+   ],
+   "answer": 1,
+   "explanation": "The verb 'plan' is followed by 'to' + infinitive."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you mind ___ the window? It's a bit cold.",
+   "options": [
+    "closing",
+    "to close",
+    "close"
+   ],
+   "answer": 0,
+   "explanation": "The verb 'mind' is followed by the -ing form."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need ___ some groceries after work.",
+   "options": [
+    "buying",
+    "to buy",
+    "buy"
+   ],
+   "answer": 1,
+   "explanation": "The verb 'need' is followed by 'to' + infinitive."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She suggested ___ (go) to the park.",
+   "answers": [
+    [
+     "going"
+    ]
+   ],
+   "explanation": "'Suggest' is followed by the -ing form."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They agreed ___ (meet) at 7 PM.",
+   "answers": [
+    [
+     "to meet"
+    ]
+   ],
+   "explanation": "'Agree' is followed by 'to' + infinitive."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He finished ___ (read) the book yesterday.",
+   "answers": [
+    [
+     "reading"
+    ]
+   ],
+   "explanation": "'Finish' is followed by the -ing form."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "want",
+    "to",
+    "visit",
+    "Paris",
+    "."
+   ],
+   "distractors": [
+    "visiting"
+   ],
+   "explanation": "'Want' is followed by 'to' + infinitive."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "enjoys",
+    "listening",
+    "to",
+    "music",
+    "."
+   ],
+   "distractors": [
+    "to listen"
+   ],
+   "explanation": "'Enjoy' is followed by the -ing form."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We decided buying a new car.",
+   "answers": [
+    "We decided to buy a new car."
+   ],
+   "explanation": "'Decide' is followed by 'to' + infinitive."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He avoids to answer difficult questions.",
+   "answers": [
+    "He avoids answering difficult questions."
+   ],
+   "explanation": "'Avoid' is followed by the -ing form."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I like to swim in the ocean.",
+   "instruction": "Use the verb 'enjoy'.",
+   "answers": [
+    "I enjoy swimming in the ocean."
+   ],
+   "explanation": "'Enjoy' takes the -ing form."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They want to travel next year.",
+   "instruction": "Use the verb 'plan'.",
+   "answers": [
+    "They plan to travel next year."
+   ],
+   "explanation": "'Plan' takes 'to' + infinitive."
+  },
+  {
+   "id": "ex.b1.gerund-or-infinitive.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.gerund-or-infinitive"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I enjoy",
+     "right": "reading mystery novels."
+    },
+    {
+     "left": "They decided",
+     "right": "to meet at the cafe."
+    },
+    {
+     "left": "He suggested",
+     "right": "going for a walk."
+    },
+    {
+     "left": "We need",
+     "right": "to buy a new house."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "enjoy \\w+ing",
+  "decide to \\w+",
+  "mind \\w+ing",
+  "plan to \\w+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.gerund-or-infinitive.01": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.02": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.03": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.04": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.05": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.06": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.07": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.08": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.09": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.10": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.11": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.12": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.13": {
+    "status": "pass"
+   },
+   "ex.b1.gerund-or-infinitive.14": {
+    "status": "drop",
+    "note": "Ambiguous: Both pairings use correct infinitive and gerund patterns."
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 325729,
+   "text": "My parents enjoy skiing every winter.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 537052,
+   "text": "What do you plan to major in at college?",
+   "author": "CK"
+  }
+ ]
+}

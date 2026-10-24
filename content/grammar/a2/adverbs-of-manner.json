@@ -1,0 +1,384 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "adverbs-of-manner",
+ "draftHash": "3a851c1a81e28ea5",
+ "grammarPoint": {
+  "id": "gp.adverbs-of-manner",
+  "level": "A2",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "Adverbs of manner",
+  "summary": "Adverbs of manner like 'quickly', 'well', and 'hard' tell us *how* an action is done. They describe verbs.",
+  "explanation": "Adverbs of manner describe *how* an action happens. They usually come after the verb they describe. For example, if someone runs, an adverb of manner can tell us *how* they run: 'They run *quickly*.'\n\nMany adverbs of manner are formed by adding '-ly' to an adjective (e.g., 'quick' becomes 'quickly', 'careful' becomes 'carefully').\n\nSome adverbs of manner are irregular. For example, the adverb form of 'good' is 'well'. The word 'hard' is both an adjective and an adverb, so it doesn't change (e.g., 'a hard worker' and 'work hard').",
+  "patterns": [
+   "verb + adjective + -ly",
+   "verb + well",
+   "verb + hard"
+  ],
+  "examples": [
+   {
+    "text": "She sings beautifully.",
+    "note": "Describes *how* she sings.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He drives carefully on busy roads.",
+    "note": "Describes *how* he drives.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They worked hard to finish the project.",
+    "note": "Describes *how* they worked.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My brother speaks English very well.",
+    "note": "Describes *how* he speaks English.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The children played happily in the park.",
+    "note": "Describes *how* the children played.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "She sings good.",
+    "right": "She sings well.",
+    "note": "Use 'well' (adverb) to describe a verb, not 'good' (adjective)."
+   },
+   {
+    "wrong": "He drives quick.",
+    "right": "He drives quickly.",
+    "note": "Add '-ly' to most adjectives to form adverbs of manner."
+   },
+   {
+    "wrong": "They work hardly.",
+    "right": "They work hard.",
+    "note": "'Hard' is already an adverb; 'hardly' has a different meaning."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.adverbs-of-manner.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team played ___ and won the game.",
+   "options": [
+    "good",
+    "well",
+    "better"
+   ],
+   "answer": 1,
+   "explanation": "'Well' is the adverb form of 'good' and describes how the team played."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Please speak ___. I can't hear you.",
+   "options": [
+    "loud",
+    "loudly",
+    "louder"
+   ],
+   "answer": 1,
+   "explanation": "'Loudly' is the adverb that describes how to speak."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She finished her homework ___ before dinner.",
+   "options": [
+    "quick",
+    "quickly",
+    "fast"
+   ],
+   "answer": 1,
+   "explanation": "'Quickly' is the adverb of manner describing how she finished her homework. 'Fast' is also an adverb, but 'quickly' is a common choice here."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My friend always studies ___ for exams.",
+   "options": [
+    "hard",
+    "hardly",
+    "harder"
+   ],
+   "answer": 0,
+   "explanation": "'Hard' is the correct adverb to describe studying with effort. 'Hardly' means almost not at all."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The chef cooked the meal very ___.",
+   "answers": [
+    [
+     "well",
+     "deliciously"
+    ]
+   ],
+   "explanation": "'Well' is the adverb that describes how the chef cooked."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He always walks ___ to work because he's often late.",
+   "answers": [
+    [
+     "quickly"
+    ]
+   ],
+   "explanation": "'Quickly' describes how he walks."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The students listened ___ to the teacher's instructions.",
+   "answers": [
+    [
+     "carefully",
+     "attentively"
+    ]
+   ],
+   "explanation": "'Carefully' describes how the students listened."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "smiled",
+    "happily",
+    "."
+   ],
+   "explanation": "The adverb 'happily' describes how she smiled."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "work",
+    "hard",
+    "every",
+    "day",
+    "."
+   ],
+   "distractors": [
+    "hardly"
+   ],
+   "explanation": "'Hard' is an adverb describing how they work."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He drives very careful on the highway.",
+   "answers": [
+    "He drives very carefully on the highway."
+   ],
+   "explanation": "The adverb 'carefully' is needed to describe the verb 'drives'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My sister plays tennis good.",
+   "answers": [
+    "My sister plays tennis well."
+   ],
+   "explanation": "Use the adverb 'well' to describe the verb 'plays'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He is a slow runner.",
+   "instruction": "Rewrite the sentence using an adverb of manner.",
+   "answers": [
+    "He runs slowly."
+   ],
+   "explanation": "The adjective 'slow' becomes the adverb 'slowly' to describe the verb 'runs'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She is a good painter.",
+   "instruction": "Rewrite the sentence using an adverb of manner.",
+   "answers": [
+    "She paints well."
+   ],
+   "explanation": "The adjective 'good' becomes the adverb 'well' to describe the verb 'paints'."
+  },
+  {
+   "id": "ex.a2.adverbs-of-manner.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.adverbs-of-manner"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The baby slept",
+     "right": "peacefully."
+    },
+    {
+     "left": "He spoke",
+     "right": "softly."
+    },
+    {
+     "left": "They learned the new words",
+     "right": "easily."
+    },
+    {
+     "left": "She writes",
+     "right": "neatly."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "\\b\\w+s? (?:quickly|slowly|carefully|loudly|softly|happily|sadly|easily)\\b",
+  "\\b\\w+s? well\\b",
+  "\\b\\w+s? hard\\b"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.adverbs-of-manner.01": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.02": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.03": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.04": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.05": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both adverbs fit grammatically and make sense in the sentence."
+   },
+   "ex.a2.adverbs-of-manner.06": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both adverbs are grammatically correct and natural options."
+   },
+   "ex.a2.adverbs-of-manner.08": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.09": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.10": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.11": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.12": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.13": {
+    "status": "pass"
+   },
+   "ex.a2.adverbs-of-manner.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 26319,
+   "text": "\"Why are you studying English so hard?\" \"To be an English teacher.\"",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 31893,
+   "text": "Mary spoke Japanese slowly.",
+   "author": "CK"
+  }
+ ]
+}

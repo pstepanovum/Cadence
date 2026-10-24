@@ -1,0 +1,385 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "some-and-any",
+ "draftHash": "e138ddbb96938ce5",
+ "grammarPoint": {
+  "id": "gp.some-and-any",
+  "level": "A2",
+  "topicId": "topic.articles-determiners",
+  "title": "Some and any",
+  "summary": "Use 'some' for positive statements and offers, and 'any' for negative statements and questions.",
+  "explanation": "We use *some* in positive sentences with plural countable nouns (like 'apples', 'friends') and uncountable nouns (like 'water', 'money'). It means \"an unspecified amount or number.\"\n\nWe also use *some* when we offer something or make a request, especially when we expect a positive answer.\n\nWe use *any* in negative sentences with plural countable nouns and uncountable nouns. It means \"not even one\" or \"not an amount.\"\n\nWe also use *any* in most questions.",
+  "patterns": [
+   "Subject + verb + some + noun (positive)",
+   "Would you like + some + noun? (offer)",
+   "Subject + don't/doesn't + verb + any + noun (negative)",
+   "Do/Does + subject + verb + any + noun? (question)"
+  ],
+  "examples": [
+   {
+    "text": "I bought some new clothes for my trip.",
+    "note": "Using 'some' in a positive statement with a plural countable noun.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Could I have some water, please?",
+    "note": "Using 'some' in a request.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There isn't any sugar left in the bowl.",
+    "note": "Using 'any' in a negative statement with an uncountable noun.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Do you have any plans for the weekend?",
+    "note": "Using 'any' in a question with a plural countable noun.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Would you like some help with that box?",
+    "note": "Using 'some' in an offer.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I don't have some time.",
+    "right": "I don't have any time.",
+    "note": "Use 'any' in negative sentences."
+   },
+   {
+    "wrong": "Do you want any coffee?",
+    "right": "Do you want some coffee?",
+    "note": "Use 'some' for offers."
+   },
+   {
+    "wrong": "She needs any new shoes.",
+    "right": "She needs some new shoes.",
+    "note": "Use 'some' in positive sentences."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.some-and-any.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need ___ new batteries for my flashlight.",
+   "options": [
+    "some",
+    "any",
+    "a",
+    "an"
+   ],
+   "answer": 0,
+   "explanation": "Use 'some' in positive sentences with plural countable nouns."
+  },
+  {
+   "id": "ex.a2.some-and-any.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We don't have ___ bread left.",
+   "options": [
+    "some",
+    "any",
+    "a",
+    "the"
+   ],
+   "answer": 1,
+   "explanation": "Use 'any' in negative sentences with uncountable nouns."
+  },
+  {
+   "id": "ex.a2.some-and-any.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Is there ___ milk in the fridge?",
+   "options": [
+    "some",
+    "any",
+    "a",
+    "the"
+   ],
+   "answer": 1,
+   "explanation": "Use 'any' in questions."
+  },
+  {
+   "id": "ex.a2.some-and-any.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Would you like ___ more juice?",
+   "options": [
+    "some",
+    "any",
+    "a",
+    "an"
+   ],
+   "answer": 0,
+   "explanation": "Use 'some' for offers."
+  },
+  {
+   "id": "ex.a2.some-and-any.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My brother has ___ interesting hobbies.",
+   "answers": [
+    [
+     "some"
+    ]
+   ],
+   "explanation": "This is a positive statement, so 'some' is correct."
+  },
+  {
+   "id": "ex.a2.some-and-any.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I didn't see ___ good movies last month.",
+   "answers": [
+    [
+     "any"
+    ]
+   ],
+   "explanation": "This is a negative statement, so 'any' is correct."
+  },
+  {
+   "id": "ex.a2.some-and-any.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Do you have ___ questions about the lesson?",
+   "answers": [
+    [
+     "any"
+    ]
+   ],
+   "explanation": "This is a question, so 'any' is correct."
+  },
+  {
+   "id": "ex.a2.some-and-any.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "need",
+    "some",
+    "new",
+    "pens",
+    "."
+   ],
+   "explanation": "The sentence is a positive statement, so 'some' is used before the plural noun 'pens'."
+  },
+  {
+   "id": "ex.a2.some-and-any.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "don't",
+    "have",
+    "any",
+    "pets",
+    "."
+   ],
+   "explanation": "The sentence is a negative statement, so 'any' is used before the plural noun 'pets'."
+  },
+  {
+   "id": "ex.a2.some-and-any.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She has any friends in the city.",
+   "answers": [
+    "She has some friends in the city."
+   ],
+   "explanation": "In a positive statement, use 'some'."
+  },
+  {
+   "id": "ex.a2.some-and-any.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We didn't buy some food for the party.",
+   "answers": [
+    "We didn't buy any food for the party."
+   ],
+   "explanation": "In a negative statement, use 'any'."
+  },
+  {
+   "id": "ex.a2.some-and-any.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I have some free time today.",
+   "instruction": "Rewrite in the negative.",
+   "answers": [
+    "I don't have any free time today."
+   ],
+   "explanation": "Change 'some' to 'any' and make the verb negative."
+  },
+  {
+   "id": "ex.a2.some-and-any.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You want some help.",
+   "instruction": "Rewrite as an offer.",
+   "answers": [
+    "Would you like some help?"
+   ],
+   "explanation": "To make an offer, use 'Would you like some...'."
+  },
+  {
+   "id": "ex.a2.some-and-any.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.some-and-any"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I need",
+     "right": "some new shoes."
+    },
+    {
+     "left": "Do you have",
+     "right": "any spare change?"
+    },
+    {
+     "left": "We don't have",
+     "right": "any plans tonight."
+    },
+    {
+     "left": "Would you like",
+     "right": "some more cake?"
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "have some",
+  "don't have any",
+  "do you have any",
+  "would you like some"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.some-and-any.01": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.02": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.03": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.04": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.05": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.06": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.07": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.08": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.09": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.10": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.11": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.12": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.13": {
+    "status": "pass"
+   },
+   "ex.a2.some-and-any.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 870565,
+   "text": "I don't have any information on that subject.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 499362,
+   "text": "May I have some more coffee?",
+   "author": "CK"
+  }
+ ]
+}

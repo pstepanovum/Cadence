@@ -1,0 +1,479 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "past-tenses-for-politeness",
+ "draftHash": "ae0d14dcc967ab5b",
+ "grammarPoint": {
+  "id": "gp.past-tenses-for-politeness",
+  "level": "C2",
+  "topicId": "topic.tenses",
+  "title": "Past forms for politeness",
+  "summary": "Learn how past forms like 'I was wondering', 'I wanted to ask', and 'I'd have thought' are used to express politeness, tentativeness, or gentle disagreement, rather than past time.",
+  "explanation": "In English, certain past forms are frequently used to make requests, questions, or opinions sound more polite, indirect, or less assertive. This doesn't mean the action happened in the past; instead, it creates a sense of distance or hypothetical possibility, which softens the statement.\n\nFor example, 'I was wondering' is a common way to introduce a polite request or question. It's less direct than 'I wonder' and therefore more courteous. Similarly, 'I wanted to ask' makes an inquiry less abrupt than 'I want to ask'.\n\n'I'd have thought' (or 'I would have thought') is used to express a gentle disagreement, a different expectation, or a mild criticism. It suggests what one *would have expected* to be true, implying that the current reality is different, but in a very understated and polite way.",
+  "patterns": [
+   "I was wondering if + clause (past or conditional)",
+   "I wanted to ask if/about + clause/noun phrase",
+   "I'd have thought + clause (past or conditional)"
+  ],
+  "examples": [
+   {
+    "text": "I was wondering if you had a moment to discuss the new proposal.",
+    "note": "Used to make a polite, indirect request for someone's time.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I wanted to ask about the changes to the project timeline.",
+    "note": "Softens a direct question, making it less demanding.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'd have thought the presentation would include more data.",
+    "note": "Expresses a gentle, indirect criticism or a different expectation.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I was wondering if it would be possible to extend the deadline.",
+    "note": "A very polite and tentative way to suggest a change.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I'd have thought they would have informed us earlier about the cancellation.",
+    "note": "Indicates a mild disappointment or a belief that something should have happened differently.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I wonder if you can help me.",
+    "right": "I was wondering if you could help me.",
+    "note": "Using the past continuous 'was wondering' makes the request more polite and less direct."
+   },
+   {
+    "wrong": "I think the report is due tomorrow.",
+    "right": "I'd have thought the report was due tomorrow.",
+    "note": "Using 'I'd have thought' softens a correction or expresses a different, tentative understanding."
+   },
+   {
+    "wrong": "I want to ask you a question.",
+    "right": "I wanted to ask you a question.",
+    "note": "The simple past 'wanted to ask' makes the inquiry less abrupt and more courteous."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.past-tenses-for-politeness.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which option best completes the polite request: \"I ___ if you could lend me your notes for a bit.\"",
+   "options": [
+    "wonder",
+    "am wondering",
+    "was wondering",
+    "will wonder"
+   ],
+   "answer": 2,
+   "explanation": "'I was wondering' is the most common and polite way to introduce a tentative request."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Choose the most polite way to express a gentle disagreement:",
+   "options": [
+    "I think that's wrong.",
+    "I'd have thought that wasn't quite right.",
+    "I would think that's incorrect.",
+    "I thought that was wrong."
+   ],
+   "answer": 1,
+   "explanation": "'I'd have thought' (conditional perfect) is used to express a very polite, indirect disagreement or a different expectation."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "To make an inquiry less direct, you could say: \"I ___ about the meeting agenda.\"",
+   "options": [
+    "want to ask",
+    "wanted to ask",
+    "will ask",
+    "am asking"
+   ],
+   "answer": 1,
+   "explanation": "'I wanted to ask' uses the simple past to soften the directness of the question, making it more polite."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.04",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ wondering if you ___ free for a quick chat later today.",
+   "answers": [
+    [
+     "was"
+    ],
+    [
+     "were",
+     "are"
+    ]
+   ],
+   "explanation": "'I was wondering' is the polite introductory phrase. 'Were' is often used in polite conditional clauses, but 'are' is also acceptable here."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'd ___ thought the new policy ___ been announced by now.",
+   "answers": [
+    [
+     "have"
+    ],
+    [
+     "had"
+    ]
+   ],
+   "explanation": "'I'd have thought' is the fixed polite expression. 'Had been announced' completes the past perfect structure within the clause, indicating an expectation about a past event."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ to ask if you ___ any feedback on my presentation.",
+   "answers": [
+    [
+     "wanted"
+    ],
+    [
+     "had"
+    ]
+   ],
+   "explanation": "'I wanted to ask' is a polite way to introduce a question. 'Had' is the appropriate past tense for the indirect question."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.07",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "was",
+    "wondering",
+    "if",
+    "you",
+    "could",
+    "review",
+    "this",
+    "document",
+    "."
+   ],
+   "distractors": [
+    "would",
+    "should"
+   ],
+   "explanation": "This sentence uses 'I was wondering' to make a polite request for a review."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I'd",
+    "have",
+    "thought",
+    "the",
+    "train",
+    "would",
+    "be",
+    "on",
+    "time",
+    "."
+   ],
+   "distractors": [
+    "should",
+    "must"
+   ],
+   "explanation": "This expresses a polite, indirect disappointment or a different expectation about the train's punctuality."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.09",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I want to ask if you have a moment.",
+   "answers": [
+    "I wanted to ask if you have a moment.",
+    "I wanted to ask if you had a moment."
+   ],
+   "explanation": "Using 'wanted to ask' makes the inquiry more polite and less direct than 'want to ask'. 'Had' is also a polite option for the second verb."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I'm wondering if it is possible to change my appointment.",
+   "answers": [
+    "I was wondering if it is possible to change my appointment.",
+    "I was wondering if it were possible to change my appointment.",
+    "I was wondering if it was possible to change my appointment."
+   ],
+   "explanation": "'I was wondering' is the standard polite form. 'Were' or 'was' can be used in the conditional clause for politeness, though 'is' is also acceptable in informal contexts."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.11",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Can you help me with this task?",
+   "instruction": "Rewrite using 'I was wondering' for politeness.",
+   "answers": [
+    "I was wondering if you could help me with this task."
+   ],
+   "explanation": "Transforming a direct question into an 'I was wondering' construction makes it significantly more polite and indirect."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I expected the results to be different.",
+   "instruction": "Rewrite using 'I'd have thought' to express a gentle, indirect opinion.",
+   "answers": [
+    "I'd have thought the results would be different.",
+    "I'd have thought the results would have been different."
+   ],
+   "explanation": "'I'd have thought' introduces a polite, tentative opinion or a mild disagreement with the current situation."
+  },
+  {
+   "id": "ex.c2.past-tenses-for-politeness.13",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.past-tenses-for-politeness"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I was wondering if",
+     "right": "you could clarify this point."
+    },
+    {
+     "left": "I wanted to ask",
+     "right": "about the new project requirements."
+    },
+    {
+     "left": "I'd have thought",
+     "right": "the meeting would have finished by now."
+    },
+    {
+     "left": "I was wondering if it",
+     "right": "would be convenient to meet tomorrow."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "I was wondering",
+  "I wanted to ask",
+  "I('d| would) have thought"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.past-tenses-for-politeness.01": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.02": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.03": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.04": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.05": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.06": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.07": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.08": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.09": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.10": {
+    "status": "drop",
+    "note": "Key judged wrong: The original sentence contains no grammatical mistake, so there is no error to correct."
+   },
+   "ex.c2.past-tenses-for-politeness.11": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.12": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.13": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.14": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.15": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.16": {
+    "status": "pass"
+   },
+   "ex.c2.past-tenses-for-politeness.17": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c2.past-tenses-for-politeness.14",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.past-tenses-for-politeness"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "To politely inquire about a colleague's availability for a meeting, which option is most appropriate?",
+    "options": [
+     "I wonder if you are free.",
+     "I was wondering if you were free.",
+     "I will wonder if you are free.",
+     "I am wondering if you are free."
+    ],
+    "answer": 1,
+    "explanation": "'I was wondering' uses the past continuous to make the inquiry less direct and more polite, especially when followed by a past tense verb like 'were'."
+   },
+   {
+    "id": "ex.c2.past-tenses-for-politeness.15",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.past-tenses-for-politeness"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Which sentence expresses a gentle disagreement or an unfulfilled expectation?",
+    "options": [
+     "I think it should be different.",
+     "I would think it was different.",
+     "I'd have thought it would be different.",
+     "I had thought it is different."
+    ],
+    "answer": 2,
+    "explanation": "'I'd have thought' (I would have thought) is used to express a polite, often critical, opinion about something that was expected but didn't happen or isn't true."
+   },
+   {
+    "id": "ex.c2.past-tenses-for-politeness.16",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.past-tenses-for-politeness"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "When making a tentative request for information, which phrase is the most polite?",
+    "options": [
+     "I want to ask about the report.",
+     "I wanted to ask about the report.",
+     "I ask about the report.",
+     "I will ask about the report."
+    ],
+    "answer": 1,
+    "explanation": "'I wanted to ask' uses the simple past to soften the request, making it less direct and more polite than the present tense 'I want to ask'."
+   },
+   {
+    "id": "ex.c2.past-tenses-for-politeness.17",
+    "kind": "gap_fill",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.past-tenses-for-politeness"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "I ___ wondering if you ___ any suggestions for improving our workflow.",
+    "answers": [
+     [
+      "was"
+     ],
+     [
+      "had"
+     ]
+    ],
+    "explanation": "'I was wondering' is a polite way to introduce a question. 'Had' is used here to match the past tense politeness and inquire about existing suggestions."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 17616,
+   "text": "Listen, um, I was wondering, what are you and Molly doing tonight?",
+   "author": "Zifre"
+  },
+  {
+   "sentenceId": 4253121,
+   "text": "Oh, Tom! This is great timing. There's something I wanted to ask you.",
+   "author": "orcrist"
+  }
+ ]
+}

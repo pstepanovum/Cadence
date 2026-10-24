@@ -1,0 +1,1659 @@
+{
+ "format": 1,
+ "title": "Traced reference drawings and their fits",
+ "series": "Richard Wright and Dan McCloy, IPA sagittal sections, Wikimedia Commons, CC0 1.0",
+ "calibration": {
+  "scale": 0.017041,
+  "angleDegrees": -6.358
+ },
+ "regularization": 0.002,
+ "weights": {
+  "lipDownIn": 3
+ },
+ "references": [
+  {
+   "id": "a",
+   "drawing": "IPA a Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_a_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "f6e3d8d535c6dea127865ded1a8cb4c9ec9d46a9d14c72270be7bbc63f3731b9",
+   "fixed": {},
+   "jawFromIncisor": -1.512,
+   "targets": {
+    "tongueBase": {
+     "x": 1.389,
+     "y": 5.039
+    },
+    "tonguePharynx": {
+     "x": 1.299,
+     "y": 5.103
+    },
+    "tongueUvular": {
+     "x": 1.288,
+     "y": 5.448
+    },
+    "tongueVelar": {
+     "x": 1.441,
+     "y": 5.527
+    },
+    "tonguePalatal": {
+     "x": 1.607,
+     "y": 5.535
+    },
+    "tonguePostAlveolar": {
+     "x": 1.806,
+     "y": 5.515
+    },
+    "tongueBladeBack": {
+     "x": 1.874,
+     "y": 5.48
+    },
+    "tongueBladeFront": {
+     "x": 1.927,
+     "y": 5.402
+    },
+    "tongueAlveolar": {
+     "x": 1.96,
+     "y": 5.278
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.363
+    }
+   },
+   "params": {
+    "jaw": -1.512,
+    "tonguePosition": 0.166,
+    "tongueShape": -0.08,
+    "tongueApex": -1.945,
+    "lipAperture": 1.588,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.043,
+   "notes": []
+  },
+  {
+   "id": "ae",
+   "drawing": "IPA æ Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%C3%A6_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "d793a814dddd9ad00fe82f22be6d062dd1abd12d01e4875a3c1b5ca96b11618e",
+   "fixed": {},
+   "jawFromIncisor": -1.323,
+   "targets": {
+    "tongueBase": {
+     "x": 1.304,
+     "y": 5.021
+    },
+    "tonguePharynx": {
+     "x": 1.339,
+     "y": 5.111
+    },
+    "tongueUvular": {
+     "x": 1.293,
+     "y": 5.446
+    },
+    "tongueVelar": {
+     "x": 1.425,
+     "y": 5.552
+    },
+    "tonguePalatal": {
+     "x": 1.619,
+     "y": 5.598
+    },
+    "tonguePostAlveolar": {
+     "x": 1.821,
+     "y": 5.554
+    },
+    "tongueBladeBack": {
+     "x": 1.886,
+     "y": 5.509
+    },
+    "tongueBladeFront": {
+     "x": 1.938,
+     "y": 5.432
+    },
+    "tongueAlveolar": {
+     "x": 1.973,
+     "y": 5.311
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.375
+    }
+   },
+   "params": {
+    "jaw": -1.323,
+    "tonguePosition": 0.15,
+    "tongueShape": 0.157,
+    "tongueApex": -1.112,
+    "lipAperture": 1.404,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.034,
+   "notes": []
+  },
+  {
+   "id": "b",
+   "drawing": "IPA b Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_b_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "c9d6231d3843cfcfbb9f526c88ba4f3d46d523a6631768fed86ae4c4b3271b7d",
+   "fixed": {
+    "lipAperture": -3
+   },
+   "jawFromIncisor": 0.756,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.322,
+     "y": 5.433
+    },
+    "tongueVelar": {
+     "x": 1.414,
+     "y": 5.569
+    },
+    "tonguePalatal": {
+     "x": 1.632,
+     "y": 5.669
+    },
+    "tonguePostAlveolar": {
+     "x": 1.843,
+     "y": 5.611
+    },
+    "tongueBladeBack": {
+     "x": 1.909,
+     "y": 5.569
+    },
+    "tongueBladeFront": {
+     "x": 1.974,
+     "y": 5.525
+    },
+    "tongueAlveolar": {
+     "x": 2.04,
+     "y": 5.483
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.519
+    }
+   },
+   "params": {
+    "jaw": 0.756,
+    "tonguePosition": 0.377,
+    "tongueShape": -0.191,
+    "tongueApex": -0.33,
+    "lipAperture": -3,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.014,
+   "notes": []
+  },
+  {
+   "id": "d",
+   "drawing": "IPA d Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_d_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "e72420e1efb6ba88bdf1748237017d5a571a7863aabfe6c8243a3a31e0579872",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.351,
+     "y": 5.42
+    },
+    "tongueVelar": {
+     "x": 1.438,
+     "y": 5.531
+    },
+    "tonguePalatal": {
+     "x": 1.627,
+     "y": 5.645
+    },
+    "tonguePostAlveolar": {
+     "x": 1.856,
+     "y": 5.644
+    },
+    "tongueBladeBack": {
+     "x": 1.929,
+     "y": 5.62
+    },
+    "tongueBladeFront": {
+     "x": 2.01,
+     "y": 5.617
+    },
+    "tongueAlveolar": {
+     "x": 2.109,
+     "y": 5.66
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.532,
+    "tongueShape": -1.387,
+    "tongueApex": 1.097,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.034,
+   "notes": []
+  },
+  {
+   "id": "dh",
+   "drawing": "IPA ð Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%C3%B0_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "6bc6009bbd04a7cb15567a71c8e3bc75c8704c727c444fdc15ac64ff1f9e3588",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.321,
+     "y": 5.433
+    },
+    "tongueVelar": {
+     "x": 1.411,
+     "y": 5.575
+    },
+    "tonguePalatal": {
+     "x": 1.636,
+     "y": 5.691
+    },
+    "tonguePostAlveolar": {
+     "x": 1.846,
+     "y": 5.618
+    },
+    "tongueBladeBack": {
+     "x": 1.911,
+     "y": 5.574
+    },
+    "tongueBladeFront": {
+     "x": 1.976,
+     "y": 5.531
+    },
+    "tongueAlveolar": {
+     "x": 2.047,
+     "y": 5.501
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0.001,
+    "tongueShape": -0.057,
+    "tongueApex": 0.192,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.008,
+   "notes": []
+  },
+  {
+   "id": "eh",
+   "drawing": "IPA Ɛ Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%C6%90_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "87f4596cb888fb4e00c1db6b9d090bc8cab59adf5f6003f3909600a0ade0ce1e",
+   "fixed": {},
+   "jawFromIncisor": -0.945,
+   "targets": {
+    "tongueBase": {
+     "x": 1.329,
+     "y": 5.027
+    },
+    "tonguePharynx": {
+     "x": 1.372,
+     "y": 5.118
+    },
+    "tongueUvular": {
+     "x": 1.315,
+     "y": 5.436
+    },
+    "tongueVelar": {
+     "x": 1.418,
+     "y": 5.562
+    },
+    "tonguePalatal": {
+     "x": 1.629,
+     "y": 5.651
+    },
+    "tonguePostAlveolar": {
+     "x": 1.834,
+     "y": 5.588
+    },
+    "tongueBladeBack": {
+     "x": 1.897,
+     "y": 5.537
+    },
+    "tongueBladeFront": {
+     "x": 1.95,
+     "y": 5.463
+    },
+    "tongueAlveolar": {
+     "x": 1.988,
+     "y": 5.35
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.399
+    }
+   },
+   "params": {
+    "jaw": -0.945,
+    "tonguePosition": -0.178,
+    "tongueShape": 0.383,
+    "tongueApex": -0.956,
+    "lipAperture": 1.036,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.029,
+   "notes": []
+  },
+  {
+   "id": "f",
+   "drawing": "IPA F Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_F_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "1d7b5da25f1f34baf9e9d10ec64e7a30b626d4a6d1cc92fe8f77a740627175c4",
+   "fixed": {},
+   "jawFromIncisor": 1.039,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.322,
+     "y": 5.433
+    },
+    "tongueVelar": {
+     "x": 1.414,
+     "y": 5.569
+    },
+    "tonguePalatal": {
+     "x": 1.632,
+     "y": 5.669
+    },
+    "tonguePostAlveolar": {
+     "x": 1.843,
+     "y": 5.609
+    },
+    "tongueBladeBack": {
+     "x": 1.908,
+     "y": 5.566
+    },
+    "tongueBladeFront": {
+     "x": 1.971,
+     "y": 5.518
+    },
+    "tongueAlveolar": {
+     "x": 2.032,
+     "y": 5.462
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.51
+    }
+   },
+   "params": {
+    "jaw": 1.039,
+    "tonguePosition": 0.532,
+    "tongueShape": -0.12,
+    "tongueApex": -0.587,
+    "lipAperture": -0.606,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.008,
+   "notes": []
+  },
+  {
+   "id": "g",
+   "drawing": "IPA g Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_g_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "c877a85e3c92084d11f8a9f378fc96678d4fb727e1b33bf690c5dfa0c6b8d0e2",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.357,
+     "y": 5.033
+    },
+    "tonguePharynx": {
+     "x": 1.314,
+     "y": 5.106
+    },
+    "tongueUvular": {
+     "x": 1.247,
+     "y": 5.466
+    },
+    "tongueVelar": {
+     "x": 1.324,
+     "y": 5.712
+    },
+    "tonguePalatal": {
+     "x": 1.629,
+     "y": 5.651
+    },
+    "tonguePostAlveolar": {
+     "x": 1.794,
+     "y": 5.485
+    },
+    "tongueBladeBack": {
+     "x": 1.858,
+     "y": 5.437
+    },
+    "tongueBladeFront": {
+     "x": 1.902,
+     "y": 5.339
+    },
+    "tongueAlveolar": {
+     "x": 1.878,
+     "y": 5.066
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 1.676,
+    "tongueShape": 2.633,
+    "tongueApex": -2.78,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.059,
+   "notes": []
+  },
+  {
+   "id": "i",
+   "drawing": "IPA i Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_i_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "4a1d2b3e2abd6da8afe02c74701d70851048720412d204654d475ebcc2d9e96d",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.331,
+     "y": 5.027
+    },
+    "tonguePharynx": {
+     "x": 1.432,
+     "y": 5.131
+    },
+    "tongueUvular": {
+     "x": 1.365,
+     "y": 5.414
+    },
+    "tongueVelar": {
+     "x": 1.411,
+     "y": 5.575
+    },
+    "tonguePalatal": {
+     "x": 1.652,
+     "y": 5.777
+    },
+    "tonguePostAlveolar": {
+     "x": 1.865,
+     "y": 5.668
+    },
+    "tongueBladeBack": {
+     "x": 1.922,
+     "y": 5.601
+    },
+    "tongueBladeFront": {
+     "x": 1.978,
+     "y": 5.534
+    },
+    "tongueAlveolar": {
+     "x": 2.025,
+     "y": 5.445
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.459
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.718,
+    "tongueShape": 0.685,
+    "tongueApex": -0.312,
+    "lipAperture": 0.116,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.035,
+   "notes": []
+  },
+  {
+   "id": "ih",
+   "drawing": "IPA Ɪ Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%EA%9E%AE_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "1285ca99626c7d9ccde4311fb5e6d3c39d4498de4bf0dab51288737c960b96a4",
+   "fixed": {},
+   "jawFromIncisor": -0.567,
+   "targets": {
+    "tongueBase": {
+     "x": 1.329,
+     "y": 5.027
+    },
+    "tonguePharynx": {
+     "x": 1.375,
+     "y": 5.119
+    },
+    "tongueUvular": {
+     "x": 1.331,
+     "y": 5.429
+    },
+    "tongueVelar": {
+     "x": 1.412,
+     "y": 5.572
+    },
+    "tonguePalatal": {
+     "x": 1.639,
+     "y": 5.705
+    },
+    "tonguePostAlveolar": {
+     "x": 1.848,
+     "y": 5.622
+    },
+    "tongueBladeBack": {
+     "x": 1.907,
+     "y": 5.563
+    },
+    "tongueBladeFront": {
+     "x": 1.962,
+     "y": 5.493
+    },
+    "tongueAlveolar": {
+     "x": 2.004,
+     "y": 5.39
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.423
+    }
+   },
+   "params": {
+    "jaw": -0.567,
+    "tonguePosition": -0.32,
+    "tongueShape": 0.535,
+    "tongueApex": -0.547,
+    "lipAperture": 0.668,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.024,
+   "notes": []
+  },
+  {
+   "id": "k",
+   "drawing": "IPA k Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_k_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "78b14a269d020d4249f5a8b85efe1fdc4ff193538e5c0ebb114426edf92b5258",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.357,
+     "y": 5.033
+    },
+    "tonguePharynx": {
+     "x": 1.314,
+     "y": 5.106
+    },
+    "tongueUvular": {
+     "x": 1.247,
+     "y": 5.466
+    },
+    "tongueVelar": {
+     "x": 1.324,
+     "y": 5.712
+    },
+    "tonguePalatal": {
+     "x": 1.629,
+     "y": 5.651
+    },
+    "tonguePostAlveolar": {
+     "x": 1.794,
+     "y": 5.485
+    },
+    "tongueBladeBack": {
+     "x": 1.858,
+     "y": 5.437
+    },
+    "tongueBladeFront": {
+     "x": 1.902,
+     "y": 5.339
+    },
+    "tongueAlveolar": {
+     "x": 1.878,
+     "y": 5.066
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 1.676,
+    "tongueShape": 2.633,
+    "tongueApex": -2.78,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.059,
+   "notes": []
+  },
+  {
+   "id": "m",
+   "drawing": "IPA m Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_m_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "5fc197686b40e144abbdf4cd075c8c1462793bc968269221452e131947e43af8",
+   "fixed": {
+    "lipAperture": -3
+   },
+   "jawFromIncisor": 0.756,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.322,
+     "y": 5.433
+    },
+    "tongueVelar": {
+     "x": 1.372,
+     "y": 5.636
+    },
+    "tonguePalatal": {
+     "x": 1.632,
+     "y": 5.669
+    },
+    "tonguePostAlveolar": {
+     "x": 1.843,
+     "y": 5.611
+    },
+    "tongueBladeBack": {
+     "x": 1.909,
+     "y": 5.569
+    },
+    "tongueBladeFront": {
+     "x": 1.974,
+     "y": 5.525
+    },
+    "tongueAlveolar": {
+     "x": 2.04,
+     "y": 5.483
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.519
+    }
+   },
+   "params": {
+    "jaw": 0.756,
+    "tonguePosition": 0.534,
+    "tongueShape": 0.253,
+    "tongueApex": -0.066,
+    "lipAperture": -3,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.024,
+   "notes": []
+  },
+  {
+   "id": "n",
+   "drawing": "IPA n Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_n_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "95a3b0420871768b28b15e43fad8b0e4510fa8c197e3fda7687fa269e1c93377",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.351,
+     "y": 5.42
+    },
+    "tongueVelar": {
+     "x": 1.397,
+     "y": 5.597
+    },
+    "tonguePalatal": {
+     "x": 1.627,
+     "y": 5.645
+    },
+    "tonguePostAlveolar": {
+     "x": 1.856,
+     "y": 5.644
+    },
+    "tongueBladeBack": {
+     "x": 1.929,
+     "y": 5.62
+    },
+    "tongueBladeFront": {
+     "x": 2.01,
+     "y": 5.617
+    },
+    "tongueAlveolar": {
+     "x": 2.109,
+     "y": 5.66
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.375,
+    "tongueShape": -0.943,
+    "tongueApex": 1.361,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.044,
+   "notes": []
+  },
+  {
+   "id": "neutral",
+   "drawing": "Neutral Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:Neutral_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "5958063a8cebcfb3b84663b06953273f9862d4a4f9f1cbc2d3f1893161b3be96",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.325,
+     "y": 5.432
+    },
+    "tongueVelar": {
+     "x": 1.414,
+     "y": 5.569
+    },
+    "tonguePalatal": {
+     "x": 1.636,
+     "y": 5.691
+    },
+    "tonguePostAlveolar": {
+     "x": 1.847,
+     "y": 5.621
+    },
+    "tongueBladeBack": {
+     "x": 1.911,
+     "y": 5.574
+    },
+    "tongueBladeFront": {
+     "x": 1.974,
+     "y": 5.523
+    },
+    "tongueAlveolar": {
+     "x": 2.037,
+     "y": 5.474
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.001,
+   "notes": []
+  },
+  {
+   "id": "ng",
+   "drawing": "IPA ŋ Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%C5%8B_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "e139f636864e92a68d2abd31ea34b0a6c45691f514ee07b0ddfc0ab207b6eaa1",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.357,
+     "y": 5.033
+    },
+    "tonguePharynx": {
+     "x": 1.31,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.319,
+     "y": 5.434
+    },
+    "tongueVelar": {
+     "x": 1.33,
+     "y": 5.704
+    },
+    "tonguePalatal": {
+     "x": 1.638,
+     "y": 5.703
+    },
+    "tonguePostAlveolar": {
+     "x": 1.807,
+     "y": 5.519
+    },
+    "tongueBladeBack": {
+     "x": 1.869,
+     "y": 5.467
+    },
+    "tongueBladeFront": {
+     "x": 1.917,
+     "y": 5.377
+    },
+    "tongueAlveolar": {
+     "x": 1.936,
+     "y": 5.215
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 1.084,
+    "tongueShape": 2.055,
+    "tongueApex": -1.903,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.043,
+   "notes": []
+  },
+  {
+   "id": "p",
+   "drawing": "IPA p Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_p_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "ec9124ec9b293c72905c0d9a072a1d8fcb704062f41ccfc57387040515a64bb0",
+   "fixed": {
+    "lipAperture": -3
+   },
+   "jawFromIncisor": 0.756,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.322,
+     "y": 5.433
+    },
+    "tongueVelar": {
+     "x": 1.414,
+     "y": 5.569
+    },
+    "tonguePalatal": {
+     "x": 1.632,
+     "y": 5.669
+    },
+    "tonguePostAlveolar": {
+     "x": 1.843,
+     "y": 5.611
+    },
+    "tongueBladeBack": {
+     "x": 1.909,
+     "y": 5.569
+    },
+    "tongueBladeFront": {
+     "x": 1.974,
+     "y": 5.525
+    },
+    "tongueAlveolar": {
+     "x": 2.04,
+     "y": 5.483
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.519
+    }
+   },
+   "params": {
+    "jaw": 0.756,
+    "tonguePosition": 0.377,
+    "tongueShape": -0.191,
+    "tongueApex": -0.33,
+    "lipAperture": -3,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.014,
+   "notes": []
+  },
+  {
+   "id": "palatal",
+   "drawing": "IPA ʝ Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%CA%9D_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "c0efa08918adc42771c8c3a30d69aeadc1e1bfab0444233c722a3d8cdc213142",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.344,
+     "y": 5.423
+    },
+    "tongueVelar": {
+     "x": 1.42,
+     "y": 5.56
+    },
+    "tonguePalatal": {
+     "x": 1.654,
+     "y": 5.786
+    },
+    "tonguePostAlveolar": {
+     "x": 1.884,
+     "y": 5.715
+    },
+    "tongueBladeBack": {
+     "x": 1.941,
+     "y": 5.65
+    },
+    "tongueBladeFront": {
+     "x": 2.003,
+     "y": 5.598
+    },
+    "tongueAlveolar": {
+     "x": 2.056,
+     "y": 5.523
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.687,
+    "tongueShape": 0.229,
+    "tongueApex": 1.063,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.021,
+   "notes": []
+  },
+  {
+   "id": "retroflex",
+   "drawing": "IPA ɽ retroflex Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%C9%BD_retroflex_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "8982dbfbf99011912b2825652f01952cc8bb18d06f2434395304cbb4c6e9edfd",
+   "fixed": {},
+   "jawFromIncisor": 0.472,
+   "targets": {
+    "tongueBase": {
+     "x": 1.342,
+     "y": 5.029
+    },
+    "tonguePharynx": {
+     "x": 1.314,
+     "y": 5.106
+    },
+    "tongueUvular": {
+     "x": 1.369,
+     "y": 5.412
+    },
+    "tongueVelar": {
+     "x": 1.477,
+     "y": 5.468
+    },
+    "tonguePalatal": {
+     "x": 1.597,
+     "y": 5.484
+    },
+    "tonguePostAlveolar": {
+     "x": 1.842,
+     "y": 5.606
+    },
+    "tongueBladeBack": {
+     "x": 1.942,
+     "y": 5.653
+    },
+    "tongueBladeFront": {
+     "x": 2.006,
+     "y": 5.606
+    },
+    "tongueAlveolar": {
+     "x": 1.905,
+     "y": 5.135
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.483
+    }
+   },
+   "params": {
+    "jaw": 0.472,
+    "tonguePosition": 0.077,
+    "tongueShape": -0.961,
+    "tongueApex": -2.549,
+    "lipAperture": -0.228,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.126,
+   "notes": []
+  },
+  {
+   "id": "s",
+   "drawing": "IPA s̺ apical Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_s%CC%BA_apical_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "39e7415665db30a21a744764f47f197493422973c5c366a40bec9c6d9aefaf21",
+   "fixed": {},
+   "jawFromIncisor": 0.283,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.351,
+     "y": 5.42
+    },
+    "tongueVelar": {
+     "x": 1.438,
+     "y": 5.531
+    },
+    "tonguePalatal": {
+     "x": 1.627,
+     "y": 5.645
+    },
+    "tonguePostAlveolar": {
+     "x": 1.856,
+     "y": 5.642
+    },
+    "tongueBladeBack": {
+     "x": 1.927,
+     "y": 5.616
+    },
+    "tongueBladeFront": {
+     "x": 2.005,
+     "y": 5.605
+    },
+    "tongueAlveolar": {
+     "x": 2.091,
+     "y": 5.614
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.471
+    }
+   },
+   "params": {
+    "jaw": 0.283,
+    "tonguePosition": -0.349,
+    "tongueShape": -1.222,
+    "tongueApex": 0.694,
+    "lipAperture": -0.044,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.024,
+   "notes": []
+  },
+  {
+   "id": "sh",
+   "drawing": "IPA ʃ laminal Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%CA%83_laminal_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "6c4ee59cc735286f6b7a9cba662e852009ff30396d29a01b16fd5bba2b8489f2",
+   "fixed": {},
+   "jawFromIncisor": 0.661,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.406,
+     "y": 5.396
+    },
+    "tongueVelar": {
+     "x": 1.471,
+     "y": 5.479
+    },
+    "tonguePalatal": {
+     "x": 1.627,
+     "y": 5.645
+    },
+    "tonguePostAlveolar": {
+     "x": 1.881,
+     "y": 5.708
+    },
+    "tongueBladeBack": {
+     "x": 1.952,
+     "y": 5.68
+    },
+    "tongueBladeFront": {
+     "x": 2.018,
+     "y": 5.638
+    },
+    "tongueAlveolar": {
+     "x": 2.051,
+     "y": 5.51
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.459
+    }
+   },
+   "params": {
+    "jaw": 0.661,
+    "tonguePosition": -0.707,
+    "tongueShape": -1.392,
+    "tongueApex": 0.039,
+    "lipAperture": 0.284,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.036,
+   "notes": []
+  },
+  {
+   "id": "t",
+   "drawing": "IPA t Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_t_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "9e5da5d4f4a98123687790d81dd65ce3480b38816043045a988f7df9bbc4d1d3",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.351,
+     "y": 5.42
+    },
+    "tongueVelar": {
+     "x": 1.438,
+     "y": 5.531
+    },
+    "tonguePalatal": {
+     "x": 1.627,
+     "y": 5.645
+    },
+    "tonguePostAlveolar": {
+     "x": 1.856,
+     "y": 5.644
+    },
+    "tongueBladeBack": {
+     "x": 1.929,
+     "y": 5.62
+    },
+    "tongueBladeFront": {
+     "x": 2.01,
+     "y": 5.617
+    },
+    "tongueAlveolar": {
+     "x": 2.109,
+     "y": 5.66
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.532,
+    "tongueShape": -1.387,
+    "tongueApex": 1.097,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.034,
+   "notes": []
+  },
+  {
+   "id": "th",
+   "drawing": "IPA θ Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%CE%B8_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "884ab6beb24edde6cb45bee846b9c10f30c9de8cd117d8ca01f8ae55f7f67f3e",
+   "fixed": {},
+   "jawFromIncisor": 0,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.321,
+     "y": 5.433
+    },
+    "tongueVelar": {
+     "x": 1.411,
+     "y": 5.575
+    },
+    "tonguePalatal": {
+     "x": 1.636,
+     "y": 5.691
+    },
+    "tonguePostAlveolar": {
+     "x": 1.846,
+     "y": 5.618
+    },
+    "tongueBladeBack": {
+     "x": 1.911,
+     "y": 5.574
+    },
+    "tongueBladeFront": {
+     "x": 1.976,
+     "y": 5.531
+    },
+    "tongueAlveolar": {
+     "x": 2.047,
+     "y": 5.501
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.465
+    }
+   },
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0.001,
+    "tongueShape": -0.057,
+    "tongueApex": 0.192,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.008,
+   "notes": []
+  },
+  {
+   "id": "u",
+   "drawing": "IPA u Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_u_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "e083a2c2c1476a41b1bb1f91cd399e90749632d73d8f329da577f12127dbe06e",
+   "fixed": {},
+   "jawFromIncisor": 0.189,
+   "targets": {
+    "tongueBase": {
+     "x": 1.329,
+     "y": 5.027
+    },
+    "tonguePharynx": {
+     "x": 1.364,
+     "y": 5.117
+    },
+    "tongueUvular": {
+     "x": 1.3,
+     "y": 5.443
+    },
+    "tongueVelar": {
+     "x": 1.386,
+     "y": 5.614
+    },
+    "tonguePalatal": {
+     "x": 1.641,
+     "y": 5.719
+    },
+    "tonguePostAlveolar": {
+     "x": 1.805,
+     "y": 5.512
+    },
+    "tongueBladeBack": {
+     "x": 1.862,
+     "y": 5.447
+    },
+    "tongueBladeFront": {
+     "x": 1.906,
+     "y": 5.349
+    },
+    "tongueAlveolar": {
+     "x": 1.934,
+     "y": 5.211
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.477
+    }
+   },
+   "params": {
+    "jaw": 0.189,
+    "tonguePosition": 1.008,
+    "tongueShape": 1.671,
+    "tongueApex": -2.49,
+    "lipAperture": -0.184,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.044,
+   "notes": []
+  },
+  {
+   "id": "uh",
+   "drawing": "IPA Ʊ Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_%C6%B1_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "e2aa2d91104b7889d9da5867ed4f9dff4b33df42542372865e196d5cc8b2b591",
+   "fixed": {},
+   "jawFromIncisor": 0.189,
+   "targets": {
+    "tongueBase": {
+     "x": 1.329,
+     "y": 5.027
+    },
+    "tonguePharynx": {
+     "x": 1.416,
+     "y": 5.128
+    },
+    "tongueUvular": {
+     "x": 1.241,
+     "y": 5.469
+    },
+    "tongueVelar": {
+     "x": 1.392,
+     "y": 5.604
+    },
+    "tonguePalatal": {
+     "x": 1.613,
+     "y": 5.568
+    },
+    "tonguePostAlveolar": {
+     "x": 1.789,
+     "y": 5.472
+    },
+    "tongueBladeBack": {
+     "x": 1.86,
+     "y": 5.442
+    },
+    "tongueBladeFront": {
+     "x": 1.915,
+     "y": 5.373
+    },
+    "tongueAlveolar": {
+     "x": 1.961,
+     "y": 5.28
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.471
+    }
+   },
+   "params": {
+    "jaw": 0.189,
+    "tonguePosition": 1.205,
+    "tongueShape": 0.726,
+    "tongueApex": -2.518,
+    "lipAperture": -0.068,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.049,
+   "notes": []
+  },
+  {
+   "id": "v",
+   "drawing": "IPA v Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_v_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "3bd653fcb32c49189a2f2ad728c0d7357c470fd79764256d73483b338cf3b4c0",
+   "fixed": {},
+   "jawFromIncisor": 1.039,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.322,
+     "y": 5.433
+    },
+    "tongueVelar": {
+     "x": 1.414,
+     "y": 5.569
+    },
+    "tonguePalatal": {
+     "x": 1.632,
+     "y": 5.669
+    },
+    "tonguePostAlveolar": {
+     "x": 1.843,
+     "y": 5.609
+    },
+    "tongueBladeBack": {
+     "x": 1.908,
+     "y": 5.566
+    },
+    "tongueBladeFront": {
+     "x": 1.971,
+     "y": 5.518
+    },
+    "tongueAlveolar": {
+     "x": 2.032,
+     "y": 5.462
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.51
+    }
+   },
+   "params": {
+    "jaw": 1.039,
+    "tonguePosition": 0.532,
+    "tongueShape": -0.12,
+    "tongueApex": -0.587,
+    "lipAperture": -0.606,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.008,
+   "notes": []
+  },
+  {
+   "id": "z",
+   "drawing": "IPA z apical Sagittal Section.svg",
+   "url": "https://commons.wikimedia.org/wiki/File:IPA_z_apical_Sagittal_Section.svg",
+   "license": "CC0 1.0",
+   "artist": "Richard Wright, Dan McCloy",
+   "sha256": "dce5f625479157bf1f5485250f2c51c5ca14e5998be283c8d0dfbc5ba6bb61f5",
+   "fixed": {},
+   "jawFromIncisor": 0.283,
+   "targets": {
+    "tongueBase": {
+     "x": 1.335,
+     "y": 5.028
+    },
+    "tonguePharynx": {
+     "x": 1.309,
+     "y": 5.105
+    },
+    "tongueUvular": {
+     "x": 1.351,
+     "y": 5.42
+    },
+    "tongueVelar": {
+     "x": 1.438,
+     "y": 5.531
+    },
+    "tonguePalatal": {
+     "x": 1.627,
+     "y": 5.645
+    },
+    "tonguePostAlveolar": {
+     "x": 1.856,
+     "y": 5.642
+    },
+    "tongueBladeBack": {
+     "x": 1.927,
+     "y": 5.616
+    },
+    "tongueBladeFront": {
+     "x": 2.005,
+     "y": 5.605
+    },
+    "tongueAlveolar": {
+     "x": 2.091,
+     "y": 5.614
+    },
+    "lipDownIn": {
+     "x": 2.201,
+     "y": 5.471
+    }
+   },
+   "params": {
+    "jaw": 0.283,
+    "tonguePosition": -0.349,
+    "tongueShape": -1.222,
+    "tongueApex": 0.694,
+    "lipAperture": -0.044,
+    "lipProtrusion": 0,
+    "larynxHeight": 0
+   },
+   "rms": 0.024,
+   "notes": []
+  }
+ ]
+}

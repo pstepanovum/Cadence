@@ -1,0 +1,415 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "passive-present-and-past",
+ "draftHash": "f5487b6b953595c9",
+ "grammarPoint": {
+  "id": "gp.passive-present-and-past",
+  "level": "B1",
+  "topicId": "topic.passive",
+  "title": "Passive: present and past simple",
+  "summary": "Learn to describe actions where the focus is on the receiver of the action, not the doer, using present and past simple passive forms.",
+  "explanation": "The passive voice helps us focus on the action or the person/thing receiving the action, rather than the person or thing doing it. We use it when the doer is unknown, unimportant, or obvious. For example, 'The cake was eaten' focuses on the cake, not who ate it.\n\nFor actions happening regularly or general facts, we use the *present simple passive*: *is/are + past participle*. For example, 'Coffee is grown in Brazil.' or 'These cars are made in Japan.'\n\nFor actions completed in the past, we use the *past simple passive*: *was/were + past participle*. For example, 'The bridge was built in 1900.' or 'The windows were cleaned yesterday.'\n\nIf we want to mention who did the action, we can add 'by + agent' at the end of the sentence. For example, 'The novel was written *by* a famous author.'",
+  "patterns": [
+   "Subject + is/are + past participle",
+   "Subject + was/were + past participle",
+   "Subject + is/are + past participle + by + agent",
+   "Subject + was/were + past participle + by + agent"
+  ],
+  "examples": [
+   {
+    "text": "Coffee is grown in warm climates.",
+    "note": "Present simple passive for a general fact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "These reports are submitted every Friday.",
+    "note": "Present simple passive for a routine action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The old theater was renovated last year.",
+    "note": "Past simple passive for a past event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new park was designed by a local architect.",
+    "note": "Past simple passive with 'by + agent' to show who did the action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Many decisions are made by the committee.",
+    "note": "Present simple passive with 'by + agent' for a regular action.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The company produce these phones.",
+    "right": "These phones are produced by the company.",
+    "note": "Use the passive voice when the focus is on the phones, not the company."
+   },
+   {
+    "wrong": "The letter was write yesterday.",
+    "right": "The letter was written yesterday.",
+    "note": "Always use the past participle form of the main verb."
+   },
+   {
+    "wrong": "The new building is build last year.",
+    "right": "The new building was built last year.",
+    "note": "Use 'was' for past simple passive with a singular subject and a past time reference."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.passive-present-and-past.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The city's main library ___ in 1950.",
+   "options": [
+    "is built",
+    "was built",
+    "builds"
+   ],
+   "answer": 1,
+   "explanation": "The action happened in the past ('in 1950'), so the past simple passive 'was built' is correct."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "These delicious cookies ___ fresh every morning.",
+   "options": [
+    "are baked",
+    "were baked",
+    "bake"
+   ],
+   "answer": 0,
+   "explanation": "The action happens regularly ('every morning'), so the present simple passive 'are baked' is correct."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The famous painting ___ by a student.",
+   "options": [
+    "was discovered",
+    "discovered",
+    "is discovering"
+   ],
+   "answer": 0,
+   "explanation": "The painting received the action of being discovered, and 'by a student' indicates the passive voice. The past tense is implied."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "English ___ in many countries around the world.",
+   "options": [
+    "speaks",
+    "is spoken",
+    "was spoken"
+   ],
+   "answer": 1,
+   "explanation": "This is a general fact, so the present simple passive 'is spoken' is correct."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old bridge ___ ___ last month.",
+   "answers": [
+    [
+     "was"
+    ],
+    [
+     "repaired"
+    ]
+   ],
+   "explanation": "The action happened in the past ('last month'), so the past simple passive 'was repaired' is needed."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "New cars ___ ___ at this factory.",
+   "answers": [
+    [
+     "are"
+    ],
+    [
+     "produced",
+     "made"
+    ]
+   ],
+   "explanation": "This is a general fact about the factory, so the present simple passive 'are produced' is correct."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The report ___ ___ by the manager.",
+   "answers": [
+    [
+     "was",
+     "is"
+    ],
+    [
+     "written"
+    ]
+   ],
+   "explanation": "The report received the action, and 'by the manager' indicates the passive voice. The past tense is implied."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "new",
+    "rules",
+    "are",
+    "explained",
+    "clearly",
+    "."
+   ],
+   "distractors": [
+    "explains"
+   ],
+   "explanation": "This sentence uses the present simple passive to describe how the rules are explained.",
+   "alternatives": [
+    [
+     "The",
+     "new",
+     "rules",
+     "are",
+     "clearly",
+     "explained",
+     "."
+    ]
+   ]
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "ancient",
+    "city",
+    "was",
+    "discovered",
+    "in",
+    "1870",
+    "."
+   ],
+   "distractors": [
+    "discover"
+   ],
+   "explanation": "This sentence uses the past simple passive to describe when the city was discovered."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Many houses was damaged by the storm.",
+   "answers": [
+    "Many houses were damaged by the storm."
+   ],
+   "explanation": "For a plural subject ('houses') in the past simple passive, use 'were' instead of 'was'."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The bread is bake every morning.",
+   "answers": [
+    "The bread is baked every morning."
+   ],
+   "explanation": "The passive voice requires the past participle form of the verb, which is 'baked'."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "A famous artist painted this portrait.",
+   "instruction": "Rewrite in the passive voice.",
+   "answers": [
+    "This portrait was painted by a famous artist."
+   ],
+   "explanation": "To change to passive, the object ('this portrait') becomes the subject, and the verb changes to 'was + past participle'. We can add 'by + agent' to keep the information about the artist."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They clean the museum every week.",
+   "instruction": "Rewrite in the passive voice.",
+   "answers": [
+    "The museum is cleaned every week."
+   ],
+   "explanation": "To change to passive, the object ('the museum') becomes the subject, and the verb changes to 'is + past participle'. The original doer ('they') is often omitted in passive sentences when unimportant."
+  },
+  {
+   "id": "ex.b1.passive-present-and-past.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.passive-present-and-past"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The new bridge",
+     "right": "was opened last month."
+    },
+    {
+     "left": "These delicious cakes",
+     "right": "are made in our bakery."
+    },
+    {
+     "left": "The old letters",
+     "right": "were found in the attic."
+    },
+    {
+     "left": "Fresh vegetables",
+     "right": "are delivered daily."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "is (?:made|built|written|cooked|cleaned|grown|produced|found|spoken|used)",
+  "was (?:made|built|written|cooked|cleaned|grown|produced|found|spoken|used)",
+  "are (?:made|built|written|cooked|cleaned|grown|produced|found|spoken|used)",
+  "were (?:made|built|written|cooked|cleaned|grown|produced|found|spoken|used)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.passive-present-and-past.01": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.02": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.03": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.04": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.05": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both verbs correctly complete the passive sentence structure."
+   },
+   "ex.b1.passive-present-and-past.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both past and present passive tenses are grammatically correct."
+   },
+   "ex.b1.passive-present-and-past.08": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both adverb placements form correct and natural passive sentences."
+   },
+   "ex.b1.passive-present-and-past.09": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.10": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.11": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.12": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.13": {
+    "status": "pass"
+   },
+   "ex.b1.passive-present-and-past.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 2261018,
+   "text": "French and Arabic are spoken in this country.",
+   "author": "_undertoad"
+  },
+  {
+   "sentenceId": 44162,
+   "text": "Nobody could explain how the thing was made.",
+   "author": "CK"
+  }
+ ]
+}

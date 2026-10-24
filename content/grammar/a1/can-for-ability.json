@@ -1,0 +1,393 @@
+{
+ "format": 1,
+ "level": "A1",
+ "slug": "can-for-ability",
+ "draftHash": "417dd06549dcc5e0",
+ "grammarPoint": {
+  "id": "gp.can-for-ability",
+  "level": "A1",
+  "topicId": "topic.modals",
+  "title": "Can and can't",
+  "summary": "Use 'can' to talk about abilities or to ask for and give permission. Use 'can't' for things you are not able to do or not allowed to do.",
+  "explanation": "We use the word *can* to say what someone or something is *able* to do. For example, if you know how to swim, you can say, \"I can swim.\"\n\n*Can* is also used to ask for or give *permission*. If you want to leave a room, you might ask, \"Can I go now?\" Someone might reply, \"Yes, you can.\"\n\nTo say that someone is *not able* to do something, or is *not allowed* to do something, we use *can't*. This is a short form of 'cannot'. For example, \"I can't speak French\" means you don't know how to speak French. \"You can't park here\" means it's not allowed.",
+  "patterns": [
+   "Subject + can + base verb",
+   "Subject + can't + base verb",
+   "Can + subject + base verb?"
+  ],
+  "examples": [
+   {
+    "text": "My brother can play the guitar very well.",
+    "note": "Shows ability.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Can I use your pen for a moment?",
+    "note": "Asks for permission.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "No, you can't eat in the library.",
+    "note": "Denies permission.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Birds can fly, but fish can't.",
+    "note": "Compares abilities.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We can meet at 3 PM if that works for you.",
+    "note": "Suggests a possibility (related to ability/permission).",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I can to speak English.",
+    "right": "I can speak English.",
+    "note": "Do not use 'to' after 'can'."
+   },
+   {
+    "wrong": "She no can come today.",
+    "right": "She can't come today.",
+    "note": "Use 'can't' or 'cannot' for negation."
+   },
+   {
+    "wrong": "He can plays tennis.",
+    "right": "He can play tennis.",
+    "note": "Use the base form of the verb after 'can'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a1.can-for-ability.01",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My little sister is only two, so she ___ read yet.",
+   "options": [
+    "can",
+    "can't",
+    "cans"
+   ],
+   "answer": 1,
+   "explanation": "She is not able to read, so 'can't' is correct."
+  },
+  {
+   "id": "ex.a1.can-for-ability.02",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ I sit here, please?",
+   "options": [
+    "Am",
+    "Can",
+    "Do"
+   ],
+   "answer": 1,
+   "explanation": "'Can I' is used to ask for permission."
+  },
+  {
+   "id": "ex.a1.can-for-ability.03",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ see the mountains from our window on a clear day.",
+   "options": [
+    "can",
+    "can't",
+    "cans"
+   ],
+   "answer": 0,
+   "explanation": "This describes an ability or possibility, so 'can' is correct."
+  },
+  {
+   "id": "ex.a1.can-for-ability.04",
+   "kind": "multiple_choice",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Excuse me, you ___ smoke inside this building.",
+   "options": [
+    "can",
+    "can't",
+    "are"
+   ],
+   "answer": 1,
+   "explanation": "Smoking is not allowed, so 'can't' is correct."
+  },
+  {
+   "id": "ex.a1.can-for-ability.05",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ speak a little Spanish, but I ___ speak French.",
+   "answers": [
+    [
+     "can"
+    ],
+    [
+     "can't",
+     "cannot"
+    ]
+   ],
+   "explanation": "The first gap needs 'can' for ability. The second needs 'can't' for lack of ability."
+  },
+  {
+   "id": "ex.a1.can-for-ability.06",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you help me carry these boxes?",
+   "answers": [
+    [
+     "Can"
+    ]
+   ],
+   "explanation": "'Can you' is used to ask someone to do something (a request, related to ability)."
+  },
+  {
+   "id": "ex.a1.can-for-ability.07",
+   "kind": "gap_fill",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My dog ___ do many tricks. He ___ even fetch the newspaper!",
+   "answers": [
+    [
+     "can"
+    ],
+    [
+     "can"
+    ]
+   ],
+   "explanation": "Both sentences describe the dog's abilities, so 'can' is used."
+  },
+  {
+   "id": "ex.a1.can-for-ability.08",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "can",
+    "run",
+    "very",
+    "fast",
+    "."
+   ],
+   "distractors": [
+    "runs"
+   ],
+   "explanation": "This sentence describes someone's ability to run quickly."
+  },
+  {
+   "id": "ex.a1.can-for-ability.09",
+   "kind": "sentence_building",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "can't",
+    "park",
+    "your",
+    "car",
+    "here",
+    "."
+   ],
+   "distractors": [
+    "not"
+   ],
+   "explanation": "This sentence states that parking is not allowed in this location."
+  },
+  {
+   "id": "ex.a1.can-for-ability.10",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My cat can jumps very high.",
+   "answers": [
+    "My cat can jump very high."
+   ],
+   "explanation": "After 'can', use the base form of the verb ('jump'), not 'jumps'."
+  },
+  {
+   "id": "ex.a1.can-for-ability.11",
+   "kind": "error_correction",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Can I to open the window?",
+   "answers": [
+    "Can I open the window?"
+   ],
+   "explanation": "Do not use 'to' after 'can'."
+  },
+  {
+   "id": "ex.a1.can-for-ability.12",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It is possible for me to meet you at 5 PM.",
+   "instruction": "Use 'can'.",
+   "answers": [
+    "I can meet you at 5 PM."
+   ],
+   "explanation": "'Can' expresses ability or possibility."
+  },
+  {
+   "id": "ex.a1.can-for-ability.13",
+   "kind": "transformation",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Is it okay if I borrow your book?",
+   "instruction": "Use 'can'.",
+   "answers": [
+    "Can I borrow your book?"
+   ],
+   "explanation": "'Can I' is used to ask for permission."
+  },
+  {
+   "id": "ex.a1.can-for-ability.14",
+   "kind": "matching",
+   "level": "A1",
+   "grammarPointIds": [
+    "gp.can-for-ability"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I can't",
+     "right": "hear you very well."
+    },
+    {
+     "left": "Can you",
+     "right": "help me with this?"
+    },
+    {
+     "left": "She can",
+     "right": "speak three languages."
+    },
+    {
+     "left": "You can't",
+     "right": "enter without a ticket."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "can (?:swim|speak|play|drive|read|write|help|open|close|see|hear|go|come)",
+  "can't (?:swim|speak|play|drive|read|write|help|open|close|see|hear|go|come)",
+  "can I (?:help|go|come|sit|open|close|ask|borrow|use)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a1.can-for-ability.01": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.02": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.03": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.04": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.05": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.06": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.07": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.08": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.09": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.10": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.11": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.12": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.13": {
+    "status": "pass"
+   },
+   "ex.a1.can-for-ability.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 435646,
+   "text": "He can speak Russian, too.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 1886273,
+   "text": "Can I sit down?",
+   "author": "CK"
+  }
+ ]
+}

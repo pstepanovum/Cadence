@@ -1,0 +1,391 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "would-for-past-habits",
+ "draftHash": "5348175c9e9b8e66",
+ "grammarPoint": {
+  "id": "gp.would-for-past-habits",
+  "level": "B2",
+  "topicId": "topic.tenses",
+  "title": "Would for past habits",
+  "summary": "Learn to use 'would' for repeated actions in the past, and how it differs from 'used to' for past habits and states.",
+  "explanation": "We use *would* to talk about actions that we repeated regularly in the past. It describes habits or routines that are no longer true. It often appears with time expressions like 'every day,' 'on weekends,' or 'when I was younger.'\n\nFor example, 'When I was a child, I *would* play outside every day.' This means playing outside was a regular activity. It emphasizes the routine nature of the action.\n\n*Would* is similar to *used to* for past habits. However, *would* can only describe *actions*, not *states*. For past states (like 'be,' 'have,' 'live,' 'know,' 'like'), you must use *used to*. For instance, you can say 'I *used to* live in a small town,' but not 'I *would* live in a small town.'",
+  "patterns": [
+   "Subject + would + base verb",
+   "Subject + wouldn't + base verb"
+  ],
+  "examples": [
+   {
+    "text": "Every summer, my family would visit the beach for a week.",
+    "note": "Describes a repeated action (visiting) in the past.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "When I was in college, I would study late into the night.",
+    "note": "Shows a regular habit (studying) from a past period.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My grandmother wouldn't let us eat dessert before dinner.",
+    "note": "Indicates a repeated refusal or rule in the past.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Before the new cafe opened, we would always meet at the old one.",
+    "note": "Refers to a past routine (meeting) that has changed.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "On rainy days, my brother and I would read books for hours.",
+    "note": "Highlights a repeated action (reading) that happened under specific conditions.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I would be very shy when I was younger.",
+    "right": "I used to be very shy when I was younger.",
+    "note": "'Would' cannot be used for past states like 'be'."
+   },
+   {
+    "wrong": "My old dog would barked at every squirrel.",
+    "right": "My old dog would bark at every squirrel.",
+    "note": "After 'would', use the base form of the verb."
+   },
+   {
+    "wrong": "They would had a big garden in their previous house.",
+    "right": "They used to have a big garden in their previous house.",
+    "note": "'Would' cannot be used for past states like 'have'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.would-for-past-habits.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "When I was a kid, I ___ spend hours building LEGO castles.",
+   "options": [
+    "would",
+    "used",
+    "was used to",
+    "would to"
+   ],
+   "answer": 0,
+   "explanation": "'Would' is used here to describe a repeated action or habit in the past. 'Used' alone is incomplete, 'was used to' means accustomed to, and 'would to' is incorrect."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My aunt ___ live in that house before she moved to the city.",
+   "options": [
+    "would",
+    "used to",
+    "would to",
+    "was used to"
+   ],
+   "answer": 1,
+   "explanation": "'Live' is a state verb, so 'used to' must be used to describe a past state. 'Would' cannot be used for states."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Every Sunday, my dad ___ make pancakes for breakfast.",
+   "options": [
+    "used",
+    "would",
+    "was used to",
+    "would to"
+   ],
+   "answer": 1,
+   "explanation": "'Would' is correct for a repeated action or habit in the past. 'Used' is incomplete, 'was used to' means accustomed to, and 'would to' is incorrect."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which sentence correctly uses 'would' for a past habit?",
+   "options": [
+    "She would know all the answers.",
+    "They would be very tall.",
+    "He would often bring flowers to his mother.",
+    "We would own a small boat."
+   ],
+   "answer": 2,
+   "explanation": "'Bring' is an action verb, so 'would' correctly describes a repeated past action. 'Know,' 'be,' and 'own' are state verbs, which require 'used to'."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Before smartphones, people ___ often carry paper maps when traveling.",
+   "answers": [
+    [
+     "would"
+    ]
+   ],
+   "explanation": "'Would' is used for a repeated action in the past. 'Used to' would also be correct here, but only 'would' is provided as an option for this exercise."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "When I was a student, I ___ always ___ my homework right after school.",
+   "answers": [
+    [
+     "would"
+    ],
+    [
+     "do"
+    ]
+   ],
+   "explanation": "'Would' is followed by the base form of the verb to describe a repeated past action."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My grandparents ___ never ___ coffee; they preferred tea.",
+   "answers": [
+    [
+     "wouldn't"
+    ],
+    [
+     "drink"
+    ]
+   ],
+   "explanation": "The negative form 'wouldn't' followed by the base verb 'drink' describes a repeated past action or habit that didn't happen."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "On",
+    "weekends",
+    ",",
+    "we",
+    "would",
+    "go",
+    "hiking",
+    "."
+   ],
+   "distractors": [
+    "went",
+    "used"
+   ],
+   "explanation": "This sentence uses 'would' to describe a repeated action (going hiking) that happened regularly on weekends in the past."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "My",
+    "cat",
+    "would",
+    "always",
+    "sleep",
+    "on",
+    "my",
+    "desk",
+    "."
+   ],
+   "distractors": [
+    "slept",
+    "used"
+   ],
+   "explanation": "This sentence uses 'would' to describe a repeated action (sleeping on the desk) that the cat habitually did in the past."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "When I was young, I would have long hair.",
+   "answers": [
+    "When I was young, I used to have long hair."
+   ],
+   "explanation": "'Have' is a state verb, so 'used to' is required instead of 'would' to describe a past state."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Every morning, the baker would baked fresh bread.",
+   "answers": [
+    "Every morning, the baker would bake fresh bread."
+   ],
+   "explanation": "After 'would', the base form of the verb is always used, not the past participle or simple past."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My neighbors always invited us for dinner on Fridays.",
+   "instruction": "Rewrite using 'would' for a past habit.",
+   "answers": [
+    "My neighbors would always invite us for dinner on Fridays."
+   ],
+   "explanation": "The instruction requires changing the simple past 'invited' to 'would invite' to express a repeated past action."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I used to play soccer every afternoon after school.",
+   "instruction": "Rewrite using 'would' if possible.",
+   "answers": [
+    "I would play soccer every afternoon after school."
+   ],
+   "explanation": "Since 'play' is an action verb, 'used to play' can be replaced with 'would play' to describe a repeated past action."
+  },
+  {
+   "id": "ex.b2.would-for-past-habits.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.would-for-past-habits"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Before the internet, people would often",
+     "right": "write letters to friends and family."
+    },
+    {
+     "left": "My old car would always",
+     "right": "break down on long trips."
+    },
+    {
+     "left": "When we lived by the lake, we would",
+     "right": "go swimming every morning."
+    },
+    {
+     "left": "My grandmother would never",
+     "right": "miss her favorite TV show."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "would (always|often|sometimes) [a-z]+",
+  "when [a-z]+, [a-z]+ would [a-z]+",
+  "wouldn't [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.would-for-past-habits.01": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.02": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.03": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.04": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.05": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.06": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.07": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key creates an ungrammatical double negative, whereas the other answer is correct."
+   },
+   "ex.b2.would-for-past-habits.08": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.09": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.10": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.11": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.12": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.13": {
+    "status": "pass"
+   },
+   "ex.b2.would-for-past-habits.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": []
+}

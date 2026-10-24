@@ -1,0 +1,405 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "unless-and-as-long-as",
+ "draftHash": "2a4540f2c2e836cd",
+ "grammarPoint": {
+  "id": "gp.unless-and-as-long-as",
+  "level": "B2",
+  "topicId": "topic.conditionals",
+  "title": "Unless, as long as, provided that",
+  "summary": "Learn to use 'unless,' 'as long as,' and 'provided that' to express conditions without using 'if.'",
+  "explanation": "“Unless,” “as long as,” and “provided that” are conjunctions that introduce conditions, much like “if.” They help you specify what must happen for another event or situation to be true or possible.\n\n*Unless* means “if not.” It introduces a negative condition, indicating that something will happen only if the condition is *not* met. For example, “Unless you hurry, you’ll miss the train” means “If you don’t hurry, you’ll miss the train.”\n\n*As long as* and *provided that* (or *providing that*) introduce a strong, necessary condition. They mean “only if” or “on the condition that.” These phrases emphasize that the main action will only occur if the specific condition is fulfilled. For instance, “You can use my laptop as long as you’re careful” sets a clear requirement for using the laptop.",
+  "patterns": [
+   "Unless + subject + verb, subject + will/won't + verb",
+   "Subject + will/won't + verb + unless + subject + verb",
+   "As long as + subject + verb, subject + will/can + verb",
+   "Subject + will/can + verb + as long as + subject + verb",
+   "Provided that + subject + verb, subject + will/can + verb"
+  ],
+  "examples": [
+   {
+    "text": "Unless it rains, we'll go hiking this afternoon.",
+    "note": "This means 'If it doesn't rain, we'll go hiking.'",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You can join the club as long as you attend the weekly meetings.",
+    "note": "This sets a necessary condition for joining the club.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Provided that the flight isn't delayed, we'll arrive on time.",
+    "note": "This states a condition for arriving on time, often more formal.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I won't buy a new car unless I get a promotion at work.",
+    "note": "The promotion is the only condition under which a new car will be bought.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We can finish the project by Friday, providing that everyone works extra hours.",
+    "note": "This uses 'providing that' to state a strong requirement.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Unless you don't study, you will fail the exam.",
+    "right": "Unless you study, you will fail the exam.",
+    "note": "Unless already includes 'not', so don't use another negative."
+   },
+   {
+    "wrong": "I will lend you the book, provided you return it back soon.",
+    "right": "I will lend you the book, provided that you return it soon.",
+    "note": "Use 'provided that' or 'providing that' for the full phrase."
+   },
+   {
+    "wrong": "As long as you are careful, you can drive my car.",
+    "right": "As long as you are careful, you can drive my car.",
+    "note": "The condition comes first, then the result."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.unless-and-as-long-as.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You can borrow my bike ___ you promise to return it tomorrow.",
+   "options": [
+    "unless",
+    "as long as",
+    "if not"
+   ],
+   "answer": 1,
+   "explanation": "'As long as' correctly expresses the condition that must be met for the bike to be borrowed."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We won't start the movie ___ everyone arrives.",
+   "options": [
+    "as long as",
+    "provided that",
+    "unless"
+   ],
+   "answer": 2,
+   "explanation": "'Unless' means 'if not,' so the movie won't start if everyone hasn't arrived yet."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you have a valid ticket, you cannot enter the concert.",
+   "options": [
+    "Provided that",
+    "As long as",
+    "Unless"
+   ],
+   "answer": 2,
+   "explanation": "'Unless' means 'if not,' so if you don't have a ticket, you can't enter."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The company will offer you the job ___ you pass the final interview.",
+   "options": [
+    "unless",
+    "as long as",
+    "if"
+   ],
+   "answer": 1,
+   "explanation": "'As long as' sets a strong condition for getting the job offer."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I won't go to the party ___ you go with me.",
+   "answers": [
+    [
+     "unless"
+    ]
+   ],
+   "explanation": "'Unless' means 'if not,' so the speaker won't go if the other person doesn't go."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "You can use the gym ___ you pay the monthly fee.",
+   "answers": [
+    [
+     "as long as"
+    ],
+    [
+     "provided that"
+    ],
+    [
+     "providing that"
+    ]
+   ],
+   "explanation": "'As long as' or 'provided that' introduces a necessary condition for using the gym."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ the weather improves, we'll have to cancel the outdoor event.",
+   "answers": [
+    [
+     "Unless"
+    ]
+   ],
+   "explanation": "'Unless' means 'if not,' so if the weather doesn't improve, the event will be canceled."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "can",
+    "stay",
+    "here",
+    "as",
+    "long",
+    "as",
+    "you",
+    "are",
+    "quiet",
+    "."
+   ],
+   "distractors": [
+    "always",
+    "then"
+   ],
+   "explanation": "This sentence uses 'as long as' to state a condition for staying."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "We",
+    "won't",
+    "leave",
+    "unless",
+    "everyone",
+    "is",
+    "ready",
+    "."
+   ],
+   "distractors": [
+    "never",
+    "soon"
+   ],
+   "explanation": "'Unless' introduces the condition that everyone must be ready before leaving."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Unless you don't bring your ID, you can't enter.",
+   "answers": [
+    "Unless you bring your ID, you can't enter."
+   ],
+   "explanation": "'Unless' already implies 'if not,' so 'don't' is redundant and creates a double negative."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I'll help you, provided you promise to keep it a secret.",
+   "answers": [
+    "I'll help you, provided that you promise to keep it a secret.",
+    "I'll help you, providing that you promise to keep it a secret."
+   ],
+   "explanation": "The full phrase is 'provided that' or 'providing that' when introducing a condition."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If you don't apologize, she won't forgive you.",
+   "instruction": "Rewrite using 'unless'.",
+   "answers": [
+    "Unless you apologize, she won't forgive you."
+   ],
+   "explanation": "'Unless' replaces 'if not' to express the same negative condition."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You can borrow my car only if you have a valid driver's license.",
+   "instruction": "Rewrite using 'as long as'.",
+   "answers": [
+    "You can borrow my car as long as you have a valid driver's license."
+   ],
+   "explanation": "'As long as' expresses a strong, necessary condition, similar to 'only if'."
+  },
+  {
+   "id": "ex.b2.unless-and-as-long-as.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.unless-and-as-long-as"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Unless you study hard,",
+     "right": "you won't pass the exam."
+    },
+    {
+     "left": "You can use my phone",
+     "right": "as long as you don't break it."
+    },
+    {
+     "left": "Provided that the weather is clear,",
+     "right": "we'll see the stars tonight."
+    },
+    {
+     "left": "I won't eat this dish",
+     "right": "unless it's vegetarian."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "unless [a-z ]+",
+  "as long as [a-z ]+",
+  "provided that [a-z ]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.unless-and-as-long-as.01": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.02": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.03": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.04": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.05": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.unless-and-as-long-as.06: needs one answer list per gap (1)"
+   },
+   "ex.b2.unless-and-as-long-as.07": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.08": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.b2.unless-and-as-long-as.10": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.11": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.12": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.13": {
+    "status": "pass"
+   },
+   "ex.b2.unless-and-as-long-as.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 3098894,
+   "text": "Don't worry about how much it costs, as long as it's reasonable.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 3444549,
+   "text": "I won't go unless Tom goes with me.",
+   "author": "CK"
+  }
+ ]
+}

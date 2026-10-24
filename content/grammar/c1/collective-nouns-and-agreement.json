@@ -1,0 +1,399 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "collective-nouns-and-agreement",
+ "draftHash": "2a97ce112f1d9ba0",
+ "grammarPoint": {
+  "id": "gp.collective-nouns-and-agreement",
+  "level": "C1",
+  "topicId": "topic.nouns-pronouns",
+  "title": "Collective nouns and agreement",
+  "summary": "Learn how collective nouns like 'team' and phrases like 'a number of' and 'the majority' determine singular or plural verb agreement.",
+  "explanation": "Collective nouns refer to a group of people or things as a single unit (e.g., *team*, *family*, *government*). In American English, these nouns usually take a *singular* verb when the group acts as one entity. However, if the members of the group are acting individually, a *plural* verb can be used, though this is less common in American English than British English.\n\nThe phrase \"*a number of*\" always takes a *plural* verb because it emphasizes the individual items or people within the group. For example, \"A number of issues *were* discussed.\"\n\n\"*The majority*\" can take either a singular or plural verb. When it refers to the group as a single unit, use a *singular* verb. When it refers to the individual members of the group, especially when followed by \"of + plural noun,\" use a *plural* verb. For instance, \"The majority *is* against the proposal\" (as a unit) versus \"The majority of employees *are* happy with the new policy\" (individuals).",
+  "patterns": [
+   "Collective noun + singular verb (unit)",
+   "Collective noun + plural verb (individuals)",
+   "A number of + plural noun + plural verb",
+   "The majority + singular verb (unit)",
+   "The majority of + plural noun + plural verb"
+  ],
+  "examples": [
+   {
+    "text": "The committee *meets* every Tuesday to review applications.",
+    "note": "The committee acts as a single unit, so a singular verb is used.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The audience *were* all standing and cheering for the band.",
+    "note": "The audience members are acting individually, so a plural verb is used.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "A number of new restaurants *have* opened downtown recently.",
+    "note": "The phrase 'a number of' always takes a plural verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The majority *is* expected to vote in favor of the new policy.",
+    "note": "Here, 'the majority' refers to the group as a single entity, taking a singular verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The majority of students *prefer* online classes this semester.",
+    "note": "When 'the majority' is followed by 'of + plural noun', it usually takes a plural verb.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "A number of people is waiting outside.",
+    "right": "A number of people *are* waiting outside.",
+    "note": "'A number of' always requires a plural verb."
+   },
+   {
+    "wrong": "The team are celebrating its victory.",
+    "right": "The team *is* celebrating *its* victory.",
+    "note": "If the team acts as a unit, use a singular verb and pronoun."
+   },
+   {
+    "wrong": "The majority of the citizens believes in the plan.",
+    "right": "The majority of the citizens *believe* in the plan.",
+    "note": "When 'the majority of' refers to individuals, use a plural verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The staff ___ decided to implement the new software next month.",
+   "options": [
+    "has",
+    "have",
+    "is",
+    "are"
+   ],
+   "answer": 0,
+   "explanation": "When 'staff' acts as a single unit making a collective decision, a singular verb ('has') is appropriate."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "A number of important details ___ overlooked in the initial report.",
+   "options": [
+    "was",
+    "were",
+    "is",
+    "are"
+   ],
+   "answer": 1,
+   "explanation": "'A number of' always takes a plural verb, so 'were' is correct."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The majority of the committee members ___ against the proposal.",
+   "options": [
+    "is",
+    "are",
+    "was",
+    "has been"
+   ],
+   "answer": 1,
+   "explanation": "When 'the majority of' refers to individual members, a plural verb ('are') is used."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The government ___ planning to introduce new environmental regulations.",
+   "options": [
+    "is",
+    "are",
+    "were",
+    "have been"
+   ],
+   "answer": 0,
+   "explanation": "The government is acting as a single unit, so a singular verb ('is') is correct."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The family ___ going on vacation together next week.",
+   "answers": [
+    [
+     "is"
+    ]
+   ],
+   "explanation": "The family is acting as a single unit, so the singular verb 'is' is correct."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "A number of new ideas ___ presented during the brainstorming session.",
+   "answers": [
+    [
+     "were"
+    ]
+   ],
+   "explanation": "'A number of' always takes a plural verb, so 'were' is correct."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The majority of the voters ___ still undecided about the upcoming election.",
+   "answers": [
+    [
+     "are"
+    ]
+   ],
+   "explanation": "When 'the majority of' refers to individual voters, a plural verb ('are') is used."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "orchestra",
+    "is",
+    "practicing",
+    "a",
+    "new",
+    "symphony",
+    "."
+   ],
+   "distractors": [
+    "are",
+    "many"
+   ],
+   "explanation": "The orchestra is acting as a single unit, so the singular verb 'is practicing' is correct."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "A",
+    "number",
+    "of",
+    "experts",
+    "agree",
+    "on",
+    "this",
+    "point",
+    "."
+   ],
+   "distractors": [
+    "agrees",
+    "much"
+   ],
+   "explanation": "'A number of' always takes a plural verb, so 'agree' is correct."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The company are launching its new product line soon.",
+   "answers": [
+    "The company is launching its new product line soon."
+   ],
+   "explanation": "When 'company' acts as a single unit, it takes a singular verb ('is')."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The majority of the participants was satisfied with the workshop.",
+   "answers": [
+    "The majority of the participants were satisfied with the workshop."
+   ],
+   "explanation": "When 'the majority of' refers to individual participants, a plural verb ('were') is used."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Many students have expressed interest in the advanced course.",
+   "instruction": "Use the phrase 'A number of'.",
+   "answers": [
+    "A number of students have expressed interest in the advanced course."
+   ],
+   "explanation": "'A number of' replaces 'many' and correctly takes a plural verb."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Most of the population supports the new environmental initiative.",
+   "instruction": "Use the phrase 'The majority of'.",
+   "answers": [
+    "The majority of the population supports the new environmental initiative."
+   ],
+   "explanation": "'The majority of' can be used here, and 'population' as a unit takes a singular verb."
+  },
+  {
+   "id": "ex.c1.collective-nouns-and-agreement.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.collective-nouns-and-agreement"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The jury",
+     "right": "is still deliberating the verdict."
+    },
+    {
+     "left": "A number of new features",
+     "right": "are included in the update."
+    },
+    {
+     "left": "The majority of the employees",
+     "right": "are working remotely this week."
+    },
+    {
+     "left": "The committee members",
+     "right": "have different opinions on the matter."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "the team (is|are)",
+  "a number of \\w+ (is|are)",
+  "the majority (is|are)",
+  "the majority of \\w+ (is|are)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.collective-nouns-and-agreement.01": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.02": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.03": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.04": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.05": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.06": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.07": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.08": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.09": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.10": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.11": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.12": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.13": {
+    "status": "pass"
+   },
+   "ex.c1.collective-nouns-and-agreement.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 6045708,
+   "text": "The majority of them are decent people.",
+   "author": "mailohilohi"
+  },
+  {
+   "sentenceId": 242918,
+   "text": "A number of students are absent today.",
+   "author": "CK"
+  }
+ ]
+}

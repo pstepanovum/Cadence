@@ -1,0 +1,557 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "as-if-and-as-though",
+ "draftHash": "bbb4b3a8fdab16a3",
+ "grammarPoint": {
+  "id": "gp.as-if-and-as-though",
+  "level": "C1",
+  "topicId": "topic.clauses",
+  "title": "As if and as though",
+  "summary": "Use 'as if' and 'as though' to make comparisons, describing how something appears or feels, often implying unreality.",
+  "explanation": "We use 'as if' and 'as though' to describe how something seems or appears. They are interchangeable and mean the same thing. The clause that follows 'as if' or 'as though' can describe either a *real* situation or an *unreal* (imagined or contrary to fact) situation.\n\nWhen describing a *real* situation, we use tenses that match the actual time frame. For example, if something seems true now, we use a present tense. If it seemed true in the past, we use a past tense.\n\nWhen describing an *unreal* situation, we use past tenses to show that the comparison is hypothetical or contrary to fact. For present or future unreality, we use the past simple (often 'were' for all subjects). For past unreality, we use the past perfect. This shift in tense signals that the situation is not real.",
+  "patterns": [
+   "verb + as if/as though + present tense (for real present/future)",
+   "verb + as if/as though + past simple (for real past)",
+   "verb + as if/as though + past simple (for unreal present/future)",
+   "verb + as if/as though + past perfect (for unreal past)"
+  ],
+  "examples": [
+   {
+    "text": "It looks as if it's going to rain any minute.",
+    "note": "Describes a real possibility in the present/future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He acts as though he were the manager, but he's just an intern.",
+    "note": "Describes an unreal situation in the present; he is not the manager.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She spoke as if she had known the secret for years.",
+    "note": "Describes an unreal situation in the past; she didn't actually know it for years.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The old house felt as though it was watching us.",
+    "note": "Describes a real past feeling, even if the house wasn't literally watching.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They celebrated as if they had won the championship, even though they lost.",
+    "note": "Describes an unreal situation in the past; they did not win.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "He talks as if he is a millionaire.",
+    "right": "He talks as if he were a millionaire.",
+    "note": "Use 'were' for all subjects when describing an unreal present situation."
+   },
+   {
+    "wrong": "She looked as though she didn't sleep for days.",
+    "right": "She looked as though she hadn't slept for days.",
+    "note": "Use the past perfect for an unreal situation in the past."
+   },
+   {
+    "wrong": "They behaved as if they are famous.",
+    "right": "They behaved as if they were famous.",
+    "note": "When the main verb is past, the 'as if' clause should also be past, especially for unreality."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.as-if-and-as-though.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The old car sounded ___ it was about to break down.",
+   "options": [
+    "as though",
+    "as if it",
+    "like if",
+    "as though if"
+   ],
+   "answer": 0,
+   "explanation": "'As though' is correct here to describe how the car sounded. 'As if it' would also work, but 'as though' is a complete option."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He spoke about the city ___ he had lived there his whole life, but he'd only visited once.",
+   "options": [
+    "as if he",
+    "as though he was",
+    "like he",
+    "as if he is"
+   ],
+   "answer": 0,
+   "explanation": "The past perfect 'had lived' correctly indicates an unreal past situation, making 'as if he' the appropriate choice."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She looked at me ___ I were a complete stranger.",
+   "options": [
+    "as if",
+    "as though she",
+    "like",
+    "as if I was"
+   ],
+   "answer": 0,
+   "explanation": "'As if' correctly introduces the unreal comparison. 'I were' is the correct subjunctive form for unreality."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.04",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The child ran around ___ ___ a burst of energy.",
+   "answers": [
+    [
+     "as",
+     "if",
+     "he",
+     "had"
+    ],
+    [
+     "as",
+     "though",
+     "he",
+     "had"
+    ]
+   ],
+   "explanation": "This describes an unreal past situation (the child didn't literally 'have' a burst of energy, but acted like it), so 'as if/though he had' is correct."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He always talks ___ ___ he ___ everything.",
+   "answers": [
+    [
+     "as",
+     "if",
+     "knew"
+    ],
+    [
+     "as",
+     "though",
+     "knew"
+    ],
+    [
+     "as",
+     "if",
+     "knows"
+    ],
+    [
+     "as",
+     "though",
+     "knows"
+    ]
+   ],
+   "explanation": "If he doesn't actually know everything (unreal), 'knew' is correct. If he genuinely seems to know everything (real), 'knows' is also acceptable."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The old building stood silent, ___ ___ it ___ seen centuries of history.",
+   "answers": [
+    [
+     "as",
+     "if",
+     "had"
+    ],
+    [
+     "as",
+     "though",
+     "had"
+    ]
+   ],
+   "explanation": "This describes an unreal past situation (the building didn't literally 'see'), so 'as if/though it had' is correct."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.07",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "smiled",
+    "as",
+    "if",
+    "she",
+    "had",
+    "no",
+    "worries",
+    "."
+   ],
+   "distractors": [
+    "has",
+    "was"
+   ],
+   "explanation": "This sentence uses 'as if' to describe an unreal past situation, implying she did have worries but didn't show them."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "ordered",
+    "the",
+    "meal",
+    "as",
+    "though",
+    "he",
+    "were",
+    "a",
+    "food",
+    "critic",
+    "."
+   ],
+   "distractors": [
+    "is",
+    "will"
+   ],
+   "explanation": "This sentence uses 'as though' to describe an unreal present situation (he is not a food critic), using the subjunctive 'were'."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.09",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The dog barked as if it was protecting its territory.",
+   "answers": [
+    "The dog barked as if it were protecting its territory.",
+    "The dog barked as though it were protecting its territory."
+   ],
+   "explanation": "For an unreal or hypothetical situation, 'were' is preferred over 'was' after 'as if/though'."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She spoke as though she knows everything about the project.",
+   "answers": [
+    "She spoke as though she knew everything about the project.",
+    "She spoke as if she knew everything about the project."
+   ],
+   "explanation": "Since the main verb 'spoke' is in the past, the verb in the 'as though' clause should also be in a past tense, especially if it's an unreal comparison."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.11",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He behaves like he is the boss.",
+   "instruction": "Rewrite using 'as if' to emphasize unreality.",
+   "answers": [
+    "He behaves as if he were the boss."
+   ],
+   "explanation": "To emphasize that he is *not* the boss (unreality), we use 'as if' followed by the past subjunctive 'were'."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They looked very tired, probably because they hadn't slept.",
+   "instruction": "Combine into one sentence using 'as though'.",
+   "answers": [
+    "They looked as though they hadn't slept.",
+    "They looked very tired as though they hadn't slept."
+   ],
+   "explanation": "'As though' introduces the reason for their appearance, using the past perfect 'hadn't slept' to describe the past situation."
+  },
+  {
+   "id": "ex.c1.as-if-and-as-though.13",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.as-if-and-as-though"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The old clock chimed",
+     "right": "as if it were alive."
+    },
+    {
+     "left": "He described the journey",
+     "right": "as though he had been there many times."
+    },
+    {
+     "left": "The room felt cold,",
+     "right": "as if someone had left a window open."
+    },
+    {
+     "left": "She sang the song",
+     "right": "as though it was written just for her."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "as (if|though) (he|she|it|they|we|you|I) (were|had)",
+  "looks as (if|though) (it|he|she) (is|was|were|had)",
+  "acts as (if|though) (he|she|it|they|we|you|I) (is|was|were|had)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.as-if-and-as-though.01": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.02": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.03": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.04": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither option forms a grammatical sentence because 'a burst of energy' requires a verb or preposition."
+   },
+   "ex.c1.as-if-and-as-though.05": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.as-if-and-as-though.05: needs one answer list per gap (3)"
+   },
+   "ex.c1.as-if-and-as-though.06": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.as-if-and-as-though.06: needs one answer list per gap (3)"
+   },
+   "ex.c1.as-if-and-as-though.07": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.08": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.09": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.10": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.11": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences are grammatically correct and convey the intended meaning."
+   },
+   "ex.c1.as-if-and-as-though.13": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.14": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.15": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.16": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.17": {
+    "status": "pass"
+   },
+   "ex.c1.as-if-and-as-though.18": {
+    "status": "drop",
+    "note": "Key judged wrong: The sequence 'as as' is ungrammatical, whereas 'as if' forms the correct conjunction."
+   },
+   "ex.c1.as-if-and-as-though.19": {
+    "status": "drop",
+    "note": "Key judged wrong: The sequence 'as as' is ungrammatical, whereas 'as if' forms the correct conjunction."
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.as-if-and-as-though.14",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.as-if-and-as-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The athlete collapsed at the finish line ___ he had run a marathon.",
+    "options": [
+     "as though",
+     "like",
+     "as"
+    ],
+    "answer": 0,
+    "explanation": "'As though' is used here to describe how the athlete collapsed, implying a comparison to someone who had run a marathon, which is a hypothetical or descriptive comparison."
+   },
+   {
+    "id": "ex.c1.as-if-and-as-though.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.as-if-and-as-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She described the ancient ruins ___ she had visited them many times, but it was her first trip.",
+    "options": [
+     "as if",
+     "as",
+     "like if"
+    ],
+    "answer": 0,
+    "explanation": "'As if' is correct for introducing a hypothetical or unreal past situation, indicating that her description was so detailed it seemed she had visited before, even though she hadn't."
+   },
+   {
+    "id": "ex.c1.as-if-and-as-though.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.as-if-and-as-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "He spoke so softly, it sounded ___ he ___ afraid to wake someone.",
+    "options": [
+     "as if / is",
+     "as though / were",
+     "like / was"
+    ],
+    "answer": 1,
+    "explanation": "'As though' is appropriate for the comparison, and 'were' is used for the unreal present situation, implying he wasn't necessarily afraid, but his voice suggested it."
+   },
+   {
+    "id": "ex.c1.as-if-and-as-though.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.as-if-and-as-though"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The old car's engine sputtered ___ it ___ about to give out.",
+    "options": [
+     "as if / was",
+     "as though / is",
+     "like / were"
+    ],
+    "answer": 0,
+    "explanation": "'As if' is used for the comparison, and 'was' is correct for a real or likely past situation, describing the engine's actual behavior."
+   },
+   {
+    "id": "ex.c1.as-if-and-as-though.18",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.as-if-and-as-though"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The artist painted the landscape ___ ___ he ___ lived there his entire life.",
+    "answers": [
+     [
+      "as",
+      "if"
+     ],
+     [
+      "as",
+      "though"
+     ],
+     [
+      "had"
+     ]
+    ],
+    "explanation": "'As if' or 'as though' introduces the comparison, and 'had lived' (past perfect) indicates an unreal past situation, as the artist likely hadn't lived there."
+   },
+   {
+    "id": "ex.c1.as-if-and-as-though.19",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.as-if-and-as-though"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "My neighbor always acts ___ ___ he ___ a celebrity, even though he's an accountant.",
+    "answers": [
+     [
+      "as",
+      "if"
+     ],
+     [
+      "as",
+      "though"
+     ],
+     [
+      "were"
+     ]
+    ],
+    "explanation": "'As if' or 'as though' introduces the comparison, and 'were' (past simple subjunctive) is used for the unreal present situation, as he is not a celebrity."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 288712,
+   "text": "He talks as if he were rich.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 314424,
+   "text": "She treats me as if I were a baby.",
+   "author": "CK"
+  }
+ ]
+}

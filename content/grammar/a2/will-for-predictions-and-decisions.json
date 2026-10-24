@@ -1,0 +1,390 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "will-for-predictions-and-decisions",
+ "draftHash": "be716808a48bfcc3",
+ "grammarPoint": {
+  "id": "gp.will-for-predictions-and-decisions",
+  "level": "A2",
+  "topicId": "topic.future",
+  "title": "Will for predictions and decisions",
+  "summary": "Use 'will' to talk about future predictions, offers, and decisions you make at the moment of speaking.",
+  "explanation": "We use *will* to talk about the future in several situations. One common use is for *predictions* – things we think will happen, but we are not 100% sure. For example, \"I think it will rain tomorrow.\"\n\nWe also use *will* for *decisions made at the moment of speaking*. These are not plans you made before, but choices you make right now. For instance, if someone asks, \"What would you like to drink?\" you might say, \"I'll have some water, please.\"\n\nFinally, *will* is used for *offers* to help someone. If you see a friend struggling with heavy bags, you can say, \"I'll help you with those.\" The negative form is *will not* or *won't*.",
+  "patterns": [
+   "Subject + will + base verb",
+   "Subject + won't + base verb",
+   "Will + Subject + base verb?"
+  ],
+  "examples": [
+   {
+    "text": "I think the train will be late today.",
+    "note": "This is a prediction about the future.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Oh, the phone is ringing. I'll answer it!",
+    "note": "This is a decision made at the moment of speaking.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Don't worry, I'll help you carry those boxes.",
+    "note": "This is an offer to help someone.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They won't finish the project by Friday.",
+    "note": "This is a negative prediction.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Will you come to the concert with us?",
+    "note": "This is a question asking about a future action.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I think it rains tomorrow.",
+    "right": "I think it will rain tomorrow.",
+    "note": "Remember to use 'will' for future predictions."
+   },
+   {
+    "wrong": "She not help you.",
+    "right": "She won't help you.",
+    "note": "Use 'won't' or 'will not' for negative future statements."
+   },
+   {
+    "wrong": "He will goes to the store.",
+    "right": "He will go to the store.",
+    "note": "After 'will', always use the base form of the verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I'm really hungry. I ___ a pizza.",
+   "options": [
+    "eat",
+    "will eat",
+    "am eating"
+   ],
+   "answer": 1,
+   "explanation": "This is a decision made at the moment of speaking, so 'will eat' is correct."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Look at those dark clouds. I think it ___ soon.",
+   "options": [
+    "rains",
+    "will rain",
+    "is raining"
+   ],
+   "answer": 1,
+   "explanation": "'Will rain' is used for a prediction about the future."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My bag is too heavy. ___ you help me?",
+   "options": [
+    "Do",
+    "Are",
+    "Will"
+   ],
+   "answer": 2,
+   "explanation": "'Will' is used to ask someone to do something or to make an offer."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Don't worry, I ___ late for the meeting.",
+   "options": [
+    "am not",
+    "won't be",
+    "don't be"
+   ],
+   "answer": 1,
+   "explanation": "'Won't be' is the correct negative form for a future prediction or promise."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I think the movie ___ (start) in five minutes.",
+   "answers": [
+    [
+     "will start"
+    ]
+   ],
+   "explanation": "This is a prediction about when the movie will start."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's cold in here. I ___ (close) the window.",
+   "answers": [
+    [
+     "will close",
+     "I'll close"
+    ]
+   ],
+   "explanation": "This is a decision made at the moment of speaking."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ (not come) to the party tonight.",
+   "answers": [
+    [
+     "will not come",
+     "won't come"
+    ]
+   ],
+   "explanation": "This is a negative prediction about their attendance."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "I",
+    "will",
+    "call",
+    "you",
+    "later",
+    "."
+   ],
+   "distractors": [
+    "called",
+    "calls"
+   ],
+   "explanation": "This sentence uses 'will' to express a decision or promise made now."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "won't",
+    "be",
+    "easy",
+    "."
+   ],
+   "distractors": [
+    "is",
+    "was"
+   ],
+   "explanation": "This sentence uses 'won't' for a negative prediction."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She will helps you with your homework.",
+   "answers": [
+    "She will help you with your homework."
+   ],
+   "explanation": "After 'will', always use the base form of the verb, without '-s'."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I think it is sunny tomorrow.",
+   "answers": [
+    "I think it will be sunny tomorrow."
+   ],
+   "explanation": "Use 'will be' for predictions about the future weather."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I decide to buy a new book.",
+   "instruction": "Rewrite using 'will' for a spontaneous decision.",
+   "answers": [
+    "I will buy a new book."
+   ],
+   "explanation": "'I will buy' expresses a decision made at the moment of speaking."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Perhaps he comes to the meeting.",
+   "instruction": "Rewrite using 'will' for a prediction.",
+   "answers": [
+    "He will come to the meeting.",
+    "Perhaps he will come to the meeting."
+   ],
+   "explanation": "'Will come' is used for a prediction about a future event."
+  },
+  {
+   "id": "ex.a2.will-for-predictions-and-decisions.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.will-for-predictions-and-decisions"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I'm thirsty.",
+     "right": "I'll get some water."
+    },
+    {
+     "left": "That box looks heavy.",
+     "right": "I'll help you carry it."
+    },
+    {
+     "left": "I think the concert",
+     "right": "will be great."
+    },
+    {
+     "left": "Don't worry,",
+     "right": "I won't forget."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "will [a-z]+",
+  "won't [a-z]+",
+  "will you [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.will-for-predictions-and-decisions.01": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.02": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.03": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.04": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.05": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.06": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.07": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.08": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.09": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.10": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.11": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.12": {
+    "status": "pass"
+   },
+   "ex.a2.will-for-predictions-and-decisions.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences correctly use 'will' to express a prediction."
+   },
+   "ex.a2.will-for-predictions-and-decisions.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 26700,
+   "text": "It will stop raining soon.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 17433,
+   "text": "I will find you a good doctor.",
+   "author": "CK"
+  }
+ ]
+}

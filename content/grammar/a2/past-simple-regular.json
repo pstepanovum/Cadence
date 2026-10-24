@@ -1,0 +1,389 @@
+{
+ "format": 1,
+ "level": "A2",
+ "slug": "past-simple-regular",
+ "draftHash": "8f69787b3fae6c96",
+ "grammarPoint": {
+  "id": "gp.past-simple-regular",
+  "level": "A2",
+  "topicId": "topic.tenses",
+  "title": "Past simple: regular verbs",
+  "summary": "Use the past simple to talk about finished actions in the past with regular verbs, using '-ed' endings and 'did' for questions and negatives.",
+  "explanation": "We use the *past simple* to talk about actions that started and finished at a specific time in the past. This tense tells us that an action is completely over.\n\nFor most regular verbs, we form the past simple by adding *-ed* to the base form of the verb. For example, 'walk' becomes 'walked', and 'start' becomes 'started'.\n\nTo make questions and negative sentences in the past simple, we use the auxiliary verb *did*. For questions, we say 'Did + subject + base verb?'. For negatives, we say 'Subject + did not (didn't) + base verb'. Remember, when you use 'did' or 'didn't', the main verb always goes back to its base form.",
+  "patterns": [
+   "Subject + verb-ed",
+   "Did + subject + base verb?",
+   "Subject + did not/didn't + base verb"
+  ],
+  "examples": [
+   {
+    "text": "I *walked* to the store this morning.",
+    "note": "Describes a finished action in the past.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She *studied* for her test last night.",
+    "note": "Shows a completed action using the -ed ending.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They *didn't like* the movie.",
+    "note": "A negative sentence using 'didn't' and the base form of the verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "*Did* you *finish* your work?",
+    "note": "A question using 'Did' and the base form of the verb.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We *played* board games all evening.",
+    "note": "Another example of a finished action with a regular -ed verb.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I did walked to the park.",
+    "right": "I walked to the park.",
+    "note": "Do not use 'did' in affirmative past simple sentences with regular verbs."
+   },
+   {
+    "wrong": "She didn't finished her homework.",
+    "right": "She didn't finish her homework.",
+    "note": "After 'didn't', use the base form of the verb."
+   },
+   {
+    "wrong": "Did he watched the show?",
+    "right": "Did he watch the show?",
+    "note": "After 'Did' in a question, use the base form of the verb."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.a2.past-simple-regular.01",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "They ___ their new apartment last week.",
+   "options": [
+    "moved",
+    "move",
+    "moving",
+    "did move"
+   ],
+   "answer": 0,
+   "explanation": "For a finished action in the past, use the -ed form of the regular verb 'move'."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.02",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ you ___ the door?",
+   "options": [
+    "Did...closed",
+    "Did...close",
+    "Do...close",
+    "Did...closing"
+   ],
+   "answer": 1,
+   "explanation": "To form a past simple question, use 'Did' followed by the base form of the verb."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.03",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I ___ my friend yesterday.",
+   "options": [
+    "not called",
+    "didn't called",
+    "didn't call",
+    "don't call"
+   ],
+   "answer": 2,
+   "explanation": "For a negative past simple sentence, use 'didn't' followed by the base form of the verb."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.04",
+   "kind": "multiple_choice",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We ___ the new restaurant.",
+   "options": [
+    "enjoyed",
+    "enjoy",
+    "did enjoyed",
+    "enjoying"
+   ],
+   "answer": 0,
+   "explanation": "The past simple of 'enjoy' is 'enjoyed' for a finished action."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.05",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My sister ___ (cook) dinner for us.",
+   "answers": [
+    [
+     "cooked"
+    ]
+   ],
+   "explanation": "The past simple of 'cook' is 'cooked' for a finished action."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.06",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ you ___ (watch) that movie?",
+   "answers": [
+    [
+     "Did"
+    ],
+    [
+     "watch"
+    ]
+   ],
+   "explanation": "For a past simple question, use 'Did' and the base form of the verb."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.07",
+   "kind": "gap_fill",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ (not/want) to leave early.",
+   "answers": [
+    [
+     "didn't want",
+     "did not want"
+    ]
+   ],
+   "explanation": "For a negative past simple sentence, use 'didn't' or 'did not' and the base form of the verb."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.08",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "her",
+    "finished",
+    "work",
+    "."
+   ],
+   "explanation": "Arrange the words to form a simple past affirmative sentence."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.09",
+   "kind": "sentence_building",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Did",
+    "you",
+    "the",
+    "music",
+    "enjoy",
+    "?"
+   ],
+   "explanation": "Form a past simple question using 'Did' and the base verb."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.10",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He didn't liked the food.",
+   "answers": [
+    "He didn't like the food."
+   ],
+   "explanation": "After 'didn't', the main verb must be in its base form, not the -ed form."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.11",
+   "kind": "error_correction",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Did she watched the show?",
+   "answers": [
+    "Did she watch the show?"
+   ],
+   "explanation": "In a past simple question with 'Did', the main verb must be in its base form."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.12",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They cleaned the house.",
+   "instruction": "Make it a question.",
+   "answers": [
+    "Did they clean the house?"
+   ],
+   "explanation": "To make a question in the past simple, use 'Did' + subject + base verb."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.13",
+   "kind": "transformation",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I worked late.",
+   "instruction": "Make it negative.",
+   "answers": [
+    "I didn't work late.",
+    "I did not work late."
+   ],
+   "explanation": "To make a negative in the past simple, use 'didn't' or 'did not' + base verb."
+  },
+  {
+   "id": "ex.a2.past-simple-regular.14",
+   "kind": "matching",
+   "level": "A2",
+   "grammarPointIds": [
+    "gp.past-simple-regular"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "We visited",
+     "right": "her grandparents."
+    },
+    {
+     "left": "She didn't",
+     "right": "finish her book."
+    },
+    {
+     "left": "Did they",
+     "right": "like the gift?"
+    },
+    {
+     "left": "He waited",
+     "right": "for the bus."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(i|you|he|she|it|we|they)\\s+[a-z]+ed\\b",
+  "did\\s+(i|you|he|she|it|we|they)\\s+[a-z]+\\?",
+  "(didn't|did not)\\s+[a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.a2.past-simple-regular.01": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.02": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.03": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.04": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.05": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.06": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.07": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical, whereas the other option is correct."
+   },
+   "ex.a2.past-simple-regular.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key is ungrammatical, whereas the other option is correct."
+   },
+   "ex.a2.past-simple-regular.10": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.11": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.12": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.13": {
+    "status": "pass"
+   },
+   "ex.a2.past-simple-regular.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 40539,
+   "text": "It happened that he was out.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 35448,
+   "text": "At first, I didn't like him.",
+   "author": "CK"
+  }
+ ]
+}

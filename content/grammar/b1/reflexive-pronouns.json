@@ -1,0 +1,408 @@
+{
+ "format": 1,
+ "level": "B1",
+ "slug": "reflexive-pronouns",
+ "draftHash": "57a407cd2c69c390",
+ "grammarPoint": {
+  "id": "gp.reflexive-pronouns",
+  "level": "B1",
+  "topicId": "topic.nouns-pronouns",
+  "title": "Reflexive pronouns",
+  "summary": "Reflexive pronouns (myself, themselves) refer back to the subject. 'By yourself' means alone. 'Each other' shows a reciprocal action.",
+  "explanation": "Reflexive pronouns like *myself*, *yourself*, *himself*, *herself*, *itself*, *ourselves*, *yourselves*, and *themselves* are used when the subject and the object of a verb are the same person or thing. For example, if you cut your own finger, you cut *yourself*.\n\nWe also use reflexive pronouns to emphasize that someone did something without help. For instance, \"They built the shed *themselves*\" means they didn't have assistance. When we say \"by + reflexive pronoun\" (e.g., *by myself*, *by herself*), it means \"alone\" or \"without anyone else.\"\n\n*Each other* is used when two or more people or things perform the same action to one another. For example, \"My friends helped *each other* with the project\" means each friend helped the other. It's important not to confuse reflexive pronouns with *each other*.",
+  "patterns": [
+   "subject + verb + reflexive pronoun",
+   "by + reflexive pronoun",
+   "subject + verb + each other"
+  ],
+  "examples": [
+   {
+    "text": "I taught myself how to bake bread.",
+    "note": "The subject 'I' and the object 'myself' are the same person.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The children enjoyed themselves at the science museum.",
+    "note": "The children were the ones who enjoyed the experience.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She prefers to study by herself in the library.",
+    "note": "'By herself' means she studies alone.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They built the entire model airplane themselves.",
+    "note": "Emphasizes that they did it without help.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My neighbors often help each other with gardening.",
+    "note": "'Each other' shows a reciprocal action between the neighbors.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I saw me in the reflection.",
+    "right": "I saw *myself* in the reflection.",
+    "note": "Use a reflexive pronoun when the subject and object are the same."
+   },
+   {
+    "wrong": "They gave themselves presents. (meaning they exchanged gifts)",
+    "right": "They gave *each other* presents.",
+    "note": "Use 'each other' for reciprocal actions between two or more people."
+   },
+   {
+    "wrong": "He lives by hisself in a small apartment.",
+    "right": "He lives by *himself* in a small apartment.",
+    "note": "'Hisself' is not a standard English word; use 'himself'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b1.reflexive-pronouns.01",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The cat cleaned ___ thoroughly after its meal.",
+   "options": [
+    "it",
+    "itself",
+    "its",
+    "by itself"
+   ],
+   "answer": 1,
+   "explanation": "The cat is both the subject and the object of the action, so 'itself' is correct."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.02",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "My colleagues and I often send ___ emails about project updates.",
+   "options": [
+    "ourselves",
+    "us",
+    "each other",
+    "them"
+   ],
+   "answer": 2,
+   "explanation": "When two or more people perform an action to one another, 'each other' is used."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.03",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She enjoys hiking in the mountains ___.",
+   "options": [
+    "by her",
+    "herself",
+    "by herself",
+    "her"
+   ],
+   "answer": 2,
+   "explanation": "'By herself' means she hikes alone, which fits the context of enjoying hiking."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.04",
+   "kind": "multiple_choice",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Be careful with that hot pan, you might burn ___!",
+   "options": [
+    "you",
+    "yourself",
+    "your own",
+    "by yourself"
+   ],
+   "answer": 1,
+   "explanation": "The subject 'you' is performing the action to 'yourself'."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.05",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We really enjoyed ___ at the concert last night.",
+   "answers": [
+    [
+     "ourselves"
+    ]
+   ],
+   "explanation": "The subject 'we' enjoyed 'ourselves'."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.06",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The children learned to tie their shoelaces ___.",
+   "answers": [
+    [
+     "themselves"
+    ],
+    [
+     "by themselves"
+    ]
+   ],
+   "explanation": "Both 'themselves' (emphasizing they did it) and 'by themselves' (emphasizing they did it alone) are correct here."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.07",
+   "kind": "gap_fill",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "My sister and I always help ___ with our homework.",
+   "answers": [
+    [
+     "each other"
+    ]
+   ],
+   "explanation": "The action of helping is reciprocal between the sister and 'I'."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.08",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "taught",
+    "herself",
+    "to",
+    "play",
+    "the",
+    "piano",
+    "."
+   ],
+   "distractors": [
+    "her",
+    "alone"
+   ],
+   "explanation": "The sentence describes the subject 'She' teaching 'herself' a skill."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.09",
+   "kind": "sentence_building",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "They",
+    "built",
+    "the",
+    "new",
+    "deck",
+    "by",
+    "themselves",
+    "."
+   ],
+   "distractors": [
+    "their",
+    "alone"
+   ],
+   "explanation": "The phrase 'by themselves' indicates that they built the deck without any help."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.10",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I accidentally locked me out of the house.",
+   "answers": [
+    "I accidentally locked *myself* out of the house.",
+    "I accidentally locked myself out of the house."
+   ],
+   "explanation": "The subject 'I' is performing the action to 'myself'."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.11",
+   "kind": "error_correction",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The two friends always support themselves during difficult times.",
+   "answers": [
+    "The two friends always support *each other* during difficult times.",
+    "The two friends always support each other during difficult times."
+   ],
+   "explanation": "When two people support one another, 'each other' is the correct pronoun."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.12",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He lives alone in a small apartment.",
+   "instruction": "Use 'by himself'.",
+   "answers": [
+    "He lives *by himself* in a small apartment.",
+    "He lives by himself in a small apartment."
+   ],
+   "explanation": "'By himself' means 'alone', fitting the original sentence's meaning."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.13",
+   "kind": "transformation",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "My colleagues and I often share ideas.",
+   "instruction": "Use 'each other'.",
+   "answers": [
+    "My colleagues and I often share ideas with *each other*.",
+    "My colleagues and I often share ideas with each other."
+   ],
+   "explanation": "The phrase 'with each other' shows that the sharing of ideas is reciprocal."
+  },
+  {
+   "id": "ex.b1.reflexive-pronouns.14",
+   "kind": "matching",
+   "level": "B1",
+   "grammarPointIds": [
+    "gp.reflexive-pronouns"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The cat licked",
+     "right": "itself clean."
+    },
+    {
+     "left": "We introduced",
+     "right": "ourselves to the new neighbors."
+    },
+    {
+     "left": "They built the fence",
+     "right": "by themselves."
+    },
+    {
+     "left": "My parents always help",
+     "right": "each other."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(myself|yourself|himself|herself|itself|ourselves|yourselves|themselves)",
+  "by (myself|yourself|himself|herself|itself|ourselves|yourselves|themselves)",
+  "each other"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b1.reflexive-pronouns.01": {
+    "status": "pass"
+   },
+   "ex.b1.reflexive-pronouns.02": {
+    "status": "pass"
+   },
+   "ex.b1.reflexive-pronouns.03": {
+    "status": "pass"
+   },
+   "ex.b1.reflexive-pronouns.04": {
+    "status": "pass"
+   },
+   "ex.b1.reflexive-pronouns.05": {
+    "status": "pass"
+   },
+   "ex.b1.reflexive-pronouns.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b1.reflexive-pronouns.06: needs one answer list per gap (1)"
+   },
+   "ex.b1.reflexive-pronouns.07": {
+    "status": "pass"
+   },
+   "ex.b1.reflexive-pronouns.08": {
+    "status": "pass"
+   },
+   "ex.b1.reflexive-pronouns.09": {
+    "status": "drop",
+    "note": "Key judged wrong: The given set of tokens contains extra words that cannot all be used in a single correct sentence."
+   },
+   "ex.b1.reflexive-pronouns.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly replace 'me' with 'myself'."
+   },
+   "ex.b1.reflexive-pronouns.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly replace 'themselves' with 'each other'."
+   },
+   "ex.b1.reflexive-pronouns.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly rewrite the sentence using 'by himself'."
+   },
+   "ex.b1.reflexive-pronouns.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly rewrite the sentence using 'each other'."
+   },
+   "ex.b1.reflexive-pronouns.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 34805,
+   "text": "I cut myself shaving.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 49379,
+   "text": "The house stands by itself.",
+   "author": "CM"
+  }
+ ]
+}

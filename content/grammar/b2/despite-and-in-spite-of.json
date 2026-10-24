@@ -1,0 +1,489 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "despite-and-in-spite-of",
+ "draftHash": "993ddaa6515b211e",
+ "grammarPoint": {
+  "id": "gp.despite-and-in-spite-of",
+  "level": "B2",
+  "topicId": "topic.linking",
+  "title": "Despite, in spite of and whereas",
+  "summary": "Use \"despite,\" \"in spite of,\" and \"whereas\" to show contrast between ideas or facts, whether surprising or direct.",
+  "explanation": "Despite and in spite of are used to show a contrast that is surprising or unexpected. They are followed by a noun, a pronoun, or a verb in the -ing form. Both \"despite\" and \"in spite of\" have the same meaning and can be used interchangeably.\n\nWhereas is used to show a direct contrast or comparison between two facts or ideas. It connects two clauses, highlighting how they are different. It often means \"in contrast\" or \"while.\"",
+  "patterns": [
+   "Despite / In spite of + noun phrase",
+   "Despite / In spite of + -ing form",
+   "Whereas + clause"
+  ],
+  "examples": [
+   {
+    "text": "Despite the heavy rain, the outdoor market was still busy.",
+    "note": "Shows unexpected contrast with a noun phrase.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "In spite of feeling nervous, she delivered an excellent speech.",
+    "note": "Shows unexpected contrast with an -ing form.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My sister prefers sweet desserts, whereas I always choose savory snacks.",
+    "note": "Shows direct contrast between two facts.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They decided to go camping, despite the forecast for cold weather.",
+    "note": "Shows unexpected contrast with a noun phrase.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Some people enjoy city life, whereas others prefer the quiet of the countryside.",
+    "note": "Shows direct contrast between two facts.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Despite of the noise, I managed to concentrate.",
+    "right": "Despite the noise, I managed to concentrate.",
+    "note": "Do not use \"of\" after \"despite.\""
+   },
+   {
+    "wrong": "In spite the bad connection, we finished the video call.",
+    "right": "In spite of the bad connection, we finished the video call.",
+    "note": "Always use \"of\" after \"in spite.\""
+   },
+   {
+    "wrong": "He likes to read, despite his friend watches movies.",
+    "right": "He likes to read, whereas his friend watches movies.",
+    "note": "\"Despite\" is followed by a noun or -ing form, not a clause. Use \"whereas\" for contrasting clauses."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.despite-and-in-spite-of.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the long queue, we waited patiently for our turn.",
+   "options": [
+    "Whereas",
+    "Despite",
+    "In spite"
+   ],
+   "answer": 1,
+   "explanation": "\"Despite\" is followed by a noun phrase (\"the long queue\") to show unexpected contrast. \"In spite\" needs \"of\". \"Whereas\" introduces a clause."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The first proposal was very detailed, ___ the second one was quite brief.",
+   "options": [
+    "despite",
+    "in spite of",
+    "whereas"
+   ],
+   "answer": 2,
+   "explanation": "\"Whereas\" is used to show a direct contrast between two clauses."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ feeling unwell, she still came to the meeting.",
+   "options": [
+    "Whereas",
+    "In spite of",
+    "Despite of"
+   ],
+   "answer": 1,
+   "explanation": "\"In spite of\" is followed by an -ing form (\"feeling\") to show unexpected contrast. \"Despite of\" is incorrect. \"Whereas\" introduces a clause."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Some fruits are sweet, ___ others are sour.",
+   "options": [
+    "despite",
+    "in spite of",
+    "whereas"
+   ],
+   "answer": 2,
+   "explanation": "\"Whereas\" is used to show a direct contrast between two clauses."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ the cold temperature, the flowers are blooming.",
+   "answers": [
+    [
+     "Despite"
+    ],
+    [
+     "In spite of"
+    ]
+   ],
+   "explanation": "Both \"Despite\" and \"In spite of\" can be followed by a noun phrase to show unexpected contrast."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "He prefers working alone, ___ his colleague enjoys teamwork.",
+   "answers": [
+    [
+     "whereas"
+    ]
+   ],
+   "explanation": "\"Whereas\" is used to show a direct contrast between two clauses."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ having little experience, she got the job.",
+   "answers": [
+    [
+     "Despite"
+    ],
+    [
+     "In spite of"
+    ]
+   ],
+   "explanation": "Both \"Despite\" and \"In spite of\" can be followed by an -ing form to show unexpected contrast."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Despite",
+    "the",
+    "loud",
+    "music",
+    ",",
+    "I",
+    "managed",
+    "to",
+    "sleep",
+    "."
+   ],
+   "distractors": [
+    "although",
+    "but"
+   ],
+   "explanation": "\"Despite\" introduces the noun phrase \"the loud music\" to show unexpected contrast."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Some",
+    "people",
+    "like",
+    "coffee",
+    ",",
+    "whereas",
+    "others",
+    "prefer",
+    "tea",
+    "."
+   ],
+   "distractors": [
+    "however",
+    "so"
+   ],
+   "explanation": "\"Whereas\" connects two contrasting clauses."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "In spite the difficult situation, they found a solution.",
+   "answers": [
+    "In spite of the difficult situation, they found a solution."
+   ],
+   "explanation": "\"In spite\" must always be followed by \"of\"."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She is very organized, despite her brother is quite messy.",
+   "answers": [
+    "She is very organized, whereas her brother is quite messy."
+   ],
+   "explanation": "\"Despite\" is followed by a noun or -ing form, not a clause. \"Whereas\" is used to contrast two clauses."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Even though it was a holiday, the store was open.",
+   "instruction": "Use \"despite\".",
+   "answers": [
+    "Despite the holiday, the store was open."
+   ],
+   "explanation": "\"Despite\" is followed by a noun phrase, replacing \"even though it was a holiday\"."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The first car was red, but the second one was blue.",
+   "instruction": "Use \"whereas\".",
+   "answers": [
+    "The first car was red, whereas the second one was blue."
+   ],
+   "explanation": "\"Whereas\" connects two contrasting clauses, replacing \"but\"."
+  },
+  {
+   "id": "ex.b2.despite-and-in-spite-of.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.despite-and-in-spite-of"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Despite the bad reviews,",
+     "right": "the movie was surprisingly good."
+    },
+    {
+     "left": "In spite of the long wait,",
+     "right": "the food was worth it."
+    },
+    {
+     "left": "He enjoys quiet evenings,",
+     "right": "whereas she loves lively parties."
+    },
+    {
+     "left": "Some plants need a lot of sun,",
+     "right": "whereas others prefer shade."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(despite|in spite of) (the|a|an) [a-z]+",
+  "(despite|in spite of) [a-z]+ing",
+  "whereas [a-z]+ (is|are|was|were|has|have|likes|prefers|enjoys)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.despite-and-in-spite-of.01": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.02": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.03": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.04": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.despite-and-in-spite-of.05: needs one answer list per gap (1)"
+   },
+   "ex.b2.despite-and-in-spite-of.06": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.despite-and-in-spite-of.07: needs one answer list per gap (1)"
+   },
+   "ex.b2.despite-and-in-spite-of.08": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.09": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all the provided tokens such as however and so."
+   },
+   "ex.b2.despite-and-in-spite-of.10": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.11": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.12": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.13": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.14": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.15": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.16": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.17": {
+    "status": "pass"
+   },
+   "ex.b2.despite-and-in-spite-of.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.despite-and-in-spite-of.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.despite-and-in-spite-of"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The first presentation was very engaging, ___ the second one was quite dull.",
+    "options": [
+     "despite",
+     "in spite of",
+     "whereas",
+     "although"
+    ],
+    "answer": 2,
+    "explanation": "'Whereas' is used to introduce a contrasting clause, comparing the two presentations."
+   },
+   {
+    "id": "ex.b2.despite-and-in-spite-of.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.despite-and-in-spite-of"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ the high cost, many people still choose to live in the city.",
+    "options": [
+     "Whereas",
+     "In spite",
+     "Despite",
+     "Even though"
+    ],
+    "answer": 2,
+    "explanation": "'Despite' is followed by a noun phrase ('the high cost') to show contrast."
+   },
+   {
+    "id": "ex.b2.despite-and-in-spite-of.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.despite-and-in-spite-of"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She managed to stay focused ___ all the distractions around her.",
+    "options": [
+     "whereas",
+     "in spite of",
+     "despite of",
+     "even if"
+    ],
+    "answer": 1,
+    "explanation": "'In spite of' is correctly used here with a noun phrase to show contrast."
+   },
+   {
+    "id": "ex.b2.despite-and-in-spite-of.18",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.despite-and-in-spite-of"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Which word best completes the sentence: \"Some cultures value individualism, ___ others prioritize community.\"",
+    "options": [
+     "despite",
+     "in spite of",
+     "whereas",
+     "but"
+    ],
+    "answer": 2,
+    "explanation": "'Whereas' is used to contrast two clauses, highlighting the difference between cultural values."
+   }
+  ]
+ },
+ "tatoebaExamples": [
+  {
+   "sentenceId": 315605,
+   "text": "She went to school in spite of the pain in her leg.",
+   "author": "CK"
+  },
+  {
+   "sentenceId": 22241,
+   "text": "Despite having lived near the sea, she still cannot swim.",
+   "author": "Objectivesea"
+  }
+ ]
+}
