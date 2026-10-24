@@ -5,8 +5,6 @@ import os
 import time
 from typing import Any
 
-import numpy as np
-
 from phoneme_scorer import _load_audio
 
 logger = logging.getLogger("cadence.ai_engine.transcriber")

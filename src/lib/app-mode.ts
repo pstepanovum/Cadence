@@ -1,4 +1,3 @@
-import { cookies } from "next/headers";
 
 export const APP_MODE_COOKIE = "cadence_app_mode";
 
@@ -12,10 +11,6 @@ export function parseAppMode(value: string | null | undefined): AppMode | null {
   }
 
   return null;
-}
-
-export async function getAppMode(): Promise<AppMode | null> {
-  return parseAppMode((await cookies()).get(APP_MODE_COOKIE)?.value);
 }
 
 export function getAppModeCookieOptions() {

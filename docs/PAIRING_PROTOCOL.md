@@ -271,10 +271,11 @@ Plus the `expo-camera` plugin, which generates `NSCameraUsageDescription`.
 
 **If the local-network prompt is refused**, iOS reports the failure identically
 to a dead server: "Network request failed", no error code, no permission API to
-query. `failureFromTransportError` therefore takes the observed network state
-from the caller, and the scanner offers "Open Settings" alongside the
-manual-code path, which does not depend on the permission for an address typed
-by hand… but does still need it to reach that address. So the honest handling is
+query. The discovery reducer (`reduce()` in `mobile/src/pairing/discovery.ts`)
+therefore reads the observed network state first, and the scanner offers
+"Open Settings" alongside the manual-code path, which does not depend on the
+permission for an address typed by hand… but does still need it to reach that
+address. So the honest handling is
 the one implemented: say what iOS is doing and send the person to Settings.
 
 ## Error codes

@@ -9,7 +9,6 @@ import {
   describeFailure,
   failureFromParseFailure,
   failureFromServerCode,
-  failureFromTransportError,
   type ConnectionFailure,
 } from "../../mobile/src/pairing/errors.ts";
 
@@ -115,53 +114,5 @@ describe("mapping QR parse failures", () => {
   it("carries version mismatches straight through", () => {
     assert.equal(failureFromParseFailure("server_too_new"), "server_too_new");
     assert.equal(failureFromParseFailure("server_too_old"), "server_too_old");
-  });
-});
-
-describe("mapping transport errors", () => {
-  const error = new Error("Network request failed");
-
-  it("blames the network before the computer when the phone is offline", () => {
-    assert.equal(
-      failureFromTransportError(error, { hasNetwork: false, isWifi: false }),
-      "offline",
-    );
-  });
-
-  it("explains cellular rather than letting it look like a dead computer", () => {
-    assert.equal(
-      failureFromTransportError(error, { hasNetwork: true, isWifi: false }),
-      "cellular_only",
-    );
-  });
-
-  it("blames the computer when the phone is on Wi-Fi", () => {
-    assert.equal(
-      failureFromTransportError(error, { hasNetwork: true, isWifi: true }),
-      "server_unreachable",
-    );
-  });
-
-  it("treats a refused local network permission as the real cause", () => {
-    // React Native reports this identically to a dead server, so the caller has
-    // to tell us; otherwise the person is sent to restart a computer that is
-    // running fine.
-    assert.equal(
-      failureFromTransportError(error, {
-        hasNetwork: true,
-        isWifi: true,
-        localNetworkDenied: true,
-      }),
-      "local_network_denied",
-    );
-  });
-
-  it("treats a timeout as an unreachable computer", () => {
-    const aborted = new Error("timeout");
-    aborted.name = "AbortError";
-    assert.equal(
-      failureFromTransportError(aborted, { hasNetwork: true, isWifi: true }),
-      "server_unreachable",
-    );
   });
 });

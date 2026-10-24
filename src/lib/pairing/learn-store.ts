@@ -55,8 +55,3 @@ export function writeDeviceLearnState(serialized: string): Promise<void> {
   queue = run.catch(() => undefined);
   return run;
 }
-
-export function resetDeviceLearnStateCache(): void {
-  cached = null;
-  queue = Promise.resolve();
-}

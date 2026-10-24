@@ -25,7 +25,7 @@ export const PAIRING_CODE_TTL_MS = 2 * 60 * 1000;
 /** Device tokens are long-lived but not eternal: one year, then re-pair. */
 export const DEVICE_TOKEN_TTL_MS = 365 * 24 * 60 * 60 * 1000;
 
-/** Prefix that lets the server tell a device token from a Supabase JWT at a glance. */
+/** Prefix that lets the server tell a device token from a Firebase ID token at a glance. */
 export const DEVICE_TOKEN_PREFIX = "cdnc_dev_";
 
 /**

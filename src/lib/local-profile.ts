@@ -1,7 +1,6 @@
 import "server-only";
 
 import { randomUUID } from "node:crypto";
-import { cookies } from "next/headers";
 
 export const LOCAL_PROFILE_COOKIE = "cadence_local_profile";
 
@@ -79,10 +78,6 @@ export function readLocalProfileFromCookies(
   cookieStore: CookieReader,
 ): LocalProfile | null {
   return parseLocalProfile(cookieStore.get(LOCAL_PROFILE_COOKIE)?.value);
-}
-
-export async function getLocalProfile(): Promise<LocalProfile | null> {
-  return readLocalProfileFromCookies(await cookies());
 }
 
 export function writeLocalProfile(

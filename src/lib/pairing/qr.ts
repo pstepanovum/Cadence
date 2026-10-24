@@ -1,7 +1,7 @@
 // FILE: src/lib/pairing/qr.ts
 //
-// QR rendering, server side only. The pairing page and the terminal script both
-// go through here so they cannot drift in what they encode.
+// QR rendering for the pairing page, server side only. `pnpm serve` draws its
+// terminal QR in scripts/serve.mjs, which cannot import this TypeScript module.
 import "server-only";
 
 import QRCode from "qrcode";
@@ -21,9 +21,4 @@ export async function renderQrSvg(text: string): Promise<string> {
     width: 320,
     color: { dark: "#212529", light: "#ffffff" },
   });
-}
-
-/** Block-character QR for `pnpm serve`. */
-export async function renderQrTerminal(text: string): Promise<string> {
-  return QRCode.toString(text, { ...OPTIONS, type: "terminal", small: true });
 }

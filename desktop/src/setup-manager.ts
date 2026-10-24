@@ -13,12 +13,7 @@ import type {
   StateListener,
 } from './setup/types'
 
-export type {
-  DesktopRuntimeDetails,
-  DesktopRuntimeLocation,
-  DesktopSetupPhase,
-  DesktopSetupState,
-} from './setup/types'
+export type { DesktopRuntimeLocation } from './setup/types'
 
 export class DesktopSetupManager {
   private readonly emitter = new EventEmitter()

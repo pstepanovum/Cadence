@@ -55,11 +55,6 @@ export async function getServerInfo(enginesReady: boolean): Promise<ServerInfo> 
   };
 }
 
-export async function getAdminToken(): Promise<string> {
-  const state = await readPairingState();
-  return state.adminToken;
-}
-
 export async function getSharedProfile() {
   const state = await readPairingState();
   return state.profile;

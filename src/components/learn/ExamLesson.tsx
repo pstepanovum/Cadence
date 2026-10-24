@@ -3,6 +3,13 @@
 
 import { startTransition, useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useEngineReady } from "@/hooks/useEngineReady";
+import {
+  endLessonSession,
+  recordAttempt,
+  saveExamScore,
+  startLessonSession,
+} from "@/lib/lesson-progress-client";
 import type { Lesson, LessonWord } from "@/lib/learn";
 import type { PronunciationAssessment } from "@/lib/pronunciation";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
@@ -34,70 +41,24 @@ export function ExamLesson({
   const [scores, setScores] = useState<number[]>([]);
   const [finalScore, setFinalScore] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  const [engineReady, setEngineReady] = useState(false);
+  const engineReady = useEngineReady();
   const [attemptNumber, setAttemptNumber] = useState(1);
   const sessionIdRef = useRef<string | null>(null);
 
   const currentWord: LessonWord | undefined = words[wordIndex];
+  const lessonId = lesson.id;
+  const lessonModuleId = lesson.module_id;
 
-  useEffect(() => {
-    let cancelled = false;
-
-    async function checkEngine() {
-      try {
-        const response = await fetch("/api/assess", {
-          method: "GET",
-          cache: "no-store",
-        });
-        const payload = (await response.json()) as { ready?: boolean };
-        if (!cancelled) {
-          setEngineReady(payload.ready === true);
-        }
-      } catch {
-        if (!cancelled) {
-          setEngineReady(false);
-        }
-      }
-    }
-
-    void checkEngine();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  useEffect(() => {
-    if (engineReady) {
-      return;
-    }
-
-    const timeout = window.setTimeout(() => {
-      fetch("/api/assess", { method: "GET", cache: "no-store" })
-        .then((response) => response.json())
-        .then((payload: { ready?: boolean }) => setEngineReady(payload.ready === true))
-        .catch(() => {});
-    }, 4000);
-
-    return () => window.clearTimeout(timeout);
-  }, [engineReady]);
-
-  function startSession() {
-    fetch("/api/sessions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ lesson_id: lesson.id, module_id: lesson.module_id }),
-    })
-      .then((response) => response.json())
-      .then((data: { sessionId?: string }) => {
-        sessionIdRef.current = data.sessionId ?? null;
-      })
-      .catch(() => {});
-  }
+  const startSession = useCallback(() => {
+    sessionIdRef.current = null;
+    void startLessonSession({ id: lessonId, module_id: lessonModuleId }).then((sessionId) => {
+      sessionIdRef.current = sessionId;
+    });
+  }, [lessonId, lessonModuleId]);
 
   useEffect(() => {
     startSession();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [startSession]);
 
   const finishExam = useCallback(
     async (allScores: number[]) => {
@@ -108,22 +69,14 @@ export function ExamLesson({
       setFinalScore(avg);
 
       if (sessionIdRef.current) {
-        await fetch(`/api/sessions/${sessionIdRef.current}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            word_count: allScores.length,
-            avg_score: avg,
-            passed: avg >= 70,
-          }),
-        }).catch(() => {});
+        await endLessonSession(sessionIdRef.current, {
+          word_count: allScores.length,
+          avg_score: avg,
+          passed: avg >= 70,
+        });
       }
 
-      await fetch("/api/progress", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ module_id: moduleId, exam_score: avg }),
-      }).catch(() => {});
+      await saveExamScore(moduleId, avg);
 
       startTransition(() => {
         router.refresh();
@@ -158,20 +111,16 @@ export function ExamLesson({
       setAssessment(result);
       setPhase("result");
 
-      fetch("/api/attempts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          lesson_id: lesson.id,
-          lesson_word_id: currentWord.id,
-          word: currentWord.word,
-          score: result.overallScore,
-          ipa_target: currentWord.ipa,
-          ipa_transcript: result.transcript,
-          phoneme_detail: result,
-          attempt_number: attemptNumber,
-        }),
-      }).catch(() => {});
+      void recordAttempt({
+        lesson_id: lesson.id,
+        lesson_word_id: currentWord.id,
+        word: currentWord.word,
+        score: result.overallScore,
+        ipa_target: currentWord.ipa,
+        ipa_transcript: result.transcript,
+        phoneme_detail: { ...result },
+        attempt_number: attemptNumber,
+      });
     } catch (nextError) {
       setError(nextError instanceof Error ? nextError.message : "Assessment failed.");
       setPhase("recording");

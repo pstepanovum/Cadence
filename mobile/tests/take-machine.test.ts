@@ -6,7 +6,6 @@ import {
   formatElapsed,
   initialTakeState,
   isBusy,
-  isCapturing,
   MAX_TAKE_MS,
   MIN_TAKE_MS,
   takeReducer,
@@ -184,12 +183,6 @@ describe("guards against double taps", () => {
       assert.deepEqual(takeReducer(state, { type: "PRESS" }), state);
     });
   }
-
-  it("knows when the native recorder should be live", () => {
-    assert.equal(isCapturing(run(grantedAndRecording)), true);
-    assert.equal(isCapturing(run([...grantedAndRecording, { type: "PRESS" }])), true);
-    assert.equal(isCapturing(initialTakeState), false);
-  });
 });
 
 describe("RESET", () => {

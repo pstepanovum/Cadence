@@ -190,32 +190,3 @@ export function failureFromParseFailure(reason: ParseFailure): ConnectionFailure
       return "unknown";
   }
 }
-
-/**
- * Map a thrown fetch error onto a failure. React Native gives us almost nothing
- * to work with here — a failed LAN request, a refused local-network permission
- * and a dead server all surface as "Network request failed" — so the network
- * state the caller observed does the disambiguating.
- */
-export function failureFromTransportError(
-  error: unknown,
-  context: { hasNetwork: boolean; isWifi: boolean; localNetworkDenied?: boolean },
-): ConnectionFailure {
-  if (context.localNetworkDenied) {
-    return "local_network_denied";
-  }
-
-  if (!context.hasNetwork) {
-    return "offline";
-  }
-
-  if (!context.isWifi) {
-    return "cellular_only";
-  }
-
-  if (error instanceof Error && error.name === "AbortError") {
-    return "server_unreachable";
-  }
-
-  return "server_unreachable";
-}

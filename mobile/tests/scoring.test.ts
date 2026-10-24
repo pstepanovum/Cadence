@@ -5,13 +5,10 @@ import { describe, it } from "node:test";
 import {
   averageScore,
   bestScore,
-  isEncouraging,
   normalizeScore,
   phonemeCaption,
-  queueProgress,
   scoreLabel,
   scoreStatus,
-  weakestPhonemes,
 } from "../src/practice/scoring.ts";
 
 describe("normalizeScore", () => {
@@ -51,14 +48,6 @@ describe("scoreLabel", () => {
   });
 });
 
-describe("isEncouraging", () => {
-  it("matches the web cue threshold: strictly above 50", () => {
-    assert.equal(isEncouraging(51), true);
-    assert.equal(isEncouraging(50), false);
-    assert.equal(isEncouraging(0), false);
-  });
-});
-
 describe("averageScore / bestScore", () => {
   it("returns 0 for an empty run instead of NaN", () => {
     assert.equal(averageScore([]), 0);
@@ -73,20 +62,6 @@ describe("averageScore / bestScore", () => {
   it("normalises each entry before averaging", () => {
     assert.equal(averageScore([120, 80]), 90);
     assert.equal(bestScore([120, 80]), 100);
-  });
-});
-
-describe("queueProgress", () => {
-  it("is 0 before the first item and 100 only when the last is scored", () => {
-    assert.equal(queueProgress(0, 5), 0);
-    assert.equal(queueProgress(1, 5), 20);
-    assert.equal(queueProgress(5, 5), 100);
-  });
-
-  it("never divides by zero or overflows", () => {
-    assert.equal(queueProgress(3, 0), 0);
-    assert.equal(queueProgress(9, 5), 100);
-    assert.equal(queueProgress(-1, 5), 0);
   });
 });
 
@@ -110,38 +85,5 @@ describe("phonemeCaption", () => {
       phonemeCaption({ symbol: "iː", heard: "iː", accuracy: 97.5, status: "correct" }),
       "98%",
     );
-  });
-});
-
-describe("weakestPhonemes", () => {
-  const phonemes = [
-    { symbol: "θ", heard: "s", accuracy: 10, status: "needs-work" as const },
-    { symbol: "iː", heard: "iː", accuracy: 99, status: "correct" as const },
-    { symbol: "ɹ", heard: "w", accuracy: 40, status: "needs-work" as const },
-    { symbol: "æ", heard: "e", accuracy: 65, status: "mixed" as const },
-    { symbol: "ŋ", heard: "n", accuracy: 55, status: "mixed" as const },
-  ];
-
-  it("drops the correct ones and sorts worst first", () => {
-    assert.deepEqual(
-      weakestPhonemes(phonemes).map((p) => p.symbol),
-      ["θ", "ɹ", "ŋ"],
-    );
-  });
-
-  it("respects the limit", () => {
-    assert.equal(weakestPhonemes(phonemes, 2).length, 2);
-    assert.equal(weakestPhonemes(phonemes, 10).length, 4);
-  });
-
-  it("does not mutate the input", () => {
-    const input = phonemes.slice();
-    weakestPhonemes(input);
-    assert.equal(input[0].symbol, "θ");
-    assert.equal(input.length, 5);
-  });
-
-  it("returns nothing when everything was correct", () => {
-    assert.deepEqual(weakestPhonemes(phonemes.filter((p) => p.status === "correct")), []);
   });
 });

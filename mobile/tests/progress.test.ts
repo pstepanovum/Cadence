@@ -8,7 +8,6 @@ import {
   parseProgress,
   playStreak,
   recordResult,
-  roundsPlayed,
   type GameResult,
 } from "../src/games/progress.ts";
 
@@ -48,8 +47,7 @@ describe("recordResult", () => {
     assert.equal(progress.results[0].score, 60);
     assert.equal(progress.bests.spelling, 90);
     assert.deepEqual(progress.days, ["2026-10-07"]);
-    assert.equal(roundsPlayed(progress), 3);
-    assert.equal(roundsPlayed(progress, "scramble"), 0);
+    assert.equal(progress.results.length, 3);
   });
 });
 

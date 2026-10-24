@@ -357,7 +357,7 @@ users/{uid}/lessonAttempts/{id}          one scored word
 users/{uid}/conversationProgress/{slug}  conversation results
 ```
 
-The lesson catalog is not in Firestore; it is read from `content/modules.sql` in every mode. Cadence Cloud used to run on Supabase; nothing is migrated from it, so cloud accounts start fresh.
+The lesson catalog is not in Firestore; it is read from `content/modules.sql` in every mode.
 
 ## Environment Variables
 

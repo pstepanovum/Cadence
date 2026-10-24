@@ -35,11 +35,6 @@ export function scoreLabel(score: number): string {
   return "Needs work";
 }
 
-/** Whether the post-assessment cue should be the positive one. */
-export function isEncouraging(score: number): boolean {
-  return normalizeScore(score) > SCORE_OK;
-}
-
 /** Mean of a run of takes, rounded, matching what the server is sent. */
 export function averageScore(scores: readonly number[]): number {
   if (scores.length === 0) return 0;
@@ -51,16 +46,6 @@ export function averageScore(scores: readonly number[]): number {
 export function bestScore(scores: readonly number[]): number {
   if (scores.length === 0) return 0;
   return scores.reduce((best, value) => Math.max(best, normalizeScore(value)), 0);
-}
-
-/**
- * Progress through a queue of `total` items, as a percentage. `done` items are
- * behind you; the bar reads full only once the last one is scored, which is why
- * this takes the completed count rather than the current index.
- */
-export function queueProgress(done: number, total: number): number {
-  if (total <= 0) return 0;
-  return Math.round((Math.max(0, Math.min(total, done)) / total) * 100);
 }
 
 export interface PhonemeLike {
@@ -79,16 +64,4 @@ export function phonemeCaption(phoneme: PhonemeLike): string {
     return `heard ${phoneme.heard.trim()}`;
   }
   return `${normalizeScore(phoneme.accuracy)}%`;
-}
-
-/** The phonemes worth drilling next, worst first, capped at `limit`. */
-export function weakestPhonemes<T extends PhonemeLike>(
-  phonemes: readonly T[],
-  limit = 3,
-): T[] {
-  return phonemes
-    .filter((phoneme) => phoneme.status !== "correct")
-    .slice()
-    .sort((a, b) => normalizeScore(a.accuracy) - normalizeScore(b.accuracy))
-    .slice(0, limit);
 }

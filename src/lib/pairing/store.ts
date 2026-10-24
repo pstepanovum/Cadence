@@ -192,9 +192,3 @@ export function withPairingState<T>(
 export function readPairingState(): Promise<PairingState> {
   return withPairingState((state) => ({ result: state, changed: false }));
 }
-
-/** Test seam: drop the process cache so a test can point at a fresh directory. */
-export function resetPairingStateCache(): void {
-  cached = null;
-  queue = Promise.resolve();
-}

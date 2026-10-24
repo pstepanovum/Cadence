@@ -2,9 +2,7 @@ import "server-only";
 
 import type { AppMode } from "@/lib/app-mode";
 import type {
-  Lesson,
   LessonSessionSummary,
-  LessonWithSummary,
   ModuleWithProgress,
   Stats,
 } from "@/lib/learn";
@@ -181,30 +179,4 @@ export async function getLearningStatsForMode(
     modules_completed: completedModules,
     current_streak_days: currentStreakDays(totals.sessionStarts, new Date()),
   };
-}
-
-export function isModuleUnlocked(module: ModuleWithProgress) {
-  return module.progress?.is_unlocked === true;
-}
-
-export function isModuleCompleted(module: ModuleWithProgress) {
-  return module.progress?.is_completed === true;
-}
-
-export function getModuleFromModules(
-  modules: ModuleWithProgress[],
-  moduleSlug: string,
-) {
-  return modules.find((module) => module.slug === moduleSlug) ?? null;
-}
-
-export function getLessonFromLessons(
-  lessons: LessonWithSummary[],
-  lessonSlug: string,
-) {
-  return lessons.find((lesson) => lesson.slug === lessonSlug) ?? null;
-}
-
-export function sortLessons(lessons: Lesson[]) {
-  return [...lessons].sort((left, right) => left.sort_order - right.sort_order);
 }

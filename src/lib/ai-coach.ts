@@ -40,10 +40,6 @@ export interface AiCoachRequestPayload {
   history: AiCoachHistoryEntry[];
 }
 
-export interface AiCoachResponsePayload {
-  turn: AiCoachGeneratedTurn;
-}
-
 export interface AiCoachStatusPayload {
   ready: boolean;
   message: string;

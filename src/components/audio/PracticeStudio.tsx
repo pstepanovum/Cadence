@@ -1,7 +1,8 @@
 // FILE: src/components/audio/PracticeStudio.tsx
 "use client";
 
-import { useEffect, useEffectEvent, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useEngineReady } from "@/hooks/useEngineReady";
 import { Activity } from "griddy-icons";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -48,29 +49,9 @@ export function PracticeStudio({
   );
   const [isAssessing, setIsAssessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [engineReady, setEngineReady] = useState(false);
+  const engineReady = useEngineReady();
   const correctAudioRef = useRef<HTMLAudioElement | null>(null);
   const incorrectAudioRef = useRef<HTMLAudioElement | null>(null);
-
-  const refreshEngineStatus = useEffectEvent(async () => {
-    try {
-      const response = await fetch("/api/assess", {
-        method: "GET",
-        cache: "no-store",
-      });
-      const payload = (await response.json()) as {
-        ready?: boolean;
-      };
-
-      setEngineReady(payload.ready === true);
-    } catch {
-      setEngineReady(false);
-    }
-  });
-
-  useEffect(() => {
-    void refreshEngineStatus();
-  }, []);
 
   useEffect(() => {
     correctAudioRef.current = createCorrectAudio();
@@ -83,18 +64,6 @@ export function PracticeStudio({
       incorrectAudioRef.current = null;
     };
   }, []);
-
-  useEffect(() => {
-    if (engineReady) {
-      return;
-    }
-
-    const timer = window.setTimeout(() => {
-      void refreshEngineStatus();
-    }, 4000);
-
-    return () => window.clearTimeout(timer);
-  }, [engineReady]);
 
   useEffect(() => {
     if (!assessment) {
@@ -164,7 +133,6 @@ export function PracticeStudio({
 
       const result = payload as PronunciationAssessment;
       setAssessment(result);
-      setEngineReady(true);
       onAssessmentComplete?.(result);
     } catch (nextError) {
       setAssessment(null);

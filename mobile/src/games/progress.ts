@@ -112,8 +112,3 @@ export function playStreak(days: readonly string[], now: Date): number {
   }
   return streak;
 }
-
-export function roundsPlayed(progress: GameProgress, gameId?: GameId): number {
-  if (!gameId) return progress.results.length;
-  return progress.results.filter((result) => result.gameId === gameId).length;
-}

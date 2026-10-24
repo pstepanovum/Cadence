@@ -145,11 +145,6 @@ export async function updateUserProfile(uid: string, patch: ProfilePatch) {
   );
 }
 
-export async function getBilling(uid: string): Promise<BillingState> {
-  const snapshot = await userRef(uid).get();
-  return readBilling(snapshot.data()?.billing);
-}
-
 /** Merge Stripe state into users/{uid}.billing. Only the server writes these. */
 export async function updateBilling(uid: string, fields: Partial<BillingState>) {
   const billing: Record<string, unknown> = { ...fields };

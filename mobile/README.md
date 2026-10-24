@@ -100,19 +100,19 @@ Everything App Store Connect needs lives in `app.json` and the four `ios:*` scri
 | | |
 |---|---|
 | Bundle identifier | `dev.pstepanov.cadence` |
-| Apple team | `V7H9Y9K6Z7` |
+| Apple team | `APPLE_TEAM_ID` in `.env.release` |
 | Version / build | `expo.version` / `expo.ios.buildNumber` in `app.json` |
 | Devices | iPhone only (`ios.supportsTablet: false`; on an iPad it runs in iPhone compatibility mode) |
 | Orientation | Portrait |
 | Deployment target | iOS 16.4 (Expo SDK 57's floor) |
 
-You need Xcode 27 with the iOS 27 SDK, and the App Store Connect API key (`.p8`) at
-`~/.config/pstepanov/AuthKey_3WFKQQ2M25.p8`. Keep the key out of the repo — `.gitignore` already
-refuses `*.p8`. Every script reads its location through `ASC_KEY_PATH`, `ASC_KEY_ID` and
-`ASC_ISSUER_ID`, so a key somewhere else only needs the env var:
+You need Xcode 27 with the iOS 27 SDK and an App Store Connect API key (`.p8`). Keep the key out
+of the repo — `.gitignore` already refuses `*.p8`. The archive and upload scripts
+(`scripts/ios-release.mjs`) read the team and the key from the environment or from
+`.env.release`, which is ignored:
 
 ```bash
-ASC_KEY_PATH=/somewhere/else/AuthKey_XXXXXXXXXX.p8 ASC_KEY_ID=XXXXXXXXXX npm run testflight
+cp .env.release.example .env.release   # APPLE_TEAM_ID, ASC_KEY_PATH, ASC_KEY_ID, ASC_ISSUER_ID
 ```
 
 ```bash
@@ -158,9 +158,11 @@ on cream.
 
 ### Permissions
 
-The microphone is the only thing the app asks for, and `NSMicrophoneUsageDescription` in
-`app.json` says why. Nothing else is declared, because nothing else is used: no camera, no photo
-library, no location, no contacts, no tracking.
+The app asks for three things, and `app.json` says why for each: the microphone
+(`NSMicrophoneUsageDescription`), the camera for scanning the pairing QR (the `expo-camera`
+plugin's `cameraPermission`), and the local network for reaching your computer
+(`NSLocalNetworkUsageDescription`). Nothing else is declared, because nothing else is used: no
+photo library, no location, no contacts, no tracking.
 
 `expo-audio` is configured with `enableBackgroundPlayback: false`. It defaults to on and adds
 `audio` to `UIBackgroundModes`, which App Review rejects when the app does not actually keep

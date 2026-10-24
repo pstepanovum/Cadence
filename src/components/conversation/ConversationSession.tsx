@@ -11,6 +11,8 @@ import { ConversationFlowCard } from "@/components/conversation/ConversationFlow
 import { ConversationSidePanel } from "@/components/conversation/ConversationSidePanel";
 import { Card } from "@/components/ui/card";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
+import { useEngineReady } from "@/hooks/useEngineReady";
+import { saveConversationScore } from "@/lib/lesson-progress-client";
 import { playLearnerRecordingSegment } from "@/lib/audio-feedback";
 
 export type Phase = "intro" | "coach" | "recording" | "assessing" | "result" | "done";
@@ -41,7 +43,7 @@ export function ConversationSession({
   const [assessment, setAssessment] = useState<PronunciationAssessment | null>(null);
   const [responses, setResponses] = useState<TurnResponse[]>([]);
   const [scores, setScores] = useState<number[]>([]);
-  const [engineReady, setEngineReady] = useState(false);
+  const engineReady = useEngineReady();
   const [error, setError] = useState<string | null>(null);
   const [finalScore, setFinalScore] = useState(0);
   const [coachAudioState, setCoachAudioState] = useState<CoachAudioState>("idle");
@@ -81,36 +83,6 @@ export function ConversationSession({
       replyAudioUrls.clear();
     };
   }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function checkEngine() {
-      try {
-        const response = await fetch("/api/assess", { method: "GET", cache: "no-store" });
-        const payload = (await response.json()) as { ready?: boolean };
-        if (!cancelled) setEngineReady(payload.ready === true);
-      } catch {
-        if (!cancelled) setEngineReady(false);
-      }
-    }
-
-    void checkEngine();
-    return () => { cancelled = true; };
-  }, []);
-
-  useEffect(() => {
-    if (engineReady) return;
-
-    const timeout = window.setTimeout(() => {
-      fetch("/api/assess", { method: "GET", cache: "no-store" })
-        .then((response) => response.json())
-        .then((payload: { ready?: boolean }) => setEngineReady(payload.ready === true))
-        .catch(() => {});
-    }, 4000);
-
-    return () => window.clearTimeout(timeout);
-  }, [engineReady]);
 
   const visibleTurns = useMemo(() => {
     if (!hasStarted) return [];
@@ -403,11 +375,7 @@ export function ConversationSession({
       setFinalScore(average);
       stopCoachAudio();
 
-      await fetch("/api/conversation-progress", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ moduleSlug: module.slug, score: average, passed }),
-      }).catch(() => {});
+      await saveConversationScore(module.slug, average, passed);
 
       startTransition(() => { router.refresh(); });
       setPhase("done");

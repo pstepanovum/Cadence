@@ -137,11 +137,6 @@ export function takeReducer(state: TakeState, event: TakeEvent): TakeState {
   }
 }
 
-/** True while the native recorder should be running. */
-export function isCapturing(state: TakeState): boolean {
-  return state.status === "recording" || state.status === "stopping";
-}
-
 /** True when the mic button should be disabled outright. */
 export function isBusy(state: TakeState): boolean {
   return state.status === "requesting" || state.status === "stopping" || state.status === "processing";

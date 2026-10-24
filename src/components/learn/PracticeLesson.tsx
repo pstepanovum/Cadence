@@ -5,6 +5,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { Lesson, LessonWord } from "@/lib/learn";
 import type { PronunciationAssessment } from "@/lib/pronunciation";
 import { createCorrectAudio, createIncorrectAudio, createCompleteAudio } from "@/lib/audio-feedback";
+import { endLessonSession, recordAttempt, startLessonSession } from "@/lib/lesson-progress-client";
+import { useEngineReady } from "@/hooks/useEngineReady";
 import { AudioRecorder } from "@/components/audio/AudioRecorder";
 import { AssessmentResult } from "@/components/learn/AssessmentResult";
 import { LessonSummary } from "@/components/learn/LessonSummary";
@@ -25,7 +27,7 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
   const [assessment, setAssessment] = useState<PronunciationAssessment | null>(null);
   const [scores, setScores] = useState<number[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const [engineReady, setEngineReady] = useState(false);
+  const engineReady = useEngineReady();
   const [attemptNumber, setAttemptNumber] = useState(1);
   const sessionIdRef = useRef<string | null>(null);
   const correctAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -33,60 +35,18 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
   const completeAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const currentWord: LessonWord | undefined = words[wordIndex];
+  const lessonId = lesson.id;
+  const lessonModuleId = lesson.module_id;
 
   useEffect(() => {
     let cancelled = false;
-
-    async function checkEngine() {
-      try {
-        const response = await fetch("/api/assess", {
-          method: "GET",
-          cache: "no-store",
-        });
-        const payload = (await response.json()) as { ready?: boolean };
-        if (!cancelled) {
-          setEngineReady(payload.ready === true);
-        }
-      } catch {
-        if (!cancelled) {
-          setEngineReady(false);
-        }
-      }
-    }
-
-    void checkEngine();
+    void startLessonSession({ id: lessonId, module_id: lessonModuleId }).then((sessionId) => {
+      if (!cancelled) sessionIdRef.current = sessionId;
+    });
     return () => {
       cancelled = true;
     };
-  }, []);
-
-  useEffect(() => {
-    if (engineReady) {
-      return;
-    }
-
-    const timeout = window.setTimeout(() => {
-      fetch("/api/assess", { method: "GET", cache: "no-store" })
-        .then((response) => response.json())
-        .then((payload: { ready?: boolean }) => setEngineReady(payload.ready === true))
-        .catch(() => {});
-    }, 4000);
-
-    return () => window.clearTimeout(timeout);
-  }, [engineReady]);
-
-  useEffect(() => {
-    fetch("/api/sessions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ lesson_id: lesson.id, module_id: lesson.module_id }),
-    })
-      .then((response) => response.json())
-      .then((data: { sessionId?: string }) => {
-        sessionIdRef.current = data.sessionId ?? null;
-      })
-      .catch(() => {});
-  }, [lesson.id, lesson.module_id]);
+  }, [lessonId, lessonModuleId]);
 
   useEffect(() => {
     correctAudioRef.current = createCorrectAudio();
@@ -112,11 +72,11 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
       ? finalScores.reduce((sum, value) => sum + value, 0) / finalScores.length
       : 0;
 
-    await fetch(`/api/sessions/${sessionIdRef.current}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ word_count: finalScores.length, avg_score: avg, passed }),
-    }).catch(() => {});
+    await endLessonSession(sessionIdRef.current, {
+      word_count: finalScores.length,
+      avg_score: avg,
+      passed,
+    });
   }, []);
 
   async function runAssessment(blob: Blob) {
@@ -143,20 +103,16 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
       setAssessment(result);
       setPhase("result");
 
-      fetch("/api/attempts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          lesson_id: lesson.id,
-          lesson_word_id: currentWord.id,
-          word: currentWord.word,
-          score: result.overallScore,
-          ipa_target: currentWord.ipa,
-          ipa_transcript: result.transcript,
-          phoneme_detail: result,
-          attempt_number: attemptNumber,
-        }),
-      }).catch(() => {});
+      void recordAttempt({
+        lesson_id: lesson.id,
+        lesson_word_id: currentWord.id,
+        word: currentWord.word,
+        score: result.overallScore,
+        ipa_target: currentWord.ipa,
+        ipa_transcript: result.transcript,
+        phoneme_detail: { ...result },
+        attempt_number: attemptNumber,
+      });
 
       const wordAudio =
         result.overallScore > 50 ? correctAudioRef.current : incorrectAudioRef.current;
@@ -204,16 +160,10 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
     setAssessment(null);
     setAttemptNumber(1);
 
-    fetch("/api/sessions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ lesson_id: lesson.id, module_id: lesson.module_id }),
-    })
-      .then((response) => response.json())
-      .then((data: { sessionId?: string }) => {
-        sessionIdRef.current = data.sessionId ?? null;
-      })
-      .catch(() => {});
+    sessionIdRef.current = null;
+    void startLessonSession({ id: lessonId, module_id: lessonModuleId }).then((sessionId) => {
+      sessionIdRef.current = sessionId;
+    });
   }
 
   if (phase === "done") {
