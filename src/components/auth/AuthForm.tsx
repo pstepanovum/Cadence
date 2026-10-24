@@ -1,35 +1,31 @@
 // FILE: src/components/auth/AuthForm.tsx
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { startTransition, useState, type FormEvent } from "react";
+import { startTransition, useId, useState, type FormEvent } from "react";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { AuthCard, AuthNotice, FieldLabel } from "@/components/auth/AuthCard";
+import { PasswordChecklist } from "@/components/auth/PasswordChecklist";
+import { isPasswordAcceptable } from "@/components/auth/password-rules";
+import { subscribeToNewsletter } from "@/components/newsletter/newsletter-api";
 import { Button } from "@/components/ui/button";
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-  createUserWithEmailAndPassword,
-  sendEmailVerification,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
 import { safeNextPath } from "@/lib/auth/safe-next";
 import { describeAuthError } from "@/lib/firebase/auth-errors";
 import { getFirebaseAuth, startServerSession } from "@/lib/firebase/client";
-import type { AppRuntime } from "@/lib/runtime/request-runtime";
-import { cn } from "@/lib/utils";
 
 interface AuthFormProps {
   mode: "login" | "signup";
-  runtime: AppRuntime;
 }
 
-export function AuthForm({ mode, runtime }: AuthFormProps) {
+export function AuthForm({ mode }: AuthFormProps) {
   const router = useRouter();
+  const id = useId();
   const isLogin = mode === "login";
-  const isDesktop = runtime === "desktop";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [newsletter, setNewsletter] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -39,16 +35,19 @@ export function AuthForm({ mode, runtime }: AuthFormProps) {
     setMessage(null);
     setError(null);
 
+    if (!isLogin && !isPasswordAcceptable(password, email)) {
+      setError("Choose a password that meets every rule below.");
+      return;
+    }
+
     try {
       setIsSubmitting(true);
-
       const auth = getFirebaseAuth();
 
       if (isLogin) {
         const { user } = await signInWithEmailAndPassword(auth, email, password);
         await startServerSession(user);
-
-        setMessage("Signed in. Taking you to your dashboard.");
+        setMessage("Signed in.");
         startTransition(() => {
           router.replace(nextPathFromLocation() ?? "/dashboard");
           router.refresh();
@@ -58,237 +57,105 @@ export function AuthForm({ mode, runtime }: AuthFormProps) {
 
       const { user } = await createUserWithEmailAndPassword(auth, email, password);
       await startServerSession(user);
-      // Verification is offered, not required: the account works right away.
-      void sendEmailVerification(user).catch(() => {});
+      // The server sends the verify-email message on the first sign-in it
+      // sees; verifying is offered, not required.
+      if (newsletter) void subscribeToNewsletter(email, "signup");
 
-      setMessage("Account created. Setting up your trial.");
+      setMessage("Account created.");
       startTransition(() => {
-        router.replace("/checkout");
+        router.replace(nextPathFromLocation() ?? "/onboarding");
         router.refresh();
       });
     } catch (nextError) {
-      setError(describeAuthError(nextError, "Something went wrong during sign-in."));
+      setError(describeAuthError(nextError, "Something went wrong. Please try again."));
     } finally {
       setIsSubmitting(false);
     }
   }
 
-  if (!isDesktop) {
-    return (
-      <Card className="w-full max-w-[30rem] bg-transparent p-0 backdrop-blur-0">
-        <div className="space-y-6">
-          <div className="space-y-4 px-5 sm:px-6">
-            <Link href="/" className="inline-flex w-fit items-center" aria-label="Go to home">
-              <Image
-                src="/logo/logo-green-white.svg"
-                alt="Cadence logo"
-                width={136}
-                height={30}
-                className="h-[30px] w-auto object-contain"
-                priority
-              />
-            </Link>
-
-            <div className="space-y-3">
-              <CardTitle className="text-[2rem] leading-tight sm:text-[2.15rem]">
-                {isLogin ? "Sign in to Cadence" : "Start your pronunciation profile"}
-              </CardTitle>
-              <CardDescription className="text-base">
-                {isLogin
-                  ? "Return to your saved rounds and next coaching cue."
-                  : "Create your learner account and begin tracking progress."}
-              </CardDescription>
-            </div>
-          </div>
-
-          <form
-            className="space-y-4 px-5 py-1 sm:px-6"
-            onSubmit={handleSubmit}
-          >
-            <label className="block">
-              <span className="block pb-2 text-sm font-medium text-hunter-green">Email</span>
-              <Input
-                type="email"
-                autoComplete="email"
-                placeholder="learner@cadence.app"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                required
-                className="bg-white"
-              />
-            </label>
-
-            <label className="block">
-              <span className="block pb-2 text-sm font-medium text-hunter-green">Password</span>
-              <Input
-                type="password"
-                autoComplete={isLogin ? "current-password" : "new-password"}
-                placeholder="At least 6 characters"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                required
-                minLength={6}
-                className="bg-white"
-              />
-            </label>
-
-            {message ? (
-              <div className="rounded-3xl bg-yellow-green px-4 py-3 text-sm text-hunter-green">
-                {message}
-              </div>
-            ) : null}
-
-            {error ? (
-              <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
-                {error}
-              </div>
-            ) : null}
-
-            <Button className="w-full" type="submit" disabled={isSubmitting}>
-              {isSubmitting
-                ? isLogin
-                  ? "Signing in..."
-                  : "Creating account..."
-                : isLogin
-                  ? "Sign in"
-                  : "Create account"}
-            </Button>
-
-            {isLogin ? (
-              <div className="pt-1 text-right">
-                <Link href="/forgot-password" className="text-sm font-semibold text-sage-green">
-                  Forgot password?
-                </Link>
-              </div>
-            ) : null}
-          </form>
-
-          <p className="px-5 text-sm leading-7 text-iron-grey sm:px-6">
-            {isLogin ? "Need an account?" : "Already have an account?"}{" "}
-            <Link
-              href={isLogin ? "/signup" : "/login"}
-              className="font-semibold text-sage-green"
-            >
-              {isLogin ? "Create one here." : "Sign in here."}
-            </Link>
-          </p>
-        </div>
-      </Card>
-    );
-  }
-
   return (
-    <Card
-      className={cn(
-        "w-full max-w-[32rem] p-0 backdrop-blur-0",
-        isDesktop
-          ? "bg-transparent shadow-none"
-          : "bg-transparent shadow-none",
-      )}
+    <AuthCard
+      title={isLogin ? "Sign in to Cadence" : "Create your account"}
+      description={
+        isLogin
+          ? "Your progress, streak and plan follow your account."
+          : "Free. Your streak and lesson stats follow you to every device."
+      }
+      footer={
+        <>
+          {isLogin ? "New to Cadence?" : "Already have an account?"}{" "}
+          <Link href={isLogin ? "/signup" : "/login"} className="font-semibold text-sage-green underline-offset-2 hover:underline">
+            {isLogin ? "Create an account" : "Sign in"}
+          </Link>
+        </>
+      }
     >
-      <div className="space-y-6">
-        <div className="space-y-4 px-5 sm:px-6">
-          <div className="inline-flex w-fit items-center">
-            <Image
-              src="/logo/logo-green-white.svg"
-              alt="Cadence logo"
-              width={136}
-              height={30}
-              className="h-[30px] w-auto object-contain"
-              priority
-            />
-          </div>
-
-          <div className="space-y-3">
-            <CardTitle className="text-[2rem] leading-tight sm:text-[2.15rem]">
-              {isLogin ? "Sign in to Cadence" : "Start your pronunciation profile"}
-            </CardTitle>
-            <CardDescription className="text-base">
-              {isLogin
-                ? "Return to your saved rounds and next coaching cue."
-                : "Create your learner account and begin tracking progress."}
-            </CardDescription>
-          </div>
+      <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+        <div>
+          <FieldLabel htmlFor={`${id}-email`}>Email</FieldLabel>
+          <Input
+            id={`${id}-email`}
+            type="email"
+            autoComplete="email"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
+            className="ring-1 ring-alabaster-grey"
+          />
         </div>
 
-        <form
-          className={cn(
-            "space-y-4 px-5 py-1 sm:px-6",
-            isDesktop
-              ? ""
-              : "border border-[#e6d9bd] bg-white px-6 py-6 shadow-[0_20px_64px_rgba(41,66,45,0.08)] sm:px-7 sm:py-7 lg:px-8",
-          )}
-          onSubmit={handleSubmit}
-        >
-          <label className="block">
-            <span className="block pb-2 text-sm font-medium text-hunter-green">Email</span>
-            <Input
-              type="email"
-              autoComplete="email"
-              placeholder="learner@cadence.app"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              required
-              className="bg-white"
-            />
-          </label>
-
-          <label className="block">
-            <span className="block pb-2 text-sm font-medium text-hunter-green">Password</span>
-            <Input
-              type="password"
-              autoComplete={isLogin ? "current-password" : "new-password"}
-              placeholder="At least 6 characters"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              required
-              minLength={6}
-              className="bg-white"
-            />
-          </label>
-
-          {message ? (
-            <div className="rounded-3xl bg-yellow-green px-4 py-3 text-sm text-hunter-green">
-              {message}
-            </div>
-          ) : null}
-
-          {error ? (
-            <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
-              {error}
-            </div>
-          ) : null}
-
-          <Button className="w-full" type="submit" disabled={isSubmitting}>
-            {isSubmitting
-              ? isLogin
-                ? "Signing in..."
-                : "Creating account..."
-              : isLogin
-                ? "Sign in"
-                : "Create account"}
-          </Button>
-
-          {isLogin ? (
-            <div className="pt-1 text-right">
-              <Link href="/forgot-password" className="text-sm font-semibold text-sage-green">
-                Forgot password?
+        <div>
+          <div className="flex items-baseline justify-between">
+            <FieldLabel htmlFor={`${id}-password`}>Password</FieldLabel>
+            {isLogin ? (
+              <Link href="/forgot-password" className="text-sm font-semibold text-sage-green underline-offset-2 hover:underline">
+                Forgot it?
               </Link>
-            </div>
-          ) : null}
-        </form>
+            ) : null}
+          </div>
+          <Input
+            id={`${id}-password`}
+            type="password"
+            autoComplete={isLogin ? "current-password" : "new-password"}
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            required
+            aria-describedby={isLogin ? undefined : `${id}-rules`}
+            className="ring-1 ring-alabaster-grey"
+          />
+          {!isLogin ? <PasswordChecklist id={`${id}-rules`} password={password} email={email} /> : null}
+        </div>
 
-        <p className="px-5 text-sm leading-7 text-iron-grey sm:px-6">
-          {isLogin ? "Need an account?" : "Already have an account?"}{" "}
-          <Link
-            href={isLogin ? "/signup" : "/login"}
-            className="font-semibold text-sage-green"
-          >
-            {isLogin ? "Create one here." : "Sign in here."}
-          </Link>
-        </p>
-      </div>
-    </Card>
+        {!isLogin ? (
+          <label className="flex cursor-pointer items-start gap-3 rounded-3xl bg-vanilla-cream px-4 py-3 text-sm leading-6 text-iron-grey">
+            <input
+              type="checkbox"
+              checked={newsletter}
+              onChange={(event) => setNewsletter(event.target.checked)}
+              className="mt-1 h-4 w-4 shrink-0 accent-[var(--sage-green)]"
+            />
+            <span>
+              Email me product updates and occasional offers. Unsubscribe any time.
+            </span>
+          </label>
+        ) : null}
+
+        {message ? <AuthNotice tone="success">{message}</AuthNotice> : null}
+        {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
+
+        <Button className="w-full" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? (isLogin ? "Signing in…" : "Creating account…") : isLogin ? "Sign in" : "Create account"}
+        </Button>
+
+        {!isLogin ? (
+          <p className="text-xs leading-5 text-slate-grey">
+            By creating an account you agree to the <Link href="/terms" className="underline">Terms</Link> and the{" "}
+            <Link href="/privacy" className="underline">Privacy Policy</Link>.
+          </p>
+        ) : null}
+      </form>
+    </AuthCard>
   );
 }
 

@@ -5,18 +5,22 @@ import { usePathname } from 'next/navigation'
 import { Settings } from 'griddy-icons'
 import { AiCoachSidebarHistory } from '@/components/coach/AiCoachSidebarHistory'
 import { BrandMark } from '@/components/ui/brand-mark'
+import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { cn } from '@/lib/utils'
 
 const navItems = [
   { href: '/dashboard',    label: 'Home'         },
+  { href: '/practice',     label: 'Practice'     },
+  { href: '/sounds',       label: 'Sounds'       },
   { href: '/learn',        label: 'Modules'      },
   { href: '/conversation', label: 'Conversation' },
-  { href: '/coach',        label: 'AI Coach'     },
+  { href: '/coach',        label: 'Coach'        },
 ]
 
 const exploreItems = [
-  { href: '/just-speak', label: 'Just Speak', isPro: true },
-  { href: '/sound-library', label: 'Sound Library' },
+  { href: '/grammar', label: 'Grammar' },
+  { href: '/connect-phone', label: 'Connect your phone' },
+  { href: '/just-speak', label: 'Just Speak' },
   { href: '/dictionary', label: 'Dictionary' },
   { href: '/bookmarks', label: 'Bookmarks' },
 ]
@@ -45,7 +49,7 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
 
       {/* ── Nav items ── */}
       <div className="flex min-h-0 flex-1 flex-col px-5">
-        <nav className="flex flex-col gap-0.5">
+        <nav aria-label="Main" className="flex flex-col gap-0.5">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -66,7 +70,7 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
           <p className="px-4 text-xs font-semibold tracking-[0.16em] text-sage-green/80 uppercase">
             Explore
           </p>
-          <nav className="flex flex-col gap-0.5">
+          <nav aria-label="Explore" className="flex flex-col gap-0.5">
             {exploreItems.map((item) => (
               <Link
                 key={item.href}
@@ -79,11 +83,7 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
                 )}
               >
                 <span>{item.label}</span>
-                {item.isPro ? (
-                  <span className="rounded-full bg-hunter-green px-2 py-0.5 text-[10px] font-bold tracking-[0.14em] text-bright-snow uppercase">
-                    Pro
-                  </span>
-                ) : null}
+
               </Link>
             ))}
           </nav>
@@ -95,19 +95,21 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
       </div>
 
       {/* ── Settings ── */}
-      <div className="px-5 pb-5">
+      <div className="flex items-center gap-2 px-5 pb-5">
         <Link
-          href="/profile"
+          href="/account"
           className={cn(
             'flex items-center gap-2.5 rounded-full px-4 py-2.5 text-base font-semibold transition-colors',
-            isActive('/profile')
+            'flex-1',
+            isActive('/account') || isActive('/profile')
               ? 'bg-yellow-green text-hunter-green'
               : 'text-hunter-green hover:bg-vanilla-cream',
           )}
         >
-          <Settings size={16} color="currentColor" />
+          <Settings size={16} color="currentColor" aria-hidden="true" />
           Settings
         </Link>
+        <ThemeToggle />
       </div>
     </aside>
   )

@@ -11,6 +11,14 @@ import { getModulesWithProgressForMode } from "@/lib/learn-data";
 import { Navbar } from "@/components/ui/navbar";
 import { ModuleProgress } from "@/components/ui/module-progress";
 import { SignOutButton } from "@/components/ui/sign-out-button";
+import Link from "next/link";
+
+const SHORTCUTS = [
+  { href: "/practice", title: "Practice", blurb: "Grammar, quizzes, sentences, flashcards" },
+  { href: "/sounds", title: "Sounds", blurb: "Mouth map for every sound" },
+  { href: "/practice/flashcards", title: "Flashcards", blurb: "Review what is due today" },
+  { href: "/coach", title: "Coach", blurb: "Talk through a real situation" },
+];
 
 export default async function DashboardPage() {
   const session = await requireAppUser("/dashboard");
@@ -24,6 +32,14 @@ export default async function DashboardPage() {
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-4">
         <Navbar current="home" />
         <ModuleProgress />
+        <nav aria-label="Shortcuts" className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {SHORTCUTS.map((item) => (
+            <Link key={item.href} href={item.href} className="rounded-3xl bg-white px-5 py-4 transition-colors hover:bg-yellow-green">
+              <span className="block font-kicker text-xl text-hunter-green">{item.title}</span>
+              <span className="block text-sm leading-6 text-iron-grey">{item.blurb}</span>
+            </Link>
+          ))}
+        </nav>
         <QuickPracticeHome modules={modules} />
 
         <footer className="mt-8 flex justify-center pb-8">

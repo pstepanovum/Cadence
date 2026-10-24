@@ -2,42 +2,39 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/ui/brand-mark";
 import { Card } from "@/components/ui/card";
+import { NewsletterForm } from "@/components/newsletter/NewsletterForm";
 import { PrivacyChoicesModal } from "@/components/ui/privacy-choices-modal";
+
+export const GITHUB_URL = "https://github.com/pstepanovum/Cadence";
 
 const footerSections = [
   {
     title: "Practice",
     links: [
-      { label: "Practice Studio", href: "/signup" },
-      { label: "AI Conversation", href: "/signup" },
-      { label: "Daily Modules", href: "/signup" },
-      { label: "Progress Tracking", href: "/signup" },
+      { label: "Sounds and mouth map", href: "/sounds" },
+      { label: "Grammar by level", href: "/grammar" },
+      { label: "Practice hub", href: "/practice" },
+      { label: "Pronunciation modules", href: "/learn" },
     ],
   },
   {
     title: "Product",
     links: [
-      { label: "Features", href: "/#features" },
-      { label: "Pricing", href: "/#pricing" },
-      { label: "FAQ", href: "/#faq" },
-      { label: "Feedback", href: "/contact" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "Download", href: "/download" },
+      { label: "Connect an AI app", href: "/connector" },
+      { label: "Run it yourself", href: GITHUB_URL },
     ],
   },
   {
     title: "Support",
     links: [
-      { label: "Help Center", href: "/help" },
-      { label: "Contact Support", href: "/contact" },
+      { label: "Support", href: "/support" },
+      { label: "Newsletter", href: "/newsletter" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],
   },
-];
-
-const legalLinks = [
-  { label: "Help Center", href: "/help" },
-  { label: "Terms of Service", href: "/terms" },
-  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 export function Footer() {
@@ -46,58 +43,45 @@ export function Footer() {
   return (
     <footer className="pb-2">
       <Card className="bg-hunter-green text-white">
-        <div className="space-y-12">
-          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr_0.95fr_0.95fr]">
-            <div className="space-y-4">
-              <Link href="/" className="inline-flex items-center">
+        <div className="space-y-10">
+          <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr_0.9fr_0.9fr]">
+            <div className="space-y-5">
+              <Link href="/" className="inline-flex items-center" aria-label="Cadence home">
                 <BrandMark variant="white" />
               </Link>
               <p className="max-w-sm text-sm leading-7 text-white/78">
-                Cadence gives non-native English speakers a focused practice
-                loop: record a word, see exactly which phoneme is off, repeat
-                with a clear cue.
+                Advanced English, out loud: pronunciation, grammar, flashcards
+                and a speaking coach. Open source and free to run yourself.
               </p>
-              <div className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm text-white/82">
-                Free forever. Open source.
-              </div>
+              <NewsletterForm source="footer" tone="onDark" className="max-w-md" />
             </div>
 
             {footerSections.map((section) => (
-              <div key={section.title} className="space-y-2">
-                <h3 className="text-lg font-semibold text-white">
-                  {section.title}
-                </h3>
-                <div className="flex flex-col gap-1">
+              <nav key={section.title} aria-label={section.title} className="space-y-2">
+                <h2 className="text-lg font-semibold text-white">{section.title}</h2>
+                <ul className="flex flex-col gap-1">
                   {section.links.map((link) => (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      className="inline-flex w-fit items-center text-sm text-white/78 transition-colors hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="inline-flex min-h-8 w-fit items-center text-sm text-white/78 transition-colors hover:text-white"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
                   ))}
-                </div>
-              </div>
+                </ul>
+              </nav>
             ))}
           </div>
 
-          <div className="pt-4 pb-4">
-            <div className="flex flex-col gap-4 text-xs text-white/64 lg:flex-row lg:items-center lg:justify-between">
-              <p>© {year} Cadence. All Rights Reserved.</p>
-
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 lg:justify-end">
-                {legalLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="text-xs transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <PrivacyChoicesModal />
-              </div>
+          <div className="flex flex-col gap-3 pb-2 text-xs text-white/70 lg:flex-row lg:items-center lg:justify-between">
+            <p>© {year} Cadence. Open source under the MIT licence.</p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <Link href="/support" className="hover:text-white">Support</Link>
+              <Link href="/privacy" className="hover:text-white">Privacy</Link>
+              <Link href="/terms" className="hover:text-white">Terms</Link>
+              <PrivacyChoicesModal />
             </div>
           </div>
         </div>

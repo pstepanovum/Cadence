@@ -12,24 +12,24 @@ import { cn } from "@/lib/utils";
 
 const faqItems = [
   {
-    question: "What exactly does Cadence score?",
+    question: "What does Cadence teach?",
     answer:
-      "Cadence focuses on word-level pronunciation quality by decoding phonemes and comparing them with the target word you asked the learner to say.",
+      "Advanced English out loud: every sound with a mouth map, grammar from A1 to C2, sentence building, quizzes, flashcards with spaced repetition, and a speaking coach with real-life scenarios.",
   },
   {
-    question: "Does it work for short daily practice?",
+    question: "What is free?",
     answer:
-      "Yes. The product is built around short, repeatable rounds so learners can improve one sound at a time instead of sitting through long drills.",
+      "All lessons, exercises, flashcards and the sounds library, for everyone. AI features are free too when they run on your own Cadence at home.",
   },
   {
-    question: "Is there a trial or a local open-source option?",
+    question: "What does Cadence Plus add?",
     answer:
-      "Yes. The monthly and yearly hosted plans both start with a 7-day free trial, and the codebase stays available for anyone who wants to run Cadence locally.",
+      "Cloud AI when your own Cadence is not around: pronunciation scoring, voices, transcription and the coach, plus full history synced across devices. $14.99 a month or $99.99 a year with a 7-day trial.",
   },
   {
-    question: "Why use phoneme feedback instead of a plain transcript?",
+    question: "Is it really open source?",
     answer:
-      "A transcript can hide accent issues that are still understandable. Phoneme comparison is better for showing where a sound is close, but still not correct.",
+      "Yes. The code is public under the MIT licence. Install the desktop app or run the server yourself, pair your phone on home Wi-Fi, and nothing leaves your network.",
   },
 ];
 
@@ -42,7 +42,7 @@ export function FaqSection() {
         <div className="flex h-full flex-col space-y-2">
           <p className="eyebrow text-sm text-sage-green">FAQ</p>
           <h2 className="max-w-md text-3xl font-semibold text-hunter-green">
-            Questions people ask before they commit to daily practice.
+            Questions people ask first.
           </h2>
         </div>
       </Card>

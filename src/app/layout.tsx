@@ -1,9 +1,12 @@
 // FILE: src/app/layout.tsx
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Funnel_Display, Sour_Gummy } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
+import { cookies } from "next/headers";
 import { AppShell } from "@/components/ui/app-shell";
+import { PackCacheRegistration } from "@/components/learn-hub/PackCacheRegistration";
+import { parseThemeChoice, THEME_COOKIE } from "@/components/theme/theme";
 import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 
 const funnelDisplay = Funnel_Display({
@@ -27,19 +30,17 @@ export const metadata: Metadata = {
   applicationName: "Cadence",
   title: {
     template: "%s | Cadence",
-    default: "Cadence — AI Accent Training for Non-Native English Speakers",
+    default: "Cadence: advanced English, out loud",
   },
   description:
-    "Cadence gives non-native English speakers a focused practice loop: record one word, decode the phoneme mismatch, then repeat with a clearer cue. AI-powered accent training that actually sticks.",
+    "Pronunciation with a mouth map for every sound, grammar by CEFR level, sentence building, quizzes, flashcards and a speaking coach. Free and open source to run yourself; Cadence Plus adds cloud AI.",
   keywords: [
-    "accent training",
+    "advanced English",
     "pronunciation practice",
-    "English pronunciation",
-    "phoneme feedback",
-    "AI language learning",
-    "accent clarity",
-    "non-native English speakers",
-    "pronunciation app",
+    "English grammar by CEFR level",
+    "spaced repetition flashcards",
+    "accent training",
+    "open source language learning",
   ],
   authors: [{ name: "Cadence" }],
   robots: {
@@ -50,17 +51,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Cadence",
-    title: "Cadence — AI Accent Training for Non-Native English Speakers",
+    title: "Cadence: advanced English, out loud",
     description:
-      "A focused practice loop: record one word, decode the phoneme mismatch, repeat with a clearer cue. AI-powered pronunciation training that sticks.",
+      "Pronunciation, grammar by level, flashcards and a speaking coach. Run it yourself for free, or add Cadence Plus for cloud AI.",
     url: appUrl,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cadence — AI Accent Training",
+    title: "Cadence: advanced English, out loud",
     description:
-      "Record. Decode the phoneme mismatch. Repeat with a clearer cue. AI pronunciation training for non-native English speakers.",
+      "Pronunciation with a mouth map, grammar by CEFR level, flashcards and a speaking coach.",
   },
   icons: {
     icon: [
@@ -74,19 +75,33 @@ export const metadata: Metadata = {
   manifest: "/favicon/site.webmanifest",
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f2e8cf" },
+    { media: "(prefers-color-scheme: dark)", color: "#121813" },
+  ],
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const runtime = await getRequestRuntime();
+  const theme = parseThemeChoice((await cookies()).get(THEME_COOKIE)?.value);
 
   return (
-    <html lang="en" className={`${funnelDisplay.variable} ${sourGummy.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${funnelDisplay.variable} ${sourGummy.variable}`}
+      data-theme={theme === "system" ? undefined : theme}
+      suppressHydrationWarning
+    >
       <body
         className={`${funnelDisplay.className} min-h-screen bg-vanilla-cream`}
       >
         <AppShell runtime={runtime}>{children}</AppShell>
+        <PackCacheRegistration />
       </body>
     </html>
   );

@@ -13,14 +13,17 @@ export const PROTECTED_ROUTES = [
   "/dictionary",
   "/bookmarks",
   "/profile",
+  "/account",
   "/desktop/setup",
 ] as const;
 
+// /reset-password and /verify-email are deliberately absent: they open links
+// from an email, which must work signed in or out and on a browser left in
+// local mode. The pages themselves handle a build without Firebase.
 export const CLOUD_ONLY_ROUTES = [
   "/login",
   "/signup",
   "/forgot-password",
-  "/reset-password",
   "/checkout",
   "/onboarding",
 ] as const;

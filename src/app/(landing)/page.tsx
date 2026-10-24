@@ -1,298 +1,134 @@
-// FILE: src/app/page.tsx
+// FILE: src/app/(landing)/page.tsx
 import type { Metadata } from "next";
-import Image from "next/image";
-import { Activity, Microphone, PlayCircle } from "griddy-icons";
-import { Navbar } from "@/components/ui/navbar";
+import Link from "next/link";
+import { PlanCards } from "@/components/billing/PlanCards";
+import { loadArticulationTargets } from "@/components/mouth-map/load-targets";
+import { MouthMapDemo, type DemoSound } from "@/components/mouth-map/MouthMapDemo";
+import { targetFor } from "@/components/mouth-map/targets";
 import { Button } from "@/components/ui/button";
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { Footer } from "@/components/ui/footer";
+import { Card } from "@/components/ui/card";
 import { FaqSection } from "@/components/ui/faq-section";
-import { PricingSection } from "@/components/ui/pricing-section";
-import { SplitText } from "@/components/ui/split-text";
-import { TrustedByStrip } from "@/components/ui/trusted-by-strip";
+import { GITHUB_URL } from "@/components/ui/footer";
+import { PageShell } from "@/components/ui/page-shell";
+import { getAppSession } from "@/lib/app-session";
+import { isFirebaseConfigured } from "@/lib/firebase/config";
 
 export const metadata: Metadata = {
-  title: "Speak English Clearly. Sound Confident. Get Understood.",
+  title: { absolute: "Cadence: advanced English, out loud" },
   description:
-    "Most tools give you a score. Cadence shows you exactly which sound is off — then hands you back to the microphone with a clear cue to fix it. Hosted plans for learners, plus an open-source path to run locally.",
-  openGraph: {
-    title: "Cadence — Speak English Clearly. Sound Confident. Get Understood.",
-    description:
-      "Most tools give you a score. Cadence shows you exactly which sound is off — with hosted plans for learners and an open-source local path.",
-  },
+    "Pronunciation with a mouth map for every sound, grammar from A1 to C2, sentence building, flashcards and a speaking coach. Open source and free to run yourself.",
 };
 
-const processCards = [
-  {
-    title: "Speak naturally",
-    description:
-      "Talk the way you normally would — full sentences, real words. Short focused rounds keep the practice loop tight enough to fit into any day.",
-    icon: Microphone,
-  },
-  {
-    title: "See exactly which sound is off",
-    description:
-      "Cadence analyzes how you speak and compares it to the target — surfacing the precise sound that’s pulling your pronunciation off.",
-    icon: Activity,
-  },
-  {
-    title: "Fix it and try again",
-    description:
-      "Every result names the next thing to focus on. Feedback never ends at a score — it hands you straight back to the microphone with a clear target.",
-    icon: PlayCircle,
-  },
+const FEATURES = [
+  { title: "Sounds and the mouth map", body: "See where the tongue, lips and jaw go for every English sound, in American and British English, and compare look-alikes like ship and sheep.", href: "/sounds" },
+  { title: "Pronunciation feedback", body: "Record a word or sentence and get each sound scored, with the weak ones linked straight to their mouth map.", href: "/dashboard" },
+  { title: "Grammar by level", body: "A1 to C2, each point with patterns, real examples and the mistakes people actually make.", href: "/grammar" },
+  { title: "Sentence building", body: "Put words in order, fix wrong sentences and rewrite them, so the grammar sticks in use.", href: "/practice/builder" },
+  { title: "Quizzes and matching", body: "Short rounds graded on your device, with an explanation after every answer.", href: "/practice/quiz" },
+  { title: "Flashcards that come back", body: "Spaced repetition brings each word back just before you would forget it.", href: "/practice/flashcards" },
+  { title: "A speaking coach", body: "Practise a job interview, a meeting, small talk, travel or a presentation, and get short pointers at the end.", href: "/coach" },
+  { title: "Works offline", body: "Lessons and exercises download once and work without a connection.", href: "/practice" },
 ];
 
-const moduleCards = [
-  {
-    title: "Guided modules",
-    description:
-      "A structured sequence that moves from foundational sounds into harder pronunciation patterns — one clear win at a time.",
-  },
-  {
-    title: "B1–C1 conversation practice",
-    description:
-      "Ten leveled speaking scenarios — from coffee chat introductions to client check-in calls — so your practice lands in real dialogue, not isolated drills.",
-  },
-  {
-    title: "Daily reminders",
-    description:
-      "Short nudges that bring you back before the practice streak breaks — not a notification flood, just the right tap at the right moment.",
-  },
-  {
-    title: "Progress and levels",
-    description:
-      "Visible milestones, level-ups, and per-sound mastery so the improvement is something you can actually see and hear.",
-  },
-  {
-    title: "Streak system",
-    description:
-      "A lightweight consistency layer that rewards repeated practice without turning the app into noise.",
-  },
+const DEMO = [
+  { id: "sound.th", label: "th in think" },
+  { id: "sound.s", label: "s in sink" },
+  { id: "sound.r", label: "r in right" },
+  { id: "sound.l", label: "l in light" },
+  { id: "sound.uw", label: "oo in food" },
 ];
 
-export default function Home() {
+export default async function Home({ searchParams }: { searchParams: Promise<{ account?: string }> }) {
+  const [session, { targets }, query] = await Promise.all([getAppSession(), loadArticulationTargets(), searchParams]);
+  const signedIn = session.mode === "cloud" && Boolean(session.user);
+  const demo = DEMO.flatMap((d) => {
+    const target = targetFor(targets, d.id, "GA");
+    return target ? [{ label: d.label, target } satisfies DemoSound] : [];
+  });
+
   return (
-    <main className="min-h-screen px-5 py-5 sm:px-8 lg:px-12">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
-        <Navbar current="home" />
+    <PageShell current="home">
+      {query.account === "deleted" ? (
+        <p role="status" className="rounded-3xl bg-yellow-green px-5 py-4 text-sm font-semibold text-hunter-green">
+          Your account has been deleted. Thanks for practising with Cadence.
+        </p>
+      ) : null}
 
-        <section className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
-          <Card className="bg-hunter-green p-0 text-white">
-            <div className="flex h-full flex-col justify-between gap-6 px-6 py-6 sm:px-8 sm:py-8">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-yellow-green">
-                  <Activity size={18} filled color="currentColor" />
-                  <span className="eyebrow text-sm">Real conversations · Precise feedback · Open source</span>
-                </div>
-                <div className="space-y-3">
-                  <SplitText
-                    text="Most tools tell you what you said. Cadence tells you what to fix."
-                    tag="h1"
-                    delay={22}
-                    duration={760}
-                    className="max-w-3xl text-balance text-4xl font-semibold leading-tight sm:text-5xl"
-                  />
-                  <p className="max-w-2xl text-base leading-8 text-white/78 sm:text-lg">
-                    Speak naturally. Cadence listens, finds the exact sound
-                    you&apos;re getting wrong, and gives you a clear cue to fix
-                    it before your next try. No vague scores. No generic
-                    transcripts. Just the specific sound that needs work.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                <Button href="/dashboard" className="bg-sage-green text-white hover:bg-[#7aa65f]">
-                  Try the practice studio
-                </Button>
-                <Button variant="secondary" href="/signup">
-                  Create an account
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="relative overflow-visible bg-white p-0">
-            <div className="flex h-full flex-col gap-4 px-6 py-6 sm:px-8 sm:py-8">
-              <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-green">
-                  Practice studio
-                </p>
-                <h2 className="font-kicker text-2xl font-semibold text-hunter-green">
-                  Record, compare, and see the gap — all in one view.
-                </h2>
-              </div>
-
-              <div className="flex flex-1 items-center justify-center">
-                <Image
-                  src="/illustration/communication-1.svg"
-                  alt="People communicating"
-                  width={520}
-                  height={380}
-                  className="h-auto w-full max-w-md translate-y-12 object-contain sm:translate-y-14"
-                  priority
-                />
-              </div>
-            </div>
-          </Card>
-        </section>
-
-        <TrustedByStrip />
-
-        <section id="features" className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">
-          <Card className="bg-white">
-            <div className="grid gap-4">
-              {processCards.map(({ title, description, icon: Icon }) => (
-                <div
-                  key={title}
-                  className="rounded-3xl bg-bright-snow px-4 py-4"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="mt-0.5 text-sage-green">
-                      <Icon size={24} filled color="currentColor" />
-                    </div>
-                    <div className="space-y-2">
-                      <CardTitle className="font-kicker text-xl">{title}</CardTitle>
-                      <CardDescription>{description}</CardDescription>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Card>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Card className="bg-vanilla-cream sm:col-span-2">
-              <div className="grid gap-4 md:grid-cols-[0.9fr_1.1fr] md:items-center">
-                <div className="flex items-center justify-center">
-                  <Image
-                    src="/illustration/progress-1.svg"
-                    alt="Progress illustration"
-                    width={420}
-                    height={280}
-                    className="h-auto w-full max-w-xs object-contain"
-                  />
-                </div>
-                <div className="space-y-3">
-                  <p className="eyebrow text-sm text-sage-green">
-                    Built for consistency
-                  </p>
-                  <h2 className="text-3xl font-semibold text-hunter-green">
-                    Five minutes a day beats one long session a week.
-                  </h2>
-                  <p className="text-base leading-8 text-iron-grey">
-                    Cadence is built around a loop short enough to close before
-                    your coffee gets cold: speak, see what&apos;s off, get the
-                    cue, go again. That tightness is the product.
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="bg-hunter-green text-white">
-              <p className="eyebrow text-sm text-yellow-green/80">
-                Not another transcript
-              </p>
-              <p className="mt-4 text-2xl font-semibold">
-                A score doesn&apos;t tell you which sound to fix. Cadence does.
-              </p>
-              <p className="mt-3 text-sm leading-7 text-white/78">
-                Voice apps transcribe what you said. Duolingo logs your streak.
-                Neither tells you which specific sound is pulling your
-                pronunciation off. That gap is exactly what Cadence fills.
-              </p>
-            </Card>
-
-            <Card className="bg-white">
-              <p className="eyebrow text-sm text-sage-green">
-                Who it&apos;s for
-              </p>
-              <p className="mt-4 text-2xl font-semibold text-hunter-green">
-                Non-native speakers who want to be understood, not just assessed.
-              </p>
-              <p className="mt-3 text-sm leading-7 text-iron-grey">
-                Solo learners building a daily habit. Professionals preparing
-                for interviews and clearer workplace communication. Language
-                learners who&apos;ve studied for years but still feel misunderstood.
-              </p>
-            </Card>
+      <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+        <Card className="flex flex-col justify-between gap-8 bg-hunter-green px-6 py-8 text-white sm:px-10 sm:py-10">
+          <div className="space-y-4">
+            <p className="eyebrow text-sm text-yellow-green">Open source · Free to run yourself</p>
+            <h1 className="max-w-2xl text-balance text-4xl font-semibold leading-tight sm:text-6xl">Advanced English, out loud.</h1>
+            <p className="max-w-xl text-base leading-8 text-white/80 sm:text-lg">
+              See how every sound is made, learn grammar level by level, build sentences, keep words with
+              flashcards and talk it through with a coach. All in one place, on the web, desktop and phone.
+            </p>
           </div>
-        </section>
+          <div className="flex flex-wrap gap-3">
+            <Button variant="secondary" href="/practice">Start practising free</Button>
+            <Button href={signedIn ? "/dashboard" : "/signup"} className="bg-white/10 text-white">
+              {signedIn ? "Go to your dashboard" : "Create an account"}
+            </Button>
+          </div>
+        </Card>
+        <Card className="bg-white">
+          <p className="eyebrow text-sm text-sage-green">The mouth map</p>
+          <h2 className="mt-1 font-kicker text-2xl text-hunter-green">Where your tongue should be, for every sound.</h2>
+          <div className="mt-4">{demo.length > 1 ? <MouthMapDemo sounds={demo} /> : null}</div>
+          <Link href="/sounds" className="mt-3 inline-block text-sm font-semibold text-sage-green underline underline-offset-2">
+            Open the sounds library
+          </Link>
+        </Card>
+      </section>
 
-        <section id="pricing">
-          <PricingSection />
-        </section>
+      <section aria-labelledby="features" className="space-y-4">
+        <h2 id="features" className="sr-only">What is in Cadence</h2>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {FEATURES.map((feature) => (
+            <li key={feature.title}>
+              <Link href={feature.href} className="flex h-full flex-col rounded-3xl bg-white px-5 py-5 transition-colors hover:bg-yellow-green">
+                <span className="font-kicker text-xl text-hunter-green">{feature.title}</span>
+                <span className="mt-2 text-sm leading-6 text-iron-grey">{feature.body}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
-        <section id="roadmap" className="grid gap-4 lg:grid-cols-[1fr_1fr]">
-          <Card className="bg-hunter-green text-white">
-            <div className="space-y-4">
-              <p className="eyebrow text-sm text-yellow-green/80">
-                What&apos;s being built
-              </p>
-              <h2 className="max-w-2xl text-3xl font-semibold leading-tight">
-                Pronunciation practice is the foundation. The platform goes further.
-              </h2>
-              <p className="max-w-2xl text-sm leading-8 text-white/78">
-                Cadence is growing into a full pronunciation curriculum: guided
-                modules from B1 to C1, AI conversation practice in real-world
-                scenarios, daily streaks, progress checkpoints, and dedicated
-                flows for students, tutors, and organizations.
-              </p>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {moduleCards.map((module) => (
-                  <div
-                    key={module.title}
-                    className={`rounded-3xl bg-white/10 px-4 py-4 ${
-                      module.title === "Streak system" ? "sm:col-span-2" : ""
-                    }`}
-                  >
-                    <h3 className="text-lg font-semibold">{module.title}</h3>
-                    <p className="mt-2 text-sm leading-7 text-white/76">
-                      {module.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Card>
+      <section className="grid gap-4 lg:grid-cols-2" aria-labelledby="ai">
+        <Card className="bg-white">
+          <p className="eyebrow text-sm text-sage-green">Your own Cadence</p>
+          <h2 id="ai" className="mt-1 text-2xl font-semibold text-hunter-green sm:text-3xl">Run the AI at home, free and unlimited.</h2>
+          <p className="mt-3 text-sm leading-7 text-iron-grey">
+            Install Cadence on your computer and it does the scoring, voices, transcription and coaching itself.
+            Scan a QR code and your phone uses it on the same Wi-Fi. The code is open source under the MIT licence;
+            your recordings never leave your network.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Button href="/download">Download for desktop</Button>
+            <Button href={GITHUB_URL} variant="ghost">Source code</Button>
+          </div>
+        </Card>
+        <Card className="bg-vanilla-cream">
+          <p className="eyebrow text-sm text-sage-green">Cadence Plus</p>
+          <h2 className="mt-1 text-2xl font-semibold text-hunter-green sm:text-3xl">Or let the cloud do it, anywhere.</h2>
+          <p className="mt-3 text-sm leading-7 text-iron-grey">
+            When your computer is not around, Plus runs the same AI on Cadence servers and keeps your full history in
+            sync. Practice without AI stays free either way.
+          </p>
+          <div className="mt-4">
+            <Button href="/pricing" variant="secondary">See plans</Button>
+          </div>
+        </Card>
+      </section>
 
-          <Card className="bg-white p-0">
-            <div className="flex h-full flex-col gap-4 px-6 py-6">
-              <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-green">
-                  Hosted + open source
-                </p>
-                <h2 className="text-2xl font-semibold text-hunter-green">
-                  Subscribe for hosted access, or run Cadence locally.
-                </h2>
-                <p className="text-sm leading-7 text-iron-grey">
-                  Choose the hosted plan if you want the full product
-                  experience with a 7-day trial, or take the open-source route
-                  to run Cadence locally and contribute in public. The roadmap
-                  stays transparent even as the hosted product grows.
-                </p>
-              </div>
+      <section id="pricing" aria-label="Plans">
+        <PlanCards signedIn={signedIn} cloudAvailable={isFirebaseConfigured} />
+      </section>
 
-              <div className="flex flex-1 items-center justify-center">
-                <Image
-                  src="/illustration/following-your-dreams-1.svg"
-                  alt="Growth illustration"
-                  width={430}
-                  height={340}
-                  className="h-auto w-full max-w-sm object-contain"
-                />
-              </div>
-            </div>
-          </Card>
-        </section>
-
-        <section id="faq">
-          <FaqSection />
-        </section>
-
-        <Footer />
-      </div>
-    </main>
+      <section id="faq">
+        <FaqSection />
+      </section>
+    </PageShell>
   );
 }

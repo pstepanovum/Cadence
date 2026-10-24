@@ -25,6 +25,7 @@ import {
 } from "@/lib/ai-coach-storage";
 import type { PronunciationAssessment } from "@/lib/pronunciation";
 import { cn } from "@/lib/utils";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 interface EngineStatusPayload {
   ready?: boolean;
@@ -351,11 +352,11 @@ export function AiCoachPlayground({
     if (cached) return cached;
 
     const params = new URLSearchParams({ text: turn.coachMessage, instruct });
-    const response = await fetch(`/api/reference-audio?${params.toString()}`, { cache: "no-store" });
+    const response = await cloudFetch(`/api/reference-audio?${params.toString()}`, { ai: true, cache: "no-store" });
 
     if (!response.ok) {
       const payload = (await response.json().catch(() => null)) as { error?: string } | null;
-      throw new Error(payload?.error ?? "Coach audio is unavailable.");
+      throw new Error(aiErrorText(payload, "Coach audio is unavailable."));
     }
 
     const blob = await response.blob();
@@ -487,7 +488,7 @@ export function AiCoachPlayground({
     try {
       if (action === "start") resetCoachSession();
 
-      const response = await fetch("/api/ai-coach", {
+      const response = await cloudFetch("/api/ai-coach", { ai: true,
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -499,7 +500,7 @@ export function AiCoachPlayground({
       } | null;
 
       if (!response.ok || !data?.turn) {
-        throw new Error(data?.error ?? "AI Coach could not generate the next turn.");
+        throw new Error(aiErrorText(data, "AI Coach could not generate the next turn."));
       }
 
       const nextTurn = createTurn(data.turn);
@@ -534,7 +535,7 @@ export function AiCoachPlayground({
         const formData = new FormData();
         formData.set("audio", blob, `${currentTurn.id}.wav`);
 
-        const response = await fetch("/api/transcribe", { method: "POST", body: formData });
+        const response = await cloudFetch("/api/transcribe", { ai: true, method: "POST", body: formData });
         const payload = (await response.json().catch(() => null)) as
           | AiCoachTranscriptPayload
           | { error?: string }
@@ -542,7 +543,7 @@ export function AiCoachPlayground({
 
         if (!response.ok || !payload || "error" in payload) {
           throw new Error(
-            payload && "error" in payload ? payload.error : "Reply transcription failed.",
+            aiErrorText(payload, "Reply transcription failed."),
           );
         }
 
@@ -554,7 +555,7 @@ export function AiCoachPlayground({
           assessmentFormData.set("audio", blob, `${currentTurn.id}.wav`);
           assessmentFormData.set("text", nextTranscript);
 
-          const assessmentResponse = await fetch("/api/assess", {
+          const assessmentResponse = await cloudFetch("/api/assess", { ai: true,
             method: "POST",
             body: assessmentFormData,
           });
@@ -580,7 +581,7 @@ export function AiCoachPlayground({
         formData.set("audio", blob, `${currentTurn.id}.wav`);
         formData.set("text", currentTurn.learnerReply);
 
-        const response = await fetch("/api/assess", { method: "POST", body: formData });
+        const response = await cloudFetch("/api/assess", { ai: true, method: "POST", body: formData });
         const payload = (await response.json().catch(() => null)) as
           | PronunciationAssessment
           | { error?: string }
@@ -588,7 +589,7 @@ export function AiCoachPlayground({
 
         if (!response.ok || !payload || "error" in payload) {
           throw new Error(
-            payload && "error" in payload ? payload.error : "Pronunciation assessment failed.",
+            aiErrorText(payload, "Pronunciation assessment failed."),
           );
         }
 

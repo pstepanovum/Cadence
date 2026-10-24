@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { ProgressRing } from "@/components/learn/ProgressRing";
 import type { PronunciationAssessment } from "@/lib/pronunciation";
 import { cn } from "@/lib/utils";
+import { SoundLink } from "@/components/mouth-map/SoundLink";
 
 function getHighlightStyles(status: PronunciationAssessment["highlights"][number]["status"]) {
   if (status === "correct") return "bg-yellow-green text-hunter-green";
@@ -164,6 +165,7 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
                   <p className="mt-3 text-sm leading-6">
                     Expected {phoneme.expected}, heard {phoneme.heard}.
                   </p>
+                  <SoundLink symbol={phoneme.expected} className="mt-1" />
                 </div>
               ))}
             </div>

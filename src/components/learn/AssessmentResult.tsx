@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import { ProgressRing } from "@/components/learn/ProgressRing";
 import { Button } from "@/components/ui/button";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
+import { RecordPhonemes, SoundLink } from "@/components/mouth-map/SoundLink";
 
 function getHighlightStyles(status: PronunciationHighlight["status"]) {
   if (status === "correct") {
@@ -385,8 +386,10 @@ export function AssessmentResult({
                   <p className="mt-3 text-sm leading-6">
                     Expected {phoneme.expected}, heard {phoneme.heard}.
                   </p>
+                  <SoundLink symbol={phoneme.expected} className="mt-1" />
                 </div>
               ))}
+              <RecordPhonemes phonemes={assessment.phonemes} />
             </div>
           </div>
         ) : null}

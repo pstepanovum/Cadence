@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Pause, Play } from "griddy-icons";
 import { Button } from "@/components/ui/button";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 interface TheoryNarrationButtonProps {
   title: string;
@@ -67,7 +68,7 @@ export function TheoryNarrationButton({
 
       if (!prefetchPromiseRef.current) {
         prefetchPromiseRef.current = (async () => {
-          const response = await fetch("/api/reference-audio/generate", {
+          const response = await cloudFetch("/api/reference-audio/generate", { ai: true,
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -79,7 +80,7 @@ export function TheoryNarrationButton({
             const payload = (await response.json().catch(() => null)) as
               | { error?: string }
               | null;
-            throw new Error(payload?.error ?? "Theory narration is unavailable.");
+            throw new Error(aiErrorText(payload, "Theory narration is unavailable."));
           }
 
           const blob = await response.blob();

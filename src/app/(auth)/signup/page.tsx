@@ -1,15 +1,13 @@
 // FILE: src/app/(auth)/signup/page.tsx
 import type { Metadata } from "next";
 import { AuthForm } from "@/components/auth/AuthForm";
-import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 
 export const metadata: Metadata = {
-  title: "Create an Account",
-  description: "Sign up for Cadence and start building a real pronunciation practice habit.",
+  title: "Create an account",
+  description: "Create a free Cadence account; your streak and stats follow you to every device.",
   robots: { index: false, follow: false },
 };
 
-export default async function SignupPage() {
-  const runtime = await getRequestRuntime();
-  return <AuthForm mode="signup" runtime={runtime} />;
+export default function SignupPage() {
+  return <AuthForm mode="signup" />;
 }

@@ -1,15 +1,13 @@
 // FILE: src/app/(auth)/reset-password/page.tsx
 import type { Metadata } from "next";
 import { ResetPasswordForm } from "@/components/auth/ResetPasswordForm";
-import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 
 export const metadata: Metadata = {
-  title: "Reset Password",
-  description: "Set a new password for your Cadence account.",
+  title: "Choose a new password",
   robots: { index: false, follow: false },
+  referrer: "no-referrer",
 };
 
-export default async function ResetPasswordPage() {
-  const runtime = await getRequestRuntime();
-  return <ResetPasswordForm runtime={runtime} />;
+export default function ResetPasswordPage() {
+  return <ResetPasswordForm />;
 }

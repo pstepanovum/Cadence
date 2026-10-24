@@ -12,6 +12,8 @@ import {
   type PronunciationHighlight,
 } from "@/lib/pronunciation";
 import { cn } from "@/lib/utils";
+import { RecordPhonemes, SoundLink } from "@/components/mouth-map/SoundLink";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 interface PracticeStudioProps {
   targetWord: string;
@@ -114,7 +116,7 @@ export function PracticeStudio({
       formData.set("audio", blob, `${targetWord.toLowerCase()}-attempt.wav`);
       formData.set("text", targetWord);
 
-      const response = await fetch("/api/assess", {
+      const response = await cloudFetch("/api/assess", { ai: true,
         method: "POST",
         body: formData,
       });
@@ -124,11 +126,7 @@ export function PracticeStudio({
         | { error?: string };
 
       if (!response.ok || ("error" in payload && typeof payload.error === "string")) {
-        throw new Error(
-          "error" in payload && payload.error
-            ? payload.error
-            : "Pronunciation assessment failed.",
-        );
+        throw new Error(aiErrorText(payload, "Pronunciation assessment failed."));
       }
 
       const result = payload as PronunciationAssessment;
@@ -272,8 +270,10 @@ export function PracticeStudio({
                   <p className="mt-3 text-lg font-semibold">
                     {phoneme.accuracy}%
                   </p>
+                  <SoundLink symbol={phoneme.expected} className="mt-1" />
                 </div>
               ))}
+              <RecordPhonemes phonemes={assessment.phonemes} />
             </div>
 
             <div className="rounded-3xl bg-bright-snow p-5">

@@ -14,6 +14,7 @@ import { useCoachVoice } from "@/hooks/useCoachVoice";
 import { useEngineReady } from "@/hooks/useEngineReady";
 import { saveConversationScore } from "@/lib/lesson-progress-client";
 import { playLearnerRecordingSegment } from "@/lib/audio-feedback";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 export type Phase = "intro" | "coach" | "recording" | "assessing" | "result" | "done";
 export type CoachAudioState = "idle" | "loading" | "playing" | "ready" | "error";
@@ -151,11 +152,11 @@ export function ConversationSession({
     if (cached) return cached;
 
     const params = new URLSearchParams({ text: coachMessage, instruct });
-    const response = await fetch(`/api/reference-audio?${params.toString()}`, { cache: "no-store" });
+    const response = await cloudFetch(`/api/reference-audio?${params.toString()}`, { ai: true, cache: "no-store" });
 
     if (!response.ok) {
       const payload = (await response.json().catch(() => null)) as { error?: string } | null;
-      throw new Error(payload?.error ?? "Coach audio is unavailable for this turn.");
+      throw new Error(aiErrorText(payload, "Coach audio is unavailable for this turn."));
     }
 
     const blob = await response.blob();
@@ -322,11 +323,11 @@ export function ConversationSession({
       formData.set("audio", blob, `${currentTurn.id}.wav`);
       formData.set("text", currentTurn.expectedResponse);
 
-      const response = await fetch("/api/assess", { method: "POST", body: formData });
+      const response = await cloudFetch("/api/assess", { ai: true, method: "POST", body: formData });
       const payload = (await response.json()) as PronunciationAssessment | { error?: string };
 
       if (!response.ok || ("error" in payload && payload.error)) {
-        throw new Error("error" in payload ? payload.error : "Assessment failed.");
+        throw new Error(aiErrorText(payload, "Assessment failed."));
       }
 
       setAssessment(payload as PronunciationAssessment);

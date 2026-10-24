@@ -9,6 +9,7 @@ import {
   type CoachVoiceSettings,
   DEFAULT_VOICE_SETTINGS,
 } from "@/hooks/useCoachVoice";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 const SAMPLE_TEXT =
   "Hello! I'm your pronunciation coach. Say the word clearly, and I'll guide you through every sound.";
@@ -104,7 +105,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
     try {
       setIsLoading(true);
       const params = new URLSearchParams({ text: SAMPLE_TEXT, instruct });
-      const response = await fetch(`/api/reference-audio?${params.toString()}`, {
+      const response = await cloudFetch(`/api/reference-audio?${params.toString()}`, { ai: true,
         cache: "no-store",
       });
 
@@ -112,7 +113,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
         const payload = (await response.json().catch(() => null)) as
           | { error?: string }
           | null;
-        throw new Error(payload?.error ?? "Voice sample unavailable.");
+        throw new Error(aiErrorText(payload, "Voice sample unavailable."));
       }
 
       const blob = await response.blob();

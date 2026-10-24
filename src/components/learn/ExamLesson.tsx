@@ -17,6 +17,7 @@ import { AssessmentResult } from "@/components/learn/AssessmentResult";
 import { ExamResult } from "@/components/learn/ExamResult";
 import { WordQueue } from "@/components/learn/WordQueue";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 interface ExamLessonProps {
   lesson: Lesson;
@@ -100,11 +101,11 @@ export function ExamLesson({
       formData.set("audio", blob, `${currentWord.word}-exam.wav`);
       formData.set("text", currentWord.word);
 
-      const response = await fetch("/api/assess", { method: "POST", body: formData });
+      const response = await cloudFetch("/api/assess", { ai: true, method: "POST", body: formData });
       const payload = (await response.json()) as PronunciationAssessment | { error?: string };
 
       if (!response.ok || ("error" in payload && payload.error)) {
-        throw new Error("error" in payload ? payload.error : "Assessment failed.");
+        throw new Error(aiErrorText(payload, "Assessment failed."));
       }
 
       const result = payload as PronunciationAssessment;

@@ -99,6 +99,22 @@ describe("cloud mode", () => {
     });
   });
 
+  it("opens email links signed in, signed out and in local mode", () => {
+    for (const pathname of ["/reset-password", "/verify-email"]) {
+      assert.deepEqual(decideRoute(gate({ pathname, signedIn: true })), { action: "next" });
+      assert.deepEqual(decideRoute(gate({ pathname })), { action: "next" });
+      assert.deepEqual(decideRoute(gate({ pathname, mode: "local", hasLocalProfile: true })), { action: "next" });
+    }
+  });
+
+  it("keeps the account page behind sign-in", () => {
+    assert.deepEqual(decideRoute(gate({ pathname: "/account" })), {
+      action: "redirect",
+      pathname: "/login",
+      keepNext: true,
+    });
+  });
+
   it("lets a signed-in person reach checkout and onboarding after sign-up", () => {
     for (const pathname of ["/checkout", "/onboarding", "/dashboard"]) {
       assert.deepEqual(decideRoute(gate({ pathname, signedIn: true })), { action: "next" });

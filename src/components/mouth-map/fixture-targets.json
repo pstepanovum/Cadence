@@ -1,0 +1,1876 @@
+{
+ "format": 1,
+ "fixture": true,
+ "note": "Placeholder targets for the web until content/articulation/*.json is committed. Every target is hand-tuned and needs review.",
+ "targets": [
+  {
+   "soundId": "sound.p",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": -3,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "bilabial",
+   "manner": "plosive",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "lips"
+   ],
+   "overlays": [
+    "plosiveBurst"
+   ],
+   "anchor": "bilabial",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.b",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": -3,
+    "lipProtrusion": 0,
+    "larynxHeight": -1,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "bilabial",
+   "manner": "plosive",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "lips",
+    "glottis"
+   ],
+   "overlays": [
+    "plosiveBurst"
+   ],
+   "anchor": "bilabial",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.t",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.5,
+    "tongueShape": -1,
+    "tongueApex": 2.3,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "alveolar",
+   "manner": "plosive",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "alveolarRidge"
+   ],
+   "overlays": [
+    "tongueTipContact",
+    "plosiveBurst"
+   ],
+   "anchor": "alveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.d",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -0.5,
+    "tongueShape": -1,
+    "tongueApex": 2.3,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "alveolar",
+   "manner": "plosive",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "alveolarRidge",
+    "glottis"
+   ],
+   "overlays": [
+    "tongueTipContact",
+    "plosiveBurst"
+   ],
+   "anchor": "alveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.k",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -1.5,
+    "tongueShape": 3,
+    "tongueApex": -3,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "velar",
+   "manner": "plosive",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "tongueBody",
+    "velum"
+   ],
+   "overlays": [
+    "plosiveBurst"
+   ],
+   "anchor": "velar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.g",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -1.5,
+    "tongueShape": 3,
+    "tongueApex": -3,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "velar",
+   "manner": "plosive",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueBody",
+    "velum",
+    "glottis"
+   ],
+   "overlays": [
+    "plosiveBurst"
+   ],
+   "anchor": "velar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.f",
+   "variant": "both",
+   "params": {
+    "jaw": 2,
+    "tonguePosition": 1,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": -1.5,
+    "lipProtrusion": -2,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "labiodental",
+   "manner": "fricative",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "lips",
+    "teeth"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "labiodental",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.v",
+   "variant": "both",
+   "params": {
+    "jaw": 2,
+    "tonguePosition": 1,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": -1.5,
+    "lipProtrusion": -2,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "labiodental",
+   "manner": "fricative",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "lips",
+    "teeth",
+    "glottis"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "labiodental",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.th",
+   "variant": "both",
+   "params": {
+    "jaw": 1,
+    "tonguePosition": -1,
+    "tongueShape": -0.5,
+    "tongueApex": 1.5,
+    "lipAperture": 0.5,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "dental",
+   "manner": "fricative",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "teeth"
+   ],
+   "overlays": [
+    "tongueBetweenTeeth",
+    "centralAirflow"
+   ],
+   "anchor": "dental",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.dh",
+   "variant": "both",
+   "params": {
+    "jaw": 1,
+    "tonguePosition": -1,
+    "tongueShape": -0.5,
+    "tongueApex": 1.5,
+    "lipAperture": 0.5,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "dental",
+   "manner": "fricative",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "teeth",
+    "glottis"
+   ],
+   "overlays": [
+    "tongueBetweenTeeth",
+    "centralAirflow"
+   ],
+   "anchor": "dental",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.s",
+   "variant": "both",
+   "params": {
+    "jaw": 2.5,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0.4,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "alveolar",
+   "manner": "fricative",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "alveolarRidge"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "alveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.z",
+   "variant": "both",
+   "params": {
+    "jaw": 2.5,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0.4,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "alveolar",
+   "manner": "fricative",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "alveolarRidge",
+    "glottis"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "alveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.sh",
+   "variant": "both",
+   "params": {
+    "jaw": 1.5,
+    "tonguePosition": 0.5,
+    "tongueShape": 0.5,
+    "tongueApex": 1,
+    "lipAperture": 0,
+    "lipProtrusion": 1.5,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "postalveolar",
+   "manner": "fricative",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "tongueBlade",
+    "hardPalate",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding",
+    "centralAirflow"
+   ],
+   "anchor": "postalveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.zh",
+   "variant": "both",
+   "params": {
+    "jaw": 1.5,
+    "tonguePosition": 0.5,
+    "tongueShape": 0.5,
+    "tongueApex": 1,
+    "lipAperture": 0,
+    "lipProtrusion": 1.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "postalveolar",
+   "manner": "fricative",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueBlade",
+    "hardPalate",
+    "lips",
+    "glottis"
+   ],
+   "overlays": [
+    "lipRounding",
+    "centralAirflow"
+   ],
+   "anchor": "postalveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.hh",
+   "variant": "both",
+   "params": {
+    "jaw": -1,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": 0.5,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -3,
+    "glottalFrequency": -3,
+    "velum": -3
+   },
+   "place": "glottal",
+   "manner": "fricative",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "glottis"
+   ],
+   "overlays": [
+    "glottalFriction"
+   ],
+   "anchor": "glottal",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ch",
+   "variant": "both",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": -0.5,
+      "tongueShape": -1,
+      "tongueApex": 2.3,
+      "lipAperture": 0,
+      "lipProtrusion": 0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -3,
+      "glottalFrequency": -3,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 1.5,
+      "tonguePosition": 0.5,
+      "tongueShape": 0.5,
+      "tongueApex": 1,
+      "lipAperture": 0,
+      "lipProtrusion": 1.5,
+      "larynxHeight": 0,
+      "glottalAperture": -3,
+      "glottalFrequency": -3,
+      "velum": -3
+     }
+    }
+   ],
+   "place": "postalveolar",
+   "manner": "affricate",
+   "voicing": "voiceless",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "tongueBlade",
+    "alveolarRidge"
+   ],
+   "overlays": [
+    "tongueTipContact",
+    "lipRounding"
+   ],
+   "anchor": "postalveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.jh",
+   "variant": "both",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": -0.5,
+      "tongueShape": -1,
+      "tongueApex": 2.3,
+      "lipAperture": 0,
+      "lipProtrusion": 0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 1.5,
+      "tonguePosition": 0.5,
+      "tongueShape": 0.5,
+      "tongueApex": 1,
+      "lipAperture": 0,
+      "lipProtrusion": 1.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "place": "postalveolar",
+   "manner": "affricate",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueTip",
+    "tongueBlade",
+    "alveolarRidge",
+    "glottis"
+   ],
+   "overlays": [
+    "tongueTipContact",
+    "lipRounding"
+   ],
+   "anchor": "postalveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.m",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": -3,
+    "lipProtrusion": -1,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": 0
+   },
+   "place": "bilabial",
+   "manner": "nasal",
+   "voicing": "voiced",
+   "airflow": "nasal",
+   "highlight": [
+    "lips",
+    "velum"
+   ],
+   "overlays": [
+    "nasalAirflow"
+   ],
+   "anchor": "nasalExit",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.n",
+   "variant": "both",
+   "params": {
+    "jaw": 0.5,
+    "tonguePosition": 0,
+    "tongueShape": 0,
+    "tongueApex": 3,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": 0
+   },
+   "place": "alveolar",
+   "manner": "nasal",
+   "voicing": "voiced",
+   "airflow": "nasal",
+   "highlight": [
+    "tongueTip",
+    "alveolarRidge",
+    "velum"
+   ],
+   "overlays": [
+    "tongueTipContact",
+    "nasalAirflow"
+   ],
+   "anchor": "nasalExit",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ng",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -1.5,
+    "tongueShape": 3,
+    "tongueApex": -3,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": 0
+   },
+   "place": "velar",
+   "manner": "nasal",
+   "voicing": "voiced",
+   "airflow": "nasal",
+   "highlight": [
+    "tongueBody",
+    "velum"
+   ],
+   "overlays": [
+    "nasalAirflow"
+   ],
+   "anchor": "nasalExit",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.l",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -2,
+    "tongueShape": 3,
+    "tongueApex": 3,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "alveolar",
+   "manner": "lateral-approximant",
+   "voicing": "voiced",
+   "airflow": "lateral",
+   "highlight": [
+    "tongueTip",
+    "alveolarRidge"
+   ],
+   "overlays": [
+    "tongueTipContact",
+    "lateralAirflow"
+   ],
+   "anchor": "alveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.r",
+   "variant": "both",
+   "params": {
+    "jaw": 0.5,
+    "tonguePosition": 0.5,
+    "tongueShape": 1,
+    "tongueApex": 1.5,
+    "lipAperture": 0,
+    "lipProtrusion": 1,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "postalveolar",
+   "manner": "approximant",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueBody",
+    "tongueTip",
+    "lips"
+   ],
+   "overlays": [
+    "bunchedTongue",
+    "lipRounding"
+   ],
+   "anchor": "postalveolar",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.w",
+   "variant": "both",
+   "params": {
+    "jaw": 0.5,
+    "tonguePosition": 2,
+    "tongueShape": 1.5,
+    "tongueApex": -2,
+    "lipAperture": -2,
+    "lipProtrusion": 2.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "labial-velar",
+   "manner": "approximant",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "lips",
+    "tongueBody"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.y",
+   "variant": "both",
+   "params": {
+    "jaw": 1,
+    "tonguePosition": 0,
+    "tongueShape": 2,
+    "tongueApex": 0,
+    "lipAperture": 0,
+    "lipProtrusion": 0,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "place": "palatal",
+   "manner": "approximant",
+   "voicing": "voiced",
+   "airflow": "central",
+   "highlight": [
+    "tongueBody",
+    "hardPalate"
+   ],
+   "overlays": [
+    "lipSpreading"
+   ],
+   "anchor": "palatal",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.iy",
+   "variant": "both",
+   "params": {
+    "jaw": 0.5,
+    "tonguePosition": -2,
+    "tongueShape": 1,
+    "tongueApex": -2,
+    "lipAperture": 1,
+    "lipProtrusion": -1,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ih",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": -1.5,
+    "tongueShape": 0.5,
+    "tongueApex": -1.5,
+    "lipAperture": 1,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.eh",
+   "variant": "both",
+   "params": {
+    "jaw": -1.5,
+    "tonguePosition": -0.5,
+    "tongueShape": 0.5,
+    "tongueApex": -1,
+    "lipAperture": 1,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ae",
+   "variant": "both",
+   "params": {
+    "jaw": -2,
+    "tonguePosition": -1,
+    "tongueShape": 0,
+    "tongueApex": -0.5,
+    "lipAperture": 1.5,
+    "lipProtrusion": -1,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-open",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "jaw",
+    "tongueBody"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.aa",
+   "variant": "both",
+   "params": {
+    "jaw": -1.5,
+    "tonguePosition": 2.5,
+    "tongueShape": 0,
+    "tongueApex": -0.5,
+    "lipAperture": 0.5,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "back",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "jaw",
+    "tongueRoot"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.oh",
+   "variant": "RP",
+   "params": {
+    "jaw": -1.5,
+    "tonguePosition": 2.8,
+    "tongueShape": 0.5,
+    "tongueApex": -0.5,
+    "lipAperture": 0,
+    "lipProtrusion": 1,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "jaw",
+    "tongueRoot",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ao",
+   "variant": "both",
+   "params": {
+    "jaw": -1,
+    "tonguePosition": 3,
+    "tongueShape": 1,
+    "tongueApex": -0.5,
+    "lipAperture": -0.3,
+    "lipProtrusion": 1.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.uh",
+   "variant": "both",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 1.8,
+    "tongueShape": 1,
+    "tongueApex": -1.5,
+    "lipAperture": -0.5,
+    "lipProtrusion": 1,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.uw",
+   "variant": "both",
+   "params": {
+    "jaw": 0.5,
+    "tonguePosition": 2,
+    "tongueShape": 1.5,
+    "tongueApex": -2,
+    "lipAperture": -1,
+    "lipProtrusion": 1.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "lips"
+   ],
+   "overlays": [
+    "lipRounding"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ah",
+   "variant": "both",
+   "params": {
+    "jaw": -1.2,
+    "tonguePosition": 1.5,
+    "tongueShape": 0,
+    "tongueApex": 0,
+    "lipAperture": 0.8,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ax",
+   "variant": "both",
+   "params": {
+    "jaw": -1.5,
+    "tonguePosition": 1.5,
+    "tongueShape": 0,
+    "tongueApex": 0.5,
+    "lipAperture": 0.5,
+    "lipProtrusion": -0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.er",
+   "variant": "GA",
+   "params": {
+    "jaw": 0,
+    "tonguePosition": 0.5,
+    "tongueShape": 1,
+    "tongueApex": 1.5,
+    "lipAperture": 0,
+    "lipProtrusion": 0.8,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "tongueTip"
+   ],
+   "overlays": [
+    "bunchedTongue"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.er",
+   "variant": "RP",
+   "params": {
+    "jaw": -0.5,
+    "tonguePosition": 1,
+    "tongueShape": 0.5,
+    "tongueApex": 0,
+    "lipAperture": 0.5,
+    "lipProtrusion": -0.3,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.axr",
+   "variant": "GA",
+   "params": {
+    "jaw": -0.5,
+    "tonguePosition": 0.8,
+    "tongueShape": 0.8,
+    "tongueApex": 1.2,
+    "lipAperture": 0.3,
+    "lipProtrusion": 0.5,
+    "larynxHeight": 0,
+    "glottalAperture": -1,
+    "glottalFrequency": 0,
+    "velum": -3
+   },
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "mid",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "tongueTip"
+   ],
+   "overlays": [
+    "bunchedTongue"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ey",
+   "variant": "both",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1,
+      "tonguePosition": -1,
+      "tongueShape": 1,
+      "tongueApex": -2,
+      "lipAperture": 1,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0.5,
+      "tonguePosition": -2,
+      "tongueShape": 1,
+      "tongueApex": -2,
+      "lipAperture": 1,
+      "lipProtrusion": -1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close-mid",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ay",
+   "variant": "both",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1.5,
+      "tonguePosition": 2.5,
+      "tongueShape": 0,
+      "tongueApex": -0.5,
+      "lipAperture": 0.5,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": -1.5,
+      "tongueShape": 0.5,
+      "tongueApex": -1.5,
+      "lipAperture": 1,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.oy",
+   "variant": "both",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1,
+      "tonguePosition": 3,
+      "tongueShape": 1,
+      "tongueApex": -0.5,
+      "lipAperture": -0.3,
+      "lipProtrusion": 1.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": -1.5,
+      "tongueShape": 0.5,
+      "tongueApex": -1.5,
+      "lipAperture": 1,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ow",
+   "variant": "GA",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -0.4,
+      "tonguePosition": 3,
+      "tongueShape": 1.5,
+      "tongueApex": 0,
+      "lipAperture": -0.3,
+      "lipProtrusion": 0,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 1.8,
+      "tongueShape": 1,
+      "tongueApex": -1.5,
+      "lipAperture": -0.5,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "close-mid",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ow",
+   "variant": "RP",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1.5,
+      "tonguePosition": 1.5,
+      "tongueShape": 0,
+      "tongueApex": 0.5,
+      "lipAperture": 0.5,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 1.8,
+      "tongueShape": 1,
+      "tongueApex": -1.5,
+      "lipAperture": -0.5,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "mid",
+    "backness": "central",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.aw",
+   "variant": "both",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1.5,
+      "tonguePosition": 2.5,
+      "tongueShape": 0,
+      "tongueApex": -0.5,
+      "lipAperture": 0.5,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 1.8,
+      "tongueShape": 1,
+      "tongueApex": -1.5,
+      "lipAperture": -0.5,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open",
+    "backness": "central",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ia",
+   "variant": "RP",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": -1.5,
+      "tongueShape": 0.5,
+      "tongueApex": -1.5,
+      "lipAperture": 1,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": -1.5,
+      "tonguePosition": 1.5,
+      "tongueShape": 0,
+      "tongueApex": 0.5,
+      "lipAperture": 0.5,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ea",
+   "variant": "RP",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": -1.5,
+      "tonguePosition": -0.5,
+      "tongueShape": 0.5,
+      "tongueApex": -1,
+      "lipAperture": 1,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": -1.5,
+      "tonguePosition": 1.5,
+      "tongueShape": 0,
+      "tongueApex": 0.5,
+      "lipAperture": 0.5,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "open-mid",
+    "backness": "front",
+    "rounding": "unrounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  },
+  {
+   "soundId": "sound.ua",
+   "variant": "RP",
+   "trajectory": [
+    {
+     "at": 0,
+     "params": {
+      "jaw": 0,
+      "tonguePosition": 1.8,
+      "tongueShape": 1,
+      "tongueApex": -1.5,
+      "lipAperture": -0.5,
+      "lipProtrusion": 1,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    },
+    {
+     "at": 1,
+     "params": {
+      "jaw": -1.5,
+      "tonguePosition": 1.5,
+      "tongueShape": 0,
+      "tongueApex": 0.5,
+      "lipAperture": 0.5,
+      "lipProtrusion": -0.5,
+      "larynxHeight": 0,
+      "glottalAperture": -1,
+      "glottalFrequency": 0,
+      "velum": -3
+     }
+    }
+   ],
+   "voicing": "voiced",
+   "airflow": "central",
+   "vowel": {
+    "height": "near-close",
+    "backness": "back",
+    "rounding": "rounded"
+   },
+   "highlight": [
+    "tongueBody",
+    "jaw",
+    "lips"
+   ],
+   "overlays": [
+    "centralAirflow"
+   ],
+   "anchor": "lipOpening",
+   "source": {
+    "method": "hand-tuned",
+    "references": []
+   },
+   "needsReview": true
+  }
+ ]
+}

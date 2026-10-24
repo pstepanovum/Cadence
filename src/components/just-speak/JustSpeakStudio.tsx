@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
 import { cn } from "@/lib/utils";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 type JustSpeakFeedback = {
   overallSummary: string;
@@ -130,12 +131,12 @@ export function JustSpeakStudio() {
     try {
       setIsLoadingVoice(true);
       const params = new URLSearchParams({ text: coachScript, instruct });
-      const response = await fetch(`/api/reference-audio?${params.toString()}`, {
+      const response = await cloudFetch(`/api/reference-audio?${params.toString()}`, { ai: true,
         cache: "no-store",
       });
       if (!response.ok) {
         const payload = (await response.json().catch(() => null)) as { error?: string } | null;
-        throw new Error(payload?.error ?? "Coach voice unavailable.");
+        throw new Error(aiErrorText(payload, "Coach voice unavailable."));
       }
 
       const blob = await response.blob();
@@ -169,11 +170,11 @@ export function JustSpeakStudio() {
     try {
       const formData = new FormData();
       formData.set("audio", blob, "just-speak.wav");
-      const response = await fetch("/api/just-speak", { method: "POST", body: formData });
+      const response = await cloudFetch("/api/just-speak", { ai: true, method: "POST", body: formData });
       const payload = (await response.json().catch(() => null)) as JustSpeakResult | { error?: string } | null;
 
       if (!response.ok || !payload || ("error" in payload && payload.error)) {
-        throw new Error((payload as { error?: string } | null)?.error ?? "Just Speak failed.");
+        throw new Error(aiErrorText(payload, "Just Speak failed."));
       }
 
       setResult(payload as JustSpeakResult);

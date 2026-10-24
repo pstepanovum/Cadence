@@ -1,166 +1,98 @@
+// FILE: src/app/(landing)/terms/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Navbar } from "@/components/ui/navbar";
-import { Card } from "@/components/ui/card";
-import { Footer } from "@/components/ui/footer";
-import { Button } from "@/components/ui/button";
+import { SUPPORT_EMAIL } from "@/components/ui/contact";
+import { GITHUB_URL } from "@/components/ui/footer";
+import { LegalBody, type LegalSection } from "@/components/ui/legal-page";
+import { PageIntro, PageShell } from "@/components/ui/page-shell";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description:
-    "The terms that govern your use of Cadence — free, open source pronunciation practice for non-native English speakers.",
-  robots: { index: true, follow: true },
+  description: "The terms for using Cadence, including Cadence Plus subscriptions.",
 };
 
-const sections = [
+const UPDATED = "October 24, 2026";
+const mail = <a href={`mailto:${SUPPORT_EMAIL}`} className="underline">{SUPPORT_EMAIL}</a>;
+
+const sections: LegalSection[] = [
+  { id: "acceptance", title: "Agreeing to these terms", body: <p>By using Cadence you agree to these terms. If you do not agree, do not use it. They apply to the website, the desktop app and the iPhone app.</p> },
   {
-    title: "Acceptance of terms",
-    body: `By accessing or using Cadence, you agree to these Terms of Service. If you do not agree, do not use the product. These terms apply to all visitors, registered users, and anyone who accesses any part of the service.`,
-  },
-  {
+    id: "service",
     title: "The service",
-    body: `Cadence is an AI-powered pronunciation practice platform for non-native English speakers. It is free to use and open source. We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.`,
+    body: <p>Cadence is a platform for practising advanced English. Practice without AI is free. Running Cadence on your own computer is free and open source. Cadence Plus is a paid subscription for AI on our servers. We may change or stop parts of the service with reasonable notice.</p>,
   },
   {
+    id: "accounts",
     title: "Accounts",
-    body: `You must be at least 13 years old to create an account. You are responsible for keeping your login credentials secure and for all activity that occurs under your account. If you suspect unauthorised access, contact us at support@cadence.app immediately.
-
-You may not create accounts on behalf of others without their consent, impersonate any person, or register with false information.`,
+    body: <p>You must be at least 13 to create an account. Keep your password safe; you are responsible for activity on your account. Tell us at {mail} if you think someone else is using it. Do not create accounts for other people without their consent or with false details.</p>,
   },
   {
+    id: "plus",
+    title: "Cadence Plus subscriptions",
+    body: (
+      <>
+        <p>Plus costs $14.99 per month or $99.99 per year (prices may vary by country and include tax where required). The yearly plan starts with a 7-day free trial for people who have not had one before; you are charged when the trial ends unless you cancel at least 24 hours before.</p>
+        <p>Subscriptions renew automatically at the same price for the same period until cancelled. Cancel on the web from your <Link href="/account" className="underline">account page</Link>, or on iPhone in Settings › your name › Subscriptions. Cancelling stops the next renewal; Plus stays on until the end of the period you paid for.</p>
+        <p>Purchases on iPhone are made through Apple and are also subject to Apple&apos;s Licensed Application End User License Agreement; refunds for them are handled by Apple. For web purchases, contact us at {mail}.</p>
+        <p>Plus includes daily limits on cloud AI (described on the <Link href="/pricing" className="underline">pricing page</Link>) to keep the service fair and running.</p>
+      </>
+    ),
+  },
+  {
+    id: "use",
     title: "Acceptable use",
-    body: `You agree not to:
-
-— Attempt to reverse-engineer, scrape, or extract training data from the AI models
-— Use Cadence to generate, distribute, or promote harmful, abusive, or illegal content
-— Probe or test the security of the service without written permission
-— Use automated tools to create accounts, submit assessments in bulk, or otherwise abuse the platform
-
-Cadence is open source — contributions and forks are welcome under the project's open source licence. Commercial reuse of the service itself requires separate written agreement.`,
+    body: (
+      <ul>
+        <li>Do not try to break, overload or probe the security of the service without written permission.</li>
+        <li>Do not use automated tools to create accounts or send requests in bulk.</li>
+        <li>Do not use the coach or any feature to produce harmful, abusive or illegal content.</li>
+      </ul>
+    ),
   },
   {
-    title: "Intellectual property",
-    body: `The Cadence codebase is open source and available under its stated licence on GitHub. The Cadence name, logo, and brand assets are not included under that licence and may not be used without permission.
-
-You retain ownership of any audio you submit. By submitting audio, you grant us a limited licence to process it for the sole purpose of generating phoneme feedback. Audio is not retained after processing is complete.`,
+    id: "ip",
+    title: "Open source and your content",
+    body: (
+      <>
+        <p>The Cadence code is open source under the MIT licence (<a href={GITHUB_URL} className="underline">source</a>). The Cadence name and logo are not covered by that licence. Third-party material is credited in the project&apos;s CREDITS file under its own licence.</p>
+        <p>You keep what you record and write. You let us process it only to give you feedback and keep your progress, as the <Link href="/privacy" className="underline">Privacy Policy</Link> describes.</p>
+      </>
+    ),
   },
   {
-    title: "Disclaimer of warranties",
-    body: `Cadence is provided "as is" without warranty of any kind, express or implied. We do not guarantee that the service will be error-free, uninterrupted, or that the phoneme scoring will be accurate for every accent, language background, or recording environment.
-
-Pronunciation feedback is intended as a practice aid, not a substitute for professional language instruction.`,
+    id: "warranty",
+    title: "No guarantees",
+    body: <p>Cadence is provided as is. Automatic scoring and feedback can be wrong, especially with unusual accents or noisy recordings. It is a practice aid, not a substitute for a teacher.</p>,
   },
   {
+    id: "liability",
     title: "Limitation of liability",
-    body: `To the maximum extent permitted by applicable law, Cadence and its contributors shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service — including but not limited to loss of data, loss of progress, or interruption of practice.`,
+    body: <p>As far as the law allows, Cadence and its contributors are not liable for indirect or consequential losses from using the service, including lost progress. Nothing here limits rights you have under consumer law.</p>,
   },
   {
-    title: "Termination",
-    body: `We may suspend or terminate your account if you violate these terms. You may delete your account at any time by emailing support@cadence.app. Upon termination, your right to use the service ends immediately, but these terms otherwise survive termination.`,
+    id: "termination",
+    title: "Ending your use",
+    body: <p>You can delete your account at any time on your <Link href="/account" className="underline">account page</Link>. We may suspend accounts that break these terms.</p>,
   },
   {
+    id: "law",
     title: "Governing law",
-    body: `These terms are governed by the laws of the European Union, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Amsterdam, the Netherlands, unless otherwise required by local consumer protection law.`,
+    body: <p>These terms are governed by the laws of the European Union and the Netherlands, and disputes go to the courts of Amsterdam, unless your local consumer law says otherwise.</p>,
   },
   {
-    title: "Changes to these terms",
-    body: `We may update these terms at any time. We will notify you by email or by posting a notice at least 14 days before material changes take effect. Continued use after that date means you accept the updated terms.`,
-  },
-  {
-    title: "Contact",
-    body: `Questions about these terms? Email legal@cadence.app or visit our Contact page.`,
+    id: "changes",
+    title: "Changes and contact",
+    body: <p>We will tell you at least 14 days before material changes take effect. Questions: {mail}. Last updated {UPDATED}.</p>,
   },
 ];
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen px-5 py-5 sm:px-8 lg:px-12">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
-        <Navbar current="home" />
-
-        <section>
-          <Card className="bg-hunter-green text-white">
-            <div className="space-y-3 px-2 py-2">
-              <p className="eyebrow text-sm text-yellow-green/80">Legal</p>
-              <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-                Terms of Service
-              </h1>
-              <p className="max-w-2xl text-base leading-8 text-white/78">
-                Last updated: April 2026. Please read these terms before using
-                Cadence. Using the service means you agree to them.
-              </p>
-            </div>
-          </Card>
-        </section>
-
-        <section className="grid gap-4 lg:grid-cols-[0.36fr_0.64fr] lg:items-start">
-          <Card className="bg-vanilla-cream lg:sticky lg:top-6">
-            <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-green">Contents</p>
-              <nav>
-                <ul className="space-y-1">
-                  {sections.map((s) => (
-                    <li key={s.title}>
-                      <a
-                        href={`#${s.title.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="text-sm text-iron-grey transition-colors hover:text-hunter-green"
-                      >
-                        {s.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          </Card>
-
-          <div className="space-y-4">
-            {sections.map((s) => (
-              <Card
-                key={s.title}
-                id={s.title.toLowerCase().replace(/\s+/g, "-")}
-                className="bg-white scroll-mt-6"
-              >
-                <h2 className="text-xl font-semibold text-hunter-green">
-                  {s.title}
-                </h2>
-                <div className="mt-3 space-y-4">
-                  {s.body.split("\n\n").map((para, i) => (
-                    <p key={i} className="text-sm leading-7 text-iron-grey whitespace-pre-line">
-                      {para}
-                    </p>
-                  ))}
-                </div>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <Card className="bg-white">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="space-y-1">
-                <p className="eyebrow text-sm text-sage-green">Questions?</p>
-                <p className="text-sm leading-7 text-iron-grey">
-                  Reach out to{" "}
-                  <Link
-                    href="mailto:legal@cadence.app"
-                    className="font-medium text-hunter-green hover:underline"
-                  >
-                    legal@cadence.app
-                  </Link>{" "}
-                  or visit our Contact page.
-                </p>
-              </div>
-              <Button variant="ghost" href="/contact" className="shrink-0">
-                Contact Support
-              </Button>
-            </div>
-          </Card>
-        </section>
-
-        <Footer />
-      </div>
-    </main>
+    <PageShell>
+      <PageIntro eyebrow="Terms of Service" title="The terms for using Cadence.">
+        Last updated {UPDATED}.
+      </PageIntro>
+      <LegalBody sections={sections} />
+    </PageShell>
   );
 }

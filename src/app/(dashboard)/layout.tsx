@@ -3,6 +3,7 @@ import { ModuleProgress } from '@/components/ui/module-progress'
 import { DesktopTopBar } from '@/components/ui/desktop-top-bar'
 import { DesktopShell } from '@/components/ui/desktop-shell'
 import { getAppSession } from '@/lib/app-session'
+import { AiOfferBanner } from '@/components/ai/AiOfferBanner'
 
 export default async function DashboardLayout({
   children,
@@ -24,6 +25,7 @@ export default async function DashboardLayout({
       )}
     >
       {children}
+      <AiOfferBanner />
     </DesktopShell>
   )
 }

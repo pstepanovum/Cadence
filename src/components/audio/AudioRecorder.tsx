@@ -6,6 +6,7 @@ import { Microphone, Play, Square } from "griddy-icons";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useAudioRecorder } from "@/hooks/useAudioRecorder";
+import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
 
 interface AudioRecorderProps {
   className?: string;
@@ -130,7 +131,7 @@ export function AudioRecorder({
       setIsLoadingReference(true);
       const params = new URLSearchParams({ text: targetWord });
       if (instruct) params.set("instruct", instruct);
-      const response = await fetch(`/api/reference-audio?${params.toString()}`, {
+      const response = await cloudFetch(`/api/reference-audio?${params.toString()}`, { ai: true,
         cache: "no-store",
       });
 
@@ -138,7 +139,7 @@ export function AudioRecorder({
         const payload = (await response.json().catch(() => null)) as
           | { error?: string }
           | null;
-        throw new Error(payload?.error ?? "Reference pronunciation is unavailable.");
+        throw new Error(aiErrorText(payload, "Reference pronunciation is unavailable."));
       }
 
       const blob = await response.blob();

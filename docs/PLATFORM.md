@@ -721,6 +721,34 @@ next step ("No cards due. Start today's plan").
 
 ---
 
+### 15.1 Web pages and the routes they call
+
+The web UI (`src/app`, `src/components`, `src/hooks`) calls the server only
+through `cloudFetch` (`src/hooks/cloud-fetch.ts`), which adds the App Check
+token (`X-Firebase-AppCheck`, limited-use for sign-up flows and the newsletter)
+and, when signed in, the Firebase ID token.
+
+| Page | Calls |
+| --- | --- |
+| `/forgot-password` | `POST /api/auth/password-reset {email}`; same answer whether or not the account exists; 60 s browser cooldown; Firebase's own email if the route is missing |
+| `/reset-password` | Firebase `confirmPasswordReset` (revokes every session), then `POST /api/auth/password-changed {email}`, then signs this device in; passes `verifyEmail`, `verifyAndChangeEmail` and `recoverEmail` links on to `/verify-email` |
+| `/verify-email` | `applyActionCode` for the link; resend is `POST /api/auth/verify-email` |
+| `/newsletter`, footer, sign-up box, `/account` switch | `POST /api/newsletter {email, source, consent: true, platform}` (Brevo double opt-in, list 5); Brevo's confirmation lands on `/api/newsletter/confirmed`, which redirects to `/newsletter/confirmed`; the account switch turns it off with `DELETE /api/newsletter` (**Open**: not built yet; the page points to the unsubscribe link meanwhile) |
+| `/pricing`, `/checkout?plan=`, `/account` | `POST /api/billing/checkout {interval}` and `POST /api/billing/portal`, both `{url}`; Plus status from `GET /api/me` |
+| `/account` | `GET /api/account/export`; `DELETE /api/account` after re-entering the password |
+| `/practice/*`, `/grammar/*` | packs from `/packs` (built-in starter pack per level until they exist); each round is `POST /api/sync/summary {activities}` when signed in |
+| AI calls (assess, transcribe, coach, voices) | `{ai: true}`: a refusal (`needs_plus`, `daily_limit`, …) opens one banner offering "Connect your own Cadence" and Plus |
+
+`/sounds`, `/sounds/<soundId>` and `/sounds/compare` read
+`content/articulation/*.json` on the server (falling back to
+`src/components/mouth-map/fixture-targets.json`); every pronunciation result
+links each sound to its page with a "Record again" link back, and records the
+scores on the device for "sounds to fix" (`src/components/mouth-map/sound-practice.ts`).
+`/connect-phone` shows the pairing QR when the browser holds the pairing key,
+otherwise the steps. `/connector` explains adding the MCP connector. Dark mode
+follows the system or the `cadence_theme` cookie; `public/sw.js` keeps packs
+offline.
+
 ## 16. Test matrix
 
 Run from the repo root unless a row says otherwise. "Exists" rows run today;

@@ -115,16 +115,20 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
 
   return (
     <div className="mx-auto grid w-full max-w-6xl gap-4 lg:grid-cols-[1fr_1fr]">
-      <section className="rounded-3xl bg-hunter-green px-6 py-8 text-bright-snow">
+      <section className="order-2 rounded-3xl bg-hunter-green px-6 py-8 text-bright-snow lg:order-1">
         <p className="eyebrow text-sm text-yellow-green">Connect your phone</p>
         <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
           Scan this with Cadence on your phone.
         </h1>
         <p className="mt-4 text-base leading-7 text-bright-snow/80">
-          Open Cadence on your phone, choose <strong>Connect to my computer</strong>,
-          and point the camera here. Your phone and this computer need to be on
-          the same Wi-Fi.
+          Your phone uses this computer for scoring, voices and the coach, free and
+          without limits. Both need to be on the same Wi-Fi.
         </p>
+        <ol className="mt-5 space-y-2 text-base leading-7 text-bright-snow/90">
+          <li>1. Open Cadence on your phone.</li>
+          <li>2. Choose <strong>Connect your own Cadence server</strong>.</li>
+          <li>3. Point the camera at the code. Done.</li>
+        </ol>
 
         <div className="mt-6 space-y-2 rounded-3xl bg-white/10 px-4 py-4 text-sm leading-7 text-bright-snow/85">
           <p>
@@ -151,8 +155,8 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
         ) : null}
       </section>
 
-      <section className="grid gap-4">
-        <div className="rounded-3xl bg-bright-snow px-6 py-6">
+      <section className="order-1 grid gap-4 lg:order-2">
+        <div className="rounded-3xl bg-white px-6 py-6">
           {loading ? (
             <p className="text-base text-iron-grey">Making a code…</p>
           ) : error ? (
@@ -169,7 +173,9 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
             <div className="space-y-4">
               <div className="relative mx-auto w-fit">
                 <div
-                  className={expired ? "opacity-15" : undefined}
+                  role="img"
+                  aria-label="Pairing QR code"
+                  className={`w-[min(20rem,70vw)] rounded-2xl bg-white p-2 on-color [&_svg]:h-auto [&_svg]:w-full ${expired ? "opacity-15" : ""}`}
                   // The SVG is generated on this server from this server's own
                   // payload; nothing here comes from a remote source.
                   dangerouslySetInnerHTML={{ __html: code.qrSvg }}
@@ -210,7 +216,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
           ) : null}
         </div>
 
-        <div className="rounded-3xl bg-bright-snow px-6 py-6">
+        <div className="rounded-3xl bg-white px-6 py-6">
           <h2 className="text-lg font-semibold text-hunter-green">Paired devices</h2>
 
           {devices.length === 0 ? (

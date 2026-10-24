@@ -11,13 +11,13 @@ type ButtonSize = "default" | "icon";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-hunter-green text-white hover:bg-[#44784f] [&_*]:text-inherit",
+    "bg-hunter-green text-white hover:brightness-110 [&_*]:text-inherit",
   secondary:
-    "bg-yellow-green text-hunter-green hover:bg-[#b5d567] [&_*]:text-inherit",
+    "bg-yellow-green text-hunter-green hover:brightness-105 [&_*]:text-inherit",
   ghost:
-    "bg-vanilla-cream text-hunter-green hover:bg-[#eadfbe] [&_*]:text-inherit",
+    "bg-vanilla-cream text-hunter-green hover:bg-platinum [&_*]:text-inherit",
   danger:
-    "bg-blushed-brick text-white hover:bg-[#a84042] [&_*]:text-inherit",
+    "bg-blushed-brick text-white hover:brightness-110 [&_*]:text-inherit",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -35,7 +35,7 @@ export function buttonVariants({
   className?: string;
 } = {}) {
   return cn(
-    "inline-flex cursor-pointer items-center justify-center gap-2 rounded-full text-center font-semibold whitespace-nowrap [&>svg]:shrink-0 disabled:cursor-not-allowed disabled:opacity-60",
+    "inline-flex cursor-pointer items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-green justify-center gap-2 rounded-full text-center font-semibold whitespace-nowrap [&>svg]:shrink-0 disabled:cursor-not-allowed disabled:opacity-60",
     variantStyles[variant],
     sizeStyles[size],
     className,

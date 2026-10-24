@@ -1,13 +1,12 @@
 // FILE: src/app/profile/page.tsx
 import type { Metadata } from "next";
-import Image from "next/image";
 import { UserCircle } from "griddy-icons";
+import Link from "next/link";
 import { Navbar } from "@/components/ui/navbar";
 import { Card } from "@/components/ui/card";
 import { SignOutButton } from "@/components/ui/sign-out-button";
 import { ProfileCoachVoice } from "@/components/audio/ProfileCoachVoice";
 import { ProfileDesktopRuntime } from "@/components/desktop/profile-desktop-runtime";
-import { CancelSubscriptionButton } from "@/components/auth/CancelSubscriptionButton";
 import { requireAppUser } from "@/lib/app-session";
 import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 
@@ -30,40 +29,23 @@ const cadenceLabel: Record<string, string> = {
   "weekend-only": "Few times a week",
 };
 
-function trialDaysLeft(trialEnd: string | null): number | null {
-  if (!trialEnd) return null;
-  const diff = new Date(trialEnd).getTime() - Date.now();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-}
-
 export default async function ProfilePage() {
   const session = await requireAppUser("/profile");
   const runtime = await getRequestRuntime();
   const isDesktop = runtime === "desktop";
-  const billing = session.user.billing;
   const isLocal = session.mode === "local";
   const displayName = session.user.displayName;
   const practiceFocus = session.user.practiceFocus ?? undefined;
   const practiceCadence = session.user.practiceCadence ?? undefined;
-  const subStatus = billing?.status ?? undefined;
-  const trialEnd = billing?.trialEnd ?? null;
-  const daysLeft        = trialDaysLeft(trialEnd);
-  const isTrialing        = subStatus === "trialing";
-  const isActive          = subStatus === "active";
-  const isCancelingAtEnd  = billing?.cancelAtPeriodEnd ?? false;
-  const cancelAt = billing?.cancelAt ?? null;
 
   const memberSince = new Date(session.user.createdAt).toLocaleDateString("en-US", {
     month: "long", day: "numeric", year: "numeric",
   });
-  const trialEndFormatted = trialEnd
-    ? new Date(trialEnd).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
-    : null;
 
   return (
     <main className="min-h-screen p-4 sm:p-5 lg:p-6 flex flex-col items-center">
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-4">
-        <Navbar current="profile" />
+        <Navbar current="account" />
 
         <section className="grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
 
@@ -90,27 +72,21 @@ export default async function ProfilePage() {
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
                   <p className="eyebrow text-xs text-sage-green">Plan</p>
                   <p className="mt-2 text-base font-semibold text-hunter-green">
-                    {isLocal ? "Local mode" : "Cadence Cloud"}
+                    {isLocal ? "Own computer" : "Cadence account"}
                   </p>
                 </div>
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
                   <p className="eyebrow text-xs text-sage-green">Status</p>
                   <p className="mt-2 text-base font-semibold text-hunter-green">
-                    {isLocal
-                      ? "Stored on this machine"
-                      : isTrialing
-                        ? "Trial"
-                        : isActive
-                          ? "Active"
-                          : (subStatus ?? "—")}
+                    {isLocal ? "Stored on this machine" : "Synced"}
                   </p>
                 </div>
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
                   <p className="eyebrow text-xs text-sage-green">
-                    {isTrialing && daysLeft !== null ? "Days left" : "Member since"}
+                    Member since
                   </p>
                   <p className="mt-2 text-base font-semibold text-hunter-green">
-                    {isTrialing && daysLeft !== null ? `${daysLeft} days` : memberSince}
+                    {memberSince}
                   </p>
                 </div>
               </div>
@@ -119,36 +95,6 @@ export default async function ProfilePage() {
 
           {/* ── Right — trial banner + preferences ──────────────────────── */}
           <div className="flex flex-col gap-4">
-
-            {/* Trial / active banner */}
-            {!isLocal && (isTrialing || isActive) && (
-              <Card className="relative overflow-hidden bg-vanilla-cream">
-                <div className="flex items-center justify-between gap-6">
-                  <div className="space-y-1">
-                    <p className="eyebrow text-xs text-sage-green">
-                      {isTrialing ? "Free trial active" : "Subscription active"}
-                    </p>
-                    <p className="text-2xl font-semibold text-hunter-green">
-                      {isTrialing && daysLeft !== null
-                        ? `${daysLeft} day${daysLeft === 1 ? "" : "s"} left on your trial`
-                        : "You're on Cadence Pro"}
-                    </p>
-                    {isTrialing && trialEndFormatted && (
-                      <p className="text-sm leading-6 text-iron-grey">
-                        Charged $14.99/mo on {trialEndFormatted}. Cancel any time.
-                      </p>
-                    )}
-                  </div>
-                  <Image
-                    src="/illustration/following-your-dreams-1.svg"
-                    alt=""
-                    width={120}
-                    height={110}
-                    className="hidden shrink-0 select-none sm:block"
-                  />
-                </div>
-              </Card>
-            )}
 
             {/* Preferences */}
             <Card className="bg-white flex-1">
@@ -186,12 +132,9 @@ export default async function ProfilePage() {
                 </div>
 
                 <div className="pt-2 flex flex-col gap-4">
-                  {!isLocal && (isTrialing || isActive) && (
-                    <CancelSubscriptionButton
-                      isCanceling={Boolean(isCancelingAtEnd)}
-                      cancelAt={cancelAt ?? null}
-                    />
-                  )}
+                  <Link href="/account" className="inline-flex min-h-11 w-fit items-center rounded-full bg-vanilla-cream px-4 text-sm font-semibold text-hunter-green">
+                    Plan, emails and data
+                  </Link>
                   <SignOutButton mode={session.mode} />
                 </div>
               </div>
