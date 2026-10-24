@@ -54,12 +54,14 @@ test("footer sign-up sends a double opt-in request and nothing else", async ({ p
 
 test("the newsletter page refuses a bad address without calling Brevo", async ({ page }, testInfo) => {
   await page.goto("/newsletter");
-  const before = (await brevoRequests()).length;
+  // Other tests run in parallel against the same stub, so only requests that
+  // mention this address count.
+  const address = `not-an-email-${testInfo.project.name}-${Date.now()}`;
   const form = page.locator("main form").first();
-  await form.getByRole("textbox", { name: /Product updates/ }).fill(`not-an-email-${testInfo.project.name}`);
+  await form.getByRole("textbox", { name: /Product updates/ }).fill(address);
   await form.getByRole("button", { name: "Sign up" }).click();
   await expect(form.getByRole("alert")).toBeVisible();
-  expect((await brevoRequests()).length).toBe(before);
+  expect(forEmail(await brevoRequests(), address)).toEqual([]);
 });
 
 test("an account created without the newsletter box never reaches list 5", async ({ page }, testInfo) => {

@@ -5,13 +5,14 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { LevelPicker, useLevel } from "@/components/learn-hub/LevelPicker";
 import { PRACTICE_MODES } from "@/components/learn-hub/modes";
 import { usePack } from "@/components/learn-hub/packs";
 import { useCardStates, useSummary } from "@/components/learn-hub/progress";
 import { ShareCardButton } from "@/components/learn-hub/ShareCard";
 import { buildQueue, dayKey } from "@/components/learn-hub/srs";
+import { syncProgress } from "@/components/learn-hub/sync";
 import { Button } from "@/components/ui/button";
 import type { CefrLevel } from "@/lib/platform/content-model.ts";
 import { currentStreak } from "@/lib/platform/progress-model.ts";
@@ -21,6 +22,10 @@ export function PracticeHub({ initialLevel }: { initialLevel: CefrLevel | null }
   const pack = usePack(level);
   const summary = useSummary();
   const cardStates = useCardStates();
+  // Picks up cards added through the connector and, with Plus, other devices' reviews.
+  useEffect(() => {
+    void syncProgress();
+  }, []);
   const due = useMemo(() => {
     if (!pack) return 0;
     const ids = pack.content.exercises.filter((e) => e.kind === "flashcard").map((e) => e.id);

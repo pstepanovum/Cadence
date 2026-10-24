@@ -27,10 +27,17 @@ describe("web flashcard scheduling", () => {
 
   it("grows hard cards slower than good and easy faster", () => {
     const base = review(review(undefined, "good", day), "good", day);
-    const hard = review(base, "hard", day).interval;
+    const hard = review(base, "hard", day);
     const good = review(base, "good", day).interval;
     const easy = review(base, "easy", day).interval;
-    assert.ok(hard < good && good < easy);
+    assert.ok(hard.interval < good && good < easy);
+    assert.equal(hard.interval, Math.round(3 * 1.2));
+    assert.ok(hard.ease < base.ease);
+  });
+
+  it("is the shared scheduler, not a copy", async () => {
+    const shared = await import("../../src/lib/platform/srs.ts");
+    assert.equal(review, shared.review);
   });
 
   it("queues due cards first, oldest first, then a few new ones", () => {

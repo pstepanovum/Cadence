@@ -10,7 +10,7 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import type { Firestore } from "firebase-admin/firestore";
 
-import { readAccount, writePlusSource, type StoredPlusRecord } from "../entitlement";
+import { accountGone, readAccount, writePlusSource, type StoredPlusRecord } from "../entitlement";
 import { isRecordActive } from "../../platform/engine-routing";
 import { db as defaultDb } from "../firebase";
 import { mailKey, queueMailInTx, type QueueInput } from "../email/queue";
@@ -132,7 +132,8 @@ export async function handleRevenueCatEvent(event: RevenueCatEvent, deps: { db?:
 
     const userRef = firestore.collection("users").doc(uid);
     const snapshot = await tx.get(userRef);
-    const data = snapshot.exists ? snapshot.data() : undefined;
+    if (await accountGone(tx, firestore, uid, snapshot.exists)) return done("ignored: no account", uid, { ignored: "no account" });
+    const data = snapshot.data();
     const account = readAccount(data, now);
     const stripeActive = isRecordActive(account.plusSources.stripe, now);
     const effect = revenueCatEffect(event, account.plusSources.app_store ?? null, now, stripeActive);

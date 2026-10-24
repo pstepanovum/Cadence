@@ -12,7 +12,7 @@ import { getAdminAuth, isFirebaseServerConfigured } from "@/lib/firebase/admin";
 import { isFirebaseConfigured } from "@/lib/firebase/config";
 import { readLocalProfileFromCookies } from "@/lib/local-profile";
 
-export async function gateRequest(request: NextRequest) {
+export async function gateRequest(request: NextRequest, requestHeaders: Headers = request.headers) {
   const pathname = request.nextUrl.pathname;
   const gate = {
     pathname,
@@ -28,7 +28,7 @@ export async function gateRequest(request: NextRequest) {
   const decision = decideRoute({ ...gate, signedIn });
 
   if (decision.action === "next") {
-    return NextResponse.next({ request });
+    return NextResponse.next({ request: { headers: requestHeaders } });
   }
 
   const redirectUrl = request.nextUrl.clone();

@@ -39,7 +39,9 @@ deploy/cloudrun.sh setup
 #    printf '%s' "$VALUE" | gcloud secrets versions add stripe-secret-key --data-file=- --project cadence-pstepanov
 #    stripe-secret-key, stripe-webhook-secret, revenuecat-webhook-secret, revenuecat-api-key,
 #    brevo-api-key, quiz-token-secret, email-unsubscribe-secret, jobs-secret
-#    (the last three: openssl rand -base64 48)
+#    (the last three: openssl rand -base64 48), oauth-known-clients
+#    (a JSON array of the connector clients whose names must redirect to their
+#    own domains: [{"label":"…","tokens":["…"],"hosts":["…"]}]; "[]" for none)
 
 # 3. Firestore TTL policies (usage, webhookEvents, rateLimits, mailQueue, OAuth codes and tokens)
 deploy/cloudrun.sh ttl
@@ -59,6 +61,13 @@ deploy/cloudrun.sh all                        # build, deploy-ai, deploy-web, sc
 ```
 
 `DRY_RUN=1 deploy/cloudrun.sh all` prints the commands without running them.
+
+Per-IP rate limits count `X-Forwarded-For` from the right, past
+`TRUSTED_PROXY_HOPS` proxies (2: Firebase Hosting, then Cloud Run). After the
+first deploy, check it once: send a request with a made-up
+`X-Forwarded-For: 192.0.2.1` header and confirm in the Cloud Run request log
+that the header arrived with exactly two more entries after it. If it had one,
+redeploy with `TRUSTED_PROXY_HOPS=1`.
 `deploy/cadence-web.env.example` lists every setting `cadence-web` gets.
 
 ## Exact URLs

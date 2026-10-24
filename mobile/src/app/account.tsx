@@ -6,7 +6,7 @@ import { EmailAuthProvider, reauthenticateWithCredential } from "firebase/auth";
 import { File, Paths } from "expo-file-system";
 import * as Sharing from "expo-sharing";
 import { useState } from "react";
-import { Alert, Linking, StyleSheet, View } from "react-native";
+import { Alert, StyleSheet, View } from "react-native";
 
 import { deleteAccount, exportAccount } from "@/api/account";
 import { Banner, Body, Button, Card, Eyebrow, Screen, TextField, Title, TopBar } from "@/components/ui";
@@ -30,7 +30,8 @@ export default function AccountScreen() {
 
   const plusRecord = account.me?.plus ?? null;
   const fromWeb = plusRecord?.source === "stripe";
-  const site = config.apiUrl ?? "https://cadence.pstepanov.dev";
+  // Named, never linked: App Review reads a link to a page that changes the plan as steering to an outside purchase.
+  const siteHost = (config.apiUrl ?? "https://cadence.pstepanov.dev").replace(/^https?:\/\//, "").replace(/\/$/, "");
 
   async function run(key: string, task: () => Promise<void>) {
     setBusy(key);
@@ -97,7 +98,9 @@ export default function AccountScreen() {
         </Body>
         {account.plus ? (
           fromWeb ? (
-            <Button label="Manage on the web" variant="tonal" onPress={() => void Linking.openURL(`${site}/account`)} />
+            <Body size={type.footnote} tone="muted">
+              {`Your Plus is billed on the web. Manage it at ${siteHost}/account.`}
+            </Body>
           ) : (
             <Button label="Manage subscription" variant="tonal" disabled={!storeConfigured} onPress={() => void manageSubscription()} />
           )

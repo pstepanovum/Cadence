@@ -1,19 +1,27 @@
 // FILE: src/components/learn-hub/FlashcardDeck.tsx
 //
 // Spaced-repetition review on this device: due cards first, then a few new
-// ones; each grade schedules the card's next day.
+// ones; each grade schedules the card's next day. Cards added through the MCP
+// connector (sync.ts) join the deck at every level.
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import { logActivity, loadCardStates, saveCardState } from "@/components/learn-hub/progress";
 import { buildQueue, review, type CardState, type Grade } from "@/components/learn-hub/srs";
+import { loadCustomCards } from "@/components/learn-hub/sync";
 import { speakWord } from "@/components/mouth-map/speak";
 import { Button } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import type { CefrLevel, FlashcardExercise } from "@/lib/platform/content-model.ts";
 
-export function FlashcardDeck({ cards, level }: { cards: FlashcardExercise[]; level: CefrLevel }) {
+type DeckCard = { id: string; front: string; back: string; example?: string };
+
+export function FlashcardDeck({ cards: packCards, level }: { cards: FlashcardExercise[]; level: CefrLevel }) {
   // Mounted only after the pack has loaded in the browser, so storage is readable here.
+  const [cards] = useState<DeckCard[]>(() => [
+    ...packCards.map((c) => ({ id: c.id, front: c.front, back: c.back, example: c.example?.text })),
+    ...loadCustomCards().map((c) => ({ id: c.id, front: c.front, back: c.back, example: c.example })),
+  ]);
   const [states] = useState<Record<string, CardState>>(() => loadCardStates());
   const [queue] = useState(() => buildQueue(cards.map((c) => c.id), states, new Date()));
   const [position, setPosition] = useState(0);
@@ -74,7 +82,7 @@ export function FlashcardDeck({ cards, level }: { cards: FlashcardExercise[]; le
       {shown ? (
         <div className="space-y-2">
           <p className="text-xl text-iron-grey">{card.back}</p>
-          {card.example ? <p className="italic text-iron-grey">{card.example.text}</p> : null}
+          {card.example ? <p className="italic text-iron-grey">{card.example}</p> : null}
         </div>
       ) : null}
       {!shown ? (

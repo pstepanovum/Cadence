@@ -57,3 +57,26 @@ describe("shared platform modules", () => {
     }
   });
 });
+
+describe("one scheduler", () => {
+  // A second SM-2 anywhere would let a card be due on one device and not on
+  // another. Only the shared module may define `review`; everything else
+  // re-exports it.
+  const roots = ["../../src/", "../../mobile/src/"].map((rel) => new URL(rel, import.meta.url));
+  const allowed = new Set(["src/lib/platform/srs.ts", "mobile/src/platform/srs.ts"]);
+
+  it("exists only in the shared srs.ts", () => {
+    const offenders: string[] = [];
+    for (const root of roots) {
+      const prefix = root.pathname.endsWith("/mobile/src/") ? "mobile/src/" : "src/";
+      for (const rel of readdirSync(root, { recursive: true }).map(String)) {
+        if (!/\.(ts|tsx)$/.test(rel) || rel.includes("node_modules") || rel.startsWith("backend/")) continue;
+        const path = `${prefix}${rel}`;
+        if (allowed.has(path)) continue;
+        const source = readFileSync(new URL(rel, root), "utf8");
+        if (/export\s+function\s+review\s*\(/.test(source) || /\binterval\s*\*\s*(current\.)?ease\b/.test(source)) offenders.push(path);
+      }
+    }
+    assert.deepEqual(offenders, [], "a second spaced-repetition scheduler; import src/lib/platform/srs.ts instead");
+  });
+});

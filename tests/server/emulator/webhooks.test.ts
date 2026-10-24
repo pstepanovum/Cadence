@@ -12,6 +12,8 @@ import { db } from "../../../src/lib/server/firebase.ts";
 import { handleStripeEvent, type StripeApi } from "../../../src/lib/server/billing/stripe-webhook.ts";
 import { handleRevenueCatEvent, type RevenueCatApi } from "../../../src/lib/server/billing/revenuecat.ts";
 import type { StripeSubscriptionLike } from "../../../src/lib/server/billing/stripe-map.ts";
+import { requestDeletion } from "../../../src/lib/server/account.ts";
+import { readFileSync } from "node:fs";
 
 const NOW = Date.UTC(2026, 9, 24, 12);
 const UID = "stripeUser0001";
@@ -120,6 +122,39 @@ describe("stripe webhook", { skip }, () => {
     assert.deepEqual(await mail(UID), ["plan-changed", "refund-issued"]);
     assert.equal((await handleStripeEvent(refund, { api: fakeStripe(yearly), now: NOW + 30_000 })).body.duplicate, true);
     assert.deepEqual(await mail(UID), ["plan-changed", "refund-issued"]);
+  });
+});
+
+describe("webhooks after an account is deleted", { skip }, () => {
+  const deps = { deleteSubscriber: async () => undefined, detachStripe: async () => undefined, deleteBrevoContact: async () => undefined, deleteAuthUser: async () => undefined, revokeOAuth: async () => undefined, now: NOW };
+
+  beforeEach(async () => {
+    await clearFirestore();
+    await db().collection("users").doc(UID).set({ email: "a@example.com", stripeCustomerId: "cus_test", plusSources: { stripe: plusRecord("stripe", NOW) } });
+  });
+
+  it("the cancellation Stripe sends after deletion never brings the account back", async () => {
+    const result = await requestDeletion(UID, "a@example.com", deps);
+    assert.equal(result.status, "completed");
+    assert.equal((await db().collection("users").doc(UID).get()).exists, false);
+
+    const sample = JSON.parse(readFileSync(new URL("../../../scripts/webhooks/fixtures/stripe/04-customer.subscription.deleted.json", import.meta.url), "utf8"));
+    sample.id = "evt_after_delete";
+    sample.data.object.metadata = { ...(sample.data.object.metadata ?? {}), firebase_uid: UID, app: "cadence" };
+    const replay = await handleStripeEvent(sample, { api: fakeStripe(null), now: NOW + 1000 });
+    assert.equal(replay.status, 200);
+    assert.equal(replay.body.ignored, "no account");
+    assert.equal((await db().collection("users").doc(UID).get()).exists, false);
+    assert.equal((await db().collection("webhookEvents").doc("stripe:evt_after_delete").get()).data()?.outcome, "ignored: no account");
+  });
+
+  it("a RevenueCat event for a deleted or unknown uid is recorded and ignored", async () => {
+    await requestDeletion(UID, "a@example.com", deps);
+    const expiration = { id: "rc_after_delete", type: "EXPIRATION", app_user_id: UID, product_id: "dev.pstepanov.cadence.plus.yearly", entitlement_ids: ["plus"], period_type: "NORMAL", expiration_at_ms: NOW, event_timestamp_ms: NOW + 1000, environment: "PRODUCTION" };
+    assert.equal((await handleRevenueCatEvent(expiration, { now: NOW + 1000 })).body.ignored, "no account");
+    assert.equal((await handleRevenueCatEvent({ ...expiration, id: "rc_stranger", app_user_id: "neverSignedIn00000000000001" }, { now: NOW + 1000 })).body.ignored, "no account");
+    assert.equal((await db().collection("users").doc(UID).get()).exists, false);
+    assert.equal((await db().collection("users").doc("neverSignedIn00000000000001").get()).exists, false);
   });
 });
 

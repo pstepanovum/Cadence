@@ -17,7 +17,7 @@ export function protectedResourceMetadata(request: Request) {
         scopes_supported: SUPPORTED_SCOPES,
         bearer_methods_supported: ["header"],
         resource_name: MCP_RESOURCE_NAME,
-        resource_documentation: `${baseUrl}/connect`,
+        resource_documentation: `${baseUrl}/connector`,
       },
       200,
       { "Cache-Control": "public, max-age=300" },

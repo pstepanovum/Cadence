@@ -3,8 +3,8 @@
 // Practice progress kept on this device (localStorage), in every mode: the
 // summary (progress-model.ts) and flashcard states. For a signed-in account
 // each activity is also sent to POST /api/sync/summary, which keeps the free
-// tier's one summary document; detailed sync for Plus is the server's
-// /api/sync/push. An activity that could not be sent waits (at most 50) and
+// tier's one summary document; flashcard states, the MCP inbox and Plus
+// detail sync go through sync.ts. An activity that could not be sent waits (at most 50) and
 // goes with the next one. With no one signed in (or no Cadence Cloud in this
 // build, as on your own Cadence) nothing is sent or queued, and a 401, 403 or
 // 404 means the same.
@@ -17,10 +17,10 @@ import { notifyStored, useStoredString } from "@/hooks/use-stored";
 import { applyActivity, emptySummary, type Activity, type ActivityKind, type ProgressSummary } from "@/lib/platform/progress-model.ts";
 import type { CefrLevel } from "@/lib/platform/content-model.ts";
 import { dayKey, type CardState } from "@/components/learn-hub/srs";
+import { SRS_KEY, scheduleSync } from "@/components/learn-hub/sync";
 
 const SUMMARY_KEY = "cadence.summary.v1";
 const QUEUE_KEY = "cadence.summary.queue.v1";
-const SRS_KEY = "cadence.srs.v1";
 const MAX_QUEUE = 50;
 
 function read<T>(key: string, fallback: T): T {
@@ -69,8 +69,10 @@ export function loadCardStates(): Record<string, CardState> {
   return read<Record<string, CardState>>(SRS_KEY, {});
 }
 
+/** Saves a review; `updatedAt` lets Plus sync merge it last-writer-wins with other devices. */
 export function saveCardState(cardId: string, state: CardState) {
-  write(SRS_KEY, { ...loadCardStates(), [cardId]: state });
+  write(SRS_KEY, { ...loadCardStates(), [cardId]: { ...state, updatedAt: Date.now() } });
+  scheduleSync();
 }
 
 export interface ActivityInput {

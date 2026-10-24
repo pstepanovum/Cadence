@@ -9,6 +9,11 @@ import { describe, it } from "node:test";
 import { appOrigin, isAppCheckEnforced, isHostedCloud } from "../../src/lib/server/env.ts";
 import { decide } from "../../src/lib/server/rate-limit.ts";
 import { checkAudio, wavSeconds } from "../../src/lib/server/engines/audio.ts";
+import { audioDuration, opusPacketSeconds } from "../../src/lib/server/engines/audio-duration.ts";
+import { sniffAudio } from "../../src/lib/platform/engine-routing.ts";
+import { clientIp } from "../../src/lib/server/http.ts";
+import { findImpersonation, parseKnownProducts } from "../../src/lib/oauth/client-identity.ts";
+import { readFileSync } from "node:fs";
 import { mergeByLastAt, mergeCards, parseActivities, parsePush } from "../../src/lib/server/sync-input.ts";
 import { cleanLearnerText, coachContents, coachSystemPrompt, combinePlacement, filterGrammarIssues, sanitizeCoachText, trimHistory } from "../../src/lib/server/engines/prompts.ts";
 import { signQuiz, verifyQuiz, presentExercise, pickExercises } from "../../src/lib/mcp/quiz.ts";
@@ -93,6 +98,95 @@ describe("audio uploads", () => {
     assert.equal((checkAudio(new Uint8Array(3 * 1024 * 1024)) as { error: string }).error, "audio_too_large");
     assert.equal((checkAudio(new Uint8Array()) as { error: string }).error, "audio_missing");
     assert.equal((checkAudio(new TextEncoder().encode("<html>not audio</html>"), "x.wav") as { error: string }).error, "audio_unsupported");
+  });
+});
+
+const AUDIO_FIXTURES = new URL("./fixtures/audio/", import.meta.url);
+const fixture = (name: string) => new Uint8Array(readFileSync(new URL(name, AUDIO_FIXTURES)));
+
+describe("audio length comes from the codec data, not from headers", () => {
+  it("measures every container the apps record within 0.2 s", () => {
+    for (const name of ["speech-3s.webm", "speech-3s-live.webm", "speech-3s.ogg", "speech-3s.m4a", "speech-3s-fragmented.m4a", "speech-3s.mp3"]) {
+      const bytes = fixture(name);
+      const seconds = audioDuration(bytes, sniffAudio(bytes)!);
+      assert.ok(seconds !== null && Math.abs(seconds - 3) < 0.2, `${name}: ${seconds}`);
+      const check = checkAudio(bytes, name);
+      assert.equal(check.ok, true, name);
+      if (check.ok) assert.ok(check.audio.seconds >= 3 && check.audio.seconds <= 4, `${name} charged ${check.audio.seconds}`);
+    }
+  });
+  it("refuses a long low-bitrate recording that a bytes-per-second guess would let through", () => {
+    for (const name of ["long-45s-low-bitrate.webm", "long-45s-low-bitrate.m4a"]) {
+      const bytes = fixture(name);
+      assert.ok(bytes.length / 8000 < 30, "the old estimate would have accepted it");
+      assert.equal((checkAudio(bytes, name) as { error: string }).error, "audio_too_long", name);
+    }
+  });
+  it("refuses a WAV whose byte rate disagrees with its sample rate", () => {
+    const bytes = wav(20);
+    new DataView(bytes.buffer).setUint32(28, 16000 * 2 * 40, true);
+    assert.equal(wavSeconds(bytes), null);
+    assert.equal((checkAudio(bytes) as { error: string }).error, "audio_unsupported");
+  });
+  it("refuses a WAV that claims a slower rate to look short", () => {
+    const bytes = wav(20);
+    const view = new DataView(bytes.buffer);
+    view.setUint32(24, 8000, true);
+    view.setUint32(28, 16000, true);
+    assert.equal((checkAudio(bytes) as { error: string }).error, "audio_too_long");
+  });
+  it("reads Opus frame counts from the TOC byte", () => {
+    assert.equal(opusPacketSeconds(Uint8Array.of(0xfc)), 0.02);
+    assert.equal(opusPacketSeconds(Uint8Array.of(0xff, 0x03)), 0.06);
+    assert.equal(opusPacketSeconds(Uint8Array.of(0x1b, 0x03)), null);
+  });
+  it("refuses compressed audio it cannot read", () => {
+    const garbage = new Uint8Array(4096);
+    garbage.set([0x1a, 0x45, 0xdf, 0xa3]);
+    assert.equal((checkAudio(garbage) as { error: string }).error, "audio_unsupported");
+  });
+});
+
+describe("client address for rate limits", () => {
+  const request = (xff?: string) => new Request("https://cadence.test/", { headers: xff ? { "x-forwarded-for": xff } : {} });
+  it("takes the address the trusted proxies appended, not what the client sent", () => {
+    assert.equal(clientIp(request("6.6.6.6, 203.0.113.9"), 1), "203.0.113.9");
+    assert.equal(clientIp(request("6.6.6.6, 7.7.7.7, 203.0.113.9, 35.1.2.3"), 2), "203.0.113.9");
+    assert.equal(clientIp(request("203.0.113.9"), 2), "203.0.113.9");
+    assert.equal(clientIp(request("not-an-ip, 203.0.113.9"), 1), "203.0.113.9");
+    assert.equal(clientIp(request(), 1), "unknown");
+  });
+  it("reads the hop count from TRUSTED_PROXY_HOPS", () => {
+    const before = process.env.TRUSTED_PROXY_HOPS;
+    process.env.TRUSTED_PROXY_HOPS = "2";
+    try {
+      assert.equal(clientIp(request("6.6.6.6, 203.0.113.9, 35.1.2.3")), "203.0.113.9");
+    } finally {
+      if (before === undefined) delete process.env.TRUSTED_PROXY_HOPS;
+      else process.env.TRUSTED_PROXY_HOPS = before;
+    }
+  });
+});
+
+describe("known connector clients", () => {
+  it("parses OAUTH_KNOWN_CLIENTS and guards the listed names", () => {
+    const before = process.env.OAUTH_KNOWN_CLIENTS;
+    process.env.OAUTH_KNOWN_CLIENTS = JSON.stringify([{ label: "Example Assistant", tokens: ["exampleassistant"], hosts: ["example.com"] }]);
+    try {
+      assert.match(findImpersonation("Example Assistant", "https://evil.test/cb") ?? "", /Example Assistant/);
+      assert.match(findImpersonation("Ехample Assistant", "https://evil.test/cb") ?? "", /impersonating/);
+      assert.equal(findImpersonation("Example Assistant", "https://app.example.com/cb"), null);
+      assert.equal(findImpersonation("Example Assistant", "http://127.0.0.1:5000/cb"), null);
+      assert.equal(findImpersonation("Some Tool", "https://evil.test/cb"), null);
+      assert.match(findImpersonation("VS Code", "https://evil.test/cb") ?? "", /Visual Studio Code/);
+    } finally {
+      if (before === undefined) delete process.env.OAUTH_KNOWN_CLIENTS;
+      else process.env.OAUTH_KNOWN_CLIENTS = before;
+    }
+  });
+  it("drops malformed entries", () => {
+    assert.deepEqual(parseKnownProducts("not json"), []);
+    assert.equal(parseKnownProducts(JSON.stringify([{ label: "x" }, { label: "Y", tokens: ["y"], hosts: ["y.test"] }])).length, 1);
   });
 });
 

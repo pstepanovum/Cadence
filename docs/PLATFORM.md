@@ -43,7 +43,7 @@ Pure TypeScript shared by every client lives in two byte-identical copies:
 | `src/lib/platform/engine-routing.ts` | `mobile/src/platform/engine-routing.ts` | `routeRequest`, `resolvePlus`, `dataTier`, quotas, audio limits and sniffing |
 | `src/lib/platform/progress-model.ts` | `mobile/src/platform/progress-model.ts` | the summary document and `applyActivity` |
 | `src/lib/platform/vocal-tract/*` | `mobile/src/platform/vocal-tract/*` | the mouth-map model (section 13) |
-| `src/lib/platform/srs.ts` | `mobile/src/platform/srs.ts` | the trimmed SM-2 (`review`, `planSession`, `summarizeDeck`); `mobile/src/games/srs.ts` re-exports it |
+| `src/lib/platform/srs.ts` | `mobile/src/platform/srs.ts` | the trimmed SM-2 (`review` with again, hard, good and easy, `planSession`, `summarizeDeck`); `mobile/src/games/srs.ts` and the web's `src/components/learn-hub/srs.ts` re-export it |
 | `src/lib/platform/daily-plan.ts` | `mobile/src/platform/daily-plan.ts` | `buildDailyPlan`: today's 10 to 15 minutes (section 7) |
 | `src/lib/platform/placement.ts` | `mobile/src/platform/placement.ts` | `writtenLevel`, `writtenScore`, `writtenConfidence`, `combineLevels` (section 7) |
 
@@ -59,9 +59,9 @@ Rules, enforced by `tests/platform/drift.test.ts`:
 - No Node, DOM, React or React Native APIs, so they run in all three apps
   and in `node --test`.
 
-**Open:** the web's flashcards still schedule with their own
-`src/components/learn-hub/srs.ts`, and no screen calls `buildDailyPlan` yet;
-both should move onto the shared modules.
+There is one scheduler: `tests/platform/drift.test.ts` also fails on any
+other `review` function or SM-2 interval rule under `src/` or `mobile/src/`.
+**Open:** no web screen calls `buildDailyPlan` yet.
 
 ---
 
@@ -360,7 +360,7 @@ picks a provider by environment variable, so a provider is swapped by config:
 | Interface | Providers | Env (default in cloud / own server) |
 | --- | --- | --- |
 | `SpeechScorer.score(audio, target)` | `local` (ai-engine), `cloud-run` (cadence-ai) | `ENGINE_SCORER` = `cloud-run` / `local` |
-| `Transcriber.transcribe(audio)` | `local` (Whisper), `gemini`, `whisper-cpu` (cadence-ai) | `ENGINE_TRANSCRIBER` = by benchmark / `local` |
+| `Transcriber.transcribe(audio)` | `local` (Whisper), `gemini`, `whisper-cpu` (cadence-ai) | `ENGINE_TRANSCRIBER` = `gemini` (benchmark, 6.2) / `local` |
 | `Synthesizer.speak(text, voice)` | `local` (OmniVoice), `google-tts` (+ GCS cache) | `ENGINE_TTS` = `google-tts` / `local` |
 | `CoachModel.turn(session, input)` | `local` (Qwen), `gemini` | `ENGINE_COACH` = `gemini` / `local` |
 | `GrammarAnalyzer.check(transcript, candidates)` | `local` (Qwen), `gemini` | `ENGINE_GRAMMAR` = `gemini` / `local` |
@@ -389,13 +389,20 @@ No GPU anywhere in the cloud.
 - **Explanations and examples** are generated offline (section 3.4), never per
   request.
 
-**Transcription benchmark.** Not run yet. Owner runs
-`node scripts/bench/transcribe.mjs` (it calls a paid API) and records:
+**Transcription benchmark.** `node scripts/bench/transcribe.mjs --clips 10`
+(2026-10-24): the first 10 clips of LibriSpeech dev-clean (CC BY 4.0, 109.8 s),
+sent as the 16 kHz WAV the iOS app records. Gemini through the public API with
+the server's prompt; Whisper-small on 2 CPU threads of an M-series Mac, costed
+as cadence-ai's 2 vCPU and 4 GiB at Cloud Run prices for the time it was busy
+(no cold start, so the real figure is higher).
 
 | Engine | Clips | WER | p50 latency | p95 latency | Cost per audio minute |
 | --- | --- | --- | --- | --- | --- |
-| Gemini 2.5 Flash-Lite (audio) | pending | | | | |
-| Whisper-small, cadence-ai CPU | pending | | | | |
+| Gemini 2.5 Flash-Lite (audio) | 10 | 7.9% | 1.54 s | 2.41 s | $0.00067 |
+| Whisper-small, CPU x2 | 10 | 8.7% | 3.55 s | 9.77 s | $0.00138 |
+
+Gemini wins on all three, so `ENGINE_TRANSCRIBER=gemini` in the cloud;
+`whisper-cpu` stays available by config.
 
 ### 6.3 Quotas and the circuit breaker
 
@@ -461,7 +468,15 @@ own Cadence get them too.
   Tokens are opaque, stored as SHA-256 digests, audience-bound to
   `https://cadence.pstepanov.dev/api/mcp`, refresh tokens rotate with reuse
   detection, grants end after 180 days. Known product names must redirect to
-  their own domains (the portfolio's `client-identity.ts` rules).
+  their own domains (the portfolio's `client-identity.ts` rules). The list of
+  those products is configuration, not code: `OAUTH_KNOWN_CLIENTS` (a JSON
+  array of `{label, tokens, hosts, schemes?}`, the `oauth-known-clients`
+  secret) is merged with the built-in entries.
+- The consent page (`src/app/oauth/authorize/page.tsx`,
+  `src/components/oauth/AuthorizeConsent.tsx`) signs in with Firebase if
+  needed, shows where the code goes first, then the app's name, the account
+  and one checkbox per scope (read is always on), and follows the
+  `{redirect}` the server answers. `resource_documentation` is `/connector`.
 - Discovery: `/.well-known/oauth-protected-resource/api/mcp` and
   `/.well-known/oauth-authorization-server` (rewrites, as in the portfolio).
   An unauthenticated call gets `401` with
@@ -497,6 +512,10 @@ Plus.
 ## 9. Billing webhooks
 
 Both endpoints read the raw body, verify before parsing anything else, and are
+idempotent. Neither ever creates `users/{uid}`: an event for a uid with no
+user document, or with a `deletions/{uid}` record, is recorded as
+`ignored: no account` and answered `200` (the cancellation Stripe sends after
+an account deletion would otherwise bring its billing back). They are
 idempotent: the first step is `create()` of `webhookEvents/{source}:{eventId}`
 in the same transaction as the state change; an existing document means a
 replay, answered `200 {duplicate: true}` with no change. Each one writes
@@ -772,17 +791,32 @@ where they differ, diphthongs and affricates as trajectories.
   with replay protection on sign-up and newsletter. MCP uses OAuth instead.
 - **Rules.** `firestore.rules` and `storage.rules` deny every client; only the
   Admin SDK on the server reads or writes.
-- **Web headers** (`next.config.ts`): a CSP with nonces for scripts,
+- **Web headers** (`src/lib/security/headers.ts`; the fixed ones from
+  `next.config.ts` on every path, the CSP per request from `src/proxy.ts`): a
+  CSP with a fresh nonce for scripts (`'strict-dynamic'`; `connect-src`
+  covers Firebase Auth, App Check and reCAPTCHA; `media-src 'self' blob:`;
+  no `upgrade-insecure-requests`, since your own Cadence is plain HTTP on the
+  LAN),
   `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`,
   `frame-ancestors 'none'` (and `X-Frame-Options: DENY`),
   `Referrer-Policy: strict-origin-when-cross-origin`,
   `X-Content-Type-Options: nosniff`, a minimal `Permissions-Policy`
   (microphone on self only).
 - **Auth endpoints** (`/api/auth/*`, password reset, sign-up) are rate limited
-  per IP and per account (`rateLimits`).
+  per IP and per account (`rateLimits`). The IP is the entry the trusted
+  proxies appended to `X-Forwarded-For`, counted from the right
+  (`TRUSTED_PROXY_HOPS`: 1 for Cloud Run alone, 2 behind Firebase Hosting,
+  which `deploy/cloudrun.sh` sets), so a client cannot pick its own bucket.
 - **Audio:** at most `AUDIO_MAX_SECONDS` (30) and `AUDIO_MAX_BYTES` (2 MB);
   the container is sniffed (`sniffAudio`), not taken from the declared type;
-  processed in memory and never stored by default.
+  the length that is capped and charged is read from the codec data the way
+  a decoder reads it (`src/lib/server/engines/audio-duration.ts`: WAV sample
+  rate times block size, refusing a byte rate that disagrees; every Opus
+  packet's own frame count in WebM and Ogg; the MP4 sample tables with a
+  floor of 1024 samples per AAC frame at 96 kHz; each MP3 frame header),
+  never less than bytes over 24,000 per second for compressed audio, and an
+  upload whose length cannot be read is refused; processed in memory and
+  never stored by default.
 - **Coach prompt injection:** fixed system prompt per scenario; learner text is
   passed as quoted data in its own message, never spliced into instructions;
   the model has no tools; output capped (about 250 tokens) and stripped of
@@ -824,6 +858,7 @@ and, when signed in, the Firebase ID token.
 | `/pricing`, `/checkout?plan=`, `/account` | `POST /api/billing/checkout {interval}` and `POST /api/billing/portal`, both `{url}`; Plus status from `GET /api/me` |
 | `/account` | `GET /api/account/export`; `DELETE /api/account` after re-entering the password |
 | `/practice/*`, `/grammar/*` | packs from `/packs` (built-in starter pack per level until they exist); each round is `POST /api/sync/summary {activities}` when signed in |
+| `/practice`, every flashcard review | `src/components/learn-hub/sync.ts`: `GET`/`DELETE /api/sync/inbox` for every account (connector cards join the deck); with Plus, `POST /api/sync/import` once per browser, then `POST /api/sync/push` a few seconds after reviews and `GET /api/sync/pull?since=`, last writer wins per card (the phone's body shapes, `sync-logic.ts`) |
 | AI calls (assess, transcribe, coach, voices) | `{ai: true}`: a refusal (`needs_plus`, `daily_limit`, …) opens one banner offering "Connect your own Cadence" and Plus |
 
 `/sounds`, `/sounds/<soundId>` and `/sounds/compare` read
@@ -880,9 +915,9 @@ commands.
 
 | What | Command | Pass |
 | --- | --- | --- |
-| Typecheck, lint, unit | `pnpm typecheck && pnpm lint && pnpm test` | clean (exists) |
+| Typecheck, lint, unit | `pnpm typecheck && pnpm lint && pnpm test` | clean (exists); includes the security headers (`tests/web/security-headers.test.ts`), web sync bodies against the server's validators (`tests/web/sync-logic.test.ts`), and audio length, client address and known-client parsing (`tests/server/guards.test.ts`, fixtures in `tests/server/fixtures/audio/`) |
 | Production build | `pnpm build` | succeeds (exists) |
-| Smoke flows | `pnpm exec playwright install chromium` once, then `firebase emulators:exec --only auth,firestore --project demo-cadence "pnpm test:e2e"` (JDK 21+; `playwright.config.ts` builds with demo Firebase values and starts `pnpm start` on port 3310; Stripe Checkout is stubbed by route interception, Brevo by `tests/e2e/support/brevo-stub.mjs` through `BREVO_API_URL`; `E2E_REUSE_BUILD=1` skips the build) | landing; sign up and in; a lesson; a quiz; flashcards; checkout redirects to the stubbed URL; local mode with no account; mouth map animates; the newsletter sends one Brevo double opt-in request for list 5 and never adds to list 5 directly; all at widths 375, 768 and 1280 with no horizontal scroll and no console errors; screenshots in `build/test-screenshots/web/<width>/` |
+| Smoke flows | `pnpm exec playwright install chromium` once, then `firebase emulators:exec --only auth,firestore --project demo-cadence "pnpm test:e2e"` (JDK 21+; `playwright.config.ts` builds with demo Firebase values and starts `pnpm start` on port 3310; Stripe Checkout is stubbed by route interception, Brevo by `tests/e2e/support/brevo-stub.mjs` through `BREVO_API_URL`; `E2E_REUSE_BUILD=1` skips the build) | landing; sign up and in; a lesson; a quiz; flashcards; checkout redirects to the stubbed URL; the connector consent page (`tests/e2e/oauth-consent.spec.ts`: discovery, sign in, allow, code for a token, deny, unknown client, security headers); local mode with no account; mouth map animates; the newsletter sends one Brevo double opt-in request for list 5 and never adds to list 5 directly; all at widths 375, 768 and 1280 with no horizontal scroll and no console errors; screenshots in `build/test-screenshots/web/<width>/` |
 | Accessibility | in the same run, `@axe-core/playwright` on every visited page | no serious or critical violations |
 | Lighthouse | `pnpm exec lhci autorun` after `pnpm build` (`lighthouserc.json`: landing and dashboard, Lighthouse's default mobile settings, median of 3; the local-mode cookie is sent on both so the dashboard opens; reports in `build/lighthouse/`) | performance at least 85, accessibility at least 95, best practices at least 95 |
 | Bundle budget | `node scripts/budgets/web.mjs` after `pnpm build` | within the budgets below |

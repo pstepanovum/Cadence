@@ -123,7 +123,8 @@ export interface PlusChange {
  * transaction (which has already read `userData`). A record older than the
  * stored one for that source is dropped, since Stripe and RevenueCat both
  * deliver out of order. Lapsing schedules the detail purge 90 days out;
- * becoming active again cancels it.
+ * becoming active again cancels it. A missing user document is never
+ * created; callers check `accountGone` first and record the event as ignored.
  */
 export function writePlusSource(
   tx: Transaction,
@@ -137,6 +138,13 @@ export function writePlusSource(
   const account = readAccount(userData, now);
   const before = account.plus;
   const stored = account.plusSources[record.source];
+
+  // Never create the account from a webhook: the document exists from the
+  // first sign-in, so a missing one is a deleted account (or a stranger's uid)
+  // and writing would bring its billing back after "account deleted".
+  if (!userData) {
+    return { before, after: before, applied: false, becameActive: false, becameInactive: false };
+  }
 
   if (stored && stored.eventAt > record.eventAt) {
     return { before, after: before, applied: false, becameActive: false, becameInactive: false };
@@ -159,17 +167,18 @@ export function writePlusSource(
     update.detailPurgeAt = now + LAPSED_RETENTION_DAYS * 24 * 60 * 60 * 1000;
   }
 
-  if (userData) {
-    tx.update(userRef, update);
-  } else {
-    tx.set(userRef, {
-      plusSources: { [record.source]: record },
-      plus: after,
-      ...extra,
-      createdAt: FieldValue.serverTimestamp(),
-      updatedAt: FieldValue.serverTimestamp(),
-    });
-  }
+  tx.update(userRef, update);
 
   return { before, after, applied: true, becameActive: isActive && !wasActive, becameInactive: wasActive && !isActive };
+}
+
+/**
+ * True when a webhook's uid has no live account: no user document, or a
+ * deletion recorded for it (deletions/{uid} outlives the purge). Read inside
+ * the webhook's transaction, before any write.
+ */
+export async function accountGone(tx: Transaction, firestore: Firestore, uid: string, userExists: boolean): Promise<boolean> {
+  if (!userExists) return true;
+  const deletion = await tx.get(firestore.collection("deletions").doc(uid));
+  return deletion.exists;
 }

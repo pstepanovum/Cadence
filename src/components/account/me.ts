@@ -8,6 +8,7 @@ import { cloudFetch } from "@/hooks/cloud-fetch";
 import type { DataTier, PlusRecord } from "@/lib/platform/engine-routing.ts";
 
 export interface Me {
+  uid: string | null;
   email: string | null;
   plus: PlusRecord | null;
   isPlus: boolean;
@@ -44,6 +45,7 @@ export function parseMe(body: unknown): Me {
   const isPlus = typeof b.isPlus === "boolean" ? b.isPlus : Boolean(plus?.active && (plus.expiresAt === null || plus.expiresAt > Date.now()));
   const tier = b.tier === "full" || b.tier === "summary" || b.tier === "none" ? b.tier : isPlus ? "full" : "summary";
   return {
+    uid: typeof user.uid === "string" ? user.uid : typeof b.uid === "string" ? b.uid : null,
     email: typeof user.email === "string" ? user.email : null,
     plus,
     isPlus,

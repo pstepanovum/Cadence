@@ -12,7 +12,7 @@
 import type { Firestore } from "firebase-admin/firestore";
 
 import { appOrigin } from "../env";
-import { writePlusSource, readAccount, type StoredPlusRecord } from "../entitlement";
+import { accountGone, writePlusSource, readAccount, type StoredPlusRecord } from "../entitlement";
 import { db as defaultDb } from "../firebase";
 import { mailKey, queueMailInTx, type QueueInput } from "../email/queue";
 import type { TemplateId } from "../email/templates/index";
@@ -230,7 +230,11 @@ export async function handleStripeEvent(event: StripeEventLike, deps: { db?: Fir
 
     const userRef = firestore.collection("users").doc(decided.uid);
     const snapshot = await tx.get(userRef);
-    const data = snapshot.exists ? snapshot.data() : undefined;
+    if (await accountGone(tx, firestore, decided.uid, snapshot.exists)) {
+      recordInTx(tx, firestore, "stripe", event.id, { type: event.type, uid: decided.uid, outcome: "ignored: no account" }, now);
+      return { status: 200, body: { received: true, ignored: "no account" }, mailKeys: [] };
+    }
+    const data = snapshot.data();
     const account = readAccount(data, now);
 
     const extra: Record<string, unknown> = {
@@ -241,7 +245,7 @@ export async function handleStripeEvent(event: StripeEventLike, deps: { db?: Fir
     if (decided.record) {
       const result = writePlusSource(tx, userRef, data, decided.record, now, extra);
       change = { before: account.plusSources.stripe ?? null, after: decided.record, applied: result.applied, nowActive: Boolean(result.after?.active) };
-    } else if (snapshot.exists && Object.keys(extra).length > 0) {
+    } else if (Object.keys(extra).length > 0) {
       tx.update(userRef, extra);
     }
 

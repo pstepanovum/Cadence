@@ -3,8 +3,8 @@
 // Spaced repetition for flashcards, a trimmed SM-2, shared by every client:
 // the phone's deck, the web and the Plus sync all schedule cards the same way.
 // A card has an ease factor and an interval in days. "Again" resets it to
-// today, "Good" grows the interval by the ease, "Easy" grows it faster and
-// nudges the ease up. Dates are local calendar days (YYYY-MM-DD), because a
+// today, "Hard" grows the interval a little and lowers the ease, "Good" grows
+// it by the ease, "Easy" grows it faster and nudges the ease up. Dates are local calendar days (YYYY-MM-DD), because a
 // learner thinks in "due today", not in milliseconds.
 //
 // Pure: no React, no storage. Tested in tests/platform/srs.test.ts.
@@ -13,7 +13,7 @@
 // by tests/platform/drift.test.ts.
 
 /** How the learner rated a review. */
-export type Grade = "again" | "good" | "easy";
+export type Grade = "again" | "hard" | "good" | "easy";
 
 export interface CardState {
   /** Successful reviews in a row. */
@@ -86,7 +86,10 @@ export function review(card: CardState | undefined, grade: Grade, now: Date): Ca
   let interval: number;
   let ease = current.ease;
 
-  if (grade === "good") {
+  if (grade === "hard") {
+    interval = reps === 1 ? 1 : reps === 2 ? 2 : Math.round(current.interval * 1.2);
+    ease = Math.max(MIN_EASE, current.ease - 0.15);
+  } else if (grade === "good") {
     interval = reps === 1 ? 1 : reps === 2 ? 3 : Math.round(current.interval * current.ease);
   } else {
     interval = reps === 1 ? 3 : Math.round(Math.max(current.interval, 1) * current.ease * 1.3);

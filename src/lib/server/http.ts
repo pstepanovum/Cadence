@@ -61,15 +61,25 @@ export async function readJsonObject(request: Request, maxBytes = 64 * 1024): Pr
   }
 }
 
+/** How many proxies in front of the server append to X-Forwarded-For (TRUSTED_PROXY_HOPS, default 1). */
+export function trustedProxyHops(): number {
+  const parsed = Number.parseInt(process.env.TRUSTED_PROXY_HOPS ?? "", 10);
+  return Number.isFinite(parsed) && parsed >= 1 && parsed <= 5 ? parsed : 1;
+}
+
 /**
- * The caller's address for per-IP limits. Firebase Hosting and Cloud Run put
- * the client first in X-Forwarded-For. Only used as a rate-limit key, never
- * for anything that grants access.
+ * The caller's address for per-IP limits. Every proxy appends the address it
+ * saw to X-Forwarded-For, so everything left of the trusted hops is whatever
+ * the client chose to send. With N trusted hops the client is the Nth entry
+ * from the right: Cloud Run alone is 1, Firebase Hosting in front of it is 2.
+ * Only used as a rate-limit key, never for anything that grants access.
  */
-export function clientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  const first = forwarded?.split(",")[0]?.trim();
-  const candidate = first || request.headers.get("x-real-ip")?.trim() || "unknown";
+export function clientIp(request: Request, hops = trustedProxyHops()): string {
+  const chain = (request.headers.get("x-forwarded-for") ?? "")
+    .split(",")
+    .map((entry) => entry.trim())
+    .filter(Boolean);
+  const candidate = chain.length > 0 ? chain[Math.max(0, chain.length - hops)] : request.headers.get("x-real-ip")?.trim() || "unknown";
   return /^[0-9a-fA-F:.]{2,45}$/.test(candidate) ? candidate : "unknown";
 }
 

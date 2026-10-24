@@ -29,11 +29,13 @@ type KnownProduct = {
   schemes?: string[];
 };
 
-const KNOWN_PRODUCTS: KnownProduct[] = [
-  { label: "Claude", tokens: ["claude", "anthropic"], hosts: ["claude.ai", "claude.com", "anthropic.com"] },
-  { label: "ChatGPT", tokens: ["chatgpt", "openai"], hosts: ["chatgpt.com", "openai.com"] },
-  { label: "Muse", tokens: ["muse", "metaai"], hosts: ["meta.ai"] },
-  { label: "Cursor", tokens: ["cursor"], hosts: ["cursor.com", "cursor.sh"], schemes: ["cursor"] },
+/**
+ * Products every deployment guards. Further products (the assistants the
+ * owner connects) come from OAUTH_KNOWN_CLIENTS, a JSON array of the same
+ * shape, so the list can grow without a code change:
+ *   [{"label":"Example","tokens":["example"],"hosts":["example.com"],"schemes":["example"]}]
+ */
+const BUILT_IN_PRODUCTS: KnownProduct[] = [
   {
     label: "Visual Studio Code",
     tokens: ["vscode", "visualstudiocode"],
@@ -45,6 +47,54 @@ const KNOWN_PRODUCTS: KnownProduct[] = [
   { label: "pstepanov.dev", tokens: ["pstepanov", "pavelstepanov"], hosts: ["pstepanov.dev"] },
 ];
 
+function isStringList(value: unknown): value is string[] {
+  return Array.isArray(value) && value.every((item) => typeof item === "string" && item.length > 0);
+}
+
+/** Parses OAUTH_KNOWN_CLIENTS. Invalid entries are dropped with a log line, never half-applied. */
+export function parseKnownProducts(raw: string | undefined): KnownProduct[] {
+  if (!raw?.trim()) return [];
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch {
+    console.error("OAUTH_KNOWN_CLIENTS is not valid JSON; ignoring it.");
+    return [];
+  }
+  if (!Array.isArray(parsed)) return [];
+  const products: KnownProduct[] = [];
+  for (const entry of parsed) {
+    const candidate = entry as Partial<KnownProduct> | null;
+    if (
+      candidate &&
+      typeof candidate.label === "string" &&
+      isStringList(candidate.tokens) &&
+      isStringList(candidate.hosts) &&
+      (candidate.schemes === undefined || isStringList(candidate.schemes))
+    ) {
+      products.push({
+        label: candidate.label,
+        tokens: candidate.tokens.map((token) => fold(token)).filter(Boolean),
+        hosts: candidate.hosts.map((host) => host.toLowerCase()),
+        schemes: candidate.schemes,
+      });
+    } else {
+      console.error("OAUTH_KNOWN_CLIENTS has an entry without label, tokens and hosts; skipping it.");
+    }
+  }
+  return products;
+}
+
+let cachedProducts: { raw: string | undefined; products: KnownProduct[] } | null = null;
+
+function knownProducts(): KnownProduct[] {
+  const raw = process.env.OAUTH_KNOWN_CLIENTS;
+  if (!cachedProducts || cachedProducts.raw !== raw) {
+    cachedProducts = { raw, products: [...BUILT_IN_PRODUCTS, ...parseKnownProducts(raw)] };
+  }
+  return cachedProducts.products;
+}
+
 /**
  * Characters that change how text renders without being visible: bidi
  * overrides and isolates can reverse a name on screen, and
@@ -54,7 +104,7 @@ const INVISIBLE = /[\u0000-\u001F\u007F-\u009F\u00AD\u061C\u180E\u200B-\u200F\u2
 
 const BIDI_CONTROL = /[\u061C\u200E\u200F\u202A-\u202E\u2066-\u2069]/;
 
-/** Latin lookalikes from Cyrillic and Greek, so "Сlaude" with a Cyrillic С still matches. */
+/** Latin lookalikes from Cyrillic and Greek, so "Еxample" with a Cyrillic Е still matches. */
 const CONFUSABLES: Record<string, string> = {
   "а": "a", "е": "e", "о": "o", "р": "p", "с": "c", "у": "y", "х": "x", "і": "i", "ј": "j", "ѕ": "s", "ԁ": "d", "һ": "h", "ӏ": "l",
   "α": "a", "ε": "e", "ο": "o", "ρ": "p", "ν": "v", "τ": "t", "ι": "i", "κ": "k", "χ": "x", "μ": "u",
@@ -95,7 +145,7 @@ export function findImpersonation(clientName: string, redirectUri: string): stri
   // stripped before a name is stored or shown, but a name that carried one was
   // built to be read backwards, so it is matched both ways round.
   const readings = BIDI_CONTROL.test(clientName) ? [folded, [...folded].reverse().join("")] : [folded];
-  const product = KNOWN_PRODUCTS.find((candidate) =>
+  const product = knownProducts().find((candidate) =>
     candidate.tokens.some((token) => readings.some((reading) => reading.includes(token))),
   );
 
