@@ -11,6 +11,7 @@ import {
 } from "@/api/endpoints";
 import type { ConversationModuleWithProgress, ConversationTurn, PronunciationAssessment } from "@/api/types";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { AssessmentView } from "@/components/practice/AssessmentView";
 import { CoachBubble, ReplyPanel } from "@/components/practice/CoachBubble";
 import { RecorderPanel } from "@/components/practice/RecorderPanel";
@@ -78,6 +79,7 @@ export default function ConversationSessionScreen() {
 }
 
 function ScenarioRun({ scenario }: { scenario: ConversationModuleWithProgress }) {
+  const elapsed = useSessionClock();
   const queryClient = useQueryClient();
   const readiness = useAssessReadiness();
   const speech = useSpeech();
@@ -164,6 +166,7 @@ function ScenarioRun({ scenario }: { scenario: ConversationModuleWithProgress })
 
     stop();
     setFinished(true);
+    logPractice({ kind: "coach", refId: `conversation.${scenario.slug ?? "scenario"}`, level: null, score: Math.round(nextScores.reduce((a, b) => a + b, 0) / Math.max(1, nextScores.length)), minutes: elapsed() });
     if (scenarioPassed(scenario.passScore, nextScores)) {
       playCompletionSound();
       haptics.success();

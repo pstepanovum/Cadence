@@ -75,3 +75,22 @@ export function syncPull(since: string | null): Promise<Record<string, unknown>>
 export function syncImport(payload: Record<string, unknown>): Promise<unknown> {
   return apiJson("/api/sync/import", "POST", payload, appCheck);
 }
+
+// --- Push devices ---
+
+export interface PushDevice {
+  installId: string;
+  expoPushToken: string;
+  platform: "ios" | "android";
+  timeZone: string;
+}
+
+/** Remembers this device's push token on the account (free and Plus alike). */
+export function registerPushDevice(device: PushDevice): Promise<unknown> {
+  return apiJson("/api/devices", "PUT", device, appCheck);
+}
+
+/** Forgets this device's push token, before signing out. */
+export function unregisterPushDevice(installId: string): Promise<unknown> {
+  return api(`/api/devices?installId=${encodeURIComponent(installId)}`, { method: "DELETE" }, appCheck);
+}

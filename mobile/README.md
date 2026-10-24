@@ -23,13 +23,20 @@ that does.
 
 ## What's included
 
-- **First run** — three onboarding questions (name, focus, pace) saved through
-  `PATCH /api/profile` to the same profile the web app reads, so one account
-  means one profile. Sign in, sign up and password reset all live under
-  `(auth)`.
-- **Home** — attempts, average score, modules complete and the day streak, plus
-  a quick-practice drill over 100+ target words grouped by sound family. The
-  family it opens on follows the focus chosen at onboarding.
+- **First run** — one question a screen (`src/components/onboarding/`, rules in
+  `src/onboarding/flow.ts`): welcome slides, the goal, the level (A2 to C2, or
+  a two-minute placement quiz), the daily goal (5, 10, 15 or 20 minutes), a
+  reminder time (iOS's notification prompt appears only when reminders are
+  turned on), where to practise ("Connect your own Cadence server", free, or
+  Cadence cloud), an account (optional with your own server, needed for the
+  cloud; the news checkbox starts unticked) and, on the cloud path only, Plus
+  with "Not now". Each step is saved on the phone, so a closed app resumes
+  where it stopped; it never shows twice, and Settings > Run setup again walks
+  the learning questions again. Installs from before it existed skip it. Sign
+  in, sign up and password reset also live under `(auth)`.
+- **Home** — the streak (with freezes), today's minutes against the daily goal,
+  the word of the day and a quick-practice drill over 100+ target words grouped
+  by sound family.
 - **Learn** — the module curriculum: theory (with narration and a "mark as
   read" that closes the session so the exam can unlock), practice rounds and
   exams. Unlimited retries per word, an attempt counter, a segmented word queue
@@ -65,10 +72,32 @@ that does.
   each sound has a drill ladder (sound, syllable, word, minimal pair, phrase,
   sentence; three takes in a row at 80 pass a step) and spaced review of fixed
   sounds (`src/practice/sound-coach.ts`).
-- **Profile** — name, focus area, daily pace, coach voice, connection status,
-  offline content packs, and for cloud accounts the account screen (Plus,
-  restore purchases, data export, account deletion), "Connect your own Cadence
-  server" and the opt-in "Product news and offers".
+- **Profile** — name, focus and pace for cloud accounts, and links to streak
+  and badges and to Settings.
+- **Settings** (`src/app/settings/index.tsx`) — reminders (daily, streak check,
+  flashcards due, weekly summary, quiet hours), daily goal, sounds, haptics,
+  coach voice, offline packs, the connected server, the account (product news,
+  plan, restore purchases, sign out, delete account), run setup again, and the
+  app version.
+- **Streaks and badges** (`src/engagement/`, `src/app/badges.tsx`) — the
+  streak counts local days; every 7 days in a row earns a freeze (two at most)
+  that covers a missed day. Badges: first lesson, 7, 30 and 100-day streaks,
+  each CEFR level completed, 100 and 1000 flashcards, a perfect quiz, a first
+  conversation, and mastering each grammar topic. They are computed from the
+  learner's state, so a free account sees them from this phone and a Plus
+  account from its synced detail; a new one gets a short unlock moment with a
+  buzz and the completion sound. The stats card shares as an image.
+- **Reminders** (`src/notifications/`) — local notifications planned for the
+  week as data (`plan.ts`, tested) and re-planned whenever the app opens or
+  practice changes, so today's reminder disappears once the goal is met. Every
+  notification opens its screen. Signed in, the phone registers an Expo push
+  token with the account (`PUT /api/devices`, free or Plus) when the build has
+  `EXPO_PUBLIC_EAS_PROJECT_ID`.
+- **Widgets** (`targets/widget`, `@bacons/apple-targets`) — a small streak and
+  goal ring, a medium word of the day that opens it to practise, and Lock Screen
+  circular (streak) and inline (goal) widgets. The app writes a snapshot into
+  the App Group `group.dev.pstepanov.cadence` (`src/lib/widget/`) and reloads
+  the widgets; they move to the next day by themselves at midnight.
 
 Every screen that loads something has a loading, empty, error and offline state
 with a way out; the record button stays disabled with an explanation while the
@@ -137,7 +166,10 @@ npm run content:check
 `npm test` is Node's own test runner — no test framework is installed. It covers
 the pure logic that is easy to get quietly wrong: score display and thresholds
 (`src/practice/scoring.ts`), lesson and scenario progression
-(`src/practice/progression.ts`), the recorder's state machine
+(`src/practice/progression.ts`), onboarding steps and placement scoring
+(`src/onboarding/`), streaks, freezes, badges and the daily goal
+(`src/engagement/`), the reminder plan (`src/notifications/plan.ts`), the
+widget snapshot (`src/lib/widget/snapshot.ts`), the recorder's state machine
 (`src/audio/take-machine.ts`), error wording (`src/copy/errors.ts`,
 `src/copy/auth-errors.ts`) and reading the cloud profile (`src/lib/profile.ts`). Anything
 that needs a device is verified by running the app, not by a test.
@@ -173,7 +205,10 @@ Everything App Store Connect needs lives in `app.json` and the four `ios:*` scri
 | Version / build | `expo.version` / `expo.ios.buildNumber` in `app.json` |
 | Devices | iPhone only (`ios.supportsTablet: false`; on an iPad it runs in iPhone compatibility mode) |
 | Orientation | Portrait |
-| Deployment target | iOS 16.4 (Expo SDK 57's floor) |
+| Deployment target | iOS 16.4 (Expo SDK 57's floor); the widget extension iOS 17 |
+| Widget extension | `dev.pstepanov.cadence.widget` (`targets/widget`) |
+| App Group | `group.dev.pstepanov.cadence`, on both App IDs |
+| Capabilities | App Groups (app and widget), Push Notifications (app) |
 
 You need Xcode 27 with the iOS 27 SDK and an App Store Connect API key (`.p8`). Keep the key out
 of the repo — `.gitignore` already refuses `*.p8`. The archive and upload scripts
@@ -194,6 +229,11 @@ npm run testflight    # the three above, in order
 `build/` and the generated `ios/` are both ignored: `ios/` is rebuilt from `app.json` by every
 archive, so never edit it by hand — a change there is gone on the next run. Put it in `app.json`
 or a config plugin instead.
+
+Before the first archive with the widget, enable the App Group
+`group.dev.pstepanov.cadence` on both App IDs (`dev.pstepanov.cadence` and
+`dev.pstepanov.cadence.widget`) and Push Notifications on the app's, in the
+developer portal; automatic signing then creates matching profiles.
 
 To run the real native app on a simulator rather than in Expo Go:
 

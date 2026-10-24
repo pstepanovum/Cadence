@@ -3,6 +3,7 @@ import { ArrowRight, Lightbulb } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import { ScoreStrip } from "@/components/games/ScoreStrip";
 import { SpeakerButton } from "@/components/games/SpeakerButton";
@@ -36,6 +37,7 @@ const MAX_LIVES = 3;
 type Verdict = { correct: boolean; close: boolean; typed: string } | null;
 
 export default function SpellingScreen() {
+  const elapsed = useSessionClock();
   const params = useLocalSearchParams<{ level?: string }>();
   const level = parseLevel(params.level);
   const { progress, recordRound } = useGameProgress();
@@ -132,6 +134,7 @@ export default function SpellingScreen() {
     setFinished(true);
     if (recorded.current) return;
     recorded.current = true;
+    logPractice({ kind: "matching", refId: "game.spelling", level: null, score: percent, minutes: elapsed() });
     if (percent >= 70) playCompletionSound();
     recordRound({
       gameId: "spelling",

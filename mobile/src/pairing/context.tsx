@@ -60,7 +60,8 @@ interface ConnectionValue {
    * at home, used for AI when it is reachable while progress follows the account.
    */
   paired: boolean;
-  chooseCloud: () => Promise<void>;
+  /** Switches to Cadence cloud; `keepServer` keeps a paired server for AI at home. */
+  chooseCloud: (options?: { keepServer?: boolean }) => Promise<void>;
   /**
    * Pairs with a Cadence server. With `keepAccount` in cloud mode the sign-in
    * stays and the server only runs AI; otherwise the phone switches to local mode.
@@ -311,14 +312,19 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
     setState({ status: "unpaired" });
   }, []);
 
-  const chooseCloud = useCallback(async () => {
-    // A stored pairing wins at launch, so it has to go, or the next cold start
-    // would put the phone back in local mode.
-    generation.current += 1;
-    await clearPairing();
-    setConnection(null);
-    setDeviceToken(null);
-    setState({ status: "unpaired" });
+  const chooseCloud = useCallback(async (options: { keepServer?: boolean } = {}) => {
+    if (!options.keepServer) {
+      // A stored pairing wins at launch, so it has to go, or the next cold
+      // start would put the phone back in local mode.
+      generation.current += 1;
+      await clearPairing();
+      setConnection(null);
+      setDeviceToken(null);
+      setState({ status: "unpaired" });
+    }
+    // With keepServer the paired server stays as the learner's server at
+    // home (onboarding: your own server first, then an account), and the
+    // remembered "cloud" mode makes the next launch read it that way.
 
     const { default: AsyncStorage } = await import(
       "@react-native-async-storage/async-storage"

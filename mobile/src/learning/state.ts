@@ -67,6 +67,27 @@ export interface SyncMarks {
   importedAt: number | null;
 }
 
+/**
+ * Practice by local day and the counters badges need. Device-local in every
+ * tier; the streak, badges and daily goal are computed from it
+ * (src/engagement/).
+ */
+export interface ActivityLog {
+  /** Minutes practised per local day (YYYY-MM-DD), the last ACTIVITY_DAYS_KEPT days. */
+  days: Record<string, number>;
+  cardsReviewed: number;
+  perfectQuizzes: number;
+  conversations: number;
+  /** Badge id to the time it was earned. */
+  badges: Record<string, number>;
+}
+
+export const ACTIVITY_DAYS_KEPT = 400;
+
+export function emptyActivity(): ActivityLog {
+  return { days: {}, cardsReviewed: 0, perfectQuizzes: 0, conversations: 0, badges: {} };
+}
+
 export interface LearningState {
   schema: number;
   summary: ProgressSummary;
@@ -78,6 +99,7 @@ export interface LearningState {
   customCards: CustomCard[];
   /** Newest first. */
   attempts: Attempt[];
+  activity: ActivityLog;
   sync: SyncMarks;
 }
 
@@ -92,6 +114,7 @@ export function emptyLearningState(): LearningState {
     cards: {},
     customCards: [],
     attempts: [],
+    activity: emptyActivity(),
     sync: { pushedAt: 0, pullCursor: null, importedAt: null },
   };
 }
@@ -113,8 +136,43 @@ export function parseLearningState(raw: unknown): LearningState {
     cards: isObject(raw.cards) ? (raw.cards as Record<string, CardRecord>) : {},
     customCards: Array.isArray(raw.customCards) ? (raw.customCards as CustomCard[]) : [],
     attempts: Array.isArray(raw.attempts) ? (raw.attempts as Attempt[]).slice(0, MAX_ATTEMPTS) : [],
+    activity: parseActivity(raw.activity),
     sync: isObject(raw.sync) ? { ...base.sync, ...(raw.sync as Partial<SyncMarks>) } : base.sync,
   };
+}
+
+const count = (value: unknown) => (typeof value === "number" && Number.isFinite(value) && value > 0 ? Math.floor(value) : 0);
+
+function parseActivity(raw: unknown): ActivityLog {
+  if (!isObject(raw)) return emptyActivity();
+  const days: Record<string, number> = {};
+  if (isObject(raw.days)) {
+    for (const [day, minutes] of Object.entries(raw.days)) {
+      if (/^\d{4}-\d{2}-\d{2}$/.test(day) && typeof minutes === "number" && minutes >= 0) days[day] = minutes;
+    }
+  }
+  const badges: Record<string, number> = {};
+  if (isObject(raw.badges)) {
+    for (const [id, at] of Object.entries(raw.badges)) if (typeof at === "number") badges[id] = at;
+  }
+  return { days, cardsReviewed: count(raw.cardsReviewed), perfectQuizzes: count(raw.perfectQuizzes), conversations: count(raw.conversations), badges };
+}
+
+/** Adds practice minutes to a day, keeping only the most recent days. */
+export function logMinutes(activity: ActivityLog, day: string, minutes: number): ActivityLog {
+  const days = { ...activity.days, [day]: (activity.days[day] ?? 0) + Math.max(0, minutes) };
+  const keys = Object.keys(days).sort();
+  for (const old of keys.slice(0, Math.max(0, keys.length - ACTIVITY_DAYS_KEPT))) delete days[old];
+  return { ...activity, days };
+}
+
+/** Marks badges as earned, keeping the first time each was earned. */
+export function earnBadges(state: LearningState, ids: readonly string[], at: number): LearningState {
+  const fresh = ids.filter((id) => !(id in state.activity.badges));
+  if (fresh.length === 0) return state;
+  const badges = { ...state.activity.badges };
+  for (const id of fresh) badges[id] = at;
+  return { ...state, activity: { ...state.activity, badges } };
 }
 
 /** One graded answer: grammar mastery for each point it practises, and the attempt log. */
@@ -182,11 +240,15 @@ export function finishSession(
     ...(completedLesson ? { completedLesson: true } : {}),
     ...(session.placementLevel ? { placementLevel: session.placementLevel } : {}),
   };
+  let log = logMinutes(state.activity, day, activity.minutes);
+  if (session.kind === "quiz" && session.score === 100) log = { ...log, perfectQuizzes: log.perfectQuizzes + 1 };
+  if (session.kind === "coach") log = { ...log, conversations: log.conversations + 1 };
   return {
     activity,
     state: {
       ...state,
       lessons,
+      activity: log,
       summary: applyActivity(state.summary, activity),
       pending: [...state.pending, activity].slice(-MAX_PENDING),
     },
@@ -195,7 +257,11 @@ export function finishSession(
 
 export function reviewCard(state: LearningState, cardId: string, grade: Grade, now: Date): LearningState {
   const next = review(state.cards[cardId], grade, now);
-  return { ...state, cards: { ...state.cards, [cardId]: { ...next, updatedAt: now.getTime() } } };
+  return {
+    ...state,
+    cards: { ...state.cards, [cardId]: { ...next, updatedAt: now.getTime() } },
+    activity: { ...state.activity, cardsReviewed: state.activity.cardsReviewed + 1 },
+  };
 }
 
 /** Adds cards (from the MCP inbox, say), skipping any whose front is already in the deck. */

@@ -98,12 +98,15 @@ export function ProgressRing({
   strokeWidth = 6,
   label,
   onDark = false,
+  color,
 }: {
   score: number;
   size?: number;
   strokeWidth?: number;
   label?: string;
   onDark?: boolean;
+  /** A fixed colour instead of the score's (a goal ring is not a grade). */
+  color?: string;
 }) {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -130,7 +133,7 @@ export function ProgressRing({
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke={scoreColor(clamped)}
+          stroke={color ?? scoreColor(clamped)}
           strokeWidth={strokeWidth}
           strokeLinecap="round"
           strokeDasharray={circumference}

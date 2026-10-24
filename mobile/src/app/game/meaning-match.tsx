@@ -3,6 +3,7 @@ import { ArrowRight, Volume2 } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { ChoiceButton, type ChoiceState } from "@/components/games/ChoiceButton";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import { ScoreStrip } from "@/components/games/ScoreStrip";
@@ -35,6 +36,7 @@ function newRound(level: ReturnType<typeof parseLevel>): MeaningQuestion[] {
 }
 
 export default function MeaningMatchScreen() {
+  const elapsed = useSessionClock();
   const params = useLocalSearchParams<{ level?: string }>();
   const level = parseLevel(params.level);
   const { progress, recordRound } = useGameProgress();
@@ -95,6 +97,7 @@ export default function MeaningMatchScreen() {
     setFinished(true);
     if (recorded.current) return;
     recorded.current = true;
+    logPractice({ kind: "quiz", refId: "game.meaning-match", level: null, score: percent, minutes: elapsed() });
     if (percent >= 70) playCompletionSound();
     recordRound({
       gameId: "meaning-match",

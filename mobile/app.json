@@ -47,6 +47,12 @@
             ]
           }
         ]
+      },
+      "appleTeamId": "V7H9Y9K6Z7",
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.dev.pstepanov.cadence"
+        ]
       }
     },
     "android": {
@@ -98,7 +104,14 @@
         }
       ],
       "expo-asset",
-      "expo-sharing"
+      "expo-sharing",
+      [
+        "expo-notifications",
+        {
+          "enableBackgroundRemoteNotifications": false
+        }
+      ],
+      "@bacons/apple-targets"
     ],
     "experiments": {
       "typedRoutes": true,

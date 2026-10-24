@@ -246,7 +246,7 @@ reads.
 | `users/{uid}/mastery/grammar` | Plus | `{gpId: {attempts, correct, ema, lastAt}}` | 1 when needed |
 | `users/{uid}/attempts/{YYYY-MM-DD}` | Plus | `items: Attempt[]` appended with `arrayUnion` (overflow to `{day}-2` past 500) | history views only |
 | `users/{uid}/coachSessions/{id}` | Plus | scenario, started/ended, turn count, running summary, transcript | history views only |
-| `users/{uid}/devices/{installId}` | Plus | platform, `lastSyncAt`, `importedAt` | on sync |
+| `users/{uid}/devices/{installId}` | all signed in | platform, `push` (`{token, timeZone, updatedAt}`, the Expo push token, any tier); with Plus also `lastSyncAt`, `importedAt` | on sync and app open |
 | `usage/{uid}/days/{YYYY-MM-DD}` | cloud AI users | `DailyUsage` counters, `expireAt` (+35 days, TTL) | 1 per AI request (in the quota transaction) |
 | `system/aiBudget/days/{YYYY-MM-DD}` | server | global estimated spend and request counts, `tripped` | cached 30 s per instance |
 | `webhookEvents/{source}:{eventId}` | server | type, uid, received at, `expireAt` (+30 days, TTL) | 1 per webhook |
@@ -301,7 +301,12 @@ in an hour sends one `suspicious-activity` a day); `GET /api/account/export`,
 `DELETE /api/account`, `POST /api/account/email` `{newEmail}`,
 `GET`/`DELETE /api/account/connections` (MCP grants); `POST /api/newsletter`
 `{email, consent}` or `{subscribed}`; `GET`/`POST /api/email/unsubscribe`;
-`POST /api/ai/grammar-feedback`, `POST /api/ai/placement`. Errors are
+`POST /api/ai/grammar-feedback`, `POST /api/ai/placement`. `PUT /api/devices`
+`{installId, expoPushToken, platform, timeZone}` and `DELETE /api/devices?installId=`
+keep a phone's push token (free and Plus); `POST /api/jobs/push` (job secret,
+`{uids, title, body, url}`) is the stub future campaigns send through
+(`src/lib/server/push.ts`). The daily purge clears `devices` after a Plus lapse;
+the app registers its token again on the next open. Errors are
 `{error, message}` with a code the apps switch on.
 
 ---

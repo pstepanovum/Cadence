@@ -15,6 +15,7 @@ import {
 } from "@/api/endpoints";
 import type { LessonWithSummary, PronunciationAssessment } from "@/api/types";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { AssessmentView } from "@/components/practice/AssessmentView";
 import { RecorderPanel } from "@/components/practice/RecorderPanel";
 import { ResultSummary } from "@/components/practice/ResultSummary";
@@ -253,6 +254,7 @@ function WordQueueLesson({
   lessons: LessonWithSummary[];
   moduleId: number;
 }) {
+  const elapsed = useSessionClock();
   const queryClient = useQueryClient();
   const readiness = useAssessReadiness();
 
@@ -385,6 +387,7 @@ function WordQueueLesson({
     }
 
     setFinished(true);
+    logPractice({ kind: "pronunciation", refId: `module.${lesson.id}`, level: null, score: Math.round(averageScore(nextScores)), minutes: elapsed() });
     if (averageScore(nextScores) >= pass) {
       playCompletionSound();
       haptics.success();

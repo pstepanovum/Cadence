@@ -10,6 +10,7 @@ import { StyleSheet, useWindowDimensions, View } from "react-native";
 import { assess, type RecordedAudio } from "@/api/endpoints";
 import type { PronunciationAssessment } from "@/api/types";
 import { playAssessmentFeedback } from "@/audio/feedback";
+import { logPractice } from "@/learning/log";
 import { MouthMap } from "@/components/mouth-map";
 import { AssessmentView } from "@/components/practice/AssessmentView";
 import { RecorderPanel } from "@/components/practice/RecorderPanel";
@@ -48,6 +49,7 @@ export default function DrillScreen() {
   const [itemIndex, setItemIndex] = useState(0);
   const [assessment, setAssessment] = useState<PronunciationAssessment | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [logged, setLogged] = useState(false);
 
   if (!sound) {
     return (
@@ -88,6 +90,11 @@ export default function DrillScreen() {
               ? `Good: ${Math.round(score)}. Keep the run going.`
               : `${Math.round(score)}. Check the mouth map and try again.`,
       );
+      // The first scored take of a visit counts as practice for the day.
+      if (!logged) {
+        setLogged(true);
+        logPractice({ kind: "pronunciation", refId: sound.id, level: null, score: Math.round(score), minutes: 1 });
+      }
       if (outcome.stepPassed) setItemIndex(0);
       else setItemIndex((i) => (i + 1) % Math.max(1, items.length));
     } catch (cause) {

@@ -6,7 +6,7 @@
 // initialised lazily and only when the build carries the config.
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { getAuth, getReactNativePersistence, initializeAuth, type Auth } from "firebase/auth";
+import { connectAuthEmulator, getAuth, getReactNativePersistence, initializeAuth, type Auth } from "firebase/auth";
 
 import { config } from "@/lib/config";
 
@@ -32,6 +32,10 @@ export function getFirebaseAuth(): Auth | null {
 
   const app = initializeApp(firebase);
   cached = initializeAuth(app, { persistence: getReactNativePersistence(AsyncStorage) });
+  // Development only: the local Auth emulator (with a demo- project), for
+  // trying the cloud flows on the simulator without a real project.
+  const emulator = process.env.EXPO_PUBLIC_FIREBASE_AUTH_EMULATOR?.trim();
+  if (__DEV__ && emulator) connectAuthEmulator(cached, `http://${emulator}`, { disableWarnings: true });
   return cached;
 }
 

@@ -5,6 +5,7 @@ import { StyleSheet, View, type FlatList } from "react-native";
 import { assess, coachTurn, transcribe, type RecordedAudio } from "@/api/endpoints";
 import type { CoachHistoryEntry, CoachMode } from "@/api/types";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { AssessmentView } from "@/components/practice/AssessmentView";
 import { CoachBubble, ReplyPanel } from "@/components/practice/CoachBubble";
 import { RecorderPanel } from "@/components/practice/RecorderPanel";
@@ -65,6 +66,7 @@ function newSessionId(): string {
 }
 
 export default function CoachSessionScreen() {
+  const elapsed = useSessionClock();
   const params = useLocalSearchParams<{ topic: string; mode: CoachMode; sessionId?: string }>();
   const topic = params.topic ?? "Everyday conversation";
   const mode: CoachMode = params.mode === "freedom" ? "freedom" : "target";
@@ -247,6 +249,7 @@ export default function CoachSessionScreen() {
     stop();
     followRef.current = true;
     setEnded(true);
+    if (scored.length > 0) logPractice({ kind: "coach", refId: "coach.session", level: null, score: null, minutes: elapsed() });
     if (scored.length > 0) {
       playCompletionSound();
       haptics.success();

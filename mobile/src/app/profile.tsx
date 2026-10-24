@@ -1,19 +1,16 @@
 import Constants from "expo-constants";
 import { router } from "expo-router";
-import { ChevronRight, Download, Laptop, Sparkles, Volume2 } from "lucide-react-native";
+import { Award, Settings as SettingsIcon } from "lucide-react-native";
 import { useState } from "react";
-import { Alert, Pressable, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import {
   Banner,
   Body,
   Button,
   Card,
-  Eyebrow,
   OptionRow,
-  pressedCard,
   Screen,
   TextField,
-  Title,
   TopBar,
 } from "@/components/ui";
 import {
@@ -23,44 +20,23 @@ import {
   type PracticeCadence,
   type PracticeFocus,
 } from "@/context/auth";
-import { NewsletterToggle } from "@/components/NewsletterToggle";
+import { SettingsRow } from "@/components/settings";
+import { earnedCount } from "@/engagement/badges";
+import { useBadges, useToday } from "@/engagement/useEngagement";
 import { useAccount } from "@/context/account";
-import { useCoachVoice } from "@/hooks/useCoachVoice";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { haptics } from "@/lib/haptics";
 import { useConnection } from "@/pairing/context";
 import { colors, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 export default function ProfileScreen() {
-  const { user, profile, signOut } = useAuth();
-  const { mode, state: connectionState, paired, forgetServer } = useConnection();
+  const { user, profile } = useAuth();
+  const { mode } = useConnection();
   const account = useAccount();
-  const voice = useCoachVoice();
   const server = useServerStatus();
+  const today = useToday();
+  const badges = useBadges();
   const local = mode === "local";
-
-  function confirmSignOut() {
-    Alert.alert(
-      "Sign out?",
-      "Your progress stays in your account. Coach conversations saved on this phone come back when you sign in again.",
-      [
-        { text: "Stay signed in", style: "cancel" },
-        { text: "Sign out", style: "destructive", onPress: () => void signOut() },
-      ],
-    );
-  }
-
-  const connectionLine = local
-    ? connectionState.status === "connected"
-      ? `Connected to ${connectionState.serverName} over Wi-Fi.`
-      : server.checking
-        ? "Looking for your computer…"
-        : (server.message ?? "Not connected.")
-    : paired
-      ? connectionState.status === "connected"
-        ? `Connected to ${connectionState.serverName}. Scoring and the coach run there when you're home.`
-        : "Paired. Scoring and the coach run there whenever it's reachable."
-      : "Run scoring and the coach on your own computer over your home Wi-Fi. Open source and free.";
 
   return (
     <Screen>
@@ -87,42 +63,18 @@ export default function ProfileScreen() {
       {local ? null : <ProfileForm />}
 
       <View style={styles.group}>
-        <Eyebrow>Settings</Eyebrow>
         <SettingsRow
-          icon={<Volume2 color={colors.hunter} size={20} />}
-          title="Coach voice"
-          detail={voice.instruct}
-          onPress={() => router.push("/settings/voice")}
+          icon={<Award color={colors.hunter} size={20} />}
+          title="Streak and badges"
+          detail={`${today.streak.current}-day streak · ${earnedCount(badges)} badges`}
+          onPress={() => router.push("/badges")}
         />
         <SettingsRow
-          icon={<Laptop color={local && !server.reachable && !server.checking ? colors.brick : colors.hunter} size={20} />}
-          title={local ? "Your computer" : paired ? "Your Cadence server" : "Connect your own Cadence server"}
-          detail={connectionLine}
-          onPress={() => {
-            if (local) router.push("/connect");
-            else if (!paired) router.push({ pathname: "/connect/scan", params: { home: "1" } });
-            else
-              Alert.alert("Your Cadence server", "Unpair it from this phone? Your account stays signed in.", [
-                { text: "Keep", style: "cancel" },
-                { text: "Unpair", style: "destructive", onPress: () => void forgetServer() },
-              ]);
-          }}
+          icon={<SettingsIcon color={colors.hunter} size={20} />}
+          title="Settings"
+          detail="Reminders, sounds, your server, your account."
+          onPress={() => router.push("/settings")}
         />
-        <SettingsRow
-          icon={<Download color={colors.hunter} size={20} />}
-          title="Offline content packs"
-          detail="Lessons and sounds on this phone, and more to download."
-          onPress={() => router.push("/settings/packs")}
-        />
-        {local ? null : (
-          <SettingsRow
-            icon={<Sparkles color={colors.hunter} size={20} />}
-            title={account.plus ? "Account and Plus" : "Account"}
-            detail={account.plus ? "Plan, restore purchases, your data." : "Plan, restore purchases, your data, delete account."}
-            onPress={() => router.push("/account")}
-          />
-        )}
-        {local ? null : <NewsletterToggle />}
       </View>
 
       {local ? (
@@ -130,13 +82,9 @@ export default function ProfileScreen() {
           No account needed with your own server. Pronunciation progress is kept on your computer; lessons and flashcards on this phone.
         </Body>
       ) : (
-        <Card>
-          <Eyebrow>Account</Eyebrow>
-          <Body size={type.callout}>
-            {account.tier === "full" ? "Everything you practise is synced to your account." : "Your account keeps your progress summary. The detail stays on this phone."}
-          </Body>
-          <Button label="Sign out" variant="danger" onPress={confirmSignOut} />
-        </Card>
+        <Body size={type.footnote} tone="muted">
+          {account.tier === "full" ? "Everything you practise is synced to your account." : "Your account keeps your progress summary. The detail stays on this phone."}
+        </Body>
       )}
 
       <Body size={type.caption} tone="muted" style={styles.version}>
@@ -240,36 +188,6 @@ function ProfileForm() {
       {saved && !dirty ? <Banner tone="success" message="Saved." /> : null}
       <Button label="Save changes" loading={saving} disabled={!dirty} onPress={handleSave} />
     </Card>
-  );
-}
-
-function SettingsRow({
-  icon,
-  title,
-  detail,
-  onPress,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  detail: string;
-  onPress: () => void;
-}) {
-  return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={title}
-      accessibilityHint={detail}
-      onPress={onPress}
-      style={({ pressed }) => [styles.row, pressedCard(pressed)]}>
-      <View style={styles.rowIcon}>{icon}</View>
-      <View style={styles.rowBody}>
-        <Title size={type.headline}>{title}</Title>
-        <Body size={type.footnote} tone="muted" numberOfLines={2}>
-          {detail}
-        </Body>
-      </View>
-      <ChevronRight color={colors.slate} size={20} />
-    </Pressable>
   );
 }
 

@@ -10,6 +10,9 @@ import { emptyLearningState, parseLearningState, type LearningState } from "./st
 
 const storageKey = (learner: string) => `cadence_learning:${learner}`;
 
+/** The learner with no account: own-server use, and setup before an account exists. */
+export const DEVICE_LEARNER = "device";
+
 interface Snapshot {
   learner: string | null;
   state: LearningState;
@@ -40,7 +43,17 @@ export function setLearner(learner: string | null): void {
   void (async () => {
     let state = emptyLearningState();
     try {
-      const raw = await AsyncStorage.getItem(storageKey(learner));
+      let raw = await AsyncStorage.getItem(storageKey(learner));
+      if (!raw && learner !== DEVICE_LEARNER) {
+        // The first sign-in on this phone takes over what was practised
+        // before there was an account (onboarding's placement quiz, say).
+        const device = await AsyncStorage.getItem(storageKey(DEVICE_LEARNER));
+        if (device) {
+          raw = device;
+          await AsyncStorage.setItem(storageKey(learner), device);
+          await AsyncStorage.removeItem(storageKey(DEVICE_LEARNER));
+        }
+      }
       if (raw) state = parseLearningState(JSON.parse(raw));
     } catch {
       // Unreadable storage starts fresh; the next write replaces it.

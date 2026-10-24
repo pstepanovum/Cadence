@@ -14,7 +14,7 @@ import { AppState } from "react-native";
 
 import { getMe } from "@/api/account";
 import { useAuth } from "@/context/auth";
-import { setLearner, useLearning } from "@/learning/store";
+import { DEVICE_LEARNER, setLearner, useLearning } from "@/learning/store";
 import { syncProgress } from "@/learning/sync";
 import { NO_STORE_STATUS, type StoreStatus } from "@/lib/billing/plans";
 import { onStoreStatus, signInToStore, signOutOfStore } from "@/lib/billing/purchases";
@@ -88,8 +88,9 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
 
   // The learner whose progress the phone keeps: the account, or this device
   // when practising on one's own server with no account.
+  // Before a mode is chosen (first-run setup) practice is the device's too.
   useEffect(() => {
-    setLearner(uid ?? (mode === "local" ? "device" : null));
+    setLearner(uid ?? (mode === "cloud" ? null : DEVICE_LEARNER));
   }, [uid, mode]);
 
   const serverPlus = me?.plusActive ?? false;

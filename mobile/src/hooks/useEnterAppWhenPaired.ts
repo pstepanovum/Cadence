@@ -1,5 +1,6 @@
 import { router } from "expo-router";
 import { useCallback, useEffect, useState } from "react";
+import { onboardingInProgress } from "@/onboarding/store";
 import { useConnection } from "@/pairing/context";
 
 /**
@@ -16,6 +17,11 @@ export function useEnterAppWhenPaired() {
     // "/" alone is ambiguous: the sign-in group has an index too, and while it
     // is guarded off a navigation to it is silently dropped.
     if (!paired) return;
+    // Paired from the first-run setup: back to it, for the steps after.
+    if (onboardingInProgress()) {
+      router.dismissTo("/onboarding");
+      return;
+    }
     if (mode === "local") router.dismissTo("/(tabs)");
     // Paired a home server while signed in: back to wherever it was opened from.
     else if (mode === "cloud" && router.canGoBack()) router.back();

@@ -3,6 +3,7 @@ import { ArrowRight, Play } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { ChoiceButton, type ChoiceState } from "@/components/games/ChoiceButton";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import { ScoreStrip } from "@/components/games/ScoreStrip";
@@ -35,6 +36,7 @@ const ROUND_LENGTH = 10;
 const ALL = "all";
 
 export default function SoundMatchScreen() {
+  const elapsed = useSessionClock();
   const params = useLocalSearchParams<{ group?: string }>();
   const { progress, recordRound } = useGameProgress();
   const audio = useSpeech();
@@ -117,6 +119,7 @@ export default function SoundMatchScreen() {
     setFinished(true);
     if (recorded.current) return;
     recorded.current = true;
+    logPractice({ kind: "matching", refId: "game.sound-match", level: null, score: percent, minutes: elapsed() });
     if (percent >= 70) playCompletionSound();
     recordRound({
       gameId: "sound-match",

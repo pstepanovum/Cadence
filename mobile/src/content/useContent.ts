@@ -64,3 +64,8 @@ export function parseLevelParam(value: unknown): CefrLevel {
   const raw = Array.isArray(value) ? value[0] : value;
   return isCefrLevel(raw) ? raw : "A1";
 }
+
+/** Sets the level the Learn hub opens on (onboarding's answer). */
+export function rememberLearnLevel(level: CefrLevel): Promise<void> {
+  return AsyncStorage.setItem(LEVEL_KEY, level).catch(() => {});
+}

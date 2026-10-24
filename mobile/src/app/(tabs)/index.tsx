@@ -1,9 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import { router } from "expo-router";
 import { Flame, Shuffle, UserRound } from "lucide-react-native";
 import { useMemo, useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { assess, getModules, getStats, type RecordedAudio } from "@/api/endpoints";
+import { Pressable, StyleSheet, View } from "react-native";
+import { assess, type RecordedAudio } from "@/api/endpoints";
 import type { PronunciationAssessment } from "@/api/types";
 import { playAssessmentFeedback } from "@/audio/feedback";
 import { AssessmentView } from "@/components/practice/AssessmentView";
@@ -11,13 +10,14 @@ import { RecorderPanel } from "@/components/practice/RecorderPanel";
 import { ReadinessBanner, ServerBanner } from "@/components/status";
 import { UpdateBanner } from "@/components/UpdateNotice";
 import {
-  Banner,
   Body,
   Button,
   buttonIconColor,
   Card,
   Chip,
+  Eyebrow,
   HorizontalPicker,
+  ProgressRing,
   RoundIconButton,
   Screen,
   SectionHeader,
@@ -26,13 +26,15 @@ import {
   Title,
 } from "@/components/ui";
 import { useAuth } from "@/context/auth";
+import { earnedCount } from "@/engagement/badges";
+import { useBadges, useToday } from "@/engagement/useEngagement";
+import { wordOfTheDay } from "@/lib/widget/snapshot";
 import { useAssessReadiness } from "@/hooks/useEngineReadiness";
 import { useRefresh } from "@/hooks/useRefresh";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { useConnection } from "@/pairing/context";
-import { normalizeScore } from "@/practice/scoring";
 import { suggestedGroupKey, targetGroups } from "@/practice/targets";
-import { colors, fonts, overlays, radii, spacing, type, themed } from "@/theme/theme";
+import { colors, fonts, radii, spacing, type, themed } from "@/theme/theme";
 
 export default function HomeScreen() {
   const { displayName, profile } = useAuth();
@@ -40,8 +42,9 @@ export default function HomeScreen() {
   const server = useServerStatus();
   const readiness = useAssessReadiness();
 
-  const statsQuery = useQuery({ queryKey: ["stats"], queryFn: getStats });
-  const modulesQuery = useQuery({ queryKey: ["modules"], queryFn: getModules });
+  const today = useToday();
+  const badges = useBadges();
+  const word = wordOfTheDay(today.today);
 
   const groups = useMemo(() => targetGroups(), []);
   const [groupKey, setGroupKey] = useState(() => {
@@ -58,7 +61,7 @@ export default function HomeScreen() {
   const { refreshing, onRefresh } = useRefresh(() => {
     server.refresh();
     readiness.refresh();
-    return Promise.all([statsQuery.refetch(), modulesQuery.refetch()]);
+    return Promise.resolve();
   });
 
   async function handleTake(take: RecordedAudio) {
@@ -85,17 +88,15 @@ export default function HomeScreen() {
     pickWord(next);
   }
 
-  const stats = statsQuery.data;
-  const modules = modulesQuery.data ?? [];
-  const completedModules = modules.filter((item) => item.progress?.is_completed).length;
-  const streak = stats?.current_streak_days ?? 0;
+  const streak = today.streak.current;
+  const streakTitle = streak > 0 ? `${streak}-day streak` : "Start a streak today";
   // Local mode has no account, and so no name worth greeting.
   const greeting = mode === "local" ? "Ready to practise?" : `Hi ${displayName}`;
 
   return (
     <Screen tab refreshing={refreshing} onRefresh={onRefresh}>
       <SectionHeader
-        eyebrow="Welcome back"
+        eyebrow={today.streak.current > 0 ? "Welcome back" : "Today"}
         title={greeting}
         trailing={
           <RoundIconButton
@@ -109,57 +110,53 @@ export default function HomeScreen() {
       <UpdateBanner />
       <ServerBanner />
 
-      <Card variant="dark">
-        {statsQuery.isError && !server.offline ? (
-          <Banner
-            tone="warning"
-            message={describeError(statsQuery.error, "Your stats could not be loaded.")}
-            actionLabel="Retry"
-            onAction={() => void statsQuery.refetch()}
-          />
-        ) : (
-          <>
-            <View style={styles.streakRow}>
-              <View style={styles.streakIcon}>
-                <Flame color={streak > 0 ? colors.yellowGreen : colors.lime} size={20} />
-              </View>
-              <View style={styles.streakText}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={`${streakTitle}. ${today.minutesToday} of ${today.goalMinutes} minutes today. Open streak and badges`}
+        onPress={() => router.push("/badges")}>
+        <Card variant="dark">
+          <View style={styles.streakRow}>
+            <ProgressRing score={today.goalProgress * 100} size={64} strokeWidth={6} label={`${today.minutesToday}/${today.goalMinutes}`} onDark color={colors.yellowGreen} />
+            <View style={styles.streakText}>
+              <View style={styles.flameRow}>
+                <Flame color={streak > 0 ? colors.yellowGreen : colors.lime} size={18} />
                 <Title size={type.headline} onDark>
-                  {!stats
-                    ? server.offline
-                      ? "Streak unavailable"
-                      : "Loading your streak…"
-                    : streak > 0 ? `${streak}-day streak` : "No streak yet"}
+                  {streakTitle}
                 </Title>
-                <Body size={type.footnote} onDark tone="muted">
-                  {!stats && server.offline
-                    ? "It shows up once Cadence is connected."
-                    : streak > 0
-                      ? "Finish a lesson today to keep it."
-                      : "Finish one lesson today to start one."}
-                </Body>
               </View>
+              <Body size={type.footnote} onDark tone="muted">
+                {today.goalMet
+                  ? "Today's goal is done. Nice work."
+                  : streak > 0 && !today.streak.practisedToday
+                    ? today.streak.freezes > 0
+                      ? "Practise today to keep it. A freeze covers you if not."
+                      : "Practise today to keep it going."
+                    : `${today.goalMinutes - today.minutesToday} minutes to today's goal.`}
+              </Body>
             </View>
-            <StatRow>
-              <StatTile
-                tone="translucent"
-                label="Attempts"
-                value={stats ? String(stats.total_attempts) : "—"}
-              />
-              <StatTile
-                tone="translucent"
-                label="Avg score"
-                value={stats ? String(normalizeScore(stats.average_score)) : "—"}
-              />
-              <StatTile
-                tone="translucent"
-                label="Modules"
-                value={stats && modules.length > 0 ? `${completedModules}/${modules.length}` : "—"}
-              />
-            </StatRow>
-          </>
-        )}
-      </Card>
+          </View>
+          <StatRow>
+            <StatTile tone="translucent" label="Best streak" value={String(today.streak.best)} />
+            <StatTile tone="translucent" label="This week" value={`${today.weekMinutes} min`} />
+            <StatTile tone="translucent" label="Badges" value={String(earnedCount(badges))} />
+          </StatRow>
+        </Card>
+      </Pressable>
+
+      <Pressable accessibilityRole="button" accessibilityLabel={`Word of the day: ${word.word}. Practise it`} onPress={() => router.push({ pathname: "/word/[wordId]", params: { wordId: word.id } })}>
+        <Card>
+          <Eyebrow>Word of the day</Eyebrow>
+          <View style={styles.wordRow}>
+            <Title size={type.title2}>{word.word}</Title>
+            <Body size={type.callout} style={styles.ipa}>
+              {word.ipa}
+            </Body>
+          </View>
+          <Body size={type.footnote} tone="muted" numberOfLines={2}>
+            {word.definition}
+          </Body>
+        </Card>
+      </Pressable>
 
       <Card>
         <SectionHeader
@@ -245,14 +242,8 @@ const styles = themed(() =>
       alignItems: "center",
       gap: spacing.md,
     },
-    streakIcon: {
-      width: 44,
-      height: 44,
-      borderRadius: radii.pill,
-      backgroundColor: overlays.whiteOnGreen,
-      alignItems: "center",
-      justifyContent: "center",
-    },
+    flameRow: { flexDirection: "row", alignItems: "center", gap: spacing.xs },
+    wordRow: { flexDirection: "row", alignItems: "baseline", flexWrap: "wrap", columnGap: spacing.sm },
     streakText: {
       flex: 1,
       gap: spacing.xxs,

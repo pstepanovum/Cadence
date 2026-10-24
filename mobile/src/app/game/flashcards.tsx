@@ -3,6 +3,7 @@ import { Volume2 } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { FlipCard } from "@/components/games/FlipCard";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import {
@@ -64,6 +65,7 @@ function FlashcardSession({
   level: ReturnType<typeof parseLevel>;
   initialCards: Readonly<Record<string, CardState>>;
 }) {
+  const elapsed = useSessionClock();
   const deck = useMemo(() => vocabForLevel(level), [level]);
   const deckIds = useMemo(() => deck.map((word) => word.id), [deck]);
 
@@ -104,6 +106,7 @@ function FlashcardSession({
     const ids = Object.keys(finalGrades);
     const kept = ids.filter((id) => finalGrades[id] !== "again").length;
     const accuracy = ids.length ? Math.round((kept / ids.length) * 100) : 0;
+    logPractice({ kind: "flashcards", refId: "game.flashcards", level: null, score: accuracy, minutes: elapsed() });
     if (accuracy >= 70) playCompletionSound();
     recordRound({
       gameId: "flashcards",

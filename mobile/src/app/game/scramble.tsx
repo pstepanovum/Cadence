@@ -3,6 +3,7 @@ import { Eye, Shuffle, Undo2, Volume2 } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, useWindowDimensions, View } from "react-native";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { logPractice, useSessionClock } from "@/learning/log";
 import { LetterTile, type TileState } from "@/components/games/LetterTile";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import { ScoreStrip } from "@/components/games/ScoreStrip";
@@ -43,6 +44,7 @@ function tileLayoutFor(letters: number, rowWidth: number): { size: number; gap: 
 }
 
 export default function ScrambleScreen() {
+  const elapsed = useSessionClock();
   const params = useLocalSearchParams<{ level?: string }>();
   const level = parseLevel(params.level);
   const { progress, recordRound } = useGameProgress();
@@ -178,6 +180,7 @@ export default function ScrambleScreen() {
     const total = Object.keys(finalOutcomes).length;
     const correct = Object.values(finalOutcomes).filter((value) => value !== "revealed").length;
     const finalPercent = accuracy(correct, total);
+    logPractice({ kind: "matching", refId: "game.scramble", level: null, score: finalPercent, minutes: elapsed() });
     if (finalPercent >= 70) playCompletionSound();
     recordRound({
       gameId: "scramble",
