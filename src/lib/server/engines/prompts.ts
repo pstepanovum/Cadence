@@ -10,7 +10,8 @@
 //   - History is trimmed to the last 12 turns plus a running summary.
 //   - Output is capped (about 250 tokens), stripped of links and markup, and
 //     must match a schema; the model has no tools.
-import { CEFR_LEVELS, compareCefr, isCefrLevel, type CefrLevel } from "../../platform/content-model";
+import { CEFR_LEVELS, isCefrLevel, type CefrLevel } from "../../platform/content-model";
+import { combineLevels, type PlacementEstimate } from "../../platform/placement";
 
 export const COACH_HISTORY_TURNS = 12;
 export const COACH_MAX_OUTPUT_TOKENS = 250;
@@ -182,15 +183,6 @@ export function filterGrammarIssues(raw: unknown, transcript: string, allowedIds
 
 // Placement ------------------------------------------------------------------
 
-export interface PlacementResult {
-  level: CefrLevel;
-  confidence: "low" | "medium" | "high";
-  strengths: string[];
-  focus: string[];
-  /** False when the spoken sample could not be analysed and the written estimate stands alone. */
-  spokenUsed: boolean;
-}
-
 export function placementSystemPrompt(writtenLevel: CefrLevel): string {
   return [
     "You estimate the CEFR level of an English learner from a transcript of about 30 seconds of their speech.",
@@ -213,14 +205,12 @@ export const PLACEMENT_SCHEMA = {
 } as const;
 
 /** The spoken sample moves the written estimate by at most one level. */
-export function combinePlacement(writtenLevel: CefrLevel, raw: unknown): PlacementResult {
+export function combinePlacement(writtenLevel: CefrLevel, raw: unknown): PlacementEstimate {
   const value = (raw ?? {}) as Record<string, unknown>;
   const spoken = isCefrLevel(value.level) ? value.level : null;
   const list = (items: unknown) => (Array.isArray(items) ? items.map((item) => sanitizeCoachText(item, 80)).filter(Boolean).slice(0, 3) : []);
   if (!spoken) return { level: writtenLevel, confidence: "low", strengths: [], focus: [], spokenUsed: false };
-  const index = CEFR_LEVELS.indexOf(writtenLevel);
-  const step = Math.sign(compareCefr(spoken, writtenLevel));
-  const level = CEFR_LEVELS[Math.min(CEFR_LEVELS.length - 1, Math.max(0, index + step))];
+  const level = combineLevels(writtenLevel, spoken);
   const confidence = value.confidence === "high" || value.confidence === "medium" ? value.confidence : "low";
   return { level, confidence, strengths: list(value.strengths), focus: list(value.focus), spokenUsed: true };
 }

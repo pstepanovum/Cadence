@@ -5,7 +5,8 @@
 #
 #   docker build -f src/backend/ai-engine/Dockerfile.cloud -t cadence-ai src/backend
 #
-# - CPU-only PyTorch wheels, so the image carries no CUDA libraries.
+# - CPU-only PyTorch wheels, so the image carries no CUDA libraries, and no
+#   librosa (the engine never imports it; it brings numba, llvmlite and scipy).
 # - Models are downloaded at build time and baked into the image, and the
 #   runtime is offline (HF_HUB_OFFLINE=1): a cold start loads from local disk
 #   and never waits on Hugging Face.
@@ -32,25 +33,44 @@ WORKDIR /app/ai-engine
 COPY ai-engine/requirements.txt ./
 RUN pip install --upgrade pip setuptools wheel && \
     pip install --extra-index-url https://download.pytorch.org/whl/cpu torch torchaudio && \
-    grep -v -E '^(torch|torchaudio|omnivoice)' requirements.txt > requirements.cloud.txt && \
+    grep -v -E '^(torch|torchaudio|omnivoice|librosa)' requirements.txt > requirements.cloud.txt && \
     pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.cloud.txt
 
-ARG SCORER_MODEL=facebook/wav2vec2-xlsr-53-espeak-cv-ft
-ARG ASR_MODEL=openai/whisper-small.en
-RUN python -c "from huggingface_hub import snapshot_download as d; d('${SCORER_MODEL}'); d('${ASR_MODEL}')"
-
-COPY ai-engine/main.py ai-engine/phoneme_scorer.py ai-engine/reference_tts.py ai-engine/speech_transcriber.py ./
-COPY data /app/data
-
+# The user exists before the models arrive, so they are written as that user
+# instead of copied into a second 2 GB layer by a later chown -R.
 RUN addgroup --system --gid 1001 appgroup && \
     adduser --system --uid 1001 --ingroup appgroup appuser && \
-    chown -R appuser:appgroup /app /models
+    mkdir -p /models/huggingface && chown -R appuser:appgroup /models /app
 
 USER appuser
 
+ARG SCORER_MODEL=facebook/wav2vec2-xlsr-53-espeak-cv-ft
+# The scorer loads this exact snapshot (MODEL_REVISION in phoneme_scorer.py,
+# the one with safetensors weights); the default branch would not load offline.
+ARG SCORER_REVISION=3e836924cfd3b858a0bbdbc1f7ef412105d00446
+# --build-arg ASR_MODEL= (empty) leaves Whisper out, about 1 GB, for when the
+# transcription benchmark picks Gemini.
+ARG ASR_MODEL=openai/whisper-small.en
+# PyTorch weights only: the Flax, TensorFlow and duplicate .bin copies some
+# repos carry would add about 3 GB to the image and are never loaded.
+RUN python - <<EOF
+from huggingface_hub import list_repo_files, snapshot_download
+for repo, revision in [("${SCORER_MODEL}", "${SCORER_REVISION}"), ("${ASR_MODEL}", None)]:
+    if not repo:
+        continue
+    files = list_repo_files(repo, revision=revision)
+    skip = ["*.msgpack", "*.h5", "*.onnx", "*.ot", "*.tflite", "flax_*", "tf_*", "coreml/*", "onnx/*"]
+    if any(f.endswith(".safetensors") for f in files):
+        skip.append("*.bin")
+    snapshot_download(repo, revision=revision, ignore_patterns=skip)
+EOF
+
+COPY --chown=appuser:appgroup ai-engine/main.py ai-engine/audio_limits.py ai-engine/phoneme_scorer.py ai-engine/reference_tts.py ai-engine/speech_transcriber.py ./
+COPY --chown=appuser:appgroup data /app/data
+
 ENV HF_HUB_OFFLINE=1 \
     TRANSFORMERS_OFFLINE=1 \
-    CADENCE_ASR_MODEL=openai/whisper-small.en \
+    CADENCE_ASR_MODEL=${ASR_MODEL} \
     CADENCE_TTS_PROVIDER=say \
     CADENCE_TTS_REQUIRE_MODEL=0 \
     CADENCE_CPU_THREADS=2 \

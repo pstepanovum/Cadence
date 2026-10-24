@@ -107,6 +107,20 @@ describe("stripe webhook", { skip }, () => {
     await handleStripeEvent(invoice("evt_paid", "invoice.paid", { amount_paid: 1499, currency: "usd", hosted_invoice_url: "https://invoice.stripe.com/i/x", number: "A-1" }), { api: fakeStripe(subscription()), now: NOW });
     assert.deepEqual(await mail(UID), ["billing-issue", "payment-receipt"]);
   });
+  it("a product change queues plan-changed, and a refund queues refund-issued without touching Plus", async () => {
+    await handleStripeEvent(stripeEvent("evt_m", "customer.subscription.created", subscription() as never), { api: fakeStripe(subscription()), now: NOW });
+    const yearly = subscription({ items: { data: [{ price: { lookup_key: "cadence_plus_yearly", product: { metadata: { app: "cadence" } } }, current_period_end: (NOW + 365 * DAY) / 1000 }] } });
+    await handleStripeEvent(stripeEvent("evt_y", "customer.subscription.updated", yearly as never, NOW / 1000 + 10), { api: fakeStripe(yearly), now: NOW + 10_000 });
+    assert.equal((await user(UID)).plus.productId, "dev.pstepanov.cadence.plus.yearly");
+    assert.deepEqual(await mail(UID), ["plan-changed"]);
+
+    const refund = stripeEvent("evt_r", "charge.refunded", { customer: "cus_test", amount_refunded: 9999, currency: "usd" }, NOW / 1000 + 20);
+    await handleStripeEvent(refund, { api: fakeStripe(yearly), now: NOW + 20_000 });
+    assert.equal((await user(UID)).plus.active, true, "a refund alone changes no state");
+    assert.deepEqual(await mail(UID), ["plan-changed", "refund-issued"]);
+    assert.equal((await handleStripeEvent(refund, { api: fakeStripe(yearly), now: NOW + 30_000 })).body.duplicate, true);
+    assert.deepEqual(await mail(UID), ["plan-changed", "refund-issued"]);
+  });
 });
 
 describe("revenuecat webhook", { skip }, () => {

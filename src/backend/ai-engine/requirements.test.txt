@@ -1,0 +1,7 @@
+# The engine's tests: python3 -m pytest (from src/backend/ai-engine).
+# The limits tests need nothing else; the endpoint tests also use FastAPI's
+# TestClient and skip when fastapi, httpx or python-multipart is missing.
+pytest
+httpx
+fastapi
+python-multipart

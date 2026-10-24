@@ -1,13 +1,30 @@
 .git
-.gitignore
+.github
 .next
+.vercel
+.claude
+.vscode
+.cadence-data
 node_modules
+**/node_modules
 .DS_Store
-.env.local
 coverage
 dist
 build
 *.log
-.vscode
-.claude
+tsconfig.tsbuildinfo
 
+# Secrets never enter the build context; only the templates do.
+.env*
+!.env*.example
+
+# Other packages and anything the web image does not build from.
+mobile
+desktop
+tests
+docs
+src/backend/**/.venv*
+src/backend/**/__pycache__
+src/backend/ai-engine
+src/backend/coach-engine
+scripts/content/.cache

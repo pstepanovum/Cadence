@@ -10,12 +10,13 @@
 // Free accounts never write anything but the summary and the inbox; the
 // routes check the tier before calling the Plus functions here, and these
 // functions check it again inside their transaction.
-import type { Firestore } from "firebase-admin/firestore";
+import { Timestamp, type Firestore } from "firebase-admin/firestore";
 
 import { applyActivity, emptySummary, SUMMARY_SCHEMA_VERSION, type Activity, type ProgressSummary } from "../platform/progress-model";
 import { readAccount } from "./entitlement";
 import { db as defaultDb } from "./firebase";
 import { mailKey, queueMailInTx } from "./email/queue";
+import { LIMITS, decide, rateLimitKey, type RateLimitRule } from "./rate-limit";
 import { mergeByLastAt, mergeCards, type AttemptRecord, type CardRecord, type GrammarMastery, type PushInput, type SoundMastery } from "./sync-input";
 
 export const INBOX_CAP = 200;
@@ -29,9 +30,23 @@ export function summaryRef(firestore: Firestore, uid: string) {
   return userRef(firestore, uid).collection("progress").doc("summary");
 }
 
+/**
+ * The summary sync's rate-limit window lives on the summary document itself,
+ * so a round costs one read and one write instead of two of each. It is
+ * server-only and never leaves readSummary.
+ */
+const SYNC_WINDOW_FIELD = "syncWindow";
+
 export function readSummary(data: FirebaseFirestore.DocumentData | undefined): ProgressSummary {
-  if (!data || data.schema !== SUMMARY_SCHEMA_VERSION) return { ...emptySummary(), ...(data ?? {}), schema: SUMMARY_SCHEMA_VERSION } as ProgressSummary;
-  return data as ProgressSummary;
+  const rest = { ...(data ?? {}) };
+  delete rest[SYNC_WINDOW_FIELD];
+  if (!data || rest.schema !== SUMMARY_SCHEMA_VERSION) return { ...emptySummary(), ...rest, schema: SUMMARY_SCHEMA_VERSION } as ProgressSummary;
+  return rest as ProgressSummary;
+}
+
+function readWindow(data: FirebaseFirestore.DocumentData | undefined): { windowStart: number; count: number } | null {
+  const value = data?.[SYNC_WINDOW_FIELD];
+  return value && typeof value.windowStart === "number" && typeof value.count === "number" ? { windowStart: value.windowStart, count: value.count } : null;
 }
 
 export async function getSummary(uid: string, firestore: Firestore = defaultDb()): Promise<ProgressSummary> {
@@ -42,10 +57,34 @@ export async function getSummary(uid: string, firestore: Firestore = defaultDb()
 export async function applyActivities(uid: string, activities: Activity[], firestore: Firestore = defaultDb()): Promise<ProgressSummary> {
   const ref = summaryRef(firestore, uid);
   return firestore.runTransaction(async (tx) => {
-    let summary = readSummary((await tx.get(ref)).data());
+    const data = (await tx.get(ref)).data();
+    let summary = readSummary(data);
     for (const activity of activities) summary = applyActivity(summary, activity);
-    tx.set(ref, summary);
+    const window = readWindow(data);
+    tx.set(ref, window ? { ...summary, [SYNC_WINDOW_FIELD]: window } : summary);
     return summary;
+  });
+}
+
+export type SummarySync = { ok: true; summary: ProgressSummary } | { ok: false; retryAfterSeconds: number };
+
+/**
+ * POST /api/sync/summary: the rate limit and the activities in the same
+ * transaction on the same document, one read and one write per round.
+ */
+export async function syncSummary(uid: string, activities: Activity[], options: { db?: Firestore; now?: number; rule?: RateLimitRule } = {}): Promise<SummarySync> {
+  const firestore = options.db ?? defaultDb();
+  const now = options.now ?? Date.now();
+  const rule = options.rule ?? LIMITS.syncUserMinute;
+  const ref = summaryRef(firestore, uid);
+  return firestore.runTransaction(async (tx): Promise<SummarySync> => {
+    const data = (await tx.get(ref)).data();
+    const decision = decide(readWindow(data), rule, now);
+    if (!decision.allowed) return { ok: false, retryAfterSeconds: decision.retryAfterSeconds };
+    let summary = readSummary(data);
+    for (const activity of activities) summary = applyActivity(summary, activity);
+    tx.set(ref, { ...summary, [SYNC_WINDOW_FIELD]: decision.next });
+    return { ok: true, summary };
   });
 }
 
@@ -97,6 +136,15 @@ export async function acknowledgeInbox(uid: string, ids: string[] | "all", fires
 
 export class TierError extends Error {}
 
+/** Too many pushes from this device (or new installs on this account) this minute. */
+export class RateLimitedError extends Error {
+  readonly retryAfterSeconds: number;
+  constructor(retryAfterSeconds: number) {
+    super("Too many syncs. Try again shortly.");
+    this.retryAfterSeconds = retryAfterSeconds;
+  }
+}
+
 async function requirePlusInTx(tx: FirebaseFirestore.Transaction, firestore: Firestore, uid: string) {
   const account = readAccount((await tx.get(userRef(firestore, uid))).data());
   if (!account.isPlus) throw new TierError("This needs Cadence Plus.");
@@ -116,7 +164,7 @@ export interface PushResult {
  * own time. `importing` marks the one-time upload on upgrade, recorded on the
  * device so a second import changes nothing.
  */
-export async function pushDetail(uid: string, input: PushInput, options: { importing?: boolean; db?: Firestore; now?: number } = {}): Promise<PushResult & { alreadyImported?: boolean }> {
+export async function pushDetail(uid: string, input: PushInput, options: { importing?: boolean; db?: Firestore; now?: number; rule?: RateLimitRule } = {}): Promise<PushResult & { alreadyImported?: boolean }> {
   const firestore = options.db ?? defaultDb();
   const now = options.now ?? Date.now();
   const user = userRef(firestore, uid);
@@ -129,20 +177,43 @@ export async function pushDetail(uid: string, input: PushInput, options: { impor
     byDay.set(day, [...(byDay.get(day) ?? []), attempt]);
   }
 
+  const rule = options.rule ?? LIMITS.syncUserMinute;
+  const uidLimitRef = firestore.collection("rateLimits").doc(rateLimitKey(rule, uid));
+
   return firestore.runTransaction(async (tx) => {
-    // Every read first, as transactions require.
+    // Every read first, as transactions require, and only the documents this
+    // push touches (docs/PLATFORM.md section 5: a Plus session stays within
+    // 10 reads and 5 writes).
     await requirePlusInTx(tx, firestore, uid);
     const device = await tx.get(deviceRef);
     if (options.importing && typeof device.data()?.importedAt === "number") {
       return { cardsChanged: 0, attemptsAdded: 0, masteryChanged: 0, coachSaved: 0, newDevice: false, cursor: now, alreadyImported: true };
     }
+    // The rate limit rides on the device document, which every push writes
+    // anyway; a new install is also counted against the account, so new
+    // install ids cannot get around it.
+    const deviceWindow = decide(readWindow(device.data()), rule, now);
+    const uidLimit = device.exists ? null : await tx.get(uidLimitRef);
+    const uidWindow = uidLimit ? decide(readWindow(uidLimit.data()), rule, now) : null;
+    if (!deviceWindow.allowed || (uidWindow && !uidWindow.allowed)) {
+      throw new RateLimitedError(Math.max(deviceWindow.retryAfterSeconds, uidWindow?.retryAfterSeconds ?? 0));
+    }
     const packIds = Object.keys(input.srs);
     const decks = await Promise.all(packIds.map((packId) => tx.get(user.collection("srs").doc(packId))));
     const soundsRef = user.collection("mastery").doc("sounds");
     const grammarRef = user.collection("mastery").doc("grammar");
-    const [sounds, grammar] = await Promise.all([tx.get(soundsRef), tx.get(grammarRef)]);
+    const hasSounds = Object.keys(input.mastery.sounds).length > 0;
+    const hasGrammar = Object.keys(input.mastery.grammar).length > 0;
+    const [sounds, grammar] = await Promise.all([hasSounds ? tx.get(soundsRef) : null, hasGrammar ? tx.get(grammarRef) : null]);
     const days = [...byDay.keys()];
-    const dayDocs = await Promise.all(days.flatMap((day) => [tx.get(user.collection("attempts").doc(day)), tx.get(user.collection("attempts").doc(`${day}-2`))]));
+    const firstDocs = await Promise.all(days.map((day) => tx.get(user.collection("attempts").doc(day))));
+    // The overflow document is read only for a day whose first one could fill up.
+    const secondDocs = await Promise.all(
+      days.map((day, index) => {
+        const stored = ((firstDocs[index].data()?.items ?? []) as AttemptRecord[]).length;
+        return stored + (byDay.get(day)?.length ?? 0) > ATTEMPTS_PER_DOC ? tx.get(user.collection("attempts").doc(`${day}-2`)) : null;
+      }),
+    );
     const coachDocs = await Promise.all(input.coach.map((session) => tx.get(user.collection("coachSessions").doc(session.id))));
 
     let cardsChanged = 0;
@@ -156,21 +227,21 @@ export async function pushDetail(uid: string, input: PushInput, options: { impor
     });
 
     let masteryChanged = 0;
-    if (Object.keys(input.mastery.sounds).length) {
-      const merged = mergeByLastAt((sounds.data()?.items ?? {}) as Record<string, SoundMastery>, input.mastery.sounds);
+    if (hasSounds) {
+      const merged = mergeByLastAt((sounds?.data()?.items ?? {}) as Record<string, SoundMastery>, input.mastery.sounds);
       if (merged.changed) tx.set(soundsRef, { items: merged.merged, updatedAt: now });
       masteryChanged += merged.changed;
     }
-    if (Object.keys(input.mastery.grammar).length) {
-      const merged = mergeByLastAt((grammar.data()?.items ?? {}) as Record<string, GrammarMastery>, input.mastery.grammar);
+    if (hasGrammar) {
+      const merged = mergeByLastAt((grammar?.data()?.items ?? {}) as Record<string, GrammarMastery>, input.mastery.grammar);
       if (merged.changed) tx.set(grammarRef, { items: merged.merged, updatedAt: now });
       masteryChanged += merged.changed;
     }
 
     let attemptsAdded = 0;
     days.forEach((day, index) => {
-      const first = (dayDocs[index * 2].data()?.items ?? []) as AttemptRecord[];
-      const second = (dayDocs[index * 2 + 1].data()?.items ?? []) as AttemptRecord[];
+      const first = (firstDocs[index].data()?.items ?? []) as AttemptRecord[];
+      const second = (secondDocs[index]?.data()?.items ?? []) as AttemptRecord[];
       const known = new Set([...first, ...second].map((a) => a.id));
       const fresh = (byDay.get(day) ?? []).filter((a) => !known.has(a.id));
       if (!fresh.length) return;
@@ -193,9 +264,12 @@ export async function pushDetail(uid: string, input: PushInput, options: { impor
     const newDevice = !device.exists;
     tx.set(
       deviceRef,
-      { platform: input.platform, lastSyncAt: now, ...(newDevice ? { firstSyncAt: now } : {}), ...(options.importing ? { importedAt: now } : {}) },
+      { platform: input.platform, lastSyncAt: now, [SYNC_WINDOW_FIELD]: deviceWindow.next, ...(newDevice ? { firstSyncAt: now } : {}), ...(options.importing ? { importedAt: now } : {}) },
       { merge: true },
     );
+    if (uidWindow) {
+      tx.set(uidLimitRef, { ...uidWindow.next, uid, expireAt: Timestamp.fromMillis(uidWindow.next.windowStart + rule.windowSeconds * 2000) });
+    }
     if (newDevice) {
       queueMailInTx(tx, firestore, mailKey("device", uid, input.installId), { template: "device-paired", uid, props: { device: input.platform === "ios" ? "iPhone or iPad" : input.platform === "android" ? "Android device" : input.platform === "desktop" ? "Cadence desktop" : "A browser", platform: input.platform, at: now } }, now);
     }

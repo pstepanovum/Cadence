@@ -29,7 +29,7 @@ COPY ai-engine/requirements.txt ./
 RUN pip install --upgrade pip setuptools wheel && \
     pip install -r requirements.txt
 
-COPY ai-engine/main.py ai-engine/phoneme_scorer.py ai-engine/reference_tts.py ai-engine/speech_transcriber.py ./
+COPY ai-engine/main.py ai-engine/audio_limits.py ai-engine/phoneme_scorer.py ai-engine/reference_tts.py ai-engine/speech_transcriber.py ./
 COPY data /app/data
 
 RUN addgroup --system --gid 1001 appgroup && \

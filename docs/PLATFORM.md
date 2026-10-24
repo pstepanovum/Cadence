@@ -43,6 +43,9 @@ Pure TypeScript shared by every client lives in two byte-identical copies:
 | `src/lib/platform/engine-routing.ts` | `mobile/src/platform/engine-routing.ts` | `routeRequest`, `resolvePlus`, `dataTier`, quotas, audio limits and sniffing |
 | `src/lib/platform/progress-model.ts` | `mobile/src/platform/progress-model.ts` | the summary document and `applyActivity` |
 | `src/lib/platform/vocal-tract/*` | `mobile/src/platform/vocal-tract/*` | the mouth-map model (section 13) |
+| `src/lib/platform/srs.ts` | `mobile/src/platform/srs.ts` | the trimmed SM-2 (`review`, `planSession`, `summarizeDeck`); `mobile/src/games/srs.ts` re-exports it |
+| `src/lib/platform/daily-plan.ts` | `mobile/src/platform/daily-plan.ts` | `buildDailyPlan`: today's 10 to 15 minutes (section 7) |
+| `src/lib/platform/placement.ts` | `mobile/src/platform/placement.ts` | `writtenLevel`, `writtenScore`, `writtenConfidence`, `combineLevels` (section 7) |
 
 Rules, enforced by `tests/platform/drift.test.ts`:
 
@@ -56,8 +59,9 @@ Rules, enforced by `tests/platform/drift.test.ts`:
 - No Node, DOM, React or React Native APIs, so they run in all three apps
   and in `node --test`.
 
-Modules builders add later that follow the same rule: `srs.ts` (the trimmed
-SM-2 in `mobile/src/games/srs.ts`, moved here), `daily-plan.ts`, `placement.ts`.
+**Open:** the web's flashcards still schedule with their own
+`src/components/learn-hub/srs.ts`, and no screen calls `buildDailyPlan` yet;
+both should move onto the shared modules.
 
 ---
 
@@ -283,15 +287,22 @@ All under App Check (section 14) and the Firebase ID token.
 
 | Route | Tier | Does |
 | --- | --- | --- |
-| `GET /api/me` | all | profile, `plus`, data tier, today's quota left |
-| `POST /api/sync/summary` | summary, full | `{activities: Activity[]}` (at most 50) applied with `applyActivity` in one transaction; returns the summary |
+| `GET /api/me` | all | profile, `plus`, data tier, today's quota left (`src/lib/server/me.ts`; usage and the breaker are read only for Plus on the hosted cloud) |
+| `POST /api/sync/summary` | summary, full | `{activities: Activity[]}` (at most 50) applied with `applyActivity` in one transaction, with the per-minute rate limit kept on the same document (`syncSummary`); returns the summary |
 | `GET /api/sync/inbox` | all | pending MCP flashcards; `DELETE` acknowledges them |
-| `POST /api/sync/push` | full | `{installId, srs?, attempts?, mastery?, coach?}`; cards merge last-writer-wins by `updatedAt` |
+| `POST /api/sync/push` | full | `{installId, srs?, attempts?, mastery?, coach?}`; cards merge last-writer-wins by `updatedAt`; rate limited on the device document (a new install also against the account) |
 | `GET /api/sync/pull?since=` | full | changes since a cursor |
 | `POST /api/sync/import` | full | the one-time upload on upgrade |
 
 Session cost targets: free 2 reads and 1 write; Plus at most 10 reads and 5
-writes.
+writes. A session is one open (`GET /api/me`) and one synced round, plus the
+detail push and pull for Plus; the inbox check is its own read per open.
+`tests/server/emulator/session-cost.test.ts` counts them: free 2 reads and
+1 write; Plus 13 reads (14 when the breaker cache is cold) and 5 writes.
+**Open:** the Plus pull costs 5 reads on its own (the user document and one
+query per detail collection, each billed at least one read). Returning the
+pull with the push, or skipping it when a `detailChangedAt` on the summary
+says nothing changed elsewhere, brings Plus under 10; both need the app.
 
 Other server routes (code in `src/lib/server/`): `PATCH /api/me`
 `{reminders}`; `POST /api/auth/password-reset` `{email}`,
@@ -468,7 +479,7 @@ own Cadence get them too.
 | `get_streak` | free | `{}` | `{current, best, lastDay, activeToday}` |
 | `lookup_grammar` | free | `{query (1-100 chars), level?}` | `{matches: [{id, title, level, summary, patterns, examples (3), commonErrors (2), url}]}` from the packs |
 | `add_flashcards` | free, write | `{cards: [{front, back, example?}] (1-20)}` | `{queued, note}`; free: inbox, delivered on the next app open; Plus: straight into SRS |
-| `start_quiz` | free | `{grammarPointId?, topic?, level?, count (3-10)}` | `{quizId, questions: [{n, kind, prompt, question?, options?, text?, tokens?}]}` without answers; `quizId` is an HMAC-signed token of the exercise ids and expiry (stateless) |
+| `start_quiz` | free | `{grammarPointId?, topic?, level?, count (3-10)}` | `{quizId, questions: [{n, kind, prompt, question?, options?, left?, text?, tokens?}]}` (`left` and `options` are matching's two columns) without answers; `quizId` is an HMAC-signed token of the exercise ids and expiry (stateless) |
 | `grade_quiz` | free | `{quizId, answers: [{n, answer: ExerciseAnswer}]}` | `{score, results: [{n, correct, expected, explanation, grammarPointId}]}`; adds a `quiz` result to the summary |
 | `log_practice` | free, write | `{kind, minutes (1-180), refId?, score?}` | the updated summary |
 | `get_weak_areas` | Plus | `{limit? (1-20)}` | `{sounds: [{soundId, ipa, score, attempts, trend}], grammar: [{grammarPointId, title, accuracy, attempts}]}` |
@@ -646,7 +657,7 @@ Cloud Scheduler ──▶ cadence-web /api/jobs/daily (17:00 UTC), /api/jobs/mai
 | Service | Image | Settings |
 | --- | --- | --- |
 | `cadence-web` | Next.js standalone (`Dockerfile`): web, API, sync, MCP, webhooks | `--allow-unauthenticated --min-instances 0 --max-instances 10 --concurrency 80 --cpu 1 --memory 1Gi --cpu-boost --timeout 60`; service account `cadence-web` with Firestore user, `run.invoker` on `cadence-ai`, Vertex AI user, TTS, the TTS cache bucket, and its own secrets only |
-| `cadence-ai` | `src/backend/ai-engine/Dockerfile.cloud` (CPU PyTorch, phoneme model and Whisper-small baked in, offline at runtime) | `--no-allow-unauthenticated --ingress internal --min-instances 0 --max-instances 3 --concurrency 4 --cpu 2 --memory 4Gi --cpu-boost --timeout 60`; no secrets; private until launch |
+| `cadence-ai` | `src/backend/ai-engine/Dockerfile.cloud` (CPU PyTorch, phoneme model at its pinned safetensors revision and Whisper-small baked in, PyTorch weights only, offline at runtime; `--build-arg ASR_MODEL=` leaves Whisper out) | `--no-allow-unauthenticated --ingress internal --min-instances 0 --max-instances 3 --concurrency 4 --cpu 2 --memory 4Gi --cpu-boost --timeout 60`; no secrets; private until launch |
 | jobs | routes on `cadence-web`, called by Cloud Scheduler with `Authorization: Bearer <JOBS_SECRET>` | daily: purge lapsed detail after 90 days, retry deletions, drop uncollected inboxes after 90 days, `trial-ending`, opt-in reminders; every 5 minutes: deliver queued mail |
 
 - **Service to service.** `cadence-web` fetches a Google ID token for the
@@ -654,9 +665,9 @@ Cloud Scheduler ──▶ cadence-web /api/jobs/daily (17:00 UTC), /api/jobs/mai
   Internal ingress only admits traffic from the VPC, so `cadence-web` uses
   Direct VPC egress (`--network default --subnet default --vpc-egress
   all-traffic`) with Cloud NAT for its internet calls.
-- **Cold starts.** Both scale to zero. `cadence-web` starts in about 2 s; it
-  never loads models. `cadence-ai` loads its model from local disk at
-  startup; the apps show "Warming up" after 3 s. **Open:** the engine's
+- **Cold starts.** Both scale to zero. `cadence-web` starts in under 1 s
+  locally (1 vCPU); it never loads models. `cadence-ai` answers in under 2 s
+  and has both models loaded from local disk in about 3.5 s locally (2 vCPU); the apps show "Warming up" after 3 s. **Open:** the engine's
   `/health` answers 200 while still warming, so Cloud Run's default TCP
   startup probe is used; a `/healthz` that answers 503 until the scorer is
   loaded (ai-engine owner) would let a startup probe hold requests back.
@@ -856,7 +867,7 @@ commands.
 | Webhooks | same run (`tests/server/emulator/webhooks.test.ts`), plus `node scripts/webhooks/replay-stripe.mjs --twice` and `node scripts/webhooks/replay-revenuecat.mjs --twice` against `pnpm dev` | bad signature or bearer is 400/401; every listed event maps per section 9; replays are `duplicate: true` with no change; `plus` correct with two sources |
 | MCP | same run (`tests/server/emulator/mcp.test.ts`) | no token: 401 with `WWW-Authenticate` and `resource_metadata`; wrong audience: 401; GET and DELETE: 405 after auth; read-only scope cannot call write tools; free account gets the Plus error on Plus tools; every tool's output matches section 8; the 31st call in an hour on free is rate limited |
 | Firestore rules | `firebase emulators:exec --only firestore --project demo-cadence "node --test tests/rules/firestore.test.ts"` (`@firebase/rules-unit-testing`) | every read and write from an unauthenticated and an authenticated client is denied, on every collection in section 5 |
-| Python engines | `python3 -m py_compile src/backend/ai-engine/main.py src/backend/coach-engine/main.py` and `cd src/backend/ai-engine && python3 -m pytest` | compile; size, duration and MIME limits refuse bad audio |
+| Python engines | `python3 -m py_compile src/backend/ai-engine/main.py src/backend/coach-engine/main.py` and `cd src/backend/ai-engine && python3 -m pytest` (`pip install -r requirements.test.txt` once) | compile; size, duration and MIME limits refuse bad audio (`audio_limits.py`, the same rules as `engines/audio.ts`) |
 
 ### Web
 
@@ -900,8 +911,8 @@ Run in `mobile/`. Simulators: "iPhone SE (3rd generation)" and
 | Bundled packs | sum of bundled `public/packs` | at most 30 MB in the iOS app |
 | Content pack | `content.json` per level | at most 1.5 MB raw, 300 KB gzip |
 | `cadence-web` image | `docker build -t cadence-web . && docker image inspect cadence-web --format '{{.Size}}'` | at most 400 MB; cold start to first byte at most 3 s locally (`docker run` to first `200` on `/api/health`) |
-| `cadence-ai` image | same for `src/backend/ai-engine/Dockerfile` | at most 2.5 GB; ready at most 20 s on 2 vCPU |
-| Firestore per session | emulator request counts in the server route tests | free at most 2 reads and 1 write; Plus at most 10 reads and 5 writes |
+| `cadence-ai` image | same for `src/backend/ai-engine/Dockerfile.cloud` (context `src/backend`), started with `--cpus 2 --memory 4g` | at most 2.5 GB; ready at most 20 s on 2 vCPU |
+| Firestore per session | emulator counts in the server route tests (`tests/server/emulator/session-cost.test.ts`) | free at most 2 reads and 1 write; Plus at most 10 reads and 5 writes |
 
 `scripts/budgets/*.mjs` enforce these numbers; change them here and in the
 script together.

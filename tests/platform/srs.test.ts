@@ -1,4 +1,6 @@
-// Run with: npm test  (node --test, native TypeScript type stripping)
+// FILE: tests/platform/srs.test.ts
+//
+// The shared SM-2 scheduler (src/lib/platform/srs.ts). Run with: pnpm test
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
@@ -12,7 +14,7 @@ import {
   review,
   summarizeDeck,
   type CardState,
-} from "../src/games/srs.ts";
+} from "../../src/lib/platform/srs.ts";
 
 const NOW = new Date(2026, 9, 7, 12, 0, 0); // 7 Oct 2026, local
 

@@ -5,7 +5,9 @@ FROM node:22-bookworm-slim AS base
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
 
-RUN corepack enable
+# Pinned to the major CI uses: an unpinned corepack pulls the newest pnpm,
+# whose defaults (minimumReleaseAge) can refuse the committed lockfile.
+RUN corepack enable && corepack prepare pnpm@10.34.8 --activate
 
 WORKDIR /app
 
@@ -42,7 +44,10 @@ COPY . .
 
 RUN pnpm build
 
-FROM base AS runner
+# The runner starts from the plain Node image: it needs no pnpm.
+FROM node:22-bookworm-slim AS runner
+
+WORKDIR /app
 
 # cadence-web on Cloud Run (deploy/cloudrun.sh) and your own Cadence under
 # docker-compose run this same image; CADENCE_DEPLOYMENT, set at deploy time,

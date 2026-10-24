@@ -1,10 +1,12 @@
 // The optional two-minute placement quiz in onboarding: twelve multiple-choice
 // questions, two per CEFR level from A1 to C2, written for Cadence. Graded on
 // the phone with the shared grader; the estimate is the highest level reached
-// before two levels in a row go mostly wrong. Pure, so it is unit tested
+// before two levels in a row go mostly wrong (the shared rule in
+// src/platform/placement.ts). Pure, so it is unit tested
 // (tests/onboarding.test.ts). The spoken sample of the full placement test
 // needs the AI engine and lives with the AI features, not here.
-import { CEFR_LEVELS, type CefrLevel, type MultipleChoiceExercise } from "../platform/content-model.ts";
+import { type CefrLevel, type MultipleChoiceExercise } from "../platform/content-model.ts";
+import { writtenLevel, writtenScore } from "../platform/placement.ts";
 
 const q = (id: string, level: CefrLevel, question: string, options: string[], answer: number, explanation: string): MultipleChoiceExercise => ({
   id: `placement.${id}`,
@@ -42,24 +44,10 @@ export const PLACEMENT_MINUTES = 2;
  * estimate stops at the first level missed after which the next is missed too.
  */
 export function placementLevel(scores: Readonly<Record<string, number>>): CefrLevel {
-  let reached: CefrLevel = "A1";
-  let misses = 0;
-  for (const level of CEFR_LEVELS) {
-    const items = PLACEMENT_QUESTIONS.filter((item) => item.level === level);
-    const right = items.reduce((sum, item) => sum + ((scores[item.id] ?? 0) >= 1 ? 1 : 0), 0);
-    if (items.length > 0 && right / items.length >= 0.5) {
-      reached = level;
-      misses = 0;
-    } else {
-      misses += 1;
-      if (misses >= 2) break;
-    }
-  }
-  return reached;
+  return writtenLevel(PLACEMENT_QUESTIONS, scores);
 }
 
 /** Score of a finished quiz, 0 to 100. */
 export function placementScore(scores: Readonly<Record<string, number>>): number {
-  const total = PLACEMENT_QUESTIONS.reduce((sum, item) => sum + (scores[item.id] ?? 0), 0);
-  return Math.round((total / PLACEMENT_QUESTIONS.length) * 100);
+  return writtenScore(PLACEMENT_QUESTIONS, scores);
 }

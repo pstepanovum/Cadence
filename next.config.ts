@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/*": ["content/modules.sql", "content/articulation/*.json"],
   },
+  // Tracing follows the process.cwd() reads into folders the server never
+  // opens (sources, scripts, a marketing video); they stay out of the image.
+  outputFileTracingExcludes: {
+    "/*": ["assets/**", "scripts/**", "src/**", "docs/**"],
+  },
   turbopack: {
     root: path.join(__dirname),
   },

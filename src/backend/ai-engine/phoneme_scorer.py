@@ -18,6 +18,8 @@ import pathlib
 import numpy as np
 import soundfile as sf
 
+from audio_limits import check_decoded_seconds
+
 
 MODEL_NAME = "facebook/wav2vec2-xlsr-53-espeak-cv-ft"
 # The default branch of this model still exposes pickle weights. Pin the
@@ -117,7 +119,7 @@ def _decode_with_ffmpeg(audio_bytes: bytes) -> tuple[np.ndarray, int] | None:
     return waveform, sample_rate
 
 
-def _load_audio(audio_bytes: bytes, filename: str | None = None) -> np.ndarray:
+def _load_audio(audio_bytes: bytes, filename: str | None = None, *, limit_length: bool = True) -> np.ndarray:
     del filename
 
     try:
@@ -143,6 +145,8 @@ def _load_audio(audio_bytes: bytes, filename: str | None = None) -> np.ndarray:
     mono_waveform = waveform.mean(axis=1, dtype=np.float32)
     if mono_waveform.size == 0:
         raise ValueError("The uploaded file did not contain decodable audio.")
+    if limit_length:
+        check_decoded_seconds(mono_waveform.size, sample_rate)
 
     if sample_rate != TARGET_SAMPLE_RATE:
         duration_seconds = mono_waveform.size / max(sample_rate, 1)
@@ -691,7 +695,7 @@ class PhonemeScorer:
             target_text,
         )
         reference_audio = self.reference_synthesizer.synthesize(text=target_text)
-        reference_waveform = _load_audio(reference_audio, filename="reference.wav")
+        reference_waveform = _load_audio(reference_audio, filename="reference.wav", limit_length=False)
         reference_transcription = self._decode_waveform(reference_waveform)
 
         if not reference_transcription:
@@ -811,6 +815,10 @@ class PhonemeScorer:
                 assessment["overallScore"],
                 assessment["transcript"],
             )
+        except ValueError:
+            # Bad audio (undecodable or too long) is the caller's 400 or 413,
+            # not an engine failure.
+            raise
         except Exception as exc:  # pragma: no cover - depends on local env
             logger.exception("Assessment failed")
             raise RuntimeError(f"Live model inference failed: {exc}") from exc
@@ -844,6 +852,10 @@ class PhonemeScorer:
                 filename,
                 transcription,
             )
+        except ValueError:
+            # Bad audio (undecodable or too long) is the caller's 400 or 413,
+            # not an engine failure.
+            raise
         except Exception as exc:  # pragma: no cover - depends on local env
             logger.exception("Transcription failed")
             raise RuntimeError(f"Live model transcription failed: {exc}") from exc

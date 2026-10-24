@@ -109,6 +109,10 @@ class SpeechTranscriber:
                 skip_special_tokens=True,
             )[0].strip()
             self.last_generation_seconds = time.perf_counter() - generation_start
+        except ValueError:
+            # Bad audio (undecodable or too long) is the caller's 400 or 413,
+            # not an engine failure.
+            raise
         except Exception as exc:  # pragma: no cover - depends on local env
             logger.exception("ASR transcription failed")
             raise RuntimeError(f"ASR transcription failed: {exc}") from exc

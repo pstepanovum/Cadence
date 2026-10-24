@@ -12,6 +12,7 @@ from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
+from audio_limits import AUDIO_MAX_BYTES, AudioRejected, check_audio
 from phoneme_scorer import MODEL_NAME, PhonemeScorer
 from reference_tts import ReferenceSpeechSynthesizer
 from speech_transcriber import SpeechTranscriber
@@ -160,6 +161,17 @@ app.add_middleware(
 )
 
 
+async def read_checked_audio(audio: UploadFile) -> bytes:
+    """Reads at most one byte past the cap, then applies the size, MIME and length limits."""
+    audio_bytes = await audio.read(AUDIO_MAX_BYTES + 1)
+    try:
+        check_audio(audio_bytes)
+    except AudioRejected as exc:
+        logger.warning("Audio rejected code=%s bytes=%s", exc.code, len(audio_bytes))
+        raise HTTPException(status_code=exc.status, detail=exc.message) from exc
+    return audio_bytes
+
+
 @app.get("/health")
 async def health() -> dict[str, object]:
     if (
@@ -205,11 +217,7 @@ async def assess(audio: UploadFile = File(...), text: str = Form(...)) -> dict[s
         audio.content_type,
         text,
     )
-    audio_bytes = await audio.read()
-
-    if not audio_bytes:
-        logger.warning("Assess rejected because uploaded audio was empty")
-        raise HTTPException(status_code=400, detail="Audio upload is empty.")
+    audio_bytes = await read_checked_audio(audio)
 
     if not text.strip():
         logger.warning("Assess rejected because target text was empty")
@@ -221,6 +229,8 @@ async def assess(audio: UploadFile = File(...), text: str = Form(...)) -> dict[s
             target_text=text,
             filename=audio.filename,
         )
+    except AudioRejected as exc:
+        raise HTTPException(status_code=exc.status, detail=exc.message) from exc
     except RuntimeError as exc:
         logger.exception("Assess failed with runtime error")
         raise HTTPException(status_code=503, detail=str(exc)) from exc
@@ -245,17 +255,15 @@ async def transcribe(audio: UploadFile = File(...)) -> dict[str, object]:
         audio.filename,
         audio.content_type,
     )
-    audio_bytes = await audio.read()
-
-    if not audio_bytes:
-        logger.warning("Transcribe rejected because uploaded audio was empty")
-        raise HTTPException(status_code=400, detail="Audio upload is empty.")
+    audio_bytes = await read_checked_audio(audio)
 
     try:
         result = speech_transcriber.transcribe(
             audio_bytes=audio_bytes,
             filename=audio.filename,
         )
+    except AudioRejected as exc:
+        raise HTTPException(status_code=exc.status, detail=exc.message) from exc
     except RuntimeError as exc:
         logger.exception("Transcribe failed with runtime error")
         raise HTTPException(status_code=503, detail=str(exc)) from exc
