@@ -6,8 +6,6 @@
 // The connection provider publishes the current transport here and the client
 // reads it. One writer, many readers, and the shape is small enough that the
 // indirection stays obvious.
-import { config } from "@/lib/config";
-
 export type TransportMode = "local" | "cloud";
 
 export interface Transport {
@@ -33,16 +31,11 @@ export class NoTransportError extends Error {
 }
 
 export function requireTransport(): Transport {
-  if (active) {
-    return active;
+  // No guessing: the provider publishes the cloud transport itself. Falling
+  // back to the hosted API here sent local-mode calls to the cloud, with a
+  // leftover sign-in, whenever the paired computer was asleep.
+  if (!active) {
+    throw new NoTransportError();
   }
-
-  // Cloud mode's origin is fixed at build time, so it can be reconstructed
-  // without the provider having published anything — which keeps the existing
-  // cloud flow working even before the connection provider has mounted.
-  if (config.apiUrl) {
-    return { mode: "cloud", baseUrl: config.apiUrl, deviceToken: null };
-  }
-
-  throw new NoTransportError();
+  return active;
 }

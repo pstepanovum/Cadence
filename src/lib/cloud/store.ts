@@ -186,6 +186,23 @@ export async function finishLessonSession(
     return null;
   }
 
+  const data = snapshot.data() ?? {};
+
+  // A session ends once. Ending it again returns the result already stored
+  // rather than overwriting it.
+  if (data.ended === true) {
+    return {
+      id: sessionId,
+      lesson_id: readString(data.lessonId),
+      module_id: readNumber(data.moduleId),
+      started_at: toIso(data.startedAt),
+      ended_at: toIso(data.endedAt),
+      word_count: readNumber(data.wordCount),
+      avg_score: readNumber(data.avgScore),
+      passed: data.passed === true,
+    };
+  }
+
   const endedAt = Timestamp.now();
   await ref.update({
     ended: true,
@@ -195,7 +212,6 @@ export async function finishLessonSession(
     passed: result.passed,
   });
 
-  const data = snapshot.data() ?? {};
   return {
     id: sessionId,
     lesson_id: readString(data.lessonId),

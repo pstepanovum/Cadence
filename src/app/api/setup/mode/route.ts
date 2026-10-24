@@ -11,7 +11,8 @@ import {
   readLocalProfileFromCookies,
   writeLocalProfile,
 } from "@/lib/local-profile";
-import { isFirebaseServerConfigured } from "@/lib/firebase/admin";
+import { safeNextPath } from "@/lib/auth/safe-next";
+import { isCloudServerReady } from "@/lib/firebase/admin";
 import { isFirebaseConfigured } from "@/lib/firebase/config";
 
 export async function POST(request: Request) {
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid setup mode." }, { status: 400 });
   }
 
-  if (mode === "cloud" && !(isFirebaseConfigured && isFirebaseServerConfigured())) {
+  if (mode === "cloud" && !(isFirebaseConfigured && isCloudServerReady())) {
     return NextResponse.json(
       {
         error:
@@ -71,7 +72,7 @@ function getRedirectTarget({
   next?: string;
   runtime: "desktop" | "web";
 }) {
-  const safeNext = typeof next === "string" && next.startsWith("/") ? next : null;
+  const safeNext = safeNextPath(next);
 
   if (mode === "cloud") {
     return "/signup";

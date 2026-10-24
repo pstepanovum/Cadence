@@ -13,6 +13,7 @@ import {
   sendEmailVerification,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { safeNextPath } from "@/lib/auth/safe-next";
 import { describeAuthError } from "@/lib/firebase/auth-errors";
 import { getFirebaseAuth, startServerSession } from "@/lib/firebase/client";
 import type { AppRuntime } from "@/lib/runtime/request-runtime";
@@ -49,7 +50,7 @@ export function AuthForm({ mode, runtime }: AuthFormProps) {
 
         setMessage("Signed in. Taking you to your dashboard.");
         startTransition(() => {
-          router.replace(safeNextPath() ?? "/dashboard");
+          router.replace(nextPathFromLocation() ?? "/dashboard");
           router.refresh();
         });
         return;
@@ -292,10 +293,9 @@ export function AuthForm({ mode, runtime }: AuthFormProps) {
 }
 
 /** The `?next=` path the proxy sent us here with, when it is one of ours. */
-function safeNextPath() {
+function nextPathFromLocation() {
   if (typeof window === "undefined") {
     return null;
   }
-  const next = new URLSearchParams(window.location.search).get("next");
-  return next && next.startsWith("/") && !next.startsWith("//") ? next : null;
+  return safeNextPath(new URLSearchParams(window.location.search).get("next"));
 }

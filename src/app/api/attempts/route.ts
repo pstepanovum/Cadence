@@ -7,7 +7,9 @@ import {
   recordLocalAttempt,
   writeLocalLearnState,
 } from "@/lib/local-learn";
+import { parseAttemptInput } from "@/lib/cloud/attempt-input";
 import { recordLessonAttempt } from "@/lib/cloud/store";
+import { getLessonByIdFromCatalog } from "@/lib/learn-catalog";
 
 export const runtime = "nodejs";
 
@@ -49,38 +51,27 @@ export async function POST(request: Request) {
       );
     }
 
-    if (
-      typeof body.lesson_id !== "string" ||
-      typeof body.lesson_word_id !== "string" ||
-      typeof body.word !== "string" ||
-      !Number.isFinite(body.score)
-    ) {
-      return NextResponse.json(
-        { error: "lesson_id, lesson_word_id, word and score are required." },
-        { status: 400 },
-      );
+    const parsed = parseAttemptInput(body);
+    if (!parsed.ok) {
+      return NextResponse.json({ error: parsed.error }, { status: 400 });
     }
 
-    const attemptNumber = Number.isFinite(body.attempt_number) ? body.attempt_number : 1;
-    const id = await recordLessonAttempt(session.user.id, {
-      lessonId: body.lesson_id,
-      lessonWordId: body.lesson_word_id,
-      word: body.word,
-      score: body.score,
-      ipaTarget: typeof body.ipa_target === "string" ? body.ipa_target : null,
-      ipaTranscript: typeof body.ipa_transcript === "string" ? body.ipa_transcript : null,
-      phonemeDetail: body.phoneme_detail ?? null,
-      attemptNumber,
-    });
+    const attempt = parsed.value;
+    const lesson = await getLessonByIdFromCatalog(attempt.lessonId);
+    if (!lesson) {
+      return NextResponse.json({ error: "Unknown lesson." }, { status: 404 });
+    }
+
+    const id = await recordLessonAttempt(session.user.id, attempt);
 
     return NextResponse.json(
       {
         id,
-        lesson_id: body.lesson_id,
-        lesson_word_id: body.lesson_word_id,
-        word: body.word,
-        score: body.score,
-        attempt_number: attemptNumber,
+        lesson_id: attempt.lessonId,
+        lesson_word_id: attempt.lessonWordId,
+        word: attempt.word,
+        score: attempt.score,
+        attempt_number: attempt.attemptNumber,
       },
       { status: 201 },
     );

@@ -18,10 +18,12 @@ import {
   useRef,
   useState,
 } from "react";
+import { signOut } from "firebase/auth";
 import { AppState } from "react-native";
 
 import { setTransport } from "@/api/transport";
 import { config } from "@/lib/config";
+import { getFirebaseAuth } from "@/lib/firebase";
 import { claimPairing, probeServer, verifySession } from "@/pairing/client";
 import {
   buildCandidates,
@@ -266,6 +268,11 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
 
       await writePairing({ deviceToken: result.deviceToken, connection: result.connection });
 
+      // Local mode has no account. A cloud sign-in left behind would otherwise
+      // keep authenticating any request made while the computer is away.
+      const auth = getFirebaseAuth();
+      if (auth?.currentUser) await signOut(auth).catch(() => {});
+
       setConnection(result.connection);
       setDeviceToken(result.deviceToken);
       setMode("local");
@@ -283,6 +290,14 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
   );
 
   const chooseCloud = useCallback(async () => {
+    // A stored pairing wins at launch, so it has to go, or the next cold start
+    // would put the phone back in local mode.
+    generation.current += 1;
+    await clearPairing();
+    setConnection(null);
+    setDeviceToken(null);
+    setState({ status: "unpaired" });
+
     const { default: AsyncStorage } = await import(
       "@react-native-async-storage/async-storage"
     );

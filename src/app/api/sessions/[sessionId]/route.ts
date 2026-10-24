@@ -6,6 +6,7 @@ import {
   getLocalLearnState,
   writeLocalLearnState,
 } from "@/lib/local-learn";
+import { clampScore } from "@/lib/cloud/attempt-input";
 import { finishLessonSession } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
@@ -58,8 +59,8 @@ export async function PATCH(
     }
 
     const finished = await finishLessonSession(session.user.id, sessionId, {
-      wordCount: Math.round(body.word_count),
-      avgScore: Math.round(body.avg_score),
+      wordCount: Math.max(0, Math.round(body.word_count)),
+      avgScore: Math.round(clampScore(body.avg_score)),
       passed: body.passed,
     });
 

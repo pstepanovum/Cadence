@@ -35,6 +35,13 @@ interface AuthState {
    * nobody can tell whether onboarding is done, so the navigator waits.
    */
   profileReady: boolean;
+  /**
+   * Set when the profile could not be loaded and nothing is cached. Treating
+   * that as a new account would send a returning person through onboarding,
+   * which then saves defaults over their real profile.
+   */
+  profileError: string | null;
+  retryProfile: () => void;
   profile: Profile;
   displayName: string;
   /** Saves profile fields on the server and updates the local copy. */
@@ -84,6 +91,8 @@ const AuthContext = createContext<AuthState>({
   user: null,
   loading: true,
   profileReady: false,
+  profileError: null,
+  retryProfile: () => {},
   profile: FALLBACK_PROFILE,
   displayName: FALLBACK_PROFILE.displayName,
   updateProfile: async () => {},
@@ -97,6 +106,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   // Tagged with the account it belongs to, so switching accounts reads as
   // "not loaded yet" without an effect having to clear it first.
   const [loaded, setLoaded] = useState<{ uid: string; fields: StoredProfile } | null>(null);
+  const [failed, setFailed] = useState<{ uid: string; message: string } | null>(null);
+  const [attempt, setAttempt] = useState(0);
   // Bumped by every local write, so a profile fetch that started before the
   // write cannot land after it and put the old values back.
   const revision = useRef(0);
@@ -117,6 +128,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const uid = cloud ? (user?.uid ?? null) : null;
 
   const fields = uid !== null && loaded?.uid === uid ? loaded.fields : null;
+  const profileError = uid !== null && fields === null && failed?.uid === uid ? failed.message : null;
 
   useEffect(() => {
     if (!uid) return;
@@ -128,22 +140,36 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const cached = await readCachedProfile(uid);
       if (active && cached && revision.current === started) setLoaded({ uid, fields: cached });
 
-      try {
-        const fresh = parseProfile(await withTimeout(getProfile(), PROFILE_TIMEOUT_MS));
-        if (!active || revision.current !== started) return;
-        setLoaded({ uid, fields: fresh });
-        writeCachedProfile(uid, fresh);
-      } catch {
-        // Offline, slow or the server is down: keep the cached copy, or treat
-        // the account as new so onboarding (which writes it back) can run.
-        if (active && !cached && revision.current === started) setLoaded({ uid, fields: {} });
+      // One quiet retry covers a blip; only a successful answer can say the
+      // account is new.
+      for (let tries = 0; tries < 2; tries += 1) {
+        try {
+          const fresh = parseProfile(await withTimeout(getProfile(), PROFILE_TIMEOUT_MS));
+          if (!active || revision.current !== started) return;
+          setLoaded({ uid, fields: fresh });
+          writeCachedProfile(uid, fresh);
+          return;
+        } catch {
+          if (!active) return;
+        }
+      }
+
+      // Offline, slow or the server is down: the cached copy stands if there is
+      // one; otherwise say so and let the person try again.
+      if (active && !cached && revision.current === started) {
+        setFailed({ uid, message: "Cadence couldn't load your profile. Check your connection and try again." });
       }
     })();
 
     return () => {
       active = false;
     };
-  }, [uid]);
+  }, [uid, attempt]);
+
+  const retryProfile = useCallback(() => {
+    setFailed(null);
+    setAttempt((n) => n + 1);
+  }, []);
 
   const updateProfile = useCallback(
     async (patch: Partial<Profile>) => {
@@ -171,12 +197,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       user,
       loading,
       profileReady,
+      profileError,
+      retryProfile,
       profile,
       displayName: profile.displayName,
       updateProfile,
       signOut,
     };
-  }, [user, loading, profileReady, fields, updateProfile, signOut]);
+  }, [user, loading, profileReady, profileError, retryProfile, fields, updateProfile, signOut]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

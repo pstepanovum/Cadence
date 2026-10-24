@@ -12,12 +12,13 @@ import {
   isRecentSignIn,
 } from "@/lib/auth/session-cookie";
 import { ensureUserRecord } from "@/lib/cloud/store";
-import { getAdminAuth, isFirebaseServerConfigured } from "@/lib/firebase/admin";
+import { CONVERSATION_PROGRESS_COOKIE } from "@/lib/conversation";
+import { getAdminAuth, isCloudServerReady } from "@/lib/firebase/admin";
 
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
-  if (!isFirebaseServerConfigured()) {
+  if (!isCloudServerReady()) {
     return NextResponse.json(
       { error: "Cadence Cloud is not configured on this server." },
       { status: 503 },
@@ -58,6 +59,9 @@ export async function POST(request: Request) {
     const response = NextResponse.json({ ok: true });
     response.cookies.set(SESSION_COOKIE, sessionCookie, getSessionCookieOptions());
     response.cookies.set(APP_MODE_COOKIE, "cloud", getAppModeCookieOptions());
+    // Saved in the account from here on; whatever the browser kept belongs to
+    // someone else's session.
+    response.cookies.delete(CONVERSATION_PROGRESS_COOKIE);
     return response;
   } catch (error) {
     console.error("Could not create a session cookie:", error);
@@ -71,6 +75,9 @@ export async function POST(request: Request) {
 export async function DELETE() {
   const response = NextResponse.json({ ok: true });
   response.cookies.delete(SESSION_COOKIE);
+  // Progress kept in the browser belongs to whoever was signed in; left behind,
+  // it would be merged into the next account that signs in here.
+  response.cookies.delete(CONVERSATION_PROGRESS_COOKIE);
   return response;
 }
 

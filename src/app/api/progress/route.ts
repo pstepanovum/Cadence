@@ -7,6 +7,7 @@ import {
   updateLocalModuleExamProgress,
   writeLocalLearnState,
 } from "@/lib/local-learn";
+import { clampScore } from "@/lib/cloud/attempt-input";
 import { applyExamToProgress, bootstrapModuleProgress } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
@@ -47,7 +48,12 @@ export async function PATCH(request: Request) {
     }
 
     const body = await request.json() as { module_id: number; exam_score: number };
-    const { module_id, exam_score } = body;
+    const { module_id } = body;
+    const exam_score = typeof body.exam_score === "number" ? clampScore(body.exam_score) : Number.NaN;
+
+    if (!Number.isFinite(exam_score)) {
+      return NextResponse.json({ error: "An exam_score is required." }, { status: 400 });
+    }
 
     const catalog = await getLearnCatalog();
 

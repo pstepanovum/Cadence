@@ -12,6 +12,10 @@
 // reaching Firestore need credentials.
 import "server-only";
 
+import { existsSync } from "node:fs";
+import { homedir } from "node:os";
+import { join } from "node:path";
+
 import { cert, getApp, getApps, initializeApp, type App } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
@@ -28,6 +32,44 @@ export function getFirebaseProjectId(): string | null {
 
 export function isFirebaseServerConfigured() {
   return getFirebaseProjectId() !== null;
+}
+
+/**
+ * Whether this server can mint session cookies and reach Firestore, which a
+ * project id alone does not allow. The packaged desktop app has the project id
+ * inlined at build time but no credentials, so without this check it offered
+ * Cadence Cloud and every sign-in failed.
+ */
+export function hasAdminCredentials() {
+  const env = process.env;
+  if (
+    env.FIREBASE_SERVICE_ACCOUNT?.trim() ||
+    env.GOOGLE_APPLICATION_CREDENTIALS?.trim() ||
+    // The runtime's own identity on Cloud Run, Cloud Functions and App Engine.
+    env.K_SERVICE ||
+    env.GAE_SERVICE ||
+    // The Auth and Firestore emulators accept any request.
+    (env.FIREBASE_AUTH_EMULATOR_HOST && env.FIRESTORE_EMULATOR_HOST)
+  ) {
+    return true;
+  }
+
+  // `gcloud auth application-default login` writes a well-known file.
+  try {
+    const configDir =
+      env.CLOUDSDK_CONFIG ||
+      (process.platform === "win32"
+        ? join(env.APPDATA ?? "", "gcloud")
+        : join(homedir(), ".config", "gcloud"));
+    return existsSync(join(configDir, "application_default_credentials.json"));
+  } catch {
+    return false;
+  }
+}
+
+/** Cloud sign-in works end to end on this server. */
+export function isCloudServerReady() {
+  return isFirebaseServerConfigured() && hasAdminCredentials();
 }
 
 function readServiceAccount() {
