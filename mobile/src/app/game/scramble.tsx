@@ -32,11 +32,14 @@ function pickWords(level: ReturnType<typeof parseLevel>): VocabWord[] {
 
 /**
  * The largest tile that fits the word on one row, but never under the 44pt
- * tap target: a long word on a small phone wraps onto a second row instead.
+ * tap target. The gap tightens before a row wraps, so an eight-letter word
+ * stays on one line on a large phone; on a small one it wraps instead.
  */
-function tileSizeFor(letters: number, rowWidth: number): number {
-  const fit = Math.floor((rowWidth - TILE_GAP * (letters - 1)) / Math.max(letters, 1));
-  return Math.max(TAP_TARGET, Math.min(MAX_TILE, fit));
+function tileLayoutFor(letters: number, rowWidth: number): { size: number; gap: number } {
+  const count = Math.max(letters, 1);
+  const gap = count * TAP_TARGET + (count - 1) * TILE_GAP > rowWidth ? spacing.xs : TILE_GAP;
+  const fit = Math.floor((rowWidth - gap * (count - 1)) / count);
+  return { size: Math.max(TAP_TARGET, Math.min(MAX_TILE, fit)), gap };
 }
 
 export default function ScrambleScreen() {
@@ -64,8 +67,8 @@ export default function ScrambleScreen() {
   const target = word?.word.toLowerCase() ?? "";
   const answer = placed.map((id) => tiles[id]?.letter ?? "").join("");
   // Screen gutters and the board's padding.
-  const rowWidth = Math.min(width, 640) - spacing.lg * 2 - spacing.lg * 2;
-  const tileSize = tileSizeFor(target.length, rowWidth);
+  const rowWidth = Math.min(width, 640) - spacing.lg * 2 - spacing.md * 2;
+  const { size: tileSize, gap: tileGap } = tileLayoutFor(target.length, rowWidth);
 
   useExitGuard(
     tally.answered > 0 && !finished,
@@ -256,7 +259,7 @@ export default function ScrambleScreen() {
 
       <Card style={styles.board}>
         <Eyebrow>{phase === "revealed" ? "The word was" : "Your answer"}</Eyebrow>
-        <View style={styles.row} accessibilityLabel={answer ? `So far: ${answer}` : "Nothing placed yet"}>
+        <View style={[styles.row, { gap: tileGap }]} accessibilityLabel={answer ? `So far: ${answer}` : "Nothing placed yet"}>
           {Array.from(target).map((_, position) => {
             const tileId = placed[position];
             const tile = tileId !== undefined ? tiles[tileId] : undefined;
@@ -273,7 +276,7 @@ export default function ScrambleScreen() {
         </View>
 
         <Eyebrow>Letters</Eyebrow>
-        <View style={styles.row}>
+        <View style={[styles.row, { gap: tileGap }]}>
           {tiles.map((tile) => (
             <LetterTile
               key={tile.id}
@@ -333,13 +336,12 @@ const styles = StyleSheet.create({
   },
   board: {
     gap: spacing.md,
-    paddingHorizontal: spacing.lg,
+    paddingHorizontal: spacing.md,
   },
   row: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: TILE_GAP,
   },
   tools: {
     flexDirection: "row",

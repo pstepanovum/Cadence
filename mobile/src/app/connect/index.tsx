@@ -21,7 +21,10 @@ export default function ConnectIndexScreen() {
   return (
     <Screen>
       {canGoBack ? <TopBar onBack={() => router.back()} /> : null}
-      <SectionHeader eyebrow="Set up Cadence" title="How should Cadence work?" />
+      <SectionHeader
+        eyebrow="Set up Cadence"
+        title={isCloudConfigured ? "How should Cadence work?" : "Connect to your computer"}
+      />
 
       <Card variant="dark">
         <View style={styles.optionHead}>
@@ -29,9 +32,9 @@ export default function ConnectIndexScreen() {
             <Laptop color={colors.lime} size={22} />
           </View>
           <View style={styles.optionTitle}>
-            <Eyebrow onDark>Recommended</Eyebrow>
+            <Eyebrow onDark>{isCloudConfigured ? "Recommended" : "Over your Wi-Fi"}</Eyebrow>
             <Title size={type.title3} onDark>
-              Connect to my computer
+              {isCloudConfigured ? "Connect to my computer" : "Pair this phone"}
             </Title>
           </View>
         </View>
@@ -67,11 +70,7 @@ export default function ConnectIndexScreen() {
             }}
           />
         </Card>
-      ) : (
-        <Body size={type.footnote} tone="muted">
-          This copy of Cadence has no hosted service, so it connects to your own computer.
-        </Body>
-      )}
+      ) : null}
     </Screen>
   );
 }

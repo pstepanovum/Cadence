@@ -5,6 +5,7 @@
 // discovering it halfway through a practice session.
 import { NextResponse } from "next/server";
 
+import { areEnginesReady } from "@/lib/pairing/engines";
 import { resolveDeviceFromHeaders } from "@/lib/pairing/request";
 import { getServerInfo } from "@/lib/pairing/service";
 
@@ -36,7 +37,7 @@ export async function GET(request: Request) {
         pairedAt: new Date(device.value.pairedAt).toISOString(),
         expiresAt: device.value.expiresAt,
       },
-      server: await getServerInfo(true),
+      server: await getServerInfo(await areEnginesReady(request)),
     },
     { headers: { "Cache-Control": "no-store" } },
   );

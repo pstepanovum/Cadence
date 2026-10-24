@@ -79,9 +79,11 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const engineUrl = getAiEngineUrlForRequest(request);
-  const formData = await request.formData();
-  const audio = formData.get("audio");
-  const text = formData.get("text");
+  // A body that is not a form (wrong Content-Type, truncated upload) is a
+  // client error, not a server crash.
+  const formData = await request.formData().catch(() => null);
+  const audio = formData?.get("audio");
+  const text = formData?.get("text");
 
   if (!(audio instanceof File)) {
     return NextResponse.json(

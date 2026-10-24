@@ -86,24 +86,27 @@ export function SetupSelection({
               </h1>
               <p className="max-w-2xl text-base leading-7 text-bright-snow/78">
                 Local mode keeps progress on this machine with no account or billing.
-                Cadence Cloud keeps the current hosted flow with sign-in, synced data,
-                and Stripe-backed plans.
+                {cloudAvailable
+                  ? " Cadence Cloud adds sign-in, synced progress and paid plans."
+                  : null}
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className={cn("grid gap-3", cloudAvailable && "sm:grid-cols-2")}>
               <div className="rounded-3xl bg-white/10 px-4 py-4">
                 <p className="eyebrow text-xs text-yellow-green/82">Open source</p>
                 <p className="mt-2 text-base font-semibold text-bright-snow">
                   Local progress, local setup, no hosted account required.
                 </p>
               </div>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Hosted</p>
-                <p className="mt-2 text-base font-semibold text-bright-snow">
-                  Sign in to keep using the paid cloud workflow.
-                </p>
-              </div>
+              {cloudAvailable ? (
+                <div className="rounded-3xl bg-white/10 px-4 py-4">
+                  <p className="eyebrow text-xs text-yellow-green/82">Hosted</p>
+                  <p className="mt-2 text-base font-semibold text-bright-snow">
+                    Sign in to keep using the paid cloud workflow.
+                  </p>
+                </div>
+              ) : null}
             </div>
 
             {currentDisplayName ? (
@@ -155,46 +158,42 @@ export function SetupSelection({
             </div>
           </Card>
 
-          <Card
-            className={cn(
-              "bg-white",
-              currentMode === "cloud" ? "ring-2 ring-hunter-green" : "",
-            )}
-          >
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-vanilla-cream text-hunter-green">
-                  <Cloud size={18} color="currentColor" />
-                </span>
-                <div className="space-y-1">
-                  <p className="eyebrow text-xs text-sage-green">Cadence Cloud</p>
-                  <h2 className="text-2xl font-semibold text-hunter-green">
-                    Keep the hosted paid workflow
-                  </h2>
+          {cloudAvailable ? (
+            <Card
+              className={cn(
+                "bg-white",
+                currentMode === "cloud" ? "ring-2 ring-hunter-green" : "",
+              )}
+            >
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-vanilla-cream text-hunter-green">
+                    <Cloud size={18} color="currentColor" />
+                  </span>
+                  <div className="space-y-1">
+                    <p className="eyebrow text-xs text-sage-green">Cadence Cloud</p>
+                    <h2 className="text-2xl font-semibold text-hunter-green">
+                      Keep the hosted paid workflow
+                    </h2>
+                  </div>
                 </div>
+
+                <p className="text-sm leading-7 text-iron-grey">
+                  Sign in with a Cadence account and use hosted billing. This
+                  is the right option when you want synced progress, account-based
+                  access, and the current public deployment behaviour.
+                </p>
+
+                <Button
+                  onClick={() => void handleModeSelection("cloud")}
+                  disabled={pendingMode !== null}
+                >
+                  {pendingMode === "cloud" ? "Opening cloud setup..." : "Use Cadence Cloud"}
+                  <ArrowRight size={16} color="currentColor" />
+                </Button>
               </div>
-
-              <p className="text-sm leading-7 text-iron-grey">
-                Sign in with a Cadence account and use hosted billing. This
-                is the right option when you want synced progress, account-based
-                access, and the current public deployment behaviour.
-              </p>
-
-              <div className="rounded-3xl bg-vanilla-cream px-4 py-4 text-sm leading-7 text-iron-grey">
-                {cloudAvailable
-                  ? "Cadence Cloud is available in this build."
-                  : "Cadence Cloud is not configured in this local build yet, so the local mode path is the safe option right now."}
-              </div>
-
-              <Button
-                onClick={() => void handleModeSelection("cloud")}
-                disabled={pendingMode !== null || !cloudAvailable}
-              >
-                {pendingMode === "cloud" ? "Opening cloud setup..." : "Use Cadence Cloud"}
-                <ArrowRight size={16} color="currentColor" />
-              </Button>
-            </div>
-          </Card>
+            </Card>
+          ) : null}
 
           {error ? (
             <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">

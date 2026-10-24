@@ -24,6 +24,11 @@ import { describeFailure } from "@/pairing/errors";
 export interface ServerStatus {
   reachable: boolean;
   checking: boolean;
+  /**
+   * Known to be unreachable: not reachable and no check running. A screen
+   * showing `ServerBanner` hides its own load errors while this is true.
+   */
+  offline: boolean;
   /** Null while reachable. */
   message: string | null;
   /** Label for the recovery button, when one makes sense. */
@@ -35,6 +40,11 @@ export interface ServerStatus {
 }
 
 export function useServerStatus(): ServerStatus {
+  const status = useServerStatusBase();
+  return { ...status, offline: !status.reachable && !status.checking };
+}
+
+function useServerStatusBase(): Omit<ServerStatus, "offline"> {
   const { mode, state, reconnect } = useConnection();
   const isLocal = mode === "local";
 

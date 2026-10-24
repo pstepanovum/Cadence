@@ -53,9 +53,9 @@ export function useAssessReadiness(enabled = true): EngineReadiness {
       : !connected
         ? "Cadence is not connected to a server, so there is nothing to score against yet."
         : offline
-          ? "Cadence can't reach the pronunciation engine right now. Recording will unlock as soon as it is back."
+          ? "Cadence can't reach the pronunciation engine right now."
           : (data?.message ??
-            "The pronunciation engine is warming up. Recording unlocks as soon as it is ready."),
+            "The pronunciation engine is warming up."),
     refresh: () => {
       query.refetch();
     },

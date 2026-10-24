@@ -20,8 +20,10 @@ function pickTranscript(payload: TranscribePayload | null): string {
 
 export async function POST(request: Request) {
   const engineUrl = getAiEngineUrlForRequest(request);
-  const formData = await request.formData();
-  const audio = formData.get("audio");
+  // A body that is not a form (wrong Content-Type, truncated upload) is a
+  // client error, not a server crash.
+  const formData = await request.formData().catch(() => null);
+  const audio = formData?.get("audio");
 
   if (!(audio instanceof File)) {
     return NextResponse.json({ error: "An audio file is required." }, { status: 400 });

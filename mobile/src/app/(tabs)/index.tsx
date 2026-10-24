@@ -108,7 +108,7 @@ export default function HomeScreen() {
       <ServerBanner />
 
       <Card variant="dark">
-        {statsQuery.isError ? (
+        {statsQuery.isError && !server.offline ? (
           <Banner
             tone="warning"
             message={describeError(statsQuery.error, "Your stats could not be loaded.")}
@@ -123,10 +123,18 @@ export default function HomeScreen() {
               </View>
               <View style={styles.streakText}>
                 <Title size={type.headline} onDark>
-                  {!stats ? "Loading your streak…" : streak > 0 ? `${streak}-day streak` : "No streak yet"}
+                  {!stats
+                    ? server.offline
+                      ? "Streak unavailable"
+                      : "Loading your streak…"
+                    : streak > 0 ? `${streak}-day streak` : "No streak yet"}
                 </Title>
                 <Body size={type.footnote} onDark tone="muted">
-                  {streak > 0 ? "Finish a lesson today to keep it." : "Finish one lesson today to start one."}
+                  {!stats && server.offline
+                    ? "It shows up once Cadence is connected."
+                    : streak > 0
+                      ? "Finish a lesson today to keep it."
+                      : "Finish one lesson today to start one."}
                 </Body>
               </View>
             </View>

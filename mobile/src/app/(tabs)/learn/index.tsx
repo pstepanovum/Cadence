@@ -66,10 +66,8 @@ export default function LearnScreen() {
       <ScreenState
         isLoading={modulesQuery.isLoading}
         isError={modulesQuery.isError}
-        errorMessage={describeError(
-          modulesQuery.error,
-          server.reachable ? "Could not load the modules." : "Cadence can't reach the server right now.",
-        )}
+        offline={server.offline}
+        errorMessage={describeError(modulesQuery.error, "Could not load the modules.")}
         onRetry={() => void modulesQuery.refetch()}
         isEmpty={modules.length === 0}
         loadingRows={4}

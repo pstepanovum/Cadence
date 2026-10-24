@@ -7,6 +7,7 @@
 // Mode is explicit. The app is either talking to a computer on the Wi-Fi
 // (local) or to the hosted service (cloud), never guessing between them, which
 // mirrors how the web app models it in src/lib/app-mode.ts.
+import { useQueryClient } from "@tanstack/react-query";
 import * as Network from "expo-network";
 import {
   createContext,
@@ -74,6 +75,10 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
   // result of a newer one.
   const sweeping = useRef(false);
   const generation = useRef(0);
+  const queryClient = useQueryClient();
+  /** The last transport published, and whether one is published right now. */
+  const lastTransportKey = useRef<string | null>(null);
+  const transportLive = useRef(false);
   const retryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const dispatch = useCallback((event: Parameters<typeof reduce>[1]) => {
@@ -309,22 +314,34 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
   // send calls. Cleared the moment the connection drops, so a screen that fires
   // a request while the computer is asleep fails fast instead of hanging.
   useEffect(() => {
-    if (mode === "local") {
-      setTransport(
-        state.status === "connected"
-          ? { mode: "local", baseUrl: state.baseUrl, deviceToken }
-          : null,
-      );
-      return;
-    }
+    const transport =
+      mode === "local"
+        ? state.status === "connected"
+          ? { mode: "local" as const, baseUrl: state.baseUrl, deviceToken }
+          : null
+        : mode === "cloud" && config.apiUrl
+          ? { mode: "cloud" as const, baseUrl: config.apiUrl, deviceToken: null }
+          : null;
 
-    if (mode === "cloud" && config.apiUrl) {
-      setTransport({ mode: "cloud", baseUrl: config.apiUrl, deviceToken: null });
-      return;
-    }
+    setTransport(transport);
+    const wasLive = transportLive.current;
+    transportLive.current = transport !== null;
+    if (!transport) return;
 
-    setTransport(null);
-  }, [mode, state, deviceToken]);
+    // Queries that ran while there was nowhere to send them hold a "not
+    // connected" error until something refetches them. A different server or
+    // credential means the cached data belongs to someone else's progress, so
+    // it is dropped; the same one coming back just refetches.
+    const key = `${transport.mode} ${transport.baseUrl} ${transport.deviceToken ?? ""}`;
+    if (key === lastTransportKey.current) {
+      if (wasLive) return;
+      void queryClient.invalidateQueries();
+    } else {
+      if (lastTransportKey.current !== null) queryClient.removeQueries();
+      void queryClient.refetchQueries({ type: "active" });
+      lastTransportKey.current = key;
+    }
+  }, [mode, state, deviceToken, queryClient]);
 
   const value = useMemo<ConnectionValue>(
     () => ({

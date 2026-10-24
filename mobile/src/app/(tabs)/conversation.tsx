@@ -67,6 +67,7 @@ export default function ConversationScreen() {
       <ScreenState
         isLoading={modulesQuery.isLoading}
         isError={modulesQuery.isError}
+        offline={server.offline}
         errorMessage={describeError(modulesQuery.error, "Could not load the conversations.")}
         onRetry={() => void modulesQuery.refetch()}
         isEmpty={scenarios.length === 0}

@@ -5,6 +5,7 @@
 // through it exactly once.
 import { NextResponse } from "next/server";
 
+import { areEnginesReady } from "@/lib/pairing/engines";
 import { claimCode, getServerInfo } from "@/lib/pairing/service";
 import { PAIRING_PROTOCOL_VERSION, type ClaimResponse } from "@/lib/pairing/protocol";
 
@@ -45,7 +46,7 @@ export async function POST(request: Request) {
     expiresAt: outcome.value.device.expiresAt,
     // The phone stores this and refuses to send its token to a server that
     // later reports a different serverId.
-    server: await getServerInfo(true),
+    server: await getServerInfo(await areEnginesReady(request)),
   };
 
   return NextResponse.json(payload, { headers: { "Cache-Control": "no-store" } });

@@ -6,7 +6,7 @@
 // device on the LAN could not already learn by connecting.
 import { NextResponse } from "next/server";
 
-import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
+import { areEnginesReady } from "@/lib/pairing/engines";
 import { getServerInfo } from "@/lib/pairing/service";
 
 export const runtime = "nodejs";
@@ -21,22 +21,4 @@ export async function GET(request: Request) {
       "Cache-Control": "no-store",
     },
   });
-}
-
-async function areEnginesReady(request: Request): Promise<boolean> {
-  try {
-    const response = await fetch(`${getAiEngineUrlForRequest(request)}/health`, {
-      cache: "no-store",
-      signal: AbortSignal.timeout(2_000),
-    });
-
-    if (!response.ok) {
-      return false;
-    }
-
-    const payload = (await response.json()) as { status?: string; modelReady?: boolean };
-    return payload.status === "ok" && payload.modelReady === true;
-  } catch {
-    return false;
-  }
 }

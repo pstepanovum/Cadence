@@ -159,6 +159,12 @@ export function LoadingBlock({ rows = 3, label }: { rows?: number; label?: strin
 export interface ScreenStateProps {
   isLoading: boolean;
   isError: boolean;
+  /**
+   * The server cannot be reached and the screen's `ServerBanner` already says
+   * so. Loading and error states then render nothing, so the outage is not
+   * reported twice.
+   */
+  offline?: boolean;
   /** Already-humanised copy; pass `describeError(error)`. */
   errorMessage?: string;
   onRetry?: () => void;
@@ -182,6 +188,7 @@ export interface ScreenStateProps {
 export function ScreenState({
   isLoading,
   isError,
+  offline = false,
   errorMessage,
   onRetry,
   isEmpty = false,
@@ -190,6 +197,9 @@ export function ScreenState({
   loadingLabel,
   children,
 }: ScreenStateProps) {
+  if (offline && (isLoading || isError)) {
+    return null;
+  }
   if (isLoading) {
     return <LoadingBlock rows={loadingRows} label={loadingLabel} />;
   }
