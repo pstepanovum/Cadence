@@ -46,8 +46,9 @@ export default function GrammarLessonScreen() {
         {points.map((point) => (
           <Card key={point.id}>
             <Eyebrow>Grammar</Eyebrow>
-            <Title size={type.headline}>{point.title}</Title>
-            <Body size={type.callout}>{point.summary}</Body>
+            {/* A one-point lesson often reuses the point's title and summary; say it once. */}
+            {point.title.trim() !== lesson.title.trim() ? <Title size={type.headline}>{point.title}</Title> : null}
+            {point.summary.trim() !== lesson.goal.trim() ? <Body size={type.callout}>{point.summary}</Body> : null}
             <View style={styles.patterns}>
               {point.patterns.map((pattern) => (
                 <Chip key={pattern} label={pattern} />

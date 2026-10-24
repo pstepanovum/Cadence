@@ -36,11 +36,11 @@ name: Own server onboarding
 - tapOn:
     id: "pair-address"
 - inputText: ${ADDRESS}
-- tapOn:
-    id: "pair-code"
+# Return moves to the code field; return there connects.
+- pressKey: Enter
+- waitForAnimationToEnd
 - inputText: ${CODE}
-- hideKeyboard
-- tapOn: "Connect"
+- pressKey: Enter
 - extendedWaitUntil:
     visible: "Connected to .*"
     timeout: 15000

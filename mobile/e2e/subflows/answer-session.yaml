@@ -3,7 +3,7 @@
 appId: dev.pstepanov.cadence
 ---
 - repeat:
-    times: 20
+    times: 40
     while:
       notVisible: "(?i)session complete"
     commands:

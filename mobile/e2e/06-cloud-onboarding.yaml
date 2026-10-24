@@ -28,7 +28,10 @@ name: Cloud onboarding
     id: "account-password"
 - inputText: ${PASSWORD}
 - hideKeyboard
-- tapOn: "Create account"
+# Closing the keyboard may already have submitted the form.
+- tapOn:
+    text: "Create account"
+    optional: true
 - extendedWaitUntil:
     visible: "You're signed in"
     timeout: 20000
@@ -39,8 +42,9 @@ name: Cloud onboarding
 - assertVisible: "Yearly, 7-day free trial, then .* a year"
 - scrollUntilVisible:
     element: "Restore purchases"
+- scrollUntilVisible:
+    element: "Privacy Policy"
 - assertVisible: "Terms of Use"
-- assertVisible: "Privacy Policy"
 - takeScreenshot: 06-paywall
 - tapOn: "Restore purchases"
 - assertVisible: "No Plus subscription found.*"
