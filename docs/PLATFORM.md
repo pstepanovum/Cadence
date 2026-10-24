@@ -253,6 +253,13 @@ reads.
 | `mailQueue/{key}` | server | template, recipient uid, data, status; `key` makes it exactly-once | written by events |
 | `oauthClients`, `oauthCodes`, `oauthTokens`, `oauthGrants` | MCP | as the portfolio's `lib/oauth`; tokens as SHA-256 digests | per MCP call |
 | `rateLimits/{key}` | server | fixed-window counters with `expireAt` (TTL) | per limited call |
+| `deletions/{uid}` | server | account deletion steps done, retried by the daily job; no address once finished | on deletion |
+
+`users/{uid}` also holds `emailPrefs` (`reminders`, `newsletter`; reminders are
+off until the learner turns them on with `PATCH /api/me`), `security` (last
+sign-in email, `tokensValidAfter`, hashed device labels, for the sign-in
+notices) and, while the web pages still read it, the older `billing` map,
+which the Stripe webhook keeps current.
 
 Notes:
 
@@ -260,10 +267,15 @@ Notes:
   because Firestore paths alternate collection and document.
 - The existing pronunciation collections (`moduleProgress`, `lessonSessions`,
   `lessonAttempts`, `conversationProgress`) become Plus detail. A free account
-  writes only the summary; its module progress stays on the device. The server
-  builder migrates the write paths; there are no production accounts to move.
-- TTL policies on `expireAt` for `usage`, `webhookEvents`, `rateLimits` are
-  configured by the owner at deploy time (documented in the deploy scripts).
+  writes only the summary; its module progress stays on the device. **Open:**
+  the routes that write them (`/api/attempts`, `/api/sessions`, `/api/progress`,
+  `/api/conversation-progress`) still write for every cloud account, because
+  the web pages read module unlocks from them through `src/lib/learn-data.ts`.
+  Gating them needs those reads moved to the device first; the daily job
+  already purges them with the rest of the Plus detail after a lapse.
+- TTL policies on `expireAt` for `usage`, `webhookEvents`, `rateLimits` and
+  `mailQueue`, and on `expiresAt` for `oauthCodes` and `oauthTokens`, are set by
+  the owner with `deploy/cloudrun.sh ttl` (docs/DEPLOY.md).
 
 ### 5.1 Sync API
 
@@ -280,6 +292,17 @@ All under App Check (section 14) and the Firebase ID token.
 
 Session cost targets: free 2 reads and 1 write; Plus at most 10 reads and 5
 writes.
+
+Other server routes (code in `src/lib/server/`): `PATCH /api/me`
+`{reminders}`; `POST /api/auth/password-reset` `{email}`,
+`/api/auth/verify-email`, `/api/auth/password-changed` `{email}`,
+`/api/auth/sign-in-failed` `{email}` (the sign-in forms report failures; ten
+in an hour sends one `suspicious-activity` a day); `GET /api/account/export`,
+`DELETE /api/account`, `POST /api/account/email` `{newEmail}`,
+`GET`/`DELETE /api/account/connections` (MCP grants); `POST /api/newsletter`
+`{email, consent}` or `{subscribed}`; `GET`/`POST /api/email/unsubscribe`;
+`POST /api/ai/grammar-feedback`, `POST /api/ai/placement`. Errors are
+`{error, message}` with a code the apps switch on.
 
 ---
 
@@ -315,7 +338,7 @@ signed in at once: AI runs at home, progress follows the account.
 
 ### 6.1 Engine interface (server)
 
-`src/lib/engines/` (server builder) defines one interface per capability and
+`src/lib/server/engines/` defines one interface per capability and
 picks a provider by environment variable, so a provider is swapped by config:
 
 | Interface | Providers | Env (default in cloud / own server) |
@@ -415,7 +438,10 @@ own Cadence get them too.
   answer 405 after authentication.
 - OAuth 2.1: the app is its own authorization server. Dynamic client
   registration is open; no token is minted without the learner signing in to
-  Cadence on the consent screen (`/oauth/authorize`). PKCE S256 required.
+  Cadence on the consent screen (`/oauth/authorize`, a web page backed by
+  `GET`/`POST /api/oauth/authorize`: GET describes the request with the
+  learner's ID token as Bearer; POST takes `{...params, decision, scope,
+  id_token}` as JSON and answers `{redirect}`). PKCE S256 required.
   Tokens are opaque, stored as SHA-256 digests, audience-bound to
   `https://cadence.pstepanov.dev/api/mcp`, refresh tokens rotate with reuse
   detection, grants end after 180 days. Known product names must redirect to
@@ -473,7 +499,12 @@ event queues each email at most once.
 - The uid comes from Checkout `client_reference_id` and
   `subscription.metadata.firebase_uid` (both set at session creation).
 - Events arrive out of order, so the handler re-reads the subscription from
-  Stripe and ignores data older than what is stored (`updatedAt`).
+  Stripe; when it cannot (no key, as in the replay harness, or a deleted
+  object) it uses the event's copy dated by the event, and an older copy never
+  overwrites a newer one (`eventAt` on each source's record).
+- Code: `src/lib/server/billing/stripe-webhook.ts` (handler),
+  `stripe-map.ts` (pure mapping), `checkout.ts` (`POST /api/billing/checkout`
+  `{interval}` and `POST /api/billing/portal`, both answering `{url}`).
 
 | Event | Effect | Email |
 | --- | --- | --- |
@@ -481,10 +512,14 @@ event queues each email at most once.
 | `customer.subscription.created` | write record | none (welcome comes from checkout) |
 | `customer.subscription.updated` | write record (`active` for `active`, `trialing`, `past_due`; `expiresAt` = current period end; `willRenew` = not `cancel_at_period_end`; `productId` from the price lookup key) | `plus-canceled` when `willRenew` turns false |
 | `customer.subscription.deleted` | `active: false` | `plus-ended` |
-| `invoice.payment_failed` | no state change (Stripe moves the status) | `billing-issue` |
+| `customer.subscription.updated` (product changed) | as above | `plan-changed` |
+| `invoice.payment_failed` | no state change (Stripe moves the status) | `billing-issue` (link to the Customer Portal through `/account`) |
+| `invoice.paid` (amount above zero) | none | `payment-receipt` with Stripe's hosted invoice link |
+| `charge.refunded` | none (a refund that ends Plus arrives as `customer.subscription.deleted`) | `refund-issued` |
 
-The current `src/app/api/stripe/webhook` route is replaced by this one; the
-owner points the Stripe endpoint at the new URL when it ships.
+The old `src/app/api/stripe/webhook` route is gone; the owner points the
+Stripe endpoint at the new URL (docs/DEPLOY.md lists the events). The handler
+still keeps the older `users/{uid}.billing` map current for pages that read it.
 
 ### 9.2 RevenueCat
 
@@ -502,11 +537,11 @@ owner points the Stripe endpoint at the new URL when it ships.
 | --- | --- | --- |
 | `INITIAL_PURCHASE` | active, `expiresAt` = `expiration_at_ms`, `willRenew` true | `plus-welcome` or `trial-started` (`period_type` `TRIAL`) |
 | `RENEWAL` | active, new `expiresAt` | none |
-| `CANCELLATION` | `willRenew` false; stays active until `expiresAt` (a refund ends it now) | `plus-canceled` |
+| `CANCELLATION` | `willRenew` false; stays active until `expiresAt` (a refund, `cancel_reason` `CUSTOMER_SUPPORT`, ends it now) | `plus-canceled`, or `refund-issued` for a refund |
 | `UNCANCELLATION` | `willRenew` true | none |
-| `EXPIRATION` | `active` false | `plus-ended` |
+| `EXPIRATION` | `active` false | `plus-ended` (none while Stripe still keeps Plus on) |
 | `BILLING_ISSUE` | stays active until the grace period ends | `billing-issue` |
-| `PRODUCT_CHANGE` | `productId` = `new_product_id` when present | none |
+| `PRODUCT_CHANGE` | `productId` = `new_product_id` when present | `plan-changed` |
 | `TRANSFER` | re-read both uids from `GET /v1/subscribers/{uid}` and rewrite their `app_store` records | none |
 | `SUBSCRIPTION_PAUSED` | `willRenew` false, active until `expiresAt` | none |
 | `TEST` | recorded, no change | none |
@@ -532,15 +567,41 @@ owner points the Stripe endpoint at the new URL when it ships.
 
 ## 10. Email
 
-Transactional email through Brevo, queued in `mailQueue` and sent by the
-server; nothing sends inline in a webhook.
+Email through Brevo from `Cadence <hello@cadence.pstepanov.dev>`, replies to
+`support@cadence.pstepanov.dev`. Everything event-driven is queued at
+`mailQueue/{key}` (often in the transaction that caused it), delivered by the
+route's `after()` hook and retried by the five-minute job; the key makes each
+message exactly-once. Password reset and verification links are credentials,
+so those two are sent directly and never stored.
 
-Templates (`src/emails/`, each with an HTML and a plain-text part, inline
-styles only, every image with `alt`): `welcome`, `password-reset`,
-`password-changed`, `plus-welcome`, `trial-started`, `trial-ending`,
-`billing-issue`, `plus-canceled`, `plus-ended`, `data-export-ready`,
-`account-deleted`. Password reset uses a Cadence link to `/reset-password`
-(Firebase `generatePasswordResetLink`, sent through Brevo).
+Code in `src/lib/server/email/`: `layout.ts` (frame and pieces),
+`templates/` (pure functions with typed props, and a fixture each in
+`templates/index.ts`), `brevo.ts` (send, contacts, double opt-in),
+`queue.ts`, `unsubscribe.ts`, `senders.ts`.
+
+Templates: account (`welcome`, `verify-email`, `password-reset`,
+`password-changed`, `email-changed` to the old and the new address,
+`new-sign-in`, `deletion-scheduled`, `account-deleted`, `data-export-ready`),
+billing (`plus-welcome`, `trial-started`, `trial-ending` for web trials only,
+`payment-receipt`, `billing-issue`, `plus-canceled`, `plus-ended`,
+`plan-changed`, `refund-issued`), security (`mcp-authorized`, `device-paired`,
+`suspicious-activity`) and opt-in (`streak-at-risk`, `weekly-summary`,
+`badge-earned`, `inactive-nudge`, `newsletter-confirm`, `newsletter-welcome`).
+
+Design: tables, at most 560 px, the hosted 2x logo PNG with alt text, one
+accent (hunter green, yellow-green in dark mode), Funnel Display through one
+Google Fonts link with a system stack behind it, and a single `<style>` block
+for the dark palette and phone padding; every other style is inline, so
+Gmail (which drops both) still gets the light design. Every email has a
+plain-text part; only opt-in mail has an unsubscribe link (and
+`List-Unsubscribe` one-click headers).
+
+Firebase's own emails are never used: the server generates the one-time
+codes with the Admin SDK and puts them on `/reset-password` and
+`/verify-email`; docs/DEPLOY.md has the console setting.
+
+Newsletter: list 5, Brevo double opt-in only (`POST /api/newsletter`); list 4
+holds every account for account email and is never used for marketing.
 
 ---
 
@@ -563,8 +624,8 @@ idempotent and retried by the daily job if it fails:
 
 ## 12. Cloud Run topology
 
-Region `us-central1`. Deploy scripts live in `scripts/deploy/` and are run by
-the owner only.
+Region `us-central1`. `deploy/cloudrun.sh` deploys and docs/DEPLOY.md is
+the runbook; the owner runs them, nothing else does.
 
 ```
 cadence.pstepanov.dev ── Firebase Hosting (CDN)
@@ -574,14 +635,14 @@ cadence.pstepanov.dev ── Firebase Hosting (CDN)
                                         ▼
                                      cadence-ai   (Cloud Run, internal ingress, IAM only)
 cadence-web ──▶ Vertex AI (Gemini), Cloud TTS (+ GCS cache), Firestore, Brevo, Stripe, RevenueCat
-Cloud Scheduler ──▶ cadence-jobs (Cloud Run job, daily)
+Cloud Scheduler ──▶ cadence-web /api/jobs/daily (17:00 UTC), /api/jobs/mail (every 5 min)
 ```
 
 | Service | Image | Settings |
 | --- | --- | --- |
 | `cadence-web` | Next.js standalone (`Dockerfile`): web, API, sync, MCP, webhooks | `--allow-unauthenticated --min-instances 0 --max-instances 10 --concurrency 80 --cpu 1 --memory 1Gi --cpu-boost --timeout 60`; service account `cadence-web` with Firestore user, `run.invoker` on `cadence-ai`, Vertex AI user, TTS, the TTS cache bucket, and its own secrets only |
-| `cadence-ai` | `src/backend/ai-engine/Dockerfile`, phoneme model (and Whisper-small if chosen) baked in | `--no-allow-unauthenticated --ingress internal --min-instances 0 --max-instances 3 --concurrency 4 --cpu 2 --memory 4Gi --cpu-boost --timeout 60`; no secrets; private until launch |
-| `cadence-jobs` | same image as web, job entrypoint | daily: purge lapsed detail after 90 days, retry deletions, clear delivered inboxes |
+| `cadence-ai` | `src/backend/ai-engine/Dockerfile.cloud` (CPU PyTorch, phoneme model and Whisper-small baked in, offline at runtime) | `--no-allow-unauthenticated --ingress internal --min-instances 0 --max-instances 3 --concurrency 4 --cpu 2 --memory 4Gi --cpu-boost --timeout 60`; no secrets; private until launch |
+| jobs | routes on `cadence-web`, called by Cloud Scheduler with `Authorization: Bearer <JOBS_SECRET>` | daily: purge lapsed detail after 90 days, retry deletions, drop uncollected inboxes after 90 days, `trial-ending`, opt-in reminders; every 5 minutes: deliver queued mail |
 
 - **Service to service.** `cadence-web` fetches a Google ID token for the
   `cadence-ai` URL from the metadata server and sends it as a Bearer token.
@@ -589,12 +650,15 @@ Cloud Scheduler ──▶ cadence-jobs (Cloud Run job, daily)
   Direct VPC egress (`--network default --subnet default --vpc-egress
   all-traffic`) with Cloud NAT for its internet calls.
 - **Cold starts.** Both scale to zero. `cadence-web` starts in about 2 s; it
-  never loads models. `cadence-ai` loads its model at startup behind a
-  startup probe on `/healthz`, so requests wait for a ready instance instead
-  of failing; the apps show "Warming up" after 3 s.
+  never loads models. `cadence-ai` loads its model from local disk at
+  startup; the apps show "Warming up" after 3 s. **Open:** the engine's
+  `/health` answers 200 while still warming, so Cloud Run's default TCP
+  startup probe is used; a `/healthz` that answers 503 until the scorer is
+  loaded (ai-engine owner) would let a startup probe hold requests back.
 - **Secrets** (Secret Manager, mounted as env): `STRIPE_SECRET_KEY`,
   `STRIPE_WEBHOOK_SECRET`, `REVENUECAT_WEBHOOK_SECRET`, `REVENUECAT_API_KEY`,
-  `BREVO_API_KEY`, `QUIZ_TOKEN_SECRET`. Templates in `.env.*.example`.
+  `BREVO_API_KEY`, `QUIZ_TOKEN_SECRET`, `EMAIL_UNSUBSCRIBE_SECRET`,
+  `JOBS_SECRET`. Settings in `deploy/cadence-web.env.example`.
   The repo never holds a secret.
 
 ---
@@ -773,18 +837,19 @@ commands.
 
 | What | Command | Pass |
 | --- | --- | --- |
-| Templates render | `pnpm test` (`tests/email/render.test.ts`) | every template renders from `tests/email/fixtures/*.json` with an HTML and a plain-text part, no unreplaced placeholders |
-| HTML lint | `node scripts/email/lint.mjs` | no `<link>` or `<style>` blocks, inline styles only, every `<img>` has `alt`, no external CSS, under 100 KB |
+| Templates render | `pnpm test` (`tests/email/render.test.ts`) | every template renders from its fixture (`src/lib/server/email/templates/index.ts`) with an HTML and a plain-text part, no unreplaced placeholders, unsubscribe only on opt-in mail |
+| HTML lint | `node --import ./tests/register.mjs scripts/email/lint.ts` | one `<style>` in `<head>` and the font `<link>` only, inline styles everywhere else, every `<img>` with `alt` on https, 560 px frame, under 100 KB |
+| Previews | `node --import ./tests/register.mjs scripts/email/preview.ts` | `build/email-previews/index.html`, light and dark |
 | Forgot password end to end | `firebase emulators:exec --only auth,firestore --project demo-cadence "pnpm test:e2e -- tests/e2e/reset-password.spec.ts"` | request sends a link; `/reset-password` accepts it; new password signs in; old one fails; one `password-changed` in `mailQueue` |
-| Billing emails exactly once | `firebase emulators:exec --only firestore --project demo-cadence "node --test --import ./tests/register.mjs tests/server/webhook-emails.test.ts"` | each Stripe and RevenueCat event queues its template once; a replay queues nothing |
+| Billing emails exactly once | in the server run below (`tests/server/emulator/webhooks.test.ts`) | each Stripe and RevenueCat event queues its template once; a replay queues nothing |
 
 ### Server
 
 | What | Command | Pass |
 | --- | --- | --- |
-| Route tests | `firebase emulators:exec --only auth,firestore --project demo-cadence "node --test --import ./tests/register.mjs 'tests/server/**/*.test.ts'"` | sync routes respect tiers and App Check; quotas return 429; circuit breaker returns 503 |
-| Webhooks | same run (`tests/server/webhooks-*.test.ts`), plus `node scripts/webhooks/replay-stripe.mjs --twice` and `node scripts/webhooks/replay-revenuecat.mjs --twice` against `pnpm dev` | bad signature or bearer is 400/401; every listed event maps per section 9; replays are `duplicate: true` with no change; `plus` correct with two sources |
-| MCP | same run (`tests/server/mcp.test.ts`) | no token: 401 with `WWW-Authenticate` and `resource_metadata`; wrong audience: 401; GET and DELETE: 405 after auth; read-only scope cannot call write tools; free account gets the Plus error on Plus tools; every tool's output matches section 8; the 31st call in an hour on free is rate limited |
+| Route tests | `firebase emulators:exec --only auth,firestore --project demo-cadence "node --test --test-concurrency=1 --import ./tests/register.mjs 'tests/server/**/*.test.ts'"` (JDK 21+) | sync routes respect tiers and App Check; quotas return 429; circuit breaker returns 503 |
+| Webhooks | same run (`tests/server/emulator/webhooks.test.ts`), plus `node scripts/webhooks/replay-stripe.mjs --twice` and `node scripts/webhooks/replay-revenuecat.mjs --twice` against `pnpm dev` | bad signature or bearer is 400/401; every listed event maps per section 9; replays are `duplicate: true` with no change; `plus` correct with two sources |
+| MCP | same run (`tests/server/emulator/mcp.test.ts`) | no token: 401 with `WWW-Authenticate` and `resource_metadata`; wrong audience: 401; GET and DELETE: 405 after auth; read-only scope cannot call write tools; free account gets the Plus error on Plus tools; every tool's output matches section 8; the 31st call in an hour on free is rate limited |
 | Firestore rules | `firebase emulators:exec --only firestore --project demo-cadence "node --test tests/rules/firestore.test.ts"` (`@firebase/rules-unit-testing`) | every read and write from an unauthenticated and an authenticated client is denied, on every collection in section 5 |
 | Python engines | `python3 -m py_compile src/backend/ai-engine/main.py src/backend/coach-engine/main.py` and `cd src/backend/ai-engine && python3 -m pytest` | compile; size, duration and MIME limits refuse bad audio |
 

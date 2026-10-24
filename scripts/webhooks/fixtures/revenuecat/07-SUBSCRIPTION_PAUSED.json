@@ -1,0 +1,24 @@
+{
+  "api_version": "1.0",
+  "event": {
+    "app_user_id": "__UID__",
+    "original_app_user_id": "__UID__",
+    "aliases": [
+      "__UID__"
+    ],
+    "product_id": "dev.pstepanov.cadence.plus.yearly",
+    "entitlement_ids": [
+      "plus"
+    ],
+    "period_type": "NORMAL",
+    "purchased_at_ms": 1792843200000,
+    "expiration_at_ms": 1824379200000,
+    "store": "APP_STORE",
+    "environment": "SANDBOX",
+    "currency": "USD",
+    "price_in_purchased_currency": 99.99,
+    "id": "rc-replay-subscription-paused",
+    "type": "SUBSCRIPTION_PAUSED",
+    "event_timestamp_ms": 1792843620000
+  }
+}

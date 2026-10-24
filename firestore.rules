@@ -2,9 +2,21 @@ rules_version = '2';
 
 // Cadence reads and writes Firestore only from its own server, through the
 // Admin SDK, which these rules do not apply to. No browser, phone or desktop
-// client talks to Firestore directly, so every client request is refused.
-// Profile edits go through PATCH /api/profile and billing through the Stripe
-// webhook, both on the server.
+// client talks to Firestore directly, so every client request is refused, on
+// every collection:
+//
+//   users/{uid} and everything under it (profile, plus, plusSources,
+//     progress/summary, inbox, srs, mastery, attempts, coachSessions, devices,
+//     and the older moduleProgress, lessonSessions, lessonAttempts,
+//     conversationProgress)
+//   usage/{uid}/days, system/aiBudget/days, rateLimits
+//   webhookEvents, mailQueue, deletions
+//   oauthClients, oauthCodes, oauthTokens, oauthGrants
+//
+// Entitlement in particular is written only by the verified Stripe and
+// RevenueCat webhooks on the server; a rule that let a client write it would
+// let anyone give themselves Plus. tests/rules/firestore.test.ts checks this
+// against the emulator.
 service cloud.firestore {
   match /databases/{database}/documents {
     match /{document=**} {

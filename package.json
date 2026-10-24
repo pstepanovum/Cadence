@@ -35,9 +35,14 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tests/tsconfig.json",
-    "test": "node --test --import ./tests/register.mjs \"tests/**/*.test.ts\""
+    "test": "node --test --import ./tests/register.mjs \"tests/**/*.test.ts\"",
+    "test:server": "firebase emulators:exec --only auth,firestore --project demo-cadence \"node --test --test-concurrency=1 --import ./tests/register.mjs 'tests/server/**/*.test.ts'\"",
+    "test:rules": "firebase emulators:exec --only firestore,storage --project demo-cadence \"node --test tests/rules/firestore.test.ts\"",
+    "email:preview": "node --import ./tests/register.mjs scripts/email/preview.ts",
+    "email:lint": "node --import ./tests/register.mjs scripts/email/lint.ts"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
     "@radix-ui/react-slot": "^1.2.4",
     "clsx": "^2.1.1",
     "firebase": "^12.19.0",
@@ -49,9 +54,11 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "stripe": "^22.0.0",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "zod": "^4.6.4"
   },
   "devDependencies": {
+    "@firebase/rules-unit-testing": "^5.0.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/qrcode": "^1.5.6",

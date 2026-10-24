@@ -1,10 +1,18 @@
 // FILE: src/app/api/assess/route.ts
 import { NextResponse } from "next/server";
 import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
+import { authorizeAi, readAudio, readCappedForm, runCharged } from "@/lib/server/ai-route";
+import { scorerFor } from "@/lib/server/engines";
+import { isHostedCloud } from "@/lib/server/env";
 
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
+  // The hosted scorer scales to zero; probing it here would wake it for
+  // nothing. Cold starts are covered by its startup probe.
+  if (isHostedCloud()) {
+    return NextResponse.json({ ready: true, warming: false, reachable: true, transcriberReady: true, cloud: true, message: "Cloud scoring is available with Cadence Plus." });
+  }
   const engineUrl = getAiEngineUrlForRequest(request);
 
   try {
@@ -77,58 +85,24 @@ export async function GET(request: Request) {
   }
 }
 
+/**
+ * Scores a recording against its target text. On an own Cadence it runs on the
+ * local engine, ungated; on the hosted cloud it needs Plus and is charged
+ * against the daily audio quota (src/lib/server/ai-gate.ts).
+ */
 export async function POST(request: Request) {
-  const engineUrl = getAiEngineUrlForRequest(request);
-  // A body that is not a form (wrong Content-Type, truncated upload) is a
-  // client error, not a server crash.
-  const formData = await request.formData().catch(() => null);
-  const audio = formData?.get("audio");
-  const text = formData?.get("text");
+  const access = await authorizeAi(request, "score");
+  if (!access.ok) return access.response;
 
-  if (!(audio instanceof File)) {
-    return NextResponse.json(
-      { error: "An audio file is required." },
-      { status: 400 },
-    );
+  const form = await readCappedForm(request);
+  if (form instanceof Response) return form;
+  const audio = await readAudio(form);
+  if (audio instanceof Response) return audio;
+  const text = form.get("text");
+  if (typeof text !== "string" || !text.trim() || text.length > 500) {
+    return NextResponse.json({ error: "Target text is required." }, { status: 400 });
   }
 
-  if (typeof text !== "string" || !text.trim()) {
-    return NextResponse.json(
-      { error: "Target text is required." },
-      { status: 400 },
-    );
-  }
-
-  const upstreamFormData = new FormData();
-  upstreamFormData.set("audio", audio, audio.name || "attempt.wav");
-  upstreamFormData.set("text", text);
-
-  try {
-    const response = await fetch(`${engineUrl}/assess`, {
-      method: "POST",
-      body: upstreamFormData,
-      cache: "no-store",
-    });
-
-    const payload = await response.json().catch(() => null);
-
-    if (!response.ok) {
-      const message =
-        payload && typeof payload === "object" && "detail" in payload
-          ? String(payload.detail)
-          : "FastAPI assessment failed.";
-
-      return NextResponse.json({ error: message }, { status: response.status });
-    }
-
-    return NextResponse.json(payload);
-  } catch {
-    return NextResponse.json(
-        {
-          error:
-          "Pronunciation scoring is offline. Make sure the local ai-engine service is healthy, then try again.",
-        },
-      { status: 503 },
-    );
-  }
+  const result = await runCharged(access, "score", { audioSeconds: audio.seconds }, () => scorerFor(request).score(audio, text.trim()));
+  return result.ok ? NextResponse.json(result.value) : result.response;
 }

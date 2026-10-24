@@ -1,0 +1,12 @@
+# FILE: deploy/cloudbuild.ai.yaml
+#
+# Builds the cadence-ai image from src/backend with the models baked in.
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: [build, --file=ai-engine/Dockerfile.cloud, --tag=${_IMAGE}, .]
+images:
+  - ${_IMAGE}
+options:
+  machineType: E2_HIGHCPU_8
+  diskSizeGb: 100
+timeout: 3600s

@@ -1,0 +1,26 @@
+{
+  "id": "evt_replay_checkout_completed",
+  "object": "event",
+  "type": "checkout.session.completed",
+  "created": 1792843200,
+  "livemode": false,
+  "data": {
+    "object": {
+      "id": "cs_test_replay",
+      "object": "checkout.session",
+      "mode": "subscription",
+      "client_reference_id": "__UID__",
+      "customer": "cus_replay",
+      "subscription": {
+        "id": "sub_replay",
+        "status": "active",
+        "customer": "cus_replay",
+        "metadata": { "firebase_uid": "__UID__", "app": "cadence" },
+        "cancel_at_period_end": false,
+        "cancel_at": null,
+        "trial_end": null,
+        "items": { "data": [{ "price": { "lookup_key": "cadence_plus_monthly", "product": { "metadata": { "app": "cadence" } } }, "current_period_end": 1795435200 }] }
+      }
+    }
+  }
+}

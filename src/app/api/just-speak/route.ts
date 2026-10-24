@@ -1,79 +1,30 @@
+// FILE: src/app/api/just-speak/route.ts
+//
+// Free speaking: transcribe, then feedback on what was said. Own Cadence runs
+// the local engine; the hosted cloud needs Plus and charges the recording's
+// length plus one analysis against the daily quota.
 import { NextResponse } from "next/server";
-import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
-import {
-  generateJustSpeakFeedbackWithGemini,
-  isJustSpeakGeminiConfigured,
-} from "@/lib/just-speak-gemini";
+
+import { generateJustSpeakFeedbackWithGemini, isJustSpeakGeminiConfigured } from "@/lib/just-speak-gemini";
+import { authorizeAi, readAudio, readCappedForm, runCharged } from "@/lib/server/ai-route";
+import { transcriberFor } from "@/lib/server/engines";
 
 export const runtime = "nodejs";
 
-type TranscribePayload = {
-  text?: string;
-  transcript?: string;
-  [key: string]: unknown;
-};
-
-function pickTranscript(payload: TranscribePayload | null): string {
-  const v = String(payload?.text ?? payload?.transcript ?? "").trim();
-  return v;
-}
-
 export async function POST(request: Request) {
-  const engineUrl = getAiEngineUrlForRequest(request);
-  // A body that is not a form (wrong Content-Type, truncated upload) is a
-  // client error, not a server crash.
-  const formData = await request.formData().catch(() => null);
-  const audio = formData?.get("audio");
+  const access = await authorizeAi(request, "grammar_feedback");
+  if (!access.ok) return access.response;
+  const form = await readCappedForm(request);
+  if (form instanceof Response) return form;
+  const audio = await readAudio(form);
+  if (audio instanceof Response) return audio;
 
-  if (!(audio instanceof File)) {
-    return NextResponse.json({ error: "An audio file is required." }, { status: 400 });
-  }
-
-  const transcribeFormData = new FormData();
-  transcribeFormData.set("audio", audio, audio.name || "attempt.wav");
-
-  try {
-    const transcribeRes = await fetch(`${engineUrl}/transcribe`, {
-      method: "POST",
-      body: transcribeFormData,
-      cache: "no-store",
-    });
-
-    const transcribeJson = (await transcribeRes.json().catch(() => null)) as
-      | TranscribePayload
-      | null;
-
-    if (!transcribeRes.ok) {
-      const message =
-        transcribeJson && typeof transcribeJson === "object" && "detail" in transcribeJson
-          ? String((transcribeJson as { detail?: unknown }).detail)
-          : "FastAPI transcription failed.";
-      return NextResponse.json({ error: message }, { status: transcribeRes.status });
-    }
-
-    const whisperTranscript = pickTranscript(transcribeJson);
-
+  const result = await runCharged(access, "grammar_feedback", { audioSeconds: audio.seconds }, async () => {
+    const { text } = await transcriberFor(request).transcribe(audio);
     const feedback = isJustSpeakGeminiConfigured()
-      ? await generateJustSpeakFeedbackWithGemini({
-          whisperTranscript,
-          overallScore: null,
-          engineTranscript: null,
-          phonemeDetail: { whisperTranscript },
-        })
+      ? await generateJustSpeakFeedbackWithGemini({ whisperTranscript: text, overallScore: null, engineTranscript: null, phonemeDetail: { whisperTranscript: text } })
       : null;
-
-    return NextResponse.json({
-      whisperTranscript,
-      feedback,
-    });
-  } catch {
-    return NextResponse.json(
-      {
-        error:
-          "Just Speak is offline. Make sure the local ai-engine service is healthy, then try again.",
-      },
-      { status: 503 },
-    );
-  }
+    return { whisperTranscript: text, feedback };
+  });
+  return result.ok ? NextResponse.json(result.value) : result.response;
 }
-

@@ -35,6 +35,8 @@ services:
       CADENCE_SERVER_NAME: ${CADENCE_SERVER_NAME:-}
       CADENCE_PUBLIC_PORT: ${CADENCE_PUBLIC_PORT:-3000}
       CADENCE_IN_CONTAINER: "1"
+      # Your own Cadence: AI runs on these engines, free and ungated.
+      CADENCE_DEPLOYMENT: self-hosted
       CADENCE_DATA_DIR: /data
       CADENCE_PAIRING_ADMIN_TOKEN: ${CADENCE_PAIRING_ADMIN_TOKEN:-}
     volumes:
@@ -67,8 +69,9 @@ services:
     env_file:
       - .env.local
     build:
-      context: ./src/backend/ai-engine
-      dockerfile: Dockerfile
+      # The shared src/backend/data folder has to be in the build context.
+      context: ./src/backend
+      dockerfile: ai-engine/Dockerfile
     environment:
       AI_ENGINE_HOST: 0.0.0.0
       AI_ENGINE_PORT: 8000

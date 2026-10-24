@@ -1,0 +1,12 @@
+rules_version = '2';
+
+// Cadence keeps nothing in Cloud Storage that a client may touch. The TTS
+// cache bucket is written and read by the cadence-web service account only,
+// which these rules do not apply to; recordings are never stored at all.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

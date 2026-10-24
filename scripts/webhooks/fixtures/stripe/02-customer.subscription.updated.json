@@ -1,0 +1,20 @@
+{
+  "id": "evt_replay_subscription_updated",
+  "object": "event",
+  "type": "customer.subscription.updated",
+  "created": 1792846800,
+  "livemode": false,
+  "data": {
+    "object": {
+      "id": "sub_replay",
+      "object": "subscription",
+      "status": "active",
+      "customer": "cus_replay",
+      "metadata": { "firebase_uid": "__UID__", "app": "cadence" },
+      "cancel_at_period_end": true,
+      "cancel_at": 1795435200,
+      "trial_end": null,
+      "items": { "data": [{ "price": { "lookup_key": "cadence_plus_monthly", "product": { "metadata": { "app": "cadence" } } }, "current_period_end": 1795435200 }] }
+    }
+  }
+}

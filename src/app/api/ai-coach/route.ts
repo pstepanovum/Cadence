@@ -1,23 +1,17 @@
 // FILE: src/app/api/ai-coach/route.ts
 import { NextResponse } from "next/server";
-import { getAppSession } from "@/lib/app-session";
-import {
-  generateCoachTurnWithGemini,
-  isGeminiCoachConfigured,
-} from "@/lib/ai-coach-gemini";
 import type { AiCoachRequestPayload } from "@/lib/ai-coach";
 import { getCoachEngineUrlForRequest } from "@/lib/runtime/request-runtime";
+import { authorizeAi, runCharged } from "@/lib/server/ai-route";
+import { coachFor } from "@/lib/server/engines";
+import { isHostedCloud } from "@/lib/server/env";
+import { contentLibrary } from "@/lib/server/packs";
 
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
-  const session = await getAppSession();
-
-  if (session.mode === "cloud" && isGeminiCoachConfigured()) {
-    return NextResponse.json({
-      ready: true,
-      message: "AI Coach (Gemini) is ready.",
-    });
+  if (isHostedCloud()) {
+    return NextResponse.json({ ready: true, message: "The cloud coach is available with Cadence Plus." });
   }
 
   const coachEngineUrl = getCoachEngineUrlForRequest(request);
@@ -63,103 +57,50 @@ export async function GET(request: Request) {
   }
 }
 
+/**
+ * One coach turn. Own Cadence: the local coach engine (Qwen), ungated. Hosted
+ * cloud: Plus, App Check, one coach turn off the daily quota, Gemini behind a
+ * fixed system prompt with the learner's words passed as data
+ * (src/lib/server/engines/prompts.ts).
+ *
+ * Body: {action: "start"|"continue", topic?, scenarioId?, mode?, history: [{role, content}], summary?}
+ * Answer: {turn: {coachMessage, learnerReply}, summary, provider}
+ */
 export async function POST(request: Request) {
-  const session = await getAppSession();
-  const raw = await request.json().catch(() => null);
+  const access = await authorizeAi(request, "coach");
+  if (!access.ok) return access.response;
 
+  const raw = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   if (!raw || typeof raw !== "object") {
-    return NextResponse.json(
-      { error: "Invalid AI Coach request payload." },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "Invalid AI Coach request payload." }, { status: 400 });
   }
-
-  const body = raw as Partial<AiCoachRequestPayload>;
-  if (!body.topic || typeof body.topic !== "string") {
-    return NextResponse.json(
-      { error: "A topic is required." },
-      { status: 400 },
-    );
+  const library = await contentLibrary();
+  const scenario = typeof raw.scenarioId === "string" ? (library.scenarios.get(raw.scenarioId) ?? null) : null;
+  const topic = typeof raw.topic === "string" ? raw.topic.slice(0, 200) : "";
+  if (!scenario && !topic.trim()) {
+    return NextResponse.json({ error: "A topic or a scenario is required." }, { status: 400 });
   }
-  const action = body.action === "continue" ? "continue" : "start";
-  const payload: AiCoachRequestPayload = {
+  const action = raw.action === "continue" ? "continue" : "start";
+  const historyRaw = Array.isArray(raw.history) ? raw.history.slice(-40) : [];
+  const history = historyRaw
+    .map((entry) => entry as { role?: unknown; content?: unknown })
+    .filter((entry) => typeof entry.content === "string")
+    .map((entry) => ({ role: entry.role === "coach" ? ("coach" as const) : ("learner" as const), text: String(entry.content).slice(0, 2000) }));
+  const legacy: AiCoachRequestPayload = {
     action,
-    topic: body.topic,
-    mode: body.mode === "freedom" ? "freedom" : "target",
-    history: Array.isArray(body.history) ? body.history : [],
+    topic: scenario?.title ?? topic,
+    mode: raw.mode === "freedom" ? "freedom" : "target",
+    history: historyRaw as AiCoachRequestPayload["history"],
   };
 
-  if (session.mode === "cloud") {
-    if (!session.user) {
-      return NextResponse.json(
-        { error: "Sign in to use AI Coach in cloud mode." },
-        { status: 401 },
-      );
-    }
-
-    if (isGeminiCoachConfigured()) {
-      try {
-        const turn = await generateCoachTurnWithGemini(payload);
-        return NextResponse.json(
-          {
-            turn,
-            provider: "gemini",
-          },
-          { status: 200 },
-        );
-      } catch (err) {
-        const message =
-          err instanceof Error ? err.message : "Gemini generation failed.";
-        return NextResponse.json({ error: message }, { status: 502 });
-      }
-    }
-  }
-
-  const coachEngineUrl = getCoachEngineUrlForRequest(request);
-
-  try {
-    const response = await fetch(`${coachEngineUrl}/coach-turn`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-      cache: "no-store",
-    });
-
-    const result = await response.json().catch(() => null);
-
-    if (!response.ok) {
-      const detail =
-        result && typeof result === "object" && "detail" in result
-          ? String(result.detail)
-          : "AI Coach generation failed.";
-
-      return NextResponse.json(
-        {
-          error: detail,
-        },
-        { status: response.status },
-      );
-    }
-
-    return NextResponse.json(
-      {
-        turn:
-          result && typeof result === "object" && "turn" in result
-            ? result.turn
-            : null,
-        provider: "local-coach",
-      },
-      { status: 200 },
-    );
-  } catch {
-    return NextResponse.json(
-      {
-        error:
-          "AI Coach is offline. Start the coach-engine service or use cloud with GEMINI_API_KEY.",
-      },
-      { status: 503 },
-    );
-  }
+  const result = await runCharged(access, "coach", {}, () =>
+    coachFor(request).turn({ scenario, topic, history, summary: typeof raw.summary === "string" ? raw.summary : undefined, start: action === "start", legacy: legacy as unknown as Record<string, unknown> }),
+  );
+  if (!result.ok) return result.response;
+  const turn = result.value;
+  return NextResponse.json({
+    turn: { coachMessage: turn.coachMessage, learnerReply: legacy.mode === "freedom" ? "" : turn.learnerReply },
+    summary: turn.summary,
+    provider: access.mode === "cloud" ? "cloud" : "local-coach",
+  });
 }

@@ -1,0 +1,62 @@
+# syntax=docker/dockerfile:1.7
+#
+# cadence-ai: the phoneme scorer (and Whisper-small, if the transcription
+# benchmark picks it) for the hosted cloud, on Cloud Run CPU. No GPU.
+#
+#   docker build -f src/backend/ai-engine/Dockerfile.cloud -t cadence-ai src/backend
+#
+# - CPU-only PyTorch wheels, so the image carries no CUDA libraries.
+# - Models are downloaded at build time and baked into the image, and the
+#   runtime is offline (HF_HUB_OFFLINE=1): a cold start loads from local disk
+#   and never waits on Hugging Face.
+# - Reference audio in the cloud is Google Cloud Text-to-Speech, called from
+#   cadence-web, so OmniVoice is never loaded here (CADENCE_TTS_PROVIDER=say
+#   makes its warmup stop at once on Linux instead of downloading a model).
+# - Runs as an unprivileged user; listens on $PORT (Cloud Run sets 8080).
+
+FROM python:3.10-slim AS base
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    HF_HOME=/models/huggingface
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ffmpeg \
+    espeak-ng \
+    libsndfile1 \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app/ai-engine
+
+COPY ai-engine/requirements.txt ./
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --extra-index-url https://download.pytorch.org/whl/cpu torch torchaudio && \
+    grep -v -E '^(torch|torchaudio|omnivoice)' requirements.txt > requirements.cloud.txt && \
+    pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.cloud.txt
+
+ARG SCORER_MODEL=facebook/wav2vec2-xlsr-53-espeak-cv-ft
+ARG ASR_MODEL=openai/whisper-small.en
+RUN python -c "from huggingface_hub import snapshot_download as d; d('${SCORER_MODEL}'); d('${ASR_MODEL}')"
+
+COPY ai-engine/main.py ai-engine/phoneme_scorer.py ai-engine/reference_tts.py ai-engine/speech_transcriber.py ./
+COPY data /app/data
+
+RUN addgroup --system --gid 1001 appgroup && \
+    adduser --system --uid 1001 --ingroup appgroup appuser && \
+    chown -R appuser:appgroup /app /models
+
+USER appuser
+
+ENV HF_HUB_OFFLINE=1 \
+    TRANSFORMERS_OFFLINE=1 \
+    CADENCE_ASR_MODEL=openai/whisper-small.en \
+    CADENCE_TTS_PROVIDER=say \
+    CADENCE_TTS_REQUIRE_MODEL=0 \
+    CADENCE_CPU_THREADS=2 \
+    AI_ENGINE_HOST=0.0.0.0 \
+    PORT=8080
+
+EXPOSE 8080
+
+CMD ["sh", "-c", "AI_ENGINE_PORT=${PORT} exec python main.py"]

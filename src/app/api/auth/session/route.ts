@@ -3,7 +3,7 @@
 // POST trades a fresh Firebase ID token for the httpOnly session cookie the
 // server reads; DELETE clears it. Signing out of one browser leaves the
 // person's other browsers and phones signed in.
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { APP_MODE_COOKIE, getAppModeCookieOptions } from "@/lib/app-mode";
 import {
   SESSION_COOKIE,
@@ -14,6 +14,10 @@ import {
 import { ensureUserRecord } from "@/lib/cloud/store";
 import { CONVERSATION_PROGRESS_COOKIE } from "@/lib/conversation";
 import { getAdminAuth, isCloudServerReady } from "@/lib/firebase/admin";
+import { noteSignIn } from "@/lib/server/account-events";
+import { deliverSoon } from "@/lib/server/email/queue";
+import { clientIp } from "@/lib/server/http";
+import { LIMITS, hitRateLimit } from "@/lib/server/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -29,6 +33,12 @@ export async function POST(request: Request) {
   // attacker's own token here and sign the victim into the wrong account.
   if (!isSameOrigin(request)) {
     return NextResponse.json({ error: "Cross-site request refused." }, { status: 403 });
+  }
+
+  // Auth endpoints are rate limited per IP (docs/PLATFORM.md section 14).
+  const limit = await hitRateLimit(LIMITS.authIpHour, `session:${clientIp(request)}`).catch(() => null);
+  if (limit && !limit.allowed) {
+    return NextResponse.json({ error: "Too many sign-ins from here. Try again later." }, { status: 429 });
   }
 
   const body = (await request.json().catch(() => null)) as { idToken?: unknown } | null;
@@ -55,6 +65,16 @@ export async function POST(request: Request) {
       expiresIn: SESSION_COOKIE_MAX_AGE_SECONDS * 1000,
     });
     await ensureUserRecord(decoded.uid, decoded.email ?? null);
+    // Welcome, new-device, password- and email-change notices, after the response.
+    const userAgent = request.headers.get("user-agent");
+    after(async () => {
+      try {
+        const keys = await noteSignIn({ uid: decoded.uid, email: decoded.email ?? null, emailVerified: decoded.email_verified === true, userAgent });
+        await deliverSoon(keys);
+      } catch (error) {
+        console.error("Sign-in notices failed:", error instanceof Error ? error.message : error);
+      }
+    });
 
     const response = NextResponse.json({ ok: true });
     response.cookies.set(SESSION_COOKIE, sessionCookie, getSessionCookieOptions());

@@ -9,7 +9,7 @@
 // It is deliberately narrow: only "@/..." and extensionless relative
 // specifiers, and only ".ts". Anything else resolves normally.
 import { registerHooks } from "node:module";
-import { existsSync } from "node:fs";
+import { statSync } from "node:fs";
 import { dirname, resolve as resolvePath } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -20,10 +20,16 @@ const repoRoot = resolvePath(dirname(fileURLToPath(import.meta.url)), "..");
 // relatively so they need no alias.
 const MOBILE_SRC = resolvePath(repoRoot, "mobile/src");
 
+// Files only: a bare directory is never a module here, and packages under
+// node_modules (firebase-admin, stripe) resolve their own "./dir" requires.
 function firstExisting(basePath) {
   for (const candidate of [basePath, `${basePath}.ts`, `${basePath}/index.ts`]) {
-    if (existsSync(candidate)) {
-      return candidate;
+    try {
+      if (statSync(candidate).isFile()) {
+        return candidate;
+      }
+    } catch {
+      // Not there; try the next form.
     }
   }
   return null;
@@ -38,7 +44,7 @@ registerHooks({
       }
     }
 
-    if (specifier.startsWith(".") && !/\.[cm]?[jt]sx?$/.test(specifier)) {
+    if (specifier.startsWith(".") && !/\.[cm]?[jt]sx?$/.test(specifier) && !context.parentURL?.includes("/node_modules/")) {
       const parentPath = context.parentURL ? fileURLToPath(context.parentURL) : repoRoot;
       const resolved = firstExisting(resolvePath(dirname(parentPath), specifier));
       if (resolved) {

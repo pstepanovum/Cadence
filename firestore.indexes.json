@@ -18,10 +18,32 @@
     }
   ],
   "fieldOverrides": [
+    { "collectionGroup": "lessonAttempts", "fieldPath": "phonemeDetail", "indexes": [] },
+    { "collectionGroup": "srs", "fieldPath": "cards", "indexes": [] },
+    { "collectionGroup": "mastery", "fieldPath": "items", "indexes": [] },
+    { "collectionGroup": "attempts", "fieldPath": "items", "indexes": [] },
+    { "collectionGroup": "coachSessions", "fieldPath": "transcript", "indexes": [] },
+    { "collectionGroup": "progress", "fieldPath": "recent", "indexes": [] },
+    { "collectionGroup": "mailQueue", "fieldPath": "props", "indexes": [] },
     {
-      "collectionGroup": "lessonAttempts",
-      "fieldPath": "phonemeDetail",
+      "collectionGroup": "inbox",
+      "fieldPath": "cards",
       "indexes": []
-    }
+    },
+    {
+      "collectionGroup": "inbox",
+      "fieldPath": "updatedAt",
+      "indexes": [
+        { "order": "ASCENDING", "queryScope": "COLLECTION" },
+        { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }
+      ]
+    },
+    { "collectionGroup": "usage", "fieldPath": "expireAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "days", "fieldPath": "expireAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "webhookEvents", "fieldPath": "expireAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "rateLimits", "fieldPath": "expireAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "mailQueue", "fieldPath": "expireAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "oauthTokens", "fieldPath": "expiresAt", "ttl": true, "indexes": [] },
+    { "collectionGroup": "oauthCodes", "fieldPath": "expiresAt", "ttl": true, "indexes": [] }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "id": "evt_replay_invoice_failed",
+  "object": "event",
+  "type": "invoice.payment_failed",
+  "created": 1792850400,
+  "livemode": false,
+  "data": {
+    "object": {
+      "id": "in_replay",
+      "object": "invoice",
+      "customer": "cus_replay",
+      "next_payment_attempt": 1793023200,
+      "parent": { "type": "subscription_details", "subscription_details": { "subscription": "sub_replay", "metadata": { "firebase_uid": "__UID__", "app": "cadence" } } }
+    }
+  }
+}

@@ -1,52 +1,24 @@
 // FILE: src/app/api/transcribe/route.ts
+//
+// Transcribes a recording. Own Cadence: the local Whisper engine, ungated.
+// Hosted cloud: Plus, App Check and the daily audio quota; the provider is
+// ENGINE_TRANSCRIBER (see src/lib/server/engines). Audio is processed in
+// memory and never stored.
 import { NextResponse } from "next/server";
-import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
+
+import { authorizeAi, readAudio, readCappedForm, runCharged } from "@/lib/server/ai-route";
+import { transcriberFor } from "@/lib/server/engines";
 
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
-  const engineUrl = getAiEngineUrlForRequest(request);
-  // A body that is not a form (wrong Content-Type, truncated upload) is a
-  // client error, not a server crash.
-  const formData = await request.formData().catch(() => null);
-  const audio = formData?.get("audio");
+  const access = await authorizeAi(request, "transcribe");
+  if (!access.ok) return access.response;
+  const form = await readCappedForm(request);
+  if (form instanceof Response) return form;
+  const audio = await readAudio(form);
+  if (audio instanceof Response) return audio;
 
-  if (!(audio instanceof File)) {
-    return NextResponse.json(
-      { error: "An audio file is required." },
-      { status: 400 },
-    );
-  }
-
-  const upstreamFormData = new FormData();
-  upstreamFormData.set("audio", audio, audio.name || "attempt.wav");
-
-  try {
-    const response = await fetch(`${engineUrl}/transcribe`, {
-      method: "POST",
-      body: upstreamFormData,
-      cache: "no-store",
-    });
-
-    const payload = await response.json().catch(() => null);
-
-    if (!response.ok) {
-      const message =
-        payload && typeof payload === "object" && "detail" in payload
-          ? String(payload.detail)
-          : "FastAPI transcription failed.";
-
-      return NextResponse.json({ error: message }, { status: response.status });
-    }
-
-    return NextResponse.json(payload);
-  } catch {
-    return NextResponse.json(
-        {
-          error:
-          "Transcription is offline. Make sure the local ai-engine service is healthy, then try again.",
-        },
-      { status: 503 },
-    );
-  }
+  const result = await runCharged(access, "transcribe", { audioSeconds: audio.seconds }, () => transcriberFor(request).transcribe(audio));
+  return result.ok ? NextResponse.json({ text: result.value.text, transcript: result.value.text }) : result.response;
 }

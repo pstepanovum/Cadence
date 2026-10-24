@@ -1,121 +1,20 @@
 // FILE: src/app/api/reference-audio/route.ts
-import { NextResponse } from "next/server";
-import { getAiEngineUrlForRequest } from "@/lib/runtime/request-runtime";
+//
+// Reference (model) audio for a phrase. Lesson and flashcard audio is
+// pre-generated in the content packs, so this is the rare request-time path.
+// Own Cadence: the local TTS engine, ungated. Hosted cloud: Plus, the daily
+// character quota, Google Cloud Text-to-Speech with a Cloud Storage cache.
+// GET ?text=&instruct=  and  POST {text, instruct?, voice?} answer audio.
+import { speak } from "@/lib/server/ai-tts";
 
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
-  const engineUrl = getAiEngineUrlForRequest(request);
-  const { searchParams } = new URL(request.url);
-  const text = searchParams.get("text")?.trim();
-  const instruct = searchParams.get("instruct")?.trim();
-
-  if (!text) {
-    return NextResponse.json(
-      { error: "Target text is required." },
-      { status: 400 },
-    );
-  }
-
-  try {
-    const upstreamUrl = new URL(`${engineUrl}/reference-audio`);
-    upstreamUrl.searchParams.set("text", text);
-    if (instruct) {
-      upstreamUrl.searchParams.set("instruct", instruct);
-    }
-
-    const response = await fetch(upstreamUrl, {
-      cache: "no-store",
-    });
-
-    if (!response.ok) {
-      const payload = (await response.json().catch(() => null)) as
-        | { detail?: string }
-        | null;
-
-      return NextResponse.json(
-        {
-          error: payload?.detail ?? "Reference pronunciation generation failed.",
-        },
-        { status: response.status },
-      );
-    }
-
-    const arrayBuffer = await response.arrayBuffer();
-
-    return new Response(arrayBuffer, {
-      headers: {
-        "Content-Type": response.headers.get("content-type") ?? "audio/wav",
-        "Cache-Control": "no-store",
-      },
-    });
-  } catch {
-    return NextResponse.json(
-      {
-        error:
-          "Reference pronunciation is unavailable. Make sure the local ai-engine service is healthy, then try again.",
-      },
-      { status: 503 },
-    );
-  }
+  const params = new URL(request.url).searchParams;
+  return speak(request, { text: params.get("text"), instruct: params.get("instruct"), voice: params.get("voice") });
 }
 
 export async function POST(request: Request) {
-  const engineUrl = getAiEngineUrlForRequest(request);
-  const payload = (await request.json().catch(() => null)) as
-    | { text?: string; instruct?: string }
-    | null;
-  const text = payload?.text?.trim();
-  const instruct = payload?.instruct?.trim();
-
-  if (!text) {
-    return NextResponse.json(
-      { error: "Target text is required." },
-      { status: 400 },
-    );
-  }
-
-  try {
-    const formData = new FormData();
-    formData.set("text", text);
-    if (instruct) {
-      formData.set("instruct", instruct);
-    }
-
-    const response = await fetch(`${engineUrl}/reference-audio`, {
-      method: "POST",
-      body: formData,
-      cache: "no-store",
-    });
-
-    if (!response.ok) {
-      const errorPayload = (await response.json().catch(() => null)) as
-        | { detail?: string }
-        | null;
-
-      return NextResponse.json(
-        {
-          error: errorPayload?.detail ?? "Reference pronunciation generation failed.",
-        },
-        { status: response.status },
-      );
-    }
-
-    const arrayBuffer = await response.arrayBuffer();
-
-    return new Response(arrayBuffer, {
-      headers: {
-        "Content-Type": response.headers.get("content-type") ?? "audio/wav",
-        "Cache-Control": "no-store",
-      },
-    });
-  } catch {
-    return NextResponse.json(
-      {
-        error:
-          "Reference pronunciation is unavailable. Make sure the local ai-engine service is healthy, then try again.",
-      },
-      { status: 503 },
-    );
-  }
+  const body = ((await request.json().catch(() => null)) ?? {}) as Record<string, unknown>;
+  return speak(request, body);
 }
