@@ -14,9 +14,11 @@ files:
 #   next-server/public/    ← copied from root /public
 #   next-server/.next/static/ ← copied from root /.next/static
 extraResources:
+  # Next.js copies the repo's .env files into the standalone output; they hold
+  # server secrets and must never ship inside the app.
   - from: "../.next/standalone"
     to: "next-server"
-    filter: ["**/*"]
+    filter: ["**/*", "!**/.env", "!**/.env.*"]
   - from: "../public"
     to: "next-server/public"
     filter: ["**/*"]
@@ -36,6 +38,8 @@ extraResources:
       - "!**/__pycache__/**"
       - "!**/.pytest_cache/**"
       - "!**/*.pyc"
+      - "!**/.env"
+      - "!**/.env.*"
   - from: "../src/backend/coach-engine"
     to: "desktop-runtime/coach-engine"
     filter:
@@ -46,22 +50,37 @@ extraResources:
       - "!**/__pycache__/**"
       - "!**/.pytest_cache/**"
       - "!**/*.pyc"
-  - from: "vendor/python/aarch64-apple-darwin"
-    to: "desktop-runtime/python/aarch64-apple-darwin"
-    filter: ["**/*"]
-  - from: "vendor/python/x86_64-apple-darwin"
-    to: "desktop-runtime/python/x86_64-apple-darwin"
-    filter: ["**/*"]
+      - "!**/.env"
+      - "!**/.env.*"
 
 directories:
   output: packages
 
+# Updates come from GitHub releases tagged desktop-vX.Y.Z. The workflow builds
+# with --publish never and uploads every file itself; this block only makes
+# electron-builder write latest*.yml and app-update.yml.
+publish:
+  provider: github
+  owner: pstepanovum
+  repo: Cadence
+  releaseType: release
+
+artifactName: "${productName}-${version}-${arch}.${ext}"
+
 mac:
+  # The zip is what electron-updater downloads; the DMG is what people install.
   target:
     - target: dmg
-      arch:
-        - x64    # Intel
-        - arm64  # Apple Silicon
+      arch: [x64, arm64]
+    - target: zip
+      arch: [x64, arm64]
+  extraResources:
+    - from: "vendor/python/aarch64-apple-darwin"
+      to: "desktop-runtime/python/aarch64-apple-darwin"
+      filter: ["**/*"]
+    - from: "vendor/python/x86_64-apple-darwin"
+      to: "desktop-runtime/python/x86_64-apple-darwin"
+      filter: ["**/*"]
   icon: assets/icon.icns
   category: public.app-category.education
   hardenedRuntime: true
@@ -75,8 +94,27 @@ dmg:
     width: 540
     height: 380
 
-# For future: Windows + Linux
-# win:
-#   target: nsis
-# linux:
-#   target: AppImage
+# Windows: NSIS updates itself; MSI is for managed installs and only links to
+# the release page. Signing is used when WIN_CSC_LINK is set, otherwise the
+# installers are unsigned and SmartScreen warns (see docs/RELEASING.md).
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: msi
+      arch: [x64]
+  icon: assets/icon.png
+  extraResources:
+    - from: "vendor/python/x86_64-pc-windows-msvc"
+      to: "desktop-runtime/python/x86_64-pc-windows-msvc"
+      filter: ["**/*"]
+
+nsis:
+  oneClick: true
+  perMachine: false
+  artifactName: "${productName}-Setup-${version}.${ext}"
+
+msi:
+  oneClick: false
+  perMachine: true
+  artifactName: "${productName}-${version}.${ext}"

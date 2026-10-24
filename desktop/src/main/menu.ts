@@ -1,4 +1,5 @@
 import { Menu } from 'electron'
+import type { UpdateMenuItem } from './updater'
 
 export interface MenuActions {
   /** Opens the pairing screen, turning on LAN serving first if needed. */
@@ -6,6 +7,22 @@ export interface MenuActions {
   /** Whether the runtime is currently reachable from the Wi-Fi. */
   isLanServing: () => boolean
   onStopSharing: () => void
+  /** The "Check for Updates" item, when the updater is running. */
+  update?: () => UpdateMenuItem
+}
+
+function updateItems(actions?: MenuActions): Electron.MenuItemConstructorOptions[] {
+  const item = actions?.update?.()
+  if (!item) return []
+  return [
+    { label: item.label, enabled: item.enabled, click: () => item.onClick() },
+    {
+      label: 'Check for Updates Automatically',
+      type: 'checkbox',
+      checked: item.autoCheck,
+      click: () => item.onToggleAutoCheck(),
+    },
+  ]
 }
 
 export function buildMenu(appName: string, actions?: MenuActions): void {
@@ -14,6 +31,7 @@ export function buildMenu(appName: string, actions?: MenuActions): void {
       label: appName,
       submenu: [
         { label: `About ${appName}`, role: 'about' },
+        ...updateItems(actions),
         { type: 'separator' },
         { role: 'services' },
         { type: 'separator' },

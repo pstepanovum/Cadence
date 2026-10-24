@@ -20,6 +20,7 @@ import { buildMenu } from './main/menu'
 import { startNextServer } from './main/next-server'
 import { createCadenceWindow } from './main/browser-window'
 import { registerSetupIpc } from './main/setup-ipc'
+import { startDesktopUpdater, type DesktopUpdater } from './main/updater'
 import {
   buildPairingUrl,
   findLanAddress,
@@ -35,6 +36,7 @@ let mainWindow: BrowserWindow | null = null
 let nextServer: UtilityProcess | null = null
 let setupManager: DesktopSetupManager | null = null
 let disposeSetupIpc: (() => void) | null = null
+let updater: DesktopUpdater | null = null
 
 app.setName(APP_NAME)
 
@@ -173,7 +175,7 @@ async function stopSharing(): Promise<void> {
   }
 }
 
-app.whenReady().then(async () => {
+function rebuildMenu(): void {
   buildMenu(APP_NAME, {
     onConnectPhone: () => {
       void connectPhone()
@@ -182,7 +184,13 @@ app.whenReady().then(async () => {
     onStopSharing: () => {
       void stopSharing()
     },
+    update: updater ? () => updater!.menuItem() : undefined,
   })
+}
+
+app.whenReady().then(async () => {
+  updater = startDesktopUpdater({ onMenuChange: rebuildMenu })
+  rebuildMenu()
 
   setupManager = new DesktopSetupManager()
   disposeSetupIpc = registerSetupIpc({
@@ -209,6 +217,8 @@ app.on('activate', () => {
 })
 
 app.on('before-quit', () => {
+  updater?.dispose()
+  updater = null
   disposeSetupIpc?.()
   disposeSetupIpc = null
   setupManager?.dispose()

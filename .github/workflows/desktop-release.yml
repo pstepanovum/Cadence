@@ -1,0 +1,267 @@
+# Builds the desktop app for macOS (DMG + zip, x64 and arm64, signed and
+# notarized) and Windows (NSIS .exe + .msi, x64), then attaches every file,
+# the latest*.yml update metadata and the blockmaps to one GitHub release
+# whose notes come from CHANGELOG.md. See docs/RELEASING.md.
+#
+# Runs on a pushed desktop-vX.Y.Z tag. Run it by hand (Actions > Desktop
+# Release > Run workflow) to rebuild a tag or, with "dry run" ticked (the
+# default), to build without touching any release. Re-running is safe: assets
+# are replaced, and the release only leaves draft once every file is up.
+name: Desktop Release
+
+on:
+  push:
+    tags:
+      - "desktop-v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to build, e.g. desktop-v0.1.27. Leave empty to build the selected branch."
+        required: false
+        default: ""
+        type: string
+      dry_run:
+        description: "Dry run: build only, publish nothing"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: desktop-release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Check version and notes
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.meta.outputs.tag }}
+      version: ${{ steps.meta.outputs.version }}
+      ref: ${{ steps.meta.outputs.ref }}
+      publish: ${{ steps.meta.outputs.publish }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+
+      - name: Resolve tag, version and whether to publish
+        id: meta
+        env:
+          EVENT: ${{ github.event_name }}
+          PUSHED_TAG: ${{ github.ref_name }}
+          INPUT_TAG: ${{ inputs.tag }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          version="$(node -p "require('./desktop/package.json').version")"
+          if [ "$EVENT" = "push" ]; then
+            tag="$PUSHED_TAG"; publish=true
+          else
+            tag="$INPUT_TAG"
+            if [ -n "$tag" ] && [ "$DRY_RUN" = "false" ]; then publish=true; else publish=false; fi
+          fi
+          if [ -n "$tag" ] && [ "$tag" != "desktop-v$version" ]; then
+            echo "::error::Tag $tag does not match desktop/package.json ($version). Bump with scripts/release/bump.mjs."
+            exit 1
+          fi
+          ref="${tag:-$GITHUB_SHA}"
+          {
+            echo "tag=$tag"
+            echo "version=$version"
+            echo "ref=$ref"
+            echo "publish=$publish"
+          } >> "$GITHUB_OUTPUT"
+          echo "Building $version (tag: ${tag:-none}, publish: $publish)"
+
+      - name: Release notes from CHANGELOG.md
+        env:
+          TAG: ${{ steps.meta.outputs.tag }}
+          PUBLISH: ${{ steps.meta.outputs.publish }}
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          set -euo pipefail
+          if [ "$PUBLISH" = "true" ]; then
+            node scripts/release/notes.mjs "$TAG" > release-notes.md
+          else
+            node scripts/release/notes.mjs "${TAG:-desktop-v$VERSION}" --allow-missing > release-notes.md
+          fi
+          cat release-notes.md
+
+      - name: Keep the notes for the publish job
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: release-notes.md
+          if-no-files-found: error
+
+  macos:
+    name: macOS (DMG, signed and notarized)
+    needs: prepare
+    runs-on: macos-14
+    timeout-minutes: 120
+    env:
+      CADENCE_RELEASE_TAG: ${{ needs.prepare.outputs.tag }}
+      CSC_LINK: ${{ secrets.CSC_LINK }}
+      CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+      APPLE_ID: ${{ secrets.APPLE_ID }}
+      APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      APPLE_API_KEY: ${{ secrets.APPLE_API_KEY }}
+      APPLE_API_KEY_ID: ${{ secrets.APPLE_API_KEY_ID }}
+      APPLE_API_ISSUER: ${{ secrets.APPLE_API_ISSUER }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare.outputs.ref }}
+
+      - name: Refuse an unsigned published release
+        if: needs.prepare.outputs.publish == 'true' && env.CSC_LINK == ''
+        run: |
+          echo "::error::CSC_LINK is not set. macOS updates only install over a signed app."
+          exit 1
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
+            desktop/pnpm-lock.yaml
+
+      - name: Install web dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install desktop dependencies
+        working-directory: desktop
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        working-directory: desktop
+        run: |
+          set -euo pipefail
+          if [ -n "${CSC_LINK:-}" ]; then pnpm build:release --mac --signed; else pnpm build:release --mac; fi
+
+      - name: Keep the macOS files
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-macos
+          path: |
+            desktop/packages/*.dmg
+            desktop/packages/*.zip
+            desktop/packages/*.blockmap
+            desktop/packages/latest-mac.yml
+          if-no-files-found: error
+
+  windows:
+    name: Windows (NSIS and MSI)
+    needs: prepare
+    runs-on: windows-latest
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: bash
+    env:
+      CADENCE_RELEASE_TAG: ${{ needs.prepare.outputs.tag }}
+      WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+      WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare.outputs.ref }}
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
+            desktop/pnpm-lock.yaml
+
+      # A hoisted layout keeps symlinks out of the Next.js standalone output,
+      # which the Windows installers cannot carry.
+      - name: Install web dependencies
+        run: pnpm install --frozen-lockfile --config.node-linker=hoisted
+
+      - name: Install desktop dependencies
+        working-directory: desktop
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        working-directory: desktop
+        run: |
+          set -euo pipefail
+          if [ -n "${WIN_CSC_LINK:-}" ]; then
+            pnpm build:release --win --signed
+          else
+            echo "::warning::No WIN_CSC_LINK secret: the installers are unsigned and SmartScreen will warn."
+            pnpm build:release --win
+          fi
+
+      - name: Keep the Windows files
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-windows
+          path: |
+            desktop/packages/*.exe
+            desktop/packages/*.msi
+            desktop/packages/*.blockmap
+            desktop/packages/latest.yml
+          if-no-files-found: error
+
+  publish:
+    name: Publish the GitHub release
+    needs: [prepare, macos, windows]
+    if: needs.prepare.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+      TAG: ${{ needs.prepare.outputs.tag }}
+      VERSION: ${{ needs.prepare.outputs.version }}
+    steps:
+      - name: Collect the build files
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Create or update the release
+        run: |
+          set -euo pipefail
+          ls -l dist
+          for file in latest-mac.yml latest.yml release-notes.md; do
+            test -f "dist/$file" || { echo "::error::missing $file"; exit 1; }
+          done
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --title "Cadence $VERSION" --notes-file dist/release-notes.md
+          else
+            gh release create "$TAG" --draft --verify-tag --title "Cadence $VERSION" --notes-file dist/release-notes.md
+          fi
+
+          # Installers first, update metadata last: an updater never reads a
+          # latest*.yml that names a file which is not up yet.
+          shopt -s nullglob
+          gh release upload "$TAG" --clobber dist/*.dmg dist/*.zip dist/*.exe dist/*.msi dist/*.blockmap
+          gh release upload "$TAG" --clobber dist/latest-mac.yml dist/latest.yml
+          gh release edit "$TAG" --draft=false --latest
+          echo "Published $(gh release view "$TAG" --json url --jq .url)"

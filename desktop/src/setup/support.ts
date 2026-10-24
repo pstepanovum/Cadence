@@ -83,11 +83,15 @@ export class DesktopSetupSupport {
 
   private getBundledPythonCandidates(): string[] {
     const archDir =
-      process.arch === 'arm64'
-        ? 'aarch64-apple-darwin'
-        : process.arch === 'x64'
-          ? 'x86_64-apple-darwin'
+      process.platform === 'win32'
+        ? process.arch === 'x64'
+          ? 'x86_64-pc-windows-msvc'
           : null
+        : process.arch === 'arm64'
+          ? 'aarch64-apple-darwin'
+          : process.arch === 'x64'
+            ? 'x86_64-apple-darwin'
+            : null
 
     if (!archDir) {
       return []
@@ -106,6 +110,10 @@ export class DesktopSetupSupport {
           join(__dirname, '..', '..', 'vendor', 'python', archDir),
           join(process.cwd(), 'vendor', 'python', archDir),
         ]
+
+    if (process.platform === 'win32') {
+      return roots.map((root) => join(root, 'python', 'python.exe'))
+    }
 
     return roots.flatMap((root) => [
       join(root, 'python', 'bin', 'python3'),

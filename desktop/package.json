@@ -14,12 +14,14 @@
     "dev:watch": "concurrently \"tsc -p tsconfig.json -w\" \"electron .\"",
     "compile": "tsc -p tsconfig.json",
     "build:next": "pnpm --dir .. build && node ./scripts/fix-standalone.mjs",
-    "build:release": "node ./scripts/prepare-release.mjs && pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --mac && node ./scripts/publish-github-release.mjs",
+    "build:release": "node ./scripts/prepare-release.mjs && pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --publish never",
     "build:clean": "pnpm clean:test && pnpm build",
     "build": "pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs",
     "build:mac": "pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --mac",
     "build:dir": "pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --dir",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "build:win": "pnpm prepare:python-runtime && pnpm build:next && pnpm compile && node ./scripts/run-electron-builder.mjs --win",
+    "test:update-feed": "pnpm compile && node ./scripts/test-update-feed.mjs"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -27,5 +29,8 @@
     "electron": "^33.4.0",
     "electron-builder": "^25.1.8",
     "typescript": "^5"
+  },
+  "dependencies": {
+    "electron-updater": "6.3.9"
   }
 }

@@ -9,10 +9,22 @@ const env = {
   ...process.env,
 }
 
+// GitHub Actions passes a missing secret as an empty string, which
+// electron-builder would read as "sign with nothing".
+for (const key of [
+  'CSC_LINK', 'CSC_KEY_PASSWORD', 'WIN_CSC_LINK', 'WIN_CSC_KEY_PASSWORD',
+  'APPLE_ID', 'APPLE_APP_SPECIFIC_PASSWORD', 'APPLE_TEAM_ID',
+  'APPLE_API_KEY', 'APPLE_API_KEY_ID', 'APPLE_API_ISSUER',
+]) {
+  if (env[key] === '') delete env[key]
+}
+
 if (!shouldSign) {
   env.CSC_IDENTITY_AUTO_DISCOVERY = 'false'
   delete env.CSC_LINK
   delete env.CSC_KEY_PASSWORD
+  delete env.WIN_CSC_LINK
+  delete env.WIN_CSC_KEY_PASSWORD
   delete env.CSC_NAME
   delete env.APPLE_ID
   delete env.APPLE_APP_SPECIFIC_PASSWORD

@@ -1,6 +1,6 @@
 # Cadence Desktop
 
-Electron wrapper for the Cadence Next.js app. Packages into a macOS `.dmg`.
+Electron wrapper for the Cadence Next.js app. Packages into a macOS `.dmg` and Windows NSIS `.exe` and `.msi` installers, and updates itself from GitHub releases. Releasing: [docs/RELEASING.md](../docs/RELEASING.md).
 
 ## Prerequisites
 
@@ -38,10 +38,12 @@ From the `desktop/` folder:
 
 ```bash
 pnpm install
-pnpm build          # runs next build + tsc + electron-builder
+pnpm build:mac      # next build + tsc + electron-builder, unsigned DMG and zip
+pnpm build:win      # on Windows: NSIS .exe and .msi
 ```
 
-Output lands in `desktop/packages/`.
+Output lands in `desktop/packages/`. Builds never change the version; see
+[docs/RELEASING.md](../docs/RELEASING.md).
 
 ### What the build does
 

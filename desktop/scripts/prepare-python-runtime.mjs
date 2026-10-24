@@ -13,16 +13,17 @@ const downloadsDir = join(vendorRoot, '.downloads')
 const manifestPath = join(vendorRoot, 'manifest.json')
 const releaseTag = '20260325'
 const pythonVersion = '3.11.15'
-const targets = [
-  {
-    key: 'aarch64-apple-darwin',
-    assetName: `cpython-${pythonVersion}+${releaseTag}-aarch64-apple-darwin-install_only.tar.gz`,
-  },
-  {
-    key: 'x86_64-apple-darwin',
-    assetName: `cpython-${pythonVersion}+${releaseTag}-x86_64-apple-darwin-install_only.tar.gz`,
-  },
-]
+// Each platform's installer carries only its own runtimes: both Mac
+// architectures in the DMG, x64 Windows in the NSIS and MSI installers.
+const targetsByPlatform = {
+  darwin: ['aarch64-apple-darwin', 'x86_64-apple-darwin'],
+  win32: ['x86_64-pc-windows-msvc'],
+}
+const platform = process.env.CADENCE_PYTHON_PLATFORM || process.platform
+const targets = (targetsByPlatform[platform] ?? []).map((key) => ({
+  key,
+  assetName: `cpython-${pythonVersion}+${releaseTag}-${key}-install_only.tar.gz`,
+}))
 const dryRun = process.argv.includes('--dry-run')
 const force = process.argv.includes('--force')
 
@@ -39,7 +40,9 @@ function getTargetDir(targetKey) {
 }
 
 function getInterpreterPath(targetKey) {
-  return join(getTargetDir(targetKey), 'python', 'bin', 'python3')
+  return targetKey.includes('windows')
+    ? join(getTargetDir(targetKey), 'python', 'python.exe')
+    : join(getTargetDir(targetKey), 'python', 'bin', 'python3')
 }
 
 async function readManifest() {
@@ -92,7 +95,13 @@ async function extractArchive(archivePath, destinationDir) {
   const tempDir = `${destinationDir}.tmp`
   await rm(tempDir, { recursive: true, force: true })
   await mkdir(tempDir, { recursive: true })
-  await run('tar', ['-xzf', archivePath, '-C', tempDir])
+  // On Windows use the system bsdtar: Git's GNU tar reads a drive letter
+  // ("C:") as a remote host.
+  const tar =
+    process.platform === 'win32'
+      ? join(process.env.SystemRoot ?? 'C:\\Windows', 'System32', 'tar.exe')
+      : 'tar'
+  await run(tar, ['-xzf', archivePath, '-C', tempDir])
   await rm(destinationDir, { recursive: true, force: true })
   await rename(tempDir, destinationDir)
 }
