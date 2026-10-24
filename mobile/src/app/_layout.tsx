@@ -15,10 +15,10 @@ import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { unlockFirstModule } from "@/api/endpoints";
 import { pruneReferenceAudioCache } from "@/audio/reference-audio";
-import { Body, PillButton, Title } from "@/components/ui";
+import { Body, Button, Title } from "@/components/ui";
 import { AuthProvider, useAuth } from "@/context/auth";
 import { ConnectionProvider, useConnection } from "@/pairing/context";
-import { colors, radii, spacing } from "@/theme/theme";
+import { colors, radii, shadows, spacing, type } from "@/theme/theme";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -37,21 +37,24 @@ const queryClient = new QueryClient({
 /**
  * expo-router renders this instead of a red box when a screen throws. Without
  * it, a bad config value or a malformed API response is an unexplained crash
- * on a TestFlight build, where there is no dev overlay.
+ * on a TestFlight build, where there is no dev overlay. It sits outside every
+ * provider, so it cannot know the mode or the account; the copy works for both.
  */
 export function ErrorBoundary({ error, retry }: { error: Error; retry: () => Promise<void> }) {
   return (
     <View style={styles.boundary}>
       <View style={styles.boundaryCard}>
-        <Title size={22}>Cadence hit a snag</Title>
-        <Body size={13}>
-          Something went wrong while loading this screen. You can try again; if it keeps happening,
-          signing out and back in usually clears it.
+        <Title size={type.title2}>Something went wrong</Title>
+        <Body size={type.callout}>
+          This screen could not load. Try again, and if it keeps happening, close Cadence and open
+          it again.
         </Body>
-        <Body size={12} style={styles.boundaryDetail}>
-          {error.message}
-        </Body>
-        <PillButton label="Try again" onPress={() => retry()} />
+        {__DEV__ ? (
+          <Body size={type.caption} tone="muted">
+            {error.message}
+          </Body>
+        ) : null}
+        <Button label="Try again" onPress={() => void retry()} />
       </View>
     </View>
   );
@@ -116,6 +119,7 @@ function RootNavigator() {
         <Stack.Screen name="conversation/[slug]" />
         <Stack.Screen name="coach/session" />
         <Stack.Screen name="game" />
+        <Stack.Screen name="profile" />
         <Stack.Screen name="settings/voice" />
       </Stack.Protected>
       {/*
@@ -191,8 +195,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.snow,
     padding: spacing.xl,
     gap: spacing.md,
-  },
-  boundaryDetail: {
-    color: colors.slate,
+    boxShadow: shadows.card,
   },
 });

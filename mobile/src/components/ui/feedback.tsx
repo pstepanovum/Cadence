@@ -1,20 +1,32 @@
-import { StyleSheet, View, type StyleProp, type ViewStyle } from "react-native";
+import { AlertTriangle, CheckCircle2, Info, XCircle } from "lucide-react-native";
+import { useEffect, useState } from "react";
+import {
+  AccessibilityInfo,
+  Animated,
+  StyleSheet,
+  View,
+  type StyleProp,
+  type ViewStyle,
+} from "react-native";
 import { SvgXml } from "react-native-svg";
-import { Body, PillButton, Title } from "@/components/ui/primitives";
-import { colors, overlays, radii, spacing } from "@/theme/theme";
+import { Button } from "@/components/ui/buttons";
+import { Body, Title } from "@/components/ui/text";
+import { colors, radii, spacing, type } from "@/theme/theme";
 
-// The web app has no spinners and no skeleton shimmer: loading is communicated
-// with plain copy and disabled controls, and "nothing here" is always a centred
-// cream panel with a heading and a sentence. These mirror that, so no screen in
-// the app can end on a bare ActivityIndicator or a blank scroll view.
+// Loading is communicated with placeholder shapes and plain copy, and
+// "nothing here" is always a centred panel with a heading and a sentence, so no
+// screen can end on a bare spinner or a blank scroll view.
 
 export type BannerTone = "info" | "warning" | "error" | "success";
 
-const bannerPalette: Record<BannerTone, { bg: string; fg: string }> = {
-  info: { bg: colors.cream, fg: colors.iron },
-  warning: { bg: colors.mixedChip, fg: colors.hunter },
-  error: { bg: colors.brick, fg: colors.snow },
-  success: { bg: colors.yellowGreen, fg: colors.hunter },
+const bannerPalette: Record<
+  BannerTone,
+  { bg: string; fg: string; icon: string; Icon: typeof Info }
+> = {
+  info: { bg: colors.white, fg: colors.iron, icon: colors.hunter, Icon: Info },
+  warning: { bg: colors.mixedSoft, fg: colors.ink, icon: colors.ink, Icon: AlertTriangle },
+  error: { bg: colors.brickSoft, fg: colors.brickText, icon: colors.brick, Icon: XCircle },
+  success: { bg: colors.limeSoft, fg: colors.ink, icon: colors.hunter, Icon: CheckCircle2 },
 };
 
 export function Banner({
@@ -31,34 +43,27 @@ export function Banner({
   style?: StyleProp<ViewStyle>;
 }) {
   const palette = bannerPalette[tone];
+  const Icon = palette.Icon;
   return (
-    <View style={[styles.banner, { backgroundColor: palette.bg }, style]}>
-      <Body size={13} style={{ color: palette.fg }}>
-        {message}
-      </Body>
+    <View
+      accessibilityRole={tone === "error" ? "alert" : undefined}
+      style={[styles.banner, { backgroundColor: palette.bg }, style]}>
+      <View style={styles.bannerRow}>
+        <Icon color={palette.icon} size={18} />
+        <Body size={type.footnote} weight="medium" style={[styles.bannerText, { color: palette.fg }]}>
+          {message}
+        </Body>
+      </View>
       {actionLabel && onAction ? (
-        <PillButton
+        <Button
           label={actionLabel}
-          variant={tone === "error" ? "ghost" : "primary"}
+          variant={tone === "error" ? "danger" : "primary"}
           onPress={onAction}
           style={styles.bannerAction}
         />
       ) : null}
     </View>
   );
-}
-
-/** Kept for the many call sites that only ever show an error. */
-export function ErrorBanner({
-  message,
-  actionLabel,
-  onAction,
-}: {
-  message: string;
-  actionLabel?: string;
-  onAction?: () => void;
-}) {
-  return <Banner message={message} tone="error" actionLabel={actionLabel} onAction={onAction} />;
 }
 
 export function EmptyState({
@@ -79,37 +84,71 @@ export function EmptyState({
   compact?: boolean;
   style?: StyleProp<ViewStyle>;
 }) {
+  const art = compact ? 96 : 140;
   return (
     <View style={[styles.empty, compact && styles.emptyCompact, style]}>
-      {illustration ? (
-        <SvgXml xml={illustration} width={compact ? 120 : 168} height={compact ? 120 : 168} />
-      ) : null}
-      <Title size={compact ? 17 : 20} style={styles.centerText}>
+      {illustration ? <SvgXml xml={illustration} width={art} height={art} /> : null}
+      <Title size={compact ? type.headline : type.title3} style={styles.centerText}>
         {title}
       </Title>
-      <Body size={13} style={styles.centerText}>
+      <Body size={type.footnote} tone="muted" style={styles.centerText}>
         {message}
       </Body>
       {actionLabel && onAction ? (
-        <PillButton label={actionLabel} onPress={onAction} style={styles.emptyAction} />
+        <Button label={actionLabel} onPress={onAction} style={styles.emptyAction} />
       ) : null}
     </View>
   );
 }
 
+/** Follows the system's Reduce Motion setting. */
+function useReduceMotion() {
+  const [reduce, setReduce] = useState(false);
+  useEffect(() => {
+    let mounted = true;
+    AccessibilityInfo.isReduceMotionEnabled().then((value) => {
+      if (mounted) setReduce(value);
+    });
+    const subscription = AccessibilityInfo.addEventListener("reduceMotionChanged", setReduce);
+    return () => {
+      mounted = false;
+      subscription.remove();
+    };
+  }, []);
+  return reduce;
+}
+
 /**
  * Placeholder blocks that hold the shape of the content that is coming, so a
- * list does not jump when it arrives. Deliberately static — the product has no
- * shimmer anywhere.
+ * list does not jump when it arrives. They breathe gently unless the learner
+ * has asked for less motion.
  */
 export function LoadingBlock({ rows = 3, label }: { rows?: number; label?: string }) {
+  const reduceMotion = useReduceMotion();
+  const [opacity] = useState(() => new Animated.Value(1));
+
+  useEffect(() => {
+    if (reduceMotion) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(opacity, { toValue: 0.5, duration: 700, useNativeDriver: true }),
+        Animated.timing(opacity, { toValue: 1, duration: 700, useNativeDriver: true }),
+      ]),
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [opacity, reduceMotion]);
+
   return (
     <View style={styles.loading} accessibilityRole="progressbar" accessibilityLabel={label ?? "Loading"}>
       {Array.from({ length: rows }, (_, index) => (
-        <View key={index} style={[styles.loadingRow, index === rows - 1 && styles.loadingRowShort]} />
+        <Animated.View
+          key={index}
+          style={[styles.loadingRow, index === rows - 1 && styles.loadingRowShort, { opacity }]}
+        />
       ))}
       {label ? (
-        <Body size={13} style={styles.centerText}>
+        <Body size={type.footnote} tone="muted" style={styles.centerText}>
           {label}
         </Body>
       ) : null}
@@ -138,8 +177,7 @@ export interface ScreenStateProps {
 
 /**
  * The one place a screen decides between "still loading", "it broke",
- * "there is nothing yet" and the real content. Every branch is a dead end
- * without it, which is exactly what this exists to prevent.
+ * "there is nothing yet" and the real content.
  */
 export function ScreenState({
   isLoading,
@@ -157,7 +195,8 @@ export function ScreenState({
   }
   if (isError) {
     return (
-      <ErrorBanner
+      <Banner
+        tone="error"
         message={errorMessage ?? "Something went wrong."}
         actionLabel={onRetry ? "Try again" : undefined}
         onAction={onRetry}
@@ -172,26 +211,35 @@ export function ScreenState({
 
 const styles = StyleSheet.create({
   banner: {
-    borderRadius: radii.card,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.lg,
+    borderRadius: radii.panel,
+    padding: spacing.lg,
     gap: spacing.md,
+    borderWidth: 1,
+    borderColor: "rgba(33,37,41,0.06)",
+  },
+  bannerRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: spacing.sm,
+  },
+  bannerText: {
+    flex: 1,
   },
   bannerAction: {
     alignSelf: "flex-start",
+    minHeight: 44,
+    paddingVertical: spacing.sm,
   },
   empty: {
     borderRadius: radii.cardLarge,
-    backgroundColor: overlays.creamSoft,
+    backgroundColor: colors.snow,
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.xxl,
     alignItems: "center",
     justifyContent: "center",
     gap: spacing.md,
-    minHeight: 280,
   },
   emptyCompact: {
-    minHeight: 180,
     paddingVertical: spacing.xl,
   },
   emptyAction: {
@@ -208,7 +256,7 @@ const styles = StyleSheet.create({
   loadingRow: {
     height: 72,
     borderRadius: radii.card,
-    backgroundColor: overlays.creamSoft,
+    backgroundColor: colors.snow,
   },
   loadingRowShort: {
     width: "65%",

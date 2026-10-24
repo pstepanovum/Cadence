@@ -4,11 +4,13 @@
 // scan, or the person simply prefers typing. The pairing screen on the computer
 // shows both pieces this asks for.
 import { useRouter } from "expo-router";
-import { useState } from "react";
-import { View } from "react-native";
+import { useRef, useState } from "react";
+import { type TextInput } from "react-native";
 
-import { Body, Card, Eyebrow, PillButton, Screen, TextField, Title } from "@/components/ui";
+import { Banner, Body, Button, Screen, SectionHeader, TextField, TopBar } from "@/components/ui";
+import { haptics } from "@/lib/haptics";
 import { parseAddress } from "@/pairing/address";
+import { useEnterAppWhenPaired } from "@/hooks/useEnterAppWhenPaired";
 import { useConnection } from "@/pairing/context";
 import { describeFailure, type ConnectionFailure } from "@/pairing/errors";
 import {
@@ -16,16 +18,18 @@ import {
   normalizePairingCode,
   type PairingPayload,
 } from "@/pairing/protocol";
-import { spacing } from "@/theme/theme";
+import { type } from "@/theme/theme";
 
 export default function ManualConnectScreen() {
   const router = useRouter();
   const { pair } = useConnection();
+  const enterApp = useEnterAppWhenPaired();
 
   const [address, setAddress] = useState("");
   const [code, setCode] = useState("");
   const [failure, setFailure] = useState<ConnectionFailure | null>(null);
   const [busy, setBusy] = useState(false);
+  const codeRef = useRef<TextInput>(null);
 
   async function connect() {
     setFailure(null);
@@ -58,14 +62,18 @@ export default function ManualConnectScreen() {
       expiresAt: Date.now() + 60_000,
     };
 
-    const result = await pair(payload);
+    // A failure to save the pairing (the keychain refusing a write, say) must
+    // not leave the button spinning.
+    const result = await pair(payload).catch(() => ({ ok: false as const, failure: "unknown" as const }));
     setBusy(false);
 
     if (result.ok) {
-      router.replace("/");
+      haptics.success();
+      enterApp();
       return;
     }
 
+    haptics.error();
     setFailure(result.failure);
   }
 
@@ -73,53 +81,48 @@ export default function ManualConnectScreen() {
 
   return (
     <Screen>
-      <View style={{ gap: spacing.lg }}>
-        <View style={{ gap: spacing.sm }}>
-          <Eyebrow>Connect to my computer</Eyebrow>
-          <Title size={26}>Type what your computer shows</Title>
-          <Body>
-            The Cadence pairing screen on your computer shows an address and a
-            12-character code. Copy both here.
-          </Body>
-        </View>
+      {router.canGoBack() ? <TopBar onBack={() => router.back()} /> : null}
+      <SectionHeader
+        eyebrow="Connect to my computer"
+        title="Type what your computer shows"
+        size={type.title2}
+        subtitle="The pairing screen on your computer shows an address and a 12-character code."
+      />
 
-        <TextField
-          label="Computer address"
-          placeholder="192.168.1.42:3000"
-          value={address}
-          onChangeText={setAddress}
-          autoCapitalize="none"
-          autoCorrect={false}
-          keyboardType="url"
-          inputMode="url"
-        />
+      <TextField
+        label="Computer address"
+        placeholder="192.168.1.42:3000"
+        value={address}
+        onChangeText={setAddress}
+        autoCapitalize="none"
+        autoCorrect={false}
+        keyboardType="url"
+        inputMode="url"
+        returnKeyType="next"
+        submitBehavior="submit"
+        onSubmitEditing={() => codeRef.current?.focus()}
+      />
 
-        <TextField
-          label="Code"
-          placeholder="ABCD-EFGH-JKMN"
-          value={code}
-          onChangeText={setCode}
-          autoCapitalize="characters"
-          autoCorrect={false}
-          maxLength={20}
-        />
+      <TextField
+        ref={codeRef}
+        label="Code"
+        placeholder="ABCD-EFGH-JKMN"
+        value={code}
+        onChangeText={setCode}
+        autoCapitalize="characters"
+        autoCorrect={false}
+        maxLength={20}
+        returnKeyType="go"
+        onSubmitEditing={() => void connect()}
+      />
 
-        {message ? (
-          <Card variant="cream">
-            <View style={{ gap: spacing.xs }}>
-              <Title size={17}>{message.title}</Title>
-              <Body>{message.body}</Body>
-            </View>
-          </Card>
-        ) : null}
+      {message ? <Banner tone="error" message={`${message.title}. ${message.body}`} /> : null}
 
-        <PillButton label="Connect" loading={busy} onPress={() => void connect()} />
-        <PillButton
-          label="Scan the code instead"
-          variant="ghost"
-          onPress={() => router.replace("/connect/scan")}
-        />
-      </View>
+      <Button label="Connect" loading={busy} onPress={() => void connect()} />
+      <Button label="Scan the code instead" variant="tonal" onPress={() => router.replace("/connect/scan")} />
+      <Body size={type.caption} tone="muted">
+        Both devices need to be on the same Wi-Fi.
+      </Body>
     </Screen>
   );
 }

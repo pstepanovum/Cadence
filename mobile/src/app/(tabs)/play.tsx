@@ -1,38 +1,38 @@
-import { Link } from "expo-router";
-import {
-  Brain,
-  ChevronRight,
-  Ear,
-  Flame,
-  Keyboard,
-  Layers,
-  Puzzle,
-  Trophy,
-  WifiOff,
-} from "lucide-react-native";
-import { useMemo, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, View } from "react-native";
+import { Link, useFocusEffect } from "expo-router";
+import { Brain, ChevronRight, Ear, Flame, Keyboard, Layers, Puzzle, WifiOff } from "lucide-react-native";
+import { useCallback, useMemo, useState } from "react";
+import { Pressable, StyleSheet, View } from "react-native";
 import {
   Body,
   Card,
   Chip,
   Eyebrow,
+  HorizontalPicker,
   InfoPanel,
+  pressedCard,
   ProgressBar,
   Screen,
   SectionHeader,
+  StatRow,
   StatTile,
   Title,
 } from "@/components/ui";
 import { useAuth } from "@/context/auth";
-import { VOCABULARY, VOCAB_LEVELS, levelLabel, suggestedLevel, vocabForLevel, type VocabLevel } from "@/data/vocabulary";
+import {
+  VOCABULARY,
+  VOCAB_LEVELS,
+  levelLabel,
+  suggestedLevel,
+  vocabForLevel,
+  type VocabLevel,
+} from "@/data/vocabulary";
 import { GAMES, gameInfo, type GameInfo } from "@/games/catalog";
 import { playStreak, type GameId, type GameResult } from "@/games/progress";
 import { summarizeDeck } from "@/games/srs";
 import { useGameProgress } from "@/games/store";
+import { useRefresh } from "@/hooks/useRefresh";
 import { useServerStatus } from "@/hooks/useServerStatus";
-import { haptics } from "@/lib/haptics";
-import { colors, overlays, radii, spacing } from "@/theme/theme";
+import { colors, radii, spacing, type } from "@/theme/theme";
 
 const ICONS: Record<GameId, React.ComponentType<{ color: string; size: number }>> = {
   flashcards: Layers,
@@ -57,7 +57,15 @@ export default function PlayScreen() {
 
   const [level, setLevel] = useState<VocabLevel>(() => suggestedLevel(profile.practiceFocus));
 
-  const now = useMemo(() => new Date(), [progress]); // eslint-disable-line react-hooks/exhaustive-deps
+  // "Due today" and "2 h ago" are measured from when the tab was last shown,
+  // which is also when a finished round has just been saved.
+  const [now, setNow] = useState(() => new Date());
+  useFocusEffect(useCallback(() => setNow(new Date()), []));
+  const { refreshing, onRefresh } = useRefresh(() => {
+    setNow(new Date());
+    server.refresh();
+  });
+
   const allIds = useMemo(() => VOCABULARY.map((word) => word.id), []);
   const overall = useMemo(() => summarizeDeck(allIds, progress.cards, now), [allIds, progress.cards, now]);
   const deck = useMemo(() => {
@@ -70,56 +78,58 @@ export default function PlayScreen() {
   const recent = progress.results.slice(0, 5);
 
   return (
-    <Screen>
+    <Screen tab refreshing={refreshing} onRefresh={onRefresh}>
       <SectionHeader
         eyebrow="Play"
         title="Word games"
-        subtitle="Short rounds for new words, spelling and your ear. Progress is kept on this phone."
+        subtitle="Short rounds for new words, spelling and your ear."
       />
 
-      <Card variant="dark">
-        <Eyebrow onDark>Your words</Eyebrow>
-        <Title size={22} onDark>
-          {!loaded
-            ? "Loading your progress…"
-            : known === 0
-              ? "Start your first deck"
-              : `${known} ${known === 1 ? "word" : "words"} you know`}
-        </Title>
-        <View style={styles.statsRow}>
-          <StatTile tone="translucent" label="Known" value={loaded ? `${known}/${overall.total}` : "—"} />
-          <StatTile tone="translucent" label="Due today" value={loaded ? String(overall.dueToday) : "—"} />
-          <StatTile tone="translucent" label="Play streak" value={loaded ? `${streak}d` : "—"} />
+      <Card>
+        <View style={styles.heroHead}>
+          <View style={styles.heroText}>
+            <Eyebrow>Your words</Eyebrow>
+            <Title size={type.title3}>
+              {!loaded
+                ? "Loading your progress…"
+                : known === 0
+                  ? "Start your first deck"
+                  : `${known} ${known === 1 ? "word" : "words"} you know`}
+            </Title>
+          </View>
+          <View
+            style={[styles.streakBadge, streak > 0 && styles.streakBadgeOn]}
+            accessible
+            accessibilityLabel={`${streak}-day play streak`}>
+            <Flame color={streak > 0 ? colors.ink : colors.slate} size={16} />
+            <Body size={type.footnote} weight="bold" style={{ color: streak > 0 ? colors.ink : colors.slate }}>
+              {streak}d
+            </Body>
+          </View>
         </View>
-        <ProgressBar value={overall.total ? (known / overall.total) * 100 : 0} onDark />
-        <View style={styles.streakRow}>
-          <Flame color={streak > 0 ? colors.yellowGreen : colors.cream} size={18} />
-          <Body size={12} onDark style={styles.streakText}>
-            {streak > 0
-              ? `${streak}-day play streak. One round today keeps it going.`
-              : "Finish any round today to start a play streak."}
-          </Body>
-        </View>
+        <ProgressBar value={overall.total ? (known / overall.total) * 100 : 0} />
+        <StatRow>
+          <StatTile label="Known" value={loaded ? `${known}/${overall.total}` : "—"} />
+          <StatTile label="Due today" value={loaded ? String(overall.dueToday) : "—"} />
+        </StatRow>
       </Card>
 
-      <Card>
+      <View style={styles.section}>
         <Eyebrow>Deck</Eyebrow>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.chipRow}>
+        <HorizontalPicker selectedIndex={Math.max(0, VOCAB_LEVELS.findIndex((item) => item.key === level))}>
           {VOCAB_LEVELS.map((item) => (
             <Chip
               key={item.key}
               label={item.label}
-              status={item.key === level ? "correct" : "neutral"}
               selected={item.key === level}
-              onPress={() => {
-                haptics.select();
-                setLevel(item.key);
-              }}
+              onPress={() => setLevel(item.key)}
             />
           ))}
-        </ScrollView>
-        <Body size={13}>{VOCAB_LEVELS.find((item) => item.key === level)?.blurb}</Body>
-        <InfoPanel>
+        </HorizontalPicker>
+        <InfoPanel tone="white">
+          <Body size={type.footnote} tone="muted">
+            {VOCAB_LEVELS.find((item) => item.key === level)?.blurb}
+          </Body>
           <View style={styles.deckRow}>
             <DeckStat label="New" value={deck.new} />
             <DeckStat label="Learning" value={deck.learning} />
@@ -127,7 +137,7 @@ export default function PlayScreen() {
             <DeckStat label="Due" value={deck.dueToday} accent />
           </View>
         </InfoPanel>
-      </Card>
+      </View>
 
       <View style={styles.list}>
         {GAMES.map((game) => (
@@ -144,10 +154,7 @@ export default function PlayScreen() {
 
       {recent.length > 0 ? (
         <Card>
-          <View style={styles.recentHead}>
-            <Trophy color={colors.sage} size={18} />
-            <Eyebrow>Recent rounds</Eyebrow>
-          </View>
+          <Eyebrow>Recent rounds</Eyebrow>
           {recent.map((result, index) => (
             <RecentRow key={`${result.playedAt}-${index}`} result={result} now={now} />
           ))}
@@ -159,11 +166,15 @@ export default function PlayScreen() {
 
 function DeckStat({ label, value, accent = false }: { label: string; value: number; accent?: boolean }) {
   return (
-    <View style={styles.deckStat}>
-      <Body size={18} weight="bold" style={{ color: accent && value > 0 ? colors.brick : colors.hunter }}>
+    <View style={styles.deckStat} accessible accessibilityLabel={`${label}: ${value}`}>
+      <Body
+        size={type.headline}
+        weight="bold"
+        maxFontSizeMultiplier={1.4}
+        style={{ color: accent && value > 0 ? colors.brickText : colors.hunter }}>
         {value}
       </Body>
-      <Body size={11} style={{ color: colors.slate }}>
+      <Body size={type.caption} tone="muted" maxFontSizeMultiplier={1.4}>
         {label}
       </Body>
     </View>
@@ -194,17 +205,17 @@ function GameCard({
         </View>
         <View style={styles.cardTitleWrap}>
           <Eyebrow>{game.tagline}</Eyebrow>
-          <Title size={19}>{game.title}</Title>
+          <Title size={type.headline}>{game.title}</Title>
         </View>
         <ChevronRight color={offline ? colors.paleSlate : colors.slate} size={20} />
       </View>
-      <Body size={13}>{game.blurb}</Body>
+      <Body size={type.callout}>{game.blurb}</Body>
       <View style={styles.cardFoot}>
         {offline ? (
           <View style={styles.offlineTag}>
-            <WifiOff color={colors.brick} size={14} />
-            <Body size={12} weight="semibold" style={{ color: colors.brick }}>
-              Needs your computer
+            <WifiOff color={colors.brickText} size={14} />
+            <Body size={type.footnote} weight="semibold" tone="error">
+              Needs the server to read words aloud
             </Body>
           </View>
         ) : (
@@ -212,24 +223,32 @@ function GameCard({
             {dueToday !== undefined && dueToday > 0 ? (
               <Chip label={`${dueToday} due`} status="mixed" />
             ) : null}
-            <Chip label={best !== undefined ? `Best ${best}` : "Not played yet"} status={best !== undefined ? "correct" : "neutral"} />
-            <Chip label={`~${game.minutes} min`} status="neutral" />
-            {usesDeck ? <Chip label={levelLabel(level)} status="neutral" /> : null}
+            <Chip
+              label={best !== undefined ? `Best ${best}` : "Not played yet"}
+              status={best !== undefined ? "correct" : "neutral"}
+            />
+            <Chip label={`~${game.minutes} min`} />
+            {usesDeck ? <Chip label={levelLabel(level)} /> : null}
           </>
         )}
       </View>
     </Card>
   );
 
-  if (offline) return card;
+  if (offline) {
+    return (
+      <View accessible accessibilityLabel={`${game.title}. Needs the server to read words aloud.`}>
+        {card}
+      </View>
+    );
+  }
 
   return (
     <Link href={{ pathname: ROUTES[game.id], params: usesDeck ? { level } : {} }} asChild>
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={`Play ${game.title}`}
-        onPressIn={() => haptics.tap()}
-        style={({ pressed }) => [pressed && styles.pressed]}>
+        style={({ pressed }) => pressedCard(pressed)}>
         {card}
       </Pressable>
     </Link>
@@ -245,15 +264,15 @@ function RecentRow({ result, now }: { result: GameResult; now: Date }) {
         <Icon color={colors.hunter} size={16} />
       </View>
       <View style={styles.recentBody}>
-        <Body size={13} weight="semibold" style={{ color: colors.hunter }}>
+        <Body size={type.footnote} weight="semibold" tone="strong">
           {info.title}
           {result.label ? ` · ${result.label}` : ""}
         </Body>
-        <Body size={12} style={{ color: colors.slate }}>
+        <Body size={type.caption} tone="muted">
           {result.correct}/{result.total} right · {timeAgo(result.playedAt, now)}
         </Body>
       </View>
-      <Body size={15} weight="bold" style={{ color: colors.hunter }}>
+      <Body size={type.body} weight="bold" tone="strong">
         {result.score}
       </Body>
     </View>
@@ -274,25 +293,34 @@ function timeAgo(iso: string, now: Date): string {
 }
 
 const styles = StyleSheet.create({
-  statsRow: {
+  heroHead: {
     flexDirection: "row",
-    gap: spacing.sm,
+    alignItems: "flex-start",
+    gap: spacing.md,
   },
-  streakRow: {
+  heroText: {
+    flex: 1,
+    gap: spacing.xxs,
+  },
+  streakBadge: {
     flexDirection: "row",
     alignItems: "center",
-    gap: spacing.sm,
-  },
-  streakText: {
-    flex: 1,
-  },
-  chipRow: {
-    gap: spacing.sm,
+    gap: spacing.xs,
+    borderRadius: radii.pill,
+    backgroundColor: colors.platinum,
+    paddingHorizontal: spacing.md,
     paddingVertical: spacing.xs,
+  },
+  streakBadgeOn: {
+    backgroundColor: colors.yellowGreen,
+  },
+  section: {
+    gap: spacing.sm,
   },
   deckRow: {
     flexDirection: "row",
     justifyContent: "space-around",
+    marginTop: spacing.xs,
   },
   deckStat: {
     alignItems: "center",
@@ -308,14 +336,14 @@ const styles = StyleSheet.create({
   iconWrap: {
     width: 48,
     height: 48,
-    borderRadius: radii.pill,
+    borderRadius: radii.panel,
     backgroundColor: colors.cream,
     alignItems: "center",
     justifyContent: "center",
   },
   cardTitleWrap: {
     flex: 1,
-    gap: 2,
+    gap: spacing.xxs,
   },
   cardFoot: {
     flexDirection: "row",
@@ -323,21 +351,14 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   offlineCard: {
-    backgroundColor: overlays.locked,
+    opacity: 0.7,
+    boxShadow: undefined,
   },
   offlineTag: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 6,
-  },
-  pressed: {
-    transform: [{ scale: 0.985 }],
-    opacity: 0.92,
-  },
-  recentHead: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.sm,
+    gap: spacing.xs,
+    flexShrink: 1,
   },
   recentRow: {
     flexDirection: "row",

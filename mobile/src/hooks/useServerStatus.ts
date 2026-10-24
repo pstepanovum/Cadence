@@ -1,4 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
+import { router } from "expo-router";
+import { Linking } from "react-native";
 import { getHealth } from "@/api/endpoints";
 import { OFFLINE_MESSAGE } from "@/copy/errors";
 import { useConnection } from "@/pairing/context";
@@ -26,6 +28,9 @@ export interface ServerStatus {
   message: string | null;
   /** Label for the recovery button, when one makes sense. */
   actionLabel: string | null;
+  /** What the recovery button does: retry, rescan, open Settings or pair. */
+  action: () => void;
+  /** Checks again. Pull-to-refresh calls this; it never navigates. */
   refresh: () => void;
 }
 
@@ -46,22 +51,37 @@ export function useServerStatus(): ServerStatus {
   if (isLocal) {
     switch (state.status) {
       case "connected":
-        return { reachable: true, checking: false, message: null, actionLabel: null, refresh: reconnect };
+        return {
+          reachable: true,
+          checking: false,
+          message: null,
+          actionLabel: null,
+          action: reconnect,
+          refresh: reconnect,
+        };
       case "connecting":
         return {
           reachable: false,
           checking: true,
           message: "Looking for your computer on this network…",
           actionLabel: null,
+          action: reconnect,
           refresh: reconnect,
         };
       case "offline": {
         const described = describeFailure(state.failure);
+        const action =
+          described.actionKind === "settings"
+            ? () => void Linking.openSettings()
+            : described.actionKind === "rescan"
+              ? () => router.push("/connect/scan")
+              : reconnect;
         return {
           reachable: false,
           checking: false,
           message: `${described.title}. ${described.body}`,
           actionLabel: described.action,
+          action,
           refresh: reconnect,
         };
       }
@@ -72,20 +92,23 @@ export function useServerStatus(): ServerStatus {
           checking: false,
           message: "This phone is not paired with a computer yet.",
           actionLabel: "Connect",
+          action: () => router.push("/connect"),
           refresh: reconnect,
         };
     }
   }
 
   const reachable = query.data?.ok === true;
+  const refresh = () => {
+    void query.refetch();
+  };
   return {
     reachable,
     checking: query.isLoading,
-    message: reachable ? null : `${OFFLINE_MESSAGE} Pull down to retry.`,
+    message: reachable ? null : OFFLINE_MESSAGE,
     actionLabel: reachable ? null : "Try again",
-    refresh: () => {
-      query.refetch();
-    },
+    action: refresh,
+    refresh,
   };
 }
 

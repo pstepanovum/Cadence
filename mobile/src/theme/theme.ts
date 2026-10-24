@@ -11,31 +11,58 @@ export const colors = {
   platinum: "#e9ecef",
   alabaster: "#dee2e6",
   paleSlate: "#ced4da",
-  slate: "#6c757d",
+  /** Muted text. One step darker than the web's #6c757d so 12pt meta text passes AA on snow. */
+  slate: "#5c646b",
   iron: "#495057",
   carbon: "#212529",
   white: "#ffffff",
-  // Hover/one-off shades used by the web app
-  hunterHover: "#44784f",
-  creamHover: "#eadfbe",
   mixedChip: "#efd889",
+
+  // Text-safe shades of the brand colours. Each one clears WCAG AA (4.5:1) on
+  // the surface it is meant for, so small labels never fall back to a colour
+  // that only works at headline size.
+  /** Sage for text on cream, snow or white (4.5:1 on cream). */
+  sageText: "#4a7335",
+  /** Deep hunter for text on yellow-green and the mixed chip (5.3:1). */
+  ink: "#244a2c",
+  /** Brick for text on light surfaces and the soft error tint. */
+  brickText: "#9e3a3c",
+  /** Yellow-green lifted for text on hunter (5:1). */
+  lime: "#d4e7a6",
+  /** Secondary text on hunter. */
+  onDarkMuted: "rgba(248,249,250,0.82)",
+
+  // Soft tints for banners and selected surfaces.
+  limeSoft: "#e3eec8",
+  brickSoft: "#f6e3e3",
+  mixedSoft: "#f7ecc3",
 } as const;
 
 export const radii = {
-  card: 24,
-  cardLarge: 32,
-  inset: 24,
+  /** Lists, cards, banners. */
+  card: 20,
+  /** Hero cards, the flashcard, empty states. */
+  cardLarge: 28,
+  /** Buttons, text fields, option tiles: soft, not pills. */
+  control: 14,
+  /** Panels nested inside a card. */
   panel: 16,
+  /** Letter tiles, phoneme cards. */
+  tile: 12,
+  /** Tags and round icon buttons only. */
   pill: 999,
 } as const;
 
+/** A 4/8pt scale. Nothing in the app should need a value between these. */
 export const spacing = {
+  xxs: 2,
   xs: 4,
   sm: 8,
   md: 12,
   lg: 16,
   xl: 24,
   xxl: 32,
+  xxxl: 40,
 } as const;
 
 export const fonts = {
@@ -47,20 +74,59 @@ export const fonts = {
   kickerBold: "SourGummy_700Bold",
 } as const;
 
+/**
+ * The type scale, in points. Screens pick from these instead of inventing a
+ * size, and nothing a learner needs to read goes below `caption`.
+ */
+export const type = {
+  display: 32,
+  title1: 28,
+  title2: 22,
+  title3: 20,
+  headline: 17,
+  body: 15,
+  callout: 14,
+  footnote: 13,
+  caption: 12,
+} as const;
+
+/**
+ * Dynamic Type ceilings. Text keeps growing with the system setting, but stops
+ * where a phone-width layout would start to clip: headings and numbers stop
+ * early, running text goes furthest.
+ */
+export const maxScale = {
+  title: 1.35,
+  body: 1.75,
+  control: 1.5,
+  label: 1.4,
+} as const;
+
+/** Gentle elevation: enough to lift a card off cream, never a hard drop shadow. */
+export const shadows = {
+  card: "0px 2px 10px rgba(33, 37, 41, 0.06)",
+  raised: "0px 6px 18px rgba(33, 37, 41, 0.14)",
+} as const;
+
+/** Minimum size of anything tappable (Apple HIG). */
+export const TAP_TARGET = 44;
+
 export function scoreColor(score: number): string {
   if (score >= 70) return colors.yellowGreen;
   if (score >= 50) return colors.sage;
   return colors.brick;
 }
 
-// Tinted overlays used for layering on solid surfaces (no shadows/gradients).
+// Tinted overlays used for layering on solid surfaces.
 export const overlays = {
   whiteOnGreen: "rgba(255,255,255,0.10)",
-  whiteOnGreenStrong: "rgba(255,255,255,0.12)",
-  sageOnCream: "rgba(106,153,78,0.15)",
-  yellowGreenSoft: "rgba(167,201,87,0.20)",
+  whiteOnGreenStrong: "rgba(255,255,255,0.14)",
   yellowGreenPanel: "rgba(167,201,87,0.30)",
   creamSoft: "rgba(242,232,207,0.80)",
+  /** The tonal button and pressed rows: hunter at a whisper. */
+  hunterTint: "rgba(56,102,65,0.08)",
   /** Locked or unavailable cards — one token instead of a copied rgba. */
   locked: "rgba(233,236,239,0.7)",
+  /** The recorder halo. */
+  brickHalo: "rgba(188,71,73,0.22)",
 } as const;

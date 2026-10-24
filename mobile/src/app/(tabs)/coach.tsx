@@ -1,32 +1,34 @@
 import { router, useFocusEffect } from "expo-router";
-import { Play, Trash2 } from "lucide-react-native";
+import { ChevronRight, Trash2 } from "lucide-react-native";
 import { useCallback, useState } from "react";
 import { Alert, Pressable, StyleSheet, View } from "react-native";
 import type { CoachMode } from "@/api/types";
+import { ReadinessBanner, ServerBanner } from "@/components/status";
 import {
-  Banner,
   Body,
+  Button,
   Card,
   Chip,
-  Eyebrow,
   EmptyState,
+  Eyebrow,
   LoadingBlock,
   OptionRow,
-  PillButton,
+  pressedCard,
   RoundIconButton,
-  Screen,
+  ScreenList,
   SectionHeader,
-  StatTile,
   TextField,
   Title,
 } from "@/components/ui";
 import { useAuth } from "@/context/auth";
 import { ILLUSTRATION_COMMUNICATION } from "@/data/svg";
 import { useCoachReadiness } from "@/hooks/useEngineReadiness";
+import { useRefresh } from "@/hooks/useRefresh";
 import { useServerStatus } from "@/hooks/useServerStatus";
 import { deleteCoachSession, readCoachSessions, type SavedCoachSession } from "@/lib/coach-storage";
+import { haptics } from "@/lib/haptics";
 import { averageScore } from "@/practice/scoring";
-import { colors, spacing } from "@/theme/theme";
+import { colors, spacing, type } from "@/theme/theme";
 
 const SUGGESTED_TOPICS = [
   "Describing my role at work",
@@ -50,24 +52,24 @@ export default function CoachScreen() {
   const [mode, setMode] = useState<CoachMode>("target");
   const [history, setHistory] = useState<SavedCoachSession[] | null>(null);
 
-  const [refreshing, setRefreshing] = useState(false);
+  const loadHistory = useCallback(
+    () =>
+      readCoachSessions(userId)
+        .then(setHistory)
+        // Saved history is a convenience; an unreadable store reads as empty.
+        .catch(() => setHistory([])),
+    [userId],
+  );
 
-  const loadHistory = useCallback(() => {
-    readCoachSessions(userId).then(setHistory);
-  }, [userId]);
-
-  function refresh() {
-    setRefreshing(true);
+  const { refreshing, onRefresh } = useRefresh(() => {
     readiness.refresh();
     server.refresh();
-    readCoachSessions(userId)
-      .then(setHistory)
-      .finally(() => setRefreshing(false));
-  }
+    return loadHistory();
+  });
 
   useFocusEffect(
     useCallback(() => {
-      loadHistory();
+      void loadHistory();
     }, [loadHistory]),
   );
 
@@ -77,185 +79,191 @@ export default function CoachScreen() {
   );
 
   function startSession() {
+    if (!readiness.ready) return;
     const chosenTopic = topic.trim() || SUGGESTED_TOPICS[0];
     router.push({ pathname: "/coach/session", params: { topic: chosenTopic, mode } });
+  }
+
+  function resume(saved: SavedCoachSession) {
+    router.push({
+      pathname: "/coach/session",
+      params: { topic: saved.topic, mode: saved.replyMode, sessionId: saved.id },
+    });
   }
 
   function confirmDelete(saved: SavedCoachSession) {
     Alert.alert(
       "Delete this conversation?",
-      `"${saved.topic}" and its ${saved.turns.length} ${saved.turns.length === 1 ? "turn" : "turns"} will be removed from this device. This cannot be undone.`,
+      `"${saved.topic}" will be removed from this phone. This cannot be undone.`,
       [
         { text: "Keep", style: "cancel" },
         {
           text: "Delete",
           style: "destructive",
           onPress: () => {
-            deleteCoachSession(userId, saved.id).then(loadHistory);
+            deleteCoachSession(userId, saved.id)
+              .then(() => {
+                haptics.success();
+                return loadHistory();
+              })
+              .catch(() => {
+                haptics.error();
+                Alert.alert("Could not delete", "Something went wrong. Try again in a moment.");
+              });
           },
         },
       ],
     );
   }
 
-  return (
-    <Screen refreshing={refreshing} onRefresh={refresh}>
-      {!server.reachable && !server.checking ? (
-        <Banner
-          tone="error"
-          message={server.message ?? "Cadence can't reach the server."}
-          actionLabel={server.actionLabel ?? "Try again"}
-          onAction={server.refresh}
-        />
-      ) : null}
-
+  const header = (
+    <View style={styles.header}>
       <SectionHeader
-        eyebrow="AI Coach"
+        eyebrow="Coach"
         title="Freeform practice"
-        subtitle="Pick any topic. The coach speaks, you answer, and every reply gets scored."
+        subtitle="Pick any topic. The coach speaks, you answer, and every reply is scored."
       />
 
-      {sessions.length > 0 ? (
-        <Card variant="dark">
-          <Eyebrow onDark>So far</Eyebrow>
-          <View style={styles.statsRow}>
-            <StatTile tone="translucent" label="Conversations" value={String(sessions.length)} />
-            <StatTile tone="translucent" label="Turns scored" value={String(scoredTurns.length)} />
-            <StatTile
-              tone="translucent"
-              label="Avg score"
-              value={scoredTurns.length ? String(averageScore(scoredTurns)) : "—"}
-            />
-          </View>
-        </Card>
-      ) : null}
-
-      {!readiness.ready ? (
-        <Banner
-          tone={readiness.offline ? "error" : "warning"}
-          message={readiness.checking ? "Checking the coach…" : (readiness.message ?? "")}
-          actionLabel={readiness.checking ? undefined : "Check again"}
-          onAction={readiness.checking ? undefined : readiness.refresh}
-        />
-      ) : null}
+      <ServerBanner />
+      {server.reachable ? <ReadinessBanner readiness={readiness} /> : null}
 
       <Card>
-        <Eyebrow>New session</Eyebrow>
         <TextField
+          label="Topic"
           placeholder="What do you want to talk about?"
           value={topic}
           onChangeText={setTopic}
           returnKeyType="go"
-          onSubmitEditing={() => readiness.ready && startSession()}
+          onSubmitEditing={startSession}
         />
         <View style={styles.topicsRow}>
           {SUGGESTED_TOPICS.map((suggestion) => (
             <Chip
               key={suggestion}
               label={suggestion}
-              status={topic === suggestion ? "correct" : "neutral"}
-              onPress={() => setTopic(suggestion)}
+              selected={topic === suggestion}
+              onPress={() => setTopic(topic === suggestion ? "" : suggestion)}
             />
           ))}
         </View>
 
         <OptionRow label="Reply mode" options={MODE_OPTIONS} value={mode} onChange={setMode} />
-        <Body size={12}>
+        <Body size={type.footnote} tone="muted">
           {mode === "target"
-            ? "The coach gives you a sentence to repeat, scored against that exact target."
-            : "Answer in your own words — Cadence transcribes what you said and scores your pronunciation of it."}
+            ? "The coach gives you a line to repeat and scores it."
+            : "Answer in your own words. Cadence writes down what you said and scores it."}
         </Body>
 
-        <PillButton
-          label="Start session"
-          disabled={!readiness.ready}
-          onPress={startSession}
-        />
-        {!readiness.ready ? (
-          <Body size={12} style={styles.centerText}>
-            Starting unlocks as soon as the coach answers.
-          </Body>
-        ) : null}
+        <Button label="Start session" disabled={!readiness.ready} onPress={startSession} />
       </Card>
 
-      <Eyebrow>History</Eyebrow>
+      <View style={styles.historyHead}>
+        <Eyebrow>History</Eyebrow>
+        {scoredTurns.length > 0 ? (
+          <Body size={type.footnote} tone="muted">
+            {sessions.length} {sessions.length === 1 ? "conversation" : "conversations"} · avg{" "}
+            {averageScore(scoredTurns)}
+          </Body>
+        ) : null}
+      </View>
+    </View>
+  );
 
-      {history === null ? (
-        <LoadingBlock rows={2} label="Loading your saved conversations…" />
-      ) : sessions.length === 0 ? (
-        <EmptyState
-          compact
-          title="No conversations yet"
-          message="Start a topic above and it will be saved here on this device, ready to pick back up."
-          illustration={ILLUSTRATION_COMMUNICATION}
-        />
-      ) : (
-        sessions.map((saved) => (
-          <Card key={saved.id} style={styles.historyCard}>
-            <Pressable
-              accessibilityRole="button"
-              accessibilityLabel={`Resume ${saved.topic}`}
-              style={styles.historyBody}
-              onPress={() =>
-                router.push({
-                  pathname: "/coach/session",
-                  params: { topic: saved.topic, mode: saved.replyMode, sessionId: saved.id },
-                })
-              }>
-              <Title size={16} numberOfLines={2}>
-                {saved.topic}
-              </Title>
-              <Body size={12}>
-                {saved.turns.length} {saved.turns.length === 1 ? "turn" : "turns"} ·{" "}
-                {new Date(saved.updatedAt).toLocaleDateString()} ·{" "}
-                {saved.replyMode === "target" ? "repeat mode" : "free mode"}
-              </Body>
-            </Pressable>
-            <RoundIconButton
-              accessibilityLabel={`Resume ${saved.topic}`}
-              tone="cream"
-              onPress={() =>
-                router.push({
-                  pathname: "/coach/session",
-                  params: { topic: saved.topic, mode: saved.replyMode, sessionId: saved.id },
-                })
-              }>
-              <Play color={colors.hunter} size={16} />
-            </RoundIconButton>
-            <RoundIconButton
-              accessibilityLabel={`Delete ${saved.topic}`}
-              tone="cream"
-              onPress={() => confirmDelete(saved)}>
-              <Trash2 color={colors.brick} size={16} />
-            </RoundIconButton>
-          </Card>
-        ))
+  return (
+    <ScreenList
+      tab
+      refreshing={refreshing}
+      onRefresh={onRefresh}
+      data={sessions}
+      keyExtractor={(item) => item.id}
+      ListHeaderComponent={header}
+      ListEmptyComponent={
+        history === null ? (
+          <LoadingBlock rows={2} label="Loading your saved conversations…" />
+        ) : (
+          <EmptyState
+            compact
+            title="No conversations yet"
+            message="Start a topic above. It's saved on this phone so you can pick it up later."
+            illustration={ILLUSTRATION_COMMUNICATION}
+          />
+        )
+      }
+      renderItem={({ item }) => (
+        <HistoryRow saved={item} onResume={() => resume(item)} onDelete={() => confirmDelete(item)} />
       )}
-    </Screen>
+    />
+  );
+}
+
+function HistoryRow({
+  saved,
+  onResume,
+  onDelete,
+}: {
+  saved: SavedCoachSession;
+  onResume: () => void;
+  onDelete: () => void;
+}) {
+  const turns = saved.turns.length;
+  return (
+    <Card style={styles.historyCard}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={`Resume ${saved.topic}`}
+        onPress={onResume}
+        style={({ pressed }) => [styles.historyBody, pressedCard(pressed)]}>
+        <View style={styles.historyText}>
+          <Title size={type.headline} numberOfLines={2}>
+            {saved.topic}
+          </Title>
+          <Body size={type.caption} tone="muted">
+            {turns} {turns === 1 ? "turn" : "turns"} · {new Date(saved.updatedAt).toLocaleDateString()} ·{" "}
+            {saved.replyMode === "target" ? "Repeat" : "Free"}
+          </Body>
+        </View>
+        <ChevronRight color={colors.slate} size={20} />
+      </Pressable>
+      <RoundIconButton accessibilityLabel={`Delete ${saved.topic}`} tone="cream" onPress={onDelete}>
+        <Trash2 color={colors.brickText} size={18} />
+      </RoundIconButton>
+    </Card>
   );
 }
 
 const styles = StyleSheet.create({
-  statsRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
+  header: {
+    gap: spacing.lg,
   },
   topicsRow: {
     flexDirection: "row",
     flexWrap: "wrap",
     gap: spacing.sm,
   },
+  historyHead: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: spacing.sm,
+    marginTop: spacing.sm,
+  },
   historyCard: {
     flexDirection: "row",
     alignItems: "center",
-    gap: spacing.sm,
-    paddingVertical: spacing.lg,
+    gap: spacing.md,
+    paddingVertical: spacing.md,
+    paddingLeft: spacing.lg,
+    paddingRight: spacing.md,
   },
   historyBody: {
     flex: 1,
-    gap: 2,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    minHeight: 44,
   },
-  centerText: {
-    textAlign: "center",
+  historyText: {
+    flex: 1,
+    gap: spacing.xxs,
   },
 });

@@ -1,22 +1,23 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { ArrowRight, Lightbulb } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { KeyboardAvoidingView, Platform, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
-import { GameTopBar } from "@/components/games/GameTopBar";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import { ScoreStrip } from "@/components/games/ScoreStrip";
 import { SpeakerButton } from "@/components/games/SpeakerButton";
 import {
+  ActionRow,
   Banner,
   Body,
+  Button,
   Card,
   Eyebrow,
   InfoPanel,
-  PillButton,
   Screen,
   SegmentedProgress,
   TextField,
+  TopBar,
 } from "@/components/ui";
 import { levelLabel, parseLevel, vocabForLevel, type VocabWord } from "@/data/vocabulary";
 import { EMPTY_TALLY, accuracy, pointsFor, tallyAnswer } from "@/games/quiz";
@@ -25,9 +26,9 @@ import { useGameProgress } from "@/games/store";
 import { checkSpelling, hintMask, letterCount, letterDiff } from "@/games/text";
 import { useExitGuard } from "@/hooks/useExitGuard";
 import { useServerStatus } from "@/hooks/useServerStatus";
-import { useWordAudio } from "@/hooks/useWordAudio";
+import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, radii, spacing } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, type } from "@/theme/theme";
 
 const ROUND_LENGTH = 8;
 const MAX_LIVES = 3;
@@ -38,7 +39,8 @@ export default function SpellingScreen() {
   const params = useLocalSearchParams<{ level?: string }>();
   const level = parseLevel(params.level);
   const { progress, recordRound } = useGameProgress();
-  const audio = useWordAudio();
+  const audio = useSpeech();
+  const { speak, prefetch } = audio;
   const server = useServerStatus();
 
   const [words, setWords] = useState<VocabWord[]>(() =>
@@ -70,21 +72,21 @@ export default function SpellingScreen() {
 
   // Each new word is read out as soon as it arrives. If the audio cannot be
   // fetched, the meaning opens by itself so the round can carry on.
+  const nextWord = words[index + 1];
   useEffect(() => {
     if (!word || finished) return;
     let cancelled = false;
     const wordId = word.id;
-    audio.speak(word.word).then((ok) => {
+    speak(word.word).then((ok) => {
       if (cancelled) return;
       if (ok) setHeardFor(wordId);
       else setShowMeaning(true);
     });
-    if (words[index + 1]) audio.prefetch(words[index + 1].word);
+    if (nextWord) prefetch(nextWord.word);
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [word?.id, finished]);
+  }, [word, nextWord, finished, speak, prefetch]);
 
   const percent = useMemo(() => accuracy(tally.correct, tally.answered), [tally]);
 
@@ -161,8 +163,13 @@ export default function SpellingScreen() {
   if (finished || !word) {
     const attempted = words.filter((item) => item.id in results);
     return (
-      <Screen edges={["top", "left", "right", "bottom"]}>
-        <GameTopBar eyebrow={eyebrow} title={lives <= 0 ? "Out of lives" : "Round over"} onClose={() => router.back()} />
+      <Screen>
+        <TopBar
+          closeLabel="Leave this game"
+          eyebrow={eyebrow}
+          title={lives <= 0 ? "Out of lives" : "Round over"}
+          onClose={() => router.back()}
+        />
         <RoundSummary
           accuracy={percent}
           isNewBest={tally.score > previousBest && tally.score > 0}
@@ -171,7 +178,7 @@ export default function SpellingScreen() {
               ? "Three misses ends the round. The words that got you are marked below."
               : tally.correct === tally.answered
                 ? "Perfect spelling, every word."
-                : "Hints cost half the points, but they beat a wrong guess."
+                : "A hint halves the points for that word, but it beats a wrong guess."
           }
           stats={[
             { label: "Score", value: String(tally.score) },
@@ -192,12 +199,8 @@ export default function SpellingScreen() {
   const diff = verdict && !verdict.correct ? letterDiff(verdict.typed, word.word) : null;
 
   return (
-    <KeyboardAvoidingView
-      style={styles.flex}
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-      keyboardVerticalOffset={0}>
-      <Screen edges={["top", "left", "right", "bottom"]}>
-        <GameTopBar
+    <Screen>
+        <TopBar closeLabel="Leave this game"
           eyebrow={eyebrow}
           title={`Word ${index + 1} of ${words.length}`}
           onClose={() => router.back()}
@@ -213,41 +216,53 @@ export default function SpellingScreen() {
             onAction={server.refresh}
           />
         ) : audio.error ? (
-          <Banner message={audio.error} tone="warning" actionLabel="Try again" onAction={() => audio.speak(word.word)} />
+          <Banner
+            message={audio.error}
+            tone="warning"
+            actionLabel="Try again"
+            onAction={() => void audio.speak(word.word)}
+          />
         ) : null}
 
         <Card style={styles.prompt}>
           <SpeakerButton
-            onPress={() => audio.speak(word.word)}
+            onPress={() => audio.toggle(word.word)}
             loading={audio.isLoading}
             playing={audio.isPlaying}
             label={heardOnce ? "Hear it again" : "Hear the word"}
           />
-          <Text style={styles.mask} accessibilityLabel={`${letters} letters`}>
+          <Text style={styles.mask} maxFontSizeMultiplier={maxScale.title} accessibilityLabel={`${letters} letters`}>
             {hintMask(word.word, revealed)}
           </Text>
-          <Body size={12} style={styles.letters}>
+          <Body size={type.caption} tone="muted">
             {letters} {letters === 1 ? "letter" : "letters"}
             {word.word.includes(" ") ? " · two words" : ""}
           </Body>
           {showMeaning ? (
             <InfoPanel>
               <Eyebrow>Meaning</Eyebrow>
-              <Body size={13}>{word.definition}</Body>
+              <Body size={type.footnote}>{word.definition}</Body>
             </InfoPanel>
           ) : null}
         </Card>
 
         {verdict ? (
           <Card variant={verdict.correct ? "cream" : "light"} style={styles.verdict}>
-            <Eyebrow tone={verdict.correct ? undefined : colors.brick}>
-              {verdict.correct ? (usedHelp ? "Right, with a hint" : "Right") : verdict.close ? "So close" : "Not quite"}
+            <Eyebrow tone={verdict.correct ? undefined : colors.brickText}>
+              {verdict.correct
+                ? usedHelp
+                  ? "Right, with a hint"
+                  : "Right"
+                : verdict.close
+                  ? "So close"
+                  : "Not quite"}
             </Eyebrow>
             {diff ? (
               <View style={styles.diffRow} accessibilityLabel={`The correct spelling is ${word.word}`}>
                 {diff.map((item, itemIndex) => (
                   <Text
                     key={itemIndex}
+                    maxFontSizeMultiplier={maxScale.title}
                     style={[
                       styles.diffLetter,
                       item.status === "match" && styles.diffMatch,
@@ -259,15 +274,15 @@ export default function SpellingScreen() {
                 ))}
               </View>
             ) : (
-              <Body size={22} weight="bold" style={{ color: colors.hunter }}>
+              <Body size={type.title2} weight="bold" tone="strong">
                 {word.word}
               </Body>
             )}
-            <Body size={13}>{word.definition}</Body>
-            <Body size={13} style={styles.example}>
+            {showMeaning ? null : <Body size={type.footnote}>{word.definition}</Body>}
+            <Body size={type.footnote} tone="muted">
               “{word.example}”
             </Body>
-            <PillButton
+            <Button
               label={index + 1 >= words.length || lives <= 0 ? "See results" : "Next word"}
               icon={<ArrowRight color={colors.snow} size={16} />}
               onPress={next}
@@ -287,44 +302,32 @@ export default function SpellingScreen() {
               onSubmitEditing={submit}
               autoFocus
             />
-            <PillButton label="Check spelling" onPress={submit} disabled={typed.trim() === ""} />
-            <View style={styles.helpRow}>
-              <PillButton
+            <Button label="Check spelling" onPress={submit} disabled={typed.trim() === ""} />
+            <ActionRow>
+              <Button
                 label={revealed >= letters ? "All revealed" : "Reveal a letter"}
-                variant="ghost"
+                variant="tonal"
                 icon={<Lightbulb color={colors.hunter} size={16} />}
                 disabled={revealed >= letters}
-                onPress={() => {
-                  haptics.select();
-                  setRevealed((value) => value + 1);
-                }}
-                style={styles.helpButton}
+                onPress={() => setRevealed((value) => value + 1)}
               />
-              <PillButton
+              <Button
                 label={showMeaning ? "Meaning shown" : "Show meaning"}
-                variant="ghost"
+                variant="tonal"
                 disabled={showMeaning}
-                onPress={() => {
-                  haptics.select();
-                  setShowMeaning(true);
-                }}
-                style={styles.helpButton}
+                onPress={() => setShowMeaning(true)}
               />
-            </View>
-            <Body size={12} style={styles.footer}>
-              Hints are free to use but halve the points for this word.
+            </ActionRow>
+            <Body size={type.caption} tone="muted" style={styles.footer}>
+              A hint halves the points for this word.
             </Body>
           </>
         )}
-      </Screen>
-    </KeyboardAvoidingView>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  flex: {
-    flex: 1,
-  },
   prompt: {
     alignItems: "center",
     gap: spacing.md,
@@ -336,28 +339,27 @@ const styles = StyleSheet.create({
     color: colors.hunter,
     textAlign: "center",
   },
-  letters: {
-    color: colors.slate,
-  },
   verdict: {
     gap: spacing.sm,
   },
   diffRow: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 4,
+    gap: spacing.xs,
   },
   diffLetter: {
     fontFamily: fonts.kickerBold,
     fontSize: 24,
     minWidth: 22,
     textAlign: "center",
-    borderRadius: radii.panel,
-    paddingHorizontal: 4,
+    borderRadius: radii.tile,
+    paddingHorizontal: spacing.xs,
+    overflow: "hidden",
     color: colors.hunter,
   },
   diffMatch: {
     backgroundColor: colors.yellowGreen,
+    color: colors.ink,
   },
   diffWrong: {
     backgroundColor: colors.brick,
@@ -367,19 +369,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.platinum,
     color: colors.slate,
   },
-  example: {
-    fontStyle: "italic",
-  },
-  helpRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
-  },
-  helpButton: {
-    flex: 1,
-    paddingHorizontal: 10,
-  },
   footer: {
     textAlign: "center",
-    color: colors.slate,
   },
 });

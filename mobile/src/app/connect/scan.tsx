@@ -8,15 +8,18 @@ import { useRouter } from "expo-router";
 import { useCallback, useRef, useState } from "react";
 import { Linking, StyleSheet, View } from "react-native";
 
-import { Body, Card, Eyebrow, PillButton, Screen, Title } from "@/components/ui";
+import { Banner, Button, LoadingBlock, Screen, SectionHeader, TopBar } from "@/components/ui";
+import { haptics } from "@/lib/haptics";
 import { describeFailure, failureFromParseFailure, type ConnectionFailure } from "@/pairing/errors";
+import { useEnterAppWhenPaired } from "@/hooks/useEnterAppWhenPaired";
 import { useConnection } from "@/pairing/context";
 import { isPayloadExpired, parsePairingUri } from "@/pairing/protocol";
-import { colors, radii, spacing } from "@/theme/theme";
+import { colors, radii, type } from "@/theme/theme";
 
 export default function ScanScreen() {
   const router = useRouter();
   const { pair } = useConnection();
+  const enterApp = useEnterAppWhenPaired();
   const [permission, requestPermission] = useCameraPermissions();
   const [failure, setFailure] = useState<ConnectionFailure | null>(null);
   const [busy, setBusy] = useState(false);
@@ -35,11 +38,13 @@ export default function ScanScreen() {
       const parsed = parsePairingUri(data);
 
       if (!parsed.ok) {
+        haptics.warning();
         setFailure(failureFromParseFailure(parsed.reason));
         return;
       }
 
       if (isPayloadExpired(parsed.payload)) {
+        haptics.warning();
         setFailure("code_expired");
         return;
       }
@@ -48,24 +53,32 @@ export default function ScanScreen() {
       setBusy(true);
       setFailure(null);
 
-      const result = await pair(parsed.payload);
+      const result = await pair(parsed.payload).catch(() => ({
+        ok: false as const,
+        failure: "unknown" as const,
+      }));
 
       if (result.ok) {
-        router.replace("/");
+        haptics.success();
+        enterApp();
         return;
       }
 
+      haptics.error();
       claimed.current = false;
       setBusy(false);
       setFailure(result.failure);
     },
-    [busy, pair, router],
+    [busy, enterApp, pair],
   );
+
+  const back = router.canGoBack() ? <TopBar onBack={() => router.back()} /> : null;
 
   if (!permission) {
     return (
       <Screen>
-        <Body>Checking camera access…</Body>
+        {back}
+        <LoadingBlock rows={1} label="Checking camera access…" />
       </Screen>
     );
   }
@@ -76,26 +89,25 @@ export default function ScanScreen() {
 
     return (
       <Screen>
-        <View style={{ gap: spacing.lg }}>
-          <Eyebrow>Connect to my computer</Eyebrow>
-          <Title size={26}>{denied ? message.title : "Cadence needs the camera"}</Title>
-          <Body>{message.body}</Body>
-          <PillButton
-            label={denied ? "Open Settings" : "Allow camera"}
-            onPress={() => {
-              if (denied) {
-                void Linking.openSettings();
-              } else {
-                void requestPermission();
-              }
-            }}
-          />
-          <PillButton
-            label="Type the code instead"
-            variant="secondary"
-            onPress={() => router.push("/connect/manual")}
-          />
-        </View>
+        {back}
+        <SectionHeader
+          eyebrow="Connect to my computer"
+          title={denied ? message.title : "Cadence needs the camera"}
+          size={type.title2}
+          subtitle={message.body}
+        />
+        <Button
+          label={denied ? "Open Settings" : "Allow camera"}
+          onPress={() => {
+            if (denied) void Linking.openSettings();
+            else void requestPermission();
+          }}
+        />
+        <Button
+          label="Type the code instead"
+          variant="tonal"
+          onPress={() => router.push("/connect/manual")}
+        />
       </Screen>
     );
   }
@@ -104,57 +116,41 @@ export default function ScanScreen() {
 
   return (
     <Screen scroll={false}>
-      <View style={{ gap: spacing.lg, flex: 1 }}>
-        <View style={{ gap: spacing.sm }}>
-          <Eyebrow>Connect to my computer</Eyebrow>
-          <Title size={26}>Point at the code on your computer</Title>
-          <Body>
-            On your computer, open Cadence and choose Connect a Phone. A square
-            code will appear.
-          </Body>
-        </View>
+      {back}
+      <SectionHeader
+        eyebrow="Connect to my computer"
+        title="Point at the code on your computer"
+        size={type.title2}
+        subtitle="Open Cadence on your computer and choose Connect a Phone."
+      />
 
-        <View style={styles.viewfinder}>
-          <CameraView
-            style={StyleSheet.absoluteFill}
-            facing="back"
-            barcodeScannerSettings={{ barcodeTypes: ["qr"] }}
-            onBarcodeScanned={busy ? undefined : (event) => void onScanned(event)}
-          />
-        </View>
-
-        {busy ? (
-          <Card variant="cream">
-            <Body>Connecting to your computer…</Body>
-          </Card>
-        ) : failureMessage ? (
-          <Card variant="cream">
-            <View style={{ gap: spacing.sm }}>
-              <Title size={18}>{failureMessage.title}</Title>
-              <Body>{failureMessage.body}</Body>
-              {failureMessage.actionKind === "settings" ? (
-                <PillButton
-                  label="Open Settings"
-                  variant="secondary"
-                  onPress={() => void Linking.openSettings()}
-                />
-              ) : (
-                <PillButton
-                  label={failureMessage.action ?? "Try again"}
-                  variant="secondary"
-                  onPress={() => setFailure(null)}
-                />
-              )}
-            </View>
-          </Card>
-        ) : null}
-
-        <PillButton
-          label="Type the code instead"
-          variant="ghost"
-          onPress={() => router.push("/connect/manual")}
+      <View style={styles.viewfinder}>
+        <CameraView
+          style={StyleSheet.absoluteFill}
+          facing="back"
+          barcodeScannerSettings={{ barcodeTypes: ["qr"] }}
+          onBarcodeScanned={busy ? undefined : (event) => void onScanned(event)}
         />
       </View>
+
+      {busy ? (
+        <Banner tone="info" message="Connecting to your computer…" />
+      ) : failureMessage ? (
+        <Banner
+          tone="error"
+          message={`${failureMessage.title}. ${failureMessage.body}`}
+          actionLabel={failureMessage.actionKind === "settings" ? "Open Settings" : (failureMessage.action ?? "Try again")}
+          onAction={() =>
+            failureMessage.actionKind === "settings" ? void Linking.openSettings() : setFailure(null)
+          }
+        />
+      ) : null}
+
+      <Button
+        label="Type the code instead"
+        variant="tonal"
+        onPress={() => router.push("/connect/manual")}
+      />
     </Screen>
   );
 }
@@ -162,7 +158,7 @@ export default function ScanScreen() {
 const styles = StyleSheet.create({
   viewfinder: {
     flex: 1,
-    minHeight: 260,
+    minHeight: 220,
     borderRadius: radii.cardLarge,
     overflow: "hidden",
     backgroundColor: colors.carbon,

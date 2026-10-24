@@ -1,13 +1,13 @@
-import { Link } from "expo-router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
-import { KeyboardAvoidingView, Platform, StyleSheet, View } from "react-native";
+import { useRef, useState } from "react";
+import { StyleSheet, View, type TextInput } from "react-native";
 import { SvgXml } from "react-native-svg";
-import { Banner, Body, Card, PillButton, Screen, TextField, Title } from "@/components/ui";
+import { Banner, Body, Button, Card, Screen, TextField, TextLink, Title } from "@/components/ui";
 import { LOGO_GREEN_DARK } from "@/data/svg";
 import { describeAuthError } from "@/copy/auth-errors";
+import { haptics } from "@/lib/haptics";
 import { requireFirebaseAuth } from "@/lib/firebase";
-import { colors, spacing } from "@/theme/theme";
+import { spacing, type } from "@/theme/theme";
 
 const MIN_PASSWORD = 8;
 
@@ -16,6 +16,7 @@ export default function SignupScreen() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const passwordRef = useRef<TextInput>(null);
 
   const trimmedEmail = email.trim();
   const emailLooksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail);
@@ -31,6 +32,7 @@ export default function SignupScreen() {
       // moves on to onboarding, the same three questions the web app asks.
       await createUserWithEmailAndPassword(requireFirebaseAuth(), trimmedEmail, password);
     } catch (cause) {
+      haptics.error();
       setError(describeAuthError(cause, "Could not create your account. Try again."));
     } finally {
       setSubmitting(false);
@@ -40,63 +42,62 @@ export default function SignupScreen() {
   const missing = MIN_PASSWORD - password.length;
 
   return (
-    <Screen style={styles.center}>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
-        style={styles.column}>
-        <View style={styles.logoWrap}>
-          <SvgXml xml={LOGO_GREEN_DARK} width={180} height={44} />
-        </View>
-        <Card>
-          <Title size={24}>Create your account</Title>
-          <Body>Start training your pronunciation in minutes.</Body>
-          {error ? <Banner message={error} tone="error" /> : null}
-          <TextField
-            placeholder="Email"
-            autoCapitalize="none"
-            autoCorrect={false}
-            autoComplete="email"
-            textContentType="emailAddress"
-            keyboardType="email-address"
-            value={email}
-            onChangeText={setEmail}
-            editable={!submitting}
-          />
-          <TextField
-            placeholder={`Password (${MIN_PASSWORD}+ characters)`}
-            secureTextEntry
-            autoComplete="new-password"
-            textContentType="newPassword"
-            value={password}
-            onChangeText={setPassword}
-            editable={!submitting}
-          />
-          {password.length > 0 && !passwordLongEnough ? (
-            <Body size={12} style={{ color: colors.brick }}>
-              {missing} more {missing === 1 ? "character" : "characters"} to go.
-            </Body>
-          ) : null}
-          {trimmedEmail.length > 0 && !emailLooksValid ? (
-            <Body size={12} style={{ color: colors.brick }}>
-              That does not look like an email address yet.
-            </Body>
-          ) : null}
-          <PillButton
-            label="Create account"
-            loading={submitting}
-            disabled={!canSubmit}
-            onPress={handleSignUp}
-          />
-          <View style={styles.footerRow}>
-            <Body size={13}>Already have an account?</Body>
-            <Link href="/login">
-              <Body size={13} weight="semibold" style={{ color: colors.sage }}>
-                Sign in
-              </Body>
-            </Link>
-          </View>
-        </Card>
-      </KeyboardAvoidingView>
+    <Screen contentStyle={styles.center}>
+      <View style={styles.logoWrap}>
+        <SvgXml xml={LOGO_GREEN_DARK} width={160} height={40} />
+      </View>
+      <Card>
+        <Title size={type.title2}>Create your account</Title>
+        <Body size={type.callout} tone="muted">
+          Start training your pronunciation in minutes.
+        </Body>
+        {error ? <Banner message={error} tone="error" /> : null}
+        <TextField
+          label="Email"
+          placeholder="you@example.com"
+          autoCapitalize="none"
+          autoCorrect={false}
+          autoComplete="email"
+          textContentType="emailAddress"
+          keyboardType="email-address"
+          returnKeyType="next"
+          submitBehavior="submit"
+          onSubmitEditing={() => passwordRef.current?.focus()}
+          value={email}
+          onChangeText={setEmail}
+          editable={!submitting}
+        />
+        {trimmedEmail.length > 0 && !emailLooksValid ? (
+          <Body size={type.caption} tone="error">
+            That does not look like an email address yet.
+          </Body>
+        ) : null}
+        <TextField
+          ref={passwordRef}
+          label="Password"
+          placeholder={`At least ${MIN_PASSWORD} characters`}
+          secureTextEntry
+          autoComplete="new-password"
+          textContentType="newPassword"
+          returnKeyType="go"
+          onSubmitEditing={handleSignUp}
+          value={password}
+          onChangeText={setPassword}
+          editable={!submitting}
+        />
+        {password.length > 0 && !passwordLongEnough ? (
+          <Body size={type.caption} tone="error">
+            {missing} more {missing === 1 ? "character" : "characters"} to go.
+          </Body>
+        ) : null}
+        <Button label="Create account" loading={submitting} disabled={!canSubmit} onPress={handleSignUp} />
+      </Card>
+      <View style={styles.footerRow}>
+        <Body size={type.callout} tone="muted">
+          Already have an account?
+        </Body>
+        <TextLink label="Sign in" href="/login" />
+      </View>
     </Screen>
   );
 }
@@ -106,17 +107,15 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: "center",
   },
-  column: {
-    gap: spacing.xl,
-  },
   logoWrap: {
     alignItems: "center",
+    paddingVertical: spacing.sm,
   },
   footerRow: {
     flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    gap: spacing.sm,
-    marginTop: spacing.xs,
+    columnGap: spacing.sm,
   },
 });

@@ -1,23 +1,35 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { ArrowRight, Play } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
 import { ChoiceButton, type ChoiceState } from "@/components/games/ChoiceButton";
-import { GameTopBar } from "@/components/games/GameTopBar";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import { ScoreStrip } from "@/components/games/ScoreStrip";
 import { SpeakerButton } from "@/components/games/SpeakerButton";
-import { Banner, Body, Card, Chip, Eyebrow, InfoPanel, PillButton, Screen, SegmentedProgress } from "@/components/ui";
+import {
+  Banner,
+  Body,
+  Button,
+  Card,
+  Chip,
+  Eyebrow,
+  HorizontalPicker,
+  InfoPanel,
+  Screen,
+  SegmentedProgress,
+  TopBar,
+} from "@/components/ui";
+import { ServerBanner } from "@/components/status";
 import { MINIMAL_PAIRS, pairGroup } from "@/data/minimal-pairs";
 import { EMPTY_TALLY, accuracy, buildSoundRounds, tallyAnswer, type SoundRound } from "@/games/quiz";
 import { clockSeed, seededRng } from "@/games/random";
 import { useGameProgress } from "@/games/store";
 import { useExitGuard } from "@/hooks/useExitGuard";
 import { useServerStatus } from "@/hooks/useServerStatus";
-import { useWordAudio } from "@/hooks/useWordAudio";
+import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, spacing } from "@/theme/theme";
+import { colors, spacing, type } from "@/theme/theme";
 
 const ROUND_LENGTH = 10;
 const ALL = "all";
@@ -25,10 +37,13 @@ const ALL = "all";
 export default function SoundMatchScreen() {
   const params = useLocalSearchParams<{ group?: string }>();
   const { progress, recordRound } = useGameProgress();
-  const audio = useWordAudio();
+  const audio = useSpeech();
+  const { speak, prefetch } = audio;
   const server = useServerStatus();
 
-  const [groupKey, setGroupKey] = useState(() => (params.group && pairGroup(params.group) ? params.group : ALL));
+  const [groupKey, setGroupKey] = useState(() =>
+    params.group && pairGroup(params.group) ? params.group : ALL,
+  );
   const [rounds, setRounds] = useState<SoundRound[] | null>(null);
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -51,20 +66,19 @@ export default function SoundMatchScreen() {
   );
 
   // Each round plays its word as soon as it appears, and warms the next one.
+  const upcoming = rounds?.[index + 1];
   useEffect(() => {
     if (!round || finished) return;
     let cancelled = false;
     const roundId = round.id;
-    audio.speak(round.target).then((ok) => {
+    speak(round.target).then((ok) => {
       if (!cancelled && ok) setHeardFor(roundId);
     });
-    const upcoming = rounds?.[index + 1];
-    if (upcoming) audio.prefetch(upcoming.target);
+    if (upcoming) prefetch(upcoming.target);
     return () => {
       cancelled = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [round?.id, finished]);
+  }, [round, upcoming, finished, speak, prefetch]);
 
   const percent = useMemo(() => accuracy(tally.correct, tally.answered), [tally]);
 
@@ -124,52 +138,42 @@ export default function SoundMatchScreen() {
   if (rounds === null) {
     const chosen = groupKey === ALL ? null : pairGroup(groupKey);
     return (
-      <Screen edges={["top", "left", "right", "bottom"]}>
-        <GameTopBar eyebrow="Sound Match" title="Train your ear" onClose={() => router.back()} />
+      <Screen>
+        <TopBar closeLabel="Leave this game" eyebrow="Sound Match" title="Train your ear" onClose={() => router.back()} />
 
-        {!server.reachable && !server.checking ? (
-          <Banner
-            tone="error"
-            message={server.message ?? "Cadence can't reach the server, and this game needs it to read the words aloud."}
-            actionLabel={server.actionLabel ?? "Try again"}
-            onAction={server.refresh}
-          />
-        ) : null}
+        <ServerBanner />
 
         <Card>
           <Eyebrow>Pick a contrast</Eyebrow>
-          <Body size={13}>
-            You&apos;ll hear one word and choose which of the pair it was. Start with the sounds your
-            modules are working on.
+          <Body size={type.callout}>
+            You&apos;ll hear one word and pick which of the pair it was.
           </Body>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.chips}>
-            <Chip label="All sounds" status={groupKey === ALL ? "correct" : "neutral"} selected={groupKey === ALL} onPress={() => setGroupKey(ALL)} />
+          <HorizontalPicker
+            bleed={spacing.xl}
+            selectedIndex={groupKey === ALL ? 0 : MINIMAL_PAIRS.findIndex((group) => group.key === groupKey) + 1}>
+            <Chip label="All sounds" selected={groupKey === ALL} onPress={() => setGroupKey(ALL)} />
             {MINIMAL_PAIRS.map((group) => (
               <Chip
                 key={group.key}
                 label={group.label}
-                status={group.key === groupKey ? "correct" : "neutral"}
                 selected={group.key === groupKey}
-                onPress={() => {
-                  haptics.select();
-                  setGroupKey(group.key);
-                }}
+                onPress={() => setGroupKey(group.key)}
               />
             ))}
-          </ScrollView>
+          </HorizontalPicker>
           <InfoPanel>
-            <Body size={13}>
+            <Body size={type.footnote}>
               {chosen
                 ? chosen.blurb
                 : "A mix of every contrast: R and L, V and W, the two TH sounds, tricky vowels and more."}
             </Body>
             {chosen ? (
-              <Body size={12} style={styles.muted}>
+              <Body size={type.caption} tone="muted">
                 {chosen.pairs.map((pair) => `${pair[0]} / ${pair[1]}`).join(" · ")}
               </Body>
             ) : null}
           </InfoPanel>
-          <PillButton
+          <Button
             label={`Start · ${ROUND_LENGTH} rounds`}
             icon={<Play color={colors.snow} size={16} />}
             disabled={!server.reachable}
@@ -185,8 +189,8 @@ export default function SoundMatchScreen() {
 
   if (finished || !round) {
     return (
-      <Screen edges={["top", "left", "right", "bottom"]}>
-        <GameTopBar eyebrow={eyebrow} title="Round over" onClose={() => router.back()} />
+      <Screen>
+        <TopBar closeLabel="Leave this game" eyebrow={eyebrow} title="Round over" onClose={() => router.back()} />
         <RoundSummary
           accuracy={percent}
           isNewBest={tally.score > previousBest && tally.score > 0}
@@ -202,7 +206,8 @@ export default function SoundMatchScreen() {
           ]}
           onPlayAgain={playAgain}
           onDone={() => setRounds(null)}
-          playAgainLabel="Same contrast again"
+          doneLabel="Pick a contrast"
+          playAgainLabel="Same again"
         />
       </Screen>
     );
@@ -216,13 +221,13 @@ export default function SoundMatchScreen() {
   }
 
   return (
-    <Screen edges={["top", "left", "right", "bottom"]}>
-      <GameTopBar
+    <Screen>
+      <TopBar closeLabel="Leave this game"
         eyebrow={eyebrow}
         title={`Round ${index + 1} of ${rounds.length}`}
         onClose={() => router.back()}
-        trailing={<ScoreStrip score={tally.score} streak={tally.streak} />}
       />
+      <ScoreStrip score={tally.score} streak={tally.streak} />
       <SegmentedProgress total={rounds.length} currentIndex={index} />
 
       {audio.error ? (
@@ -238,7 +243,7 @@ export default function SoundMatchScreen() {
           label={heard ? "Hear it again" : "Play the word"}
           size={108}
         />
-        <Body size={13} style={styles.muted}>
+        <Body size={type.footnote} tone="muted">
           Which word did you hear?
         </Body>
       </Card>
@@ -250,7 +255,7 @@ export default function SoundMatchScreen() {
             label={word}
             state={stateFor(word)}
             disabled={answered && !heard}
-            onPress={() => (answered ? audio.speak(word) : choose(word))}
+            onPress={() => (answered ? audio.toggle(word) : choose(word))}
           />
         ))}
       </View>
@@ -261,17 +266,17 @@ export default function SoundMatchScreen() {
             <Eyebrow tone={correct ? undefined : colors.brick}>
               {correct ? "That's the one" : `It was “${round.target}”`}
             </Eyebrow>
-            <Body size={13}>Tap either word to hear it. Compare them back to back.</Body>
+            <Body size={type.footnote}>Tap either word to hear it again.</Body>
           </InfoPanel>
-          <PillButton
+          <Button
             label={index + 1 >= rounds.length ? "See results" : "Next"}
             icon={<ArrowRight color={colors.snow} size={16} />}
             onPress={next}
           />
         </>
       ) : (
-        <Body size={12} style={[styles.muted, styles.footer]}>
-          Not sure? Play it again before you choose — there&apos;s no penalty.
+        <Body size={type.caption} tone="muted" style={styles.footer}>
+          Not sure? Play it again first. There&apos;s no penalty.
         </Body>
       )}
     </Screen>
@@ -279,13 +284,6 @@ export default function SoundMatchScreen() {
 }
 
 const styles = StyleSheet.create({
-  chips: {
-    gap: spacing.sm,
-    paddingVertical: spacing.xs,
-  },
-  muted: {
-    color: colors.slate,
-  },
   prompt: {
     alignItems: "center",
     gap: spacing.md,

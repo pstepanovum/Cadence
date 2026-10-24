@@ -1,19 +1,17 @@
 import { router } from "expo-router";
-import { ArrowLeft, Volume2 } from "lucide-react-native";
-import { useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { getReferenceAudio } from "@/audio/reference-audio";
+import { Square, Volume2 } from "lucide-react-native";
+import { StyleSheet } from "react-native";
 import {
   Banner,
   Body,
+  Button,
+  buttonIconColor,
   Card,
   Eyebrow,
   InfoPanel,
   OptionRow,
-  PillButton,
-  RoundIconButton,
   Screen,
-  SectionHeader,
+  TopBar,
 } from "@/components/ui";
 import {
   useCoachVoice,
@@ -22,8 +20,8 @@ import {
   VOICE_GENDERS,
   VOICE_PITCHES,
 } from "@/hooks/useCoachVoice";
-import { usePlayback } from "@/hooks/usePlayback";
-import { colors, spacing } from "@/theme/theme";
+import { useSpeech } from "@/hooks/useSpeech";
+import { spacing, type } from "@/theme/theme";
 
 const SAMPLE_LINE = "Let's work on the way you say this sentence, one sound at a time.";
 
@@ -41,130 +39,93 @@ function options<T extends string>(values: readonly T[]) {
  */
 export default function CoachVoiceScreen() {
   const voice = useCoachVoice();
-  const playback = usePlayback();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const speech = useSpeech();
+  const playing = speech.activeText === SAMPLE_LINE;
 
-  async function playSample() {
-    if (playback.isPlaying || playback.isLoading) {
-      playback.stop();
-      return;
-    }
-    setError(null);
-    setLoading(true);
-    try {
-      const uri = await getReferenceAudio(SAMPLE_LINE, voice.instruct);
-      await playback.play(uri);
-    } catch (cause) {
-      setError(
-        cause instanceof Error
-          ? cause.message
-          : "Could not generate a sample in this voice right now.",
-      );
-    } finally {
-      setLoading(false);
-    }
+  function change(patch: Parameters<typeof voice.update>[0]) {
+    speech.stop();
+    voice.update(patch);
   }
 
   return (
     <Screen>
-      <View style={styles.backRow}>
-        <RoundIconButton accessibilityLabel="Back to profile" onPress={() => router.back()}>
-          <ArrowLeft color={colors.hunter} size={18} />
-        </RoundIconButton>
-        <Body weight="semibold" style={{ color: colors.hunter }}>
-          Profile
-        </Body>
-      </View>
-
-      <SectionHeader
-        eyebrow="Coach voice"
-        title="Choose how Cadence sounds"
-        subtitle="This voice reads target words, coach lines and lesson narration."
-      />
+      <TopBar onBack={() => router.back()} backLabel="Back to profile" eyebrow="Settings" title="Coach voice" />
+      <Body size={type.callout} tone="muted">
+        This voice reads target words, coach lines and lesson narration.
+      </Body>
 
       <Card>
         <InfoPanel>
           <Eyebrow>Current voice</Eyebrow>
-          <Body size={13} weight="semibold">
+          <Body size={type.footnote} weight="semibold">
             {voice.instruct}
           </Body>
         </InfoPanel>
-        {error ? <Banner message={error} tone="error" /> : null}
-        <PillButton
-          label={playback.isPlaying ? "Stop sample" : "Hear this voice"}
+        {speech.error ? <Banner message={speech.error} tone="error" /> : null}
+        <Button
+          label={playing ? "Stop sample" : "Hear this voice"}
           variant="secondary"
-          loading={loading}
-          icon={<Volume2 color={colors.hunter} size={16} />}
-          onPress={playSample}
+          loading={playing && speech.isLoading}
+          icon={
+            playing ? (
+              <Square color={buttonIconColor("secondary")} size={14} fill={buttonIconColor("secondary")} />
+            ) : (
+              <Volume2 color={buttonIconColor("secondary")} size={16} />
+            )
+          }
+          onPress={() => speech.toggle(SAMPLE_LINE)}
         />
       </Card>
 
-      <Card>
+      <Card style={styles.form}>
         <OptionRow
           label="Gender"
           options={options(VOICE_GENDERS)}
           value={voice.settings.gender}
-          onChange={(gender) => {
-            playback.stop();
-            voice.update({ gender });
-          }}
+          onChange={(gender) => change({ gender })}
         />
         <OptionRow
           label="Age"
           options={options(VOICE_AGES)}
           value={voice.settings.age}
-          onChange={(age) => {
-            playback.stop();
-            voice.update({ age });
-          }}
+          onChange={(age) => change({ age })}
         />
         <OptionRow
           label="Pitch"
           options={options(VOICE_PITCHES)}
           value={voice.settings.pitch}
-          onChange={(pitch) => {
-            playback.stop();
-            voice.update({ pitch });
-          }}
+          onChange={(pitch) => change({ pitch })}
         />
         <OptionRow
           label="Accent"
           options={options(VOICE_ACCENTS)}
           value={voice.settings.accent}
-          onChange={(accent) => {
-            playback.stop();
-            voice.update({ accent });
-          }}
+          onChange={(accent) => change({ accent })}
         />
       </Card>
 
-      <PillButton
+      <Button
         label="Reset to default"
-        variant="ghost"
+        variant="tonal"
         disabled={voice.isDefault}
         onPress={() => {
-          playback.stop();
+          speech.stop();
           voice.reset();
         }}
       />
 
-      <Body size={12} style={styles.note}>
-        Changing the voice clears the cached audio on this device, so the first clip in a new voice
-        takes a moment to generate.
+      <Body size={type.caption} tone="muted" style={styles.note}>
+        The first clip in a new voice takes a moment to generate.
       </Body>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  backRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.sm,
+  form: {
+    gap: spacing.xl,
   },
   note: {
     textAlign: "center",
-    color: colors.slate,
   },
 });

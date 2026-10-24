@@ -1,24 +1,15 @@
 import { router } from "expo-router";
 import { sendPasswordResetEmail } from "firebase/auth";
-import { ArrowLeft } from "lucide-react-native";
 import { useState } from "react";
-import { KeyboardAvoidingView, Platform, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SvgXml } from "react-native-svg";
-import {
-  Banner,
-  Body,
-  Card,
-  PillButton,
-  RoundIconButton,
-  Screen,
-  TextField,
-  Title,
-} from "@/components/ui";
+import { Banner, Body, Button, Card, Screen, TextField, Title, TopBar } from "@/components/ui";
 import { config } from "@/lib/config";
 import { LOGO_GREEN_DARK } from "@/data/svg";
 import { authErrorCode, describeAuthError } from "@/copy/auth-errors";
+import { haptics } from "@/lib/haptics";
 import { requireFirebaseAuth } from "@/lib/firebase";
-import { colors, spacing } from "@/theme/theme";
+import { spacing, type } from "@/theme/theme";
 
 async function sendResetEmail(email: string): Promise<void> {
   const auth = requireFirebaseAuth();
@@ -60,6 +51,7 @@ export default function ForgotPasswordScreen() {
         setSent(true);
         return;
       }
+      haptics.error();
       setError(describeAuthError(cause, "Could not send the reset email. Try again."));
     } finally {
       setSubmitting(false);
@@ -67,62 +59,45 @@ export default function ForgotPasswordScreen() {
   }
 
   return (
-    <Screen style={styles.center}>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
-        style={styles.column}>
-        <View style={styles.logoWrap}>
-          <SvgXml xml={LOGO_GREEN_DARK} width={180} height={44} />
-        </View>
-        <Card>
-          <View style={styles.headerRow}>
-            <RoundIconButton
-              accessibilityLabel="Back to sign in"
-              tone="cream"
-              onPress={() => router.back()}>
-              <ArrowLeft color={colors.hunter} size={18} />
-            </RoundIconButton>
-            <Title size={22}>Reset your password</Title>
-          </View>
-
-          {sent ? (
-            <>
-              <Banner
-                tone="success"
-                message={`If an account exists for ${trimmed}, a reset link is on its way. Open it on this phone or on your computer, set a new password, then come back and sign in.`}
-              />
-              <PillButton label="Back to sign in" onPress={() => router.back()} />
-            </>
-          ) : (
-            <>
-              <Body>
-                Enter the email you signed up with and we will send you a link to set a new
-                password.
-              </Body>
-              {error ? <Banner message={error} tone="error" /> : null}
-              <TextField
-                placeholder="Email"
-                autoCapitalize="none"
-                autoCorrect={false}
-                autoComplete="email"
-                textContentType="emailAddress"
-                keyboardType="email-address"
-                returnKeyType="go"
-                onSubmitEditing={handleReset}
-                value={email}
-                onChangeText={setEmail}
-                editable={!submitting}
-              />
-              <PillButton
-                label="Send reset link"
-                loading={submitting}
-                disabled={!trimmed}
-                onPress={handleReset}
-              />
-            </>
-          )}
-        </Card>
-      </KeyboardAvoidingView>
+    <Screen contentStyle={styles.center}>
+      <TopBar onBack={() => router.back()} backLabel="Back to sign in" />
+      <View style={styles.logoWrap}>
+        <SvgXml xml={LOGO_GREEN_DARK} width={160} height={40} />
+      </View>
+      <Card>
+        <Title size={type.title2}>Reset your password</Title>
+        {sent ? (
+          <>
+            <Banner
+              tone="success"
+              message={`If an account exists for ${trimmed}, a reset link is on its way. Set a new password, then sign in here.`}
+            />
+            <Button label="Back to sign in" onPress={() => router.back()} />
+          </>
+        ) : (
+          <>
+            <Body size={type.callout} tone="muted">
+              Enter the email you signed up with and we will send you a link to set a new password.
+            </Body>
+            {error ? <Banner message={error} tone="error" /> : null}
+            <TextField
+              label="Email"
+              placeholder="you@example.com"
+              autoCapitalize="none"
+              autoCorrect={false}
+              autoComplete="email"
+              textContentType="emailAddress"
+              keyboardType="email-address"
+              returnKeyType="go"
+              onSubmitEditing={handleReset}
+              value={email}
+              onChangeText={setEmail}
+              editable={!submitting}
+            />
+            <Button label="Send reset link" loading={submitting} disabled={!trimmed} onPress={handleReset} />
+          </>
+        )}
+      </Card>
     </Screen>
   );
 }
@@ -132,15 +107,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: "center",
   },
-  column: {
-    gap: spacing.xl,
-  },
   logoWrap: {
     alignItems: "center",
-  },
-  headerRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
+    paddingVertical: spacing.sm,
   },
 });

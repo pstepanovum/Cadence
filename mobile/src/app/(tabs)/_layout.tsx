@@ -1,22 +1,28 @@
 import { Tabs } from "expo-router";
-import { BookOpen, Gamepad2, House, MessagesSquare, Sparkles, UserRound } from "lucide-react-native";
+import { BookOpen, Gamepad2, House, MessagesSquare, Sparkles } from "lucide-react-native";
+import { haptics } from "@/lib/haptics";
 import { colors, fonts } from "@/theme/theme";
 
+// Five tabs, the iOS maximum. Profile and settings open from the Home header.
 export default function TabsLayout() {
   return (
     <Tabs
+      screenListeners={{ tabPress: () => haptics.select() }}
       screenOptions={{
         headerShown: false,
         sceneStyle: { backgroundColor: colors.cream },
         tabBarActiveTintColor: colors.hunter,
         tabBarInactiveTintColor: colors.slate,
+        // Like the system tab bar: labels stay put, and long-pressing a tab
+        // shows the large-content viewer for anyone using big text.
+        tabBarAllowFontScaling: false,
         tabBarStyle: {
           backgroundColor: colors.snow,
           borderTopColor: colors.alabaster,
         },
         tabBarLabelStyle: {
           fontFamily: fonts.bodySemiBold,
-          fontSize: 11,
+          fontSize: 12,
         },
       }}>
       <Tabs.Screen
@@ -34,13 +40,6 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="play"
-        options={{
-          title: "Play",
-          tabBarIcon: ({ color, size }) => <Gamepad2 color={color} size={size} />,
-        }}
-      />
-      <Tabs.Screen
         name="conversation"
         options={{
           title: "Talk",
@@ -55,10 +54,10 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="play"
         options={{
-          title: "Profile",
-          tabBarIcon: ({ color, size }) => <UserRound color={color} size={size} />,
+          title: "Play",
+          tabBarIcon: ({ color, size }) => <Gamepad2 color={color} size={size} />,
         }}
       />
     </Tabs>

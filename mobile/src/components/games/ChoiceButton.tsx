@@ -1,13 +1,13 @@
 import { Check, X } from "lucide-react-native";
 import { useState } from "react";
 import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
-import { colors, fonts, radii, spacing } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, shadows, spacing, type } from "@/theme/theme";
 
 export type ChoiceState = "idle" | "correct" | "wrong" | "dimmed";
 
 const palette: Record<ChoiceState, { bg: string; fg: string; sub: string; border: string }> = {
   idle: { bg: colors.snow, fg: colors.hunter, sub: colors.iron, border: "transparent" },
-  correct: { bg: colors.yellowGreen, fg: colors.hunter, sub: colors.hunter, border: colors.yellowGreen },
+  correct: { bg: colors.yellowGreen, fg: colors.ink, sub: colors.ink, border: colors.yellowGreen },
   wrong: { bg: colors.brick, fg: colors.snow, sub: "rgba(248,249,250,0.85)", border: colors.brick },
   dimmed: { bg: colors.snow, fg: colors.slate, sub: colors.slate, border: "transparent" },
 };
@@ -57,16 +57,24 @@ export function ChoiceButton({
         ]}>
         {badge ? (
           <View style={[styles.badge, state !== "idle" && state !== "dimmed" && styles.badgeOnColour]}>
-            <Text style={[styles.badgeText, { color: state === "wrong" ? colors.snow : colors.hunter }]}>
+            <Text
+              maxFontSizeMultiplier={maxScale.label}
+              style={[styles.badgeText, { color: state === "wrong" ? colors.snow : colors.hunter }]}>
               {badge}
             </Text>
           </View>
         ) : null}
         <View style={styles.body}>
-          <Text style={[styles.label, { color: tone.fg }]}>{label}</Text>
-          {sublabel ? <Text style={[styles.sublabel, { color: tone.sub }]}>{sublabel}</Text> : null}
+          <Text maxFontSizeMultiplier={maxScale.control} style={[styles.label, { color: tone.fg }]}>
+            {label}
+          </Text>
+          {sublabel ? (
+            <Text maxFontSizeMultiplier={maxScale.control} style={[styles.sublabel, { color: tone.sub }]}>
+              {sublabel}
+            </Text>
+          ) : null}
         </View>
-        {state === "correct" ? <Check color={colors.hunter} size={22} /> : null}
+        {state === "correct" ? <Check color={colors.ink} size={22} /> : null}
         {state === "wrong" ? <X color={colors.snow} size={22} /> : null}
       </Animated.View>
     </Pressable>
@@ -83,10 +91,11 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.lg,
     paddingHorizontal: spacing.lg,
     minHeight: 60,
+    boxShadow: shadows.card,
   },
   badge: {
-    width: 30,
-    height: 30,
+    width: 32,
+    height: 32,
     borderRadius: radii.pill,
     backgroundColor: colors.cream,
     alignItems: "center",
@@ -97,7 +106,7 @@ const styles = StyleSheet.create({
   },
   badgeText: {
     fontFamily: fonts.kicker,
-    fontSize: 13,
+    fontSize: type.footnote,
   },
   body: {
     flex: 1,
@@ -105,12 +114,12 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: fonts.bodySemiBold,
-    fontSize: 16,
+    fontSize: type.body + 1,
     lineHeight: 22,
   },
   sublabel: {
     fontFamily: fonts.body,
-    fontSize: 13,
+    fontSize: type.footnote,
     lineHeight: 18,
   },
 });

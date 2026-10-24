@@ -1,17 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SvgXml } from "react-native-svg";
-import {
-  Banner,
-  Body,
-  Card,
-  Eyebrow,
-  OptionRow,
-  PillButton,
-  Screen,
-  TextField,
-  Title,
-} from "@/components/ui";
+import { Banner, Body, Button, Card, Eyebrow, OptionRow, Screen, TextField, TextLink, Title } from "@/components/ui";
 import {
   PRACTICE_CADENCE_OPTIONS,
   PRACTICE_FOCUS_OPTIONS,
@@ -19,9 +8,9 @@ import {
   type PracticeCadence,
   type PracticeFocus,
 } from "@/context/auth";
-import { ILLUSTRATION_PROGRESS } from "@/data/svg";
 import { describeError } from "@/hooks/useServerStatus";
-import { spacing } from "@/theme/theme";
+import { haptics } from "@/lib/haptics";
+import { spacing, type } from "@/theme/theme";
 
 /**
  * First run. Mirrors the web app's onboarding: a name, what to work on, and how
@@ -49,8 +38,10 @@ export default function OnboardingScreen() {
         practiceCadence: cadence,
         onboardingCompleted: true,
       });
+      haptics.success();
       // The root navigator swaps to the tabs as soon as the flag lands.
     } catch (cause) {
+      haptics.error();
       setError(describeError(cause, "Could not save your answers. Try again."));
     } finally {
       setSaving(false);
@@ -59,68 +50,66 @@ export default function OnboardingScreen() {
 
   return (
     <Screen>
-      <Card variant="dark">
-        <Eyebrow onDark>Welcome to Cadence</Eyebrow>
-        <Title size={26} onDark>
-          Three quick questions, then you are practising.
-        </Title>
-        <Body size={13} onDark>
-          They shape what Cadence puts in front of you first. You can change any of them later from
-          your profile.
+      <View style={styles.intro}>
+        <Eyebrow>Welcome to Cadence</Eyebrow>
+        <Title size={type.title1}>Three quick questions</Title>
+        <Body size={type.callout} tone="muted">
+          They shape what you practise first. You can change them later in your profile.
         </Body>
-        <View style={styles.illustration}>
-          <SvgXml xml={ILLUSTRATION_PROGRESS} width={180} height={180} />
-        </View>
-      </Card>
+      </View>
 
-      {error ? <Banner message={error} tone="error" /> : null}
-
-      <Card>
+      <Card style={styles.form}>
         <TextField
           label="What should we call you?"
           placeholder="Your name"
           autoCapitalize="words"
           autoComplete="name"
+          returnKeyType="done"
           value={name}
           onChangeText={setName}
           editable={!saving}
         />
-      </Card>
-
-      <Card>
         <OptionRow
-          label="What do you want to focus on first?"
+          label="What do you want to work on first?"
           options={PRACTICE_FOCUS_OPTIONS}
           value={focus}
           onChange={setFocus}
         />
-      </Card>
-
-      <Card>
         <OptionRow
-          label="What kind of pace feels realistic?"
+          label="How much time feels realistic?"
           options={PRACTICE_CADENCE_OPTIONS}
           value={cadence}
           onChange={setCadence}
         />
       </Card>
 
-      <PillButton label="Open my dashboard" loading={saving} onPress={handleFinish} />
-      <PillButton
-        label="Sign out"
-        variant="ghost"
-        disabled={saving}
-        onPress={() => {
-          signOut();
-        }}
-      />
+      {error ? <Banner message={error} tone="error" /> : null}
+
+      <Button label="Start practising" loading={saving} onPress={handleFinish} />
+
+      <View style={styles.signOut}>
+        <Body size={type.footnote} tone="muted">
+          Wrong account?
+        </Body>
+        <TextLink label="Sign out" onPress={() => void signOut()} />
+      </View>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  illustration: {
+  form: {
+    gap: spacing.xl,
+  },
+  intro: {
+    gap: spacing.xs,
+    paddingTop: spacing.lg,
+  },
+  signOut: {
+    flexDirection: "row",
+    justifyContent: "center",
     alignItems: "center",
-    paddingTop: spacing.sm,
+    columnGap: spacing.sm,
+    marginTop: spacing.xl,
   },
 });

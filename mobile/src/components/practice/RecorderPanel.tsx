@@ -1,22 +1,21 @@
-import * as Haptics from "expo-haptics";
 import { Mic, Play, Settings, Square, Trash2, Volume2 } from "lucide-react-native";
 import { useCallback, useEffect, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
 import type { RecordedAudio } from "@/api/endpoints";
-import { getReferenceAudio, prefetchReferenceAudio } from "@/audio/reference-audio";
 import { formatElapsed } from "@/audio/take-machine";
-import { Banner, Body, InfoPanel, PillButton } from "@/components/ui";
-import { useCoachVoice } from "@/hooks/useCoachVoice";
+import { Body, Button, buttonIconColor, InfoPanel } from "@/components/ui";
 import { usePlayback } from "@/hooks/usePlayback";
+import { useSpeech } from "@/hooks/useSpeech";
 import { useTakeRecorder } from "@/hooks/useTakeRecorder";
-import { colors, fonts, radii, spacing } from "@/theme/theme";
+import { haptics } from "@/lib/haptics";
+import { colors, fonts, overlays, radii, shadows, spacing, type } from "@/theme/theme";
 
 interface RecorderPanelProps {
   /** Text whose TTS rendering "Hear target" plays. Omit to hide the button. */
   targetText?: string;
   /**
    * Handles the finished take. Throw to tell the panel the take failed — the
-   * status strip then says so instead of claiming everything is fine.
+   * status strip then says so. It is the one place a scoring error is shown.
    */
   onTake: (take: RecordedAudio) => Promise<void> | void;
   /** Blocks recording, e.g. while the scoring engine is still warming up. */
@@ -42,11 +41,11 @@ export function RecorderPanel({
 }: RecorderPanelProps) {
   const recorder = useTakeRecorder();
   const playback = usePlayback();
-  const { instruct } = useCoachVoice();
+  const speech = useSpeech();
+  const { prefetch: warm } = speech;
 
   const [take, setTake] = useState<RecordedAudio | null>(null);
-  const [ttsError, setTtsError] = useState<string | null>(null);
-  const [ttsLoading, setTtsLoading] = useState(false);
+  const [halo] = useState(() => new Animated.Value(1));
 
   // The web app flips its copy from "take" to "reply" once the target is a
   // phrase rather than a single word.
@@ -54,16 +53,29 @@ export function RecorderPanel({
   const noun = isPhrase ? "reply" : "take";
 
   useEffect(() => {
-    if (prefetch && targetText) prefetchReferenceAudio(targetText, instruct);
-  }, [prefetch, targetText, instruct]);
+    if (prefetch && targetText) warm(targetText);
+  }, [prefetch, targetText, warm]);
 
   // NOTE: callers pass `key={<target id>}` so a new word remounts the panel
   // and clears the previous take. That is deliberate — resetting state from an
   // effect here would render one frame of the old take against the new word.
 
+  const recording = recorder.isRecording;
+
+  // The halo follows the live input level so the learner can see the phone
+  // hears them. The meter updates ten times a second; the spring fills the gaps.
+  useEffect(() => {
+    Animated.spring(halo, {
+      toValue: recording ? 1 + recorder.level * 0.45 : 1,
+      useNativeDriver: true,
+      speed: 40,
+      bounciness: 0,
+    }).start();
+  }, [halo, recorder.level, recording]);
+
   const handlePress = useCallback(async () => {
     if (recorder.isRecording) {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+      haptics.thud();
       const finished = await recorder.toggle();
       if (!finished) return;
       setTake(finished);
@@ -71,6 +83,7 @@ export function RecorderPanel({
         await onTake(finished);
         recorder.settle();
       } catch (cause) {
+        haptics.error();
         recorder.settle(
           cause instanceof Error ? cause.message : "That take could not be scored. Try again.",
         );
@@ -79,33 +92,11 @@ export function RecorderPanel({
     }
 
     playback.stop();
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+    speech.stop();
+    haptics.thud();
     setTake(null);
-    setTtsError(null);
     await recorder.toggle();
-  }, [onTake, playback, recorder]);
-
-  async function hearTarget() {
-    if (!targetText) return;
-    if (playback.isPlaying || playback.isLoading) {
-      playback.stop();
-      return;
-    }
-    setTtsError(null);
-    setTtsLoading(true);
-    try {
-      const uri = await getReferenceAudio(targetText, instruct);
-      await playback.play(uri);
-    } catch (cause) {
-      setTtsError(
-        cause instanceof Error
-          ? cause.message
-          : "Could not load the reference audio. Check your connection.",
-      );
-    } finally {
-      setTtsLoading(false);
-    }
-  }
+  }, [onTake, playback, recorder, speech]);
 
   const hint = recorder.hint({
     fallback: disabled
@@ -117,18 +108,16 @@ export function RecorderPanel({
     hasTake: take !== null,
   });
 
-  const recording = recorder.isRecording;
   const buttonDisabled = disabled || recorder.busy;
-  // The halo tracks the live input level, so the learner can see it hears them.
-  const haloScale = 1 + recorder.level * 0.45;
+  const hearingTarget = targetText !== undefined && speech.activeText === targetText;
+  const statusText = speech.error && !recording ? speech.error : hint.text;
+  const statusIsError = hint.tone === "error" || (speech.error !== null && !recording);
 
   return (
     <View style={styles.container}>
-      {ttsError ? <Banner message={ttsError} tone="error" /> : null}
-
       <View style={styles.buttonWrap}>
         {recording ? (
-          <View pointerEvents="none" style={[styles.halo, { transform: [{ scale: haloScale }] }]} />
+          <Animated.View pointerEvents="none" style={[styles.halo, { transform: [{ scale: halo }] }]} />
         ) : null}
         <Pressable
           accessibilityRole="button"
@@ -139,44 +128,53 @@ export function RecorderPanel({
           style={({ pressed }) => [
             styles.recordButton,
             { backgroundColor: recording ? colors.brick : colors.hunter },
-            buttonDisabled && { opacity: 0.5 },
-            pressed && { transform: [{ scale: 0.96 }] },
+            buttonDisabled && styles.recordDisabled,
+            pressed && styles.recordPressed,
           ]}>
           {recording ? (
             <Square color={colors.snow} size={28} fill={colors.snow} />
           ) : (
-            <Mic color={colors.snow} size={30} />
+            <Mic color={colors.snow} size={32} />
           )}
         </Pressable>
       </View>
 
-      {recording ? <Text style={styles.timer}>{formatElapsed(recorder.elapsedMs)}</Text> : null}
+      {recording ? (
+        <Text maxFontSizeMultiplier={1.4} style={styles.timer}>
+          {formatElapsed(recorder.elapsedMs)}
+        </Text>
+      ) : null}
 
       <View style={styles.actionsRow}>
         {targetText ? (
-          <PillButton
-            label={playback.isPlaying ? "Stop target" : "Hear target"}
+          <Button
+            label={hearingTarget ? "Stop" : "Hear target"}
             variant="secondary"
-            loading={ttsLoading}
+            loading={hearingTarget && speech.isLoading}
             disabled={recording}
-            icon={<Volume2 color={colors.hunter} size={16} />}
-            onPress={hearTarget}
+            icon={<Volume2 color={buttonIconColor("secondary")} size={16} />}
+            onPress={() => speech.toggle(targetText)}
+            style={styles.smallButton}
           />
         ) : null}
         {take ? (
           <>
-            <PillButton
+            <Button
               label={playback.playingUri === take.uri ? `Stop ${noun}` : `Play my ${noun}`}
-              variant="ghost"
+              variant="tonal"
               disabled={recording}
               icon={<Play color={colors.hunter} size={16} />}
-              onPress={() =>
-                playback.playingUri === take.uri ? playback.stop() : playback.play(take.uri)
-              }
+              onPress={() => {
+                speech.stop();
+                if (playback.playingUri === take.uri) playback.stop();
+                else void playback.play(take.uri);
+              }}
+              style={styles.smallButton}
             />
-            <PillButton
-              label={`Clear ${noun}`}
-              variant="ghost"
+            <Button
+              label="Clear"
+              variant="tonal"
+              accessibilityLabel={`Clear this ${noun}`}
               disabled={recording}
               icon={<Trash2 color={colors.hunter} size={16} />}
               onPress={() => {
@@ -184,22 +182,23 @@ export function RecorderPanel({
                 setTake(null);
                 recorder.reset();
               }}
+              style={styles.smallButton}
             />
           </>
         ) : null}
       </View>
 
-      <InfoPanel style={styles.status}>
+      <InfoPanel tone="white" style={styles.status}>
         <Body
-          size={13}
-          weight={hint.tone === "neutral" ? "regular" : "semibold"}
-          style={[styles.statusText, hint.tone === "error" && { color: colors.brick }]}>
-          {hint.text}
+          size={type.footnote}
+          weight={hint.tone === "neutral" && !statusIsError ? "regular" : "semibold"}
+          tone={statusIsError ? "error" : "default"}
+          style={styles.statusText}>
+          {statusText}
         </Body>
         {hint.showSettingsLink ? (
-          <PillButton
+          <Button
             label="Open Settings"
-            variant="primary"
             icon={<Settings color={colors.snow} size={16} />}
             onPress={recorder.openSettings}
             style={styles.settingsButton}
@@ -216,8 +215,8 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   buttonWrap: {
-    width: 112,
-    height: 112,
+    width: 120,
+    height: 120,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -226,7 +225,7 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: radii.pill,
-    backgroundColor: "rgba(188,71,73,0.22)",
+    backgroundColor: overlays.brickHalo,
   },
   recordButton: {
     width: 88,
@@ -234,11 +233,19 @@ const styles = StyleSheet.create({
     borderRadius: radii.pill,
     alignItems: "center",
     justifyContent: "center",
+    boxShadow: shadows.raised,
+  },
+  recordDisabled: {
+    opacity: 0.45,
+    boxShadow: undefined,
+  },
+  recordPressed: {
+    transform: [{ scale: 0.95 }],
   },
   timer: {
     fontFamily: fonts.bodyBold,
-    fontSize: 15,
-    color: colors.brick,
+    fontSize: type.body,
+    color: colors.brickText,
     fontVariant: ["tabular-nums"],
   },
   actionsRow: {
@@ -246,6 +253,10 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center",
     gap: spacing.sm,
+  },
+  smallButton: {
+    minHeight: 44,
+    paddingVertical: spacing.sm,
   },
   status: {
     alignSelf: "stretch",

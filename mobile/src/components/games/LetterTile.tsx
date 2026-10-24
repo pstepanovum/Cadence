@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
-import { colors, fonts, radii } from "@/theme/theme";
+import { colors, fonts, radii, shadows, TAP_TARGET } from "@/theme/theme";
 
 export type TileState = "pool" | "placed" | "correct" | "wrong" | "empty" | "ghost";
 
 const palette: Record<TileState, { bg: string; fg: string; border: string }> = {
-  pool: { bg: colors.snow, fg: colors.hunter, border: "transparent" },
+  pool: { bg: colors.white, fg: colors.hunter, border: colors.alabaster },
   placed: { bg: colors.cream, fg: colors.hunter, border: colors.yellowGreen },
-  correct: { bg: colors.yellowGreen, fg: colors.hunter, border: colors.yellowGreen },
+  correct: { bg: colors.yellowGreen, fg: colors.ink, border: colors.yellowGreen },
   wrong: { bg: colors.brick, fg: colors.snow, border: colors.brick },
   /** A slot waiting for a letter. */
   empty: { bg: "transparent", fg: colors.paleSlate, border: colors.paleSlate },
@@ -19,7 +19,7 @@ const palette: Record<TileState, { bg: string; fg: string; border: string }> = {
 export function LetterTile({
   letter,
   state = "pool",
-  size = 44,
+  size = TAP_TARGET,
   onPress,
 }: {
   letter: string;
@@ -47,8 +47,9 @@ export function LetterTile({
           borderStyle: state === "empty" || state === "ghost" ? "dashed" : "solid",
           transform: [{ scale }],
         },
+        state === "pool" && styles.lifted,
       ]}>
-      <Text style={[styles.letter, { color: tone.fg, fontSize: size * 0.5 }]}>
+      <Text allowFontScaling={false} style={[styles.letter, { color: tone.fg, fontSize: size * 0.5 }]}>
         {state === "empty" || state === "ghost" ? "" : letter.toUpperCase()}
       </Text>
     </Animated.View>
@@ -70,12 +71,18 @@ export function LetterTile({
 
 const styles = StyleSheet.create({
   tile: {
-    borderRadius: radii.panel,
+    borderRadius: radii.tile,
     borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",
   },
+  lifted: {
+    boxShadow: shadows.card,
+  },
+  // Full width: measured on its own, a narrow glyph such as "I" got no room.
   letter: {
+    alignSelf: "stretch",
+    textAlign: "center",
     fontFamily: fonts.kickerBold,
   },
 });

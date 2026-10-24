@@ -1,6 +1,7 @@
 import { Volume2 } from "lucide-react-native";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
-import { colors, fonts, radii } from "@/theme/theme";
+import { haptics } from "@/lib/haptics";
+import { colors, fonts, maxScale, radii, shadows, spacing, type } from "@/theme/theme";
 
 /**
  * The big "hear it" control. Large on purpose: in Spelling Bee and Sound Match
@@ -28,24 +29,30 @@ export function SpeakerButton({
         accessibilityLabel={label}
         accessibilityState={{ disabled, busy: loading }}
         disabled={disabled}
-        onPress={onPress}
+        onPress={() => {
+          haptics.tap();
+          onPress();
+        }}
         style={({ pressed }) => [
           styles.button,
           {
             width: size,
             height: size,
             backgroundColor: playing ? colors.yellowGreen : colors.hunter,
+            boxShadow: disabled ? undefined : shadows.raised,
             opacity: disabled ? 0.5 : pressed ? 0.85 : 1,
             transform: [{ scale: pressed ? 0.95 : 1 }],
           },
         ]}>
         {loading ? (
-          <ActivityIndicator color={playing ? colors.hunter : colors.snow} />
+          <ActivityIndicator color={playing ? colors.ink : colors.snow} />
         ) : (
-          <Volume2 color={playing ? colors.hunter : colors.snow} size={size * 0.4} />
+          <Volume2 color={playing ? colors.ink : colors.snow} size={size * 0.4} />
         )}
       </Pressable>
-      <Text style={styles.label}>{playing ? "Playing…" : label}</Text>
+      <Text maxFontSizeMultiplier={maxScale.control} style={styles.label}>
+        {playing ? "Playing…" : label}
+      </Text>
     </View>
   );
 }
@@ -53,7 +60,7 @@ export function SpeakerButton({
 const styles = StyleSheet.create({
   wrap: {
     alignItems: "center",
-    gap: 8,
+    gap: spacing.sm,
   },
   button: {
     borderRadius: radii.pill,
@@ -62,7 +69,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: fonts.bodySemiBold,
-    fontSize: 13,
+    fontSize: type.footnote,
     color: colors.hunter,
   },
 });

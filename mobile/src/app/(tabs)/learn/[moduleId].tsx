@@ -1,25 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link, router, useLocalSearchParams } from "expo-router";
-import { ArrowLeft, BookOpenText, GraduationCap, Lock, Mic2 } from "lucide-react-native";
+import { BookOpenText, GraduationCap, Lock, Mic2 } from "lucide-react-native";
 import { Pressable, StyleSheet, View } from "react-native";
 import { getLessons, getModules } from "@/api/endpoints";
 import type { LessonWithSummary } from "@/api/types";
 import {
-  Banner,
   Body,
   Card,
   Chip,
   Eyebrow,
   ProgressRing,
-  RoundIconButton,
   Screen,
   ScreenState,
-  SectionHeader,
-  StatTile,
   Title,
+  TopBar,
   pressedCard,
 } from "@/components/ui";
 import { ILLUSTRATION_PROGRESS } from "@/data/svg";
+import { useRefresh } from "@/hooks/useRefresh";
 import { describeError } from "@/hooks/useServerStatus";
 import {
   isCleared,
@@ -29,7 +27,7 @@ import {
   nextLesson,
 } from "@/practice/progression";
 import { normalizeScore } from "@/practice/scoring";
-import { colors, overlays, spacing } from "@/theme/theme";
+import { colors, overlays, radii, spacing, type } from "@/theme/theme";
 
 export default function ModuleLessonsScreen() {
   const { moduleId } = useLocalSearchParams<{ moduleId: string }>();
@@ -41,60 +39,40 @@ export default function ModuleLessonsScreen() {
     queryFn: () => getLessons(numericModuleId),
     enabled: Number.isFinite(numericModuleId),
   });
+  const { refreshing, onRefresh } = useRefresh(() => lessonsQuery.refetch());
 
   const module = modulesQuery.data?.find((item) => item.id === numericModuleId);
   const lessons = lessonsQuery.data ?? [];
   const upNext = nextLesson(lessons);
   const completion = moduleCompletion(lessons);
+  const firstLocked = lessons.find((lesson) => !isLessonUnlocked(lessons, lesson.id));
 
   return (
-    <Screen refreshing={lessonsQuery.isFetching} onRefresh={() => lessonsQuery.refetch()}>
-      <View style={styles.backRow}>
-        <RoundIconButton accessibilityLabel="Back to all modules" onPress={() => router.back()}>
-          <ArrowLeft color={colors.hunter} size={18} />
-        </RoundIconButton>
-        <Body weight="semibold" style={{ color: colors.hunter }}>
-          All modules
-        </Body>
-      </View>
-
-      <SectionHeader
+    <Screen tab refreshing={refreshing} onRefresh={onRefresh}>
+      <TopBar
+        onBack={() => router.back()}
+        backLabel="Back to modules"
         eyebrow={module ? `Module ${module.sort_order}` : "Module"}
         title={module?.title ?? "Lessons"}
-        size={26}
-        subtitle={module?.description ?? "Theory first, then practice, then the exam."}
       />
 
-      {module ? (
-        <Card variant="dark">
-          <View style={styles.summaryRow}>
-            <ProgressRing score={completion} size={88} strokeWidth={7} onDark label={`${completion}%`} />
-            <View style={styles.summaryText}>
-              <Eyebrow onDark>Lesson path</Eyebrow>
-              <Title size={18} onDark>
-                {upNext ? "Keep going" : "Module complete"}
-              </Title>
-              <Body size={12} onDark>
-                {lessons.filter(isCleared).length} of {lessons.length} lessons cleared.
-              </Body>
-            </View>
-          </View>
-          <View style={styles.statsRow}>
-            <StatTile
-              tone="translucent"
-              label="Theory"
-              value={String(lessons.filter((l) => l.lesson_type === "theory").length)}
-            />
-            <StatTile
-              tone="translucent"
-              label="Practice"
-              value={String(lessons.filter((l) => l.lesson_type === "practice").length)}
-            />
-            <StatTile
-              tone="translucent"
-              label="Exam"
-              value={String(lessons.filter((l) => l.lesson_type === "exam").length)}
-            />
+      {module?.description ? (
+        <Body size={type.callout} tone="muted">
+          {module.description}
+        </Body>
+      ) : null}
+
+      {module && lessons.length > 0 ? (
+        <Card variant="dark" style={styles.summary}>
+          <ProgressRing score={completion} size={80} strokeWidth={7} onDark label={`${completion}%`} />
+          <View style={styles.summaryText}>
+            <Eyebrow onDark>Lesson path</Eyebrow>
+            <Title size={type.headline} onDark>
+              {!upNext ? "Module complete" : lessons.some(isCleared) ? "Keep going" : "Start here"}
+            </Title>
+            <Body size={type.footnote} onDark tone="muted">
+              {lessons.filter(isCleared).length} of {lessons.length} lessons cleared
+            </Body>
           </View>
         </Card>
       ) : null}
@@ -103,26 +81,28 @@ export default function ModuleLessonsScreen() {
         isLoading={lessonsQuery.isLoading}
         isError={lessonsQuery.isError}
         errorMessage={describeError(lessonsQuery.error, "Could not load the lessons.")}
-        onRetry={() => lessonsQuery.refetch()}
+        onRetry={() => void lessonsQuery.refetch()}
         isEmpty={lessons.length === 0}
         loadingRows={3}
         empty={{
           title: "No lessons here yet",
-          message:
-            "This module has no published lessons. Pull down to check again, or head back and pick another module.",
+          message: "This module has no lessons yet. Pull down to check again.",
           illustration: ILLUSTRATION_PROGRESS,
           actionLabel: "All modules",
           onAction: () => router.back(),
         }}>
-        {lessons.map((lesson) => (
-          <LessonRow
-            key={lesson.id}
-            lesson={lesson}
-            lessons={lessons}
-            moduleId={numericModuleId}
-            isNext={upNext?.id === lesson.id}
-          />
-        ))}
+        <View style={styles.list}>
+          {lessons.map((lesson) => (
+            <LessonRow
+              key={lesson.id}
+              lesson={lesson}
+              lessons={lessons}
+              moduleId={numericModuleId}
+              isNext={upNext?.id === lesson.id}
+              showLockReason={firstLocked?.id === lesson.id}
+            />
+          ))}
+        </View>
       </ScreenState>
     </Screen>
   );
@@ -133,68 +113,62 @@ function LessonRow({
   lessons,
   moduleId,
   isNext,
+  showLockReason,
 }: {
   lesson: LessonWithSummary;
   lessons: LessonWithSummary[];
   moduleId: number;
   isNext: boolean;
+  showLockReason: boolean;
 }) {
-  const unlocked = isLessonUnlocked(lessons, lesson.id);
-  const locked = !unlocked;
+  const locked = !isLessonUnlocked(lessons, lesson.id);
   const cleared = isCleared(lesson);
   const summary = lesson.session_summary;
 
   const Icon =
-    lesson.lesson_type === "theory"
-      ? BookOpenText
-      : lesson.lesson_type === "exam"
-        ? GraduationCap
-        : Mic2;
+    lesson.lesson_type === "theory" ? BookOpenText : lesson.lesson_type === "exam" ? GraduationCap : Mic2;
 
-  const subtitle =
-    lesson.lesson_type === "theory"
+  const subtitle = locked
+    ? showLockReason
+      ? (lockReason(lessons, lesson.id) ?? "Locked for now.")
+      : "Locked"
+    : lesson.lesson_type === "theory"
       ? "Theory"
       : lesson.lesson_type === "exam"
-        ? "Exam · pass with 70 to unlock the next module"
+        ? "Exam · pass with 70"
         : `Practice · ${lesson.words.length} ${lesson.words.length === 1 ? "word" : "words"}`;
 
   const card = (
-    <Card
-      style={[
-        styles.lessonCard,
-        locked && styles.lockedCard,
-        isNext && styles.nextCard,
-      ]}>
-      <View style={styles.lessonRow}>
-        <View style={[styles.lessonIcon, locked && { backgroundColor: colors.platinum }]}>
-          {locked ? (
-            <Lock color={colors.slate} size={18} />
-          ) : (
-            <Icon color={colors.hunter} size={20} />
-          )}
-        </View>
-        <View style={styles.lessonBody}>
-          <Title size={16}>{lesson.title}</Title>
-          <Body size={12}>{subtitle}</Body>
-        </View>
-        {cleared ? (
-          <Chip label="Passed" status="correct" />
-        ) : summary?.best_score != null ? (
-          <Chip
-            label={`Best ${normalizeScore(summary.best_score)}`}
-            status={summary.best_score >= 50 ? "mixed" : "needs-work"}
-          />
-        ) : isNext ? (
-          <Chip label="Next up" status="accent" />
-        ) : null}
+    <Card style={[styles.lessonCard, locked && styles.lockedCard, isNext && styles.nextCard]}>
+      <View style={[styles.lessonIcon, locked && styles.lessonIconLocked]}>
+        {locked ? <Lock color={colors.slate} size={18} /> : <Icon color={colors.hunter} size={20} />}
       </View>
-      {locked ? (
-        <Banner tone="info" message={lockReason(lessons, lesson.id) ?? "Locked for now."} />
+      <View style={styles.lessonBody}>
+        <Title size={type.headline}>{lesson.title}</Title>
+        <Body size={type.footnote} tone="muted">
+          {subtitle}
+        </Body>
+      </View>
+      {cleared ? (
+        <Chip label="Passed" status="correct" />
+      ) : summary?.best_score != null ? (
+        <Chip
+          label={`Best ${normalizeScore(summary.best_score)}`}
+          status={summary.best_score >= 50 ? "mixed" : "needs-work"}
+        />
+      ) : isNext ? (
+        <Chip label="Next up" status="accent" />
       ) : null}
     </Card>
   );
 
-  if (locked) return card;
+  if (locked) {
+    return (
+      <View accessible accessibilityLabel={`${lesson.title}. ${subtitle}`}>
+        {card}
+      </View>
+    );
+  }
 
   return (
     <Link
@@ -214,27 +188,23 @@ function LessonRow({
 }
 
 const styles = StyleSheet.create({
-  backRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.sm,
-  },
-  summaryRow: {
+  summary: {
     flexDirection: "row",
     alignItems: "center",
     gap: spacing.lg,
   },
   summaryText: {
     flex: 1,
-    gap: spacing.xs,
+    gap: spacing.xxs,
   },
-  statsRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
+  list: {
+    gap: spacing.md,
   },
   lessonCard: {
-    paddingVertical: spacing.lg,
+    flexDirection: "row",
+    alignItems: "center",
     gap: spacing.md,
+    padding: spacing.lg,
   },
   nextCard: {
     borderWidth: 2,
@@ -242,22 +212,21 @@ const styles = StyleSheet.create({
   },
   lockedCard: {
     backgroundColor: overlays.locked,
-  },
-  lessonRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
+    boxShadow: undefined,
   },
   lessonIcon: {
     width: 44,
     height: 44,
-    borderRadius: 999,
+    borderRadius: radii.pill,
     backgroundColor: colors.cream,
     alignItems: "center",
     justifyContent: "center",
   },
+  lessonIconLocked: {
+    backgroundColor: colors.platinum,
+  },
   lessonBody: {
     flex: 1,
-    gap: 2,
+    gap: spacing.xxs,
   },
 });

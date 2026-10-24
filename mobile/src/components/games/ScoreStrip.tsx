@@ -1,6 +1,6 @@
 import { Flame, Heart } from "lucide-react-native";
 import { StyleSheet, Text, View } from "react-native";
-import { colors, fonts, radii, spacing } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, type } from "@/theme/theme";
 
 /**
  * Score, combo and lives in one compact row. Lives are drawn as hearts so a
@@ -22,16 +22,22 @@ export function ScoreStrip({
   return (
     <View style={styles.row} accessibilityRole="summary">
       <View style={[styles.pill, styles.scorePill]}>
-        <Text style={styles.scoreLabel}>Score</Text>
-        <Text style={styles.scoreValue}>{score}</Text>
+        <Text maxFontSizeMultiplier={maxScale.label} style={styles.scoreLabel}>
+          Score
+        </Text>
+        <Text maxFontSizeMultiplier={maxScale.label} style={styles.scoreValue}>
+          {score}
+        </Text>
       </View>
 
       {streak !== undefined ? (
         <View
           style={[styles.pill, hot && styles.hotPill]}
           accessibilityLabel={`${streak} in a row`}>
-          <Flame color={hot ? colors.hunter : colors.slate} size={14} />
-          <Text style={[styles.pillText, hot && { color: colors.hunter }]}>×{streak}</Text>
+          <Flame color={hot ? colors.ink : colors.slate} size={14} />
+          <Text maxFontSizeMultiplier={maxScale.label} style={[styles.pillText, hot && styles.hotText]}>
+            ×{streak}
+          </Text>
         </View>
       ) : null}
 
@@ -60,37 +66,40 @@ const styles = StyleSheet.create({
   pill: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 4,
+    gap: spacing.xs,
     borderRadius: radii.pill,
-    backgroundColor: colors.snow,
-    paddingHorizontal: 12,
-    minHeight: 34,
+    backgroundColor: colors.white,
+    paddingHorizontal: spacing.md,
+    minHeight: 32,
   },
   scorePill: {
     backgroundColor: colors.hunter,
-    gap: 6,
   },
   scoreLabel: {
     fontFamily: fonts.bodyMedium,
-    fontSize: 11,
-    color: "rgba(248,249,250,0.75)",
+    fontSize: type.caption,
+    color: colors.onDarkMuted,
   },
   scoreValue: {
     fontFamily: fonts.bodyBold,
-    fontSize: 15,
+    fontSize: type.body,
     color: colors.snow,
+    fontVariant: ["tabular-nums"],
   },
   hotPill: {
     backgroundColor: colors.yellowGreen,
   },
   pillText: {
     fontFamily: fonts.bodySemiBold,
-    fontSize: 13,
+    fontSize: type.footnote,
     color: colors.slate,
+  },
+  hotText: {
+    color: colors.ink,
   },
   hearts: {
     flexDirection: "row",
-    gap: 2,
+    gap: spacing.xxs,
     marginLeft: "auto",
   },
 });

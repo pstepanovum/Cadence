@@ -1,200 +1,184 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { router, useLocalSearchParams, useNavigation } from "expo-router";
-import { ArrowRight, Pause, Play, RotateCcw, X } from "lucide-react-native";
+import { router, useLocalSearchParams } from "expo-router";
+import { ArrowRight, RotateCcw } from "lucide-react-native";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Alert, StyleSheet, View } from "react-native";
-import { SvgXml } from "react-native-svg";
+import { StyleSheet } from "react-native";
 import {
   assess,
   getConversationModules,
   saveConversationResult,
   type RecordedAudio,
 } from "@/api/endpoints";
-import type { ConversationTurn, PronunciationAssessment } from "@/api/types";
+import type { ConversationModuleWithProgress, ConversationTurn, PronunciationAssessment } from "@/api/types";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
-import { getReferenceAudio, prefetchReferenceAudio } from "@/audio/reference-audio";
 import { AssessmentView } from "@/components/practice/AssessmentView";
+import { CoachBubble, ReplyPanel } from "@/components/practice/CoachBubble";
 import { RecorderPanel } from "@/components/practice/RecorderPanel";
+import { ResultSummary } from "@/components/practice/ResultSummary";
+import { ReadinessBanner } from "@/components/status";
 import {
+  ActionRow,
   Banner,
   Body,
+  Button,
   Card,
-  Chip,
   Eyebrow,
   InfoPanel,
-  PillButton,
-  ProgressRing,
-  RoundIconButton,
   Screen,
   ScreenState,
   SegmentedProgress,
-  StatTile,
-  Title,
+  TopBar,
 } from "@/components/ui";
-import { ILLUSTRATION_SUCCESS } from "@/data/svg";
-import { useCoachVoice } from "@/hooks/useCoachVoice";
 import { useAssessReadiness } from "@/hooks/useEngineReadiness";
-import { usePlayback } from "@/hooks/usePlayback";
+import { useExitGuard } from "@/hooks/useExitGuard";
 import { describeError } from "@/hooks/useServerStatus";
+import { speechStateFor, useSpeech } from "@/hooks/useSpeech";
+import { haptics } from "@/lib/haptics";
 import { scenarioPassed } from "@/practice/progression";
 import { averageScore, bestScore, normalizeScore, scoreStatus } from "@/practice/scoring";
-import { colors, radii, spacing } from "@/theme/theme";
+import { colors, spacing, type } from "@/theme/theme";
 
 export default function ConversationSessionScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
-  const queryClient = useQueryClient();
-  const navigation = useNavigation();
-  const playback = usePlayback();
-  const readiness = useAssessReadiness();
-  const { instruct } = useCoachVoice();
-
   const modulesQuery = useQuery({
     queryKey: ["conversation-modules"],
     queryFn: getConversationModules,
   });
   const scenario = modulesQuery.data?.find((item) => item.slug === slug);
 
+  if (scenario) {
+    return (
+      <Screen>
+        <ScenarioRun scenario={scenario} />
+      </Screen>
+    );
+  }
+
+  return (
+    <Screen>
+      <TopBar onClose={() => router.back()} closeLabel="Close conversation" title="Conversation" />
+      <ScreenState
+        isLoading={modulesQuery.isLoading}
+        isError={modulesQuery.isError}
+        errorMessage={describeError(modulesQuery.error, "Could not load this conversation.")}
+        onRetry={() => void modulesQuery.refetch()}
+        isEmpty={modulesQuery.isSuccess}
+        loadingRows={3}
+        loadingLabel="Loading the scenario…"
+        empty={{
+          title: "Conversation not found",
+          message: "This scenario is no longer available.",
+          actionLabel: "Back to conversations",
+          onAction: () => router.back(),
+        }}>
+        {null}
+      </ScreenState>
+    </Screen>
+  );
+}
+
+function ScenarioRun({ scenario }: { scenario: ConversationModuleWithProgress }) {
+  const queryClient = useQueryClient();
+  const readiness = useAssessReadiness();
+  const speech = useSpeech();
+  const { speak, prefetch, stop } = speech;
+
   const [turnIndex, setTurnIndex] = useState(0);
   const [attempt, setAttempt] = useState(1);
   const [scores, setScores] = useState<number[]>([]);
   const [assessment, setAssessment] = useState<PronunciationAssessment | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [finished, setFinished] = useState(false);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
-  const [coachAudioFailed, setCoachAudioFailed] = useState(false);
-  const [coachLoading, setCoachLoading] = useState(false);
 
-  const currentTurn = scenario?.turns[turnIndex];
+  const turns = scenario.turns;
+  const currentTurn = turns[turnIndex];
+  const upcoming = turns[turnIndex + 1];
   const inProgress = !finished && (scores.length > 0 || assessment !== null);
-  const spokenTurnRef = useRef<string | null>(null);
+  const unsaved = finished && (saving || saveError !== null);
+  // Each coach line plays once when its turn comes up; a retry plays it again.
+  const spokenRef = useRef<string | null>(null);
 
-  const speakCoachLine = useCallback(
-    async (message: string) => {
-      if (playback.isPlaying || playback.isLoading) {
-        playback.stop();
-        return;
-      }
-      setCoachLoading(true);
-      setCoachAudioFailed(false);
-      try {
-        const uri = await getReferenceAudio(message, instruct);
-        await playback.play(uri);
-      } catch {
-        // The line is on screen either way; the learner just answers without it.
-        setCoachAudioFailed(true);
-      } finally {
-        setCoachLoading(false);
-      }
-    },
-    [instruct, playback],
+  useExitGuard(
+    inProgress || unsaved,
+    unsaved ? "Your result isn't saved" : "Leave this conversation?",
+    unsaved
+      ? "Leaving now loses this result. Stay and save it again?"
+      : `You have answered ${scores.length} of ${turns.length} turns. Leaving now discards the run.`,
+    { stayLabel: unsaved ? "Stay" : "Keep going", onLeave: stop },
   );
 
-  // Play each coach line once when its turn comes up, and warm the next one.
   useEffect(() => {
     if (!currentTurn || finished) return;
-    if (spokenTurnRef.current === currentTurn.id) return;
-    spokenTurnRef.current = currentTurn.id;
-    speakCoachLine(currentTurn.coachMessage);
-    const upcoming = scenario?.turns[turnIndex + 1];
-    if (upcoming) prefetchReferenceAudio(upcoming.coachMessage, instruct);
-    // speakCoachLine changes identity with the playback state, which would
-    // replay the line mid-playback; the ref guard above is what gates this.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentTurn?.id, finished]);
-
-  // Leaving mid-scenario throws the run away, so ask first.
-  useEffect(() => {
-    const unsubscribe = navigation.addListener("beforeRemove", (event) => {
-      if (!inProgress) return;
-      event.preventDefault();
-      Alert.alert(
-        "Leave this conversation?",
-        `You have answered ${scores.length} of ${scenario?.turns.length ?? 0} turns. Leaving now discards the run.`,
-        [
-          { text: "Keep going", style: "cancel" },
-          {
-            text: "Leave",
-            style: "destructive",
-            onPress: () => {
-              playback.stop();
-              navigation.dispatch(event.data.action);
-            },
-          },
-        ],
-      );
-    });
-    return unsubscribe;
-  }, [navigation, inProgress, scores.length, scenario?.turns.length, playback]);
+    const key = `${currentTurn.id}-${attempt}`;
+    if (spokenRef.current === key) return;
+    spokenRef.current = key;
+    void speak(currentTurn.coachMessage);
+    if (upcoming) prefetch(upcoming.coachMessage);
+  }, [attempt, currentTurn, finished, prefetch, speak, upcoming]);
 
   async function handleTake(take: RecordedAudio) {
     if (!currentTurn) return;
-    setError(null);
     try {
       const result = await assess(take, currentTurn.expectedResponse);
       setAssessment(result);
       playAssessmentFeedback(result.overallScore);
     } catch (cause) {
-      const message = describeError(cause, "Scoring failed. Try that reply again.");
-      setError(message);
-      throw new Error(message);
+      // Shown once, in the recorder's status line.
+      throw new Error(describeError(cause, "Scoring failed. Try that reply again."));
     }
   }
 
   const saveResult = useCallback(
     async (finalScores: number[]) => {
-      if (!scenario) return;
-      const avg = averageScore(finalScores);
       setSaving(true);
       setSaveError(null);
       try {
         await saveConversationResult({
           moduleSlug: scenario.slug,
-          score: avg,
+          score: averageScore(finalScores),
           passed: scenarioPassed(scenario.passScore, finalScores),
         });
         await queryClient.invalidateQueries({ queryKey: ["conversation-modules"] });
       } catch (cause) {
-        setSaveError(
-          describeError(cause, "Your result could not be saved. Check your connection."),
-        );
+        haptics.error();
+        setSaveError(describeError(cause, "Your result could not be saved. Check your connection."));
       } finally {
         setSaving(false);
       }
     },
-    [queryClient, scenario],
+    [queryClient, scenario.passScore, scenario.slug],
   );
 
   async function advance() {
-    if (!scenario || !assessment) return;
+    if (!assessment) return;
     const nextScores = [...scores, normalizeScore(assessment.overallScore)];
     setScores(nextScores);
     setAssessment(null);
-    setError(null);
 
-    if (turnIndex + 1 < scenario.turns.length) {
+    if (turnIndex + 1 < turns.length) {
       setTurnIndex(turnIndex + 1);
       setAttempt(1);
       return;
     }
 
-    playback.stop();
+    stop();
     setFinished(true);
-    if (scenarioPassed(scenario.passScore, nextScores)) playCompletionSound();
+    if (scenarioPassed(scenario.passScore, nextScores)) {
+      playCompletionSound();
+      haptics.success();
+    }
     await saveResult(nextScores);
   }
 
   function retryTurn() {
     setAssessment(null);
-    setError(null);
     setAttempt((value) => value + 1);
-    // Replaying the line is part of retrying the turn on web, too.
-    spokenTurnRef.current = null;
   }
 
   function restart() {
-    playback.stop();
-    spokenTurnRef.current = null;
+    stop();
+    spokenRef.current = null;
     setScores([]);
     setTurnIndex(0);
     setAttempt(1);
@@ -203,288 +187,155 @@ export default function ConversationSessionScreen() {
     setSaveError(null);
   }
 
-  return (
-    <Screen>
-      <View style={styles.topBar}>
-        <View style={styles.topBarText}>
-          <Eyebrow>
-            {scenario && !finished
-              ? `Turn ${turnIndex + 1} of ${scenario.turns.length}`
-              : "Conversation"}
-          </Eyebrow>
-          <Title size={20}>{scenario?.title ?? "Loading…"}</Title>
-        </View>
-        <RoundIconButton
-          accessibilityLabel="Close conversation"
-          onPress={() => {
-            playback.stop();
-            router.back();
-          }}>
-          <X color={colors.hunter} size={20} />
-        </RoundIconButton>
-      </View>
+  const close = () => {
+    router.back();
+  };
 
-      <ScreenState
-        isLoading={modulesQuery.isLoading}
-        isError={modulesQuery.isError}
-        errorMessage={describeError(modulesQuery.error, "Could not load this conversation.")}
-        onRetry={() => modulesQuery.refetch()}
-        isEmpty={modulesQuery.isSuccess && !scenario}
-        loadingRows={3}
-        loadingLabel="Loading the scenario…"
-        empty={{
-          title: "Conversation not found",
-          message: "This scenario is no longer available. Head back and pick another one.",
-          actionLabel: "Back to conversations",
-          onAction: () => router.back(),
-        }}>
-        {scenario && finished ? (
-          <>
-            <Card style={styles.summaryCard}>
-              <Eyebrow>{scenario.title}</Eyebrow>
-              <ProgressRing score={averageScore(scores)} size={104} strokeWidth={9} />
-              <Title size={22} style={styles.centerText}>
-                {scenarioPassed(scenario.passScore, scores) ? "Scenario passed!" : "Almost there"}
-              </Title>
-              <Body size={13} style={styles.centerText}>
-                {scenarioPassed(scenario.passScore, scores)
-                  ? "The next scenario is now unlocked."
-                  : `You need ${scenario.passScore} or higher to pass this one.`}
-              </Body>
-
-              <View style={styles.statsRow}>
-                <StatTile label="Average" value={String(averageScore(scores))} />
-                <StatTile label="Best turn" value={String(bestScore(scores))} />
-                <StatTile label="Pass mark" value={String(scenario.passScore)} />
-              </View>
-
-              <View style={styles.summaryChips}>
-                {scenario.turns.map((turn, index) => (
-                  <Chip
-                    key={turn.id}
-                    label={`Turn ${index + 1} · ${scores[index] ?? "—"}`}
-                    status={scores[index] == null ? "neutral" : scoreStatus(scores[index])}
-                  />
-                ))}
-              </View>
-
-              {scenarioPassed(scenario.passScore, scores) ? (
-                <SvgXml xml={ILLUSTRATION_SUCCESS} width={168} height={168} />
-              ) : null}
-            </Card>
-
-            {saveError ? (
-              <Banner
-                message={saveError}
-                tone="error"
-                actionLabel={saving ? undefined : "Save again"}
-                onAction={() => saveResult(scores)}
-              />
-            ) : null}
-
-            <PillButton
+  if (finished) {
+    const passed = scenarioPassed(scenario.passScore, scores);
+    return (
+      <>
+        <TopBar onClose={close} closeLabel="Close conversation" eyebrow="Conversation" title={scenario.title} />
+        <ResultSummary
+          eyebrow="Scenario result"
+          score={averageScore(scores)}
+          title={passed ? "Scenario passed!" : "Almost there"}
+          subtitle={
+            passed
+              ? "The next scenario is now unlocked."
+              : `You need ${scenario.passScore} or higher to pass this one.`
+          }
+          stats={[
+            { label: "Average", value: String(averageScore(scores)) },
+            { label: "Best turn", value: String(bestScore(scores)) },
+            { label: "Pass mark", value: String(scenario.passScore) },
+          ]}
+          items={turns.map((turn, index) => ({
+            label: `Turn ${index + 1} · ${scores[index] ?? "—"}`,
+            status: scores[index] == null ? "neutral" : scoreStatus(scores[index]),
+          }))}
+          celebrate={passed}>
+          {saveError ? (
+            <Banner
+              message={saveError}
+              tone="error"
+              actionLabel={saving ? undefined : "Save again"}
+              onAction={() => void saveResult(scores)}
+              style={styles.summaryBanner}
+            />
+          ) : null}
+          <ActionRow>
+            <Button
               label="Run it again"
-              variant="ghost"
+              variant="tonal"
               icon={<RotateCcw color={colors.hunter} size={16} />}
               onPress={restart}
             />
-            <PillButton label="Back to conversations" onPress={() => router.back()} />
-          </>
-        ) : scenario && currentTurn ? (
-          <ActiveTurn
-            turn={currentTurn}
-            turnIndex={turnIndex}
-            totalTurns={scenario.turns.length}
-            attempt={attempt}
-            scores={scores}
-            assessment={assessment}
-            error={error}
-            coachAudioFailed={coachAudioFailed}
-            coachLoading={coachLoading}
-            isPlaying={playback.isPlaying}
-            readinessMessage={readiness.message}
-            readinessOffline={readiness.offline}
-            readinessReady={readiness.ready}
-            onRefreshReadiness={readiness.refresh}
-            onSpeak={() => speakCoachLine(currentTurn.coachMessage)}
-            onTake={handleTake}
-            onRetry={retryTurn}
-            onAdvance={advance}
-          />
-        ) : null}
-      </ScreenState>
-    </Screen>
-  );
-}
+            <Button label="Done" disabled={saving} onPress={close} />
+          </ActionRow>
+        </ResultSummary>
+      </>
+    );
+  }
 
-function ActiveTurn({
-  turn,
-  turnIndex,
-  totalTurns,
-  attempt,
-  scores,
-  assessment,
-  error,
-  coachAudioFailed,
-  coachLoading,
-  isPlaying,
-  readinessMessage,
-  readinessOffline,
-  readinessReady,
-  onRefreshReadiness,
-  onSpeak,
-  onTake,
-  onRetry,
-  onAdvance,
-}: {
-  turn: ConversationTurn;
-  turnIndex: number;
-  totalTurns: number;
-  attempt: number;
-  scores: number[];
-  assessment: PronunciationAssessment | null;
-  error: string | null;
-  coachAudioFailed: boolean;
-  coachLoading: boolean;
-  isPlaying: boolean;
-  readinessMessage: string | null;
-  readinessOffline: boolean;
-  readinessReady: boolean;
-  onRefreshReadiness: () => void;
-  onSpeak: () => void;
-  onTake: (take: RecordedAudio) => Promise<void>;
-  onRetry: () => void;
-  onAdvance: () => void;
-}) {
+  if (!currentTurn) return null;
+
   return (
     <>
-      <SegmentedProgress total={totalTurns} currentIndex={turnIndex} />
+      <TopBar
+        onClose={close}
+        closeLabel="Close conversation"
+        eyebrow={`Turn ${turnIndex + 1} of ${turns.length}`}
+        title={scenario.title}
+      />
+      <SegmentedProgress total={turns.length} currentIndex={turnIndex} />
 
-      <View style={styles.coachBubble}>
-        <View style={styles.coachBubbleHeader}>
-          <Eyebrow onDark>Coach</Eyebrow>
-          <RoundIconButton
-            accessibilityLabel={isPlaying ? "Stop the coach line" : "Play the coach line"}
-            tone="translucent"
-            size={36}
-            disabled={coachLoading}
-            onPress={onSpeak}>
-            {isPlaying ? (
-              <Pause color={colors.yellowGreen} size={16} />
-            ) : (
-              <Play color={colors.yellowGreen} size={16} />
-            )}
-          </RoundIconButton>
-        </View>
-        <Body onDark>{turn.coachMessage}</Body>
-        {coachAudioFailed ? (
-          <Body size={12} onDark>
-            The coach audio could not load — read the line above and answer as usual.
-          </Body>
-        ) : null}
-      </View>
+      <CoachBubble
+        message={currentTurn.coachMessage}
+        state={speechStateFor(speech, currentTurn.coachMessage)}
+        onToggle={() => speech.toggle(currentTurn.coachMessage)}
+        note={speech.error ? "The coach audio didn't load. Read the line and answer as usual." : undefined}
+      />
 
-      <Card>
-        <Eyebrow>Say this</Eyebrow>
-        <Body weight="semibold" size={15}>
-          {turn.expectedResponse}
-        </Body>
-        <InfoPanel>
-          <Eyebrow>Coaching cue</Eyebrow>
-          <Body size={12}>{turn.coachingCue}</Body>
-        </InfoPanel>
-
-        <View style={styles.statsRow}>
-          <StatTile label="Attempt" value={String(attempt)} />
-          <StatTile label="Answered" value={`${scores.length}/${totalTurns}`} />
-          <StatTile label="Left" value={String(totalTurns - turnIndex - 1)} />
-        </View>
-
-        {!readinessReady && readinessMessage ? (
-          <Banner
-            tone={readinessOffline ? "error" : "warning"}
-            message={readinessMessage}
-            actionLabel={readinessOffline ? "Try again" : undefined}
-            onAction={readinessOffline ? onRefreshReadiness : undefined}
-          />
-        ) : null}
-
-        <RecorderPanel
-          key={`${turn.id}-${attempt}`}
-          targetText={turn.expectedResponse}
-          onTake={onTake}
-          disabled={!readinessReady}
-          statusHint="Tap the microphone and give the reply out loud."
-        />
-      </Card>
-
-      {error ? <Banner message={error} tone="error" /> : null}
+      <ActiveTurn
+        turn={currentTurn}
+        attempt={attempt}
+        readinessReady={readiness.ready}
+        readinessBanner={<ReadinessBanner readiness={readiness} />}
+        onTake={handleTake}
+      />
 
       {assessment ? (
         <Card>
           <AssessmentView assessment={assessment} />
-          <View style={styles.actionRow}>
-            <PillButton
+          <ActionRow>
+            <Button
               label="Try again"
-              variant="ghost"
+              variant="tonal"
               icon={<RotateCcw color={colors.hunter} size={16} />}
-              onPress={onRetry}
-              style={styles.actionButton}
+              onPress={retryTurn}
             />
-            <PillButton
-              label={turnIndex + 1 < totalTurns ? "Next turn" : "Finish scenario"}
+            <Button
+              label={turnIndex + 1 < turns.length ? "Next turn" : "Finish"}
               icon={<ArrowRight color={colors.snow} size={16} />}
-              onPress={onAdvance}
-              style={styles.actionButton}
+              onPress={advance}
             />
-          </View>
+          </ActionRow>
         </Card>
       ) : null}
     </>
   );
 }
 
+function ActiveTurn({
+  turn,
+  attempt,
+  readinessReady,
+  readinessBanner,
+  onTake,
+}: {
+  turn: ConversationTurn;
+  attempt: number;
+  readinessReady: boolean;
+  readinessBanner: React.ReactNode;
+  onTake: (take: RecordedAudio) => Promise<void>;
+}) {
+  return (
+    <>
+      <ReplyPanel label="Say this">
+        <Body weight="semibold" size={type.headline} tone="strong">
+          {turn.expectedResponse}
+        </Body>
+      </ReplyPanel>
+
+      <Card>
+        <InfoPanel>
+          <Eyebrow>Coaching cue</Eyebrow>
+          <Body size={type.footnote}>{turn.coachingCue}</Body>
+        </InfoPanel>
+        {attempt > 1 ? (
+          <Body size={type.caption} tone="muted" style={styles.centerText}>
+            Attempt {attempt}
+          </Body>
+        ) : null}
+
+        {readinessBanner}
+
+        <RecorderPanel
+          key={`${turn.id}-${attempt}`}
+          targetText={turn.expectedResponse}
+          onTake={onTake}
+          disabled={!readinessReady}
+          statusHint="Tap the microphone and say the reply out loud."
+        />
+      </Card>
+    </>
+  );
+}
+
 const styles = StyleSheet.create({
-  topBar: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: spacing.md,
-  },
-  topBarText: {
-    flex: 1,
-    gap: spacing.xs,
-  },
-  coachBubble: {
-    borderRadius: radii.card,
-    backgroundColor: colors.hunter,
-    padding: spacing.lg,
-    gap: spacing.sm,
-  },
-  coachBubbleHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  statsRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
-  },
-  summaryCard: {
-    alignItems: "center",
-    gap: spacing.lg,
-  },
-  summaryChips: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: spacing.sm,
-  },
-  actionRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
-  },
-  actionButton: {
-    flex: 1,
+  summaryBanner: {
+    marginBottom: spacing.sm,
   },
   centerText: {
     textAlign: "center",

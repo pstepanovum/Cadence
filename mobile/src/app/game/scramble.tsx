@@ -1,38 +1,51 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { Eye, Shuffle, Undo2, Volume2 } from "lucide-react-native";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, useWindowDimensions, View } from "react-native";
 import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
-import { GameTopBar } from "@/components/games/GameTopBar";
 import { LetterTile, type TileState } from "@/components/games/LetterTile";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import { ScoreStrip } from "@/components/games/ScoreStrip";
-import { Body, Card, Eyebrow, PillButton, Screen, SegmentedProgress } from "@/components/ui";
+import { Body, Button, Card, Eyebrow, Screen, SegmentedProgress, TopBar } from "@/components/ui";
 import { levelLabel, parseLevel, vocabForLevel, type VocabWord } from "@/data/vocabulary";
 import { EMPTY_TALLY, accuracy, tallyAnswer } from "@/games/quiz";
 import { clockSeed, sample, seededRng } from "@/games/random";
 import { useGameProgress } from "@/games/store";
 import { isScrambleable, scrambleWord, type ScrambleTile } from "@/games/text";
 import { useExitGuard } from "@/hooks/useExitGuard";
-import { useWordAudio } from "@/hooks/useWordAudio";
+import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, spacing } from "@/theme/theme";
+import { colors, spacing, TAP_TARGET, type } from "@/theme/theme";
 
 const ROUND_LENGTH = 8;
 const FLASH_MS = 650;
 const PARTIAL_POINTS = 5;
+const TILE_GAP = spacing.xs + 2;
+const MAX_TILE = 52;
 
 type Phase = "building" | "correct" | "wrong" | "revealed";
 
 function pickWords(level: ReturnType<typeof parseLevel>): VocabWord[] {
-  return sample(vocabForLevel(level).filter((word) => isScrambleable(word.word)), ROUND_LENGTH, seededRng(clockSeed()));
+  const pool = vocabForLevel(level).filter((word) => isScrambleable(word.word));
+  return sample(pool, ROUND_LENGTH, seededRng(clockSeed()));
+}
+
+/**
+ * The largest tile that fits the word on one row, but never under the 44pt
+ * tap target: a long word on a small phone wraps onto a second row instead.
+ */
+function tileSizeFor(letters: number, rowWidth: number): number {
+  const fit = Math.floor((rowWidth - TILE_GAP * (letters - 1)) / Math.max(letters, 1));
+  return Math.max(TAP_TARGET, Math.min(MAX_TILE, fit));
 }
 
 export default function ScrambleScreen() {
   const params = useLocalSearchParams<{ level?: string }>();
   const level = parseLevel(params.level);
   const { progress, recordRound } = useGameProgress();
-  const audio = useWordAudio();
+  const audio = useSpeech();
+  const { prefetch } = audio;
+  const { width } = useWindowDimensions();
 
   const [words, setWords] = useState(() => pickWords(level));
   const [index, setIndex] = useState(0);
@@ -50,7 +63,9 @@ export default function ScrambleScreen() {
   const word = words[index];
   const target = word?.word.toLowerCase() ?? "";
   const answer = placed.map((id) => tiles[id]?.letter ?? "").join("");
-  const tileSize = useMemo(() => (target.length > 9 ? 34 : target.length > 7 ? 38 : 44), [target.length]);
+  // Screen gutters and the board's padding.
+  const rowWidth = Math.min(width, 640) - spacing.lg * 2 - spacing.lg * 2;
+  const tileSize = tileSizeFor(target.length, rowWidth);
 
   useExitGuard(
     tally.answered > 0 && !finished,
@@ -62,10 +77,10 @@ export default function ScrambleScreen() {
     if (timer.current) clearTimeout(timer.current);
   }, []);
 
+  const wordText = word?.word;
   useEffect(() => {
-    if (word) audio.prefetch(word.word);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [word?.id]);
+    if (wordText) prefetch(wordText);
+  }, [wordText, prefetch]);
 
   const percent = useMemo(() => accuracy(tally.correct, tally.answered), [tally]);
 
@@ -128,7 +143,6 @@ export default function ScrambleScreen() {
 
   function reshuffle() {
     if (phase !== "building") return;
-    haptics.select();
     // Keep what has been placed; reshuffle only the pool so nothing is lost.
     const pool = tiles.filter((tile) => !placed.includes(tile.id));
     const shuffled = scrambleWord(pool.map((tile) => tile.letter).join(""));
@@ -188,8 +202,8 @@ export default function ScrambleScreen() {
   if (finished || !word) {
     const played = words.filter((item) => item.id in outcomes);
     return (
-      <Screen edges={["top", "left", "right", "bottom"]}>
-        <GameTopBar eyebrow={eyebrow} title="Round over" onClose={() => router.back()} />
+      <Screen>
+        <TopBar closeLabel="Leave this game" eyebrow={eyebrow} title="Round over" onClose={() => router.back()} />
         <RoundSummary
           accuracy={percent}
           isNewBest={tally.score > previousBest && tally.score > 0}
@@ -219,23 +233,23 @@ export default function ScrambleScreen() {
   }
 
   return (
-    <Screen edges={["top", "left", "right", "bottom"]}>
-      <GameTopBar
+    <Screen>
+      <TopBar closeLabel="Leave this game"
         eyebrow={eyebrow}
         title={`Word ${index + 1} of ${words.length}`}
         onClose={() => router.back()}
-        trailing={<ScoreStrip score={tally.score} streak={tally.streak} />}
       />
+      <ScoreStrip score={tally.score} streak={tally.streak} />
       <SegmentedProgress total={words.length} currentIndex={index} />
 
       <Card variant="cream" style={styles.clue}>
         <Eyebrow>{word.pos} · your clue</Eyebrow>
-        <Body size={16} weight="semibold" style={styles.center}>
+        <Body size={type.headline} weight="semibold" style={styles.center}>
           {word.definition}
         </Body>
         {mistakes > 0 && phase === "building" ? (
-          <Body size={12} style={styles.hint}>
-            Not that order — the first letter is “{target[0].toUpperCase()}”.
+          <Body size={type.caption} tone="error">
+            Not that order. The first letter is “{target[0].toUpperCase()}”.
           </Body>
         ) : null}
       </Card>
@@ -273,32 +287,32 @@ export default function ScrambleScreen() {
       </Card>
 
       <View style={styles.tools}>
-        <PillButton
+        <Button
           label="Undo"
-          variant="ghost"
+          variant="tonal"
           icon={<Undo2 color={colors.hunter} size={16} />}
           disabled={placed.length === 0 || phase !== "building"}
           onPress={() => removeTile(placed[placed.length - 1])}
           style={styles.tool}
         />
-        <PillButton
+        <Button
           label="Shuffle"
-          variant="ghost"
+          variant="tonal"
           icon={<Shuffle color={colors.hunter} size={16} />}
           disabled={phase !== "building"}
           onPress={reshuffle}
           style={styles.tool}
         />
-        <PillButton
+        <Button
           label="Hear it"
-          variant="ghost"
+          variant="tonal"
           icon={<Volume2 color={colors.hunter} size={16} />}
           loading={audio.isLoading}
-          onPress={() => audio.speak(word.word)}
+          onPress={() => audio.toggle(word.word)}
           style={styles.tool}
         />
       </View>
-      <PillButton
+      <Button
         label="Give up and reveal"
         variant="outline"
         icon={<Eye color={colors.hunter} size={16} />}
@@ -317,24 +331,23 @@ const styles = StyleSheet.create({
   center: {
     textAlign: "center",
   },
-  hint: {
-    color: colors.brick,
-  },
   board: {
     gap: spacing.md,
+    paddingHorizontal: spacing.lg,
   },
   row: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: 6,
+    gap: TILE_GAP,
   },
   tools: {
     flexDirection: "row",
+    flexWrap: "wrap",
     gap: spacing.sm,
   },
   tool: {
-    flex: 1,
-    paddingHorizontal: 8,
+    flexGrow: 1,
+    paddingHorizontal: spacing.sm,
   },
 });

@@ -4,19 +4,20 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { playCompletionSound } from "@/audio/feedback";
 import { FlipCard } from "@/components/games/FlipCard";
-import { GameTopBar } from "@/components/games/GameTopBar";
 import { RoundSummary } from "@/components/games/RoundSummary";
 import {
+  ActionRow,
   Banner,
   Body,
+  Button,
   Chip,
   EmptyState,
   Eyebrow,
   LoadingBlock,
-  PillButton,
   Screen,
   SegmentedProgress,
   Title,
+  TopBar,
 } from "@/components/ui";
 import { ILLUSTRATION_SUCCESS } from "@/data/svg";
 import { levelLabel, parseLevel, vocabById, vocabForLevel } from "@/data/vocabulary";
@@ -24,13 +25,11 @@ import { sample } from "@/games/random";
 import { planSession, type CardState, type Grade } from "@/games/srs";
 import { useGameProgress } from "@/games/store";
 import { useExitGuard } from "@/hooks/useExitGuard";
-import { useWordAudio } from "@/hooks/useWordAudio";
+import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, spacing } from "@/theme/theme";
+import { colors, fonts, spacing, type } from "@/theme/theme";
 
 const REVIEW_ANYWAY = 10;
-
-const FULL_EDGES = ["top", "left", "right", "bottom"] as const;
 
 /**
  * Waits for the stored cards, then hands them to the session once. The
@@ -44,8 +43,8 @@ export default function FlashcardsScreen() {
 
   if (!loaded) {
     return (
-      <Screen edges={FULL_EDGES}>
-        <GameTopBar
+      <Screen>
+        <TopBar closeLabel="Leave this game"
           eyebrow={`Flashcards · ${levelLabel(level)}`}
           title="Loading your deck"
           onClose={() => router.back()}
@@ -69,7 +68,8 @@ function FlashcardSession({
   const deckIds = useMemo(() => deck.map((word) => word.id), [deck]);
 
   const { progress, gradeCard, recordRound } = useGameProgress();
-  const audio = useWordAudio();
+  const audio = useSpeech();
+  const { prefetch } = audio;
 
   const [initialPlan] = useState(() => planSession(deckIds, initialCards, new Date()));
   const [queue, setQueue] = useState<string[]>(initialPlan.ids);
@@ -92,10 +92,10 @@ function FlashcardSession({
     "Cards you have already graded are saved. The rest of today's queue will wait for you.",
   );
 
+  const currentWord = current?.word;
   useEffect(() => {
-    if (current) audio.prefetch(current.word);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current?.id]);
+    if (currentWord) prefetch(currentWord);
+  }, [currentWord, prefetch]);
 
   function finish(finalGrades: Record<string, Grade>) {
     setFinished(true);
@@ -159,8 +159,8 @@ function FlashcardSession({
 
   if (finished) {
     return (
-      <Screen edges={FULL_EDGES}>
-        <GameTopBar eyebrow={eyebrow} title="Deck done" onClose={() => router.back()} />
+      <Screen>
+        <TopBar closeLabel="Leave this game" eyebrow={eyebrow} title="Deck done" onClose={() => router.back()} />
         <RoundSummary
           eyebrow="Session complete"
           accuracy={reviewedIds.length ? Math.round((remembered / reviewedIds.length) * 100) : 0}
@@ -188,8 +188,8 @@ function FlashcardSession({
 
   if (queue.length === 0 || !current) {
     return (
-      <Screen edges={FULL_EDGES}>
-        <GameTopBar eyebrow={eyebrow} title="All caught up" onClose={() => router.back()} />
+      <Screen>
+        <TopBar closeLabel="Leave this game" eyebrow={eyebrow} title="All caught up" onClose={() => router.back()} />
         <EmptyState
           title="Nothing due today"
           message={`Every card in the ${levelLabel(level)} deck is scheduled for later. Come back tomorrow, or run through a few anyway.`}
@@ -202,8 +202,8 @@ function FlashcardSession({
   }
 
   return (
-    <Screen edges={FULL_EDGES}>
-      <GameTopBar
+    <Screen>
+      <TopBar closeLabel="Leave this game"
         eyebrow={eyebrow}
         title={`Card ${index + 1} of ${queue.length}`}
         onClose={() => router.back()}
@@ -227,13 +227,13 @@ function FlashcardSession({
         front={
           <View style={styles.face}>
             <Eyebrow>{current.pos}</Eyebrow>
-            <Title size={36} style={styles.center}>
+            <Title size={type.display + 4} style={styles.center}>
               {current.word}
             </Title>
-            <Body size={16} style={styles.ipa}>
+            <Body size={type.headline} style={styles.ipa}>
               {current.ipa}
             </Body>
-            <Body size={12} style={styles.hint}>
+            <Body size={type.caption} tone="muted" style={styles.hint}>
               Tap to see the meaning
             </Body>
           </View>
@@ -241,10 +241,10 @@ function FlashcardSession({
         back={
           <View style={styles.face}>
             <Eyebrow onDark>{current.word}</Eyebrow>
-            <Body size={17} weight="semibold" onDark style={styles.center}>
+            <Body size={type.headline} weight="semibold" onDark style={styles.center}>
               {current.definition}
             </Body>
-            <Body size={14} onDark style={[styles.center, styles.example]}>
+            <Body size={type.callout} onDark tone="muted" style={[styles.center, styles.example]}>
               “{current.example}”
             </Body>
           </View>
@@ -253,35 +253,32 @@ function FlashcardSession({
 
       {audio.error ? <Banner message={audio.error} tone="warning" /> : null}
 
-      <PillButton
+      <Button
         label={audio.activeText === current.word ? "Playing…" : "Hear it"}
-        variant="ghost"
+        variant="tonal"
         loading={audio.isLoading && audio.activeText === current.word}
         icon={<Volume2 color={colors.hunter} size={16} />}
-        onPress={() => audio.speak(current.word)}
+        onPress={() => audio.toggle(current.word)}
       />
 
       {flipped ? (
-        <View style={styles.gradeRow}>
-          <PillButton label="Again" variant="danger" style={styles.gradeButton} onPress={() => grade("again")} />
-          <PillButton label="Good" variant="primary" style={styles.gradeButton} onPress={() => grade("good")} />
-          <PillButton label="Easy" variant="secondary" style={styles.gradeButton} onPress={() => grade("easy")} />
-        </View>
+        <ActionRow>
+          <Button label="Again" variant="danger" onPress={() => grade("again")} />
+          <Button label="Good" variant="primary" onPress={() => grade("good")} />
+          <Button label="Easy" variant="secondary" onPress={() => grade("easy")} />
+        </ActionRow>
       ) : (
-        <PillButton
+        <Button
           label="Show meaning"
           variant="secondary"
-          onPress={() => {
-            haptics.select();
-            setFlipped(true);
-          }}
+          onPress={() => setFlipped(true)}
         />
       )}
 
-      <Body size={12} style={styles.footer}>
+      <Body size={type.caption} tone="muted" style={styles.footer}>
         {flipped
           ? "Again brings it back today. Good waits a few days. Easy waits longer."
-          : "Say it out loud before you flip — guessing is how it sticks."}
+          : "Say it out loud before you flip. Guessing is how it sticks."}
       </Body>
     </Screen>
   );
@@ -302,26 +299,15 @@ const styles = StyleSheet.create({
   },
   ipa: {
     fontFamily: fonts.bodyMedium,
-    color: colors.sage,
+    color: colors.sageText,
   },
   hint: {
-    color: colors.slate,
     marginTop: spacing.md,
   },
   example: {
-    fontStyle: "italic",
     marginTop: spacing.xs,
-  },
-  gradeRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
-  },
-  gradeButton: {
-    flex: 1,
-    paddingHorizontal: 8,
   },
   footer: {
     textAlign: "center",
-    color: colors.slate,
   },
 });

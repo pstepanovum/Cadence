@@ -1,23 +1,32 @@
 import { useNavigation } from "expo-router";
-import { useEffect } from "react";
+import { usePreventRemove } from "expo-router/react-navigation";
 import { Alert } from "react-native";
 
 /**
- * Asks before the screen is popped while `active`, the way the lessons do:
- * leaving a half-played round throws it away, and that deserves a question.
+ * Asks before the screen is left while `active` — by the close button, the
+ * swipe-back gesture or Android's back button alike. Leaving a half-played
+ * round throws it away, and that deserves a question.
  */
-export function useExitGuard(active: boolean, title: string, message: string) {
+export function useExitGuard(
+  active: boolean,
+  title: string,
+  message: string,
+  options: { stayLabel?: string; onLeave?: () => void } = {},
+) {
   const navigation = useNavigation();
+  const { stayLabel = "Keep going", onLeave } = options;
 
-  useEffect(() => {
-    if (!active) return;
-    const unsubscribe = navigation.addListener("beforeRemove", (event) => {
-      event.preventDefault();
-      Alert.alert(title, message, [
-        { text: "Keep playing", style: "cancel" },
-        { text: "Leave", style: "destructive", onPress: () => navigation.dispatch(event.data.action) },
-      ]);
-    });
-    return unsubscribe;
-  }, [navigation, active, title, message]);
+  usePreventRemove(active, ({ data }) => {
+    Alert.alert(title, message, [
+      { text: stayLabel, style: "cancel" },
+      {
+        text: "Leave",
+        style: "destructive",
+        onPress: () => {
+          onLeave?.();
+          navigation.dispatch(data.action);
+        },
+      },
+    ]);
+  });
 }

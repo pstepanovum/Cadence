@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Animated, Pressable, StyleSheet, View } from "react-native";
-import { colors, radii } from "@/theme/theme";
+import { Animated, Pressable, StyleSheet, useWindowDimensions, View } from "react-native";
+import { colors, radii, shadows, spacing } from "@/theme/theme";
 
 /**
  * A card with two faces that turns over around its vertical axis. The faces
@@ -12,7 +12,7 @@ export function FlipCard({
   front,
   back,
   onPress,
-  height = 300,
+  height = 280,
 }: {
   flipped: boolean;
   front: React.ReactNode;
@@ -21,6 +21,10 @@ export function FlipCard({
   height?: number;
 }) {
   const [progress] = useState(() => new Animated.Value(flipped ? 1 : 0));
+  // The faces are absolutely positioned, so the card grows with the text size
+  // instead of letting a long definition spill out of it.
+  const { fontScale } = useWindowDimensions();
+  const scaledHeight = Math.round(height * Math.min(Math.max(fontScale, 1), 1.8));
 
   useEffect(() => {
     Animated.spring(progress, {
@@ -40,7 +44,7 @@ export function FlipCard({
       accessibilityLabel={flipped ? "Show the word" : "Show the meaning"}
       accessibilityHint="Flips the card"
       onPress={onPress}
-      style={[styles.wrap, { height }]}>
+      style={[styles.wrap, { height: scaledHeight }]}>
       <Animated.View
         pointerEvents={flipped ? "none" : "auto"}
         style={[styles.face, styles.front, { transform: [{ perspective: 1200 }, { rotateY: frontRotate }] }]}>
@@ -63,13 +67,14 @@ const styles = StyleSheet.create({
   face: {
     ...StyleSheet.absoluteFill,
     borderRadius: radii.cardLarge,
-    padding: 24,
+    padding: spacing.xl,
     alignItems: "center",
     justifyContent: "center",
     backfaceVisibility: "hidden",
   },
   front: {
     backgroundColor: colors.snow,
+    boxShadow: shadows.card,
   },
   back: {
     backgroundColor: colors.hunter,

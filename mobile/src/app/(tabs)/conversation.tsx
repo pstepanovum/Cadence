@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "expo-router";
-import { CheckCircle2, Clock3, Lock } from "lucide-react-native";
+import { Clock3, Lock } from "lucide-react-native";
 import { Pressable, StyleSheet, View } from "react-native";
 import { getConversationModules } from "@/api/endpoints";
 import type { ConversationModuleWithProgress } from "@/api/types";
+import { ServerBanner } from "@/components/status";
 import {
-  Banner,
   Body,
   Card,
   Chip,
@@ -15,14 +15,14 @@ import {
   pressedCard,
   ScreenState,
   SectionHeader,
-  StatTile,
   Title,
 } from "@/components/ui";
 import { ILLUSTRATION_COMMUNICATION } from "@/data/svg";
+import { useRefresh } from "@/hooks/useRefresh";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { nextScenario, scenarioLockReason } from "@/practice/progression";
 import { normalizeScore } from "@/practice/scoring";
-import { colors, overlays, spacing } from "@/theme/theme";
+import { colors, overlays, spacing, type } from "@/theme/theme";
 
 export default function ConversationScreen() {
   const server = useServerStatus();
@@ -30,66 +30,53 @@ export default function ConversationScreen() {
     queryKey: ["conversation-modules"],
     queryFn: getConversationModules,
   });
+  const { refreshing, onRefresh } = useRefresh(() => {
+    server.refresh();
+    return modulesQuery.refetch();
+  });
 
   const scenarios = modulesQuery.data ?? [];
   const completed = scenarios.filter((item) => item.isCompleted).length;
-  const unlocked = scenarios.filter((item) => item.isUnlocked).length;
   const upNext = nextScenario(scenarios);
+  const nextLocked = scenarios.find((item) => !item.isUnlocked);
 
   return (
-    <Screen refreshing={modulesQuery.isFetching} onRefresh={() => modulesQuery.refetch()}>
-      {!server.reachable && !server.checking ? (
-        <Banner
-          tone="error"
-          message={server.message ?? "Cadence can't reach the server."}
-          actionLabel={server.actionLabel ?? "Try again"}
-          onAction={server.refresh}
-        />
-      ) : null}
-
+    <Screen tab refreshing={refreshing} onRefresh={onRefresh}>
       <SectionHeader
-        eyebrow="Conversation"
+        eyebrow="Talk"
         title="Guided dialogues"
-        subtitle="Short scripted scenarios. Pass one to unlock the next."
+        subtitle="Short scripted scenes. Pass one to unlock the next."
       />
 
+      <ServerBanner />
+
       {scenarios.length > 0 ? (
-        <Card variant="dark">
-          <Eyebrow onDark>Your track</Eyebrow>
-          <Title size={20} onDark>
-            {upNext ? upNext.title : "Every scenario passed"}
-          </Title>
-          <View style={styles.statsRow}>
-            <StatTile
-              tone="translucent"
-              label="Passed"
-              value={`${completed}/${scenarios.length}`}
-            />
-            <StatTile tone="translucent" label="Unlocked" value={String(unlocked)} />
-            <StatTile
-              tone="translucent"
-              label="Progress"
-              value={`${Math.round((completed / scenarios.length) * 100)}%`}
-            />
+        <View style={styles.track}>
+          <View style={styles.trackRow}>
+            <Body size={type.footnote} weight="semibold" tone="strong">
+              {completed} of {scenarios.length} passed
+            </Body>
+            <Body size={type.footnote} tone="muted">
+              {Math.round((completed / scenarios.length) * 100)}%
+            </Body>
           </View>
-          <ProgressBar value={(completed / scenarios.length) * 100} onDark />
-        </Card>
+          <ProgressBar value={(completed / scenarios.length) * 100} />
+        </View>
       ) : null}
 
       <ScreenState
         isLoading={modulesQuery.isLoading}
         isError={modulesQuery.isError}
         errorMessage={describeError(modulesQuery.error, "Could not load the conversations.")}
-        onRetry={() => modulesQuery.refetch()}
+        onRetry={() => void modulesQuery.refetch()}
         isEmpty={scenarios.length === 0}
         loadingRows={4}
         empty={{
           title: "No scenarios yet",
-          message:
-            "The conversation track hasn't loaded for this account. Pull down to try again.",
+          message: "The dialogues haven't loaded. Pull down to try again.",
           illustration: ILLUSTRATION_COMMUNICATION,
           actionLabel: "Check again",
-          onAction: () => modulesQuery.refetch(),
+          onAction: () => void modulesQuery.refetch(),
         }}>
         {scenarios.map((scenario) => (
           <ScenarioCard
@@ -97,6 +84,7 @@ export default function ConversationScreen() {
             scenario={scenario}
             scenarios={scenarios}
             isNext={upNext?.slug === scenario.slug}
+            showLockReason={nextLocked?.slug === scenario.slug}
           />
         ))}
       </ScreenState>
@@ -108,75 +96,76 @@ function ScenarioCard({
   scenario,
   scenarios,
   isNext,
+  showLockReason,
 }: {
   scenario: ConversationModuleWithProgress;
   scenarios: ConversationModuleWithProgress[];
   isNext: boolean;
+  showLockReason: boolean;
 }) {
   const locked = !scenario.isUnlocked;
   const completed = scenario.isCompleted;
+  const reason =
+    scenarioLockReason(scenarios, scenario.slug) ?? "Pass the earlier scenes to unlock this one.";
 
   const card = (
-    <Card
-      variant={completed ? "dark" : "light"}
-      style={[locked && styles.lockedCard, isNext && styles.nextCard]}>
+    <Card style={[locked && styles.lockedCard, isNext && styles.nextCard]}>
       <View style={styles.cardTop}>
         <View style={styles.cardTitleWrap}>
-          <Eyebrow onDark={completed}>
+          <Eyebrow>
             {scenario.level} · {scenario.topic}
           </Eyebrow>
-          <Title size={19} onDark={completed}>
-            {scenario.title}
-          </Title>
+          <Title size={type.title3}>{scenario.title}</Title>
         </View>
         {completed ? (
-          <CheckCircle2 color={colors.yellowGreen} size={26} />
+          <Chip label="Passed" status="correct" />
         ) : locked ? (
-          <Lock color={colors.slate} size={22} />
+          <Lock color={colors.slate} size={20} />
         ) : isNext ? (
           <Chip label="Next up" status="accent" />
         ) : null}
       </View>
 
-      <Body size={13} onDark={completed}>
+      <Body size={type.callout} numberOfLines={3}>
         {scenario.summary}
       </Body>
 
       <View style={styles.focusRow}>
         {scenario.focus.slice(0, 3).map((item) => (
-          <Chip key={item} label={item} status={completed ? "correct" : "neutral"} />
+          <Chip key={item} label={item} />
         ))}
       </View>
 
-      <View style={styles.metaRow}>
-        <View style={styles.timeRow}>
-          <Clock3 color={completed ? colors.yellowGreen : colors.sage} size={14} />
-          <Body size={12} onDark={completed}>
-            ~{scenario.estimatedMinutes} min · {scenario.turns.length} turns · pass{" "}
-            {scenario.passScore}
-          </Body>
-        </View>
-        {scenario.progress ? (
-          <Chip
-            label={`Best ${normalizeScore(scenario.progress.bestScore)}`}
-            status={scenario.progress.passed ? "correct" : "mixed"}
-          />
-        ) : null}
-      </View>
-
       {locked ? (
-        <Banner
-          tone="info"
-          message={
-            scenarioLockReason(scenarios, scenario.slug) ??
-            "Complete the earlier scenarios to unlock this one."
-          }
-        />
-      ) : null}
+        <Body size={type.footnote} tone="muted">
+          {showLockReason ? reason : "Locked"}
+        </Body>
+      ) : (
+        <View style={styles.metaRow}>
+          <View style={styles.timeRow}>
+            <Clock3 color={colors.sageText} size={14} />
+            <Body size={type.footnote} tone="muted">
+              ~{scenario.estimatedMinutes} min · {scenario.turns.length} turns · pass {scenario.passScore}
+            </Body>
+          </View>
+          {scenario.progress ? (
+            <Chip
+              label={`Best ${normalizeScore(scenario.progress.bestScore)}`}
+              status={scenario.progress.passed ? "correct" : "mixed"}
+            />
+          ) : null}
+        </View>
+      )}
     </Card>
   );
 
-  if (locked) return card;
+  if (locked) {
+    return (
+      <View accessible accessibilityLabel={`${scenario.title}. Locked. ${reason}`}>
+        {card}
+      </View>
+    );
+  }
 
   return (
     <Link href={{ pathname: "/conversation/[slug]", params: { slug: scenario.slug } }} asChild>
@@ -191,12 +180,17 @@ function ScenarioCard({
 }
 
 const styles = StyleSheet.create({
-  statsRow: {
-    flexDirection: "row",
+  track: {
     gap: spacing.sm,
+  },
+  trackRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   lockedCard: {
     backgroundColor: overlays.locked,
+    boxShadow: undefined,
   },
   nextCard: {
     borderWidth: 2,
@@ -210,7 +204,7 @@ const styles = StyleSheet.create({
   },
   cardTitleWrap: {
     flex: 1,
-    gap: spacing.xs,
+    gap: spacing.xxs,
   },
   focusRow: {
     flexDirection: "row",
@@ -219,6 +213,7 @@ const styles = StyleSheet.create({
   },
   metaRow: {
     flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "space-between",
     alignItems: "center",
     gap: spacing.sm,
@@ -226,7 +221,7 @@ const styles = StyleSheet.create({
   timeRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 6,
+    gap: spacing.xs,
     flexShrink: 1,
   },
 });

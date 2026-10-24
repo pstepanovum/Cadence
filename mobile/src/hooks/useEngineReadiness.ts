@@ -78,19 +78,24 @@ export function useCoachReadiness(enabled = true): EngineReadiness {
   const data = query.data;
   const ready = connected && data?.ready === true;
   const offline = !connected || query.isError;
+  const warming = !ready && !offline && data?.warming === true;
 
   return {
     ready,
-    warming: !ready && !offline,
+    warming,
     offline,
     checking: connected && query.isLoading,
+    // The server's own message is written for whoever runs it (it names
+    // environment variables), so the learner gets plain copy instead.
     message: ready
       ? null
       : !connected
         ? "Cadence is not connected to a server, so the coach has nowhere to answer from."
         : offline
           ? "Cadence can't reach the coach right now. Check your connection and try again."
-          : (data?.message ?? "The coach is warming up. This can take a minute on a cold start."),
+          : warming
+            ? "The coach is warming up. This can take a minute on a cold start."
+            : "The coach isn't available right now. It unlocks as soon as it's running.",
     refresh: () => {
       query.refetch();
     },
