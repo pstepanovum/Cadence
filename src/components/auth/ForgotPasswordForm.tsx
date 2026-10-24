@@ -94,7 +94,7 @@ export function ForgotPasswordForm() {
       footer={
         <>
           Remembered it?{" "}
-          <Link href="/login" className="font-semibold text-sage-text underline-offset-2 hover:underline">
+          <Link href="/login" className="font-semibold text-hunter-green underline-offset-2 hover:underline">
             Sign in
           </Link>
         </>
@@ -112,14 +112,14 @@ export function ForgotPasswordForm() {
             onChange={(event) => setEmail(event.target.value)}
             required
             aria-invalid={error ? true : undefined}
-            className="ring-1 ring-alabaster-grey"
+            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
           />
         </div>
 
         {state === "sent" ? <AuthNotice tone="success">{RESET_SENT_MESSAGE}</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="w-full" type="submit" disabled={state === "sending" || wait > 0}>
+        <Button className="min-h-[52px] w-full rounded-[14px] text-base" type="submit" disabled={state === "sending" || wait > 0}>
           {state === "sending"
             ? "Sending…"
             : wait > 0

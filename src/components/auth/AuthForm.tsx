@@ -75,16 +75,16 @@ export function AuthForm({ mode }: AuthFormProps) {
 
   return (
     <AuthCard
-      title={isLogin ? "Sign in to Cadence" : "Create your account"}
+      title={isLogin ? "Welcome back" : "Create your account"}
       description={
         isLogin
-          ? "Your progress, streak and plan follow your account."
+          ? "Sign in to keep training your pronunciation."
           : "Free. Your streak and lesson stats follow you to every device."
       }
       footer={
         <>
           {isLogin ? "New to Cadence?" : "Already have an account?"}{" "}
-          <Link href={isLogin ? "/signup" : "/login"} className="font-semibold text-sage-text underline-offset-2 hover:underline">
+          <Link href={isLogin ? "/signup" : "/login"} className="font-semibold text-hunter-green underline-offset-2 hover:underline">
             {isLogin ? "Create an account" : "Sign in"}
           </Link>
         </>
@@ -101,34 +101,28 @@ export function AuthForm({ mode }: AuthFormProps) {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             required
-            className="ring-1 ring-alabaster-grey"
+            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
           />
         </div>
 
         <div>
-          <div className="flex items-baseline justify-between">
-            <FieldLabel htmlFor={`${id}-password`}>Password</FieldLabel>
-            {isLogin ? (
-              <Link href="/forgot-password" className="text-sm font-semibold text-sage-text underline-offset-2 hover:underline">
-                Forgot it?
-              </Link>
-            ) : null}
-          </div>
+          <FieldLabel htmlFor={`${id}-password`}>Password</FieldLabel>
           <Input
             id={`${id}-password`}
             type="password"
             autoComplete={isLogin ? "current-password" : "new-password"}
+            placeholder={isLogin ? "Your password" : "At least 8 characters"}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             required
             aria-describedby={isLogin ? undefined : `${id}-rules`}
-            className="ring-1 ring-alabaster-grey"
+            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
           />
           {!isLogin ? <PasswordChecklist id={`${id}-rules`} password={password} email={email} /> : null}
         </div>
 
         {!isLogin ? (
-          <label className="flex cursor-pointer items-start gap-3 rounded-3xl bg-vanilla-cream px-4 py-3 text-sm leading-6 text-iron-grey">
+          <label className="flex cursor-pointer items-start gap-3 rounded-2xl bg-bright-snow px-4 py-3 text-sm leading-6 text-iron-grey ring-1 ring-alabaster-grey">
             <input
               type="checkbox"
               checked={newsletter}
@@ -144,9 +138,17 @@ export function AuthForm({ mode }: AuthFormProps) {
         {message ? <AuthNotice tone="success">{message}</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="w-full" type="submit" disabled={isSubmitting}>
+        <Button className="min-h-[52px] w-full rounded-[14px] text-base" type="submit" disabled={isSubmitting}>
           {isSubmitting ? (isLogin ? "Signing in…" : "Creating account…") : isLogin ? "Sign in" : "Create account"}
         </Button>
+
+        {isLogin ? (
+          <p className="text-center">
+            <Link href="/forgot-password" className="text-sm font-semibold text-hunter-green underline-offset-2 hover:underline">
+              Forgot your password?
+            </Link>
+          </p>
+        ) : null}
 
         {!isLogin ? (
           <p className="text-xs leading-5 text-slate-grey">

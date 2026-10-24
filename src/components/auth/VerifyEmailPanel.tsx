@@ -104,7 +104,7 @@ export function VerifyEmailPanel() {
     case "verified":
       return (
         <AuthCard title="Email confirmed" description="Thanks. Your account is all set.">
-          <Button className="w-full" href="/dashboard">
+          <Button className="min-h-[52px] w-full rounded-[14px] text-base" href="/dashboard">
             Continue to Cadence
           </Button>
         </AuthCard>
@@ -112,7 +112,7 @@ export function VerifyEmailPanel() {
     case "failed":
       return (
         <AuthCard title="This link does not work" description={stage.message}>
-          <Button className="w-full" href="/verify-email">
+          <Button className="min-h-[52px] w-full rounded-[14px] text-base" href="/verify-email">
             Send a new link
           </Button>
         </AuthCard>
@@ -120,7 +120,7 @@ export function VerifyEmailPanel() {
     case "unavailable":
       return (
         <AuthCard title="No account needed here" description="This copy of Cadence runs without accounts, so there is no email to confirm.">
-          <Button className="w-full" href="/dashboard">
+          <Button className="min-h-[52px] w-full rounded-[14px] text-base" href="/dashboard">
             Go to practice
           </Button>
         </AuthCard>
@@ -131,7 +131,7 @@ export function VerifyEmailPanel() {
           title="Confirm your email"
           description="Open the link in the email we sent. To get a new one, sign in first."
         >
-          <Button className="w-full" href="/login?next=/verify-email">
+          <Button className="min-h-[52px] w-full rounded-[14px] text-base" href="/login?next=/verify-email">
             Sign in
           </Button>
         </AuthCard>
@@ -143,19 +143,19 @@ export function VerifyEmailPanel() {
           title="Confirm your email"
           description={
             <>
-              We sent a link to <span className="font-semibold text-hunter-green">{stage.user.email}</span>. Open it to
+              We sent a link to <span className="font-semibold text-carbon-black">{stage.user.email}</span>. Open it to
               confirm the address. You can keep practising meanwhile.
             </>
           }
           footer={
-            <Link href="/dashboard" className="font-semibold text-sage-text underline-offset-2 hover:underline">
+            <Link href="/dashboard" className="font-semibold text-hunter-green underline-offset-2 hover:underline">
               Skip for now
             </Link>
           }
         >
           <div className="space-y-3">
             {notice ? <AuthNotice tone="info">{notice}</AuthNotice> : null}
-            <Button className="w-full" variant="ghost" disabled={wait > 0} onClick={() => void resend(stage.user)}>
+            <Button className="min-h-[52px] w-full rounded-[14px] text-base" variant="ghost" disabled={wait > 0} onClick={() => void resend(stage.user)}>
               {wait > 0 ? `Send again in ${Math.ceil(wait / 1000)} s` : "Send the link again"}
             </Button>
           </div>

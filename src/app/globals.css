@@ -40,29 +40,29 @@
 
 /* ── Dark mode ────────────────────────────────────────────────────────────
    The palette keeps its names; dark mode redefines what they hold. Neutral
-   surfaces (cream, snow, white) turn deep green-grey and hunter green turns
+   surfaces (cream, snow, white) turn the neutral greys and hunter green turns
    into the light text colour. Coloured surfaces re-scope the variables for
    their own subtree, so white text on a green card stays white and green
    text on a lime chip stays dark. The system setting applies unless the
    person picked a theme (data-theme on <html>, from the cadence_theme cookie). */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --vanilla-cream: #121813;
-    --bright-snow: #1b221c;
-    --color-white: #1b221c;
-    --platinum: #252e27;
-    --alabaster-grey: #313b33;
-    --pale-slate: #48524a;
-    --pale-slate-2: #6b766d;
-    --slate-grey: #a4aea6;
-    --iron-grey: #c4ccc5;
-    --gunmetal: #dce2dd;
-    --carbon-black: #eef2ef;
+    --vanilla-cream: #16191c;
+    --bright-snow: #212529;
+    --color-white: #212529;
+    --platinum: #2b3035;
+    --alabaster-grey: #343a40;
+    --pale-slate: #495057;
+    --pale-slate-2: #6c757d;
+    --slate-grey: #adb5bd;
+    --iron-grey: #ced4da;
+    --gunmetal: #dee2e6;
+    --carbon-black: #f8f9fa;
     --hunter-green: #dbe9cf;
     --sage-green: #a3cb86;
     --sage-text: #a9d18c;
     --blushed-brick: #e88486;
-    --mm-bg: #18201a;
+    --mm-bg: #1b1f23;
     --mm-tissue: #4a3a34;
     --mm-tissue-line: #b48f7e;
     --mm-palate: #5a453c;
@@ -70,7 +70,7 @@
     --mm-tongue-line: #f0b2ae;
     --mm-teeth: #e9ecef;
     --mm-teeth-line: #6c757d;
-    --mm-airway: #18201a;
+    --mm-airway: #1b1f23;
     --mm-highlight: #a7c957;
     --mm-highlight-line: #dbe9cf;
     --mm-air: #a3cb86;
@@ -80,7 +80,7 @@
 }
 
 :root[data-theme="dark"] {
-  --mm-bg: #18201a;
+  --mm-bg: #1b1f23;
   --mm-tissue: #4a3a34;
   --mm-tissue-line: #b48f7e;
   --mm-palate: #5a453c;
@@ -88,22 +88,22 @@
   --mm-tongue-line: #f0b2ae;
   --mm-teeth: #e9ecef;
   --mm-teeth-line: #6c757d;
-  --mm-airway: #18201a;
+  --mm-airway: #1b1f23;
   --mm-highlight: #a7c957;
   --mm-highlight-line: #dbe9cf;
   --mm-air: #a3cb86;
   --mm-label: #dbe9cf;
-  --vanilla-cream: #121813;
-  --bright-snow: #1b221c;
-  --color-white: #1b221c;
-  --platinum: #252e27;
-  --alabaster-grey: #313b33;
-  --pale-slate: #48524a;
-  --pale-slate-2: #6b766d;
-  --slate-grey: #a4aea6;
-  --iron-grey: #c4ccc5;
-  --gunmetal: #dce2dd;
-  --carbon-black: #eef2ef;
+  --vanilla-cream: #16191c;
+  --bright-snow: #212529;
+  --color-white: #212529;
+  --platinum: #2b3035;
+  --alabaster-grey: #343a40;
+  --pale-slate: #495057;
+  --pale-slate-2: #6c757d;
+  --slate-grey: #adb5bd;
+  --iron-grey: #ced4da;
+  --gunmetal: #dee2e6;
+  --carbon-black: #f8f9fa;
   --hunter-green: #dbe9cf;
   --sage-green: #a3cb86;
   --sage-text: #a9d18c;
@@ -186,6 +186,13 @@
 html {
   background-color: var(--vanilla-cream);
 }
+
+/* Account screens sit on platinum in light mode and on the page grey in dark. */
+.auth-page { background-color: var(--platinum); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .auth-page { background-color: var(--vanilla-cream); }
+}
+:root[data-theme="dark"] .auth-page { background-color: var(--vanilla-cream); }
 
 body {
   min-height: 100vh;

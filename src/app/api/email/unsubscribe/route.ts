@@ -30,7 +30,7 @@ async function unsubscribe(token: string | null): Promise<"reminders" | "newslet
 
 function page(title: string, body: string, status = 200) {
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${title}</title>
-<style>body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#F2E8CF;color:#212529}main{max-width:480px;margin:15vh auto;padding:32px;background:#fff;border-radius:20px}h1{font-size:24px;margin:0 0 12px}a{color:#386641}@media (prefers-color-scheme:dark){body{background:#121813;color:#EEF2EF}main{background:#1B221C}a{color:#A7C957}}</style></head>
+<style>body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#E9ECEF;color:#212529}main{max-width:480px;margin:15vh auto;padding:32px;background:#fff;border-radius:20px}h1{font-size:24px;margin:0 0 12px}a{color:#386641}@media (prefers-color-scheme:dark){body{background:#16191C;color:#F8F9FA}main{background:#212529}a{color:#A7C957}}</style></head>
 <body><main><h1>${title}</h1><p>${body}</p><p><a href="/">Back to Cadence</a></p></main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }

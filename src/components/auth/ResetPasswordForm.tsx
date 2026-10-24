@@ -104,11 +104,11 @@ export function ResetPasswordForm() {
         <div className="space-y-3">
           <AuthNotice tone="success">Your new password works from now on.</AuthNotice>
           {stage.signedIn ? (
-            <Button className="w-full" onClick={() => { router.replace("/dashboard"); router.refresh(); }}>
+            <Button className="min-h-[52px] w-full rounded-[14px] text-base" onClick={() => { router.replace("/dashboard"); router.refresh(); }}>
               Continue to Cadence
             </Button>
           ) : (
-            <Button className="w-full" href="/login">
+            <Button className="min-h-[52px] w-full rounded-[14px] text-base" href="/login">
               Sign in
             </Button>
           )}
@@ -120,7 +120,7 @@ export function ResetPasswordForm() {
   if (stage.name === "invalid") {
     return (
       <AuthCard title="This link does not work" description={stage.message}>
-        <Button className="w-full" href="/forgot-password">
+        <Button className="min-h-[52px] w-full rounded-[14px] text-base" href="/forgot-password">
           Get a new link
         </Button>
       </AuthCard>
@@ -132,11 +132,11 @@ export function ResetPasswordForm() {
   return (
     <AuthCard
       title="Choose a new password"
-      description={email ? <>For <span className="font-semibold text-hunter-green">{email}</span>.</> : "Checking your link…"}
+      description={email ? <>For <span className="font-semibold text-carbon-black">{email}</span>.</> : "Checking your link…"}
       footer={
         <>
           Link expired?{" "}
-          <Link href="/forgot-password" className="font-semibold text-sage-text underline-offset-2 hover:underline">
+          <Link href="/forgot-password" className="font-semibold text-hunter-green underline-offset-2 hover:underline">
             Get a new one
           </Link>
         </>
@@ -156,7 +156,7 @@ export function ResetPasswordForm() {
             required
             aria-describedby={`${id}-rules`}
             disabled={stage.name !== "ready"}
-            className="ring-1 ring-alabaster-grey"
+            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
           />
           <PasswordChecklist id={`${id}-rules`} password={password} email={email} />
         </div>
@@ -170,14 +170,14 @@ export function ResetPasswordForm() {
             onChange={(event) => setConfirm(event.target.value)}
             required
             disabled={stage.name !== "ready"}
-            className="ring-1 ring-alabaster-grey"
+            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
           />
         </div>
 
         {stage.name === "checking" ? <AuthNotice tone="info">Checking your link…</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="w-full" type="submit" disabled={submitting || stage.name !== "ready"}>
+        <Button className="min-h-[52px] w-full rounded-[14px] text-base" type="submit" disabled={submitting || stage.name !== "ready"}>
           {submitting ? "Changing password…" : "Change password"}
         </Button>
       </form>
