@@ -9,7 +9,7 @@ import {
   type TextInputProps,
 } from "react-native";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, maxScale, radii, spacing, TAP_TARGET, type } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 /** The visible label above a field or a group of options. */
 function FieldLabel({ children }: { children: string }) {
@@ -129,88 +129,90 @@ export function Collapsible({
   );
 }
 
-const styles = StyleSheet.create({
-  field: {
-    gap: spacing.sm,
-  },
-  fieldLabel: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.callout,
-    lineHeight: 20,
-    color: colors.carbon,
-  },
-  input: {
-    minHeight: 52,
-    borderRadius: radii.control,
-    backgroundColor: colors.white,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-    fontFamily: fonts.body,
-    fontSize: 16,
-    color: colors.carbon,
-    borderWidth: 1.5,
-    borderColor: colors.alabaster,
-  },
-  inputFocused: {
-    borderColor: colors.hunter,
-  },
-  optionRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  option: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.xs,
-    borderRadius: radii.tile,
-    backgroundColor: colors.white,
-    borderWidth: 1,
-    borderColor: colors.alabaster,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.sm,
-    minHeight: TAP_TARGET,
-  },
-  optionSelected: {
-    backgroundColor: colors.hunter,
-    borderColor: colors.hunter,
-  },
-  optionPressed: {
-    opacity: 0.75,
-  },
-  optionLabel: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.callout,
-    color: colors.iron,
-  },
-  optionLabelSelected: {
-    color: colors.snow,
-  },
-  collapsible: {
-    borderRadius: radii.panel,
-    backgroundColor: colors.white,
-    borderWidth: 1,
-    borderColor: colors.platinum,
-    paddingHorizontal: spacing.lg,
-  },
-  collapsibleHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: spacing.sm,
-    minHeight: 48,
-  },
-  collapsibleTitle: {
-    flex: 1,
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.callout,
-    color: colors.hunter,
-  },
-  chevronOpen: {
-    transform: [{ rotate: "180deg" }],
-  },
-  collapsibleBody: {
-    gap: spacing.sm,
-    paddingBottom: spacing.lg,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    field: {
+      gap: spacing.sm,
+    },
+    fieldLabel: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.callout,
+      lineHeight: 20,
+      color: colors.carbon,
+    },
+    input: {
+      minHeight: 52,
+      borderRadius: radii.control,
+      backgroundColor: colors.white,
+      paddingHorizontal: spacing.lg,
+      paddingVertical: spacing.md,
+      fontFamily: fonts.body,
+      fontSize: 16,
+      color: colors.carbon,
+      borderWidth: 1.5,
+      borderColor: colors.alabaster,
+    },
+    inputFocused: {
+      borderColor: colors.hunter,
+    },
+    optionRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    option: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.xs,
+      borderRadius: radii.tile,
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.alabaster,
+      paddingHorizontal: spacing.lg,
+      paddingVertical: spacing.sm,
+      minHeight: TAP_TARGET,
+    },
+    optionSelected: {
+      backgroundColor: colors.hunter,
+      borderColor: colors.hunter,
+    },
+    optionPressed: {
+      opacity: 0.75,
+    },
+    optionLabel: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.callout,
+      color: colors.iron,
+    },
+    optionLabelSelected: {
+      color: colors.snow,
+    },
+    collapsible: {
+      borderRadius: radii.panel,
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.platinum,
+      paddingHorizontal: spacing.lg,
+    },
+    collapsibleHeader: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: spacing.sm,
+      minHeight: 48,
+    },
+    collapsibleTitle: {
+      flex: 1,
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.callout,
+      color: colors.hunter,
+    },
+    chevronOpen: {
+      transform: [{ rotate: "180deg" }],
+    },
+    collapsibleBody: {
+      gap: spacing.sm,
+      paddingBottom: spacing.lg,
+    },
+  }),
+);

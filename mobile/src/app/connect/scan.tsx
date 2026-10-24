@@ -4,7 +4,7 @@
 // camera refused, wrong kind of code, expired code, already-used code, a
 // computer running a different version. A spinner is never the answer.
 import { CameraView, useCameraPermissions } from "expo-camera";
-import { useRouter } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { useCallback, useRef, useState } from "react";
 import { Linking, StyleSheet, View } from "react-native";
 
@@ -14,11 +14,14 @@ import { describeFailure, failureFromParseFailure, type ConnectionFailure } from
 import { useEnterAppWhenPaired } from "@/hooks/useEnterAppWhenPaired";
 import { useConnection } from "@/pairing/context";
 import { isPayloadExpired, parsePairingUri } from "@/pairing/protocol";
-import { colors, radii, type } from "@/theme/theme";
+import { colors, radii, type, themed } from "@/theme/theme";
 
 export default function ScanScreen() {
   const router = useRouter();
   const { pair } = useConnection();
+  // `home=1`: pairing the learner's own server while staying signed in.
+  const { home } = useLocalSearchParams<{ home?: string }>();
+  const keepAccount = home === "1";
   const enterApp = useEnterAppWhenPaired();
   const [permission, requestPermission] = useCameraPermissions();
   const [failure, setFailure] = useState<ConnectionFailure | null>(null);
@@ -53,7 +56,7 @@ export default function ScanScreen() {
       setBusy(true);
       setFailure(null);
 
-      const result = await pair(parsed.payload).catch(() => ({
+      const result = await pair(parsed.payload, { keepAccount }).catch(() => ({
         ok: false as const,
         failure: "unknown" as const,
       }));
@@ -69,7 +72,7 @@ export default function ScanScreen() {
       setBusy(false);
       setFailure(result.failure);
     },
-    [busy, enterApp, pair],
+    [busy, enterApp, pair, keepAccount],
   );
 
   const back = router.canGoBack() ? <TopBar onBack={() => router.back()} /> : null;
@@ -106,7 +109,7 @@ export default function ScanScreen() {
         <Button
           label="Type the code instead"
           variant="tonal"
-          onPress={() => router.push("/connect/manual")}
+          onPress={() => router.push({ pathname: "/connect/manual", params: keepAccount ? { home: "1" } : {} })}
         />
       </Screen>
     );
@@ -149,18 +152,20 @@ export default function ScanScreen() {
       <Button
         label="Type the code instead"
         variant="tonal"
-        onPress={() => router.push("/connect/manual")}
+        onPress={() => router.push({ pathname: "/connect/manual", params: keepAccount ? { home: "1" } : {} })}
       />
     </Screen>
   );
 }
 
-const styles = StyleSheet.create({
-  viewfinder: {
-    flex: 1,
-    minHeight: 220,
-    borderRadius: radii.cardLarge,
-    overflow: "hidden",
-    backgroundColor: colors.carbon,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    viewfinder: {
+      flex: 1,
+      minHeight: 220,
+      borderRadius: radii.cardLarge,
+      overflow: "hidden",
+      backgroundColor: colors.carbon,
+    },
+  }),
+);

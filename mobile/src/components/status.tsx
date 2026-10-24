@@ -1,3 +1,4 @@
+import { AiOffer } from "@/components/AiOffer";
 import { Banner } from "@/components/ui";
 import type { EngineReadiness } from "@/hooks/useEngineReadiness";
 import { useServerStatus } from "@/hooks/useServerStatus";
@@ -26,6 +27,7 @@ export function ServerBanner({ message }: { message?: string }) {
  */
 export function ReadinessBanner({ readiness }: { readiness: EngineReadiness }) {
   if (readiness.ready) return null;
+  if (readiness.blocked) return <AiOffer decision={readiness.blocked} compact />;
   if (readiness.checking) {
     return <Banner tone="info" message="Checking the engine…" />;
   }

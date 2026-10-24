@@ -12,17 +12,17 @@ import {
   type ViewStyle,
 } from "react-native";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, maxScale, overlays, radii, spacing, TAP_TARGET, type } from "@/theme/theme";
+import { colors, fonts, maxScale, overlays, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 export type ButtonVariant = "primary" | "secondary" | "tonal" | "danger" | "outline";
 
-const buttonColors: Record<ButtonVariant, { bg: string; fg: string }> = {
+const buttonColors: Record<ButtonVariant, { bg: string; fg: string }> = themed(() => ({
   primary: { bg: colors.hunter, fg: colors.snow },
   secondary: { bg: colors.yellowGreen, fg: colors.ink },
   tonal: { bg: overlays.hunterTint, fg: colors.hunter },
   danger: { bg: colors.brick, fg: colors.snow },
   outline: { bg: "transparent", fg: colors.hunter },
-};
+}));
 
 /** The colour an icon inside a button of this variant should use. */
 export function buttonIconColor(variant: ButtonVariant = "primary"): string {
@@ -160,13 +160,13 @@ export function RoundIconButton({
 
 export type ChipStatus = "correct" | "mixed" | "needs-work" | "neutral" | "accent";
 
-const chipPalette: Record<ChipStatus, { bg: string; fg: string }> = {
+const chipPalette: Record<ChipStatus, { bg: string; fg: string }> = themed(() => ({
   correct: { bg: colors.yellowGreen, fg: colors.ink },
   mixed: { bg: colors.mixedChip, fg: colors.ink },
   "needs-work": { bg: colors.brick, fg: colors.snow },
   neutral: { bg: colors.platinum, fg: colors.iron },
   accent: { bg: colors.hunter, fg: colors.snow },
-};
+}));
 
 /**
  * A tag, a tappable word, or one option in a picker. Pass `selected` to make
@@ -240,80 +240,82 @@ export function Chip({
   );
 }
 
-const styles = StyleSheet.create({
-  button: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: spacing.sm,
-    borderRadius: radii.control,
-    minHeight: 52,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-  },
-  buttonOutline: {
-    borderWidth: 1.5,
-    borderColor: colors.paleSlate,
-  },
-  buttonDisabled: {
-    opacity: 0.45,
-  },
-  buttonPressed: {
-    opacity: 0.85,
-    transform: [{ scale: 0.98 }],
-  },
-  buttonLabel: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.body,
-    lineHeight: 20,
-    textAlign: "center",
-    flexShrink: 1,
-  },
-  actionRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
-  },
-  actionColumn: {
-    gap: spacing.sm,
-  },
-  actionCell: {
-    flex: 1,
-  },
-  round: {
-    borderRadius: radii.pill,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  roundShadow: {
-    boxShadow: "0px 1px 4px rgba(33, 37, 41, 0.08)",
-  },
-  chip: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.xs,
-    borderRadius: radii.pill,
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.xs,
-    minHeight: 28,
-    alignSelf: "flex-start",
-  },
-  chipInteractive: {
-    minHeight: 40,
-    paddingHorizontal: spacing.lg,
-  },
-  chipPickerIdle: {
-    borderWidth: 1,
-    borderColor: colors.alabaster,
-  },
-  chipActive: {
-    opacity: 0.6,
-  },
-  chipPressed: {
-    opacity: 0.75,
-  },
-  chipLabel: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.footnote,
-    lineHeight: 18,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    button: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: spacing.sm,
+      borderRadius: radii.control,
+      minHeight: 52,
+      paddingHorizontal: spacing.lg,
+      paddingVertical: spacing.md,
+    },
+    buttonOutline: {
+      borderWidth: 1.5,
+      borderColor: colors.paleSlate,
+    },
+    buttonDisabled: {
+      opacity: 0.45,
+    },
+    buttonPressed: {
+      opacity: 0.85,
+      transform: [{ scale: 0.98 }],
+    },
+    buttonLabel: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.body,
+      lineHeight: 20,
+      textAlign: "center",
+      flexShrink: 1,
+    },
+    actionRow: {
+      flexDirection: "row",
+      gap: spacing.sm,
+    },
+    actionColumn: {
+      gap: spacing.sm,
+    },
+    actionCell: {
+      flex: 1,
+    },
+    round: {
+      borderRadius: radii.pill,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    roundShadow: {
+      boxShadow: "0px 1px 4px rgba(33, 37, 41, 0.08)",
+    },
+    chip: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.xs,
+      borderRadius: radii.pill,
+      paddingHorizontal: spacing.md,
+      paddingVertical: spacing.xs,
+      minHeight: 28,
+      alignSelf: "flex-start",
+    },
+    chipInteractive: {
+      minHeight: 40,
+      paddingHorizontal: spacing.lg,
+    },
+    chipPickerIdle: {
+      borderWidth: 1,
+      borderColor: colors.alabaster,
+    },
+    chipActive: {
+      opacity: 0.6,
+    },
+    chipPressed: {
+      opacity: 0.75,
+    },
+    chipLabel: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.footnote,
+      lineHeight: 18,
+    },
+  }),
+);

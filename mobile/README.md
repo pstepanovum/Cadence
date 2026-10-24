@@ -50,12 +50,80 @@ that does.
   rules (scheduler, scoring, question builders, text helpers) are under
   `src/games/` and unit tested. Games that play audio need the server; the
   rest work offline.
-- **Profile** — name, focus area, daily pace, coach voice, connection status
-  and sign out (account cards are hidden in local mode, which has no account).
+- **Learn** (the tab's hub) — pick a CEFR level, then a quiz, matching, the
+  grammar builder (sentence building), sentence practice (rewrite, gap fill,
+  dictation) or flashcards with spaced repetition; grammar lessons with an
+  intro and graded exercises; the grammar reference with search; the sounds
+  library; and the pronunciation modules. Everything here is graded on the
+  phone (`gradeExercise` in `src/platform/content-model.ts`) and works offline.
+- **Mouth map** — `src/components/mouth-map/`: the side view and front lip view
+  of every English sound from the shared VocalTract port
+  (`src/platform/vocal-tract/`), animated by interpolating the model's
+  parameters, with highlighted articulators, a pulsing voice box for voiced
+  sounds, an airflow arrow, overlays the model cannot draw itself, and a
+  compare view for minimal pairs. Every pronunciation result links to it, and
+  each sound has a drill ladder (sound, syllable, word, minimal pair, phrase,
+  sentence; three takes in a row at 80 pass a step) and spaced review of fixed
+  sounds (`src/practice/sound-coach.ts`).
+- **Profile** — name, focus area, daily pace, coach voice, connection status,
+  offline content packs, and for cloud accounts the account screen (Plus,
+  restore purchases, data export, account deletion), "Connect your own Cadence
+  server" and the opt-in "Product news and offers".
 
 Every screen that loads something has a loading, empty, error and offline state
 with a way out; the record button stays disabled with an explanation while the
 scoring engine is still warming up, and unlocks by itself when it is ready.
+
+## Content packs
+
+Lessons, exercises and flashcards come from content packs
+(`docs/PLATFORM.md`, section 3.3). `sounds` and `core-a1` to `core-b2` ship in
+the app as `.cpack` assets, read from disk the first time a level is opened;
+C1, C2 and newer versions are downloaded from Settings > Offline content packs
+into the documents directory and checked against the manifest's SHA-256 sums.
+The mouth-map targets come from `content/articulation/*.json` and live in the
+JS bundle.
+
+```bash
+npm run content:sync    # copy public/packs and content/articulation into the app
+npm run content:check   # fail if the copies are stale
+```
+
+Until the content pipeline has built `public/packs`, the small samples in
+`src/content/fixtures/` stand in, and the Learn tab says so.
+
+## AI, accounts and Plus
+
+- **Where AI runs.** `src/engine/useEngineRoute.ts` runs the shared
+  `routeRequest` before every AI action: a reachable paired Cadence server
+  first (free, for everyone), then the cloud with Cadence Plus within today's
+  quota, otherwise an offer (`src/components/AiOffer.tsx`). A phone signed in
+  to the cloud can also pair its own server at home (Profile > Connect your own
+  Cadence server): AI then runs at home while progress follows the account.
+  AI calls go to `requireAiTransport()`, everything else to the account
+  transport. In own-server mode there is no cloud, so nothing offers Plus.
+- **Progress.** `src/learning/` keeps practice on the phone per learner (the
+  uid, or `device` with no account). Signed in, a free account syncs only the
+  summary (`POST /api/sync/summary`); Plus also uploads its detail once and then
+  pushes and pulls changes (`src/learning/sync.ts`). Flashcards added through
+  the MCP connector arrive from `GET /api/sync/inbox`.
+- **Plus** is bought in the app through RevenueCat (`src/lib/billing/`,
+  entitlement `plus`, offering `default`). After sign-in the app calls
+  `Purchases.logIn(uid)` and `logOut` on sign-out. Without
+  `EXPO_PUBLIC_REVENUECAT_IOS_KEY` the paywall says purchases are unavailable;
+  `EXPO_PUBLIC_PURCHASES_STUB=1` is an offline stub for simulator flows. Plus
+  itself comes from the server (`GET /api/me`).
+- **App Check.** Cloud AI, sync and newsletter calls carry
+  `X-Firebase-AppCheck`, from App Attest through the local module in
+  `modules/cadence-app-attest` (iOS devices), or from a debug token in
+  development (`EXPO_PUBLIC_APPCHECK_DEBUG_TOKEN`, ignored in release builds).
+  The App Attest provider must be registered for the iOS app in the Firebase
+  console with `EXPO_PUBLIC_FIREBASE_IOS_APP_ID` set.
+- **Update notices.** On launch the app reads `GET /api/version`
+  (`docs/RELEASING.md`): a banner below `ios.latest`, a blocking screen only
+  below `ios.minimumBuild`, nothing without an App Store URL.
+- **Dark mode** follows the system. Colour tokens in `src/theme/theme.ts` are
+  live; style sheets built with `themed()` rebuild after a switch.
 
 ## Checks
 
@@ -63,6 +131,7 @@ scoring engine is still warming up, and unlocks by itself when it is ready.
 npm run typecheck   # tsc --noEmit
 npm run lint        # expo lint
 npm test            # node --test over tests/*.test.ts
+npm run content:check
 ```
 
 `npm test` is Node's own test runner — no test framework is installed. It covers

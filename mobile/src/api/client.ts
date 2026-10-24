@@ -1,7 +1,8 @@
 // FILE: mobile/src/api/client.ts
 import { signOut } from "firebase/auth";
 
-import { requireTransport, type Transport } from "@/api/transport";
+import { requireAiTransport, requireTransport, type Transport } from "@/api/transport";
+import { appCheckHeaders } from "@/lib/app-check";
 import { getFirebaseAuth } from "@/lib/firebase";
 
 export class ApiError extends Error {
@@ -46,17 +47,32 @@ function send(
   });
 }
 
-export async function apiFetch(path: string, init: RequestInit = {}): Promise<Response> {
-  const transport = requireTransport();
+export interface FetchOptions {
+  /** An AI request: goes to the paired server when it is connected. */
+  ai?: boolean;
+  /** Attach a Firebase App Check token (cloud AI, sync and newsletter routes). */
+  appCheck?: boolean;
+}
 
-  let response = await send(transport, path, init, await authHeader(transport));
+async function headersFor(transport: Transport, options: FetchOptions, forceRefresh = false) {
+  const auth = await authHeader(transport, forceRefresh);
+  // App Check proves the request comes from this app; only the hosted API
+  // checks it, so a paired server never gets one.
+  const appCheck = transport.mode === "cloud" && (options.appCheck || options.ai) ? await appCheckHeaders() : {};
+  return { ...auth, ...appCheck };
+}
+
+export async function apiFetch(path: string, init: RequestInit = {}, options: FetchOptions = {}): Promise<Response> {
+  const transport = options.ai ? requireAiTransport() : requireTransport();
+
+  let response = await send(transport, path, init, await headersFor(transport, options));
 
   // A token can be revoked or expire between the SDK's check and the server's,
   // so a cloud 401 gets one retry with a freshly minted token before the
   // person is signed out. The retry resends the same body, which is fine for
   // the strings and FormData this client sends.
   if (response.status === 401 && transport.mode === "cloud" && getFirebaseAuth()?.currentUser) {
-    const refreshed = await authHeader(transport, true).catch(() => null);
+    const refreshed = await headersFor(transport, options, true).catch(() => null);
     if (refreshed) {
       response = await send(transport, path, init, refreshed);
     }
@@ -86,8 +102,8 @@ export async function apiFetch(path: string, init: RequestInit = {}): Promise<Re
   return response;
 }
 
-export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const response = await apiFetch(path, init);
+export async function api<T>(path: string, init: RequestInit = {}, options: FetchOptions = {}): Promise<T> {
+  const response = await apiFetch(path, init, options);
 
   if (!response.ok) {
     let message = `Request failed (${response.status}).`;
@@ -109,10 +125,23 @@ export async function api<T>(path: string, init: RequestInit = {}): Promise<T> {
   return (await response.json()) as T;
 }
 
-export function apiJson<T>(path: string, method: string, body: unknown): Promise<T> {
-  return api<T>(path, {
-    method,
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
+export function apiJson<T>(path: string, method: string, body: unknown, options: FetchOptions = {}): Promise<T> {
+  return api<T>(
+    path,
+    {
+      method,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    },
+    options,
+  );
+}
+
+/**
+ * Headers for an AI request made outside fetch, such as the reference-audio
+ * download: the device token at home, or the ID token and App Check token in
+ * the cloud.
+ */
+export function aiRequestHeaders(): Promise<Record<string, string>> {
+  return headersFor(requireAiTransport(), { ai: true });
 }

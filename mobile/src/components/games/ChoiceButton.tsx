@@ -1,16 +1,17 @@
 import { Check, X } from "lucide-react-native";
 import { useState } from "react";
 import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
-import { colors, fonts, maxScale, radii, shadows, spacing, type } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
-export type ChoiceState = "idle" | "correct" | "wrong" | "dimmed";
+export type ChoiceState = "idle" | "selected" | "correct" | "wrong" | "dimmed";
 
-const palette: Record<ChoiceState, { bg: string; fg: string; sub: string; border: string }> = {
-  idle: { bg: colors.snow, fg: colors.hunter, sub: colors.iron, border: "transparent" },
+const palette: Record<ChoiceState, { bg: string; fg: string; sub: string; border: string }> = themed(() => ({
+  idle: { bg: colors.white, fg: colors.hunter, sub: colors.iron, border: colors.platinum },
+  selected: { bg: colors.limeSoft, fg: colors.hunter, sub: colors.iron, border: colors.hunter },
   correct: { bg: colors.yellowGreen, fg: colors.ink, sub: colors.ink, border: colors.yellowGreen },
   wrong: { bg: colors.brick, fg: colors.snow, sub: "rgba(248,249,250,0.85)", border: colors.brick },
-  dimmed: { bg: colors.snow, fg: colors.slate, sub: colors.slate, border: "transparent" },
-};
+  dimmed: { bg: colors.white, fg: colors.slate, sub: colors.slate, border: colors.platinum },
+}));
 
 /**
  * One answer in a multiple-choice round. It shrinks slightly under the thumb
@@ -44,7 +45,7 @@ export function ChoiceButton({
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={sublabel ? `${label}. ${sublabel}` : label}
-      accessibilityState={{ disabled, selected: state === "correct" || state === "wrong" }}
+      accessibilityState={{ disabled, selected: state === "selected" || state === "correct" || state === "wrong" }}
       disabled={disabled}
       onPress={onPress}
       onPressIn={() => pressTo(0.97)}
@@ -56,7 +57,7 @@ export function ChoiceButton({
           state === "dimmed" && { opacity: 0.55 },
         ]}>
         {badge ? (
-          <View style={[styles.badge, state !== "idle" && state !== "dimmed" && styles.badgeOnColour]}>
+          <View style={[styles.badge, (state === "correct" || state === "wrong") && styles.badgeOnColour]}>
             <Text
               maxFontSizeMultiplier={maxScale.label}
               style={[styles.badgeText, { color: state === "wrong" ? colors.snow : colors.hunter }]}>
@@ -81,45 +82,47 @@ export function ChoiceButton({
   );
 }
 
-const styles = StyleSheet.create({
-  choice: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-    borderRadius: radii.card,
-    borderWidth: 2,
-    paddingVertical: spacing.lg,
-    paddingHorizontal: spacing.lg,
-    minHeight: 60,
-    boxShadow: shadows.card,
-  },
-  badge: {
-    width: 32,
-    height: 32,
-    borderRadius: radii.pill,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  badgeOnColour: {
-    backgroundColor: "rgba(255,255,255,0.35)",
-  },
-  badgeText: {
-    fontFamily: fonts.kicker,
-    fontSize: type.footnote,
-  },
-  body: {
-    flex: 1,
-    gap: 2,
-  },
-  label: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.body + 1,
-    lineHeight: 22,
-  },
-  sublabel: {
-    fontFamily: fonts.body,
-    fontSize: type.footnote,
-    lineHeight: 18,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    choice: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+      borderRadius: radii.card,
+      borderWidth: 2,
+      paddingVertical: spacing.lg,
+      paddingHorizontal: spacing.lg,
+      minHeight: 60,
+      boxShadow: shadows.card,
+    },
+    badge: {
+      width: 32,
+      height: 32,
+      borderRadius: radii.pill,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    badgeOnColour: {
+      backgroundColor: "rgba(255,255,255,0.35)",
+    },
+    badgeText: {
+      fontFamily: fonts.kicker,
+      fontSize: type.footnote,
+    },
+    body: {
+      flex: 1,
+      gap: 2,
+    },
+    label: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.body + 1,
+      lineHeight: 22,
+    },
+    sublabel: {
+      fontFamily: fonts.body,
+      fontSize: type.footnote,
+      lineHeight: 18,
+    },
+  }),
+);

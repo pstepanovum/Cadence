@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Animated, Pressable, StyleSheet, useWindowDimensions, View } from "react-native";
-import { colors, radii, shadows, spacing } from "@/theme/theme";
+import { colors, radii, shadows, spacing, themed } from "@/theme/theme";
 
 /**
  * A card with two faces that turns over around its vertical axis. The faces
@@ -60,23 +60,25 @@ export function FlipCard({
   );
 }
 
-const styles = StyleSheet.create({
-  wrap: {
-    width: "100%",
-  },
-  face: {
-    ...StyleSheet.absoluteFill,
-    borderRadius: radii.cardLarge,
-    padding: spacing.xl,
-    alignItems: "center",
-    justifyContent: "center",
-    backfaceVisibility: "hidden",
-  },
-  front: {
-    backgroundColor: colors.snow,
-    boxShadow: shadows.card,
-  },
-  back: {
-    backgroundColor: colors.hunter,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    wrap: {
+      width: "100%",
+    },
+    face: {
+      ...StyleSheet.absoluteFill,
+      borderRadius: radii.cardLarge,
+      padding: spacing.xl,
+      alignItems: "center",
+      justifyContent: "center",
+      backfaceVisibility: "hidden",
+    },
+    front: {
+      backgroundColor: colors.snow,
+      boxShadow: shadows.card,
+    },
+    back: {
+      backgroundColor: colors.hunter,
+    },
+  }),
+);

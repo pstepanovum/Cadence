@@ -1,6 +1,6 @@
 import { Flame, Heart } from "lucide-react-native";
 import { StyleSheet, Text, View } from "react-native";
-import { colors, fonts, maxScale, radii, spacing, type } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, type, themed } from "@/theme/theme";
 
 /**
  * Score, combo and lives in one compact row. Lives are drawn as hearts so a
@@ -57,49 +57,51 @@ export function ScoreStrip({
   );
 }
 
-const styles = StyleSheet.create({
-  row: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.sm,
-  },
-  pill: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.xs,
-    borderRadius: radii.pill,
-    backgroundColor: colors.white,
-    paddingHorizontal: spacing.md,
-    minHeight: 32,
-  },
-  scorePill: {
-    backgroundColor: colors.hunter,
-  },
-  scoreLabel: {
-    fontFamily: fonts.bodyMedium,
-    fontSize: type.caption,
-    color: colors.onDarkMuted,
-  },
-  scoreValue: {
-    fontFamily: fonts.bodyBold,
-    fontSize: type.body,
-    color: colors.snow,
-    fontVariant: ["tabular-nums"],
-  },
-  hotPill: {
-    backgroundColor: colors.yellowGreen,
-  },
-  pillText: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.footnote,
-    color: colors.slate,
-  },
-  hotText: {
-    color: colors.ink,
-  },
-  hearts: {
-    flexDirection: "row",
-    gap: spacing.xxs,
-    marginLeft: "auto",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    row: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.sm,
+    },
+    pill: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.xs,
+      borderRadius: radii.pill,
+      backgroundColor: colors.white,
+      paddingHorizontal: spacing.md,
+      minHeight: 32,
+    },
+    scorePill: {
+      backgroundColor: colors.hunter,
+    },
+    scoreLabel: {
+      fontFamily: fonts.bodyMedium,
+      fontSize: type.caption,
+      color: colors.onDarkMuted,
+    },
+    scoreValue: {
+      fontFamily: fonts.bodyBold,
+      fontSize: type.body,
+      color: colors.snow,
+      fontVariant: ["tabular-nums"],
+    },
+    hotPill: {
+      backgroundColor: colors.yellowGreen,
+    },
+    pillText: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.footnote,
+      color: colors.slate,
+    },
+    hotText: {
+      color: colors.ink,
+    },
+    hearts: {
+      flexDirection: "row",
+      gap: spacing.xxs,
+      marginLeft: "auto",
+    },
+  }),
+);

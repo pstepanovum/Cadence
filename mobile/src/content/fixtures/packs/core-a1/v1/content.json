@@ -1,0 +1,229 @@
+{
+  "topics": [
+    { "id": "topic.a1.present-simple", "title": "Present simple", "summary": "Talking about habits, facts and routines." },
+    { "id": "topic.a1.articles", "title": "Articles", "summary": "When to use a, an and the." }
+  ],
+  "grammarPoints": [
+    {
+      "id": "gp.a1.present-simple-third-person",
+      "level": "A1",
+      "topicId": "topic.a1.present-simple",
+      "title": "He works, she lives: the -s ending",
+      "summary": "Add -s to the verb after he, she and it in the present simple.",
+      "explanation": "In the present simple the verb has no ending after I, you, we and they. After *he*, *she* and *it* (or one person or thing), add *-s*.\n\nVerbs that end in -sh, -ch, -ss, -x or -o take *-es*: watches, goes. A consonant plus -y becomes *-ies*: study, studies.",
+      "patterns": ["he / she / it + verb-s", "I / you / we / they + verb"],
+      "examples": [
+        { "text": "She works in a small bakery.", "source": { "kind": "generated" } },
+        { "text": "My brother watches football every Sunday.", "note": "watch takes -es", "source": { "kind": "generated" } },
+        { "text": "They live near the station.", "source": { "kind": "generated" } }
+      ],
+      "commonErrors": [
+        { "wrong": "He work at home.", "right": "He works at home.", "note": "One person needs the -s ending." },
+        { "wrong": "She studys English.", "right": "She studies English.", "note": "Consonant + y becomes -ies." }
+      ],
+      "related": ["gp.a1.present-simple-negatives"]
+    },
+    {
+      "id": "gp.a1.present-simple-negatives",
+      "level": "A1",
+      "topicId": "topic.a1.present-simple",
+      "title": "Don't and doesn't",
+      "summary": "Make the present simple negative with don't or doesn't plus the base verb.",
+      "explanation": "Use *don't* after I, you, we and they, and *doesn't* after he, she and it. The main verb stays in its base form: the -s moves to *doesn't*.",
+      "patterns": ["I / you / we / they + don't + verb", "he / she / it + doesn't + verb"],
+      "examples": [
+        { "text": "I don't drink coffee in the evening.", "source": { "kind": "generated" } },
+        { "text": "He doesn't like loud music.", "source": { "kind": "generated" } }
+      ],
+      "commonErrors": [
+        { "wrong": "She doesn't likes tea.", "right": "She doesn't like tea.", "note": "Only one -s: it is already in doesn't." }
+      ],
+      "related": ["gp.a1.present-simple-third-person"]
+    },
+    {
+      "id": "gp.a1.a-an",
+      "level": "A1",
+      "topicId": "topic.a1.articles",
+      "title": "A or an",
+      "summary": "Use an before a vowel sound and a before a consonant sound.",
+      "explanation": "The choice depends on the *sound*, not the letter. Say *an hour* (the h is silent) but *a university* (it starts with a y sound).",
+      "patterns": ["a + consonant sound", "an + vowel sound"],
+      "examples": [
+        { "text": "I had an apple and a banana.", "source": { "kind": "generated" } },
+        { "text": "We waited for an hour.", "note": "silent h", "source": { "kind": "generated" } }
+      ],
+      "commonErrors": [
+        { "wrong": "She is a engineer.", "right": "She is an engineer.", "note": "Engineer starts with a vowel sound." }
+      ],
+      "related": []
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson.a1.daily-routines",
+      "level": "A1",
+      "topicId": "topic.a1.present-simple",
+      "title": "Daily routines",
+      "goal": "Describe what you and other people do every day.",
+      "minutes": 6,
+      "grammarPointIds": ["gp.a1.present-simple-third-person", "gp.a1.present-simple-negatives"],
+      "soundIds": [],
+      "exerciseIds": [
+        "ex.a1.daily-routines.01",
+        "ex.a1.daily-routines.02",
+        "ex.a1.daily-routines.03",
+        "ex.a1.daily-routines.04",
+        "ex.a1.daily-routines.05"
+      ]
+    },
+    {
+      "id": "lesson.a1.a-or-an",
+      "level": "A1",
+      "topicId": "topic.a1.articles",
+      "title": "A or an",
+      "goal": "Choose a or an by listening to the first sound.",
+      "minutes": 4,
+      "grammarPointIds": ["gp.a1.a-an"],
+      "soundIds": [],
+      "exerciseIds": ["ex.a1.a-or-an.01", "ex.a1.a-or-an.02", "ex.a1.a-or-an.03"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex.a1.daily-routines.01",
+      "kind": "multiple_choice",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.present-simple-third-person"],
+      "prompt": "Choose the best answer.",
+      "question": "My sister ___ at a hospital.",
+      "options": ["work", "works", "working"],
+      "answer": 1,
+      "explanation": "One person (my sister) takes the -s ending: works."
+    },
+    {
+      "id": "ex.a1.daily-routines.02",
+      "kind": "gap_fill",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.present-simple-negatives"],
+      "prompt": "Fill in the gap.",
+      "text": "He ___ eat meat.",
+      "answers": [["doesn't", "does not"]],
+      "bank": ["doesn't", "don't", "isn't"],
+      "explanation": "He takes doesn't, and the verb stays in its base form."
+    },
+    {
+      "id": "ex.a1.daily-routines.03",
+      "kind": "sentence_building",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.present-simple-third-person"],
+      "prompt": "Put the words in order.",
+      "answer": ["She", "gets", "up", "at", "seven"],
+      "alternatives": [["At", "seven", "she", "gets", "up"]],
+      "distractors": ["get"],
+      "explanation": "Subject, verb with -s, then the time."
+    },
+    {
+      "id": "ex.a1.daily-routines.04",
+      "kind": "error_correction",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.present-simple-third-person"],
+      "prompt": "Correct the mistake.",
+      "sentence": "My father drive to work.",
+      "answers": ["My father drives to work."],
+      "explanation": "My father is one person, so the verb needs -s."
+    },
+    {
+      "id": "ex.a1.daily-routines.05",
+      "kind": "matching",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.present-simple-third-person"],
+      "prompt": "Match each verb to its he/she form.",
+      "pairs": [
+        { "left": "go", "right": "goes" },
+        { "left": "study", "right": "studies" },
+        { "left": "play", "right": "plays" },
+        { "left": "watch", "right": "watches" }
+      ]
+    },
+    {
+      "id": "ex.a1.a-or-an.01",
+      "kind": "multiple_choice",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.a-an"],
+      "prompt": "Choose a or an.",
+      "question": "It takes ___ hour to get there.",
+      "options": ["a", "an"],
+      "answer": 1,
+      "explanation": "Hour starts with a vowel sound because the h is silent."
+    },
+    {
+      "id": "ex.a1.a-or-an.02",
+      "kind": "gap_fill",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.a-an"],
+      "prompt": "Fill in the gaps with a or an.",
+      "text": "She has ___ umbrella and ___ blue bag.",
+      "answers": [["an"], ["a"]],
+      "bank": ["a", "an"]
+    },
+    {
+      "id": "ex.a1.a-or-an.03",
+      "kind": "dictation",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.a-an"],
+      "prompt": "Listen and type what you hear.",
+      "text": "I need an envelope and a stamp.",
+      "audio": "audio/missing-in-fixture.m4a"
+    },
+    {
+      "id": "ex.a1.cards.01",
+      "kind": "flashcard",
+      "level": "A1",
+      "grammarPointIds": [],
+      "prompt": "Do you remember this word?",
+      "front": "commute",
+      "back": "to travel regularly between home and work",
+      "example": { "text": "I commute by train every day.", "source": { "kind": "generated" } }
+    },
+    {
+      "id": "ex.a1.cards.02",
+      "kind": "flashcard",
+      "level": "A1",
+      "grammarPointIds": [],
+      "prompt": "Do you remember this word?",
+      "front": "usually",
+      "back": "most of the time",
+      "example": { "text": "We usually have dinner at eight.", "source": { "kind": "generated" } }
+    },
+    {
+      "id": "ex.a1.cards.03",
+      "kind": "flashcard",
+      "level": "A1",
+      "grammarPointIds": [],
+      "prompt": "Do you remember this word?",
+      "front": "neighbour",
+      "back": "a person who lives next to you or near you",
+      "example": { "text": "Our neighbour has a friendly dog.", "source": { "kind": "generated" } }
+    },
+    {
+      "id": "ex.a1.pairs.01",
+      "kind": "minimal_pair",
+      "level": "A1",
+      "grammarPointIds": [],
+      "soundIds": ["sound.ih", "sound.iy"],
+      "prompt": "Which word do you hear?",
+      "words": ["ship", "sheep"],
+      "audio": ["audio/missing-ship.m4a", "audio/missing-sheep.m4a"]
+    },
+    {
+      "id": "ex.a1.transform.01",
+      "kind": "transformation",
+      "level": "A1",
+      "grammarPointIds": ["gp.a1.present-simple-negatives"],
+      "prompt": "Rewrite the sentence.",
+      "source": "They speak French.",
+      "instruction": "Make it negative.",
+      "answers": ["They don't speak French.", "They do not speak French."]
+    }
+  ]
+}

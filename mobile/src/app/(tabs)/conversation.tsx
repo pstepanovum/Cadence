@@ -22,7 +22,7 @@ import { useRefresh } from "@/hooks/useRefresh";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { nextScenario, scenarioLockReason } from "@/practice/progression";
 import { normalizeScore } from "@/practice/scoring";
-import { colors, overlays, spacing, type } from "@/theme/theme";
+import { colors, overlays, spacing, type, themed } from "@/theme/theme";
 
 export default function ConversationScreen() {
   const server = useServerStatus();
@@ -180,49 +180,51 @@ function ScenarioCard({
   );
 }
 
-const styles = StyleSheet.create({
-  track: {
-    gap: spacing.sm,
-  },
-  trackRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  lockedCard: {
-    backgroundColor: overlays.locked,
-    boxShadow: undefined,
-  },
-  nextCard: {
-    borderWidth: 2,
-    borderColor: colors.yellowGreen,
-  },
-  cardTop: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    gap: spacing.md,
-  },
-  cardTitleWrap: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-  focusRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  metaRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: spacing.sm,
-  },
-  timeRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.xs,
-    flexShrink: 1,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    track: {
+      gap: spacing.sm,
+    },
+    trackRow: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    lockedCard: {
+      backgroundColor: overlays.locked,
+      boxShadow: undefined,
+    },
+    nextCard: {
+      borderWidth: 2,
+      borderColor: colors.yellowGreen,
+    },
+    cardTop: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      gap: spacing.md,
+    },
+    cardTitleWrap: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+    focusRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    metaRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      alignItems: "center",
+      gap: spacing.sm,
+    },
+    timeRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.xs,
+      flexShrink: 1,
+    },
+  }),
+);

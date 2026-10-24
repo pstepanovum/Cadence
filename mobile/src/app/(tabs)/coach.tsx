@@ -28,7 +28,7 @@ import { useServerStatus } from "@/hooks/useServerStatus";
 import { deleteCoachSession, readCoachSessions, type SavedCoachSession } from "@/lib/coach-storage";
 import { haptics } from "@/lib/haptics";
 import { averageScore } from "@/practice/scoring";
-import { colors, spacing, type } from "@/theme/theme";
+import { colors, spacing, type, themed } from "@/theme/theme";
 
 const SUGGESTED_TOPICS = [
   "Describing my role at work",
@@ -231,39 +231,41 @@ function HistoryRow({
   );
 }
 
-const styles = StyleSheet.create({
-  header: {
-    gap: spacing.lg,
-  },
-  topicsRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  historyHead: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: spacing.sm,
-    marginTop: spacing.sm,
-  },
-  historyCard: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-    paddingVertical: spacing.md,
-    paddingLeft: spacing.lg,
-    paddingRight: spacing.md,
-  },
-  historyBody: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.sm,
-    minHeight: 44,
-  },
-  historyText: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    header: {
+      gap: spacing.lg,
+    },
+    topicsRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    historyHead: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: spacing.sm,
+      marginTop: spacing.sm,
+    },
+    historyCard: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+      paddingVertical: spacing.md,
+      paddingLeft: spacing.lg,
+      paddingRight: spacing.md,
+    },
+    historyBody: {
+      flex: 1,
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.sm,
+      minHeight: 44,
+    },
+    historyText: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+  }),
+);

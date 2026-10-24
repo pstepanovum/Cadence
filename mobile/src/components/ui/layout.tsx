@@ -13,7 +13,7 @@ import {
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import { RoundIconButton } from "@/components/ui/buttons";
 import { Eyebrow, Title } from "@/components/ui/text";
-import { colors, radii, shadows, spacing, type } from "@/theme/theme";
+import { colors, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 /** Keeps content to a readable column on wide screens. */
 const MAX_CONTENT_WIDTH = 640;
@@ -280,70 +280,72 @@ export function pressedCard(pressed: boolean): StyleProp<ViewStyle> {
   return pressed ? styles.cardPressed : undefined;
 }
 
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    backgroundColor: colors.cream,
-  },
-  content: {
-    width: "100%",
-    maxWidth: MAX_CONTENT_WIDTH,
-    alignSelf: "center",
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.sm,
-    gap: spacing.lg,
-  },
-  fill: {
-    flex: 1,
-  },
-  picker: {
-    gap: spacing.sm,
-    paddingVertical: spacing.xxs,
-  },
-  fixedHeader: {
-    paddingBottom: spacing.sm,
-  },
-  topBar: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-    minHeight: 48,
-  },
-  topBarText: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-  card: {
-    borderRadius: radii.card,
-    backgroundColor: colors.snow,
-    padding: spacing.xl,
-    gap: spacing.md,
-    boxShadow: shadows.card,
-  },
-  cardDark: {
-    backgroundColor: colors.hunter,
-  },
-  cardCream: {
-    backgroundColor: colors.cream,
-    boxShadow: undefined,
-    borderWidth: 1,
-    borderColor: "rgba(56,102,65,0.10)",
-  },
-  cardPressed: {
-    transform: [{ scale: 0.985 }],
-    opacity: 0.92,
-  },
-  infoPanel: {
-    borderRadius: radii.panel,
-    backgroundColor: colors.cream,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-    gap: spacing.xs,
-  },
-  infoPanelWhite: {
-    backgroundColor: colors.white,
-  },
-  infoPanelTranslucent: {
-    backgroundColor: "rgba(255,255,255,0.10)",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    screen: {
+      flex: 1,
+      backgroundColor: colors.cream,
+    },
+    content: {
+      width: "100%",
+      maxWidth: MAX_CONTENT_WIDTH,
+      alignSelf: "center",
+      paddingHorizontal: spacing.lg,
+      paddingTop: spacing.sm,
+      gap: spacing.lg,
+    },
+    fill: {
+      flex: 1,
+    },
+    picker: {
+      gap: spacing.sm,
+      paddingVertical: spacing.xxs,
+    },
+    fixedHeader: {
+      paddingBottom: spacing.sm,
+    },
+    topBar: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+      minHeight: 48,
+    },
+    topBarText: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+    card: {
+      borderRadius: radii.card,
+      backgroundColor: colors.snow,
+      padding: spacing.xl,
+      gap: spacing.md,
+      boxShadow: shadows.card,
+    },
+    cardDark: {
+      backgroundColor: colors.hunter,
+    },
+    cardCream: {
+      backgroundColor: colors.cream,
+      boxShadow: undefined,
+      borderWidth: 1,
+      borderColor: "rgba(56,102,65,0.10)",
+    },
+    cardPressed: {
+      transform: [{ scale: 0.985 }],
+      opacity: 0.92,
+    },
+    infoPanel: {
+      borderRadius: radii.panel,
+      backgroundColor: colors.cream,
+      paddingHorizontal: spacing.lg,
+      paddingVertical: spacing.md,
+      gap: spacing.xs,
+    },
+    infoPanelWhite: {
+      backgroundColor: colors.white,
+    },
+    infoPanelTranslucent: {
+      backgroundColor: "rgba(255,255,255,0.10)",
+    },
+  }),
+);

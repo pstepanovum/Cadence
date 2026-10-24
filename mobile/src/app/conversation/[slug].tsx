@@ -36,7 +36,7 @@ import { speechStateFor, useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
 import { scenarioPassed } from "@/practice/progression";
 import { averageScore, bestScore, normalizeScore, scoreStatus } from "@/practice/scoring";
-import { colors, spacing, type } from "@/theme/theme";
+import { colors, spacing, type, themed } from "@/theme/theme";
 
 export default function ConversationSessionScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -333,11 +333,13 @@ function ActiveTurn({
   );
 }
 
-const styles = StyleSheet.create({
-  summaryBanner: {
-    marginBottom: spacing.sm,
-  },
-  centerText: {
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    summaryBanner: {
+      marginBottom: spacing.sm,
+    },
+    centerText: {
+      textAlign: "center",
+    },
+  }),
+);

@@ -11,14 +11,16 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, useColorScheme, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { unlockFirstModule } from "@/api/endpoints";
 import { pruneReferenceAudioCache } from "@/audio/reference-audio";
 import { Body, Button, Title } from "@/components/ui";
+import { UpdateGate } from "@/components/UpdateNotice";
+import { AccountProvider } from "@/context/account";
 import { AuthProvider, useAuth } from "@/context/auth";
 import { ConnectionProvider, useConnection } from "@/pairing/context";
-import { colors, radii, shadows, spacing, type } from "@/theme/theme";
+import { applyColorScheme, colors, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -134,6 +136,17 @@ function RootNavigator() {
         <Stack.Screen name="game" />
         <Stack.Screen name="profile" />
         <Stack.Screen name="settings/voice" />
+        <Stack.Screen name="settings/packs" />
+        <Stack.Screen name="practice/[mode]" />
+        <Stack.Screen name="practice/lesson/[lessonId]" />
+        <Stack.Screen name="grammar/index" />
+        <Stack.Screen name="grammar/[pointId]" />
+        <Stack.Screen name="sounds/index" />
+        <Stack.Screen name="sounds/[soundId]" />
+        <Stack.Screen name="sounds/compare" />
+        <Stack.Screen name="sounds/drill/[soundId]" />
+        <Stack.Screen name="plus" options={{ presentation: "modal" }} />
+        <Stack.Screen name="account" />
       </Stack.Protected>
       {/*
         Not guarded: the setup flow stays reachable from Profile so a person can
@@ -163,6 +176,11 @@ function Gate({ children }: { children: React.ReactNode }) {
 }
 
 export default function RootLayout() {
+  // The tokens follow the system appearance; a change remounts the screens so
+  // every one redraws with the new colours.
+  const scheme = useColorScheme() === "dark" ? "dark" : "light";
+  applyColorScheme(scheme);
+
   const [fontsLoaded, fontError] = useFonts({
     FunnelDisplay_400Regular,
     FunnelDisplay_500Medium,
@@ -185,10 +203,14 @@ export default function RootLayout() {
       <QueryClientProvider client={queryClient}>
         <ConnectionProvider>
           <AuthProvider>
-            <Gate>
-              <StatusBar style="dark" />
-              <RootNavigator />
-            </Gate>
+            <AccountProvider>
+              <Gate>
+                <StatusBar style={scheme === "dark" ? "light" : "dark"} />
+                <UpdateGate key={scheme}>
+                  <RootNavigator />
+                </UpdateGate>
+              </Gate>
+            </AccountProvider>
           </AuthProvider>
         </ConnectionProvider>
       </QueryClientProvider>
@@ -196,18 +218,20 @@ export default function RootLayout() {
   );
 }
 
-const styles = StyleSheet.create({
-  boundary: {
-    flex: 1,
-    backgroundColor: colors.cream,
-    justifyContent: "center",
-    padding: spacing.lg,
-  },
-  boundaryCard: {
-    borderRadius: radii.cardLarge,
-    backgroundColor: colors.snow,
-    padding: spacing.xl,
-    gap: spacing.md,
-    boxShadow: shadows.card,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    boundary: {
+      flex: 1,
+      backgroundColor: colors.cream,
+      justifyContent: "center",
+      padding: spacing.lg,
+    },
+    boundaryCard: {
+      borderRadius: radii.cardLarge,
+      backgroundColor: colors.snow,
+      padding: spacing.xl,
+      gap: spacing.md,
+      boxShadow: shadows.card,
+    },
+  }),
+);

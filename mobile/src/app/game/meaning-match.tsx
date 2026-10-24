@@ -25,7 +25,7 @@ import { useGameProgress } from "@/games/store";
 import { useExitGuard } from "@/hooks/useExitGuard";
 import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, spacing, type } from "@/theme/theme";
+import { colors, fonts, spacing, type, themed } from "@/theme/theme";
 
 const ROUND_LENGTH = 10;
 const BADGES = ["A", "B", "C", "D"];
@@ -228,21 +228,23 @@ export default function MeaningMatchScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  prompt: {
-    alignItems: "center",
-    gap: spacing.sm,
-    minHeight: 120,
-    justifyContent: "center",
-  },
-  center: {
-    textAlign: "center",
-  },
-  ipa: {
-    fontFamily: fonts.bodyMedium,
-    color: colors.sageText,
-  },
-  options: {
-    gap: spacing.sm,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    prompt: {
+      alignItems: "center",
+      gap: spacing.sm,
+      minHeight: 120,
+      justifyContent: "center",
+    },
+    center: {
+      textAlign: "center",
+    },
+    ipa: {
+      fontFamily: fonts.bodyMedium,
+      color: colors.sageText,
+    },
+    options: {
+      gap: spacing.sm,
+    },
+  }),
+);

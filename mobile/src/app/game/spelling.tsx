@@ -28,7 +28,7 @@ import { useExitGuard } from "@/hooks/useExitGuard";
 import { useServerStatus } from "@/hooks/useServerStatus";
 import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, maxScale, radii, spacing, type } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, type, themed } from "@/theme/theme";
 
 const ROUND_LENGTH = 8;
 const MAX_LIVES = 3;
@@ -327,49 +327,51 @@ export default function SpellingScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  prompt: {
-    alignItems: "center",
-    gap: spacing.md,
-  },
-  mask: {
-    fontFamily: fonts.kickerBold,
-    fontSize: 24,
-    letterSpacing: 2,
-    color: colors.hunter,
-    textAlign: "center",
-  },
-  verdict: {
-    gap: spacing.sm,
-  },
-  diffRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.xs,
-  },
-  diffLetter: {
-    fontFamily: fonts.kickerBold,
-    fontSize: 24,
-    minWidth: 22,
-    textAlign: "center",
-    borderRadius: radii.tile,
-    paddingHorizontal: spacing.xs,
-    overflow: "hidden",
-    color: colors.hunter,
-  },
-  diffMatch: {
-    backgroundColor: colors.yellowGreen,
-    color: colors.ink,
-  },
-  diffWrong: {
-    backgroundColor: colors.brick,
-    color: colors.snow,
-  },
-  diffMissing: {
-    backgroundColor: colors.platinum,
-    color: colors.slate,
-  },
-  footer: {
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    prompt: {
+      alignItems: "center",
+      gap: spacing.md,
+    },
+    mask: {
+      fontFamily: fonts.kickerBold,
+      fontSize: 24,
+      letterSpacing: 2,
+      color: colors.hunter,
+      textAlign: "center",
+    },
+    verdict: {
+      gap: spacing.sm,
+    },
+    diffRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.xs,
+    },
+    diffLetter: {
+      fontFamily: fonts.kickerBold,
+      fontSize: 24,
+      minWidth: 22,
+      textAlign: "center",
+      borderRadius: radii.tile,
+      paddingHorizontal: spacing.xs,
+      overflow: "hidden",
+      color: colors.hunter,
+    },
+    diffMatch: {
+      backgroundColor: colors.yellowGreen,
+      color: colors.ink,
+    },
+    diffWrong: {
+      backgroundColor: colors.brick,
+      color: colors.snow,
+    },
+    diffMissing: {
+      backgroundColor: colors.platinum,
+      color: colors.slate,
+    },
+    footer: {
+      textAlign: "center",
+    },
+  }),
+);

@@ -1,13 +1,15 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useRef, useState } from "react";
-import { StyleSheet, View, type TextInput } from "react-native";
+import { Check } from "lucide-react-native";
+import { Pressable, StyleSheet, Text, View, type TextInput } from "react-native";
 import { SvgXml } from "react-native-svg";
 import { Banner, Body, Button, Card, Screen, TextField, TextLink, Title } from "@/components/ui";
 import { LOGO_GREEN_DARK } from "@/data/svg";
 import { describeAuthError } from "@/copy/auth-errors";
 import { haptics } from "@/lib/haptics";
 import { requireFirebaseAuth } from "@/lib/firebase";
-import { spacing, type } from "@/theme/theme";
+import { setNewsletter } from "@/api/account";
+import { colors, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 const MIN_PASSWORD = 8;
 
@@ -16,6 +18,8 @@ export default function SignupScreen() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  // The one place onboarding mentions news, and it starts unticked.
+  const [news, setNews] = useState(false);
   const passwordRef = useRef<TextInput>(null);
 
   const trimmedEmail = email.trim();
@@ -31,6 +35,7 @@ export default function SignupScreen() {
       // Firebase signs the new account in straight away, so the navigator
       // moves on to onboarding, the same three questions the web app asks.
       await createUserWithEmailAndPassword(requireFirebaseAuth(), trimmedEmail, password);
+      if (news) setNewsletter(true).catch(() => {});
     } catch (cause) {
       haptics.error();
       setError(describeAuthError(cause, "Could not create your account. Try again."));
@@ -90,6 +95,17 @@ export default function SignupScreen() {
             {missing} more {missing === 1 ? "character" : "characters"} to go.
           </Body>
         ) : null}
+        <Pressable
+          accessibilityRole="checkbox"
+          accessibilityState={{ checked: news }}
+          accessibilityLabel="Send me product news and offers"
+          onPress={() => setNews((value) => !value)}
+          style={styles.checkRow}>
+          <View style={[styles.box, news && styles.boxOn]}>{news ? <Check color={colors.snow} size={16} strokeWidth={3} /> : null}</View>
+          <Text maxFontSizeMultiplier={maxScale.control} style={styles.checkLabel}>
+            Send me product news and offers
+          </Text>
+        </Pressable>
         <Button label="Create account" loading={submitting} disabled={!canSubmit} onPress={handleSignUp} />
       </Card>
       <View style={styles.footerRow}>
@@ -102,20 +118,26 @@ export default function SignupScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  center: {
-    flexGrow: 1,
-    justifyContent: "center",
-  },
-  logoWrap: {
-    alignItems: "center",
-    paddingVertical: spacing.sm,
-  },
-  footerRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    alignItems: "center",
-    columnGap: spacing.sm,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    checkRow: { flexDirection: "row", alignItems: "center", gap: spacing.md, minHeight: TAP_TARGET },
+    box: { width: 24, height: 24, borderRadius: radii.tile / 2, borderWidth: 2, borderColor: colors.paleSlate, alignItems: "center", justifyContent: "center" },
+    boxOn: { backgroundColor: colors.hunter, borderColor: colors.hunter },
+    checkLabel: { flex: 1, fontFamily: fonts.body, fontSize: type.callout, color: colors.iron },
+    center: {
+      flexGrow: 1,
+      justifyContent: "center",
+    },
+    logoWrap: {
+      alignItems: "center",
+      paddingVertical: spacing.sm,
+    },
+    footerRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      alignItems: "center",
+      columnGap: spacing.sm,
+    },
+  }),
+);

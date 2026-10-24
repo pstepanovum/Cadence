@@ -32,7 +32,7 @@ import { summarizeDeck } from "@/games/srs";
 import { useGameProgress } from "@/games/store";
 import { useRefresh } from "@/hooks/useRefresh";
 import { useServerStatus } from "@/hooks/useServerStatus";
-import { colors, radii, spacing, type } from "@/theme/theme";
+import { colors, radii, spacing, type, themed } from "@/theme/theme";
 
 const ICONS: Record<GameId, React.ComponentType<{ color: string; size: number }>> = {
   flashcards: Layers,
@@ -292,88 +292,90 @@ function timeAgo(iso: string, now: Date): string {
   return `${days} days ago`;
 }
 
-const styles = StyleSheet.create({
-  heroHead: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: spacing.md,
-  },
-  heroText: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-  streakBadge: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.xs,
-    borderRadius: radii.pill,
-    backgroundColor: colors.platinum,
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.xs,
-  },
-  streakBadgeOn: {
-    backgroundColor: colors.yellowGreen,
-  },
-  section: {
-    gap: spacing.sm,
-  },
-  deckRow: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginTop: spacing.xs,
-  },
-  deckStat: {
-    alignItems: "center",
-  },
-  list: {
-    gap: spacing.md,
-  },
-  cardTop: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-  },
-  iconWrap: {
-    width: 48,
-    height: 48,
-    borderRadius: radii.panel,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  cardTitleWrap: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-  cardFoot: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  offlineCard: {
-    opacity: 0.7,
-    boxShadow: undefined,
-  },
-  offlineTag: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.xs,
-    flexShrink: 1,
-  },
-  recentRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-  },
-  recentIcon: {
-    width: 32,
-    height: 32,
-    borderRadius: radii.pill,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  recentBody: {
-    flex: 1,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    heroHead: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      gap: spacing.md,
+    },
+    heroText: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+    streakBadge: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.xs,
+      borderRadius: radii.pill,
+      backgroundColor: colors.platinum,
+      paddingHorizontal: spacing.md,
+      paddingVertical: spacing.xs,
+    },
+    streakBadgeOn: {
+      backgroundColor: colors.yellowGreen,
+    },
+    section: {
+      gap: spacing.sm,
+    },
+    deckRow: {
+      flexDirection: "row",
+      justifyContent: "space-around",
+      marginTop: spacing.xs,
+    },
+    deckStat: {
+      alignItems: "center",
+    },
+    list: {
+      gap: spacing.md,
+    },
+    cardTop: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+    },
+    iconWrap: {
+      width: 48,
+      height: 48,
+      borderRadius: radii.panel,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    cardTitleWrap: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+    cardFoot: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    offlineCard: {
+      opacity: 0.7,
+      boxShadow: undefined,
+    },
+    offlineTag: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.xs,
+      flexShrink: 1,
+    },
+    recentRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+    },
+    recentIcon: {
+      width: 32,
+      height: 32,
+      borderRadius: radii.pill,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    recentBody: {
+      flex: 1,
+    },
+  }),
+);

@@ -21,7 +21,7 @@ import {
 import { signOut } from "firebase/auth";
 import { AppState } from "react-native";
 
-import { setTransport } from "@/api/transport";
+import { setLocalAiTransport, setTransport } from "@/api/transport";
 import { config } from "@/lib/config";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { claimPairing, probeServer, verifySession } from "@/pairing/client";
@@ -55,8 +55,22 @@ interface ConnectionValue {
   /** Base URL for API calls in local mode, null when not connected. */
   baseUrl: string | null;
   deviceToken: string | null;
+  /**
+   * A Cadence server is paired. In cloud mode that is the learner's own server
+   * at home, used for AI when it is reachable while progress follows the account.
+   */
+  paired: boolean;
   chooseCloud: () => Promise<void>;
-  pair: (payload: PairingPayload) => Promise<{ ok: true } | { ok: false; failure: ConnectionFailure }>;
+  /**
+   * Pairs with a Cadence server. With `keepAccount` in cloud mode the sign-in
+   * stays and the server only runs AI; otherwise the phone switches to local mode.
+   */
+  pair: (
+    payload: PairingPayload,
+    options?: { keepAccount?: boolean },
+  ) => Promise<{ ok: true } | { ok: false; failure: ConnectionFailure }>;
+  /** Unpairs the home server in cloud mode, keeping the account. */
+  forgetServer: () => Promise<void>;
   reconnect: () => void;
   forget: () => Promise<void>;
 }
@@ -94,26 +108,23 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
 
     void (async () => {
       const stored = await readPairing();
+      // Cloud is remembered separately: it needs no keychain entry, only the
+      // Firebase sign-in the auth context already restores. A build without
+      // cloud config cannot honour a remembered cloud choice.
+      const { default: AsyncStorage } = await import("@react-native-async-storage/async-storage");
+      const savedMode = await AsyncStorage.getItem(MODE_KEY);
+      const cloud = savedMode === "cloud" && config.isCloudConfigured;
 
       if (cancelled) return;
 
       if (stored) {
+        // In cloud mode a stored pairing is the learner's server at home.
         setConnection(stored.connection);
         setDeviceToken(stored.deviceToken);
-        setMode("local");
+        setMode(cloud ? "cloud" : "local");
         setState({ status: "connecting", attempt: 0, candidate: null });
-      } else {
-        // Cloud is remembered separately: it needs no keychain entry, only the
-        // Firebase sign-in the auth context already restores.
-        const { default: AsyncStorage } = await import(
-          "@react-native-async-storage/async-storage"
-        );
-        const savedMode = await AsyncStorage.getItem(MODE_KEY);
-        // A build without cloud config cannot honour a remembered cloud
-        // choice, so it falls back to the connect screen instead.
-        if (!cancelled && savedMode === "cloud" && config.isCloudConfigured) {
-          setMode("cloud");
-        }
+      } else if (cloud) {
+        setMode("cloud");
       }
 
       if (!cancelled) setReady(true);
@@ -234,7 +245,7 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
   // A laptop that went to sleep is the common case, and the phone usually
   // notices when it comes back to the foreground.
   useEffect(() => {
-    if (mode !== "local") return;
+    if (!connection) return;
 
     const subscription = AppState.addEventListener("change", (next) => {
       if (next === "active") {
@@ -243,23 +254,23 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
     });
 
     return () => subscription.remove();
-  }, [mode, dispatch]);
+  }, [connection, dispatch]);
 
   // Joining a different Wi-Fi invalidates the remembered address.
   useEffect(() => {
-    if (mode !== "local") return;
+    if (!connection) return;
 
     const subscription = Network.addNetworkStateListener(() => {
       dispatch({ type: "connect_requested" });
     });
 
     return () => subscription.remove();
-  }, [mode, dispatch]);
+  }, [connection, dispatch]);
 
   // --- Actions ------------------------------------------------------------
 
   const pair = useCallback(
-    async (payload: PairingPayload) => {
+    async (payload: PairingPayload, options: { keepAccount?: boolean } = {}) => {
       const result = await claimPairing(payload);
 
       if (!result.ok) {
@@ -268,26 +279,37 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
 
       await writePairing({ deviceToken: result.deviceToken, connection: result.connection });
 
-      // Local mode has no account. A cloud sign-in left behind would otherwise
-      // keep authenticating any request made while the computer is away.
-      const auth = getFirebaseAuth();
-      if (auth?.currentUser) await signOut(auth).catch(() => {});
+      const keep = options.keepAccount === true && mode === "cloud";
+      if (!keep) {
+        // Local mode has no account. A cloud sign-in left behind would otherwise
+        // keep authenticating any request made while the computer is away.
+        const auth = getFirebaseAuth();
+        if (auth?.currentUser) await signOut(auth).catch(() => {});
+      }
 
       setConnection(result.connection);
       setDeviceToken(result.deviceToken);
-      setMode("local");
+      if (!keep) setMode("local");
       generation.current += 1;
       setState(reduce(state, { type: "paired", connection: result.connection }));
 
-      const { default: AsyncStorage } = await import(
-        "@react-native-async-storage/async-storage"
-      );
-      await AsyncStorage.setItem(MODE_KEY, "local");
+      if (!keep) {
+        const { default: AsyncStorage } = await import("@react-native-async-storage/async-storage");
+        await AsyncStorage.setItem(MODE_KEY, "local");
+      }
 
       return { ok: true as const };
     },
-    [state],
+    [state, mode],
   );
+
+  const forgetServer = useCallback(async () => {
+    generation.current += 1;
+    await clearPairing();
+    setConnection(null);
+    setDeviceToken(null);
+    setState({ status: "unpaired" });
+  }, []);
 
   const chooseCloud = useCallback(async () => {
     // A stored pairing wins at launch, so it has to go, or the next cold start
@@ -339,6 +361,10 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
           : null;
 
     setTransport(transport);
+    // The paired server runs AI whenever it answers, in either mode.
+    setLocalAiTransport(
+      state.status === "connected" && deviceToken ? { mode: "local", baseUrl: state.baseUrl, deviceToken } : null,
+    );
     const wasLive = transportLive.current;
     transportLive.current = transport !== null;
     if (!transport) return;
@@ -366,12 +392,14 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
       connection,
       baseUrl: state.status === "connected" ? state.baseUrl : null,
       deviceToken,
+      paired: connection !== null && deviceToken !== null,
       chooseCloud,
       pair,
+      forgetServer,
       reconnect,
       forget,
     }),
-    [ready, mode, state, connection, deviceToken, chooseCloud, pair, reconnect, forget],
+    [ready, mode, state, connection, deviceToken, chooseCloud, pair, forgetServer, reconnect, forget],
   );
 
   return <ConnectionContext.Provider value={value}>{children}</ConnectionContext.Provider>;

@@ -1,6 +1,6 @@
 import Constants from "expo-constants";
 import { router } from "expo-router";
-import { ChevronRight, Laptop, Volume2 } from "lucide-react-native";
+import { ChevronRight, Download, Laptop, Sparkles, Volume2 } from "lucide-react-native";
 import { useState } from "react";
 import { Alert, Pressable, StyleSheet, View } from "react-native";
 import {
@@ -23,15 +23,18 @@ import {
   type PracticeCadence,
   type PracticeFocus,
 } from "@/context/auth";
+import { NewsletterToggle } from "@/components/NewsletterToggle";
+import { useAccount } from "@/context/account";
 import { useCoachVoice } from "@/hooks/useCoachVoice";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { haptics } from "@/lib/haptics";
 import { useConnection } from "@/pairing/context";
-import { colors, radii, shadows, spacing, type } from "@/theme/theme";
+import { colors, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 export default function ProfileScreen() {
   const { user, profile, signOut } = useAuth();
-  const { mode, state: connectionState } = useConnection();
+  const { mode, state: connectionState, paired, forgetServer } = useConnection();
+  const account = useAccount();
   const voice = useCoachVoice();
   const server = useServerStatus();
   const local = mode === "local";
@@ -53,7 +56,11 @@ export default function ProfileScreen() {
       : server.checking
         ? "Looking for your computer…"
         : (server.message ?? "Not connected.")
-    : "Run Cadence on your own computer instead, over your home Wi-Fi. Your voice never leaves the house.";
+    : paired
+      ? connectionState.status === "connected"
+        ? `Connected to ${connectionState.serverName}. Scoring and the coach run there when you're home.`
+        : "Paired. Scoring and the coach run there whenever it's reachable."
+      : "Run scoring and the coach on your own computer over your home Wi-Fi. Open source and free.";
 
   return (
     <Screen>
@@ -89,20 +96,45 @@ export default function ProfileScreen() {
         />
         <SettingsRow
           icon={<Laptop color={local && !server.reachable && !server.checking ? colors.brick : colors.hunter} size={20} />}
-          title={local ? "Your computer" : "Connect to my computer"}
+          title={local ? "Your computer" : paired ? "Your Cadence server" : "Connect your own Cadence server"}
           detail={connectionLine}
-          onPress={() => router.push("/connect")}
+          onPress={() => {
+            if (local) router.push("/connect");
+            else if (!paired) router.push({ pathname: "/connect/scan", params: { home: "1" } });
+            else
+              Alert.alert("Your Cadence server", "Unpair it from this phone? Your account stays signed in.", [
+                { text: "Keep", style: "cancel" },
+                { text: "Unpair", style: "destructive", onPress: () => void forgetServer() },
+              ]);
+          }}
         />
+        <SettingsRow
+          icon={<Download color={colors.hunter} size={20} />}
+          title="Offline content packs"
+          detail="Lessons and sounds on this phone, and more to download."
+          onPress={() => router.push("/settings/packs")}
+        />
+        {local ? null : (
+          <SettingsRow
+            icon={<Sparkles color={colors.hunter} size={20} />}
+            title={account.plus ? "Account and Plus" : "Account"}
+            detail={account.plus ? "Plan, restore purchases, your data." : "Plan, restore purchases, your data, delete account."}
+            onPress={() => router.push("/account")}
+          />
+        )}
+        {local ? null : <NewsletterToggle />}
       </View>
 
       {local ? (
         <Body size={type.footnote} tone="muted">
-          There is no account in local mode. Everything you practise is saved on your computer.
+          No account needed with your own server. Pronunciation progress is kept on your computer; lessons and flashcards on this phone.
         </Body>
       ) : (
         <Card>
           <Eyebrow>Account</Eyebrow>
-          <Body size={type.callout}>Your modules, exams and conversations are saved to your account.</Body>
+          <Body size={type.callout}>
+            {account.tier === "full" ? "Everything you practise is synced to your account." : "Your account keeps your progress summary. The detail stays on this phone."}
+          </Body>
           <Button label="Sign out" variant="danger" onPress={confirmSignOut} />
         </Card>
       )}
@@ -241,36 +273,38 @@ function SettingsRow({
   );
 }
 
-const styles = StyleSheet.create({
-  form: {
-    gap: spacing.xl,
-  },
-  group: {
-    gap: spacing.sm,
-  },
-  row: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-    borderRadius: radii.card,
-    backgroundColor: colors.snow,
-    padding: spacing.lg,
-    minHeight: 72,
-    boxShadow: shadows.card,
-  },
-  rowIcon: {
-    width: 44,
-    height: 44,
-    borderRadius: radii.panel,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  rowBody: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-  version: {
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    form: {
+      gap: spacing.xl,
+    },
+    group: {
+      gap: spacing.sm,
+    },
+    row: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+      borderRadius: radii.card,
+      backgroundColor: colors.snow,
+      padding: spacing.lg,
+      minHeight: 72,
+      boxShadow: shadows.card,
+    },
+    rowIcon: {
+      width: 44,
+      height: 44,
+      borderRadius: radii.panel,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    rowBody: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+    version: {
+      textAlign: "center",
+    },
+  }),
+);

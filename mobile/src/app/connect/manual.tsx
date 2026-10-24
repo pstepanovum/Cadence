@@ -3,7 +3,7 @@
 // The fallback for when the camera is refused, the screen is too glossy to
 // scan, or the person simply prefers typing. The pairing screen on the computer
 // shows both pieces this asks for.
-import { useRouter } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { useRef, useState } from "react";
 import { type TextInput } from "react-native";
 
@@ -23,6 +23,9 @@ import { type } from "@/theme/theme";
 export default function ManualConnectScreen() {
   const router = useRouter();
   const { pair } = useConnection();
+  // `home=1`: pairing the learner's own server while staying signed in.
+  const { home } = useLocalSearchParams<{ home?: string }>();
+  const keepAccount = home === "1";
   const enterApp = useEnterAppWhenPaired();
 
   const [address, setAddress] = useState("");
@@ -64,7 +67,7 @@ export default function ManualConnectScreen() {
 
     // A failure to save the pairing (the keychain refusing a write, say) must
     // not leave the button spinning.
-    const result = await pair(payload).catch(() => ({ ok: false as const, failure: "unknown" as const }));
+    const result = await pair(payload, { keepAccount }).catch(() => ({ ok: false as const, failure: "unknown" as const }));
     setBusy(false);
 
     if (result.ok) {
@@ -119,7 +122,7 @@ export default function ManualConnectScreen() {
       {message ? <Banner tone="error" message={`${message.title}. ${message.body}`} /> : null}
 
       <Button label="Connect" loading={busy} onPress={() => void connect()} />
-      <Button label="Scan the code instead" variant="tonal" onPress={() => router.replace("/connect/scan")} />
+      <Button label="Scan the code instead" variant="tonal" onPress={() => router.replace({ pathname: "/connect/scan", params: keepAccount ? { home: "1" } : {} })} />
       <Body size={type.caption} tone="muted">
         Both devices need to be on the same Wi-Fi.
       </Body>

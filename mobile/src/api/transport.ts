@@ -30,6 +30,31 @@ export class NoTransportError extends Error {
   }
 }
 
+/**
+ * The paired Cadence server, when it is connected, published separately so a
+ * phone signed in to the cloud can still run AI on its own server at home
+ * (docs/PLATFORM.md, section 6: the AI transport and the account transport).
+ */
+let localAi: Transport | null = null;
+
+export function setLocalAiTransport(next: Transport | null): void {
+  localAi = next;
+}
+
+export function getLocalAiTransport(): Transport | null {
+  return localAi;
+}
+
+/**
+ * Where an AI request (scoring, speech, transcription, the coach) goes: the
+ * paired server when it is connected, otherwise the account transport. The
+ * engine router decides beforehand whether the cloud may be used at all, and
+ * the server checks again.
+ */
+export function requireAiTransport(): Transport {
+  return localAi ?? requireTransport();
+}
+
 export function requireTransport(): Transport {
   // No guessing: the provider publishes the cloud transport itself. Falling
   // back to the hosted API here sent local-mode calls to the cloud, with a

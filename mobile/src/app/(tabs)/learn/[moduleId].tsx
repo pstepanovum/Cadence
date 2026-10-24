@@ -27,7 +27,7 @@ import {
   nextLesson,
 } from "@/practice/progression";
 import { normalizeScore } from "@/practice/scoring";
-import { colors, overlays, radii, spacing, type } from "@/theme/theme";
+import { colors, overlays, radii, spacing, type, themed } from "@/theme/theme";
 
 export default function ModuleLessonsScreen() {
   const { moduleId } = useLocalSearchParams<{ moduleId: string }>();
@@ -187,46 +187,48 @@ function LessonRow({
   );
 }
 
-const styles = StyleSheet.create({
-  summary: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.lg,
-  },
-  summaryText: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-  list: {
-    gap: spacing.md,
-  },
-  lessonCard: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-    padding: spacing.lg,
-  },
-  nextCard: {
-    borderWidth: 2,
-    borderColor: colors.yellowGreen,
-  },
-  lockedCard: {
-    backgroundColor: overlays.locked,
-    boxShadow: undefined,
-  },
-  lessonIcon: {
-    width: 44,
-    height: 44,
-    borderRadius: radii.pill,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  lessonIconLocked: {
-    backgroundColor: colors.platinum,
-  },
-  lessonBody: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    summary: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.lg,
+    },
+    summaryText: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+    list: {
+      gap: spacing.md,
+    },
+    lessonCard: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+      padding: spacing.lg,
+    },
+    nextCard: {
+      borderWidth: 2,
+      borderColor: colors.yellowGreen,
+    },
+    lockedCard: {
+      backgroundColor: overlays.locked,
+      boxShadow: undefined,
+    },
+    lessonIcon: {
+      width: 44,
+      height: 44,
+      borderRadius: radii.pill,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    lessonIconLocked: {
+      backgroundColor: colors.platinum,
+    },
+    lessonBody: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+  }),
+);

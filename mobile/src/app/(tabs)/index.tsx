@@ -9,6 +9,7 @@ import { playAssessmentFeedback } from "@/audio/feedback";
 import { AssessmentView } from "@/components/practice/AssessmentView";
 import { RecorderPanel } from "@/components/practice/RecorderPanel";
 import { ReadinessBanner, ServerBanner } from "@/components/status";
+import { UpdateBanner } from "@/components/UpdateNotice";
 import {
   Banner,
   Body,
@@ -31,7 +32,7 @@ import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { useConnection } from "@/pairing/context";
 import { normalizeScore } from "@/practice/scoring";
 import { suggestedGroupKey, targetGroups } from "@/practice/targets";
-import { colors, fonts, overlays, radii, spacing, type } from "@/theme/theme";
+import { colors, fonts, overlays, radii, spacing, type, themed } from "@/theme/theme";
 
 export default function HomeScreen() {
   const { displayName, profile } = useAuth();
@@ -105,6 +106,7 @@ export default function HomeScreen() {
         }
       />
 
+      <UpdateBanner />
       <ServerBanner />
 
       <Card variant="dark">
@@ -236,33 +238,35 @@ export default function HomeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  streakRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-  },
-  streakIcon: {
-    width: 44,
-    height: 44,
-    borderRadius: radii.pill,
-    backgroundColor: overlays.whiteOnGreen,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  streakText: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-  wordPanel: {
-    borderRadius: radii.panel,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    paddingVertical: spacing.xl,
-    paddingHorizontal: spacing.lg,
-    gap: spacing.xs,
-  },
-  ipa: {
-    fontFamily: fonts.bodyMedium,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    streakRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+    },
+    streakIcon: {
+      width: 44,
+      height: 44,
+      borderRadius: radii.pill,
+      backgroundColor: overlays.whiteOnGreen,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    streakText: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+    wordPanel: {
+      borderRadius: radii.panel,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      paddingVertical: spacing.xl,
+      paddingHorizontal: spacing.lg,
+      gap: spacing.xs,
+    },
+    ipa: {
+      fontFamily: fonts.bodyMedium,
+    },
+  }),
+);

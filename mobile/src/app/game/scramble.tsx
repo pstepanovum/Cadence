@@ -15,7 +15,7 @@ import { isScrambleable, scrambleWord, type ScrambleTile } from "@/games/text";
 import { useExitGuard } from "@/hooks/useExitGuard";
 import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, spacing, TAP_TARGET, type } from "@/theme/theme";
+import { colors, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 const ROUND_LENGTH = 8;
 const FLASH_MS = 650;
@@ -326,30 +326,32 @@ export default function ScrambleScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  clue: {
-    alignItems: "center",
-    gap: spacing.sm,
-  },
-  center: {
-    textAlign: "center",
-  },
-  board: {
-    gap: spacing.md,
-    paddingHorizontal: spacing.md,
-  },
-  row: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-  },
-  tools: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  tool: {
-    flexGrow: 1,
-    paddingHorizontal: spacing.sm,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    clue: {
+      alignItems: "center",
+      gap: spacing.sm,
+    },
+    center: {
+      textAlign: "center",
+    },
+    board: {
+      gap: spacing.md,
+      paddingHorizontal: spacing.md,
+    },
+    row: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+    },
+    tools: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    tool: {
+      flexGrow: 1,
+      paddingHorizontal: spacing.sm,
+    },
+  }),
+);

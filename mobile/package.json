@@ -8,11 +8,13 @@
     "@react-native-async-storage/async-storage": "2.2.0",
     "@tanstack/react-query": "^5.101.4",
     "expo": "~57.0.31",
+    "expo-application": "~57.0.3",
     "expo-asset": "~57.0.20",
     "expo-audio": "~57.0.5",
     "expo-build-properties": "~57.0.22",
     "expo-camera": "~57.0.6",
     "expo-constants": "~57.0.7",
+    "expo-crypto": "~57.0.4",
     "expo-device": "~57.0.2",
     "expo-file-system": "~57.0.1",
     "expo-font": "~57.0.1",
@@ -21,6 +23,8 @@
     "expo-network": "~57.0.3",
     "expo-router": "~57.0.29",
     "expo-secure-store": "~57.0.4",
+    "expo-sharing": "~57.0.24",
+    "expo-speech": "~57.0.3",
     "expo-splash-screen": "~57.0.10",
     "expo-status-bar": "~57.0.1",
     "expo-system-ui": "~57.0.4",
@@ -30,6 +34,7 @@
     "react-dom": "19.2.3",
     "react-native": "0.86.3",
     "react-native-gesture-handler": "~2.32.0",
+    "react-native-purchases": "^10.9.1",
     "react-native-reanimated": "4.5.1",
     "react-native-render-html": "^6.3.4",
     "react-native-safe-area-context": "~5.7.0",
@@ -56,7 +61,9 @@
     "ios:archive": "node scripts/ios-release.mjs archive",
     "ios:upload": "node scripts/ios-release.mjs upload",
     "testflight": "npm run ios:bump && npm run ios:archive && npm run ios:upload",
-    "test": "node --test \"tests/*.test.ts\""
+    "test": "node --test \"tests/*.test.ts\"",
+    "content:sync": "node scripts/sync-content.mjs",
+    "content:check": "node scripts/sync-content.mjs --check"
   },
   "private": true
 }

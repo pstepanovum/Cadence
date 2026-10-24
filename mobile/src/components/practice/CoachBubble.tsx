@@ -1,7 +1,7 @@
 import { Pause, Play } from "lucide-react-native";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
 import { Body, Eyebrow, RoundIconButton } from "@/components/ui";
-import { colors, radii, spacing, type } from "@/theme/theme";
+import { colors, radii, spacing, type, themed } from "@/theme/theme";
 
 /**
  * One line from the coach, with its own play button. `state` belongs to this
@@ -59,26 +59,28 @@ export function ReplyPanel({ label, children }: { label: string; children: React
   );
 }
 
-const styles = StyleSheet.create({
-  bubble: {
-    borderRadius: radii.card,
-    borderTopLeftRadius: spacing.xs,
-    backgroundColor: colors.hunter,
-    padding: spacing.lg,
-    gap: spacing.sm,
-    marginRight: spacing.xl,
-  },
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  reply: {
-    borderRadius: radii.card,
-    borderTopRightRadius: spacing.xs,
-    backgroundColor: colors.white,
-    padding: spacing.lg,
-    gap: spacing.xs,
-    marginLeft: spacing.xl,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    bubble: {
+      borderRadius: radii.card,
+      borderTopLeftRadius: spacing.xs,
+      backgroundColor: colors.hunter,
+      padding: spacing.lg,
+      gap: spacing.sm,
+      marginRight: spacing.xl,
+    },
+    header: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    reply: {
+      borderRadius: radii.card,
+      borderTopRightRadius: spacing.xs,
+      backgroundColor: colors.white,
+      padding: spacing.lg,
+      gap: spacing.xs,
+      marginLeft: spacing.xl,
+    },
+  }),
+);

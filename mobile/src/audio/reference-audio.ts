@@ -1,4 +1,5 @@
 import { Directory, File, Paths } from "expo-file-system";
+import { aiRequestHeaders } from "@/api/client";
 import { referenceAudioUrl } from "@/api/endpoints";
 
 const CACHE_DIR = "reference-audio";
@@ -72,6 +73,7 @@ export async function getReferenceAudio(text: string, instruct?: string): Promis
   try {
     downloaded = await File.downloadFileAsync(referenceAudioUrl(target, instruct), file, {
       idempotent: true,
+      headers: await aiRequestHeaders(),
     });
   } catch {
     throw new ReferenceAudioError(

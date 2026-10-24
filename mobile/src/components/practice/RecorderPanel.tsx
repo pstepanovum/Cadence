@@ -8,7 +8,7 @@ import { usePlayback } from "@/hooks/usePlayback";
 import { useSpeech } from "@/hooks/useSpeech";
 import { useTakeRecorder } from "@/hooks/useTakeRecorder";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, overlays, radii, shadows, spacing, type } from "@/theme/theme";
+import { colors, fonts, overlays, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 interface RecorderPanelProps {
   /** Text whose TTS rendering "Hear target" plays. Omit to hide the button. */
@@ -209,64 +209,66 @@ export function RecorderPanel({
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    gap: spacing.md,
-  },
-  buttonWrap: {
-    width: 120,
-    height: 120,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  halo: {
-    position: "absolute",
-    width: 96,
-    height: 96,
-    borderRadius: radii.pill,
-    backgroundColor: overlays.brickHalo,
-  },
-  recordButton: {
-    width: 88,
-    height: 88,
-    borderRadius: radii.pill,
-    alignItems: "center",
-    justifyContent: "center",
-    boxShadow: shadows.raised,
-  },
-  recordDisabled: {
-    opacity: 0.45,
-    boxShadow: undefined,
-  },
-  recordPressed: {
-    transform: [{ scale: 0.95 }],
-  },
-  timer: {
-    fontFamily: fonts.bodyBold,
-    fontSize: type.body,
-    color: colors.brickText,
-    fontVariant: ["tabular-nums"],
-  },
-  actionsRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: spacing.sm,
-  },
-  smallButton: {
-    minHeight: 44,
-    paddingVertical: spacing.sm,
-  },
-  status: {
-    alignSelf: "stretch",
-    alignItems: "center",
-  },
-  statusText: {
-    textAlign: "center",
-  },
-  settingsButton: {
-    marginTop: spacing.xs,
-    alignSelf: "stretch",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    container: {
+      alignItems: "center",
+      gap: spacing.md,
+    },
+    buttonWrap: {
+      width: 120,
+      height: 120,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    halo: {
+      position: "absolute",
+      width: 96,
+      height: 96,
+      borderRadius: radii.pill,
+      backgroundColor: overlays.brickHalo,
+    },
+    recordButton: {
+      width: 88,
+      height: 88,
+      borderRadius: radii.pill,
+      alignItems: "center",
+      justifyContent: "center",
+      boxShadow: shadows.raised,
+    },
+    recordDisabled: {
+      opacity: 0.45,
+      boxShadow: undefined,
+    },
+    recordPressed: {
+      transform: [{ scale: 0.95 }],
+    },
+    timer: {
+      fontFamily: fonts.bodyBold,
+      fontSize: type.body,
+      color: colors.brickText,
+      fontVariant: ["tabular-nums"],
+    },
+    actionsRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: spacing.sm,
+    },
+    smallButton: {
+      minHeight: 44,
+      paddingVertical: spacing.sm,
+    },
+    status: {
+      alignSelf: "stretch",
+      alignItems: "center",
+    },
+    statusText: {
+      textAlign: "center",
+    },
+    settingsButton: {
+      marginTop: spacing.xs,
+      alignSelf: "stretch",
+    },
+  }),
+);

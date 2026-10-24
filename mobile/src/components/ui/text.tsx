@@ -1,6 +1,6 @@
 import { Link, type Href } from "expo-router";
 import { Pressable, StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
-import { colors, fonts, maxScale, spacing, TAP_TARGET, type } from "@/theme/theme";
+import { colors, fonts, maxScale, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 export function Title({
   children,
@@ -178,37 +178,39 @@ export function TextLink({
   );
 }
 
-const styles = StyleSheet.create({
-  eyebrow: {
-    fontFamily: fonts.kicker,
-    fontSize: type.caption,
-    lineHeight: 16,
-    letterSpacing: 1,
-    textTransform: "uppercase",
-  },
-  sectionHeader: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    justifyContent: "space-between",
-    gap: spacing.md,
-  },
-  sectionHeaderText: {
-    flex: 1,
-    gap: spacing.xs,
-  },
-  link: {
-    minHeight: TAP_TARGET,
-    justifyContent: "center",
-    alignSelf: "center",
-  },
-  linkPressed: {
-    opacity: 0.6,
-  },
-  linkLabel: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.callout,
-    color: colors.hunter,
-    textDecorationLine: "underline",
-    textDecorationColor: colors.yellowGreen,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    eyebrow: {
+      fontFamily: fonts.kicker,
+      fontSize: type.caption,
+      lineHeight: 16,
+      letterSpacing: 1,
+      textTransform: "uppercase",
+    },
+    sectionHeader: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      justifyContent: "space-between",
+      gap: spacing.md,
+    },
+    sectionHeaderText: {
+      flex: 1,
+      gap: spacing.xs,
+    },
+    link: {
+      minHeight: TAP_TARGET,
+      justifyContent: "center",
+      alignSelf: "center",
+    },
+    linkPressed: {
+      opacity: 0.6,
+    },
+    linkLabel: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.callout,
+      color: colors.hunter,
+      textDecorationLine: "underline",
+      textDecorationColor: colors.yellowGreen,
+    },
+  }),
+);

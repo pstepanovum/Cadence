@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAssessReadiness, getCoachReadiness } from "@/api/endpoints";
+import { blockMessage } from "@/copy/ai-offer";
+import { useEngineRoute } from "@/engine/useEngineRoute";
 import { useConnection } from "@/pairing/context";
+import type { RouteDecision } from "@/platform/engine-routing";
 
 // The Python engines load their models lazily, so the first request after a
 // cold start can take a minute. The web app polls readiness every few seconds
@@ -20,16 +23,21 @@ export interface EngineReadiness {
   checking: boolean;
   /** One line to show the learner. Null once everything is ready. */
   message: string | null;
+  /** Set when the engine router says this cannot run here: show the offer instead. */
+  blocked: Extract<RouteDecision, { route: "blocked" }> | null;
   refresh: () => void;
 }
 
 export function useAssessReadiness(enabled = true): EngineReadiness {
   const { mode, state } = useConnection();
+  const route = useEngineRoute("score");
+  const blocked = route.route === "blocked" ? route : null;
   // No point polling an engine we have no route to.
-  const connected = mode !== "local" || state.status === "connected";
+  const connected = (mode !== "local" || state.status === "connected") && !blocked;
 
   const query = useQuery({
-    queryKey: ["readiness", "assess"],
+    // Keyed by where the request goes: the home server and the cloud warm up separately.
+    queryKey: ["readiness", "assess", route.route],
     queryFn: getAssessReadiness,
     enabled: enabled && connected,
     // Keep polling until it is ready, then stop.
@@ -43,8 +51,11 @@ export function useAssessReadiness(enabled = true): EngineReadiness {
   // A thrown query means we never reached the Next.js app at all.
   const offline = !connected || query.isError || data?.reachable === false;
 
+  if (blocked) return blockedReadiness(blocked, () => void query.refetch());
+
   return {
     ready,
+    blocked: null,
     warming: !ready && !offline && (data?.warming ?? false),
     offline,
     checking: connected && query.isLoading,
@@ -64,10 +75,12 @@ export function useAssessReadiness(enabled = true): EngineReadiness {
 
 export function useCoachReadiness(enabled = true): EngineReadiness {
   const { mode, state } = useConnection();
-  const connected = mode !== "local" || state.status === "connected";
+  const route = useEngineRoute("coach");
+  const blocked = route.route === "blocked" ? route : null;
+  const connected = (mode !== "local" || state.status === "connected") && !blocked;
 
   const query = useQuery({
-    queryKey: ["readiness", "coach"],
+    queryKey: ["readiness", "coach", route.route],
     queryFn: getCoachReadiness,
     enabled: enabled && connected,
     refetchInterval: (current) => (current.state.data?.ready ? false : COACH_POLL_MS),
@@ -80,8 +93,11 @@ export function useCoachReadiness(enabled = true): EngineReadiness {
   const offline = !connected || query.isError;
   const warming = !ready && !offline && data?.warming === true;
 
+  if (blocked) return blockedReadiness(blocked, () => void query.refetch());
+
   return {
     ready,
+    blocked: null,
     warming,
     offline,
     checking: connected && query.isLoading,
@@ -99,5 +115,17 @@ export function useCoachReadiness(enabled = true): EngineReadiness {
     refresh: () => {
       query.refetch();
     },
+  };
+}
+
+function blockedReadiness(blocked: Extract<RouteDecision, { route: "blocked" }>, refresh: () => void): EngineReadiness {
+  return {
+    ready: false,
+    warming: false,
+    offline: false,
+    checking: false,
+    message: blockMessage(blocked.reason, blocked.note),
+    blocked,
+    refresh,
   };
 }

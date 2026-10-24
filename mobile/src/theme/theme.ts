@@ -1,7 +1,13 @@
-// Design tokens mirrored from the web app (src/app/globals.css).
-// Light theme only — the product has no dark mode.
+// Design tokens mirrored from the web app (src/app/globals.css), in light and
+// dark.
+//
+// The colour tokens are live: `colors`, `overlays` and `shadows` hold the
+// current scheme's values, swapped by `applyColorScheme`, and style sheets
+// built with `themed()` are rebuilt on first use after a swap. The root layout
+// applies the system scheme and remounts the app when it changes, so every
+// screen redraws with the new values.
 
-export const colors = {
+const lightColors = {
   hunter: "#386641",
   sage: "#6a994e",
   yellowGreen: "#a7c957",
@@ -36,7 +42,42 @@ export const colors = {
   limeSoft: "#e3eec8",
   brickSoft: "#f6e3e3",
   mixedSoft: "#f7ecc3",
-} as const;
+};
+
+export type Palette = { [K in keyof typeof lightColors]: string };
+
+/**
+ * Dark mode keeps the names and their roles: `cream` is still the page,
+ * `snow` the card, `hunter` the strong brand colour (lifted to stay readable
+ * on dark), `iron` body text. Text-safe shades are re-picked for AA on the
+ * dark surfaces.
+ */
+const darkColors: Palette = {
+  hunter: "#a7c957",
+  sage: "#8fbf6a",
+  yellowGreen: "#a7c957",
+  cream: "#141c17",
+  brick: "#d9686a",
+  snow: "#1d2721",
+  platinum: "#2a362f",
+  alabaster: "#334139",
+  paleSlate: "#4b5a51",
+  slate: "#a6b1aa",
+  iron: "#dce1dc",
+  carbon: "#f1f3ef",
+  white: "#243029",
+  mixedChip: "#e6cf7f",
+  sageText: "#a9d18c",
+  ink: "#1b3a22",
+  brickText: "#f2a7a8",
+  lime: "#1b3a22",
+  onDarkMuted: "rgba(20,28,23,0.78)",
+  limeSoft: "#26371f",
+  brickSoft: "#3b2425",
+  mixedSoft: "#3a3420",
+};
+
+export const colors: Palette = { ...lightColors };
 
 export const radii = {
   /** Lists, cards, banners. */
@@ -103,10 +144,10 @@ export const maxScale = {
 } as const;
 
 /** Gentle elevation: enough to lift a card off cream, never a hard drop shadow. */
-export const shadows = {
+const lightShadows = {
   card: "0px 2px 10px rgba(33, 37, 41, 0.06)",
   raised: "0px 6px 18px rgba(33, 37, 41, 0.14)",
-} as const;
+};
 
 /** Minimum size of anything tappable (Apple HIG). */
 export const TAP_TARGET = 44;
@@ -118,7 +159,7 @@ export function scoreColor(score: number): string {
 }
 
 // Tinted overlays used for layering on solid surfaces.
-export const overlays = {
+const lightOverlays = {
   whiteOnGreen: "rgba(255,255,255,0.10)",
   whiteOnGreenStrong: "rgba(255,255,255,0.14)",
   yellowGreenPanel: "rgba(167,201,87,0.30)",
@@ -129,4 +170,68 @@ export const overlays = {
   locked: "rgba(233,236,239,0.7)",
   /** The recorder halo. */
   brickHalo: "rgba(188,71,73,0.22)",
-} as const;
+};
+
+const darkOverlays: typeof lightOverlays = {
+  whiteOnGreen: "rgba(20,28,23,0.10)",
+  whiteOnGreenStrong: "rgba(20,28,23,0.16)",
+  yellowGreenPanel: "rgba(167,201,87,0.22)",
+  creamSoft: "rgba(20,28,23,0.80)",
+  hunterTint: "rgba(167,201,87,0.12)",
+  locked: "rgba(42,54,47,0.7)",
+  brickHalo: "rgba(217,104,106,0.28)",
+};
+
+const darkShadows: typeof lightShadows = {
+  card: "0px 1px 2px rgba(0, 0, 0, 0.35)",
+  raised: "0px 6px 18px rgba(0, 0, 0, 0.45)",
+};
+
+export const overlays: { [K in keyof typeof lightOverlays]: string } = { ...lightOverlays };
+export const shadows: { [K in keyof typeof lightShadows]: string } = { ...lightShadows };
+
+export type ColorScheme = "light" | "dark";
+
+let scheme: ColorScheme = "light";
+let version = 0;
+
+export function currentScheme(): ColorScheme {
+  return scheme;
+}
+
+/** Swaps the live tokens. Returns true when the scheme actually changed. */
+export function applyColorScheme(next: ColorScheme): boolean {
+  if (next === scheme) return false;
+  scheme = next;
+  version += 1;
+  Object.assign(colors, next === "dark" ? darkColors : lightColors);
+  Object.assign(overlays, next === "dark" ? darkOverlays : lightOverlays);
+  Object.assign(shadows, next === "dark" ? darkShadows : lightShadows);
+  return true;
+}
+
+/**
+ * A value built from the tokens (a style sheet, a palette) that is rebuilt
+ * after the scheme changes. Behaves like the object itself, including for
+ * spreading and key listing.
+ */
+export function themed<T extends object>(build: () => T): T {
+  let built = build();
+  let builtFor = version;
+  const current = () => {
+    if (builtFor !== version) {
+      built = build();
+      builtFor = version;
+    }
+    return built;
+  };
+  return new Proxy({} as T, {
+    get: (_, key) => Reflect.get(current(), key),
+    has: (_, key) => Reflect.has(current(), key),
+    ownKeys: () => Reflect.ownKeys(current()),
+    getOwnPropertyDescriptor: (_, key) => {
+      const descriptor = Reflect.getOwnPropertyDescriptor(current(), key);
+      return descriptor ? { ...descriptor, configurable: true } : undefined;
+    },
+  });
+}

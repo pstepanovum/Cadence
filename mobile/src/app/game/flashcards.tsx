@@ -27,7 +27,7 @@ import { useGameProgress } from "@/games/store";
 import { useExitGuard } from "@/hooks/useExitGuard";
 import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, spacing, type } from "@/theme/theme";
+import { colors, fonts, spacing, type, themed } from "@/theme/theme";
 
 const REVIEW_ANYWAY = 10;
 
@@ -284,30 +284,32 @@ function FlashcardSession({
   );
 }
 
-const styles = StyleSheet.create({
-  planRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  face: {
-    alignItems: "center",
-    gap: spacing.sm,
-  },
-  center: {
-    textAlign: "center",
-  },
-  ipa: {
-    fontFamily: fonts.bodyMedium,
-    color: colors.sageText,
-  },
-  hint: {
-    marginTop: spacing.md,
-  },
-  example: {
-    marginTop: spacing.xs,
-  },
-  footer: {
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    planRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    face: {
+      alignItems: "center",
+      gap: spacing.sm,
+    },
+    center: {
+      textAlign: "center",
+    },
+    ipa: {
+      fontFamily: fonts.bodyMedium,
+      color: colors.sageText,
+    },
+    hint: {
+      marginTop: spacing.md,
+    },
+    example: {
+      marginTop: spacing.xs,
+    },
+    footer: {
+      textAlign: "center",
+    },
+  }),
+);

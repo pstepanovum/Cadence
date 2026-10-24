@@ -10,7 +10,7 @@ import { StyleSheet, View } from "react-native";
 import { Body, Button, Card, Eyebrow, Screen, SectionHeader, Title, TopBar } from "@/components/ui";
 import { isCloudConfigured } from "@/lib/config";
 import { useConnection } from "@/pairing/context";
-import { colors, overlays, radii, spacing, type } from "@/theme/theme";
+import { colors, overlays, radii, spacing, type, themed } from "@/theme/theme";
 
 export default function ConnectIndexScreen() {
   const router = useRouter();
@@ -75,25 +75,27 @@ export default function ConnectIndexScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  optionHead: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.md,
-  },
-  optionIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: radii.panel,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  optionIconDark: {
-    backgroundColor: overlays.whiteOnGreen,
-  },
-  optionTitle: {
-    flex: 1,
-    gap: spacing.xxs,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    optionHead: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.md,
+    },
+    optionIcon: {
+      width: 48,
+      height: 48,
+      borderRadius: radii.panel,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    optionIconDark: {
+      backgroundColor: overlays.whiteOnGreen,
+    },
+    optionTitle: {
+      flex: 1,
+      gap: spacing.xxs,
+    },
+  }),
+);

@@ -1,4 +1,5 @@
-import { StyleSheet, View } from "react-native";
+import { router } from "expo-router";
+import { Pressable, StyleSheet, View } from "react-native";
 import type { PronunciationAssessment } from "@/api/types";
 import {
   Banner,
@@ -12,7 +13,8 @@ import {
 } from "@/components/ui";
 import { useSpeech } from "@/hooks/useSpeech";
 import { normalizeScore, phonemeCaption, scoreLabel, scoreStatus } from "@/practice/scoring";
-import { colors, fonts, overlays, radii, spacing, type } from "@/theme/theme";
+import { soundIdForSymbol } from "@/practice/sounds";
+import { colors, fonts, overlays, radii, spacing, type, themed } from "@/theme/theme";
 
 /** The bare word a highlight chip stands for, without punctuation. */
 function spokenWord(text: string): string {
@@ -41,6 +43,20 @@ export function AssessmentView({
   const clean = assessment.highlights.filter((item) => item.status === "correct").length;
   const close = assessment.highlights.filter((item) => item.status === "mixed").length;
   const total = assessment.highlights.length;
+
+  // The sounds this take missed, once each, linked to their mouth map.
+  const weakSounds = [
+    ...new Map(
+      assessment.phonemes
+        .filter((p) => p.status === "needs-work")
+        .map((p) => [soundIdForSymbol(p.symbol), p.symbol] as const)
+        .filter((entry): entry is readonly [string, string] => entry[0] !== null),
+    ),
+  ].slice(0, 4);
+
+  function openSound(soundId: string) {
+    router.push({ pathname: "/sounds/[soundId]", params: { soundId } });
+  }
 
   function hearWord(word: string) {
     const target = spokenWord(word);
@@ -118,6 +134,17 @@ export function AssessmentView({
         </View>
       ) : null}
 
+      {weakSounds.length > 0 ? (
+        <View style={styles.section}>
+          <Eyebrow>Sounds to work on</Eyebrow>
+          <View style={styles.chipsWrap}>
+            {weakSounds.map(([soundId, symbol]) => (
+              <Chip key={soundId} label={`${symbol} · see how`} status="needs-work" accessibilityHint="Shows where the tongue and lips go for this sound." onPress={() => openSound(soundId)} />
+            ))}
+          </View>
+        </View>
+      ) : null}
+
       {!compact && assessment.nextStep ? (
         <InfoPanel>
           <Eyebrow>Next cue</Eyebrow>
@@ -130,10 +157,14 @@ export function AssessmentView({
           <View style={styles.chipsWrap}>
             {assessment.phonemes.map((phoneme, index) => {
               const needsWork = phoneme.status === "needs-work";
+              const soundId = soundIdForSymbol(phoneme.symbol);
               return (
-                <View
+                <Pressable
                   key={`${phoneme.symbol}-${index}`}
-                  accessible
+                  accessibilityRole={soundId ? "button" : undefined}
+                  disabled={!soundId}
+                  onPress={soundId ? () => openSound(soundId) : undefined}
+                  accessibilityHint={soundId ? "Shows the mouth map for this sound." : undefined}
                   accessibilityLabel={`${phoneme.symbol}, expected ${phoneme.expected}, heard ${
                     phoneme.heard || "nothing"
                   }, ${normalizeScore(phoneme.accuracy)} percent`}
@@ -147,7 +178,7 @@ export function AssessmentView({
                   <Body size={type.caption} onDark={needsWork}>
                     {phonemeCaption(phoneme)}
                   </Body>
-                </View>
+                </Pressable>
               );
             })}
           </View>
@@ -157,57 +188,59 @@ export function AssessmentView({
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    gap: spacing.md,
-  },
-  scoreHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: spacing.lg,
-  },
-  scoreHeaderText: {
-    flex: 1,
-    gap: spacing.xs,
-  },
-  scoreRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  flexText: {
-    flexShrink: 1,
-  },
-  panelRow: {
-    gap: spacing.sm,
-  },
-  panel: {
-    flex: 1,
-  },
-  ipa: {
-    fontFamily: fonts.bodyMedium,
-  },
-  section: {
-    gap: spacing.sm,
-  },
-  sectionHead: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: spacing.sm,
-  },
-  chipsWrap: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: spacing.sm,
-  },
-  phonemeCard: {
-    borderRadius: radii.tile,
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
-    alignItems: "center",
-    minWidth: 64,
-    gap: 2,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    container: {
+      gap: spacing.md,
+    },
+    scoreHeader: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: spacing.lg,
+    },
+    scoreHeaderText: {
+      flex: 1,
+      gap: spacing.xs,
+    },
+    scoreRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    flexText: {
+      flexShrink: 1,
+    },
+    panelRow: {
+      gap: spacing.sm,
+    },
+    panel: {
+      flex: 1,
+    },
+    ipa: {
+      fontFamily: fonts.bodyMedium,
+    },
+    section: {
+      gap: spacing.sm,
+    },
+    sectionHead: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: spacing.sm,
+    },
+    chipsWrap: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: spacing.sm,
+    },
+    phonemeCard: {
+      borderRadius: radii.tile,
+      paddingHorizontal: spacing.md,
+      paddingVertical: spacing.sm,
+      alignItems: "center",
+      minWidth: 64,
+      gap: 2,
+    },
+  }),
+);

@@ -33,7 +33,7 @@ import {
   type SavedCoachSession,
 } from "@/lib/coach-storage";
 import { averageScore, normalizeScore, scoreStatus } from "@/practice/scoring";
-import { colors, spacing, type } from "@/theme/theme";
+import { colors, spacing, type, themed } from "@/theme/theme";
 
 /** Past this the history payload gets long and the model starts repeating itself. */
 const SOFT_TURN_LIMIT = 10;
@@ -417,14 +417,16 @@ export default function CoachSessionScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  turnBlock: {
-    gap: spacing.md,
-  },
-  footer: {
-    gap: spacing.lg,
-  },
-  centerText: {
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    turnBlock: {
+      gap: spacing.md,
+    },
+    footer: {
+      gap: spacing.lg,
+    },
+    centerText: {
+      textAlign: "center",
+    },
+  }),
+);

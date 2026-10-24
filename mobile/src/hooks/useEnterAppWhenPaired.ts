@@ -15,7 +15,10 @@ export function useEnterAppWhenPaired() {
   useEffect(() => {
     // "/" alone is ambiguous: the sign-in group has an index too, and while it
     // is guarded off a navigation to it is silently dropped.
-    if (paired && mode === "local") router.dismissTo("/(tabs)");
+    if (!paired) return;
+    if (mode === "local") router.dismissTo("/(tabs)");
+    // Paired a home server while signed in: back to wherever it was opened from.
+    else if (mode === "cloud" && router.canGoBack()) router.back();
   }, [paired, mode]);
 
   return useCallback(() => setPaired(true), []);

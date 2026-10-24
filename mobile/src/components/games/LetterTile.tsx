@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
-import { colors, fonts, radii, shadows, TAP_TARGET } from "@/theme/theme";
+import { colors, fonts, radii, shadows, TAP_TARGET, themed } from "@/theme/theme";
 
 export type TileState = "pool" | "placed" | "correct" | "wrong" | "empty" | "ghost";
 
-const palette: Record<TileState, { bg: string; fg: string; border: string }> = {
+const palette: Record<TileState, { bg: string; fg: string; border: string }> = themed(() => ({
   pool: { bg: colors.white, fg: colors.hunter, border: colors.alabaster },
   placed: { bg: colors.cream, fg: colors.hunter, border: colors.yellowGreen },
   correct: { bg: colors.yellowGreen, fg: colors.ink, border: colors.yellowGreen },
@@ -13,7 +13,7 @@ const palette: Record<TileState, { bg: string; fg: string; border: string }> = {
   empty: { bg: "transparent", fg: colors.paleSlate, border: colors.paleSlate },
   /** A pool tile already used — keeps its space so the row does not jump. */
   ghost: { bg: "transparent", fg: colors.paleSlate, border: colors.alabaster },
-};
+}));
 
 /** One letter in the scramble game. Tiles shrink as they are tapped. */
 export function LetterTile({
@@ -69,20 +69,22 @@ export function LetterTile({
   );
 }
 
-const styles = StyleSheet.create({
-  tile: {
-    borderRadius: radii.tile,
-    borderWidth: 2,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  lifted: {
-    boxShadow: shadows.card,
-  },
-  // Full width: measured on its own, a narrow glyph such as "I" got no room.
-  letter: {
-    alignSelf: "stretch",
-    textAlign: "center",
-    fontFamily: fonts.kickerBold,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    tile: {
+      borderRadius: radii.tile,
+      borderWidth: 2,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    lifted: {
+      boxShadow: shadows.card,
+    },
+    // Full width: measured on its own, a narrow glyph such as "I" got no room.
+    letter: {
+      alignSelf: "stretch",
+      textAlign: "center",
+      fontFamily: fonts.kickerBold,
+    },
+  }),
+);

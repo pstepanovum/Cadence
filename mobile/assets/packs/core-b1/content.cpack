@@ -1,0 +1,179 @@
+{
+  "topics": [
+    { "id": "topic.b1.present-perfect", "title": "Present perfect", "summary": "Linking the past to now." },
+    { "id": "topic.b1.conditionals", "title": "Conditionals", "summary": "Real and imagined situations." }
+  ],
+  "grammarPoints": [
+    {
+      "id": "gp.b1.present-perfect-for-since",
+      "level": "B1",
+      "topicId": "topic.b1.present-perfect",
+      "title": "For and since",
+      "summary": "Use for with a length of time and since with a starting point.",
+      "explanation": "With the present perfect, *for* tells you how long (for two years, for a week) and *since* tells you when it started (since 2019, since Monday).",
+      "patterns": ["have/has + past participle + for + period", "have/has + past participle + since + point in time"],
+      "examples": [
+        { "text": "We have lived here for six years.", "source": { "kind": "generated" } },
+        { "text": "She has worked at the library since March.", "source": { "kind": "generated" } }
+      ],
+      "commonErrors": [
+        { "wrong": "I have known him since ten years.", "right": "I have known him for ten years.", "note": "Ten years is a length of time, so use for." }
+      ],
+      "related": ["gp.b1.present-perfect-continuous"]
+    },
+    {
+      "id": "gp.b1.present-perfect-continuous",
+      "level": "B1",
+      "topicId": "topic.b1.present-perfect",
+      "title": "I've been waiting: the present perfect continuous",
+      "summary": "Use have/has been + -ing for an activity that started in the past and is still going on.",
+      "explanation": "The present perfect continuous puts the focus on the *activity* and how long it has lasted. It is common with how long, for and since.",
+      "patterns": ["have/has + been + verb-ing"],
+      "examples": [
+        { "text": "I've been waiting for twenty minutes.", "source": { "kind": "generated" } },
+        { "text": "It has been raining all morning.", "source": { "kind": "generated" } }
+      ],
+      "commonErrors": [
+        { "wrong": "I am waiting here since nine.", "right": "I have been waiting here since nine.", "note": "Since needs a perfect tense." }
+      ],
+      "related": ["gp.b1.present-perfect-for-since"]
+    },
+    {
+      "id": "gp.b1.first-conditional",
+      "level": "B1",
+      "topicId": "topic.b1.conditionals",
+      "title": "If it rains, we'll stay in",
+      "summary": "The first conditional: if + present simple, will + verb, for likely future results.",
+      "explanation": "Use the first conditional for a real possibility in the future. The *if* part uses the present simple, not will.",
+      "patterns": ["if + present simple, will + verb", "will + verb + if + present simple"],
+      "examples": [
+        { "text": "If you leave now, you'll catch the bus.", "source": { "kind": "generated" } },
+        { "text": "We'll have the picnic inside if it rains.", "source": { "kind": "generated" } }
+      ],
+      "commonErrors": [
+        { "wrong": "If it will rain, we'll stay in.", "right": "If it rains, we'll stay in.", "note": "No will after if." }
+      ],
+      "related": []
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson.b1.how-long",
+      "level": "B1",
+      "topicId": "topic.b1.present-perfect",
+      "title": "How long have you been here?",
+      "goal": "Say how long something has lasted with for, since and the present perfect.",
+      "minutes": 7,
+      "grammarPointIds": ["gp.b1.present-perfect-for-since", "gp.b1.present-perfect-continuous"],
+      "soundIds": [],
+      "exerciseIds": ["ex.b1.how-long.01", "ex.b1.how-long.02", "ex.b1.how-long.03", "ex.b1.how-long.04"]
+    },
+    {
+      "id": "lesson.b1.plans-and-results",
+      "level": "B1",
+      "topicId": "topic.b1.conditionals",
+      "title": "Plans and results",
+      "goal": "Talk about likely results with the first conditional.",
+      "minutes": 5,
+      "grammarPointIds": ["gp.b1.first-conditional"],
+      "soundIds": [],
+      "exerciseIds": ["ex.b1.plans.01", "ex.b1.plans.02", "ex.b1.plans.03"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex.b1.how-long.01",
+      "kind": "multiple_choice",
+      "level": "B1",
+      "grammarPointIds": ["gp.b1.present-perfect-for-since"],
+      "prompt": "Choose the best answer.",
+      "question": "They have been married ___ 2015.",
+      "options": ["for", "since", "from", "during"],
+      "answer": 1,
+      "explanation": "2015 is a starting point, so use since."
+    },
+    {
+      "id": "ex.b1.how-long.02",
+      "kind": "gap_fill",
+      "level": "B1",
+      "grammarPointIds": ["gp.b1.present-perfect-continuous"],
+      "prompt": "Complete the sentence.",
+      "text": "She ___ been studying for three hours.",
+      "answers": [["has", "'s"]],
+      "explanation": "She takes has: she has been studying."
+    },
+    {
+      "id": "ex.b1.how-long.03",
+      "kind": "transformation",
+      "level": "B1",
+      "grammarPointIds": ["gp.b1.present-perfect-continuous"],
+      "prompt": "Rewrite the sentence.",
+      "source": "I started learning the guitar two years ago. I'm still learning it.",
+      "instruction": "Use the present perfect continuous with for.",
+      "answers": [
+        "I have been learning the guitar for two years.",
+        "I've been learning the guitar for two years."
+      ]
+    },
+    {
+      "id": "ex.b1.how-long.04",
+      "kind": "sentence_building",
+      "level": "B1",
+      "grammarPointIds": ["gp.b1.present-perfect-for-since"],
+      "prompt": "Put the words in order.",
+      "answer": ["How", "long", "have", "you", "lived", "here?"],
+      "distractors": ["did"]
+    },
+    {
+      "id": "ex.b1.plans.01",
+      "kind": "error_correction",
+      "level": "B1",
+      "grammarPointIds": ["gp.b1.first-conditional"],
+      "prompt": "Correct the mistake.",
+      "sentence": "If you will call me, I'll pick you up.",
+      "answers": ["If you call me, I'll pick you up.", "If you call me, I will pick you up."]
+    },
+    {
+      "id": "ex.b1.plans.02",
+      "kind": "matching",
+      "level": "B1",
+      "grammarPointIds": ["gp.b1.first-conditional"],
+      "prompt": "Match the halves.",
+      "pairs": [
+        { "left": "If we miss the train,", "right": "we'll take a taxi." },
+        { "left": "If you're hungry,", "right": "I'll make some pasta." },
+        { "left": "If it's sunny tomorrow,", "right": "we'll go to the beach." }
+      ]
+    },
+    {
+      "id": "ex.b1.plans.03",
+      "kind": "multiple_choice",
+      "level": "B1",
+      "grammarPointIds": ["gp.b1.first-conditional"],
+      "prompt": "Choose the best answer.",
+      "question": "I'll send you the photos if I ___ time tonight.",
+      "options": ["have", "will have", "had"],
+      "answer": 0
+    },
+    {
+      "id": "ex.b1.cards.01",
+      "kind": "flashcard",
+      "level": "B1",
+      "grammarPointIds": [],
+      "prompt": "Do you remember this word?",
+      "front": "postpone",
+      "back": "to move an event to a later time",
+      "example": { "text": "They postponed the meeting until Friday.", "source": { "kind": "generated" } }
+    },
+    {
+      "id": "ex.b1.cards.02",
+      "kind": "flashcard",
+      "level": "B1",
+      "grammarPointIds": [],
+      "prompt": "Do you remember this word?",
+      "front": "reliable",
+      "back": "able to be trusted to do what is expected",
+      "example": { "text": "This old car is surprisingly reliable.", "source": { "kind": "generated" } }
+    }
+  ]
+}

@@ -29,7 +29,7 @@ import { useExitGuard } from "@/hooks/useExitGuard";
 import { useServerStatus } from "@/hooks/useServerStatus";
 import { useSpeech } from "@/hooks/useSpeech";
 import { haptics } from "@/lib/haptics";
-import { colors, spacing, type } from "@/theme/theme";
+import { colors, spacing, type, themed } from "@/theme/theme";
 
 const ROUND_LENGTH = 10;
 const ALL = "all";
@@ -283,15 +283,17 @@ export default function SoundMatchScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  prompt: {
-    alignItems: "center",
-    gap: spacing.md,
-  },
-  options: {
-    gap: spacing.sm,
-  },
-  footer: {
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    prompt: {
+      alignItems: "center",
+      gap: spacing.md,
+    },
+    options: {
+      gap: spacing.sm,
+    },
+    footer: {
+      textAlign: "center",
+    },
+  }),
+);

@@ -1,7 +1,7 @@
 import { Volume2 } from "lucide-react-native";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
 import { haptics } from "@/lib/haptics";
-import { colors, fonts, maxScale, radii, shadows, spacing, type } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 /**
  * The big "hear it" control. Large on purpose: in Spelling Bee and Sound Match
@@ -57,19 +57,21 @@ export function SpeakerButton({
   );
 }
 
-const styles = StyleSheet.create({
-  wrap: {
-    alignItems: "center",
-    gap: spacing.sm,
-  },
-  button: {
-    borderRadius: radii.pill,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  label: {
-    fontFamily: fonts.bodySemiBold,
-    fontSize: type.footnote,
-    color: colors.hunter,
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    wrap: {
+      alignItems: "center",
+      gap: spacing.sm,
+    },
+    button: {
+      borderRadius: radii.pill,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    label: {
+      fontFamily: fonts.bodySemiBold,
+      fontSize: type.footnote,
+      color: colors.hunter,
+    },
+  }),
+);

@@ -11,7 +11,7 @@ import {
 import { SvgXml } from "react-native-svg";
 import { Button } from "@/components/ui/buttons";
 import { Body, Title } from "@/components/ui/text";
-import { colors, radii, spacing, type } from "@/theme/theme";
+import { colors, radii, spacing, type, themed } from "@/theme/theme";
 
 // Loading is communicated with placeholder shapes and plain copy, and
 // "nothing here" is always a centred panel with a heading and a sentence, so no
@@ -22,12 +22,12 @@ export type BannerTone = "info" | "warning" | "error" | "success";
 const bannerPalette: Record<
   BannerTone,
   { bg: string; fg: string; icon: string; Icon: typeof Info }
-> = {
+> = themed(() => ({
   info: { bg: colors.white, fg: colors.iron, icon: colors.hunter, Icon: Info },
   warning: { bg: colors.mixedSoft, fg: colors.ink, icon: colors.ink, Icon: AlertTriangle },
   error: { bg: colors.brickSoft, fg: colors.brickText, icon: colors.brick, Icon: XCircle },
   success: { bg: colors.limeSoft, fg: colors.ink, icon: colors.hunter, Icon: CheckCircle2 },
-};
+}));
 
 export function Banner({
   message,
@@ -219,56 +219,58 @@ export function ScreenState({
   return <>{children}</>;
 }
 
-const styles = StyleSheet.create({
-  banner: {
-    borderRadius: radii.panel,
-    padding: spacing.lg,
-    gap: spacing.md,
-    borderWidth: 1,
-    borderColor: "rgba(33,37,41,0.06)",
-  },
-  bannerRow: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: spacing.sm,
-  },
-  bannerText: {
-    flex: 1,
-  },
-  bannerAction: {
-    alignSelf: "flex-start",
-    minHeight: 44,
-    paddingVertical: spacing.sm,
-  },
-  empty: {
-    borderRadius: radii.cardLarge,
-    backgroundColor: colors.snow,
-    paddingHorizontal: spacing.xl,
-    paddingVertical: spacing.xxl,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: spacing.md,
-  },
-  emptyCompact: {
-    paddingVertical: spacing.xl,
-  },
-  emptyAction: {
-    marginTop: spacing.xs,
-    alignSelf: "stretch",
-  },
-  centerText: {
-    textAlign: "center",
-  },
-  loading: {
-    gap: spacing.md,
-    paddingVertical: spacing.sm,
-  },
-  loadingRow: {
-    height: 72,
-    borderRadius: radii.card,
-    backgroundColor: colors.snow,
-  },
-  loadingRowShort: {
-    width: "65%",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    banner: {
+      borderRadius: radii.panel,
+      padding: spacing.lg,
+      gap: spacing.md,
+      borderWidth: 1,
+      borderColor: "rgba(33,37,41,0.06)",
+    },
+    bannerRow: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      gap: spacing.sm,
+    },
+    bannerText: {
+      flex: 1,
+    },
+    bannerAction: {
+      alignSelf: "flex-start",
+      minHeight: 44,
+      paddingVertical: spacing.sm,
+    },
+    empty: {
+      borderRadius: radii.cardLarge,
+      backgroundColor: colors.snow,
+      paddingHorizontal: spacing.xl,
+      paddingVertical: spacing.xxl,
+      alignItems: "center",
+      justifyContent: "center",
+      gap: spacing.md,
+    },
+    emptyCompact: {
+      paddingVertical: spacing.xl,
+    },
+    emptyAction: {
+      marginTop: spacing.xs,
+      alignSelf: "stretch",
+    },
+    centerText: {
+      textAlign: "center",
+    },
+    loading: {
+      gap: spacing.md,
+      paddingVertical: spacing.sm,
+    },
+    loadingRow: {
+      height: 72,
+      borderRadius: radii.card,
+      backgroundColor: colors.snow,
+    },
+    loadingRowShort: {
+      width: "65%",
+    },
+  }),
+);

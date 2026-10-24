@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Animated, StyleSheet, Text, View, type StyleProp, type ViewStyle } from "react-native";
 import Svg, { Circle } from "react-native-svg";
-import { colors, fonts, maxScale, overlays, radii, scoreColor, spacing, type } from "@/theme/theme";
+import { colors, fonts, maxScale, overlays, radii, scoreColor, spacing, type, themed } from "@/theme/theme";
 
 export function ProgressBar({
   value,
@@ -191,52 +191,54 @@ export function StatRow({ children }: { children: React.ReactNode }) {
   return <View style={styles.statRow}>{children}</View>;
 }
 
-const styles = StyleSheet.create({
-  progressTrack: {
-    height: 8,
-    borderRadius: radii.pill,
-    overflow: "hidden",
-  },
-  progressFill: {
-    height: "100%",
-    width: "100%",
-    borderRadius: radii.pill,
-  },
-  segments: {
-    flexDirection: "row",
-    gap: spacing.xs,
-  },
-  segment: {
-    flex: 1,
-    height: 6,
-    borderRadius: radii.pill,
-  },
-  ringText: {
-    position: "absolute",
-    fontFamily: fonts.bodyBold,
-  },
-  statRow: {
-    flexDirection: "row",
-    gap: spacing.sm,
-  },
-  statTile: {
-    flex: 1,
-    borderRadius: radii.panel,
-    paddingVertical: spacing.md,
-    paddingHorizontal: spacing.sm,
-    alignItems: "center",
-    justifyContent: "center",
-    gap: spacing.xxs,
-  },
-  statValue: {
-    fontFamily: fonts.bodyBold,
-    fontSize: type.title2,
-    lineHeight: 28,
-  },
-  statLabel: {
-    fontFamily: fonts.bodyMedium,
-    fontSize: type.caption,
-    lineHeight: 16,
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    progressTrack: {
+      height: 8,
+      borderRadius: radii.pill,
+      overflow: "hidden",
+    },
+    progressFill: {
+      height: "100%",
+      width: "100%",
+      borderRadius: radii.pill,
+    },
+    segments: {
+      flexDirection: "row",
+      gap: spacing.xs,
+    },
+    segment: {
+      flex: 1,
+      height: 6,
+      borderRadius: radii.pill,
+    },
+    ringText: {
+      position: "absolute",
+      fontFamily: fonts.bodyBold,
+    },
+    statRow: {
+      flexDirection: "row",
+      gap: spacing.sm,
+    },
+    statTile: {
+      flex: 1,
+      borderRadius: radii.panel,
+      paddingVertical: spacing.md,
+      paddingHorizontal: spacing.sm,
+      alignItems: "center",
+      justifyContent: "center",
+      gap: spacing.xxs,
+    },
+    statValue: {
+      fontFamily: fonts.bodyBold,
+      fontSize: type.title2,
+      lineHeight: 28,
+    },
+    statLabel: {
+      fontFamily: fonts.bodyMedium,
+      fontSize: type.caption,
+      lineHeight: 16,
+      textAlign: "center",
+    },
+  }),
+);

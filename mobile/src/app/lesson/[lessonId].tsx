@@ -42,26 +42,26 @@ import { haptics } from "@/lib/haptics";
 import { htmlToPlainText, narrationChunks } from "@/practice/narration";
 import { didPass, lessonAfter, passMark } from "@/practice/progression";
 import { averageScore, bestScore, normalizeScore, scoreStatus } from "@/practice/scoring";
-import { colors, fonts, maxScale, radii, spacing, type } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, type, themed } from "@/theme/theme";
 
 const MAX_CONTENT_WIDTH = 640;
 
 // Module constants: RenderHtml rebuilds its whole tree when these change identity.
 const HTML_TEXT_PROPS = { maxFontSizeMultiplier: maxScale.body };
-const HTML_BASE_STYLE = {
+const HTML_BASE_STYLE = themed(() => ({
   color: colors.iron,
   fontFamily: fonts.body,
   fontSize: type.body,
   lineHeight: 23,
-};
-const HTML_TAG_STYLES = {
+}));
+const HTML_TAG_STYLES = themed(() => ({
   h1: { color: colors.hunter, fontFamily: fonts.kicker, fontSize: type.title2, lineHeight: 28 },
   h2: { color: colors.hunter, fontFamily: fonts.kicker, fontSize: type.title3, lineHeight: 26 },
   h3: { color: colors.hunter, fontFamily: fonts.kicker, fontSize: type.headline, lineHeight: 22 },
   strong: { fontFamily: fonts.bodyBold, color: colors.hunter },
   em: { fontFamily: fonts.bodyMedium, fontStyle: "normal" as const, color: colors.hunter },
   li: { marginBottom: spacing.xs },
-};
+}));
 
 export default function LessonScreen() {
   const { lessonId, moduleId } = useLocalSearchParams<{ lessonId: string; moduleId: string }>();
@@ -549,22 +549,24 @@ function WordQueueLesson({
   );
 }
 
-const styles = StyleSheet.create({
-  wordPanel: {
-    borderRadius: radii.panel,
-    backgroundColor: colors.cream,
-    alignItems: "center",
-    paddingVertical: spacing.xl,
-    paddingHorizontal: spacing.lg,
-    gap: spacing.xs,
-  },
-  ipa: {
-    fontFamily: fonts.bodyMedium,
-  },
-  summaryBanner: {
-    marginBottom: spacing.sm,
-  },
-  centerText: {
-    textAlign: "center",
-  },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    wordPanel: {
+      borderRadius: radii.panel,
+      backgroundColor: colors.cream,
+      alignItems: "center",
+      paddingVertical: spacing.xl,
+      paddingHorizontal: spacing.lg,
+      gap: spacing.xs,
+    },
+    ipa: {
+      fontFamily: fonts.bodyMedium,
+    },
+    summaryBanner: {
+      marginBottom: spacing.sm,
+    },
+    centerText: {
+      textAlign: "center",
+    },
+  }),
+);

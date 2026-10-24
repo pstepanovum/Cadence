@@ -1,5 +1,7 @@
 import { api, apiFetch, apiJson } from "@/api/client";
-import { requireTransport } from "@/api/transport";
+import { requireAiTransport } from "@/api/transport";
+import { recordPronunciation } from "@/learning/state";
+import { today, updateLearning } from "@/learning/store";
 import type {
   CoachHistoryEntry,
   CoachMode,
@@ -33,21 +35,22 @@ function audioFormData(audio: RecordedAudio): FormData {
 
 // --- AI / audio ---
 
-export function assess(audio: RecordedAudio, text: string): Promise<PronunciationAssessment> {
+export async function assess(audio: RecordedAudio, text: string): Promise<PronunciationAssessment> {
   const form = audioFormData(audio);
   form.append("text", text);
-  return api<PronunciationAssessment>("/api/assess", { method: "POST", body: form });
+  const result = await api<PronunciationAssessment>("/api/assess", { method: "POST", body: form }, { ai: true });
+  // Every scored take feeds the per-sound mastery behind "sounds to fix".
+  const now = new Date();
+  updateLearning((state) => recordPronunciation(state, result.phonemes ?? [], now.getTime(), today(now)));
+  return result;
 }
 
 export function transcribe(audio: RecordedAudio): Promise<TranscribeResponse> {
-  return api<TranscribeResponse>("/api/transcribe", {
-    method: "POST",
-    body: audioFormData(audio),
-  });
+  return api<TranscribeResponse>("/api/transcribe", { method: "POST", body: audioFormData(audio) }, { ai: true });
 }
 
 export async function getAssessReadiness(): Promise<EngineReadiness & { status: number }> {
-  const response = await apiFetch("/api/assess");
+  const response = await apiFetch("/api/assess", {}, { ai: true });
   const body = (await response.json().catch(() => ({}))) as EngineReadiness;
   return { ...body, status: response.status };
 }
@@ -72,7 +75,7 @@ export async function getHealth(): Promise<{ ok: boolean; service?: string }> {
 export function referenceAudioUrl(text: string, instruct?: string): string {
   const params = new URLSearchParams({ text });
   if (instruct) params.set("instruct", instruct);
-  return `${requireTransport().baseUrl}/api/reference-audio?${params.toString()}`;
+  return `${requireAiTransport().baseUrl}/api/reference-audio?${params.toString()}`;
 }
 
 // --- Learn ---
@@ -126,7 +129,7 @@ export async function getCoachReadiness(): Promise<EngineReadiness> {
   // The route answers 503 with a perfectly useful `{ready:false, message}`
   // body when the coach is offline, so this must not go through `api()`, which
   // throws that body away on a non-2xx response.
-  const response = await apiFetch("/api/ai-coach");
+  const response = await apiFetch("/api/ai-coach", {}, { ai: true });
   const body = (await response.json().catch(() => ({}))) as EngineReadiness;
   return { ...body, ready: body.ready === true };
 }
@@ -137,7 +140,7 @@ export function coachTurn(payload: {
   mode: CoachMode;
   history: CoachHistoryEntry[];
 }): Promise<CoachTurnResponse> {
-  return apiJson("/api/ai-coach", "POST", payload);
+  return apiJson("/api/ai-coach", "POST", payload, { ai: true });
 }
 
 // --- Conversation ---
