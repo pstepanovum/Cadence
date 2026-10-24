@@ -13,6 +13,17 @@ import type { RenderedEmail } from "./layout";
 import { isEmailAddress, senders, type Mailbox } from "./senders";
 
 export const BREVO_API = "https://api.brevo.com/v3";
+
+/**
+ * Where calls go. BREVO_API_URL points them at a local stub in end-to-end
+ * tests; only a loopback http address is accepted, so a misconfigured
+ * server can never send mail or contacts anywhere but Brevo.
+ */
+export function brevoApiBase(env: Env = process.env): string {
+  const override = env.BREVO_API_URL?.trim();
+  if (override && /^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?(\/[\w/.-]*)?$/.test(override)) return override.replace(/\/$/, "");
+  return BREVO_API;
+}
 const TIMEOUT_MS = 10_000;
 
 /** Brevo list ids, fixed by the owner. */
@@ -110,7 +121,7 @@ async function call(path: string, init: { method: string; body?: unknown }, deps
   const key = env.BREVO_API_KEY?.trim();
   if (!key) throw new EmailError("not_configured", "BREVO_API_KEY is not set.");
   try {
-    return await (deps.fetch ?? fetch)(`${BREVO_API}${path}`, {
+    return await (deps.fetch ?? fetch)(`${brevoApiBase(env)}${path}`, {
       method: init.method,
       headers: { "api-key": key, "content-type": "application/json", accept: "application/json" },
       body: init.body === undefined ? undefined : JSON.stringify(init.body),

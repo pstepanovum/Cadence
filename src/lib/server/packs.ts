@@ -31,12 +31,15 @@ export interface ContentLibrary {
 let cached: Promise<ContentLibrary> | null = null;
 
 export function packsDir(): string {
-  return process.env.CADENCE_PACKS_DIR?.trim() || join(process.cwd(), "public", "packs");
+  return process.env.CADENCE_PACKS_DIR?.trim() || join(/* turbopackIgnore: true */ process.cwd(), "public", "packs");
 }
 
+// The packs live in public/, which every deployment copies next to the
+// server, so the paths read here stay out of file tracing; traced, the
+// dynamic paths matched the whole repository (mobile/ included).
 async function readJson<T>(path: string): Promise<T | null> {
   try {
-    return JSON.parse(await readFile(path, "utf8")) as T;
+    return JSON.parse(await readFile(/* turbopackIgnore: true */ path, "utf8")) as T;
   } catch {
     return null;
   }
@@ -44,14 +47,14 @@ async function readJson<T>(path: string): Promise<T | null> {
 
 async function load(dir: string): Promise<ContentLibrary> {
   const library: ContentLibrary = { grammarPoints: new Map(), exercises: new Map(), topics: new Map(), scenarios: new Map() };
-  const index = await readJson<PackIndex>(join(dir, "index.json"));
+  const index = await readJson<PackIndex>(join(/* turbopackIgnore: true */ dir, "index.json"));
   for (const entry of index?.packs ?? []) {
     if (!/^[a-z0-9-]+$/.test(entry.id) || !Number.isInteger(entry.version)) continue;
-    const root = join(dir, entry.id, `v${entry.version}`);
-    const manifest = await readJson<PackManifest>(join(root, "manifest.json"));
+    const root = join(/* turbopackIgnore: true */ dir, entry.id, `v${entry.version}`);
+    const manifest = await readJson<PackManifest>(join(/* turbopackIgnore: true */ root, "manifest.json"));
     if (!manifest || !canReadPack(manifest)) continue;
     for (const file of manifest.files.filter((f) => f.path.endsWith(".json") && !f.path.includes(".."))) {
-      const content = await readJson<PackContent & { scenarios?: (CoachScenario & { level?: CefrLevel })[] }>(join(root, file.path));
+      const content = await readJson<PackContent & { scenarios?: (CoachScenario & { level?: CefrLevel })[] }>(join(/* turbopackIgnore: true */ root, file.path));
       if (!content) continue;
       for (const gp of content.grammarPoints ?? []) library.grammarPoints.set(gp.id, gp);
       for (const ex of content.exercises ?? []) library.exercises.set(ex.id, ex);

@@ -148,7 +148,7 @@ export function VerifyEmailPanel() {
             </>
           }
           footer={
-            <Link href="/dashboard" className="font-semibold text-sage-green underline-offset-2 hover:underline">
+            <Link href="/dashboard" className="font-semibold text-sage-text underline-offset-2 hover:underline">
               Skip for now
             </Link>
           }

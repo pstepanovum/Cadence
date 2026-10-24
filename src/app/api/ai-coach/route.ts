@@ -52,7 +52,8 @@ export async function GET(request: Request) {
         message:
           "AI Coach is offline. For cloud, set GEMINI_API_KEY; for local, start the coach-engine service.",
       },
-      { status: 503 },
+      // A status answer, like GET /api/assess: clients read `ready`.
+      { status: 200 },
     );
   }
 }

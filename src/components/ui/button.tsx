@@ -1,5 +1,7 @@
 // FILE: src/components/ui/button.tsx
-"use client";
+//
+// No "use client": with no state of its own it renders on the server from
+// server components and ships no JavaScript there.
 
 import * as React from "react";
 import Link from "next/link";

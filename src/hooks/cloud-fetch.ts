@@ -14,30 +14,30 @@
 // request goes out without them; the server decides what that means.
 "use client";
 
-import { getApp, getApps, initializeApp } from "firebase/app";
-import {
-  getLimitedUseToken,
-  getToken,
-  initializeAppCheck,
-  ReCaptchaEnterpriseProvider,
-  type AppCheck,
-} from "firebase/app-check";
-import { getAuth } from "firebase/auth";
+import type { FirebaseApp } from "firebase/app";
+import type { AppCheck } from "firebase/app-check";
 import { firebaseWebConfig, isFirebaseConfigured } from "@/lib/firebase/config";
+
+// The Firebase SDK is loaded on the first call, not with the page, so public
+// pages that only might call a cloud route (the newsletter box) stay light.
 
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_ENTERPRISE_SITE_KEY ?? "";
 const DEBUG_TOKEN = process.env.NEXT_PUBLIC_APPCHECK_DEBUG_TOKEN ?? "";
 
-let appCheck: AppCheck | null | undefined;
+let appCheck: Promise<AppCheck | null> | undefined;
 
-function firebaseApp() {
+async function firebaseApp(): Promise<FirebaseApp> {
+  const { getApp, getApps, initializeApp } = await import("firebase/app");
   return getApps().length > 0 ? getApp() : initializeApp(firebaseWebConfig);
 }
 
-function getAppCheck(): AppCheck | null {
-  if (appCheck !== undefined) return appCheck;
-  appCheck = null;
-  if (typeof window === "undefined" || !isFirebaseConfigured) return appCheck;
+function getAppCheck(): Promise<AppCheck | null> {
+  appCheck ??= createAppCheck();
+  return appCheck;
+}
+
+async function createAppCheck(): Promise<AppCheck | null> {
+  if (typeof window === "undefined" || !isFirebaseConfigured) return null;
 
   const useDebug = process.env.NODE_ENV !== "production" || DEBUG_TOKEN !== "";
   if (useDebug) {
@@ -46,23 +46,24 @@ function getAppCheck(): AppCheck | null {
     (self as unknown as { FIREBASE_APPCHECK_DEBUG_TOKEN?: string | boolean }).FIREBASE_APPCHECK_DEBUG_TOKEN =
       DEBUG_TOKEN || true;
   }
-  if (!SITE_KEY && !useDebug) return appCheck;
+  if (!SITE_KEY && !useDebug) return null;
 
   try {
-    appCheck = initializeAppCheck(firebaseApp(), {
+    const { initializeAppCheck, ReCaptchaEnterpriseProvider } = await import("firebase/app-check");
+    return initializeAppCheck(await firebaseApp(), {
       provider: new ReCaptchaEnterpriseProvider(SITE_KEY || "debug"),
       isTokenAutoRefreshEnabled: true,
     });
   } catch {
-    appCheck = null;
+    return null;
   }
-  return appCheck;
 }
 
 async function appCheckToken(kind: "standard" | "limited"): Promise<string | null> {
-  const instance = getAppCheck();
+  const instance = await getAppCheck();
   if (!instance) return null;
   try {
+    const { getLimitedUseToken, getToken } = await import("firebase/app-check");
     const result = kind === "limited" ? await getLimitedUseToken(instance) : await getToken(instance);
     return result.token;
   } catch {
@@ -73,7 +74,8 @@ async function appCheckToken(kind: "standard" | "limited"): Promise<string | nul
 async function idToken(): Promise<string | null> {
   if (!isFirebaseConfigured) return null;
   try {
-    const auth = getAuth(firebaseApp());
+    const { getFirebaseAuth } = await import("@/lib/firebase/client");
+    const auth = getFirebaseAuth();
     await auth.authStateReady();
     return auth.currentUser ? await auth.currentUser.getIdToken() : null;
   } catch {

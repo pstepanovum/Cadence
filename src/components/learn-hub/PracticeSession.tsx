@@ -46,7 +46,7 @@ export function PracticeSession({ modeId, initialLevel, grammarPointId }: { mode
     <div className="space-y-4">
       <section className="flex flex-col gap-4 rounded-3xl bg-white px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div>
-          <p className="eyebrow text-sm text-sage-green">
+          <p className="eyebrow text-sm text-sage-text">
             <Link href={`/practice?level=${level}`} className="underline-offset-2 hover:underline">Practice</Link> · {level}
           </p>
           <h1 className="mt-1 text-3xl font-semibold text-hunter-green">{mode.title}</h1>

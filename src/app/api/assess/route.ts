@@ -80,7 +80,9 @@ export async function GET(request: Request) {
         message:
           "Pronunciation scoring is offline. Make sure the local ai-engine service is healthy, then try again.",
       },
-      { status: 503 },
+      // A status answer, not a failure: clients read `ready` and poll every
+      // few seconds, and a 503 would log an error in the browser each time.
+      { status: 200 },
     );
   }
 }

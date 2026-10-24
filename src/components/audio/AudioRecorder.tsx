@@ -197,7 +197,7 @@ export function AudioRecorder({
       <div className="space-y-5">
         {showIntro ? (
           <div className="mx-auto max-w-xl space-y-2 text-center">
-            <p className="eyebrow text-sm text-sage-green">Recorder</p>
+            <p className="eyebrow text-sm text-sage-text">Recorder</p>
             <h3 className="text-2xl font-semibold text-hunter-green">
               Capture one take
             </h3>

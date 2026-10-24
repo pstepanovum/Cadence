@@ -57,7 +57,7 @@ export function CoachThread({
     <Card className="bg-white">
       <div className="space-y-4">
         <div className="space-y-2">
-          <p className="eyebrow text-sm text-sage-green">Coach thread</p>
+          <p className="eyebrow text-sm text-sage-text">Coach thread</p>
           <h2 className="text-2xl font-semibold text-hunter-green">
             Keep the conversation visible while you answer.
           </h2>
@@ -76,7 +76,7 @@ export function CoachThread({
                   <div className="max-w-[88%] rounded-[1.9rem] bg-vanilla-cream px-4 py-4 sm:px-5">
                     <div className="flex items-start justify-between gap-4">
                       <div className="min-w-0 flex-1 space-y-2">
-                        <p className="eyebrow text-xs text-sage-green">Coach</p>
+                        <p className="eyebrow text-xs text-sage-text">Coach</p>
                         <p className="text-base leading-7 text-hunter-green">{turn.coachMessage}</p>
                       </div>
                       <Button
@@ -93,7 +93,7 @@ export function CoachThread({
                       </Button>
                     </div>
                     {isCurrent ? (
-                      <p className="mt-2 text-xs font-semibold text-sage-green">
+                      <p className="mt-2 text-xs font-semibold text-sage-text">
                         {phase === "coach" ? "Current coach message" : "Coach message complete"}
                       </p>
                     ) : null}
@@ -105,7 +105,7 @@ export function CoachThread({
                   <div className="max-w-[88%] rounded-[1.9rem] bg-white px-4 py-4 sm:px-5">
                     <div className="flex items-start justify-between gap-4">
                       <div className="min-w-0 flex-1 space-y-3">
-                        <p className="eyebrow text-xs text-sage-green">You</p>
+                        <p className="eyebrow text-xs text-sage-text">You</p>
 
                         {turn.assessment ? (
                           <p className="text-base font-semibold leading-7 text-hunter-green">
@@ -152,7 +152,7 @@ export function CoachThread({
           <div className="space-y-4 rounded-[1.9rem] bg-vanilla-cream px-4 py-4 sm:px-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="space-y-1">
-                <p className="eyebrow text-sm text-sage-green">Recorder</p>
+                <p className="eyebrow text-sm text-sage-text">Recorder</p>
                 <h2 className="text-xl font-semibold text-hunter-green">Next reply</h2>
               </div>
               <div className="rounded-full bg-white px-3 py-2 text-xs font-semibold text-hunter-green">

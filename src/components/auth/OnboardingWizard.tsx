@@ -71,7 +71,7 @@ export function OnboardingWizard() {
                   delay={18}
                   duration={640}
                 />
-                <p className="max-w-xl text-base leading-7 text-bright-snow/70">
+                <p className="max-w-xl text-base leading-7 text-bright-snow/84">
                   We only need a quick sense of your focus so the dashboard can
                   open in the right place and keep your repetition loop clean.
                 </p>
@@ -91,11 +91,11 @@ export function OnboardingWizard() {
 
             <div className="grid gap-3 grid-cols-2">
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Best for</p>
+                <p className="eyebrow text-xs text-yellow-green">Best for</p>
                 <p className="mt-2 text-base font-semibold">Daily pronunciation reps</p>
               </div>
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">After this</p>
+                <p className="eyebrow text-xs text-yellow-green">After this</p>
                 <p className="mt-2 text-base font-semibold">Quick practice opens right away</p>
               </div>
             </div>
@@ -112,7 +112,7 @@ export function OnboardingWizard() {
                 Welcome to Cadence
               </div>
               <div className="space-y-4">
-                <p className="eyebrow text-sm text-sage-green hidden lg:block">Setup</p>
+                <p className="eyebrow text-sm text-sage-text hidden lg:block">Setup</p>
                 <h2 className="text-3xl font-semibold text-hunter-green">
                   Tell Cadence how you want to practice.
                 </h2>

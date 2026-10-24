@@ -18,7 +18,7 @@ const typeLabel: Record<string, string> = {
 
 const typeBadgeClass: Record<string, string> = {
   theory: "bg-vanilla-cream text-hunter-green",
-  practice: "bg-sage-green/15 text-sage-green",
+  practice: "bg-sage-green/15 text-sage-text",
   exam: "bg-blushed-brick/15 text-blushed-brick",
 };
 

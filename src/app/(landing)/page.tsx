@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PlanCards } from "@/components/billing/PlanCards";
 import { loadArticulationTargets } from "@/components/mouth-map/load-targets";
-import { MouthMapDemo, type DemoSound } from "@/components/mouth-map/MouthMapDemo";
+import { LazyMouthMapDemo } from "@/components/mouth-map/LazyMouthMapDemo";
+import type { DemoSound } from "@/components/mouth-map/MouthMapDemo";
+import { MouthMapSvg } from "@/components/mouth-map/MouthMapSvg";
 import { targetFor } from "@/components/mouth-map/targets";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -12,6 +14,7 @@ import { GITHUB_URL } from "@/components/ui/footer";
 import { PageShell } from "@/components/ui/page-shell";
 import { getAppSession } from "@/lib/app-session";
 import { isFirebaseConfigured } from "@/lib/firebase/config";
+import { NEUTRAL_PARAMS, paramsAt } from "@/lib/platform/vocal-tract/index.ts";
 
 export const metadata: Metadata = {
   title: { absolute: "Cadence: advanced English, out loud" },
@@ -72,10 +75,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
           </div>
         </Card>
         <Card className="bg-white">
-          <p className="eyebrow text-sm text-sage-green">The mouth map</p>
+          <p className="eyebrow text-sm text-sage-text">The mouth map</p>
           <h2 className="mt-1 font-kicker text-2xl text-hunter-green">Where your tongue should be, for every sound.</h2>
-          <div className="mt-4">{demo.length > 1 ? <MouthMapDemo sounds={demo} /> : null}</div>
-          <Link href="/sounds" className="mt-3 inline-block text-sm font-semibold text-sage-green underline underline-offset-2">
+          <div className="mt-4">{demo.length > 1 ? <LazyMouthMapDemo sounds={demo} still={<DemoStill sounds={demo} />} /> : null}</div>
+          <Link href="/sounds" className="mt-3 inline-block text-sm font-semibold text-sage-text underline underline-offset-2">
             Open the sounds library
           </Link>
         </Card>
@@ -97,7 +100,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
 
       <section className="grid gap-4 lg:grid-cols-2" aria-labelledby="ai">
         <Card className="bg-white">
-          <p className="eyebrow text-sm text-sage-green">Your own Cadence</p>
+          <p className="eyebrow text-sm text-sage-text">Your own Cadence</p>
           <h2 id="ai" className="mt-1 text-2xl font-semibold text-hunter-green sm:text-3xl">Run the AI at home, free and unlimited.</h2>
           <p className="mt-3 text-sm leading-7 text-iron-grey">
             Install Cadence on your computer and it does the scoring, voices, transcription and coaching itself.
@@ -110,7 +113,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
           </div>
         </Card>
         <Card className="bg-vanilla-cream">
-          <p className="eyebrow text-sm text-sage-green">Cadence Plus</p>
+          <p className="eyebrow text-sm text-sage-text">Cadence Plus</p>
           <h2 className="mt-1 text-2xl font-semibold text-hunter-green sm:text-3xl">Or let the cloud do it, anywhere.</h2>
           <p className="mt-3 text-sm leading-7 text-iron-grey">
             When your computer is not around, Plus runs the same AI on Cadence servers and keeps your full history in
@@ -130,5 +133,35 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
         <FaqSection />
       </section>
     </PageShell>
+  );
+}
+
+/** The demo's first sound, drawn on the server until the animated demo loads. */
+function DemoStill({ sounds }: { sounds: DemoSound[] }) {
+  const first = sounds[0].target;
+  const params = first.trajectory?.length ? paramsAt(first.trajectory, 1) : (first.params ?? NEUTRAL_PARAMS);
+  return (
+    <div className="space-y-3">
+      <MouthMapSvg
+        params={params}
+        highlight={first.highlight}
+        overlays={first.overlays}
+        anchor={first.anchor}
+        airflow={first.airflow}
+        pulse={0}
+        title={`Mouth map: ${sounds[0].label}`}
+        description={`A side view of the mouth in the shape for ${sounds[0].label}.`}
+      />
+      <div aria-hidden="true" className="flex flex-wrap justify-center gap-2">
+        {sounds.map((sound, i) => (
+          <span
+            key={sound.label}
+            className={`inline-flex min-h-10 items-center rounded-full px-4 text-sm font-semibold ${i === 0 ? "bg-hunter-green text-white" : "bg-vanilla-cream text-hunter-green"}`}
+          >
+            {sound.label}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }

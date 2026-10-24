@@ -30,11 +30,11 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
         <Card className="bg-hunter-green text-bright-snow">
           <div className="space-y-5">
             <div className="space-y-3">
-              <p className="eyebrow text-sm text-yellow-green/82">Modules</p>
+              <p className="eyebrow text-sm text-yellow-green">Modules</p>
               <h1 className="text-4xl font-semibold text-bright-snow sm:text-5xl">
                 A structured pronunciation route, not a loose stack of drills.
               </h1>
-              <p className="max-w-3xl text-sm leading-7 text-bright-snow/78">
+              <p className="max-w-3xl text-sm leading-7 text-bright-snow/84">
                 Each module moves from theory to guided practice and then into a
                 scored exam, so the learner always knows what comes next.
               </p>
@@ -42,19 +42,19 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
 
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Complete</p>
+                <p className="eyebrow text-xs text-yellow-green">Complete</p>
                 <p className="mt-2 text-2xl font-semibold text-bright-snow">
                   {completed}/{modules.length}
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Unlocked</p>
+                <p className="eyebrow text-xs text-yellow-green">Unlocked</p>
                 <p className="mt-2 text-2xl font-semibold text-bright-snow">
                   {unlocked}
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Progress</p>
+                <p className="eyebrow text-xs text-yellow-green">Progress</p>
                 <p className="mt-2 text-2xl font-semibold text-bright-snow">
                   {completionRate}%
                 </p>
@@ -77,7 +77,7 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
 
             <div className="space-y-4">
               <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-green">Current route</p>
+                <p className="eyebrow text-sm text-sage-text">Current route</p>
                 <h2 className="text-3xl font-semibold text-hunter-green">
                   {currentModule
                     ? `Module ${currentModule.sort_order}: ${currentModule.title}`
@@ -103,7 +103,7 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
               </div>
 
               <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Route note</p>
+                <p className="eyebrow text-xs text-sage-text">Route note</p>
                 <p className="mt-2 text-sm leading-6 text-iron-grey">
                   Passing an exam keeps the module path moving, so progress feels
                   earned and easy to follow.

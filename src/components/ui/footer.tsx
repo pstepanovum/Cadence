@@ -49,7 +49,7 @@ export function Footer() {
               <Link href="/" className="inline-flex items-center" aria-label="Cadence home">
                 <BrandMark variant="white" />
               </Link>
-              <p className="max-w-sm text-sm leading-7 text-white/78">
+              <p className="max-w-sm text-sm leading-7 text-white/84">
                 Advanced English, out loud: pronunciation, grammar, flashcards
                 and a speaking coach. Open source and free to run yourself.
               </p>
@@ -64,7 +64,7 @@ export function Footer() {
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="inline-flex min-h-8 w-fit items-center text-sm text-white/78 transition-colors hover:text-white"
+                        className="inline-flex min-h-8 w-fit items-center text-sm text-white/84 transition-colors hover:text-white"
                       >
                         {link.label}
                       </Link>
@@ -75,7 +75,7 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-3 pb-2 text-xs text-white/70 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-3 pb-2 text-xs text-white/84 lg:flex-row lg:items-center lg:justify-between">
             <p>© {year} Cadence. Open source under the MIT licence.</p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               <Link href="/support" className="hover:text-white">Support</Link>

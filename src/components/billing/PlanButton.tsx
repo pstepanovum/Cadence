@@ -1,10 +1,10 @@
 // FILE: src/components/billing/PlanButton.tsx
-"use client";
-
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { openPortal, startCheckout, type PlanInterval } from "@/components/billing/billing-api";
-import { Button } from "@/components/ui/button";
+//
+// No "use client": signed out it is a plain link rendered on the server, and
+// signed in only BillingAction runs in the browser.
+import { BillingAction } from "@/components/billing/BillingAction";
+import type { PlanInterval } from "@/components/billing/billing-api";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 export function PlanButton({
   interval,
@@ -19,10 +19,6 @@ export function PlanButton({
   variant?: "primary" | "secondary" | "ghost";
   className?: string;
 }) {
-  const router = useRouter();
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
   if (!signedIn) {
     return (
       <Button href={`/signup?next=${encodeURIComponent(`/checkout?plan=${interval}`)}`} variant={variant} className={className}>
@@ -30,51 +26,16 @@ export function PlanButton({
       </Button>
     );
   }
-
-  async function go() {
-    setBusy(true);
-    setError(null);
-    const outcome = await startCheckout(interval);
-    if (outcome.ok) {
-      window.location.assign(outcome.url);
-      return;
-    }
-    setBusy(false);
-    if (outcome.reason === "already_plus") router.push("/account");
-    else if (outcome.reason === "sign_in") router.push(`/login?next=${encodeURIComponent("/pricing")}`);
-    else setError(outcome.message);
-  }
-
   return (
-    <div className="space-y-2">
-      <Button onClick={() => void go()} disabled={busy} variant={variant} className={className}>
-        {busy ? "Opening checkout…" : label}
-      </Button>
-      {error ? <p role="alert" className="text-sm text-blushed-brick">{error}</p> : null}
-    </div>
+    <BillingAction
+      action={{ kind: "checkout", interval }}
+      label={label}
+      busyLabel="Opening checkout…"
+      className={buttonVariants({ variant, className })}
+    />
   );
 }
 
 export function PortalButton({ className, label = "Manage subscription" }: { className?: string; label?: string }) {
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  async function go() {
-    setBusy(true);
-    setError(null);
-    const outcome = await openPortal();
-    if (outcome.ok) {
-      window.location.assign(outcome.url);
-      return;
-    }
-    setBusy(false);
-    setError(outcome.message);
-  }
-  return (
-    <div className="space-y-2">
-      <Button variant="ghost" onClick={() => void go()} disabled={busy} className={className}>
-        {busy ? "Opening…" : label}
-      </Button>
-      {error ? <p role="alert" className="text-sm text-blushed-brick">{error}</p> : null}
-    </div>
-  );
+  return <BillingAction action={{ kind: "portal" }} label={label} busyLabel="Opening…" className={buttonVariants({ variant: "ghost", className })} />;
 }

@@ -13,7 +13,7 @@ export function LegalBody({ sections }: { sections: LegalSection[] }) {
   return (
     <div className="grid gap-4 lg:grid-cols-[16rem_1fr]">
       <nav aria-label="On this page" className="h-fit rounded-3xl bg-white px-5 py-5 lg:sticky lg:top-4">
-        <p className="eyebrow pb-2 text-xs text-sage-green">On this page</p>
+        <p className="eyebrow pb-2 text-xs text-sage-text">On this page</p>
         <ol className="space-y-1 text-sm">
           {sections.map((section) => (
             <li key={section.id}>

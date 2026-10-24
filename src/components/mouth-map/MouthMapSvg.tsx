@@ -4,8 +4,8 @@
 // (src/lib/platform/vocal-tract) turned into SVG, styled in the Cadence
 // palette, with highlighted layers, overlays the model cannot show, an
 // airflow arrow and a glottis that pulses when the sound is voiced. Pure
-// render: the parent decides the parameters for each frame.
-"use client";
+// render: the parent decides the parameters for each frame. No "use client",
+// so a server component can draw a still frame with no JavaScript.
 
 import { useId, useMemo } from "react";
 import {
@@ -140,13 +140,15 @@ export function MouthMapSvg({
             strokeWidth={on ? 3 : 0}
             strokeLinecap="round"
             strokeLinejoin="round"
-            aria-label={LAYER_LABELS[id]}
-          />
+          >
+            <title>{LAYER_LABELS[id]}</title>
+          </path>
         );
       })}
 
       {/* Vocal folds: an opening that narrows when voiced, with a beat. */}
-      <g aria-label={glottis.voiced ? "Vocal folds vibrating" : "Vocal folds apart"}>
+      <g>
+        <title>{glottis.voiced ? "Vocal folds vibrating" : "Vocal folds apart"}</title>
         {glottis.voiced ? (
           <circle
             cx={gCenter.x}
@@ -171,8 +173,9 @@ export function MouthMapSvg({
           strokeDasharray={air.dashed ? "2 6" : "8 4"}
           className="mm-flow"
           markerEnd={`url(#${uid}-arrow)`}
-          aria-label={air.label}
-        />
+        >
+          <title>{air.label}</title>
+        </path>
       ) : null}
 
       {anchorPoint ? <Overlays overlays={overlays} at={anchorPoint} state={state} px={px} /> : null}
@@ -194,13 +197,15 @@ function Overlays({
   return (
     <g>
       {overlays.includes("tongueTipContact") || overlays.includes("tongueBetweenTeeth") ? (
-        <g aria-label={overlays.includes("tongueBetweenTeeth") ? "Tongue tip between the teeth" : "Tongue tip touches here"}>
+        <g>
+          <title>{overlays.includes("tongueBetweenTeeth") ? "Tongue tip between the teeth" : "Tongue tip touches here"}</title>
           <circle cx={at.x} cy={at.y} r={9} fill="var(--mm-highlight)" fillOpacity={0.35} />
           <circle cx={at.x} cy={at.y} r={4.5} fill="var(--mm-highlight-line)" />
         </g>
       ) : null}
       {overlays.includes("plosiveBurst") ? (
-        <g aria-label="Air builds up, then bursts out" stroke="var(--mm-air)" strokeWidth={2.4} strokeLinecap="round">
+        <g stroke="var(--mm-air)" strokeWidth={2.4} strokeLinecap="round">
+          <title>Air builds up, then bursts out</title>
           {[-40, -15, 10, 35].map((deg) => {
             const r = (deg * Math.PI) / 180;
             const lip = px(placeAnchor(state, "lipOpening"));
@@ -211,19 +216,21 @@ function Overlays({
         </g>
       ) : null}
       {overlays.includes("bunchedTongue") ? (
-        <g aria-label="Tongue bunched up, tip not touching">
+        <g>
+          <title>Tongue bunched up, tip not touching</title>
           <circle cx={at.x - 18} cy={at.y + 14} r={6} fill="none" stroke="var(--mm-highlight-line)" strokeWidth={2} strokeDasharray="3 3" />
         </g>
       ) : null}
       {overlays.includes("glottalFriction") ? (
         <path
-          aria-label="Breath through open vocal folds"
           d={`M${at.x - 14} ${at.y - 10} q 7 -6 14 0 t 14 0`}
           fill="none"
           stroke="var(--mm-air)"
           strokeWidth={2.4}
           strokeLinecap="round"
-        />
+        >
+          <title>Breath through open vocal folds</title>
+        </path>
       ) : null}
     </g>
   );

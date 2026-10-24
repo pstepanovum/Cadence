@@ -3,7 +3,7 @@
 
 import { useSyncExternalStore } from "react";
 import { nextThemeChoice, parseThemeChoice, THEME_COOKIE, type ThemeChoice } from "@/components/theme/theme";
-import { cn } from "@/lib/utils";
+import { clsx as cn } from "clsx";
 
 const LABELS: Record<ThemeChoice, string> = {
   system: "Theme: system",

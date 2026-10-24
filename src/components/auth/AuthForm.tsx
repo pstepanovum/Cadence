@@ -84,7 +84,7 @@ export function AuthForm({ mode }: AuthFormProps) {
       footer={
         <>
           {isLogin ? "New to Cadence?" : "Already have an account?"}{" "}
-          <Link href={isLogin ? "/signup" : "/login"} className="font-semibold text-sage-green underline-offset-2 hover:underline">
+          <Link href={isLogin ? "/signup" : "/login"} className="font-semibold text-sage-text underline-offset-2 hover:underline">
             {isLogin ? "Create an account" : "Sign in"}
           </Link>
         </>
@@ -109,7 +109,7 @@ export function AuthForm({ mode }: AuthFormProps) {
           <div className="flex items-baseline justify-between">
             <FieldLabel htmlFor={`${id}-password`}>Password</FieldLabel>
             {isLogin ? (
-              <Link href="/forgot-password" className="text-sm font-semibold text-sage-green underline-offset-2 hover:underline">
+              <Link href="/forgot-password" className="text-sm font-semibold text-sage-text underline-offset-2 hover:underline">
                 Forgot it?
               </Link>
             ) : null}

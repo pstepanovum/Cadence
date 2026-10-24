@@ -19,7 +19,7 @@ export default function NewsletterConfirmedPage() {
       <Card className="bg-white">
         <div className="grid items-center gap-6 md:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-4">
-            <p className="eyebrow text-sm text-sage-green">Newsletter</p>
+            <p className="eyebrow text-sm text-sage-text">Newsletter</p>
             <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl">You are on the list.</h1>
             <p className="max-w-xl text-base leading-8 text-iron-grey">
               Thanks for confirming. Expect product updates and the occasional offer.

@@ -41,7 +41,7 @@ export function LessonList({ module, lessons }: LessonListProps) {
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-yellow-green text-sm font-bold text-hunter-green">
                   {module.sort_order}
                 </span>
-                <span className="eyebrow text-sm text-yellow-green/82">
+                <span className="eyebrow text-sm text-yellow-green">
                   Module {module.sort_order}
                 </span>
               </div>
@@ -50,7 +50,7 @@ export function LessonList({ module, lessons }: LessonListProps) {
                 <CardTitle className="text-3xl text-bright-snow sm:text-4xl">
                   {module.title}
                 </CardTitle>
-                <CardDescription className="max-w-3xl text-bright-snow/72">
+                <CardDescription className="max-w-3xl text-bright-snow/84">
                   {module.description}
                 </CardDescription>
               </div>
@@ -68,7 +68,7 @@ export function LessonList({ module, lessons }: LessonListProps) {
             </div>
 
             <div className="rounded-3xl bg-white/10 px-5 py-4">
-              <p className="text-sm leading-7 text-bright-snow/78">{moduleStatus}</p>
+              <p className="text-sm leading-7 text-bright-snow/84">{moduleStatus}</p>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ export function LessonList({ module, lessons }: LessonListProps) {
             <div className="flex items-center gap-4">
               <ProgressRing score={completionRate} size={96} strokeWidth={7} />
               <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-green">Module progress</p>
+                <p className="eyebrow text-sm text-sage-text">Module progress</p>
                 <p className="text-2xl font-semibold text-hunter-green">
                   {completedCount}/{lessons.length} lessons passed
                 </p>
@@ -88,19 +88,19 @@ export function LessonList({ module, lessons }: LessonListProps) {
 
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-3xl bg-platinum px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Theory</p>
+                <p className="eyebrow text-xs text-sage-text">Theory</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {theoryCount}
                 </p>
               </div>
               <div className="rounded-3xl bg-platinum px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Practice</p>
+                <p className="eyebrow text-xs text-sage-text">Practice</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {practiceCount}
                 </p>
               </div>
               <div className="rounded-3xl bg-platinum px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Exam</p>
+                <p className="eyebrow text-xs text-sage-text">Exam</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {examCount}
                 </p>
@@ -126,7 +126,7 @@ export function LessonList({ module, lessons }: LessonListProps) {
         <div className="space-y-4">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-sm text-sage-green">Lesson path</p>
+              <p className="eyebrow text-sm text-sage-text">Lesson path</p>
               <CardTitle className="text-2xl">
                 Move through each lesson in order.
               </CardTitle>

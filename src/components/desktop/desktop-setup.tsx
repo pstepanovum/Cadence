@@ -297,7 +297,7 @@ export function DesktopSetup() {
                 <div className="h-[11.75rem] rounded-3xl bg-white/10 px-5 py-5">
                   <div className="flex items-start justify-between gap-4">
                     <div className="h-[4.75rem] flex-1">
-                      <p className="eyebrow text-sm text-yellow-green/80">Current step</p>
+                      <p className="eyebrow text-sm text-yellow-green">Current step</p>
                       <p className="mt-2 h-[3.5rem] overflow-hidden text-lg font-semibold leading-7 text-bright-snow">
                         {isLoading ? 'Loading installer state…' : state.currentStep}
                       </p>
@@ -356,7 +356,7 @@ export function DesktopSetup() {
 
           <Card className="h-full bg-white">
             <div className="flex h-full flex-col gap-6">
-              <div className="inline-flex w-auto self-start items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
+              <div className="inline-flex w-auto self-start items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
                 <Activity size={18} filled color="currentColor" />
                 <span className="eyebrow text-sm">Runtime Health</span>
               </div>
@@ -378,7 +378,7 @@ export function DesktopSetup() {
 
               <div className="mt-auto grid gap-3 sm:grid-cols-2">
                 <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-                  <p className="eyebrow text-sm text-sage-green">Setup style</p>
+                  <p className="eyebrow text-sm text-sage-text">Setup style</p>
                   <p className="mt-3 text-2xl font-semibold text-hunter-green">
                     Native local setup
                   </p>
@@ -390,7 +390,7 @@ export function DesktopSetup() {
                 </div>
 
                 <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-                  <p className="eyebrow text-sm text-sage-green">Ready to enter</p>
+                  <p className="eyebrow text-sm text-sage-text">Ready to enter</p>
                   <p className="mt-3 text-2xl font-semibold text-hunter-green">
                     {state.modelsReady ? 'Yes' : 'Not yet'}
                   </p>

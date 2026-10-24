@@ -41,7 +41,7 @@ export default async function ComparePage({ searchParams }: Props) {
         />
       ) : (
         <p className="rounded-3xl bg-white px-5 py-6 text-sm text-iron-grey">
-          One of these sounds has no mouth map yet. <Link href="/sounds" className="font-semibold text-sage-green">Back to all sounds</Link>
+          One of these sounds has no mouth map yet. <Link href="/sounds" className="font-semibold text-sage-text">Back to all sounds</Link>
         </p>
       )}
     </AppPage>

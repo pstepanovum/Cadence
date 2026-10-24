@@ -185,7 +185,7 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
         <Card className="bg-white">
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-green">Guided practice</p>
+              <p className="eyebrow text-sm text-sage-text">Guided practice</p>
               <CardTitle className="text-4xl capitalize sm:text-5xl">
                 {currentWord?.word}
               </CardTitle>
@@ -193,7 +193,7 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
             </div>
 
             <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Practice cue</p>
+              <p className="eyebrow text-xs text-sage-text">Practice cue</p>
               <p className="mt-2 text-sm leading-7 text-iron-grey">
                 Keep this take focused. Say the target word once, stop the
                 recorder, and let the phoneme check show the exact mismatch to fix
@@ -206,25 +206,25 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
         <Card className="bg-white">
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-green">Round progress</p>
+              <p className="eyebrow text-sm text-sage-text">Round progress</p>
               <WordQueue total={words.length} current={wordIndex} />
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Current word</p>
+                <p className="eyebrow text-xs text-sage-text">Current word</p>
                 <p className="mt-2 text-2xl font-semibold capitalize text-hunter-green">
                   {wordIndex + 1}
                 </p>
               </div>
               <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Attempts</p>
+                <p className="eyebrow text-xs text-sage-text">Attempts</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {attemptNumber}
                 </p>
               </div>
               <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Left in lesson</p>
+                <p className="eyebrow text-xs text-sage-text">Left in lesson</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {Math.max(words.length - wordIndex - 1, 0)}
                 </p>
@@ -238,7 +238,7 @@ export function PracticeLesson({ lesson, moduleSlug }: PracticeLessonProps) {
         <Card className="bg-bright-snow">
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-green">Recorder</p>
+              <p className="eyebrow text-sm text-sage-text">Recorder</p>
               <CardTitle className="text-2xl">
                 Capture one steady pronunciation take.
               </CardTitle>

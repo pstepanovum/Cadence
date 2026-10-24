@@ -34,11 +34,11 @@ export function ConversationResult({
               className="[&>span]:text-bright-snow shrink-0"
             />
             <div className="space-y-2">
-              <p className="eyebrow text-xs text-yellow-green/84">Conversation result</p>
+              <p className="eyebrow text-xs text-yellow-green">Conversation result</p>
               <h3 className="text-2xl font-semibold text-bright-snow sm:text-3xl">
                 {passed ? "Module passed." : "Almost there."}
               </h3>
-              <p className="text-sm leading-6 text-bright-snow/76">
+              <p className="text-sm leading-6 text-bright-snow/84">
                 You need {module.passScore}+ to clear this module, and you finished
                 with {score}/100.
               </p>
@@ -46,8 +46,8 @@ export function ConversationResult({
           </div>
 
           <div className="mt-5 rounded-3xl bg-white/10 px-4 py-4">
-            <p className="eyebrow text-xs text-yellow-green/84">Why it matters</p>
-            <p className="mt-2 text-sm leading-6 text-bright-snow/78">
+            <p className="eyebrow text-xs text-yellow-green">Why it matters</p>
+            <p className="mt-2 text-sm leading-6 text-bright-snow/84">
               Conversation modules are meant to prove that your sound control holds
               inside realistic speech, not only in isolated drills.
             </p>
@@ -56,7 +56,7 @@ export function ConversationResult({
 
         <div className="rounded-[2rem] bg-vanilla-cream px-5 py-5 sm:px-6 sm:py-6">
           <div className="space-y-2">
-            <p className="eyebrow text-xs text-sage-green">Module summary</p>
+            <p className="eyebrow text-xs text-sage-text">Module summary</p>
             <h3 className="text-2xl font-semibold text-hunter-green">
               {module.title}
             </h3>
@@ -65,19 +65,19 @@ export function ConversationResult({
 
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Level</p>
+              <p className="eyebrow text-xs text-sage-text">Level</p>
               <p className="mt-2 text-2xl font-semibold text-hunter-green">
                 {module.level}
               </p>
             </div>
             <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Pass mark</p>
+              <p className="eyebrow text-xs text-sage-text">Pass mark</p>
               <p className="mt-2 text-2xl font-semibold text-hunter-green">
                 {module.passScore}
               </p>
             </div>
             <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Turns</p>
+              <p className="eyebrow text-xs text-sage-text">Turns</p>
               <p className="mt-2 text-2xl font-semibold text-hunter-green">
                 {module.turns.length}
               </p>
@@ -85,7 +85,7 @@ export function ConversationResult({
           </div>
 
           <div className="mt-4 rounded-3xl bg-white px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Next move</p>
+            <p className="eyebrow text-xs text-sage-text">Next move</p>
             <p className="mt-2 text-sm leading-6 text-iron-grey">
               {passed
                 ? "Move into the next scenario while the rhythm is still fresh, or revisit this one if you want an even cleaner pass."

@@ -36,6 +36,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tests/tsconfig.json",
     "test": "node --test --import ./tests/register.mjs \"tests/**/*.test.ts\"",
+    "test:e2e": "playwright test",
     "test:server": "firebase emulators:exec --only auth,firestore --project demo-cadence \"node --test --test-concurrency=1 --import ./tests/register.mjs 'tests/server/**/*.test.ts'\"",
     "test:rules": "firebase emulators:exec --only firestore,storage --project demo-cadence \"node --test tests/rules/firestore.test.ts\"",
     "email:preview": "node --import ./tests/register.mjs scripts/email/preview.ts",
@@ -58,7 +59,10 @@
     "zod": "^4.6.4"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@firebase/rules-unit-testing": "^5.0.2",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/qrcode": "^1.5.6",

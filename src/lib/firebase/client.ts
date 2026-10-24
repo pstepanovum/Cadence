@@ -7,8 +7,12 @@
 "use client";
 
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { getAuth, type Auth, type User } from "firebase/auth";
+import { connectAuthEmulator, getAuth, type Auth, type User } from "firebase/auth";
 import { firebaseWebConfig, isFirebaseConfigured } from "@/lib/firebase/config";
+
+// Set only in local test builds (demo-* project), never in production.
+const AUTH_EMULATOR_HOST = process.env.NEXT_PUBLIC_FIREBASE_AUTH_EMULATOR_HOST ?? "";
+let emulatorConnected = false;
 
 export function getFirebaseAuth(): Auth {
   if (!isFirebaseConfigured) {
@@ -18,7 +22,12 @@ export function getFirebaseAuth(): Auth {
   }
 
   const app = getApps().length > 0 ? getApp() : initializeApp(firebaseWebConfig);
-  return getAuth(app);
+  const auth = getAuth(app);
+  if (AUTH_EMULATOR_HOST && !emulatorConnected && firebaseWebConfig.projectId.startsWith("demo-")) {
+    connectAuthEmulator(auth, `http://${AUTH_EMULATOR_HOST}`, { disableWarnings: true });
+    emulatorConnected = true;
+  }
+  return auth;
 }
 
 /** Trade the signed-in user's ID token for the server's session cookie. */

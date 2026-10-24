@@ -14,26 +14,26 @@ export function ConversationModuleHeader({ module, turnIndex }: ConversationModu
       <Card className="bg-hunter-green text-bright-snow">
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-yellow-green/82">Conversation module</p>
+            <p className="eyebrow text-sm text-yellow-green">Conversation module</p>
             <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
               {module.title}
             </h1>
-            <p className="max-w-3xl text-sm leading-7 text-bright-snow/78">
+            <p className="max-w-3xl text-sm leading-7 text-bright-snow/84">
               {module.scenario}
             </p>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-3">
             <div className="rounded-3xl bg-white/10 px-4 py-4">
-              <p className="eyebrow text-xs text-yellow-green/82">Level</p>
+              <p className="eyebrow text-xs text-yellow-green">Level</p>
               <p className="mt-2 text-2xl font-semibold text-bright-snow">{module.level}</p>
             </div>
             <div className="rounded-3xl bg-white/10 px-4 py-4">
-              <p className="eyebrow text-xs text-yellow-green/82">Pass mark</p>
+              <p className="eyebrow text-xs text-yellow-green">Pass mark</p>
               <p className="mt-2 text-2xl font-semibold text-bright-snow">{module.passScore}</p>
             </div>
             <div className="rounded-3xl bg-white/10 px-4 py-4">
-              <p className="eyebrow text-xs text-yellow-green/82">Turns</p>
+              <p className="eyebrow text-xs text-yellow-green">Turns</p>
               <p className="mt-2 text-2xl font-semibold text-bright-snow">{module.turns.length}</p>
             </div>
           </div>
@@ -43,12 +43,12 @@ export function ConversationModuleHeader({ module, turnIndex }: ConversationModu
       <Card className="bg-white">
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-green">Progress</p>
+            <p className="eyebrow text-sm text-sage-text">Progress</p>
             <WordQueue total={module.turns.length} current={turnIndex} />
           </div>
 
           <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Track definition</p>
+            <p className="eyebrow text-xs text-sage-text">Track definition</p>
             <p className="mt-2 text-sm leading-6 text-iron-grey">
               Sound modules isolate individual phonemes. Conversation modules
               check whether you can keep that accuracy inside a realistic spoken

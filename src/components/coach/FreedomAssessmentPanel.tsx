@@ -28,14 +28,14 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
       <Card className="bg-white">
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-green">Freedom transcript</p>
+            <p className="eyebrow text-sm text-sage-text">Freedom transcript</p>
             <h3 className="text-2xl font-semibold text-hunter-green">
               Cadence captured what you said and is ready to compare the next take.
             </h3>
           </div>
 
           <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Whisper transcript</p>
+            <p className="eyebrow text-xs text-sage-text">Whisper transcript</p>
             <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">
               {transcript}
             </p>
@@ -55,14 +55,14 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
     <Card className="bg-white">
       <div className="space-y-5">
         <div className="space-y-2">
-          <p className="eyebrow text-sm text-sage-green">Freedom transcript</p>
+          <p className="eyebrow text-sm text-sage-text">Freedom transcript</p>
           <h3 className="text-2xl font-semibold text-hunter-green">
             Whisper builds the reply text, then Cadence checks the live phonemes against it.
           </h3>
         </div>
 
         <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-          <p className="eyebrow text-xs text-sage-green">Whisper transcript</p>
+          <p className="eyebrow text-xs text-sage-text">Whisper transcript</p>
           <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">{transcript}</p>
           <p className="mt-2 text-sm leading-6 text-iron-grey">
             This is the word-level transcript from the freedom take.
@@ -71,14 +71,14 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
 
         <div className="grid gap-3 sm:grid-cols-[auto_1fr]">
           <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Transcript-based pronunciation</p>
+            <p className="eyebrow text-xs text-sage-text">Transcript-based pronunciation</p>
             <div className="mt-3 flex justify-center">
               <ProgressRing score={assessment.overallScore} size={88} strokeWidth={7} />
             </div>
           </div>
 
           <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Pronunciation check</p>
+            <p className="eyebrow text-xs text-sage-text">Pronunciation check</p>
             <p className="mt-2 text-sm leading-6 text-iron-grey">{assessment.summary}</p>
             <p className="mt-3 text-sm font-semibold leading-6 text-hunter-green">{assessment.nextStep}</p>
           </div>
@@ -86,13 +86,13 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
 
         <div className="grid gap-3 lg:grid-cols-2">
           <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Target reply</p>
+            <p className="eyebrow text-xs text-sage-text">Target reply</p>
             <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">{assessment.targetText}</p>
             <p className="mt-2 text-sm leading-6 text-iron-grey break-words">{assessment.ipaTarget}</p>
           </div>
 
           <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-green">Decoded phonemes</p>
+            <p className="eyebrow text-xs text-sage-text">Decoded phonemes</p>
             <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green break-words">
               {assessment.transcript}
             </p>
@@ -105,7 +105,7 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
         <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-xs text-sage-green">Word feedback</p>
+              <p className="eyebrow text-xs text-sage-text">Word feedback</p>
               <p className="text-sm leading-6 text-iron-grey">
                 Compare the transcript-driven target with what the audio model heard.
               </p>
@@ -135,7 +135,7 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
         <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-xs text-sage-green">Advanced breakdown</p>
+              <p className="eyebrow text-xs text-sage-text">Advanced breakdown</p>
               <p className="text-sm leading-6 text-iron-grey">
                 Open the phoneme grid to compare expected sounds with the live decode.
               </p>

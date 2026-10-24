@@ -42,7 +42,7 @@ export function PracticeHub({ initialLevel }: { initialLevel: CefrLevel | null }
     <div className="space-y-4">
       <section className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="rounded-3xl bg-white px-5 py-6 sm:px-8">
-          <p className="eyebrow text-sm text-sage-green">Practice</p>
+          <p className="eyebrow text-sm text-sage-text">Practice</p>
           <h1 className="mt-1 text-3xl font-semibold text-hunter-green sm:text-4xl">What do you want to practise?</h1>
           <p className="mt-2 text-sm leading-7 text-iron-grey">Choose your level. Everything here works offline and is free.</p>
           <div className="mt-4">
@@ -107,7 +107,7 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-3xl bg-white/10 px-3 py-3">
       <p className="text-3xl font-semibold">{value}</p>
-      <p className="text-xs text-white/75">{label}</p>
+      <p className="text-xs text-white/84">{label}</p>
     </div>
   );
 }
@@ -119,7 +119,7 @@ function HubCard({ href, title, blurb, meta }: { href: string; title: string; bl
         <h2 className="font-kicker text-2xl text-hunter-green">{title}</h2>
         <p className="mt-1 text-sm leading-6 text-iron-grey">{blurb}</p>
       </div>
-      {meta ? <p className="mt-3 text-xs font-semibold text-sage-green">{meta}</p> : null}
+      {meta ? <p className="mt-3 text-xs font-semibold text-sage-text">{meta}</p> : null}
     </Link>
   );
 }

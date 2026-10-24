@@ -27,7 +27,7 @@ function ProgressBar({
     <div className="flex min-w-0 flex-1 flex-col gap-2">
       <div className="flex items-center justify-between gap-3">
         <span
-          className={`eyebrow text-[10px] whitespace-nowrap ${isDark ? "text-white" : "text-sage-green"}`}
+          className={`eyebrow text-[10px] whitespace-nowrap ${isDark ? "text-white" : "text-sage-text"}`}
         >
           {label}
         </span>

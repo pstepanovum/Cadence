@@ -64,3 +64,10 @@ next-env.d.ts
 
 # video project files (kept locally, not in the repo)
 /assets/
+
+# test output (Playwright, Lighthouse CI, Firebase emulators)
+/.lighthouseci/
+/test-results/
+/playwright-report/
+firebase-debug.log
+firestore-debug.log

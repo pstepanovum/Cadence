@@ -26,12 +26,14 @@ function accept(raw: unknown): ArticulationTarget[] {
 }
 
 export const loadArticulationTargets = cache(async (): Promise<LoadedTargets> => {
-  const dir = path.join(process.cwd(), "content", "articulation");
+  // Shipped through outputFileTracingIncludes in next.config.ts; left to the
+  // tracer, the dynamic file names matched every "content*" file in the repo.
+  const dir = path.join(/* turbopackIgnore: true */ process.cwd(), "content", "articulation");
   try {
     const names = (await readdir(dir)).filter((name) => name.endsWith(".json")).sort();
     const targets: ArticulationTarget[] = [];
     for (const name of names) {
-      targets.push(...accept(JSON.parse(await readFile(path.join(dir, name), "utf8"))));
+      targets.push(...accept(JSON.parse(await readFile(path.join(/* turbopackIgnore: true */ dir, name), "utf8"))));
     }
     if (targets.length > 0) return { targets, fixture: false };
   } catch {

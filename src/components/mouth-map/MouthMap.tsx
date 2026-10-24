@@ -85,7 +85,7 @@ export function MouthMap({ sound, target, variant, word, from = null, compact = 
             ))}
           </figcaption>
           <div>
-            <p className="eyebrow pb-2 text-xs text-sage-green">Parts of the mouth</p>
+            <p className="eyebrow pb-2 text-xs text-sage-text">Parts of the mouth</p>
             <ul className="flex flex-wrap gap-2">
               {target.highlight.map((id) => (
                 <li key={id}>

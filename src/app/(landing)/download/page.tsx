@@ -46,7 +46,7 @@ export default async function DownloadPage() {
 
         {/* ── Hero ── */}
         <section className="flex flex-col items-center gap-4 py-10 text-center">
-          <p className="eyebrow text-sm text-sage-green">Desktop app</p>
+          <p className="eyebrow text-sm text-sage-text">Desktop app</p>
           <SplitText
             text="Take Cadence with you"
             tag="h1"
@@ -84,7 +84,7 @@ export default async function DownloadPage() {
 
               {/* Requirements */}
               <div className="flex flex-col gap-2 mb-8 flex-1">
-                <p className="text-sm text-bright-snow/70">{p.requirement}</p>
+                <p className="text-sm text-bright-snow/84">{p.requirement}</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {p.architectures.map((arch) => (
                     <span
@@ -105,7 +105,7 @@ export default async function DownloadPage() {
                 >
                   {p.buttonLabel}
                 </Link>
-                <p className="text-center text-xs text-bright-snow/50">
+                <p className="text-center text-xs text-bright-snow/84">
                   {p.fileHint}
                 </p>
               </div>
@@ -119,7 +119,7 @@ export default async function DownloadPage() {
             Cadence is open source.{" "}
             <Link
               href="https://github.com/pstepanovum/Cadence"
-              className="font-semibold text-hunter-green underline underline-offset-4 hover:text-sage-green"
+              className="font-semibold text-hunter-green underline underline-offset-4 hover:text-sage-text"
               target="_blank"
               rel="noopener noreferrer"
             >

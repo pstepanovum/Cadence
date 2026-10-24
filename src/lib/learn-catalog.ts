@@ -46,14 +46,14 @@ export async function getLessonByIdFromCatalog(lessonId: string) {
 const CATALOG_FILENAMES = ["modules.sql", "learn_catalog.sql"] as const;
 
 function findCatalogSqlUnderDir(startDir: string): string | null {
-  let current = path.resolve(startDir);
+  let current = path.resolve(/* turbopackIgnore: true */ startDir);
 
   for (let depth = 0; depth < 16; depth += 1) {
     for (const name of CATALOG_FILENAMES) {
       // The file is shipped by outputFileTracingIncludes in next.config.ts, so
       // the bundler need not trace this walk.
       const candidate = path.join(/* turbopackIgnore: true */ current, "content", name);
-      if (existsSync(candidate)) {
+      if (existsSync(/* turbopackIgnore: true */ candidate)) {
         return candidate;
       }
     }
@@ -74,7 +74,7 @@ function resolveLearnCatalogSqlPath(): string {
   const envPath = process.env.CADENCE_MODULES_SQL_PATH;
   if (envPath) {
     tried.push(envPath);
-    if (existsSync(envPath)) {
+    if (existsSync(/* turbopackIgnore: true */ envPath)) {
       return envPath;
     }
   }

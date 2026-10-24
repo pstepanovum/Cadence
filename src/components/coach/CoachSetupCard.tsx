@@ -61,7 +61,7 @@ export function CoachSetupCard({
       <Card className="bg-white">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="space-y-1">
-            <p className="eyebrow text-sm text-sage-green">Active session</p>
+            <p className="eyebrow text-sm text-sage-text">Active session</p>
             <p className="text-lg font-semibold text-hunter-green">{sessionTopic}</p>
           </div>
           <Button variant="ghost" onClick={onReset}>
@@ -77,7 +77,7 @@ export function CoachSetupCard({
     <Card className="bg-white">
       <div className="space-y-4">
         <div className="space-y-2">
-          <p className="eyebrow text-sm text-sage-green">Session setup</p>
+          <p className="eyebrow text-sm text-sage-text">Session setup</p>
           <h2 className="text-2xl font-semibold text-hunter-green">
             Give the coach a situation to open.
           </h2>
@@ -88,7 +88,7 @@ export function CoachSetupCard({
 
         <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-green">Topic or situation</span>
+            <span className="eyebrow block text-xs text-sage-text">Topic or situation</span>
             <Input
               className="rounded-full border border-hunter-green/10 bg-vanilla-cream px-5"
               value={topicDraft}
@@ -125,7 +125,7 @@ export function CoachSetupCard({
         <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-xs text-sage-green">Reply mode</p>
+              <p className="eyebrow text-xs text-sage-text">Reply mode</p>
               <p className="text-sm leading-6 text-iron-grey">
                 Choose whether the next reply should follow an exact target or stay fully open.
               </p>
@@ -163,13 +163,13 @@ export function CoachSetupCard({
         {showEngineDiagnostics ? (
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Coach status</p>
+              <p className="eyebrow text-xs text-sage-text">Coach status</p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">
                 {coachStatus?.message ?? "Checking AI Coach availability..."}
               </p>
             </div>
             <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">
+              <p className="eyebrow text-xs text-sage-text">
                 {replyMode === "target" ? "Pronunciation engine" : "Freedom transcription"}
               </p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">

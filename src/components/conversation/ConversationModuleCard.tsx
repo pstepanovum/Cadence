@@ -70,7 +70,7 @@ export function ConversationModuleCard({
           <p
             className={cn(
               "eyebrow text-xs",
-              module.isCompleted ? "text-yellow-green/82" : "text-sage-green",
+              module.isCompleted ? "text-yellow-green" : "text-sage-text",
             )}
           >
             {module.topic}
@@ -88,7 +88,7 @@ export function ConversationModuleCard({
         <p
           className={cn(
             "text-sm leading-7",
-            module.isCompleted ? "text-bright-snow/74" : "text-iron-grey",
+            module.isCompleted ? "text-bright-snow/84" : "text-iron-grey",
           )}
         >
           {module.summary}
@@ -99,7 +99,7 @@ export function ConversationModuleCard({
         <p
           className={cn(
             "text-sm leading-6",
-            module.isCompleted ? "text-bright-snow/78" : "text-iron-grey",
+            module.isCompleted ? "text-bright-snow/84" : "text-iron-grey",
           )}
         >
           {module.scenario}
@@ -146,7 +146,7 @@ export function ConversationModuleCard({
         <p
           className={cn(
             "text-xs font-medium",
-            module.isCompleted ? "text-bright-snow/68" : "text-iron-grey",
+            module.isCompleted ? "text-bright-snow/84" : "text-iron-grey",
           )}
         >
           Pass mark {module.passScore}+ and about {module.estimatedMinutes} minutes.

@@ -28,7 +28,7 @@ function Ticks({ items, onDark }: { items: string[]; onDark?: boolean }) {
     <ul className="space-y-2 text-sm leading-6">
       {items.map((item) => (
         <li key={item} className="flex gap-2">
-          <span aria-hidden="true" className={onDark ? "text-yellow-green" : "text-sage-green"}>✓</span>
+          <span aria-hidden="true" className={onDark ? "text-yellow-green" : "text-sage-text"}>✓</span>
           <span className={onDark ? "text-white/85" : "text-iron-grey"}>{item}</span>
         </li>
       ))}
@@ -60,7 +60,7 @@ export function PlanCards({ signedIn, cloudAvailable }: { signedIn: boolean; clo
         action={
           <div className="flex flex-col gap-2">
             <Button href="/download" variant="ghost" className="w-full">Download for desktop</Button>
-            <a href={GITHUB_URL} className="text-center text-sm font-semibold text-sage-green underline underline-offset-2">Source code</a>
+            <a href={GITHUB_URL} className="text-center text-sm font-semibold text-sage-text underline underline-offset-2">Source code</a>
           </div>
         }
       />
@@ -120,7 +120,7 @@ function Plan({
         </div>
         <p>
           <span className={cn("text-4xl font-semibold", dark ? "text-white" : "text-hunter-green")}>{price}</span>{" "}
-          <span className={cn("text-sm", dark ? "text-white/75" : "text-iron-grey")}>{cadence}</span>
+          <span className={cn("text-sm", dark ? "text-white/84" : "text-iron-grey")}>{cadence}</span>
         </p>
         <p className={cn("text-sm leading-6", dark ? "text-white/80" : "text-iron-grey")}>{blurb}</p>
         {features}

@@ -58,7 +58,7 @@ export function CompareView({ a, b, variant }: { a: Side; b: Side; variant: Vari
           description={`The mouth moves from the shape for ${label(previous)} to the shape for ${label(current)}.`}
         />
         <div className="space-y-3">
-          <p className="eyebrow text-xs text-sage-green">Watch the difference</p>
+          <p className="eyebrow text-xs text-sage-text">Watch the difference</p>
           <p className="text-lg font-semibold text-hunter-green">
             {label(previous)} → {label(current)}
           </p>

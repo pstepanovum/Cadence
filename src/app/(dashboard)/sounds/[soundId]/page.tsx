@@ -49,7 +49,7 @@ export default async function SoundPage({ params, searchParams }: Props) {
 
       <div className="grid gap-4 lg:grid-cols-[1.35fr_0.65fr]">
         <section className="rounded-3xl bg-white px-4 py-5 sm:px-6 sm:py-6">
-          <p className="eyebrow text-sm text-sage-green">{sound.kind === "consonant" ? "Consonant" : sound.kind === "vowel" ? "Vowel" : "Diphthong"}</p>
+          <p className="eyebrow text-sm text-sage-text">{sound.kind === "consonant" ? "Consonant" : sound.kind === "vowel" ? "Vowel" : "Diphthong"}</p>
           <h1 className="mt-1 font-kicker text-4xl text-hunter-green sm:text-5xl">
             /{ipaOf(sound, variant)}/ <span className="text-2xl text-iron-grey">as in “{sound.example}”</span>
           </h1>

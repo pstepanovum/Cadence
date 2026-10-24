@@ -76,7 +76,7 @@ export function SetupSelection({
       <div className="grid w-full gap-4 lg:grid-cols-[0.96fr_1.04fr] xl:gap-5">
         <Card className="bg-hunter-green text-bright-snow">
           <div className="space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-yellow-green">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-white">
               <span className="eyebrow text-sm">Setup</span>
             </div>
 
@@ -84,7 +84,7 @@ export function SetupSelection({
               <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
                 Choose how this copy of Cadence should work.
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-bright-snow/78">
+              <p className="max-w-2xl text-base leading-7 text-bright-snow/84">
                 Local mode keeps progress on this machine with no account or billing.
                 {cloudAvailable
                   ? " Cadence Cloud adds sign-in, synced progress and paid plans."
@@ -94,14 +94,14 @@ export function SetupSelection({
 
             <div className={cn("grid gap-3", cloudAvailable && "sm:grid-cols-2")}>
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Open source</p>
+                <p className="eyebrow text-xs text-white">Open source</p>
                 <p className="mt-2 text-base font-semibold text-bright-snow">
                   Local progress, local setup, no hosted account required.
                 </p>
               </div>
               {cloudAvailable ? (
                 <div className="rounded-3xl bg-white/10 px-4 py-4">
-                  <p className="eyebrow text-xs text-yellow-green/82">Hosted</p>
+                  <p className="eyebrow text-xs text-white">Hosted</p>
                   <p className="mt-2 text-base font-semibold text-bright-snow">
                     Sign in to keep using the paid cloud workflow.
                   </p>
@@ -132,7 +132,7 @@ export function SetupSelection({
                   <Database size={18} color="currentColor" />
                 </span>
                 <div className="space-y-1">
-                  <p className="eyebrow text-xs text-sage-green">Local mode</p>
+                  <p className="eyebrow text-xs text-sage-text">Local mode</p>
                   <h2 className="text-2xl font-semibold text-hunter-green">{localTitle}</h2>
                 </div>
               </div>
@@ -171,7 +171,7 @@ export function SetupSelection({
                     <Cloud size={18} color="currentColor" />
                   </span>
                   <div className="space-y-1">
-                    <p className="eyebrow text-xs text-sage-green">Cadence Cloud</p>
+                    <p className="eyebrow text-xs text-sage-text">Cadence Cloud</p>
                     <h2 className="text-2xl font-semibold text-hunter-green">
                       Keep the hosted paid workflow
                     </h2>

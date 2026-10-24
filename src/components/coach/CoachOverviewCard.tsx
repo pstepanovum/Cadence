@@ -25,7 +25,7 @@ export function CoachOverviewCard({ completedTurns, averageScore, savedSessions 
             <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
               Open-topic speaking practice with a live pronunciation coach.
             </h1>
-            <p className="max-w-3xl text-base leading-7 text-bright-snow/78">
+            <p className="max-w-3xl text-base leading-7 text-bright-snow/84">
               Pick any topic, let the coach open the exchange, then switch between
               strict target scoring and open freedom replies as the conversation unfolds.
             </p>
@@ -34,14 +34,14 @@ export function CoachOverviewCard({ completedTurns, averageScore, savedSessions 
 
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
           <div className="rounded-3xl bg-white/10 px-4 py-4">
-            <p className="eyebrow text-xs text-yellow-green/82">Turns scored</p>
+            <p className="eyebrow text-xs text-yellow-green">Turns scored</p>
             <p className="mt-2 text-2xl font-semibold text-bright-snow">
               {completedTurns.length}
             </p>
           </div>
 
           <div className="rounded-3xl bg-white/10 px-4 py-4">
-            <p className="eyebrow text-xs text-yellow-green/82">Average score</p>
+            <p className="eyebrow text-xs text-yellow-green">Average score</p>
             <div className="mt-2 flex items-center gap-3">
               <ProgressRing
                 score={averageScore}
@@ -51,7 +51,7 @@ export function CoachOverviewCard({ completedTurns, averageScore, savedSessions 
                 trackColor="rgba(255,255,255,0.18)"
                 className="[&_span]:text-bright-snow shrink-0"
               />
-              <p className="hidden text-sm leading-6 text-bright-snow/78 lg:block">
+              <p className="hidden text-sm leading-6 text-bright-snow/84 lg:block">
                 Keep the conversation moving and the score climbs with each stronger reply.
               </p>
             </div>
@@ -60,9 +60,9 @@ export function CoachOverviewCard({ completedTurns, averageScore, savedSessions 
           <div className="col-span-2 rounded-3xl bg-white/10 px-4 py-4 lg:col-span-1">
             <div className="flex items-start justify-between gap-4">
               <div className="space-y-2">
-                <p className="eyebrow text-xs text-yellow-green/82">Saved conversations</p>
+                <p className="eyebrow text-xs text-yellow-green">Saved conversations</p>
                 <p className="text-2xl font-semibold text-bright-snow">{savedSessions.length}</p>
-                <p className="hidden text-sm leading-6 text-bright-snow/78 sm:block">
+                <p className="hidden text-sm leading-6 text-bright-snow/84 sm:block">
                   Restore any recent coach session and keep going from where you left it.
                 </p>
               </div>

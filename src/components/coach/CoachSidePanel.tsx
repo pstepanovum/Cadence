@@ -38,7 +38,7 @@ export function CoachSidePanel({
       <Card className="bg-white">
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-green">Reply flow</p>
+            <p className="eyebrow text-sm text-sage-text">Reply flow</p>
             <h2 className="text-2xl font-semibold text-hunter-green">
               Keep the next turn and outcome in view.
             </h2>
@@ -49,7 +49,7 @@ export function CoachSidePanel({
               <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
                 {replyMode === "target" ? (
                   <>
-                    <p className="eyebrow text-xs text-sage-green">Target reply</p>
+                    <p className="eyebrow text-xs text-sage-text">Target reply</p>
                     <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">
                       {currentTurn.learnerReply}
                     </p>
@@ -59,7 +59,7 @@ export function CoachSidePanel({
                   </>
                 ) : (
                   <>
-                    <p className="eyebrow text-xs text-sage-green">Freedom mode</p>
+                    <p className="eyebrow text-xs text-sage-text">Freedom mode</p>
                     <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">
                       Answer the coach naturally in your own words.
                     </p>

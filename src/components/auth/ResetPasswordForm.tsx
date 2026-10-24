@@ -136,7 +136,7 @@ export function ResetPasswordForm() {
       footer={
         <>
           Link expired?{" "}
-          <Link href="/forgot-password" className="font-semibold text-sage-green underline-offset-2 hover:underline">
+          <Link href="/forgot-password" className="font-semibold text-sage-text underline-offset-2 hover:underline">
             Get a new one
           </Link>
         </>

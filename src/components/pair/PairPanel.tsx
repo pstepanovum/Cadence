@@ -141,7 +141,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
             </span>
           </p>
           {addresses.length > 1 ? (
-            <p className="text-bright-snow/70">
+            <p className="text-bright-snow/84">
               Also reachable at {addresses.slice(1).map((entry) => `${entry}:${port}`).join(", ")}
             </p>
           ) : null}

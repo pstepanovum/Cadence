@@ -137,7 +137,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
       <div className="space-y-5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sm font-medium text-sage-green">
+            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sm font-medium text-sage-text">
               <Speaker size={18} color="currentColor" />
               Coach voice
             </div>
@@ -175,7 +175,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-green">Gender</span>
+            <span className="eyebrow block text-xs text-sage-text">Gender</span>
             <Select
               value={settings.gender}
               onChange={(e) => onUpdate({ gender: e.target.value })}
@@ -189,7 +189,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
           </label>
 
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-green">Age</span>
+            <span className="eyebrow block text-xs text-sage-text">Age</span>
             <Select
               value={settings.age}
               onChange={(e) => onUpdate({ age: e.target.value })}
@@ -203,7 +203,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
           </label>
 
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-green">Pitch</span>
+            <span className="eyebrow block text-xs text-sage-text">Pitch</span>
             <Select
               value={settings.pitch}
               onChange={(e) => onUpdate({ pitch: e.target.value })}
@@ -217,7 +217,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
           </label>
 
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-green">Accent</span>
+            <span className="eyebrow block text-xs text-sage-text">Accent</span>
             <Select
               value={settings.accent}
               onChange={(e) => onUpdate({ accent: e.target.value })}
@@ -238,7 +238,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
         ) : null}
 
         <button
-          className="text-sm font-semibold text-sage-green hover:text-hunter-green transition-colors"
+          className="text-sm font-semibold text-sage-text hover:text-hunter-green transition-colors"
           onClick={() => onUpdate({ ...DEFAULT_VOICE_SETTINGS })}
         >
           Reset to default

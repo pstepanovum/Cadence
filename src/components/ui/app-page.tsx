@@ -19,7 +19,7 @@ export function AppPage({ children, current }: { children: ReactNode; current?: 
 export function AppIntro({ eyebrow, title, children, actions }: { eyebrow: string; title: string; children?: ReactNode; actions?: ReactNode }) {
   return (
     <section className="rounded-3xl bg-white px-5 py-6 sm:px-8 sm:py-8">
-      <p className="eyebrow text-sm text-sage-green">{eyebrow}</p>
+      <p className="eyebrow text-sm text-sage-text">{eyebrow}</p>
       <h1 className="mt-2 max-w-3xl text-balance text-3xl font-semibold text-hunter-green sm:text-4xl">{title}</h1>
       {children ? <div className="mt-3 max-w-3xl text-base leading-7 text-iron-grey">{children}</div> : null}
       {actions ? <div className="mt-5 flex flex-wrap gap-2">{actions}</div> : null}

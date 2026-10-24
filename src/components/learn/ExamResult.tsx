@@ -44,7 +44,7 @@ export function ExamResult({
               <p
                 className={cn(
                   "eyebrow text-xs",
-                  passed ? "text-yellow-green/84" : "text-sage-green",
+                  passed ? "text-yellow-green" : "text-sage-text",
                 )}
               >
                 Final exam score
@@ -60,7 +60,7 @@ export function ExamResult({
               <p
                 className={cn(
                   "text-sm leading-6",
-                  passed ? "text-bright-snow/76" : "text-iron-grey",
+                  passed ? "text-bright-snow/84" : "text-iron-grey",
                 )}
               >
                 {passed
@@ -79,7 +79,7 @@ export function ExamResult({
             <p
               className={cn(
                 "eyebrow text-xs",
-                passed ? "text-yellow-green/84" : "text-sage-green",
+                passed ? "text-yellow-green" : "text-sage-text",
               )}
             >
               What this means
@@ -87,7 +87,7 @@ export function ExamResult({
             <p
               className={cn(
                 "mt-2 text-sm leading-6",
-                passed ? "text-bright-snow/78" : "text-iron-grey",
+                passed ? "text-bright-snow/84" : "text-iron-grey",
               )}
             >
               {passed
@@ -101,7 +101,7 @@ export function ExamResult({
 
         <div className="rounded-[2rem] bg-vanilla-cream px-5 py-5 sm:px-6 sm:py-6">
           <div className="space-y-2">
-            <p className="eyebrow text-xs text-sage-green">Route update</p>
+            <p className="eyebrow text-xs text-sage-text">Route update</p>
             <h3 className="text-2xl font-semibold text-hunter-green">
               {passed
                 ? "The structured path keeps moving."
@@ -137,13 +137,13 @@ export function ExamResult({
 
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Pass mark</p>
+              <p className="eyebrow text-xs text-sage-text">Pass mark</p>
               <p className="mt-2 text-2xl font-semibold text-hunter-green">
                 70+
               </p>
             </div>
             <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Your score</p>
+              <p className="eyebrow text-xs text-sage-text">Your score</p>
               <p className="mt-2 text-2xl font-semibold text-hunter-green">
                 {score}/100
               </p>

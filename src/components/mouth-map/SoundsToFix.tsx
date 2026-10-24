@@ -44,9 +44,9 @@ export function SoundsToFix({ variant }: { variant: Variant }) {
                 <Link
                   href={`/sounds/${item.soundId}${suffix}`}
                   className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/10 px-4 text-sm font-semibold text-white hover:bg-white/20"
-                  aria-label={`/${ipaOf(sound, variant)}/, average score ${item.score}`}
                 >
-                  /{ipaOf(sound, variant)}/ <span className="font-normal text-white/75">{item.score}</span>
+                  /{ipaOf(sound, variant)}/<span className="sr-only">, average score</span>{" "}
+                  <span className="font-normal text-white/84">{item.score}</span>
                 </Link>
               </li>
             ) : null;

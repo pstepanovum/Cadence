@@ -52,9 +52,9 @@ export default async function SoundsPage({ searchParams }: { searchParams: Promi
                   <Link
                     href={`/sounds/${sound.id}${suffix}`}
                     className="flex min-h-20 flex-col justify-center rounded-3xl bg-vanilla-cream px-4 py-3 transition-colors hover:bg-yellow-green"
-                    aria-label={`/${ipaOf(sound, variant)}/ as in ${sound.example}`}
                   >
                     <span className="font-kicker text-2xl text-hunter-green">/{ipaOf(sound, variant)}/</span>
+                    <span className="sr-only"> as in </span>
                     <span className="text-sm text-iron-grey">{sound.example}</span>
                   </Link>
                 </li>

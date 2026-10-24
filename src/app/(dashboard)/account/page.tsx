@@ -49,7 +49,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
           {isFirebaseConfigured ? (
             <div className="mt-4 flex flex-wrap gap-2">
               <Button href="/signup">Create a free account</Button>
-              <Link href="/pricing" className="inline-flex min-h-12 items-center px-3 text-sm font-semibold text-sage-green underline underline-offset-2">See plans</Link>
+              <Link href="/pricing" className="inline-flex min-h-12 items-center px-3 text-sm font-semibold text-sage-text underline underline-offset-2">See plans</Link>
             </div>
           ) : null}
         </Card>

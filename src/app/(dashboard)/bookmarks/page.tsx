@@ -19,7 +19,7 @@ export default async function BookmarksPage() {
         <ModuleProgress />
         <Card className="bg-white">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-green">Bookmarks</p>
+            <p className="eyebrow text-sm text-sage-text">Bookmarks</p>
             <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl">
               Save and revisit your important items.
             </h1>

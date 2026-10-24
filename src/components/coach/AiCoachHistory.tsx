@@ -48,7 +48,7 @@ export function AiCoachHistory({ userId }: { userId: string }) {
           <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
             Saved conversations you can reopen anytime.
           </h1>
-          <p className="max-w-3xl text-base leading-7 text-bright-snow/78">
+          <p className="max-w-3xl text-base leading-7 text-bright-snow/84">
             Each saved thread stays local to this browser, so you can reopen a
             strong topic and continue speaking without rebuilding the whole flow.
           </p>
@@ -58,7 +58,7 @@ export function AiCoachHistory({ userId }: { userId: string }) {
       {sessions.length === 0 ? (
         <Card className="bg-white">
           <div className="space-y-3">
-            <p className="eyebrow text-sm text-sage-green">No saved sessions</p>
+            <p className="eyebrow text-sm text-sage-text">No saved sessions</p>
             <h2 className="text-2xl font-semibold text-hunter-green">
               Start an AI Coach topic and it will appear here.
             </h2>
@@ -75,7 +75,7 @@ export function AiCoachHistory({ userId }: { userId: string }) {
             <Card key={session.id} className="bg-white">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <p className="eyebrow text-xs text-sage-green">
+                  <p className="eyebrow text-xs text-sage-text">
                     {session.replyMode === "target" ? "Targeted mode" : "Freedom mode"}
                   </p>
                   <h2 className="text-2xl font-semibold text-hunter-green">

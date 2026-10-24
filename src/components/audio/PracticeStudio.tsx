@@ -149,7 +149,7 @@ export function PracticeStudio({
       <Card className="bg-bright-snow">
         <div className="space-y-5">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sm font-medium text-sage-green">
+            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sm font-medium text-sage-text">
               <Activity size={18} filled color="currentColor" />
               Practice studio
             </div>
@@ -163,7 +163,7 @@ export function PracticeStudio({
           </div>
 
           <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-            <p className="eyebrow text-sm text-sage-green">Current target</p>
+            <p className="eyebrow text-sm text-sage-text">Current target</p>
             <div className="mt-3 flex items-end justify-between gap-4">
               <div>
                 <p className="text-2xl font-semibold text-hunter-green sm:text-3xl">
@@ -222,7 +222,7 @@ export function PracticeStudio({
             </div>
 
             <div className="rounded-3xl bg-vanilla-cream/90 p-5">
-              <p className="eyebrow text-sm text-sage-green">
+              <p className="eyebrow text-sm text-sage-text">
                 Transcribed phonemes
               </p>
               <p className="mt-3 text-2xl font-semibold text-hunter-green">
@@ -234,7 +234,7 @@ export function PracticeStudio({
             </div>
 
             <div className="space-y-3">
-              <p className="eyebrow text-sm text-sage-green">
+              <p className="eyebrow text-sm text-sage-text">
                 Letter highlights
               </p>
               <div className="flex flex-wrap gap-3">
@@ -277,7 +277,7 @@ export function PracticeStudio({
             </div>
 
             <div className="rounded-3xl bg-bright-snow p-5">
-              <p className="eyebrow text-sm text-sage-green">
+              <p className="eyebrow text-sm text-sage-text">
                 Next repetition cue
               </p>
               <p className="mt-3 text-base leading-7 text-iron-grey">

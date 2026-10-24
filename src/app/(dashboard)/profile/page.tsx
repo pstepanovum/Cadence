@@ -70,19 +70,19 @@ export default async function ProfilePage() {
 
               <div className="grid gap-3 sm:grid-cols-3">
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                  <p className="eyebrow text-xs text-sage-green">Plan</p>
+                  <p className="eyebrow text-xs text-sage-text">Plan</p>
                   <p className="mt-2 text-base font-semibold text-hunter-green">
                     {isLocal ? "Own computer" : "Cadence account"}
                   </p>
                 </div>
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                  <p className="eyebrow text-xs text-sage-green">Status</p>
+                  <p className="eyebrow text-xs text-sage-text">Status</p>
                   <p className="mt-2 text-base font-semibold text-hunter-green">
                     {isLocal ? "Stored on this machine" : "Synced"}
                   </p>
                 </div>
                 <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                  <p className="eyebrow text-xs text-sage-green">
+                  <p className="eyebrow text-xs text-sage-text">
                     Member since
                   </p>
                   <p className="mt-2 text-base font-semibold text-hunter-green">
@@ -100,7 +100,7 @@ export default async function ProfilePage() {
             <Card className="bg-white flex-1">
               <div className="space-y-4">
                 <div className="space-y-1">
-                  <p className="eyebrow text-sm text-sage-green">Practice setup</p>
+                  <p className="eyebrow text-sm text-sage-text">Practice setup</p>
                   <h2 className="text-2xl font-semibold text-hunter-green">Your preferences</h2>
                 </div>
 

@@ -12,10 +12,12 @@
   --alabaster-grey: #dee2e6;
   --pale-slate: #ced4da;
   --pale-slate-2: #adb5bd;
-  --slate-grey: #6c757d;
+  --slate-grey: #5a636b;
   --iron-grey: #495057;
   --gunmetal: #343a40;
   --carbon-black: #212529;
+  /* Sage green for text: the fill colour is too light for small type (AA). */
+  --sage-text: #466c32;
   color-scheme: light;
 }
 
@@ -58,6 +60,7 @@
     --carbon-black: #eef2ef;
     --hunter-green: #dbe9cf;
     --sage-green: #a3cb86;
+    --sage-text: #a9d18c;
     --blushed-brick: #e88486;
     --mm-bg: #18201a;
     --mm-tissue: #4a3a34;
@@ -103,6 +106,7 @@
   --carbon-black: #eef2ef;
   --hunter-green: #dbe9cf;
   --sage-green: #a3cb86;
+  --sage-text: #a9d18c;
   --blushed-brick: #e88486;
   color-scheme: dark;
 }
@@ -117,7 +121,7 @@
   :root:not([data-theme="light"]) .bg-hunter-green { --hunter-green: #2a4630; }
   :root:not([data-theme="light"]) .bg-sage-green { --sage-green: #4c7438; }
   :root:not([data-theme="light"]) .bg-blushed-brick { --blushed-brick: #a33f41; }
-  :root:not([data-theme="light"]) :is(.bg-yellow-green, .on-lime) { --hunter-green: #1a2f1f; }
+  :root:not([data-theme="light"]) :is(.bg-yellow-green, .on-lime) { --hunter-green: #1a2f1f; --sage-text: #2f4f22; }
   :root:not([data-theme="light"]) .theme-light-only { display: none !important; }
   :root:not([data-theme="light"]) .theme-dark-only { display: revert !important; }
 }
@@ -131,13 +135,22 @@
 :root[data-theme="dark"] .bg-hunter-green { --hunter-green: #2a4630; }
 :root[data-theme="dark"] .bg-sage-green { --sage-green: #4c7438; }
 :root[data-theme="dark"] .bg-blushed-brick { --blushed-brick: #a33f41; }
-:root[data-theme="dark"] :is(.bg-yellow-green, .on-lime) { --hunter-green: #1a2f1f; }
+:root[data-theme="dark"] :is(.bg-yellow-green, .on-lime) { --hunter-green: #1a2f1f; --sage-text: #2f4f22; }
 :root[data-theme="dark"] .theme-light-only { display: none !important; }
 :root[data-theme="dark"] .theme-dark-only { display: revert !important; }
 
 .theme-dark-only {
   display: none;
 }
+
+/* Text on coloured surfaces, light mode (dark mode re-scopes these above):
+   green text on lime is the deeper ink, and lime text on hunter green is the
+   paler lime, so small type stays AA. A lime button inside a green card
+   keeps its own lime. */
+:is(.bg-yellow-green, .on-lime) { --hunter-green: #244a2c; }
+.bg-hunter-green { --yellow-green: #d4e7a6; }
+.bg-hunter-green :is(.bg-white\/10, .bg-white\/12) { --yellow-green: #eef5dc; }
+.bg-hunter-green .bg-yellow-green { --yellow-green: #a7c957; }
 
 /* Illustrations are drawn for a light page; soften them on dark. */
 @media (prefers-color-scheme: dark) {
@@ -148,6 +161,7 @@
 @theme inline {
   --color-hunter-green: var(--hunter-green);
   --color-sage-green: var(--sage-green);
+  --color-sage-text: var(--sage-text);
   --color-yellow-green: var(--yellow-green);
   --color-vanilla-cream: var(--vanilla-cream);
   --color-blushed-brick: var(--blushed-brick);

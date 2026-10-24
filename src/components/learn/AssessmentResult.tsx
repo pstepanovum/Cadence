@@ -246,7 +246,7 @@ export function AssessmentResult({
               strokeWidth={7}
             />
             <div className="space-y-2">
-              <p className="eyebrow text-xs text-sage-green">Assessment score</p>
+              <p className="eyebrow text-xs text-sage-text">Assessment score</p>
               <p className="text-3xl font-semibold text-hunter-green">
                 {assessment.overallScore}/100
               </p>
@@ -258,7 +258,7 @@ export function AssessmentResult({
 
           <div className="mt-5 space-y-3">
             <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">
+              <p className="eyebrow text-xs text-sage-text">
                 {targetIsPhrase ? "Target reply" : "Target word"}
               </p>
               <p
@@ -275,7 +275,7 @@ export function AssessmentResult({
             </div>
 
             <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Decoded phonemes</p>
+              <p className="eyebrow text-xs text-sage-text">Decoded phonemes</p>
               <p className="mt-2 text-lg font-semibold text-hunter-green break-words">
                 {assessment.transcript}
               </p>
@@ -289,7 +289,7 @@ export function AssessmentResult({
         <div className="rounded-[2rem] bg-vanilla-cream px-5 py-5 sm:px-6 sm:py-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="space-y-2">
-              <p className="eyebrow text-xs text-sage-green">Word feedback</p>
+              <p className="eyebrow text-xs text-sage-text">Word feedback</p>
               <h3 className="text-2xl font-semibold text-hunter-green">
                 See which parts of the reply landed cleanly.
               </h3>
@@ -316,14 +316,14 @@ export function AssessmentResult({
 
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">At a glance</p>
+              <p className="eyebrow text-xs text-sage-text">At a glance</p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">
                 {correctHighlights} words were clean, {mixedHighlights} were close,
                 and the rest need another pass.
               </p>
             </div>
             <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Next cue</p>
+              <p className="eyebrow text-xs text-sage-text">Next cue</p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">
                 {assessment.nextStep}
               </p>
@@ -346,7 +346,7 @@ export function AssessmentResult({
       <div className="rounded-[2rem] bg-white px-5 py-5 sm:px-6 sm:py-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="space-y-1">
-            <p className="eyebrow text-xs text-sage-green">Advanced breakdown</p>
+            <p className="eyebrow text-xs text-sage-text">Advanced breakdown</p>
             <h3 className="text-2xl font-semibold text-hunter-green">
               {showAdvanced
                 ? "Phoneme detail is open."

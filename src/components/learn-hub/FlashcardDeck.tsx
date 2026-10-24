@@ -68,7 +68,7 @@ export function FlashcardDeck({ cards, level }: { cards: FlashcardExercise[]; le
     <article className="space-y-5 rounded-3xl bg-white px-5 py-8 text-center sm:px-10" aria-live="polite">
       <p className="text-sm text-iron-grey">Card {position + 1} of {queue.length}</p>
       <p className="text-4xl font-semibold text-hunter-green">{card.front}</p>
-      <button type="button" onClick={() => speakWord(card.front)} className="min-h-11 cursor-pointer text-sm font-semibold text-sage-green underline underline-offset-2">
+      <button type="button" onClick={() => speakWord(card.front)} className="min-h-11 cursor-pointer text-sm font-semibold text-sage-text underline underline-offset-2">
         Hear it
       </button>
       {shown ? (

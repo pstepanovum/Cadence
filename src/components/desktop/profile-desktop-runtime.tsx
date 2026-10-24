@@ -100,7 +100,7 @@ function InfoCard({
 }) {
   return (
     <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-      <p className="eyebrow text-xs text-sage-green">{label}</p>
+      <p className="eyebrow text-xs text-sage-text">{label}</p>
       <p className="mt-3 text-lg font-semibold text-hunter-green">{value}</p>
       <p className="mt-2 text-sm leading-7 text-iron-grey">{detail}</p>
     </div>
@@ -142,7 +142,7 @@ function RuntimeLocationRow({
       </div>
 
       <div className="min-w-0 flex-1">
-        <p className="eyebrow text-xs text-sage-green">{label}</p>
+        <p className="eyebrow text-xs text-sage-text">{label}</p>
         <p className="mt-1 truncate text-base font-semibold text-hunter-green">
           {baseName(value)}
         </p>
@@ -167,7 +167,7 @@ function PathPane({
   return (
     <div className="rounded-[32px] bg-[#f5ebd2] p-3">
       <div className="rounded-[26px] bg-[#efe1bd] px-4 py-3">
-        <p className="eyebrow text-xs text-sage-green">{label}</p>
+        <p className="eyebrow text-xs text-sage-text">{label}</p>
       </div>
       <div className="mt-3 space-y-3">{children}</div>
     </div>
@@ -193,7 +193,7 @@ function ModelCard({
     <div className="rounded-[28px] bg-hunter-green px-5 py-5 text-bright-snow">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="eyebrow text-xs text-yellow-green/80">{label}</p>
+          <p className="eyebrow text-xs text-yellow-green">{label}</p>
           <p className="mt-3 text-lg font-semibold text-bright-snow">{modelId}</p>
         </div>
         <div
@@ -272,7 +272,7 @@ export function ProfileDesktopRuntime() {
       <div className="space-y-6">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
+            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
               <Microphone size={18} filled color="currentColor" />
               <span className="eyebrow text-sm">Desktop runtime</span>
             </div>
@@ -314,7 +314,7 @@ export function ProfileDesktopRuntime() {
             <details className="group rounded-[28px] bg-vanilla-cream/60 open:bg-vanilla-cream transition-colors">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
                 <div className="min-w-0 space-y-0.5">
-                  <p className="eyebrow text-sm text-sage-green">Advanced</p>
+                  <p className="eyebrow text-sm text-sage-text">Advanced</p>
                   <p className="text-sm text-iron-grey">
                     Models, folders, logs, and other technical details
                   </p>
@@ -363,7 +363,7 @@ export function ProfileDesktopRuntime() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
                     <Activity size={18} filled color="currentColor" />
                     <span className="eyebrow text-sm">Runtime files</span>
                   </div>
@@ -411,7 +411,7 @@ export function ProfileDesktopRuntime() {
                 </div>
 
                 <div className="rounded-3xl bg-[#f5ebd2] px-5 py-5">
-                  <div className="flex items-center gap-2 text-sage-green">
+                  <div className="flex items-center gap-2 text-sage-text">
                     <Speaker size={18} color="currentColor" />
                     <p className="eyebrow text-sm">Current voice style</p>
                   </div>
@@ -432,7 +432,7 @@ export function ProfileDesktopRuntime() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-green">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
                     <Activity size={18} filled color="currentColor" />
                     <span className="eyebrow text-sm">Current models</span>
                   </div>

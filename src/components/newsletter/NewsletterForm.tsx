@@ -3,12 +3,8 @@
 
 import Link from "next/link";
 import { useId, useState, type FormEvent } from "react";
-import {
-  describeSubscribeFailure,
-  subscribeToNewsletter,
-  type NewsletterSource,
-} from "@/components/newsletter/newsletter-api";
-import { cn } from "@/lib/utils";
+import type { NewsletterSource } from "@/components/newsletter/newsletter-api";
+import { clsx as cn } from "clsx";
 
 interface NewsletterFormProps {
   source: Extract<NewsletterSource, "footer" | "page">;
@@ -28,6 +24,8 @@ export function NewsletterForm({ source, tone = "default", className }: Newslett
     event.preventDefault();
     setError(null);
     setState("sending");
+    // Loaded on submit: the form sits in every page's footer.
+    const { describeSubscribeFailure, subscribeToNewsletter } = await import("@/components/newsletter/newsletter-api");
     const result = await subscribeToNewsletter(email, source);
     if (result.ok) {
       setState("sent");
@@ -48,7 +46,7 @@ export function NewsletterForm({ source, tone = "default", className }: Newslett
         )}
       >
         <p className="font-semibold">Check your email.</p>
-        <p className={cn("mt-1 text-sm leading-6", onDark ? "text-bright-snow/80" : "text-hunter-green/80")}>
+        <p className={cn("mt-1 text-sm leading-6", onDark ? "text-bright-snow" : "text-hunter-green")}>
           We sent a link to {email.trim()}. You are on the list once you click it.
         </p>
       </div>
@@ -93,7 +91,7 @@ export function NewsletterForm({ source, tone = "default", className }: Newslett
           {error}
         </p>
       ) : null}
-      <p id={`${id}-note`} className={cn("text-xs leading-5", onDark ? "text-bright-snow/70" : "text-slate-grey")}>
+      <p id={`${id}-note`} className={cn("text-xs leading-5", onDark ? "text-bright-snow/84" : "text-slate-grey")}>
         A few emails a month at most. Unsubscribe from any email.{" "}
         <Link href="/privacy#newsletter" className="underline underline-offset-2">
           Privacy

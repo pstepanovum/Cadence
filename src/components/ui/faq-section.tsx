@@ -1,14 +1,8 @@
 // FILE: src/components/ui/faq-section.tsx
-"use client";
-
-import { useState } from "react";
-import {
-  Cursor,
-  CursorFollow,
-  CursorProvider,
-} from "@/components/animate-ui/components/animate/cursor";
+//
+// The landing FAQ as native <details> sharing one name, so one answer opens at
+// a time with no JavaScript; `group-open:` restyles the open card.
 import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 
 const faqItems = [
   {
@@ -34,96 +28,37 @@ const faqItems = [
 ];
 
 export function FaqSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <section className="grid gap-3 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
       <Card className="h-full bg-white">
         <div className="flex h-full flex-col space-y-2">
-          <p className="eyebrow text-sm text-sage-green">FAQ</p>
-          <h2 className="max-w-md text-3xl font-semibold text-hunter-green">
-            Questions people ask first.
-          </h2>
+          <p className="eyebrow text-sm text-sage-text">FAQ</p>
+          <h2 className="max-w-md text-3xl font-semibold text-hunter-green">Questions people ask first.</h2>
         </div>
       </Card>
 
       <div className="grid gap-3">
-        {faqItems.map((item, index) => {
-          const isOpen = openIndex === index;
-
-          return (
-            <CursorProvider key={item.question} className="w-full">
-              <Cursor className="bg-hunter-green" />
-              <CursorFollow
-                side="top"
-                sideOffset={18}
-                align="center"
-                className="bg-hunter-green text-white"
-              >
-                {isOpen ? "Close answer" : "Open answer"}
-              </CursorFollow>
-              <button
-                type="button"
-                aria-expanded={isOpen}
-                onClick={() => setOpenIndex(isOpen ? null : index)}
-                className={cn(
-                  "w-full cursor-pointer rounded-3xl p-0 text-left",
-                  "focus-visible:outline-none focus-visible:ring-0",
-                )}
-              >
-                <Card
-                  className={cn(
-                    "flex flex-col gap-4 p-5 sm:p-6",
-                    isOpen
-                      ? "bg-hunter-green text-white"
-                      : "bg-white text-hunter-green",
-                  )}
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={cn(
-                          "eyebrow inline-flex rounded-full px-3 py-1.5 text-xs",
-                          isOpen
-                            ? "bg-white/10 text-yellow-green"
-                            : "bg-vanilla-cream text-sage-green",
-                        )}
-                      >
-                        0{index + 1}
-                      </div>
-
-                      <h3
-                        className={cn(
-                          "text-lg font-semibold sm:text-xl",
-                          isOpen ? "text-white" : "text-hunter-green",
-                        )}
-                      >
-                        {item.question}
-                      </h3>
-                    </div>
-
-                    <div
-                      className={cn(
-                        "rounded-full px-3 py-1.5 text-sm whitespace-nowrap",
-                        isOpen
-                          ? "bg-white/10 text-white/84"
-                          : "bg-bright-snow text-iron-grey",
-                      )}
-                    >
-                      {isOpen ? "Close" : "Open"}
-                    </div>
-                  </div>
-
-                  {isOpen ? (
-                    <p className="max-w-3xl pr-2 text-sm leading-7 text-white/78">
-                      {item.answer}
-                    </p>
-                  ) : null}
-                </Card>
-              </button>
-            </CursorProvider>
-          );
-        })}
+        {faqItems.map((item, index) => (
+          <details
+            key={item.question}
+            name="faq"
+            className="group rounded-3xl bg-white p-5 text-hunter-green open:bg-hunter-green open:text-white sm:p-6"
+          >
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage-green [&::-webkit-details-marker]:hidden">
+              <span className="flex items-center gap-4">
+                <span className="eyebrow inline-flex rounded-full bg-vanilla-cream px-3 py-1.5 text-xs text-sage-text group-open:bg-white/10 group-open:text-yellow-green">
+                  0{index + 1}
+                </span>
+                <span className="text-lg font-semibold text-hunter-green group-open:text-white sm:text-xl">{item.question}</span>
+              </span>
+              <span aria-hidden="true" className="whitespace-nowrap rounded-full bg-bright-snow px-3 py-1.5 text-sm text-iron-grey group-open:bg-white/10 group-open:text-white/84">
+                <span className="group-open:hidden">Open</span>
+                <span className="hidden group-open:inline">Close</span>
+              </span>
+            </summary>
+            <p className="mt-4 max-w-3xl pr-2 text-sm leading-7 text-white/84">{item.answer}</p>
+          </details>
+        ))}
       </div>
     </section>
   );

@@ -46,7 +46,7 @@ export function ExerciseCard({ exercise, onResult, onNext, isLast }: ExerciseCar
   return (
     <article className="space-y-5 rounded-3xl bg-white px-5 py-6 sm:px-8 sm:py-8" aria-live="polite">
       <header className="space-y-1">
-        <p className="eyebrow text-xs text-sage-green">{exercise.level} · {exercise.prompt}</p>
+        <p className="eyebrow text-xs text-sage-text">{exercise.level} · {exercise.prompt}</p>
       </header>
       <Body exercise={exercise} disabled={result !== null} onCheck={check} result={result} />
       {result ? (
@@ -60,7 +60,7 @@ export function ExerciseCard({ exercise, onResult, onNext, isLast }: ExerciseCar
           {!result.correct ? <p>{expectedText(exercise)}</p> : null}
           {exercise.explanation ? <p>{exercise.explanation}</p> : null}
           {exercise.grammarPointIds[0] ? (
-            <Link href={`/grammar/${exercise.grammarPointIds[0]}`} className="inline-block font-semibold text-sage-green underline underline-offset-2">
+            <Link href={`/grammar/${exercise.grammarPointIds[0]}`} className="inline-block font-semibold text-sage-text underline underline-offset-2">
               Read the grammar
             </Link>
           ) : null}

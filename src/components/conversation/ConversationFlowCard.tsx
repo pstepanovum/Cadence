@@ -152,7 +152,7 @@ export function ConversationFlowCard({
     <Card className="bg-white">
       <div className="space-y-4">
         <div className="space-y-2">
-          <p className="eyebrow text-sm text-sage-green">Conversation flow</p>
+          <p className="eyebrow text-sm text-sage-text">Conversation flow</p>
           <CardTitle className="text-2xl">
             A real back-and-forth, one spoken reply at a time.
           </CardTitle>
@@ -165,7 +165,7 @@ export function ConversationFlowCard({
         <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="space-y-2">
-              <p className="eyebrow text-xs text-sage-green">Turn status</p>
+              <p className="eyebrow text-xs text-sage-text">Turn status</p>
               <p className="text-lg font-semibold text-hunter-green">
                 {phase === "intro"
                   ? "Start the chat."
@@ -220,7 +220,7 @@ export function ConversationFlowCard({
         <div className="space-y-3">
           {visibleTurns.length === 0 ? (
             <div className="rounded-[1.75rem] bg-bright-snow px-4 py-5 text-center">
-              <p className="eyebrow text-xs text-sage-green">Ready state</p>
+              <p className="eyebrow text-xs text-sage-text">Ready state</p>
               <p className="mt-2 text-lg font-semibold text-hunter-green">
                 Click start to hear the first coach line.
               </p>
@@ -235,7 +235,7 @@ export function ConversationFlowCard({
                   <div className="flex justify-start">
                     <div className="max-w-[85%] rounded-[1.75rem] bg-vanilla-cream px-4 py-4">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="eyebrow text-xs text-sage-green">Coach</p>
+                        <p className="eyebrow text-xs text-sage-text">Coach</p>
                         <Button
                           variant="ghost"
                           className="min-h-8 px-3 py-2 text-xs"
@@ -253,7 +253,7 @@ export function ConversationFlowCard({
                         {turn.coachMessage}
                       </p>
                       {isCurrent ? (
-                        <p className="mt-2 text-xs font-semibold text-sage-green">
+                        <p className="mt-2 text-xs font-semibold text-sage-text">
                           {phase === "coach"
                             ? coachAudioState === "playing"
                               ? "Speaking now"
@@ -277,7 +277,7 @@ export function ConversationFlowCard({
                         <p
                           className={cn(
                             "eyebrow text-xs",
-                            response ? "text-yellow-green/84" : "text-sage-green",
+                            response ? "text-yellow-green" : "text-sage-text",
                           )}
                         >
                           You
@@ -299,10 +299,10 @@ export function ConversationFlowCard({
                       </div>
                       {response ? (
                         <div className="mt-2 space-y-2">
-                          <p className="text-xs font-semibold text-yellow-green/84">
+                          <p className="text-xs font-semibold text-yellow-green">
                             Your scored reply
                           </p>
-                          <p className="text-xs leading-5 text-yellow-green/70">
+                          <p className="text-xs leading-5 text-yellow-green">
                             Tap a word to hear that part of your recording.
                           </p>
                           <ReplyWordFeedback

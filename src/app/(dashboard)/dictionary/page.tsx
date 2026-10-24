@@ -19,7 +19,7 @@ export default async function DictionaryPage() {
         <ModuleProgress />
         <Card className="bg-white">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-green">Dictionary</p>
+            <p className="eyebrow text-sm text-sage-text">Dictionary</p>
             <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl">
               Look up pronunciation guidance quickly.
             </h1>

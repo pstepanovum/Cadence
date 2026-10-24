@@ -64,7 +64,7 @@ function PlusCard({ me }: { me: Me | null | undefined }) {
           <PlanButton interval="yearly" signedIn label="Start 7-day free trial" variant="secondary" />
           <PlanButton interval="monthly" signedIn label="Monthly, $14.99" variant="ghost" />
         </div>
-        <p className="mt-3 text-xs text-white/70">Running Cadence on your own computer gives the same AI for free.</p>
+        <p className="mt-3 text-xs text-white/84">Running Cadence on your own computer gives the same AI for free.</p>
       </Card>
     );
   }

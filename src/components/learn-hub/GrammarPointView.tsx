@@ -35,7 +35,7 @@ function ExampleLine({ example }: { example: Example }) {
           </p>
         ) : null}
       </div>
-      <button type="button" onClick={() => speakWord(example.text)} className="min-h-11 shrink-0 cursor-pointer rounded-full px-3 text-sm font-semibold text-sage-green" aria-label={`Hear: ${example.text}`}>
+      <button type="button" onClick={() => speakWord(example.text)} className="min-h-11 shrink-0 cursor-pointer rounded-full px-3 text-sm font-semibold text-sage-text" aria-label={`Hear: ${example.text}`}>
         Hear
       </button>
     </li>
@@ -60,7 +60,7 @@ export function GrammarPointView({ pointId }: { pointId: string }) {
   return (
     <article className="grid gap-4 lg:grid-cols-[1.3fr_0.7fr]">
       <div className="space-y-4 rounded-3xl bg-white px-5 py-6 sm:px-8 sm:py-8">
-        <p className="eyebrow text-sm text-sage-green">
+        <p className="eyebrow text-sm text-sage-text">
           <Link href={`/grammar?level=${gp.level}`} className="underline-offset-2 hover:underline">Grammar</Link> · {gp.level}
         </p>
         <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl">{gp.title}</h1>

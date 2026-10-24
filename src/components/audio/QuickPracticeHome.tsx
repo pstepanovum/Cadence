@@ -51,7 +51,7 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
               <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
                 Quick practice
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-bright-snow/78">
+              <p className="max-w-2xl text-base leading-7 text-bright-snow/84">
                 Free drill mode for supported target words. Hear the reference
                 pronunciation, record one take, and let Cadence compare the
                 decoded phonemes against the target.
@@ -60,19 +60,19 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
 
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Modules complete</p>
+                <p className="eyebrow text-xs text-yellow-green">Modules complete</p>
                 <p className="mt-2 text-2xl font-semibold text-bright-snow">
                   {completedModules}/{modules.length || 10}
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Unlocked now</p>
+                <p className="eyebrow text-xs text-yellow-green">Unlocked now</p>
                 <p className="mt-2 text-2xl font-semibold text-bright-snow">
                   {unlockedModules}
                 </p>
               </div>
               <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green/82">Current module</p>
+                <p className="eyebrow text-xs text-yellow-green">Current module</p>
                 <p className="mt-2 text-base font-semibold text-bright-snow">
                   {currentModule ? `Module ${currentModule.sort_order}` : "Ready"}
                 </p>
@@ -90,7 +90,7 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
           <div className="grid gap-5 md:grid-cols-[0.92fr_1.08fr] md:items-center">
             <div className="space-y-4">
               <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-green">Session cue</p>
+                <p className="eyebrow text-sm text-sage-text">Session cue</p>
                 <label className="block space-y-2">
                   <span className="text-sm font-semibold text-hunter-green">
                     Choose a target word

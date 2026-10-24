@@ -90,7 +90,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
         <p
           className={cn(
             "text-sm leading-7",
-            isCompleted ? "text-bright-snow/74" : "text-iron-grey",
+            isCompleted ? "text-bright-snow/84" : "text-iron-grey",
           )}
         >
           {module.description}
@@ -143,7 +143,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
         ) : null}
 
         {isCompleted ? (
-          <p className="text-xs font-medium text-bright-snow/66">
+          <p className="text-xs font-medium text-bright-snow/84">
             Reopen the module any time to revisit theory, practice, and the exam.
           </p>
         ) : null}

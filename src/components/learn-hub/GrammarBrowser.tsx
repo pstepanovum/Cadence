@@ -29,7 +29,7 @@ export function GrammarBrowser({ initialLevel }: { initialLevel: CefrLevel | nul
     <div className="space-y-4">
       <section className="space-y-4 rounded-3xl bg-white px-5 py-6 sm:px-8">
         <div>
-          <p className="eyebrow text-sm text-sage-green">Grammar</p>
+          <p className="eyebrow text-sm text-sage-text">Grammar</p>
           <h1 className="mt-1 text-3xl font-semibold text-hunter-green sm:text-4xl">Grammar by level</h1>
         </div>
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
@@ -58,7 +58,7 @@ export function GrammarBrowser({ initialLevel }: { initialLevel: CefrLevel | nul
           {points.map((gp: GrammarPoint) => (
             <li key={gp.id}>
               <Link href={`/grammar/${gp.id}`} className="flex h-full flex-col rounded-3xl bg-white px-5 py-5 transition-colors hover:bg-yellow-green">
-                <span className="text-xs font-semibold text-sage-green">{gp.level} · {topics.get(gp.topicId) ?? ""}</span>
+                <span className="text-xs font-semibold text-sage-text">{gp.level} · {topics.get(gp.topicId) ?? ""}</span>
                 <span className="mt-1 font-kicker text-xl text-hunter-green">{gp.title}</span>
                 <span className="mt-1 text-sm leading-6 text-iron-grey">{gp.summary}</span>
               </Link>

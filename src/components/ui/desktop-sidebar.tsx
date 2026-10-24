@@ -67,7 +67,7 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
         </nav>
 
         <div className="mt-5 space-y-2">
-          <p className="px-4 text-xs font-semibold tracking-[0.16em] text-sage-green/80 uppercase">
+          <p className="px-4 text-xs font-semibold tracking-[0.16em] text-sage-text/80 uppercase">
             Explore
           </p>
           <nav aria-label="Explore" className="flex flex-col gap-0.5">

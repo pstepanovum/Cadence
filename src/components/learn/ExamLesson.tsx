@@ -198,7 +198,7 @@ export function ExamLesson({
             </div>
 
             <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-green">Exam rule</p>
+              <p className="eyebrow text-xs text-sage-text">Exam rule</p>
               <p className="mt-2 text-sm leading-7 text-iron-grey">
                 Keep each take clean and direct. Cadence averages the full exam,
                 and a passing score unlocks the next module in the route.
@@ -210,25 +210,25 @@ export function ExamLesson({
         <Card className="bg-vanilla-cream">
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-green">Exam progress</p>
+              <p className="eyebrow text-sm text-sage-text">Exam progress</p>
               <WordQueue total={words.length} current={wordIndex} />
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-3xl bg-white px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Word number</p>
+                <p className="eyebrow text-xs text-sage-text">Word number</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {wordIndex + 1}
                 </p>
               </div>
               <div className="rounded-3xl bg-white px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Attempts</p>
+                <p className="eyebrow text-xs text-sage-text">Attempts</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {attemptNumber}
                 </p>
               </div>
               <div className="rounded-3xl bg-white px-4 py-4">
-                <p className="eyebrow text-xs text-sage-green">Words left</p>
+                <p className="eyebrow text-xs text-sage-text">Words left</p>
                 <p className="mt-2 text-2xl font-semibold text-hunter-green">
                   {Math.max(words.length - wordIndex - 1, 0)}
                 </p>
@@ -242,7 +242,7 @@ export function ExamLesson({
         <Card className="bg-bright-snow">
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-green">Recorder</p>
+              <p className="eyebrow text-sm text-sage-text">Recorder</p>
               <CardTitle className="text-2xl">
                 Send each exam word through one recorded take.
               </CardTitle>
