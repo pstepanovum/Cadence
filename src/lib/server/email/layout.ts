@@ -47,16 +47,18 @@ export const FOOTER_ADDRESSES = {
 export const BREVO_DOI_PLACEHOLDER = "{{ doubleoptin }}";
 
 /**
- * Cadence's palette (src/app/globals.css) for mail, with one accent: hunter
- * green in light mode, yellow-green in dark. Button text is white on hunter
- * (6.9:1) and near-black on yellow-green (10:1).
+ * Cadence's palette (src/app/globals.css) for mail: the grayscale carries the
+ * frame (platinum page, white card, snow panels, alabaster rules, carbon and
+ * iron text) and there is one accent, hunter green in light mode and
+ * yellow-green in dark. Button text is white on hunter (6.9:1) and carbon on
+ * yellow-green (9.6:1).
  */
 export const tone = {
   light: {
-    page: "#F2E8CF",
+    page: "#E9ECEF",
     card: "#FFFFFF",
     panel: "#F8F9FA",
-    rule: "#E9ECEF",
+    rule: "#DEE2E6",
     text: "#212529",
     secondary: "#495057",
     tertiary: "#5C656D",
@@ -64,15 +66,15 @@ export const tone = {
     onAccent: "#FFFFFF",
   },
   dark: {
-    page: "#121813",
-    card: "#1B221C",
-    panel: "#252E27",
-    rule: "#313B33",
-    text: "#EEF2EF",
-    secondary: "#C4CCC5",
-    tertiary: "#A4AEA6",
+    page: "#16191C",
+    card: "#212529",
+    panel: "#2B3035",
+    rule: "#343A40",
+    text: "#F8F9FA",
+    secondary: "#CED4DA",
+    tertiary: "#ADB5BD",
     accent: "#A7C957",
-    onAccent: "#121813",
+    onAccent: "#212529",
   },
 } as const;
 
