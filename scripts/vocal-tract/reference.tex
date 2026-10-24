@@ -1,0 +1,30 @@
+% Runs the original VocalTract package (CTAN pkg/vocaltract) over every entry
+% of its own demo codebook and writes the coordinates it computes, so the
+% TypeScript port can be tested against the package itself.
+% Driven by scripts/vocal-tract/make-reference.mjs; not part of any build.
+\documentclass{article}
+\usepackage{VocalTract}
+\pagestyle{empty}
+\newwrite\vtout
+\immediate\openout\vtout=vocaltract-points.txt
+\newcommand\vtpoint[1]{\immediate\write\vtout{#1 \csname #1X\endcsname\space\csname #1Y\endcsname}}
+\begin{document}
+\psset{yunit=2cm,xunit=2cm}
+\multido{\i=1+1}{26}{%
+\begin{pspicture*}(0cm,0cm)(13cm,18cm)
+\UpdateVocalTract{\i}
+\immediate\write\vtout{FRAME \i}
+\vtpoint{HyoidDown}\vtpoint{HyoidUp}\vtpoint{EpiglotisBase}\vtpoint{TongueBase}%
+\vtpoint{TonguePharynx}\vtpoint{Epiglotis}\vtpoint{TongueUvular}\vtpoint{TongueVelar}%
+\vtpoint{TonguePalatal}\vtpoint{TonguePostAlv}\vtpoint{TongueAlveolar}%
+\vtpoint{ChordsJointFront}\vtpoint{ChordsJointBack}%
+\vtpoint{LipUpOut}\vtpoint{LipUpIn}\vtpoint{LipDownOut}\vtpoint{LipDownIn}%
+\vtpoint{ChinUp}\vtpoint{ChinMiddle}\vtpoint{ChinDown}\vtpoint{LipDownBaseOut}%
+\vtpoint{TeethDownBaseIn}\vtpoint{TeethDownEdge}\vtpoint{TeethDownBaseOut}\vtpoint{SubTongueSal}%
+\immediate\write\vtout{vtngX \vtngXx\space\vtngXy}%
+\immediate\write\vtout{vtngY \vtngYx\space\vtngYy}%
+\immediate\write\vtout{NasalCavMov \NasalCavMovX\space\NasalCavMovY}%
+\immediate\write\vtout{GLOTTIS \GlottalAperture\space\ChordsFrequency}%
+\end{pspicture*}}
+\immediate\closeout\vtout
+\end{document}

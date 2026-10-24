@@ -1,0 +1,26 @@
+Cadence
+Copyright (c) 2026 Pavel Stepanov
+Licensed under the MIT License; see LICENSE.
+
+This product includes a TypeScript translation of the VocalTract LaTeX
+package (CTAN pkg/vocaltract, release 1, 2012) by Dimitrios Ververidis,
+in src/lib/platform/vocal-tract/ and its copy in
+mobile/src/platform/vocal-tract/.
+
+  D. Ververidis, D. Schneider and J. Koehler, "The vocal tract LaTeX
+  package", The PracTeX Journal, 2012, no. 1.
+  https://ctan.org/pkg/vocaltract
+
+The package README licenses it under the Apache License, Version 2.0
+(https://www.apache.org/licenses/LICENSE-2.0); the header of VocalTract.sty
+names the LaTeX Project Public License
+(https://www.latex-project.org/lppl/). These files are a modified version:
+the TeX macros were translated to TypeScript, the drawing was cropped to the
+head and regrouped into named layers, and a front lip view, interpolation and
+a parameter fit were added. They are not the original package and do not
+carry its file names.
+
+The model's factor-analysis loadings are from S. Maeda, "Compensatory
+articulation during speech: evidence from the analysis and synthesis of
+vocal-tract shapes using an articulatory model", in W. J. Hardcastle and
+A. Marchal (eds.), Speech Production and Speech Modelling, Kluwer, 1990.
