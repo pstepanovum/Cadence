@@ -13,6 +13,7 @@ import {
   ProgressBar,
   ProgressRing,
   Screen,
+  pressedCard,
   ScreenState,
   SectionHeader,
   StatTile,
@@ -21,7 +22,7 @@ import {
 import { ILLUSTRATION_PROGRESS } from "@/data/svg";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { normalizeScore } from "@/practice/scoring";
-import { colors, spacing } from "@/theme/theme";
+import { colors, overlays, spacing } from "@/theme/theme";
 
 export default function LearnScreen() {
   const server = useServerStatus();
@@ -146,7 +147,7 @@ function ModuleCard({ module }: { module: ModuleWithProgress }) {
           }
         />
       ) : (
-        <Body size={12} onDark={completed} style={styles.cta}>
+        <Body size={12} weight="semibold" onDark={completed}>
           {completed
             ? `Review module · best exam score ${normalizeScore(bestScore ?? 0)}/100`
             : bestScore !== null
@@ -163,7 +164,10 @@ function ModuleCard({ module }: { module: ModuleWithProgress }) {
     <Link
       href={{ pathname: "/learn/[moduleId]", params: { moduleId: String(module.id) } }}
       asChild>
-      <Pressable accessibilityRole="button" accessibilityLabel={`Open ${module.title}`}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={`Open ${module.title}`}
+        style={({ pressed }) => pressedCard(pressed)}>
         {card}
       </Pressable>
     </Link>
@@ -176,7 +180,7 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   lockedCard: {
-    backgroundColor: "rgba(233,236,239,0.7)",
+    backgroundColor: overlays.locked,
   },
   cardTop: {
     flexDirection: "row",
@@ -192,8 +196,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     gap: spacing.sm,
-  },
-  cta: {
-    fontWeight: "600",
   },
 });

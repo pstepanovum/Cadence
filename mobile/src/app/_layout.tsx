@@ -113,6 +113,7 @@ function RootNavigator() {
         <Stack.Screen name="lesson/[lessonId]" />
         <Stack.Screen name="conversation/[slug]" />
         <Stack.Screen name="coach/session" />
+        <Stack.Screen name="game" />
         <Stack.Screen name="settings/voice" />
       </Stack.Protected>
       {/*

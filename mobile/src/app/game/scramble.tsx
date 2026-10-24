@@ -1,0 +1,340 @@
+import { router, useLocalSearchParams } from "expo-router";
+import { Eye, Shuffle, Undo2, Volume2 } from "lucide-react-native";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { playAssessmentFeedback, playCompletionSound } from "@/audio/feedback";
+import { GameTopBar } from "@/components/games/GameTopBar";
+import { LetterTile, type TileState } from "@/components/games/LetterTile";
+import { RoundSummary } from "@/components/games/RoundSummary";
+import { ScoreStrip } from "@/components/games/ScoreStrip";
+import { Body, Card, Eyebrow, PillButton, Screen, SegmentedProgress } from "@/components/ui";
+import { levelLabel, parseLevel, vocabForLevel, type VocabWord } from "@/data/vocabulary";
+import { EMPTY_TALLY, accuracy, tallyAnswer } from "@/games/quiz";
+import { clockSeed, sample, seededRng } from "@/games/random";
+import { useGameProgress } from "@/games/store";
+import { isScrambleable, scrambleWord, type ScrambleTile } from "@/games/text";
+import { useExitGuard } from "@/hooks/useExitGuard";
+import { useWordAudio } from "@/hooks/useWordAudio";
+import { haptics } from "@/lib/haptics";
+import { colors, spacing } from "@/theme/theme";
+
+const ROUND_LENGTH = 8;
+const FLASH_MS = 650;
+const PARTIAL_POINTS = 5;
+
+type Phase = "building" | "correct" | "wrong" | "revealed";
+
+function pickWords(level: ReturnType<typeof parseLevel>): VocabWord[] {
+  return sample(vocabForLevel(level).filter((word) => isScrambleable(word.word)), ROUND_LENGTH, seededRng(clockSeed()));
+}
+
+export default function ScrambleScreen() {
+  const params = useLocalSearchParams<{ level?: string }>();
+  const level = parseLevel(params.level);
+  const { progress, recordRound } = useGameProgress();
+  const audio = useWordAudio();
+
+  const [words, setWords] = useState(() => pickWords(level));
+  const [index, setIndex] = useState(0);
+  const [tiles, setTiles] = useState<ScrambleTile[]>(() => (words[0] ? scrambleWord(words[0].word) : []));
+  const [placed, setPlaced] = useState<number[]>([]);
+  const [phase, setPhase] = useState<Phase>("building");
+  const [mistakes, setMistakes] = useState(0);
+  const [tally, setTally] = useState(EMPTY_TALLY);
+  const [outcomes, setOutcomes] = useState<Record<string, "clean" | "messy" | "revealed">>({});
+  const [finished, setFinished] = useState(false);
+  const [previousBest, setPreviousBest] = useState(() => progress.bests.scramble ?? 0);
+  const recorded = useRef(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const word = words[index];
+  const target = word?.word.toLowerCase() ?? "";
+  const answer = placed.map((id) => tiles[id]?.letter ?? "").join("");
+  const tileSize = useMemo(() => (target.length > 9 ? 34 : target.length > 7 ? 38 : 44), [target.length]);
+
+  useExitGuard(
+    tally.answered > 0 && !finished,
+    "Leave the scramble?",
+    "This round's score will be lost. Finished rounds are saved automatically.",
+  );
+
+  useEffect(() => () => {
+    if (timer.current) clearTimeout(timer.current);
+  }, []);
+
+  useEffect(() => {
+    if (word) audio.prefetch(word.word);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [word?.id]);
+
+  const percent = useMemo(() => accuracy(tally.correct, tally.answered), [tally]);
+
+  function loadWord(nextIndex: number, list = words) {
+    setIndex(nextIndex);
+    setTiles(list[nextIndex] ? scrambleWord(list[nextIndex].word) : []);
+    setPlaced([]);
+    setPhase("building");
+    setMistakes(0);
+  }
+
+  function advance(outcome: "clean" | "messy" | "revealed") {
+    if (!word) return;
+    const nextOutcomes = { ...outcomes, [word.id]: outcome };
+    setOutcomes(nextOutcomes);
+    audio.stop();
+    if (index + 1 >= words.length) {
+      finish(nextOutcomes);
+    } else {
+      loadWord(index + 1);
+    }
+  }
+
+  function placeTile(id: number) {
+    if (phase !== "building" || placed.includes(id)) return;
+    haptics.select();
+    const nextPlaced = [...placed, id];
+    setPlaced(nextPlaced);
+    if (nextPlaced.length === tiles.length) check(nextPlaced);
+  }
+
+  function removeTile(id: number) {
+    if (phase !== "building") return;
+    haptics.select();
+    setPlaced((current) => current.filter((item) => item !== id));
+  }
+
+  function check(nextPlaced: number[]) {
+    const built = nextPlaced.map((id) => tiles[id].letter).join("");
+    if (built === target) {
+      setPhase("correct");
+      haptics.success();
+      playAssessmentFeedback(100);
+      const clean = mistakes === 0;
+      setTally((current) => {
+        const next = tallyAnswer(current, true);
+        return clean ? next : { ...next, score: current.score + PARTIAL_POINTS };
+      });
+      timer.current = setTimeout(() => advance(clean ? "clean" : "messy"), FLASH_MS);
+    } else {
+      setPhase("wrong");
+      haptics.error();
+      setMistakes((value) => value + 1);
+      timer.current = setTimeout(() => {
+        setPlaced([]);
+        setPhase("building");
+      }, FLASH_MS);
+    }
+  }
+
+  function reshuffle() {
+    if (phase !== "building") return;
+    haptics.select();
+    // Keep what has been placed; reshuffle only the pool so nothing is lost.
+    const pool = tiles.filter((tile) => !placed.includes(tile.id));
+    const shuffled = scrambleWord(pool.map((tile) => tile.letter).join(""));
+    const placedTiles = placed.map((id) => tiles[id]);
+    const next = [...placedTiles, ...shuffled.map((tile) => ({ ...tile }))].map((tile, id) => ({
+      id,
+      letter: tile.letter,
+    }));
+    setTiles(next);
+    setPlaced(placedTiles.map((_, id) => id));
+  }
+
+  function reveal() {
+    if (phase !== "building" || !word) return;
+    haptics.warning();
+    playAssessmentFeedback(0);
+    setPhase("revealed");
+    // Lay the word out in order so the learner sees it before moving on.
+    const ordered = Array.from(target).map((letter, id) => ({ id, letter }));
+    setTiles(ordered);
+    setPlaced(ordered.map((tile) => tile.id));
+    setTally((current) => tallyAnswer(current, false));
+    timer.current = setTimeout(() => advance("revealed"), FLASH_MS * 2);
+  }
+
+  function finish(finalOutcomes: Record<string, "clean" | "messy" | "revealed">) {
+    setFinished(true);
+    if (recorded.current) return;
+    recorded.current = true;
+    const total = Object.keys(finalOutcomes).length;
+    const correct = Object.values(finalOutcomes).filter((value) => value !== "revealed").length;
+    const finalPercent = accuracy(correct, total);
+    if (finalPercent >= 70) playCompletionSound();
+    recordRound({
+      gameId: "scramble",
+      score: tally.score,
+      accuracy: finalPercent,
+      correct,
+      total,
+      label: levelLabel(level),
+    });
+  }
+
+  function playAgain() {
+    recorded.current = false;
+    setPreviousBest((best) => Math.max(best, tally.score));
+    const next = pickWords(level);
+    setWords(next);
+    setTally(EMPTY_TALLY);
+    setOutcomes({});
+    setFinished(false);
+    loadWord(0, next);
+  }
+
+  const eyebrow = `Word Scramble · ${levelLabel(level)}`;
+
+  if (finished || !word) {
+    const played = words.filter((item) => item.id in outcomes);
+    return (
+      <Screen edges={["top", "left", "right", "bottom"]}>
+        <GameTopBar eyebrow={eyebrow} title="Round over" onClose={() => router.back()} />
+        <RoundSummary
+          accuracy={percent}
+          isNewBest={tally.score > previousBest && tally.score > 0}
+          subtitle="A word solved first time earns full points. Solved after a miss earns a few."
+          stats={[
+            { label: "Score", value: String(tally.score) },
+            { label: "Solved", value: `${tally.correct}/${tally.answered}` },
+            { label: "Best combo", value: `×${tally.bestStreak}` },
+          ]}
+          items={played.map((item) => ({
+            label: item.word,
+            status:
+              outcomes[item.id] === "clean" ? "correct" : outcomes[item.id] === "messy" ? "mixed" : "needs-work",
+          }))}
+          onPlayAgain={playAgain}
+          onDone={() => router.back()}
+        />
+      </Screen>
+    );
+  }
+
+  function slotState(position: number): TileState {
+    if (phase === "correct") return "correct";
+    if (phase === "wrong") return "wrong";
+    if (phase === "revealed") return "placed";
+    return placed[position] !== undefined ? "placed" : "empty";
+  }
+
+  return (
+    <Screen edges={["top", "left", "right", "bottom"]}>
+      <GameTopBar
+        eyebrow={eyebrow}
+        title={`Word ${index + 1} of ${words.length}`}
+        onClose={() => router.back()}
+        trailing={<ScoreStrip score={tally.score} streak={tally.streak} />}
+      />
+      <SegmentedProgress total={words.length} currentIndex={index} />
+
+      <Card variant="cream" style={styles.clue}>
+        <Eyebrow>{word.pos} · your clue</Eyebrow>
+        <Body size={16} weight="semibold" style={styles.center}>
+          {word.definition}
+        </Body>
+        {mistakes > 0 && phase === "building" ? (
+          <Body size={12} style={styles.hint}>
+            Not that order — the first letter is “{target[0].toUpperCase()}”.
+          </Body>
+        ) : null}
+      </Card>
+
+      <Card style={styles.board}>
+        <Eyebrow>{phase === "revealed" ? "The word was" : "Your answer"}</Eyebrow>
+        <View style={styles.row} accessibilityLabel={answer ? `So far: ${answer}` : "Nothing placed yet"}>
+          {Array.from(target).map((_, position) => {
+            const tileId = placed[position];
+            const tile = tileId !== undefined ? tiles[tileId] : undefined;
+            return (
+              <LetterTile
+                key={position}
+                letter={tile?.letter ?? ""}
+                size={tileSize}
+                state={slotState(position)}
+                onPress={tile && phase === "building" ? () => removeTile(tile.id) : undefined}
+              />
+            );
+          })}
+        </View>
+
+        <Eyebrow>Letters</Eyebrow>
+        <View style={styles.row}>
+          {tiles.map((tile) => (
+            <LetterTile
+              key={tile.id}
+              letter={tile.letter}
+              size={tileSize}
+              state={placed.includes(tile.id) ? "ghost" : "pool"}
+              onPress={() => placeTile(tile.id)}
+            />
+          ))}
+        </View>
+      </Card>
+
+      <View style={styles.tools}>
+        <PillButton
+          label="Undo"
+          variant="ghost"
+          icon={<Undo2 color={colors.hunter} size={16} />}
+          disabled={placed.length === 0 || phase !== "building"}
+          onPress={() => removeTile(placed[placed.length - 1])}
+          style={styles.tool}
+        />
+        <PillButton
+          label="Shuffle"
+          variant="ghost"
+          icon={<Shuffle color={colors.hunter} size={16} />}
+          disabled={phase !== "building"}
+          onPress={reshuffle}
+          style={styles.tool}
+        />
+        <PillButton
+          label="Hear it"
+          variant="ghost"
+          icon={<Volume2 color={colors.hunter} size={16} />}
+          loading={audio.isLoading}
+          onPress={() => audio.speak(word.word)}
+          style={styles.tool}
+        />
+      </View>
+      <PillButton
+        label="Give up and reveal"
+        variant="outline"
+        icon={<Eye color={colors.hunter} size={16} />}
+        disabled={phase !== "building"}
+        onPress={reveal}
+      />
+    </Screen>
+  );
+}
+
+const styles = StyleSheet.create({
+  clue: {
+    alignItems: "center",
+    gap: spacing.sm,
+  },
+  center: {
+    textAlign: "center",
+  },
+  hint: {
+    color: colors.brick,
+  },
+  board: {
+    gap: spacing.md,
+  },
+  row: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: 6,
+  },
+  tools: {
+    flexDirection: "row",
+    gap: spacing.sm,
+  },
+  tool: {
+    flex: 1,
+    paddingHorizontal: 8,
+  },
+});

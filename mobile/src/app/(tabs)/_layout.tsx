@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { BookOpen, House, MessagesSquare, Sparkles, UserRound } from "lucide-react-native";
+import { BookOpen, Gamepad2, House, MessagesSquare, Sparkles, UserRound } from "lucide-react-native";
 import { colors, fonts } from "@/theme/theme";
 
 export default function TabsLayout() {
@@ -31,6 +31,13 @@ export default function TabsLayout() {
         options={{
           title: "Learn",
           tabBarIcon: ({ color, size }) => <BookOpen color={color} size={size} />,
+        }}
+      />
+      <Tabs.Screen
+        name="play"
+        options={{
+          title: "Play",
+          tabBarIcon: ({ color, size }) => <Gamepad2 color={color} size={size} />,
         }}
       />
       <Tabs.Screen

@@ -17,6 +17,7 @@ import {
   SectionHeader,
   StatTile,
   Title,
+  pressedCard,
 } from "@/components/ui";
 import { ILLUSTRATION_PROGRESS } from "@/data/svg";
 import { describeError } from "@/hooks/useServerStatus";
@@ -28,7 +29,7 @@ import {
   nextLesson,
 } from "@/practice/progression";
 import { normalizeScore } from "@/practice/scoring";
-import { colors, spacing } from "@/theme/theme";
+import { colors, overlays, spacing } from "@/theme/theme";
 
 export default function ModuleLessonsScreen() {
   const { moduleId } = useLocalSearchParams<{ moduleId: string }>();
@@ -202,7 +203,10 @@ function LessonRow({
         params: { lessonId: lesson.id, moduleId: String(moduleId) },
       }}
       asChild>
-      <Pressable accessibilityRole="button" accessibilityLabel={`Open ${lesson.title}`}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={`Open ${lesson.title}`}
+        style={({ pressed }) => pressedCard(pressed)}>
         {card}
       </Pressable>
     </Link>
@@ -237,7 +241,7 @@ const styles = StyleSheet.create({
     borderColor: colors.yellowGreen,
   },
   lockedCard: {
-    backgroundColor: "rgba(233,236,239,0.7)",
+    backgroundColor: overlays.locked,
   },
   lessonRow: {
     flexDirection: "row",

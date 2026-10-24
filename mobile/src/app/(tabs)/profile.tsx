@@ -92,7 +92,17 @@ export default function ProfileScreen() {
 
   return (
     <Screen refreshing={statsQuery.isFetching} onRefresh={() => statsQuery.refetch()}>
-      <SectionHeader eyebrow="Profile" title={profile.displayName} subtitle={session?.user.email ?? undefined} />
+      <SectionHeader
+        eyebrow="Profile"
+        title={mode === "local" ? "This phone" : profile.displayName}
+        subtitle={
+          mode === "local"
+            ? connectionState.status === "connected"
+              ? `Paired with ${connectionState.serverName}`
+              : "Paired with your computer"
+            : (session?.user.email ?? undefined)
+        }
+      />
 
       <Card variant="dark">
         <Eyebrow onDark>Your practice</Eyebrow>
@@ -124,45 +134,55 @@ export default function ProfileScreen() {
         )}
       </Card>
 
-      <Card>
-        <Eyebrow>Account</Eyebrow>
-        {error ? <Banner message={error} tone="error" /> : null}
-        {saved && !dirty ? <Banner tone="success" message="Saved." /> : null}
-        <TextField
-          label="Display name"
-          placeholder="Your name"
-          value={name}
-          onChangeText={(value) => {
-            setName(value);
-            setSaved(false);
-          }}
-        />
-        <OptionRow
-          label="Focus area"
-          options={PRACTICE_FOCUS_OPTIONS}
-          value={focus}
-          onChange={(value) => {
-            setFocus(value);
-            setSaved(false);
-          }}
-        />
-        <OptionRow
-          label="Daily pace"
-          options={PRACTICE_CADENCE_OPTIONS}
-          value={cadence}
-          onChange={(value) => {
-            setCadence(value);
-            setSaved(false);
-          }}
-        />
-        <PillButton
-          label={saving ? "Saving" : "Save changes"}
-          variant="secondary"
-          loading={saving}
-          disabled={!dirty}
-          onPress={handleSave}
-        />
-      </Card>
+      {mode === "local" ? (
+        <Card>
+          <Eyebrow>Account</Eyebrow>
+          <Body size={13}>
+            There is no account in local mode. This phone is one of the devices paired to your
+            computer, and everything you practise is saved there.
+          </Body>
+        </Card>
+      ) : (
+        <Card>
+          <Eyebrow>Account</Eyebrow>
+          {error ? <Banner message={error} tone="error" /> : null}
+          {saved && !dirty ? <Banner tone="success" message="Saved." /> : null}
+          <TextField
+            label="Display name"
+            placeholder="Your name"
+            value={name}
+            onChangeText={(value) => {
+              setName(value);
+              setSaved(false);
+            }}
+          />
+          <OptionRow
+            label="Focus area"
+            options={PRACTICE_FOCUS_OPTIONS}
+            value={focus}
+            onChange={(value) => {
+              setFocus(value);
+              setSaved(false);
+            }}
+          />
+          <OptionRow
+            label="Daily pace"
+            options={PRACTICE_CADENCE_OPTIONS}
+            value={cadence}
+            onChange={(value) => {
+              setCadence(value);
+              setSaved(false);
+            }}
+          />
+          <PillButton
+            label={saving ? "Saving" : "Save changes"}
+            variant="secondary"
+            loading={saving}
+            disabled={!dirty}
+            onPress={handleSave}
+          />
+        </Card>
+      )}
 
       <Pressable
         accessibilityRole="button"
@@ -231,14 +251,16 @@ export default function ProfileScreen() {
         </Card>
       )}
 
-      <Card>
-        <Eyebrow>Session</Eyebrow>
-        <Body size={13}>
-          Signing out clears this device. Your modules, exams and conversation progress live in your
-          account.
-        </Body>
-        <PillButton label="Sign out" variant="danger" onPress={confirmSignOut} />
-      </Card>
+      {mode !== "local" ? (
+        <Card>
+          <Eyebrow>Session</Eyebrow>
+          <Body size={13}>
+            Signing out clears this device. Your modules, exams and conversation progress live in
+            your account.
+          </Body>
+          <PillButton label="Sign out" variant="danger" onPress={confirmSignOut} />
+        </Card>
+      ) : null}
 
       <Body size={11} style={styles.version}>
         Cadence {version}

@@ -10,6 +10,7 @@ import {
   Chip,
   Eyebrow,
   EmptyState,
+  LoadingBlock,
   OptionRow,
   PillButton,
   RoundIconButton,
@@ -49,9 +50,20 @@ export default function CoachScreen() {
   const [mode, setMode] = useState<CoachMode>("target");
   const [history, setHistory] = useState<SavedCoachSession[] | null>(null);
 
+  const [refreshing, setRefreshing] = useState(false);
+
   const loadHistory = useCallback(() => {
     readCoachSessions(userId).then(setHistory);
   }, [userId]);
+
+  function refresh() {
+    setRefreshing(true);
+    readiness.refresh();
+    server.refresh();
+    readCoachSessions(userId)
+      .then(setHistory)
+      .finally(() => setRefreshing(false));
+  }
 
   useFocusEffect(
     useCallback(() => {
@@ -87,7 +99,7 @@ export default function CoachScreen() {
   }
 
   return (
-    <Screen>
+    <Screen refreshing={refreshing} onRefresh={refresh}>
       {!server.reachable && !server.checking ? (
         <Banner
           tone="error"
@@ -169,7 +181,7 @@ export default function CoachScreen() {
       <Eyebrow>History</Eyebrow>
 
       {history === null ? (
-        <Body size={13}>Loading your saved conversations…</Body>
+        <LoadingBlock rows={2} label="Loading your saved conversations…" />
       ) : sessions.length === 0 ? (
         <EmptyState
           compact

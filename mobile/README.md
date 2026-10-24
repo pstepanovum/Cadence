@@ -35,8 +35,20 @@ that does.
   read aloud, per-turn retry and pass/unlock progression.
 - **Coach** — freeform sessions in repeat-the-target or say-anything mode, with
   a retry on every reply, an end-of-session summary, and history on the device.
+- **Play** — five word games with progress kept on the phone (AsyncStorage,
+  per account): **Flashcards** (spaced repetition over four hand-written decks of
+  forty words each, with definitions, examples and IPA), **Meaning Match**
+  (four-choice definition quiz with a combo bonus), **Spelling Bee** (hear the
+  word in the coach voice, type it; three lives, letter hints, meaning hint),
+  **Word Scramble** (tap letter tiles into order with the definition as the
+  clue) and **Sound Match** (hear one word of a minimal pair, pick which it
+  was, across twelve contrasts such as R/L, V/W and the two TH sounds). The
+  decks are `src/data/vocabulary.ts` and `src/data/minimal-pairs.ts`; the pure
+  rules (scheduler, scoring, question builders, text helpers) are under
+  `src/games/` and unit tested. Games that play audio need the server; the
+  rest work offline.
 - **Profile** — name, focus area, daily pace, coach voice, connection status
-  and sign out.
+  and sign out (account cards are hidden in local mode, which has no account).
 
 Every screen that loads something has a loading, empty, error and offline state
 with a way out; the record button stays disabled with an explanation while the

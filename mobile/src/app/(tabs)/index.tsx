@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { router } from "expo-router";
-import { BookOpen, Flame, MessagesSquare, Shuffle, Sparkles } from "lucide-react-native";
+import { BookOpen, Flame, Gamepad2, MessagesSquare, Shuffle, Sparkles } from "lucide-react-native";
 import { useMemo, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, View } from "react-native";
 import { assess, getModules, getStats, type RecordedAudio } from "@/api/endpoints";
@@ -129,7 +129,7 @@ export default function HomeScreen() {
               <StatTile
                 tone="translucent"
                 label="Modules"
-                value={stats ? `${completedModules}/${modules.length || 10}` : "—"}
+                value={stats && modules.length > 0 ? `${completedModules}/${modules.length}` : "—"}
               />
             </View>
 
@@ -165,6 +165,11 @@ export default function HomeScreen() {
           label="Coach"
           icon={<Sparkles color={colors.hunter} size={18} />}
           onPress={() => router.push("/coach")}
+        />
+        <Shortcut
+          label="Play"
+          icon={<Gamepad2 color={colors.hunter} size={18} />}
+          onPress={() => router.push("/play")}
         />
       </View>
 

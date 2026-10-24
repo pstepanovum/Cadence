@@ -61,4 +61,6 @@ export const overlays = {
   yellowGreenSoft: "rgba(167,201,87,0.20)",
   yellowGreenPanel: "rgba(167,201,87,0.30)",
   creamSoft: "rgba(242,232,207,0.80)",
+  /** Locked or unavailable cards — one token instead of a copied rgba. */
+  locked: "rgba(233,236,239,0.7)",
 } as const;

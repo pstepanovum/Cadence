@@ -1,0 +1,116 @@
+import { Check, X } from "lucide-react-native";
+import { useState } from "react";
+import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
+import { colors, fonts, radii, spacing } from "@/theme/theme";
+
+export type ChoiceState = "idle" | "correct" | "wrong" | "dimmed";
+
+const palette: Record<ChoiceState, { bg: string; fg: string; sub: string; border: string }> = {
+  idle: { bg: colors.snow, fg: colors.hunter, sub: colors.iron, border: "transparent" },
+  correct: { bg: colors.yellowGreen, fg: colors.hunter, sub: colors.hunter, border: colors.yellowGreen },
+  wrong: { bg: colors.brick, fg: colors.snow, sub: "rgba(248,249,250,0.85)", border: colors.brick },
+  dimmed: { bg: colors.snow, fg: colors.slate, sub: colors.slate, border: "transparent" },
+};
+
+/**
+ * One answer in a multiple-choice round. It shrinks slightly under the thumb
+ * and, once answered, turns green or red and shows a tick or a cross so the
+ * verdict never rests on colour alone.
+ */
+export function ChoiceButton({
+  label,
+  sublabel,
+  badge,
+  state = "idle",
+  disabled = false,
+  onPress,
+}: {
+  label: string;
+  sublabel?: string;
+  /** A short tag at the left, e.g. "A". */
+  badge?: string;
+  state?: ChoiceState;
+  disabled?: boolean;
+  onPress: () => void;
+}) {
+  const [scale] = useState(() => new Animated.Value(1));
+  const tone = palette[state];
+
+  function pressTo(value: number) {
+    Animated.spring(scale, { toValue: value, useNativeDriver: true, speed: 40, bounciness: 4 }).start();
+  }
+
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={sublabel ? `${label}. ${sublabel}` : label}
+      accessibilityState={{ disabled, selected: state === "correct" || state === "wrong" }}
+      disabled={disabled}
+      onPress={onPress}
+      onPressIn={() => pressTo(0.97)}
+      onPressOut={() => pressTo(1)}>
+      <Animated.View
+        style={[
+          styles.choice,
+          { backgroundColor: tone.bg, borderColor: tone.border, transform: [{ scale }] },
+          state === "dimmed" && { opacity: 0.55 },
+        ]}>
+        {badge ? (
+          <View style={[styles.badge, state !== "idle" && state !== "dimmed" && styles.badgeOnColour]}>
+            <Text style={[styles.badgeText, { color: state === "wrong" ? colors.snow : colors.hunter }]}>
+              {badge}
+            </Text>
+          </View>
+        ) : null}
+        <View style={styles.body}>
+          <Text style={[styles.label, { color: tone.fg }]}>{label}</Text>
+          {sublabel ? <Text style={[styles.sublabel, { color: tone.sub }]}>{sublabel}</Text> : null}
+        </View>
+        {state === "correct" ? <Check color={colors.hunter} size={22} /> : null}
+        {state === "wrong" ? <X color={colors.snow} size={22} /> : null}
+      </Animated.View>
+    </Pressable>
+  );
+}
+
+const styles = StyleSheet.create({
+  choice: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.md,
+    borderRadius: radii.card,
+    borderWidth: 2,
+    paddingVertical: spacing.lg,
+    paddingHorizontal: spacing.lg,
+    minHeight: 60,
+  },
+  badge: {
+    width: 30,
+    height: 30,
+    borderRadius: radii.pill,
+    backgroundColor: colors.cream,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  badgeOnColour: {
+    backgroundColor: "rgba(255,255,255,0.35)",
+  },
+  badgeText: {
+    fontFamily: fonts.kicker,
+    fontSize: 13,
+  },
+  body: {
+    flex: 1,
+    gap: 2,
+  },
+  label: {
+    fontFamily: fonts.bodySemiBold,
+    fontSize: 16,
+    lineHeight: 22,
+  },
+  sublabel: {
+    fontFamily: fonts.body,
+    fontSize: 13,
+    lineHeight: 18,
+  },
+});

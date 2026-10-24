@@ -12,6 +12,7 @@ import {
   Eyebrow,
   ProgressBar,
   Screen,
+  pressedCard,
   ScreenState,
   SectionHeader,
   StatTile,
@@ -21,7 +22,7 @@ import { ILLUSTRATION_COMMUNICATION } from "@/data/svg";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { nextScenario, scenarioLockReason } from "@/practice/progression";
 import { normalizeScore } from "@/practice/scoring";
-import { colors, spacing } from "@/theme/theme";
+import { colors, overlays, spacing } from "@/theme/theme";
 
 export default function ConversationScreen() {
   const server = useServerStatus();
@@ -179,7 +180,10 @@ function ScenarioCard({
 
   return (
     <Link href={{ pathname: "/conversation/[slug]", params: { slug: scenario.slug } }} asChild>
-      <Pressable accessibilityRole="button" accessibilityLabel={`Start ${scenario.title}`}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={`Start ${scenario.title}`}
+        style={({ pressed }) => pressedCard(pressed)}>
         {card}
       </Pressable>
     </Link>
@@ -192,7 +196,7 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   lockedCard: {
-    backgroundColor: "rgba(233,236,239,0.7)",
+    backgroundColor: overlays.locked,
   },
   nextCard: {
     borderWidth: 2,

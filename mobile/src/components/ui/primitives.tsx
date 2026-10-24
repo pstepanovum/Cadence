@@ -1,7 +1,8 @@
 import { ChevronDown, ChevronUp } from "lucide-react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Animated,
   Pressable,
   RefreshControl,
   ScrollView,
@@ -15,8 +16,9 @@ import {
   type TextStyle,
   type ViewStyle,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView, type Edge } from "react-native-safe-area-context";
 import Svg, { Circle } from "react-native-svg";
+import { haptics } from "@/lib/haptics";
 import { colors, fonts, overlays, radii, scoreColor, spacing } from "@/theme/theme";
 
 export function Screen({
@@ -26,6 +28,7 @@ export function Screen({
   contentStyle,
   refreshing,
   onRefresh,
+  edges = ["top", "left", "right"],
 }: {
   children: React.ReactNode;
   scroll?: boolean;
@@ -34,6 +37,12 @@ export function Screen({
   /** Pass both to enable pull-to-refresh. */
   refreshing?: boolean;
   onRefresh?: () => void;
+  /**
+   * Safe-area edges to pad. Tab screens leave the bottom to the tab bar;
+   * full-screen routes (lessons, games) should include "bottom" so their
+   * last button clears the home indicator.
+   */
+  edges?: readonly Edge[];
 }) {
   const content = scroll ? (
     <ScrollView
@@ -57,7 +66,7 @@ export function Screen({
   );
 
   return (
-    <SafeAreaView style={styles.screen} edges={["top", "left", "right"]}>
+    <SafeAreaView style={styles.screen} edges={edges as Edge[]}>
       {content}
     </SafeAreaView>
   );
@@ -101,6 +110,7 @@ export function Title({
   return (
     <Text
       numberOfLines={numberOfLines}
+      maxFontSizeMultiplier={1.3}
       style={[
         {
           fontFamily: fonts.kicker,
@@ -251,11 +261,19 @@ export function PillButton({
       disabled={disabled || loading}
       style={({ pressed }) => [
         styles.pill,
-        { backgroundColor: palette.bg, opacity: disabled ? 0.5 : pressed ? 0.85 : 1 },
+        {
+          backgroundColor: palette.bg,
+          opacity: disabled ? 0.5 : pressed ? 0.85 : 1,
+          transform: [{ scale: pressed ? 0.98 : 1 }],
+        },
         variant === "outline" && styles.pillOutline,
         style,
       ]}
-      {...props}>
+      {...props}
+      onPressIn={(event) => {
+        haptics.tap();
+        props.onPressIn?.(event);
+      }}>
       {loading ? (
         <ActivityIndicator color={palette.fg} size="small" />
       ) : (
@@ -326,6 +344,7 @@ export function Chip({
   onPress,
   onLongPress,
   active = false,
+  selected,
   accessibilityHint,
   style,
 }: {
@@ -335,12 +354,24 @@ export function Chip({
   onLongPress?: () => void;
   /** Dims the chip to show it is the one currently playing. */
   active?: boolean;
+  /**
+   * For chips used as a picker: announces the choice to screen readers and
+   * adds an outline, so the selection never rests on colour alone.
+   */
+  selected?: boolean;
   accessibilityHint?: string;
   style?: StyleProp<ViewStyle>;
 }) {
   const palette = chipPalette[status];
   const content = (
-    <View style={[styles.chip, { backgroundColor: palette.bg }, active && styles.chipActive, style]}>
+    <View
+      style={[
+        styles.chip,
+        { backgroundColor: palette.bg },
+        active && styles.chipActive,
+        selected && styles.chipSelected,
+        style,
+      ]}>
       <Text style={[styles.chipLabel, { color: palette.fg }]}>{label}</Text>
     </View>
   );
@@ -352,6 +383,7 @@ export function Chip({
       accessibilityRole="button"
       accessibilityLabel={label}
       accessibilityHint={accessibilityHint}
+      accessibilityState={selected === undefined ? undefined : { selected }}
       onPress={onPress}
       onLongPress={onLongPress}
       style={({ pressed }) => [pressed && { opacity: 0.8 }]}>
@@ -370,6 +402,13 @@ export function ProgressBar({
   style?: StyleProp<ViewStyle>;
 }) {
   const clamped = Math.max(0, Math.min(100, value));
+  const [width] = useState(() => new Animated.Value(clamped));
+
+  // Slide to the new value instead of jumping, so progress reads as movement.
+  useEffect(() => {
+    Animated.timing(width, { toValue: clamped, duration: 450, useNativeDriver: false }).start();
+  }, [clamped, width]);
+
   return (
     <View
       accessibilityRole="progressbar"
@@ -379,9 +418,22 @@ export function ProgressBar({
         { backgroundColor: onDark ? overlays.whiteOnGreenStrong : colors.alabaster },
         style,
       ]}>
-      <View style={[styles.progressFill, { width: `${clamped}%` }]} />
+      <Animated.View
+        style={[
+          styles.progressFill,
+          { width: width.interpolate({ inputRange: [0, 100], outputRange: ["0%", "100%"] }) },
+        ]}
+      />
     </View>
   );
+}
+
+/**
+ * The pressed look for a whole card wrapped in a Pressable: a slight shrink
+ * and fade. Shared so every tappable list card in the app reacts the same way.
+ */
+export function pressedCard(pressed: boolean): StyleProp<ViewStyle> {
+  return pressed ? styles.cardPressed : undefined;
 }
 
 /**
@@ -646,6 +698,10 @@ const styles = StyleSheet.create({
     padding: spacing.xl,
     gap: spacing.md,
   },
+  cardPressed: {
+    transform: [{ scale: 0.985 }],
+    opacity: 0.92,
+  },
   sectionHeader: {
     flexDirection: "row",
     alignItems: "flex-start",
@@ -682,6 +738,12 @@ const styles = StyleSheet.create({
   },
   chipActive: {
     opacity: 0.72,
+  },
+  chipSelected: {
+    borderWidth: 2,
+    borderColor: colors.hunter,
+    paddingHorizontal: 14,
+    paddingVertical: 6,
   },
   chipLabel: {
     fontFamily: fonts.bodySemiBold,
