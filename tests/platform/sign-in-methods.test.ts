@@ -7,6 +7,7 @@ import { describe, it } from "node:test";
 
 import {
   addableMethods,
+  canLinkPending,
   canRemoveMethod,
   continueLabel,
   linkedMethods,
@@ -70,6 +71,14 @@ describe("same email, another provider", () => {
     const offered = ["apple.com", "google.com", "password"] as const;
     assert.deepEqual(suggestedMethods(pending, offered, ["password"]), ["password"]);
     assert.deepEqual(suggestedMethods(pending, offered, []), ["google.com", "password"]);
+  });
+
+  it("links only to the account the conflict named", () => {
+    const pending = { method: "apple.com" as const, email: "Ana@Example.com" };
+    assert.equal(canLinkPending(pending, "ana@example.com"), true);
+    assert.equal(canLinkPending(pending, "bo@example.com"), false);
+    assert.equal(canLinkPending(pending, null), false);
+    assert.equal(canLinkPending({ method: "apple.com", email: null }, "ana@example.com"), false);
   });
 
   it("says what will happen in one line", () => {

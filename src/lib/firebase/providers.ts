@@ -36,6 +36,7 @@ import {
 } from "firebase/auth";
 import { getFirebaseAuth } from "@/lib/firebase/client";
 import {
+  canLinkPending,
   canRemoveMethod,
   isSignInMethod,
   pendingLinkFromError,
@@ -124,11 +125,19 @@ function pendingCredential(): OAuthCredential | null {
   }
 }
 
-/** Links the waiting provider after any successful sign-in. */
+/**
+ * Links the waiting provider after a successful sign-in, but only to the
+ * account the conflict named (canLinkPending): on a shared browser the next
+ * person to sign in must never receive someone else's Google or Apple. A
+ * mismatch drops it and the sign-in goes ahead; the method can still be added
+ * in Account > Sign-in methods.
+ */
 async function afterSignIn(user: User): Promise<void> {
+  const waiting = readPendingLink();
   const credential = pendingCredential();
   clearPendingLink();
-  if (!credential) return;
+  if (!credential || !waiting) return;
+  if (!canLinkPending(waiting, user.email)) return;
   try {
     await linkWithCredential(user, credential);
   } catch (cause) {

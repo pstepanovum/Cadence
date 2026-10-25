@@ -34,6 +34,7 @@ import { authErrorCode } from "@/copy/auth-errors";
 import { config } from "@/lib/config";
 import { requireFirebaseAuth } from "@/lib/firebase";
 import {
+  canLinkPending,
   canRemoveMethod,
   methodLabel,
   pendingLinkFromError,
@@ -202,12 +203,18 @@ export function clearPendingLink(): void {
   setPending(null);
 }
 
-/** Runs after every sign-in: links the waiting provider, if any. */
+/**
+ * Runs after every sign-in: links the waiting provider, if any, but only to
+ * the account the conflict named (canLinkPending). Another email means
+ * another account, which must never receive this Apple or Google; the link is
+ * dropped and the sign-in stands.
+ */
 async function afterSignIn(user: User, displayName: string | null = null): Promise<void> {
   if (displayName && !user.displayName) await updateProfile(user, { displayName }).catch(() => {});
   const waiting = pending;
   if (!waiting) return;
   setPending(null);
+  if (!canLinkPending(waiting, user.email)) return;
   try {
     await linkWithCredential(user, waiting.credential);
   } catch (cause) {

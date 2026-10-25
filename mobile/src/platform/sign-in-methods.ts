@@ -111,6 +111,19 @@ export function pendingLinkFromError(cause: unknown, attempted: SignInMethod): P
 }
 
 /**
+ * Whether the waiting provider may be added to the account that has just
+ * signed in. Only to the account the conflict named: a different email means
+ * someone else signed in (another person on a shared browser, or another of
+ * the person's accounts), and linking there would let the provider's owner
+ * into that account. A conflict that named no email cannot be checked, so it
+ * is not linked either; the method can still be added in Settings.
+ */
+export function canLinkPending(pending: PendingLink, signedInEmail: string | null | undefined): boolean {
+  if (!pending.email || !signedInEmail) return false;
+  return pending.email.trim().toLowerCase() === signedInEmail.trim().toLowerCase();
+}
+
+/**
  * Which methods to suggest for signing in to the existing account. With email
  * enumeration protection on, Firebase no longer says which methods an email
  * has, so `known` is often empty; then every other offered method is
