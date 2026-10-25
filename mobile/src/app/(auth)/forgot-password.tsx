@@ -10,7 +10,7 @@ import { authErrorCode, describeAuthError } from "@/copy/auth-errors";
 import { config } from "@/lib/config";
 import { requireFirebaseAuth } from "@/lib/firebase";
 import { haptics } from "@/lib/haptics";
-import { spacing, type } from "@/theme/theme";
+import { colors, spacing, type } from "@/theme/theme";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -79,7 +79,7 @@ export default function ForgotPasswordScreen() {
           </View>
         )}
         <View style={styles.heading}>
-          <Title size={type.title1} style={styles.centerText}>Reset your password</Title>
+          <Title size={type.title1} style={[styles.centerText, { color: colors.carbon }]}>Reset your password</Title>
           <Body tone="muted" style={styles.centerText}>{sent ? "Check your inbox." : "We'll email you a link to set a new one."}</Body>
         </View>
         {sent ? (

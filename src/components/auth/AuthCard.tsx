@@ -21,18 +21,18 @@ export const AUTH_INPUT_CLASS =
 
 export function AuthCard({ title, description, children, footer }: AuthCardProps) {
   return (
-    <div className="w-full max-w-[24rem] space-y-8">
+    <div className="w-full max-w-[24rem] space-y-5">
       <Link href="/" className="mx-auto flex w-fit items-center py-1" aria-label="Cadence home">
         <BrandMark />
       </Link>
-      <div className="space-y-6">
+      <div className="space-y-5">
         <div className="space-y-1.5 text-center">
-          <h1 className="font-kicker text-[1.75rem] leading-tight text-hunter-green">{title}</h1>
+          <h1 className="font-kicker text-[1.75rem] leading-tight text-carbon-black">{title}</h1>
           {description ? <p className="text-[0.95rem] leading-6 text-slate-grey">{description}</p> : null}
         </div>
         {children}
       </div>
-      {footer ? <div className="text-center text-[0.95rem] leading-7 text-slate-grey">{footer}</div> : null}
+      {footer ? <div className="text-center text-[0.95rem] leading-6 text-slate-grey">{footer}</div> : null}
     </div>
   );
 }
@@ -40,7 +40,7 @@ export function AuthCard({ title, description, children, footer }: AuthCardProps
 export function AuthNotice({ tone, children }: { tone: "info" | "success" | "error"; children: ReactNode }) {
   const styles = {
     info: "bg-platinum text-iron-grey",
-    success: "bg-yellow-green text-hunter-green",
+    success: "bg-platinum text-hunter-green",
     error: "bg-blushed-brick text-white",
   }[tone];
   return (

@@ -113,7 +113,7 @@ export function SignInMethods() {
 
   return (
     <Card className="bg-white">
-      <h2 className="font-kicker text-xl text-hunter-green">Sign-in methods</h2>
+      <h2 className="font-kicker text-xl text-carbon-black">Sign-in methods</h2>
       <p className="mt-1 text-sm leading-6 text-iron-grey">Ways to sign in to {user.email ?? "this account"}. Keep at least one.</p>
 
       <ul className="mt-4 space-y-2">
@@ -182,7 +182,7 @@ export function SignInMethods() {
       ) : null}
 
       {note ? (
-        <p role={note.tone === "error" ? "alert" : "status"} className={`mt-4 rounded-2xl px-4 py-3 text-sm ${note.tone === "error" ? "bg-blushed-brick text-white" : "bg-yellow-green text-hunter-green"}`}>
+        <p role={note.tone === "error" ? "alert" : "status"} className={`mt-4 rounded-2xl px-4 py-3 text-sm ${note.tone === "error" ? "bg-blushed-brick text-white" : "bg-platinum text-hunter-green"}`}>
           {note.text}
         </p>
       ) : null}

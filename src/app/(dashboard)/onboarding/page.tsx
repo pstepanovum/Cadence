@@ -25,7 +25,7 @@ export default async function OnboardingPage() {
   }
 
   return (
-    <main className="h-screen overflow-hidden bg-vanilla-cream">
+    <main className="auth-page min-h-dvh">
       <OnboardingWizard />
     </main>
   );

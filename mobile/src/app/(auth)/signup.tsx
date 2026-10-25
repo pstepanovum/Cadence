@@ -6,7 +6,7 @@ import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/au
 import { SignInOptions, TestBuildNote, Wordmark } from "@/components/auth/SignInOptions";
 import { SwitchLine } from "@/components/auth/SwitchLine";
 import { Body, Title } from "@/components/ui";
-import { spacing, type } from "@/theme/theme";
+import { colors, spacing, type } from "@/theme/theme";
 
 export default function SignupScreen() {
   const typing = useKeyboardVisible();
@@ -20,7 +20,7 @@ export default function SignupScreen() {
           </View>
         )}
         <View style={styles.heading}>
-          <Title size={type.title1} style={styles.centerText}>Create your account</Title>
+          <Title size={type.title1} style={[styles.centerText, { color: colors.carbon }]}>Create your account</Title>
           <Body tone="muted" style={styles.centerText}>Free. Your streak follows you to every device.</Body>
         </View>
         <SignInOptions

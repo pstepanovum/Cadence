@@ -198,7 +198,7 @@ export function AuthForm({ mode }: AuthFormProps) {
               onChange={(event) => setNewsletter(event.target.checked)}
               className="mt-1 h-4 w-4 shrink-0 accent-[var(--hunter-green)]"
             />
-            <span>Send me product news and offers. Unsubscribe any time.</span>
+            <span>Send me product news and offers</span>
           </label>
         ) : null}
 

@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 export function PasswordChecklist({ id, password, email }: { id: string; password: string; email?: string }) {
   const rules = checkPassword(password, email);
   return (
-    <ul id={id} className="grid gap-1 pt-2 text-xs sm:grid-cols-2" aria-label="Password rules">
+    <ul id={id} className="grid grid-cols-2 gap-x-3 gap-y-1 pt-2 text-xs" aria-label="Password rules">
       {rules.map((rule) => (
-        <li key={rule.id} className={cn("flex items-center gap-1.5", rule.met ? "text-sage-text" : "text-slate-grey")}>
+        <li key={rule.id} className={cn("flex items-center gap-1.5", rule.met ? "text-hunter-green" : "text-slate-grey")}>
           <span aria-hidden="true">{rule.met ? "✓" : "•"}</span>
           <span>
             {rule.label}

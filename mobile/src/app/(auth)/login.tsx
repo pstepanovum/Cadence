@@ -5,7 +5,7 @@ import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/au
 import { SignInOptions, TestBuildNote, Wordmark } from "@/components/auth/SignInOptions";
 import { SwitchLine } from "@/components/auth/SwitchLine";
 import { Body, Title } from "@/components/ui";
-import { spacing, type } from "@/theme/theme";
+import { colors, spacing, type } from "@/theme/theme";
 
 export default function LoginScreen() {
   const typing = useKeyboardVisible();
@@ -19,7 +19,7 @@ export default function LoginScreen() {
           </View>
         )}
         <View style={styles.heading}>
-          <Title size={type.title1} style={styles.centerText}>Welcome back</Title>
+          <Title size={type.title1} style={[styles.centerText, { color: colors.carbon }]}>Welcome back</Title>
           <Body tone="muted" style={styles.centerText}>Sign in to keep practising.</Body>
         </View>
         {/* The auth context hears about the sign-in and the navigator moves on. */}

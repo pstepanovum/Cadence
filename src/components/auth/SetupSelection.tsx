@@ -1,10 +1,14 @@
+// FILE: src/components/auth/SetupSelection.tsx
+//
+// Local or cloud: two flat rows that turn primary green when chosen, and one
+// Continue button, on the same neutral column as the account screens.
 "use client";
 
 import { useRouter } from "next/navigation";
 import { startTransition, useMemo, useState } from "react";
-import { ArrowRight, Cloud, Database } from "griddy-icons";
+import { ArrowRight, Check, Cloud, Database } from "griddy-icons";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { AuthCard, AuthNotice } from "@/components/auth/AuthCard";
 import { cn } from "@/lib/utils";
 
 interface SetupSelectionProps {
@@ -25,6 +29,9 @@ export function SetupSelection({
   const router = useRouter();
   const [pendingMode, setPendingMode] = useState<"local" | "cloud" | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [chosen, setChosen] = useState<"local" | "cloud">(
+    currentMode === "cloud" && cloudAvailable ? "cloud" : "local",
+  );
 
   const localTitle = useMemo(() => {
     return runtime === "desktop"
@@ -71,137 +78,76 @@ export function SetupSelection({
     }
   }
 
+  const options = [
+    {
+      mode: "local" as const,
+      icon: Database,
+      title: localTitle,
+      body: "Progress stays on this device. No account, no billing.",
+    },
+    ...(cloudAvailable
+      ? [
+          {
+            mode: "cloud" as const,
+            icon: Cloud,
+            title: "Use Cadence Cloud",
+            body: "Sign in to sync progress across devices.",
+          },
+        ]
+      : []),
+  ];
+
   return (
-    <div className="mx-auto flex min-h-[calc(100vh-2.5rem)] max-w-6xl items-center justify-center">
-      <div className="grid w-full gap-4 lg:grid-cols-[0.96fr_1.04fr] xl:gap-5">
-        <Card className="bg-hunter-green text-bright-snow">
-          <div className="space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-white">
-              <span className="eyebrow text-sm">Setup</span>
-            </div>
-
-            <div className="space-y-3">
-              <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
-                Choose how this copy of Cadence should work.
-              </h1>
-              <p className="max-w-2xl text-base leading-7 text-bright-snow/84">
-                Local mode keeps progress on this machine with no account or billing.
-                {cloudAvailable
-                  ? " Cadence Cloud adds sign-in, synced progress and paid plans."
-                  : null}
-              </p>
-            </div>
-
-            <div className={cn("grid gap-3", cloudAvailable && "sm:grid-cols-2")}>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-white">Open source</p>
-                <p className="mt-2 text-base font-semibold text-bright-snow">
-                  Local progress, local setup, no hosted account required.
-                </p>
-              </div>
-              {cloudAvailable ? (
-                <div className="rounded-3xl bg-white/10 px-4 py-4">
-                  <p className="eyebrow text-xs text-white">Hosted</p>
-                  <p className="mt-2 text-base font-semibold text-bright-snow">
-                    Sign in to keep using the paid cloud workflow.
-                  </p>
-                </div>
-              ) : null}
-            </div>
-
-            {currentDisplayName ? (
-              <div className="rounded-3xl bg-white/10 px-4 py-4 text-sm leading-7 text-bright-snow/82">
-                Current workspace:{" "}
-                <span className="font-semibold text-bright-snow">{currentDisplayName}</span>
-                {currentMode ? ` in ${currentMode} mode.` : "."}
-              </div>
-            ) : null}
-          </div>
-        </Card>
-
-        <div className="grid gap-4">
-          <Card
-            className={cn(
-              "bg-white",
-              currentMode === "local" ? "ring-2 ring-hunter-green" : "",
-            )}
-          >
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-vanilla-cream text-hunter-green">
-                  <Database size={18} color="currentColor" />
-                </span>
-                <div className="space-y-1">
-                  <p className="eyebrow text-xs text-sage-text">Local mode</p>
-                  <h2 className="text-2xl font-semibold text-hunter-green">{localTitle}</h2>
-                </div>
-              </div>
-
-              <p className="text-sm leading-7 text-iron-grey">
-                Progress stays on this machine, and the open-source build avoids the
-                hosted account flow completely. This is the default path for local
-                development and self-hosted use.
-              </p>
-
-              <div className="rounded-3xl bg-vanilla-cream px-4 py-4 text-sm leading-7 text-iron-grey">
-                Best for contributors, local desktop use, and anyone who wants the
-                app to keep its learning data on-device.
-              </div>
-
-              <Button
-                onClick={() => void handleModeSelection("local")}
+    <div className="flex min-h-[calc(100dvh-2.5rem)] flex-col items-center justify-center">
+      <AuthCard
+        title="Choose your setup"
+        description={
+          currentDisplayName
+            ? `Signed in as ${currentDisplayName}${currentMode ? ` in ${currentMode} mode` : ""}.`
+            : "You can change this later."
+        }
+      >
+        <div role="radiogroup" aria-label="Setup" className="space-y-2.5">
+          {options.map((option) => {
+            const selected = chosen === option.mode;
+            const Icon = option.icon;
+            return (
+              <button
+                key={option.mode}
+                type="button"
+                role="radio"
+                aria-checked={selected}
+                onClick={() => setChosen(option.mode)}
                 disabled={pendingMode !== null}
+                className={cn(
+                  "flex w-full cursor-pointer items-center gap-3.5 rounded-[20px] px-4 py-4 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hunter-green disabled:cursor-not-allowed",
+                  selected ? "bg-hunter-green text-bright-snow" : "bg-platinum text-carbon-black hover:bg-alabaster-grey",
+                )}
               >
-                {pendingMode === "local" ? "Saving local mode..." : "Continue locally"}
-                <ArrowRight size={16} color="currentColor" />
-              </Button>
-            </div>
-          </Card>
-
-          {cloudAvailable ? (
-            <Card
-              className={cn(
-                "bg-white",
-                currentMode === "cloud" ? "ring-2 ring-hunter-green" : "",
-              )}
-            >
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-vanilla-cream text-hunter-green">
-                    <Cloud size={18} color="currentColor" />
+                <Icon size={20} color="currentColor" className="shrink-0" />
+                <span className="min-w-0 flex-1">
+                  <span className="block text-base font-semibold">{option.title}</span>
+                  <span className={cn("mt-0.5 block text-sm leading-6", selected ? "text-bright-snow/90" : "text-iron-grey")}>
+                    {option.body}
                   </span>
-                  <div className="space-y-1">
-                    <p className="eyebrow text-xs text-sage-text">Cadence Cloud</p>
-                    <h2 className="text-2xl font-semibold text-hunter-green">
-                      Keep the hosted paid workflow
-                    </h2>
-                  </div>
-                </div>
-
-                <p className="text-sm leading-7 text-iron-grey">
-                  Sign in with a Cadence account and use hosted billing. This
-                  is the right option when you want synced progress, account-based
-                  access, and the current public deployment behaviour.
-                </p>
-
-                <Button
-                  onClick={() => void handleModeSelection("cloud")}
-                  disabled={pendingMode !== null}
-                >
-                  {pendingMode === "cloud" ? "Opening cloud setup..." : "Use Cadence Cloud"}
-                  <ArrowRight size={16} color="currentColor" />
-                </Button>
-              </div>
-            </Card>
-          ) : null}
-
-          {error ? (
-            <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
-              {error}
-            </div>
-          ) : null}
+                </span>
+                {selected ? <Check size={20} color="currentColor" className="shrink-0" /> : null}
+              </button>
+            );
+          })}
         </div>
-      </div>
+
+        {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
+
+        <Button
+          className="min-h-[52px] w-full rounded-[14px] text-base"
+          onClick={() => void handleModeSelection(chosen)}
+          disabled={pendingMode !== null}
+        >
+          {pendingMode ? "Saving…" : "Continue"}
+          <ArrowRight size={16} color="currentColor" />
+        </Button>
+      </AuthCard>
     </div>
   );
 }

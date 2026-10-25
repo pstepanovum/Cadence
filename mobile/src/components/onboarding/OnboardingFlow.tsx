@@ -403,7 +403,7 @@ function IntroSlide({ index }: { index: number }) {
         <Illustration name={slide.art} size={size} />
       </View>
       <View style={styles.slideText}>
-        <Title size={height < 740 ? type.title2 : type.title1}>{slide.title}</Title>
+        <Title size={height < 740 ? type.title2 : type.title1} style={{ color: colors.carbon }}>{slide.title}</Title>
         <Body size={type.body} tone="muted">
           {slide.body}
         </Body>

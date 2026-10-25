@@ -112,7 +112,7 @@ export function PlusPaywall({
     <View style={[styles.root, compact && styles.rootCompact]}>
       {compact ? (
         <View style={styles.compactHead}>
-          <Title size={type.title2}>{account.plus ? "You have Plus" : "Practise with AI anywhere"}</Title>
+          <Title size={type.title2} style={{ color: colors.carbon }}>{account.plus ? "You have Plus" : "Practise with AI anywhere"}</Title>
           <Body size={type.callout} tone="muted">
             {account.plus ? (renewalLine(account.store.active ? account.store : (account.me?.plus ?? { expiresAt: null, willRenew: false })) ?? "") : "Lessons, quizzes and flashcards stay free."}
           </Body>
