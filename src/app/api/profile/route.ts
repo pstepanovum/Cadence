@@ -60,6 +60,7 @@ function toProfileResponse(user: AppUser) {
     email: user.email,
     displayName: user.displayName,
     practiceFocus: user.practiceFocus,
+    learningGoals: user.learningGoals,
     practiceCadence: user.practiceCadence,
     onboardingCompleted: user.onboardingCompleted,
     levels: user.levels ?? null,

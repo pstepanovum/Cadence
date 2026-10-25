@@ -8,18 +8,12 @@ import { SignOutButton } from "@/components/ui/sign-out-button";
 import { ProfileCoachVoice } from "@/components/audio/ProfileCoachVoice";
 import { ProfileDesktopRuntime } from "@/components/desktop/profile-desktop-runtime";
 import { requireAppUser } from "@/lib/app-session";
+import { LEARNING_GOALS } from "@/lib/platform/goals";
 import { getRequestRuntime } from "@/lib/runtime/request-runtime";
 
 export const metadata: Metadata = {
   title: "Settings",
   robots: { index: false, follow: false },
-};
-
-const focusLabel: Record<string, string> = {
-  conversations: "Conversation confidence",
-  vowels:        "Short and long vowel control",
-  work:          "Clearer speaking at work",
-  daily:         "Daily speaking fluency",
 };
 
 const cadenceLabel: Record<string, string> = {
@@ -35,7 +29,7 @@ export default async function ProfilePage() {
   const isDesktop = runtime === "desktop";
   const isLocal = session.mode === "local";
   const displayName = session.user.displayName;
-  const practiceFocus = session.user.practiceFocus ?? undefined;
+  const goals = LEARNING_GOALS.filter((goal) => session.user.learningGoals.includes(goal.value)).map((goal) => goal.title);
   const practiceCadence = session.user.practiceCadence ?? undefined;
 
   const memberSince = new Date(session.user.createdAt).toLocaleDateString("en-US", {
@@ -106,9 +100,9 @@ export default async function ProfilePage() {
 
                 <div className="space-y-3">
                   <div className="rounded-[20px] bg-page px-5 py-4">
-                    <p className="text-xs text-iron-grey">Focus area</p>
+                    <p className="text-xs text-iron-grey">Goals</p>
                     <p className="mt-1 text-base font-semibold text-carbon-black">
-                      {focusLabel[practiceFocus ?? ""] ?? "Not set"}
+                      {goals.length ? goals.join(", ") : "Not set"}
                     </p>
                   </div>
                   <div className="rounded-[20px] bg-page px-5 py-4">

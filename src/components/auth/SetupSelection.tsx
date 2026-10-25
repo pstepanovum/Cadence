@@ -1,7 +1,10 @@
 // FILE: src/components/auth/SetupSelection.tsx
 //
-// Local or cloud: two flat rows that turn primary green when chosen, and one
-// Continue button, on the same neutral column as the account screens.
+// Cadence Cloud or your own Cadence: two flat rows that turn primary green
+// when chosen, and one Continue button, on the same neutral column as the
+// account screens. Cloud comes first and is chosen by default when this
+// server offers it; your own Cadence is the free alternative for people who
+// run it on their own computer. The phone's setup asks the same question.
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -30,13 +33,13 @@ export function SetupSelection({
   const [pendingMode, setPendingMode] = useState<"local" | "cloud" | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [chosen, setChosen] = useState<"local" | "cloud">(
-    currentMode === "cloud" && cloudAvailable ? "cloud" : "local",
+    cloudAvailable && currentMode !== "local" ? "cloud" : "local",
   );
 
-  const localTitle = useMemo(() => {
+  const localBody = useMemo(() => {
     return runtime === "desktop"
-      ? "Use Cadence locally on this Mac"
-      : "Use Cadence locally in this browser";
+      ? "Free. Runs on this computer; progress stays here."
+      : "Free. For Cadence running on your own computer; progress stays in this browser.";
   }, [runtime]);
 
   async function handleModeSelection(mode: "local" | "cloud") {
@@ -79,28 +82,28 @@ export function SetupSelection({
   }
 
   const options = [
-    {
-      mode: "local" as const,
-      icon: Database,
-      title: localTitle,
-      body: "Progress stays on this device. No account, no billing.",
-    },
     ...(cloudAvailable
       ? [
           {
             mode: "cloud" as const,
             icon: Cloud,
-            title: "Use Cadence Cloud",
-            body: "Sign in to sync progress across devices.",
+            title: "Cadence Cloud",
+            body: "Sign in and practise anywhere, synced. Plus adds AI scoring, voices and the coach.",
           },
         ]
       : []),
+    {
+      mode: "local" as const,
+      icon: Database,
+      title: "Your own Cadence",
+      body: localBody,
+    },
   ];
 
   return (
     <div className="flex min-h-[calc(100dvh-2.5rem)] flex-col items-center justify-center">
       <AuthCard
-        title="Choose your setup"
+        title="Where should Cadence run?"
         description={
           currentDisplayName
             ? `Signed in as ${currentDisplayName}${currentMode ? ` in ${currentMode} mode` : ""}.`

@@ -169,13 +169,13 @@ export default function SettingsScreen() {
         <Eyebrow>Connected server</Eyebrow>
         <SettingsRow
           icon={<Laptop color={local && !server.reachable && !server.checking ? colors.brick : colors.hunter} size={20} />}
-          title={local ? "Your computer" : paired ? "Your Cadence server" : "Connect your own Cadence server"}
+          title={local ? "Your computer" : paired ? "Your own Cadence" : "Connect your own Cadence"}
           detail={connectionLine}
           onPress={() => {
             if (local) router.push("/connect");
             else if (!paired) router.push({ pathname: "/connect/scan", params: { home: "1" } });
             else
-              Alert.alert("Your Cadence server", "Unpair it from this phone? Your account stays signed in.", [
+              Alert.alert("Your own Cadence", "Unpair it from this phone? Your account stays signed in.", [
                 { text: "Keep", style: "cancel" },
                 { text: "Unpair", style: "destructive", onPress: () => void forgetServer() },
               ]);

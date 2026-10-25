@@ -1,8 +1,9 @@
-// First-run setup, one question a screen: three welcome slides, the goal, the
-// level (with an optional two-minute quiz), the daily goal, a reminder time
-// (iOS's permission is asked here, when reminders are turned on), where to
-// practise, an optional account, and Plus at the end on the cloud path with a
-// clear "Not now". Each move is saved, so closing the app halfway resumes
+// First-run setup, one question a screen: three welcome slides, the goals (one
+// or more), the level (with an optional placement test), the daily goal, a
+// reminder time (iOS's permission is asked here, when reminders are turned
+// on), where Cadence runs (Cadence Cloud first and chosen by default; your
+// own Cadence on your computer as the alternative), an optional account, and
+// Plus at the end on the cloud path with a clear "Not now". Each move is saved, so closing the app halfway resumes
 // where it stopped; finishing marks it done for good.
 //
 // A replay (Settings > Run setup again) walks the learning questions only and
@@ -40,7 +41,7 @@ import {
   afterWelcome,
   cadenceForMinutes,
   DEFAULT_ANSWERS,
-  focusForGoal,
+  focusForGoals,
   INTRO_SLIDES,
   LEARNING_GOALS,
   nextPosition,
@@ -55,6 +56,7 @@ import {
   type OnboardingPosition,
 } from "@/onboarding/flow";
 import { completeOnboarding, getOnboarding, saveOnboardingProgress } from "@/onboarding/store";
+import { sameGoals, toggleGoal } from "@/platform/goals";
 import { useConnection } from "@/pairing/context";
 import { colors, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
@@ -109,6 +111,9 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
   const update = (patch: Partial<OnboardingAnswers>) => setAnswers((current) => ({ ...current, ...patch }));
 
   const moveTo = (next: OnboardingPosition, way: 1 | -1) => {
+    // Cadence Cloud is the main path: chosen already when the place step
+    // opens, so Continue is one tap; your own Cadence is a tap away.
+    if (next.step === "where" && isCloudConfigured) setAnswers((current) => (current.place === null ? { ...current, place: "cloud" } : current));
     setNotice(null);
     setDirection(way);
     setPosition(next);
@@ -136,8 +141,11 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     updateReminders({ daily: answers.remindersOn, time: answers.reminderTime });
     await rememberLearnLevel(startingLevel(answers));
     if (signedIn) {
-      const patch = { practiceFocus: focusForGoal(answers.goal), practiceCadence: cadenceForMinutes(answers.minutes), ...(replay ? {} : { onboardingCompleted: true }) };
-      if (!replay || patch.practiceFocus !== profile.practiceFocus || patch.practiceCadence !== profile.practiceCadence) await updateProfile(patch).catch(() => {});
+      // Skipped goals leave the account's as they were (the server wants at least one).
+      const goals = answers.goals.length ? { learningGoals: answers.goals, practiceFocus: focusForGoals(answers.goals) } : {};
+      const patch = { ...goals, practiceCadence: cadenceForMinutes(answers.minutes), ...(replay ? {} : { onboardingCompleted: true }) };
+      const changed = (answers.goals.length > 0 && !sameGoals(answers.goals, profile.learningGoals)) || patch.practiceCadence !== profile.practiceCadence;
+      if (!replay || changed) await updateProfile(patch).catch(() => {});
       if (wantsNews) setNewsletter(true).catch(() => {});
     }
     haptics.success();
@@ -202,15 +210,23 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "goal":
       body = (
         <View style={[styles.section, compact && styles.sectionCompact]}>
-          <StepHeading compact={compact} title="What brings you to Cadence?" detail="We'll start your practice there." />
-          <View accessibilityRole="radiogroup" style={[styles.choices, compact && styles.choicesCompact]}>
+          <StepHeading compact={compact} title="What brings you to Cadence?" detail="Choose all that apply." />
+          <View accessibilityRole="list" style={[styles.choices, compact && styles.choicesCompact]}>
             {LEARNING_GOALS.map((goal) => (
-              <ChoiceCard key={goal.value} compact={compact} title={goal.title} detail={goal.detail} selected={answers.goal === goal.value} onPress={() => update({ goal: goal.value })} />
+              <ChoiceCard
+                key={goal.value}
+                multiple
+                compact={compact}
+                title={goal.title}
+                detail={goal.detail}
+                selected={answers.goals.includes(goal.value)}
+                onPress={() => setAnswers((current) => ({ ...current, goals: toggleGoal(current.goals, goal.value) }))}
+              />
             ))}
           </View>
         </View>
       );
-      primary = { label: "Continue", onPress: () => void advance(), disabled: answers.goal === null };
+      primary = { label: "Continue", onPress: () => void advance(), disabled: answers.goals.length === 0 };
       break;
     case "level":
       body = (
@@ -279,8 +295,8 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
               <ChoiceCard
                 compact={compact}
                 icon={(selected) => <Cloud color={selected ? colors.snow : colors.hunter} size={22} />}
-                title="Cadence cloud"
-                detail="Works on any network with a free account. Cloud AI practice comes with Cadence Plus."
+                title="Cadence Cloud"
+                detail="Practise anywhere, synced to your account. Plus adds AI scoring, voices and the coach."
                 selected={answers.place === "cloud"}
                 onPress={() => update({ place: "cloud" })}
               />
@@ -288,8 +304,8 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
             <ChoiceCard
               compact={compact}
               icon={(selected) => <Laptop color={selected ? colors.snow : colors.hunter} size={22} />}
-              title="Connect your own Cadence server"
-              detail="Cadence on your computer scores your voice and runs the coach over your home Wi-Fi. Free and open source."
+              title="Connect your own Cadence"
+              detail="For Cadence running on your own computer, over your home Wi-Fi."
               selected={answers.place === "own"}
               onPress={() => update({ place: "own" })}
             />
@@ -302,7 +318,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
                 </Body>
               ) : (
                 <>
-                  <Body size={type.callout}>On your computer, open Cadence, choose Connect a Phone, and scan the code it shows. Always free.</Body>
+                  <Body size={type.callout}>On your computer, open Cadence, choose Connect a Phone, and scan the code it shows.</Body>
                   <Button label="Scan the code" variant="neutral" onPress={() => router.push("/connect/scan")} />
                 </>
               )}
@@ -319,7 +335,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
           <StepHeading
             compact={compact}
             title={signedIn ? "You're signed in" : optional ? "Keep your progress in sync" : "Create your free account"}
-            detail={signedIn || (typing && compact) ? undefined : optional ? "A free account keeps a summary of your progress across devices." : "Cadence cloud keeps your progress with your account."}
+            detail={signedIn || (typing && compact) ? undefined : optional ? "A free account keeps a summary of your progress across devices." : "Cadence Cloud keeps your progress with your account."}
           />
           <AccountStep
             signedInEmail={signedIn ? (user?.email ?? "your account") : null}

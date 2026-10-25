@@ -48,6 +48,26 @@ describe("validating a profile update", () => {
     assert.equal(parseProfileUpdate({ displayName: "x".repeat(61) }).ok, false);
   });
 
+  it("accepts one or more learning goals and derives the older focus", () => {
+    assert.deepEqual(parseProfileUpdate({ learningGoals: ["fluency", "grammar", "fluency"] }), {
+      ok: true,
+      update: { learningGoals: ["grammar", "fluency"], practiceFocus: "grammar" },
+    });
+    // A client that sends both keeps its own focus.
+    assert.deepEqual(parseProfileUpdate({ learningGoals: ["work"], practiceFocus: "work" }), {
+      ok: true,
+      update: { practiceFocus: "work", learningGoals: ["work"] },
+    });
+    assert.equal(parseProfileUpdate({ practiceFocus: "grammar" }).ok, true);
+  });
+
+  it("refuses empty, unknown or non-list goals", () => {
+    assert.equal(parseProfileUpdate({ learningGoals: [] }).ok, false);
+    assert.equal(parseProfileUpdate({ learningGoals: ["work", "fame"] }).ok, false);
+    assert.equal(parseProfileUpdate({ learningGoals: "work" }).ok, false);
+    assert.equal(parseProfileUpdate({ learningGoals: Array(20).fill("work") }).ok, false);
+  });
+
   it("refuses a body that is not an object", () => {
     for (const body of [null, undefined, "name", [], 3]) {
       assert.equal(parseProfileUpdate(body).ok, false);

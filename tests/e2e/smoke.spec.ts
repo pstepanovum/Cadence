@@ -47,8 +47,13 @@ test("landing", async ({ page, checkPage }) => {
 
 test("local mode with no account", async ({ page, checkPage }) => {
   await page.goto("/setup");
+  // Cadence Cloud is the main path: listed first and already chosen.
+  const radios = page.getByRole("radio");
+  await expect(radios.first()).toHaveAccessibleName(/^Cadence Cloud/);
+  await expect(radios.first()).toBeChecked();
+  await expect(page.getByText("Cadence server")).toHaveCount(0);
   await checkPage("setup");
-  await page.getByRole("radio", { name: /Use Cadence locally/ }).check();
+  await page.getByRole("radio", { name: /Your own Cadence/ }).check();
   await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.waitForURL(/\/dashboard/);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
@@ -57,6 +62,25 @@ test("local mode with no account", async ({ page, checkPage }) => {
   await page.goto("/practice");
   await expect(page.getByRole("heading", { name: "What do you want to practise?" })).toBeVisible();
   await checkPage("practice-local");
+});
+
+test("onboarding asks for one or more goals", async ({ page, checkPage }) => {
+  await signUp(page, uniqueEmail("goals"));
+  const start = page.getByRole("button", { name: /Start practising/ });
+  await expect(start).toBeDisabled();
+  await page.getByRole("checkbox", { name: /Break a plateau/ }).click();
+  await page.getByRole("checkbox", { name: /Grammar precision/ }).click();
+  await page.getByRole("checkbox", { name: /Sound natural/ }).click();
+  await page.getByRole("checkbox", { name: /Sound natural/ }).click();
+  await expect(page.getByRole("checkbox", { checked: true })).toHaveCount(2);
+  await checkPage("onboarding-goals");
+  await start.click();
+  await page.waitForURL(/\/dashboard/, { timeout: 30_000 });
+  // Both goals are on the account, in the setup's order.
+  const profile = await page.request.get("/api/profile");
+  expect((await profile.json()).profile.learningGoals).toEqual(["plateau", "grammar"]);
+  await page.goto("/profile");
+  await expect(page.getByText("Break a plateau, Grammar precision")).toBeVisible();
 });
 
 test("sign up and sign in", async ({ page, browser, checkPage, consoleErrors }) => {

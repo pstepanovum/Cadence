@@ -4,10 +4,11 @@
 // tests/cloud/profile-input.test.ts. The same values are offered by the web
 // onboarding wizard and the mobile app.
 
+import { LEARNING_GOAL_VALUES, PRACTICE_FOCUS_VALUES, focusForGoals, isLearningGoal, parseGoals, type LearningGoal } from "../platform/goals";
 import { parseLevelPrefs, type LevelPrefs } from "../platform/levels";
 import { SEEN_MAX_LENGTH, decodeSeen, encodeSeen } from "../platform/placement";
 
-export const PRACTICE_FOCUS_VALUES = ["conversations", "vowels", "work", "daily"] as const;
+export { PRACTICE_FOCUS_VALUES };
 export const PRACTICE_CADENCE_VALUES = [
   "5-minutes",
   "15-minutes",
@@ -20,6 +21,8 @@ export const DISPLAY_NAME_MAX_LENGTH = 60;
 export interface ProfileUpdate {
   displayName?: string;
   practiceFocus?: string;
+  /** One or more goals from the setup question, in the setup's order. */
+  learningGoals?: LearningGoal[];
   practiceCadence?: string;
   onboardingCompleted?: boolean;
   /** The learner's level settings: overall, per skill, and where they came from. */
@@ -56,6 +59,16 @@ export function parseProfileUpdate(body: unknown): ProfileParseResult {
       return { ok: false, error: "Unknown practiceFocus." };
     }
     update.practiceFocus = input.practiceFocus as string;
+  }
+
+  if ("learningGoals" in input) {
+    const raw = input.learningGoals;
+    if (!Array.isArray(raw) || raw.length === 0 || raw.length > LEARNING_GOAL_VALUES.length * 2 || !raw.every(isLearningGoal)) {
+      return { ok: false, error: "learningGoals must list at least one known goal." };
+    }
+    update.learningGoals = parseGoals(raw);
+    // Builds that only read the single focus still see the closest one.
+    if (!("practiceFocus" in input)) update.practiceFocus = focusForGoals(update.learningGoals);
   }
 
   if ("practiceCadence" in input) {

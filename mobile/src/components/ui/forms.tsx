@@ -96,6 +96,47 @@ export function OptionRow<T extends string>({
   );
 }
 
+/** OptionRow for several answers at once: each option toggles, with a buzz both ways. */
+export function MultiOptionRow<T extends string>({
+  options,
+  values,
+  onToggle,
+  label,
+}: {
+  options: readonly { value: T; label: string }[];
+  values: readonly T[];
+  onToggle: (value: T) => void;
+  label?: string;
+}) {
+  return (
+    <View style={styles.field} accessibilityLabel={label}>
+      {label ? <FieldLabel>{label}</FieldLabel> : null}
+      <View style={styles.optionRow}>
+        {options.map((option) => {
+          const selected = values.includes(option.value);
+          return (
+            <Pressable
+              key={option.value}
+              accessibilityRole="checkbox"
+              accessibilityLabel={option.label}
+              accessibilityState={{ selected, checked: selected }}
+              onPress={() => {
+                haptics.select();
+                onToggle(option.value);
+              }}
+              style={({ pressed }) => [styles.option, selected && styles.optionSelected, pressed && styles.optionPressed]}>
+              {selected ? <Check color={colors.snow} size={16} strokeWidth={3} /> : null}
+              <Text maxFontSizeMultiplier={maxScale.control} style={[styles.optionLabel, selected && styles.optionLabelSelected]}>
+                {option.label}
+              </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+    </View>
+  );
+}
+
 /** A show/hide section — the "Advanced breakdown" pattern from the web app. */
 export function Collapsible({
   title,

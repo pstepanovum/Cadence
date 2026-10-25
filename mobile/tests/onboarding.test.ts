@@ -6,7 +6,7 @@ import {
   afterWelcome,
   cadenceForMinutes,
   DEFAULT_ANSWERS,
-  focusForGoal,
+  focusForGoals,
   INTRO_SLIDES,
   nextPosition,
   onboardingSteps,
@@ -84,8 +84,11 @@ describe("moving through onboarding", () => {
     assert.equal(parseStoredOnboarding("nope"), null);
     const stored = parseStoredOnboarding({ completedAt: 4, position: { step: "goal", slide: 0 }, answers: { goal: "work", minutes: 15, level: "B2", place: "own", reminderTime: 600 } });
     assert.equal(stored?.completedAt, 4);
-    assert.equal(stored?.answers.goal, "work");
+    // A run saved with the single answer comes back as a list of one.
+    assert.deepEqual(stored?.answers.goals, ["work"]);
     assert.equal(stored?.answers.minutes, 15);
+    const several = parseStoredOnboarding({ answers: { goals: ["fluency", "plateau", "fame", "plateau"] } });
+    assert.deepEqual(several?.answers.goals, ["plateau", "fluency"]);
     const bad = parseStoredOnboarding({ position: { step: "elsewhere" }, answers: { goal: "fame", minutes: 7, level: "Z9" } });
     assert.equal(bad?.position, null);
     assert.deepEqual(bad?.answers, DEFAULT_ANSWERS);
@@ -94,10 +97,14 @@ describe("moving through onboarding", () => {
 
 describe("what the answers mean", () => {
   it("maps the goal and minutes to the web profile", () => {
-    assert.equal(focusForGoal("accent"), "vowels");
-    assert.equal(focusForGoal("work"), "work");
-    assert.equal(focusForGoal("fluency"), "conversations");
-    assert.equal(focusForGoal(null), "daily");
+    assert.equal(focusForGoals(["accent"]), "vowels");
+    assert.equal(focusForGoals(["work"]), "work");
+    assert.equal(focusForGoals(["fluency"]), "conversations");
+    // Grammar used to save "daily" (shown as daily speaking fluency).
+    assert.equal(focusForGoals(["grammar"]), "grammar");
+    assert.equal(focusForGoals(["exam"]), "exam");
+    assert.equal(focusForGoals(["fluency", "plateau"]), "vowels");
+    assert.equal(focusForGoals([]), "conversations");
     assert.equal(cadenceForMinutes(5), "5-minutes");
     assert.equal(cadenceForMinutes(10), "15-minutes");
     assert.equal(cadenceForMinutes(20), "30-minutes");

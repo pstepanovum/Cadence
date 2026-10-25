@@ -21,7 +21,20 @@ name: Auth and setup screens
 - tapOn: "Continue"
 - assertVisible: "What brings you to Cadence?"
 - takeScreenshot: 04-goal
-- tapOn: "Better grammar.*"
+# Several goals at once: two chosen, one taken back, two left.
+- tapOn: "Break a plateau.*"
+- tapOn: "Grammar precision.*"
+- tapOn: "Sound natural.*"
+- tapOn: "Sound natural.*"
+- assertVisible:
+    text: "Break a plateau.*"
+    selected: true
+- assertVisible:
+    text: "Grammar precision.*"
+    selected: true
+- assertVisible:
+    text: "Sound natural.*"
+    selected: false
 - takeScreenshot: 05-goal-selected
 - tapOn: "Continue"
 - assertVisible: "How is your English now?"
@@ -35,10 +48,14 @@ name: Auth and setup screens
 - takeScreenshot: 08-reminders
 - tapOn: "Not now"
 - assertVisible: "Where should Cadence run?"
-- tapOn: "Connect your own Cadence server.*"
-- takeScreenshot: 09-where-own
-- tapOn: "Cadence cloud.*"
+# Cadence Cloud is chosen already.
+- assertVisible:
+    text: "Cadence Cloud.*"
+    selected: true
 - takeScreenshot: 10-where-cloud
+- tapOn: "Connect your own Cadence.*"
+- takeScreenshot: 09-where-own
+- tapOn: "Cadence Cloud.*"
 - tapOn: "Continue"
 - assertVisible: "Create your free account"
 - takeScreenshot: 11-account
@@ -56,17 +73,32 @@ name: Auth and setup screens
 # Tapping the page's heading closes the keyboard.
 - tapOn: "Create your free account"
 - tapOn: "Create account"
+- runFlow: subflows/decline-save-password.yaml
 # A new account moves straight on to Plus.
 - extendedWaitUntil:
     visible: "Practise with AI anywhere"
     timeout: 20000
 - takeScreenshot: 14-paywall
+- runFlow: subflows/decline-save-password.yaml
 - tapOn: "Not now"
 - extendedWaitUntil:
     visible: "Hi .*"
     timeout: 15000
-# Settings > Sign-in methods
+# The goals chosen in setup are on the account.
 - tapOn: "Profile and settings"
+- scrollUntilVisible:
+    element: "Grammar precision"
+- assertVisible:
+    text: "Break a plateau"
+    selected: true
+- assertVisible:
+    text: "Grammar precision"
+    selected: true
+- assertVisible:
+    text: "Sound natural"
+    selected: false
+- takeScreenshot: 14b-profile-goals
+# Settings > Sign-in methods
 - scrollUntilVisible:
     element: "Settings"
 - tapOn: "Settings"
@@ -81,10 +113,10 @@ name: Auth and setup screens
 - scrollUntilVisible:
     element: "Sign out"
 - tapOn: "Sign out"
-# The alert's own button, above "Stay signed in".
+# The alert's own button, beside "Stay signed in" (iOS 27 lays the two side by side).
 - tapOn:
     text: "Sign out"
-    above: "Stay signed in"
+    rightOf: "Stay signed in"
 - extendedWaitUntil:
     visible: "Welcome back"
     timeout: 15000
@@ -112,9 +144,12 @@ name: Auth and setup screens
 - extendedWaitUntil:
     visible: "That email and password don't match.*"
     timeout: 10000
+- runFlow: subflows/decline-save-password.yaml
 - takeScreenshot: 19-sign-in-error
 # Password reset
 - tapOn: "Forgot your password?"
+# Leaving the form with a typed password is when iOS offers to save it.
+- runFlow: subflows/decline-save-password.yaml
 - assertVisible: "Reset your password"
 - waitForAnimationToEnd
 - takeScreenshot: 20-reset
@@ -135,6 +170,7 @@ name: Auth and setup screens
 - inputText: ${PASSWORD}
 - tapOn: "Welcome back"
 - tapOn: "Sign in"
+- runFlow: subflows/decline-save-password.yaml
 - extendedWaitUntil:
     visible: "Hi .*"
     timeout: 20000

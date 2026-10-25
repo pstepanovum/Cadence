@@ -7,6 +7,7 @@ import {
   Banner,
   Body,
   Button,
+  MultiOptionRow,
   OptionRow,
   Screen,
   TextField,
@@ -14,11 +15,12 @@ import {
 } from "@/components/ui";
 import {
   PRACTICE_CADENCE_OPTIONS,
-  PRACTICE_FOCUS_OPTIONS,
   useAuth,
+  type LearningGoal,
   type PracticeCadence,
-  type PracticeFocus,
 } from "@/context/auth";
+import { LEARNING_GOALS, focusForGoals, sameGoals, toggleGoal } from "@/platform/goals";
+
 import { SettingsRow } from "@/components/settings";
 import { earnedCount } from "@/engagement/badges";
 import { useBadges, useToday } from "@/engagement/useEngagement";
@@ -27,6 +29,8 @@ import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { haptics } from "@/lib/haptics";
 import { useConnection } from "@/pairing/context";
 import { colors, spacing, type, themed } from "@/theme/theme";
+
+const GOAL_OPTIONS = LEARNING_GOALS.map((goal) => ({ value: goal.value, label: goal.title }));
 
 export default function ProfileScreen() {
   const { user, profile } = useAuth();
@@ -93,13 +97,13 @@ export default function ProfileScreen() {
   );
 }
 
-/** Name, focus and pace. Cloud accounts only: local mode has no profile to save. */
+/** Name, goals and pace. Cloud accounts only: local mode has no profile to save. */
 function ProfileForm() {
   const { profile, updateProfile } = useAuth();
 
   const [base, setBase] = useState(profile);
   const [name, setName] = useState(profile.displayName);
-  const [focus, setFocus] = useState<PracticeFocus>(profile.practiceFocus);
+  const [goals, setGoals] = useState<LearningGoal[]>(profile.learningGoals);
   const [cadence, setCadence] = useState<PracticeCadence>(profile.practiceCadence);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -107,7 +111,7 @@ function ProfileForm() {
 
   const dirty =
     name.trim() !== profile.displayName ||
-    focus !== profile.practiceFocus ||
+    !sameGoals(goals, profile.learningGoals) ||
     cadence !== profile.practiceCadence;
 
   // The profile can arrive after this screen opens (a cached copy first, the
@@ -115,12 +119,12 @@ function ProfileForm() {
   if (base !== profile) {
     const untouched =
       name.trim() === base.displayName &&
-      focus === base.practiceFocus &&
+      sameGoals(goals, base.learningGoals) &&
       cadence === base.practiceCadence;
     setBase(profile);
     if (untouched) {
       setName(profile.displayName);
-      setFocus(profile.practiceFocus);
+      setGoals(profile.learningGoals);
       setCadence(profile.practiceCadence);
     }
   }
@@ -133,7 +137,7 @@ function ProfileForm() {
     try {
       await updateProfile({
         displayName: name.trim() || profile.displayName,
-        practiceFocus: focus,
+        ...(goals.length ? { learningGoals: goals, practiceFocus: focusForGoals(goals) } : {}),
         practiceCadence: cadence,
       });
       haptics.success();
@@ -165,12 +169,12 @@ function ProfileForm() {
           edited();
         }}
       />
-      <OptionRow
-        label="Focus area"
-        options={PRACTICE_FOCUS_OPTIONS}
-        value={focus}
-        onChange={(value) => {
-          setFocus(value);
+      <MultiOptionRow
+        label="Goals"
+        options={GOAL_OPTIONS}
+        values={goals}
+        onToggle={(value) => {
+          setGoals((current) => toggleGoal(current, value));
           edited();
         }}
       />
@@ -185,7 +189,7 @@ function ProfileForm() {
       />
       {error ? <Banner message={error} tone="error" /> : null}
       {saved && !dirty ? <Banner tone="success" message="Saved." /> : null}
-      <Button label="Save changes" loading={saving} disabled={!dirty} onPress={handleSave} />
+      <Button label="Save changes" loading={saving} disabled={!dirty || goals.length === 0} onPress={handleSave} />
     </View>
   );
 }

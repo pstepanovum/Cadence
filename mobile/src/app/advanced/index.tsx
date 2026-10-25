@@ -13,6 +13,7 @@ import { useAccount } from "@/context/account";
 import { useAdvancedContent } from "@/learning/advanced-content";
 import { syncAdvanced, useAdvancedState } from "@/learning/advanced-store";
 import { ItemRow, Tag } from "@/learning/advanced-ui";
+import { useLearningGoals } from "@/learning/goals";
 import { today } from "@/learning/store";
 import { buildDailyPlan } from "@/platform/daily-plan";
 import { dailyDrills, retestDue, trackSummary, PHASE_COPY } from "@/platform/fossilization";
@@ -27,6 +28,7 @@ export default function AdvancedHub() {
   const { tier } = useAccount();
   useFocusEffect(useCallback(() => void syncAdvanced(tier), [tier]));
   const day = today();
+  const goals = useLearningGoals();
 
   const practice = useMemo(() => (content && loaded ? buildPracticeDay({ day, phrases: content.phrases, slang: content.slang, cards: state.cards, list: state.list, track: state.track, catalog: content.errors }) : null), [content, loaded, state, day]);
   const plan = useMemo(
@@ -41,9 +43,10 @@ export default function AdvancedHub() {
             aiAvailable: false,
             plateau: state.track ? { steps: dailyDrills(state.track, content.errors, day).length, retestDue: retestDue(state.track, day) !== null } : null,
             dueItems: Object.entries(state.cards).map(([itemId, c]) => ({ itemId, due: c.due })),
+            goals,
           })
         : null,
-    [content, loaded, state, day],
+    [content, loaded, state, day, goals],
   );
   const summary = state.track ? trackSummary(state.track, day) : null;
   const phraseMinutes = plan?.items.find((i) => i.kind === "phrases")?.minutes ?? 0;

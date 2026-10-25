@@ -1,16 +1,20 @@
 // FILE: src/components/auth/OnboardingWizard.tsx
 //
 // First-run questions for a new cloud account, drawn like the account
-// screens: one centred column on the neutral page, no card, one action.
+// screens: one centred column on the neutral page, no card, one action. The
+// goals are the phone's setup question ("What brings you to Cadence?"), one or
+// more, as flat grey rows that turn green with a white tick.
 "use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowRight } from "griddy-icons";
+import { ArrowRight, Check } from "griddy-icons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { AUTH_INPUT_CLASS, AuthCard, AuthNotice, FieldLabel } from "@/components/auth/AuthCard";
+import { LEARNING_GOALS, toggleGoal, type LearningGoal } from "@/lib/platform/goals";
+import { cn } from "@/lib/utils";
 
 /** The account screens' flat platinum field, for a native select. */
 const SELECT_CLASS =
@@ -19,12 +23,16 @@ const SELECT_CLASS =
 export function OnboardingWizard() {
   const router = useRouter();
   const [name, setName] = useState("");
-  const [focus, setFocus] = useState("conversations");
+  const [goals, setGoals] = useState<LearningGoal[]>([]);
   const [cadence, setCadence] = useState("15-minutes");
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit() {
+    if (goals.length === 0) {
+      setError("Choose at least one goal.");
+      return;
+    }
     setIsSaving(true);
     setError(null);
 
@@ -35,7 +43,7 @@ export function OnboardingWizard() {
         body: JSON.stringify({
           onboardingCompleted: true,
           displayName: name.trim(),
-          practiceFocus: focus,
+          learningGoals: goals,
           practiceCadence: cadence,
         }),
       });
@@ -84,20 +92,46 @@ export function OnboardingWizard() {
             />
           </div>
 
-          <div>
-            <FieldLabel htmlFor="onboarding-focus">Focus</FieldLabel>
-            <Select
-              id="onboarding-focus"
-              value={focus}
-              onChange={(event) => setFocus(event.target.value)}
-              className={SELECT_CLASS}
-            >
-              <option value="conversations">Conversation confidence</option>
-              <option value="vowels">Short and long vowel control</option>
-              <option value="work">Clearer speaking at work</option>
-              <option value="daily">Daily speaking fluency</option>
-            </Select>
-          </div>
+          <fieldset>
+            <legend className="block pb-2 text-sm font-medium text-hunter-green">
+              What brings you to Cadence? <span className="font-normal text-slate-grey">Choose all that apply.</span>
+            </legend>
+            <div className="space-y-2">
+              {LEARNING_GOALS.map((goal) => {
+                const selected = goals.includes(goal.value);
+                return (
+                  <button
+                    key={goal.value}
+                    type="button"
+                    role="checkbox"
+                    aria-checked={selected}
+                    onClick={() => {
+                      setGoals((current) => toggleGoal(current, goal.value));
+                      setError(null);
+                    }}
+                    className={cn(
+                      "flex w-full cursor-pointer items-center gap-3 rounded-[14px] px-4 py-3 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hunter-green",
+                      selected ? "bg-hunter-green text-bright-snow" : "bg-platinum text-carbon-black hover:bg-alabaster-grey",
+                    )}
+                  >
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-base font-semibold">{goal.title}</span>
+                      <span className={cn("block text-sm", selected ? "text-bright-snow/90" : "text-iron-grey")}>{goal.detail}</span>
+                    </span>
+                    <span
+                      aria-hidden
+                      className={cn(
+                        "flex size-6 shrink-0 items-center justify-center rounded-[8px]",
+                        selected ? "bg-bright-snow text-hunter-green" : "bg-alabaster-grey",
+                      )}
+                    >
+                      {selected ? <Check size={14} color="currentColor" /> : null}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
 
           <div>
             <FieldLabel htmlFor="onboarding-pace">Pace</FieldLabel>
@@ -116,7 +150,7 @@ export function OnboardingWizard() {
 
           {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-          <Button className="w-full" type="submit" disabled={isSaving}>
+          <Button className="w-full" type="submit" disabled={isSaving || goals.length === 0}>
             {isSaving ? "Saving…" : "Start practising"}
             <ArrowRight size={16} color="currentColor" />
           </Button>

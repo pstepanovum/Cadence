@@ -3,7 +3,8 @@
 // is read back. One question a screen. Pure, so it is unit tested
 // (tests/onboarding.test.ts); src/onboarding/store.ts persists it and
 // src/components/onboarding/ draws it.
-import type { PracticeCadence, PracticeFocus } from "../lib/profile.ts";
+import type { PracticeCadence } from "../lib/profile.ts";
+import { LEARNING_GOALS, focusForGoals, parseGoals, type LearningGoal } from "../platform/goals.ts";
 import { isCefrLevel, type CefrLevel } from "../platform/content-model.ts";
 import { DEFAULT_LEVEL, LEVELS_ADVANCED_FIRST, LEVEL_INFO } from "../platform/levels.ts";
 import { DEFAULT_DAILY_GOAL, isDailyGoal, type DailyGoal } from "../engagement/today.ts";
@@ -13,14 +14,9 @@ export const INTRO_SLIDES = 3;
 
 export type OnboardingStep = "welcome" | "goal" | "level" | "placement" | "minutes" | "reminders" | "where" | "account" | "paywall";
 
-export type LearningGoal = "accent" | "grammar" | "fluency" | "exam" | "work";
-export const LEARNING_GOALS: { value: LearningGoal; title: string; detail: string }[] = [
-  { value: "accent", title: "A clearer accent", detail: "Sounds, stress and rhythm." },
-  { value: "grammar", title: "Better grammar", detail: "Lessons and practice by level." },
-  { value: "fluency", title: "Speaking fluency", detail: "Conversations that flow." },
-  { value: "exam", title: "An English exam", detail: "Grammar, vocabulary and speaking." },
-  { value: "work", title: "English for work", detail: "Meetings, interviews, emails." },
-];
+// The goal question allows several answers; the list and the rules live in
+// the shared src/platform/goals.ts, so the web setup asks the same thing.
+export { LEARNING_GOALS, focusForGoals, type LearningGoal };
 
 /**
  * The self-check: all six levels, advanced first (Cadence is built for B2 to
@@ -44,7 +40,8 @@ export function shortExamLine(level: CefrLevel): string {
 export type PracticePlace = "own" | "cloud";
 
 export interface OnboardingAnswers {
-  goal: LearningGoal | null;
+  /** One or more, in the setup's order; empty until chosen. */
+  goals: LearningGoal[];
   level: CefrLevel | null;
   /** Set when the placement quiz was taken. */
   placementLevel: CefrLevel | null;
@@ -56,7 +53,7 @@ export interface OnboardingAnswers {
 }
 
 export const DEFAULT_ANSWERS: OnboardingAnswers = {
-  goal: null,
+  goals: [],
   level: null,
   placementLevel: null,
   minutes: DEFAULT_DAILY_GOAL,
@@ -139,20 +136,6 @@ export function resumePosition(saved: OnboardingPosition | null, steps: readonly
   return { step: "welcome", slide: 0 };
 }
 
-/** The web profile's focus for a goal, so both apps start in the same place. */
-export function focusForGoal(goal: LearningGoal | null): PracticeFocus {
-  switch (goal) {
-    case "accent":
-      return "vowels";
-    case "work":
-      return "work";
-    case "fluency":
-      return "conversations";
-    default:
-      return "daily";
-  }
-}
-
 export function cadenceForMinutes(minutes: number): PracticeCadence {
   if (minutes <= 5) return "5-minutes";
   if (minutes <= 15) return "15-minutes";
@@ -187,7 +170,8 @@ export function parseStoredOnboarding(raw: unknown): StoredOnboarding | null {
         ? { step: p.step as OnboardingStep, slide: typeof p.slide === "number" && p.slide >= 0 ? Math.floor(p.slide) : 0 }
         : null,
     answers: {
-      goal: LEARNING_GOALS.some((g) => g.value === a.goal) ? (a.goal as LearningGoal) : null,
+      // A run saved before several goals were allowed kept a single `goal`.
+      goals: parseGoals(Array.isArray(a.goals) ? a.goals : a.goal),
       level: isCefrLevel(a.level) ? a.level : null,
       placementLevel: isCefrLevel(a.placementLevel) ? a.placementLevel : null,
       minutes: isDailyGoal(a.minutes) ? a.minutes : DEFAULT_ANSWERS.minutes,

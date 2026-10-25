@@ -11,13 +11,13 @@ name: Screenshots, free account
       notifications: allow
       microphone: allow
 - tapOn: "Skip"
-- tapOn: "A clearer accent.*"
+- tapOn: "Accent clarity.*"
 - tapOn: "Continue"
 - tapOn: "B1 · .*"
 - tapOn: "Continue"
 - tapOn: "Continue"
 - tapOn: "Not now"
-- tapOn: "Connect your own Cadence server.*"
+- tapOn: "Connect your own Cadence.*"
 - extendedWaitUntil:
     visible: "Connecting your own Cadence is always free."
     timeout: 5000

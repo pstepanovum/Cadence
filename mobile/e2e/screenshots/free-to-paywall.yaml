@@ -2,7 +2,7 @@
 appId: dev.pstepanov.cadence
 name: Screenshots, sign in to the paywall
 ---
-- tapOn: "Cadence cloud.*"
+- tapOn: "Cadence Cloud.*"
 - tapOn: "Continue"
 - extendedWaitUntil:
     visible: "Already have an account?"

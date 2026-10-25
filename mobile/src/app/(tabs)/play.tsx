@@ -17,7 +17,7 @@ import {
   StatTile,
   Title,
 } from "@/components/ui";
-import { useAuth } from "@/context/auth";
+import { useLearningGoals } from "@/learning/goals";
 import {
   VOCABULARY,
   VOCAB_LEVELS,
@@ -51,11 +51,11 @@ const ROUTES = {
 } as const satisfies Record<GameId, string>;
 
 export default function PlayScreen() {
-  const { profile } = useAuth();
   const { progress, loaded } = useGameProgress();
   const server = useServerStatus();
 
-  const [level, setLevel] = useState<VocabLevel>(() => suggestedLevel(profile.practiceFocus));
+  const goals = useLearningGoals();
+  const [level, setLevel] = useState<VocabLevel>(() => suggestedLevel(goals));
 
   // "Due today" and "2 h ago" are measured from when the tab was last shown,
   // which is also when a finished round has just been saved.

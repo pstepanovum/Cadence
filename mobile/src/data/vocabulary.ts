@@ -40,18 +40,11 @@ export function levelLabel(level: VocabLevel): string {
   return VOCAB_LEVELS.find((item) => item.key === level)?.label ?? level;
 }
 
-/** The deck to open first, given what the learner told onboarding. */
-export function suggestedLevel(focus: string): VocabLevel {
-  switch (focus) {
-    case "work":
-      return "work";
-    case "daily":
-      return "everyday";
-    case "conversations":
-      return "ideas";
-    default:
-      return "everyday";
-  }
+/** The deck to open first, given the goals the learner chose in setup. */
+export function suggestedLevel(goals: readonly string[]): VocabLevel {
+  if (goals.includes("work")) return "work";
+  if (goals.some((goal) => goal === "fluency" || goal === "natural" || goal === "exam")) return "ideas";
+  return "everyday";
 }
 
 export const VOCABULARY: VocabWord[] = [

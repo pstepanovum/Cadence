@@ -21,6 +21,7 @@ import {
   type DocumentData,
 } from "firebase-admin/firestore";
 import { getAdminDb } from "@/lib/firebase/admin";
+import { parseGoals, type LearningGoal } from "@/lib/platform/goals";
 import { parseLevelPrefs, type LevelPrefs } from "@/lib/platform/levels";
 import {
   applyExamResult,
@@ -42,6 +43,8 @@ export interface CloudUserRecord {
   email: string | null;
   displayName: string | null;
   practiceFocus: string | null;
+  /** Goals from the setup question; empty for an account from before they existed. */
+  learningGoals: LearningGoal[];
   practiceCadence: string | null;
   onboardingCompleted: boolean;
   createdAt: string;
@@ -55,6 +58,7 @@ export interface CloudUserRecord {
 export interface ProfilePatch {
   displayName?: string;
   practiceFocus?: string;
+  learningGoals?: LearningGoal[];
   practiceCadence?: string;
   onboardingCompleted?: boolean;
   levels?: LevelPrefs;
@@ -106,6 +110,7 @@ function readUserRecord(data: DocumentData): CloudUserRecord {
     email: readString(data.email),
     displayName: readString(data.displayName),
     practiceFocus: readString(data.practiceFocus),
+    learningGoals: parseGoals(data.learningGoals),
     practiceCadence: readString(data.practiceCadence),
     onboardingCompleted: data.onboardingCompleted === true,
     createdAt: toIso(data.createdAt) ?? new Date().toISOString(),

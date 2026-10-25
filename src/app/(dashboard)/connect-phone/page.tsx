@@ -68,7 +68,7 @@ export default async function ConnectPhonePage() {
           <h2 className="font-kicker text-2xl text-carbon-black">On your phone</h2>
           <ol className="mt-3 space-y-2 text-base leading-7 text-iron-grey">
             <li>1. Install Cadence and open it.</li>
-            <li>2. Choose <strong className="text-carbon-black">Connect your own Cadence server</strong>.</li>
+            <li>2. Choose <strong className="text-carbon-black">Connect your own Cadence</strong>.</li>
             <li>3. Scan the code. Both devices need the same Wi-Fi.</li>
           </ol>
           {!isDesktop ? (

@@ -22,7 +22,7 @@ import { UpdateGate } from "@/components/UpdateNotice";
 import { AccountProvider } from "@/context/account";
 import { EngagementWatcher } from "@/components/EngagementWatcher";
 import { HEAD_START_MS, LaunchSplash } from "@/components/LaunchSplash";
-import { cadenceForMinutes, focusForGoal } from "@/onboarding/flow";
+import { cadenceForMinutes, focusForGoals } from "@/onboarding/flow";
 import { markOnboardingDoneForExistingInstall, useOnboardingStatus } from "@/onboarding/store";
 import { AuthProvider, useAuth } from "@/context/auth";
 import { ConnectionProvider, useConnection } from "@/pairing/context";
@@ -99,7 +99,9 @@ function RootNavigator() {
     const answers = onboarding.saved?.answers;
     updateProfile({
       onboardingCompleted: true,
-      ...(answers?.goal ? { practiceFocus: focusForGoal(answers.goal), practiceCadence: cadenceForMinutes(answers.minutes) } : {}),
+      ...(answers?.goals.length
+        ? { learningGoals: answers.goals, practiceFocus: focusForGoals(answers.goals), practiceCadence: cadenceForMinutes(answers.minutes) }
+        : {}),
     }).catch(() => {});
     // Once per account and phone; the profile flag stops it after that.
     // eslint-disable-next-line react-hooks/exhaustive-deps

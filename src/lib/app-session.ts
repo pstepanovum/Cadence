@@ -11,6 +11,7 @@ import { getAdminAuth, isFirebaseServerConfigured } from "@/lib/firebase/admin";
 import type { LocalProfile } from "@/lib/local-profile";
 import { readLocalProfileFromCookies } from "@/lib/local-profile";
 import { authenticateToken, getSharedProfile } from "@/lib/pairing/service";
+import { goalsFromFocus, resolveGoals, type LearningGoal } from "@/lib/platform/goals";
 import type { LevelPrefs } from "@/lib/platform/levels";
 
 export interface AppUser {
@@ -19,6 +20,8 @@ export interface AppUser {
   createdAt: string;
   displayName: string;
   practiceFocus: string | null;
+  /** What the learner is working towards (goals.ts); an older account's focus stands in until it has some. */
+  learningGoals: LearningGoal[];
   practiceCadence: string | null;
   onboardingCompleted: boolean;
   isLocal: boolean;
@@ -148,6 +151,7 @@ async function loadCloudUser({ uid, email: tokenEmail }: VerifiedIdentity): Prom
     createdAt: record.createdAt,
     displayName: record.displayName || email?.split("@")[0] || "Learner",
     practiceFocus: record.practiceFocus,
+    learningGoals: resolveGoals(record.learningGoals, record.practiceFocus),
     practiceCadence: record.practiceCadence,
     onboardingCompleted: record.onboardingCompleted,
     isLocal: false,
@@ -164,6 +168,7 @@ function mapLocalProfileToAppUser(profile: LocalProfile): AppUser {
     createdAt: profile.createdAt,
     displayName: profile.displayName,
     practiceFocus: profile.practiceFocus,
+    learningGoals: goalsFromFocus(profile.practiceFocus),
     practiceCadence: profile.practiceCadence,
     onboardingCompleted: profile.onboardingCompleted,
     isLocal: true,

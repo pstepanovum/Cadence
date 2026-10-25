@@ -10,13 +10,13 @@ name: Screenshots, Plus account
       notifications: allow
       microphone: allow
 - tapOn: "Skip"
-- tapOn: "A clearer accent.*"
+- tapOn: "Accent clarity.*"
 - tapOn: "Continue"
 - tapOn: "B1 · .*"
 - tapOn: "Continue"
 - tapOn: "Continue"
 - tapOn: "Not now"
-- tapOn: "Cadence cloud.*"
+- tapOn: "Cadence Cloud.*"
 - tapOn: "Continue"
 - extendedWaitUntil:
     visible: "Already have an account?"

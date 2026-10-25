@@ -79,18 +79,14 @@ export function targetGroups(targets: readonly PracticeTarget[] = PRACTICE_TARGE
 }
 
 /**
- * The family a learner should warm up with, given what they told onboarding.
- * Nothing here is binding — it only decides which group is open on arrival.
+ * The family a learner should warm up with, given the goals they chose in
+ * setup. Nothing here is binding — it only decides which group is open on
+ * arrival. A plateau starts on reduced vowels, the sound advanced speakers
+ * most often keep getting wrong without hearing it.
  */
-export function suggestedGroupKey(focus: string): string {
-  switch (focus) {
-    case "vowels":
-      return "short_vowels";
-    case "work":
-      return "consonant_clusters";
-    case "daily":
-      return "schwa_unstressed";
-    default:
-      return "th_voiceless";
-  }
+export function suggestedGroupKey(goals: readonly string[]): string {
+  if (goals.includes("plateau")) return "schwa_unstressed";
+  if (goals.includes("accent")) return "short_vowels";
+  if (goals.includes("work")) return "consonant_clusters";
+  return "th_voiceless";
 }

@@ -1,8 +1,9 @@
 // FILE: mobile/src/app/connect/index.tsx
 //
-// The fork in the road: your own computer, or the hosted service. The choice is
-// explicit because the two behave differently in ways a person can feel — one
-// needs the computer awake and on the same Wi-Fi, the other needs an account.
+// The fork in the road: Cadence Cloud first, the main path, or your own
+// Cadence on your computer. The choice is explicit because the two behave
+// differently in ways a person can feel — one needs an account, the other
+// needs the computer awake and on the same Wi-Fi.
 import { useRouter } from "expo-router";
 import { Cloud, Laptop } from "lucide-react-native";
 import { StyleSheet, View } from "react-native";
@@ -23,30 +24,8 @@ export default function ConnectIndexScreen() {
       {canGoBack ? <TopBar onBack={() => router.back()} /> : null}
       <SectionHeader
         eyebrow="Set up Cadence"
-        title={isCloudConfigured ? "How should Cadence work?" : "Connect to your computer"}
+        title={isCloudConfigured ? "Where should Cadence run?" : "Connect to your computer"}
       />
-
-      <Card>
-        <View style={styles.optionHead}>
-          <View style={styles.optionIcon}>
-            <Laptop color={colors.carbon} size={22} />
-          </View>
-          <View style={styles.optionTitle}>
-            <Eyebrow>{isCloudConfigured ? "Recommended" : "Over your Wi-Fi"}</Eyebrow>
-            <Title size={type.title3}>
-              {isCloudConfigured ? "Connect to my computer" : "Pair this phone"}
-            </Title>
-          </View>
-        </View>
-        <Body size={type.callout}>
-          Cadence runs on your computer and your phone talks to it over your home Wi-Fi. Your voice
-          never leaves your house.
-        </Body>
-        <Body size={type.footnote} tone="muted">
-          Keep Cadence open on your computer, on the same Wi-Fi as this phone.
-        </Body>
-        <Button label="Scan the code" onPress={() => router.push("/connect/scan")} />
-      </Card>
 
       {isCloudConfigured ? (
         <Card>
@@ -55,16 +34,15 @@ export default function ConnectIndexScreen() {
               <Cloud color={colors.carbon} size={22} />
             </View>
             <View style={styles.optionTitle}>
-              <Eyebrow>Hosted</Eyebrow>
-              <Title size={type.title3}>Use Cadence Cloud</Title>
+              <Eyebrow>Recommended</Eyebrow>
+              <Title size={type.title3}>Cadence Cloud</Title>
             </View>
           </View>
           <Body size={type.callout}>
-            Sign in with a Cadence account. Works on any network, with your progress synced.
+            Practise anywhere, synced to your account. Plus adds AI scoring, voices and the coach.
           </Body>
           <Button
             label="Sign in"
-            variant="secondary"
             onPress={async () => {
               await chooseCloud();
               router.replace("/login");
@@ -72,6 +50,27 @@ export default function ConnectIndexScreen() {
           />
         </Card>
       ) : null}
+
+      <Card>
+        <View style={styles.optionHead}>
+          <View style={styles.optionIcon}>
+            <Laptop color={colors.carbon} size={22} />
+          </View>
+          <View style={styles.optionTitle}>
+            <Eyebrow>On your computer</Eyebrow>
+            <Title size={type.title3}>Connect your own Cadence</Title>
+          </View>
+        </View>
+        <Body size={type.callout}>
+          For Cadence running on your own computer, over your home Wi-Fi. Keep it open, on the same
+          Wi-Fi as this phone.
+        </Body>
+        <Button
+          label="Scan the code"
+          variant={isCloudConfigured ? "secondary" : "primary"}
+          onPress={() => router.push("/connect/scan")}
+        />
+      </Card>
     </Screen>
   );
 }

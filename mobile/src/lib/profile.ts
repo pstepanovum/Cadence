@@ -3,7 +3,10 @@
 // The cloud account's profile fields and how to read them out of a server
 // response. Kept free of React and React Native imports so it can be unit
 // tested with the plain `node --test` runner (see mobile/tests/profile.test.ts).
+import { PRACTICE_FOCUS_VALUES, focusForGoals, parseGoals, resolveGoals, type LearningGoal, type PracticeFocus } from "../platform/goals.ts";
 import { parseLevelPrefs, type LevelPrefs } from "../platform/levels.ts";
+
+export type { LearningGoal, PracticeFocus };
 
 /**
  * Profile fields the web app keeps for a cloud account. The server owns them
@@ -12,7 +15,10 @@ import { parseLevelPrefs, type LevelPrefs } from "../platform/levels.ts";
  */
 export interface Profile {
   displayName: string;
+  /** Kept for builds that predate goals; derived from the goals when they are saved. */
   practiceFocus: PracticeFocus;
+  /** What the learner is working towards, one or more (src/platform/goals.ts). */
+  learningGoals: LearningGoal[];
   practiceCadence: PracticeCadence;
   onboardingCompleted: boolean;
   /** Level settings kept on the account; the phone keeps its own copy and the newer wins. */
@@ -21,15 +27,8 @@ export interface Profile {
   placementSeen?: string;
 }
 
-export type PracticeFocus = "conversations" | "vowels" | "work" | "daily";
 export type PracticeCadence = "5-minutes" | "15-minutes" | "30-minutes" | "weekend-only";
 
-export const PRACTICE_FOCUS_OPTIONS: { value: PracticeFocus; label: string }[] = [
-  { value: "conversations", label: "Conversation confidence" },
-  { value: "vowels", label: "Short and long vowel control" },
-  { value: "work", label: "Clearer speaking at work" },
-  { value: "daily", label: "Daily speaking fluency" },
-];
 
 export const PRACTICE_CADENCE_OPTIONS: { value: PracticeCadence; label: string }[] = [
   { value: "5-minutes", label: "5 minutes a day" },
@@ -51,9 +50,11 @@ export function parseProfile(raw: unknown): StoredProfile {
   if (typeof body.displayName === "string" && body.displayName.trim()) {
     fields.displayName = body.displayName.trim();
   }
-  if (PRACTICE_FOCUS_OPTIONS.some((option) => option.value === body.practiceFocus)) {
+  if (PRACTICE_FOCUS_VALUES.includes(body.practiceFocus as PracticeFocus)) {
     fields.practiceFocus = body.practiceFocus as PracticeFocus;
   }
+  const goals = parseGoals(body.learningGoals);
+  if (goals.length) fields.learningGoals = goals;
   if (PRACTICE_CADENCE_OPTIONS.some((option) => option.value === body.practiceCadence)) {
     fields.practiceCadence = body.practiceCadence as PracticeCadence;
   }
@@ -72,7 +73,9 @@ export function toProfile(
 ): Profile {
   return {
     displayName: fields.displayName || user?.email?.split("@")[0] || "Learner",
-    practiceFocus: fields.practiceFocus ?? "conversations",
+    practiceFocus: fields.practiceFocus ?? (fields.learningGoals?.length ? focusForGoals(fields.learningGoals) : "conversations"),
+    // An account from before goals existed: its focus stands in.
+    learningGoals: resolveGoals(fields.learningGoals, fields.practiceFocus),
     practiceCadence: fields.practiceCadence ?? "15-minutes",
     onboardingCompleted: fields.onboardingCompleted === true,
     ...(fields.levels ? { levels: fields.levels } : {}),

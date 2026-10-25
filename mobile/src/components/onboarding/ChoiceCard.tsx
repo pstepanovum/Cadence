@@ -7,7 +7,8 @@ import { colors, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } fro
 /**
  * One answer on a question step: a flat grey row that turns primary green,
  * with a white tick, when chosen. `compact` tightens it for short phones so a
- * six-option step still fits an iPhone SE without scrolling.
+ * seven-option step still fits an iPhone SE without scrolling. `multiple`
+ * makes it a checkbox (one of several answers, square tick, a buzz both ways).
  */
 export function ChoiceCard({
   title,
@@ -16,6 +17,7 @@ export function ChoiceCard({
   onPress,
   icon,
   compact = false,
+  multiple = false,
 }: {
   title: string;
   detail?: string;
@@ -24,14 +26,15 @@ export function ChoiceCard({
   /** Drawn in the row's text colour, so it stays visible once the row turns green. */
   icon?: (selected: boolean) => React.ReactNode;
   compact?: boolean;
+  multiple?: boolean;
 }) {
   return (
     <Pressable
-      accessibilityRole="radio"
+      accessibilityRole={multiple ? "checkbox" : "radio"}
       accessibilityState={{ selected, checked: selected }}
       accessibilityLabel={detail ? `${title}. ${detail}` : title}
       onPress={() => {
-        if (!selected) haptics.select();
+        if (!selected || multiple) haptics.select();
         onPress();
       }}
       style={({ pressed }) => [styles.card, compact && styles.compact, selected && styles.selected, pressed && styles.pressed]}>
@@ -46,7 +49,7 @@ export function ChoiceCard({
           </Text>
         ) : null}
       </View>
-      <View style={[styles.tick, selected && styles.tickOn]}>{selected ? <Check color={colors.hunter} size={14} strokeWidth={3} /> : null}</View>
+      <View style={[styles.tick, multiple && styles.tickSquare, selected && styles.tickOn]}>{selected ? <Check color={colors.hunter} size={14} strokeWidth={3} /> : null}</View>
     </Pressable>
   );
 }
@@ -63,7 +66,7 @@ const styles = themed(() =>
       borderRadius: radii.control,
       backgroundColor: colors.platinum,
     },
-    compact: { minHeight: TAP_TARGET, paddingVertical: spacing.sm },
+    compact: { minHeight: TAP_TARGET, paddingVertical: spacing.xs + spacing.xxs },
     selected: { backgroundColor: colors.hunter },
     pressed: { opacity: 0.85 },
     icon: { width: 28, alignItems: "center" },
@@ -74,6 +77,7 @@ const styles = themed(() =>
     onSelected: { color: colors.snow },
     detailOnSelected: { color: colors.onDarkMuted },
     tick: { width: 24, height: 24, borderRadius: radii.pill, backgroundColor: colors.alabaster, alignItems: "center", justifyContent: "center" },
+    tickSquare: { borderRadius: 7 },
     tickOn: { backgroundColor: colors.snow },
   }),
 );

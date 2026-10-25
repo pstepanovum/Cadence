@@ -15,7 +15,7 @@ import { useConnection } from "@/pairing/context";
 
 export {
   PRACTICE_CADENCE_OPTIONS,
-  PRACTICE_FOCUS_OPTIONS,
+  type LearningGoal,
   type PracticeCadence,
   type PracticeFocus,
   type Profile,

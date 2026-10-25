@@ -26,6 +26,7 @@ import {
   Title,
 } from "@/components/ui";
 import { useAuth } from "@/context/auth";
+import { useLearningGoals } from "@/learning/goals";
 import { earnedCount } from "@/engagement/badges";
 import { useBadges, useToday } from "@/engagement/useEngagement";
 import { wordOfTheDay } from "@/lib/widget/snapshot";
@@ -37,7 +38,8 @@ import { suggestedGroupKey, targetGroups } from "@/practice/targets";
 import { colors, fonts, radii, spacing, type, themed } from "@/theme/theme";
 
 export default function HomeScreen() {
-  const { displayName, profile } = useAuth();
+  const { displayName } = useAuth();
+  const goals = useLearningGoals();
   const { mode } = useConnection();
   const server = useServerStatus();
   const readiness = useAssessReadiness();
@@ -48,7 +50,7 @@ export default function HomeScreen() {
 
   const groups = useMemo(() => targetGroups(), []);
   const [groupKey, setGroupKey] = useState(() => {
-    const preferred = suggestedGroupKey(profile.practiceFocus);
+    const preferred = suggestedGroupKey(goals);
     return groups.some((group) => group.key === preferred) ? preferred : groups[0]?.key;
   });
   const group = groups.find((item) => item.key === groupKey) ?? groups[0];

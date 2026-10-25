@@ -75,3 +75,43 @@ describe("daily plan", () => {
     assert.ok(!plan.items.some((item) => item.kind === "flashcards" || item.kind === "sound"));
   });
 });
+
+describe("the learner's goals", () => {
+  const kinds = (input: PlanInput) => buildDailyPlan(input).items.map((item) => item.kind);
+
+  it("keeps the default order with no goals", () => {
+    assert.deepEqual(kinds({ ...full, goals: [] }), kinds(full));
+  });
+
+  it("puts grammar before sounds for a grammar or exam goal", () => {
+    const order = kinds({ ...full, dueCards: [], goals: ["grammar"] });
+    assert.ok(order.indexOf("grammar") < order.indexOf("sound"), order.join(","));
+    const exam = kinds({ ...full, dueCards: [], goals: ["exam"] });
+    assert.ok(exam.indexOf("grammar") < exam.indexOf("sound"), exam.join(","));
+  });
+
+  it("keeps sounds first when a sound goal is chosen too", () => {
+    const order = kinds({ ...full, dueCards: [], goals: ["grammar", "accent"] });
+    assert.ok(order.indexOf("sound") < order.indexOf("grammar"), order.join(","));
+  });
+
+  it("talks with the coach instead of shadowing for conversation goals", () => {
+    assert.ok(kinds({ ...full, dueCards: [], goals: [] }).includes("shadowing"));
+    const order = kinds({ ...full, dueCards: [], goals: ["fluency"] });
+    assert.ok(order.includes("coach") && !order.includes("shadowing"), order.join(","));
+  });
+
+  it("gives a longer phrase review to sound natural", () => {
+    const dueItems = Array.from({ length: 20 }, (_, i) => ({ itemId: `phrase.${i}`, due: TODAY }));
+    const phrases = (goals: PlanInput["goals"]) => buildDailyPlan({ ...base, dueItems, goals }).items.find((item) => item.kind === "phrases");
+    assert.equal(phrases([])?.minutes, 3);
+    assert.equal(phrases(["natural"])?.minutes, 5);
+  });
+
+  it("stays within 10 to 15 minutes for any goals", () => {
+    for (const goals of [["plateau"], ["natural", "work"], ["exam", "grammar", "fluency"]] as const) {
+      const plan = buildDailyPlan({ ...full, goals });
+      assert.ok(plan.minutes >= PLAN_MIN_MINUTES && plan.minutes <= PLAN_MAX_MINUTES, `${goals.join(",")}: ${plan.minutes}`);
+    }
+  });
+});

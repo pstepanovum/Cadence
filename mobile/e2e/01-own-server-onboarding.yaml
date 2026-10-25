@@ -1,4 +1,4 @@
-# First run on a clean phone: setup, then "Connect your own Cadence server"
+# First run on a clean phone: setup, then "Connect your own Cadence"
 # with a typed pairing code. No Plus step and no paywall on this path.
 # env: ADDRESS (host:port of the Cadence server), CODE (a fresh pairing code)
 appId: dev.pstepanov.cadence
@@ -16,7 +16,7 @@ name: Own server onboarding
 - tapOn: "Continue"
 - tapOn: "Continue"
 - assertVisible: "What brings you to Cadence?"
-- tapOn: "A clearer accent.*"
+- tapOn: "Accent clarity.*"
 - tapOn: "Continue"
 - assertVisible: "How is your English now?"
 - tapOn: "B1 · Intermediate.*"
@@ -28,7 +28,7 @@ name: Own server onboarding
 - tapOn: "Turn on reminders"
 - assertVisible: "Where should Cadence run?"
 - takeScreenshot: 01-where
-- tapOn: "Connect your own Cadence server.*"
+- tapOn: "Connect your own Cadence.*"
 - scrollUntilVisible:
     element: "Scan the code"
 - tapOn: "Scan the code"

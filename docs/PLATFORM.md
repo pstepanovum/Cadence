@@ -50,6 +50,7 @@ Pure TypeScript shared by every client lives in two byte-identical copies:
 | `src/lib/platform/phrase-bank.ts` | `mobile/src/platform/phrase-bank.ts` | phrase and slang records and validators, search, phrase drills and their grading, slang quizzes, result-to-grade mapping, the practice list (section 17) |
 | `src/lib/platform/fossilization.ts` | `mobile/src/platform/fossilization.ts` | the plateau track: evidence, `diagnose`, the diagnostic, `startTrack`, weeks and phases, `dailyDrills`, own sentences, re-tests, `errorProgress` (section 18) |
 | `src/lib/platform/practice-day.ts` | `mobile/src/platform/practice-day.ts` | `buildPracticeDay` (today's advanced drill list) and `spokenSteps` (sections 17, 18 and 20) |
+| `src/lib/platform/goals.ts` | `mobile/src/platform/goals.ts` | the setup's learning goals (one or more, `learningGoals` on the account), `parseGoals`, migration from the older single `practiceFocus` (`goalsFromFocus`, `focusForGoals`), and `goalEmphasis` for the daily plan |
 | `src/lib/platform/recordings.ts` | `mobile/src/platform/recordings.ts` | the recordings index every store keeps, limits and eviction, grouping, and the metadata Plus syncs (section 19) |
 
 Rules, enforced by `tests/platform/drift.test.ts`:
@@ -258,7 +259,7 @@ in the change that brings it in.
 - After sign-in the iOS app calls `Purchases.logIn(uid)` (and `logOut` on
   sign-out), so `app_user_id` is the Firebase uid.
 - Connecting your own Cadence is free forever and open source. In the iOS app
-  it is "Connect your own Cadence server", never presented as a way around
+  it is "Connect your own Cadence", never presented as a way around
   paying. No promo or friend codes anywhere in the native apps.
 
 ---
@@ -494,8 +495,11 @@ own Cadence get them too.
   the weakest sounds (mastery EMA times frequency weight) and the weakest
   grammar points, pick 10-15 minutes: due cards first (at most 5 minutes), then
   one or two sounds, one grammar item, then shadowing or a coach scenario if AI
-  is available. Same function on the device (free, local data) and with synced
-  data (Plus).
+  is available. The learner's goals reorder it: grammar before sounds for a
+  grammar or exam goal (with no sound goal), the coach instead of shadowing for
+  conversation goals, up to 5 minutes of phrase review to sound natural; with
+  no goals the order above is unchanged. Same function on the device (free,
+  local data) and with synced data (Plus).
 - **Spoken grammar feedback.** After transcription, the analyzer gets the
   transcript and a candidate list of grammar point ids for the learner's level,
   and returns `{issues: [{quote, corrected, grammarPointId, note}]}`. The server

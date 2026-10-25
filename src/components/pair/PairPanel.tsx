@@ -126,7 +126,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
         </p>
         <ol className="mt-5 space-y-2 text-base leading-7 text-iron-grey">
           <li>1. Open Cadence on your phone.</li>
-          <li>2. Choose <strong>Connect your own Cadence server</strong>.</li>
+          <li>2. Choose <strong>Connect your own Cadence</strong>.</li>
           <li>3. Point the camera at the code. Done.</li>
         </ol>
 

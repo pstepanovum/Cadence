@@ -1,4 +1,4 @@
-# First run choosing Cadence cloud: a free account against the Auth
+# First run choosing Cadence Cloud: a free account against the Auth
 # emulator, then the Plus step with store prices and Restore purchases.
 # env: EMAIL, PASSWORD
 appId: dev.pstepanov.cadence
@@ -11,13 +11,13 @@ name: Cloud onboarding
       notifications: allow
       microphone: allow
 - tapOn: "Skip"
-- tapOn: "Better grammar.*"
+- tapOn: "Grammar precision.*"
 - tapOn: "Continue"
 - tapOn: "C1 · Advanced.*"
 - tapOn: "Continue"
 - tapOn: "Continue"
 - tapOn: "Not now"
-- tapOn: "Cadence cloud.*"
+- tapOn: "Cadence Cloud.*"
 - tapOn: "Continue"
 - assertVisible: "Create your free account"
 - assertNotVisible: "Not now"
@@ -26,12 +26,15 @@ name: Cloud onboarding
 - inputText: ${EMAIL}
 - tapOn:
     id: "account-password"
-- inputText: ${PASSWORD}
-- hideKeyboard
-# Closing the keyboard may already have submitted the form.
+# iOS may offer a strong password for a new-password field; type our own.
 - tapOn:
-    text: "Create account"
+    text: "Choose My Own Password"
     optional: true
+- inputText: ${PASSWORD}
+# Tapping the page's heading closes the keyboard.
+- tapOn: "Create your free account"
+- tapOn: "Create account"
+- runFlow: subflows/decline-save-password.yaml
 # A new account moves straight on to Plus.
 - extendedWaitUntil:
     visible: "Practise with AI anywhere"
@@ -46,6 +49,7 @@ name: Cloud onboarding
 - takeScreenshot: 06-paywall
 - tapOn: "Restore purchases"
 - assertVisible: "No Plus subscription found.*"
+- runFlow: subflows/decline-save-password.yaml
 - tapOn: "Not now"
 - extendedWaitUntil:
     visible: "Hi .*"

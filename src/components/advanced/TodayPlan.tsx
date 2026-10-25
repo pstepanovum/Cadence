@@ -13,6 +13,7 @@ import { loadSoundStore } from "@/components/mouth-map/sound-store";
 import { Button } from "@/components/ui/button";
 import { buildDailyPlan, type PlanItem } from "@/lib/platform/daily-plan.ts";
 import { dailyDrills, retestDue } from "@/lib/platform/fossilization.ts";
+import type { LearningGoal } from "@/lib/platform/goals.ts";
 import { buildPracticeDay } from "@/lib/platform/practice-day.ts";
 import { useAdvancedContent } from "./content";
 import { syncAdvanced, today, useAdvancedState } from "./store";
@@ -41,7 +42,8 @@ function planLabel(item: PlanItem): { title: string; href: string } {
   }
 }
 
-export function TodayPlan() {
+/** `goals` are the account's (or the older focus's), so the plan leads with what the learner asked for. */
+export function TodayPlan({ goals = [] }: { goals?: readonly LearningGoal[] }) {
   const content = useAdvancedContent();
   const state = useAdvancedState();
   useEffect(() => {
@@ -74,9 +76,10 @@ export function TodayPlan() {
       aiAvailable: false,
       plateau: state.track ? { steps: dailyDrills(state.track, content.errors, day).length, retestDue: retestDue(state.track, day) !== null } : null,
       dueItems: Object.entries(state.cards).map(([itemId, c]) => ({ itemId, due: c.due })).filter((c) => c.due),
+      goals,
     });
     return { practice, plan };
-  }, [content, state, day]);
+  }, [content, state, day, goals]);
 
   if (!content || !result) return <Loading label="Building today" />;
   const { practice, plan } = result;

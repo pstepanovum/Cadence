@@ -6,7 +6,9 @@
 // phrases and slang due for review (at most 3 minutes), then one or two weak
 // sounds, one weak grammar point, then shadowing or a
 // coach scenario when AI is available, topped up with a lesson at the
-// learner's level. The same function runs on the device with local data
+// learner's level. The learner's goals (goals.ts) reorder it: grammar
+// before sounds for grammar and exam goals, the coach before shadowing for
+// conversation goals, a longer phrase review for sounding natural. The same function runs on the device with local data
 // (free) and with synced data (Plus). Pure and deterministic: the same input
 // in any order gives the same plan.
 //
@@ -14,6 +16,7 @@
 // checked by tests/platform/drift.test.ts.
 
 import type { CefrLevel } from "./content-model.ts";
+import { goalEmphasis, type LearningGoal } from "./goals.ts";
 import { DEFAULT_LEVEL } from "./levels.ts";
 
 /** What the planner knows about the learner today. */
@@ -36,6 +39,8 @@ export interface PlanInput {
   plateau?: { steps: number; retestDue: boolean } | null;
   /** Phrase-bank and slang items due for review, plus anything assigned to the practice list. */
   dueItems?: readonly { itemId: string; due: string }[];
+  /** What the learner said they are working towards; none keeps the default order. */
+  goals?: readonly LearningGoal[];
 }
 
 export type PlanItem =
@@ -67,6 +72,8 @@ const PLATEAU_MINUTES = 4;
 const RETEST_MINUTES = 5;
 const ITEM_SECONDS = 30;
 const ITEMS_MAX_MINUTES = 3;
+/** The phrase review's ceiling for a learner who wants to sound natural. */
+const ITEMS_MAX_MINUTES_PHRASES = 5;
 /** Below this a sound or grammar point counts as weak. */
 const WEAK_BELOW = 80;
 
@@ -89,6 +96,8 @@ export function weakGrammar(input: Pick<PlanInput, "grammar">) {
 export function buildDailyPlan(input: PlanInput): DailyPlan {
   const items: PlanItem[] = [];
   const total = () => items.reduce((sum, item) => sum + item.minutes, 0);
+  const emphasis = goalEmphasis(input.goals ?? []);
+  const itemsMax = emphasis.phrases ? ITEMS_MAX_MINUTES_PHRASES : ITEMS_MAX_MINUTES;
 
   // Due cards, most overdue first, at most five minutes of them.
   const cards = input.dueCards
@@ -102,15 +111,23 @@ export function buildDailyPlan(input: PlanInput): DailyPlan {
     items.push({ kind: "plateau", retest: input.plateau.retestDue, minutes: input.plateau.retestDue ? RETEST_MINUTES : PLATEAU_MINUTES });
   }
 
-  // Phrases and slang due for review, most overdue first, at most three minutes.
+  // Phrases and slang due for review, most overdue first, at most three minutes (five to sound natural).
   const due = (input.dueItems ?? [])
     .filter((item) => item.due <= input.today)
     .sort((a, b) => byText(a.due, b.due) || byText(a.itemId, b.itemId))
-    .slice(0, Math.floor((ITEMS_MAX_MINUTES * 60) / ITEM_SECONDS));
+    .slice(0, Math.floor((itemsMax * 60) / ITEM_SECONDS));
   if (due.length && total() + 1 <= PLAN_MAX_MINUTES) {
     const minutes = Math.min(PLAN_MAX_MINUTES - total(), Math.max(1, Math.ceil((due.length * ITEM_SECONDS) / 60)));
     items.push({ kind: "phrases", itemIds: due.slice(0, Math.floor((minutes * 60) / ITEM_SECONDS)).map((item) => item.itemId), minutes });
   }
+
+  // Grammar and exam goals (without a sound goal) take the grammar point before the sounds.
+  const grammar = weakGrammar(input)[0];
+  const grammarFirst = emphasis.grammar && !emphasis.sounds;
+  const addGrammar = () => {
+    if (grammar && total() + GRAMMAR_MINUTES <= PLAN_MAX_MINUTES) items.push({ kind: "grammar", grammarPointId: grammar.grammarPointId, minutes: GRAMMAR_MINUTES });
+  };
+  if (grammarFirst) addGrammar();
 
   // One or two sounds: the second only while it leaves room for grammar.
   const sounds = weakSounds(input);
@@ -120,11 +137,12 @@ export function buildDailyPlan(input: PlanInput): DailyPlan {
     items.push({ kind: "sound", soundId: sound.soundId, minutes: SOUND_MINUTES });
   }
 
-  const grammar = weakGrammar(input)[0];
-  if (grammar && total() + GRAMMAR_MINUTES <= PLAN_MAX_MINUTES) items.push({ kind: "grammar", grammarPointId: grammar.grammarPointId, minutes: GRAMMAR_MINUTES });
+  if (!grammarFirst) addGrammar();
 
+  // Conversation goals (without a sound goal) talk with the coach rather than shadow.
   if (input.aiAvailable) {
-    const ai: PlanItem = sounds.length ? { kind: "shadowing", soundId: sounds[0].soundId, minutes: SHADOWING_MINUTES } : { kind: "coach", minutes: COACH_MINUTES };
+    const shadow = sounds.length > 0 && !(emphasis.conversation && !emphasis.sounds);
+    const ai: PlanItem = shadow ? { kind: "shadowing", soundId: sounds[0].soundId, minutes: SHADOWING_MINUTES } : { kind: "coach", minutes: COACH_MINUTES };
     if (total() + ai.minutes <= PLAN_MAX_MINUTES) items.push(ai);
   }
 

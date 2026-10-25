@@ -24,12 +24,15 @@ that does.
 ## What's included
 
 - **First run** — one question a screen (`src/components/onboarding/`, rules in
-  `src/onboarding/flow.ts`): welcome slides, the goal, the level (all six,
+  `src/onboarding/flow.ts`): welcome slides, the goals (one or more, from the
+  shared `src/platform/goals.ts`; stored on the account as `learningGoals` and
+  read by the daily plan and Home's and Play's suggestions), the level (all six,
   C2 first, each with approximate IELTS and TOEFL iBT equivalents, or the
   adaptive placement test), the daily goal (5, 10, 15 or 20 minutes), a
   reminder time (iOS's notification prompt appears only when reminders are
-  turned on), where to practise ("Connect your own Cadence server", free, or
-  Cadence cloud), an account (optional with your own server, needed for the
+  turned on), where Cadence runs (Cadence Cloud first and chosen by default,
+  with Plus for AI everywhere and sync; or "Connect your own Cadence" for
+  Cadence on the learner's own computer), an account (optional with your own server, needed for the
   cloud; the news checkbox starts unticked) and, on the cloud path only, Plus
   with "Not now". Each step is saved on the phone, so a closed app resumes
   where it stopped; it never shows twice, and Settings > Run setup again walks
