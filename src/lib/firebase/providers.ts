@@ -47,8 +47,15 @@ import {
 
 export type ProviderMethod = Extract<SignInMethod, "apple.com" | "google.com">;
 
-/** Both are offered on the web; the lead turns them on in the Firebase console. */
-export const WEB_PROVIDERS = providerButtons("web", { apple: true, google: true }) as ProviderMethod[];
+/**
+ * Google is always offered on the web. Apple on the web needs a Services ID
+ * and key in the Firebase Apple provider (native iOS does not), so it shows
+ * only once NEXT_PUBLIC_APPLE_WEB_SIGNIN=1 is set at build time.
+ */
+export const WEB_PROVIDERS = providerButtons("web", {
+  apple: process.env.NEXT_PUBLIC_APPLE_WEB_SIGNIN === "1",
+  google: true,
+}) as ProviderMethod[];
 
 const PENDING_KEY = "cadence.pendingLink";
 const REDIRECT_KEY = "cadence.authRedirect";
