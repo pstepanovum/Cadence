@@ -4,7 +4,7 @@
 import { useEffect, useRef } from "react";
 
 import { useAuth } from "@/context/auth";
-import { levelPrefs, placementSeen, useLevelPrefs } from "@/learning/level-store";
+import { levelPrefs, placementSeen, useLevelPrefs, usePlacementSeen } from "@/learning/level-store";
 import { newerLevelPrefs, type LevelPrefs } from "@/platform/levels";
 import { decodeSeen, encodeSeen, mergeSeen } from "@/platform/placement";
 
@@ -18,7 +18,7 @@ export * from "@/learning/level-store";
 export function useLevelSync(): void {
   const { user, profile, profileReady, updateProfile } = useAuth();
   const local = useLevelPrefs();
-  const seen = placementSeen.use();
+  const seen = usePlacementSeen();
   const pushing = useRef(false);
   const remoteLevels = profile.levels ?? null;
   const remoteSeen = profile.placementSeen ?? "";

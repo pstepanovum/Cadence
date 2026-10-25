@@ -17,6 +17,13 @@ export const placementSeen = storedValue<string>("cadence.placement.seen.v1", (r
 
 export const useLevelPrefs = levelPrefs.use;
 
+/**
+ * Named as a hook on purpose: the React Compiler treats a call like
+ * `placementSeen.use()` as a plain value, memoises it, and skips the hook on
+ * later renders, which breaks the hook order of whatever calls it.
+ */
+export const usePlacementSeen = placementSeen.use;
+
 /** The level one skill practises at right now, outside React (API calls). */
 export function currentLevel(skill?: LevelSkill): CefrLevel {
   return levelFor(levelPrefs.get(), skill);
