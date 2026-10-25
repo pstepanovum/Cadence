@@ -290,8 +290,10 @@ profile on the first run; the App Store Connect record has to exist before `ios:
 accepted.
 
 **Decide on `.env` first.** `EXPO_PUBLIC_*` values are baked into the JS bundle at archive time.
-A build made without them is a local-pairing build: it works, and the connect screen simply does
-not offer Cadence Cloud. To ship cloud as well, fill in all five values from `.env.example`.
+A build made without them cannot sign anyone up: the app hides Cadence Cloud. `npm run ios:archive`
+therefore refuses to archive unless all five values from `.env.example` are set (export them, or
+keep them in `.env`), and checks that the archived bundle carries the Firebase project. For a
+deliberate pairing-only build, set `CADENCE_LOCAL_ONLY_BUILD=1`.
 `EXPO_PUBLIC_API_URL` must then point at a host the phone can reach from anywhere, not a LAN
 address: a LAN IP works on your own Wi-Fi and nowhere else, and a reviewer cannot reach it at all.
 

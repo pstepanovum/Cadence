@@ -63,7 +63,7 @@ function checkArchivedBundle() {
     console.error("No main.jsbundle in the archive; cannot check it for test values.");
     process.exit(1);
   }
-  const problems = bundleProblems(readFileSync(bundle, "latin1"));
+  const problems = bundleProblems(readFileSync(bundle, "latin1"), { projectId: bundlingEnv().EXPO_PUBLIC_FIREBASE_PROJECT_ID });
   if (problems.length === 0) return;
   console.error("The archived app was built with test values and must not be uploaded:");
   for (const problem of problems) console.error(`  - ${problem}`);

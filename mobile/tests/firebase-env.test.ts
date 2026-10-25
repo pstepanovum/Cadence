@@ -33,13 +33,22 @@ describe("authTarget", () => {
 });
 
 describe("releaseEnvProblems", () => {
-  it("accepts a store build's values, and an empty local-pairing build", () => {
+  it("accepts a store build's values, and a pairing-only build only when it says so", () => {
     assert.deepEqual(releaseEnvProblems(STORE_ENV), []);
-    assert.deepEqual(releaseEnvProblems({}), []);
+    assert.deepEqual(releaseEnvProblems({ CADENCE_LOCAL_ONLY_BUILD: "1" }), []);
+    assert.match(releaseEnvProblems({})[0], /could not sign up/);
+  });
+
+  it("refuses a half set up cloud, which hides sign-up", () => {
+    const { EXPO_PUBLIC_FIREBASE_PROJECT_ID: _project, EXPO_PUBLIC_FIREBASE_APP_ID: _app, ...partial } = STORE_ENV;
+    const problems = releaseEnvProblems(partial);
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /EXPO_PUBLIC_FIREBASE_PROJECT_ID, EXPO_PUBLIC_FIREBASE_APP_ID are missing/);
   });
 
   it("refuses the e2e environment", () => {
     const problems = releaseEnvProblems({
+      ...STORE_ENV,
       EXPO_PUBLIC_API_URL: "http://127.0.0.1:3000",
       EXPO_PUBLIC_FIREBASE_PROJECT_ID: "demo-cadence",
       EXPO_PUBLIC_FIREBASE_AUTH_EMULATOR: "127.0.0.1:9099",
@@ -71,6 +80,11 @@ describe("bundleProblems", () => {
   it("finds an inlined emulator address or test project", () => {
     assert.equal(bundleProblems('connect("http://127.0.0.1:9099")').length, 1);
     assert.equal(bundleProblems('authDomain:"demo-cadence.firebaseapp.com"').length, 1);
+  });
+
+  it("finds a bundle built without the Firebase project", () => {
+    assert.match(bundleProblems('apiUrl:"https://cadence.pstepanov.dev"', { projectId: "cadence-pstepanov" })[0], /cadence-pstepanov/);
+    assert.deepEqual(bundleProblems('projectId:"cadence-pstepanov"', { projectId: "cadence-pstepanov" }), []);
   });
 
   it("passes a clean bundle that only mentions the rule", () => {
