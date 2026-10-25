@@ -33,6 +33,8 @@ export interface QueueInput<Id extends TemplateId> {
   uid?: string;
   /** A fixed address: the old address on an email change, a newsletter signup. */
   to?: string;
+  /** Replies go here instead of the support inbox (a support request replies to its writer). */
+  replyTo?: { email: string; name?: string };
 }
 
 export function mailKey(...parts: string[]): string {
@@ -46,6 +48,7 @@ function record<Id extends TemplateId>(input: QueueInput<Id>, now: number) {
     props: JSON.parse(JSON.stringify(input.props ?? {})) as Record<string, unknown>,
     uid: input.uid ?? null,
     to: input.to ?? null,
+    ...(input.replyTo ? { replyTo: input.replyTo.name ? { email: input.replyTo.email, name: input.replyTo.name } : { email: input.replyTo.email } } : {}),
     status: "pending",
     attempts: 0,
     createdAt: FieldValue.serverTimestamp(),
@@ -141,8 +144,16 @@ export async function deliverMail(key: string, deps: DeliverDeps = {}): Promise<
       props.unsubscribeUrl = unsubscribeUrl(subject, entry.list, appOrigin(deps.env), deps.env);
     }
     const email = renderTemplate(template, props as never);
+    const replyTo = claimed.replyTo as { email?: unknown; name?: unknown } | undefined;
     await sendEmail(
-      { to: { email: to }, email, tags: [template], idempotencyKey: key, unsubscribeUrl: props.unsubscribeUrl as string | undefined },
+      {
+        to: { email: to },
+        email,
+        tags: [template],
+        idempotencyKey: key,
+        unsubscribeUrl: props.unsubscribeUrl as string | undefined,
+        ...(typeof replyTo?.email === "string" ? { replyTo: { email: replyTo.email, ...(typeof replyTo.name === "string" ? { name: replyTo.name } : {}) } } : {}),
+      },
       deps,
     );
     await finish("sent", { sentAt: now });

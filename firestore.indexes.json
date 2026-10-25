@@ -15,6 +15,14 @@
         { "fieldPath": "ended", "order": "ASCENDING" },
         { "fieldPath": "lessonId", "order": "ASCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "supportRequests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
     }
   ],
   "fieldOverrides": [
@@ -33,6 +41,16 @@
     {
       "collectionGroup": "inbox",
       "fieldPath": "updatedAt",
+      "indexes": [
+        { "order": "ASCENDING", "queryScope": "COLLECTION" },
+        { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }
+      ]
+    },
+    { "collectionGroup": "supportRequests", "fieldPath": "message", "indexes": [] },
+    { "collectionGroup": "supportRequests", "fieldPath": "replies", "indexes": [] },
+    {
+      "collectionGroup": "redemptions",
+      "fieldPath": "uid",
       "indexes": [
         { "order": "ASCENDING", "queryScope": "COLLECTION" },
         { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }

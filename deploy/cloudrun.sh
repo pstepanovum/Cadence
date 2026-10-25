@@ -33,7 +33,7 @@ AI_SA="cadence-ai@${PROJECT}.iam.gserviceaccount.com"
 TTS_BUCKET="${TTS_BUCKET:-${PROJECT}-tts-cache}"
 ORIGIN="https://cadence.pstepanov.dev"
 
-SECRETS=(stripe-secret-key stripe-webhook-secret revenuecat-webhook-secret revenuecat-api-key brevo-api-key quiz-token-secret email-unsubscribe-secret jobs-secret oauth-known-clients)
+SECRETS=(stripe-secret-key stripe-webhook-secret revenuecat-webhook-secret revenuecat-api-key brevo-api-key quiz-token-secret email-unsubscribe-secret jobs-secret oauth-known-clients admin-secret)
 
 run() {
   if [[ "${DRY_RUN:-}" == "1" ]]; then
@@ -109,7 +109,7 @@ deploy_web() {
   if [[ -z "$ai_url" && "${DRY_RUN:-}" != "1" ]]; then
     ai_url="$(gcloud run services describe cadence-ai --project "$PROJECT" --region "$REGION" --format 'value(status.url)')"
   fi
-  local secrets="STRIPE_SECRET_KEY=stripe-secret-key:latest,STRIPE_WEBHOOK_SECRET=stripe-webhook-secret:latest,REVENUECAT_WEBHOOK_SECRET=revenuecat-webhook-secret:latest,REVENUECAT_API_KEY=revenuecat-api-key:latest,BREVO_API_KEY=brevo-api-key:latest,QUIZ_TOKEN_SECRET=quiz-token-secret:latest,EMAIL_UNSUBSCRIBE_SECRET=email-unsubscribe-secret:latest,JOBS_SECRET=jobs-secret:latest,OAUTH_KNOWN_CLIENTS=oauth-known-clients:latest"
+  local secrets="STRIPE_SECRET_KEY=stripe-secret-key:latest,STRIPE_WEBHOOK_SECRET=stripe-webhook-secret:latest,REVENUECAT_WEBHOOK_SECRET=revenuecat-webhook-secret:latest,REVENUECAT_API_KEY=revenuecat-api-key:latest,BREVO_API_KEY=brevo-api-key:latest,QUIZ_TOKEN_SECRET=quiz-token-secret:latest,EMAIL_UNSUBSCRIBE_SECRET=email-unsubscribe-secret:latest,JOBS_SECRET=jobs-secret:latest,OAUTH_KNOWN_CLIENTS=oauth-known-clients:latest,ADMIN_SECRET=admin-secret:latest"
   local env="CADENCE_DEPLOYMENT=cloud,CADENCE_PUBLIC_ORIGIN=${ORIGIN},OAUTH_ISSUER=${ORIGIN},FIREBASE_PROJECT_ID=${PROJECT},APP_CHECK_ENFORCE=${APP_CHECK_ENFORCE:-1},AI_DAILY_BUDGET_USD=${AI_DAILY_BUDGET_USD:-25},CADENCE_AI_URL=${ai_url},ENGINE_SCORER=cloud-run,ENGINE_TRANSCRIBER=${ENGINE_TRANSCRIBER:-gemini},ENGINE_TTS=google-tts,ENGINE_COACH=gemini,ENGINE_GRAMMAR=gemini,GEMINI_BACKEND=vertex,VERTEX_REGION=${REGION},TTS_CACHE_BUCKET=${TTS_BUCKET},BREVO_DOI_TEMPLATE_ID=${BREVO_DOI_TEMPLATE_ID:-},ENGINE_AUTH=google-id-token,TRUSTED_PROXY_HOPS=${TRUSTED_PROXY_HOPS:-2}"
 
   # Public, scale to zero, at most 10 instances of 80 requests each. All

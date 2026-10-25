@@ -222,7 +222,18 @@ in the change that brings it in.
   `users/{uid}.plusSources.<stripe|app_store>` (a `PlusRecord`:
   `{active, source, productId, expiresAt, willRenew, updatedAt}`) and, in the
   same transaction, `users/{uid}.plus = resolvePlus(plusSources, now)`. Plus
-  if either source is active and its period has not ended.
+  if any source is active and its period has not ended.
+- **Friend codes** are the third source, `plusSources.code` (productId
+  `dev.pstepanov.cadence.plus.code`, `willRenew` false, plus the `codeId`
+  that wrote it), written by `src/lib/server/codes/store.ts` in the same kind
+  of transaction, so `resolvePlus` still decides alone. A code gives a whole
+  number of days, 1 to 730, never Plus for life; redeeming extends a running
+  code grant and never touches a purchase; when the code is the only active
+  source, `detailPurgeAt` is set to 90 days after it ends. Codes are made on
+  the owner's dashboard (pstepanov.dev/dashboard/apps/cadence) through
+  `/api/admin/codes` with `ADMIN_SECRET`, and redeemed only on the website's
+  `/redeem` (`/api/codes/redeem`, signed in, ten tries an hour). The iPhone
+  app never mentions or takes codes.
 - Clients never write entitlement. They read `plus` from `GET /api/me` and,
   on iOS, use RevenueCat's customer info only to update the UI immediately
   after a purchase; the server stays authoritative.
@@ -257,6 +268,8 @@ reads.
 | `mailQueue/{key}` | server | template, recipient uid, data, status; `key` makes it exactly-once | written by events |
 | `oauthClients`, `oauthCodes`, `oauthTokens`, `oauthGrants` | MCP | as the portfolio's `lib/oauth`; tokens as SHA-256 digests | per MCP call |
 | `rateLimits/{key}` | server | fixed-window counters with `expireAt` (TTL) | per limited call |
+| `friendCodes/{sha256}` | server | a friend code: label, `durationDays`, `maxRedemptions`, `redemptions`, redeem-by `expiresAt`, `disabled`; `redemptions/{uid}` beneath it (uid, email, when, grant end, `revokedAt?`; deleted with the account) | per redemption |
+| `supportRequests/{id}` | server | a contact-form message: email, name, topic, message, platform, user agent, `uid?`, `status` (open, answered, closed), `replies[]`; deleted with the account when it has a uid | per message |
 | `deletions/{uid}` | server | account deletion steps done, retried by the daily job; no address once finished | on deletion |
 
 `users/{uid}` also holds `emailPrefs` (`reminders`, `newsletter`; reminders are
@@ -312,7 +325,16 @@ in an hour sends one `suspicious-activity` a day); `GET /api/account/export`,
 `DELETE /api/account`, `POST /api/account/email` `{newEmail}`,
 `GET`/`DELETE /api/account/connections` (MCP grants); `POST /api/newsletter`
 `{email, consent}` or `{subscribed}`; `GET`/`POST /api/email/unsubscribe`;
-`POST /api/ai/grammar-feedback`, `POST /api/ai/placement`. `PUT /api/devices`
+`POST /api/ai/grammar-feedback`, `POST /api/ai/placement`; `POST /api/support`
+`{email, topic, message, name?, platform?}` (the contact form: honeypot
+`website`, five an hour per IP and ten a day per address, a signed-in
+writer's uid attached, kept in `supportRequests` and queued as
+`support-request` to `SUPPORT_INBOX` with the writer as reply-to);
+`GET`/`POST /api/codes/redeem` (friend codes, section 4.2). The owner's
+dashboard calls `GET`/`POST`/`PATCH /api/admin/codes` (the contract every
+app it manages shares: list, create, disable or enable, revoke) and
+`GET`/`PATCH`/`POST /api/admin/support` (list by status, set status, reply
+by email as `support-reply`), all with `Authorization: Bearer <ADMIN_SECRET>`. `PUT /api/devices`
 `{installId, expoPushToken, platform, timeZone}` and `DELETE /api/devices?installId=`
 keep a phone's push token (free and Plus); `POST /api/jobs/push` (job secret,
 `{uids, title, body, url}`) is the stub future campaigns send through
@@ -620,8 +642,10 @@ Templates: account (`welcome`, `verify-email`, `password-reset`,
 billing (`plus-welcome`, `trial-started`, `trial-ending` for web trials only,
 `payment-receipt`, `billing-issue`, `plus-canceled`, `plus-ended`,
 `plan-changed`, `refund-issued`), security (`mcp-authorized`, `device-paired`,
-`suspicious-activity`) and opt-in (`streak-at-risk`, `weekly-summary`,
-`badge-earned`, `inactive-nudge`, `newsletter-confirm`, `newsletter-welcome`).
+`suspicious-activity`), support (`support-request` to the inbox with the
+writer as reply-to, `support-reply` to the writer) and opt-in
+(`streak-at-risk`, `weekly-summary`, `badge-earned`, `inactive-nudge`,
+`newsletter-confirm`, `newsletter-welcome`).
 
 Design: tables, at most 560 px, the hosted 2x logo PNG with alt text, one
 accent (hunter green, yellow-green in dark mode), Funnel Display through one
@@ -700,7 +724,8 @@ Cloud Scheduler ──▶ cadence-web /api/jobs/daily (17:00 UTC), /api/jobs/mai
 - **Secrets** (Secret Manager, mounted as env): `STRIPE_SECRET_KEY`,
   `STRIPE_WEBHOOK_SECRET`, `REVENUECAT_WEBHOOK_SECRET`, `REVENUECAT_API_KEY`,
   `BREVO_API_KEY`, `QUIZ_TOKEN_SECRET`, `EMAIL_UNSUBSCRIBE_SECRET`,
-  `JOBS_SECRET`. Settings in `deploy/cadence-web.env.example`.
+  `JOBS_SECRET`, `ADMIN_SECRET` (the owner's dashboard holds the same value
+  as `CADENCE_ADMIN_SECRET`). Settings in `deploy/cadence-web.env.example`.
   The repo never holds a secret.
 
 ---
@@ -857,6 +882,8 @@ and, when signed in, the Firebase ID token.
 | `/newsletter`, footer, sign-up box, `/account` switch | `POST /api/newsletter {email, source, consent: true, platform}` (Brevo double opt-in, list 5); Brevo's confirmation lands on `/api/newsletter/confirmed`, which redirects to `/newsletter/confirmed`; the account switch turns it off with `DELETE /api/newsletter` (**Open**: not built yet; the page points to the unsubscribe link meanwhile) |
 | `/pricing`, `/checkout?plan=`, `/account` | `POST /api/billing/checkout {interval}` and `POST /api/billing/portal`, both `{url}`; Plus status from `GET /api/me` |
 | `/account` | `GET /api/account/export`; `DELETE /api/account` after re-entering the password |
+| `/contact` | `POST /api/support` (the form; `/support` holds the quick answers and links here) |
+| `/redeem?code=` | `GET /api/codes/redeem?code=` once for a code from a link, then `POST /api/codes/redeem {code}`; web only, never linked from the iPhone app |
 | `/practice/*`, `/grammar/*` | packs from `/packs` (built-in starter pack per level until they exist); each round is `POST /api/sync/summary {activities}` when signed in |
 | `/practice`, every flashcard review | `src/components/learn-hub/sync.ts`: `GET`/`DELETE /api/sync/inbox` for every account (connector cards join the deck); with Plus, `POST /api/sync/import` once per browser, then `POST /api/sync/push` a few seconds after reviews and `GET /api/sync/pull?since=`, last writer wins per card (the phone's body shapes, `sync-logic.ts`) |
 | AI calls (assess, transcribe, coach, voices) | `{ai: true}`: a refusal (`needs_plus`, `daily_limit`, …) opens one banner offering "Connect your own Cadence" and Plus |
@@ -867,7 +894,9 @@ and, when signed in, the Firebase ID token.
 links each sound to its page with a "Record again" link back, and records the
 scores on the device for "sounds to fix" (`src/components/mouth-map/sound-practice.ts`).
 `/connect-phone` shows the pairing QR when the browser holds the pairing key,
-otherwise the steps. `/connector` explains adding the MCP connector. Dark mode
+otherwise the steps. `/connector` explains adding the MCP connector,
+`/download` the desktop builds and the iPhone app (`NEXT_PUBLIC_APP_STORE_URL`
+once it is live), and `/credits` the credits and licences from `CREDITS.md`. Dark mode
 follows the system or the `cadence_theme` cookie; `public/sw.js` keeps packs
 offline.
 
@@ -909,6 +938,7 @@ commands.
 | Webhooks | same run (`tests/server/emulator/webhooks.test.ts`), plus `node scripts/webhooks/replay-stripe.mjs --twice` and `node scripts/webhooks/replay-revenuecat.mjs --twice` against `pnpm dev` | bad signature or bearer is 400/401; every listed event maps per section 9; replays are `duplicate: true` with no change; `plus` correct with two sources |
 | MCP | same run (`tests/server/emulator/mcp.test.ts`) | no token: 401 with `WWW-Authenticate` and `resource_metadata`; wrong audience: 401; GET and DELETE: 405 after auth; read-only scope cannot call write tools; free account gets the Plus error on Plus tools; every tool's output matches section 8; the 31st call in an hour on free is rate limited |
 | Firestore rules | `firebase emulators:exec --only firestore --project demo-cadence "node --test tests/rules/firestore.test.ts"` (`@firebase/rules-unit-testing`) | every read and write from an unauthenticated and an authenticated client is denied, on every collection in section 5 |
+| Support and friend codes | same run (`tests/server/emulator/support-and-codes.test.ts`); pure rules in `pnpm test` (`tests/server/support-and-codes.test.ts`) | the form stores a request and queues one `support-request` with the writer as reply-to; the honeypot stores nothing; the sixth message in an hour from one IP is 429; admin routes refuse without `ADMIN_SECRET`; a reply queues `support-reply` and marks it answered; codes follow the dashboard contract (201, 409, 415, no lifetime codes, revoke); redeeming writes `plusSources.code` for the code's days and Plus ends with it; a subscription is never touched; ten tries an hour |
 | Python engines | `python3 -m py_compile src/backend/ai-engine/main.py src/backend/coach-engine/main.py` and `cd src/backend/ai-engine && python3 -m pytest` (`pip install -r requirements.test.txt` once) | compile; size, duration and MIME limits refuse bad audio (`audio_limits.py`, the same rules as `engines/audio.ts`) |
 
 ### Web

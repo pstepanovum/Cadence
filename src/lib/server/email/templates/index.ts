@@ -8,6 +8,7 @@ import * as account from "./account";
 import * as billing from "./billing";
 import * as engagement from "./engagement";
 import * as security from "./security";
+import * as support from "./support";
 
 export interface TemplateProps {
   welcome: account.WelcomeProps;
@@ -37,6 +38,8 @@ export interface TemplateProps {
   "inactive-nudge": engagement.InactiveNudgeProps;
   "newsletter-confirm": engagement.NewsletterConfirmProps;
   "newsletter-welcome": engagement.NewsletterWelcomeProps;
+  "support-request": support.SupportRequestProps;
+  "support-reply": support.SupportReplyProps;
 }
 
 export type TemplateId = keyof TemplateProps;
@@ -44,7 +47,7 @@ export type TemplateId = keyof TemplateProps;
 export interface TemplateEntry<Id extends TemplateId> {
   id: Id;
   name: string;
-  group: "account" | "billing" | "security" | "engagement";
+  group: "account" | "billing" | "security" | "engagement" | "support";
   category: EmailCategory;
   /** The list an opt-in template belongs to; its unsubscribe link leaves that list. */
   list?: EmailList;
@@ -84,6 +87,8 @@ export const TEMPLATES: { [Id in TemplateId]: TemplateEntry<Id> } = {
   "inactive-nudge": { id: "inactive-nudge", name: "Inactive nudge", group: "engagement", category: "reminder", list: "reminders", render: engagement.renderInactiveNudge, fixture: { name: "Maria", daysAway: 9, unsubscribeUrl: UNSUB } },
   "newsletter-confirm": { id: "newsletter-confirm", name: "Newsletter confirmation", group: "engagement", category: "transactional", render: engagement.renderNewsletterConfirm, fixture: { confirmUrl: "https://cadence.pstepanov.dev/newsletter/confirmed" } },
   "newsletter-welcome": { id: "newsletter-welcome", name: "Newsletter welcome", group: "engagement", category: "marketing", list: "newsletter", render: engagement.renderNewsletterWelcome, fixture: { unsubscribeUrl: UNSUB } },
+  "support-request": { id: "support-request", name: "Support request (to the inbox)", group: "support", category: "transactional", render: support.renderSupportRequest, fixture: { requestId: "preview", topic: "help", email: "maria@example.com", name: "Maria Lopez", message: "The TH score stays at 60 however I place my tongue.\n\nIs the microphone the problem?", uid: "uid-preview", platform: "web", userAgent: "Safari on macOS", at: T0 } },
+  "support-reply": { id: "support-reply", name: "Support reply", group: "support", category: "transactional", render: support.renderSupportReply, fixture: { name: "Maria Lopez", topic: "help", message: "Try the compare view on the TH page: it shows where the tongue tip should sit.\n\nIf the score still stays flat, send a recording and we'll look.", original: "The TH score stays at 60 however I place my tongue." } },
 };
 
 export const TEMPLATE_IDS = Object.keys(TEMPLATES) as TemplateId[];

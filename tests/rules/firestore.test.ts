@@ -39,6 +39,9 @@ const PATHS = [
   "oauthTokens/t1",
   "oauthGrants/g1",
   "rateLimits/r1",
+  "supportRequests/s1",
+  "friendCodes/c1",
+  "friendCodes/c1/redemptions/u1",
 ];
 
 describe("security rules deny every client", { skip }, () => {

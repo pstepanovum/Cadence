@@ -1,7 +1,9 @@
 // FILE: src/lib/server/entitlement.ts
 //
 // Cadence Plus, server side. The truth is users/{uid}.plusSources.<source>,
-// written only by verified webhooks (src/lib/server/billing/*), and the
+// written only by verified webhooks (src/lib/server/billing/*) and, for
+// source "code", by a friend code redeemed on the website
+// (src/lib/server/codes/store.ts); the
 // resolved users/{uid}.plus = resolvePlus(plusSources) written in the same
 // transaction. Every gate reads `plus` and checks its period against the
 // clock, so a record whose webhook never came still runs out on time.
@@ -26,6 +28,8 @@ export interface StoredPlusRecord extends PlusRecord {
   trial?: boolean;
   /** RevenueCat sandbox (TestFlight, App Review). */
   sandbox?: boolean;
+  /** Source "code" only: the friend code that wrote this grant, so revoking it touches only its own grant. */
+  codeId?: string;
 }
 
 export interface AccountState {
@@ -63,7 +67,7 @@ function millis(value: unknown): number | null {
 export function readPlusRecord(value: unknown): StoredPlusRecord | null {
   if (!value || typeof value !== "object") return null;
   const v = value as Record<string, unknown>;
-  if (v.source !== "stripe" && v.source !== "app_store") return null;
+  if (v.source !== "stripe" && v.source !== "app_store" && v.source !== "code") return null;
   return {
     active: v.active === true,
     source: v.source,
@@ -74,13 +78,14 @@ export function readPlusRecord(value: unknown): StoredPlusRecord | null {
     eventAt: millis(v.eventAt) ?? millis(v.updatedAt) ?? 0,
     ...(v.trial === true ? { trial: true } : {}),
     ...(v.sandbox === true ? { sandbox: true } : {}),
+    ...(typeof v.codeId === "string" ? { codeId: v.codeId } : {}),
   };
 }
 
 export function readAccount(data: DocumentData | undefined, now = Date.now()): AccountState {
   const sources: Partial<Record<PlusSource, StoredPlusRecord>> = {};
   const rawSources = (data?.plusSources ?? {}) as Record<string, unknown>;
-  for (const key of ["stripe", "app_store"] as const) {
+  for (const key of ["stripe", "app_store", "code"] as const) {
     const record = readPlusRecord(rawSources[key]);
     if (record) sources[key] = record;
   }

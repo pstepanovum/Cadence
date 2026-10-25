@@ -15,6 +15,9 @@ export const metadata: Metadata = {
 
 const RELEASES = "https://github.com/pstepanovum/Cadence/releases/latest";
 
+/** Set once the iPhone app is live; until then the card says it is on its way. */
+const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL?.trim() || "";
+
 const platforms = [
   {
     key: "mac",
@@ -111,6 +114,26 @@ export default async function DownloadPage() {
               </div>
             </div>
           ))}
+        </section>
+
+        {/* ── iPhone ── */}
+        <section className="mx-auto flex w-full max-w-3xl flex-col gap-4 rounded-3xl bg-platinum p-8 sm:flex-row sm:items-center">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white">
+            <Image src="/icon/apple.svg" alt="" width={28} height={28} className="h-7 w-7 object-contain" />
+          </div>
+          <div className="flex-1">
+            <h2 className="font-kicker text-2xl text-hunter-green">iPhone</h2>
+            <p className="mt-1 text-sm leading-6 text-iron-grey">
+              Practice anywhere, synced with your account, or paired with Cadence on your computer over Wi-Fi. iOS 16.4 or later.
+            </p>
+          </div>
+          {APP_STORE_URL ? (
+            <Link href={APP_STORE_URL} className="inline-flex min-h-12 items-center justify-center rounded-full bg-hunter-green px-6 text-sm font-semibold text-white hover:brightness-110">
+              App Store
+            </Link>
+          ) : (
+            <span className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-iron-grey">Coming to the App Store</span>
+          )}
         </section>
 
         {/* ── Open source note ── */}

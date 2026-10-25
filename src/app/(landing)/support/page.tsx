@@ -27,6 +27,7 @@ const TOPICS: { title: string; items: { q: string; a: React.ReactNode }[] }[] = 
       { q: "How do I cancel?", a: <>Bought on the web: <Link href="/account" className="underline">account page</Link> › Manage or cancel. Bought on iPhone: Settings › your name › Subscriptions › Cadence. Plus stays on until the end of the paid period.</> },
       { q: "How do I get a refund?", a: <>For the web, email us. For iPhone purchases, Apple handles refunds at reportaproblem.apple.com.</> },
       { q: "I subscribed on iPhone; why does the website not show Plus?", a: <>Sign in with the same account on both. Plus follows your account wherever you bought it. On iPhone, Restore Purchases in the app fixes a subscription that did not attach.</> },
+      { q: "I have a code from a friend.", a: <>Redeem it on the website at <Link href="/redeem" className="underline">Redeem a code</Link>, signed in. Plus turns on for that account everywhere and ends by itself.</> },
       { q: "It says the daily limit is reached.", a: <>Plus includes generous daily cloud AI limits that reset at midnight UTC. Your own Cadence on your computer has no limit.</> },
     ],
   },
@@ -50,13 +51,13 @@ export default function SupportPage() {
   return (
     <PageShell>
       <PageIntro eyebrow="Support" title="How can we help?">
-        Most answers are below. If not, email us and a person replies, usually within two working days.
+        Most answers are below. If not, write to us and a person replies, usually within two working days.
       </PageIntro>
       <section className="grid gap-4 md:grid-cols-2">
         <Card className="bg-white">
-          <h2 className="font-kicker text-xl text-hunter-green">Email</h2>
-          <p className="mt-1 text-sm leading-6 text-iron-grey">Accounts, billing, privacy requests, anything else.</p>
-          <Button href={`mailto:${SUPPORT_EMAIL}`} className="mt-4">{SUPPORT_EMAIL}</Button>
+          <h2 className="font-kicker text-xl text-hunter-green">Write to us</h2>
+          <p className="mt-1 text-sm leading-6 text-iron-grey">Accounts, billing, privacy requests, anything else. Or email {SUPPORT_EMAIL}.</p>
+          <Button href="/contact" className="mt-4">Contact support</Button>
         </Card>
         <Card className="bg-white">
           <h2 className="font-kicker text-xl text-hunter-green">Bugs and ideas</h2>

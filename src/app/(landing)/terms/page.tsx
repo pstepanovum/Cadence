@@ -39,6 +39,11 @@ const sections: LegalSection[] = [
     ),
   },
   {
+    id: "codes",
+    title: "Friend codes",
+    body: <p>A friend code gives Cadence Plus free for the time it names, on the account that redeems it on the website, and then ends without charge. Each code has a redemption limit and may have a last day to redeem it. Codes have no cash value, cannot be exchanged or combined into a lifetime plan, and may be turned off if they are sold or misused.</p>,
+  },
+  {
     id: "use",
     title: "Acceptable use",
     body: (

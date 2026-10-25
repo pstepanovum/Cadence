@@ -74,6 +74,7 @@ function PlusCard({ me }: { me: Me | null | undefined }) {
   }
 
   const fromAppStore = plus?.source === "app_store";
+  const fromCode = plus?.source === "code";
   return (
     <Card className="bg-hunter-green text-white">
       <p className="eyebrow text-sm text-yellow-green">Your plan</p>
@@ -87,10 +88,10 @@ function PlusCard({ me }: { me: Me | null | undefined }) {
             ? `Renews on ${dateFormat(plus.expiresAt)}.`
             : `Ends on ${dateFormat(plus.expiresAt)}. It will not renew.`
           : "Active."}{" "}
-        {fromAppStore ? "Bought on iPhone." : "Billed by Stripe."}
+        {fromCode ? "From a code: nothing is billed." : fromAppStore ? "Bought on iPhone." : "Billed by Stripe."}
       </p>
       <div className="mt-4">
-        {fromAppStore ? (
+        {fromCode ? null : fromAppStore ? (
           <p className="text-sm text-white/85">Manage or cancel it on your iPhone: Settings › your name › Subscriptions.</p>
         ) : (
           <PortalButton label="Manage or cancel" />

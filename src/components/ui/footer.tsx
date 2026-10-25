@@ -23,6 +23,7 @@ const footerSections = [
       { label: "Pricing", href: "/pricing" },
       { label: "Download", href: "/download" },
       { label: "Connect an AI app", href: "/connector" },
+      { label: "Redeem a code", href: "/redeem" },
       { label: "Run it yourself", href: GITHUB_URL },
     ],
   },
@@ -30,9 +31,11 @@ const footerSections = [
     title: "Support",
     links: [
       { label: "Support", href: "/support" },
+      { label: "Contact", href: "/contact" },
       { label: "Newsletter", href: "/newsletter" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
+      { label: "Credits and licences", href: "/credits" },
     ],
   },
 ];
@@ -81,6 +84,7 @@ export function Footer() {
               <Link href="/support" className="hover:text-white">Support</Link>
               <Link href="/privacy" className="hover:text-white">Privacy</Link>
               <Link href="/terms" className="hover:text-white">Terms</Link>
+              <Link href="/credits" className="hover:text-white">Credits</Link>
               <PrivacyChoicesModal />
             </div>
           </div>

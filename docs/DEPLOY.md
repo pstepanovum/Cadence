@@ -38,7 +38,9 @@ deploy/cloudrun.sh setup
 # 2. Secret values, one at a time, from your password manager, never on a command line:
 #    printf '%s' "$VALUE" | gcloud secrets versions add stripe-secret-key --data-file=- --project cadence-pstepanov
 #    stripe-secret-key, stripe-webhook-secret, revenuecat-webhook-secret, revenuecat-api-key,
-#    brevo-api-key, quiz-token-secret, email-unsubscribe-secret, jobs-secret
+#    brevo-api-key, quiz-token-secret, email-unsubscribe-secret, jobs-secret,
+#    admin-secret (openssl rand -hex 32; the same value goes into the portfolio's
+#    CADENCE_ADMIN_SECRET in its Secret Manager, for friend codes and support)
 #    (the last three: openssl rand -base64 48), oauth-known-clients
 #    (a JSON array of the connector clients whose names must redirect to their
 #    own domains: [{"label":"…","tokens":["…"],"hosts":["…"]}]; "[]" for none)

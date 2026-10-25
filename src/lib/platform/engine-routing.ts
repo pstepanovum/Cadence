@@ -21,7 +21,12 @@ export type AiCapability = (typeof AI_CAPABILITIES)[number];
 // Entitlement
 // ---------------------------------------------------------------------------
 
-export type PlusSource = "stripe" | "app_store";
+/**
+ * Where a Plus record came from: Stripe on the web, the App Store through
+ * RevenueCat, or `code`, a complimentary grant for a fixed number of days that
+ * only the website writes. Every source resolves the same way below.
+ */
+export type PlusSource = "stripe" | "app_store" | "code";
 
 /**
  * What a verified webhook writes, per source, at users/{uid}.plusSources.<source>,
@@ -45,7 +50,7 @@ export function isRecordActive(record: PlusRecord | null | undefined, now: numbe
 
 /**
  * The record to store at users/{uid}.plus from every source's record: Plus if
- * either source is active. With several active, the one that lasts longest
+ * any source is active. With several active, the one that lasts longest
  * wins; with none, the most recently updated (so the account page can say what
  * lapsed). Null when there is no record at all.
  */

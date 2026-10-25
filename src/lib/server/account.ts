@@ -30,6 +30,8 @@ import { deleteAllForUid, listGrantsForUid } from "../oauth/store";
 import { deleteRevenueCatSubscriber } from "./billing/revenuecat";
 import { isStripeKeyConfigured, stripe } from "./billing/stripe-client";
 import { readAccount } from "./entitlement";
+import { deleteRedemptionsFor } from "./codes/store";
+import { SUPPORT_COLLECTION } from "./support";
 
 export const DELETION_STEPS = ["revenuecat", "stripe", "brevo", "firestore", "auth"] as const;
 export type DeletionStep = (typeof DELETION_STEPS)[number];
@@ -148,6 +150,8 @@ export async function runDeletion(uid: string, deps: DeletionDeps = {}): Promise
       await (deps.revokeOAuth ?? deleteAllForUid)(uid);
       await deleteWhere(firestore, "rateLimits", "uid", uid);
       await deleteWhere(firestore, MAIL_QUEUE, "uid", uid);
+      await deleteWhere(firestore, SUPPORT_COLLECTION, "uid", uid);
+      await deleteRedemptionsFor(uid, firestore);
     },
     auth: async () => {
       try {

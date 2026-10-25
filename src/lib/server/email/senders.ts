@@ -38,3 +38,11 @@ export function senders(env: Record<string, string | undefined> = process.env): 
     replyTo: parseMailbox(env.EMAIL_REPLY_TO, "Cadence support") ?? DEFAULT_REPLY_TO,
   };
 }
+
+/**
+ * Where contact-form messages are delivered: SUPPORT_INBOX, else the support
+ * reply-to address. Answering one there answers the writer, who is its reply-to.
+ */
+export function supportInbox(env: Record<string, string | undefined> = process.env): Mailbox {
+  return parseMailbox(env.SUPPORT_INBOX, "Cadence support") ?? senders(env).replyTo;
+}

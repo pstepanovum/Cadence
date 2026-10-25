@@ -58,6 +58,8 @@ export interface OutgoingEmail {
   idempotencyKey?: string;
   /** Prepended to the subject, e.g. "[TEST] " for the test sender. */
   subjectPrefix?: string;
+  /** Overrides the support reply-to: a support request replies to the person who wrote it. */
+  replyTo?: Mailbox;
 }
 
 export interface BrevoDeps {
@@ -102,7 +104,13 @@ export function brevoPayload(message: OutgoingEmail, env: Env = process.env) {
 
   const name = message.to.name?.replace(/[\r\n"<>]/g, " ").trim().slice(0, 80);
   const tags = [...new Set((message.tags ?? []).map((tag) => tag.replace(/[^A-Za-z0-9:_.-]/g, "-").slice(0, 60)).filter(Boolean))].slice(0, 10);
-  const { from, replyTo } = senders(env);
+  const { from, replyTo: defaultReplyTo } = senders(env);
+  let replyTo = defaultReplyTo;
+  if (message.replyTo) {
+    if (!isEmailAddress(message.replyTo.email)) throw new EmailError("invalid", "The reply-to address is not valid.");
+    const replyName = message.replyTo.name?.replace(/[\r\n"<>]/g, " ").trim().slice(0, 80);
+    replyTo = replyName ? { email: message.replyTo.email, name: replyName } : { email: message.replyTo.email };
+  }
 
   return {
     sender: from,

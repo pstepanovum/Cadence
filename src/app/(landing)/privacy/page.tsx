@@ -73,6 +73,20 @@ const sections: LegalSection[] = [
     ),
   },
   {
+    id: "codes",
+    title: "Friend codes",
+    body: (
+      <p>If you redeem a code on the website, we record which account redeemed it, its email address and when, and how long the Plus it gives lasts. The code&apos;s Plus is kept with your subscription state and ends by itself. The record is deleted with your account.</p>
+    ),
+  },
+  {
+    id: "support",
+    title: "Support messages",
+    body: (
+      <p>When you write to us through the contact form, we keep your email address, name if you give one, your message, your browser or device description and, if you are signed in, your account id, so we can answer and follow up. It is stored on our servers and delivered to our support inbox through Brevo. Messages sent while signed in are deleted with your account; you can ask us to delete any other message at any time.</p>
+    ),
+  },
+  {
     id: "newsletter",
     title: "Email and the newsletter",
     body: (
@@ -108,7 +122,7 @@ const sections: LegalSection[] = [
     title: "Download or delete your data",
     body: (
       <>
-        <p>On your <Link href="/account" className="underline">account page</Link>, <strong>Download my data</strong> gives you everything we keep for your account as a JSON file. <strong>Delete account</strong> removes your account and progress from our servers, removes you from the newsletter, deletes your record at RevenueCat, cancels any web subscription and unlinks your Stripe customer. Stripe keeps invoices for as long as tax law requires. The iPhone app offers the same in its account settings. An Apple subscription must also be cancelled in your iPhone&apos;s Settings.</p>
+        <p>On your <Link href="/account" className="underline">account page</Link>, <strong>Download my data</strong> gives you everything we keep for your account as a JSON file. <strong>Delete account</strong> removes your account and progress from our servers, along with your friend code redemptions and the support messages you sent while signed in, removes you from the newsletter, deletes your record at RevenueCat, cancels any web subscription and unlinks your Stripe customer. Stripe keeps invoices for as long as tax law requires. The iPhone app offers the same in its account settings. An Apple subscription must also be cancelled in your iPhone&apos;s Settings.</p>
         <p>You may also ask us to access, correct or delete your data, or object to how it is used, by emailing <a href={`mailto:${SUPPORT_EMAIL}`} className="underline">{SUPPORT_EMAIL}</a>. We answer within 30 days. In the EU and UK you can also complain to your data protection authority.</p>
       </>
     ),

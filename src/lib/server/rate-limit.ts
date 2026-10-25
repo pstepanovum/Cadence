@@ -106,4 +106,8 @@ export const LIMITS = {
   oauthTokenIpMinute: { name: "oauth-token-ip-minute", limit: 60, windowSeconds: 60 },
   syncUserMinute: { name: "sync-user-minute", limit: 60, windowSeconds: 60 },
   exportUserHour: { name: "export-user-hour", limit: 5, windowSeconds: 3600 },
+  supportIpHour: { name: "support-ip-hour", limit: 5, windowSeconds: 3600 },
+  supportEmailDay: { name: "support-email-day", limit: 10, windowSeconds: 86400 },
+  redeemUserHour: { name: "redeem-user-hour", limit: 10, windowSeconds: 3600 },
+  redeemPreviewUserHour: { name: "redeem-preview-user-hour", limit: 10, windowSeconds: 3600 },
 } as const satisfies Record<string, RateLimitRule>;

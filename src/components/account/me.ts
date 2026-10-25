@@ -31,7 +31,7 @@ export function parseMe(body: unknown): Me {
   const user = (b.user ?? b) as Record<string, unknown>;
   const rawPlus = (b.plus ?? user.plus) as Record<string, unknown> | null | undefined;
   const plus: PlusRecord | null =
-    rawPlus && (rawPlus.source === "stripe" || rawPlus.source === "app_store")
+    rawPlus && (rawPlus.source === "stripe" || rawPlus.source === "app_store" || rawPlus.source === "code")
       ? {
           active: rawPlus.active === true,
           source: rawPlus.source,
