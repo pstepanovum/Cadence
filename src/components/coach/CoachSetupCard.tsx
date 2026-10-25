@@ -90,7 +90,7 @@ export function CoachSetupCard({
           <label className="space-y-2">
             <span className="eyebrow block text-xs text-slate-grey">Topic or situation</span>
             <Input
-              className="rounded-[14px] border border-hunter-green/10 bg-page px-5"
+              className="rounded-[14px] bg-platinum px-5"
               value={topicDraft}
               onChange={(e) => onTopicDraftChange(e.target.value)}
               onKeyDown={(e) => {

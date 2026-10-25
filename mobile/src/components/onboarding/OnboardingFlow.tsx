@@ -296,7 +296,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
                 compact={compact}
                 icon={(selected) => <Cloud color={selected ? colors.snow : colors.hunter} size={22} />}
                 title="Cadence Cloud"
-                detail="Practise anywhere, synced to your account. Plus adds AI scoring, voices and the coach."
+                detail="Your account on every device. Free keeps a progress summary; Plus syncs everything and adds AI scoring, voices and the coach."
                 selected={answers.place === "cloud"}
                 onPress={() => update({ place: "cloud" })}
               />

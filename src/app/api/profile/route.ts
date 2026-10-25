@@ -5,7 +5,7 @@
 // and the mobile app both use it, since no client writes Firestore directly).
 import { NextResponse } from "next/server";
 import { getAppSession, type AppUser } from "@/lib/app-session";
-import { parseProfileUpdate } from "@/lib/cloud/profile-input";
+import { parseProfileUpdate, reconcileFocusOnly } from "@/lib/cloud/profile-input";
 import { updateUserProfile } from "@/lib/cloud/store";
 
 export const runtime = "nodejs";
@@ -39,8 +39,9 @@ export async function PATCH(request: Request) {
     return NextResponse.json({ error: parsed.error }, { status: 400 });
   }
 
+  const update = reconcileFocusOnly(parsed.update, session.user.practiceFocus);
   try {
-    await updateUserProfile(session.user.id, parsed.update);
+    await updateUserProfile(session.user.id, update);
   } catch (error) {
     console.error("Profile update failed:", error);
     return NextResponse.json({ error: "Could not save your profile." }, { status: 500 });
@@ -48,8 +49,8 @@ export async function PATCH(request: Request) {
 
   const user: AppUser = {
     ...session.user,
-    ...parsed.update,
-    displayName: parsed.update.displayName || session.user.displayName,
+    ...update,
+    displayName: update.displayName || session.user.displayName,
   };
   return NextResponse.json({ mode: session.mode, profile: toProfileResponse(user) });
 }

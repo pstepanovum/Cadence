@@ -81,7 +81,11 @@ export function gradeItem(itemId: string, grade: Grade) {
 }
 
 export function toggleListed(itemId: string) {
-  updateAdvanced((s) => (s.list.some((i) => i.itemId === itemId) ? { ...s, list: removeFromPracticeList(s.list, [itemId]) } : { ...s, list: addToPracticeList(s.list, [{ itemId, addedAt: Date.now(), source: "device" }]) }));
+  updateAdvanced((s) =>
+    s.list.some((i) => i.itemId === itemId)
+      ? { ...s, list: removeFromPracticeList(s.list, [itemId]), listDone: [...s.listDone.filter((id) => id !== itemId), itemId].slice(-200) }
+      : { ...s, list: addToPracticeList(s.list, [{ itemId, addedAt: Date.now(), source: "device" }]), listDone: s.listDone.filter((id) => id !== itemId) },
+  );
 }
 
 export function setTrack(track: Track | null) {
@@ -114,7 +118,9 @@ async function syncOnce(tier: DataTier) {
   const body = await api<{ list?: PracticeListItem[]; reviews?: { itemId: string; grade: Grade; at: number }[] }>("/api/practice", {}, appCheck);
   if (snapshot.learner !== learner) return;
   const fresh = (body.reviews ?? []).filter((r) => r.at > snapshot.state.reviewsUpTo).sort((a, b) => a.at - b.at);
-  const assigned = (body.list ?? []).filter((i) => i && typeof i.itemId === "string");
+  // Items removed on this phone stay removed: they are not taken back from the account's list.
+  const removed = new Set(snapshot.state.listDone);
+  const assigned = (body.list ?? []).filter((i) => i && typeof i.itemId === "string" && !removed.has(i.itemId));
   const day = today();
   updateAdvanced((s) => {
     let cards = s.cards;
@@ -127,10 +133,16 @@ async function syncOnce(tier: DataTier) {
     if (!fresh.length && list.length === s.list.length) return s;
     return { ...s, cards, track, list, reviewsUpTo: fresh.length ? fresh[fresh.length - 1].at : s.reviewsUpTo };
   });
-  if (fresh.length) await apiJson("/api/practice", "PATCH", { reviewsUpTo: fresh[fresh.length - 1].at }, appCheck);
+  const done = snapshot.state.listDone;
+  if (fresh.length || done.length) {
+    await apiJson("/api/practice", "PATCH", { ...(fresh.length ? { reviewsUpTo: fresh[fresh.length - 1].at } : {}), ...(done.length ? { done } : {}) }, appCheck);
+    if (done.length && snapshot.learner === learner) updateAdvanced((s) => ({ ...s, listDone: s.listDone.filter((id) => !done.includes(id)) }));
+  }
 
   if (tier !== "full") return;
   const state = snapshot.state;
+  // The device clock, like every card's updatedAt, so a skewed server clock never hides a change.
+  const pushedAt = Date.now();
   const installId = await getInstallId();
   const index = await recordingIndex();
   const changed = Object.fromEntries(Object.entries(state.cards).filter(([, c]) => c.updatedAt > state.syncedAt));
@@ -144,7 +156,7 @@ async function syncOnce(tier: DataTier) {
   updateAdvanced((s) => {
     const cards = { ...s.cards };
     for (const [id, card] of Object.entries(merged.cards ?? {})) if (!cards[id] || card.updatedAt > cards[id].updatedAt) cards[id] = card;
-    return { ...s, cards, track: newerTrack(s.track, parseTrack(merged.track ?? null)), removedRecordings: [], syncedAt: Number(merged.updatedAt) || Date.now() };
+    return { ...s, cards, track: newerTrack(s.track, parseTrack(merged.track ?? null)), removedRecordings: s.removedRecordings.filter((id) => !state.removedRecordings.includes(id)), syncedAt: pushedAt };
   });
 }
 

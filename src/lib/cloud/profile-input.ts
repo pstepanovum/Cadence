@@ -4,7 +4,7 @@
 // tests/cloud/profile-input.test.ts. The same values are offered by the web
 // onboarding wizard and the mobile app.
 
-import { LEARNING_GOAL_VALUES, PRACTICE_FOCUS_VALUES, focusForGoals, isLearningGoal, parseGoals, type LearningGoal } from "../platform/goals";
+import { LEARNING_GOAL_VALUES, PRACTICE_FOCUS_VALUES, focusForGoals, goalsFromFocus, isLearningGoal, parseGoals, type LearningGoal } from "../platform/goals";
 import { parseLevelPrefs, type LevelPrefs } from "../platform/levels";
 import { SEEN_MAX_LENGTH, decodeSeen, encodeSeen } from "../platform/placement";
 
@@ -105,4 +105,16 @@ export function parseProfileUpdate(body: unknown): ProfileParseResult {
   }
 
   return { ok: true, update };
+}
+
+/**
+ * A build from before goals sends only `practiceFocus`. When that focus is a
+ * change from the stored one, the learner picked something new on that build,
+ * so the goals follow it; otherwise (a rename that resends the same focus)
+ * the goals chosen on a newer build are kept.
+ */
+export function reconcileFocusOnly(update: ProfileUpdate, storedFocus: string | null): ProfileUpdate {
+  if (update.practiceFocus === undefined || update.learningGoals !== undefined || update.practiceFocus === storedFocus) return update;
+  const goals = goalsFromFocus(update.practiceFocus);
+  return goals.length ? { ...update, learningGoals: goals } : update;
 }

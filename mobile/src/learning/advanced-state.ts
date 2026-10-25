@@ -12,10 +12,12 @@ export interface AdvancedState {
   track: Track | null;
   reviewsUpTo: number;
   removedRecordings: string[];
+  /** Practice-list items removed here since the last sync, so the account's list drops them too. */
+  listDone: string[];
   syncedAt: number;
 }
 
-export const EMPTY_ADVANCED: AdvancedState = { cards: {}, list: [], track: null, reviewsUpTo: 0, removedRecordings: [], syncedAt: 0 };
+export const EMPTY_ADVANCED: AdvancedState = { cards: {}, list: [], track: null, reviewsUpTo: 0, removedRecordings: [], listDone: [], syncedAt: 0 };
 
 export function parseAdvancedState(value: unknown): AdvancedState {
   if (!value || typeof value !== "object") return EMPTY_ADVANCED;
@@ -26,6 +28,7 @@ export function parseAdvancedState(value: unknown): AdvancedState {
     track: parseTrack(v.track ?? null),
     reviewsUpTo: Number(v.reviewsUpTo) || 0,
     removedRecordings: Array.isArray(v.removedRecordings) ? v.removedRecordings.slice(-1000) : [],
+    listDone: Array.isArray(v.listDone) ? v.listDone.filter((id) => typeof id === "string").slice(-200) : [],
     syncedAt: Number(v.syncedAt) || 0,
   };
 }

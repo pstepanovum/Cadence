@@ -48,9 +48,12 @@ describe("bundled advanced packs", { skip }, () => {
 
 describe("stored advanced state", () => {
   it("parses what it stored and survives junk", () => {
-    const state = { ...EMPTY_ADVANCED, cards: { "phrase.x": { reps: 1, interval: 1, ease: 2.5, due: "2026-10-25", lapses: 0, updatedAt: 5 } }, list: [{ itemId: "phrase.x", addedAt: 1, source: "device" as const }], reviewsUpTo: 9 };
+    const state = { ...EMPTY_ADVANCED, cards: { "phrase.x": { reps: 1, interval: 1, ease: 2.5, due: "2026-10-25", lapses: 0, updatedAt: 5 } }, list: [{ itemId: "phrase.x", addedAt: 1, source: "device" as const }], reviewsUpTo: 9, listDone: ["slang.bet"] };
     assert.deepEqual(parseAdvancedState(JSON.parse(JSON.stringify(state))), state);
     assert.deepEqual(parseAdvancedState("nope"), EMPTY_ADVANCED);
     assert.deepEqual(parseAdvancedState({ list: [null, { itemId: 3 }], track: { format: 7 } }).list, []);
+    // A copy saved before removals were tracked reads with none pending.
+    assert.deepEqual(parseAdvancedState({ list: [], listDone: [4, "phrase.y"] }).listDone, ["phrase.y"]);
+    assert.deepEqual(parseAdvancedState({ list: [] }).listDone, []);
   });
 });

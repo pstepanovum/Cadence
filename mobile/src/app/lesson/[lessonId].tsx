@@ -434,7 +434,7 @@ function WordQueueLesson({
         <ResultSummary
           eyebrow={isExam ? "Exam result" : "Lesson complete"}
           score={avg}
-          title={passed ? (isExam ? "You passed the exam!" : "Great work!") : "Keep practising"}
+          title={passed ? (isExam ? "Exam passed" : "Lesson passed") : "Not passed yet"}
           subtitle={
             isExam
               ? passed

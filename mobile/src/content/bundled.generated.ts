@@ -105,9 +105,9 @@ export const BUNDLED_PACKS: BundledPack[] = [
   },
   {
     id: "slang",
-    version: 1,
+    version: 2,
     title: "Cadence slang",
-    bytes: 390731,
+    bytes: 386436,
     content: require("../../assets/packs/slang/content.cpack"),
     audio: {
     },

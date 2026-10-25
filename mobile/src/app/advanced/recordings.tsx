@@ -55,26 +55,29 @@ export default function RecordingsScreen() {
               return t.takes ? `${t.takes} take${t.takes === 1 ? "" : "s"} of ${t.items} item${t.items === 1 ? "" : "s"} · ${formatDuration(t.durationMs)} · ${formatBytes(t.bytes)} on this phone. Never uploaded to Cadence.` : "Takes stay on this phone and are never uploaded to Cadence.";
             })()}
           </Body>
-          <Card style={styles.card}>
-            <View style={styles.rowBetween}>
-              <View style={styles.flex}>
-                <Title size={type.headline}>Copy to iCloud Drive</Title>
-                <Body size={type.footnote} tone="muted">
-                  {status?.available === false ? ICLOUD_REASON_COPY[status.reason] : "A copy of each take in a Cadence folder in your own iCloud Drive, visible in the Files app."}
-                </Body>
+          {/* A build without the iCloud entitlement shows no switch at all, rather than a feature it cannot offer. */}
+          {status && !(status.available === false && status.reason !== "signed_out") ? (
+            <Card style={styles.card}>
+              <View style={styles.rowBetween}>
+                <View style={styles.flex}>
+                  <Title size={type.headline}>Copy to iCloud Drive</Title>
+                  <Body size={type.footnote} tone="muted">
+                    {status?.available === false ? ICLOUD_REASON_COPY[status.reason] : "A copy of each take in a Cadence folder in your own iCloud Drive, visible in the Files app."}
+                  </Body>
+                </View>
+                <Switch
+                  accessibilityLabel="Copy recordings to iCloud Drive"
+                  value={enabled && status?.available === true}
+                  disabled={status?.available !== true}
+                  trackColor={{ true: colors.hunter, false: colors.alabaster }}
+                  onValueChange={(next) => {
+                    setEnabled(next);
+                    void setICloudEnabled(next).then(() => (next ? copyPendingToICloud() : 0));
+                  }}
+                />
               </View>
-              <Switch
-                accessibilityLabel="Copy recordings to iCloud Drive"
-                value={enabled && status?.available === true}
-                disabled={status?.available !== true}
-                trackColor={{ true: colors.hunter, false: colors.alabaster }}
-                onValueChange={(next) => {
-                  setEnabled(next);
-                  void setICloudEnabled(next).then(() => (next ? copyPendingToICloud() : 0));
-                }}
-              />
-            </View>
-          </Card>
+            </Card>
+          ) : null}
           {index.items.length === 0 ? (
             <EmptyState title="No recordings yet" message="Record yourself on any phrase, slang example or plateau drill and the take appears here." />
           ) : (
@@ -142,7 +145,7 @@ const styles = themed(() =>
     rowBetween: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: spacing.md },
     flex: { flex: 1 },
     take: { flexDirection: "row", alignItems: "center", gap: spacing.xs, paddingVertical: spacing.xs },
-    icon: { minWidth: 40, minHeight: 40, borderRadius: radii.control, backgroundColor: colors.platinum, alignItems: "center", justifyContent: "center" },
+    icon: { minWidth: 44, minHeight: 44, borderRadius: radii.control, backgroundColor: colors.platinum, alignItems: "center", justifyContent: "center" },
     pressed: { opacity: 0.7 },
   }),
 );

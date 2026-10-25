@@ -33,10 +33,12 @@ export interface AdvancedState {
   reviewsUpTo: number;
   /** Recording ids deleted here since the last sync, so the account forgets them too. */
   removedRecordings: string[];
+  /** Practice-list items removed here since the last sync, so the account's list drops them too. */
+  listDone: string[];
   syncedAt: number;
 }
 
-const EMPTY: AdvancedState = { cards: {}, list: [], track: null, reviewsUpTo: 0, removedRecordings: [], syncedAt: 0 };
+const EMPTY: AdvancedState = { cards: {}, list: [], track: null, reviewsUpTo: 0, removedRecordings: [], listDone: [], syncedAt: 0 };
 let cache: { raw: string | null; state: AdvancedState } = { raw: null, state: EMPTY };
 
 function parse(raw: string | null): AdvancedState {
@@ -49,6 +51,7 @@ function parse(raw: string | null): AdvancedState {
       track: parseTrack(value.track ?? null),
       reviewsUpTo: Number(value.reviewsUpTo) || 0,
       removedRecordings: Array.isArray(value.removedRecordings) ? value.removedRecordings.slice(-1000) : [],
+      listDone: Array.isArray(value.listDone) ? value.listDone.filter((id) => typeof id === "string").slice(-200) : [],
       syncedAt: Number(value.syncedAt) || 0,
     };
   } catch {
@@ -103,11 +106,11 @@ export function gradeItem(itemId: string, grade: Grade) {
 
 export function addToList(itemIds: string[]) {
   const now = Date.now();
-  writeAdvanced((s) => ({ ...s, list: addToPracticeList(s.list, itemIds.map((itemId, i) => ({ itemId, addedAt: now + i, source: "device" as const }))) }));
+  writeAdvanced((s) => ({ ...s, list: addToPracticeList(s.list, itemIds.map((itemId, i) => ({ itemId, addedAt: now + i, source: "device" as const }))), listDone: s.listDone.filter((id) => !itemIds.includes(id)) }));
 }
 
 export function removeFromList(itemIds: string[]) {
-  writeAdvanced((s) => ({ ...s, list: removeFromPracticeList(s.list, itemIds) }));
+  writeAdvanced((s) => ({ ...s, list: removeFromPracticeList(s.list, itemIds), listDone: [...s.listDone.filter((id) => !itemIds.includes(id)), ...itemIds].slice(-200) }));
 }
 
 export function setTrack(track: Track | null) {
@@ -164,7 +167,9 @@ async function syncOnce() {
     const body = (await inbox.json().catch(() => null)) as { list?: PracticeListItem[]; reviews?: { itemId: string; grade: Grade; at: number }[] } | null;
     const state = readAdvanced();
     const fresh = (body?.reviews ?? []).filter((r) => r.at > state.reviewsUpTo).sort((a, b) => a.at - b.at);
-    const assigned = (body?.list ?? []).filter((i) => i && typeof i.itemId === "string");
+    // Items removed in this browser stay removed: they are not taken back from the account's list.
+    const removed = new Set(state.listDone);
+    const assigned = (body?.list ?? []).filter((i) => i && typeof i.itemId === "string" && !removed.has(i.itemId));
     if (fresh.length || assigned.some((i) => !state.list.some((l) => l.itemId === i.itemId))) {
       const day = today();
       writeAdvanced((s) => {
@@ -177,10 +182,16 @@ async function syncOnce() {
         return { ...s, cards, track, list: addToPracticeList(s.list, assigned), reviewsUpTo: fresh.length ? fresh[fresh.length - 1].at : s.reviewsUpTo };
       });
     }
-    if (fresh.length) await cloudFetch("/api/practice", { method: "PATCH", json: { reviewsUpTo: fresh[fresh.length - 1].at } });
+    const done = state.listDone;
+    if (fresh.length || done.length) {
+      const ack = await cloudFetch("/api/practice", { method: "PATCH", json: { ...(fresh.length ? { reviewsUpTo: fresh[fresh.length - 1].at } : {}), ...(done.length ? { done } : {}) } });
+      if (ack.ok && done.length) writeAdvanced((s) => ({ ...s, listDone: s.listDone.filter((id) => !done.includes(id)) }));
+    }
   }
 
   if (me.tier !== "full") return;
+  // The device clock, like every card's updatedAt, so a skewed server clock never hides a change.
+  const pushedAt = Date.now();
   const state = readAdvanced();
   const changed = Object.fromEntries(Object.entries(state.cards).filter(([, c]) => c.updatedAt > state.syncedAt));
   const index = await recordingsIndex();
@@ -194,7 +205,7 @@ async function syncOnce() {
   writeAdvanced((s) => {
     const cards = { ...s.cards };
     for (const [id, card] of Object.entries(merged.cards ?? {})) if (!cards[id] || card.updatedAt > cards[id].updatedAt) cards[id] = card;
-    return { ...s, cards, track: newerTrack(s.track, parseTrack(merged.track ?? null)), removedRecordings: [], syncedAt: Number(merged.updatedAt) || Date.now() };
+    return { ...s, cards, track: newerTrack(s.track, parseTrack(merged.track ?? null)), removedRecordings: s.removedRecordings.filter((id) => !state.removedRecordings.includes(id)), syncedAt: pushedAt };
   });
 }
 

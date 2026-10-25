@@ -1241,8 +1241,8 @@ Cadence cloud:
   `modules/cadence-icloud`), off by default, turned on from the Recordings
   screen. It needs a build with the iCloud Documents entitlement
   (`CADENCE_ICLOUD=1` makes `mobile/app.config.js` add
-  `plugins/with-icloud-recordings.js`); without it the screen says so and
-  everything stays on the phone. **Open (owner, developer portal):** before
+  `plugins/with-icloud-recordings.js`); without it the screen shows no iCloud
+  switch and everything stays on the phone. **Open (owner, developer portal):** before
   any build with `CADENCE_ICLOUD=1`: in Certificates, Identifiers & Profiles
   create the iCloud container `iCloud.dev.pstepanov.cadence`; on the App ID
   `dev.pstepanov.cadence` enable the iCloud capability with "iCloud

@@ -208,7 +208,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
                 <button
                   type="button"
                   onClick={() => void issueCode()}
-                  className="w-full rounded-[14px] border border-alabaster-grey px-5 py-2 text-sm font-semibold text-iron-grey">
+                  className="w-full rounded-[14px] bg-platinum px-5 py-2 text-sm font-semibold text-carbon-black hover:bg-alabaster-grey">
                   Show a different code
                 </button>
               ) : null}
@@ -243,7 +243,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
                   <button
                     type="button"
                     onClick={() => void revoke(device.deviceId, device.name)}
-                    className="shrink-0 rounded-full border border-blushed-brick px-4 py-1.5 text-xs font-semibold text-blushed-brick">
+                    className="shrink-0 rounded-[14px] bg-platinum px-4 py-2 text-xs font-semibold text-blushed-brick hover:bg-alabaster-grey">
                     Unpair
                   </button>
                 </li>

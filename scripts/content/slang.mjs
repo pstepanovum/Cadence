@@ -11,8 +11,8 @@
 //      are still understood but sound a few years old are kept and marked
 //      dated, with a note on how they come across;
 //   3. a register check: ordinary vocabulary that is not slang or informal
-//      ("amazing") is dropped, and EXCLUDED_TERMS (group or political labels)
-//      are left out by editorial decision.
+//      ("amazing") is dropped, and EXCLUDED_TERMS (lib/slang-exclusions.mjs: group or political
+//      labels, words for children) are left out by editorial decision.
 //
 //   node scripts/content/slang.mjs [--only reactions] [--check-only]
 //
@@ -24,6 +24,7 @@ import { join } from "node:path";
 import { CHECK_MODEL, generateJson, geminiStats, pool } from "./lib/gemini.mjs";
 import { JUDGE_MODEL } from "./lib/blind-check.mjs";
 import { CONTENT_DIR } from "./lib/paths.mjs";
+import { EXCLUDED_TERMS } from "./lib/slang-exclusions.mjs";
 import { isSensitive, profanityIn, sha256Hex, textKey } from "./lib/text.mjs";
 
 const args = process.argv.slice(2);
@@ -158,7 +159,7 @@ const REVIEW_SCHEMA = {
  * a nationality or group, and political labels, which say more about the
  * speaker than an advanced learner wants to borrow.
  */
-export const EXCLUDED_TERMS = new Set(["irish goodbye", "french leave", "woke", "cancel culture", "karen", "boomer", "ok boomer", "snowflake"]);
+export { EXCLUDED_TERMS };
 
 const REGISTER_SYSTEM = `You are a lexicographer. For each term and meaning decide:
 - informal: true if, used with this meaning, it is slang or clearly informal English; false if it is ordinary neutral vocabulary that is just as natural in formal writing with the same meaning (for example "amazing", "sarcastic", "overwhelmed", "discounted").`;

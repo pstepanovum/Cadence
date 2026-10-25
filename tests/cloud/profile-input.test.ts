@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
-import { parseProfileUpdate } from "../../src/lib/cloud/profile-input.ts";
+import { parseProfileUpdate, reconcileFocusOnly } from "../../src/lib/cloud/profile-input.ts";
 
 describe("validating a profile update", () => {
   it("accepts the onboarding answers", () => {
@@ -89,5 +89,17 @@ describe("validating a profile update", () => {
     assert.equal(parseProfileUpdate({ levels: { overall: "Z9" } }).ok, false);
     assert.equal(parseProfileUpdate({ placementSeen: 12 }).ok, false);
     assert.equal(parseProfileUpdate({ placementSeen: "x".repeat(5000) }).ok, false);
+  });
+
+  it("moves the goals to a focus an older build changed, and keeps them when it resends the same one", () => {
+    const changed = parseProfileUpdate({ practiceFocus: "work" });
+    assert.ok(changed.ok);
+    assert.deepEqual(reconcileFocusOnly(changed.update, "vowels"), { practiceFocus: "work", learningGoals: ["work"] });
+    const same = parseProfileUpdate({ displayName: "Ana", practiceFocus: "vowels" });
+    assert.ok(same.ok);
+    assert.deepEqual(reconcileFocusOnly(same.update, "vowels"), { displayName: "Ana", practiceFocus: "vowels" });
+    const both = parseProfileUpdate({ practiceFocus: "work", learningGoals: ["plateau", "work"] });
+    assert.ok(both.ok);
+    assert.deepEqual(reconcileFocusOnly(both.update, "vowels").learningGoals, ["plateau", "work"]);
   });
 });

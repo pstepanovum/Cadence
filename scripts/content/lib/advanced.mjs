@@ -14,6 +14,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { CONTENT_DIR } from "./paths.mjs";
+import { EXCLUDED_TERMS } from "./slang-exclusions.mjs";
 import { slugify, textKey } from "./text.mjs";
 import { audioPath } from "./assemble.mjs";
 import { SITUATIONS } from "../data/phrase-plan.mjs";
@@ -98,7 +99,7 @@ export function loadSlang() {
     let count = 0;
     for (const e of file.items) {
       const verdict = file.check?.results?.[textKey(e.term)];
-      if (verdict?.status !== "pass" || seen.has(textKey(e.term))) continue;
+      if (verdict?.status !== "pass" || seen.has(textKey(e.term)) || EXCLUDED_TERMS.has(textKey(e.term))) continue;
       seen.add(textKey(e.term));
       let slug = slugify(e.term) || "term";
       for (let n = 2; used.has(slug); n += 1) slug = `${slugify(e.term)}-${n}`;

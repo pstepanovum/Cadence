@@ -82,9 +82,9 @@ export function renderBadgeEarned(props: BadgeEarnedProps): RenderedEmail {
   const description = cleanText(props.description, 160);
   return compose({
     subject: `You earned a badge: ${badge}`,
-    preheader: description || "Nice work.",
-    body: [heading(`You earned ${badge}`), description && paragraph(escapeHtml(description)), paragraph("Nice work. Keep the rhythm going.", { spaceAfter: 20 }), button("See your progress", appUrl("/dashboard"))],
-    text: [`You earned ${badge}`, description, "Nice work. Keep the rhythm going.", `See your progress: ${appUrl("/dashboard")}`],
+    preheader: description || "A new badge on your Cadence account.",
+    body: [heading(`You earned ${badge}`), description && paragraph(escapeHtml(description)), paragraph("Keep the rhythm going.", { spaceAfter: 20 }), button("See your progress", appUrl("/dashboard"))],
+    text: [`You earned ${badge}`, description, "Keep the rhythm going.", `See your progress: ${appUrl("/dashboard")}`],
     footer: { category: "reminder", reason: REMINDER_REASON, unsubscribeUrl: props.unsubscribeUrl },
   });
 }

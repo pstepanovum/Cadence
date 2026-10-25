@@ -202,7 +202,7 @@ function ScenarioRun({ scenario }: { scenario: ConversationModuleWithProgress })
         <ResultSummary
           eyebrow="Scenario result"
           score={averageScore(scores)}
-          title={passed ? "Scenario passed!" : "Almost there"}
+          title={passed ? "Scenario passed" : "Not passed yet"}
           subtitle={
             passed
               ? "The next scenario is now unlocked."
