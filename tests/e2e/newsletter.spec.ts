@@ -69,7 +69,7 @@ test("an account created without the newsletter box never reaches list 5", async
   await page.goto("/signup");
   await page.getByRole("textbox", { name: "Email" }).fill(email);
   await page.getByRole("textbox", { name: "Password" }).fill(PASSWORD);
-  await expect(page.getByRole("checkbox", { name: /product news/i })).not.toBeChecked();
+  await expect(page.getByRole("checkbox", { name: /product updates/i })).not.toBeChecked();
   await page.getByRole("button", { name: "Create account" }).click();
   await page.waitForURL(/\/onboarding/, { timeout: 30_000 });
   // Give the queued welcome mail and the list-4 contact time to go out.
@@ -84,7 +84,7 @@ test("ticking the box at sign-up asks for the opt-in, not a list add", async ({ 
   await page.goto("/signup");
   await page.getByRole("textbox", { name: "Email" }).fill(email);
   await page.getByRole("textbox", { name: "Password" }).fill(PASSWORD);
-  await page.getByRole("checkbox", { name: /product news/i }).check();
+  await page.getByRole("checkbox", { name: /product updates/i }).check();
   await page.getByRole("button", { name: "Create account" }).click();
   await page.waitForURL(/\/onboarding/, { timeout: 30_000 });
   await expect.poll(async () => forEmail(await brevoRequests(), email).filter((r) => r.path.endsWith("/contacts/doubleOptinConfirmation")).length).toBe(1);
