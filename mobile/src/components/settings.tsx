@@ -72,7 +72,7 @@ export function SwitchRow({
             haptics.select();
             onChange(next);
           }}
-          trackColor={{ true: colors.sage, false: colors.paleSlate }}
+          trackColor={{ true: colors.hunter, false: colors.paleSlate }}
         />
       </View>
       {value && children ? <View style={styles.extra}>{children}</View> : null}
@@ -96,7 +96,7 @@ const styles = themed(() =>
       width: 44,
       height: 44,
       borderRadius: radii.panel,
-      backgroundColor: colors.cream,
+      backgroundColor: colors.platinum,
       alignItems: "center",
       justifyContent: "center",
     },

@@ -14,8 +14,9 @@ type ButtonSize = "default" | "icon";
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "bg-hunter-green text-white hover:brightness-110 [&_*]:text-inherit",
+  // Secondary actions are a flat grey fill: never lime, never outlined.
   secondary:
-    "bg-yellow-green text-hunter-green hover:brightness-105 [&_*]:text-inherit",
+    "bg-platinum text-carbon-black hover:bg-alabaster-grey [&_*]:text-inherit",
   ghost:
     "bg-platinum text-carbon-black hover:bg-alabaster-grey [&_*]:text-inherit",
   danger:
@@ -24,7 +25,7 @@ const variantStyles: Record<ButtonVariant, string> = {
 
 const sizeStyles: Record<ButtonSize, string> = {
   default: "min-h-12 px-5 py-3.5 text-sm",
-  icon: "h-14 w-14 p-0",
+  icon: "h-14 w-14 rounded-full p-0",
 };
 
 export function buttonVariants({
@@ -37,7 +38,7 @@ export function buttonVariants({
   className?: string;
 } = {}) {
   return cn(
-    "inline-flex cursor-pointer items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-green justify-center gap-2 rounded-full text-center font-semibold whitespace-nowrap [&>svg]:shrink-0 disabled:cursor-not-allowed disabled:opacity-60",
+    "inline-flex cursor-pointer items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-green justify-center gap-2 rounded-[14px] text-center font-semibold whitespace-nowrap [&>svg]:shrink-0 disabled:cursor-not-allowed disabled:opacity-60",
     variantStyles[variant],
     sizeStyles[size],
     className,

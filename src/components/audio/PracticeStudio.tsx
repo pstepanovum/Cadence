@@ -26,11 +26,11 @@ function HighlightChip({ highlight }: { highlight: PronunciationHighlight }) {
   return (
     <div
       className={cn(
-        "rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap",
+        "rounded-[14px] px-4 py-2 text-sm font-semibold whitespace-nowrap",
         highlight.status === "correct"
           ? "bg-yellow-green text-hunter-green"
           : highlight.status === "mixed"
-            ? "bg-[#efd889] text-hunter-green"
+            ? "bg-[#efd889] text-carbon-black"
             : "bg-blushed-brick text-bright-snow",
       )}
       title={highlight.feedback}
@@ -149,11 +149,11 @@ export function PracticeStudio({
       <Card className="bg-bright-snow">
         <div className="space-y-5">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sm font-medium text-sage-text">
+            <div className="inline-flex items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-sm font-medium text-iron-grey">
               <Activity size={18} filled color="currentColor" />
               Practice studio
             </div>
-            <h2 className="text-2xl font-semibold text-hunter-green sm:text-3xl">
+            <h2 className="text-2xl font-semibold text-carbon-black sm:text-3xl">
               One clean take, then a direct phoneme check.
             </h2>
             <p className="max-w-2xl text-sm leading-7 text-iron-grey">
@@ -162,16 +162,16 @@ export function PracticeStudio({
             </p>
           </div>
 
-          <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-            <p className="eyebrow text-sm text-sage-text">Current target</p>
+          <div className="rounded-[20px] bg-page px-5 py-5">
+            <p className="eyebrow text-sm text-slate-grey">Current target</p>
             <div className="mt-3 flex items-end justify-between gap-4">
               <div>
-                <p className="text-2xl font-semibold text-hunter-green sm:text-3xl">
+                <p className="text-2xl font-semibold text-carbon-black sm:text-3xl">
                   {targetWord}
                 </p>
                 <p className="mt-2 text-lg text-iron-grey">{targetPhonemes}</p>
               </div>
-              <div className="rounded-full bg-white px-3 py-2 text-xs font-semibold text-hunter-green">
+              <div className="rounded-full bg-white px-3 py-2 text-xs font-semibold text-carbon-black">
                 Live review
               </div>
             </div>
@@ -192,7 +192,7 @@ export function PracticeStudio({
           ) : null}
 
           {error ? (
-            <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+            <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
               {error}
             </div>
           ) : null}
@@ -209,7 +209,7 @@ export function PracticeStudio({
                   Live phoneme output from the FastAPI engine for the latest take.
                 </CardDescription>
               </div>
-              <div className="min-w-fit whitespace-nowrap rounded-full bg-vanilla-cream px-4 py-3 text-sm font-semibold text-hunter-green">
+              <div className="min-w-fit whitespace-nowrap rounded-[14px] bg-page px-4 py-3 text-sm font-semibold text-carbon-black">
                 Score {assessment.overallScore}/100
               </div>
             </div>
@@ -221,11 +221,11 @@ export function PracticeStudio({
               />
             </div>
 
-            <div className="rounded-3xl bg-vanilla-cream/90 p-5">
-              <p className="eyebrow text-sm text-sage-text">
+            <div className="rounded-[20px] bg-page/90 p-5">
+              <p className="eyebrow text-sm text-slate-grey">
                 Transcribed phonemes
               </p>
-              <p className="mt-3 text-2xl font-semibold text-hunter-green">
+              <p className="mt-3 text-2xl font-semibold text-carbon-black">
                 {assessment.transcript}
               </p>
               <p className="mt-2 text-sm text-iron-grey">
@@ -234,7 +234,7 @@ export function PracticeStudio({
             </div>
 
             <div className="space-y-3">
-              <p className="eyebrow text-sm text-sage-text">
+              <p className="eyebrow text-sm text-slate-grey">
                 Letter highlights
               </p>
               <div className="flex flex-wrap gap-3">
@@ -255,9 +255,9 @@ export function PracticeStudio({
                 <div
                   key={`${phoneme.symbol}-${phoneme.expected}-${phoneme.heard}-${index}`}
                   className={cn(
-                    "rounded-3xl p-4",
+                    "rounded-[20px] p-4",
                     phoneme.status === "correct"
-                      ? "bg-yellow-green/30 text-hunter-green"
+                      ? "bg-yellow-green/30 text-carbon-black"
                       : "bg-blushed-brick text-bright-snow",
                   )}
                 >
@@ -276,8 +276,8 @@ export function PracticeStudio({
               <RecordPhonemes phonemes={assessment.phonemes} />
             </div>
 
-            <div className="rounded-3xl bg-bright-snow p-5">
-              <p className="eyebrow text-sm text-sage-text">
+            <div className="rounded-[20px] bg-bright-snow p-5">
+              <p className="eyebrow text-sm text-slate-grey">
                 Next repetition cue
               </p>
               <p className="mt-3 text-base leading-7 text-iron-grey">
@@ -286,7 +286,7 @@ export function PracticeStudio({
             </div>
           </div>
         ) : (
-          <div className="flex h-full min-h-[18rem] flex-col justify-center rounded-3xl bg-vanilla-cream/70 p-6 text-center sm:min-h-[28rem]">
+          <div className="flex h-full min-h-[18rem] flex-col justify-center rounded-[20px] bg-page/70 p-6 text-center sm:min-h-[28rem]">
             <CardTitle>Ready for your first take</CardTitle>
             <CardDescription className="mt-3 text-base">
               Your latest pronunciation assessment appears here after the

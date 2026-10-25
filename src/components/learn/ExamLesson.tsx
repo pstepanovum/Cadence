@@ -181,10 +181,10 @@ export function ExamLesson({
         <Card className="bg-white">
           <div className="space-y-4">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-full bg-blushed-brick px-4 py-2 text-sm font-semibold text-bright-snow">
+              <span className="rounded-[14px] bg-blushed-brick px-4 py-2 text-sm font-semibold text-bright-snow">
                 Final exam
               </span>
-              <span className="rounded-full bg-vanilla-cream px-4 py-2 text-sm font-semibold text-hunter-green">
+              <span className="rounded-[14px] bg-page px-4 py-2 text-sm font-semibold text-carbon-black">
                 Pass mark 70+
               </span>
             </div>
@@ -197,8 +197,8 @@ export function ExamLesson({
               <p className="text-lg text-iron-grey">{currentWord?.ipa}</p>
             </div>
 
-            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">Exam rule</p>
+            <div className="rounded-[20px] bg-page px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">Exam rule</p>
               <p className="mt-2 text-sm leading-7 text-iron-grey">
                 Keep each take clean and direct. Cadence averages the full exam,
                 and a passing score unlocks the next module in the route.
@@ -207,29 +207,29 @@ export function ExamLesson({
           </div>
         </Card>
 
-        <Card className="bg-vanilla-cream">
+        <Card className="bg-page">
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-text">Exam progress</p>
+              <p className="eyebrow text-sm text-slate-grey">Exam progress</p>
               <WordQueue total={words.length} current={wordIndex} />
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-3xl bg-white px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Word number</p>
-                <p className="mt-2 text-2xl font-semibold text-hunter-green">
+              <div className="rounded-[20px] bg-white px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Word number</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {wordIndex + 1}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Attempts</p>
-                <p className="mt-2 text-2xl font-semibold text-hunter-green">
+              <div className="rounded-[20px] bg-white px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Attempts</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {attemptNumber}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Words left</p>
-                <p className="mt-2 text-2xl font-semibold text-hunter-green">
+              <div className="rounded-[20px] bg-white px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Words left</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {Math.max(words.length - wordIndex - 1, 0)}
                 </p>
               </div>
@@ -242,7 +242,7 @@ export function ExamLesson({
         <Card className="bg-bright-snow">
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="eyebrow text-sm text-sage-text">Recorder</p>
+              <p className="eyebrow text-sm text-slate-grey">Recorder</p>
               <CardTitle className="text-2xl">
                 Send each exam word through one recorded take.
               </CardTitle>
@@ -263,20 +263,20 @@ export function ExamLesson({
             />
 
             {!engineReady ? (
-              <div className="rounded-3xl bg-white px-4 py-4 text-sm leading-6 text-iron-grey">
+              <div className="rounded-[20px] bg-white px-4 py-4 text-sm leading-6 text-iron-grey">
                 The pronunciation engine is warming up. Recording unlocks as soon
                 as it is ready.
               </div>
             ) : null}
 
             {phase === "assessing" ? (
-              <div className="rounded-3xl bg-white px-4 py-4 text-sm leading-6 text-hunter-green">
+              <div className="rounded-[20px] bg-white px-4 py-4 text-sm leading-6 text-carbon-black">
                 Scoring the current exam take against the target phonemes.
               </div>
             ) : null}
 
             {error ? (
-              <div className="rounded-3xl bg-blushed-brick px-4 py-4 text-sm leading-6 text-bright-snow">
+              <div className="rounded-[20px] bg-blushed-brick px-4 py-4 text-sm leading-6 text-bright-snow">
                 {error}
               </div>
             ) : null}
@@ -292,7 +292,7 @@ export function ExamLesson({
               nextLabel={wordIndex + 1 >= words.length ? "Submit Exam" : "Next Word"}
             />
           ) : (
-            <div className="flex h-full min-h-[26rem] flex-col justify-center rounded-[2rem] bg-vanilla-cream px-5 py-5 text-center sm:px-6 sm:py-6">
+            <div className="flex h-full min-h-[26rem] flex-col justify-center rounded-[28px] bg-page px-5 py-5 text-center sm:px-6 sm:py-6">
               <CardTitle className="text-3xl">Exam panel waiting.</CardTitle>
               <CardDescription className="mt-3">
                 Each scored take appears here before you move on to the next exam

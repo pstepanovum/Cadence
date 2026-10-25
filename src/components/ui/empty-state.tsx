@@ -18,9 +18,9 @@ export function EmptyState({
   illustration?: string;
 }) {
   return (
-    <section className="flex flex-col items-center gap-4 rounded-3xl bg-white px-6 py-10 text-center">
+    <section className="flex flex-col items-center gap-4 rounded-[20px] bg-white px-6 py-10 text-center">
       <Image src={illustration} alt="" width={200} height={150} className="h-auto w-40" />
-      <h2 className="font-kicker text-2xl text-hunter-green">{title}</h2>
+      <h2 className="font-kicker text-2xl text-carbon-black">{title}</h2>
       {children ? <div className="max-w-md text-sm leading-7 text-iron-grey">{children}</div> : null}
       {action ? (
         <Button href={action.href} onClick={action.onClick}>

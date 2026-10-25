@@ -30,7 +30,7 @@ interface NavbarProps {
 }
 
 const navBaseClass =
-  "inline-flex min-h-11 items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap";
+  "inline-flex min-h-11 items-center justify-center rounded-[14px] px-4 py-2.5 text-sm font-semibold whitespace-nowrap";
 
 export async function Navbar({ current, variant = "default" }: NavbarProps) {
   const session = await getAppSession();
@@ -57,8 +57,8 @@ export async function Navbar({ current, variant = "default" }: NavbarProps) {
   const isDark = variant === "dark";
   const inactiveClass = isDark
     ? "bg-white/10 text-bright-snow hover:bg-white/20"
-    : "bg-vanilla-cream text-hunter-green hover:bg-platinum";
-  const activeClass = "bg-yellow-green text-hunter-green";
+    : "text-iron-grey hover:bg-page hover:text-carbon-black";
+  const activeClass = isDark ? "bg-white text-carbon-black" : "bg-hunter-green text-white";
 
   return (
     <NavbarFrame variant={variant} runtime={runtime}>
@@ -81,7 +81,7 @@ export async function Navbar({ current, variant = "default" }: NavbarProps) {
                   current === item.key
                     ? activeClass
                     : item.key === "signup"
-                      ? "bg-yellow-green text-hunter-green hover:brightness-105"
+                      ? "bg-hunter-green text-white hover:brightness-110"
                       : inactiveClass,
                 )}
               >

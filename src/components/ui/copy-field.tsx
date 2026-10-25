@@ -7,7 +7,7 @@ export function CopyField({ value, label }: { value: string; label: string }) {
   const [copied, setCopied] = useState(false);
   return (
     <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center">
-      <code aria-label={label} className="min-w-0 flex-1 overflow-x-auto rounded-2xl bg-vanilla-cream px-4 py-3 font-mono text-sm whitespace-nowrap text-hunter-green">
+      <code aria-label={label} className="min-w-0 flex-1 overflow-x-auto rounded-2xl bg-page px-4 py-3 font-mono text-sm whitespace-nowrap text-carbon-black">
         {value}
       </code>
       <button
@@ -18,7 +18,7 @@ export function CopyField({ value, label }: { value: string; label: string }) {
             window.setTimeout(() => setCopied(false), 1800);
           });
         }}
-        className="min-h-11 shrink-0 cursor-pointer rounded-full bg-hunter-green px-5 text-sm font-semibold text-white"
+        className="min-h-11 shrink-0 cursor-pointer rounded-[14px] bg-hunter-green px-5 text-sm font-semibold text-white"
       >
         <span aria-live="polite">{copied ? "Copied" : "Copy"}</span>
       </button>

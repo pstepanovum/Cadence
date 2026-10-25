@@ -186,7 +186,7 @@ function MatchTile({
   hint: string;
 }) {
   const bg =
-    tone === "correct" ? colors.yellowGreen : tone === "wrong" ? colors.brickSoft : tone === "paired" ? colors.limeSoft : tone === "used" ? colors.platinum : colors.white;
+    tone === "correct" ? colors.yellowGreen : tone === "wrong" ? colors.brickSoft : tone === "paired" ? colors.alabaster : colors.platinum;
   return (
     <Pressable
       testID={testID}
@@ -196,11 +196,11 @@ function MatchTile({
       accessibilityState={{ selected }}
       onPress={onPress}
       style={({ pressed }) => [styles.tile, { backgroundColor: bg }, selected && styles.tileSelected, pressed && styles.pressed]}>
-      <Text maxFontSizeMultiplier={maxScale.control} style={styles.tileText}>
+      <Text maxFontSizeMultiplier={maxScale.control} style={[styles.tileText, selected && styles.tileTextSelected]}>
         {label}
       </Text>
       {sub ? (
-        <Text maxFontSizeMultiplier={maxScale.control} style={styles.tileSub}>
+        <Text maxFontSizeMultiplier={maxScale.control} style={[styles.tileSub, selected && styles.tileSubSelected]}>
           {sub}
         </Text>
       ) : null}
@@ -451,8 +451,8 @@ function Expected({ lines, title = "Answer" }: { lines: string[]; title?: string
 const styles = themed(() =>
   StyleSheet.create({
     wrap: { gap: spacing.md },
-    sentence: { fontFamily: fonts.kicker, fontSize: type.title3, lineHeight: Math.round(type.title3 * 1.35), color: colors.hunter },
-    filled: { color: colors.sageText, textDecorationLine: "underline" },
+    sentence: { fontFamily: fonts.kicker, fontSize: type.title3, lineHeight: Math.round(type.title3 * 1.35), color: colors.carbon },
+    filled: { color: colors.hunter, textDecorationLine: "underline" },
     blank: { color: colors.slate },
     list: { gap: spacing.sm },
     chips: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm },
@@ -466,26 +466,27 @@ const styles = themed(() =>
       justifyContent: "center",
       backgroundColor: colors.platinum,
     },
-    tileSelected: { backgroundColor: colors.limeSoft },
+    tileSelected: { backgroundColor: colors.hunter },
+    tileTextSelected: { color: colors.snow },
+    tileSubSelected: { color: colors.onDarkMuted },
     pressed: { opacity: 0.8 },
     tileText: { fontFamily: fonts.bodySemiBold, fontSize: type.callout, color: colors.carbon },
     tileSub: { fontFamily: fonts.body, fontSize: type.caption, color: colors.iron, marginTop: spacing.xxs },
     builder: {
       minHeight: 64,
       borderRadius: radii.panel,
-      borderWidth: 2,
-      borderStyle: "dashed",
-      borderColor: colors.paleSlate,
+      // A flat grey slot; after checking it turns lime or brick.
+      backgroundColor: colors.platinum,
       padding: spacing.md,
       flexDirection: "row",
       flexWrap: "wrap",
       gap: spacing.sm,
       alignItems: "center",
     },
-    builderRight: { borderColor: colors.yellowGreen, borderStyle: "solid" },
-    builderWrong: { borderColor: colors.brick, borderStyle: "solid" },
+    builderRight: { backgroundColor: colors.limeSoft },
+    builderWrong: { backgroundColor: colors.brickSoft },
     cardFront: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: spacing.md },
-    hear: { width: TAP_TARGET, height: TAP_TARGET, borderRadius: radii.pill, backgroundColor: colors.cream, alignItems: "center", justifyContent: "center" },
+    hear: { width: TAP_TARGET, height: TAP_TARGET, borderRadius: radii.pill, backgroundColor: colors.platinum, alignItems: "center", justifyContent: "center" },
     grades: { flexDirection: "row", gap: spacing.sm, flexWrap: "wrap" },
   }),
 );

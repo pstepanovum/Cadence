@@ -34,7 +34,7 @@ export function ScoreStrip({
         <View
           style={[styles.pill, hot && styles.hotPill]}
           accessibilityLabel={`${streak} in a row`}>
-          <Flame color={hot ? colors.ink : colors.slate} size={14} />
+          <Flame color={hot ? colors.snow : colors.slate} size={14} />
           <Text maxFontSizeMultiplier={maxScale.label} style={[styles.pillText, hot && styles.hotText]}>
             ×{streak}
           </Text>
@@ -69,7 +69,7 @@ const styles = themed(() =>
       alignItems: "center",
       gap: spacing.xs,
       borderRadius: radii.pill,
-      backgroundColor: colors.white,
+      backgroundColor: colors.platinum,
       paddingHorizontal: spacing.md,
       minHeight: 32,
     },
@@ -88,7 +88,7 @@ const styles = themed(() =>
       fontVariant: ["tabular-nums"],
     },
     hotPill: {
-      backgroundColor: colors.yellowGreen,
+      backgroundColor: colors.hunter,
     },
     pillText: {
       fontFamily: fonts.bodySemiBold,
@@ -96,7 +96,7 @@ const styles = themed(() =>
       color: colors.slate,
     },
     hotText: {
-      color: colors.ink,
+      color: colors.snow,
     },
     hearts: {
       flexDirection: "row",

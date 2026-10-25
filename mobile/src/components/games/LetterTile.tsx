@@ -5,14 +5,14 @@ import { colors, fonts, radii, shadows, TAP_TARGET, themed } from "@/theme/theme
 export type TileState = "pool" | "placed" | "correct" | "wrong" | "empty" | "ghost";
 
 const palette: Record<TileState, { bg: string; fg: string }> = themed(() => ({
-  pool: { bg: colors.white, fg: colors.hunter },
-  placed: { bg: colors.limeSoft, fg: colors.hunter },
+  pool: { bg: colors.platinum, fg: colors.carbon },
+  placed: { bg: colors.hunter, fg: colors.snow },
   correct: { bg: colors.yellowGreen, fg: colors.ink },
   wrong: { bg: colors.brick, fg: colors.snow },
   /** A slot waiting for a letter. */
-  empty: { bg: colors.platinum, fg: colors.paleSlate },
+  empty: { bg: colors.alabaster, fg: colors.paleSlate },
   /** A pool tile already used — keeps its space so the row does not jump. */
-  ghost: { bg: colors.platinum, fg: colors.paleSlate },
+  ghost: { bg: colors.snow, fg: colors.paleSlate },
 }));
 
 /** One letter in the scramble game. Tiles shrink as they are tapped. */
@@ -43,7 +43,6 @@ export function LetterTile({
           width: size,
           height: size * 1.15,
           backgroundColor: tone.bg,
-          borderStyle: state === "empty" || state === "ghost" ? "dashed" : "solid",
           transform: [{ scale }],
         },
         state === "pool" && styles.lifted,

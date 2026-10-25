@@ -21,7 +21,7 @@ export default function NewsletterPage() {
           <NewsletterForm source="page" />
         </Card>
         <Card className="bg-white">
-          <h2 className="font-kicker text-xl text-hunter-green">How it works</h2>
+          <h2 className="font-kicker text-xl text-carbon-black">How it works</h2>
           <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-7 text-iron-grey">
             <li>Enter your email. We send one message with a confirmation link.</li>
             <li>Click the link. Until you do, you get nothing else from us.</li>

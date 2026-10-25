@@ -53,7 +53,7 @@ export function MouthMapDemo({ sounds }: { sounds: DemoSound[] }) {
               setIndex(i);
               setPlayKey((k) => k + 1);
             }}
-            className={`min-h-10 cursor-pointer rounded-full px-4 text-sm font-semibold ${i === index ? "bg-hunter-green text-white" : "bg-vanilla-cream text-hunter-green"}`}
+            className={`min-h-10 cursor-pointer rounded-[14px] px-4 text-sm font-semibold ${i === index ? "bg-hunter-green text-white" : "bg-page text-carbon-black"}`}
           >
             {sound.label}
           </button>

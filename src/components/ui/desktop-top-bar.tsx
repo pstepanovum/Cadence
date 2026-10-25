@@ -22,7 +22,7 @@ export function DesktopTopBar({
 
   return (
     <TopBarContext.Provider value={true}>
-      <div className="z-10 w-full shrink-0 bg-hunter-green px-6 py-4">
+      <div className="z-10 w-full shrink-0 bg-white px-6 py-4">
         {children}
       </div>
     </TopBarContext.Provider>

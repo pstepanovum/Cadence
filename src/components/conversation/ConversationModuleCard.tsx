@@ -18,9 +18,9 @@ export function ConversationModuleCard({
   const content = (
     <div
       className={cn(
-        "flex h-full flex-col rounded-[2rem] px-5 py-5 sm:px-6 sm:py-6",
+        "flex h-full flex-col rounded-[28px] px-5 py-5 sm:px-6 sm:py-6",
         module.isCompleted
-          ? "bg-hunter-green text-bright-snow"
+          ? "bg-white text-carbon-black"
           : module.isUnlocked
             ? "bg-bright-snow"
             : "bg-platinum/70",
@@ -32,10 +32,10 @@ export function ConversationModuleCard({
             className={cn(
               "inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold",
               module.isCompleted
-                ? "bg-yellow-green text-hunter-green"
+                ? "bg-hunter-green text-white"
                 : module.isUnlocked
                   ? "bg-hunter-green text-white"
-                  : "bg-pale-slate-2 text-white",
+                  : "bg-pale-slate-2 text-carbon-black",
             )}
           >
             {module.sortOrder}
@@ -44,9 +44,9 @@ export function ConversationModuleCard({
             className={cn(
               "rounded-full px-3 py-1 text-xs font-semibold",
               module.isCompleted
-                ? "bg-white/12 text-bright-snow"
+                ? "bg-page text-carbon-black"
                 : module.isUnlocked
-                  ? "bg-yellow-green/20 text-hunter-green"
+                  ? "bg-page text-carbon-black"
                   : "bg-pale-slate text-slate-grey",
             )}
           >
@@ -55,11 +55,11 @@ export function ConversationModuleCard({
         </div>
 
         {module.isCompleted ? (
-          <CheckCircle size={20} color="currentColor" className="text-yellow-green" />
+          <CheckCircle size={20} color="currentColor" className="text-slate-grey" />
         ) : !module.isUnlocked ? (
           <Lock size={18} color="currentColor" className="text-pale-slate-2" />
         ) : bestScore !== null ? (
-          <span className="rounded-full bg-vanilla-cream px-3 py-1 text-xs font-semibold text-hunter-green">
+          <span className="rounded-full bg-page px-3 py-1 text-xs font-semibold text-carbon-black">
             {bestScore}/100
           </span>
         ) : null}
@@ -70,7 +70,7 @@ export function ConversationModuleCard({
           <p
             className={cn(
               "eyebrow text-xs",
-              module.isCompleted ? "text-yellow-green" : "text-sage-text",
+              module.isCompleted ? "text-slate-grey" : "text-slate-grey",
             )}
           >
             {module.topic}
@@ -78,7 +78,7 @@ export function ConversationModuleCard({
           <h3
             className={cn(
               "text-2xl font-semibold leading-tight",
-              module.isCompleted ? "text-bright-snow" : "text-hunter-green",
+              module.isCompleted ? "text-carbon-black" : "text-carbon-black",
             )}
           >
             {module.title}
@@ -88,18 +88,18 @@ export function ConversationModuleCard({
         <p
           className={cn(
             "text-sm leading-7",
-            module.isCompleted ? "text-bright-snow/84" : "text-iron-grey",
+            module.isCompleted ? "text-iron-grey" : "text-iron-grey",
           )}
         >
           {module.summary}
         </p>
       </div>
 
-      <div className="mt-4 rounded-3xl bg-white/10 px-4 py-4">
+      <div className="mt-4 rounded-[20px] bg-page px-4 py-4">
         <p
           className={cn(
             "text-sm leading-6",
-            module.isCompleted ? "text-bright-snow/84" : "text-iron-grey",
+            module.isCompleted ? "text-iron-grey" : "text-iron-grey",
           )}
         >
           {module.scenario}
@@ -113,9 +113,9 @@ export function ConversationModuleCard({
             className={cn(
               "rounded-full px-3 py-1 text-xs font-semibold",
               module.isCompleted
-                ? "bg-white/12 text-bright-snow"
+                ? "bg-page text-carbon-black"
                 : module.isUnlocked
-                  ? "bg-vanilla-cream text-hunter-green"
+                  ? "bg-page text-carbon-black"
                   : "bg-pale-slate text-slate-grey",
             )}
           >
@@ -130,7 +130,7 @@ export function ConversationModuleCard({
             className={cn(
               "flex min-h-12 w-full items-center justify-between rounded-[1.5rem] px-4 py-3 text-sm font-semibold",
               module.isCompleted
-                ? "bg-white/12 text-bright-snow"
+                ? "bg-page text-carbon-black"
                 : "bg-hunter-green text-white",
             )}
           >
@@ -146,7 +146,7 @@ export function ConversationModuleCard({
         <p
           className={cn(
             "text-xs font-medium",
-            module.isCompleted ? "text-bright-snow/84" : "text-iron-grey",
+            module.isCompleted ? "text-iron-grey" : "text-iron-grey",
           )}
         >
           Pass mark {module.passScore}+ and about {module.estimatedMinutes} minutes.

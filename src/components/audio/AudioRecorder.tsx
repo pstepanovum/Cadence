@@ -182,7 +182,7 @@ export function AudioRecorder({
   return (
     <div
       className={cn(
-        embedded ? "p-0" : "rounded-3xl bg-white p-5",
+        embedded ? "p-0" : "rounded-[20px] bg-white p-5",
         className,
       )}
     >
@@ -197,8 +197,8 @@ export function AudioRecorder({
       <div className="space-y-5">
         {showIntro ? (
           <div className="mx-auto max-w-xl space-y-2 text-center">
-            <p className="eyebrow text-sm text-sage-text">Recorder</p>
-            <h3 className="text-2xl font-semibold text-hunter-green">
+            <p className="eyebrow text-sm text-slate-grey">Recorder</p>
+            <h3 className="text-2xl font-semibold text-carbon-black">
               Capture one take
             </h3>
             <p className="text-sm leading-7 text-iron-grey">
@@ -282,7 +282,7 @@ export function AudioRecorder({
         {showStatus ? (
           <div
             className={cn(
-              "rounded-3xl bg-vanilla-cream/80 px-4 py-3 text-center text-sm text-iron-grey",
+              "rounded-[20px] bg-page/80 px-4 py-3 text-center text-sm text-iron-grey",
               embedded && "mx-auto max-w-xl",
             )}
           >
@@ -298,13 +298,13 @@ export function AudioRecorder({
       </div>
 
       {error ? (
-        <div className="mt-4 rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+        <div className="mt-4 rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
           {error}
         </div>
       ) : null}
 
       {referenceError ? (
-        <div className="mt-4 rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+        <div className="mt-4 rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
           {referenceError}
         </div>
       ) : null}

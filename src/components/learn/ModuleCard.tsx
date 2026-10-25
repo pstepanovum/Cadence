@@ -31,9 +31,9 @@ export function ModuleCard({ module }: ModuleCardProps) {
   const content = (
     <div
       className={cn(
-        "flex h-full min-h-[22rem] flex-col rounded-[2rem] px-6 py-6",
+        "flex h-full min-h-[22rem] flex-col rounded-[28px] px-6 py-6",
         isCompleted
-          ? "bg-hunter-green text-bright-snow"
+          ? "bg-white text-carbon-black"
           : isUnlocked
             ? "bg-bright-snow"
             : "bg-platinum/70 select-none",
@@ -45,10 +45,10 @@ export function ModuleCard({ module }: ModuleCardProps) {
             className={cn(
               "inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold",
               isCompleted
-                ? "bg-yellow-green text-hunter-green"
+                ? "bg-hunter-green text-white"
                 : isUnlocked
                   ? "bg-hunter-green text-white"
-                  : "bg-pale-slate-2 text-white",
+                  : "bg-pale-slate-2 text-carbon-black",
             )}
           >
             {module.sort_order}
@@ -57,9 +57,9 @@ export function ModuleCard({ module }: ModuleCardProps) {
             className={cn(
               "rounded-full px-3 py-1 text-xs font-semibold",
               isCompleted
-                ? "bg-white/12 text-bright-snow"
+                ? "bg-page text-carbon-black"
                 : isUnlocked
-                  ? "bg-yellow-green/20 text-hunter-green"
+                  ? "bg-page text-carbon-black"
                   : "bg-pale-slate text-slate-grey",
             )}
           >
@@ -68,11 +68,11 @@ export function ModuleCard({ module }: ModuleCardProps) {
         </div>
 
         {isCompleted ? (
-          <CheckCircle size={20} color="currentColor" className="text-yellow-green" />
+          <CheckCircle size={20} color="currentColor" className="text-slate-grey" />
         ) : !isUnlocked ? (
           <Lock size={20} color="currentColor" className="text-pale-slate-2" />
         ) : bestScore !== null ? (
-          <span className="rounded-full bg-vanilla-cream px-3 py-1 text-xs font-semibold text-hunter-green">
+          <span className="rounded-full bg-page px-3 py-1 text-xs font-semibold text-carbon-black">
             {bestScore}/100
           </span>
         ) : null}
@@ -82,7 +82,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
         <h3
           className={cn(
             "text-2xl font-semibold leading-tight",
-            isCompleted ? "text-bright-snow" : "text-hunter-green",
+            isCompleted ? "text-carbon-black" : "text-carbon-black",
           )}
         >
           {module.title}
@@ -90,7 +90,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
         <p
           className={cn(
             "text-sm leading-7",
-            isCompleted ? "text-bright-snow/84" : "text-iron-grey",
+            isCompleted ? "text-iron-grey" : "text-iron-grey",
           )}
         >
           {module.description}
@@ -105,9 +105,9 @@ export function ModuleCard({ module }: ModuleCardProps) {
               className={cn(
                 "rounded-full px-3 py-1 text-xs font-mono font-semibold",
                 isCompleted
-                  ? "bg-white/12 text-bright-snow"
+                  ? "bg-page text-carbon-black"
                   : isUnlocked
-                    ? "bg-vanilla-cream text-hunter-green"
+                    ? "bg-page text-carbon-black"
                     : "bg-pale-slate text-slate-grey",
               )}
             >
@@ -123,7 +123,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
             className={cn(
               "flex min-h-12 w-full items-center justify-between rounded-[1.5rem] px-4 py-3 text-sm font-semibold",
               isCompleted
-                ? "bg-white/12 text-bright-snow"
+                ? "bg-page text-carbon-black"
                 : "bg-hunter-green text-white",
             )}
           >
@@ -143,7 +143,7 @@ export function ModuleCard({ module }: ModuleCardProps) {
         ) : null}
 
         {isCompleted ? (
-          <p className="text-xs font-medium text-bright-snow/84">
+          <p className="text-xs font-medium text-iron-grey">
             Reopen the module any time to revisit theory, practice, and the exam.
           </p>
         ) : null}

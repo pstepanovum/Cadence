@@ -266,7 +266,7 @@ export default function SoundMatchScreen() {
       {answered ? (
         <>
           <InfoPanel tone={correct ? "cream" : "white"}>
-            <Eyebrow tone={correct ? undefined : colors.brick}>
+            <Eyebrow tone={correct ? colors.sageText : colors.brickText}>
               {correct ? "That's the one" : `It was “${round.target}”`}
             </Eyebrow>
             <Body size={type.footnote}>Tap either word to hear it again.</Body>

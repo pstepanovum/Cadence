@@ -40,8 +40,8 @@ export default async function SoundsPage({ searchParams }: { searchParams: Promi
       <SoundsToFix variant={variant} />
 
       {GROUPS.map((group) => (
-        <section key={group.kind} aria-labelledby={`group-${group.kind}`} className="rounded-3xl bg-white px-5 py-6 sm:px-8">
-          <h2 id={`group-${group.kind}`} className="font-kicker text-2xl text-hunter-green">
+        <section key={group.kind} aria-labelledby={`group-${group.kind}`} className="rounded-[20px] bg-white px-5 py-6 sm:px-8">
+          <h2 id={`group-${group.kind}`} className="font-kicker text-2xl text-carbon-black">
             {group.title}
           </h2>
           <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">
@@ -51,9 +51,9 @@ export default async function SoundsPage({ searchParams }: { searchParams: Promi
                 <li key={sound.id}>
                   <Link
                     href={`/sounds/${sound.id}${suffix}`}
-                    className="flex min-h-20 flex-col justify-center rounded-3xl bg-vanilla-cream px-4 py-3 transition-colors hover:bg-yellow-green"
+                    className="flex min-h-20 flex-col justify-center rounded-[20px] bg-page px-4 py-3 transition-colors hover:bg-platinum"
                   >
-                    <span className="font-kicker text-2xl text-hunter-green">/{ipaOf(sound, variant)}/</span>
+                    <span className="font-kicker text-2xl text-carbon-black">/{ipaOf(sound, variant)}/</span>
                     <span className="sr-only"> as in </span>
                     <span className="text-sm text-iron-grey">{sound.example}</span>
                   </Link>
@@ -63,15 +63,15 @@ export default async function SoundsPage({ searchParams }: { searchParams: Promi
         </section>
       ))}
 
-      <section aria-labelledby="pairs" className="rounded-3xl bg-white px-5 py-6 sm:px-8">
-        <h2 id="pairs" className="font-kicker text-2xl text-hunter-green">Compare two sounds</h2>
+      <section aria-labelledby="pairs" className="rounded-[20px] bg-white px-5 py-6 sm:px-8">
+        <h2 id="pairs" className="font-kicker text-2xl text-carbon-black">Compare two sounds</h2>
         <p className="mt-2 text-sm leading-7 text-iron-grey">Pairs of words that differ by one sound.</p>
         <ul className="mt-4 flex flex-wrap gap-2">
           {MINIMAL_PAIRS.filter((pair) => soundById(pair.a)?.ipa[variant] && soundById(pair.b)?.ipa[variant]).map((pair) => (
             <li key={pair.words.join("-")}>
               <Link
                 href={`/sounds/compare?a=${pair.a}&b=${pair.b}&words=${pair.words.join(",")}${variant === "RP" ? "&accent=RP" : ""}`}
-                className="inline-flex min-h-11 items-center rounded-full bg-vanilla-cream px-4 text-sm font-semibold text-hunter-green hover:bg-yellow-green"
+                className="inline-flex min-h-11 items-center rounded-[14px] bg-page px-4 text-sm font-semibold text-carbon-black hover:bg-platinum"
               >
                 {pair.words[0]} / {pair.words[1]}
               </Link>

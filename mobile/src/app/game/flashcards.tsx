@@ -303,7 +303,7 @@ const styles = themed(() =>
     },
     ipa: {
       fontFamily: fonts.bodyMedium,
-      color: colors.sageText,
+      color: colors.slate,
     },
     hint: {
       marginTop: spacing.md,

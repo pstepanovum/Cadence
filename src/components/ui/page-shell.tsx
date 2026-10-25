@@ -21,10 +21,10 @@ export function PageShell({ children, current }: { children: ReactNode; current?
 /** A heading card at the top of a public page. */
 export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title: string; children?: ReactNode }) {
   return (
-    <section className="rounded-3xl bg-hunter-green px-6 py-8 text-white sm:px-10 sm:py-10">
-      <p className="eyebrow text-sm text-yellow-green">{eyebrow}</p>
+    <section className="rounded-[20px] bg-white px-6 py-8 text-carbon-black sm:px-10 sm:py-10">
+      <p className="eyebrow text-sm text-slate-grey">{eyebrow}</p>
       <h1 className="mt-3 max-w-3xl text-balance text-3xl font-semibold leading-tight sm:text-5xl">{title}</h1>
-      {children ? <div className="mt-4 max-w-2xl text-base leading-8 text-white/80">{children}</div> : null}
+      {children ? <div className="mt-4 max-w-2xl text-base leading-8 text-iron-grey">{children}</div> : null}
     </section>
   );
 }

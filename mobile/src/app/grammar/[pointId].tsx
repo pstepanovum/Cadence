@@ -107,7 +107,7 @@ const styles = themed(() =>
     section: { gap: spacing.sm },
     example: { flexDirection: "row", alignItems: "center", gap: spacing.md, backgroundColor: colors.snow, borderRadius: radii.panel, padding: spacing.md },
     exampleText: { flex: 1, gap: spacing.xxs },
-    hear: { width: TAP_TARGET, height: TAP_TARGET, borderRadius: radii.pill, backgroundColor: colors.cream, alignItems: "center", justifyContent: "center" },
+    hear: { width: TAP_TARGET, height: TAP_TARGET, borderRadius: radii.pill, backgroundColor: colors.platinum, alignItems: "center", justifyContent: "center" },
     strike: { textDecorationLine: "line-through" },
   }),
 );

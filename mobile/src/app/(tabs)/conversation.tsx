@@ -110,7 +110,7 @@ function ScenarioCard({
     scenarioLockReason(scenarios, scenario.slug) ?? "Pass the earlier scenes to unlock this one.";
 
   const card = (
-    <Card style={[locked && styles.lockedCard, isNext && styles.nextCard]}>
+    <Card style={[locked && styles.lockedCard]}>
       <View style={styles.cardTop}>
         <View style={styles.cardTitleWrap}>
           <Eyebrow>
@@ -144,7 +144,7 @@ function ScenarioCard({
       ) : (
         <View style={styles.metaRow}>
           <View style={styles.timeRow}>
-            <Clock3 color={colors.sageText} size={14} />
+            <Clock3 color={colors.slate} size={14} />
             <Body size={type.footnote} tone="muted">
               ~{scenario.estimatedMinutes} min · {scenario.turns.length} turns · pass {scenario.passScore}
             </Body>
@@ -193,10 +193,6 @@ const styles = themed(() =>
     lockedCard: {
       backgroundColor: overlays.locked,
       boxShadow: undefined,
-    },
-    nextCard: {
-      borderWidth: 2,
-      borderColor: colors.yellowGreen,
     },
     cardTop: {
       flexDirection: "row",

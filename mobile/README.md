@@ -266,8 +266,14 @@ crash on anything running iOS 27.
 `assets/svg/icon-green-white.svg` (the sage `#6A994E` cut, the one drawn for light backgrounds)
 centred at 66% width on the brand cream `#f2e8cf`, 1024×1024, flattened to RGB. The flattening
 matters: App Store Connect rejects an icon that carries an alpha channel. Android and the web keep
-`assets/images/icon.png`, the yellow-green mark on transparent, and the splash is that same mark
-on cream.
+`assets/images/icon.png`, the yellow-green mark on transparent.
+
+The native splash is the mark in grey on the page colour (`assets/images/splash-mark.png` on
+white, `splash-mark-dark.png` on `#16191c`, 140 pt wide). `src/components/LaunchSplash.tsx` takes
+over from it at the same size and place, fills the mark with green liquid while fonts, the stored
+sign-in and the paired computer load, then fades into the app. It never holds a ready app back by
+more than about 600 ms, and with Reduce Motion on it only fades. Regenerate the two PNGs from
+`assets/svg/icon-green-white.svg` if the mark changes.
 
 ### Permissions
 

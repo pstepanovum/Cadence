@@ -23,10 +23,11 @@ const bannerPalette: Record<
   BannerTone,
   { bg: string; fg: string; icon: string; Icon: typeof Info }
 > = themed(() => ({
-  info: { bg: colors.white, fg: colors.iron, icon: colors.hunter, Icon: Info },
-  warning: { bg: colors.mixedSoft, fg: colors.ink, icon: colors.ink, Icon: AlertTriangle },
+  info: { bg: colors.platinum, fg: colors.iron, icon: colors.slate, Icon: Info },
+  // Carbon, not ink: ink is the dark green for yellow-green chips and disappears on the dark-mode tint.
+  warning: { bg: colors.mixedSoft, fg: colors.carbon, icon: colors.carbon, Icon: AlertTriangle },
   error: { bg: colors.brickSoft, fg: colors.brickText, icon: colors.brick, Icon: XCircle },
-  success: { bg: colors.limeSoft, fg: colors.ink, icon: colors.hunter, Icon: CheckCircle2 },
+  success: { bg: colors.platinum, fg: colors.carbon, icon: colors.hunter, Icon: CheckCircle2 },
 }));
 
 export function Banner({
@@ -225,8 +226,6 @@ const styles = themed(() =>
       borderRadius: radii.panel,
       padding: spacing.lg,
       gap: spacing.md,
-      borderWidth: 1,
-      borderColor: "rgba(33,37,41,0.06)",
     },
     bannerRow: {
       flexDirection: "row",
@@ -267,7 +266,7 @@ const styles = themed(() =>
     loadingRow: {
       height: 72,
       borderRadius: radii.card,
-      backgroundColor: colors.snow,
+      backgroundColor: colors.platinum,
     },
     loadingRowShort: {
       width: "65%",

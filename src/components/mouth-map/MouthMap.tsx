@@ -65,7 +65,7 @@ export function MouthMap({ sound, target, variant, word, from = null, compact = 
             <button
               type="button"
               onClick={play}
-              className="inline-flex min-h-11 flex-1 cursor-pointer items-center justify-center gap-2 rounded-full bg-hunter-green px-4 text-sm font-semibold text-white sm:w-full sm:flex-none"
+              className="inline-flex min-h-11 flex-1 cursor-pointer items-center justify-center gap-2 rounded-[14px] bg-hunter-green px-4 text-sm font-semibold text-white sm:w-full sm:flex-none"
               aria-label={speech ? `Play “${spoken}” and replay the movement` : "Replay the movement"}
             >
               <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor">
@@ -85,7 +85,7 @@ export function MouthMap({ sound, target, variant, word, from = null, compact = 
             ))}
           </figcaption>
           <div>
-            <p className="eyebrow pb-2 text-xs text-sage-text">Parts of the mouth</p>
+            <p className="eyebrow pb-2 text-xs text-slate-grey">Parts of the mouth</p>
             <ul className="flex flex-wrap gap-2">
               {target.highlight.map((id) => (
                 <li key={id}>
@@ -96,7 +96,7 @@ export function MouthMap({ sound, target, variant, word, from = null, compact = 
                     onFocus={() => setFocusLayer(id)}
                     onBlur={() => setFocusLayer(null)}
                     aria-label={`Show the ${LAYER_LABELS[id].toLowerCase()}`}
-                    className="min-h-9 cursor-pointer rounded-full bg-yellow-green px-3 text-sm font-semibold text-hunter-green"
+                    className="min-h-9 cursor-pointer rounded-[14px] bg-platinum px-3 text-sm font-semibold text-carbon-black hover:bg-alabaster-grey"
                   >
                     {LAYER_LABELS[id]}
                   </button>

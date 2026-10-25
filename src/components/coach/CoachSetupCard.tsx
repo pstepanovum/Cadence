@@ -61,8 +61,8 @@ export function CoachSetupCard({
       <Card className="bg-white">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="space-y-1">
-            <p className="eyebrow text-sm text-sage-text">Active session</p>
-            <p className="text-lg font-semibold text-hunter-green">{sessionTopic}</p>
+            <p className="eyebrow text-sm text-slate-grey">Active session</p>
+            <p className="text-lg font-semibold text-carbon-black">{sessionTopic}</p>
           </div>
           <Button variant="ghost" onClick={onReset}>
             New conversation
@@ -77,8 +77,8 @@ export function CoachSetupCard({
     <Card className="bg-white">
       <div className="space-y-4">
         <div className="space-y-2">
-          <p className="eyebrow text-sm text-sage-text">Session setup</p>
-          <h2 className="text-2xl font-semibold text-hunter-green">
+          <p className="eyebrow text-sm text-slate-grey">Session setup</p>
+          <h2 className="text-2xl font-semibold text-carbon-black">
             Give the coach a situation to open.
           </h2>
           <p className="text-sm leading-6 text-iron-grey">
@@ -88,9 +88,9 @@ export function CoachSetupCard({
 
         <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-text">Topic or situation</span>
+            <span className="eyebrow block text-xs text-slate-grey">Topic or situation</span>
             <Input
-              className="rounded-full border border-hunter-green/10 bg-vanilla-cream px-5"
+              className="rounded-[14px] border border-hunter-green/10 bg-page px-5"
               value={topicDraft}
               onChange={(e) => onTopicDraftChange(e.target.value)}
               onKeyDown={(e) => {
@@ -114,7 +114,7 @@ export function CoachSetupCard({
             <button
               key={suggestion}
               type="button"
-              className="rounded-full bg-vanilla-cream px-3 py-2 text-sm font-semibold text-hunter-green transition-colors hover:bg-[#eadfbe]"
+              className="rounded-[14px] bg-page px-3 py-2 text-sm font-semibold text-carbon-black transition-colors hover:bg-platinum"
               onClick={() => onTopicDraftChange(suggestion)}
             >
               {suggestion}
@@ -122,10 +122,10 @@ export function CoachSetupCard({
           ))}
         </div>
 
-        <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
+        <div className="rounded-[20px] bg-page px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-xs text-sage-text">Reply mode</p>
+              <p className="eyebrow text-xs text-slate-grey">Reply mode</p>
               <p className="text-sm leading-6 text-iron-grey">
                 Choose whether the next reply should follow an exact target or stay fully open.
               </p>
@@ -151,25 +151,25 @@ export function CoachSetupCard({
         </div>
 
         {error ? (
-          <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+          <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
             {error}
           </div>
         ) : startHelperMessage ? (
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-3 text-sm text-iron-grey">
+          <div className="rounded-[20px] bg-page px-4 py-3 text-sm text-iron-grey">
             {startHelperMessage}
           </div>
         ) : null}
 
         {showEngineDiagnostics ? (
           <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">Coach status</p>
+            <div className="rounded-[20px] bg-page px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">Coach status</p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">
                 {coachStatus?.message ?? "Checking AI Coach availability..."}
               </p>
             </div>
-            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">
+            <div className="rounded-[20px] bg-page px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">
                 {replyMode === "target" ? "Pronunciation engine" : "Freedom transcription"}
               </p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">

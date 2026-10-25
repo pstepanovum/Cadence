@@ -32,7 +32,7 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
     pathname === href || pathname.startsWith(href + '/')
 
   return (
-    <aside className="flex h-screen w-80 shrink-0 flex-col overflow-hidden bg-white text-hunter-green">
+    <aside className="flex h-screen w-80 shrink-0 flex-col overflow-hidden bg-white text-carbon-black">
 
       {/* ── Traffic-light zone ── */}
       <div className="h-[52px] shrink-0 w-full px-3 pt-2">
@@ -55,10 +55,10 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
               key={item.href}
               href={item.href}
               className={cn(
-                'flex items-center rounded-full px-4 py-2.5 text-base font-semibold transition-colors',
+                'flex items-center rounded-[14px] px-4 py-2.5 text-base font-semibold transition-colors',
                 isActive(item.href)
-                  ? 'bg-yellow-green text-hunter-green'
-                  : 'text-hunter-green hover:bg-vanilla-cream',
+                  ? 'bg-hunter-green text-white'
+                  : 'text-carbon-black hover:bg-page',
               )}
             >
               {item.label}
@@ -67,7 +67,7 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
         </nav>
 
         <div className="mt-5 space-y-2">
-          <p className="px-4 text-xs font-semibold tracking-[0.16em] text-sage-text/80 uppercase">
+          <p className="px-4 text-xs font-semibold tracking-[0.16em] text-slate-grey uppercase">
             Explore
           </p>
           <nav aria-label="Explore" className="flex flex-col gap-0.5">
@@ -76,10 +76,10 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'flex items-center justify-between gap-2 rounded-full px-4 py-2.5 text-base font-semibold transition-colors',
+                  'flex items-center justify-between gap-2 rounded-[14px] px-4 py-2.5 text-base font-semibold transition-colors',
                   isActive(item.href)
-                    ? 'bg-yellow-green text-hunter-green'
-                    : 'text-hunter-green hover:bg-vanilla-cream',
+                    ? 'bg-hunter-green text-white'
+                    : 'text-carbon-black hover:bg-page',
                 )}
               >
                 <span>{item.label}</span>
@@ -99,11 +99,11 @@ export function DesktopSidebar({ userId }: { userId?: string | null }) {
         <Link
           href="/account"
           className={cn(
-            'flex items-center gap-2.5 rounded-full px-4 py-2.5 text-base font-semibold transition-colors',
+            'flex items-center gap-2.5 rounded-[14px] px-4 py-2.5 text-base font-semibold transition-colors',
             'flex-1',
             isActive('/account') || isActive('/profile')
-              ? 'bg-yellow-green text-hunter-green'
-              : 'text-hunter-green hover:bg-vanilla-cream',
+              ? 'bg-hunter-green text-white'
+              : 'text-carbon-black hover:bg-page',
           )}
         >
           <Settings size={16} color="currentColor" aria-hidden="true" />

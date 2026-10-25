@@ -34,10 +34,10 @@ function StatusPill({
   return (
     <div
       className={cn(
-        'inline-flex w-auto self-start rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap',
+        'inline-flex w-auto self-start rounded-[14px] px-4 py-2 text-sm font-semibold whitespace-nowrap',
         ready
-          ? 'bg-yellow-green text-hunter-green'
-          : 'bg-vanilla-cream text-iron-grey',
+          ? 'bg-hunter-green text-white'
+          : 'bg-page text-iron-grey',
       )}
     >
       {label}
@@ -264,7 +264,7 @@ export function DesktopSetup() {
   return (
     <div
       className={cn(
-        'bg-vanilla-cream px-4 py-4 sm:px-6 sm:py-5 lg:px-8',
+        'bg-page px-4 py-4 sm:px-6 sm:py-5 lg:px-8',
         isElectron ? 'h-[100dvh] overflow-hidden' : 'min-h-screen',
       )}
     >
@@ -275,41 +275,41 @@ export function DesktopSetup() {
         )}
       >
         <section className="grid w-full max-w-5xl gap-4 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
-          <Card className="h-full bg-hunter-green text-bright-snow">
+          <Card className="h-full bg-white text-carbon-black">
             <div className="flex h-full flex-col justify-between gap-5">
               <div className="space-y-5">
-                <div className="inline-flex self-start items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-yellow-green">
+                <div className="inline-flex self-start items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-slate-grey">
                   <Microphone size={18} filled color="currentColor" />
                   <span className="eyebrow text-sm">Desktop Setup</span>
                 </div>
 
                 <div className="space-y-3">
-                  <h1 className="text-4xl font-semibold text-bright-snow sm:text-5xl">
+                  <h1 className="text-4xl font-semibold text-carbon-black sm:text-5xl">
                     Getting Cadence ready for your first session.
                   </h1>
-                  <p className="max-w-2xl text-base leading-7 text-bright-snow/80">
+                  <p className="max-w-2xl text-base leading-7 text-iron-grey">
                     Cadence will prepare the local speaking tools this Mac needs
                     for practice, listening, and coach responses. The first
                     setup can take a few minutes once you start it.
                   </p>
                 </div>
 
-                <div className="h-[11.75rem] rounded-3xl bg-white/10 px-5 py-5">
+                <div className="h-[11.75rem] rounded-[20px] bg-page px-5 py-5">
                   <div className="flex items-start justify-between gap-4">
                     <div className="h-[4.75rem] flex-1">
-                      <p className="eyebrow text-sm text-yellow-green">Current step</p>
-                      <p className="mt-2 h-[3.5rem] overflow-hidden text-lg font-semibold leading-7 text-bright-snow">
+                      <p className="eyebrow text-sm text-slate-grey">Current step</p>
+                      <p className="mt-2 h-[3.5rem] overflow-hidden text-lg font-semibold leading-7 text-carbon-black">
                         {isLoading ? 'Loading installer state…' : state.currentStep}
                       </p>
                     </div>
-                    <div className="flex h-12 w-16 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-bright-snow">
+                    <div className="flex h-12 w-16 shrink-0 items-center justify-center rounded-full bg-page text-sm font-semibold text-carbon-black">
                       {state.percent}%
                     </div>
                   </div>
 
-                  <div className="mt-5 rounded-full bg-white/12 p-2">
+                  <div className="mt-5 rounded-full bg-page p-2">
                     <div
-                      className="h-4 rounded-full bg-yellow-green transition-[width] duration-500"
+                      className="h-4 rounded-full bg-hunter-green transition-[width] duration-500"
                       style={{ width: progressWidth }}
                     />
                   </div>
@@ -319,13 +319,13 @@ export function DesktopSetup() {
               <div className="space-y-4">
                 <div className="min-h-[5.75rem]">
                   {state.phase === 'idle' ? (
-                    <div className="rounded-3xl bg-white/10 px-4 py-4 text-sm leading-7 text-bright-snow/80">
-                      Nothing is running yet. Click <span className="font-semibold text-bright-snow">Start setup</span> and
+                    <div className="rounded-[20px] bg-page px-4 py-4 text-sm leading-7 text-iron-grey">
+                      Nothing is running yet. Click <span className="font-semibold text-carbon-black">Start setup</span> and
                       Cadence will begin preparing the local speaking tools for
                       this Mac.
                     </div>
                   ) : state.error || localError ? (
-                    <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+                    <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
                       {state.error ?? localError}
                     </div>
                   ) : null}
@@ -333,7 +333,6 @@ export function DesktopSetup() {
 
                 <div className="flex flex-wrap gap-3">
                   <Button
-                    variant="secondary"
                     onClick={() => void handlePrimaryAction()}
                     disabled={isSubmitting || isBusy}
                   >
@@ -343,7 +342,7 @@ export function DesktopSetup() {
 
                   <Button
                     variant="ghost"
-                    className="bg-white/12 text-bright-snow hover:bg-white/18"
+                    className="bg-page text-carbon-black hover:bg-platinum"
                     onClick={() => void handleOpenLogs()}
                     disabled={isSubmitting}
                   >
@@ -356,7 +355,7 @@ export function DesktopSetup() {
 
           <Card className="h-full bg-white">
             <div className="flex h-full flex-col gap-6">
-              <div className="inline-flex w-auto self-start items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
+              <div className="inline-flex w-auto self-start items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-iron-grey">
                 <Activity size={18} filled color="currentColor" />
                 <span className="eyebrow text-sm">Runtime Health</span>
               </div>
@@ -377,9 +376,9 @@ export function DesktopSetup() {
               </div>
 
               <div className="mt-auto grid gap-3 sm:grid-cols-2">
-                <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-                  <p className="eyebrow text-sm text-sage-text">Setup style</p>
-                  <p className="mt-3 text-2xl font-semibold text-hunter-green">
+                <div className="rounded-[20px] bg-page px-5 py-5">
+                  <p className="eyebrow text-sm text-slate-grey">Setup style</p>
+                  <p className="mt-3 text-2xl font-semibold text-carbon-black">
                     Native local setup
                   </p>
                   <p className="mt-2 text-sm leading-7 text-iron-grey">
@@ -389,9 +388,9 @@ export function DesktopSetup() {
                   </p>
                 </div>
 
-                <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-                  <p className="eyebrow text-sm text-sage-text">Ready to enter</p>
-                  <p className="mt-3 text-2xl font-semibold text-hunter-green">
+                <div className="rounded-[20px] bg-page px-5 py-5">
+                  <p className="eyebrow text-sm text-slate-grey">Ready to enter</p>
+                  <p className="mt-3 text-2xl font-semibold text-carbon-black">
                     {state.modelsReady ? 'Yes' : 'Not yet'}
                   </p>
                   <p className="mt-2 text-sm leading-7 text-iron-grey">

@@ -35,22 +35,22 @@ export function LessonList({ module, lessons }: LessonListProps) {
     <div className="space-y-4">
       <Card className="overflow-hidden bg-white p-0">
         <div className="grid gap-0 xl:grid-cols-[1.15fr_0.85fr]">
-          <div className="space-y-5 bg-hunter-green px-6 py-6 text-bright-snow sm:px-7 sm:py-7">
+          <div className="space-y-5 bg-white px-6 py-6 text-carbon-black sm:px-7 sm:py-7">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-yellow-green text-sm font-bold text-hunter-green">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-hunter-green text-sm font-bold text-white">
                   {module.sort_order}
                 </span>
-                <span className="eyebrow text-sm text-yellow-green">
+                <span className="eyebrow text-sm text-slate-grey">
                   Module {module.sort_order}
                 </span>
               </div>
 
               <div className="space-y-2">
-                <CardTitle className="text-3xl text-bright-snow sm:text-4xl">
+                <CardTitle className="text-3xl text-carbon-black sm:text-4xl">
                   {module.title}
                 </CardTitle>
-                <CardDescription className="max-w-3xl text-bright-snow/84">
+                <CardDescription className="max-w-3xl text-iron-grey">
                   {module.description}
                 </CardDescription>
               </div>
@@ -60,15 +60,15 @@ export function LessonList({ module, lessons }: LessonListProps) {
               {module.phoneme_focus.map((phoneme) => (
                 <span
                   key={phoneme}
-                  className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-bright-snow"
+                  className="rounded-full bg-page px-3 py-1 text-xs font-semibold text-carbon-black"
                 >
                   {phoneme}
                 </span>
               ))}
             </div>
 
-            <div className="rounded-3xl bg-white/10 px-5 py-4">
-              <p className="text-sm leading-7 text-bright-snow/84">{moduleStatus}</p>
+            <div className="rounded-[20px] bg-page px-5 py-4">
+              <p className="text-sm leading-7 text-iron-grey">{moduleStatus}</p>
             </div>
           </div>
 
@@ -76,8 +76,8 @@ export function LessonList({ module, lessons }: LessonListProps) {
             <div className="flex items-center gap-4">
               <ProgressRing score={completionRate} size={96} strokeWidth={7} />
               <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-text">Module progress</p>
-                <p className="text-2xl font-semibold text-hunter-green">
+                <p className="eyebrow text-sm text-slate-grey">Module progress</p>
+                <p className="text-2xl font-semibold text-carbon-black">
                   {completedCount}/{lessons.length} lessons passed
                 </p>
                 <p className="text-sm leading-6 text-iron-grey">
@@ -87,21 +87,21 @@ export function LessonList({ module, lessons }: LessonListProps) {
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-3xl bg-platinum px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Theory</p>
-                <p className="mt-2 text-2xl font-semibold text-hunter-green">
+              <div className="rounded-[20px] bg-platinum px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Theory</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {theoryCount}
                 </p>
               </div>
-              <div className="rounded-3xl bg-platinum px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Practice</p>
-                <p className="mt-2 text-2xl font-semibold text-hunter-green">
+              <div className="rounded-[20px] bg-platinum px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Practice</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {practiceCount}
                 </p>
               </div>
-              <div className="rounded-3xl bg-platinum px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Exam</p>
-                <p className="mt-2 text-2xl font-semibold text-hunter-green">
+              <div className="rounded-[20px] bg-platinum px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Exam</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {examCount}
                 </p>
               </div>
@@ -126,12 +126,12 @@ export function LessonList({ module, lessons }: LessonListProps) {
         <div className="space-y-4">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-sm text-sage-text">Lesson path</p>
+              <p className="eyebrow text-sm text-slate-grey">Lesson path</p>
               <CardTitle className="text-2xl">
                 Move through each lesson in order.
               </CardTitle>
             </div>
-            <div className="rounded-full bg-vanilla-cream px-4 py-2 text-sm font-semibold text-hunter-green">
+            <div className="rounded-[14px] bg-page px-4 py-2 text-sm font-semibold text-carbon-black">
               {lessons.length} total lessons
             </div>
           </div>

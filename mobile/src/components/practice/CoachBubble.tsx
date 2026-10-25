@@ -1,7 +1,7 @@
 import { Pause, Play } from "lucide-react-native";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
 import { Body, Eyebrow, RoundIconButton } from "@/components/ui";
-import { colors, radii, spacing, type, themed } from "@/theme/theme";
+import { colors, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 /**
  * One line from the coach, with its own play button. `state` belongs to this
@@ -22,26 +22,26 @@ export function CoachBubble({
   return (
     <View style={styles.bubble}>
       <View style={styles.header}>
-        <Eyebrow onDark>Coach</Eyebrow>
+        <Eyebrow>Coach</Eyebrow>
         <RoundIconButton
           accessibilityLabel={state === "idle" ? "Play this coach line" : "Stop this coach line"}
-          tone="translucent"
+          tone="cream"
           size={36}
           onPress={onToggle}>
           {state === "loading" ? (
-            <ActivityIndicator color={colors.lime} size="small" />
+            <ActivityIndicator color={colors.hunter} size="small" />
           ) : state === "playing" ? (
-            <Pause color={colors.lime} size={16} />
+            <Pause color={colors.hunter} size={16} />
           ) : (
-            <Play color={colors.lime} size={16} />
+            <Play color={colors.hunter} size={16} />
           )}
         </RoundIconButton>
       </View>
-      <Body onDark size={type.body}>
+      <Body size={type.body} style={{ color: colors.carbon }}>
         {message}
       </Body>
       {note ? (
-        <Body onDark tone="muted" size={type.caption}>
+        <Body tone="muted" size={type.caption}>
           {note}
         </Body>
       ) : null}
@@ -64,7 +64,7 @@ const styles = themed(() =>
     bubble: {
       borderRadius: radii.card,
       borderTopLeftRadius: spacing.xs,
-      backgroundColor: colors.hunter,
+      backgroundColor: colors.platinum,
       padding: spacing.lg,
       gap: spacing.sm,
       marginRight: spacing.xl,
@@ -77,7 +77,8 @@ const styles = themed(() =>
     reply: {
       borderRadius: radii.card,
       borderTopRightRadius: spacing.xs,
-      backgroundColor: colors.white,
+      backgroundColor: colors.snow,
+      boxShadow: shadows.card,
       padding: spacing.lg,
       gap: spacing.xs,
       marginLeft: spacing.xl,

@@ -27,14 +27,14 @@ export function ConversationModuleGrid({
   return (
     <div className="space-y-4">
       <div className="grid gap-4 xl:grid-cols-[1.08fr_0.92fr]">
-        <Card className="bg-hunter-green text-bright-snow">
+        <Card className="bg-white text-carbon-black">
           <div className="space-y-5">
             <div className="space-y-3">
-              <p className="eyebrow text-sm text-yellow-green">Track structure</p>
-              <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
+              <p className="eyebrow text-sm text-slate-grey">Track structure</p>
+              <h1 className="text-3xl font-semibold text-carbon-black sm:text-4xl lg:text-5xl">
                 Two tracks, one accent goal.
               </h1>
-              <p className="max-w-3xl text-sm leading-7 text-bright-snow/84">
+              <p className="max-w-3xl text-sm leading-7 text-iron-grey">
                 Sound modules sharpen individual phonemes. Conversation modules
                 move that control into realistic exchanges, where rhythm, word
                 choice, and response timing all matter together.
@@ -42,21 +42,21 @@ export function ConversationModuleGrid({
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Conversation modules</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Conversation modules</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {completed}/{modules.length}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Unlocked now</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Unlocked now</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {unlocked}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Pass standard</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Pass standard</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   High
                 </p>
               </div>
@@ -78,8 +78,8 @@ export function ConversationModuleGrid({
 
             <div className="space-y-4">
               <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-text">Current route</p>
-                <h2 className="text-3xl font-semibold text-hunter-green">
+                <p className="eyebrow text-sm text-slate-grey">Current route</p>
+                <h2 className="text-3xl font-semibold text-carbon-black">
                   {currentModule
                     ? `${currentModule.title}`
                     : "Start with the first conversation module"}
@@ -93,7 +93,7 @@ export function ConversationModuleGrid({
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                 <ProgressRing score={completionRate} size={80} strokeWidth={7} className="shrink-0" />
                 <div className="space-y-1">
-                  <p className="text-sm font-semibold text-hunter-green">
+                  <p className="text-sm font-semibold text-carbon-black">
                     {completed} conversation modules passed
                   </p>
                   <p className="text-sm leading-6 text-iron-grey">
@@ -103,8 +103,8 @@ export function ConversationModuleGrid({
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Format</p>
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Format</p>
                 <p className="mt-2 text-sm leading-6 text-iron-grey">
                   The coach speaks first, you reply with a target phrase, and
                   Cadence scores pronunciation quality before the next turn.

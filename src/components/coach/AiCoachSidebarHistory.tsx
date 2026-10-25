@@ -76,14 +76,14 @@ export function AiCoachSidebarHistory({ userId }: { userId: string }) {
       <button
         type="button"
         onClick={() => setIsExpanded((previous) => !previous)}
-        className="flex w-full items-center justify-between gap-3 rounded-full px-3 py-2 text-left transition-colors hover:bg-vanilla-cream"
+        className="flex w-full items-center justify-between gap-3 rounded-[14px] px-3 py-2 text-left transition-colors hover:bg-page"
       >
-        <p className="text-base font-semibold text-hunter-green">Coach history</p>
+        <p className="text-base font-semibold text-carbon-black">Coach history</p>
         <div className="flex items-center gap-2">
-          <span className="inline-flex min-w-8 items-center justify-center rounded-full bg-vanilla-cream px-2 py-1 text-sm font-semibold text-hunter-green">
+          <span className="inline-flex min-w-8 items-center justify-center rounded-full bg-page px-2 py-1 text-sm font-semibold text-carbon-black">
             {sessions.length}
           </span>
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-vanilla-cream text-base font-semibold leading-none text-hunter-green">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-page text-base font-semibold leading-none text-carbon-black">
             {isExpanded ? '−' : '+'}
           </span>
         </div>
@@ -103,8 +103,8 @@ export function AiCoachSidebarHistory({ userId }: { userId: string }) {
                   className={cn(
                     'rounded-[20px] px-3 py-2 transition-colors',
                     isActive
-                      ? 'bg-vanilla-cream text-hunter-green'
-                      : 'text-hunter-green hover:bg-vanilla-cream',
+                      ? 'bg-page text-carbon-black'
+                      : 'text-carbon-black hover:bg-page',
                   )}
                 >
                   <p className="truncate text-base font-semibold">{session.topic}</p>

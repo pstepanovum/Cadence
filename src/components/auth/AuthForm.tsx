@@ -170,7 +170,7 @@ export function AuthForm({ mode }: AuthFormProps) {
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             required
-            className={AUTH_INPUT_CLASS}
+            className={`${AUTH_INPUT_CLASS} rounded-full bg-white`}
           />
         </div>
 
@@ -192,7 +192,7 @@ export function AuthForm({ mode }: AuthFormProps) {
             onChange={(event) => setPassword(event.target.value)}
             required
             aria-describedby={isLogin ? undefined : `${id}-rules`}
-            className={AUTH_INPUT_CLASS}
+            className={`${AUTH_INPUT_CLASS} rounded-full bg-white`}
           />
           {!isLogin ? <PasswordChecklist id={`${id}-rules`} password={password} email={email} /> : null}
         </div>
@@ -212,7 +212,7 @@ export function AuthForm({ mode }: AuthFormProps) {
         {message ? <AuthNotice tone="success">{message}</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="w-full" type="submit" disabled={busy !== null}>
+        <Button className="w-full rounded-full" type="submit" disabled={busy !== null}>
           {busy === "email" ? (isLogin ? "Signing in…" : "Creating account…") : isLogin ? "Sign in" : "Create account"}
         </Button>
 

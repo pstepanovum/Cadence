@@ -37,8 +37,8 @@ export function CompareView({ a, b, variant }: { a: Side; b: Side; variant: Vari
     <div className="space-y-4">
       <div className="grid gap-4 md:grid-cols-2">
         {[a, b].map((side) => (
-          <section key={side.sound.id} className="rounded-3xl bg-white p-4 sm:p-5" aria-label={label(side)}>
-            <h2 className="pb-3 font-kicker text-2xl text-hunter-green">
+          <section key={side.sound.id} className="rounded-[20px] bg-white p-4 sm:p-5" aria-label={label(side)}>
+            <h2 className="pb-3 font-kicker text-2xl text-carbon-black">
               {side.word} <span className="text-base text-slate-grey">/{ipaOf(side.sound, variant)}/</span>
             </h2>
             <MouthMap sound={side.sound} target={side.target} variant={variant} word={side.word} />
@@ -46,7 +46,7 @@ export function CompareView({ a, b, variant }: { a: Side; b: Side; variant: Vari
         ))}
       </div>
 
-      <section className="grid items-center gap-4 rounded-3xl bg-white p-4 sm:p-5 md:grid-cols-[minmax(0,22rem)_1fr]">
+      <section className="grid items-center gap-4 rounded-[20px] bg-white p-4 sm:p-5 md:grid-cols-[minmax(0,22rem)_1fr]">
         <MouthMapSvg
           params={params}
           highlight={current.target.highlight}
@@ -58,8 +58,8 @@ export function CompareView({ a, b, variant }: { a: Side; b: Side; variant: Vari
           description={`The mouth moves from the shape for ${label(previous)} to the shape for ${label(current)}.`}
         />
         <div className="space-y-3">
-          <p className="eyebrow text-xs text-sage-text">Watch the difference</p>
-          <p className="text-lg font-semibold text-hunter-green">
+          <p className="eyebrow text-xs text-slate-grey">Watch the difference</p>
+          <p className="text-lg font-semibold text-carbon-black">
             {label(previous)} → {label(current)}
           </p>
           <p className="text-sm leading-7 text-iron-grey">
@@ -68,7 +68,7 @@ export function CompareView({ a, b, variant }: { a: Side; b: Side; variant: Vari
           <button
             type="button"
             onClick={morph}
-            className="min-h-11 cursor-pointer rounded-full bg-hunter-green px-5 text-sm font-semibold text-white"
+            className="min-h-11 cursor-pointer rounded-[14px] bg-hunter-green px-5 text-sm font-semibold text-white"
           >
             Morph to “{toB ? a.word : b.word}”
           </button>

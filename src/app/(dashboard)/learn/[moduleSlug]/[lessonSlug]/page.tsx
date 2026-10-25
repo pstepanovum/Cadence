@@ -51,13 +51,13 @@ export default async function LessonPage({ params }: PageProps) {
         <Navbar current="learn" />
         <ModuleProgress />
 
-        <div className="rounded-full bg-vanilla-cream px-4 py-3 text-sm text-iron-grey">
+        <div className="rounded-[14px] bg-page px-4 py-3 text-sm text-iron-grey">
           <div className="flex flex-wrap items-center gap-2">
             <span>
               Module {lessonData.module.sort_order}: {lessonData.module.title}
             </span>
             <ChevronRight size={14} color="#adb5bd" />
-            <span className="font-medium text-hunter-green">
+            <span className="font-medium text-carbon-black">
               {lessonData.lesson.title}
             </span>
           </div>

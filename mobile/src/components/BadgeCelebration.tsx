@@ -58,7 +58,7 @@ export function BadgeCelebration({ badges, onDone }: { badges: Badge[]; onDone: 
           }}
           style={styles.row}>
           <Animated.View style={[styles.medal, medal]}>
-            <Award color={colors.ink} size={26} strokeWidth={2.5} />
+            <Award color={colors.snow} size={26} strokeWidth={2.5} />
           </Animated.View>
           <View style={styles.text}>
             <Text maxFontSizeMultiplier={maxScale.label} style={styles.kicker}>
@@ -79,9 +79,9 @@ const styles = themed(() =>
     layer: { justifyContent: "flex-end", paddingHorizontal: spacing.lg },
     card: { alignSelf: "center", width: "100%", maxWidth: 480, borderRadius: radii.cardLarge, backgroundColor: colors.snow, boxShadow: shadows.raised },
     row: { flexDirection: "row", alignItems: "center", gap: spacing.md, padding: spacing.lg },
-    medal: { width: 52, height: 52, borderRadius: radii.pill, backgroundColor: colors.yellowGreen, alignItems: "center", justifyContent: "center" },
+    medal: { width: 52, height: 52, borderRadius: radii.pill, backgroundColor: colors.hunter, alignItems: "center", justifyContent: "center" },
     text: { flex: 1, gap: spacing.xxs },
-    kicker: { fontFamily: fonts.kicker, fontSize: type.footnote, color: colors.sageText },
+    kicker: { fontFamily: fonts.kicker, fontSize: type.footnote, color: colors.slate },
     title: { fontFamily: fonts.bodyBold, fontSize: type.headline, color: colors.carbon },
   }),
 );

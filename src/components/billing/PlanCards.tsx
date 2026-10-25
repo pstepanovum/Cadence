@@ -28,8 +28,8 @@ function Ticks({ items, onDark }: { items: string[]; onDark?: boolean }) {
     <ul className="space-y-2 text-sm leading-6">
       {items.map((item) => (
         <li key={item} className="flex gap-2">
-          <span aria-hidden="true" className={onDark ? "text-yellow-green" : "text-sage-text"}>✓</span>
-          <span className={onDark ? "text-white/85" : "text-iron-grey"}>{item}</span>
+          <span aria-hidden="true" className={onDark ? "text-slate-grey" : "text-slate-grey"}>✓</span>
+          <span className={onDark ? "text-iron-grey" : "text-iron-grey"}>{item}</span>
         </li>
       ))}
     </ul>
@@ -71,7 +71,7 @@ export function PlanCards({ signedIn, cloudAvailable }: { signedIn: boolean; clo
         blurb="Cloud AI wherever you are."
         tone="dark"
         features={<Ticks items={PLUS} onDark />}
-        action={cloudAvailable ? <PlanButton interval="monthly" signedIn={signedIn} label="Get Plus monthly" variant="secondary" className="w-full" /> : <Unavailable />}
+        action={cloudAvailable ? <PlanButton interval="monthly" signedIn={signedIn} label="Get Plus monthly" className="w-full" /> : <Unavailable />}
       />
       <Plan
         title="Plus yearly"
@@ -81,14 +81,14 @@ export function PlanCards({ signedIn, cloudAvailable }: { signedIn: boolean; clo
         badge="7 days free"
         tone="dark"
         features={<Ticks items={PLUS} onDark />}
-        action={cloudAvailable ? <PlanButton interval="yearly" signedIn={signedIn} label="Start free trial" variant="secondary" className="w-full" /> : <Unavailable />}
+        action={cloudAvailable ? <PlanButton interval="yearly" signedIn={signedIn} label="Start free trial" className="w-full" /> : <Unavailable />}
       />
     </div>
   );
 }
 
 function Unavailable() {
-  return <p className="text-sm text-white/80">Plus is available on cadence.pstepanov.dev.</p>;
+  return <p className="text-sm text-iron-grey">Plus is available on cadence.pstepanov.dev.</p>;
 }
 
 function Plan({
@@ -112,17 +112,17 @@ function Plan({
 }) {
   const dark = tone === "dark";
   return (
-    <section className={cn("flex flex-col justify-between gap-5 rounded-3xl px-6 py-6", dark ? "bg-hunter-green text-white" : "bg-white")} aria-label={title}>
+    <section className={cn("flex flex-col justify-between gap-5 rounded-[20px] px-6 py-6", dark ? "bg-white text-carbon-black" : "bg-white")} aria-label={title}>
       <div className="space-y-4">
         <div className="flex items-center justify-between gap-2">
-          <h3 className={cn("font-kicker text-xl", dark ? "text-white" : "text-hunter-green")}>{title}</h3>
-          {badge ? <span className="rounded-full bg-yellow-green px-3 py-1 text-xs font-semibold text-hunter-green">{badge}</span> : null}
+          <h3 className={cn("font-kicker text-xl", dark ? "text-carbon-black" : "text-carbon-black")}>{title}</h3>
+          {badge ? <span className="rounded-full bg-hunter-green px-3 py-1 text-xs font-semibold text-white">{badge}</span> : null}
         </div>
         <p>
-          <span className={cn("text-4xl font-semibold", dark ? "text-white" : "text-hunter-green")}>{price}</span>{" "}
-          <span className={cn("text-sm", dark ? "text-white/84" : "text-iron-grey")}>{cadence}</span>
+          <span className={cn("text-4xl font-semibold", dark ? "text-carbon-black" : "text-carbon-black")}>{price}</span>{" "}
+          <span className={cn("text-sm", dark ? "text-iron-grey" : "text-iron-grey")}>{cadence}</span>
         </p>
-        <p className={cn("text-sm leading-6", dark ? "text-white/80" : "text-iron-grey")}>{blurb}</p>
+        <p className={cn("text-sm leading-6", dark ? "text-iron-grey" : "text-iron-grey")}>{blurb}</p>
         {features}
       </div>
       {action}

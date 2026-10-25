@@ -111,14 +111,14 @@ export function AuthorizeConsent() {
   }
 
   return (
-    <section className="rounded-[2rem] bg-white p-6 shadow-[0_18px_40px_rgba(19,49,40,0.08)] sm:p-8" aria-live="polite">
-      <p className="eyebrow text-xs text-sage-text">Cadence connector</p>
+    <section className="rounded-[28px] bg-white p-6 shadow-[0_18px_40px_rgba(19,49,40,0.08)] sm:p-8" aria-live="polite">
+      <p className="eyebrow text-xs text-slate-grey">Cadence connector</p>
       {state.kind === "loading" || state.kind === "leaving" ? (
         <p className="mt-4 text-sm text-iron-grey">{state.kind === "leaving" ? "Sending you back to the app…" : "Loading…"}</p>
       ) : null}
       {state.kind === "error" ? (
         <>
-          <h1 className="mt-3 text-2xl font-semibold text-hunter-green">Can&apos;t connect</h1>
+          <h1 className="mt-3 text-2xl font-semibold text-carbon-black">Can&apos;t connect</h1>
           <p className="mt-3 text-sm leading-6 text-iron-grey" role="alert">
             {state.message}
           </p>
@@ -162,10 +162,10 @@ function Consent({
 }) {
   return (
     <>
-      <h1 className="mt-3 text-2xl font-semibold text-hunter-green">Connect an app to Cadence?</h1>
-      <div className="mt-5 rounded-3xl bg-vanilla-cream px-4 py-4" data-testid="oauth-destination">
+      <h1 className="mt-3 text-2xl font-semibold text-carbon-black">Connect an app to Cadence?</h1>
+      <div className="mt-5 rounded-[20px] bg-page px-4 py-4" data-testid="oauth-destination">
         <p className="text-xs font-semibold uppercase tracking-wide text-iron-grey">Access goes to</p>
-        <p className="mt-1 break-all text-lg font-semibold text-hunter-green">{request.destination}</p>
+        <p className="mt-1 break-all text-lg font-semibold text-carbon-black">{request.destination}</p>
         <p className="mt-1 text-xs leading-5 text-iron-grey">
           {request.loopback
             ? "An app on this computer."
@@ -173,7 +173,7 @@ function Consent({
         </p>
       </div>
       <p className="mt-5 text-sm leading-6 text-iron-grey">
-        <span className="font-semibold text-hunter-green">{request.client.name}</span> wants to use your Cadence account
+        <span className="font-semibold text-carbon-black">{request.client.name}</span> wants to use your Cadence account
         {request.account.email ? (
           <>
             {" "}
@@ -183,12 +183,12 @@ function Consent({
         .
       </p>
       <fieldset className="mt-5 space-y-3">
-        <legend className="text-sm font-semibold text-hunter-green">It may</legend>
+        <legend className="text-sm font-semibold text-carbon-black">It may</legend>
         {request.availableScopes.map((option) => {
           const fixed = option.scope === READ_SCOPE;
           const id = `scope-${option.scope.replace(/[^a-z]/g, "-")}`;
           return (
-            <label key={option.scope} htmlFor={id} className="flex cursor-pointer items-start gap-3 rounded-3xl bg-vanilla-cream px-4 py-3">
+            <label key={option.scope} htmlFor={id} className="flex cursor-pointer items-start gap-3 rounded-[20px] bg-page px-4 py-3">
               <input
                 id={id}
                 type="checkbox"
@@ -198,7 +198,7 @@ function Consent({
                 onChange={() => onToggle(option.scope)}
               />
               <span>
-                <span className="block text-sm font-semibold text-hunter-green">{SCOPE_LABELS[option.scope] ?? option.scope}</span>
+                <span className="block text-sm font-semibold text-carbon-black">{SCOPE_LABELS[option.scope] ?? option.scope}</span>
                 <span className="block text-xs leading-5 text-iron-grey">{option.description}</span>
               </span>
             </label>
@@ -239,17 +239,17 @@ function SignIn({ onSignedIn }: { onSignedIn: () => void }) {
 
   return (
     <>
-      <h1 className="mt-3 text-2xl font-semibold text-hunter-green">Sign in to continue</h1>
+      <h1 className="mt-3 text-2xl font-semibold text-carbon-black">Sign in to continue</h1>
       <p className="mt-2 text-sm leading-6 text-iron-grey">An app wants to connect to your Cadence account.</p>
       <form className="mt-5 space-y-4" onSubmit={submit} noValidate>
-        <label className="block text-sm font-semibold text-hunter-green" htmlFor="oauth-email">
+        <label className="block text-sm font-semibold text-carbon-black" htmlFor="oauth-email">
           Email
         </label>
-        <Input id="oauth-email" type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} className="ring-1 ring-alabaster-grey" required />
-        <label className="block text-sm font-semibold text-hunter-green" htmlFor="oauth-password">
+        <Input id="oauth-email" type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} className="" required />
+        <label className="block text-sm font-semibold text-carbon-black" htmlFor="oauth-password">
           Password
         </label>
-        <Input id="oauth-password" type="password" autoComplete="current-password" value={password} onChange={(event) => setPassword(event.target.value)} className="ring-1 ring-alabaster-grey" required />
+        <Input id="oauth-password" type="password" autoComplete="current-password" value={password} onChange={(event) => setPassword(event.target.value)} className="" required />
         {error ? (
           <p className="text-sm text-blushed-brick" role="alert">
             {error}

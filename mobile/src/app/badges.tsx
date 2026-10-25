@@ -59,7 +59,7 @@ export default function BadgesScreen() {
           </Text>
         </View>
         <View style={styles.streakRow} accessible accessibilityLabel={`${today.streak.current}-day streak`}>
-          <Flame color={colors.yellowGreen} size={28} />
+          <Flame color={colors.hunter} size={28} />
           <Text maxFontSizeMultiplier={maxScale.title} style={styles.streakNumber}>
             {today.streak.current}
           </Text>
@@ -154,7 +154,7 @@ function BadgeTile({ badge }: { badge: Badge }) {
       accessible
       accessibilityLabel={`${badge.title}. ${badge.earned ? "Earned." : `${badge.detail} ${badge.value} of ${badge.target}.`}`}>
       <View style={[styles.medal, badge.earned ? styles.medalOn : styles.medalOff]}>
-        {badge.earned ? <Award color={colors.ink} size={22} strokeWidth={2.5} /> : <Lock color={colors.slate} size={18} />}
+        {badge.earned ? <Award color={colors.snow} size={22} strokeWidth={2.5} /> : <Lock color={colors.slate} size={18} />}
       </View>
       <Title size={type.headline} numberOfLines={2}>
         {badge.title}
@@ -191,7 +191,7 @@ const styles = themed(() =>
     tile: { flexBasis: "47%", flexGrow: 1, borderRadius: radii.card, backgroundColor: colors.snow, padding: spacing.lg, gap: spacing.xs, boxShadow: shadows.card },
     tileLocked: { backgroundColor: overlays.locked },
     medal: { width: 40, height: 40, borderRadius: radii.pill, alignItems: "center", justifyContent: "center" },
-    medalOn: { backgroundColor: colors.yellowGreen },
+    medalOn: { backgroundColor: colors.hunter },
     medalOff: { backgroundColor: colors.platinum },
   }),
 );

@@ -48,11 +48,11 @@ export default function ConnectorPage() {
 
       <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
         <Card className="min-w-0 bg-white">
-          <h2 className="font-kicker text-2xl text-hunter-green">Add it in four steps</h2>
+          <h2 className="font-kicker text-2xl text-carbon-black">Add it in four steps</h2>
           <ol className="mt-4 space-y-3">
             {STEPS.map((step, i) => (
               <li key={step} className="flex gap-3 text-sm leading-7 text-iron-grey">
-                <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-yellow-green text-sm font-semibold text-hunter-green">{i + 1}</span>
+                <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-hunter-green text-sm font-semibold text-white">{i + 1}</span>
                 <span>{step}</span>
               </li>
             ))}
@@ -64,9 +64,9 @@ export default function ConnectorPage() {
             It uses the standard connector protocol (MCP) with secure sign-in (OAuth). The AI app never sees your password.
           </p>
         </Card>
-        <Card className="bg-hunter-green text-white">
+        <Card className="bg-white text-carbon-black">
           <h2 className="font-kicker text-2xl">You stay in control</h2>
-          <ul className="mt-3 space-y-2 text-sm leading-7 text-white/85">
+          <ul className="mt-3 space-y-2 text-sm leading-7 text-iron-grey">
             <li>Nothing is shared until you sign in and approve.</li>
             <li>Read-only access unless you also allow adding cards and logging practice.</li>
             <li>Disconnect from the AI app at any time; access ends right away. Access also expires after 180 days.</li>
@@ -77,23 +77,23 @@ export default function ConnectorPage() {
 
       <section className="grid gap-4 md:grid-cols-2">
         <Card className="bg-white">
-          <h2 className="font-kicker text-xl text-hunter-green">With any account</h2>
+          <h2 className="font-kicker text-xl text-carbon-black">With any account</h2>
           <dl className="mt-3 space-y-3">
             {FREE_TOOLS.map(([name, text]) => (
               <div key={name}>
-                <dt className="text-sm font-semibold text-hunter-green">{name}</dt>
+                <dt className="text-sm font-semibold text-carbon-black">{name}</dt>
                 <dd className="text-sm leading-6 text-iron-grey">{text}</dd>
               </div>
             ))}
           </dl>
         </Card>
         <Card className="bg-white">
-          <h2 className="font-kicker text-xl text-hunter-green">With Cadence Plus</h2>
+          <h2 className="font-kicker text-xl text-carbon-black">With Cadence Plus</h2>
           <p className="mt-1 text-sm text-iron-grey">These read the detailed history that only Plus keeps on our servers.</p>
           <dl className="mt-3 space-y-3">
             {PLUS_TOOLS.map(([name, text]) => (
               <div key={name}>
-                <dt className="text-sm font-semibold text-hunter-green">{name}</dt>
+                <dt className="text-sm font-semibold text-carbon-black">{name}</dt>
                 <dd className="text-sm leading-6 text-iron-grey">{text}</dd>
               </div>
             ))}

@@ -41,16 +41,16 @@ export default async function SoundPage({ params, searchParams }: Props) {
   return (
     <AppPage current="sounds">
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center justify-between gap-3">
-        <Link href={variant === "RP" ? "/sounds?accent=RP" : "/sounds"} className="inline-flex min-h-11 items-center rounded-full bg-white px-4 text-sm font-semibold text-hunter-green">
+        <Link href={variant === "RP" ? "/sounds?accent=RP" : "/sounds"} className="inline-flex min-h-11 items-center rounded-[14px] bg-white px-4 text-sm font-semibold text-carbon-black">
           ← All sounds
         </Link>
         {sound.ipa.GA && sound.ipa.RP ? <AccentSwitch variant={variant} hrefFor={accentHref} /> : null}
       </nav>
 
       <div className="grid gap-4 lg:grid-cols-[1.35fr_0.65fr]">
-        <section className="rounded-3xl bg-white px-4 py-5 sm:px-6 sm:py-6">
-          <p className="eyebrow text-sm text-sage-text">{sound.kind === "consonant" ? "Consonant" : sound.kind === "vowel" ? "Vowel" : "Diphthong"}</p>
-          <h1 className="mt-1 font-kicker text-4xl text-hunter-green sm:text-5xl">
+        <section className="rounded-[20px] bg-white px-4 py-5 sm:px-6 sm:py-6">
+          <p className="eyebrow text-sm text-slate-grey">{sound.kind === "consonant" ? "Consonant" : sound.kind === "vowel" ? "Vowel" : "Diphthong"}</p>
+          <h1 className="mt-1 font-kicker text-4xl text-carbon-black sm:text-5xl">
             /{ipaOf(sound, variant)}/ <span className="text-2xl text-iron-grey">as in “{sound.example}”</span>
           </h1>
           {!sound.ipa[requested] ? (
@@ -60,7 +60,7 @@ export default async function SoundPage({ params, searchParams }: Props) {
             {target ? (
               <MouthMap sound={sound} target={target} variant={variant} />
             ) : (
-              <p className="rounded-3xl bg-vanilla-cream px-4 py-6 text-sm text-iron-grey">The mouth map for this sound is on its way.</p>
+              <p className="rounded-[20px] bg-page px-4 py-6 text-sm text-iron-grey">The mouth map for this sound is on its way.</p>
             )}
           </div>
           {fixture ? (
@@ -70,24 +70,24 @@ export default async function SoundPage({ params, searchParams }: Props) {
 
         <div className="flex flex-col gap-4">
           {back ? (
-            <section className="rounded-3xl bg-hunter-green px-5 py-6 text-white">
+            <section className="rounded-[20px] bg-white px-5 py-6 text-carbon-black">
               <h2 className="font-kicker text-xl">Ready to try again?</h2>
-              <p className="mt-1 text-sm leading-6 text-white/80">Copy the shape, play the model, then record another take.</p>
-              <Button href={back} variant="secondary" className="mt-4 w-full">
+              <p className="mt-1 text-sm leading-6 text-iron-grey">Copy the shape, play the model, then record another take.</p>
+              <Button href={back} className="mt-4 w-full">
                 Record again
               </Button>
             </section>
           ) : null}
           <DrillLadder soundId={soundId} />
           {pairs.length > 0 ? (
-            <section className="rounded-3xl bg-white px-5 py-6">
-              <h2 className="font-kicker text-xl text-hunter-green">Easy to mix up with</h2>
+            <section className="rounded-[20px] bg-white px-5 py-6">
+              <h2 className="font-kicker text-xl text-carbon-black">Easy to mix up with</h2>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {pairs.map((pair) => (
                   <li key={pair.words.join("-")}>
                     <Link
                       href={`/sounds/compare?a=${pair.a}&b=${pair.b}&words=${pair.words.join(",")}${variant === "RP" ? "&accent=RP" : ""}`}
-                      className="inline-flex min-h-11 items-center rounded-full bg-vanilla-cream px-4 text-sm font-semibold text-hunter-green hover:bg-yellow-green"
+                      className="inline-flex min-h-11 items-center rounded-[14px] bg-page px-4 text-sm font-semibold text-carbon-black hover:bg-platinum"
                     >
                       {pair.words[0]} / {pair.words[1]}
                     </Link>

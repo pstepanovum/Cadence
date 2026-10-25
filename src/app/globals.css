@@ -6,6 +6,9 @@
   --sage-green: #6a994e;
   --yellow-green: #a7c957;
   --vanilla-cream: #f2e8cf;
+  /* The page. Greyscale is the frame: a cool grey page with white surfaces.
+     Cream is a brand accent now (the account screens keep it). */
+  --page: #f1f3f5;
   --blushed-brick: #bc4749;
   --bright-snow: #f8f9fa;
   --platinum: #e9ecef;
@@ -21,9 +24,9 @@
   color-scheme: light;
 }
 
-/* Mouth map: soft fills, clear outlines. */
+/* Mouth map: soft fills, clear outlines, on the grey frame. */
 :root {
-  --mm-bg: #fbf6e9;
+  --mm-bg: #f8f9fa;
   --mm-tissue: #f3d9c9;
   --mm-tissue-line: #b98a74;
   --mm-palate: #e9c3ae;
@@ -31,7 +34,7 @@
   --mm-tongue-line: #a55451;
   --mm-teeth: #ffffff;
   --mm-teeth-line: #9aa3a0;
-  --mm-airway: #fbf6e9;
+  --mm-airway: #f8f9fa;
   --mm-highlight: #a7c957;
   --mm-highlight-line: #386641;
   --mm-air: #6a994e;
@@ -48,6 +51,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --vanilla-cream: #16191c;
+    --page: #16191c;
     --bright-snow: #212529;
     --color-white: #212529;
     --platinum: #2b3035;
@@ -94,6 +98,7 @@
   --mm-air: #a3cb86;
   --mm-label: #dbe9cf;
   --vanilla-cream: #16191c;
+  --page: #16191c;
   --bright-snow: #212529;
   --color-white: #212529;
   --platinum: #2b3035;
@@ -164,6 +169,7 @@
   --color-sage-text: var(--sage-text);
   --color-yellow-green: var(--yellow-green);
   --color-vanilla-cream: var(--vanilla-cream);
+  --color-page: var(--page);
   --color-blushed-brick: var(--blushed-brick);
   --color-bright-snow: var(--bright-snow);
   --color-platinum: var(--platinum);
@@ -184,24 +190,24 @@
 }
 
 html {
-  background-color: var(--vanilla-cream);
+  background-color: var(--page);
 }
 
 /* Account screens sit on a white page in light mode, as on the phone, and on
    the page grey in dark. Apple's button turns white on dark. */
 .auth-page { background-color: #ffffff; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .auth-page { background-color: var(--vanilla-cream); }
+  :root:not([data-theme="light"]) .auth-page { background-color: var(--page); }
   :root:not([data-theme="light"]) .apple-button { background-color: #ffffff; color: #000000; }
 }
-:root[data-theme="dark"] .auth-page { background-color: var(--vanilla-cream); }
+:root[data-theme="dark"] .auth-page { background-color: var(--page); }
 :root[data-theme="dark"] .apple-button { background-color: #ffffff; color: #000000; }
 
 body {
   min-height: 100vh;
   margin: 0;
-  background-color: var(--vanilla-cream);
-  color: var(--hunter-green);
+  background-color: var(--page);
+  color: var(--carbon-black);
   line-height: 1.42;
 }
 
@@ -229,7 +235,7 @@ select {
   }
 
   body {
-    @apply font-display text-hunter-green antialiased;
+    @apply font-display text-carbon-black antialiased;
   }
 
   h1,

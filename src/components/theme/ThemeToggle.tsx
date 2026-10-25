@@ -77,7 +77,7 @@ export function ThemeToggle({ className, tone = "default" }: { className?: strin
         "inline-flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors",
         tone === "onDark"
           ? "bg-white/10 text-bright-snow hover:bg-white/20"
-          : "bg-vanilla-cream text-hunter-green hover:bg-platinum",
+          : "bg-page text-carbon-black hover:bg-platinum",
         className,
       )}
     >

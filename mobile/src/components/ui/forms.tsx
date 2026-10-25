@@ -121,7 +121,7 @@ export function Collapsible({
           {title}
         </Text>
         <View style={open ? styles.chevronOpen : undefined}>
-          <ChevronDown color={colors.hunter} size={18} />
+          <ChevronDown color={colors.slate} size={18} />
         </View>
       </Pressable>
       {open ? <View style={styles.collapsibleBody}>{children}</View> : null}
@@ -201,7 +201,7 @@ const styles = themed(() =>
       flex: 1,
       fontFamily: fonts.bodySemiBold,
       fontSize: type.callout,
-      color: colors.hunter,
+      color: colors.carbon,
     },
     chevronOpen: {
       transform: [{ rotate: "180deg" }],

@@ -20,7 +20,7 @@ export function WordQueue({ total, current, className }: WordQueueProps) {
             className={cn(
               "h-2.5 flex-1 rounded-full",
               index < current
-                ? "bg-yellow-green"
+                ? "bg-hunter-green"
                 : index === current
                   ? "bg-hunter-green"
                   : "bg-platinum",
@@ -28,7 +28,7 @@ export function WordQueue({ total, current, className }: WordQueueProps) {
           />
         ))}
       </div>
-      <span className="shrink-0 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-hunter-green">
+      <span className="shrink-0 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-carbon-black">
         {current + 1}/{total}
       </span>
     </div>

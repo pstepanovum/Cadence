@@ -43,7 +43,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
 
       {isLocal ? (
         <Card className="bg-white">
-          <h2 className="font-kicker text-xl text-hunter-green">Want progress on every device?</h2>
+          <h2 className="font-kicker text-xl text-carbon-black">Want progress on every device?</h2>
           <p className="mt-1 text-sm leading-7 text-iron-grey">
             A free account keeps your streak and lesson stats in sync. You can keep using your own Cadence for AI either way.
           </p>

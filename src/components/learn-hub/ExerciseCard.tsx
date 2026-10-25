@@ -50,17 +50,17 @@ export function ExerciseCard({ exercise, onResult, onNext, isLast, quiet = false
   }
 
   return (
-    <article className="space-y-5 rounded-3xl bg-white px-5 py-6 sm:px-8 sm:py-8" aria-live="polite">
+    <article className="space-y-5 rounded-[20px] bg-white px-5 py-6 sm:px-8 sm:py-8" aria-live="polite">
       <header className="space-y-1">
-        <p className="eyebrow text-xs text-sage-text">{quiet ? exercise.prompt : `${exercise.level} · ${exercise.prompt}`}</p>
+        <p className="eyebrow text-xs text-slate-grey">{quiet ? exercise.prompt : `${exercise.level} · ${exercise.prompt}`}</p>
       </header>
       <Body exercise={exercise} disabled={result !== null} onCheck={check} result={result} />
       {result ? (
         <div
           role="status"
-          className={cn("space-y-2 rounded-3xl px-4 py-4 text-sm leading-6", result.correct ? "bg-yellow-green text-hunter-green" : "bg-vanilla-cream text-iron-grey")}
+          className={cn("space-y-2 rounded-[20px] px-4 py-4 text-sm leading-6", result.correct ? "bg-yellow-green text-hunter-green" : "bg-page text-iron-grey")}
         >
-          <p className="font-semibold text-hunter-green">
+          <p className="font-semibold text-carbon-black">
             {result.correct ? "Correct." : result.score > 0 ? `Partly right: ${Math.round(result.score * 100)}%.` : "Not quite."}
           </p>
           {!result.correct ? <p>{expectedText(exercise)}</p> : null}
@@ -139,18 +139,19 @@ function MultipleChoice({ exercise, disabled, onCheck }: BodyProps & { exercise:
   const id = useId();
   return (
     <div className="space-y-3">
-      {exercise.passage ? <p className="rounded-2xl bg-vanilla-cream px-4 py-3 text-base leading-7 text-hunter-green">{exercise.passage}</p> : null}
+      {exercise.passage ? <p className="rounded-2xl bg-page px-4 py-3 text-base leading-7 text-carbon-black">{exercise.passage}</p> : null}
       <fieldset className="space-y-3" disabled={disabled}>
-      <legend className="text-xl font-semibold text-hunter-green sm:text-2xl">{exercise.question}</legend>
+      <legend className="text-xl font-semibold text-carbon-black sm:text-2xl">{exercise.question}</legend>
       <div className="grid gap-2 sm:grid-cols-2">
         {exercise.options.map((option, index) => (
           <label
             key={option}
             htmlFor={`${id}-${index}`}
             className={cn(
-              "flex min-h-12 cursor-pointer items-center gap-3 rounded-2xl px-4 py-3 text-base ring-1",
-              choice === index ? "bg-yellow-green text-hunter-green ring-yellow-green" : "bg-vanilla-cream text-hunter-green ring-transparent",
-              disabled && index === exercise.answer ? "ring-2 ring-sage-green" : "",
+              "flex min-h-12 cursor-pointer items-center gap-3 rounded-2xl px-4 py-3 text-base",
+              choice === index ? "bg-hunter-green text-white" : "bg-platinum text-carbon-black hover:bg-alabaster-grey",
+              // After checking: the right answer in lime, a wrong pick in brick.
+              disabled && index === exercise.answer ? "bg-yellow-green text-hunter-green" : disabled && choice === index ? "bg-blushed-brick text-white" : "",
             )}
           >
             <input
@@ -185,7 +186,7 @@ function GapFill({ exercise, disabled, onCheck, result }: BodyProps & { exercise
   }
   return (
     <form onSubmit={submit} className="space-y-4">
-      <p className="text-xl leading-10 text-hunter-green sm:text-2xl">
+      <p className="text-xl leading-10 text-carbon-black sm:text-2xl">
         {parts.map((part, index) => (
           <span key={index}>
             {part}
@@ -200,8 +201,8 @@ function GapFill({ exercise, disabled, onCheck, result }: BodyProps & { exercise
                 autoComplete="off"
                 spellCheck={false}
                 className={cn(
-                  "mx-1 inline-block w-32 rounded-xl bg-vanilla-cream px-3 py-1 text-center text-lg ring-1 ring-alabaster-grey",
-                  result?.parts?.[index] === false ? "ring-2 ring-blushed-brick" : result?.parts?.[index] ? "ring-2 ring-sage-green" : "",
+                  "mx-1 inline-block w-32 rounded-xl bg-page px-3 py-1 text-center text-lg",
+                  result?.parts?.[index] === false ? "bg-blushed-brick text-white" : result?.parts?.[index] ? "bg-yellow-green text-hunter-green" : "",
                 )}
               />
             ) : null}
@@ -229,7 +230,7 @@ function Builder({ exercise, disabled, onCheck }: BodyProps & { exercise: Extrac
   return (
     <div className="space-y-4">
       <div
-        className="flex min-h-16 flex-wrap items-center gap-2 rounded-3xl bg-vanilla-cream px-3 py-3"
+        className="flex min-h-16 flex-wrap items-center gap-2 rounded-[20px] bg-page px-3 py-3"
         aria-label={`Your sentence: ${picked.map((i) => tiles.find((t) => t.index === i)!.text).join(" ") || "empty"}`}
       >
         {picked.length === 0 ? <span className="px-2 text-sm text-slate-grey">Tap the words in order.</span> : null}
@@ -256,7 +257,7 @@ function Builder({ exercise, disabled, onCheck }: BodyProps & { exercise: Extrac
             type="button"
             disabled={disabled || used.has(tile.index)}
             onClick={() => setPicked((p) => [...p, tile.index])}
-            className="min-h-11 cursor-pointer rounded-2xl bg-white px-3 text-base font-semibold text-hunter-green ring-1 ring-alabaster-grey disabled:cursor-default disabled:opacity-30"
+            className="min-h-11 cursor-pointer rounded-2xl bg-platinum px-3 text-base font-semibold text-carbon-black hover:bg-alabaster-grey disabled:cursor-default disabled:opacity-30"
           >
             {tile.text}
           </button>
@@ -308,9 +309,9 @@ function Matching({ exercise, disabled, onCheck, result }: BodyProps & { exercis
                   onClick={() => setActive(index)}
                   aria-pressed={active === index}
                   className={cn(
-                    "flex min-h-12 w-full cursor-pointer flex-col items-start rounded-2xl px-4 py-2 text-left text-base ring-1",
-                    active === index ? "bg-yellow-green text-hunter-green ring-yellow-green" : "bg-vanilla-cream text-hunter-green ring-transparent",
-                    result?.parts?.[index] === false ? "ring-2 ring-blushed-brick" : result?.parts?.[index] ? "ring-2 ring-sage-green" : "",
+                    "flex min-h-12 w-full cursor-pointer flex-col items-start rounded-2xl px-4 py-2 text-left text-base",
+                    active === index ? "bg-hunter-green text-white" : "bg-platinum text-carbon-black hover:bg-alabaster-grey",
+                    result?.parts?.[index] === false ? "bg-blushed-brick text-white [&_span]:text-white/85" : result?.parts?.[index] ? "bg-yellow-green text-hunter-green" : "",
                   )}
                 >
                   <span className="font-semibold">{pair.left}</span>
@@ -328,7 +329,7 @@ function Matching({ exercise, disabled, onCheck, result }: BodyProps & { exercis
                 disabled={disabled || active === null}
                 onClick={() => pickRight(right.index)}
                 className={cn(
-                  "min-h-12 w-full cursor-pointer rounded-2xl bg-white px-4 py-2 text-left text-base text-hunter-green ring-1 ring-alabaster-grey disabled:cursor-default",
+                  "min-h-12 w-full cursor-pointer rounded-2xl bg-platinum px-4 py-2 text-left text-base text-carbon-black hover:bg-alabaster-grey disabled:cursor-default",
                   taken.has(right.index) ? "opacity-50" : "",
                 )}
               >
@@ -365,7 +366,7 @@ function TypedAnswer({
         onCheck({ kind, text });
       }}
     >
-      {lead ? <p className="text-xl font-semibold text-hunter-green sm:text-2xl">{lead}</p> : null}
+      {lead ? <p className="text-xl font-semibold text-carbon-black sm:text-2xl">{lead}</p> : null}
       {hint ? <p className="text-sm text-iron-grey">{hint}</p> : null}
       {speak ? (
         <Button type="button" variant="ghost" onClick={() => speakWord(speak)}>
@@ -381,7 +382,7 @@ function TypedAnswer({
         rows={2}
         autoCapitalize="sentences"
         spellCheck={false}
-        className="w-full rounded-2xl bg-vanilla-cream px-4 py-3 text-lg text-hunter-green ring-1 ring-alabaster-grey"
+        className="w-full rounded-2xl bg-page px-4 py-3 text-lg text-carbon-black"
       />
       {!disabled ? <Button type="submit" disabled={text.trim() === ""}>Check</Button> : null}
     </form>
@@ -410,7 +411,7 @@ function FlashcardBody({ exercise, disabled, onCheck }: BodyProps & { exercise: 
   const [shown, setShown] = useState(false);
   return (
     <div className="space-y-4">
-      <p className="text-3xl font-semibold text-hunter-green">{exercise.front}</p>
+      <p className="text-3xl font-semibold text-carbon-black">{exercise.front}</p>
       {shown ? (
         <div className="space-y-2">
           <p className="text-lg text-iron-grey">{exercise.back}</p>

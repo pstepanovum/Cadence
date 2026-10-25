@@ -26,7 +26,7 @@ export function Title({
           fontFamily: fonts.kicker,
           fontSize: size,
           lineHeight: Math.round(size * 1.25),
-          color: onDark ? colors.snow : colors.hunter,
+          color: onDark ? colors.snow : colors.carbon,
         },
         style,
       ]}>
@@ -69,7 +69,7 @@ export function Body({
     : tone === "muted"
       ? colors.slate
       : tone === "strong"
-        ? colors.hunter
+        ? colors.carbon
         : tone === "error"
           ? colors.brickText
           : colors.iron;
@@ -108,7 +108,7 @@ export function Eyebrow({
       maxFontSizeMultiplier={maxScale.label}
       style={[
         styles.eyebrow,
-        { color: tone ?? (onDark ? colors.lime : colors.sageText) },
+        { color: tone ?? (onDark ? colors.onDarkMuted : colors.slate) },
         style,
       ]}>
       {children}
@@ -215,7 +215,7 @@ const styles = themed(() =>
       fontSize: type.callout,
       color: colors.hunter,
       textDecorationLine: "underline",
-      textDecorationColor: colors.yellowGreen,
+      textDecorationColor: colors.hunter,
     },
   }),
 );

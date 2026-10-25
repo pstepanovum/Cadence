@@ -52,13 +52,13 @@ export default async function ProfilePage() {
           {/* ── Left — identity + stats ─────────────────────────────────── */}
           <Card className="bg-white">
             <div className="space-y-5">
-              <div className="inline-flex items-center gap-2 rounded-full bg-vanilla-cream px-4 py-2 text-hunter-green">
+              <div className="inline-flex items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-carbon-black">
                 <UserCircle size={18} color="currentColor" />
                 <span className="eyebrow text-sm">Settings</span>
               </div>
 
               <div className="space-y-2">
-                <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl lg:text-5xl">
+                <h1 className="text-3xl font-semibold text-carbon-black sm:text-4xl lg:text-5xl">
                   {displayName}
                 </h1>
                 {session.user.email ? (
@@ -69,23 +69,23 @@ export default async function ProfilePage() {
               </div>
 
               <div className="grid gap-3 sm:grid-cols-3">
-                <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                  <p className="eyebrow text-xs text-sage-text">Plan</p>
-                  <p className="mt-2 text-base font-semibold text-hunter-green">
+                <div className="rounded-[20px] bg-page px-4 py-4">
+                  <p className="eyebrow text-xs text-slate-grey">Plan</p>
+                  <p className="mt-2 text-base font-semibold text-carbon-black">
                     {isLocal ? "Own computer" : "Cadence account"}
                   </p>
                 </div>
-                <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                  <p className="eyebrow text-xs text-sage-text">Status</p>
-                  <p className="mt-2 text-base font-semibold text-hunter-green">
+                <div className="rounded-[20px] bg-page px-4 py-4">
+                  <p className="eyebrow text-xs text-slate-grey">Status</p>
+                  <p className="mt-2 text-base font-semibold text-carbon-black">
                     {isLocal ? "Stored on this machine" : "Synced"}
                   </p>
                 </div>
-                <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                  <p className="eyebrow text-xs text-sage-text">
+                <div className="rounded-[20px] bg-page px-4 py-4">
+                  <p className="eyebrow text-xs text-slate-grey">
                     Member since
                   </p>
-                  <p className="mt-2 text-base font-semibold text-hunter-green">
+                  <p className="mt-2 text-base font-semibold text-carbon-black">
                     {memberSince}
                   </p>
                 </div>
@@ -100,31 +100,31 @@ export default async function ProfilePage() {
             <Card className="bg-white flex-1">
               <div className="space-y-4">
                 <div className="space-y-1">
-                  <p className="eyebrow text-sm text-sage-text">Practice setup</p>
-                  <h2 className="text-2xl font-semibold text-hunter-green">Your preferences</h2>
+                  <p className="eyebrow text-sm text-slate-grey">Practice setup</p>
+                  <h2 className="text-2xl font-semibold text-carbon-black">Your preferences</h2>
                 </div>
 
                 <div className="space-y-3">
-                  <div className="rounded-3xl bg-vanilla-cream px-5 py-4">
+                  <div className="rounded-[20px] bg-page px-5 py-4">
                     <p className="text-xs text-iron-grey">Focus area</p>
-                    <p className="mt-1 text-base font-semibold text-hunter-green">
+                    <p className="mt-1 text-base font-semibold text-carbon-black">
                       {focusLabel[practiceFocus ?? ""] ?? "Not set"}
                     </p>
                   </div>
-                  <div className="rounded-3xl bg-vanilla-cream px-5 py-4">
+                  <div className="rounded-[20px] bg-page px-5 py-4">
                     <p className="text-xs text-iron-grey">Daily cadence</p>
-                    <p className="mt-1 text-base font-semibold text-hunter-green">
+                    <p className="mt-1 text-base font-semibold text-carbon-black">
                       {cadenceLabel[practiceCadence ?? ""] ?? "Not set"}
                     </p>
                   </div>
-                  <div className="rounded-3xl bg-vanilla-cream px-5 py-4">
+                  <div className="rounded-[20px] bg-page px-5 py-4">
                     <p className="text-xs text-iron-grey">Member since</p>
-                    <p className="mt-1 text-base font-semibold text-hunter-green">{memberSince}</p>
+                    <p className="mt-1 text-base font-semibold text-carbon-black">{memberSince}</p>
                   </div>
                   {isLocal ? (
-                    <div className="rounded-3xl bg-vanilla-cream px-5 py-4">
+                    <div className="rounded-[20px] bg-page px-5 py-4">
                       <p className="text-xs text-iron-grey">Storage</p>
-                      <p className="mt-1 text-base font-semibold text-hunter-green">
+                      <p className="mt-1 text-base font-semibold text-carbon-black">
                         Local only
                       </p>
                     </div>
@@ -132,7 +132,7 @@ export default async function ProfilePage() {
                 </div>
 
                 <div className="pt-2 flex flex-col gap-4">
-                  <Link href="/account" className="inline-flex min-h-11 w-fit items-center rounded-full bg-vanilla-cream px-4 text-sm font-semibold text-hunter-green">
+                  <Link href="/account" className="inline-flex min-h-11 w-fit items-center rounded-[14px] bg-page px-4 text-sm font-semibold text-carbon-black">
                     Plan, emails and data
                   </Link>
                   <SignOutButton mode={session.mode} />

@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f2e8cf" },
+    { media: "(prefers-color-scheme: light)", color: "#f1f3f5" },
     { media: "(prefers-color-scheme: dark)", color: "#16191c" },
   ],
 };
@@ -98,7 +98,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className={`${funnelDisplay.className} min-h-screen bg-vanilla-cream`}
+        className={`${funnelDisplay.className} min-h-screen bg-page`}
       >
         <AppShell runtime={runtime}>{children}</AppShell>
         <PackCacheRegistration />

@@ -93,25 +93,25 @@ export function RedeemPanel({ initialCode }: { initialCode: string }) {
 
   if (!isFirebaseConfigured) {
     return (
-      <div className="rounded-3xl bg-white px-6 py-6">
+      <div className="rounded-[20px] bg-white px-6 py-6">
         <p className="text-sm leading-7 text-iron-grey">Codes are redeemed on cadence.pstepanov.dev/redeem, signed in to your Cadence account.</p>
       </div>
     );
   }
 
-  if (account === undefined) return <div className="h-40 rounded-3xl bg-white" aria-busy="true" />;
+  if (account === undefined) return <div className="h-40 rounded-[20px] bg-white" aria-busy="true" />;
 
   if (done) {
     return (
-      <div role="status" className="rounded-3xl bg-hunter-green px-6 py-6 text-white">
-        <p className="eyebrow text-sm text-yellow-green">Plus is on</p>
+      <div role="status" className="rounded-[20px] bg-white px-6 py-6 text-carbon-black">
+        <p className="eyebrow text-sm text-slate-grey">Plus is on</p>
         <p className="mt-2 text-2xl font-semibold">
           {done.expiresAt ? `Cadence Plus${done.duration ? ` for ${done.duration}` : ""}, until ${dateFormat(done.expiresAt)}.` : "Cadence Plus is on."}
         </p>
-        <p className="mt-2 text-sm leading-7 text-white/85">
+        <p className="mt-2 text-sm leading-7 text-iron-grey">
           It ends by itself; nothing renews and nothing is charged. Sign in as {account?.email ?? "this account"} on any device to use it.
         </p>
-        <Button href="/dashboard" variant="secondary" className="mt-4">Start practising</Button>
+        <Button href="/dashboard" className="mt-4">Start practising</Button>
       </div>
     );
   }
@@ -119,7 +119,7 @@ export function RedeemPanel({ initialCode }: { initialCode: string }) {
   if (!account) {
     const next = initial ? `/redeem?code=${encodeURIComponent(initial)}` : "/redeem";
     return (
-      <div className="rounded-3xl bg-white px-6 py-6">
+      <div className="rounded-[20px] bg-white px-6 py-6">
         <p className="text-sm leading-7 text-iron-grey">Sign in first. The code turns Plus on for the account you sign in with.</p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Button href={`/login?next=${encodeURIComponent(next)}`}>Sign in</Button>
@@ -130,16 +130,16 @@ export function RedeemPanel({ initialCode }: { initialCode: string }) {
   }
 
   return (
-    <form onSubmit={redeem} className="space-y-4 rounded-3xl bg-white px-6 py-6" noValidate>
+    <form onSubmit={redeem} className="space-y-4 rounded-[20px] bg-white px-6 py-6" noValidate>
       {offer ? (
-        <div className="rounded-2xl bg-hunter-green px-5 py-4 text-white">
-          <p className="eyebrow text-xs text-yellow-green">This code gives</p>
+        <div className="rounded-2xl bg-white px-5 py-4 text-carbon-black">
+          <p className="eyebrow text-xs text-slate-grey">This code gives</p>
           <p className="mt-1 text-xl font-semibold">Cadence Plus for {offer}</p>
-          <p className="mt-1 text-xs text-white/85">Free, with no card. It ends by itself.</p>
+          <p className="mt-1 text-xs text-iron-grey">Free, with no card. It ends by itself.</p>
         </div>
       ) : null}
       <div>
-        <label htmlFor={`${id}-code`} className="block pb-1 text-sm font-semibold text-hunter-green">Code</label>
+        <label htmlFor={`${id}-code`} className="block pb-1 text-sm font-semibold text-carbon-black">Code</label>
         <input
           id={`${id}-code`}
           value={code}

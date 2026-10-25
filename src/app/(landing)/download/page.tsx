@@ -49,7 +49,7 @@ export default async function DownloadPage() {
 
         {/* ── Hero ── */}
         <section className="flex flex-col items-center gap-4 py-10 text-center">
-          <p className="eyebrow text-sm text-sage-text">Desktop app</p>
+          <p className="eyebrow text-sm text-slate-grey">Desktop app</p>
           <SplitText
             text="Take Cadence with you"
             tag="h1"
@@ -69,11 +69,11 @@ export default async function DownloadPage() {
           {platforms.map((p) => (
             <div
               key={p.key}
-              className="flex flex-col rounded-3xl bg-hunter-green p-8 text-bright-snow"
+              className="flex flex-col rounded-[20px] bg-white p-8 text-carbon-black"
             >
               {/* Icon + name */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-page">
                   <Image
                     src={p.icon}
                     alt={`${p.name} logo`}
@@ -87,12 +87,12 @@ export default async function DownloadPage() {
 
               {/* Requirements */}
               <div className="flex flex-col gap-2 mb-8 flex-1">
-                <p className="text-sm text-bright-snow/84">{p.requirement}</p>
+                <p className="text-sm text-iron-grey">{p.requirement}</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {p.architectures.map((arch) => (
                     <span
                       key={arch}
-                      className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-bright-snow/90"
+                      className="rounded-full bg-page px-3 py-1 text-xs font-medium text-iron-grey"
                     >
                       {arch}
                     </span>
@@ -104,11 +104,11 @@ export default async function DownloadPage() {
               <div className="flex flex-col gap-2">
                 <Link
                   href={p.href}
-                  className="inline-flex items-center justify-center rounded-full bg-yellow-green px-6 py-3 text-sm font-semibold text-hunter-green transition-colors hover:bg-[#b5d567]"
+                  className="inline-flex items-center justify-center rounded-[14px] bg-hunter-green px-6 py-3 text-sm font-semibold text-white transition-[filter] hover:brightness-110"
                 >
                   {p.buttonLabel}
                 </Link>
-                <p className="text-center text-xs text-bright-snow/84">
+                <p className="text-center text-xs text-iron-grey">
                   {p.fileHint}
                 </p>
               </div>
@@ -117,22 +117,22 @@ export default async function DownloadPage() {
         </section>
 
         {/* ── iPhone ── */}
-        <section className="mx-auto flex w-full max-w-3xl flex-col gap-4 rounded-3xl bg-platinum p-8 sm:flex-row sm:items-center">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-hunter-green">
+        <section className="mx-auto flex w-full max-w-3xl flex-col gap-4 rounded-[20px] bg-platinum p-8 sm:flex-row sm:items-center">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white">
             <Image src="/icon/apple.svg" alt="" width={28} height={28} className="h-7 w-7 object-contain" />
           </div>
           <div className="flex-1">
-            <h2 className="font-kicker text-2xl text-hunter-green">iPhone</h2>
+            <h2 className="font-kicker text-2xl text-carbon-black">iPhone</h2>
             <p className="mt-1 text-sm leading-6 text-iron-grey">
               Practice anywhere, synced with your account, or paired with Cadence on your computer over Wi-Fi. iOS 16.4 or later.
             </p>
           </div>
           {APP_STORE_URL ? (
-            <Link href={APP_STORE_URL} className="inline-flex min-h-12 items-center justify-center rounded-full bg-hunter-green px-6 text-sm font-semibold text-white hover:brightness-110">
+            <Link href={APP_STORE_URL} className="inline-flex min-h-12 items-center justify-center rounded-[14px] bg-hunter-green px-6 text-sm font-semibold text-white hover:brightness-110">
               App Store
             </Link>
           ) : (
-            <span className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-iron-grey">Coming to the App Store</span>
+            <span className="inline-flex min-h-12 items-center justify-center rounded-[14px] bg-white px-6 text-sm font-semibold text-iron-grey">Coming to the App Store</span>
           )}
         </section>
 

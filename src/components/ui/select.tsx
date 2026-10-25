@@ -14,10 +14,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         <select
           ref={ref}
           className={cn(
-            "min-h-12 w-full cursor-pointer appearance-none rounded-full px-4 py-3 text-sm font-semibold text-hunter-green outline-none transition-colors",
+            "min-h-12 w-full cursor-pointer appearance-none rounded-[14px] px-4 py-3 text-sm font-semibold text-carbon-black outline-none transition-colors",
             variant === "white"
               ? "bg-white hover:bg-white/90"
-              : "bg-vanilla-cream hover:bg-vanilla-cream/80",
+              : "bg-page hover:bg-page/80",
             className,
           )}
           {...props}
@@ -25,7 +25,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           {children}
         </select>
         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">
-          <ChevronDown size={16} color="currentColor" className="text-hunter-green/60" />
+          <ChevronDown size={16} color="currentColor" className="text-slate-grey" />
         </div>
       </div>
     );

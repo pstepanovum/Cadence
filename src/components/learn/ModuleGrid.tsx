@@ -27,35 +27,35 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
   return (
     <div className="space-y-4">
       <div className="grid gap-4 xl:grid-cols-[1.06fr_0.94fr]">
-        <Card className="bg-hunter-green text-bright-snow">
+        <Card className="bg-white text-carbon-black">
           <div className="space-y-5">
             <div className="space-y-3">
-              <p className="eyebrow text-sm text-yellow-green">Modules</p>
-              <h1 className="text-4xl font-semibold text-bright-snow sm:text-5xl">
+              <p className="eyebrow text-sm text-slate-grey">Modules</p>
+              <h1 className="text-4xl font-semibold text-carbon-black sm:text-5xl">
                 A structured pronunciation route, not a loose stack of drills.
               </h1>
-              <p className="max-w-3xl text-sm leading-7 text-bright-snow/84">
+              <p className="max-w-3xl text-sm leading-7 text-iron-grey">
                 Each module moves from theory to guided practice and then into a
                 scored exam, so the learner always knows what comes next.
               </p>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Complete</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Complete</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {completed}/{modules.length}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Unlocked</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Unlocked</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {unlocked}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Progress</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Progress</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {completionRate}%
                 </p>
               </div>
@@ -77,8 +77,8 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
 
             <div className="space-y-4">
               <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-text">Current route</p>
-                <h2 className="text-3xl font-semibold text-hunter-green">
+                <p className="eyebrow text-sm text-slate-grey">Current route</p>
+                <h2 className="text-3xl font-semibold text-carbon-black">
                   {currentModule
                     ? `Module ${currentModule.sort_order}: ${currentModule.title}`
                     : "Start with your first module"}
@@ -92,7 +92,7 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
               <div className="flex items-center gap-4">
                 <ProgressRing score={completionRate} size={88} strokeWidth={7} />
                 <div className="space-y-1">
-                  <p className="text-sm font-semibold text-hunter-green">
+                  <p className="text-sm font-semibold text-carbon-black">
                     {completed} modules finished
                   </p>
                   <p className="text-sm leading-6 text-iron-grey">
@@ -102,8 +102,8 @@ export function ModuleGrid({ modules }: ModuleGridProps) {
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Route note</p>
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Route note</p>
                 <p className="mt-2 text-sm leading-6 text-iron-grey">
                   Passing an exam keeps the module path moving, so progress feels
                   earned and easy to follow.

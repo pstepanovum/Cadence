@@ -49,12 +49,13 @@ export type Palette = { [K in keyof typeof lightColors]: string };
 
 /**
  * Dark mode keeps the names and their roles: `cream` is still the page,
- * `snow` the card, `hunter` the strong brand colour (lifted to stay readable
- * on dark), `iron` body text. Text-safe shades are re-picked for AA on the
+ * `snow` the card, `hunter` the primary green (lifted to stay readable on
+ * dark, and still green: lime is only for correct answers), `iron` body text. Text-safe shades are re-picked for AA on the
  * dark surfaces.
  */
 const darkColors: Palette = {
-  hunter: "#a7c957",
+  /** The primary green lifted for dark surfaces (7.8:1 on the page), never lime. */
+  hunter: "#7cbb84",
   sage: "#8fbf6a",
   yellowGreen: "#a7c957",
   cream: "#16191c",
@@ -178,7 +179,7 @@ const darkOverlays: typeof lightOverlays = {
   whiteOnGreenStrong: "rgba(20,28,23,0.16)",
   yellowGreenPanel: "rgba(167,201,87,0.22)",
   creamSoft: "rgba(20,28,23,0.80)",
-  hunterTint: "rgba(167,201,87,0.12)",
+  hunterTint: "rgba(124,187,132,0.14)",
   locked: "rgba(42,54,47,0.7)",
   brickHalo: "rgba(217,104,106,0.28)",
 };

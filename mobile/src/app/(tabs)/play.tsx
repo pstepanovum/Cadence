@@ -101,8 +101,8 @@ export default function PlayScreen() {
             style={[styles.streakBadge, streak > 0 && styles.streakBadgeOn]}
             accessible
             accessibilityLabel={`${streak}-day play streak`}>
-            <Flame color={streak > 0 ? colors.ink : colors.slate} size={16} />
-            <Body size={type.footnote} weight="bold" style={{ color: streak > 0 ? colors.ink : colors.slate }}>
+            <Flame color={streak > 0 ? colors.snow : colors.slate} size={16} />
+            <Body size={type.footnote} weight="bold" style={{ color: streak > 0 ? colors.snow : colors.slate }}>
               {streak}d
             </Body>
           </View>
@@ -201,7 +201,7 @@ function GameCard({
     <Card style={offline ? styles.offlineCard : undefined}>
       <View style={styles.cardTop}>
         <View style={styles.iconWrap}>
-          <Icon color={colors.hunter} size={22} />
+          <Icon color={colors.carbon} size={22} />
         </View>
         <View style={styles.cardTitleWrap}>
           <Eyebrow>{game.tagline}</Eyebrow>
@@ -261,7 +261,7 @@ function RecentRow({ result, now }: { result: GameResult; now: Date }) {
   return (
     <View style={styles.recentRow}>
       <View style={styles.recentIcon}>
-        <Icon color={colors.hunter} size={16} />
+        <Icon color={colors.carbon} size={16} />
       </View>
       <View style={styles.recentBody}>
         <Body size={type.footnote} weight="semibold" tone="strong">
@@ -313,7 +313,7 @@ const styles = themed(() =>
       paddingVertical: spacing.xs,
     },
     streakBadgeOn: {
-      backgroundColor: colors.yellowGreen,
+      backgroundColor: colors.hunter,
     },
     section: {
       gap: spacing.sm,
@@ -338,7 +338,7 @@ const styles = themed(() =>
       width: 48,
       height: 48,
       borderRadius: radii.panel,
-      backgroundColor: colors.cream,
+      backgroundColor: colors.platinum,
       alignItems: "center",
       justifyContent: "center",
     },
@@ -370,7 +370,7 @@ const styles = themed(() =>
       width: 32,
       height: 32,
       borderRadius: radii.pill,
-      backgroundColor: colors.cream,
+      backgroundColor: colors.platinum,
       alignItems: "center",
       justifyContent: "center",
     },

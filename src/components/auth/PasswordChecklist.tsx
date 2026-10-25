@@ -7,7 +7,7 @@ export function PasswordChecklist({ id, password, email }: { id: string; passwor
   return (
     <ul id={id} className="grid grid-cols-2 gap-x-3 gap-y-1 pt-2 text-xs" aria-label="Password rules">
       {rules.map((rule) => (
-        <li key={rule.id} className={cn("flex items-center gap-1.5", rule.met ? "text-hunter-green" : "text-slate-grey")}>
+        <li key={rule.id} className={cn("flex items-center gap-1.5", rule.met ? "text-carbon-black" : "text-slate-grey")}>
           <span aria-hidden="true">{rule.met ? "✓" : "•"}</span>
           <span>
             {rule.label}

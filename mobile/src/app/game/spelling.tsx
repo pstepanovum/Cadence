@@ -251,7 +251,7 @@ export default function SpellingScreen() {
 
         {verdict ? (
           <Card variant={verdict.correct ? "cream" : "light"} style={styles.verdict}>
-            <Eyebrow tone={verdict.correct ? undefined : colors.brickText}>
+            <Eyebrow tone={verdict.correct ? colors.sageText : colors.brickText}>
               {verdict.correct
                 ? usedHelp
                   ? "Right, with a hint"

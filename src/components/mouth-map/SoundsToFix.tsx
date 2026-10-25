@@ -15,12 +15,12 @@ export function SoundsToFix({ variant }: { variant: Variant }) {
   const suffix = variant === "RP" ? "?accent=RP" : "";
 
   return (
-    <section aria-labelledby="to-fix" className="rounded-3xl bg-hunter-green px-5 py-6 text-white sm:px-8">
+    <section aria-labelledby="to-fix" className="rounded-[20px] bg-white px-5 py-6 text-carbon-black sm:px-8">
       <h2 id="to-fix" className="font-kicker text-2xl">Your sounds to fix</h2>
       {fix.length === 0 && review.length === 0 ? (
-        <p className="mt-2 max-w-2xl text-sm leading-7 text-white/80">
+        <p className="mt-2 max-w-2xl text-sm leading-7 text-iron-grey">
           Nothing yet. Record a word in{" "}
-          <Link href="/dashboard" className="font-semibold text-yellow-green underline underline-offset-2">
+          <Link href="/dashboard" className="font-semibold text-slate-grey underline underline-offset-2">
             Quick practice
           </Link>{" "}
           and the sounds that need work show up here, most useful first.
@@ -31,7 +31,7 @@ export function SoundsToFix({ variant }: { variant: Variant }) {
             const sound = soundById(id);
             return sound ? (
               <li key={`r-${id}`}>
-                <Link href={`/sounds/${id}${suffix}`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-yellow-green px-4 text-sm font-semibold text-hunter-green">
+                <Link href={`/sounds/${id}${suffix}`} className="inline-flex min-h-11 items-center gap-2 rounded-[14px] bg-platinum px-4 text-sm font-semibold text-carbon-black hover:bg-alabaster-grey">
                   /{ipaOf(sound, variant)}/ <span className="font-normal">review</span>
                 </Link>
               </li>
@@ -43,10 +43,10 @@ export function SoundsToFix({ variant }: { variant: Variant }) {
               <li key={item.soundId}>
                 <Link
                   href={`/sounds/${item.soundId}${suffix}`}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white/10 px-4 text-sm font-semibold text-white hover:bg-white/20"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-[14px] bg-page px-4 text-sm font-semibold text-carbon-black hover:bg-platinum"
                 >
                   /{ipaOf(sound, variant)}/<span className="sr-only">, average score</span>{" "}
-                  <span className="font-normal text-white/84">{item.score}</span>
+                  <span className="font-normal text-iron-grey">{item.score}</span>
                 </Link>
               </li>
             ) : null;

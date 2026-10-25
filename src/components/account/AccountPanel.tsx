@@ -32,7 +32,7 @@ export function AccountPanel({ email, checkout }: { email: string | null; checko
     <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
       <div className="flex flex-col gap-4">
         {checkout === "success" ? (
-          <p role="status" className="rounded-3xl bg-yellow-green px-5 py-4 text-sm font-semibold text-hunter-green">
+          <p role="status" className="rounded-[20px] bg-white px-5 py-4 text-sm font-semibold text-carbon-black">
             Thanks. Your payment went through; Plus turns on as soon as Stripe confirms it, usually within a minute.
           </p>
         ) : null}
@@ -57,18 +57,18 @@ function PlusCard({ me }: { me: Me | null | undefined }) {
 
   if (!active) {
     return (
-      <Card className="bg-hunter-green text-white">
-        <p className="eyebrow text-sm text-yellow-green">Your plan</p>
+      <Card className="bg-white text-carbon-black">
+        <p className="eyebrow text-sm text-slate-grey">Your plan</p>
         <h2 className="mt-2 text-2xl font-semibold">Free</h2>
-        <p className="mt-2 text-sm leading-7 text-white/80">
+        <p className="mt-2 text-sm leading-7 text-iron-grey">
           All practice is yours. Plus adds cloud AI: scoring, voices, transcription and the coach, wherever you are.
           {plus && !plus.active ? " Your earlier Plus has ended; your detailed history is kept for 90 days." : ""}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          <PlanButton interval="yearly" signedIn label="Start 7-day free trial" variant="secondary" />
+          <PlanButton interval="yearly" signedIn label="Start 7-day free trial" />
           <PlanButton interval="monthly" signedIn label="Monthly, $14.99" variant="ghost" />
         </div>
-        <p className="mt-3 text-xs text-white/84">Running Cadence on your own computer gives the same AI for free.</p>
+        <p className="mt-3 text-xs text-iron-grey">Running Cadence on your own computer gives the same AI for free.</p>
       </Card>
     );
   }
@@ -76,13 +76,13 @@ function PlusCard({ me }: { me: Me | null | undefined }) {
   const fromAppStore = plus?.source === "app_store";
   const fromCode = plus?.source === "code";
   return (
-    <Card className="bg-hunter-green text-white">
-      <p className="eyebrow text-sm text-yellow-green">Your plan</p>
+    <Card className="bg-white text-carbon-black">
+      <p className="eyebrow text-sm text-slate-grey">Your plan</p>
       <h2 className="mt-2 text-2xl font-semibold">
         Cadence Plus{plus?.productId && PLAN_NAMES[plus.productId] ? `, ${PLAN_NAMES[plus.productId]}` : ""}
         {me?.trial ? " (trial)" : ""}
       </h2>
-      <p className="mt-2 text-sm leading-7 text-white/80">
+      <p className="mt-2 text-sm leading-7 text-iron-grey">
         {plus?.expiresAt
           ? plus.willRenew
             ? `Renews on ${dateFormat(plus.expiresAt)}.`
@@ -92,7 +92,7 @@ function PlusCard({ me }: { me: Me | null | undefined }) {
       </p>
       <div className="mt-4">
         {fromCode ? null : fromAppStore ? (
-          <p className="text-sm text-white/85">Manage or cancel it on your iPhone: Settings › your name › Subscriptions.</p>
+          <p className="text-sm text-iron-grey">Manage or cancel it on your iPhone: Settings › your name › Subscriptions.</p>
         ) : (
           <PortalButton label="Manage or cancel" />
         )}
@@ -132,7 +132,7 @@ function NewsletterCard({ email, me }: { email: string | null; me: Me | null | u
     <Card className="bg-white">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h2 id={`${id}-t`} className="font-kicker text-xl text-hunter-green">Newsletter</h2>
+          <h2 id={`${id}-t`} className="font-kicker text-xl text-carbon-black">Newsletter</h2>
           <p id={`${id}-d`} className="mt-1 text-sm leading-6 text-iron-grey">Product updates and occasional offers. A few emails a month at most.</p>
         </div>
         <button
@@ -148,7 +148,7 @@ function NewsletterCard({ email, me }: { email: string | null; me: Me | null | u
           <span className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-[left] on-color ${on ? "left-7" : "left-1"}`} />
         </button>
       </div>
-      {state === "pending" ? <p role="status" className="mt-3 text-sm text-hunter-green">Check your email and click the link to confirm.</p> : null}
+      {state === "pending" ? <p role="status" className="mt-3 text-sm text-carbon-black">Check your email and click the link to confirm.</p> : null}
       {error ? <p role="alert" className="mt-3 text-sm text-blushed-brick">{error}</p> : null}
     </Card>
   );
@@ -178,7 +178,7 @@ function DataCard() {
   }
   return (
     <Card className="bg-white">
-      <h2 className="font-kicker text-xl text-hunter-green">Your data</h2>
+      <h2 className="font-kicker text-xl text-carbon-black">Your data</h2>
       <p className="mt-1 text-sm leading-6 text-iron-grey">
         Download everything Cadence keeps for this account as one JSON file: profile, plan, progress and usage.
       </p>
@@ -238,7 +238,7 @@ function DeleteCard({ email }: { email: string | null }) {
 
   return (
     <Card className="bg-white">
-      <h2 className="font-kicker text-xl text-hunter-green">Delete account</h2>
+      <h2 className="font-kicker text-xl text-carbon-black">Delete account</h2>
       <p className="mt-1 text-sm leading-6 text-iron-grey">
         Removes your account, progress and newsletter subscription, and ends any web subscription now. Download your
         data first if you want a copy. An iPhone subscription must also be cancelled in Settings.
@@ -249,15 +249,15 @@ function DeleteCard({ email }: { email: string | null }) {
         <form className="mt-4 space-y-3" onSubmit={remove}>
           {confirmWith === "password" ? (
             <div>
-              <label htmlFor={`${id}-pw`} className="block pb-1 text-sm font-medium text-hunter-green">Password</label>
-              <input id={`${id}-pw`} type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required className="min-h-12 w-full rounded-full bg-vanilla-cream px-4 text-sm text-hunter-green ring-1 ring-alabaster-grey" />
+              <label htmlFor={`${id}-pw`} className="block pb-1 text-sm font-medium text-carbon-black">Password</label>
+              <input id={`${id}-pw`} type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required className="min-h-12 w-full rounded-[14px] bg-page px-4 text-sm text-carbon-black" />
             </div>
           ) : (
             <p className="text-sm text-iron-grey">You&apos;ll confirm with {methodLabel(confirmWith)} first.</p>
           )}
           <div>
-            <label htmlFor={`${id}-c`} className="block pb-1 text-sm font-medium text-hunter-green">Type “delete” to confirm</label>
-            <input id={`${id}-c`} value={confirm} onChange={(e) => setConfirm(e.target.value)} autoComplete="off" required className="min-h-12 w-full rounded-full bg-vanilla-cream px-4 text-sm text-hunter-green ring-1 ring-alabaster-grey" />
+            <label htmlFor={`${id}-c`} className="block pb-1 text-sm font-medium text-carbon-black">Type “delete” to confirm</label>
+            <input id={`${id}-c`} value={confirm} onChange={(e) => setConfirm(e.target.value)} autoComplete="off" required className="min-h-12 w-full rounded-[14px] bg-page px-4 text-sm text-carbon-black" />
           </div>
           {error ? <p role="alert" className="text-sm text-blushed-brick">{error}</p> : null}
           <div className="flex flex-wrap gap-2">

@@ -33,7 +33,7 @@ export function OnboardingTopBar({
       <View style={styles.side}>
         {onBack ? (
           <RoundIconButton accessibilityLabel="Back" onPress={onBack}>
-            <ChevronLeft color={colors.hunter} size={22} />
+            <ChevronLeft color={colors.carbon} size={22} />
           </RoundIconButton>
         ) : null}
       </View>
@@ -41,7 +41,7 @@ export function OnboardingTopBar({
       <View style={[styles.side, styles.end]}>
         {onClose ? (
           <RoundIconButton accessibilityLabel="Close setup" onPress={onClose}>
-            <X color={colors.hunter} size={20} />
+            <X color={colors.carbon} size={20} />
           </RoundIconButton>
         ) : onSkip ? (
           <Pressable

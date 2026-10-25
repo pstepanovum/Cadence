@@ -7,7 +7,6 @@ import {
   Banner,
   Body,
   Button,
-  Card,
   OptionRow,
   Screen,
   TextField,
@@ -27,7 +26,7 @@ import { useAccount } from "@/context/account";
 import { describeError, useServerStatus } from "@/hooks/useServerStatus";
 import { haptics } from "@/lib/haptics";
 import { useConnection } from "@/pairing/context";
-import { colors, radii, shadows, spacing, type, themed } from "@/theme/theme";
+import { colors, spacing, type, themed } from "@/theme/theme";
 
 export default function ProfileScreen() {
   const { user, profile } = useAuth();
@@ -64,13 +63,13 @@ export default function ProfileScreen() {
 
       <View style={styles.group}>
         <SettingsRow
-          icon={<Award color={colors.hunter} size={20} />}
+          icon={<Award color={colors.carbon} size={20} />}
           title="Streak and badges"
           detail={`${today.streak.current}-day streak · ${earnedCount(badges)} badges`}
           onPress={() => router.push("/badges")}
         />
         <SettingsRow
-          icon={<SettingsIcon color={colors.hunter} size={20} />}
+          icon={<SettingsIcon color={colors.carbon} size={20} />}
           title="Settings"
           detail="Reminders, sounds, your server, your account."
           onPress={() => router.push("/settings")}
@@ -153,7 +152,7 @@ function ProfileForm() {
   }
 
   return (
-    <Card style={styles.form}>
+    <View style={styles.form}>
       <TextField
         label="Display name"
         placeholder="Your name"
@@ -187,7 +186,7 @@ function ProfileForm() {
       {error ? <Banner message={error} tone="error" /> : null}
       {saved && !dirty ? <Banner tone="success" message="Saved." /> : null}
       <Button label="Save changes" loading={saving} disabled={!dirty} onPress={handleSave} />
-    </Card>
+    </View>
   );
 }
 
@@ -198,28 +197,6 @@ const styles = themed(() =>
     },
     group: {
       gap: spacing.sm,
-    },
-    row: {
-      flexDirection: "row",
-      alignItems: "center",
-      gap: spacing.md,
-      borderRadius: radii.card,
-      backgroundColor: colors.snow,
-      padding: spacing.lg,
-      minHeight: 72,
-      boxShadow: shadows.card,
-    },
-    rowIcon: {
-      width: 44,
-      height: 44,
-      borderRadius: radii.panel,
-      backgroundColor: colors.cream,
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    rowBody: {
-      flex: 1,
-      gap: spacing.xxs,
     },
     version: {
       textAlign: "center",

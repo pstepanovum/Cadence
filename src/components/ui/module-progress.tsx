@@ -27,12 +27,12 @@ function ProgressBar({
     <div className="flex min-w-0 flex-1 flex-col gap-2">
       <div className="flex items-center justify-between gap-3">
         <span
-          className={`eyebrow text-[10px] whitespace-nowrap ${isDark ? "text-white" : "text-sage-text"}`}
+          className={`eyebrow text-[10px] whitespace-nowrap ${isDark ? "text-white" : "text-slate-grey"}`}
         >
           {label}
         </span>
         <span
-          className={`text-xs font-semibold tabular-nums ${isDark ? "text-white" : "text-hunter-green"}`}
+          className={`text-xs font-semibold tabular-nums ${isDark ? "text-white" : "text-carbon-black"}`}
         >
           {countLabel}
         </span>

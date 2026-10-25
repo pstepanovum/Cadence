@@ -24,8 +24,8 @@ export function CheckoutRedirect({ interval }: { interval: PlanInterval }) {
   }, [interval]);
 
   return (
-    <section className="mx-auto w-full max-w-lg space-y-4 rounded-3xl bg-white px-6 py-10 text-center" aria-live="polite">
-      <h1 className="font-kicker text-2xl text-hunter-green">{error ? "Checkout did not open" : "Opening secure checkout…"}</h1>
+    <section className="mx-auto w-full max-w-lg space-y-4 rounded-[20px] bg-white px-6 py-10 text-center" aria-live="polite">
+      <h1 className="font-kicker text-2xl text-carbon-black">{error ? "Checkout did not open" : "Opening secure checkout…"}</h1>
       {error ? (
         <>
           <p className="text-sm text-iron-grey">{error}</p>

@@ -127,7 +127,7 @@ export default function CoachScreen() {
       <ServerBanner />
       {server.reachable ? <ReadinessBanner readiness={readiness} /> : null}
 
-      <Card>
+      <View style={styles.form}>
         <TextField
           label="Topic"
           placeholder="What do you want to talk about?"
@@ -155,7 +155,7 @@ export default function CoachScreen() {
         </Body>
 
         <Button label="Start session" disabled={!readiness.ready} onPress={startSession} />
-      </Card>
+      </View>
 
       <View style={styles.historyHead}>
         <Eyebrow>History</Eyebrow>
@@ -224,7 +224,7 @@ function HistoryRow({
         </View>
         <ChevronRight color={colors.slate} size={20} />
       </Pressable>
-      <RoundIconButton accessibilityLabel={`Delete ${saved.topic}`} tone="cream" onPress={onDelete}>
+      <RoundIconButton accessibilityLabel={`Delete ${saved.topic}`} onPress={onDelete}>
         <Trash2 color={colors.brickText} size={18} />
       </RoundIconButton>
     </Card>
@@ -233,6 +233,9 @@ function HistoryRow({
 
 const styles = themed(() =>
   StyleSheet.create({
+    form: {
+      gap: spacing.md,
+    },
     header: {
       gap: spacing.lg,
     },

@@ -52,31 +52,31 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
   return (
     <PageShell current="home">
       {query.account === "deleted" ? (
-        <p role="status" className="rounded-3xl bg-yellow-green px-5 py-4 text-sm font-semibold text-hunter-green">
+        <p role="status" className="rounded-[20px] bg-white px-5 py-4 text-sm font-semibold text-carbon-black">
           Your account has been deleted. Thanks for practising with Cadence.
         </p>
       ) : null}
 
       <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-        <Card className="flex flex-col justify-between gap-8 bg-hunter-green px-6 py-8 text-white sm:px-10 sm:py-10">
+        <Card className="flex flex-col justify-between gap-8 bg-white px-6 py-8 text-carbon-black sm:px-10 sm:py-10">
           <div className="space-y-4">
-            <p className="eyebrow text-sm text-yellow-green">Open source · Free to run yourself</p>
+            <p className="eyebrow text-sm text-slate-grey">Open source · Free to run yourself</p>
             <h1 className="max-w-2xl text-balance text-4xl font-semibold leading-tight sm:text-6xl">Advanced English, out loud.</h1>
-            <p className="max-w-xl text-base leading-8 text-white/80 sm:text-lg">
+            <p className="max-w-xl text-base leading-8 text-iron-grey sm:text-lg">
               See how every sound is made, learn grammar level by level, build sentences, keep words with
               flashcards and talk it through with a coach. All in one place, on the web, desktop and phone.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button variant="secondary" href="/practice">Start practising free</Button>
-            <Button href={signedIn ? "/dashboard" : "/signup"} className="bg-white/10 text-white">
+            <Button href="/practice">Start practising free</Button>
+            <Button href={signedIn ? "/dashboard" : "/signup"} variant="secondary">
               {signedIn ? "Go to your dashboard" : "Create an account"}
             </Button>
           </div>
         </Card>
         <Card className="bg-white">
-          <p className="eyebrow text-sm text-sage-text">The mouth map</p>
-          <h2 className="mt-1 font-kicker text-2xl text-hunter-green">Where your tongue should be, for every sound.</h2>
+          <p className="eyebrow text-sm text-slate-grey">The mouth map</p>
+          <h2 className="mt-1 font-kicker text-2xl text-carbon-black">Where your tongue should be, for every sound.</h2>
           <div className="mt-4">{demo.length > 1 ? <LazyMouthMapDemo sounds={demo} still={<DemoStill sounds={demo} />} /> : null}</div>
           <Link href="/sounds" className="mt-3 inline-block text-sm font-semibold text-sage-text underline underline-offset-2">
             Open the sounds library
@@ -89,8 +89,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((feature) => (
             <li key={feature.title}>
-              <Link href={feature.href} className="flex h-full flex-col rounded-3xl bg-white px-5 py-5 transition-colors hover:bg-yellow-green">
-                <span className="font-kicker text-xl text-hunter-green">{feature.title}</span>
+              <Link href={feature.href} className="flex h-full flex-col rounded-[20px] bg-white px-5 py-5 transition-colors hover:bg-platinum">
+                <span className="font-kicker text-xl text-carbon-black">{feature.title}</span>
                 <span className="mt-2 text-sm leading-6 text-iron-grey">{feature.body}</span>
               </Link>
             </li>
@@ -100,8 +100,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
 
       <section className="grid gap-4 lg:grid-cols-2" aria-labelledby="ai">
         <Card className="bg-white">
-          <p className="eyebrow text-sm text-sage-text">Your own Cadence</p>
-          <h2 id="ai" className="mt-1 text-2xl font-semibold text-hunter-green sm:text-3xl">Run the AI at home, free and unlimited.</h2>
+          <p className="eyebrow text-sm text-slate-grey">Your own Cadence</p>
+          <h2 id="ai" className="mt-1 text-2xl font-semibold text-carbon-black sm:text-3xl">Run the AI at home, free and unlimited.</h2>
           <p className="mt-3 text-sm leading-7 text-iron-grey">
             Install Cadence on your computer and it does the scoring, voices, transcription and coaching itself.
             Scan a QR code and your phone uses it on the same Wi-Fi. The code is open source under the MIT licence;
@@ -112,9 +112,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
             <Button href={GITHUB_URL} variant="ghost">Source code</Button>
           </div>
         </Card>
-        <Card className="bg-vanilla-cream">
-          <p className="eyebrow text-sm text-sage-text">Cadence Plus</p>
-          <h2 className="mt-1 text-2xl font-semibold text-hunter-green sm:text-3xl">Or let the cloud do it, anywhere.</h2>
+        <Card className="bg-page">
+          <p className="eyebrow text-sm text-slate-grey">Cadence Plus</p>
+          <h2 className="mt-1 text-2xl font-semibold text-carbon-black sm:text-3xl">Or let the cloud do it, anywhere.</h2>
           <p className="mt-3 text-sm leading-7 text-iron-grey">
             When your computer is not around, Plus runs the same AI on Cadence servers and keeps your full history in
             sync. Practice without AI stays free either way.
@@ -156,7 +156,7 @@ function DemoStill({ sounds }: { sounds: DemoSound[] }) {
         {sounds.map((sound, i) => (
           <span
             key={sound.label}
-            className={`inline-flex min-h-10 items-center rounded-full px-4 text-sm font-semibold ${i === 0 ? "bg-hunter-green text-white" : "bg-vanilla-cream text-hunter-green"}`}
+            className={`inline-flex min-h-10 items-center rounded-[14px] px-4 text-sm font-semibold ${i === 0 ? "bg-hunter-green text-white" : "bg-page text-carbon-black"}`}
           >
             {sound.label}
           </span>

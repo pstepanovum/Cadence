@@ -32,8 +32,8 @@ export function FaqSection() {
     <section className="grid gap-3 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
       <Card className="h-full bg-white">
         <div className="flex h-full flex-col space-y-2">
-          <p className="eyebrow text-sm text-sage-text">FAQ</p>
-          <h2 className="max-w-md text-3xl font-semibold text-hunter-green">Questions people ask first.</h2>
+          <p className="eyebrow text-sm text-slate-grey">FAQ</p>
+          <h2 className="max-w-md text-3xl font-semibold text-carbon-black">Questions people ask first.</h2>
         </div>
       </Card>
 
@@ -42,21 +42,21 @@ export function FaqSection() {
           <details
             key={item.question}
             name="faq"
-            className="group rounded-3xl bg-white p-5 text-hunter-green open:bg-hunter-green open:text-white sm:p-6"
+            className="group rounded-[20px] bg-white p-5 text-carbon-black open:bg-white open:text-carbon-black sm:p-6"
           >
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sage-green [&::-webkit-details-marker]:hidden">
               <span className="flex items-center gap-4">
-                <span className="eyebrow inline-flex rounded-full bg-vanilla-cream px-3 py-1.5 text-xs text-sage-text group-open:bg-white/10 group-open:text-yellow-green">
+                <span className="eyebrow inline-flex rounded-full bg-page px-3 py-1.5 text-xs text-slate-grey group-open:bg-page group-open:text-slate-grey">
                   0{index + 1}
                 </span>
-                <span className="text-lg font-semibold text-hunter-green group-open:text-white sm:text-xl">{item.question}</span>
+                <span className="text-lg font-semibold text-carbon-black group-open:text-carbon-black sm:text-xl">{item.question}</span>
               </span>
-              <span aria-hidden="true" className="whitespace-nowrap rounded-full bg-bright-snow px-3 py-1.5 text-sm text-iron-grey group-open:bg-white/10 group-open:text-white/84">
+              <span aria-hidden="true" className="whitespace-nowrap rounded-[14px] bg-bright-snow px-3 py-1.5 text-sm text-iron-grey group-open:bg-page group-open:text-iron-grey">
                 <span className="group-open:hidden">Open</span>
                 <span className="hidden group-open:inline">Close</span>
               </span>
             </summary>
-            <p className="mt-4 max-w-3xl pr-2 text-sm leading-7 text-white/84">{item.answer}</p>
+            <p className="mt-4 max-w-3xl pr-2 text-sm leading-7 text-iron-grey">{item.answer}</p>
           </details>
         ))}
       </div>

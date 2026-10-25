@@ -203,8 +203,8 @@ export function JustSpeakStudio() {
       <Card className="bg-white">
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-text">Just Speak · Pro</p>
-            <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl">
+            <p className="eyebrow text-sm text-slate-grey">Just Speak · Pro</p>
+            <h1 className="text-3xl font-semibold text-carbon-black sm:text-4xl">
               Just speak. Get instant feedback.
             </h1>
             <p className="text-sm leading-7 text-iron-grey">
@@ -212,7 +212,7 @@ export function JustSpeakStudio() {
             </p>
           </div>
 
-          <div className={cn("rounded-3xl bg-vanilla-cream px-4 py-4", !canRecord && "opacity-70")}>
+          <div className={cn("rounded-[20px] bg-page px-4 py-4", !canRecord && "opacity-70")}>
             <AudioRecorder
               embedded
               showIntro={false}
@@ -225,13 +225,13 @@ export function JustSpeakStudio() {
           </div>
 
           {error ? (
-            <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+            <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
               {error}
             </div>
           ) : null}
 
           {phase === "assessing" ? (
-            <div className="rounded-3xl bg-vanilla-cream px-4 py-3 text-sm text-iron-grey">
+            <div className="rounded-[20px] bg-page px-4 py-3 text-sm text-iron-grey">
               Transcribing your take…
             </div>
           ) : null}
@@ -242,8 +242,8 @@ export function JustSpeakStudio() {
         <div className="space-y-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-sm text-sage-text">History</p>
-              <h2 className="text-2xl font-semibold text-hunter-green">
+              <p className="eyebrow text-sm text-slate-grey">History</p>
+              <h2 className="text-2xl font-semibold text-carbon-black">
                 {history.length ? "Recent takes" : "Record to start a history"}
               </h2>
             </div>
@@ -264,8 +264,8 @@ export function JustSpeakStudio() {
           </div>
 
           <div className="grid gap-3 lg:grid-cols-[0.92fr_1.08fr]">
-            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">Recent</p>
+            <div className="rounded-[20px] bg-page px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">Recent</p>
               {history.length ? (
                 <div className="mt-3 space-y-2">
                   {history.map((item) => {
@@ -275,13 +275,13 @@ export function JustSpeakStudio() {
                         key={item.id}
                         type="button"
                         className={cn(
-                          "w-full rounded-3xl px-4 py-3 text-left transition-colors",
+                          "w-full rounded-[20px] px-4 py-3 text-left transition-colors",
                           isActive ? "bg-white" : "bg-white/0 hover:bg-white/60",
                         )}
                         onClick={() => setActiveHistoryId(item.id)}
                       >
                         <div className="flex items-start justify-between gap-3">
-                          <p className="text-sm font-semibold text-hunter-green">
+                          <p className="text-sm font-semibold text-carbon-black">
                             {item.transcript ? item.transcript.slice(0, 42) : "Unclear take"}
                             {item.transcript.length > 42 ? "…" : ""}
                           </p>
@@ -304,8 +304,8 @@ export function JustSpeakStudio() {
             </div>
 
             <div className="space-y-3">
-              <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">What you said</p>
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">What you said</p>
                 <p className="mt-2 text-sm leading-7 text-iron-grey">
                   {result?.whisperTranscript?.trim() ||
                     activeHistoryItem?.transcript ||
@@ -313,8 +313,8 @@ export function JustSpeakStudio() {
                 </p>
               </div>
 
-              <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                <p className="eyebrow text-xs text-sage-text">Coach summary</p>
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Coach summary</p>
                 <p className="mt-2 text-sm leading-7 text-iron-grey">
                   {result?.feedback?.overallSummary ??
                     activeHistoryItem?.feedback?.overallSummary ??
@@ -326,8 +326,8 @@ export function JustSpeakStudio() {
 
               {(result?.feedback ?? activeHistoryItem?.feedback) ? (
                 <div className="grid gap-3 lg:grid-cols-2">
-                  <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                    <p className="eyebrow text-xs text-sage-text">What went well</p>
+                  <div className="rounded-[20px] bg-page px-4 py-4">
+                    <p className="eyebrow text-xs text-slate-grey">What went well</p>
                     <ul className="mt-2 space-y-2 text-sm leading-7 text-iron-grey">
                       {(result?.feedback?.whatWentWell ?? activeHistoryItem?.feedback?.whatWentWell ?? []).length ? (
                         (result?.feedback?.whatWentWell ?? activeHistoryItem?.feedback?.whatWentWell ?? []).map((line) => (
@@ -338,8 +338,8 @@ export function JustSpeakStudio() {
                       )}
                     </ul>
                   </div>
-                  <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-                    <p className="eyebrow text-xs text-sage-text">What to improve</p>
+                  <div className="rounded-[20px] bg-page px-4 py-4">
+                    <p className="eyebrow text-xs text-slate-grey">What to improve</p>
                     <ul className="mt-2 space-y-2 text-sm leading-7 text-iron-grey">
                       {(result?.feedback?.whatToImprove ?? activeHistoryItem?.feedback?.whatToImprove ?? []).length ? (
                         (result?.feedback?.whatToImprove ?? activeHistoryItem?.feedback?.whatToImprove ?? []).map((line) => (
@@ -354,9 +354,9 @@ export function JustSpeakStudio() {
               ) : null}
 
               {(result?.feedback?.practiceDrill ?? activeHistoryItem?.feedback?.practiceDrill) ? (
-                <div className="rounded-3xl bg-hunter-green px-5 py-5 text-bright-snow">
-                  <p className="eyebrow text-xs text-yellow-green">Practice drill</p>
-                  <p className="mt-3 text-sm leading-7 text-bright-snow/85">
+                <div className="rounded-[20px] bg-white px-5 py-5 text-carbon-black">
+                  <p className="eyebrow text-xs text-slate-grey">Practice drill</p>
+                  <p className="mt-3 text-sm leading-7 text-iron-grey">
                     {result?.feedback?.practiceDrill ?? activeHistoryItem?.feedback?.practiceDrill}
                   </p>
                 </div>

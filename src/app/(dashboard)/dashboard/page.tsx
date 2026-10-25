@@ -34,8 +34,8 @@ export default async function DashboardPage() {
         <ModuleProgress />
         <nav aria-label="Shortcuts" className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {SHORTCUTS.map((item) => (
-            <Link key={item.href} href={item.href} className="rounded-3xl bg-white px-5 py-4 transition-colors hover:bg-yellow-green">
-              <span className="block font-kicker text-xl text-hunter-green">{item.title}</span>
+            <Link key={item.href} href={item.href} className="rounded-[20px] bg-white px-5 py-4 transition-colors hover:bg-platinum">
+              <span className="block font-kicker text-xl text-carbon-black">{item.title}</span>
               <span className="block text-sm leading-6 text-iron-grey">{item.blurb}</span>
             </Link>
           ))}

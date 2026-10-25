@@ -19,8 +19,8 @@ export default async function BookmarksPage() {
         <ModuleProgress />
         <Card className="bg-white">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-text">Bookmarks</p>
-            <h1 className="text-3xl font-semibold text-hunter-green sm:text-4xl">
+            <p className="eyebrow text-sm text-slate-grey">Bookmarks</p>
+            <h1 className="text-3xl font-semibold text-carbon-black sm:text-4xl">
               Save and revisit your important items.
             </h1>
             <p className="max-w-3xl text-sm leading-7 text-iron-grey">

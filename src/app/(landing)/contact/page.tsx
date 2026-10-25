@@ -26,13 +26,13 @@ export default function ContactPage() {
         </Card>
         <div className="flex flex-col gap-4">
           <Card className="bg-white">
-            <h2 className="font-kicker text-xl text-hunter-green">Quick answers</h2>
+            <h2 className="font-kicker text-xl text-carbon-black">Quick answers</h2>
             <p className="mt-1 text-sm leading-6 text-iron-grey">
               Passwords, cancelling, refunds and connecting your phone are on the <Link href="/support" className="underline">support page</Link>.
             </p>
           </Card>
           <Card className="bg-white">
-            <h2 className="font-kicker text-xl text-hunter-green">Email</h2>
+            <h2 className="font-kicker text-xl text-carbon-black">Email</h2>
             <p className="mt-1 text-sm leading-6 text-iron-grey">
               Prefer your own mail app? <a href={`mailto:${SUPPORT_EMAIL}`} className="underline">{SUPPORT_EMAIL}</a>
             </p>

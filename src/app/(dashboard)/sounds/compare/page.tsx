@@ -40,7 +40,7 @@ export default async function ComparePage({ searchParams }: Props) {
           b={{ sound: soundB, target: targetB, word: words[1] ?? soundB.example }}
         />
       ) : (
-        <p className="rounded-3xl bg-white px-5 py-6 text-sm text-iron-grey">
+        <p className="rounded-[20px] bg-white px-5 py-6 text-sm text-iron-grey">
           One of these sounds has no mouth map yet. <Link href="/sounds" className="font-semibold text-sage-text">Back to all sounds</Link>
         </p>
       )}

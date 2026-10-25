@@ -1,5 +1,6 @@
 import { ChevronLeft, X } from "lucide-react-native";
-import { Children, useRef } from "react";
+import { BottomTabBarHeightContext } from "expo-router/build/react-navigation/bottom-tabs";
+import { Children, useContext, useRef } from "react";
 import {
   FlatList,
   RefreshControl,
@@ -30,19 +31,29 @@ function refreshControl(refreshing?: boolean, onRefresh?: () => void) {
   );
 }
 
-/** The bottom padding a screen needs: the home indicator, unless a tab bar already clears it. */
+/** The standard iPhone tab bar, above the home indicator. */
+const TAB_BAR_HEIGHT = 49;
+
+/**
+ * The bottom padding a screen needs. The tab bar is translucent and content
+ * scrolls under it, so a tab screen clears the whole bar (and the home
+ * indicator below it); anything else clears the home indicator.
+ */
 function useBottomInset(tab: boolean) {
   const insets = useSafeAreaInsets();
-  return tab ? 0 : insets.bottom;
+  const tabBar = useContext(BottomTabBarHeightContext);
+  if (!tab) return insets.bottom;
+  return tabBar ?? TAB_BAR_HEIGHT + insets.bottom;
 }
 
 /**
- * Every screen's frame: cream background, safe areas, a scroll view that
+ * Every screen's frame: the page background, safe areas, a scroll view that
  * moves out of the keyboard's way, and optional pull-to-refresh.
  *
- * Pass `tab` on screens inside the tab bar, which already clears the home
- * indicator. Everything else gets the bottom inset so its last button is
- * never under it.
+ * Pass `tab` on screens inside the tab bar: the bar floats over the content,
+ * so the screen pads its end by the bar's height and its last row is never
+ * hidden. Everything else gets the bottom inset so its last button is never
+ * under the home indicator.
  */
 export function Screen({
   children,
@@ -71,6 +82,7 @@ export function Screen({
             { paddingBottom: bottom + spacing.xxl },
             contentStyle,
           ]}
+          scrollIndicatorInsets={tab ? { bottom } : undefined}
           keyboardShouldPersistTaps="handled"
           keyboardDismissMode="interactive"
           automaticallyAdjustKeyboardInsets
@@ -114,6 +126,7 @@ export function ScreenList<T>({
       <FlatList
         ref={listRef}
         contentContainerStyle={[styles.content, { paddingBottom: bottom + spacing.xxl }]}
+        scrollIndicatorInsets={tab ? { bottom } : undefined}
         keyboardShouldPersistTaps="handled"
         keyboardDismissMode="interactive"
         automaticallyAdjustKeyboardInsets
@@ -151,11 +164,11 @@ export function TopBar({
     <View style={styles.topBar}>
       {onBack ? (
         <RoundIconButton accessibilityLabel={backLabel} onPress={onBack}>
-          <ChevronLeft color={colors.hunter} size={22} />
+          <ChevronLeft color={colors.carbon} size={22} />
         </RoundIconButton>
       ) : onClose ? (
         <RoundIconButton accessibilityLabel={closeLabel} onPress={onClose}>
-          <X color={colors.hunter} size={20} />
+          <X color={colors.carbon} size={20} />
         </RoundIconButton>
       ) : null}
       {eyebrow || title ? (
@@ -324,11 +337,10 @@ const styles = themed(() =>
     cardDark: {
       backgroundColor: colors.hunter,
     },
+    // The flat variant: a grey surface, no stroke and no shadow.
     cardCream: {
-      backgroundColor: colors.cream,
+      backgroundColor: colors.platinum,
       boxShadow: undefined,
-      borderWidth: 1,
-      borderColor: "rgba(56,102,65,0.10)",
     },
     cardPressed: {
       transform: [{ scale: 0.985 }],

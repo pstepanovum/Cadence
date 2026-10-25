@@ -46,29 +46,29 @@ export default async function ConnectPhonePage() {
         unlimited. Your progress stays here, or follows your account if you sign in.
       </AppIntro>
       <div className="grid gap-4 md:grid-cols-2">
-        <Card className="bg-hunter-green text-white">
+        <Card className="bg-white text-carbon-black">
           <h2 className="font-kicker text-2xl">{isDesktop ? "Show the QR code" : "On the computer running Cadence"}</h2>
           {isDesktop ? (
-            <ol className="mt-3 space-y-2 text-base leading-7 text-white/90">
+            <ol className="mt-3 space-y-2 text-base leading-7 text-iron-grey">
               <li>1. In the menu bar, choose <strong>Phone › Connect a Phone</strong>.</li>
               <li>2. The first time, Cadence asks to accept Wi-Fi connections and reopens.</li>
               <li>3. Choose it again: the QR code opens in your browser.</li>
             </ol>
           ) : (
             <>
-              <p className="mt-3 text-base leading-7 text-white/85">
+              <p className="mt-3 text-base leading-7 text-iron-grey">
                 Open the desktop app and choose Phone › Connect a Phone, or on a self-hosted server run:
               </p>
               <pre className="mt-3 overflow-x-auto rounded-2xl bg-black/25 px-4 py-3 text-sm">pnpm serve</pre>
-              <p className="mt-3 text-sm text-white/80">It prints a link that shows the QR code.</p>
+              <p className="mt-3 text-sm text-iron-grey">It prints a link that shows the QR code.</p>
             </>
           )}
         </Card>
         <Card className="bg-white">
-          <h2 className="font-kicker text-2xl text-hunter-green">On your phone</h2>
+          <h2 className="font-kicker text-2xl text-carbon-black">On your phone</h2>
           <ol className="mt-3 space-y-2 text-base leading-7 text-iron-grey">
             <li>1. Install Cadence and open it.</li>
-            <li>2. Choose <strong className="text-hunter-green">Connect your own Cadence server</strong>.</li>
+            <li>2. Choose <strong className="text-carbon-black">Connect your own Cadence server</strong>.</li>
             <li>3. Scan the code. Both devices need the same Wi-Fi.</li>
           </ol>
           {!isDesktop ? (

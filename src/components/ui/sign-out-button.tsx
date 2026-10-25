@@ -32,7 +32,7 @@ export function SignOutButton({ mode }: { mode: AppMode }) {
     <button
       type="button"
       onClick={() => void handleSignOut()}
-      className="inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full bg-hunter-green px-4 py-2.5 text-sm font-semibold text-white whitespace-nowrap hover:bg-[#44784f]"
+      className="inline-flex min-h-11 cursor-pointer items-center justify-center rounded-[14px] bg-hunter-green px-4 py-2.5 text-sm font-semibold text-white whitespace-nowrap hover:bg-[#44784f]"
     >
       {mode === "local" ? "Exit local mode" : "Sign out"}
     </button>

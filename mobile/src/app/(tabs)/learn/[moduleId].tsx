@@ -63,18 +63,18 @@ export default function ModuleLessonsScreen() {
       ) : null}
 
       {module && lessons.length > 0 ? (
-        <Card variant="dark" style={styles.summary}>
-          <ProgressRing score={completion} size={80} strokeWidth={7} onDark label={`${completion}%`} />
+        <View style={styles.summary}>
+          <ProgressRing score={completion} size={80} strokeWidth={7} color={colors.hunter} label={`${completion}%`} />
           <View style={styles.summaryText}>
-            <Eyebrow onDark>Lesson path</Eyebrow>
-            <Title size={type.headline} onDark>
+            <Eyebrow>Lesson path</Eyebrow>
+            <Title size={type.headline}>
               {!upNext ? "Module complete" : lessons.some(isCleared) ? "Keep going" : "Start here"}
             </Title>
-            <Body size={type.footnote} onDark tone="muted">
+            <Body size={type.footnote} tone="muted">
               {lessons.filter(isCleared).length} of {lessons.length} lessons cleared
             </Body>
           </View>
-        </Card>
+        </View>
       ) : null}
 
       <ScreenState
@@ -139,9 +139,9 @@ function LessonRow({
         : `Practice · ${lesson.words.length} ${lesson.words.length === 1 ? "word" : "words"}`;
 
   const card = (
-    <Card style={[styles.lessonCard, locked && styles.lockedCard, isNext && styles.nextCard]}>
+    <Card style={[styles.lessonCard, locked && styles.lockedCard]}>
       <View style={[styles.lessonIcon, locked && styles.lessonIconLocked]}>
-        {locked ? <Lock color={colors.slate} size={18} /> : <Icon color={colors.hunter} size={20} />}
+        {locked ? <Lock color={colors.slate} size={18} /> : <Icon color={colors.carbon} size={20} />}
       </View>
       <View style={styles.lessonBody}>
         <Title size={type.headline}>{lesson.title}</Title>
@@ -207,10 +207,6 @@ const styles = themed(() =>
       gap: spacing.md,
       padding: spacing.lg,
     },
-    nextCard: {
-      borderWidth: 2,
-      borderColor: colors.yellowGreen,
-    },
     lockedCard: {
       backgroundColor: overlays.locked,
       boxShadow: undefined,
@@ -219,7 +215,7 @@ const styles = themed(() =>
       width: 44,
       height: 44,
       borderRadius: radii.pill,
-      backgroundColor: colors.cream,
+      backgroundColor: colors.platinum,
       alignItems: "center",
       justifyContent: "center",
     },

@@ -20,7 +20,7 @@ export function DesktopShell({
   if (!enabled) return <>{topBar}{children}</>
 
   return (
-    <div className="flex h-screen overflow-hidden bg-vanilla-cream">
+    <div className="flex h-screen overflow-hidden bg-page">
       <DesktopSidebar userId={userId} />
       <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
         {topBar}

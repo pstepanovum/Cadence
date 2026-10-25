@@ -93,10 +93,10 @@ function PlacementResult({ result, onRetake }: { result: AdaptiveResult; onRetak
   const level: CefrLevel = result.level;
   const skills = (Object.entries(result.skills) as [string, CefrLevel][]).filter(([, value]) => value !== level);
   return (
-    <div className="space-y-2 rounded-3xl bg-platinum px-6 py-6" role="status">
+    <div className="space-y-2 rounded-[20px] bg-platinum px-6 py-6" role="status">
       <p className="text-sm text-iron-grey">Your level</p>
-      <p className="font-kicker text-5xl text-hunter-green">{level}</p>
-      <p className="font-semibold text-hunter-green">{LEVEL_INFO[level].name}</p>
+      <p className="font-kicker text-5xl text-carbon-black">{level}</p>
+      <p className="font-semibold text-carbon-black">{LEVEL_INFO[level].name}</p>
       <p className="text-sm text-iron-grey">{examLine(level)}</p>
       <p className="text-sm">{`${CONFIDENCE_TEXT[result.confidence]} ${result.asked} questions, ${result.score}% right.`}</p>
       {skills.map(([skill, value]) => (

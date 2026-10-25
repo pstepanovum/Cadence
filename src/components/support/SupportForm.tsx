@@ -55,9 +55,9 @@ export function SupportForm({ defaultEmail = "" }: { defaultEmail?: string }) {
 
   if (state === "sent") {
     return (
-      <div role="status" className="rounded-3xl bg-hunter-green px-6 py-6 text-white">
+      <div role="status" className="rounded-[20px] bg-white px-6 py-6 text-carbon-black">
         <p className="text-lg font-semibold">Sent.</p>
-        <p className="mt-1 text-sm leading-6 text-white/85">
+        <p className="mt-1 text-sm leading-6 text-iron-grey">
           We reply to {email.trim()}, usually within two working days.
         </p>
       </div>
@@ -69,7 +69,7 @@ export function SupportForm({ defaultEmail = "" }: { defaultEmail?: string }) {
   return (
     <form onSubmit={submit} noValidate className="space-y-5">
       <fieldset>
-        <legend className="pb-2 text-sm font-semibold text-hunter-green">What is it about?</legend>
+        <legend className="pb-2 text-sm font-semibold text-carbon-black">What is it about?</legend>
         <div className="grid gap-2 sm:grid-cols-2">
           {SUPPORT_TOPICS.map((choice) => {
             const chosen = topic === choice.value;
@@ -99,17 +99,17 @@ export function SupportForm({ defaultEmail = "" }: { defaultEmail?: string }) {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor={`${id}-email`} className="block pb-1 text-sm font-semibold text-hunter-green">Email</label>
+          <label htmlFor={`${id}-email`} className="block pb-1 text-sm font-semibold text-carbon-black">Email</label>
           <input id={`${id}-email`} type="email" inputMode="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} aria-invalid={invalid("email")} className={field} placeholder="you@example.com" />
         </div>
         <div>
-          <label htmlFor={`${id}-name`} className="block pb-1 text-sm font-semibold text-hunter-green">Name <span className="font-normal text-slate-grey">(optional)</span></label>
+          <label htmlFor={`${id}-name`} className="block pb-1 text-sm font-semibold text-carbon-black">Name <span className="font-normal text-slate-grey">(optional)</span></label>
           <input id={`${id}-name`} type="text" autoComplete="name" maxLength={SUPPORT_LIMITS.name} value={name} onChange={(e) => setName(e.target.value)} className={field} />
         </div>
       </div>
 
       <div>
-        <label htmlFor={`${id}-message`} className="block pb-1 text-sm font-semibold text-hunter-green">Message</label>
+        <label htmlFor={`${id}-message`} className="block pb-1 text-sm font-semibold text-carbon-black">Message</label>
         <textarea
           id={`${id}-message`}
           required

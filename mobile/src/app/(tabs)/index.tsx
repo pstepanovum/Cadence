@@ -102,7 +102,7 @@ export default function HomeScreen() {
           <RoundIconButton
             accessibilityLabel="Profile and settings"
             onPress={() => router.push("/profile")}>
-            <UserRound color={colors.hunter} size={20} />
+            <UserRound color={colors.carbon} size={20} />
           </RoundIconButton>
         }
       />
@@ -113,34 +113,31 @@ export default function HomeScreen() {
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={`${streakTitle}. ${today.minutesToday} of ${today.goalMinutes} minutes today. Open streak and badges`}
+        style={({ pressed }) => [styles.today, pressed && styles.pressed]}
         onPress={() => router.push("/badges")}>
-        <Card variant="dark">
-          <View style={styles.streakRow}>
-            <ProgressRing score={today.goalProgress * 100} size={64} strokeWidth={6} label={`${today.minutesToday}/${today.goalMinutes}`} onDark color={colors.yellowGreen} />
-            <View style={styles.streakText}>
-              <View style={styles.flameRow}>
-                <Flame color={streak > 0 ? colors.yellowGreen : colors.lime} size={18} />
-                <Title size={type.headline} onDark>
-                  {streakTitle}
-                </Title>
-              </View>
-              <Body size={type.footnote} onDark tone="muted">
-                {today.goalMet
-                  ? "Today's goal is done. Nice work."
-                  : streak > 0 && !today.streak.practisedToday
-                    ? today.streak.freezes > 0
-                      ? "Practise today to keep it. A freeze covers you if not."
-                      : "Practise today to keep it going."
-                    : `${today.goalMinutes - today.minutesToday} minutes to today's goal.`}
-              </Body>
+        <View style={styles.streakRow}>
+          <ProgressRing score={today.goalProgress * 100} size={64} strokeWidth={6} label={`${today.minutesToday}/${today.goalMinutes}`} color={colors.hunter} />
+          <View style={styles.streakText}>
+            <View style={styles.flameRow}>
+              <Flame color={streak > 0 ? colors.hunter : colors.slate} size={18} />
+              <Title size={type.headline}>{streakTitle}</Title>
             </View>
+            <Body size={type.footnote} tone="muted">
+              {today.goalMet
+                ? "Today's goal is done."
+                : streak > 0 && !today.streak.practisedToday
+                  ? today.streak.freezes > 0
+                    ? "Practise today to keep it. A freeze covers you if not."
+                    : "Practise today to keep it going."
+                  : `${today.goalMinutes - today.minutesToday} minutes to today's goal.`}
+            </Body>
           </View>
-          <StatRow>
-            <StatTile tone="translucent" label="Best streak" value={String(today.streak.best)} />
-            <StatTile tone="translucent" label="This week" value={`${today.weekMinutes} min`} />
-            <StatTile tone="translucent" label="Badges" value={String(earnedCount(badges))} />
-          </StatRow>
-        </Card>
+        </View>
+        <StatRow>
+          <StatTile label="Best streak" value={String(today.streak.best)} />
+          <StatTile label="This week" value={`${today.weekMinutes} min`} />
+          <StatTile label="Badges" value={String(earnedCount(badges))} />
+        </StatRow>
       </Pressable>
 
       <Pressable accessibilityRole="button" accessibilityLabel={`Word of the day: ${word.word}. Practise it`} onPress={() => router.push({ pathname: "/word/[wordId]", params: { wordId: word.id } })}>
@@ -148,7 +145,7 @@ export default function HomeScreen() {
           <Eyebrow>Word of the day</Eyebrow>
           <View style={styles.wordRow}>
             <Title size={type.title2}>{word.word}</Title>
-            <Body size={type.callout} style={styles.ipa}>
+            <Body size={type.callout} tone="muted" style={styles.ipa}>
               {word.ipa}
             </Body>
           </View>
@@ -158,7 +155,7 @@ export default function HomeScreen() {
         </Card>
       </Pressable>
 
-      <Card>
+      <View style={styles.drill}>
         <SectionHeader
           eyebrow="Quick drill"
           title="Practise one sound"
@@ -167,7 +164,7 @@ export default function HomeScreen() {
         />
 
         <HorizontalPicker
-          bleed={spacing.xl}
+          bleed={spacing.lg}
           selectedIndex={Math.max(0, groups.findIndex((item) => item.key === group?.key))}>
           {groups.map((item) => (
             <Chip
@@ -188,7 +185,7 @@ export default function HomeScreen() {
           </Body>
         ) : null}
 
-        <HorizontalPicker key={group?.key} bleed={spacing.xl} selectedIndex={wordIndex}>
+        <HorizontalPicker key={group?.key} bleed={spacing.lg} selectedIndex={wordIndex}>
           {(group?.targets ?? []).map((item, index) => (
             <Chip
               key={item.word}
@@ -203,7 +200,7 @@ export default function HomeScreen() {
           <>
             <View style={styles.wordPanel}>
               <Title size={type.display}>{target.word}</Title>
-              <Body size={type.headline} style={styles.ipa}>
+              <Body size={type.headline} tone="muted" style={styles.ipa}>
                 {target.ipa}
               </Body>
             </View>
@@ -230,13 +227,16 @@ export default function HomeScreen() {
             ) : null}
           </>
         ) : null}
-      </Card>
+      </View>
     </Screen>
   );
 }
 
 const styles = themed(() =>
   StyleSheet.create({
+    today: { gap: spacing.md },
+    pressed: { opacity: 0.85 },
+    drill: { gap: spacing.md },
     streakRow: {
       flexDirection: "row",
       alignItems: "center",
@@ -249,8 +249,8 @@ const styles = themed(() =>
       gap: spacing.xxs,
     },
     wordPanel: {
-      borderRadius: radii.panel,
-      backgroundColor: colors.cream,
+      borderRadius: radii.card,
+      backgroundColor: colors.snow,
       alignItems: "center",
       paddingVertical: spacing.xl,
       paddingHorizontal: spacing.lg,

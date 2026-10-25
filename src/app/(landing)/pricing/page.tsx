@@ -42,11 +42,11 @@ export default async function PricingPage() {
       </PageIntro>
       <PlanCards signedIn={signedIn} cloudAvailable={isFirebaseConfigured} />
       <Card className="bg-white">
-        <h2 className="font-kicker text-2xl text-hunter-green">Questions</h2>
+        <h2 className="font-kicker text-2xl text-carbon-black">Questions</h2>
         <dl className="mt-4 grid gap-5 md:grid-cols-2">
           {QUESTIONS.map((item) => (
             <div key={item.q}>
-              <dt className="font-semibold text-hunter-green">{item.q}</dt>
+              <dt className="font-semibold text-carbon-black">{item.q}</dt>
               <dd className="mt-1 text-sm leading-7 text-iron-grey">{item.a}</dd>
             </div>
           ))}

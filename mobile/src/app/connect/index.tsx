@@ -10,7 +10,7 @@ import { StyleSheet, View } from "react-native";
 import { Body, Button, Card, Eyebrow, Screen, SectionHeader, Title, TopBar } from "@/components/ui";
 import { isCloudConfigured } from "@/lib/config";
 import { useConnection } from "@/pairing/context";
-import { colors, overlays, radii, spacing, type, themed } from "@/theme/theme";
+import { colors, radii, spacing, type, themed } from "@/theme/theme";
 
 export default function ConnectIndexScreen() {
   const router = useRouter();
@@ -26,33 +26,33 @@ export default function ConnectIndexScreen() {
         title={isCloudConfigured ? "How should Cadence work?" : "Connect to your computer"}
       />
 
-      <Card variant="dark">
+      <Card>
         <View style={styles.optionHead}>
-          <View style={[styles.optionIcon, styles.optionIconDark]}>
-            <Laptop color={colors.lime} size={22} />
+          <View style={styles.optionIcon}>
+            <Laptop color={colors.carbon} size={22} />
           </View>
           <View style={styles.optionTitle}>
-            <Eyebrow onDark>{isCloudConfigured ? "Recommended" : "Over your Wi-Fi"}</Eyebrow>
-            <Title size={type.title3} onDark>
+            <Eyebrow>{isCloudConfigured ? "Recommended" : "Over your Wi-Fi"}</Eyebrow>
+            <Title size={type.title3}>
               {isCloudConfigured ? "Connect to my computer" : "Pair this phone"}
             </Title>
           </View>
         </View>
-        <Body size={type.callout} onDark>
+        <Body size={type.callout}>
           Cadence runs on your computer and your phone talks to it over your home Wi-Fi. Your voice
           never leaves your house.
         </Body>
-        <Body size={type.footnote} onDark tone="muted">
+        <Body size={type.footnote} tone="muted">
           Keep Cadence open on your computer, on the same Wi-Fi as this phone.
         </Body>
-        <Button label="Scan the code" variant="secondary" onPress={() => router.push("/connect/scan")} />
+        <Button label="Scan the code" onPress={() => router.push("/connect/scan")} />
       </Card>
 
       {isCloudConfigured ? (
         <Card>
           <View style={styles.optionHead}>
             <View style={styles.optionIcon}>
-              <Cloud color={colors.hunter} size={22} />
+              <Cloud color={colors.carbon} size={22} />
             </View>
             <View style={styles.optionTitle}>
               <Eyebrow>Hosted</Eyebrow>
@@ -64,6 +64,7 @@ export default function ConnectIndexScreen() {
           </Body>
           <Button
             label="Sign in"
+            variant="secondary"
             onPress={async () => {
               await chooseCloud();
               router.replace("/login");
@@ -86,12 +87,9 @@ const styles = themed(() =>
       width: 48,
       height: 48,
       borderRadius: radii.panel,
-      backgroundColor: colors.cream,
+      backgroundColor: colors.platinum,
       alignItems: "center",
       justifyContent: "center",
-    },
-    optionIconDark: {
-      backgroundColor: overlays.whiteOnGreen,
     },
     optionTitle: {
       flex: 1,

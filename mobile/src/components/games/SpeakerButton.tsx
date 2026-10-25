@@ -38,16 +38,16 @@ export function SpeakerButton({
           {
             width: size,
             height: size,
-            backgroundColor: playing ? colors.yellowGreen : colors.hunter,
+            backgroundColor: playing ? colors.sage : colors.hunter,
             boxShadow: disabled ? undefined : shadows.raised,
             opacity: disabled ? 0.5 : pressed ? 0.85 : 1,
             transform: [{ scale: pressed ? 0.95 : 1 }],
           },
         ]}>
         {loading ? (
-          <ActivityIndicator color={playing ? colors.ink : colors.snow} />
+          <ActivityIndicator color={colors.snow} />
         ) : (
-          <Volume2 color={playing ? colors.ink : colors.snow} size={size * 0.4} />
+          <Volume2 color={colors.snow} size={size * 0.4} />
         )}
       </Pressable>
       <Text maxFontSizeMultiplier={maxScale.control} style={styles.label}>

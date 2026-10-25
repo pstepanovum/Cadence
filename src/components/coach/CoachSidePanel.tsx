@@ -38,19 +38,19 @@ export function CoachSidePanel({
       <Card className="bg-white">
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-text">Reply flow</p>
-            <h2 className="text-2xl font-semibold text-hunter-green">
+            <p className="eyebrow text-sm text-slate-grey">Reply flow</p>
+            <h2 className="text-2xl font-semibold text-carbon-black">
               Keep the next turn and outcome in view.
             </h2>
           </div>
 
           {currentTurn ? (
             <>
-              <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
+              <div className="rounded-[20px] bg-page px-4 py-4">
                 {replyMode === "target" ? (
                   <>
-                    <p className="eyebrow text-xs text-sage-text">Target reply</p>
-                    <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">
+                    <p className="eyebrow text-xs text-slate-grey">Target reply</p>
+                    <p className="mt-2 text-lg font-semibold leading-7 text-carbon-black">
                       {currentTurn.learnerReply}
                     </p>
                     <p className="mt-2 text-sm leading-6 text-iron-grey">
@@ -59,8 +59,8 @@ export function CoachSidePanel({
                   </>
                 ) : (
                   <>
-                    <p className="eyebrow text-xs text-sage-text">Freedom mode</p>
-                    <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">
+                    <p className="eyebrow text-xs text-slate-grey">Freedom mode</p>
+                    <p className="mt-2 text-lg font-semibold leading-7 text-carbon-black">
                       Answer the coach naturally in your own words.
                     </p>
                     <p className="mt-2 text-sm leading-6 text-iron-grey">
@@ -96,19 +96,19 @@ export function CoachSidePanel({
       ) : null}
 
       {coachAudioError ? (
-        <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+        <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
           {coachAudioError}
         </div>
       ) : null}
 
       {error ? (
-        <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+        <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
           {error}
         </div>
       ) : null}
 
       {isLoadingCoachAudio ? (
-        <div className="rounded-3xl bg-white px-4 py-3 text-sm text-iron-grey">
+        <div className="rounded-[20px] bg-white px-4 py-3 text-sm text-iron-grey">
           Coach audio is loading for the current turn.
         </div>
       ) : null}

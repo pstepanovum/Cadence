@@ -104,11 +104,11 @@ export function ResetPasswordForm() {
         <div className="space-y-3">
           <AuthNotice tone="success">Your new password works from now on.</AuthNotice>
           {stage.signedIn ? (
-            <Button className="w-full" onClick={() => { router.replace("/dashboard"); router.refresh(); }}>
+            <Button className="w-full rounded-full" onClick={() => { router.replace("/dashboard"); router.refresh(); }}>
               Continue to Cadence
             </Button>
           ) : (
-            <Button className="w-full" href="/login">
+            <Button className="w-full rounded-full" href="/login">
               Sign in
             </Button>
           )}
@@ -120,7 +120,7 @@ export function ResetPasswordForm() {
   if (stage.name === "invalid") {
     return (
       <AuthCard title="This link does not work" description={stage.message}>
-        <Button className="w-full" href="/forgot-password">
+        <Button className="w-full rounded-full" href="/forgot-password">
           Get a new link
         </Button>
       </AuthCard>
@@ -156,7 +156,7 @@ export function ResetPasswordForm() {
             required
             aria-describedby={`${id}-rules`}
             disabled={stage.name !== "ready"}
-            className={AUTH_INPUT_CLASS}
+            className={`${AUTH_INPUT_CLASS} rounded-full bg-white`}
           />
           <PasswordChecklist id={`${id}-rules`} password={password} email={email} />
         </div>
@@ -170,14 +170,14 @@ export function ResetPasswordForm() {
             onChange={(event) => setConfirm(event.target.value)}
             required
             disabled={stage.name !== "ready"}
-            className={AUTH_INPUT_CLASS}
+            className={`${AUTH_INPUT_CLASS} rounded-full bg-white`}
           />
         </div>
 
         {stage.name === "checking" ? <AuthNotice tone="info">Checking your link…</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="w-full" type="submit" disabled={submitting || stage.name !== "ready"}>
+        <Button className="w-full rounded-full" type="submit" disabled={submitting || stage.name !== "ready"}>
           {submitting ? "Changing password…" : "Change password"}
         </Button>
       </form>

@@ -78,10 +78,10 @@ function StatusPill({
   return (
     <div
       className={cn(
-        "rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap",
+        "rounded-[14px] px-4 py-2 text-sm font-semibold whitespace-nowrap",
         ready
-          ? "bg-yellow-green text-hunter-green"
-          : "bg-vanilla-cream text-iron-grey",
+          ? "bg-hunter-green text-white"
+          : "bg-page text-iron-grey",
       )}
     >
       {label}
@@ -99,9 +99,9 @@ function InfoCard({
   detail: string;
 }) {
   return (
-    <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-      <p className="eyebrow text-xs text-sage-text">{label}</p>
-      <p className="mt-3 text-lg font-semibold text-hunter-green">{value}</p>
+    <div className="rounded-[20px] bg-page px-5 py-5">
+      <p className="eyebrow text-xs text-slate-grey">{label}</p>
+      <p className="mt-3 text-lg font-semibold text-carbon-black">{value}</p>
       <p className="mt-2 text-sm leading-7 text-iron-grey">{detail}</p>
     </div>
   );
@@ -131,19 +131,19 @@ function RuntimeLocationRow({
   }
 
   return (
-    <div className="flex items-center gap-4 rounded-[28px] bg-[#fbf4e4] px-4 py-4">
+    <div className="flex items-center gap-4 rounded-[28px] bg-page px-4 py-4">
       <div
         className={cn(
           "flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl",
-          isFile ? "bg-[#f0e0b8] text-hunter-green" : "bg-yellow-green text-hunter-green",
+          isFile ? "bg-platinum text-carbon-black" : "bg-hunter-green text-white",
         )}
       >
         <Icon size={22} filled color="currentColor" />
       </div>
 
       <div className="min-w-0 flex-1">
-        <p className="eyebrow text-xs text-sage-text">{label}</p>
-        <p className="mt-1 truncate text-base font-semibold text-hunter-green">
+        <p className="eyebrow text-xs text-slate-grey">{label}</p>
+        <p className="mt-1 truncate text-base font-semibold text-carbon-black">
           {baseName(value)}
         </p>
         <p className="mt-1 break-all text-sm leading-6 text-iron-grey">{value}</p>
@@ -165,9 +165,9 @@ function PathPane({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-[32px] bg-[#f5ebd2] p-3">
-      <div className="rounded-[26px] bg-[#efe1bd] px-4 py-3">
-        <p className="eyebrow text-xs text-sage-text">{label}</p>
+    <div className="rounded-[28px] bg-page p-3">
+      <div className="rounded-[20px] bg-platinum px-4 py-3">
+        <p className="eyebrow text-xs text-slate-grey">{label}</p>
       </div>
       <div className="mt-3 space-y-3">{children}</div>
     </div>
@@ -190,29 +190,29 @@ function ModelCard({
   error: string | null;
 }) {
   return (
-    <div className="rounded-[28px] bg-hunter-green px-5 py-5 text-bright-snow">
+    <div className="rounded-[28px] bg-white px-5 py-5 text-carbon-black">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="eyebrow text-xs text-yellow-green">{label}</p>
-          <p className="mt-3 text-lg font-semibold text-bright-snow">{modelId}</p>
+          <p className="eyebrow text-xs text-slate-grey">{label}</p>
+          <p className="mt-3 text-lg font-semibold text-carbon-black">{modelId}</p>
         </div>
         <div
           className={cn(
             "rounded-full px-3 py-2 text-xs font-semibold whitespace-nowrap",
             ready
-              ? "bg-yellow-green text-hunter-green"
-              : "bg-white/12 text-bright-snow",
+              ? "bg-hunter-green text-white"
+              : "bg-page text-carbon-black",
           )}
         >
           {ready ? "Ready" : "Starting"}
         </div>
       </div>
 
-      <div className="mt-4 space-y-2 text-sm leading-6 text-bright-snow/80">
+      <div className="mt-4 space-y-2 text-sm leading-6 text-iron-grey">
         <p>Device: {device ?? "Not reported yet"}</p>
         <p>{detail}</p>
         {error ? (
-          <p className="rounded-2xl bg-white/10 px-3 py-3 text-bright-snow">{error}</p>
+          <p className="rounded-2xl bg-page px-3 py-3 text-carbon-black">{error}</p>
         ) : null}
       </div>
     </div>
@@ -272,7 +272,7 @@ export function ProfileDesktopRuntime() {
       <div className="space-y-6">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
+            <div className="inline-flex items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-iron-grey">
               <Microphone size={18} filled color="currentColor" />
               <span className="eyebrow text-sm">Desktop runtime</span>
             </div>
@@ -293,7 +293,7 @@ export function ProfileDesktopRuntime() {
         </div>
 
         {isLoading ? (
-          <div className="rounded-3xl bg-vanilla-cream px-5 py-5 text-sm leading-7 text-iron-grey">
+          <div className="rounded-[20px] bg-page px-5 py-5 text-sm leading-7 text-iron-grey">
             Loading your desktop runtime details…
           </div>
         ) : runtime ? (
@@ -311,10 +311,10 @@ export function ProfileDesktopRuntime() {
                 : (state.currentStep ?? "Cadence is checking the local runtime.")}
             </p>
 
-            <details className="group rounded-[28px] bg-vanilla-cream/60 open:bg-vanilla-cream transition-colors">
+            <details className="group rounded-[28px] bg-page/60 open:bg-page transition-colors">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
                 <div className="min-w-0 space-y-0.5">
-                  <p className="eyebrow text-sm text-sage-text">Advanced</p>
+                  <p className="eyebrow text-sm text-slate-grey">Advanced</p>
                   <p className="text-sm text-iron-grey">
                     Models, folders, logs, and other technical details
                   </p>
@@ -322,7 +322,7 @@ export function ProfileDesktopRuntime() {
                 <ChevronDown
                   size={20}
                   color="currentColor"
-                  className="shrink-0 text-hunter-green transition-transform duration-200 group-open:rotate-180"
+                  className="shrink-0 text-carbon-black transition-transform duration-200 group-open:rotate-180"
                 />
               </summary>
               <div className="space-y-6 px-5 pb-5 pt-4">
@@ -363,7 +363,7 @@ export function ProfileDesktopRuntime() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
+                  <div className="inline-flex items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-iron-grey">
                     <Activity size={18} filled color="currentColor" />
                     <span className="eyebrow text-sm">Runtime files</span>
                   </div>
@@ -410,21 +410,21 @@ export function ProfileDesktopRuntime() {
                   </PathPane>
                 </div>
 
-                <div className="rounded-3xl bg-[#f5ebd2] px-5 py-5">
+                <div className="rounded-[20px] bg-page px-5 py-5">
                   <div className="flex items-center gap-2 text-sage-text">
                     <Speaker size={18} color="currentColor" />
                     <p className="eyebrow text-sm">Current voice style</p>
                   </div>
                   <div className="mt-4 grid gap-3 lg:grid-cols-2">
-                    <div className="rounded-3xl bg-white px-4 py-4">
+                    <div className="rounded-[20px] bg-white px-4 py-4">
                       <p className="text-xs text-iron-grey">Your selected coach voice</p>
-                      <p className="mt-2 text-base font-semibold text-hunter-green">
+                      <p className="mt-2 text-base font-semibold text-carbon-black">
                         {instruct || "Default voice"}
                       </p>
                     </div>
-                    <div className="rounded-3xl bg-white px-4 py-4">
+                    <div className="rounded-[20px] bg-white px-4 py-4">
                       <p className="text-xs text-iron-grey">Engine default voice</p>
-                      <p className="mt-2 text-base font-semibold text-hunter-green">
+                      <p className="mt-2 text-base font-semibold text-carbon-black">
                         {runtime.tts.instruct}
                       </p>
                     </div>
@@ -432,7 +432,7 @@ export function ProfileDesktopRuntime() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sage-text">
+                  <div className="inline-flex items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-iron-grey">
                     <Activity size={18} filled color="currentColor" />
                     <span className="eyebrow text-sm">Current models</span>
                   </div>
@@ -475,14 +475,14 @@ export function ProfileDesktopRuntime() {
             </details>
           </>
         ) : (
-          <div className="rounded-3xl bg-vanilla-cream px-5 py-5 text-sm leading-7 text-iron-grey">
+          <div className="rounded-[20px] bg-page px-5 py-5 text-sm leading-7 text-iron-grey">
             Cadence could not read the desktop runtime details just yet. Try
             opening the setup log if this Mac is still warming things up.
           </div>
         )}
 
         {state.error ? (
-          <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+          <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
             {state.error}
           </div>
         ) : null}

@@ -39,20 +39,20 @@ export default async function PairPage({ searchParams }: PairPageProps) {
 
   if (!authorized) {
     return (
-      <main className="min-h-screen bg-vanilla-cream px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-xl rounded-3xl bg-hunter-green px-6 py-8 text-bright-snow">
-          <p className="eyebrow text-sm text-yellow-green">Pairing</p>
+      <main className="min-h-screen bg-page px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-xl rounded-[20px] bg-white px-6 py-8 text-carbon-black">
+          <p className="eyebrow text-sm text-slate-grey">Pairing</p>
           <h1 className="mt-3 text-3xl font-semibold">
             Open this from the computer running Cadence.
           </h1>
-          <p className="mt-4 text-base leading-7 text-bright-snow/80">
+          <p className="mt-4 text-base leading-7 text-iron-grey">
             This page hands out access to your computer, so it asks for the key
             that only lives on that machine. On the computer running Cadence, run:
           </p>
           <pre className="mt-4 overflow-x-auto rounded-2xl bg-black/25 px-4 py-3 text-sm">
             pnpm serve
           </pre>
-          <p className="mt-4 text-base leading-7 text-bright-snow/80">
+          <p className="mt-4 text-base leading-7 text-iron-grey">
             It prints a link. Open that link, and this page will show a QR code
             for your phone.
           </p>
@@ -64,7 +64,7 @@ export default async function PairPage({ searchParams }: PairPageProps) {
   const devices = await getPairedDevices();
 
   return (
-    <main className="min-h-screen bg-vanilla-cream px-4 py-6 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-page px-4 py-6 sm:px-6 lg:px-8">
       <PairPanel
         serverName={getServerDisplayName()}
         port={getServerPort()}

@@ -22,7 +22,7 @@ function getHighlightStyles(status: PronunciationHighlight["status"]) {
   }
 
   if (status === "mixed") {
-    return "bg-[#efd889] text-hunter-green";
+    return "bg-[#efd889] text-carbon-black";
   }
 
   return "bg-blushed-brick text-bright-snow";
@@ -62,7 +62,7 @@ function SentenceFeedback({
             type="button"
             key={`${highlight.text}-${highlight.status}-${index}`}
             className={cn(
-              "appearance-none border-0 rounded-full px-3 py-1.5 font-semibold transition-colors cursor-pointer",
+              "appearance-none border-0 rounded-[14px] px-3 py-1.5 font-semibold transition-colors cursor-pointer",
               getHighlightStyles(highlight.status),
               isActive && "brightness-95",
             )}
@@ -238,7 +238,7 @@ export function AssessmentResult({
   return (
     <div className="space-y-4">
       <div className="grid gap-4 xl:grid-cols-[0.94fr_1.06fr]">
-        <div className="rounded-[2rem] bg-white px-5 py-5 sm:px-6 sm:py-6">
+        <div className="rounded-[28px] bg-white px-5 py-5 sm:px-6 sm:py-6">
           <div className="flex items-center gap-4">
             <ProgressRing
               score={assessment.overallScore}
@@ -246,8 +246,8 @@ export function AssessmentResult({
               strokeWidth={7}
             />
             <div className="space-y-2">
-              <p className="eyebrow text-xs text-sage-text">Assessment score</p>
-              <p className="text-3xl font-semibold text-hunter-green">
+              <p className="eyebrow text-xs text-slate-grey">Assessment score</p>
+              <p className="text-3xl font-semibold text-carbon-black">
                 {assessment.overallScore}/100
               </p>
               <p className="text-sm leading-6 text-iron-grey">
@@ -257,13 +257,13 @@ export function AssessmentResult({
           </div>
 
           <div className="mt-5 space-y-3">
-            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">
+            <div className="rounded-[20px] bg-page px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">
                 {targetIsPhrase ? "Target reply" : "Target word"}
               </p>
               <p
                 className={cn(
-                  "mt-2 text-2xl font-semibold text-hunter-green",
+                  "mt-2 text-2xl font-semibold text-carbon-black",
                   !targetIsPhrase && "capitalize",
                 )}
               >
@@ -274,9 +274,9 @@ export function AssessmentResult({
               </p>
             </div>
 
-            <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">Decoded phonemes</p>
-              <p className="mt-2 text-lg font-semibold text-hunter-green break-words">
+            <div className="rounded-[20px] bg-page px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">Decoded phonemes</p>
+              <p className="mt-2 text-lg font-semibold text-carbon-black break-words">
                 {assessment.transcript}
               </p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">
@@ -286,11 +286,11 @@ export function AssessmentResult({
           </div>
         </div>
 
-        <div className="rounded-[2rem] bg-vanilla-cream px-5 py-5 sm:px-6 sm:py-6">
+        <div className="rounded-[28px] bg-page px-5 py-5 sm:px-6 sm:py-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="space-y-2">
-              <p className="eyebrow text-xs text-sage-text">Word feedback</p>
-              <h3 className="text-2xl font-semibold text-hunter-green">
+              <p className="eyebrow text-xs text-slate-grey">Word feedback</p>
+              <h3 className="text-2xl font-semibold text-carbon-black">
                 See which parts of the reply landed cleanly.
               </h3>
               {replyAudioUrl ? (
@@ -300,12 +300,12 @@ export function AssessmentResult({
                 </p>
               ) : null}
             </div>
-            <div className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-hunter-green">
+            <div className="rounded-[14px] bg-white px-4 py-2 text-sm font-semibold text-carbon-black">
               {correctHighlights}/{assessment.highlights.length} strong words
             </div>
           </div>
 
-          <div className="mt-4 rounded-3xl bg-white px-4 py-4">
+          <div className="mt-4 rounded-[20px] bg-white px-4 py-4">
             <SentenceFeedback
               highlights={assessment.highlights}
               instruct={instruct}
@@ -315,15 +315,15 @@ export function AssessmentResult({
           </div>
 
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">At a glance</p>
+            <div className="rounded-[20px] bg-white px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">At a glance</p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">
                 {correctHighlights} words were clean, {mixedHighlights} were close,
                 and the rest need another pass.
               </p>
             </div>
-            <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">Next cue</p>
+            <div className="rounded-[20px] bg-white px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">Next cue</p>
               <p className="mt-2 text-sm leading-6 text-iron-grey">
                 {assessment.nextStep}
               </p>
@@ -343,11 +343,11 @@ export function AssessmentResult({
         </div>
       ) : null}
 
-      <div className="rounded-[2rem] bg-white px-5 py-5 sm:px-6 sm:py-6">
+      <div className="rounded-[28px] bg-white px-5 py-5 sm:px-6 sm:py-6">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="space-y-1">
-            <p className="eyebrow text-xs text-sage-text">Advanced breakdown</p>
-            <h3 className="text-2xl font-semibold text-hunter-green">
+            <p className="eyebrow text-xs text-slate-grey">Advanced breakdown</p>
+            <h3 className="text-2xl font-semibold text-carbon-black">
               {showAdvanced
                 ? "Phoneme detail is open."
                 : "Open the phoneme grid only when you need it."}
@@ -372,9 +372,9 @@ export function AssessmentResult({
                 <div
                   key={`${phoneme.symbol}-${phoneme.expected}-${phoneme.heard}-${index}`}
                   className={cn(
-                    "rounded-3xl px-4 py-4",
+                    "rounded-[20px] px-4 py-4",
                     phoneme.status === "correct"
-                      ? "bg-yellow-green/25 text-hunter-green"
+                      ? "bg-yellow-green/25 text-carbon-black"
                       : "bg-blushed-brick text-bright-snow",
                   )}
                 >

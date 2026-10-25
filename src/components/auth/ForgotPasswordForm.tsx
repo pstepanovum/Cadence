@@ -112,14 +112,14 @@ export function ForgotPasswordForm() {
             onChange={(event) => setEmail(event.target.value)}
             required
             aria-invalid={error ? true : undefined}
-            className={AUTH_INPUT_CLASS}
+            className={`${AUTH_INPUT_CLASS} rounded-full bg-white`}
           />
         </div>
 
         {state === "sent" ? <AuthNotice tone="success">{RESET_SENT_MESSAGE}</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="w-full" type="submit" disabled={state === "sending" || wait > 0}>
+        <Button className="w-full rounded-full" type="submit" disabled={state === "sending" || wait > 0}>
           {state === "sending"
             ? "Sending…"
             : wait > 0

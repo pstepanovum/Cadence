@@ -112,7 +112,7 @@ function ModuleCard({
       : `Pass module ${module.sort_order - 1}'s exam with 70 or more.`;
 
   const card = (
-    <Card style={[!unlocked && styles.lockedCard, isNext && styles.nextCard]}>
+    <Card style={[!unlocked && styles.lockedCard]}>
       <View style={styles.cardTop}>
         <View style={styles.cardTitleWrap}>
           <Eyebrow>Module {module.sort_order}</Eyebrow>
@@ -148,7 +148,7 @@ function ModuleCard({
                 ? `Continue · best exam ${normalizeScore(bestScore)}`
                 : "Start module"}
           </Body>
-          <ChevronRight color={colors.hunter} size={18} />
+          <ChevronRight color={colors.slate} size={18} />
         </View>
       ) : (
         <Body size={type.footnote} tone="muted">
@@ -193,10 +193,6 @@ const styles = themed(() =>
     lockedCard: {
       backgroundColor: overlays.locked,
       boxShadow: undefined,
-    },
-    nextCard: {
-      borderWidth: 2,
-      borderColor: colors.yellowGreen,
     },
     cardTop: {
       flexDirection: "row",

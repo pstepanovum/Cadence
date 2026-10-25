@@ -182,7 +182,7 @@ export function SignInMethods() {
       ) : null}
 
       {note ? (
-        <p role={note.tone === "error" ? "alert" : "status"} className={`mt-4 rounded-2xl px-4 py-3 text-sm ${note.tone === "error" ? "bg-blushed-brick text-white" : "bg-platinum text-hunter-green"}`}>
+        <p role={note.tone === "error" ? "alert" : "status"} className={`mt-4 rounded-2xl px-4 py-3 text-sm ${note.tone === "error" ? "bg-blushed-brick text-white" : "bg-platinum text-carbon-black"}`}>
           {note.text}
         </p>
       ) : null}

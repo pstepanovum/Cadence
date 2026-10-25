@@ -204,7 +204,7 @@ export default function MeaningMatchScreen() {
       {answered ? (
         <>
           <InfoPanel tone={correct ? "cream" : "white"}>
-            <Eyebrow tone={correct ? undefined : colors.brick}>
+            <Eyebrow tone={correct ? colors.sageText : colors.brickText}>
               {correct ? "Right" : `It was “${question.answer.word}”`}
             </Eyebrow>
             <Body size={type.callout} tone="muted">
@@ -244,7 +244,7 @@ const styles = themed(() =>
     },
     ipa: {
       fontFamily: fonts.bodyMedium,
-      color: colors.sageText,
+      color: colors.slate,
     },
     options: {
       gap: spacing.sm,

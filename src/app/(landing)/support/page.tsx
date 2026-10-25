@@ -55,23 +55,23 @@ export default function SupportPage() {
       </PageIntro>
       <section className="grid gap-4 md:grid-cols-2">
         <Card className="bg-white">
-          <h2 className="font-kicker text-xl text-hunter-green">Write to us</h2>
+          <h2 className="font-kicker text-xl text-carbon-black">Write to us</h2>
           <p className="mt-1 text-sm leading-6 text-iron-grey">Accounts, billing, privacy requests, anything else. Or email {SUPPORT_EMAIL}.</p>
           <Button href="/contact" className="mt-4">Contact support</Button>
         </Card>
         <Card className="bg-white">
-          <h2 className="font-kicker text-xl text-hunter-green">Bugs and ideas</h2>
+          <h2 className="font-kicker text-xl text-carbon-black">Bugs and ideas</h2>
           <p className="mt-1 text-sm leading-6 text-iron-grey">Cadence is open source. Report a bug or suggest a feature in public.</p>
           <Button href={`${GITHUB_URL}/issues`} variant="ghost" className="mt-4">Open an issue</Button>
         </Card>
       </section>
       {TOPICS.map((topic) => (
         <Card key={topic.title} className="bg-white">
-          <h2 className="font-kicker text-2xl text-hunter-green">{topic.title}</h2>
+          <h2 className="font-kicker text-2xl text-carbon-black">{topic.title}</h2>
           <dl className="mt-3 divide-y divide-platinum">
             {topic.items.map((item) => (
               <div key={item.q} className="py-3">
-                <dt className="font-semibold text-hunter-green">{item.q}</dt>
+                <dt className="font-semibold text-carbon-black">{item.q}</dt>
                 <dd className="mt-1 text-sm leading-7 text-iron-grey">{item.a}</dd>
               </div>
             ))}

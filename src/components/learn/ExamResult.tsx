@@ -28,8 +28,8 @@ export function ExamResult({
       <div className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
         <div
           className={cn(
-            "rounded-[2rem] px-5 py-5 sm:px-6 sm:py-6",
-            passed ? "bg-hunter-green text-bright-snow" : "bg-white",
+            "rounded-[28px] px-5 py-5 sm:px-6 sm:py-6",
+            passed ? "bg-white text-carbon-black" : "bg-white",
           )}
         >
           <div className="flex items-center gap-4">
@@ -44,7 +44,7 @@ export function ExamResult({
               <p
                 className={cn(
                   "eyebrow text-xs",
-                  passed ? "text-yellow-green" : "text-sage-text",
+                  passed ? "text-slate-grey" : "text-slate-grey",
                 )}
               >
                 Final exam score
@@ -52,7 +52,7 @@ export function ExamResult({
               <h3
                 className={cn(
                   "text-3xl font-semibold",
-                  passed ? "text-bright-snow" : "text-hunter-green",
+                  passed ? "text-carbon-black" : "text-carbon-black",
                 )}
               >
                 {passed ? "Module complete." : "One more pass."}
@@ -60,7 +60,7 @@ export function ExamResult({
               <p
                 className={cn(
                   "text-sm leading-6",
-                  passed ? "text-bright-snow/84" : "text-iron-grey",
+                  passed ? "text-iron-grey" : "text-iron-grey",
                 )}
               >
                 {passed
@@ -72,14 +72,14 @@ export function ExamResult({
 
           <div
             className={cn(
-              "mt-5 rounded-3xl px-4 py-4",
-              passed ? "bg-white/10" : "bg-vanilla-cream",
+              "mt-5 rounded-[20px] px-4 py-4",
+              passed ? "bg-page" : "bg-page",
             )}
           >
             <p
               className={cn(
                 "eyebrow text-xs",
-                passed ? "text-yellow-green" : "text-sage-text",
+                passed ? "text-slate-grey" : "text-slate-grey",
               )}
             >
               What this means
@@ -87,7 +87,7 @@ export function ExamResult({
             <p
               className={cn(
                 "mt-2 text-sm leading-6",
-                passed ? "text-bright-snow/84" : "text-iron-grey",
+                passed ? "text-iron-grey" : "text-iron-grey",
               )}
             >
               {passed
@@ -99,17 +99,17 @@ export function ExamResult({
           </div>
         </div>
 
-        <div className="rounded-[2rem] bg-vanilla-cream px-5 py-5 sm:px-6 sm:py-6">
+        <div className="rounded-[28px] bg-page px-5 py-5 sm:px-6 sm:py-6">
           <div className="space-y-2">
-            <p className="eyebrow text-xs text-sage-text">Route update</p>
-            <h3 className="text-2xl font-semibold text-hunter-green">
+            <p className="eyebrow text-xs text-slate-grey">Route update</p>
+            <h3 className="text-2xl font-semibold text-carbon-black">
               {passed
                 ? "The structured path keeps moving."
                 : "The module stays open for another try."}
             </h3>
           </div>
 
-          <div className="mt-4 rounded-3xl bg-white px-4 py-4">
+          <div className="mt-4 rounded-[20px] bg-white px-4 py-4">
             <div className="flex items-center gap-3">
               {passed ? (
                 moduleId < 10 ? (
@@ -120,7 +120,7 @@ export function ExamResult({
               ) : (
                 <RefreshCcw size={18} color="#386641" />
               )}
-              <p className="text-sm font-semibold text-hunter-green">
+              <p className="text-sm font-semibold text-carbon-black">
                 {passed
                   ? moduleId < 10
                     ? `Module ${moduleId + 1} unlocked`
@@ -136,15 +136,15 @@ export function ExamResult({
           </div>
 
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">Pass mark</p>
-              <p className="mt-2 text-2xl font-semibold text-hunter-green">
+            <div className="rounded-[20px] bg-white px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">Pass mark</p>
+              <p className="mt-2 text-2xl font-semibold text-carbon-black">
                 70+
               </p>
             </div>
-            <div className="rounded-3xl bg-white px-4 py-4">
-              <p className="eyebrow text-xs text-sage-text">Your score</p>
-              <p className="mt-2 text-2xl font-semibold text-hunter-green">
+            <div className="rounded-[20px] bg-white px-4 py-4">
+              <p className="eyebrow text-xs text-slate-grey">Your score</p>
+              <p className="mt-2 text-2xl font-semibold text-carbon-black">
                 {score}/100
               </p>
             </div>

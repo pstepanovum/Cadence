@@ -17,8 +17,8 @@ const typeLabel: Record<string, string> = {
 };
 
 const typeBadgeClass: Record<string, string> = {
-  theory: "bg-vanilla-cream text-hunter-green",
-  practice: "bg-sage-green/15 text-sage-text",
+  theory: "bg-page text-carbon-black",
+  practice: "bg-page text-iron-grey",
   exam: "bg-blushed-brick/15 text-blushed-brick",
 };
 
@@ -38,11 +38,11 @@ export function LessonRow({ lesson, moduleSlug, isLocked }: LessonRowProps) {
   return (
     <div
       className={cn(
-        "grid gap-4 rounded-[2rem] px-4 py-4 sm:grid-cols-[auto_minmax(0,1fr)_minmax(0,10rem)] sm:items-center sm:px-5 sm:py-5",
+        "grid gap-4 rounded-[28px] px-4 py-4 sm:grid-cols-[auto_minmax(0,1fr)_minmax(0,10rem)] sm:items-center sm:px-5 sm:py-5",
         isLocked
-          ? "bg-vanilla-cream/70"
+          ? "bg-page/70"
           : passed
-            ? "bg-vanilla-cream"
+            ? "bg-page"
             : "bg-bright-snow",
       )}
     >
@@ -54,7 +54,7 @@ export function LessonRow({ lesson, moduleSlug, isLocked }: LessonRowProps) {
               ? "bg-hunter-green text-white"
               : isLocked
                 ? "bg-pale-slate text-white"
-                : "bg-white text-hunter-green",
+                : "bg-white text-carbon-black",
           )}
         >
           {isLocked ? <Lock size={15} color="currentColor" /> : lesson.sort_order}
@@ -68,10 +68,10 @@ export function LessonRow({ lesson, moduleSlug, isLocked }: LessonRowProps) {
             className={cn(
               "inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold",
               passed
-                ? "bg-yellow-green/25 text-hunter-green"
+                ? "bg-hunter-green text-white"
                 : isLocked
                   ? "bg-pale-slate text-white"
-                  : "bg-white text-hunter-green",
+                  : "bg-white text-carbon-black",
             )}
           >
             {passed ? <CheckCircle size={12} color="currentColor" /> : null}
@@ -101,7 +101,7 @@ export function LessonRow({ lesson, moduleSlug, isLocked }: LessonRowProps) {
           <p
             className={cn(
               "text-lg font-semibold leading-6",
-              isLocked ? "text-slate-grey" : "text-hunter-green",
+              isLocked ? "text-slate-grey" : "text-carbon-black",
             )}
           >
             {lesson.title}

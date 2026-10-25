@@ -11,8 +11,9 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import * as SystemUI from "expo-system-ui";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { StyleSheet, useColorScheme, View } from "react-native";
+import { useReducedMotion } from "react-native-reanimated";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { unlockFirstModule } from "@/api/endpoints";
 import { pruneReferenceAudioCache } from "@/audio/reference-audio";
@@ -20,6 +21,7 @@ import { Body, Button, Title } from "@/components/ui";
 import { UpdateGate } from "@/components/UpdateNotice";
 import { AccountProvider } from "@/context/account";
 import { EngagementWatcher } from "@/components/EngagementWatcher";
+import { HEAD_START_MS, LaunchSplash } from "@/components/LaunchSplash";
 import { cadenceForMinutes, focusForGoal } from "@/onboarding/flow";
 import { markOnboardingDoneForExistingInstall, useOnboardingStatus } from "@/onboarding/store";
 import { AuthProvider, useAuth } from "@/context/auth";
@@ -183,18 +185,19 @@ function RootNavigator() {
   );
 }
 
-function Gate({ children }: { children: React.ReactNode }) {
+function Gate({ children, onReady }: { children: React.ReactNode; onReady: () => void }) {
   const { loading, profileReady, profileError } = useAuth();
   const { ready } = useConnection();
 
-  // Hold the splash until the fonts are ready, the stored sign-in has been
-  // restored *and* the keychain has been read for a paired computer. Hiding it
-  // earlier shows an empty cream screen, or worse, flashes the setup screen at
-  // someone who is already paired.
+  // Hold the launch animation until the fonts are ready, the stored sign-in
+  // has been restored *and* the keychain has been read for a paired computer.
+  // Lifting it earlier shows an empty screen, or worse, flashes the setup
+  // screen at someone who is already paired.
   const onboarding = useOnboardingStatus();
+  const appReady = !loading && ready && onboarding.loaded && (profileReady || profileError);
   useEffect(() => {
-    if (!loading && ready && onboarding.loaded && (profileReady || profileError)) SplashScreen.hideAsync();
-  }, [loading, ready, onboarding.loaded, profileReady, profileError]);
+    if (appReady) onReady();
+  }, [appReady, onReady]);
 
   return <>{children}</>;
 }
@@ -223,32 +226,52 @@ export default function RootLayout() {
     SystemUI.setBackgroundColorAsync(colors.cream).catch(() => {});
   }, [scheme]);
 
+  // The launch animation covers the app until it is ready to be seen.
+  const [appReady, setAppReady] = useState(false);
+  const markReady = useCallback(() => setAppReady(true), []);
+  // The app mounts under the splash once the liquid has had its head start
+  // (at once with Reduce Motion, where there is nothing to keep smooth).
+  const reduceMotion = useReducedMotion();
+  const [mountApp, setMountApp] = useState(false);
+  const splashStarted = useCallback(() => {
+    if (reduceMotion) setMountApp(true);
+    else setTimeout(() => setMountApp(true), HEAD_START_MS);
+  }, [reduceMotion]);
+
   // A font that fails to download should not brick the app — render with the
   // system font rather than sitting on the splash screen forever.
-  if (!fontsLoaded && !fontError) return null;
+  const fontsSettled = fontsLoaded || Boolean(fontError);
 
   return (
-    <SafeAreaProvider>
-      <QueryClientProvider client={queryClient}>
-        <ConnectionProvider>
-          <AuthProvider>
-            <AccountProvider>
-              <Gate>
-                <StatusBar style={scheme === "dark" ? "light" : "dark"} />
-                <UpdateGate key={scheme}>
-                  <RootNavigator />
-                </UpdateGate>
-              </Gate>
-            </AccountProvider>
-          </AuthProvider>
-        </ConnectionProvider>
-      </QueryClientProvider>
-    </SafeAreaProvider>
+    <View style={[styles.root, { backgroundColor: colors.cream }]}>
+      {fontsSettled && mountApp ? (
+        <SafeAreaProvider>
+          <QueryClientProvider client={queryClient}>
+            <ConnectionProvider>
+              <AuthProvider>
+                <AccountProvider>
+                  <Gate onReady={markReady}>
+                    <StatusBar style={scheme === "dark" ? "light" : "dark"} />
+                    <UpdateGate key={scheme}>
+                      <RootNavigator />
+                    </UpdateGate>
+                  </Gate>
+                </AccountProvider>
+              </AuthProvider>
+            </ConnectionProvider>
+          </QueryClientProvider>
+        </SafeAreaProvider>
+      ) : null}
+      <LaunchSplash ready={appReady} onStarted={splashStarted} />
+    </View>
   );
 }
 
 const styles = themed(() =>
   StyleSheet.create({
+    root: {
+      flex: 1,
+    },
     boundary: {
       flex: 1,
       backgroundColor: colors.cream,

@@ -41,7 +41,7 @@ export function ProgressBar({
         style={[
           styles.progressFill,
           {
-            backgroundColor: onDark ? colors.yellowGreen : colors.sage,
+            backgroundColor: onDark ? colors.snow : colors.hunter,
             opacity: trackWidth ? 1 : 0,
             transform: [{ translateX }],
           },
@@ -78,9 +78,9 @@ export function SegmentedProgress({
             {
               backgroundColor:
                 index < currentIndex
-                  ? colors.yellowGreen
+                  ? colors.hunter
                   : index === currentIndex
-                    ? colors.hunter
+                    ? colors.sage
                     : onDark
                       ? overlays.whiteOnGreenStrong
                       : colors.alabaster,
@@ -165,7 +165,7 @@ export function StatTile({
 }) {
   const onDark = tone === "translucent";
   const background =
-    tone === "white" ? colors.white : onDark ? overlays.whiteOnGreen : colors.cream;
+    tone === "white" ? colors.white : onDark ? overlays.whiteOnGreen : colors.platinum;
   return (
     <View
       accessible

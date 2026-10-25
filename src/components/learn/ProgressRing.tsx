@@ -59,7 +59,7 @@ export function ProgressRing({
         />
       </svg>
       <span
-        className="pointer-events-none absolute font-semibold leading-none text-hunter-green"
+        className="pointer-events-none absolute font-semibold leading-none text-carbon-black"
         style={{ fontSize }}
       >
         {displayValue}

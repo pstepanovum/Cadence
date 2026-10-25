@@ -42,7 +42,7 @@ export function PaywallHero({ title, subtitle }: { title: string; subtitle?: str
 const styles = themed(() =>
   StyleSheet.create({
     root: { gap: spacing.lg, alignItems: "center" },
-    panel: { alignSelf: "stretch", alignItems: "center", paddingVertical: spacing.md, borderRadius: radii.cardLarge, backgroundColor: colors.limeSoft },
+    panel: { alignSelf: "stretch", alignItems: "center", paddingVertical: spacing.md, borderRadius: radii.cardLarge, backgroundColor: colors.snow },
     text: { alignItems: "center", gap: spacing.xs },
     center: { textAlign: "center" },
   }),

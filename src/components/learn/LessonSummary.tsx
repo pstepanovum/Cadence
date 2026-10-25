@@ -25,7 +25,7 @@ export function LessonSummary({
   return (
     <div className="space-y-4">
       <div className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
-        <div className="rounded-[2rem] bg-hunter-green px-5 py-5 text-bright-snow sm:px-6 sm:py-6">
+        <div className="rounded-[28px] bg-white px-5 py-5 text-carbon-black sm:px-6 sm:py-6">
           <div className="flex items-center gap-4">
             <ProgressRing
               score={avg}
@@ -35,53 +35,53 @@ export function LessonSummary({
               className="[&>span]:text-bright-snow"
             />
             <div className="space-y-2">
-              <p className="eyebrow text-xs text-yellow-green">Lesson complete</p>
-              <h3 className="text-3xl font-semibold text-bright-snow">
+              <p className="eyebrow text-xs text-slate-grey">Lesson complete</p>
+              <h3 className="text-3xl font-semibold text-carbon-black">
                 Your pronunciation round is complete.
               </h3>
-              <p className="text-sm leading-6 text-bright-snow/84">
+              <p className="text-sm leading-6 text-iron-grey">
                 {scores.length} recorded word{scores.length !== 1 ? "s" : ""} in
                 this practice loop.
               </p>
             </div>
           </div>
 
-          <div className="mt-5 rounded-3xl bg-white/10 px-4 py-4">
-            <p className="eyebrow text-xs text-yellow-green">Summary</p>
-            <p className="mt-2 text-sm leading-6 text-bright-snow/84">
+          <div className="mt-5 rounded-[20px] bg-page px-4 py-4">
+            <p className="eyebrow text-xs text-slate-grey">Summary</p>
+            <p className="mt-2 text-sm leading-6 text-iron-grey">
               Keep the sound you landed well, then replay the weaker word once or
               twice before moving back into the full module.
             </p>
           </div>
         </div>
 
-        <div className="rounded-[2rem] bg-vanilla-cream px-5 py-5 sm:px-6 sm:py-6">
+        <div className="rounded-[28px] bg-page px-5 py-5 sm:px-6 sm:py-6">
           <div className="space-y-2">
-            <p className="eyebrow text-xs text-sage-text">Session breakdown</p>
-            <h3 className="text-2xl font-semibold text-hunter-green">
+            <p className="eyebrow text-xs text-slate-grey">Session breakdown</p>
+            <h3 className="text-2xl font-semibold text-carbon-black">
               One glance at how the round went.
             </h3>
           </div>
 
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-3xl bg-white px-4 py-4 text-center">
-              <p className="eyebrow text-xs text-sage-text">Average</p>
-              <p className="mt-2 text-3xl font-semibold text-hunter-green">{avg}</p>
+            <div className="rounded-[20px] bg-white px-4 py-4 text-center">
+              <p className="eyebrow text-xs text-slate-grey">Average</p>
+              <p className="mt-2 text-3xl font-semibold text-carbon-black">{avg}</p>
             </div>
-            <div className="rounded-3xl bg-white px-4 py-4 text-center">
-              <p className="eyebrow text-xs text-sage-text">Best</p>
-              <p className="mt-2 text-3xl font-semibold text-hunter-green">{best}</p>
+            <div className="rounded-[20px] bg-white px-4 py-4 text-center">
+              <p className="eyebrow text-xs text-slate-grey">Best</p>
+              <p className="mt-2 text-3xl font-semibold text-carbon-black">{best}</p>
             </div>
-            <div className="rounded-3xl bg-white px-4 py-4 text-center">
+            <div className="rounded-[20px] bg-white px-4 py-4 text-center">
               <p className="eyebrow text-xs text-blushed-brick">Needs work</p>
-              <p className="mt-2 text-3xl font-semibold text-hunter-green">
+              <p className="mt-2 text-3xl font-semibold text-carbon-black">
                 {lowest}
               </p>
             </div>
           </div>
 
-          <div className="mt-4 rounded-3xl bg-white px-4 py-4">
-            <p className="eyebrow text-xs text-sage-text">Next move</p>
+          <div className="mt-4 rounded-[20px] bg-white px-4 py-4">
+            <p className="eyebrow text-xs text-slate-grey">Next move</p>
             <p className="mt-2 text-sm leading-6 text-iron-grey">
               Run the lesson again if you want another focused pass, or step back
               into the module to move on with the rest of the route.

@@ -160,9 +160,9 @@ export default function SettingsScreen() {
         </View>
         <SwitchRow title="Sounds" detail="Short cues for answers and finished lessons." value={prefs.sounds} onChange={(on) => setPref("sounds", on)} />
         <SwitchRow title="Haptics" detail="Gentle taps when you press and pick." value={prefs.haptics} onChange={(on) => setPref("haptics", on)} />
-        <SettingsRow icon={<GraduationCap color={colors.hunter} size={20} />} title="Level" detail={levelSummary(levels)} onPress={() => router.push("/settings/level")} />
-        <SettingsRow icon={<Volume2 color={colors.hunter} size={20} />} title="Coach voice" detail={voice.instruct} onPress={() => router.push("/settings/voice")} />
-        <SettingsRow icon={<Download color={colors.hunter} size={20} />} title="Offline content packs" detail="Lessons and sounds on this phone, and more to download." onPress={() => router.push("/settings/packs")} />
+        <SettingsRow icon={<GraduationCap color={colors.carbon} size={20} />} title="Level" detail={levelSummary(levels)} onPress={() => router.push("/settings/level")} />
+        <SettingsRow icon={<Volume2 color={colors.carbon} size={20} />} title="Coach voice" detail={voice.instruct} onPress={() => router.push("/settings/voice")} />
+        <SettingsRow icon={<Download color={colors.carbon} size={20} />} title="Offline content packs" detail="Lessons and sounds on this phone, and more to download." onPress={() => router.push("/settings/packs")} />
       </View>
 
       <View style={styles.group}>
@@ -191,13 +191,13 @@ export default function SettingsScreen() {
           </Body>
           <NewsletterToggle />
           <SettingsRow
-            icon={<KeyRound color={colors.hunter} size={20} />}
+            icon={<KeyRound color={colors.carbon} size={20} />}
             title="Sign-in methods"
             detail={linkedMethods(user.providers).map(methodLabel).join(", ") || "Apple, Google, or email and password."}
             onPress={() => router.push("/settings/sign-in")}
           />
           <SettingsRow
-            icon={<Sparkles color={colors.hunter} size={20} />}
+            icon={<Sparkles color={colors.carbon} size={20} />}
             title={account.plus ? "Plan: Cadence Plus" : "Plan: Free"}
             detail="Your plan, your data download, and deleting your account."
             onPress={() => router.push("/account")}
@@ -210,7 +210,7 @@ export default function SettingsScreen() {
 
       <View style={styles.group}>
         <Eyebrow>Setup</Eyebrow>
-        <SettingsRow icon={<RotateCcw color={colors.hunter} size={20} />} title="Run setup again" detail="Your goal, level, daily minutes and reminder time." onPress={() => router.push("/settings/onboarding")} />
+        <SettingsRow icon={<RotateCcw color={colors.carbon} size={20} />} title="Run setup again" detail="Your goal, level, daily minutes and reminder time." onPress={() => router.push("/settings/onboarding")} />
       </View>
 
       <Body size={type.caption} tone="muted" style={styles.version}>

@@ -18,13 +18,13 @@ export function drawShareCard(summary: ProgressSummary, streak: number): HTMLCan
   const ctx = canvas.getContext("2d")!;
   ctx.fillStyle = "#386641";
   ctx.fillRect(0, 0, size, size);
-  ctx.fillStyle = "#a7c957";
+  ctx.fillStyle = "rgba(255,255,255,0.08)";
   ctx.beginPath();
   ctx.arc(size - 140, 140, 260, 0, Math.PI * 2);
   ctx.fill();
 
   const font = (weight: number, px: number) => `${weight} ${px}px "Funnel Display", system-ui, sans-serif`;
-  ctx.fillStyle = "#f2e8cf";
+  ctx.fillStyle = "rgba(255,255,255,0.82)";
   ctx.font = font(700, 56);
   ctx.fillText("Cadence", 90, 140);
 
@@ -42,15 +42,15 @@ export function drawShareCard(summary: ProgressSummary, streak: number): HTMLCan
   ];
   stats.forEach(([value, label], i) => {
     const x = 90 + i * 320;
-    ctx.fillStyle = "#a7c957";
+    ctx.fillStyle = "#ffffff";
     ctx.font = font(800, 88);
     ctx.fillText(value, x, 820);
-    ctx.fillStyle = "#f2e8cf";
+    ctx.fillStyle = "rgba(255,255,255,0.82)";
     ctx.font = font(500, 36);
     ctx.fillText(label, x, 870);
   });
   ctx.font = font(500, 34);
-  ctx.fillStyle = "rgba(242,232,207,0.8)";
+  ctx.fillStyle = "rgba(255,255,255,0.7)";
   ctx.fillText("cadence.pstepanov.dev", 90, 1000);
   return canvas;
 }

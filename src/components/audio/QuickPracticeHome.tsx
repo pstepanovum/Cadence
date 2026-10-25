@@ -40,18 +40,18 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
   return (
     <div className="space-y-4">
       <section className="grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
-        <Card className="bg-hunter-green text-bright-snow">
+        <Card className="bg-white text-carbon-black">
           <div className="space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-yellow-green">
+            <div className="inline-flex items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-slate-grey">
               <Microphone size={18} filled color="currentColor" />
               <span className="eyebrow text-sm">Home</span>
             </div>
 
             <div className="space-y-3">
-              <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
+              <h1 className="text-3xl font-semibold text-carbon-black sm:text-4xl lg:text-5xl">
                 Quick practice
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-bright-snow/84">
+              <p className="max-w-2xl text-base leading-7 text-iron-grey">
                 Free drill mode for supported target words. Hear the reference
                 pronunciation, record one take, and let Cadence compare the
                 decoded phonemes against the target.
@@ -59,27 +59,27 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
             </div>
 
             <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Modules complete</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Modules complete</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {completedModules}/{modules.length || 10}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Unlocked now</p>
-                <p className="mt-2 text-2xl font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Unlocked now</p>
+                <p className="mt-2 text-2xl font-semibold text-carbon-black">
                   {unlockedModules}
                 </p>
               </div>
-              <div className="rounded-3xl bg-white/10 px-4 py-4">
-                <p className="eyebrow text-xs text-yellow-green">Current module</p>
-                <p className="mt-2 text-base font-semibold text-bright-snow">
+              <div className="rounded-[20px] bg-page px-4 py-4">
+                <p className="eyebrow text-xs text-slate-grey">Current module</p>
+                <p className="mt-2 text-base font-semibold text-carbon-black">
                   {currentModule ? `Module ${currentModule.sort_order}` : "Ready"}
                 </p>
               </div>
             </div>
 
-            <Button variant="secondary" href="/learn" className="w-fit">
+            <Button href="/learn" className="w-fit">
               Open modules
               <ArrowRight size={16} color="currentColor" />
             </Button>
@@ -90,9 +90,9 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
           <div className="grid gap-5 md:grid-cols-[0.92fr_1.08fr] md:items-center">
             <div className="space-y-4">
               <div className="space-y-2">
-                <p className="eyebrow text-sm text-sage-text">Session cue</p>
+                <p className="eyebrow text-sm text-slate-grey">Session cue</p>
                 <label className="block space-y-2">
-                  <span className="text-sm font-semibold text-hunter-green">
+                  <span className="text-sm font-semibold text-carbon-black">
                     Choose a target word
                   </span>
                   <Select
@@ -108,8 +108,8 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
                 </label>
               </div>
 
-              <div className="rounded-3xl bg-vanilla-cream px-5 py-5">
-                <p className="text-3xl font-semibold text-hunter-green sm:text-4xl">
+              <div className="rounded-[20px] bg-page px-5 py-5">
+                <p className="text-3xl font-semibold text-carbon-black sm:text-4xl">
                   {currentTarget.label}
                 </p>
                 <p className="mt-2 text-lg text-iron-grey">{currentTarget.ipa}</p>
@@ -121,7 +121,7 @@ export function QuickPracticeHome({ modules }: QuickPracticeHomeProps) {
               {currentModule ? (
                 <p className="text-sm leading-7 text-iron-grey">
                   Structured learning stays in Modules. Your current route is{" "}
-                  <span className="font-semibold text-hunter-green">
+                  <span className="font-semibold text-carbon-black">
                     Module {currentModule.sort_order}: {currentModule.title}
                   </span>
                   .

@@ -23,10 +23,10 @@ export function NavbarFrame({
   return (
     <header
       className={cn(
-        'rounded-3xl px-5 py-4',
+        'rounded-[20px] px-5 py-4',
         variant === 'dark'
           ? 'bg-hunter-green text-bright-snow'
-          : 'bg-white text-hunter-green',
+          : 'bg-white text-carbon-black',
       )}
     >
       <div className="flex flex-wrap items-center justify-between gap-4 md:flex-nowrap">

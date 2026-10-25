@@ -77,10 +77,10 @@ export function PrivacyChoicesPanel({ onClose }: { onClose: () => void }) {
           />
 
           {/* Modal */}
-          <div className="relative z-10 w-full max-w-md rounded-3xl bg-vanilla-cream p-8 shadow-xl">
+          <div className="relative z-10 w-full max-w-md rounded-[20px] bg-page p-8 shadow-xl">
             <div className="space-y-1">
-              <p className="eyebrow text-sm text-sage-text">Privacy</p>
-              <h2 className="text-2xl font-semibold text-hunter-green">
+              <p className="eyebrow text-sm text-slate-grey">Privacy</p>
+              <h2 className="text-2xl font-semibold text-carbon-black">
                 Your Privacy Choices
               </h2>
               <p className="pt-1 text-sm leading-7 text-iron-grey">
@@ -96,7 +96,7 @@ export function PrivacyChoicesPanel({ onClose }: { onClose: () => void }) {
                   className="flex items-start justify-between gap-4 rounded-2xl bg-white px-5 py-4"
                 >
                   <div className="space-y-0.5">
-                    <p className="text-sm font-semibold text-hunter-green">
+                    <p className="text-sm font-semibold text-carbon-black">
                       {cat.label}
                     </p>
                     <p className="text-sm leading-6 text-iron-grey">

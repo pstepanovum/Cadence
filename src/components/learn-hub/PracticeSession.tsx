@@ -44,19 +44,19 @@ export function PracticeSession({ modeId, initialLevel, grammarPointId }: { mode
 
   return (
     <div className="space-y-4">
-      <section className="flex flex-col gap-4 rounded-3xl bg-white px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      <section className="flex flex-col gap-4 rounded-[20px] bg-white px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div>
-          <p className="eyebrow text-sm text-sage-text">
+          <p className="eyebrow text-sm text-slate-grey">
             <Link href={`/practice?level=${level}`} className="underline-offset-2 hover:underline">Practice</Link> · {level}
           </p>
-          <h1 className="mt-1 text-3xl font-semibold text-hunter-green">{mode.title}</h1>
+          <h1 className="mt-1 text-3xl font-semibold text-carbon-black">{mode.title}</h1>
           <p className="mt-1 text-sm text-iron-grey">{mode.blurb}</p>
         </div>
         <LevelPicker level={level} onChange={(next) => { setLevel(next); setRound((r) => r + 1); }} />
       </section>
 
       {exercises === null ? (
-        <p className="rounded-3xl bg-white px-6 py-10 text-center text-iron-grey" role="status">Loading…</p>
+        <p className="rounded-[20px] bg-white px-6 py-10 text-center text-iron-grey" role="status">Loading…</p>
       ) : exercises.length === 0 ? (
         <EmptyState
           title="Nothing here at this level yet"
@@ -98,16 +98,16 @@ function Round({ exercises, level, modeId, activity, onAgain }: { exercises: Exe
 
   if (done) {
     return (
-      <section className="space-y-4 rounded-3xl bg-hunter-green px-6 py-8 text-white sm:px-10" aria-live="polite">
-        <p className="eyebrow text-sm text-yellow-green">Round done</p>
+      <section className="space-y-4 rounded-[20px] bg-white px-6 py-8 text-carbon-black sm:px-10" aria-live="polite">
+        <p className="eyebrow text-sm text-slate-grey">Round done</p>
         <p className="text-5xl font-semibold">{score}%</p>
-        <p className="text-base text-white/80">
+        <p className="text-base text-iron-grey">
           {results.filter((r) => r.correct).length} of {results.length} right.{" "}
           {score >= 80 ? "Strong. Try the next level up or a harder mode." : "Another round shuffles new questions."}
         </p>
         <div className="flex flex-wrap gap-2">
-          <Button variant="secondary" onClick={onAgain}>Another round</Button>
-          <Button href={`/practice?level=${level}`} className="bg-white/10 text-white">Back to practice</Button>
+          <Button onClick={onAgain}>Another round</Button>
+          <Button href={`/practice?level=${level}`} variant="secondary">Back to practice</Button>
         </div>
       </section>
     );

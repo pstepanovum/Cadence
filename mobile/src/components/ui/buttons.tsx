@@ -20,7 +20,8 @@ const buttonColors: Record<ButtonVariant, { bg: string; fg: string }> = themed((
   primary: { bg: colors.hunter, fg: colors.snow },
   /** Secondary actions are filled grey, never yellow-green or outlined. */
   secondary: { bg: colors.platinum, fg: colors.carbon },
-  tonal: { bg: overlays.hunterTint, fg: colors.hunter },
+  /** A quieter primary: the grey fill with the action in green. */
+  tonal: { bg: colors.platinum, fg: colors.hunter },
   danger: { bg: colors.brick, fg: colors.snow },
   /** The quiet choice beside a primary button ("Not now"): filled grey, no stroke. */
   neutral: { bg: colors.platinum, fg: colors.carbon },
@@ -129,8 +130,10 @@ export function RoundIconButton({
   size?: number;
   disabled?: boolean;
 }) {
+  // Flat grey on the page; the page colour on a grey surface ("cream");
+  // translucent only over a green panel.
   const background =
-    tone === "cream" ? colors.cream : tone === "translucent" ? overlays.whiteOnGreenStrong : colors.white;
+    tone === "translucent" ? overlays.whiteOnGreenStrong : tone === "cream" ? colors.cream : colors.platinum;
   // Smaller visuals keep a 44pt target.
   const slop = Math.max(0, Math.ceil((TAP_TARGET - size) / 2));
   return (
@@ -152,7 +155,6 @@ export function RoundIconButton({
           backgroundColor: background,
           opacity: disabled ? 0.45 : pressed ? 0.7 : 1,
         },
-        tone === "light" && styles.roundShadow,
       ]}>
       {children}
     </Pressable>
@@ -215,7 +217,7 @@ export function Chip({
         active && styles.chipActive,
         style,
       ]}>
-      {picker && selected ? <Check color={colors.lime} size={14} strokeWidth={3} /> : null}
+      {picker && selected ? <Check color={colors.snow} size={14} strokeWidth={3} /> : null}
       <Text
         maxFontSizeMultiplier={maxScale.control}
         style={[styles.chipLabel, { color: palette.fg }]}>
@@ -286,9 +288,6 @@ const styles = themed(() =>
       alignItems: "center",
       justifyContent: "center",
     },
-    roundShadow: {
-      boxShadow: "0px 1px 4px rgba(33, 37, 41, 0.08)",
-    },
     chip: {
       flexDirection: "row",
       alignItems: "center",
@@ -299,9 +298,11 @@ const styles = themed(() =>
       minHeight: 28,
       alignSelf: "flex-start",
     },
+    // A chip you can tap is a control: soft corners, not a pill.
     chipInteractive: {
       minHeight: 40,
       paddingHorizontal: spacing.lg,
+      borderRadius: radii.control,
     },
     chipPickerIdle: {
       backgroundColor: colors.platinum,

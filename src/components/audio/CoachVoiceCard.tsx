@@ -137,7 +137,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
       <div className="space-y-5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 rounded-full bg-sage-green/15 px-4 py-2 text-sm font-medium text-sage-text">
+            <div className="inline-flex items-center gap-2 rounded-[14px] bg-page px-4 py-2 text-sm font-medium text-iron-grey">
               <Speaker size={18} color="currentColor" />
               Coach voice
             </div>
@@ -165,7 +165,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
                   : "Hear this voice"}
             </Button>
 
-            <div className="hidden rounded-3xl bg-vanilla-cream px-4 py-3 text-sm font-semibold text-hunter-green whitespace-nowrap sm:block">
+            <div className="hidden rounded-[20px] bg-page px-4 py-3 text-sm font-semibold text-carbon-black whitespace-nowrap sm:block">
               {[settings.gender, settings.age, settings.pitch, settings.accent]
                 .filter(Boolean)
                 .join(", ") || "Default voice"}
@@ -175,7 +175,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-text">Gender</span>
+            <span className="eyebrow block text-xs text-slate-grey">Gender</span>
             <Select
               value={settings.gender}
               onChange={(e) => onUpdate({ gender: e.target.value })}
@@ -189,7 +189,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
           </label>
 
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-text">Age</span>
+            <span className="eyebrow block text-xs text-slate-grey">Age</span>
             <Select
               value={settings.age}
               onChange={(e) => onUpdate({ age: e.target.value })}
@@ -203,7 +203,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
           </label>
 
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-text">Pitch</span>
+            <span className="eyebrow block text-xs text-slate-grey">Pitch</span>
             <Select
               value={settings.pitch}
               onChange={(e) => onUpdate({ pitch: e.target.value })}
@@ -217,7 +217,7 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
           </label>
 
           <label className="space-y-2">
-            <span className="eyebrow block text-xs text-sage-text">Accent</span>
+            <span className="eyebrow block text-xs text-slate-grey">Accent</span>
             <Select
               value={settings.accent}
               onChange={(e) => onUpdate({ accent: e.target.value })}
@@ -232,13 +232,13 @@ export function CoachVoiceCard({ settings, instruct, onUpdate }: CoachVoiceCardP
         </div>
 
         {error ? (
-          <div className="rounded-3xl bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
+          <div className="rounded-[20px] bg-blushed-brick px-4 py-3 text-sm text-bright-snow">
             {error}
           </div>
         ) : null}
 
         <button
-          className="text-sm font-semibold text-sage-text hover:text-hunter-green transition-colors"
+          className="text-sm font-semibold text-sage-text hover:text-carbon-black transition-colors"
           onClick={() => onUpdate({ ...DEFAULT_VOICE_SETTINGS })}
         >
           Reset to default

@@ -46,20 +46,20 @@ export function PracticeHub({ initialLevel }: { initialLevel: CefrLevel | null }
   return (
     <div className="space-y-4">
       <section className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="rounded-3xl bg-white px-5 py-6 sm:px-8">
-          <p className="eyebrow text-sm text-sage-text">Practice</p>
-          <h1 className="mt-1 text-3xl font-semibold text-hunter-green sm:text-4xl">What do you want to practise?</h1>
+        <div className="rounded-[20px] bg-white px-5 py-6 sm:px-8">
+          <p className="eyebrow text-sm text-slate-grey">Practice</p>
+          <h1 className="mt-1 text-3xl font-semibold text-carbon-black sm:text-4xl">What do you want to practise?</h1>
           <p className="mt-2 text-sm leading-7 text-iron-grey">Choose your level. Everything here works offline and is free.</p>
           <div className="mt-4">
             <LevelPicker level={level} onChange={setLevel} />
           </div>
         </div>
-        <div className="rounded-3xl bg-hunter-green px-5 py-6 text-white sm:px-8">
+        <div className="rounded-[20px] bg-white px-5 py-6 text-carbon-black sm:px-8">
           {isNew ? (
             <div className="space-y-3">
-              <p className="eyebrow text-sm text-yellow-green">Start here</p>
+              <p className="eyebrow text-sm text-slate-grey">Start here</p>
               <p className="text-2xl font-semibold">No practice yet. A five-minute quiz is a good first step.</p>
-              <Button variant="secondary" href={`/practice/quiz?level=${level}`}>Start a quiz</Button>
+              <Button href={`/practice/quiz?level=${level}`}>Start a quiz</Button>
             </div>
           ) : (
             <div className="space-y-4">
@@ -92,12 +92,12 @@ export function PracticeHub({ initialLevel }: { initialLevel: CefrLevel | null }
         <p className="px-2 text-xs text-slate-grey">Showing the starter set for {level}. The full lesson library downloads when it is published.</p>
       ) : null}
       {summary.recent.length > 0 ? (
-        <section className="rounded-3xl bg-white px-5 py-6 sm:px-8">
-          <h2 className="font-kicker text-xl text-hunter-green">Recent</h2>
+        <section className="rounded-[20px] bg-white px-5 py-6 sm:px-8">
+          <h2 className="font-kicker text-xl text-carbon-black">Recent</h2>
           <ul className="mt-3 divide-y divide-platinum">
             {summary.recent.slice(0, 5).map((item) => (
               <li key={`${item.at}-${item.refId}`} className="flex items-center justify-between gap-3 py-2 text-sm">
-                <span className="text-hunter-green">{item.kind.replace("_", " ")} · {item.level ?? ""}</span>
+                <span className="text-carbon-black">{item.kind.replace("_", " ")} · {item.level ?? ""}</span>
                 <span className="text-iron-grey">{item.score === null ? "" : `${item.score}%`}</span>
               </li>
             ))}
@@ -110,21 +110,21 @@ export function PracticeHub({ initialLevel }: { initialLevel: CefrLevel | null }
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-3xl bg-white/10 px-3 py-3">
+    <div className="rounded-[20px] bg-page px-3 py-3">
       <p className="text-3xl font-semibold">{value}</p>
-      <p className="text-xs text-white/84">{label}</p>
+      <p className="text-xs text-iron-grey">{label}</p>
     </div>
   );
 }
 
 function HubCard({ href, title, blurb, meta }: { href: string; title: string; blurb: string; meta?: string }) {
   return (
-    <Link href={href} className="group flex min-h-36 flex-col justify-between rounded-3xl bg-white px-5 py-5 transition-colors hover:bg-yellow-green">
+    <Link href={href} className="group flex min-h-36 flex-col justify-between rounded-[20px] bg-white px-5 py-5 transition-colors hover:bg-platinum">
       <div>
-        <h2 className="font-kicker text-2xl text-hunter-green">{title}</h2>
+        <h2 className="font-kicker text-2xl text-carbon-black">{title}</h2>
         <p className="mt-1 text-sm leading-6 text-iron-grey">{blurb}</p>
       </div>
-      {meta ? <p className="mt-3 text-xs font-semibold text-sage-text">{meta}</p> : null}
+      {meta ? <p className="mt-3 text-xs font-semibold text-slate-grey">{meta}</p> : null}
     </Link>
   );
 }

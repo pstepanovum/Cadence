@@ -109,7 +109,7 @@ export default function LearnHub() {
                         </View>
                         {record ? (
                           <View style={styles.done}>
-                            <Check color={colors.ink} size={16} strokeWidth={3} />
+                            <Check color={colors.snow} size={16} strokeWidth={3} />
                           </View>
                         ) : (
                           <ChevronRight color={colors.slate} size={20} />
@@ -126,9 +126,9 @@ export default function LearnHub() {
 
       <View style={styles.section}>
         <Eyebrow>More</Eyebrow>
-        <HubRow icon={<BookOpenText color={colors.hunter} size={20} />} title="Grammar reference" detail={`Every ${level} grammar point, with examples and common mistakes.`} onPress={() => router.push({ pathname: "/grammar", params: { level } })} />
-        <HubRow icon={<Smile color={colors.hunter} size={20} />} title="Sounds and the mouth map" detail="See where the tongue and lips go for every English sound." onPress={() => router.push("/sounds")} />
-        <HubRow icon={<Mic color={colors.hunter} size={20} />} title="Pronunciation modules" detail="Theory, practice and exams, scored by your voice." onPress={() => router.push("/learn/modules")} />
+        <HubRow icon={<BookOpenText color={colors.carbon} size={20} />} title="Grammar reference" detail={`Every ${level} grammar point, with examples and common mistakes.`} onPress={() => router.push({ pathname: "/grammar", params: { level } })} />
+        <HubRow icon={<Smile color={colors.carbon} size={20} />} title="Sounds and the mouth map" detail="See where the tongue and lips go for every English sound." onPress={() => router.push("/sounds")} />
+        <HubRow icon={<Mic color={colors.carbon} size={20} />} title="Pronunciation modules" detail="Theory, practice and exams, scored by your voice." onPress={() => router.push("/learn/modules")} />
       </View>
     </Screen>
   );
@@ -158,7 +158,7 @@ function ModeTile({ mode, level, detail, disabled }: { mode: PracticeMode; level
       onPress={() => router.push({ pathname: "/practice/[mode]", params: { mode, level } })}
       style={({ pressed }) => [styles.tile, disabled && styles.tileDisabled, pressedCard(pressed)]}>
       <View style={styles.tileIcon}>
-        <Icon color={colors.hunter} size={20} />
+        <Icon color={colors.carbon} size={20} />
       </View>
       <Title size={type.headline}>{title}</Title>
       <Body size={type.caption} tone="muted">
@@ -201,14 +201,14 @@ const styles = themed(() =>
       width: 40,
       height: 40,
       borderRadius: radii.panel,
-      backgroundColor: colors.cream,
+      backgroundColor: colors.platinum,
       alignItems: "center",
       justifyContent: "center",
     },
     section: { gap: spacing.sm },
     lesson: { flexDirection: "row", alignItems: "center", gap: spacing.md, padding: spacing.lg },
     lessonText: { flex: 1, gap: spacing.xxs },
-    done: { width: 28, height: 28, borderRadius: radii.pill, backgroundColor: colors.yellowGreen, alignItems: "center", justifyContent: "center" },
+    done: { width: 28, height: 28, borderRadius: radii.pill, backgroundColor: colors.hunter, alignItems: "center", justifyContent: "center" },
     row: {
       flexDirection: "row",
       alignItems: "center",

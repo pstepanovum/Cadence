@@ -115,40 +115,40 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
 
   return (
     <div className="mx-auto grid w-full max-w-6xl gap-4 lg:grid-cols-[1fr_1fr]">
-      <section className="order-2 rounded-3xl bg-hunter-green px-6 py-8 text-bright-snow lg:order-1">
-        <p className="eyebrow text-sm text-yellow-green">Connect your phone</p>
+      <section className="order-2 rounded-[20px] bg-white px-6 py-8 text-carbon-black lg:order-1">
+        <p className="eyebrow text-sm text-slate-grey">Connect your phone</p>
         <h1 className="mt-3 text-3xl font-semibold sm:text-4xl">
           Scan this with Cadence on your phone.
         </h1>
-        <p className="mt-4 text-base leading-7 text-bright-snow/80">
+        <p className="mt-4 text-base leading-7 text-iron-grey">
           Your phone uses this computer for scoring, voices and the coach, free and
           without limits. Both need to be on the same Wi-Fi.
         </p>
-        <ol className="mt-5 space-y-2 text-base leading-7 text-bright-snow/90">
+        <ol className="mt-5 space-y-2 text-base leading-7 text-iron-grey">
           <li>1. Open Cadence on your phone.</li>
           <li>2. Choose <strong>Connect your own Cadence server</strong>.</li>
           <li>3. Point the camera at the code. Done.</li>
         </ol>
 
-        <div className="mt-6 space-y-2 rounded-3xl bg-white/10 px-4 py-4 text-sm leading-7 text-bright-snow/85">
+        <div className="mt-6 space-y-2 rounded-[20px] bg-page px-4 py-4 text-sm leading-7 text-iron-grey">
           <p>
-            This computer: <span className="font-semibold text-bright-snow">{serverName}</span>
+            This computer: <span className="font-semibold text-carbon-black">{serverName}</span>
           </p>
           <p>
             Address:{" "}
-            <span className="font-semibold text-bright-snow">
+            <span className="font-semibold text-carbon-black">
               {addresses[0] ? `${addresses[0]}:${port}` : "no Wi-Fi address found"}
             </span>
           </p>
           {addresses.length > 1 ? (
-            <p className="text-bright-snow/84">
+            <p className="text-iron-grey">
               Also reachable at {addresses.slice(1).map((entry) => `${entry}:${port}`).join(", ")}
             </p>
           ) : null}
         </div>
 
         {addresses.length === 0 ? (
-          <p className="mt-4 rounded-3xl bg-blushed-brick/25 px-4 py-3 text-sm leading-7">
+          <p className="mt-4 rounded-[20px] bg-blushed-brick/25 px-4 py-3 text-sm leading-7">
             This computer has no Wi-Fi or Ethernet address right now, so a phone
             cannot reach it. Connect to a network and reload this page.
           </p>
@@ -156,7 +156,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
       </section>
 
       <section className="order-1 grid gap-4 lg:order-2">
-        <div className="rounded-3xl bg-white px-6 py-6">
+        <div className="rounded-[20px] bg-white px-6 py-6">
           {loading ? (
             <p className="text-base text-iron-grey">Making a code…</p>
           ) : error ? (
@@ -165,7 +165,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
               <button
                 type="button"
                 onClick={() => void issueCode()}
-                className="rounded-full bg-hunter-green px-5 py-2 text-sm font-semibold text-bright-snow">
+                className="rounded-[14px] bg-hunter-green px-5 py-2 text-sm font-semibold text-bright-snow">
                 Try again
               </button>
             </div>
@@ -185,7 +185,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
                     <button
                       type="button"
                       onClick={() => void issueCode()}
-                      className="rounded-full bg-hunter-green px-6 py-3 text-sm font-semibold text-bright-snow">
+                      className="rounded-[14px] bg-hunter-green px-6 py-3 text-sm font-semibold text-bright-snow">
                       Show a new code
                     </button>
                   </div>
@@ -194,7 +194,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
 
               <div className="text-center">
                 <p className="eyebrow text-xs text-slate-grey">Or type this code</p>
-                <p className="mt-1 font-mono text-2xl font-semibold tracking-widest text-hunter-green">
+                <p className="mt-1 font-mono text-2xl font-semibold tracking-widest text-carbon-black">
                   {expired ? "— — — —" : code.displayCode}
                 </p>
                 <p className="mt-2 text-sm text-slate-grey">
@@ -208,7 +208,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
                 <button
                   type="button"
                   onClick={() => void issueCode()}
-                  className="w-full rounded-full border border-alabaster-grey px-5 py-2 text-sm font-semibold text-iron-grey">
+                  className="w-full rounded-[14px] border border-alabaster-grey px-5 py-2 text-sm font-semibold text-iron-grey">
                   Show a different code
                 </button>
               ) : null}
@@ -216,8 +216,8 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
           ) : null}
         </div>
 
-        <div className="rounded-3xl bg-white px-6 py-6">
-          <h2 className="text-lg font-semibold text-hunter-green">Paired devices</h2>
+        <div className="rounded-[20px] bg-white px-6 py-6">
+          <h2 className="text-lg font-semibold text-carbon-black">Paired devices</h2>
 
           {devices.length === 0 ? (
             <p className="mt-3 text-sm leading-7 text-slate-grey">
@@ -228,7 +228,7 @@ export function PairPanel({ serverName, port, addresses, initialDevices }: PairP
               {devices.map((device) => (
                 <li
                   key={device.deviceId}
-                  className="flex items-center justify-between gap-3 rounded-2xl bg-vanilla-cream px-4 py-3">
+                  className="flex items-center justify-between gap-3 rounded-2xl bg-page px-4 py-3">
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold text-carbon-black">{device.name}</p>
                     <p className="text-xs text-slate-grey">

@@ -36,8 +36,8 @@ export function LevelPicker({ level, onChange }: { level: CefrLevel; onChange: (
           aria-checked={option === level}
           onClick={() => onChange(option)}
           className={cn(
-            "min-h-11 min-w-12 cursor-pointer rounded-full px-3 text-sm font-semibold",
-            option === level ? "bg-hunter-green text-white" : "bg-vanilla-cream text-hunter-green hover:bg-platinum",
+            "min-h-11 min-w-12 cursor-pointer rounded-[14px] px-3 text-sm font-semibold",
+            option === level ? "bg-hunter-green text-white" : "bg-page text-carbon-black hover:bg-platinum",
           )}
         >
           {option}

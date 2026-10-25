@@ -25,7 +25,7 @@ export function LevelSettings({ signedIn }: { signedIn: boolean }) {
   return (
     <div className="space-y-8">
       <section className="space-y-3" aria-labelledby="level-overall">
-        <h2 id="level-overall" className="font-kicker text-xl text-hunter-green">
+        <h2 id="level-overall" className="font-kicker text-xl text-carbon-black">
           Overall
         </h2>
         <p className="text-sm text-iron-grey">
@@ -43,7 +43,7 @@ export function LevelSettings({ signedIn }: { signedIn: boolean }) {
                 onClick={() => setOverallLevel(level, signedIn)}
                 className={cn(
                   "flex min-h-14 w-full cursor-pointer flex-col items-start gap-0.5 rounded-2xl px-4 py-3 text-left",
-                  selected ? "bg-hunter-green text-white" : "bg-platinum text-hunter-green hover:brightness-95",
+                  selected ? "bg-hunter-green text-white" : "bg-platinum text-carbon-black hover:brightness-95",
                 )}
               >
                 <span className="font-semibold">{`${level} · ${LEVEL_INFO[level].name}`}</span>
@@ -56,7 +56,7 @@ export function LevelSettings({ signedIn }: { signedIn: boolean }) {
       </section>
 
       <section className="space-y-3" aria-labelledby="level-skills">
-        <h2 id="level-skills" className="font-kicker text-xl text-hunter-green">
+        <h2 id="level-skills" className="font-kicker text-xl text-carbon-black">
           By skill
         </h2>
         <p className="text-sm text-iron-grey">Optional. A skill set to Same follows the overall level.</p>
@@ -65,7 +65,7 @@ export function LevelSettings({ signedIn }: { signedIn: boolean }) {
           const options: (CefrLevel | null)[] = [null, ...[...CEFR_LEVELS].reverse()];
           return (
             <div key={skill} className="space-y-1.5">
-              <p className="text-sm font-semibold text-hunter-green">{SKILL_TITLES[skill]}</p>
+              <p className="text-sm font-semibold text-carbon-black">{SKILL_TITLES[skill]}</p>
               <div role="radiogroup" aria-label={SKILL_TITLES[skill]} className="flex flex-wrap gap-1.5">
                 {options.map((option) => {
                   const selected = option === value;
@@ -77,8 +77,8 @@ export function LevelSettings({ signedIn }: { signedIn: boolean }) {
                       aria-checked={selected}
                       onClick={() => setSkillLevel(skill, option, signedIn)}
                       className={cn(
-                        "min-h-11 min-w-12 cursor-pointer rounded-full px-3 text-sm font-semibold",
-                        selected ? "bg-hunter-green text-white" : "bg-platinum text-hunter-green hover:brightness-95",
+                        "min-h-11 min-w-12 cursor-pointer rounded-[14px] px-3 text-sm font-semibold",
+                        selected ? "bg-hunter-green text-white" : "bg-platinum text-carbon-black hover:brightness-95",
                       )}
                     >
                       {option ?? "Same"}
@@ -92,7 +92,7 @@ export function LevelSettings({ signedIn }: { signedIn: boolean }) {
       </section>
 
       <section className="space-y-3" aria-labelledby="level-placement">
-        <h2 id="level-placement" className="font-kicker text-xl text-hunter-green">
+        <h2 id="level-placement" className="font-kicker text-xl text-carbon-black">
           Placement test
         </h2>
         <p className="text-sm text-iron-grey">Adaptive, 12 to 24 questions, about five minutes. New questions each time.</p>

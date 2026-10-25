@@ -11,7 +11,7 @@ import { SoundLink } from "@/components/mouth-map/SoundLink";
 
 function getHighlightStyles(status: PronunciationAssessment["highlights"][number]["status"]) {
   if (status === "correct") return "bg-yellow-green text-hunter-green";
-  if (status === "mixed") return "bg-[#efd889] text-hunter-green";
+  if (status === "mixed") return "bg-[#efd889] text-carbon-black";
   return "bg-blushed-brick text-bright-snow";
 }
 
@@ -28,15 +28,15 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
       <Card className="bg-white">
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="eyebrow text-sm text-sage-text">Freedom transcript</p>
-            <h3 className="text-2xl font-semibold text-hunter-green">
+            <p className="eyebrow text-sm text-slate-grey">Freedom transcript</p>
+            <h3 className="text-2xl font-semibold text-carbon-black">
               Cadence captured what you said and is ready to compare the next take.
             </h3>
           </div>
 
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-text">Whisper transcript</p>
-            <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">
+          <div className="rounded-[20px] bg-page px-4 py-4">
+            <p className="eyebrow text-xs text-slate-grey">Whisper transcript</p>
+            <p className="mt-2 text-lg font-semibold leading-7 text-carbon-black">
               {transcript}
             </p>
             <p className="mt-2 text-sm leading-6 text-iron-grey">
@@ -55,45 +55,45 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
     <Card className="bg-white">
       <div className="space-y-5">
         <div className="space-y-2">
-          <p className="eyebrow text-sm text-sage-text">Freedom transcript</p>
-          <h3 className="text-2xl font-semibold text-hunter-green">
+          <p className="eyebrow text-sm text-slate-grey">Freedom transcript</p>
+          <h3 className="text-2xl font-semibold text-carbon-black">
             Whisper builds the reply text, then Cadence checks the live phonemes against it.
           </h3>
         </div>
 
-        <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-          <p className="eyebrow text-xs text-sage-text">Whisper transcript</p>
-          <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">{transcript}</p>
+        <div className="rounded-[20px] bg-page px-4 py-4">
+          <p className="eyebrow text-xs text-slate-grey">Whisper transcript</p>
+          <p className="mt-2 text-lg font-semibold leading-7 text-carbon-black">{transcript}</p>
           <p className="mt-2 text-sm leading-6 text-iron-grey">
             This is the word-level transcript from the freedom take.
           </p>
         </div>
 
         <div className="grid gap-3 sm:grid-cols-[auto_1fr]">
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-text">Transcript-based pronunciation</p>
+          <div className="rounded-[20px] bg-page px-4 py-4">
+            <p className="eyebrow text-xs text-slate-grey">Transcript-based pronunciation</p>
             <div className="mt-3 flex justify-center">
               <ProgressRing score={assessment.overallScore} size={88} strokeWidth={7} />
             </div>
           </div>
 
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-text">Pronunciation check</p>
+          <div className="rounded-[20px] bg-page px-4 py-4">
+            <p className="eyebrow text-xs text-slate-grey">Pronunciation check</p>
             <p className="mt-2 text-sm leading-6 text-iron-grey">{assessment.summary}</p>
-            <p className="mt-3 text-sm font-semibold leading-6 text-hunter-green">{assessment.nextStep}</p>
+            <p className="mt-3 text-sm font-semibold leading-6 text-carbon-black">{assessment.nextStep}</p>
           </div>
         </div>
 
         <div className="grid gap-3 lg:grid-cols-2">
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-text">Target reply</p>
-            <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green">{assessment.targetText}</p>
+          <div className="rounded-[20px] bg-page px-4 py-4">
+            <p className="eyebrow text-xs text-slate-grey">Target reply</p>
+            <p className="mt-2 text-lg font-semibold leading-7 text-carbon-black">{assessment.targetText}</p>
             <p className="mt-2 text-sm leading-6 text-iron-grey break-words">{assessment.ipaTarget}</p>
           </div>
 
-          <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
-            <p className="eyebrow text-xs text-sage-text">Decoded phonemes</p>
-            <p className="mt-2 text-lg font-semibold leading-7 text-hunter-green break-words">
+          <div className="rounded-[20px] bg-page px-4 py-4">
+            <p className="eyebrow text-xs text-slate-grey">Decoded phonemes</p>
+            <p className="mt-2 text-lg font-semibold leading-7 text-carbon-black break-words">
               {assessment.transcript}
             </p>
             <p className="mt-2 text-sm leading-6 text-iron-grey">
@@ -102,15 +102,15 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
           </div>
         </div>
 
-        <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
+        <div className="rounded-[20px] bg-page px-4 py-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-xs text-sage-text">Word feedback</p>
+              <p className="eyebrow text-xs text-slate-grey">Word feedback</p>
               <p className="text-sm leading-6 text-iron-grey">
                 Compare the transcript-driven target with what the audio model heard.
               </p>
             </div>
-            <div className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-hunter-green">
+            <div className="rounded-[14px] bg-white px-4 py-2 text-sm font-semibold text-carbon-black">
               {correctHighlights}/{assessment.highlights.length} strong words
             </div>
           </div>
@@ -120,7 +120,7 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
               <span
                 key={`${highlight.text}-${highlight.status}-${index}`}
                 title={highlight.feedback}
-                className={cn("rounded-full px-3 py-1.5 text-sm font-semibold", getHighlightStyles(highlight.status))}
+                className={cn("rounded-[14px] px-3 py-1.5 text-sm font-semibold", getHighlightStyles(highlight.status))}
               >
                 {highlight.text}
               </span>
@@ -132,10 +132,10 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
           </p>
         </div>
 
-        <div className="rounded-3xl bg-vanilla-cream px-4 py-4">
+        <div className="rounded-[20px] bg-page px-4 py-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="space-y-1">
-              <p className="eyebrow text-xs text-sage-text">Advanced breakdown</p>
+              <p className="eyebrow text-xs text-slate-grey">Advanced breakdown</p>
               <p className="text-sm leading-6 text-iron-grey">
                 Open the phoneme grid to compare expected sounds with the live decode.
               </p>
@@ -151,9 +151,9 @@ export function FreedomAssessmentPanel({ transcript, assessment }: FreedomAssess
                 <div
                   key={`${phoneme.symbol}-${phoneme.expected}-${phoneme.heard}-${index}`}
                   className={cn(
-                    "rounded-3xl px-4 py-4",
+                    "rounded-[20px] px-4 py-4",
                     phoneme.status === "correct"
-                      ? "bg-yellow-green/25 text-hunter-green"
+                      ? "bg-yellow-green/25 text-carbon-black"
                       : "bg-blushed-brick text-bright-snow",
                   )}
                 >

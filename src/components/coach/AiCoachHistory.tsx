@@ -42,13 +42,13 @@ export function AiCoachHistory({ userId }: { userId: string }) {
 
   return (
     <div className="space-y-4">
-      <Card className="bg-hunter-green text-bright-snow">
+      <Card className="bg-white text-carbon-black">
         <div className="space-y-3">
-          <p className="eyebrow text-sm text-yellow-green">Coach history</p>
-          <h1 className="text-3xl font-semibold text-bright-snow sm:text-4xl lg:text-5xl">
+          <p className="eyebrow text-sm text-slate-grey">Coach history</p>
+          <h1 className="text-3xl font-semibold text-carbon-black sm:text-4xl lg:text-5xl">
             Saved conversations you can reopen anytime.
           </h1>
-          <p className="max-w-3xl text-base leading-7 text-bright-snow/84">
+          <p className="max-w-3xl text-base leading-7 text-iron-grey">
             Each saved thread stays local to this browser, so you can reopen a
             strong topic and continue speaking without rebuilding the whole flow.
           </p>
@@ -58,8 +58,8 @@ export function AiCoachHistory({ userId }: { userId: string }) {
       {sessions.length === 0 ? (
         <Card className="bg-white">
           <div className="space-y-3">
-            <p className="eyebrow text-sm text-sage-text">No saved sessions</p>
-            <h2 className="text-2xl font-semibold text-hunter-green">
+            <p className="eyebrow text-sm text-slate-grey">No saved sessions</p>
+            <h2 className="text-2xl font-semibold text-carbon-black">
               Start an AI Coach topic and it will appear here.
             </h2>
             <div>
@@ -75,10 +75,10 @@ export function AiCoachHistory({ userId }: { userId: string }) {
             <Card key={session.id} className="bg-white">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <p className="eyebrow text-xs text-sage-text">
+                  <p className="eyebrow text-xs text-slate-grey">
                     {session.replyMode === "target" ? "Targeted mode" : "Freedom mode"}
                   </p>
-                  <h2 className="text-2xl font-semibold text-hunter-green">
+                  <h2 className="text-2xl font-semibold text-carbon-black">
                     {session.topic}
                   </h2>
                   <p className="text-sm leading-6 text-iron-grey">

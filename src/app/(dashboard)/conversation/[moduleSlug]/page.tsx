@@ -55,11 +55,11 @@ export default async function ConversationModulePage({ params }: PageProps) {
         <Navbar current="conversation" />
         <ModuleProgress />
 
-        <div className="rounded-full bg-vanilla-cream px-4 py-3 text-sm text-iron-grey">
+        <div className="rounded-[14px] bg-page px-4 py-3 text-sm text-iron-grey">
           <div className="flex flex-wrap items-center gap-2">
             <span>Conversation track</span>
             <ChevronRight size={14} color="#adb5bd" />
-            <span className="font-medium text-hunter-green">
+            <span className="font-medium text-carbon-black">
               {conversationModule.title}
             </span>
           </div>

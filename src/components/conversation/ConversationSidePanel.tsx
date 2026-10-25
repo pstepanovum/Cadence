@@ -36,7 +36,7 @@ export function ConversationSidePanel({
           nextLabel={turnIndex + 1 >= moduleLength ? "Finish Module" : "Next Reply"}
         />
       ) : (
-        <div className="flex h-full min-h-[20rem] flex-col justify-center rounded-[2rem] bg-vanilla-cream px-5 py-5 text-center sm:min-h-[30rem] sm:px-6 sm:py-6">
+        <div className="flex h-full min-h-[20rem] flex-col justify-center rounded-[28px] bg-page px-5 py-5 text-center sm:min-h-[30rem] sm:px-6 sm:py-6">
           <CardTitle className="text-3xl">
             {phase === "intro"
               ? "Conversation feedback appears here."
