@@ -82,7 +82,7 @@ export function OptionRow<T extends string>({
                 selected && styles.optionSelected,
                 pressed && styles.optionPressed,
               ]}>
-              {selected ? <Check color={colors.lime} size={16} strokeWidth={3} /> : null}
+              {selected ? <Check color={colors.snow} size={16} strokeWidth={3} /> : null}
               <Text
                 maxFontSizeMultiplier={maxScale.control}
                 style={[styles.optionLabel, selected && styles.optionLabelSelected]}>
@@ -143,14 +143,15 @@ const styles = themed(() =>
     input: {
       minHeight: 52,
       borderRadius: radii.control,
-      backgroundColor: colors.white,
+      // A flat grey fill; the border is drawn only while focused (hunter).
+      backgroundColor: colors.platinum,
       paddingHorizontal: spacing.lg,
       paddingVertical: spacing.md,
       fontFamily: fonts.body,
       fontSize: 16,
       color: colors.carbon,
       borderWidth: 1.5,
-      borderColor: colors.alabaster,
+      borderColor: colors.platinum,
     },
     inputFocused: {
       borderColor: colors.hunter,
@@ -165,16 +166,13 @@ const styles = themed(() =>
       alignItems: "center",
       gap: spacing.xs,
       borderRadius: radii.tile,
-      backgroundColor: colors.white,
-      borderWidth: 1,
-      borderColor: colors.alabaster,
+      backgroundColor: colors.platinum,
       paddingHorizontal: spacing.lg,
       paddingVertical: spacing.sm,
       minHeight: TAP_TARGET,
     },
     optionSelected: {
       backgroundColor: colors.hunter,
-      borderColor: colors.hunter,
     },
     optionPressed: {
       opacity: 0.75,
@@ -182,16 +180,14 @@ const styles = themed(() =>
     optionLabel: {
       fontFamily: fonts.bodySemiBold,
       fontSize: type.callout,
-      color: colors.iron,
+      color: colors.carbon,
     },
     optionLabelSelected: {
       color: colors.snow,
     },
     collapsible: {
       borderRadius: radii.panel,
-      backgroundColor: colors.white,
-      borderWidth: 1,
-      borderColor: colors.platinum,
+      backgroundColor: colors.platinum,
       paddingHorizontal: spacing.lg,
     },
     collapsibleHeader: {

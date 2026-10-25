@@ -32,11 +32,10 @@ name: Cloud onboarding
 - tapOn:
     text: "Create account"
     optional: true
+# A new account moves straight on to Plus.
 - extendedWaitUntil:
-    visible: "You're signed in"
+    visible: "Practise with AI anywhere"
     timeout: 20000
-- tapOn: "Continue"
-- assertVisible: "Practise with AI anywhere"
 - scrollUntilVisible:
     element: "Monthly, .* a month"
 - assertVisible: "Yearly, 7-day free trial, then .* a year"

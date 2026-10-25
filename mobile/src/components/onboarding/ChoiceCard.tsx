@@ -63,7 +63,7 @@ const styles = themed(() =>
       borderRadius: radii.control,
       backgroundColor: colors.platinum,
     },
-    compact: { minHeight: TAP_TARGET + 4, paddingVertical: spacing.sm + 2 },
+    compact: { minHeight: TAP_TARGET, paddingVertical: spacing.sm },
     selected: { backgroundColor: colors.hunter },
     pressed: { opacity: 0.85 },
     icon: { width: 28, alignItems: "center" },

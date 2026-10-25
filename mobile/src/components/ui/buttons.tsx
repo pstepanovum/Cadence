@@ -18,7 +18,8 @@ export type ButtonVariant = "primary" | "secondary" | "tonal" | "danger" | "neut
 
 const buttonColors: Record<ButtonVariant, { bg: string; fg: string }> = themed(() => ({
   primary: { bg: colors.hunter, fg: colors.snow },
-  secondary: { bg: colors.yellowGreen, fg: colors.ink },
+  /** Secondary actions are filled grey, never yellow-green or outlined. */
+  secondary: { bg: colors.platinum, fg: colors.carbon },
   tonal: { bg: overlays.hunterTint, fg: colors.hunter },
   danger: { bg: colors.brick, fg: colors.snow },
   /** The quiet choice beside a primary button ("Not now"): filled grey, no stroke. */

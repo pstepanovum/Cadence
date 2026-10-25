@@ -5,7 +5,7 @@
 // src/components/onboarding/ draws it.
 import type { PracticeCadence, PracticeFocus } from "../lib/profile.ts";
 import { isCefrLevel, type CefrLevel } from "../platform/content-model.ts";
-import { DEFAULT_LEVEL, LEVELS_ADVANCED_FIRST, LEVEL_INFO, examLine } from "../platform/levels.ts";
+import { DEFAULT_LEVEL, LEVELS_ADVANCED_FIRST, LEVEL_INFO } from "../platform/levels.ts";
 import { DEFAULT_DAILY_GOAL, isDailyGoal, type DailyGoal } from "../engagement/today.ts";
 
 export const ONBOARDING_VERSION = 1;
@@ -24,14 +24,22 @@ export const LEARNING_GOALS: { value: LearningGoal; title: string; detail: strin
 
 /**
  * The self-check: all six levels, advanced first (Cadence is built for B2 to
- * C2 work), each with a line on what it means and its approximate IELTS and
- * TOEFL iBT equivalents. Not sure? The placement test decides.
+ * C2 work), each with its approximate IELTS and TOEFL iBT equivalents on one
+ * line, so all six fit an iPhone SE without scrolling. Not sure? The
+ * placement test decides; Settings > Level spells each level out.
  */
 export const SELF_CHECK_LEVELS: { value: CefrLevel; title: string; detail: string }[] = LEVELS_ADVANCED_FIRST.map((level) => ({
   value: level,
   title: `${level} · ${LEVEL_INFO[level].name}`,
-  detail: `${LEVEL_INFO[level].detail} ${examLine(level)}`,
+  detail: shortExamLine(level),
 }));
+
+/** "≈ IELTS 7.0–8.0 · TOEFL iBT 95–113": the exam equivalents in one short line. */
+export function shortExamLine(level: CefrLevel): string {
+  const info = LEVEL_INFO[level];
+  const range = (text: string) => text.replace(" to ", "–");
+  return `≈ ${[info.ielts ? `IELTS ${range(info.ielts)}` : null, `TOEFL iBT ${range(info.toefl)}`].filter(Boolean).join(" · ")}`;
+}
 
 export type PracticePlace = "own" | "cloud";
 

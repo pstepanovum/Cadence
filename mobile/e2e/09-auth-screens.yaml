@@ -56,12 +56,10 @@ name: Auth and setup screens
 # Tapping the page's heading closes the keyboard.
 - tapOn: "Create your free account"
 - tapOn: "Create account"
+# A new account moves straight on to Plus.
 - extendedWaitUntil:
-    visible: "You're signed in"
+    visible: "Practise with AI anywhere"
     timeout: 20000
-- takeScreenshot: 13-account-done
-- tapOn: "Continue"
-- assertVisible: "Practise with AI anywhere"
 - takeScreenshot: 14-paywall
 - tapOn: "Not now"
 - extendedWaitUntil:

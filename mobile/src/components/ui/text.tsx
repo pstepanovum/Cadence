@@ -1,5 +1,6 @@
 import { Link, type Href } from "expo-router";
 import { Pressable, StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
+import { haptics } from "@/lib/haptics";
 import { colors, fonts, maxScale, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 export function Title({
@@ -162,7 +163,11 @@ export function TextLink({
   const pressable = (
     <Pressable
       accessibilityRole="link"
-      onPress={onPress}
+      // With an href, expo-router's Link composes its own press after this one.
+      onPress={() => {
+        haptics.tap();
+        onPress?.();
+      }}
       hitSlop={{ left: spacing.sm, right: spacing.sm }}
       style={({ pressed }) => [styles.link, pressed && styles.linkPressed]}>
       <Text maxFontSizeMultiplier={maxScale.control} style={styles.linkLabel}>

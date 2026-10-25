@@ -174,6 +174,15 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     await advance();
   }
 
+  // An account made on the account step moves straight on to Plus when Plus
+  // comes next (worked out as the steps will be once signed in). As the last
+  // step it stays on "You're signed in", whose button finishes setup once the
+  // new account is in place.
+  function afterSigningIn() {
+    const next = nextPosition(position, onboardingSteps({ replay, cloudAvailable: isCloudConfigured, wantsPlacement, place: answers.place, signedIn: true, plus: account.plus }));
+    if (next) moveTo(next, 1);
+  }
+
   async function continueFromPlace() {
     if (answers.place === "cloud" && connection.mode !== "cloud") await connection.chooseCloud();
     await advance();
@@ -192,9 +201,9 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       break;
     case "goal":
       body = (
-        <View style={styles.section}>
+        <View style={[styles.section, compact && styles.sectionCompact]}>
           <StepHeading compact={compact} title="What brings you to Cadence?" detail="We'll start your practice there." />
-          <View accessibilityRole="radiogroup" style={styles.choices}>
+          <View accessibilityRole="radiogroup" style={[styles.choices, compact && styles.choicesCompact]}>
             {LEARNING_GOALS.map((goal) => (
               <ChoiceCard key={goal.value} compact={compact} title={goal.title} detail={goal.detail} selected={answers.goal === goal.value} onPress={() => update({ goal: goal.value })} />
             ))}
@@ -205,9 +214,9 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       break;
     case "level":
       body = (
-        <View style={styles.section}>
+        <View style={[styles.section, compact && styles.sectionCompact]}>
           <StepHeading compact={compact} title="How is your English now?" detail="A rough guess is fine." />
-          <View accessibilityRole="radiogroup" style={styles.choices}>
+          <View accessibilityRole="radiogroup" style={[styles.choices, compact && styles.choicesCompact]}>
             {SELF_CHECK_LEVELS.map((level) => (
               <ChoiceCard key={level.value} compact={compact} title={level.title} detail={level.detail} selected={answers.level === level.value} onPress={() => update({ level: level.value })} />
             ))}
@@ -225,7 +234,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       break;
     case "placement":
       body = (
-        <View style={styles.section}>
+        <View style={[styles.section, compact && styles.sectionCompact]}>
           <StepHeading compact={compact} title="Placement test" detail="Adaptive: 12 to 24 questions, about five minutes." />
           <PlacementTest result={answers.placementLevel} onDone={(outcome) => update({ placementLevel: outcome.level })} />
         </View>
@@ -234,9 +243,9 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       break;
     case "minutes":
       body = (
-        <View style={styles.section}>
+        <View style={[styles.section, compact && styles.sectionCompact]}>
           <StepHeading compact={compact} title="Your daily goal" detail="Minutes of practice a day. Change it any time." />
-          <View accessibilityRole="radiogroup" style={styles.choices}>
+          <View accessibilityRole="radiogroup" style={[styles.choices, compact && styles.choicesCompact]}>
             {DAILY_GOAL_OPTIONS.map((minutes) => (
               <ChoiceCard key={minutes} compact={compact} title={`${minutes} minutes`} detail={MINUTES_DETAIL[minutes]} selected={answers.minutes === minutes} onPress={() => update({ minutes })} />
             ))}
@@ -246,7 +255,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       break;
     case "reminders":
       body = (
-        <View style={styles.section}>
+        <View style={[styles.section, compact && styles.sectionCompact]}>
           <ArtHeader art="reminders" />
           <StepHeading compact={compact} title="When should we remind you?" detail="One short reminder a day, skipped once your goal is met." />
           <TimePicker value={answers.reminderTime} onChange={(reminderTime) => update({ reminderTime })} />
@@ -263,17 +272,9 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       break;
     case "where":
       body = (
-        <View style={styles.section}>
+        <View style={[styles.section, compact && styles.sectionCompact]}>
           <StepHeading compact={compact} title="Where should Cadence run?" detail="Lessons, quizzes and flashcards work on this phone either way." />
-          <View accessibilityRole="radiogroup" style={styles.choices}>
-            <ChoiceCard
-              compact={compact}
-              icon={(selected) => <Laptop color={selected ? colors.snow : colors.hunter} size={22} />}
-              title="Connect your own Cadence server"
-              detail="Cadence on your computer scores your voice and runs the coach over your home Wi-Fi. Free and open source."
-              selected={answers.place === "own"}
-              onPress={() => update({ place: "own" })}
-            />
+          <View accessibilityRole="radiogroup" style={[styles.choices, compact && styles.choicesCompact]}>
             {isCloudConfigured ? (
               <ChoiceCard
                 compact={compact}
@@ -284,6 +285,14 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
                 onPress={() => update({ place: "cloud" })}
               />
             ) : null}
+            <ChoiceCard
+              compact={compact}
+              icon={(selected) => <Laptop color={selected ? colors.snow : colors.hunter} size={22} />}
+              title="Connect your own Cadence server"
+              detail="Cadence on your computer scores your voice and runs the coach over your home Wi-Fi. Free and open source."
+              selected={answers.place === "own"}
+              onPress={() => update({ place: "own" })}
+            />
           </View>
           {answers.place === "own" ? (
             <View style={styles.ownServer}>
@@ -306,7 +315,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "account": {
       const optional = accountOptional(answers.place);
       body = (
-        <View style={styles.section}>
+        <View style={[styles.section, compact && styles.sectionCompact]}>
           <StepHeading
             compact={compact}
             title={signedIn ? "You're signed in" : optional ? "Keep your progress in sync" : "Create your free account"}
@@ -318,6 +327,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
             afterAccount={async ({ newsletter: news }) => {
               setWantsNews(news);
               if (connection.mode !== "cloud") await connection.chooseCloud({ keepServer: true });
+              afterSigningIn();
             }}
           />
         </View>
@@ -375,7 +385,14 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
 /** The quieter second choice under the primary button: text only, a full 44 pt target. */
 function QuietButton({ label, onPress }: { label: string; onPress: () => void }) {
   return (
-    <Pressable accessibilityRole="button" accessibilityLabel={label} onPress={onPress} style={({ pressed }) => [styles.quiet, pressed && styles.quietPressed]}>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      onPress={() => {
+        haptics.tap();
+        onPress();
+      }}
+      style={({ pressed }) => [styles.quiet, pressed && styles.quietPressed]}>
       <Text maxFontSizeMultiplier={maxScale.control} style={styles.quietLabel}>
         {label}
       </Text>
@@ -436,7 +453,10 @@ const styles = themed(() =>
     body: { paddingTop: spacing.lg },
     transition: { flexGrow: 1 },
     section: { gap: spacing.xl },
+    // Short phones: six answers, the heading and the footer still fit an iPhone SE.
+    sectionCompact: { gap: spacing.lg },
     choices: { gap: spacing.sm },
+    choicesCompact: { gap: spacing.xs + spacing.xxs },
     ownServer: { gap: spacing.md },
     artHeader: { alignItems: "center" },
     slide: { flexGrow: 1, justifyContent: "center", gap: spacing.xl },

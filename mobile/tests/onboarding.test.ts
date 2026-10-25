@@ -140,7 +140,7 @@ describe("self-check levels", () => {
       SELF_CHECK_LEVELS.map((level) => level.value),
       ["C2", "C1", "B2", "B1", "A2", "A1"],
     );
-    for (const level of SELF_CHECK_LEVELS) assert.match(level.detail, /TOEFL iBT .+\(approx\.\)$/);
-    assert.match(SELF_CHECK_LEVELS[1].detail, /IELTS 7\.0 to 8\.0/);
+    for (const level of SELF_CHECK_LEVELS) assert.match(level.detail, /^≈ .*TOEFL iBT \S+/);
+    assert.equal(SELF_CHECK_LEVELS[1].detail, "≈ IELTS 7.0–8.0 · TOEFL iBT 95–113");
   });
 });

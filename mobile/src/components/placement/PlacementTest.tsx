@@ -21,7 +21,6 @@ import { PLACEMENT_QUESTIONS } from "@/onboarding/placement";
 import { gradeExercise, type CefrLevel, type Exercise, type ExerciseAnswer } from "@/platform/content-model";
 import { LEVEL_INFO, examLine } from "@/platform/levels";
 import {
-  ADAPTIVE,
   adaptiveResult,
   bankFromExercises,
   decodeSeen,
@@ -103,7 +102,7 @@ export function PlacementTest({ onDone, result, refId = "placement.onboarding" }
 
   return (
     <View style={styles.root}>
-      <Body size={type.footnote} tone="muted">{`Question ${responses.length + 1} · ${ADAPTIVE.minItems} to ${ADAPTIVE.maxItems} in all`}</Body>
+      <Body size={type.footnote} tone="muted">{`Question ${responses.length + 1}`}</Body>
       <ExerciseView
         key={exercise.id}
         exercise={exercise}
