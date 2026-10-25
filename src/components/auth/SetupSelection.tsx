@@ -140,7 +140,7 @@ export function SetupSelection({
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
         <Button
-          className="min-h-[52px] w-full rounded-[14px] text-base"
+          className="w-full"
           onClick={() => void handleModeSelection(chosen)}
           disabled={pendingMode !== null}
         >

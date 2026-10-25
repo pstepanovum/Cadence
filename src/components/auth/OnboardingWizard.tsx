@@ -116,7 +116,7 @@ export function OnboardingWizard() {
 
           {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-          <Button className="min-h-[52px] w-full rounded-[14px] text-base" type="submit" disabled={isSaving}>
+          <Button className="w-full" type="submit" disabled={isSaving}>
             {isSaving ? "Saving…" : "Start practising"}
             <ArrowRight size={16} color="currentColor" />
           </Button>

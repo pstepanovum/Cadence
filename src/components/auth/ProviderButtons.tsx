@@ -27,7 +27,7 @@ export function AppleLogo({ className = "h-[18px] w-[18px]" }: { className?: str
 }
 
 const BASE =
-  "inline-flex min-h-[50px] w-full cursor-pointer items-center justify-center gap-2.5 rounded-[14px] px-5 text-base font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-green disabled:cursor-not-allowed disabled:opacity-60";
+  "inline-flex min-h-12 w-full cursor-pointer items-center justify-center gap-2.5 rounded-full px-5 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-green disabled:cursor-not-allowed disabled:opacity-60";
 
 export function ProviderButton({
   method,

@@ -119,7 +119,7 @@ export function ForgotPasswordForm() {
         {state === "sent" ? <AuthNotice tone="success">{RESET_SENT_MESSAGE}</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="min-h-[52px] w-full rounded-[14px] text-base" type="submit" disabled={state === "sending" || wait > 0}>
+        <Button className="w-full" type="submit" disabled={state === "sending" || wait > 0}>
           {state === "sending"
             ? "Sending…"
             : wait > 0

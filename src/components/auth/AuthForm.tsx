@@ -124,12 +124,12 @@ export function AuthForm({ mode }: AuthFormProps) {
 
   return (
     <AuthCard
-      title={isLogin ? "Welcome back" : "Create your account"}
-      description={isLogin ? "Sign in to keep practising." : "Free. Your streak follows you to every device."}
+      title={isLogin ? "Sign in to Cadence" : "Create your account"}
+      description={isLogin ? "Your progress, streak and plan follow your account." : "Free. Your streak and lesson stats follow you to every device."}
       footer={
         <>
           {isLogin ? "New to Cadence?" : "Already have an account?"}{" "}
-          <Link href={isLogin ? "/signup" : "/login"} className="font-semibold text-hunter-green underline-offset-2 hover:underline">
+          <Link href={isLogin ? "/signup" : "/login"} className="font-semibold text-sage-text underline-offset-2 hover:underline">
             {isLogin ? "Create an account" : "Sign in"}
           </Link>
         </>
@@ -175,7 +175,14 @@ export function AuthForm({ mode }: AuthFormProps) {
         </div>
 
         <div>
-          <FieldLabel htmlFor={`${id}-password`}>Password</FieldLabel>
+          <div className="flex items-baseline justify-between">
+            <FieldLabel htmlFor={`${id}-password`}>Password</FieldLabel>
+            {isLogin ? (
+              <Link href="/forgot-password" className="text-sm font-semibold text-sage-text underline-offset-2 hover:underline">
+                Forgot it?
+              </Link>
+            ) : null}
+          </div>
           <Input
             id={`${id}-password`}
             type="password"
@@ -191,31 +198,23 @@ export function AuthForm({ mode }: AuthFormProps) {
         </div>
 
         {!isLogin ? (
-          <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-iron-grey">
+          <label className="flex cursor-pointer items-start gap-3 rounded-3xl bg-vanilla-cream px-4 py-3 text-sm leading-6 text-iron-grey">
             <input
               type="checkbox"
               checked={newsletter}
               onChange={(event) => setNewsletter(event.target.checked)}
-              className="mt-1 h-4 w-4 shrink-0 accent-[var(--hunter-green)]"
+              className="mt-1 h-4 w-4 shrink-0 accent-[var(--sage-green)]"
             />
-            <span>Send me product news and offers</span>
+            <span>Email me product updates and occasional offers. Unsubscribe any time.</span>
           </label>
         ) : null}
 
         {message ? <AuthNotice tone="success">{message}</AuthNotice> : null}
         {error ? <AuthNotice tone="error">{error}</AuthNotice> : null}
 
-        <Button className="min-h-[52px] w-full rounded-[14px] text-base" type="submit" disabled={busy !== null}>
+        <Button className="w-full" type="submit" disabled={busy !== null}>
           {busy === "email" ? (isLogin ? "Signing in…" : "Creating account…") : isLogin ? "Sign in" : "Create account"}
         </Button>
-
-        {isLogin ? (
-          <p className="text-center">
-            <Link href="/forgot-password" className="text-sm font-semibold text-hunter-green underline-offset-2 hover:underline">
-              Forgot your password?
-            </Link>
-          </p>
-        ) : null}
 
         {!isLogin ? (
           <p className="text-center text-xs leading-5 text-slate-grey">

@@ -58,7 +58,7 @@ export function NewsletterForm({ source, tone = "default", className }: Newslett
       <label htmlFor={`${id}-email`} className={cn("block text-sm font-semibold", onDark ? "text-bright-snow" : "text-hunter-green")}>
         Product updates and occasional offers
       </label>
-      <div className="flex flex-col gap-2 sm:flex-row">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
         <input
           id={`${id}-email`}
           type="email"
@@ -71,7 +71,7 @@ export function NewsletterForm({ source, tone = "default", className }: Newslett
           aria-invalid={error ? true : undefined}
           aria-describedby={`${id}-note`}
           className={cn(
-            "min-h-12 w-full min-w-0 flex-1 rounded-full px-4 py-3 text-sm placeholder:text-slate-grey",
+            "h-12 w-full min-w-0 flex-1 rounded-full px-4 text-sm leading-none placeholder:text-slate-grey",
             onDark ? "bg-white/90 text-[#212529] on-color" : "bg-white text-hunter-green ring-1 ring-alabaster-grey",
           )}
         />
@@ -79,7 +79,7 @@ export function NewsletterForm({ source, tone = "default", className }: Newslett
           type="submit"
           disabled={state === "sending"}
           className={cn(
-            "min-h-12 shrink-0 cursor-pointer rounded-full px-5 text-sm font-semibold disabled:cursor-wait disabled:opacity-70",
+            "h-12 shrink-0 cursor-pointer rounded-full px-5 text-sm font-semibold disabled:cursor-wait disabled:opacity-70",
             onDark ? "bg-yellow-green text-hunter-green" : "bg-hunter-green text-white",
           )}
         >

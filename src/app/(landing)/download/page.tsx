@@ -118,7 +118,7 @@ export default async function DownloadPage() {
 
         {/* ── iPhone ── */}
         <section className="mx-auto flex w-full max-w-3xl flex-col gap-4 rounded-3xl bg-platinum p-8 sm:flex-row sm:items-center">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-hunter-green">
             <Image src="/icon/apple.svg" alt="" width={28} height={28} className="h-7 w-7 object-contain" />
           </div>
           <div className="flex-1">
@@ -148,17 +148,17 @@ export default async function DownloadPage() {
             >
               View on GitHub
             </Link>{" "}
-            to build from source or contribute.
+            to build from source or contribute.{" "}
+            <Link
+              href={RELEASES}
+              className="inline-flex items-center gap-0.5 whitespace-nowrap text-iron-grey underline underline-offset-4 hover:text-hunter-green"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              All releases
+              <ArrowUpRight size={14} color="currentColor" aria-hidden="true" />
+            </Link>
           </p>
-          <Link
-            href={RELEASES}
-            className="inline-flex items-center gap-1 text-xs text-iron-grey/70 hover:text-iron-grey transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="All releases and changelogs"
-          >
-            <ArrowUpRight size={14} color="currentColor" />
-          </Link>
         </section>
 
         <Footer />
