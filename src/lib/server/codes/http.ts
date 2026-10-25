@@ -21,8 +21,9 @@
 // error_description, Cadence's own pages read message.
 import { isAdminAuthorized } from "../admin-auth";
 import { firebaseProjectId } from "../env";
-import { BodyTooLargeError, json, readJsonObject } from "../http";
+import { BodyTooLargeError, clientIp, json, readJsonObject } from "../http";
 import { cloudIdentity } from "../identity";
+import { LIMITS, hitRateLimit } from "../rate-limit";
 import { describeGrantDuration, parseCreateCodeInput, redeemFailureMessage } from "./logic";
 import { createCode, listCodes, previewCode, redeemCode, revokeRedemption, setCodeDisabled } from "./store";
 
@@ -93,11 +94,19 @@ export async function handleAdminCodesPatch(request: Request): Promise<Response>
   return error(400, "invalid_request", 'action is "disable", "enable", or "revoke".');
 }
 
-/** The signed-in cloud account, or the response to send. */
+const TOO_MANY = "Too many tries. Try again in an hour.";
+
+/**
+ * The signed-in cloud account, or the response to send. Each call also counts
+ * against its address (thirty an hour, looking up and redeeming together), on
+ * top of the ten an hour per account the store counts: accounts are free to
+ * make, so a per-account limit alone does not stop guessing.
+ */
 async function account(request: Request): Promise<{ uid: string; email: string | null } | Response> {
   if (!firebaseProjectId()) return error(503, "cloud_unavailable", "Redeem codes at cadence.pstepanov.dev/redeem.");
   const identity = await cloudIdentity(request);
   if (!identity) return error(401, "login_required", "Sign in to redeem a code.");
+  if (!(await hitRateLimit(LIMITS.redeemIpHour, clientIp(request))).allowed) return error(429, "rate_limited", TOO_MANY);
   return { uid: identity.uid, email: identity.email };
 }
 
@@ -106,7 +115,7 @@ export async function handleRedeemGet(request: Request): Promise<Response> {
   if (who instanceof Response) return who;
   const result = await previewCode(who.uid, new URL(request.url).searchParams.get("code"));
   if (result.ok) return json({ durationDays: result.durationDays, duration: describeGrantDuration(result.durationDays) });
-  if (result.reason === "rate_limited") return error(429, "rate_limited", "Too many tries. Try again in an hour.");
+  if (result.reason === "rate_limited") return error(429, "rate_limited", TOO_MANY);
   return error(400, "invalid_code", redeemFailureMessage(result.reason));
 }
 
@@ -120,7 +129,7 @@ export async function handleRedeemPost(request: Request): Promise<Response> {
   if (result.ok) {
     return json({ redeemed: true, durationDays: result.durationDays, duration: describeGrantDuration(result.durationDays), expiresAt: result.expiresAt });
   }
-  if (result.reason === "rate_limited") return error(429, "rate_limited", "Too many tries. Try again in an hour.");
+  if (result.reason === "rate_limited") return error(429, "rate_limited", TOO_MANY);
   if (result.reason === "account_deleted") return error(401, "login_required", "Sign in again to redeem a code.");
   return error(400, "invalid_code", redeemFailureMessage(result.reason));
 }

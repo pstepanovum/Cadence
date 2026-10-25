@@ -241,7 +241,7 @@ in the change that brings it in.
   source, `detailPurgeAt` is set to 90 days after it ends. Codes are made on
   the owner's dashboard (pstepanov.dev/dashboard/apps/cadence) through
   `/api/admin/codes` with `ADMIN_SECRET`, and redeemed only on the website's
-  `/redeem` (`/api/codes/redeem`, signed in, ten tries an hour). The iPhone
+  `/redeem` (`/api/codes/redeem`, signed in, ten tries an hour per account and thirty per address). The iPhone
   app never mentions or takes codes.
 - Clients never write entitlement. They read `plus` from `GET /api/me` and,
   on iOS, use RevenueCat's customer info only to update the UI immediately

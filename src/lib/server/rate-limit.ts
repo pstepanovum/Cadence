@@ -110,4 +110,6 @@ export const LIMITS = {
   supportEmailDay: { name: "support-email-day", limit: 10, windowSeconds: 86400 },
   redeemUserHour: { name: "redeem-user-hour", limit: 10, windowSeconds: 3600 },
   redeemPreviewUserHour: { name: "redeem-preview-user-hour", limit: 10, windowSeconds: 3600 },
+  /** Looking up and redeeming together, per address, so a stack of fresh accounts cannot guess codes ten at a time each. */
+  redeemIpHour: { name: "redeem-ip-hour", limit: 30, windowSeconds: 3600 },
 } as const satisfies Record<string, RateLimitRule>;

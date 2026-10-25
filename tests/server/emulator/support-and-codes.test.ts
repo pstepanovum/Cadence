@@ -292,6 +292,21 @@ describe("redeeming a code", { skip }, () => {
     assert.deepEqual(await redeemCode(uid, "CADENCE-NOPE-ZZZZ"), { ok: false, reason: "rate_limited" });
   });
 
+  it("allows thirty tries an hour per address, across accounts", async () => {
+    const headers = { "x-forwarded-for": "198.51.100.9" };
+    const accounts = await Promise.all([signUp(), signUp(), signUp(), signUp()]);
+    let tries = 0;
+    for (const { idToken } of accounts) {
+      for (let i = 0; i < 8 && tries < 30; i += 1, tries += 1) {
+        const response = await handleRedeemPost(post("/api/codes/redeem", { code: `CADENCE-NOPE-${String(tries).padStart(4, "2")}` }, { ...headers, Authorization: `Bearer ${idToken}` }));
+        assert.equal(response.status, 400);
+      }
+    }
+    const fresh = await signUp();
+    const refused = await handleRedeemPost(post("/api/codes/redeem", { code: "CADENCE-NOPE-ZZZZ" }, { ...headers, Authorization: `Bearer ${fresh.idToken}` }));
+    assert.equal(refused.status, 429);
+  });
+
   it("removes redemptions with the account", async () => {
     const code = await makeCode({ maxRedemptions: 2 });
     const { uid } = await signUp();
