@@ -24,7 +24,7 @@ describe("security headers", () => {
     assert.match(csp, /frame-ancestors 'none'/);
     assert.match(csp, /object-src 'none'/);
     assert.match(csp, /media-src 'self' blob:/);
-    for (const host of ["identitytoolkit.googleapis.com", "securetoken.googleapis.com", "firebaseappcheck.googleapis.com", "www.google.com/recaptcha/"]) {
+    for (const host of ["identitytoolkit.googleapis.com", "securetoken.googleapis.com", "firebaseappcheck.googleapis.com", "www.google.com/recaptcha/", "apis.google.com"]) {
       assert.ok(csp.includes(`https://${host}`), host);
     }
     assert.doesNotMatch(csp, /unsafe-eval/);

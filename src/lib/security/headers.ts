@@ -13,7 +13,7 @@ export const STATIC_SECURITY_HEADERS: ReadonlyArray<{ key: string; value: string
   { key: "Permissions-Policy", value: "microphone=(self), camera=(), geolocation=(), payment=(), usb=(), interest-cohort=()" },
 ];
 
-/** Google endpoints the browser SDKs call: Auth, App Check and reCAPTCHA Enterprise. */
+/** Google endpoints the browser SDKs call: Auth, App Check, reCAPTCHA Enterprise and the Google API loader. */
 const FIREBASE_CONNECT = [
   "https://identitytoolkit.googleapis.com",
   "https://securetoken.googleapis.com",
@@ -22,6 +22,9 @@ const FIREBASE_CONNECT = [
   "https://firebaseinstallations.googleapis.com",
   "https://www.google.com/recaptcha/",
   "https://recaptcha.google.com/recaptcha/",
+  // The Google API loader the Auth SDK pulls in for popup and redirect sign-in
+  // pings this host once it has loaded.
+  "https://apis.google.com",
 ];
 
 const RECAPTCHA_SCRIPTS = ["https://www.google.com/recaptcha/", "https://www.gstatic.com/recaptcha/"];

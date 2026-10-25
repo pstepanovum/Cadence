@@ -48,7 +48,8 @@ test("landing", async ({ page, checkPage }) => {
 test("local mode with no account", async ({ page, checkPage }) => {
   await page.goto("/setup");
   await checkPage("setup");
-  await page.getByRole("button", { name: "Continue locally" }).click();
+  await page.getByRole("radio", { name: /Use Cadence locally/ }).check();
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
   await page.waitForURL(/\/dashboard/);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await checkPage("dashboard-local");
@@ -93,6 +94,8 @@ test("sign up and sign in", async ({ page, browser, checkPage, consoleErrors }) 
 test("a grammar lesson and its practice", async ({ page, checkPage }) => {
   await page.goto("/grammar");
   await checkPage("grammar");
+  // The browser opens at the learner's level (B2 by default); this point is B1.
+  await page.getByRole("radio", { name: "B1", exact: true }).check();
   await page.getByRole("link", { name: /As \.\.\. as/ }).click();
   await expect(page.getByRole("heading", { level: 1, name: "As ... as" })).toBeVisible();
   await checkPage("grammar-lesson");

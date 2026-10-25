@@ -49,6 +49,9 @@ export const test = base.extend<Fixtures>({
     await provide(async (name, page = defaultPage) => {
       await page.waitForLoadState("load");
       await page.evaluate(() => document.fonts.ready.then(() => undefined));
+      // After a client-side navigation the new page's title is streamed in a
+      // moment after its content; axe would otherwise report it missing.
+      await expect(page, `${name}: document title`).toHaveTitle(/\S/);
       const { scrollWidth, viewport } = await page.evaluate(() => ({
         scrollWidth: document.documentElement.scrollWidth,
         viewport: window.innerWidth,
