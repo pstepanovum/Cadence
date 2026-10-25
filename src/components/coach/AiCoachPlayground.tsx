@@ -26,6 +26,7 @@ import {
 import type { PronunciationAssessment } from "@/lib/pronunciation";
 import { cn } from "@/lib/utils";
 import { aiErrorText, cloudFetch } from "@/hooks/cloud-fetch";
+import { currentLevel } from "@/components/levels/level-store";
 
 interface EngineStatusPayload {
   ready?: boolean;
@@ -491,7 +492,8 @@ export function AiCoachPlayground({
       const response = await cloudFetch("/api/ai-coach", { ai: true,
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        // The coach pitches its English to the learner's current level (Account > Level).
+        body: JSON.stringify({ ...payload, level: currentLevel() }),
       });
 
       const data = (await response.json().catch(() => null)) as {

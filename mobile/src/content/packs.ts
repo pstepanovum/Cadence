@@ -1,6 +1,6 @@
 // Content packs on the phone (docs/PLATFORM.md, section 3.3).
 //
-// `sounds` and `core-a1` to `core-b2` ship inside the app as assets
+// `sounds`, `placement` and `core-a1` to `core-b2` ship inside the app as assets
 // (bundled.generated.ts); `core-c1`, `core-c2` and newer versions of any pack
 // are downloaded on demand into the documents directory, checked against the
 // manifest's SHA-256 sums, and can be removed again from Settings. A pack is

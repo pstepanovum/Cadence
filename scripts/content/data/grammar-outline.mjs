@@ -123,6 +123,10 @@ export const OUTLINE = {
     ["its-time-and-would-rather", "conditionals", "It's time, would rather", "past forms for present wishes and preferences"],
     ["emphatic-do", "emphasis", "Emphatic do", "I do like it, He did call: stressing that something is true"],
     ["the-more-the-better", "comparison", "The more ..., the better", "double comparatives for things that change together"],
+    ["advanced-linkers-for-essays", "linking", "Linkers for essays", "furthermore, moreover, nevertheless, on the other hand, in addition: linking sentences and paragraphs in formal writing"],
+    ["linking-cause-and-effect", "linking", "Cause and effect", "due to, owing to, as a result of, consequently, therefore, which led to: explaining causes and results"],
+    ["describing-trends-and-data", "comparison", "Describing trends and data", "rose sharply, a slight decline, peaked at, twice as many as, the proportion of: reporting figures and charts"],
+    ["likelihood-expressions", "modals", "Likelihood", "be likely to, be bound to, be unlikely to, there is a good chance that: how probable something is"],
   ],
   C1: [
     ["inversion-after-negative-adverbials", "emphasis", "Inversion after negative adverbials", "Never have I..., Not only did she..., Rarely do we..."],
@@ -149,6 +153,12 @@ export const OUTLINE = {
     ["were-to-and-should-conditionals", "conditionals", "Were to and should in conditionals", "unlikely future events"],
     ["collective-nouns-and-agreement", "nouns-pronouns", "Collective nouns and agreement", "the team is or are, a number of, the majority"],
     ["the-reason-why-the-way-that", "emphasis", "The reason why, the way that", "noun phrases that focus on reasons and manner"],
+    ["inversion-after-only-and-not-until", "emphasis", "Inversion after only and not until", "Only then did..., Only by working..., Not until later did..., Only when ... did ..."],
+    ["causatives-advanced", "passive", "Causatives in depth", "have someone do, get someone to do, make and let someone do, be made to do, get something done by"],
+    ["cohesion-reference-and-summary-nouns", "linking", "Cohesion with reference and summary nouns", "this approach, such a view, the former and the latter, this trend: pointing back to ideas across sentences"],
+    ["academic-register-impersonal", "emphasis", "Impersonal academic style", "impersonal it and there, passive and noun-based style, avoiding I and you in formal writing"],
+    ["modal-perfects-advanced", "modals", "Would have, may well have, needn't have", "would have, may well have, could hardly have, needn't have: nuanced speculation and judgement about the past"],
+    ["reporting-and-citing-sources", "reported-speech", "Reporting sources", "X argues that, according to, as Y points out, it has been suggested that: citing and reporting ideas in essays"],
   ],
   C2: [
     ["inversion-with-so-and-such", "emphasis", "Inversion with so and such", "So great was the demand that..., Such was..."],
@@ -167,6 +177,12 @@ export const OUTLINE = {
     ["regrets-and-hypothetical-past", "conditionals", "Regrets and the hypothetical past", "if only I had, would that, I'd sooner you hadn't"],
     ["subtle-quantifiers", "articles-determiners", "Subtle quantifiers", "many a, the odd, a good few, nowhere near"],
     ["register-shifts", "emphasis", "Formal and informal register", "the same idea in formal and informal English"],
+    ["mixed-inverted-conditionals", "conditionals", "Mixed and inverted conditionals", "Had he taken the job, he would now be...; Were it not for..., we would have...: mixing times with inversion"],
+    ["hedging-and-boosting", "linking", "Hedging and boosting", "to some extent, arguably, it is widely accepted, undoubtedly, by no means: calibrating how strongly a claim is made"],
+    ["verbless-and-reduced-clauses", "clauses", "Verbless and reduced clauses", "Though tired, she...; If necessary, ...; When in doubt, ...; Once inside, ...: clauses with the verb left out"],
+    ["academic-nominal-style", "clauses", "Dense nominal style", "the failure to act, a growing reluctance to, a reduction in: turning verbs into nouns with the right prepositions in academic writing"],
+    ["lest-and-mandative-subjunctive", "verb-patterns", "Lest and the mandative subjunctive", "lest, it is essential that he be, the demand that it not be, and should as the British alternative"],
+    ["intensifying-collocations", "adjectives-adverbs", "Intensifying collocations", "bitterly disappointed, highly unlikely, deeply rooted, utterly convinced, painfully aware: adverbs that collocate with adjectives"],
   ],
 };
 

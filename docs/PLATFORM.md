@@ -45,7 +45,8 @@ Pure TypeScript shared by every client lives in two byte-identical copies:
 | `src/lib/platform/vocal-tract/*` | `mobile/src/platform/vocal-tract/*` | the mouth-map model (section 13) |
 | `src/lib/platform/srs.ts` | `mobile/src/platform/srs.ts` | the trimmed SM-2 (`review` with again, hard, good and easy, `planSession`, `summarizeDeck`); `mobile/src/games/srs.ts` and the web's `src/components/learn-hub/srs.ts` re-export it |
 | `src/lib/platform/daily-plan.ts` | `mobile/src/platform/daily-plan.ts` | `buildDailyPlan`: today's 10 to 15 minutes (section 7) |
-| `src/lib/platform/placement.ts` | `mobile/src/platform/placement.ts` | `writtenLevel`, `writtenScore`, `writtenConfidence`, `combineLevels` (section 7) |
+| `src/lib/platform/placement.ts` | `mobile/src/platform/placement.ts` | the adaptive test (`nextPlacementItem`, `placementDone`, `estimateAbility`, `adaptiveResult`), the seen-items encoding (`encodeSeen`, `decodeSeen`, `mergeSeen`), and the older `writtenLevel`, `writtenScore`, `writtenConfidence`, `combineLevels` (section 7) |
+| `src/lib/platform/levels.ts` | `mobile/src/platform/levels.ts` | `LEVEL_INFO` (description and approximate IELTS and TOEFL iBT per level), `LevelPrefs` (overall and per-skill levels), `parseLevelPrefs`, `levelFor`, `withLevel`, `newerLevelPrefs`, `prefsFromPlacement` (section 7.1) |
 
 Rules, enforced by `tests/platform/drift.test.ts`:
 
@@ -97,7 +98,7 @@ both forms):
 
 | Kind | Fields | Answer | Correct when |
 | --- | --- | --- | --- |
-| `multiple_choice` | `question`, `options[2..6]`, `answer` (index) | `choice` | index matches |
+| `multiple_choice` | `passage?` (reading items, at most 480 characters, shown above the question), `question`, `options[2..6]`, `answer` (index) | `choice` | index matches |
 | `matching` | `pairs[2..8]` of `left`/`right` | `mapping[i]` = chosen right index | all pairs; partial score per pair |
 | `gap_fill` | `text` with `___` per gap, `answers[gap][]`, `bank?` | `gaps[]` | every gap matches an accepted answer; partial score per gap |
 | `sentence_building` | `answer` tokens in order (3-16), `alternatives?`, `distractors?` | `tokens[]` | equals the answer or an alternative |
@@ -141,6 +142,8 @@ public/packs/<packId>/v<version>/audio/<sha256-16>.m4a     pre-generated audio
 ```
 
 - Packs: `sounds` (articulation targets, minimal pairs, sounds library audio),
+  `placement` (the placement test's bank, section 7; exercises only, never
+  used by quizzes, lookups or the MCP tools, so a retake meets fresh items),
   `core-a1` … `core-c2` (topics, grammar points, lessons, exercises,
   flashcards, scenarios for that level).
 - `manifest.json` lists every file with its SHA-256 and size. `version` is an
@@ -151,7 +154,7 @@ public/packs/<packId>/v<version>/audio/<sha256-16>.m4a     pre-generated audio
   (`CONTENT_MODEL_VERSION`) is the schema. `canReadPack` skips any pack the app
   does not understand rather than half-reading it; `packsToUpdate` picks the
   ones with a newer version.
-- Mobile bundles `sounds`, `core-a1` … `core-b2` in the binary and downloads
+- Mobile bundles `sounds`, `placement`, `core-a1` … `core-b2` in the binary and downloads
   `core-c1`, `core-c2` and newer versions on demand into the documents
   directory (the "offline content packs" setting lists them with sizes and a
   remove button). Desktop bundles all packs in the standalone build. The web
@@ -170,12 +173,18 @@ Size budgets are in section 16.
    Gemini (`GEMINI_API_KEY` read from `~/.config/pstepanov/gemini.env`, never
    printed), in our own words, against a fixed outline of grammar points per
    level.
-2. `tatoeba.mjs` pulls English sentences from the Tatoeba export (CC BY 2.0
+2. `placement.mjs` drafts the placement bank (section 7) per level in seven
+   item types, puts it through the same blind check (`lib/blind-check.mjs`,
+   shared with `check.mjs`) and a level check (a second model rates each
+   item's CEFR level; more than one level away from its band is dropped),
+   into `content/placement/<level>.json`.
+3. `tatoeba.mjs` pulls English sentences from the Tatoeba export (CC BY 2.0
    FR), keeps id and author, and attaches them as examples where a grammar
    point matches.
-3. `validate.mjs` runs section 3.2. `build.mjs` writes the pack, hashes files,
-   bumps the version only when something changed.
-4. `audio.mjs` synthesizes missing audio (owner runs it; it costs money).
+4. `validate.mjs` runs section 3.2, plus the placement coverage (at least 60
+   items and all seven types per level). `build.mjs` writes the pack, hashes
+   files, bumps the version only when something changed.
+5. `audio.mjs` synthesizes missing audio (owner runs it; it costs money).
 
 ### 3.5 Sources and credit
 
@@ -253,7 +262,7 @@ reads.
 
 | Path | Who | Contents | Reads |
 | --- | --- | --- | --- |
-| `users/{uid}` | all | profile (existing fields), `plus`, `plusSources`, `stripeCustomerId`, `rcAppUserId`, `detailPurgeAt?` | 1 per session |
+| `users/{uid}` | all | profile (existing fields, plus `levels`: the `LevelPrefs` of section 7.1, and `placementSeen`: the compact seen-items string, under 1 KB), `plus`, `plusSources`, `stripeCustomerId`, `rcAppUserId`, `detailPurgeAt?` | 1 per session |
 | `users/{uid}/progress/summary` | all signed in | `ProgressSummary` (`progress-model.ts`): streak, minutes, lessons per level, placement level, last active, 20 most recent results; under 8 KB | 1 per session |
 | `users/{uid}/inbox/flashcards` | all signed in | cards added through MCP, waiting for a device (at most 200; deleted once delivered) | 1 per open, usually missing |
 | `users/{uid}/srs/{packId}` | Plus | `cards: {cardId: CardState & {updatedAt}}`, one document per pack (about 70 bytes a card, well under 1 MiB) | 1 per pack in use |
@@ -445,12 +454,29 @@ Gemini wins on all three, so `ENGINE_TRANSCRIBER=gemini` in the cloud;
 All five run through routing (local engines or cloud), so free users with their
 own Cadence get them too.
 
-- **Placement test.** About 20 mixed items (multiple choice and gap fill)
-  climbing a staircase from A2 to C1, plus one 30-second spoken answer to a
-  prompt. Written score gives a level band; the spoken sample (transcribed and
-  analysed for range and accuracy) moves it by at most one level. Without AI it
-  returns the written estimate and says so. Output `{level, confidence,
-  strengths[], focus[]}`; stored as `placementLevel` in the summary.
+- **Placement test.** Adaptive, written, free and offline (no AI): items from
+  the `placement` pack (at least 60 per level, about 500 in all, in seven
+  types: grammar in context, typed gap fill, error spotting, sentence
+  transformation, word order, collocation and word choice, reading in
+  context), with genuinely hard C1 and C2 items (inversion, clefts, mixed and
+  inverted conditionals, the subjunctive, nominalisation, hedging, register,
+  idiomatic collocation). `placement.ts` models each answer with one ability
+  scale on which a level is one unit wide and an item of that level has its
+  difficulty at the level's start (slope 1.7, a guessing floor of one in the
+  number of options for multiple choice, none for typed answers), keeps the
+  posterior on a grid from a broad prior centred between B1 and B2, and asks
+  next an item at the level nearest the estimate, of a type not used in the
+  last two answers, never one asked in this test and, while any are left, one
+  not seen in an earlier test. It stops after 12 to 24 items, once 80% of the
+  estimate lies inside one level. The result is `{level, confidence,
+  probability, theta, score, asked, skills: {grammar?, vocabulary?},
+  strengths, focus}`; confidence is high from 80%, medium from 60%. Seen ids
+  are kept on the device and, signed in, on the account as one compact string
+  (per `<level>.<type>`, a base64url bitset of item numbers). The spoken
+  sample (`POST /api/ai/placement`, with AI) still moves the written level by
+  at most one (`combineLevels`). The result sets the learner's level (7.1)
+  and is stored as `placementLevel` in the summary. Scoring is tested with
+  simulated learners at every level (`tests/platform/adaptive-placement.test.ts`).
 - **Adaptive daily plan.** `daily-plan.ts` (shared, pure): from due flashcards,
   the weakest sounds (mastery EMA times frequency weight) and the weakest
   grammar points, pick 10-15 minutes: due cards first (at most 5 minutes), then
@@ -470,6 +496,50 @@ own Cadence get them too.
   as `scenario.*` records with role cards (who the coach plays, the learner's
   goal, useful phrases). The coach stays in role and ends with three short
   pointers.
+
+### 7.1 Levels
+
+Six levels everywhere, A1 to C2, always offered advanced first: Cadence is
+built for B2 to C2 learners who have plateaued, and A1 and A2 exist for
+completeness. The default level, before setup or a test, is B2.
+
+| Level | Name | What it means | IELTS (approx.) | TOEFL iBT (approx.) |
+| --- | --- | --- | --- | --- |
+| C2 | Proficient | Nuance, register and precision at will. | 8.5 to 9.0 | 114 to 120 |
+| C1 | Advanced | Fluent, precise English for work and study. | 7.0 to 8.0 | 95 to 113 |
+| B2 | Upper intermediate | Clear, detailed argument on abstract topics. | 5.5 to 6.5 | 72 to 94 |
+| B1 | Intermediate | Most everyday situations and simple connected text. | 4.0 to 5.0 | 42 to 71 |
+| A2 | Elementary | Routine exchanges on familiar topics. | below 4.0 | below 42 |
+| A1 | Beginner | Basic phrases and simple facts. | not reported | below 42 |
+
+Sources: IELTS's own CEFR alignment, "IELTS and the CEFR" on ielts.org (IELTS
+reports no CEFR level below B1, so A2 and A1 are shown as below 4.0 and not
+reported); ETS's published CEFR mapping of TOEFL iBT total scores (0 to 120:
+B1 from 42, B2 from 72, C1 from 95, C2 from 114). The apps label them
+approximate, because a CEFR level is a band and the exams measure different
+things. **Open:** the owner should check the figures against the current ETS
+and IELTS tables before launch, and whether ETS's newer 1 to 6 band score
+should be shown beside the 0 to 120 total.
+
+**Level settings** (`levels.ts`, `LevelPrefs`): one overall level, optional
+grammar, vocabulary and pronunciation levels (a skill set to the overall level
+follows it again), where it came from (`default`, `self`, `placement`) and
+`updatedAt`. Set in setup (the self-check of all six levels, or the placement
+test, which also sets grammar and vocabulary where they came out different)
+and changeable any time: Settings > Level on the phone
+(`mobile/src/app/settings/level.tsx`, with Retake placement at
+`settings/placement`), Account > Level on the web (`/account/level`,
+`/account/level/placement`). Stored by data tier: on the device for everyone
+(AsyncStorage `cadence.levels.v1`, localStorage on the web) and, signed in to
+the cloud, also on `users/{uid}.levels` through `PATCH /api/profile`; the
+newer copy wins both ways (`mobile/src/learning/levels.ts`,
+`src/components/levels/level-store.ts`). Own-server mode keeps it on the
+device. Everything follows a change at once: the Learn hub, practice and the
+grammar browser open on the learner's grammar level (another level is
+browsable without changing it), screens without a level parameter use it,
+`buildDailyPlan` takes it as `level`, and the coach gets it with every turn
+(`level` on `POST /api/ai-coach`, a fixed line per level in the system prompt,
+never learner text).
 
 ---
 
@@ -916,8 +986,8 @@ commands.
 | Summary and streaks | `pnpm test` (`tests/platform/progress-model.test.ts`) | all pass (exists) |
 | Vocal-tract port | `pnpm test` (`tests/platform/vocal-tract.test.ts`); refresh the reference with `node scripts/vocal-tract/make-reference.mjs` (needs TeX Live) | every point of all 26 demo phonemes within 1e-4 of the package (exists) |
 | SRS scheduling | `pnpm test` (`tests/platform/srs.test.ts`, moved from `mobile/tests/srs.test.ts`) | all pass |
-| Daily plan, placement scoring | `pnpm test` (`tests/platform/daily-plan.test.ts`, `placement.test.ts`) | plan fits 10-15 minutes; deterministic for fixed input |
-| Content packs | `node scripts/content/validate.mjs` | zero problems across every pack |
+| Daily plan, placement scoring | `pnpm test` (`tests/platform/daily-plan.test.ts`, `placement.test.ts`, `adaptive-placement.test.ts`, `levels.test.ts`) | plan fits 10-15 minutes; deterministic for fixed input; simulated learners at every level placed at their level at least 75% of the time and never more than one level off; retakes ask fresh items; level settings parse and the newer copy wins |
+| Content packs | `node scripts/content/validate.mjs` | zero problems across every pack, including at least 60 placement items and all seven types per level |
 | Articulation targets | `node scripts/content/validate-articulation.mjs` | every `ENGLISH_SOUNDS` entry has a valid target per variant; `needsReview` list printed |
 
 ### Email

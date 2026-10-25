@@ -1,0 +1,407 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "advanced-linkers-for-essays",
+ "draftHash": "9e1ad3ff92bab65e",
+ "grammarPoint": {
+  "id": "gp.advanced-linkers-for-essays",
+  "level": "B2",
+  "topicId": "topic.linking",
+  "title": "Linkers for essays",
+  "summary": "Learn to use formal linkers like 'furthermore,' 'moreover,' 'nevertheless,' 'on the other hand,' and 'in addition' to connect ideas in essays and formal writing.",
+  "explanation": "When writing essays or formal reports, you often need to connect ideas smoothly between sentences and paragraphs. Linkers help your writing flow logically and clearly. They signal to the reader how one idea relates to the next, whether you are adding more information or presenting a contrasting point.\n\n*Furthermore*, *moreover*, and *in addition* are used to add extra information or arguments that support or expand on what you have just said. They help build up your point by providing more evidence or details. *Furthermore* and *moreover* are generally stronger and more formal than *in addition*.\n\n*Nevertheless* and *on the other hand* are used to introduce a contrasting idea. *Nevertheless* means 'despite what has just been said' and introduces a surprising or unexpected contrast. *On the other hand* introduces an alternative perspective or a different side of an argument, often when discussing two opposing views.",
+  "patterns": [
+   "Sentence 1. Furthermore/Moreover/In addition, sentence 2.",
+   "Sentence 1. Nevertheless, sentence 2.",
+   "Sentence 1. On the other hand, sentence 2."
+  ],
+  "examples": [
+   {
+    "text": "The initial findings were promising. Furthermore, subsequent tests confirmed the positive results.",
+    "note": "Adds more supporting information to the previous statement.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The project faced budget constraints. Moreover, the timeline for completion was extremely tight.",
+    "note": "Adds another significant point to the previous one.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The new policy aims to reduce waste. In addition, it seeks to promote sustainable practices.",
+    "note": "Adds another related piece of information.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The experiment encountered several technical difficulties. Nevertheless, the team managed to collect valuable data.",
+    "note": "Introduces a contrasting idea that happened despite the difficulties.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Some argue that remote work increases productivity. On the other hand, others believe it can hinder team collaboration.",
+    "note": "Presents an opposing viewpoint or alternative perspective.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The weather was bad, nevertheless we went to the beach.",
+    "right": "The weather was bad. Nevertheless, we went to the beach.",
+    "note": "Linkers like 'nevertheless' usually start a new sentence or are preceded by a semicolon."
+   },
+   {
+    "wrong": "The report is detailed furthermore it includes new data.",
+    "right": "The report is detailed. Furthermore, it includes new data.",
+    "note": "Always use a comma after these linkers when they begin a sentence."
+   },
+   {
+    "wrong": "I like apples. On the other hand, I also like oranges.",
+    "right": "I like apples. In addition, I also like oranges.",
+    "note": "'On the other hand' introduces a contrast, not an additional similar item."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The company invested heavily in new technology. ___, employee training was significantly improved.",
+   "options": [
+    "Nevertheless",
+    "On the other hand",
+    "Furthermore",
+    "Despite"
+   ],
+   "answer": 2,
+   "explanation": "'Furthermore' is used to add another supporting point or piece of information."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The initial proposal seemed promising. ___, some stakeholders expressed concerns about the long-term costs.",
+   "options": [
+    "Moreover",
+    "In addition",
+    "Nevertheless",
+    "Also"
+   ],
+   "answer": 2,
+   "explanation": "'Nevertheless' introduces a contrasting idea that occurs despite the previous statement."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Many people enjoy the convenience of online shopping. ___, there are valid concerns about data privacy.",
+   "options": [
+    "Moreover",
+    "On the other hand",
+    "Furthermore",
+    "In addition"
+   ],
+   "answer": 1,
+   "explanation": "'On the other hand' is used to present a contrasting or opposing viewpoint."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new software offers enhanced security features. ___, it provides a more intuitive user interface.",
+   "options": [
+    "Nevertheless",
+    "On the other hand",
+    "However",
+    "In addition"
+   ],
+   "answer": 3,
+   "explanation": "'In addition' is used to add another piece of information or a supporting point."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The city council approved the new park project. ___, they allocated funds for its maintenance.",
+   "answers": [
+    [
+     "Furthermore",
+     "Moreover",
+     "In addition"
+    ]
+   ],
+   "explanation": "The sentence adds another supporting action by the city council, so 'furthermore,' 'moreover,' or 'in addition' are appropriate."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The experiment yielded unexpected results. ___, the scientists decided to repeat the procedure.",
+   "answers": [
+    [
+     "Nevertheless",
+     "Therefore"
+    ]
+   ],
+   "explanation": "The scientists repeated the procedure despite the unexpected results, indicating a contrast. 'Nevertheless' fits best here."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Some argue that artificial intelligence will create new jobs. ___, others fear it will lead to widespread unemployment.",
+   "answers": [
+    [
+     "On the other hand"
+    ]
+   ],
+   "explanation": "This sentence presents two opposing views, making 'on the other hand' the correct linker."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "report",
+    "was",
+    "thorough",
+    ".",
+    "Furthermore",
+    ",",
+    "it",
+    "included",
+    "new",
+    "recommendations",
+    "."
+   ],
+   "distractors": [
+    "also",
+    "but"
+   ],
+   "explanation": "This sentence uses 'furthermore' to add another positive point about the report."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "team",
+    "faced",
+    "many",
+    "challenges",
+    ".",
+    "Nevertheless",
+    ",",
+    "they",
+    "achieved",
+    "their",
+    "goal",
+    "."
+   ],
+   "distractors": [
+    "so",
+    "and"
+   ],
+   "explanation": "'Nevertheless' introduces a contrasting idea, showing that the goal was achieved despite the challenges."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The cost of living is rising. On the other hand, salaries are also increasing.",
+   "answers": [
+    "The cost of living is rising. In addition, salaries are also increasing.",
+    "The cost of living is rising. Furthermore, salaries are also increasing.",
+    "The cost of living is rising. Moreover, salaries are also increasing.",
+    "The cost of living is rising. On the other hand, salaries are increasing."
+   ],
+   "explanation": "'On the other hand' implies a contrast, but here, both statements describe increases, so a linker for adding information is needed."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The new policy is unpopular, nevertheless it is necessary.",
+   "answers": [
+    "The new policy is unpopular. Nevertheless, it is necessary.",
+    "The new policy is unpopular; nevertheless, it is necessary."
+   ],
+   "explanation": "A linker like 'nevertheless' should typically start a new sentence or be preceded by a semicolon, and always followed by a comma."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The project was delayed due to bad weather. The team also had to deal with equipment malfunctions.",
+   "instruction": "Use the word 'moreover'.",
+   "answers": [
+    "The project was delayed due to bad weather. Moreover, the team had to deal with equipment malfunctions."
+   ],
+   "explanation": "'Moreover' adds another significant reason for the delay, connecting the two sentences formally."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The new system is complex, but it offers advanced features.",
+   "instruction": "Rewrite using 'nevertheless'.",
+   "answers": [
+    "The new system is complex. Nevertheless, it offers advanced features.",
+    "The new system is complex; nevertheless, it offers advanced features."
+   ],
+   "explanation": "'Nevertheless' introduces a contrasting positive point despite the complexity, making the connection more formal."
+  },
+  {
+   "id": "ex.b2.advanced-linkers-for-essays.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.advanced-linkers-for-essays"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The research provided clear evidence.",
+     "right": "Furthermore, it opened new avenues for study."
+    },
+    {
+     "left": "The proposal had some flaws.",
+     "right": "Nevertheless, it was approved by the committee."
+    },
+    {
+     "left": "Some prefer traditional learning methods.",
+     "right": "On the other hand, online courses offer great flexibility."
+    },
+    {
+     "left": "The new regulations aim to protect consumers.",
+     "right": "In addition, they promote fair competition."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "furthermore,",
+  "moreover,",
+  "nevertheless,",
+  "on the other hand,",
+  "in addition,"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.advanced-linkers-for-essays.01": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.02": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.03": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.04": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.05": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both transition words are grammatically correct and logically defensible in context."
+   },
+   "ex.b2.advanced-linkers-for-essays.07": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.08": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.b2.advanced-linkers-for-essays.09": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers successfully resolve the contradiction between the transition and the rest of the sentence."
+   },
+   "ex.b2.advanced-linkers-for-essays.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly fix the comma splice using appropriate punctuation."
+   },
+   "ex.b2.advanced-linkers-for-essays.12": {
+    "status": "pass"
+   },
+   "ex.b2.advanced-linkers-for-essays.13": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both a period and a semicolon are valid punctuation choices when using 'nevertheless'."
+   },
+   "ex.b2.advanced-linkers-for-essays.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

@@ -53,4 +53,21 @@ describe("validating a profile update", () => {
       assert.equal(parseProfileUpdate(body).ok, false);
     }
   });
+
+  it("accepts level settings and keeps only valid seen placement items", () => {
+    const parsed = parseProfileUpdate({
+      levels: { overall: "C1", skills: { pronunciation: "B2" }, source: "self", updatedAt: 1700000000000 },
+      placementSeen: "c1.error:BB;junk",
+    });
+    assert.deepEqual(parsed, {
+      ok: true,
+      update: {
+        levels: { overall: "C1", skills: { pronunciation: "B2" }, source: "self", updatedAt: 1700000000000 },
+        placementSeen: "c1.error:BB",
+      },
+    });
+    assert.equal(parseProfileUpdate({ levels: { overall: "Z9" } }).ok, false);
+    assert.equal(parseProfileUpdate({ placementSeen: 12 }).ok, false);
+    assert.equal(parseProfileUpdate({ placementSeen: "x".repeat(5000) }).ok, false);
+  });
 });

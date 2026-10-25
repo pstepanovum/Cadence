@@ -1,0 +1,406 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "causatives-advanced",
+ "draftHash": "1752aaa97107805c",
+ "grammarPoint": {
+  "id": "gp.causatives-advanced",
+  "level": "C1",
+  "topicId": "topic.passive",
+  "title": "Causatives in depth",
+  "summary": "Learn to use causative verbs like 'have', 'get', 'make', and 'let' to describe arranging for actions or influencing others, including passive forms.",
+  "explanation": "Causative verbs show that one person or thing causes another person or thing to perform an action. They are crucial for expressing how we arrange for services, persuade people, or exert influence.\n\nWe use *have someone do something* when we arrange for a service or give instructions. For example, \"I had the technician install the new software.\" *Get someone to do something* implies persuading or convincing someone to perform an action: \"She got her colleague to help with the presentation.\"\n\n*Make someone do something* means to force or oblige someone, often against their will: \"The company made us attend the mandatory workshop.\" Its passive form, *be made to do something*, emphasizes this obligation: \"We were made to sign the new contract.\" In contrast, *let someone do something* means to permit or allow an action: \"My manager let me work from home today.\"\n\nFinally, *get something done* is a passive causative structure, often used when the agent performing the action is less important or unknown. It means to arrange for a service to be completed: \"I need to get my car serviced.\" You can specify the agent with 'by': \"I got the report proofread by an editor.\"",
+  "patterns": [
+   "have + object (person) + base verb",
+   "get + object (person) + to-infinitive",
+   "make + object (person) + base verb",
+   "let + object (person) + base verb",
+   "be made + to-infinitive",
+   "get + object (thing) + past participle (+ by + agent)"
+  ],
+  "examples": [
+   {
+    "text": "I had the architect draw up the plans for the extension.",
+    "note": "Used to show arranging for a service or giving instructions.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It took a lot of effort, but I finally got my neighbor to water my plants.",
+    "note": "Used to show persuading or convincing someone.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The strict rules made the students follow the dress code.",
+    "note": "Used to show forcing or obliging someone.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "My parents let me choose my own career path after college.",
+    "note": "Used to show permitting or allowing someone.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "We got the entire house painted by a professional team last month.",
+    "note": "Used to show arranging for a service, often when the doer is less important.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The teacher made us to read the book.",
+    "right": "The teacher made us read the book.",
+    "note": "Do not use 'to' after 'make someone do'."
+   },
+   {
+    "wrong": "I had my assistant to prepare the report.",
+    "right": "I had my assistant prepare the report.",
+    "note": "Use the base verb (without 'to') after 'have someone do'."
+   },
+   {
+    "wrong": "She got her computer fixed.",
+    "right": "She got her computer fixed by a technician.",
+    "note": "While 'get something done' is correct, specifying the agent with 'by' is often helpful for clarity at C1."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.causatives-advanced.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After much discussion, we finally ___ the committee to approve the proposal.",
+   "options": [
+    "had",
+    "made",
+    "got",
+    "let"
+   ],
+   "answer": 2,
+   "explanation": "'Got' is used with 'to' to mean 'persuaded' or 'convinced'."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The company policy ___ employees take a mandatory break every four hours.",
+   "options": [
+    "makes",
+    "gets",
+    "has",
+    "lets"
+   ],
+   "answer": 0,
+   "explanation": "'Makes' implies forcing or obliging, which fits the context of a company policy."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Despite their protests, the children ___ clean their rooms before playing.",
+   "options": [
+    "were made to",
+    "got to",
+    "had to",
+    "let to"
+   ],
+   "answer": 0,
+   "explanation": "'Were made to' is the passive form of 'make someone do', indicating they were forced."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "I need to ___ my passport photo ___ before my trip next week.",
+   "options": [
+    "have / take",
+    "get / taken",
+    "make / take",
+    "let / taken"
+   ],
+   "answer": 1,
+   "explanation": "'Get something done' uses 'get' + object + past participle to mean arranging for a service."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The new manager ___ everyone ___ a detailed progress report each week.",
+   "answers": [
+    [
+     "made",
+     "makes"
+    ],
+    [
+     "submit"
+    ]
+   ],
+   "explanation": "'Made' is used to show obligation, and 'submit' is the base verb after 'make someone do'."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "We decided to ___ the old fence ___ by a local carpenter.",
+   "answers": [
+    [
+     "get",
+     "have"
+    ],
+    [
+     "repaired"
+    ]
+   ],
+   "explanation": "'Get something done' is used for arranging a service, requiring 'get' and the past participle 'repaired'."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "After a long discussion, she finally ___ her friend ___ lend her the book.",
+   "answers": [
+    [
+     "got"
+    ],
+    [
+     "to lend"
+    ]
+   ],
+   "explanation": "'Got' is used with 'to-infinitive' to mean 'persuaded' or 'convinced'."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "professor",
+    "let",
+    "the",
+    "students",
+    "resubmit",
+    "their",
+    "assignments",
+    "."
+   ],
+   "distractors": [
+    "allow",
+    "made"
+   ],
+   "explanation": "This sentence uses 'let someone do something' to indicate permission."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "was",
+    "made",
+    "to",
+    "apologize",
+    "for",
+    "his",
+    "mistake",
+    "."
+   ],
+   "distractors": [
+    "force",
+    "get"
+   ],
+   "explanation": "This sentence uses the passive causative 'be made to do something' to show obligation."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "My parents had me to learn piano when I was young.",
+   "answers": [
+    "My parents had me learn piano when I was young."
+   ],
+   "explanation": "After 'have someone do something', use the base form of the verb without 'to'."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The company got their new website design.",
+   "answers": [
+    "The company got their new website designed."
+   ],
+   "explanation": "For 'get something done', the verb describing the action must be in the past participle form."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The strict rules obliged the team members to follow the safety protocols.",
+   "instruction": "Use the causative verb 'make'.",
+   "answers": [
+    "The strict rules made the team members follow the safety protocols."
+   ],
+   "explanation": "'Make someone do something' means to oblige or force someone to do something."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I will ask a professional to fix my computer.",
+   "instruction": "Rewrite using 'get something done'.",
+   "answers": [
+    "I will get my computer fixed by a professional."
+   ],
+   "explanation": "'Get something done' is used to arrange for a service, with the object followed by the past participle."
+  },
+  {
+   "id": "ex.c1.causatives-advanced.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.causatives-advanced"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "I had the tailor",
+     "right": "alter my suit for the wedding."
+    },
+    {
+     "left": "She finally got her brother",
+     "right": "to help her move the furniture."
+    },
+    {
+     "left": "The school made all students",
+     "right": "wear uniforms during class hours."
+    },
+    {
+     "left": "We need to get the broken window",
+     "right": "repaired before winter."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "have (him|her|them|us|me|you|someone|somebody|the [a-z]+) [a-z]+",
+  "get (him|her|them|us|me|you|someone|somebody|the [a-z]+) to [a-z]+",
+  "make (him|her|them|us|me|you|someone|somebody|the [a-z]+) [a-z]+",
+  "let (him|her|them|us|me|you|someone|somebody|the [a-z]+) [a-z]+",
+  "(was|were) made to [a-z]+",
+  "get (my|his|her|their|our|your|the [a-z]+) (cleaned|repaired|fixed|done|painted|cut|checked|translated|written|built)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.causatives-advanced.01": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.02": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.03": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.04": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.05": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both past 'made' and present 'makes' fit naturally with 'each week'."
+   },
+   "ex.c1.causatives-advanced.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'get' and 'have' are correct in this causative structure."
+   },
+   "ex.c1.causatives-advanced.07": {
+    "status": "drop",
+    "note": "Key judged wrong: The key creates a duplicate verb because 'lend' is already in the sentence."
+   },
+   "ex.c1.causatives-advanced.08": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'let' and 'made' form correct sentences with the bare infinitive 'resubmit'."
+   },
+   "ex.c1.causatives-advanced.09": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.10": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.11": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.12": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.13": {
+    "status": "pass"
+   },
+   "ex.c1.causatives-advanced.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

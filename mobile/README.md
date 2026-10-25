@@ -24,8 +24,9 @@ that does.
 ## What's included
 
 - **First run** — one question a screen (`src/components/onboarding/`, rules in
-  `src/onboarding/flow.ts`): welcome slides, the goal, the level (A2 to C2, or
-  a two-minute placement quiz), the daily goal (5, 10, 15 or 20 minutes), a
+  `src/onboarding/flow.ts`): welcome slides, the goal, the level (all six,
+  C2 first, each with approximate IELTS and TOEFL iBT equivalents, or the
+  adaptive placement test), the daily goal (5, 10, 15 or 20 minutes), a
   reminder time (iOS's notification prompt appears only when reminders are
   turned on), where to practise ("Connect your own Cadence server", free, or
   Cadence cloud), an account (optional with your own server, needed for the
@@ -77,7 +78,8 @@ that does.
 - **Profile** — name, focus and pace for cloud accounts, and links to streak
   and badges and to Settings.
 - **Settings** (`src/app/settings/index.tsx`) — reminders (daily, streak check,
-  flashcards due, weekly summary, quiet hours), daily goal, sounds, haptics,
+  flashcards due, weekly summary, quiet hours), daily goal, level (overall and
+  per skill, with Retake placement), sounds, haptics,
   coach voice, offline packs, the connected server, the account (product news,
   plan, restore purchases, sign out, delete account), run setup again, and the
   app version.

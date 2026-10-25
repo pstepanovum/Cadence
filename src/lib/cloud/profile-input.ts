@@ -4,6 +4,9 @@
 // tests/cloud/profile-input.test.ts. The same values are offered by the web
 // onboarding wizard and the mobile app.
 
+import { parseLevelPrefs, type LevelPrefs } from "../platform/levels";
+import { SEEN_MAX_LENGTH, decodeSeen, encodeSeen } from "../platform/placement";
+
 export const PRACTICE_FOCUS_VALUES = ["conversations", "vowels", "work", "daily"] as const;
 export const PRACTICE_CADENCE_VALUES = [
   "5-minutes",
@@ -19,6 +22,10 @@ export interface ProfileUpdate {
   practiceFocus?: string;
   practiceCadence?: string;
   onboardingCompleted?: boolean;
+  /** The learner's level settings: overall, per skill, and where they came from. */
+  levels?: LevelPrefs;
+  /** Placement items seen in earlier tests, re-encoded so only valid ids are kept. */
+  placementSeen?: string;
 }
 
 export type ProfileParseResult =
@@ -63,6 +70,21 @@ export function parseProfileUpdate(body: unknown): ProfileParseResult {
       return { ok: false, error: "onboardingCompleted must be true or false." };
     }
     update.onboardingCompleted = input.onboardingCompleted;
+  }
+
+  if ("levels" in input) {
+    const levels = parseLevelPrefs(input.levels);
+    if (!levels) {
+      return { ok: false, error: "levels needs an overall CEFR level." };
+    }
+    update.levels = levels;
+  }
+
+  if ("placementSeen" in input) {
+    if (typeof input.placementSeen !== "string" || input.placementSeen.length > SEEN_MAX_LENGTH) {
+      return { ok: false, error: "placementSeen must be the compact seen string." };
+    }
+    update.placementSeen = encodeSeen(decodeSeen(input.placementSeen));
   }
 
   if (Object.keys(update).length === 0) {

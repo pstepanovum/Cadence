@@ -132,6 +132,8 @@ interface ExerciseBase {
 
 export interface MultipleChoiceExercise extends ExerciseBase {
   kind: "multiple_choice";
+  /** A short text to read first (reading-in-context items); shown above the question. */
+  passage?: string;
   question: string;
   options: string[];
   /** Index into `options`. */
@@ -274,6 +276,7 @@ export const TEXT_LIMITS = {
   sentence: 240,
   explanation: 2000,
   option: 120,
+  passage: 480,
 } as const;
 
 function countGaps(text: string): number {
@@ -302,6 +305,7 @@ export function validateExercise(exercise: Exercise): string[] {
   switch (exercise.kind) {
     case "multiple_choice": {
       checkText(p, `${at} question`, exercise.question, TEXT_LIMITS.sentence);
+      if (exercise.passage !== undefined) checkText(p, `${at} passage`, exercise.passage, TEXT_LIMITS.passage);
       if (!Array.isArray(exercise.options) || exercise.options.length < 2 || exercise.options.length > 6) {
         p.push(`${at}: needs 2 to 6 options`);
         break;

@@ -50,6 +50,8 @@ async function load(dir: string): Promise<ContentLibrary> {
   const index = await readJson<PackIndex>(join(/* turbopackIgnore: true */ dir, "index.json"));
   for (const entry of index?.packs ?? []) {
     if (!/^[a-z0-9-]+$/.test(entry.id) || !Number.isInteger(entry.version)) continue;
+    // The placement bank is only for the placement test: never in quizzes or lookups, so a retake meets fresh items.
+    if (entry.id === "placement") continue;
     const root = join(/* turbopackIgnore: true */ dir, entry.id, `v${entry.version}`);
     const manifest = await readJson<PackManifest>(join(/* turbopackIgnore: true */ root, "manifest.json"));
     if (!manifest || !canReadPack(manifest)) continue;

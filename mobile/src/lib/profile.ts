@@ -3,6 +3,7 @@
 // The cloud account's profile fields and how to read them out of a server
 // response. Kept free of React and React Native imports so it can be unit
 // tested with the plain `node --test` runner (see mobile/tests/profile.test.ts).
+import { parseLevelPrefs, type LevelPrefs } from "../platform/levels.ts";
 
 /**
  * Profile fields the web app keeps for a cloud account. The server owns them
@@ -14,6 +15,10 @@ export interface Profile {
   practiceFocus: PracticeFocus;
   practiceCadence: PracticeCadence;
   onboardingCompleted: boolean;
+  /** Level settings kept on the account; the phone keeps its own copy and the newer wins. */
+  levels?: LevelPrefs;
+  /** Placement items seen in earlier tests, compact (src/platform/placement.ts). */
+  placementSeen?: string;
 }
 
 export type PracticeFocus = "conversations" | "vowels" | "work" | "daily";
@@ -55,6 +60,9 @@ export function parseProfile(raw: unknown): StoredProfile {
   if (typeof body.onboardingCompleted === "boolean") {
     fields.onboardingCompleted = body.onboardingCompleted;
   }
+  const levels = parseLevelPrefs(body.levels);
+  if (levels) fields.levels = levels;
+  if (typeof body.placementSeen === "string") fields.placementSeen = body.placementSeen;
   return fields;
 }
 
@@ -67,5 +75,7 @@ export function toProfile(
     practiceFocus: fields.practiceFocus ?? "conversations",
     practiceCadence: fields.practiceCadence ?? "15-minutes",
     onboardingCompleted: fields.onboardingCompleted === true,
+    ...(fields.levels ? { levels: fields.levels } : {}),
+    ...(fields.placementSeen !== undefined ? { placementSeen: fields.placementSeen } : {}),
   };
 }

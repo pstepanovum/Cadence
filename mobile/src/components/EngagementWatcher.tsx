@@ -1,7 +1,8 @@
 // Runs while the app is open: records newly earned badges and celebrates
 // them, writes the widgets' snapshot, re-plans the local reminders, opens the
-// screen a tapped notification points to, and registers this device's push
-// token with the account. Draws nothing but the badge moment.
+// screen a tapped notification points to, registers this device's push
+// token with the account, and keeps the level settings in step with the
+// account. Draws nothing but the badge moment.
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Notifications from "expo-notifications";
 import { router, type Href } from "expo-router";
@@ -15,6 +16,7 @@ import { useAuth } from "@/context/auth";
 import { newlyEarned, type Badge } from "@/engagement/badges";
 import { dueByDay } from "@/engagement/today";
 import { useBadges, useToday } from "@/engagement/useEngagement";
+import { useLevelSync } from "@/learning/levels";
 import { earnBadges } from "@/learning/state";
 import { updateLearning, useLearning } from "@/learning/store";
 import { getInstallId } from "@/lib/install-id";
@@ -36,6 +38,7 @@ export function EngagementWatcher() {
   const { user } = useAuth();
   const [celebrating, setCelebrating] = useState<Badge[]>([]);
   const [foreground, setForeground] = useState(0);
+  useLevelSync();
 
   useEffect(() => {
     const subscription = AppState.addEventListener("change", (next) => {

@@ -1,0 +1,481 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "modal-perfects-advanced",
+ "draftHash": "730c963c3d32a8cc",
+ "grammarPoint": {
+  "id": "gp.modal-perfects-advanced",
+  "level": "C1",
+  "topicId": "topic.modals",
+  "title": "Would have, may well have, needn't have",
+  "summary": "Use 'would have', 'may well have', 'could hardly have', and 'needn't have' to express nuanced speculation, judgment, or hypothetical situations about the past.",
+  "explanation": "We use *would have* + past participle to talk about hypothetical situations in the past that did not happen. It often appears in conditional sentences, describing what would have occurred if a different past event had taken place.\n\n*May well have* + past participle expresses a strong probability or likelihood that something happened in the past. It suggests that there is good reason to believe a past event occurred. In contrast, *could hardly have* + past participle indicates that something was almost impossible or extremely unlikely to have happened in the past.\n\nFinally, *needn't have* + past participle is used to say that an action was performed in the past, but it was unnecessary. The action happened, but it wasn't required, and often implies regret or a wasted effort.",
+  "patterns": [
+   "would have + past participle",
+   "may well have + past participle",
+   "could hardly have + past participle",
+   "needn't have + past participle"
+  ],
+  "examples": [
+   {
+    "text": "If I had known about the traffic, I would have left earlier.",
+    "note": "Expresses a hypothetical past action that didn't happen.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She didn't answer her phone; she may well have been sleeping.",
+    "note": "Indicates a strong probability about a past event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They could hardly have finished the entire project in just one day.",
+    "note": "Suggests that a past action was almost impossible.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "You needn't have bought so much food; we already have plenty.",
+    "note": "Shows that a past action was unnecessary, implying it was done anyway.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He would have called if he had received the message.",
+    "note": "Another example of a hypothetical past action.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I would helped if I knew.",
+    "right": "I would have helped if I had known.",
+    "note": "Remember to use 'have' and the past participle for hypothetical pasts, and the past perfect in the 'if' clause."
+   },
+   {
+    "wrong": "She may well be gone by then.",
+    "right": "She may well have been gone by then.",
+    "note": "Use 'have + past participle' to refer to a past possibility."
+   },
+   {
+    "wrong": "You didn't need to buy a ticket.",
+    "right": "You needn't have bought a ticket.",
+    "note": "Use 'needn't have + past participle' when an action was done but was unnecessary."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.modal-perfects-advanced.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If the weather had been better, we ___ gone hiking.",
+   "options": [
+    "may well have",
+    "needn't have",
+    "would have",
+    "could hardly have"
+   ],
+   "answer": 2,
+   "explanation": "'Would have' is used for hypothetical past situations that didn't happen."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The package isn't here. The delivery driver ___ left it at the wrong address.",
+   "options": [
+    "needn't have",
+    "could hardly have",
+    "may well have",
+    "would have"
+   ],
+   "answer": 2,
+   "explanation": "'May well have' expresses a strong probability about a past event."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "You ___ worried so much about the exam; it was quite easy.",
+   "options": [
+    "would have",
+    "needn't have",
+    "could hardly have",
+    "may well have"
+   ],
+   "answer": 1,
+   "explanation": "'Needn't have' indicates that an action (worrying) was done but was unnecessary."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It was a secret, so he ___ told anyone.",
+   "options": [
+    "would have",
+    "may well have",
+    "needn't have",
+    "could hardly have"
+   ],
+   "answer": 3,
+   "explanation": "'Could hardly have' means it was almost impossible for him to have told anyone, given it was a secret."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "She ___ ___ finished the marathon without training.",
+   "answers": [
+    [
+     "could",
+     "hardly",
+     "have"
+    ]
+   ],
+   "explanation": "'Could hardly have' expresses that it was almost impossible for her to finish without training."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I ___ ___ ___ called you, but I didn't have your number.",
+   "answers": [
+    [
+     "would",
+     "have",
+     "called"
+    ]
+   ],
+   "explanation": "'Would have called' describes a hypothetical past action that didn't occur."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "They ___ ___ ___ known about the surprise party.",
+   "answers": [
+    [
+     "may",
+     "well",
+     "have"
+    ]
+   ],
+   "explanation": "'May well have known' suggests a strong possibility that they knew."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "You",
+    "needn't",
+    "have",
+    "waited",
+    "for",
+    "me",
+    "."
+   ],
+   "distractors": [
+    "must",
+    "should"
+   ],
+   "explanation": "This sentence uses 'needn't have' to show that waiting was unnecessary."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "could",
+    "hardly",
+    "have",
+    "seen",
+    "us",
+    "in",
+    "the",
+    "dark",
+    "."
+   ],
+   "distractors": [
+    "might",
+    "easily"
+   ],
+   "explanation": "'Could hardly have seen' indicates it was almost impossible for him to see them."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If I had more time, I would have visited the museum.",
+   "answers": [
+    "If I had had more time, I would have visited the museum."
+   ],
+   "explanation": "For a hypothetical past conditional, the 'if' clause needs to be in the past perfect ('had had')."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She may well be missed her flight.",
+   "answers": [
+    "She may well have missed her flight."
+   ],
+   "explanation": "After 'may well have', use the past participle of the main verb."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It was unnecessary for you to bring a jacket, but you did.",
+   "instruction": "Rewrite using 'needn't have'.",
+   "answers": [
+    "You needn't have brought a jacket."
+   ],
+   "explanation": "'Needn't have' expresses that an action was performed but was not necessary."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Perhaps he was busy yesterday, so he didn't call.",
+   "instruction": "Rewrite using 'may well have'.",
+   "answers": [
+    "He may well have been busy yesterday, so he didn't call."
+   ],
+   "explanation": "'May well have' indicates a strong probability about a past event."
+  },
+  {
+   "id": "ex.c1.modal-perfects-advanced.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.modal-perfects-advanced"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If I had known you were coming,",
+     "right": "I would have baked a cake."
+    },
+    {
+     "left": "The train was delayed, so they",
+     "right": "could hardly have arrived on time."
+    },
+    {
+     "left": "She didn't reply to my email;",
+     "right": "she may well have been on vacation."
+    },
+    {
+     "left": "You bought extra coffee, but we",
+     "right": "needn't have bought any more."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "would have (?:been|done|gone|seen|heard|said|thought|known)",
+  "may well have (?:been|done|gone|seen|heard|said|thought|known)",
+  "could hardly have (?:been|done|gone|seen|heard|said|thought|known)",
+  "needn't have (?:been|done|gone|seen|heard|said|thought|known|bought|worried)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.modal-perfects-advanced.01": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.02": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.03": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.04": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.05": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.modal-perfects-advanced.05: needs one answer list per gap (2)"
+   },
+   "ex.c1.modal-perfects-advanced.06": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.modal-perfects-advanced.06: needs one answer list per gap (3)"
+   },
+   "ex.c1.modal-perfects-advanced.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.modal-perfects-advanced.07: needs one answer list per gap (3)"
+   },
+   "ex.c1.modal-perfects-advanced.08": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.09": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.10": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.11": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.12": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.13": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.14": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.15": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.16": {
+    "status": "drop",
+    "note": "Key judged wrong: Seeing her car parked outside implies she is likely still there, so 'could hardly have' is the logically correct choice."
+   },
+   "ex.c1.modal-perfects-advanced.17": {
+    "status": "pass"
+   },
+   "ex.c1.modal-perfects-advanced.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.modal-perfects-advanced.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.modal-perfects-advanced"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The concert was canceled. They ___ announced it earlier.",
+    "options": [
+     "would have",
+     "may well have",
+     "could hardly have",
+     "needn't have"
+    ],
+    "answer": 0,
+    "explanation": "'Would have' suggests a hypothetical action that should have happened but didn't, implying a missed opportunity or expectation."
+   },
+   {
+    "id": "ex.c1.modal-perfects-advanced.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.modal-perfects-advanced"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "I saw her car parked outside, so she ___ left already.",
+    "options": [
+     "would have",
+     "may well have",
+     "could hardly have",
+     "needn't have"
+    ],
+    "answer": 1,
+    "explanation": "'May well have' indicates a strong probability based on the evidence (the car being parked)."
+   },
+   {
+    "id": "ex.c1.modal-perfects-advanced.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.modal-perfects-advanced"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "He ___ known about the surprise party; he looked genuinely shocked.",
+    "options": [
+     "would have",
+     "may well have",
+     "could hardly have",
+     "needn't have"
+    ],
+    "answer": 2,
+    "explanation": "'Could hardly have' expresses that it was almost impossible for him to have known, given his reaction."
+   },
+   {
+    "id": "ex.c1.modal-perfects-advanced.18",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.modal-perfects-advanced"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "We brought extra blankets, but the hotel room was very warm. We ___ bothered.",
+    "options": [
+     "would have",
+     "may well have",
+     "could hardly have",
+     "needn't have"
+    ],
+    "answer": 3,
+    "explanation": "'Needn't have' means the action (bringing blankets) was done but was unnecessary."
+   }
+  ]
+ }
+}

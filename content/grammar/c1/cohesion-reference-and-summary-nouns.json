@@ -1,0 +1,510 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "cohesion-reference-and-summary-nouns",
+ "draftHash": "7c1280330cfa1f27",
+ "grammarPoint": {
+  "id": "gp.cohesion-reference-and-summary-nouns",
+  "level": "C1",
+  "topicId": "topic.linking",
+  "title": "Cohesion with reference and summary nouns",
+  "summary": "Use reference and summary nouns like 'this approach' or 'the former' to link ideas across sentences, making your writing more cohesive and easier to follow.",
+  "explanation": "Cohesion is about how well the parts of a text connect to each other. Reference and summary nouns help achieve this by pointing back to ideas, concepts, or situations mentioned earlier in your writing. This makes your text flow smoothly and prevents repetition.\n\nPhrases like *this approach*, *such a view*, or *this trend* refer to a whole idea, argument, or development that was just presented. They act as a concise summary, allowing you to elaborate on that idea without restating it fully.\n\nWhen you need to distinguish between two specific items or ideas that have just been mentioned, you can use *the former* and *the latter*. 'The former' refers to the first item, and 'the latter' refers to the second. This is particularly useful in formal writing to maintain clarity and conciseness.",
+  "patterns": [
+   "this/that + summary noun (e.g., approach, view, trend, idea, method)",
+   "such a/an + summary noun",
+   "the former",
+   "the latter"
+  ],
+  "examples": [
+   {
+    "text": "The company decided to implement flexible working hours. This approach has been shown to increase employee satisfaction.",
+    "note": "This approach refers to the idea of implementing flexible working hours.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Some critics argue that artificial intelligence will replace many jobs. Such a view often overlooks the new opportunities AI creates.",
+    "note": "Such a view refers to the critical argument about AI replacing jobs.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "First, we discussed the budget; then, we talked about the timeline. The former was quickly approved, but the latter required more negotiation.",
+    "note": "The former refers to the budget, and the latter refers to the timeline.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Global temperatures are rising, and extreme weather events are becoming more frequent. This trend is a major concern for scientists.",
+    "note": "This trend refers to the overall situation of rising temperatures and frequent extreme weather.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She proposed a new marketing strategy, emphasizing social media engagement. This idea was met with enthusiasm by the team.",
+    "note": "This idea refers to the new marketing strategy.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The team presented two solutions. It was chosen.",
+    "right": "The team presented two solutions. The latter was chosen.",
+    "note": "Using 'it' can be vague; 'the latter' clearly specifies which solution."
+   },
+   {
+    "wrong": "He mentioned two books. Former was a classic.",
+    "right": "He mentioned two books. The former was a classic.",
+    "note": "'The' is required before 'former' and 'latter'."
+   },
+   {
+    "wrong": "The new policy requires all staff to work weekends. This opinion is unpopular.",
+    "right": "The new policy requires all staff to work weekends. This requirement is unpopular.",
+    "note": "Choose a summary noun that accurately reflects the preceding idea."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The government introduced a new tax on luxury goods. ___ is expected to generate significant revenue.",
+   "options": [
+    "This opinion",
+    "Such a problem",
+    "This measure",
+    "The former"
+   ],
+   "answer": 2,
+   "explanation": "'This measure' correctly refers to the new tax introduced by the government."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Some people believe that success is purely a matter of luck, while others emphasize hard work. ___ often ignores the role of opportunity.",
+   "options": [
+    "This trend",
+    "Such a view",
+    "The latter",
+    "This approach"
+   ],
+   "answer": 1,
+   "explanation": "'Such a view' refers to the belief or perspective that success is purely a matter of luck."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "We considered two options: renovating the old building or constructing a new one. ___ would be more expensive, but ___ offers more space.",
+   "options": [
+    "The latter / the former",
+    "The former / the latter",
+    "This option / that option",
+    "Such a choice / this decision"
+   ],
+   "answer": 1,
+   "explanation": "'The former' refers to renovating the old building, and 'the latter' refers to constructing a new one, correctly distinguishing between the two options."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The company has seen a steady increase in online sales over the past year. ___ indicates a shift in consumer behavior.",
+   "options": [
+    "This approach",
+    "Such a problem",
+    "This trend",
+    "The former"
+   ],
+   "answer": 2,
+   "explanation": "'This trend' accurately summarizes the steady increase in online sales."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The city council proposed building a new park. ___ was met with mixed reactions from residents.",
+   "answers": [
+    [
+     "This idea"
+    ],
+    [
+     "This proposal"
+    ]
+   ],
+   "explanation": "'This idea' or 'This proposal' refers back to the city council's plan to build a new park."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Our team discussed two potential strategies: increasing advertising or lowering prices. ___ would attract new customers, while ___ would retain existing ones.",
+   "answers": [
+    [
+     "The former"
+    ],
+    [
+     "the latter"
+    ]
+   ],
+   "explanation": "'The former' refers to increasing advertising, and 'the latter' refers to lowering prices, distinguishing between the two strategies."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Many scientists are concerned about the rapid loss of biodiversity. ___ requires urgent global action.",
+   "answers": [
+    [
+     "This issue"
+    ],
+    [
+     "This problem"
+    ],
+    [
+     "Such a crisis"
+    ]
+   ],
+   "explanation": "'This issue,' 'This problem,' or 'Such a crisis' refers to the rapid loss of biodiversity, summarizing the concern."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "new",
+    "software",
+    "has",
+    "many",
+    "features",
+    ".",
+    "This",
+    "approach",
+    "improves",
+    "workflow",
+    "."
+   ],
+   "distractors": [
+    "also",
+    "system"
+   ],
+   "explanation": "'This approach' refers to the new software's many features, linking the ideas cohesively."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "presented",
+    "two",
+    "theories",
+    ":",
+    "one",
+    "about",
+    "climate",
+    "change",
+    "and",
+    "another",
+    "about",
+    "economic",
+    "growth",
+    ".",
+    "The",
+    "former",
+    "was",
+    "widely",
+    "debated",
+    "."
+   ],
+   "distractors": [
+    "later",
+    "both"
+   ],
+   "explanation": "'The former' refers to the first theory mentioned, which is about climate change, providing clear reference."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The company decided to reduce its carbon footprint. It is a positive step.",
+   "answers": [
+    "The company decided to reduce its carbon footprint. This initiative is a positive step.",
+    "The company decided to reduce its carbon footprint. This approach is a positive step.",
+    "The company decided to reduce its carbon footprint. This is a positive step."
+   ],
+   "explanation": "'It' is too vague; a summary noun like 'initiative' or 'approach' provides better cohesion by clearly referring to the action taken."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He offered two suggestions: to work overtime or to hire more staff. Latter was preferred.",
+   "answers": [
+    "He offered two suggestions: to work overtime or to hire more staff. The latter was preferred."
+   ],
+   "explanation": "'The' is required before 'latter' when referring to one of two previously mentioned items to make the reference grammatically correct."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The research team proposed a new method for data analysis. They believe it will be more efficient.",
+   "instruction": "Use 'this approach'.",
+   "answers": [
+    "The research team proposed a new method for data analysis. This approach will be more efficient.",
+    "The research team proposed a new method for data analysis. They believe this approach will be more efficient."
+   ],
+   "explanation": "'This approach' replaces the vague 'it' and clearly refers to the new method for data analysis, improving cohesion."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Some argue that stricter regulations are needed, while others advocate for market-based solutions. The first option is often seen as more direct.",
+   "instruction": "Replace 'The first option' with a cohesive reference.",
+   "answers": [
+    "Some argue that stricter regulations are needed, while others advocate for market-based solutions. The former is often seen as more direct."
+   ],
+   "explanation": "'The former' is used to refer to the first of the two options mentioned (stricter regulations), providing a concise and cohesive link."
+  },
+  {
+   "id": "ex.c1.cohesion-reference-and-summary-nouns.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.cohesion-reference-and-summary-nouns"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The city is investing in public transport and bike lanes.",
+     "right": "This strategy aims to reduce traffic congestion."
+    },
+    {
+     "left": "We discussed two potential candidates for the role.",
+     "right": "The former had more experience, but the latter had fresh ideas."
+    },
+    {
+     "left": "Many people are choosing to work remotely.",
+     "right": "Such a trend has reshaped office culture."
+    },
+    {
+     "left": "She suggested a new way to organize the project.",
+     "right": "This method could save us a lot of time."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "this (approach|view|trend|idea|method|strategy|issue|problem)",
+  "such a (view|approach|idea|method|trend)",
+  "the (former|latter)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.cohesion-reference-and-summary-nouns.01": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.02": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.03": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.04": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.05": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.cohesion-reference-and-summary-nouns.05: needs one answer list per gap (1)"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.06": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.cohesion-reference-and-summary-nouns.07: needs one answer list per gap (1)"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.08": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all the given tokens, omitting words like 'system'."
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.09": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.cohesion-reference-and-summary-nouns.09: answer needs 3 to 16 tokens"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly improve the sentence by replacing the vague pronoun with a clearer reference."
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.11": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both rewrites successfully incorporate the specified phrase into natural, grammatically correct sentences."
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.13": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.14": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.15": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.16": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.17": {
+    "status": "pass"
+   },
+   "ex.c1.cohesion-reference-and-summary-nouns.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.cohesion-reference-and-summary-nouns.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.cohesion-reference-and-summary-nouns"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The university announced a new scholarship program for international students. ___ is expected to attract more diverse applicants.",
+    "options": [
+     "It",
+     "This development",
+     "That thing",
+     "Such a program"
+    ],
+    "answer": 1,
+    "explanation": "'This development' effectively summarizes the previous sentence, providing better cohesion than 'it' or 'that thing'. 'Such a program' is also possible but 'this development' is a broader summary."
+   },
+   {
+    "id": "ex.c1.cohesion-reference-and-summary-nouns.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.cohesion-reference-and-summary-nouns"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Some argue that artificial intelligence will create more jobs than it destroys, while others fear widespread unemployment. ___ focuses on the potential for innovation.",
+    "options": [
+     "The latter",
+     "The former",
+     "This view",
+     "That idea"
+    ],
+    "answer": 1,
+    "explanation": "'The former' refers to the first idea mentioned: AI creating more jobs than it destroys."
+   },
+   {
+    "id": "ex.c1.cohesion-reference-and-summary-nouns.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.cohesion-reference-and-summary-nouns"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The company decided to invest heavily in renewable energy sources. ___ reflects a growing commitment to sustainability.",
+    "options": [
+     "This move",
+     "It",
+     "That",
+     "Such a decision"
+    ],
+    "answer": 0,
+    "explanation": "'This move' clearly refers to the company's decision, providing a concise summary noun. 'Such a decision' is also correct, but 'this move' is a strong option."
+   },
+   {
+    "id": "ex.c1.cohesion-reference-and-summary-nouns.18",
+    "kind": "gap_fill",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.cohesion-reference-and-summary-nouns"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "The government proposed a new policy to reduce plastic waste. ___ aims to encourage recycling.",
+    "answers": [
+     [
+      "This policy",
+      "This initiative",
+      "This measure",
+      "Such a policy",
+      "Such an initiative",
+      "Such a measure"
+     ]
+    ],
+    "explanation": "A summary noun like 'this policy' or 'this initiative' effectively refers back to the proposed policy, making the connection clear."
+   }
+  ]
+ }
+}

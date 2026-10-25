@@ -28,6 +28,15 @@ export const BUNDLED_PACKS: BundledPack[] = [
     },
   },
   {
+    id: "placement",
+    version: 1,
+    title: "Cadence placement",
+    bytes: 228468,
+    content: require("../../assets/packs/placement/content.cpack"),
+    audio: {
+    },
+  },
+  {
     id: "core-a1",
     version: 1,
     level: "A1",
@@ -39,30 +48,30 @@ export const BUNDLED_PACKS: BundledPack[] = [
   },
   {
     id: "core-a2",
-    version: 1,
+    version: 2,
     level: "A2",
     title: "Cadence A2",
-    bytes: 564038,
+    bytes: 564061,
     content: require("../../assets/packs/core-a2/content.cpack"),
     audio: {
     },
   },
   {
     id: "core-b1",
-    version: 1,
+    version: 2,
     level: "B1",
     title: "Cadence B1",
-    bytes: 678584,
+    bytes: 678610,
     content: require("../../assets/packs/core-b1/content.cpack"),
     audio: {
     },
   },
   {
     id: "core-b2",
-    version: 1,
+    version: 2,
     level: "B2",
     title: "Cadence B2",
-    bytes: 699636,
+    bytes: 738442,
     content: require("../../assets/packs/core-b2/content.cpack"),
     audio: {
     },

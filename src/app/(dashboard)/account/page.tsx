@@ -28,6 +28,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
         actions={
           <>
             <Button href="/profile" variant="ghost">Practice preferences</Button>
+            <Button href="/account/level" variant="ghost">Level</Button>
             <SignOutButton mode={session.mode ?? "local"} />
             <span className="inline-flex items-center gap-2 text-sm text-iron-grey">
               <ThemeToggle /> Theme

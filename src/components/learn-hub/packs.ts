@@ -56,6 +56,24 @@ async function loadFromPacks(level: CefrLevel): Promise<LoadedPack | null> {
   return { level, content, source: "pack", base };
 }
 
+let placementPromise: Promise<PackContent | null> | null = null;
+
+/** The placement test's bank (the `placement` pack), or null when this site has none. */
+export function loadPlacementContent(): Promise<PackContent | null> {
+  placementPromise ??= (async () => {
+    const index = await loadIndex();
+    const entry = index?.packs.filter((pack) => pack.id === "placement").sort((a, b) => b.version - a.version)[0];
+    if (!entry) return null;
+    const manifestUrl = resolve(entry.manifest);
+    const manifest = (await fetch(manifestUrl).then((r) => (r.ok ? r.json() : null))) as PackManifest | null;
+    if (!manifest || !canReadPack(manifest)) return null;
+    const base = manifestUrl.slice(0, manifestUrl.lastIndexOf("/") + 1);
+    const content = (await fetch(`${base}content.json`).then((r) => (r.ok ? r.json() : null))) as PackContent | null;
+    return content && Array.isArray(content.exercises) ? content : null;
+  })().catch(() => null);
+  return placementPromise;
+}
+
 export function loadPack(level: CefrLevel): Promise<LoadedPack> {
   let promise = packPromises.get(level);
   if (!promise) {

@@ -64,6 +64,8 @@ export interface CoachInput {
   history: CoachTurn[];
   summary?: string;
   start: boolean;
+  /** The learner's current level, which sets how the coach pitches its English. */
+  level?: CefrLevel | null;
   /** The existing local coach-engine payload, passed through unchanged. */
   legacy?: Record<string, unknown>;
 }
@@ -155,7 +157,7 @@ const geminiCoach: CoachModel = {
   async turn(input) {
     const raw = await generateJson<Record<string, unknown>>({
       model: MODELS.coach,
-      system: coachSystemPrompt(input.scenario),
+      system: coachSystemPrompt(input.scenario, input.level ?? null),
       contents: coachContents(input),
       schema: COACH_SCHEMA,
       maxOutputTokens: COACH_MAX_OUTPUT_TOKENS,

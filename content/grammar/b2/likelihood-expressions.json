@@ -1,0 +1,476 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "likelihood-expressions",
+ "draftHash": "dea4258f59e45499",
+ "grammarPoint": {
+  "id": "gp.likelihood-expressions",
+  "level": "B2",
+  "topicId": "topic.modals",
+  "title": "Likelihood",
+  "summary": "Learn to express how probable something is using phrases like \"be likely to,\" \"be bound to,\" and \"there is a good chance that.\"",
+  "explanation": "We use specific phrases to talk about how probable or certain something is. These phrases help us express different levels of likelihood, from a strong possibility to an almost certain outcome.\n\n*Be likely to* and *be unlikely to* describe something that will probably happen or probably won't happen. \"Likely\" suggests a good chance, while \"unlikely\" suggests a small chance. You always follow \"be likely/unlikely\" with *to* and the base form of a verb.\n\n*Be bound to* expresses a very strong certainty, almost an inevitability. If something is \"bound to happen,\" it means it's almost impossible for it not to happen. This is stronger than \"be likely to.\"\n\n*There is a good chance that* is another way to say something is very probable. It's often used when you want to emphasize the positive possibility. This phrase is followed by a complete clause (subject + verb).",
+  "patterns": [
+   "Subject + be + likely/unlikely + to + base verb",
+   "Subject + be + bound + to + base verb",
+   "There is a good chance that + clause"
+  ],
+  "examples": [
+   {
+    "text": "It's likely to be sunny tomorrow, so we should plan a picnic.",
+    "note": "Expresses a good probability of future sunshine.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They're unlikely to agree on the new proposal.",
+    "note": "Shows a low probability of agreement.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "With all that hard work, she's bound to get a promotion soon.",
+    "note": "Indicates a very high certainty of a promotion.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There's a good chance that the concert tickets will sell out quickly.",
+    "note": "Suggests a strong possibility of tickets selling fast.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Are you likely to visit your family next month?",
+    "note": "Asks about the probability of a future visit.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "It likely rain later.",
+    "right": "It's likely to rain later.",
+    "note": "Remember to use \"be\" and \"to\" with \"likely.\""
+   },
+   {
+    "wrong": "He is bound for succeed.",
+    "right": "He is bound to succeed.",
+    "note": "Use \"to\" + base verb, not \"for\" + noun/gerund, after \"bound.\""
+   },
+   {
+    "wrong": "There is a good chance of they will come.",
+    "right": "There is a good chance that they will come.",
+    "note": "\"There is a good chance that\" is followed by a clause (subject + verb)."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.likelihood-expressions.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The train is ___ arrive late due to the heavy snow.",
+   "options": [
+    "bound for",
+    "likely to",
+    "good chance",
+    "unlikely"
+   ],
+   "answer": 1,
+   "explanation": "\"Likely to\" correctly expresses a probability followed by a base verb."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "She studied for months, so she's ___ pass the exam.",
+   "options": [
+    "unlikely to",
+    "likely",
+    "bound to",
+    "there is a good chance"
+   ],
+   "answer": 2,
+   "explanation": "\"Bound to\" expresses a very high certainty given her effort."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the new restaurant will be popular.",
+   "options": [
+    "It's unlikely",
+    "There's a good chance that",
+    "It's bound",
+    "They are likely"
+   ],
+   "answer": 1,
+   "explanation": "\"There's a good chance that\" is followed by a clause and expresses strong probability."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Do you think they are ___ finish the project by Friday?",
+   "options": [
+    "bound",
+    "likely to",
+    "good chance",
+    "unlikely for"
+   ],
+   "answer": 1,
+   "explanation": "\"Likely to\" is the correct structure for asking about probability."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "If you don't leave now, you're ___ ___ miss your flight.",
+   "answers": [
+    [
+     "bound",
+     "to"
+    ]
+   ],
+   "explanation": "\"Bound to\" expresses a high certainty of missing the flight."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "There's a good ___ ___ the company will announce new policies next week.",
+   "answers": [
+    [
+     "chance",
+     "that"
+    ]
+   ],
+   "explanation": "\"There's a good chance that\" is the correct phrase for strong probability."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It's ___ ___ rain this afternoon, so take an umbrella.",
+   "answers": [
+    [
+     "likely",
+     "to"
+    ]
+   ],
+   "explanation": "\"Likely to\" expresses a good probability of rain."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "team",
+    "is",
+    "unlikely",
+    "to",
+    "win",
+    "the",
+    "championship",
+    "."
+   ],
+   "distractors": [
+    "will",
+    "for"
+   ],
+   "explanation": "This sentence uses \"unlikely to\" to express a low probability."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He's",
+    "bound",
+    "to",
+    "make",
+    "a",
+    "mistake",
+    "if",
+    "he",
+    "rushes",
+    "."
+   ],
+   "distractors": [
+    "might",
+    "for"
+   ],
+   "explanation": "\"Bound to\" indicates a very high certainty of making a mistake under those conditions."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "There is a good chance of the train will be delayed.",
+   "answers": [
+    "There is a good chance that the train will be delayed."
+   ],
+   "explanation": "\"There is a good chance that\" requires \"that\" followed by a clause."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She likely to get the job, she's very qualified.",
+   "answers": [
+    "She's likely to get the job, she's very qualified.",
+    "She is likely to get the job, she's very qualified."
+   ],
+   "explanation": "\"Be likely to\" is the correct structure."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's almost certain that they will arrive late.",
+   "instruction": "Use 'bound to'.",
+   "answers": [
+    "They are bound to arrive late."
+   ],
+   "explanation": "\"Bound to\" expresses strong certainty."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Perhaps the meeting will be canceled.",
+   "instruction": "Use 'likely to'.",
+   "answers": [
+    "The meeting is likely to be canceled."
+   ],
+   "explanation": "\"Likely to\" expresses probability."
+  },
+  {
+   "id": "ex.b2.likelihood-expressions.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.likelihood-expressions"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "If you don't water the plants,",
+     "right": "they're bound to die."
+    },
+    {
+     "left": "It's unlikely to snow",
+     "right": "in July here."
+    },
+    {
+     "left": "There's a good chance that",
+     "right": "we'll finish early today."
+    },
+    {
+     "left": "He's likely to forget",
+     "right": "his keys again."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(is|are|am|was|were) (likely|unlikely) to",
+  "(is|are|am|was|were) bound to",
+  "there (is|was) a good chance that"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.likelihood-expressions.01": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.02": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.03": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.04": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.likelihood-expressions.05: needs one answer list per gap (2)"
+   },
+   "ex.b2.likelihood-expressions.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.likelihood-expressions.06: needs one answer list per gap (2)"
+   },
+   "ex.b2.likelihood-expressions.07": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.likelihood-expressions.07: needs one answer list per gap (2)"
+   },
+   "ex.b2.likelihood-expressions.08": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.09": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.10": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.11": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.12": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.13": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.14": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.15": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.16": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.17": {
+    "status": "pass"
+   },
+   "ex.b2.likelihood-expressions.18": {
+    "status": "drop",
+    "note": "Invalid: needs one answer list per gap."
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.b2.likelihood-expressions.15",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.likelihood-expressions"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Given the clear sky, it's ___ rain today.",
+    "options": [
+     "bound to",
+     "unlikely to",
+     "likely to"
+    ],
+    "answer": 1,
+    "explanation": "'Unlikely to' means it's not probable, which fits the context of a clear sky and no rain."
+   },
+   {
+    "id": "ex.b2.likelihood-expressions.16",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.likelihood-expressions"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "She practiced for months, so she's ___ perform well.",
+    "options": [
+     "unlikely to",
+     "bound to",
+     "a good chance that"
+    ],
+    "answer": 1,
+    "explanation": "'Bound to' indicates a very high certainty of performing well due to extensive practice."
+   },
+   {
+    "id": "ex.b2.likelihood-expressions.17",
+    "kind": "multiple_choice",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.likelihood-expressions"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "If you leave now, there's ___ you'll catch the early train.",
+    "options": [
+     "unlikely to",
+     "bound to",
+     "a good chance that"
+    ],
+    "answer": 2,
+    "explanation": "'There's a good chance that' expresses a strong possibility, which is appropriate for catching a train if leaving now."
+   },
+   {
+    "id": "ex.b2.likelihood-expressions.18",
+    "kind": "gap_fill",
+    "level": "B2",
+    "grammarPointIds": [
+     "gp.likelihood-expressions"
+    ],
+    "prompt": "Complete the sentence.",
+    "text": "If you don't water the plants, they ___ ___ die.",
+    "answers": [
+     [
+      "are",
+      "bound",
+      "to"
+     ]
+    ],
+    "explanation": "'Are bound to' expresses the certainty of the plants dying without water."
+   }
+  ]
+ }
+}

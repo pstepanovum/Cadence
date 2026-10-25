@@ -1,0 +1,406 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "academic-nominal-style",
+ "draftHash": "407846108bc8f039",
+ "grammarPoint": {
+  "id": "gp.academic-nominal-style",
+  "level": "C2",
+  "topicId": "topic.clauses",
+  "title": "Dense nominal style",
+  "summary": "This lesson explores dense nominal style, a formal technique using nouns and prepositions to condense information, common in academic and professional writing.",
+  "explanation": "Dense nominal style involves expressing ideas primarily through nouns and prepositions rather than verbs and clauses. This technique allows for a highly concise and formal presentation of information, often preferred in academic papers, reports, and official documents. It transforms actions and processes into static concepts, making sentences more objective and less focused on agents.\n\nInstead of saying \"They failed to act,\" a dense nominal style might use \"the *failure to act*.\" Similarly, \"They were reluctant to accept\" becomes \"a *growing reluctance to accept*.\" This shift often requires careful selection of prepositions (e.g., *of*, *in*, *on*, *for*, *to*) to link the nominalized verbs to other parts of the sentence, creating complex noun phrases.\n\nMastering this style enhances clarity and sophistication in formal writing, enabling you to convey complex ideas with greater economy of words. It's about packaging information efficiently, making the text more analytical and less narrative.",
+  "patterns": [
+   "the + noun (from verb) + of + noun",
+   "a/an + noun (from verb) + in/on/for + noun",
+   "noun (from verb) + to + verb (infinitive)",
+   "noun (from verb) + that + clause"
+  ],
+  "examples": [
+   {
+    "text": "The *implementation of* the new regulations required extensive training.",
+    "note": "Shows how an action 'implement' becomes a noun 'implementation' linked by 'of'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There was a *significant reduction in* operational costs last quarter.",
+    "note": "Illustrates how 'reduce' becomes 'reduction' with 'in' to specify what was reduced.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Her *reluctance to compromise* complicated the negotiation process.",
+    "note": "Demonstrates how 'reluctant to compromise' becomes a noun phrase with 'to'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The committee noted *the failure to address* the core issues.",
+    "note": "Highlights how 'fail to address' is nominalized to 'failure to address'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "This report provides an *analysis of* the recent market trends.",
+    "note": "Shows how 'analyze' becomes 'analysis' with 'of' to introduce the object.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The *decision of* implement the new system was made yesterday.",
+    "right": "The *decision to implement* the new system was made yesterday.",
+    "note": "Use 'to' with 'decision' when followed by an infinitive verb."
+   },
+   {
+    "wrong": "There was a *decrease on* the number of participants.",
+    "right": "There was a *decrease in* the number of participants.",
+    "note": "'Decrease' typically takes 'in' to specify the area of reduction."
+   },
+   {
+    "wrong": "We observed *the growing reluctance accepting* the changes.",
+    "right": "We observed *the growing reluctance to accept* the changes.",
+    "note": "'Reluctance' is followed by 'to' and an infinitive."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.academic-nominal-style.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The board expressed its ___ the proposed merger.",
+   "options": [
+    "approval of",
+    "approve of",
+    "approving",
+    "approved"
+   ],
+   "answer": 0,
+   "explanation": "'Approval of' is the correct nominal form, using a noun and preposition to express the board's stance."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The report highlighted a significant ___ the company's market share.",
+   "options": [
+    "decline in",
+    "decline on",
+    "declining",
+    "to decline"
+   ],
+   "answer": 0,
+   "explanation": "'Decline in' is the correct nominal phrase to describe a reduction in something."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "There was a clear ___ the new policy among employees.",
+   "options": [
+    "resistance to",
+    "resist to",
+    "resisting",
+    "resist of"
+   ],
+   "answer": 0,
+   "explanation": "'Resistance to' is the correct nominal form, indicating opposition towards something."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team showed a strong ___ the project's success.",
+   "options": [
+    "commitment to",
+    "commit to",
+    "committing",
+    "committed for"
+   ],
+   "answer": 0,
+   "explanation": "'Commitment to' is the correct nominal phrase, expressing dedication towards a goal."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The company announced a significant ___ ___ its carbon footprint.",
+   "answers": [
+    [
+     "reduction"
+    ],
+    [
+     "in"
+    ]
+   ],
+   "explanation": "'Reduction in' is the correct nominal phrase to describe a decrease in something."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Her ___ ___ act quickly prevented a major crisis.",
+   "answers": [
+    [
+     "ability",
+     "decision"
+    ],
+    [
+     "to"
+    ]
+   ],
+   "explanation": "'Ability to' is the correct nominal phrase, indicating the capacity to perform an action."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "There was a noticeable ___ ___ the quality of service.",
+   "answers": [
+    [
+     "deterioration",
+     "decline"
+    ],
+    [
+     "in"
+    ]
+   ],
+   "explanation": "'Deterioration in' is the correct nominal phrase to describe a decline in quality."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "lack",
+    "of",
+    "funding",
+    "hindered",
+    "the",
+    "project's",
+    "progress",
+    "."
+   ],
+   "distractors": [
+    "funds",
+    "lacked"
+   ],
+   "explanation": "This sentence uses the nominal phrase 'the lack of funding' to concisely state the cause of the hindrance."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "A",
+    "growing",
+    "awareness",
+    "of",
+    "environmental",
+    "issues",
+    "is",
+    "evident",
+    "."
+   ],
+   "distractors": [
+    "aware",
+    "grow"
+   ],
+   "explanation": "The nominal phrase 'a growing awareness of environmental issues' concisely expresses a developing understanding."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The *assessment on* the impact of the new policy is ongoing.",
+   "answers": [
+    "The *assessment of* the impact of the new policy is ongoing.",
+    "The assessment of the impact of the new policy is ongoing."
+   ],
+   "explanation": "'Assessment' typically takes 'of' to introduce the subject being assessed."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "We observed *the growing reluctance accepting* the changes.",
+   "answers": [
+    "We observed *the growing reluctance to accept* the changes.",
+    "We observed the growing reluctance to accept the changes."
+   ],
+   "explanation": "'Reluctance' is followed by 'to' and an infinitive verb."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "They were unable to resolve the conflict.",
+   "instruction": "Rewrite using a dense nominal style.",
+   "answers": [
+    "Their *inability to resolve* the conflict was evident."
+   ],
+   "explanation": "'Inability to resolve' is the nominalized form of 'unable to resolve,' creating a denser structure."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The company decided to expand its operations globally.",
+   "instruction": "Rewrite using a dense nominal style.",
+   "answers": [
+    "The company made a *decision to expand* its operations globally."
+   ],
+   "explanation": "Transforming 'decided to expand' into 'made a decision to expand' uses a nominal structure."
+  },
+  {
+   "id": "ex.c2.academic-nominal-style.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.academic-nominal-style"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The *development of*",
+     "right": "new technologies is crucial."
+    },
+    {
+     "left": "There was a *delay in*",
+     "right": "the shipment's arrival."
+    },
+    {
+     "left": "Her *commitment to*",
+     "right": "the project was unwavering."
+    },
+    {
+     "left": "We noted *the absence of*",
+     "right": "clear guidelines."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(the|a|an) (failure|reluctance|reduction|increase|development|implementation|analysis) (of|in|to)",
+  "(inability|capacity|tendency) to",
+  "(lack of|absence of)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.academic-nominal-style.01": {
+    "status": "pass"
+   },
+   "ex.c2.academic-nominal-style.02": {
+    "status": "pass"
+   },
+   "ex.c2.academic-nominal-style.03": {
+    "status": "pass"
+   },
+   "ex.c2.academic-nominal-style.04": {
+    "status": "pass"
+   },
+   "ex.c2.academic-nominal-style.05": {
+    "status": "pass"
+   },
+   "ex.c2.academic-nominal-style.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both noun phrases fit the context naturally and correctly."
+   },
+   "ex.c2.academic-nominal-style.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options complete the sentence naturally and grammatically."
+   },
+   "ex.c2.academic-nominal-style.08": {
+    "status": "drop",
+    "note": "Key judged wrong: Neither answer uses all of the provided tokens."
+   },
+   "ex.c2.academic-nominal-style.09": {
+    "status": "pass"
+   },
+   "ex.c2.academic-nominal-style.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly fix the preposition error."
+   },
+   "ex.c2.academic-nominal-style.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly fix the complement structure to use the infinitive."
+   },
+   "ex.c2.academic-nominal-style.12": {
+    "status": "pass",
+    "note": "Checker slip: The key forms a complete sentence while the other answer is a fragment."
+   },
+   "ex.c2.academic-nominal-style.13": {
+    "status": "pass",
+    "note": "Checker slip: The key is a complete rewritten sentence while the other answer is only a noun phrase."
+   },
+   "ex.c2.academic-nominal-style.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

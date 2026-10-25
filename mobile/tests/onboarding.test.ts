@@ -14,6 +14,7 @@ import {
   previousPosition,
   progressIndex,
   resumePosition,
+  SELF_CHECK_LEVELS,
   startingLevel,
   type FlowContext,
 } from "../src/onboarding/flow.ts";
@@ -102,8 +103,8 @@ describe("what the answers mean", () => {
     assert.equal(cadenceForMinutes(20), "30-minutes");
   });
 
-  it("starts from the quiz, else the self-check, else A1", () => {
-    assert.equal(startingLevel(DEFAULT_ANSWERS), "A1");
+  it("starts from the quiz, else the self-check, else B2", () => {
+    assert.equal(startingLevel(DEFAULT_ANSWERS), "B2");
     assert.equal(startingLevel({ ...DEFAULT_ANSWERS, level: "B1" }), "B1");
     assert.equal(startingLevel({ ...DEFAULT_ANSWERS, level: "B1", placementLevel: "C1" }), "C1");
   });
@@ -130,5 +131,16 @@ describe("placement quiz", () => {
 
   it("scores out of 100", () => {
     assert.equal(placementScore(upTo(["A1", "A2", "B1"])), 50);
+  });
+});
+
+describe("self-check levels", () => {
+  it("offers all six levels, advanced first, with approximate exam equivalents", () => {
+    assert.deepEqual(
+      SELF_CHECK_LEVELS.map((level) => level.value),
+      ["C2", "C1", "B2", "B1", "A2", "A1"],
+    );
+    for (const level of SELF_CHECK_LEVELS) assert.match(level.detail, /TOEFL iBT .+\(approx\.\)$/);
+    assert.match(SELF_CHECK_LEVELS[1].detail, /IELTS 7\.0 to 8\.0/);
   });
 });

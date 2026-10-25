@@ -70,6 +70,11 @@ function MultipleChoice({ exercise, result, onChange }: ExerciseViewProps & { ex
   const [choice, setChoice] = useState<number | null>(null);
   return (
     <View style={styles.wrap}>
+      {exercise.passage ? (
+        <InfoPanel>
+          <Body size={type.callout}>{exercise.passage}</Body>
+        </InfoPanel>
+      ) : null}
       <Title size={type.title3}>{exercise.question}</Title>
       <View style={styles.list}>
         {exercise.options.map((option, index) => {

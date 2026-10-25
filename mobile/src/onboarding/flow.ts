@@ -5,6 +5,7 @@
 // src/components/onboarding/ draws it.
 import type { PracticeCadence, PracticeFocus } from "../lib/profile.ts";
 import { isCefrLevel, type CefrLevel } from "../platform/content-model.ts";
+import { DEFAULT_LEVEL, LEVELS_ADVANCED_FIRST, LEVEL_INFO, examLine } from "../platform/levels.ts";
 import { DEFAULT_DAILY_GOAL, isDailyGoal, type DailyGoal } from "../engagement/today.ts";
 
 export const ONBOARDING_VERSION = 1;
@@ -21,14 +22,16 @@ export const LEARNING_GOALS: { value: LearningGoal; title: string; detail: strin
   { value: "work", title: "English for work", detail: "Meetings, interviews, emails." },
 ];
 
-/** The self-check offers A2 to C2; complete beginners start at A1 through the quiz. */
-export const SELF_CHECK_LEVELS: { value: CefrLevel; title: string; detail: string }[] = [
-  { value: "A2", title: "A2 · Elementary", detail: "Simple everyday conversations." },
-  { value: "B1", title: "B1 · Intermediate", detail: "Most everyday situations." },
-  { value: "B2", title: "B2 · Upper intermediate", detail: "Work and complex topics." },
-  { value: "C1", title: "C1 · Advanced", detail: "Fluent and flexible." },
-  { value: "C2", title: "C2 · Proficient", detail: "Close to native." },
-];
+/**
+ * The self-check: all six levels, advanced first (Cadence is built for B2 to
+ * C2 work), each with a line on what it means and its approximate IELTS and
+ * TOEFL iBT equivalents. Not sure? The placement test decides.
+ */
+export const SELF_CHECK_LEVELS: { value: CefrLevel; title: string; detail: string }[] = LEVELS_ADVANCED_FIRST.map((level) => ({
+  value: level,
+  title: `${level} · ${LEVEL_INFO[level].name}`,
+  detail: `${LEVEL_INFO[level].detail} ${examLine(level)}`,
+}));
 
 export type PracticePlace = "own" | "cloud";
 
@@ -148,9 +151,9 @@ export function cadenceForMinutes(minutes: number): PracticeCadence {
   return "30-minutes";
 }
 
-/** The level practice starts at: the quiz's answer, else the self-check, else A1. */
+/** The level practice starts at: the quiz's answer, else the self-check, else B2 (DEFAULT_LEVEL). */
 export function startingLevel(answers: OnboardingAnswers): CefrLevel {
-  return answers.placementLevel ?? answers.level ?? "A1";
+  return answers.placementLevel ?? answers.level ?? DEFAULT_LEVEL;
 }
 
 const STEPS: readonly OnboardingStep[] = ["welcome", "goal", "level", "placement", "minutes", "reminders", "where", "account", "paywall"];

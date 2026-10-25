@@ -1,0 +1,351 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "academic-register-impersonal",
+ "draftHash": "1eab80e06e6c8efb",
+ "grammarPoint": {
+  "id": "gp.academic-register-impersonal",
+  "level": "C1",
+  "topicId": "topic.emphasis",
+  "title": "Impersonal academic style",
+  "summary": "Learn to write in an impersonal, objective style for academic and formal contexts, using structures like passive voice, 'it' and 'there' constructions, and noun phrases.",
+  "explanation": "In academic and formal writing, an *impersonal style* is often preferred to maintain objectivity and focus on information rather than the writer or reader. This means avoiding personal pronouns like \"I\" and \"you.\"\n\nWe often use *impersonal \"it\"* and *impersonal \"there\"* to introduce facts or general statements. For example, \"It is believed that...\" or \"There is evidence to suggest...\" These structures help present information as widely accepted or observed, rather than as a personal opinion.\n\nThe *passive voice* is another key tool. It allows you to emphasize the action or the result, rather than the person or thing performing the action. This is especially useful when the agent is unknown, unimportant, or obvious from the context.\n\nFinally, a *noun-based style*, also known as nominalization, involves turning verbs or adjectives into nouns. This makes sentences more concise and formal, often seen in scientific or technical writing. For instance, instead of \"We analyzed the data,\" you might write \"An analysis of the data was performed.\"",
+  "patterns": [
+   "It is + adjective/past participle + that/to-infinitive",
+   "There is/are + noun phrase + that/to-infinitive",
+   "Subject + be + past participle (passive)",
+   "Noun phrase (instead of verb phrase)"
+  ],
+  "examples": [
+   {
+    "text": "It is widely accepted that climate change is a global issue.",
+    "note": "Impersonal 'it' introduces a general truth.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There is a strong correlation between diet and health.",
+    "note": "Impersonal 'there' introduces a fact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The experiment was conducted over several weeks.",
+    "note": "Passive voice focuses on the experiment, not who conducted it.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "A thorough investigation of the incident is underway.",
+    "note": "Noun-based style makes the sentence more formal and concise.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Research indicates a significant increase in renewable energy use.",
+    "note": "Avoids 'I' or 'we' to present findings objectively.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I think that the results show a clear trend.",
+    "right": "It is thought that the results show a clear trend.",
+    "note": "Avoid personal opinions in formal writing."
+   },
+   {
+    "wrong": "They analyzed the samples carefully.",
+    "right": "The samples were analyzed carefully.",
+    "note": "Use the passive voice to focus on the action, not the agent."
+   },
+   {
+    "wrong": "You can see that the data supports the hypothesis.",
+    "right": "The data is observed to support the hypothesis.",
+    "note": "Replace 'you' with impersonal constructions or passive voice."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.academic-register-impersonal.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Which sentence uses an appropriate impersonal academic style?",
+   "options": [
+    "I believe the study's findings are significant.",
+    "The study's findings are believed to be significant.",
+    "You can see the study's findings are significant.",
+    "We found the study's findings significant."
+   ],
+   "answer": 1,
+   "explanation": "Option 1 uses the impersonal passive construction \"are believed to be,\" which is suitable for academic style, unlike the personal pronouns in other options."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "To maintain an impersonal tone, which phrase is best to start a sentence?",
+   "options": [
+    "I would argue that...",
+    "It is argued that...",
+    "We can conclude that...",
+    "You might consider that..."
+   ],
+   "answer": 1,
+   "explanation": "\"It is argued that...\" uses an impersonal passive construction, which is appropriate for formal academic writing, unlike the personal pronouns in the other options."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.03",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ is important to note that ___ was a significant increase in data errors.",
+   "answers": [
+    [
+     "It"
+    ],
+    [
+     "there"
+    ]
+   ],
+   "explanation": "\"It is important to note\" is an impersonal introductory phrase, and \"there was\" introduces the existence of something."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.04",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The decision ___ made after careful consideration of all factors.",
+   "answers": [
+    [
+     "was"
+    ]
+   ],
+   "explanation": "The passive voice \"was made\" is used to focus on the decision itself, not who made it."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "A detailed ___ of the problem was presented in the report.",
+   "answers": [
+    [
+     "analysis"
+    ]
+   ],
+   "explanation": "\"Analysis\" is the noun form (nominalization) of \"analyze,\" creating a more formal, noun-based style."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.06",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "is",
+    "suggested",
+    "that",
+    "further",
+    "research",
+    "is",
+    "needed",
+    "."
+   ],
+   "distractors": [
+    "they",
+    "believe"
+   ],
+   "explanation": "This sentence uses the impersonal 'it' construction to present a suggestion objectively."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.07",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "results",
+    "were",
+    "published",
+    "in",
+    "a",
+    "peer-reviewed",
+    "journal",
+    "."
+   ],
+   "distractors": [
+    "we"
+   ],
+   "explanation": "This sentence uses the passive voice to emphasize the results and their publication, not the researchers."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.08",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "I observed that the temperature increased steadily.",
+   "answers": [
+    "It was observed that the temperature increased steadily.",
+    "The temperature was observed to increase steadily."
+   ],
+   "explanation": "The original sentence uses a personal pronoun. The corrections use impersonal 'it' or the passive voice to maintain an objective tone."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.09",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "There is believed that the new policy will be effective.",
+   "answers": [
+    "It is believed that the new policy will be effective."
+   ],
+   "explanation": "The impersonal construction requires \"It is believed that...\" not \"There is believed that...\"."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.10",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We concluded that the experiment was successful.",
+   "instruction": "Rewrite in an impersonal academic style.",
+   "answers": [
+    "It was concluded that the experiment was successful.",
+    "The conclusion was that the experiment was successful."
+   ],
+   "explanation": "The original sentence uses a personal pronoun. The rewritten sentences use impersonal 'it' or nominalization to achieve an academic style."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.11",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "You can see a clear pattern in the data.",
+   "instruction": "Rewrite to avoid 'you' and maintain formality.",
+   "answers": [
+    "A clear pattern is observed in the data.",
+    "There is a clear pattern observed in the data.",
+    "A clear pattern can be observed in the data."
+   ],
+   "explanation": "The original sentence uses 'you'. The rewritten sentences use the passive voice or impersonal 'there' to remove the direct address."
+  },
+  {
+   "id": "ex.c1.academic-register-impersonal.12",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.academic-register-impersonal"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "It is generally",
+     "right": "understood that these factors are linked."
+    },
+    {
+     "left": "There is considerable",
+     "right": "evidence supporting this theory."
+    },
+    {
+     "left": "The findings were",
+     "right": "presented at the conference."
+    },
+    {
+     "left": "A careful examination",
+     "right": "of the samples was performed."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "it is (widely | generally | commonly )?(believed|known|understood|accepted) that",
+  "there is (evidence|a correlation|a need) (to|for|that)",
+  "(was|were) (conducted|observed|analyzed|published|performed)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.academic-register-impersonal.01": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.02": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.03": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.04": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.05": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.06": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.07": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.08": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.09": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.10": {
+    "status": "pass"
+   },
+   "ex.c1.academic-register-impersonal.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both rewrites successfully avoid 'you' while maintaining a formal tone."
+   },
+   "ex.c1.academic-register-impersonal.12": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

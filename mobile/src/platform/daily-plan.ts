@@ -12,6 +12,7 @@
 // checked by tests/platform/drift.test.ts.
 
 import type { CefrLevel } from "./content-model.ts";
+import { DEFAULT_LEVEL } from "./levels.ts";
 
 /** What the planner knows about the learner today. */
 export interface PlanInput {
@@ -25,6 +26,7 @@ export interface PlanInput {
   soundFrequency?: Readonly<Record<string, number>>;
   /** Grammar accuracy, 0 to 100, from exercises answered. */
   grammar: readonly { grammarPointId: string; accuracy: number; attempts: number }[];
+  /** The learner's current level (levels.ts: their grammar level, else overall); null means not set, so B2. */
   level: CefrLevel | null;
   /** A paired Cadence or cloud AI is available for shadowing or the coach. */
   aiAvailable: boolean;
@@ -100,7 +102,7 @@ export function buildDailyPlan(input: PlanInput): DailyPlan {
 
   // Short of ten minutes: new material at the learner's level fills the rest.
   if (total() < PLAN_MIN_MINUTES) {
-    items.push({ kind: "lesson", level: input.level ?? "A2", minutes: Math.min(PLAN_MAX_MINUTES - total(), Math.max(PLAN_MIN_MINUTES - total(), 4)) });
+    items.push({ kind: "lesson", level: input.level ?? DEFAULT_LEVEL, minutes: Math.min(PLAN_MAX_MINUTES - total(), Math.max(PLAN_MIN_MINUTES - total(), 4)) });
   }
 
   return { day: input.today, items, minutes: total() };

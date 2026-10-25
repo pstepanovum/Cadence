@@ -27,7 +27,7 @@ function tokenOrder(exercise) {
 export function blindView(e, n) {
   switch (e.kind) {
     case "multiple_choice":
-      return { n, task: "choose", question: e.question, options: e.options };
+      return { n, task: "choose", ...(e.passage ? { passage: e.passage } : {}), question: e.question, options: e.options };
     case "gap_fill":
       return { n, task: "fill", text: e.text, ...(e.bank ? { bank: e.bank } : {}) };
     case "sentence_building":
@@ -73,7 +73,7 @@ export function fromBlindAnswer(e, reply) {
 export function judgeView(e, answer) {
   switch (e.kind) {
     case "multiple_choice":
-      return { task: "choose", question: e.question, options: e.options, key: e.options[e.answer], other: e.options[answer.choice] ?? "(none)" };
+      return { task: "choose", ...(e.passage ? { passage: e.passage } : {}), question: e.question, options: e.options, key: e.options[e.answer], other: e.options[answer.choice] ?? "(none)" };
     case "gap_fill":
       return { task: "fill the ___ gaps", text: e.text, key: e.answers.map((a) => a[0]), other: answer.gaps };
     case "sentence_building":

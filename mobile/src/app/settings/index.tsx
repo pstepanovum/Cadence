@@ -3,7 +3,7 @@
 // running setup again, and the app version.
 import Constants from "expo-constants";
 import { router } from "expo-router";
-import { Download, KeyRound, Laptop, RotateCcw, Sparkles, Volume2 } from "lucide-react-native";
+import { Download, GraduationCap, KeyRound, Laptop, RotateCcw, Sparkles, Volume2 } from "lucide-react-native";
 import { useEffect, useState } from "react";
 import { Alert, AppState, Linking, StyleSheet, View } from "react-native";
 
@@ -25,6 +25,7 @@ import { formatTime, inQuietHours } from "@/notifications/plan";
 import { askForNotifications, notificationPermission, type PermissionState } from "@/notifications/schedule";
 import { updateReminders, useReminderSettings } from "@/notifications/settings";
 import { haptics } from "@/lib/haptics";
+import { levelSummary, useLevelPrefs } from "@/learning/level-store";
 import { useConnection } from "@/pairing/context";
 import { linkedMethods, methodLabel } from "@/platform/sign-in-methods";
 import { colors, spacing, type } from "@/theme/theme";
@@ -37,6 +38,7 @@ export default function SettingsScreen() {
   const { mode, state: connectionState, paired, forgetServer } = useConnection();
   const server = useServerStatus();
   const voice = useCoachVoice();
+  const levels = useLevelPrefs();
   const [permission, setPermission] = useState<PermissionState>("undetermined");
   const [message, setMessage] = useState<{ tone: "error" | "success" | "info"; text: string } | null>(null);
   const [restoring, setRestoring] = useState(false);
@@ -158,6 +160,7 @@ export default function SettingsScreen() {
         </View>
         <SwitchRow title="Sounds" detail="Short cues for answers and finished lessons." value={prefs.sounds} onChange={(on) => setPref("sounds", on)} />
         <SwitchRow title="Haptics" detail="Gentle taps when you press and pick." value={prefs.haptics} onChange={(on) => setPref("haptics", on)} />
+        <SettingsRow icon={<GraduationCap color={colors.hunter} size={20} />} title="Level" detail={levelSummary(levels)} onPress={() => router.push("/settings/level")} />
         <SettingsRow icon={<Volume2 color={colors.hunter} size={20} />} title="Coach voice" detail={voice.instruct} onPress={() => router.push("/settings/voice")} />
         <SettingsRow icon={<Download color={colors.hunter} size={20} />} title="Offline content packs" detail="Lessons and sounds on this phone, and more to download." onPress={() => router.push("/settings/packs")} />
       </View>

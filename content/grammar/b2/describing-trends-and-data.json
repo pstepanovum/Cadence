@@ -1,0 +1,402 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "describing-trends-and-data",
+ "draftHash": "6384213bec98ae44",
+ "grammarPoint": {
+  "id": "gp.describing-trends-and-data",
+  "level": "B2",
+  "topicId": "topic.comparison",
+  "title": "Describing trends and data",
+  "summary": "Learn to describe changes and comparisons in data using phrases like 'rose sharply,' 'a slight decline,' 'peaked at,' 'twice as many as,' and 'the proportion of.'",
+  "explanation": "When you're talking about trends and data, it's useful to have specific phrases to describe how things change over time or how different figures compare. You can use verbs like *rise*, *fall*, *increase*, or *decline* with adverbs such as *sharply* or *slightly* to show the speed or size of a change.\n\nFor example, 'sales *rose sharply*' means a big, quick increase, while 'a *slight decline*' indicates a small decrease. To talk about the highest point a value reached, you can use *peaked at* followed by the specific number or amount.\n\nTo compare quantities, you can use structures like '*twice as many as*' or '*twice as much as*'. Use 'many' for countable nouns and 'much' for uncountable nouns. Finally, to discuss a part of a whole, use 'the *proportion of*' followed by the group you're referring to.",
+  "patterns": [
+   "verb (e.g., rose, fell) + adverb (e.g., sharply, slightly)",
+   "a/an + adjective (e.g., sharp, slight) + noun (e.g., increase, decline)",
+   "peaked at + number/value",
+   "X times as many/much + noun + as + Y",
+   "the proportion of + noun"
+  ],
+  "examples": [
+   {
+    "text": "The company's profits *rose sharply* in the third quarter.",
+    "note": "Describes a significant and quick increase.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "There was *a slight decline* in new subscriptions last month.",
+    "note": "Indicates a small decrease.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The number of website visitors *peaked at* 10,000 on Monday.",
+    "note": "Shows the highest point reached.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Our team completed *twice as many* tasks *as* the other team.",
+    "note": "Compares two countable quantities.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "*The proportion of* students choosing online courses has grown.",
+    "note": "Refers to a part of a larger group.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The temperature peaked on 30 degrees.",
+    "right": "The temperature *peaked at* 30 degrees.",
+    "note": "Use 'at' with 'peaked' to indicate the specific value."
+   },
+   {
+    "wrong": "We have twice much coffee as last week.",
+    "right": "We have *twice as much* coffee *as* last week.",
+    "note": "Remember 'as' before and after 'much/many' in comparisons."
+   },
+   {
+    "wrong": "Sales sharply rose in December.",
+    "right": "Sales *rose sharply* in December.",
+    "note": "Adverbs of manner usually come after the verb they modify."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.describing-trends-and-data.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After the new marketing campaign, customer engagement ___.",
+   "options": [
+    "a slight decline",
+    "peaked at",
+    "rose sharply",
+    "twice as many as"
+   ],
+   "answer": 2,
+   "explanation": "'Rose sharply' indicates a significant increase, which is a positive outcome of a marketing campaign."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The survey showed that ___ employees prefer flexible working hours.",
+   "options": [
+    "peaked at",
+    "a slight decline",
+    "twice as much",
+    "the proportion of"
+   ],
+   "answer": 3,
+   "explanation": "'The proportion of' is used to talk about a part of a group, like employees."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "During the holiday season, online orders ___ 5,000 per day.",
+   "options": [
+    "rose sharply",
+    "peaked at",
+    "a slight decline",
+    "twice as many"
+   ],
+   "answer": 1,
+   "explanation": "'Peaked at' is used to describe the highest point reached by a number or value."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Last year, the restaurant served ___ customers ___ the year before.",
+   "options": [
+    "a slight decline",
+    "peaked at",
+    "twice as many",
+    "the proportion of"
+   ],
+   "answer": 2,
+   "explanation": "'Twice as many' is used for comparing countable nouns like 'customers'."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The number of people attending the festival ___ ___ 20,000 this year.",
+   "answers": [
+    [
+     "peaked"
+    ],
+    [
+     "at"
+    ]
+   ],
+   "explanation": "'Peaked at' describes the highest point reached by a number."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "There was a ___ ___ in energy consumption during the summer months.",
+   "answers": [
+    [
+     "slight"
+    ],
+    [
+     "decline",
+     "increase"
+    ]
+   ],
+   "explanation": "'A slight decline' means a small decrease."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The company produced ___ ___ ___ cars this quarter ___ the previous one.",
+   "answers": [
+    [
+     "twice"
+    ],
+    [
+     "as"
+    ],
+    [
+     "many"
+    ],
+    [
+     "as"
+    ]
+   ],
+   "explanation": "'Twice as many as' is used to compare countable items like 'cars'."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "proportion",
+    "of",
+    "vegetarians",
+    "in",
+    "the",
+    "city",
+    "has",
+    "increased",
+    "."
+   ],
+   "explanation": "This sentence correctly uses 'the proportion of' to refer to a part of the population."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Online",
+    "sales",
+    "rose",
+    "sharply",
+    "after",
+    "the",
+    "advertisement",
+    "."
+   ],
+   "distractors": [
+    "slowly",
+    "fell"
+   ],
+   "explanation": "'Rose sharply' indicates a significant increase in online sales."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The price of coffee saw a sharply rise last month.",
+   "answers": [
+    "The price of coffee saw a sharp rise last month."
+   ],
+   "explanation": "Use the adjective 'sharp' before the noun 'rise' to describe the type of increase."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Our team scored twice much points as theirs.",
+   "answers": [
+    "Our team scored twice as many points as theirs."
+   ],
+   "explanation": "For countable nouns like 'points', use 'many' instead of 'much' in comparisons."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The number of people using public transport reached its highest point at 5,000.",
+   "instruction": "Use the phrase 'peaked at'.",
+   "answers": [
+    "The number of people using public transport peaked at 5,000."
+   ],
+   "explanation": "'Peaked at' is the correct phrase to describe reaching the highest point."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Last year, we received 50 applications. This year, we received 100.",
+   "instruction": "Rewrite using 'twice as many as'.",
+   "answers": [
+    "This year, we received twice as many applications as last year."
+   ],
+   "explanation": "'Twice as many as' correctly compares the two countable quantities of applications."
+  },
+  {
+   "id": "ex.b2.describing-trends-and-data.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.describing-trends-and-data"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The cost of living",
+     "right": "rose sharply last year."
+    },
+    {
+     "left": "There was a slight",
+     "right": "decline in tourism."
+    },
+    {
+     "left": "The number of participants",
+     "right": "peaked at 150."
+    },
+    {
+     "left": "The proportion of households",
+     "right": "with internet access is high."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "rose sharply",
+  "a slight decline",
+  "peaked at",
+  "twice as many as",
+  "the proportion of"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.describing-trends-and-data.01": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.02": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.03": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.04": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.05": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.06": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers form correct and natural sentences because no context specifies whether consumption went up or down."
+   },
+   "ex.b2.describing-trends-and-data.07": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.08": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.09": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.10": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.11": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.12": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.13": {
+    "status": "pass"
+   },
+   "ex.b2.describing-trends-and-data.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

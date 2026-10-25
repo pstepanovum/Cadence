@@ -11,6 +11,7 @@ import { getAdminAuth, isFirebaseServerConfigured } from "@/lib/firebase/admin";
 import type { LocalProfile } from "@/lib/local-profile";
 import { readLocalProfileFromCookies } from "@/lib/local-profile";
 import { authenticateToken, getSharedProfile } from "@/lib/pairing/service";
+import type { LevelPrefs } from "@/lib/platform/levels";
 
 export interface AppUser {
   id: string;
@@ -23,6 +24,10 @@ export interface AppUser {
   isLocal: boolean;
   /** Stripe state for a cloud user; null in local mode. */
   billing: BillingState | null;
+  /** Level settings kept on the account (cloud only; elsewhere they stay on the device). */
+  levels?: LevelPrefs | null;
+  /** Placement items seen in earlier tests, compact (cloud only). */
+  placementSeen?: string | null;
 }
 
 export interface AppSession {
@@ -147,6 +152,8 @@ async function loadCloudUser({ uid, email: tokenEmail }: VerifiedIdentity): Prom
     onboardingCompleted: record.onboardingCompleted,
     isLocal: false,
     billing: record.billing,
+    levels: record.levels,
+    placementSeen: record.placementSeen,
   };
 }
 

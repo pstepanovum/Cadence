@@ -13,6 +13,7 @@ Downloads and API responses are cached in `scripts/content/.cache/`
 | Tatoeba sentences | `node scripts/content/tatoeba.mjs sentences` | `content/sentences/<level>.json` |
 | Grammar drafts | `node scripts/content/generate.mjs [--level B1] [--only slug]` | `content/grammar/<level>/<slug>.json` |
 | Blind check | `node scripts/content/check.mjs [--level B1] [--only slug]` | `check` in each grammar file |
+| Placement bank | `node scripts/content/placement.mjs [--level C1] [--type error]` | `content/placement/<level>.json` (drafts, blind check and level check) |
 | Tatoeba grammar examples | `node scripts/content/examples.mjs` | `tatoebaExamples` in each grammar file |
 | Mouth-map targets | `node scripts/content/fit-articulation.mjs` | `content/articulation/*.json` |
 | Validate | `node scripts/content/validate.mjs`, `node scripts/content/validate-articulation.mjs` | nothing; exits 1 on any problem |
@@ -22,4 +23,6 @@ Downloads and API responses are cached in `scripts/content/.cache/`
 Every Gemini call is temperature 0 with a fixed seed and a JSON schema, and is
 cached by prompt, so reruns are free and repeatable. Only exercises that pass
 the blind check (`pass`, or `fixed` when a second correct answer was added)
-reach a pack. Sources and licences are in `CREDITS.md`.
+reach a pack. Placement items also need a level check: a second model rates
+each item's CEFR level, and one rated more than a level away from its band is
+dropped. Sources and licences are in `CREDITS.md`.

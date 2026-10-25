@@ -1,0 +1,405 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "mixed-inverted-conditionals",
+ "draftHash": "67b01a9423e41fa5",
+ "grammarPoint": {
+  "id": "gp.mixed-inverted-conditionals",
+  "level": "C2",
+  "topicId": "topic.conditionals",
+  "title": "Mixed and inverted conditionals",
+  "summary": "Explore mixed conditionals, combining different time frames, and inverted conditionals, which omit 'if' for a more formal or emphatic tone.",
+  "explanation": "Mixed conditionals combine different time frames in the 'if' clause and the main clause. For example, a past condition can lead to a present result, or a present condition can have a past consequence. This allows for nuanced expression of hypothetical situations that span across time.\n\nInverted conditionals are a more formal way to express conditional sentences, especially in written English or formal speech. Instead of using 'if', the auxiliary verb (had, were, should) is placed before the subject. This structure is common in C2 English and adds a sophisticated touch to your communication.\n\nWhen mixing and inverting, pay close attention to the verb forms. For a past condition with a present result, you'll often see 'Had + subject + past participle' in the condition and 'would + base verb' or 'would + be + verb-ing' in the result. For a present condition with a past result, 'Were + subject + to + verb' or 'Were it not for + noun' in the condition is followed by 'would + have + past participle' in the result.",
+  "patterns": [
+   "Had + subject + past participle, subject + would + base verb",
+   "Had + subject + past participle, subject + would + be + verb-ing",
+   "Were + subject + (not) + adjective/noun/to + verb, subject + would + have + past participle",
+   "Were it not for + noun/noun phrase, subject + would + have + past participle"
+  ],
+  "examples": [
+   {
+    "text": "Had she accepted the promotion, she would now be managing the entire department.",
+    "note": "An inverted past condition leads to a present continuous result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Were he more careful with his finances, he wouldn't have accumulated so much debt last year.",
+    "note": "An inverted present condition leads to a past result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If they had started the project earlier, they would be celebrating its completion today.",
+    "note": "A standard mixed conditional with a past condition and a present continuous result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Were it not for the sudden storm, we would have reached the summit yesterday.",
+    "note": "An inverted present condition ('Were it not for...') leads to a past result.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Had I known about the change in plans, I would be at the conference right now.",
+    "note": "An inverted past condition leads to a present result.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "If had I known, I would be there.",
+    "right": "Had I known, I would be there.",
+    "note": "When inverting, 'if' is omitted and the auxiliary verb comes first."
+   },
+   {
+    "wrong": "Were it not for his help, I wouldn't finish the report.",
+    "right": "Were it not for his help, I wouldn't have finished the report.",
+    "note": "A present condition with a past result requires 'would have + past participle'."
+   },
+   {
+    "wrong": "Had she studied more, she would pass the exam now.",
+    "right": "Had she studied more, she would be passing the exam now.",
+    "note": "For a present continuous result, use 'would be + verb-ing'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the early flight, I would have slept in this morning.",
+   "options": [
+    "If it were not for",
+    "Were it not for",
+    "Had it not for",
+    "If it had not for"
+   ],
+   "answer": 1,
+   "explanation": "'Were it not for' is the correct inverted form for a present condition with a past result."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Had he taken the job, he ___ now living in Paris.",
+   "options": [
+    "would be",
+    "would have been",
+    "will be",
+    "is"
+   ],
+   "answer": 0,
+   "explanation": "A past condition ('Had he taken...') leads to a present continuous result ('would be living')."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ more time, she wouldn't have rushed the presentation yesterday.",
+   "options": [
+    "If she had",
+    "Had she",
+    "Were she to have",
+    "Were she have"
+   ],
+   "answer": 2,
+   "explanation": "'Were she to have' expresses a present hypothetical condition leading to a past result, and is a valid inverted form."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "If I had listened to their advice, I ___ in this predicament today.",
+   "options": [
+    "wouldn't be",
+    "wouldn't have been",
+    "won't be",
+    "am not"
+   ],
+   "answer": 0,
+   "explanation": "A past condition ('If I had listened...') leads to a present result ('wouldn't be')."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ I known about the concert, I ___ there right now.",
+   "answers": [
+    [
+     "Had"
+    ],
+    [
+     "would be"
+    ]
+   ],
+   "explanation": "This is an inverted mixed conditional: a past condition ('Had I known') leads to a present continuous result ('would be there')."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Were it not ___ the unexpected delay, we ___ arrived by noon.",
+   "answers": [
+    [
+     "for"
+    ],
+    [
+     "would have"
+    ]
+   ],
+   "explanation": "'Were it not for' introduces a present condition, and 'would have arrived' indicates a past result."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ she to accept the offer, she ___ a much higher salary than she does now.",
+   "answers": [
+    [
+     "Were"
+    ],
+    [
+     "would earn"
+    ]
+   ],
+   "explanation": "'Were she to accept' is an inverted present condition, and 'would earn' is the present result."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Had",
+    "they",
+    "left",
+    "earlier",
+    ",",
+    "they",
+    "would",
+    "be",
+    "home",
+    "by",
+    "now",
+    "."
+   ],
+   "distractors": [
+    "if",
+    "then"
+   ],
+   "explanation": "This sentence uses an inverted past condition ('Had they left earlier') to express a present result ('they would be home by now')."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Were",
+    "it",
+    "not",
+    "for",
+    "her",
+    "talent",
+    ",",
+    "she",
+    "wouldn't",
+    "have",
+    "won",
+    "the",
+    "award",
+    "."
+   ],
+   "distractors": [
+    "if",
+    "had"
+   ],
+   "explanation": "This sentence uses the inverted 'Were it not for' to express a present condition that had a past consequence."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "If had I realized the difficulty, I would have prepared more thoroughly.",
+   "answers": [
+    "Had I realized the difficulty, I would have prepared more thoroughly."
+   ],
+   "explanation": "When inverting a conditional, 'if' is omitted and the auxiliary verb ('Had') comes before the subject."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Were he to be more patient, he wouldn't miss so many opportunities last year.",
+   "answers": [
+    "Were he to be more patient, he wouldn't have missed so many opportunities last year."
+   ],
+   "explanation": "A present condition ('Were he to be more patient') with a past result ('missed last year') requires 'wouldn't have missed'."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If she were more organized, she wouldn't have forgotten her passport.",
+   "instruction": "Rewrite using an inverted conditional.",
+   "answers": [
+    "Were she more organized, she wouldn't have forgotten her passport."
+   ],
+   "explanation": "To invert, remove 'if' and place 'Were' before the subject 'she'."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "If I had taken that course, I would understand this theory better now.",
+   "instruction": "Rewrite using an inverted conditional.",
+   "answers": [
+    "Had I taken that course, I would understand this theory better now."
+   ],
+   "explanation": "To invert, remove 'if' and place 'Had' before the subject 'I'."
+  },
+  {
+   "id": "ex.c2.mixed-inverted-conditionals.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.mixed-inverted-conditionals"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Had they invested in renewable energy years ago",
+     "right": "they would be a leading company in the sector today."
+    },
+    {
+     "left": "Were it not for the constant noise from the construction site",
+     "right": "I would have finished my report much earlier."
+    },
+    {
+     "left": "Were she to accept the new role",
+     "right": "she would be earning a significantly higher salary."
+    },
+    {
+     "left": "Had I known about the change in schedule",
+     "right": "I would be at the meeting right now."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "had (?:i|he|she|we|they|you) (?:known|taken|seen|done|been) (?:.*?) would (?:now|still|already) be",
+  "were it not for (?:the|a|an) (?:.*?) would (?:have|have been)",
+  "were (?:i|he|she|we|they|you) to (?:accept|take|do|be) (?:.*?) would (?:now|still|already) be"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.mixed-inverted-conditionals.01": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.02": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.03": {
+    "status": "drop",
+    "note": "Key judged wrong: 'Were she to have' cannot express a past hypothetical condition for a past result, whereas 'Had she' forms a valid mixed conditional."
+   },
+   "ex.c2.mixed-inverted-conditionals.04": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.05": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.06": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.07": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key omits given tokens like 'if' and 'then', and the other answer is ungrammatical."
+   },
+   "ex.c2.mixed-inverted-conditionals.09": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.10": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.11": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.12": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.13": {
+    "status": "pass"
+   },
+   "ex.c2.mixed-inverted-conditionals.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

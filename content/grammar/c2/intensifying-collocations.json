@@ -1,0 +1,386 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "intensifying-collocations",
+ "draftHash": "60c2d31c655f8758",
+ "grammarPoint": {
+  "id": "gp.intensifying-collocations",
+  "level": "C2",
+  "topicId": "topic.adjectives-adverbs",
+  "title": "Intensifying collocations",
+  "summary": "Learn to use specific adverbs that naturally combine with certain adjectives to create strong, precise meanings.",
+  "explanation": "In English, some adverbs form strong, natural partnerships with particular adjectives. These are called intensifying collocations, and they create a much stronger or more specific meaning than a general intensifier like 'very'.\n\nFor example, while you can say 'very disappointed,' using 'bitterly disappointed' conveys a much deeper, more intense feeling of disappointment. These fixed pairings are common in both spoken and written English.\n\nMastering these collocations helps your English sound more natural, sophisticated, and precise. It shows a deeper understanding of how words work together to convey nuanced meaning.",
+  "patterns": [
+   "bitterly + disappointed",
+   "highly + unlikely",
+   "deeply + rooted",
+   "utterly + convinced",
+   "painfully + aware"
+  ],
+  "examples": [
+   {
+    "text": "She was bitterly disappointed when her project didn't get funded.",
+    "note": "Shows a strong, negative feeling of disappointment.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It's highly unlikely that the train will arrive on time during the storm.",
+    "note": "Emphasizes a very low probability.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The tradition of afternoon tea is deeply rooted in British culture.",
+    "note": "Indicates something firmly established and difficult to change.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "After seeing the evidence, he was utterly convinced of her innocence.",
+    "note": "Expresses complete and absolute certainty.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "I became painfully aware of my mistakes during the presentation.",
+    "note": "Highlights an uncomfortable or difficult realization.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "I was very disappointed by the news.",
+    "right": "I was bitterly disappointed by the news.",
+    "note": "'Bitterly' adds a stronger, more specific sense of disappointment."
+   },
+   {
+    "wrong": "It's strongly unlikely that they will agree.",
+    "right": "It's highly unlikely that they will agree.",
+    "note": "'Highly' is the correct intensifier for 'unlikely'."
+   },
+   {
+    "wrong": "She was totally convinced by his story.",
+    "right": "She was utterly convinced by his story.",
+    "note": "'Utterly' is a stronger and more common collocation with 'convinced'."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.intensifying-collocations.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The company's values are ___ rooted in customer satisfaction.",
+   "options": [
+    "strongly",
+    "deeply",
+    "firmly",
+    "greatly"
+   ],
+   "answer": 1,
+   "explanation": "'Deeply rooted' is the correct and natural collocation to describe something firmly established."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "After the long discussion, she was ___ convinced that her plan was the best option.",
+   "options": [
+    "absolutely",
+    "utterly",
+    "totally",
+    "completely"
+   ],
+   "answer": 1,
+   "explanation": "'Utterly convinced' is a strong and common collocation for complete certainty."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It's ___ unlikely that we'll finish the project before the deadline.",
+   "options": [
+    "very",
+    "highly",
+    "greatly",
+    "extremely"
+   ],
+   "answer": 1,
+   "explanation": "'Highly unlikely' is the standard collocation to express a very low probability."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "He was ___ aware of the challenges ahead, but remained optimistic.",
+   "options": [
+    "strongly",
+    "deeply",
+    "painfully",
+    "bitterly"
+   ],
+   "answer": 2,
+   "explanation": "'Painfully aware' describes an uncomfortable or difficult realization."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The team was ___ disappointed by their loss in the final match.",
+   "answers": [
+    [
+     "bitterly"
+    ]
+   ],
+   "explanation": "'Bitterly disappointed' conveys a strong, negative feeling of disappointment."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Her belief in justice is ___ rooted in her childhood experiences.",
+   "answers": [
+    [
+     "deeply"
+    ]
+   ],
+   "explanation": "'Deeply rooted' describes something firmly established and fundamental."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "I'm ___ convinced that we made the right decision.",
+   "answers": [
+    [
+     "utterly"
+    ]
+   ],
+   "explanation": "'Utterly convinced' expresses complete and absolute certainty."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It's",
+    "highly",
+    "unlikely",
+    "to",
+    "rain",
+    "today",
+    "."
+   ],
+   "distractors": [
+    "very",
+    "probably"
+   ],
+   "explanation": "This sentence uses the collocation 'highly unlikely' to express a low probability."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "She",
+    "was",
+    "painfully",
+    "aware",
+    "of",
+    "her",
+    "mistake",
+    "."
+   ],
+   "distractors": [
+    "sadly",
+    "knew"
+   ],
+   "explanation": "The collocation 'painfully aware' highlights an uncomfortable realization."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The old traditions are very rooted in the community.",
+   "answers": [
+    "The old traditions are deeply rooted in the community."
+   ],
+   "explanation": "'Deeply rooted' is the correct collocation to describe something firmly established."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "He was completely disappointed by the outcome.",
+   "answers": [
+    "He was bitterly disappointed by the outcome."
+   ],
+   "explanation": "'Bitterly disappointed' conveys a stronger, more specific sense of disappointment than 'completely disappointed'."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It's almost impossible that they will finish on time.",
+   "instruction": "Rewrite using 'unlikely'.",
+   "answers": [
+    "It's highly unlikely that they will finish on time."
+   ],
+   "explanation": "The phrase 'highly unlikely' effectively replaces 'almost impossible' to express a very low probability."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "She felt a strong, uncomfortable realization about her lack of preparation.",
+   "instruction": "Rewrite using 'aware'.",
+   "answers": [
+    "She was painfully aware of her lack of preparation."
+   ],
+   "explanation": "'Painfully aware' concisely expresses a strong, uncomfortable realization."
+  },
+  {
+   "id": "ex.c2.intensifying-collocations.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.intensifying-collocations"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The idea of universal healthcare is",
+     "right": "deeply rooted in their political philosophy."
+    },
+    {
+     "left": "I was",
+     "right": "utterly convinced by his passionate speech."
+    },
+    {
+     "left": "It's",
+     "right": "highly unlikely that we'll see snow in July."
+    },
+    {
+     "left": "She felt",
+     "right": "bitterly disappointed after losing the competition."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "bitterly disappointed",
+  "highly unlikely",
+  "deeply rooted",
+  "utterly convinced",
+  "painfully aware"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.intensifying-collocations.01": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.02": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.03": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.04": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.05": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.06": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.07": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.08": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.09": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.10": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.11": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.12": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.13": {
+    "status": "pass"
+   },
+   "ex.c2.intensifying-collocations.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

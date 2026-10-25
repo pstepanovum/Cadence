@@ -1,0 +1,485 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "reporting-and-citing-sources",
+ "draftHash": "aeab84d641a4eb52",
+ "grammarPoint": {
+  "id": "gp.reporting-and-citing-sources",
+  "level": "C1",
+  "topicId": "topic.reported-speech",
+  "title": "Reporting sources",
+  "summary": "Learn to formally cite and report ideas from various sources in academic writing using phrases like \"X argues that\" and \"according to.\"",
+  "explanation": "When writing essays or formal reports, it's crucial to show where your information comes from. This is called *reporting sources*. It helps you support your arguments with evidence and gives credit to the original thinkers, making your writing more credible and allowing readers to follow your research.\n\nPhrases like \"X argues that\" or \"as Y points out\" are used when you want to attribute a specific idea or claim to a particular person, study, or publication. These are strong ways to introduce a contention or a key observation.\n\nFor broader or less specific sources, you might use \"according to\" (e.g., a report, a survey) or \"it has been suggested that.\" The latter is useful when multiple sources imply something, or when you want to present an idea without committing to a single, named author.",
+  "patterns": [
+   "[Author/Study] argues that [statement].",
+   "According to [source], [statement].",
+   "As [Author] points out, [statement].",
+   "It has been suggested that [statement]."
+  ],
+  "examples": [
+   {
+    "text": "Dr. Chen argues that climate change is accelerating.",
+    "note": "Attributing a specific claim or contention to an expert.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "According to the latest census, the city's population has grown significantly.",
+    "note": "Citing data or information from an official report or document.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "As Professor Lee points out, critical thinking is essential for problem-solving.",
+    "note": "Introducing a supporting idea or observation from an academic.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It has been suggested that early morning exercise improves focus.",
+    "note": "Presenting a widely discussed idea or hypothesis without a single, named author.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The research paper argues that renewable energy sources are key to a sustainable future.",
+    "note": "Attributing a main contention or argument to a document.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "According to Dr. Smith argues that the economy will recover.",
+    "right": "According to Dr. Smith, the economy will recover.",
+    "note": "Do not use \"argues that\" immediately after \"according to\" when introducing a direct statement."
+   },
+   {
+    "wrong": "It has been suggested that the new policy is effective, but I don't agree.",
+    "right": "It has been suggested that the new policy is effective.",
+    "note": "\"It has been suggested that\" is for reporting, not for expressing personal opinions directly after."
+   },
+   {
+    "wrong": "The report points out that the data is inconclusive.",
+    "right": "As the report points out, the data is inconclusive.",
+    "note": "Use \"as [source] points out\" for formal attribution, or \"the report states that.\""
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.reporting-and-citing-sources.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Professor Anya Sharma ___ that sustainable urban planning is crucial for future cities.",
+   "options": [
+    "argues",
+    "according to",
+    "has suggested",
+    "as"
+   ],
+   "answer": 0,
+   "explanation": "\"Argues\" is used to directly attribute a specific claim or contention to a named person."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The recent study ___ that prolonged screen time affects sleep quality.",
+   "options": [
+    "according to",
+    "has suggested",
+    "argues",
+    "as"
+   ],
+   "answer": 2,
+   "explanation": "A specific study makes an argument or presents a finding, so \"argues\" is the most appropriate verb."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ the committee's findings, the project exceeded its budget.",
+   "options": [
+    "It has been suggested",
+    "As the committee",
+    "The committee argues",
+    "According to"
+   ],
+   "answer": 3,
+   "explanation": "\"According to\" is used to introduce information or findings from a formal source like a committee's report."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ that artificial intelligence will transform many industries, but no single expert agrees on the timeline.",
+   "options": [
+    "Professor Davies argues",
+    "According to Professor Davies",
+    "As Professor Davies",
+    "It has been suggested"
+   ],
+   "answer": 3,
+   "explanation": "\"It has been suggested that\" is suitable when the idea is widely discussed or implied by multiple sources, without attributing it to one specific person."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ Dr. Evans ___, the discovery has major implications for medicine.",
+   "answers": [
+    [
+     "As"
+    ],
+    [
+     "points out"
+    ]
+   ],
+   "explanation": "\"As [Author] points out\" is used to introduce a supporting idea or observation from a specific person."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ that renewable energy sources are becoming more cost-effective.",
+   "answers": [
+    [
+     "It has been suggested"
+    ]
+   ],
+   "explanation": "\"It has been suggested that\" is used when the source is general or multiple, or not explicitly named."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The recent economic analysis ___ that inflation will stabilize next year.",
+   "answers": [
+    [
+     "argues",
+     "suggests"
+    ]
+   ],
+   "explanation": "\"X argues that\" is used to attribute a specific claim or contention to a study or analysis."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Professor",
+    "Lee",
+    "argues",
+    "that",
+    "digital",
+    "literacy",
+    "is",
+    "vital",
+    "."
+   ],
+   "distractors": [
+    "however",
+    "also"
+   ],
+   "explanation": "This sentence uses \"Professor Lee argues that\" to attribute a specific claim to an academic."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "According",
+    "to",
+    "the",
+    "survey",
+    ",",
+    "most",
+    "people",
+    "prefer",
+    "remote",
+    "work",
+    "."
+   ],
+   "distractors": [
+    "said",
+    "then"
+   ],
+   "explanation": "\"According to the survey\" introduces information or findings from a formal source."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "As the study argues out, regular exercise improves mental health.",
+   "answers": [
+    "As the study points out, regular exercise improves mental health.",
+    "The study argues that regular exercise improves mental health."
+   ],
+   "explanation": "\"Argues out\" is incorrect. It should be \"points out\" for an observation or \"argues that\" for a contention."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "It has been suggested that the new policy is effective, according to the minister.",
+   "answers": [
+    "It has been suggested that the new policy is effective.",
+    "According to the minister, the new policy is effective.",
+    "The minister has suggested that the new policy is effective."
+   ],
+   "explanation": "\"It has been suggested that\" is typically used when the source is not explicitly named or is general. If a specific source like \"the minister\" is given, \"according to\" is more appropriate. Using both creates redundancy and awkward phrasing."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Many experts believe that space exploration offers significant benefits.",
+   "instruction": "Use \"It has been suggested that\".",
+   "answers": [
+    "It has been suggested that space exploration offers significant benefits."
+   ],
+   "explanation": "\"It has been suggested that\" is a formal way to report a widely held belief or idea without naming specific experts."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The author claims that the novel reflects societal changes.",
+   "instruction": "Rewrite using \"As the author points out\".",
+   "answers": [
+    "As the author points out, the novel reflects societal changes."
+   ],
+   "explanation": "\"As the author points out\" is used to introduce a specific observation or claim made by an author."
+  },
+  {
+   "id": "ex.c1.reporting-and-citing-sources.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.reporting-and-citing-sources"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Dr. Anya Sharma argues that",
+     "right": "renewable energy is crucial."
+    },
+    {
+     "left": "According to the latest report,",
+     "right": "the global economy is recovering slowly."
+    },
+    {
+     "left": "As the research team points out,",
+     "right": "urban green spaces improve well-being."
+    },
+    {
+     "left": "It has been suggested that",
+     "right": "the new vaccine is highly effective."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "[a-z]+ (argues|points out) that",
+  "according to the [a-z]+",
+  "it has been suggested that"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.reporting-and-citing-sources.01": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.02": {
+    "status": "drop",
+    "note": "Ambiguous: Both 'argues' and 'has suggested' are natural and grammatically correct options."
+   },
+   "ex.c1.reporting-and-citing-sources.03": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.04": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.05": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.06": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both 'argues' and 'suggests' are completely natural and grammatically correct answers."
+   },
+   "ex.c1.reporting-and-citing-sources.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The key fails to use all the provided tokens, while the other answer forms a complete, valid sentence."
+   },
+   "ex.c1.reporting-and-citing-sources.09": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.10": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.11": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both answers correctly fix the redundant double attribution in the original sentence."
+   },
+   "ex.c1.reporting-and-citing-sources.12": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.13": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.14": {
+    "status": "drop",
+    "note": "Ambiguous: Both match combinations create grammatically correct and natural sentences, making the task ambiguous."
+   },
+   "ex.c1.reporting-and-citing-sources.15": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.16": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.17": {
+    "status": "pass"
+   },
+   "ex.c1.reporting-and-citing-sources.18": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c1.reporting-and-citing-sources.15",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.reporting-and-citing-sources"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The recent archaeological findings ___ that the ancient civilization had advanced irrigation systems.",
+    "options": [
+     "argues",
+     "according to",
+     "suggest",
+     "has been suggested"
+    ],
+    "answer": 2,
+    "explanation": "\"Suggest\" is the correct verb to use when reporting what findings indicate. \"Argues\" is typically used for people or entities expressing an opinion, and \"according to\" requires a noun phrase after it. \"Has been suggested\" is passive and doesn't fit \"findings\" as the active subject."
+   },
+   {
+    "id": "ex.c1.reporting-and-citing-sources.16",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.reporting-and-citing-sources"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ the latest government report, unemployment rates have decreased this quarter.",
+    "options": [
+     "It has been suggested",
+     "As",
+     "According to",
+     "Points out"
+    ],
+    "answer": 2,
+    "explanation": "\"According to\" is used to introduce information from a specific source like a report."
+   },
+   {
+    "id": "ex.c1.reporting-and-citing-sources.17",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.reporting-and-citing-sources"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "Dr. Elena Petrova ___ that early childhood education has long-term benefits for cognitive development.",
+    "options": [
+     "points out",
+     "has been suggested",
+     "according to",
+     "argues"
+    ],
+    "answer": 3,
+    "explanation": "\"Argues that\" is used to report a specific person's strong opinion or claim, often supported by reasoning. \"Points out\" is also possible but implies drawing attention to an existing fact rather than presenting a reasoned case."
+   },
+   {
+    "id": "ex.c1.reporting-and-citing-sources.18",
+    "kind": "multiple_choice",
+    "level": "C1",
+    "grammarPointIds": [
+     "gp.reporting-and-citing-sources"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "It ___ that the new software update will resolve most of the system's performance issues.",
+    "options": [
+     "argues",
+     "according to",
+     "has been suggested",
+     "points out"
+    ],
+    "answer": 2,
+    "explanation": "\"It has been suggested that\" is used when the source of the suggestion is not specified or is general."
+   }
+  ]
+ }
+}

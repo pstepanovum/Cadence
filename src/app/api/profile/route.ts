@@ -62,6 +62,8 @@ function toProfileResponse(user: AppUser) {
     practiceFocus: user.practiceFocus,
     practiceCadence: user.practiceCadence,
     onboardingCompleted: user.onboardingCompleted,
+    levels: user.levels ?? null,
+    placementSeen: user.placementSeen ?? null,
     createdAt: user.createdAt,
     subscriptionStatus: user.billing?.status ?? null,
   };

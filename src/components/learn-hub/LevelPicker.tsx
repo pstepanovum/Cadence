@@ -2,21 +2,22 @@
 "use client";
 
 import { useState } from "react";
-import { useStoredString, writeStored } from "@/hooks/use-stored";
+import { useLevelPrefs } from "@/components/levels/level-store";
 import { CEFR_LEVELS, type CefrLevel } from "@/lib/platform/content-model.ts";
-import { parseLevel } from "@/components/learn-hub/packs";
+import { levelFor } from "@/lib/platform/levels.ts";
 import { cn } from "@/lib/utils";
 
-const KEY = "cadence.level";
-
-/** The level the learner last chose on this device, B1 until they choose. */
+/**
+ * The level a page shows: one picked on this page (or in its URL), else the
+ * learner's level (Account > Level), so a change there applies at once.
+ * Picking another level here browses it without changing the learner's level.
+ */
 export function useLevel(initial: CefrLevel | null) {
-  const saved = parseLevel(useStoredString(KEY));
+  const learner = levelFor(useLevelPrefs(), "grammar");
   const [chosen, setChosen] = useState<CefrLevel | null>(initial);
-  const level: CefrLevel = chosen ?? saved ?? "B1";
+  const level: CefrLevel = chosen ?? learner;
   const setLevel = (next: CefrLevel) => {
     setChosen(next);
-    writeStored(KEY, next);
     const url = new URL(window.location.href);
     url.searchParams.set("level", next);
     window.history.replaceState(null, "", url);

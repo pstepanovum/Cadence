@@ -1,0 +1,410 @@
+{
+ "format": 1,
+ "level": "B2",
+ "slug": "linking-cause-and-effect",
+ "draftHash": "d6675002c8af117b",
+ "grammarPoint": {
+  "id": "gp.linking-cause-and-effect",
+  "level": "B2",
+  "topicId": "topic.linking",
+  "title": "Cause and effect",
+  "summary": "Learn to explain causes and results using phrases like 'due to', 'owing to', 'as a result of', 'consequently', 'therefore', and 'which led to'.",
+  "explanation": "We use phrases like *due to*, *owing to*, and *as a result of* to introduce the *cause* of an event. These are prepositions and must be followed by a noun or a noun phrase. They can appear at the beginning or in the middle of a sentence.\n\nTo introduce the *effect* or *result* of an action or situation, we can use *consequently* or *therefore*. These are adverbs that connect two independent clauses. They usually come at the beginning of a new sentence or after a semicolon, followed by a comma.\n\nAnother way to show a result is with *which led to*. This phrase introduces a non-defining relative clause, referring to the entire preceding situation or event as the cause.",
+  "patterns": [
+   "Due to / Owing to / As a result of + noun phrase, [result clause].",
+   "[Cause clause]. Consequently / Therefore, [result clause].",
+   "[Cause clause], which led to [result clause]."
+  ],
+  "examples": [
+   {
+    "text": "Due to heavy rain, the outdoor concert was canceled.",
+    "note": "Shows the reason for the cancellation using 'due to' followed by a noun phrase.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The team worked hard on the project; consequently, they finished it ahead of schedule.",
+    "note": "Shows the result of working hard using 'consequently' to connect two clauses.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Owing to a technical issue, the website was temporarily unavailable.",
+    "note": "Explains the cause of the website being down using 'owing to' followed by a noun phrase.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "She studied diligently for months, which led to her excellent exam results.",
+    "note": "Connects her studying to the outcome using 'which led to' as a relative clause.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The company reduced its prices; therefore, sales increased significantly.",
+    "note": "Indicates the effect of the price reduction using 'therefore' to connect two clauses.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "The flight was delayed due to it was foggy.",
+    "right": "The flight was delayed due to the fog.",
+    "note": "'Due to' is followed by a noun phrase, not a clause."
+   },
+   {
+    "wrong": "He forgot his keys, consequently he couldn't get into his apartment.",
+    "right": "He forgot his keys; consequently, he couldn't get into his apartment.",
+    "note": "'Consequently' connects two independent clauses and needs proper punctuation."
+   },
+   {
+    "wrong": "The new policy caused a lot of confusion. This led to many complaints.",
+    "right": "The new policy caused a lot of confusion, which led to many complaints.",
+    "note": "'Which led to' links the result directly to the preceding situation in one sentence."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.b2.linking-cause-and-effect.01",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The train was delayed ___ a signal problem.",
+   "options": [
+    "consequently",
+    "therefore",
+    "due to",
+    "which led to"
+   ],
+   "answer": 2,
+   "explanation": "'Due to' is a prepositional phrase that introduces the cause and is followed by a noun phrase ('a signal problem')."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.02",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The team worked overtime for weeks. ___, they were exhausted by the end of the project.",
+   "options": [
+    "Due to",
+    "Owing to",
+    "Consequently",
+    "As a result of"
+   ],
+   "answer": 2,
+   "explanation": "'Consequently' is an adverb that connects two independent clauses, showing the result of the first clause. It starts a new sentence and is followed by a comma."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.03",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The company implemented new security measures, ___ a significant decrease in data breaches.",
+   "options": [
+    "due to",
+    "owing to",
+    "as a result of",
+    "which led to"
+   ],
+   "answer": 3,
+   "explanation": "'Which led to' introduces a non-defining relative clause that explains the result of the entire preceding action or situation."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.04",
+   "kind": "multiple_choice",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ unexpected traffic, we arrived late for the meeting.",
+   "options": [
+    "Consequently",
+    "Therefore",
+    "Owing to",
+    "Which led to"
+   ],
+   "answer": 2,
+   "explanation": "'Owing to' is a prepositional phrase that introduces the cause and is followed by a noun phrase ('unexpected traffic')."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.05",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The factory closed ___ a lack of demand for its products.",
+   "answers": [
+    [
+     "due to"
+    ],
+    [
+     "owing to"
+    ],
+    [
+     "as a result of"
+    ]
+   ],
+   "explanation": "These phrases introduce the cause and are followed by a noun phrase."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.06",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The experiment failed. ___, the scientists had to start over.",
+   "answers": [
+    [
+     "Consequently"
+    ],
+    [
+     "Therefore"
+    ]
+   ],
+   "explanation": "These adverbs connect two independent clauses, showing a result, and start a new sentence."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.07",
+   "kind": "gap_fill",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The city invested in public transportation, ___ a reduction in traffic congestion.",
+   "answers": [
+    [
+     "which led to",
+     "leading to"
+    ]
+   ],
+   "explanation": "'Which led to' introduces a relative clause explaining the result of the previous action."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.08",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "storm",
+    "was",
+    "severe",
+    ",",
+    "which",
+    "led",
+    "to",
+    "widespread",
+    "power",
+    "outages",
+    "."
+   ],
+   "distractors": [
+    "because"
+   ],
+   "explanation": "'Which led to' connects the severity of the storm to its consequence."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.09",
+   "kind": "sentence_building",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Owing",
+    "to",
+    "the",
+    "bad",
+    "weather",
+    ",",
+    "the",
+    "flight",
+    "was",
+    "canceled",
+    "."
+   ],
+   "distractors": [
+    "so"
+   ],
+   "explanation": "'Owing to' introduces the cause of the flight cancellation."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.10",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The project was delayed due to the team had some unexpected problems.",
+   "answers": [
+    "The project was delayed due to some unexpected problems.",
+    "The project was delayed owing to some unexpected problems.",
+    "The project was delayed as a result of some unexpected problems.",
+    "The project was delayed because the team had some unexpected problems."
+   ],
+   "explanation": "'Due to' should be followed by a noun phrase, not a clause."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.11",
+   "kind": "error_correction",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She forgot her passport, therefore she couldn't board the plane.",
+   "answers": [
+    "She forgot her passport; therefore, she couldn't board the plane.",
+    "She forgot her passport. Therefore, she couldn't board the plane."
+   ],
+   "explanation": "'Therefore' is a conjunctive adverb and requires a semicolon or a period before it when connecting two independent clauses."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.12",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "The heavy rain caused flooding in the streets.",
+   "instruction": "Use \"as a result of\".",
+   "answers": [
+    "Flooding in the streets occurred as a result of the heavy rain.",
+    "As a result of the heavy rain, flooding occurred in the streets.",
+    "The streets flooded as a result of the heavy rain."
+   ],
+   "explanation": "'As a result of' introduces the cause and is followed by a noun phrase."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.13",
+   "kind": "transformation",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He worked extra hours. He earned a bonus.",
+   "instruction": "Combine into one sentence using \"consequently\".",
+   "answers": [
+    "He worked extra hours; consequently, he earned a bonus.",
+    "He worked extra hours. Consequently, he earned a bonus."
+   ],
+   "explanation": "'Consequently' connects two independent clauses, showing the result, and requires proper punctuation."
+  },
+  {
+   "id": "ex.b2.linking-cause-and-effect.14",
+   "kind": "matching",
+   "level": "B2",
+   "grammarPointIds": [
+    "gp.linking-cause-and-effect"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The new software was installed,",
+     "right": "which led to improved efficiency."
+    },
+    {
+     "left": "Owing to a power outage,",
+     "right": "the factory temporarily shut down."
+    },
+    {
+     "left": "The company expanded rapidly;",
+     "right": "therefore, they hired more staff."
+    },
+    {
+     "left": "The increase in online shopping",
+     "right": "is due to its convenience."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "due to [a-z ]+",
+  "consequently,",
+  "which led to"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.b2.linking-cause-and-effect.01": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.02": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.03": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.04": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.05": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.linking-cause-and-effect.05: needs one answer list per gap (1)"
+   },
+   "ex.b2.linking-cause-and-effect.06": {
+    "status": "drop",
+    "note": "Invalid: ex.b2.linking-cause-and-effect.06: needs one answer list per gap (1)"
+   },
+   "ex.b2.linking-cause-and-effect.07": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both the relative clause and participle clause are correct and natural."
+   },
+   "ex.b2.linking-cause-and-effect.08": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.09": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.10": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both options correctly fix the grammatical mistake in the original sentence."
+   },
+   "ex.b2.linking-cause-and-effect.11": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both sentences are correct rewrites that follow the instruction."
+   },
+   "ex.b2.linking-cause-and-effect.13": {
+    "status": "pass"
+   },
+   "ex.b2.linking-cause-and-effect.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

@@ -6,6 +6,7 @@ import { join } from "node:path";
 import { CONTENT_DIR } from "./paths.mjs";
 import { LEVELS, sha256Hex } from "./text.mjs";
 import { TOPICS } from "../data/grammar-outline.mjs";
+import { loadPlacementBanks, passingItems } from "./placement-bank.mjs";
 
 /** TTS settings the audio is named by; audio.mjs synthesizes with the same. */
 export const AUDIO_VOICE = "en-US-Neural2-F";
@@ -193,9 +194,24 @@ function soundsPack() {
   };
 }
 
+/**
+ * The placement bank as one pack: every item that passed the blind check and
+ * the level check, as plain exercises (ids ex.placement.<level>.<type>.<nn>;
+ * the adaptive test reads level and type from them). No lessons: the bank is
+ * only ever asked by the placement test.
+ */
+function placementPack() {
+  const exercises = loadPlacementBanks()
+    .flatMap((bank) => passingItems(bank).map((item) => item.exercise))
+    .sort((a, b) => a.id.localeCompare(b.id, "en", { numeric: true }));
+  return { id: "placement", title: "Cadence placement", files: { "content.json": { topics: [], grammarPoints: [], lessons: [], exercises } } };
+}
+
 export function assemblePacks() {
   const allGrammar = LEVELS.flatMap((level) => loadGrammar(level).map((f) => f.grammarPoint));
   const packs = [soundsPack()];
+  const placement = placementPack();
+  if (placement.files["content.json"].exercises.length) packs.push(placement);
   for (const level of LEVELS) {
     const pack = corePack(level, allGrammar);
     if (pack.files["content.json"].exercises.length) packs.push(pack);

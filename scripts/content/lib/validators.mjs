@@ -16,6 +16,8 @@ export const COVERAGE = {
   totalFlashcards: 3000,
   totalSentences: 5000,
   sentencesPerLevel: { A2: 800, B1: 800, B2: 800, C1: 800, C2: 600 },
+  placementPerLevel: 60,
+  placementTypesPerLevel: 7,
 };
 export const LIMITS = { definition: 120, tatoebaSentence: 160 };
 
@@ -61,7 +63,7 @@ export function textsOf(value, out = []) {
 export function exerciseKey(e) {
   switch (e.kind) {
     case "multiple_choice":
-      return `mc:${textKey(e.question)}:${e.options.map(textKey).sort().join("|")}`;
+      return `mc:${e.passage ? `${textKey(e.passage)}:` : ""}${textKey(e.question)}:${e.options.map(textKey).sort().join("|")}`;
     case "gap_fill":
       return `gap:${textKey(e.text)}`;
     case "sentence_building":
@@ -194,6 +196,16 @@ export function corpusProblems(packs) {
     if (n < min) p.push(`coverage: ${level} has ${n} sentences, need ${min}`);
   }
   for (const level of LEVELS.slice(1)) if (!core.some((pk) => pk.level === level)) p.push(`coverage: no ${level} pack`);
+
+  // The placement bank: enough items of every kind per level that a learner practically never meets one twice.
+  const placement = packs.find((pk) => pk.id === "placement")?.files["content.json"].exercises ?? [];
+  for (const level of LEVELS) {
+    const own = placement.filter((e) => e.level === level);
+    const types = new Set(own.map((e) => e.id.split(".")[3]));
+    if (own.length < COVERAGE.placementPerLevel) p.push(`coverage: placement ${level} has ${own.length} items, need ${COVERAGE.placementPerLevel}`);
+    if (types.size < COVERAGE.placementTypesPerLevel) p.push(`coverage: placement ${level} has ${types.size} item types, need ${COVERAGE.placementTypesPerLevel}`);
+    for (const e of own) if (!e.id.startsWith(`ex.placement.${level.toLowerCase()}.`)) p.push(`${e.id}: placement id does not match its level ${level}`);
+  }
   return p;
 }
 

@@ -31,22 +31,28 @@ interface ExerciseCardProps {
   onResult: (result: GradeResult) => void;
   onNext: () => void;
   isLast: boolean;
+  /** A measure, not a lesson (the placement test): no right or wrong shown, straight to the next item. */
+  quiet?: boolean;
 }
 
-export function ExerciseCard({ exercise, onResult, onNext, isLast }: ExerciseCardProps) {
+export function ExerciseCard({ exercise, onResult, onNext, isLast, quiet = false }: ExerciseCardProps) {
   const [result, setResult] = useState<GradeResult | null>(null);
 
   function check(answer: ExerciseAnswer) {
     if (result) return;
     const graded = gradeExercise(exercise, answer);
-    setResult(graded);
     onResult(graded);
+    if (quiet) {
+      onNext();
+      return;
+    }
+    setResult(graded);
   }
 
   return (
     <article className="space-y-5 rounded-3xl bg-white px-5 py-6 sm:px-8 sm:py-8" aria-live="polite">
       <header className="space-y-1">
-        <p className="eyebrow text-xs text-sage-text">{exercise.level} · {exercise.prompt}</p>
+        <p className="eyebrow text-xs text-sage-text">{quiet ? exercise.prompt : `${exercise.level} · ${exercise.prompt}`}</p>
       </header>
       <Body exercise={exercise} disabled={result !== null} onCheck={check} result={result} />
       {result ? (
@@ -132,7 +138,9 @@ function MultipleChoice({ exercise, disabled, onCheck }: BodyProps & { exercise:
   const [choice, setChoice] = useState<number | null>(null);
   const id = useId();
   return (
-    <fieldset className="space-y-3" disabled={disabled}>
+    <div className="space-y-3">
+      {exercise.passage ? <p className="rounded-2xl bg-vanilla-cream px-4 py-3 text-base leading-7 text-hunter-green">{exercise.passage}</p> : null}
+      <fieldset className="space-y-3" disabled={disabled}>
       <legend className="text-xl font-semibold text-hunter-green sm:text-2xl">{exercise.question}</legend>
       <div className="grid gap-2 sm:grid-cols-2">
         {exercise.options.map((option, index) => (
@@ -162,7 +170,8 @@ function MultipleChoice({ exercise, disabled, onCheck }: BodyProps & { exercise:
           Check
         </Button>
       ) : null}
-    </fieldset>
+      </fieldset>
+    </div>
   );
 }
 

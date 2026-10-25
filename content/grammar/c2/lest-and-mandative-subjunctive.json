@@ -1,0 +1,393 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "lest-and-mandative-subjunctive",
+ "draftHash": "6f3f2435f173222d",
+ "grammarPoint": {
+  "id": "gp.lest-and-mandative-subjunctive",
+  "level": "C2",
+  "topicId": "topic.verb-patterns",
+  "title": "Lest and the mandative subjunctive",
+  "summary": "Learn to use 'lest' for caution and the mandative subjunctive for demands or necessities, including its negative form and the 'should' alternative.",
+  "explanation": "The conjunction *lest* is used in formal contexts to express a negative purpose or a warning, meaning \"in order to prevent something\" or \"for fear that.\" It is typically followed by the bare infinitive (the subjunctive form) or \"should\" + bare infinitive.\n\nThe *mandative subjunctive* is used in formal contexts to express a demand, recommendation, suggestion, or necessity. It appears in a 'that'-clause after certain verbs (e.g., *suggest, recommend, demand, insist, propose*) or adjectives (e.g., *essential, important, vital, necessary*).\n\nThe verb in the subjunctive clause always takes its *base form* (the bare infinitive), regardless of the subject's person or number. For negative statements, 'not' is placed directly before the base form of the verb. In British English, and sometimes in American English, 'should' + bare infinitive is a common alternative to the bare subjunctive, especially after verbs of recommendation or suggestion. This can sometimes sound slightly less formal than the bare subjunctive.",
+  "patterns": [
+   "lest + subject + bare infinitive",
+   "lest + subject + should + bare infinitive",
+   "(it is) + adjective + that + subject + bare infinitive",
+   "(verb/noun) + that + subject + bare infinitive",
+   "(verb/noun) + that + subject + not + bare infinitive"
+  ],
+  "examples": [
+   {
+    "text": "She spoke quietly lest she disturb the sleeping child.",
+    "note": "Uses 'lest' with the bare infinitive to prevent an action.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It is essential that he submit his report by Friday.",
+    "note": "Uses the mandative subjunctive (bare infinitive) after 'essential that'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "The board demanded that the new policy not be implemented yet.",
+    "note": "Uses the negative mandative subjunctive ('not' + bare infinitive) after 'demanded that'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "They recommended that all staff should attend the training session.",
+    "note": "Uses 'should' as an alternative to the bare subjunctive after 'recommended that'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "He carried the fragile vase carefully lest it should break.",
+    "note": "Uses 'lest' with 'should' + bare infinitive to express caution.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "She wore a mask lest she catches a cold.",
+    "right": "She wore a mask lest she catch a cold.",
+    "note": "After 'lest', use the bare infinitive (subjunctive form)."
+   },
+   {
+    "wrong": "It is crucial that he arrives on time.",
+    "right": "It is crucial that he arrive on time.",
+    "note": "The mandative subjunctive uses the bare infinitive, regardless of the subject."
+   },
+   {
+    "wrong": "They insisted that it be not a problem.",
+    "right": "They insisted that it not be a problem.",
+    "note": "For negative mandative subjunctive, 'not' comes before the bare infinitive."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The architect designed the building with extra supports ___ it collapse in an earthquake.",
+   "options": [
+    "lest",
+    "so that",
+    "in case",
+    "for fear"
+   ],
+   "answer": 0,
+   "explanation": "'Lest' is used here to express a negative purpose, meaning 'to prevent it from collapsing'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It is imperative that every participant ___ the safety guidelines.",
+   "options": [
+    "follows",
+    "follow",
+    "will follow",
+    "is following"
+   ],
+   "answer": 1,
+   "explanation": "After 'it is imperative that', the mandative subjunctive requires the bare infinitive 'follow'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The manager requested that the meeting ___ postponed until next week.",
+   "options": [
+    "not be",
+    "not to be",
+    "is not",
+    "will not be"
+   ],
+   "answer": 0,
+   "explanation": "For a negative mandative subjunctive, 'not' precedes the bare infinitive 'be'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The doctor advised that the patient ___ rest for a few days.",
+   "options": [
+    "should",
+    "rests",
+    "will",
+    "is"
+   ],
+   "answer": 0,
+   "explanation": "'Should' is a common alternative to the bare subjunctive after verbs of advice or recommendation."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The company implemented strict security measures ___ sensitive data ___ compromised.",
+   "answers": [
+    [
+     "lest"
+    ],
+    [
+     "be"
+    ]
+   ],
+   "explanation": "'Lest' introduces the negative purpose, and 'be' is the bare infinitive for the subjunctive."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "It is vital that the new software ___ compatible with existing systems.",
+   "answers": [
+    [
+     "be"
+    ]
+   ],
+   "explanation": "After 'it is vital that', the mandative subjunctive requires the bare infinitive 'be'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The committee insisted that the budget ___ exceed the allocated amount.",
+   "answers": [
+    [
+     "not"
+    ],
+    [
+     "exceed"
+    ]
+   ],
+   "explanation": "For a negative mandative subjunctive, 'not' comes before the bare infinitive 'exceed'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "He",
+    "checked",
+    "the",
+    "forecast",
+    "lest",
+    "it",
+    "rain",
+    "."
+   ],
+   "distractors": [
+    "rains",
+    "will"
+   ],
+   "explanation": "This sentence uses 'lest' to express caution, followed by the bare infinitive 'rain'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "is",
+    "important",
+    "that",
+    "she",
+    "arrive",
+    "early",
+    "."
+   ],
+   "distractors": [
+    "arrives",
+    "arrived"
+   ],
+   "explanation": "This sentence uses the mandative subjunctive 'arrive' after 'it is important that'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "She hurried lest she misses her flight.",
+   "answers": [
+    "She hurried lest she miss her flight."
+   ],
+   "explanation": "After 'lest', the bare infinitive 'miss' is required for the subjunctive mood."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The regulations demand that everyone wears a helmet.",
+   "answers": [
+    "The regulations demand that everyone wear a helmet."
+   ],
+   "explanation": "In the mandative subjunctive, the verb takes its bare infinitive form 'wear', regardless of the subject."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "He kept his voice down because he didn't want to disturb anyone.",
+   "instruction": "Rewrite using 'lest'.",
+   "answers": [
+    "He kept his voice down lest he disturb anyone.",
+    "He kept his voice down lest he should disturb anyone."
+   ],
+   "explanation": "'Lest' introduces the negative purpose, followed by the bare infinitive or 'should' + bare infinitive."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "It is necessary for all documents to be signed by the director.",
+   "instruction": "Rewrite using the mandative subjunctive.",
+   "answers": [
+    "It is necessary that all documents be signed by the director."
+   ],
+   "explanation": "The mandative subjunctive uses the bare infinitive 'be' after 'it is necessary that'."
+  },
+  {
+   "id": "ex.c2.lest-and-mandative-subjunctive.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.lest-and-mandative-subjunctive"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "She studied diligently",
+     "right": "lest she fail the exam."
+    },
+    {
+     "left": "It is crucial",
+     "right": "that he understand the instructions."
+    },
+    {
+     "left": "The team insisted",
+     "right": "that the project not be delayed."
+    },
+    {
+     "left": "They suggested",
+     "right": "that she should take a break."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "lest (?:he|she|it|we|you|they|I) (?:should )?[a-z]+",
+  "it is (?:essential|important|crucial|vital|imperative|necessary) that (?:he|she|it|we|you|they|I) (?:not )?[a-z]+",
+  "(?:demand|insist|request|suggest|recommend) that (?:he|she|it|we|you|they|I) (?:not )?[a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.lest-and-mandative-subjunctive.01": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.02": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.03": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.04": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.05": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.06": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.07": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.lest-and-mandative-subjunctive.07: needs one answer list per gap (1)"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.08": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.09": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.10": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.11": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.12": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.13": {
+    "status": "pass"
+   },
+   "ex.c2.lest-and-mandative-subjunctive.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

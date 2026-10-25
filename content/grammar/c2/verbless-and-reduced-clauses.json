@@ -1,0 +1,455 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "verbless-and-reduced-clauses",
+ "draftHash": "c0013416ba9e3ef5",
+ "grammarPoint": {
+  "id": "gp.verbless-and-reduced-clauses",
+  "level": "C2",
+  "topicId": "topic.clauses",
+  "title": "Verbless and reduced clauses",
+  "summary": "Verbless and reduced clauses condense information by omitting a verb, often when the subject is clear from context or implied, enhancing conciseness.",
+  "explanation": "Verbless and reduced clauses are a sophisticated way to condense information, making sentences more concise and often more formal. They are clauses where the verb, and sometimes the subject, are omitted because they can be easily understood from the context.\n\nThese clauses typically begin with a conjunction like *though, if, when, once, while, unless, as long as*, or *until*. The omitted verb is usually a form of 'be', and the implied subject is often the same as the main clause's subject, or a general 'it' or 'one'.\n\nFor example, instead of saying \"Though *she was* tired, she continued working,\" we can reduce it to \"Though *tired*, she continued working.\" This structure is common in both written and spoken English, particularly in more advanced contexts.",
+  "patterns": [
+   "Conjunction + adjective (e.g., \"Though tired\")",
+   "Conjunction + adverbial phrase (e.g., \"When in doubt\")",
+   "Conjunction + past participle (e.g., \"Once completed\")",
+   "Conjunction + present participle (e.g., \"While waiting\")"
+  ],
+  "examples": [
+   {
+    "text": "Though *exhausted*, she continued working on the project.",
+    "note": "The clause 'Though exhausted' implies 'Though she was exhausted'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "If *possible*, please submit your report by Friday.",
+    "note": "The clause 'If possible' implies 'If it is possible'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "When *in Rome*, do as the Romans do.",
+    "note": "The clause 'When in Rome' implies 'When you are in Rome'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Once *completed*, the new bridge will significantly reduce travel time.",
+    "note": "The clause 'Once completed' implies 'Once it is completed'.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "While *waiting for the bus*, I read a chapter of my book.",
+    "note": "The clause 'While waiting for the bus' implies 'While I was waiting for the bus'.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Though she tired, she kept going.",
+    "right": "Though *tired*, she kept going.",
+    "note": "Use the adjective or participle form, not a finite verb."
+   },
+   {
+    "wrong": "If it is necessary, we can reschedule.",
+    "right": "If *necessary*, we can reschedule.",
+    "note": "Omit the subject and 'be' verb when they are clear from context."
+   },
+   {
+    "wrong": "Once enter, you will see the main hall.",
+    "right": "Once *inside*, you will see the main hall.",
+    "note": "Ensure the correct form (adjective, participle, or adverbial) is used."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ in doubt, always ask for clarification.",
+   "options": [
+    "When you are",
+    "When being",
+    "When",
+    "When you were"
+   ],
+   "answer": 2,
+   "explanation": "'When' alone can introduce a verbless clause, implying 'When you are'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ specified, all documents should be submitted digitally.",
+   "options": [
+    "Unless it is",
+    "Unless",
+    "Unless being",
+    "Unless was"
+   ],
+   "answer": 1,
+   "explanation": "'Unless' can introduce a reduced clause, meaning 'Unless it is specified'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "___ fully operational, the new system will enhance efficiency.",
+   "options": [
+    "Once it is",
+    "Once being",
+    "Once",
+    "Once was"
+   ],
+   "answer": 2,
+   "explanation": "'Once' can introduce a verbless clause, implying 'Once it is fully operational'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.04",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ possible, please use sustainable materials.",
+   "answers": [
+    [
+     "If"
+    ]
+   ],
+   "explanation": "'If possible' is a common verbless clause meaning 'If it is possible'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ by the long journey, they decided to rest.",
+   "answers": [
+    [
+     "Though"
+    ],
+    [
+     "exhausted"
+    ]
+   ],
+   "explanation": "'Though exhausted' is a reduced clause meaning 'Though they were exhausted'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___ inside, the museum offers a fascinating collection.",
+   "answers": [
+    [
+     "Once"
+    ]
+   ],
+   "explanation": "'Once inside' means 'Once you are inside' or 'Once it is inside'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.07",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Though",
+    "quite",
+    "challenging",
+    "the",
+    "task",
+    "was",
+    "completed",
+    "on",
+    "time",
+    "."
+   ],
+   "distractors": [
+    "challenge",
+    "completing"
+   ],
+   "explanation": "'Though quite challenging' is a verbless clause, implying 'Though it was quite challenging'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "If",
+    "necessary",
+    "we",
+    "can",
+    "adjust",
+    "the",
+    "schedule",
+    "."
+   ],
+   "distractors": [
+    "need",
+    "needed"
+   ],
+   "explanation": "'If necessary' is a reduced clause, meaning 'If it is necessary'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.09",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "While waited for the results, she felt anxious.",
+   "answers": [
+    "While waiting for the results, she felt anxious."
+   ],
+   "explanation": "The present participle 'waiting' is used in reduced clauses to imply an ongoing action."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Unless is specified, all documents should be digital.",
+   "answers": [
+    "Unless specified, all documents should be digital."
+   ],
+   "explanation": "In a verbless clause, the subject and 'be' verb are omitted, leaving just the participle."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.11",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "When you are in doubt, always consult an expert.",
+   "instruction": "Rewrite using a verbless clause.",
+   "answers": [
+    "When in doubt, always consult an expert."
+   ],
+   "explanation": "The verbless clause 'When in doubt' concisely replaces 'When you are in doubt'."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Although it was difficult, the team managed to finish the project.",
+   "instruction": "Rewrite using a reduced clause.",
+   "answers": [
+    "Although difficult, the team managed to finish the project."
+   ],
+   "explanation": "The reduced clause 'Although difficult' omits 'it was' for conciseness."
+  },
+  {
+   "id": "ex.c2.verbless-and-reduced-clauses.13",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.verbless-and-reduced-clauses"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Though initially hesitant,",
+     "right": "he eventually agreed to the proposal."
+    },
+    {
+     "left": "If at all possible,",
+     "right": "we should avoid further delays."
+    },
+    {
+     "left": "Once fully operational,",
+     "right": "the new system will streamline workflows."
+    },
+    {
+     "left": "When considering a career change,",
+     "right": "it's wise to weigh all options."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "(though|although)\\s+(?:[a-z]+ed|[a-z]+)",
+  "(if|unless)\\s+(?:[a-z]+)",
+  "(when|while|once)\\s+(?:in\\s+[a-z]+|[a-z]+ing|[a-z]+ed|inside|outside)"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.verbless-and-reduced-clauses.01": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.02": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.03": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.04": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.05": {
+    "status": "drop",
+    "note": "Invalid: ex.c2.verbless-and-reduced-clauses.05: needs one answer list per gap (1)"
+   },
+   "ex.c2.verbless-and-reduced-clauses.06": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.07": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The provided tokens contain extra words that cannot all be used to form a single sentence."
+   },
+   "ex.c2.verbless-and-reduced-clauses.09": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.10": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.11": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.12": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.13": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.14": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.15": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.16": {
+    "status": "pass"
+   },
+   "ex.c2.verbless-and-reduced-clauses.17": {
+    "status": "pass"
+   }
+  },
+  "extra": [
+   {
+    "id": "ex.c2.verbless-and-reduced-clauses.14",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.verbless-and-reduced-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ by the sudden announcement, the audience remained silent.",
+    "options": [
+     "Though surprising",
+     "Though surprised",
+     "Though was surprised",
+     "Though they surprised"
+    ],
+    "answer": 1,
+    "explanation": "The audience was surprised, so the past participle 'surprised' is correct. 'Though surprised' implies 'Though they were surprised'."
+   },
+   {
+    "id": "ex.c2.verbless-and-reduced-clauses.15",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.verbless-and-reduced-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ in a new city, it's common to feel a bit disoriented.",
+    "options": [
+     "When you are living",
+     "When living",
+     "When lived",
+     "When to live"
+    ],
+    "answer": 1,
+    "explanation": "The present participle 'living' correctly forms a reduced clause, implying 'When one is living'."
+   },
+   {
+    "id": "ex.c2.verbless-and-reduced-clauses.16",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.verbless-and-reduced-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "The project, ___ complete, will revolutionize the industry.",
+    "options": [
+     "once fully",
+     "once it fully",
+     "once is fully",
+     "once fully being"
+    ],
+    "answer": 0,
+    "explanation": "'Once fully complete' is the correct reduced clause, implying 'once it is fully complete'."
+   },
+   {
+    "id": "ex.c2.verbless-and-reduced-clauses.17",
+    "kind": "multiple_choice",
+    "level": "C2",
+    "grammarPointIds": [
+     "gp.verbless-and-reduced-clauses"
+    ],
+    "prompt": "Choose the best answer.",
+    "question": "___ for the position, candidates must demonstrate strong leadership skills.",
+    "options": [
+     "If considered",
+     "If considering",
+     "If they consider",
+     "If to consider"
+    ],
+    "answer": 0,
+    "explanation": "Candidates are considered, so the past participle 'considered' is correct, implying 'If they are considered'."
+   }
+  ]
+ }
+}

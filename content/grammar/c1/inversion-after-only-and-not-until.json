@@ -1,0 +1,393 @@
+{
+ "format": 1,
+ "level": "C1",
+ "slug": "inversion-after-only-and-not-until",
+ "draftHash": "fe2e75b80b103a08",
+ "grammarPoint": {
+  "id": "gp.inversion-after-only-and-not-until",
+  "level": "C1",
+  "topicId": "topic.emphasis",
+  "title": "Inversion after only and not until",
+  "summary": "Use inversion after 'only' and 'not until' to add strong emphasis, often highlighting a specific condition, time, or method.",
+  "explanation": "When we start a sentence with phrases like *Only then*, *Not until*, *Only after*, or *Only by*, we often use *inversion*. This means the auxiliary verb comes before the subject, similar to how we form questions.\n\nThis structure creates a more formal and emphatic tone. It draws attention to the condition or time that made the main action possible or true. It's a way to highlight that something happened *only* under those specific circumstances, or *not* until a particular point.\n\nFor example, instead of saying \"I understood the problem only after she explained it,\" we can say \"*Only after* she explained it *did* I understand the problem.\" This emphasizes the explanation as the crucial factor.",
+  "patterns": [
+   "Only then + auxiliary + subject + main verb",
+   "Only by + verb-ing + auxiliary + subject + main verb",
+   "Not until + time/clause + auxiliary + subject + main verb",
+   "Only when + clause + auxiliary + subject + main verb",
+   "Only after + time/clause + auxiliary + subject + main verb"
+  ],
+  "examples": [
+   {
+    "text": "Only then did the team realize the full extent of the challenge.",
+    "note": "Emphasizes that the realization happened at a specific, later moment.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Not until the final results were published did we celebrate our success.",
+    "note": "Highlights that the celebration was delayed until a specific event.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Only by working together can we achieve such ambitious goals.",
+    "note": "Stresses that collaboration is the sole method for success.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Only when the sun had fully set did the nocturnal animals begin to stir.",
+    "note": "Points out the exact condition (sunset) that triggered the animals' activity.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Only after several attempts did the scientist perfect the experiment.",
+    "note": "Emphasizes the necessity of multiple attempts before success.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Only after the meeting finished, we could leave.",
+    "right": "Only after the meeting finished could we leave.",
+    "note": "Remember to invert the auxiliary verb and subject."
+   },
+   {
+    "wrong": "Not until later he understood the instructions.",
+    "right": "Not until later did he understand the instructions.",
+    "note": "Use 'did' as the auxiliary for simple past tense."
+   },
+   {
+    "wrong": "Only by studying hard you will pass the exam.",
+    "right": "Only by studying hard will you pass the exam.",
+    "note": "The auxiliary verb ('will') must come before the subject ('you')."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.01",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Only when the alarm sounded ___ everyone evacuate the building.",
+   "options": [
+    "did",
+    "they did",
+    "do",
+    "they do"
+   ],
+   "answer": 0,
+   "explanation": "The phrase 'Only when the alarm sounded' requires inversion, so the auxiliary verb 'did' comes before the subject 'everyone'."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.02",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Not until she saw the evidence ___ she believe his story.",
+   "options": [
+    "did",
+    "she did",
+    "does",
+    "she does"
+   ],
+   "answer": 0,
+   "explanation": "For past tense, 'did' is the correct auxiliary verb to use in inversion after 'Not until'."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.03",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Only by carefully analyzing the data ___ we find the solution.",
+   "options": [
+    "can",
+    "we can",
+    "are",
+    "we are"
+   ],
+   "answer": 0,
+   "explanation": "The inversion structure requires the auxiliary verb 'can' to precede the subject 'we'."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.04",
+   "kind": "multiple_choice",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Only then ___ the true impact of the decision become clear.",
+   "options": [
+    "did",
+    "it did",
+    "does",
+    "it does"
+   ],
+   "answer": 0,
+   "explanation": "The past tense context implies 'did' is the correct auxiliary for inversion."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.05",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Not until the last guest left ___ I finally relax.",
+   "answers": [
+    [
+     "did"
+    ]
+   ],
+   "explanation": "The past tense context requires 'did' as the auxiliary for inversion."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.06",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Only by practicing regularly ___ you improve your musical skills.",
+   "answers": [
+    [
+     "will"
+    ],
+    [
+     "can"
+    ]
+   ],
+   "explanation": "Both 'will' and 'can' work here to express future ability or certainty, following the inversion rule."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.07",
+   "kind": "gap_fill",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "Only when the rain stopped ___ the children go outside to play.",
+   "answers": [
+    [
+     "did"
+    ]
+   ],
+   "explanation": "The past tense action 'go outside' requires 'did' for inversion."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.08",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Only",
+    "then",
+    "did",
+    "the",
+    "manager",
+    "announce",
+    "the",
+    "news",
+    "."
+   ],
+   "distractors": [
+    "always"
+   ],
+   "explanation": "The phrase 'Only then' triggers inversion, placing 'did' before the subject 'the manager'."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.09",
+   "kind": "sentence_building",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "Not",
+    "until",
+    "midnight",
+    "did",
+    "the",
+    "party",
+    "start",
+    "to",
+    "get",
+    "lively",
+    "."
+   ],
+   "distractors": [
+    "never"
+   ],
+   "explanation": "The phrase 'Not until midnight' requires inversion, so 'did' comes before 'the party'."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.10",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Only by listening carefully you can understand the subtle differences.",
+   "answers": [
+    "Only by listening carefully can you understand the subtle differences."
+   ],
+   "explanation": "After 'Only by + verb-ing', the auxiliary verb ('can') must be inverted with the subject ('you')."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.11",
+   "kind": "error_correction",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "Not until the next morning he realized his mistake.",
+   "answers": [
+    "Not until the next morning did he realize his mistake."
+   ],
+   "explanation": "The phrase 'Not until' at the beginning of a sentence requires inversion of the auxiliary verb ('did') and subject ('he')."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.12",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "I understood the complexity of the project only after I started working on it.",
+   "instruction": "Rewrite the sentence starting with 'Only after'.",
+   "answers": [
+    "Only after I started working on the project did I understand its complexity.",
+    "Only after I started working on it did I understand the complexity of the project."
+   ],
+   "explanation": "Starting with 'Only after' requires inversion of the auxiliary verb ('did') and subject ('I')."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.13",
+   "kind": "transformation",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "We could finally relax when all the preparations were complete.",
+   "instruction": "Rewrite the sentence starting with 'Not until'.",
+   "answers": [
+    "Not until all the preparations were complete could we finally relax."
+   ],
+   "explanation": "The phrase 'Not until' at the beginning of the sentence requires inversion of the auxiliary verb ('could') and subject ('we')."
+  },
+  {
+   "id": "ex.c1.inversion-after-only-and-not-until.14",
+   "kind": "matching",
+   "level": "C1",
+   "grammarPointIds": [
+    "gp.inversion-after-only-and-not-until"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "Only by reading widely",
+     "right": "can you broaden your perspective."
+    },
+    {
+     "left": "Not until the storm passed",
+     "right": "did the rescue teams begin their work."
+    },
+    {
+     "left": "Only when the lights went out",
+     "right": "did we realize how dark it truly was."
+    },
+    {
+     "left": "Only then",
+     "right": "did the ancient prophecy make sense."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "only (then|after|when|by) (did|do|does|had|have|has|will|would|can|could|may|might|must|should) [a-z]+",
+  "not until (later|then|after|when) (did|do|does|had|have|has|will|would|can|could|may|might|must|should) [a-z]+"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c1.inversion-after-only-and-not-until.01": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.02": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.03": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.04": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.05": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.06": {
+    "status": "drop",
+    "note": "Invalid: ex.c1.inversion-after-only-and-not-until.06: needs one answer list per gap (1)"
+   },
+   "ex.c1.inversion-after-only-and-not-until.07": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key omits the token 'always', while the alternative is semantically unnatural."
+   },
+   "ex.c1.inversion-after-only-and-not-until.09": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.10": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.11": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.12": {
+    "status": "fixed",
+    "note": "Second answer accepted: Both rewrites are grammatically correct and natural."
+   },
+   "ex.c1.inversion-after-only-and-not-until.13": {
+    "status": "pass"
+   },
+   "ex.c1.inversion-after-only-and-not-until.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

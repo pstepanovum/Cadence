@@ -1,0 +1,389 @@
+{
+ "format": 1,
+ "level": "C2",
+ "slug": "hedging-and-boosting",
+ "draftHash": "c95b29f4915bbecb",
+ "grammarPoint": {
+  "id": "gp.hedging-and-boosting",
+  "level": "C2",
+  "topicId": "topic.linking",
+  "title": "Hedging and boosting",
+  "summary": "Calibrate the strength of your claims using hedging phrases like 'to some extent' and 'arguably' to soften, and boosting phrases like 'undoubtedly' and 'by no means' to strengthen.",
+  "explanation": "When we communicate, it's important to show how certain we are about a statement. *Hedging* involves using words or phrases to soften a claim, indicating that it might not be entirely true, or that it's an opinion rather than a fact. This helps to avoid overgeneralization and allows for nuance, often used in academic or formal contexts.\n\nConversely, *boosting* involves using words or phrases to strengthen a claim, expressing greater certainty or conviction. This can be used to emphasize a point, assert a fact, or highlight a widely accepted truth. Both hedging and boosting are crucial for precise and effective communication.\n\nPhrases like 'to some extent' and 'arguably' are used for hedging, allowing you to present an idea as partially true or as a strong but debatable opinion. Phrases like 'undoubtedly', 'it is widely accepted', and 'by no means' are used for boosting, conveying strong certainty, general consensus, or emphatic negation.",
+  "patterns": [
+   "to some extent",
+   "arguably",
+   "it is widely accepted",
+   "undoubtedly",
+   "by no means"
+  ],
+  "examples": [
+   {
+    "text": "To some extent, the new urban planning has alleviated traffic congestion.",
+    "note": "Uses 'to some extent' to indicate a partial truth or limited impact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Arguably, this novel is the most influential work of the century.",
+    "note": "Uses 'arguably' to present a strong opinion that can be debated.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "It is widely accepted that regular hydration is vital for health.",
+    "note": "Uses 'it is widely accepted' to state a generally agreed-upon fact.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Undoubtedly, their innovative research will lead to significant breakthroughs.",
+    "note": "Uses 'undoubtedly' to express strong certainty about a future outcome.",
+    "source": {
+     "kind": "generated"
+    }
+   },
+   {
+    "text": "Achieving such ambitious goals is by no means an easy task.",
+    "note": "Uses 'by no means' to strongly negate, emphasizing the difficulty.",
+    "source": {
+     "kind": "generated"
+    }
+   }
+  ],
+  "commonErrors": [
+   {
+    "wrong": "Undoubtedly, the weather might improve tomorrow.",
+    "right": "The weather might improve tomorrow.",
+    "note": "'Undoubtedly' expresses certainty, which contradicts 'might'."
+   },
+   {
+    "wrong": "It is by no means not a good idea.",
+    "right": "It is by no means a good idea.",
+    "note": "Avoid double negatives with 'by no means' as it already implies negation."
+   },
+   {
+    "wrong": "To some extent, arguably, it might be possible that the data suggests a trend.",
+    "right": "Arguably, the data suggests a trend.",
+    "note": "Overusing hedging phrases can make your claim sound weak or unclear."
+   }
+  ],
+  "related": []
+ },
+ "exercises": [
+  {
+   "id": "ex.c2.hedging-and-boosting.01",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The new software is ___ the most user-friendly option available.",
+   "options": [
+    "to some extent",
+    "arguably",
+    "by no means",
+    "undoubtedly"
+   ],
+   "answer": 1,
+   "explanation": "'Arguably' presents a strong opinion that others might debate, fitting the context of comparing options."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.02",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "It is ___ that regular exercise improves overall health.",
+   "options": [
+    "to some extent",
+    "arguably",
+    "by no means",
+    "widely accepted"
+   ],
+   "answer": 3,
+   "explanation": "'Widely accepted' indicates a general consensus or common knowledge, which is true for the benefits of exercise."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.03",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "The project's success was ___ due to the team's dedication.",
+   "options": [
+    "by no means",
+    "undoubtedly",
+    "to some extent",
+    "arguably"
+   ],
+   "answer": 1,
+   "explanation": "'Undoubtedly' expresses strong certainty that the team's dedication was the cause of success."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.04",
+   "kind": "multiple_choice",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Choose the best answer.",
+   "question": "Her contribution was ___ insignificant.",
+   "options": [
+    "to some extent",
+    "arguably",
+    "by no means",
+    "undoubtedly"
+   ],
+   "answer": 2,
+   "explanation": "'By no means' strongly negates the idea of her contribution being insignificant, meaning it was very significant."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.05",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The experiment's results are ___ conclusive; more research is needed.",
+   "answers": [
+    [
+     "by no means"
+    ]
+   ],
+   "explanation": "'By no means' strongly indicates that the results are not conclusive, implying further work is required."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.06",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "___, the company's innovative approach sets it apart from competitors.",
+   "answers": [
+    [
+     "Undoubtedly"
+    ]
+   ],
+   "explanation": "'Undoubtedly' expresses strong certainty about the company's unique and superior approach."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.07",
+   "kind": "gap_fill",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Complete the sentence.",
+   "text": "The new regulations have improved safety, but only ___.",
+   "answers": [
+    [
+     "to some extent"
+    ]
+   ],
+   "explanation": "'To some extent' indicates a partial improvement, suggesting that safety has not been fully resolved."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.08",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "The",
+    "impact",
+    "of",
+    "AI",
+    "is",
+    "arguably",
+    "transformative",
+    "."
+   ],
+   "distractors": [
+    "very"
+   ],
+   "explanation": "'Arguably' is placed before the adjective 'transformative' to present the claim as a strong but debatable opinion."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.09",
+   "kind": "sentence_building",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Put the words in the right order.",
+   "answer": [
+    "It",
+    "is",
+    "widely",
+    "accepted",
+    "that",
+    "biodiversity",
+    "is",
+    "crucial",
+    "."
+   ],
+   "distractors": [
+    "believed"
+   ],
+   "explanation": "'It is widely accepted that' introduces a statement that is generally agreed upon as a fact."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.10",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "The new system is undoubtedly flawed, but we hope to fix it.",
+   "answers": [
+    "The new system is arguably flawed, but we hope to fix it."
+   ],
+   "explanation": "'Undoubtedly' implies absolute certainty, which contradicts the uncertainty suggested by 'we hope to fix it'. 'Arguably' fits better when acknowledging potential flaws while still seeking a solution."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.11",
+   "kind": "error_correction",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Find the mistake and write the sentence correctly.",
+   "sentence": "By no means the project was a failure.",
+   "answers": [
+    "The project was by no means a failure.",
+    "By no means was the project a failure."
+   ],
+   "explanation": "When 'by no means' starts a sentence, it requires inversion of the subject and auxiliary verb. Alternatively, it can follow the verb in a standard sentence structure."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.12",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Most people agree that sustainable practices are essential.",
+   "instruction": "Use the phrase 'it is widely accepted'.",
+   "answers": [
+    "It is widely accepted that sustainable practices are essential."
+   ],
+   "explanation": "'It is widely accepted' replaces 'Most people agree that' to express general consensus more formally."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.13",
+   "kind": "transformation",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Rewrite the sentence.",
+   "source": "Many believe this approach is the most effective.",
+   "instruction": "Use the word 'arguably'.",
+   "answers": [
+    "This approach is arguably the most effective."
+   ],
+   "explanation": "'Arguably' presents the claim as a strong, defensible opinion, replacing 'Many believe' and making the statement more direct."
+  },
+  {
+   "id": "ex.c2.hedging-and-boosting.14",
+   "kind": "matching",
+   "level": "C2",
+   "grammarPointIds": [
+    "gp.hedging-and-boosting"
+   ],
+   "prompt": "Match the beginnings and endings.",
+   "pairs": [
+    {
+     "left": "The economic forecast is",
+     "right": "to some extent optimistic."
+    },
+    {
+     "left": "It is widely accepted",
+     "right": "that education is key to progress."
+    },
+    {
+     "left": "Their innovative strategy is",
+     "right": "by no means conventional."
+    },
+    {
+     "left": "The benefits of renewable energy are",
+     "right": "undoubtedly significant."
+    }
+   ]
+  }
+ ],
+ "tatoebaPatterns": [
+  "to some extent",
+  "arguably",
+  "it is widely accepted that",
+  "undoubtedly",
+  "by no means"
+ ],
+ "check": {
+  "model": "gemini-2.5-flash",
+  "judge": "gemini-3.5-flash",
+  "results": {
+   "ex.c2.hedging-and-boosting.01": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.02": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.03": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.04": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.05": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.06": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.07": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.08": {
+    "status": "drop",
+    "note": "Key judged wrong: The answer key omits the token 'very', whereas the other answer uses all provided tokens."
+   },
+   "ex.c2.hedging-and-boosting.09": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.10": {
+    "status": "drop",
+    "note": "Key judged wrong: The original sentence contains no mistake to correct."
+   },
+   "ex.c2.hedging-and-boosting.11": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.12": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.13": {
+    "status": "pass"
+   },
+   "ex.c2.hedging-and-boosting.14": {
+    "status": "pass"
+   }
+  },
+  "extra": []
+ }
+}

@@ -4,7 +4,7 @@
 // users/{uid}, and every function here takes the uid of the already-verified
 // session, never one from a request body:
 //
-//   users/{uid}                              profile, onboarding, billing
+//   users/{uid}                              profile, onboarding, level settings, billing
 //   users/{uid}/moduleProgress/{moduleId}    unlocks, best exam score
 //   users/{uid}/lessonSessions/{autoId}      one run through a lesson
 //   users/{uid}/lessonAttempts/{autoId}      one scored word
@@ -21,6 +21,7 @@ import {
   type DocumentData,
 } from "firebase-admin/firestore";
 import { getAdminDb } from "@/lib/firebase/admin";
+import { parseLevelPrefs, type LevelPrefs } from "@/lib/platform/levels";
 import {
   applyExamResult,
   type EndedSessionRecord,
@@ -45,6 +46,10 @@ export interface CloudUserRecord {
   onboardingCompleted: boolean;
   createdAt: string;
   billing: BillingState;
+  /** The learner's level settings (src/lib/platform/levels.ts), when set. */
+  levels: LevelPrefs | null;
+  /** Placement items seen in earlier tests, as the compact string from placement.ts. */
+  placementSeen: string | null;
 }
 
 export interface ProfilePatch {
@@ -52,6 +57,8 @@ export interface ProfilePatch {
   practiceFocus?: string;
   practiceCadence?: string;
   onboardingCompleted?: boolean;
+  levels?: LevelPrefs;
+  placementSeen?: string;
 }
 
 const ALREADY_EXISTS = 6;
@@ -103,6 +110,8 @@ function readUserRecord(data: DocumentData): CloudUserRecord {
     onboardingCompleted: data.onboardingCompleted === true,
     createdAt: toIso(data.createdAt) ?? new Date().toISOString(),
     billing: readBilling(data.billing),
+    levels: parseLevelPrefs(data.levels),
+    placementSeen: typeof data.placementSeen === "string" ? data.placementSeen : null,
   };
 }
 

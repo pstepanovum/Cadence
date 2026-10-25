@@ -1,0 +1,26 @@
+{
+ "format": 1,
+ "contentModel": 1,
+ "id": "core-b1",
+ "version": 2,
+ "title": "Cadence B1",
+ "level": "B1",
+ "generatedAt": "2026-10-25T00:58:21.403Z",
+ "files": [
+  {
+   "path": "content.json",
+   "sha256": "7bb99c06f80f7b0de71bc76be2251bfc62d754518cca27756fa4a5a65977b87e",
+   "bytes": 555461
+  },
+  {
+   "path": "scenarios.json",
+   "sha256": "5de6b5cfc4bbaa543ff43d6e724eb4f0d6ebb16ef10b21ebfcee87fe72689111",
+   "bytes": 973
+  },
+  {
+   "path": "sentences.json",
+   "sha256": "a28b75720b42a16e473784696ec889e464e4cc4491d6a2d400234ab0b46b1c7d",
+   "bytes": 122176
+  }
+ ]
+}

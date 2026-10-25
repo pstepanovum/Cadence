@@ -21,7 +21,7 @@ import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/au
 import { AccountStep } from "@/components/onboarding/AccountStep";
 import { ChoiceCard } from "@/components/onboarding/ChoiceCard";
 import { OnboardingTopBar } from "@/components/onboarding/OnboardingTopBar";
-import { PlacementQuiz } from "@/components/onboarding/PlacementQuiz";
+import { PlacementTest } from "@/components/placement/PlacementTest";
 import { StepHeading } from "@/components/onboarding/StepHeading";
 import { TimePicker } from "@/components/TimePicker";
 import { Banner, Body, Button, Title } from "@/components/ui";
@@ -216,7 +216,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       );
       primary = { label: "Continue", onPress: () => void advance(), disabled: answers.level === null && answers.placementLevel === null };
       secondary = {
-        label: "Not sure? Take a 2-minute quiz",
+        label: "Not sure? Take the placement test",
         onPress: () => {
           setWantsPlacement(true);
           moveTo({ step: "placement", slide: 0 }, 1);
@@ -226,8 +226,8 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "placement":
       body = (
         <View style={styles.section}>
-          <StepHeading compact={compact} title="A quick placement quiz" detail="Twelve questions, about two minutes." />
-          <PlacementQuiz result={answers.placementLevel} onDone={(level) => update({ placementLevel: level })} />
+          <StepHeading compact={compact} title="Placement test" detail="Adaptive: 12 to 24 questions, about five minutes." />
+          <PlacementTest result={answers.placementLevel} onDone={(outcome) => update({ placementLevel: outcome.level })} />
         </View>
       );
       primary = answers.placementLevel ? { label: "Continue", onPress: () => void advance() } : null;

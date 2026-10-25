@@ -8,6 +8,12 @@
    "bytes": 71407
   },
   {
+   "id": "placement",
+   "version": 1,
+   "manifest": "placement/v1/manifest.json",
+   "bytes": 228468
+  },
+  {
    "id": "core-a1",
    "version": 1,
    "level": "A1",
@@ -16,38 +22,38 @@
   },
   {
    "id": "core-a2",
-   "version": 1,
+   "version": 2,
    "level": "A2",
-   "manifest": "core-a2/v1/manifest.json",
-   "bytes": 564038
+   "manifest": "core-a2/v2/manifest.json",
+   "bytes": 564061
   },
   {
    "id": "core-b1",
-   "version": 1,
+   "version": 2,
    "level": "B1",
-   "manifest": "core-b1/v1/manifest.json",
-   "bytes": 678584
+   "manifest": "core-b1/v2/manifest.json",
+   "bytes": 678610
   },
   {
    "id": "core-b2",
-   "version": 1,
+   "version": 2,
    "level": "B2",
-   "manifest": "core-b2/v1/manifest.json",
-   "bytes": 699636
+   "manifest": "core-b2/v2/manifest.json",
+   "bytes": 738442
   },
   {
    "id": "core-c1",
-   "version": 1,
+   "version": 2,
    "level": "C1",
-   "manifest": "core-c1/v1/manifest.json",
-   "bytes": 599961
+   "manifest": "core-c1/v2/manifest.json",
+   "bytes": 662178
   },
   {
    "id": "core-c2",
-   "version": 1,
+   "version": 2,
    "level": "C2",
-   "manifest": "core-c2/v1/manifest.json",
-   "bytes": 407228
+   "manifest": "core-c2/v2/manifest.json",
+   "bytes": 464522
   }
  ]
 }

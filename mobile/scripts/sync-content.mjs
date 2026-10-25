@@ -8,7 +8,8 @@
 //   public/packs/index.json and public/packs/<id>/v<n>/   the built packs
 //   content/articulation/*.json                            the mouth-map targets
 //
-// The bundled packs are `sounds` and `core-a1` to `core-b2`; C1 and C2 are
+// The bundled packs are `sounds`, `placement` (the placement test's bank,
+// needed offline in setup) and `core-a1` to `core-b2`; C1 and C2 are
 // downloaded on demand. Pack files are copied as `.cpack` so Metro treats them
 // as assets (read from disk when a level is opened) rather than parsing them
 // into the JS bundle at launch.
@@ -26,7 +27,7 @@ const mobile = resolve(here, "..");
 const repo = resolve(mobile, "..");
 const check = process.argv.includes("--check");
 
-const BUNDLED = ["sounds", "core-a1", "core-a2", "core-b1", "core-b2"];
+const BUNDLED = ["sounds", "placement", "core-a1", "core-a2", "core-b1", "core-b2"];
 const PACKS_SRC = join(repo, "public/packs");
 const FIXTURE_PACKS = join(mobile, "src/content/fixtures/packs");
 const ARTICULATION_SRC = join(repo, "content/articulation");

@@ -17,6 +17,7 @@ import type {
   Stats,
   TranscribeResponse,
 } from "@/api/types";
+import { currentLevel } from "@/learning/level-store";
 
 export interface RecordedAudio {
   uri: string;
@@ -145,7 +146,8 @@ export function coachTurn(payload: {
   mode: CoachMode;
   history: CoachHistoryEntry[];
 }): Promise<CoachTurnResponse> {
-  return apiJson("/api/ai-coach", "POST", payload, { ai: true });
+  // The coach pitches its English to the learner's current level (Settings > Level).
+  return apiJson("/api/ai-coach", "POST", { ...payload, level: currentLevel() }, { ai: true });
 }
 
 // --- Conversation ---

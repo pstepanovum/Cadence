@@ -4,6 +4,7 @@ import type { AiCoachRequestPayload } from "@/lib/ai-coach";
 import { getCoachEngineUrlForRequest } from "@/lib/runtime/request-runtime";
 import { authorizeAi, runCharged } from "@/lib/server/ai-route";
 import { coachFor } from "@/lib/server/engines";
+import { isCefrLevel } from "@/lib/platform/content-model";
 import { isHostedCloud } from "@/lib/server/env";
 import { contentLibrary } from "@/lib/server/packs";
 
@@ -64,7 +65,7 @@ export async function GET(request: Request) {
  * fixed system prompt with the learner's words passed as data
  * (src/lib/server/engines/prompts.ts).
  *
- * Body: {action: "start"|"continue", topic?, scenarioId?, mode?, history: [{role, content}], summary?}
+ * Body: {action: "start"|"continue", topic?, scenarioId?, mode?, level?, history: [{role, content}], summary?}
  * Answer: {turn: {coachMessage, learnerReply}, summary, provider}
  */
 export async function POST(request: Request) {
@@ -87,6 +88,7 @@ export async function POST(request: Request) {
     .map((entry) => entry as { role?: unknown; content?: unknown })
     .filter((entry) => typeof entry.content === "string")
     .map((entry) => ({ role: entry.role === "coach" ? ("coach" as const) : ("learner" as const), text: String(entry.content).slice(0, 2000) }));
+  const level = isCefrLevel(raw.level) ? raw.level : null;
   const legacy: AiCoachRequestPayload = {
     action,
     topic: scenario?.title ?? topic,
@@ -95,7 +97,15 @@ export async function POST(request: Request) {
   };
 
   const result = await runCharged(access, "coach", {}, () =>
-    coachFor(request).turn({ scenario, topic, history, summary: typeof raw.summary === "string" ? raw.summary : undefined, start: action === "start", legacy: legacy as unknown as Record<string, unknown> }),
+    coachFor(request).turn({
+      scenario,
+      topic,
+      history,
+      summary: typeof raw.summary === "string" ? raw.summary : undefined,
+      start: action === "start",
+      level,
+      legacy: { ...(legacy as unknown as Record<string, unknown>), ...(level ? { level } : {}) },
+    }),
   );
   if (!result.ok) return result.response;
   const turn = result.value;
