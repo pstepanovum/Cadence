@@ -35,7 +35,7 @@ export function OnboardingProgress({ current, total }: { current: number; total:
 
 const styles = themed(() =>
   StyleSheet.create({
-    track: { flex: 1, height: 6, borderRadius: radii.pill, overflow: "hidden", backgroundColor: colors.alabaster },
-    fill: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderRadius: radii.pill, backgroundColor: colors.sage },
+    track: { flex: 1, height: 6, borderRadius: radii.pill, overflow: "hidden", backgroundColor: colors.platinum },
+    fill: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderRadius: radii.pill, backgroundColor: colors.hunter },
   }),
 );

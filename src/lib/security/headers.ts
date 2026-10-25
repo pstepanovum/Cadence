@@ -47,9 +47,13 @@ export function createNonce(): string {
 
 export function buildCsp(nonce: string, options: CspOptions = {}): string {
   const connect = ["'self'", ...FIREBASE_CONNECT];
-  if (options.authEmulatorHost && /^[A-Za-z0-9.\-[\]:]+$/.test(options.authEmulatorHost)) connect.push(`http://${options.authEmulatorHost}`);
-  if (options.development) connect.push("ws:", "wss:");
   const frames = [...RECAPTCHA_FRAMES];
+  if (options.authEmulatorHost && /^[A-Za-z0-9.\-[\]:]+$/.test(options.authEmulatorHost)) {
+    connect.push(`http://${options.authEmulatorHost}`);
+    // Google and Apple sign-in open the emulator's own page in an iframe.
+    frames.push(`http://${options.authEmulatorHost}`);
+  }
+  if (options.development) connect.push("ws:", "wss:");
   if (options.authDomain && /^[A-Za-z0-9.-]+$/.test(options.authDomain)) frames.push(`https://${options.authDomain}`);
   const script = ["'self'", `'nonce-${nonce}'`, "'strict-dynamic'", ...RECAPTCHA_SCRIPTS];
   if (options.development) script.push("'unsafe-eval'");

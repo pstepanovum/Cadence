@@ -1,0 +1,72 @@
+# Sign in with Apple and add Google, through the Auth emulator's fake
+# identity tokens (a test build asks for the fake account's email), then the
+# account's sign-in methods: add a password and remove Apple.
+# env: APPLE_EMAIL, PASSWORD
+appId: dev.pstepanov.cadence
+name: Apple and Google
+---
+- launchApp
+# Signed in from an earlier flow: sign out first.
+- runFlow:
+    when:
+      visible: "Hi .*"
+    commands:
+      - tapOn: "Profile and settings"
+      - scrollUntilVisible:
+          element: "Settings"
+      - tapOn: "Settings"
+      - scrollUntilVisible:
+          element: "Sign out"
+      - tapOn: "Sign out"
+      - tapOn:
+          text: "Sign out"
+          above: "Stay signed in"
+- extendedWaitUntil:
+    visible: "Welcome back"
+    timeout: 15000
+- tapOn: "Sign in with Apple"
+- extendedWaitUntil:
+    visible: "Test Apple account"
+    timeout: 5000
+- takeScreenshot: 23-apple-test-prompt
+- inputText: ${APPLE_EMAIL}
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Hi .*"
+    timeout: 20000
+- tapOn: "Profile and settings"
+- scrollUntilVisible:
+    element: "Settings"
+- tapOn: "Settings"
+- scrollUntilVisible:
+    element: "Sign-in methods"
+- tapOn: "Sign-in methods"
+- assertVisible: "Connected · your only way in"
+- takeScreenshot: 24-methods-apple-only
+- tapOn:
+    id: "new-password"
+- inputText: ${PASSWORD}
+- tapOn: "(?i)add a password"
+- tapOn: "Add password"
+- extendedWaitUntil:
+    visible: "Password added.*"
+    timeout: 15000
+- tapOn:
+    text: "Add"
+- extendedWaitUntil:
+    visible: "Test Google account"
+    timeout: 5000
+- inputText: ${APPLE_EMAIL}
+- tapOn: "Continue"
+- extendedWaitUntil:
+    visible: "Google added.*"
+    timeout: 15000
+- takeScreenshot: 25-methods-all
+- tapOn:
+    text: "Remove"
+    index: 0
+- tapOn: "Remove Apple"
+- extendedWaitUntil:
+    visible: "Apple removed."
+    timeout: 15000
+- takeScreenshot: 26-methods-apple-removed

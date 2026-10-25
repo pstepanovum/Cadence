@@ -36,15 +36,14 @@ name: Cloud onboarding
     visible: "You're signed in"
     timeout: 20000
 - tapOn: "Continue"
-- assertVisible: "(?i)cadence plus"
+- assertVisible: "Practise with AI anywhere"
 - scrollUntilVisible:
     element: "Monthly, .* a month"
 - assertVisible: "Yearly, 7-day free trial, then .* a year"
 - scrollUntilVisible:
     element: "Restore purchases"
-- scrollUntilVisible:
-    element: "Privacy Policy"
-- assertVisible: "Terms of Use"
+- assertVisible: "Privacy"
+- assertVisible: "Terms"
 - takeScreenshot: 06-paywall
 - tapOn: "Restore purchases"
 - assertVisible: "No Plus subscription found.*"

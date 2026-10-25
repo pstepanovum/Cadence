@@ -1,0 +1,144 @@
+# Every first-run and sign-in screen on the cloud path, captured for review:
+# setup with a new email account, Plus, the sign-in methods screen, sign
+# out, sign in, sign up, the password reset, and Apple through the
+# emulator's fake identity token. Each screen must fit without scrolling.
+# env: EMAIL, PASSWORD
+appId: dev.pstepanov.cadence
+name: Auth and setup screens
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+      microphone: allow
+- assertVisible: "Speak English with confidence"
+- takeScreenshot: 01-welcome-1
+- tapOn: "Get started"
+- takeScreenshot: 02-welcome-2
+- tapOn: "Continue"
+- takeScreenshot: 03-welcome-3
+- tapOn: "Continue"
+- assertVisible: "What brings you to Cadence?"
+- takeScreenshot: 04-goal
+- tapOn: "Better grammar.*"
+- takeScreenshot: 05-goal-selected
+- tapOn: "Continue"
+- assertVisible: "How is your English now?"
+- tapOn: "B2 · Upper intermediate.*"
+- takeScreenshot: 06-level
+- tapOn: "Continue"
+- assertVisible: "Your daily goal"
+- takeScreenshot: 07-minutes
+- tapOn: "Continue"
+- assertVisible: "When should we remind you?"
+- takeScreenshot: 08-reminders
+- tapOn: "Not now"
+- assertVisible: "Where should Cadence run?"
+- tapOn: "Connect your own Cadence server.*"
+- takeScreenshot: 09-where-own
+- tapOn: "Cadence cloud.*"
+- takeScreenshot: 10-where-cloud
+- tapOn: "Continue"
+- assertVisible: "Create your free account"
+- takeScreenshot: 11-account
+- tapOn:
+    id: "account-email"
+- inputText: ${EMAIL}
+- takeScreenshot: 12-account-keyboard
+- tapOn:
+    id: "account-password"
+# iOS may offer a strong password for a new-password field; type our own.
+- tapOn:
+    text: "Choose My Own Password"
+    optional: true
+- inputText: ${PASSWORD}
+# Tapping the page's heading closes the keyboard.
+- tapOn: "Create your free account"
+- tapOn: "Create account"
+- extendedWaitUntil:
+    visible: "You're signed in"
+    timeout: 20000
+- takeScreenshot: 13-account-done
+- tapOn: "Continue"
+- assertVisible: "Practise with AI anywhere"
+- takeScreenshot: 14-paywall
+- tapOn: "Not now"
+- extendedWaitUntil:
+    visible: "Hi .*"
+    timeout: 15000
+# Settings > Sign-in methods
+- tapOn: "Profile and settings"
+- scrollUntilVisible:
+    element: "Settings"
+- tapOn: "Settings"
+- scrollUntilVisible:
+    element: "Sign-in methods"
+- tapOn: "Sign-in methods"
+- assertVisible: "Email and password"
+- waitForAnimationToEnd
+- takeScreenshot: 15-sign-in-methods
+- tapOn: "Back"
+# Sign out
+- scrollUntilVisible:
+    element: "Sign out"
+- tapOn: "Sign out"
+# The alert's own button, above "Stay signed in".
+- tapOn:
+    text: "Sign out"
+    above: "Stay signed in"
+- extendedWaitUntil:
+    visible: "Welcome back"
+    timeout: 15000
+- waitForAnimationToEnd
+- takeScreenshot: 16-sign-in
+- tapOn: "Create an account"
+- assertVisible: "Create your account"
+- waitForAnimationToEnd
+- takeScreenshot: 17-sign-up
+- tapOn:
+    id: "auth-email"
+- takeScreenshot: 18-sign-up-keyboard
+- tapOn: "Create your account"
+- tapOn: "Sign in"
+- assertVisible: "Welcome back"
+# A wrong password is refused with a clear message.
+- tapOn:
+    id: "auth-email"
+- inputText: ${EMAIL}
+- tapOn:
+    id: "auth-password"
+- inputText: "not-the-password"
+- tapOn: "Welcome back"
+- tapOn: "Sign in"
+- extendedWaitUntil:
+    visible: "That email and password don't match.*"
+    timeout: 10000
+- takeScreenshot: 19-sign-in-error
+# Password reset
+- tapOn: "Forgot your password?"
+- assertVisible: "Reset your password"
+- waitForAnimationToEnd
+- takeScreenshot: 20-reset
+- tapOn:
+    id: "reset-email"
+- inputText: ${EMAIL}
+- tapOn: "Reset your password"
+- tapOn: "Send reset link"
+- extendedWaitUntil:
+    visible: "If an account exists.*"
+    timeout: 10000
+- takeScreenshot: 21-reset-sent
+- tapOn: "Back to sign in"
+# Sign in with the real password.
+- tapOn:
+    id: "auth-password"
+- eraseText: 40
+- inputText: ${PASSWORD}
+- tapOn: "Welcome back"
+- tapOn: "Sign in"
+- extendedWaitUntil:
+    visible: "Hi .*"
+    timeout: 20000
+- waitForAnimationToEnd
+- takeScreenshot: 22-signed-in

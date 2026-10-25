@@ -50,9 +50,8 @@ name: Own server onboarding
 - tapOn: "Continue"
 - assertVisible: "Keep your progress in sync"
 - assertNotVisible: "(?i)cadence plus"
-- scrollUntilVisible:
-    element: "Not now"
-- tapOn: "Not now"
+# The account is optional with your own server: Skip in the top bar.
+- tapOn: "Skip"
 - extendedWaitUntil:
     visible: "Ready to practise?"
     timeout: 15000

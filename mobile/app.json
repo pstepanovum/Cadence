@@ -49,6 +49,7 @@
         ]
       },
       "appleTeamId": "V7H9Y9K6Z7",
+      "usesAppleSignIn": true,
       "entitlements": {
         "com.apple.security.application-groups": [
           "group.dev.pstepanov.cadence"
@@ -111,7 +112,8 @@
           "enableBackgroundRemoteNotifications": false
         }
       ],
-      "@bacons/apple-targets"
+      "@bacons/apple-targets",
+      "expo-apple-authentication"
     ],
     "experiments": {
       "typedRoutes": true,

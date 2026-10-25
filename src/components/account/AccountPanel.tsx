@@ -7,7 +7,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useState, type FormEvent } from "react";
-import { EmailAuthProvider, reauthenticateWithCredential, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { PLAN_NAMES, readMe, type Me } from "@/components/account/me";
 import { PlanButton, PortalButton } from "@/components/billing/PlanButton";
 import { subscribeToNewsletter, unsubscribeFromNewsletter } from "@/components/newsletter/newsletter-api";
@@ -15,7 +15,10 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cloudFetch } from "@/hooks/cloud-fetch";
 import { describeAuthError } from "@/lib/firebase/auth-errors";
+import { SignInMethods } from "@/components/auth/SignInMethods";
 import { getFirebaseAuth } from "@/lib/firebase/client";
+import { providerIds, reauthenticate } from "@/lib/firebase/providers";
+import { linkedMethods, methodLabel, type SignInMethod } from "@/lib/platform/sign-in-methods";
 
 const dateFormat = (ms: number) => new Date(ms).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
@@ -37,6 +40,7 @@ export function AccountPanel({ email, checkout }: { email: string | null; checko
         <NewsletterCard email={email} me={me} />
       </div>
       <div className="flex flex-col gap-4">
+        <SignInMethods />
         <DataCard />
         <DeleteCard email={email} />
       </div>
@@ -193,6 +197,16 @@ function DeleteCard({ email }: { email: string | null }) {
   const [confirm, setConfirm] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Deleting needs a recent sign-in: the password when the account has one,
+  // otherwise Google or Apple again.
+  const [confirmWith, setConfirmWith] = useState<SignInMethod>("password");
+  useEffect(() => {
+    const auth = getFirebaseAuth();
+    void auth.authStateReady().then(() => {
+      const methods = auth.currentUser ? linkedMethods(providerIds(auth.currentUser)) : [];
+      setConfirmWith(methods.includes("password") ? "password" : (methods[0] ?? "password"));
+    });
+  }, []);
 
   async function remove(event: FormEvent) {
     event.preventDefault();
@@ -204,8 +218,10 @@ function DeleteCard({ email }: { email: string | null }) {
       await auth.authStateReady();
       const user = auth.currentUser;
       if (!user) throw new Error("Sign in again, then delete.");
-      // Deleting needs a recent sign-in: prove it with the password.
-      await reauthenticateWithCredential(user, EmailAuthProvider.credential(email, password));
+      if (!(await reauthenticate(confirmWith, password))) {
+        setBusy(false);
+        return;
+      }
       const token = await user.getIdToken(true);
       const response = await cloudFetch("/api/account", { method: "DELETE", headers: { Authorization: `Bearer ${token}` } });
       if (!response.ok && response.status !== 202) throw new Error("Could not delete the account. Nothing was removed; try again later.");
@@ -230,17 +246,21 @@ function DeleteCard({ email }: { email: string | null }) {
         <Button variant="danger" className="mt-4" onClick={() => setOpen(true)}>Delete my account</Button>
       ) : (
         <form className="mt-4 space-y-3" onSubmit={remove}>
-          <div>
-            <label htmlFor={`${id}-pw`} className="block pb-1 text-sm font-medium text-hunter-green">Password</label>
-            <input id={`${id}-pw`} type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required className="min-h-12 w-full rounded-full bg-vanilla-cream px-4 text-sm text-hunter-green ring-1 ring-alabaster-grey" />
-          </div>
+          {confirmWith === "password" ? (
+            <div>
+              <label htmlFor={`${id}-pw`} className="block pb-1 text-sm font-medium text-hunter-green">Password</label>
+              <input id={`${id}-pw`} type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required className="min-h-12 w-full rounded-full bg-vanilla-cream px-4 text-sm text-hunter-green ring-1 ring-alabaster-grey" />
+            </div>
+          ) : (
+            <p className="text-sm text-iron-grey">You&apos;ll confirm with {methodLabel(confirmWith)} first.</p>
+          )}
           <div>
             <label htmlFor={`${id}-c`} className="block pb-1 text-sm font-medium text-hunter-green">Type “delete” to confirm</label>
             <input id={`${id}-c`} value={confirm} onChange={(e) => setConfirm(e.target.value)} autoComplete="off" required className="min-h-12 w-full rounded-full bg-vanilla-cream px-4 text-sm text-hunter-green ring-1 ring-alabaster-grey" />
           </div>
           {error ? <p role="alert" className="text-sm text-blushed-brick">{error}</p> : null}
           <div className="flex flex-wrap gap-2">
-            <Button type="submit" variant="danger" disabled={busy || confirm.trim().toLowerCase() !== "delete" || !password}>
+            <Button type="submit" variant="danger" disabled={busy || confirm.trim().toLowerCase() !== "delete" || (confirmWith === "password" && !password)}>
               {busy ? "Deleting…" : "Delete for good"}
             </Button>
             <Button type="button" variant="ghost" onClick={() => setOpen(false)} disabled={busy}>Keep my account</Button>

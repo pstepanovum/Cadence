@@ -187,12 +187,15 @@ html {
   background-color: var(--vanilla-cream);
 }
 
-/* Account screens sit on platinum in light mode and on the page grey in dark. */
-.auth-page { background-color: var(--platinum); }
+/* Account screens sit on a white page in light mode, as on the phone, and on
+   the page grey in dark. Apple's button turns white on dark. */
+.auth-page { background-color: #ffffff; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .auth-page { background-color: var(--vanilla-cream); }
+  :root:not([data-theme="light"]) .apple-button { background-color: #ffffff; color: #000000; }
 }
 :root[data-theme="dark"] .auth-page { background-color: var(--vanilla-cream); }
+:root[data-theme="dark"] .apple-button { background-color: #ffffff; color: #000000; }
 
 body {
   min-height: 100vh;

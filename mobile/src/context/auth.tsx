@@ -1,9 +1,10 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { onAuthStateChanged, signOut as firebaseSignOut } from "firebase/auth";
+import { onIdTokenChanged, signOut as firebaseSignOut, type User } from "firebase/auth";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 import { getProfile, patchProfile } from "@/api/endpoints";
 import { getFirebaseAuth } from "@/lib/firebase";
+import { signOutOfProviders } from "@/lib/firebase-providers";
 import {
   parseProfile,
   toProfile,
@@ -24,6 +25,12 @@ export {
 export interface AuthUser {
   uid: string;
   email: string | null;
+  /** Firebase provider ids on the account: "password", "apple.com", "google.com". */
+  providers: string[];
+}
+
+function toAuthUser(user: User): AuthUser {
+  return { uid: user.uid, email: user.email, providers: user.providerData.map((info) => info.providerId) };
 }
 
 interface AuthState {
@@ -47,6 +54,8 @@ interface AuthState {
   /** Saves profile fields on the server and updates the local copy. */
   updateProfile: (patch: Partial<Profile>) => Promise<void>;
   signOut: () => Promise<void>;
+  /** Re-reads the account after a sign-in method was added or removed. */
+  refreshUser: () => void;
 }
 
 const FALLBACK_PROFILE = toProfile({}, null);
@@ -97,6 +106,7 @@ const AuthContext = createContext<AuthState>({
   displayName: FALLBACK_PROFILE.displayName,
   updateProfile: async () => {},
   signOut: async () => {},
+  refreshUser: () => {},
 });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -116,10 +126,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const auth = getFirebaseAuth();
     if (!auth) return;
 
-    // Fires once with the restored user (or null) and again on every sign-in
-    // and sign-out, so it covers both the cold start and the auth screens.
-    return onAuthStateChanged(auth, (next) => {
-      setUser(next ? { uid: next.uid, email: next.email } : null);
+    // Fires once with the restored user (or null), on every sign-in and
+    // sign-out, and when the token is refreshed (which linking a sign-in
+    // method does), so it covers the cold start and the auth screens.
+    return onIdTokenChanged(auth, (next) => {
+      setUser((current) => {
+        if (!next) return null;
+        const fresh = toAuthUser(next);
+        // Same account, same methods: keep the identity so nothing re-renders.
+        return current && current.uid === fresh.uid && current.email === fresh.email && current.providers.join() === fresh.providers.join() ? current : fresh;
+      });
       setUserRestored(true);
     });
   }, []);
@@ -185,7 +201,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = useCallback(async () => {
     const auth = getFirebaseAuth();
-    if (auth) await firebaseSignOut(auth);
+    if (!auth) return;
+    await signOutOfProviders();
+    await firebaseSignOut(auth);
+  }, []);
+
+  const refreshUser = useCallback(() => {
+    const current = getFirebaseAuth()?.currentUser;
+    if (!current) return;
+    void current
+      .reload()
+      .catch(() => {})
+      .then(() => setUser(toAuthUser(current)));
   }, []);
 
   const loading = !userRestored;
@@ -203,8 +230,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       displayName: profile.displayName,
       updateProfile,
       signOut,
+      refreshUser,
     };
-  }, [user, loading, profileReady, profileError, retryProfile, fields, updateProfile, signOut]);
+  }, [user, loading, profileReady, profileError, retryProfile, fields, updateProfile, signOut, refreshUser]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

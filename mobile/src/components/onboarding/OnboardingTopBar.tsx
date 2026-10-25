@@ -19,12 +19,14 @@ export function OnboardingTopBar({
   onBack,
   onSkip,
   onClose,
+  skipLabel = "Skip",
 }: {
   current: number;
   total: number;
   onBack?: () => void;
   onSkip?: () => void;
   onClose?: () => void;
+  skipLabel?: string;
 }) {
   return (
     <View style={styles.bar}>
@@ -44,15 +46,15 @@ export function OnboardingTopBar({
         ) : onSkip ? (
           <Pressable
             accessibilityRole="button"
-            accessibilityLabel="Skip"
+            accessibilityLabel={skipLabel}
             hitSlop={8}
             onPress={() => {
               haptics.tap();
               onSkip();
             }}
             style={({ pressed }) => [styles.skip, pressed && styles.skipPressed]}>
-            <Text maxFontSizeMultiplier={maxScale.control} style={styles.skipLabel}>
-              Skip
+            <Text maxFontSizeMultiplier={maxScale.control} numberOfLines={1} style={styles.skipLabel}>
+              {skipLabel}
             </Text>
           </Pressable>
         ) : null}
@@ -65,7 +67,8 @@ const styles = themed(() =>
   StyleSheet.create({
     bar: { minHeight: TAP_TARGET, flexDirection: "row", alignItems: "center", gap: spacing.md },
     side: { width: SIDE, minHeight: TAP_TARGET, flexDirection: "row", alignItems: "center" },
-    end: { justifyContent: "flex-end" },
+    // Grows for a longer label ("Not now") instead of wrapping it.
+    end: { justifyContent: "flex-end", width: undefined, minWidth: SIDE },
     skip: { minHeight: TAP_TARGET, paddingHorizontal: spacing.sm, borderRadius: radii.control, alignItems: "center", justifyContent: "center" },
     skipPressed: { backgroundColor: overlays.hunterTint },
     skipLabel: { fontFamily: fonts.bodySemiBold, fontSize: type.headline, color: colors.hunter },

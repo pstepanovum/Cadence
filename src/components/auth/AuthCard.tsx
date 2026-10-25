@@ -1,8 +1,9 @@
 // FILE: src/components/auth/AuthCard.tsx
 //
-// The frame every account screen shares, drawn like the mobile app's: the logo
-// centred above one white card holding the heading, a line of context and the
-// form, and the footer line under the card.
+// The frame every account screen shares, drawn like the mobile app's: one
+// centred column on the neutral page, with no card around it. The logo, the
+// heading and one line of context, then the form, then the "switch screen"
+// line at the foot.
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { BrandMark } from "@/components/ui/brand-mark";
@@ -14,15 +15,19 @@ interface AuthCardProps {
   footer?: ReactNode;
 }
 
+/** Flat platinum fields with a hunter focus ring, as on the phone. */
+export const AUTH_INPUT_CLASS =
+  "min-h-[52px] rounded-[14px] bg-platinum text-base text-carbon-black placeholder:text-slate-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green";
+
 export function AuthCard({ title, description, children, footer }: AuthCardProps) {
   return (
-    <div className="w-full max-w-[26rem] space-y-5">
-      <Link href="/" className="mx-auto flex w-fit items-center py-2" aria-label="Cadence home">
+    <div className="w-full max-w-[24rem] space-y-8">
+      <Link href="/" className="mx-auto flex w-fit items-center py-1" aria-label="Cadence home">
         <BrandMark />
       </Link>
-      <div className="space-y-5 rounded-[20px] border border-alabaster-grey bg-white px-5 py-7 shadow-[0_1px_2px_rgba(33,37,41,0.04),0_8px_24px_rgba(33,37,41,0.06)] sm:px-7">
-        <div className="space-y-1.5">
-          <h1 className="text-[1.6rem] font-semibold leading-tight tracking-[-0.01em] text-carbon-black">{title}</h1>
+      <div className="space-y-6">
+        <div className="space-y-1.5 text-center">
+          <h1 className="font-kicker text-[1.75rem] leading-tight text-hunter-green">{title}</h1>
           {description ? <p className="text-[0.95rem] leading-6 text-slate-grey">{description}</p> : null}
         </div>
         {children}
@@ -34,7 +39,7 @@ export function AuthCard({ title, description, children, footer }: AuthCardProps
 
 export function AuthNotice({ tone, children }: { tone: "info" | "success" | "error"; children: ReactNode }) {
   const styles = {
-    info: "bg-bright-snow text-iron-grey ring-1 ring-alabaster-grey",
+    info: "bg-platinum text-iron-grey",
     success: "bg-yellow-green text-hunter-green",
     error: "bg-blushed-brick text-white",
   }[tone];

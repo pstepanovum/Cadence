@@ -12,8 +12,8 @@ leave the house. This is the path described in
 [docs/CONNECT_YOUR_PHONE.md](../docs/CONNECT_YOUR_PHONE.md); the protocol is in
 [docs/PAIRING_PROTOCOL.md](../docs/PAIRING_PROTOCOL.md).
 
-**Cadence Cloud.** Signs in with Firebase Authentication (email and password,
-the same Firebase project as the web app) and talks to a hosted Next.js API.
+**Cadence Cloud.** Signs in with Firebase Authentication (Sign in with Apple,
+Google, or email and password, the same Firebase project as the web app) and talks to a hosted Next.js API.
 Available only when `EXPO_PUBLIC_API_URL` and the four `EXPO_PUBLIC_FIREBASE_*`
 values are set at build time; without them the connect screen offers pairing
 with your own computer only.
@@ -33,7 +33,9 @@ that does.
   with "Not now". Each step is saved on the phone, so a closed app resumes
   where it stopped; it never shows twice, and Settings > Run setup again walks
   the learning questions again. Installs from before it existed skip it. Sign
-  in, sign up and password reset also live under `(auth)`.
+  in, sign up and password reset also live under `(auth)`. Every one of these
+  screens fits an iPhone SE without scrolling at the default text size; the
+  e2e flow `09-auth-screens` captures them all.
 - **Home** — the streak (with freezes), today's minutes against the daily goal,
   the word of the day and a quick-practice drill over 100+ target words grouped
   by sound family.

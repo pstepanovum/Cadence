@@ -2,7 +2,6 @@
 // product news (opt-in), data export and account deletion
 // (docs/PLATFORM.md, sections 4 and 11).
 import { router } from "expo-router";
-import { EmailAuthProvider, reauthenticateWithCredential } from "firebase/auth";
 import { File, Paths } from "expo-file-system";
 import * as Sharing from "expo-sharing";
 import { useState } from "react";
@@ -17,6 +16,8 @@ import { renewalLine } from "@/lib/billing/plans";
 import { manageSubscription, restorePurchases, storeConfigured } from "@/lib/billing/purchases";
 import { config } from "@/lib/config";
 import { getFirebaseAuth } from "@/lib/firebase";
+import { reauthenticate } from "@/lib/firebase-providers";
+import { linkedMethods, methodLabel } from "@/platform/sign-in-methods";
 import { haptics } from "@/lib/haptics";
 import { spacing, type } from "@/theme/theme";
 
@@ -29,6 +30,10 @@ export default function AccountScreen() {
   const [password, setPassword] = useState("");
 
   const plusRecord = account.me?.plus ?? null;
+  // Deleting needs a fresh sign-in: the password when the account has one,
+  // otherwise Apple or Google again.
+  const methods = linkedMethods(user?.providers ?? []);
+  const confirmWith = methods.includes("password") ? "password" : (methods[0] ?? "password");
   const fromWeb = plusRecord?.source === "stripe";
   // Named, never linked: App Review reads a link to a page that changes the plan as steering to an outside purchase.
   const siteHost = (config.apiUrl ?? "https://cadence.pstepanov.dev").replace(/^https?:\/\//, "").replace(/\/$/, "");
@@ -71,11 +76,11 @@ export default function AccountScreen() {
     run("delete", async () => {
       const auth = getFirebaseAuth();
       const current = auth?.currentUser;
-      if (!current?.email) throw new Error("Sign in again, then try once more.");
+      if (!current) throw new Error("Sign in again, then try once more.");
       try {
-        await reauthenticateWithCredential(current, EmailAuthProvider.credential(current.email, password));
+        if (!(await reauthenticate(confirmWith, password))) return;
       } catch {
-        throw new Error("That password didn't work.");
+        throw new Error(confirmWith === "password" ? "That password didn't work." : `${methodLabel(confirmWith)} didn't confirm it's you. Try again.`);
       }
       await deleteAccount();
       await forgetLearner(current.uid);
@@ -131,12 +136,16 @@ export default function AccountScreen() {
               This deletes your account and its progress for good. A subscription bought in the App Store keeps running until you cancel it in your Apple Account settings.
             </Body>
             <Button label="Download my data first" variant="tonal" loading={busy === "export"} disabled={busy !== null} onPress={() => void download()} />
-            <TextField testID="delete-password" label="Your password" secureTextEntry autoComplete="current-password" returnKeyType="done" submitBehavior="blurAndSubmit" value={password} onChangeText={setPassword} />
+            {confirmWith === "password" ? (
+              <TextField testID="delete-password" label="Your password" secureTextEntry autoComplete="current-password" returnKeyType="done" submitBehavior="blurAndSubmit" value={password} onChangeText={setPassword} />
+            ) : (
+              <Body size={type.footnote} tone="muted">{`You'll confirm with ${methodLabel(confirmWith)} first.`}</Body>
+            )}
             <Button
               label="Delete my account"
               variant="danger"
               loading={busy === "delete"}
-              disabled={!password || busy !== null}
+              disabled={(confirmWith === "password" && !password) || busy !== null}
               onPress={() =>
                 Alert.alert("Delete your account?", "This can't be undone.", [
                   { text: "Keep it", style: "cancel" },

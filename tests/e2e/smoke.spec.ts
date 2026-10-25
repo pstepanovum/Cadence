@@ -73,7 +73,7 @@ test("sign up and sign in", async ({ page, browser, checkPage, consoleErrors }) 
   await checkPage("login", second);
   await second.getByRole("textbox", { name: "Email" }).fill(email);
   await second.getByRole("textbox", { name: "Password" }).fill(PASSWORD);
-  await second.getByRole("button", { name: "Sign in" }).click();
+  await second.getByRole("button", { name: "Sign in", exact: true }).click();
   await second.waitForURL(/\/(dashboard|onboarding)/, { timeout: 30_000 });
   await second.goto("/dashboard");
   await expect(second).toHaveURL(/\/dashboard/);
@@ -84,7 +84,7 @@ test("sign up and sign in", async ({ page, browser, checkPage, consoleErrors }) 
   await third.goto("/login");
   await third.getByRole("textbox", { name: "Email" }).fill(email);
   await third.getByRole("textbox", { name: "Password" }).fill(`${PASSWORD}-wrong`);
-  await third.getByRole("button", { name: "Sign in" }).click();
+  await third.getByRole("button", { name: "Sign in", exact: true }).click();
   await expect(third.getByRole("alert")).toBeVisible();
   await expect(third).toHaveURL(/\/login/);
   await fresh.close();

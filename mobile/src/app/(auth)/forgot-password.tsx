@@ -2,14 +2,17 @@ import { router } from "expo-router";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { SvgXml } from "react-native-svg";
-import { Banner, Body, Button, Card, Screen, TextField, Title, TopBar } from "@/components/ui";
-import { config } from "@/lib/config";
-import { LOGO_GREEN_DARK } from "@/data/svg";
+
+import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/auth/layout";
+import { AuthField, TestBuildNote, Wordmark } from "@/components/auth/SignInOptions";
+import { Banner, Body, Button, Title, TopBar } from "@/components/ui";
 import { authErrorCode, describeAuthError } from "@/copy/auth-errors";
-import { haptics } from "@/lib/haptics";
+import { config } from "@/lib/config";
 import { requireFirebaseAuth } from "@/lib/firebase";
+import { haptics } from "@/lib/haptics";
 import { spacing, type } from "@/theme/theme";
+
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 async function sendResetEmail(email: string): Promise<void> {
   const auth = requireFirebaseAuth();
@@ -28,6 +31,8 @@ async function sendResetEmail(email: string): Promise<void> {
 }
 
 export default function ForgotPasswordScreen() {
+  const typing = useKeyboardVisible();
+  const compact = useCompactHeight();
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -36,79 +41,84 @@ export default function ForgotPasswordScreen() {
   const trimmed = email.trim();
 
   async function handleReset() {
-    if (!trimmed || submitting) return;
+    if (submitting) return;
+    if (!EMAIL.test(trimmed)) {
+      haptics.error();
+      setError("Enter the email you signed up with.");
+      return;
+    }
     setError(null);
     setSubmitting(true);
     try {
       // The reset form is Firebase's own page; once the new password is set it
       // links back to the web app's sign-in.
       await sendResetEmail(trimmed);
+      haptics.success();
       setSent(true);
     } catch (cause) {
       // Firebase does not say whether an account exists, and neither should
       // this screen, so a missing account reads the same as a sent link.
       if (authErrorCode(cause) === "auth/user-not-found") {
+        haptics.success();
         setSent(true);
         return;
       }
       haptics.error();
-      setError(describeAuthError(cause, "Could not send the reset email. Try again."));
+      setError(describeAuthError(cause, "Couldn't send the reset email. Try again.", { emulator: config.authEmulator }));
     } finally {
       setSubmitting(false);
     }
   }
 
   return (
-    <Screen contentStyle={styles.center}>
-      <TopBar onBack={() => router.back()} backLabel="Back to sign in" />
-      <View style={styles.logoWrap}>
-        <SvgXml xml={LOGO_GREEN_DARK} width={160} height={40} />
-      </View>
-      <Card>
-        <Title size={type.title2}>Reset your password</Title>
+    <FitScreen header={<TopBar onBack={() => router.back()} backLabel="Back to sign in" />}>
+      <View style={[styles.stack, compact && styles.stackCompact]}>
+        {typing ? null : (
+          <View style={styles.logo}>
+            <Wordmark />
+          </View>
+        )}
+        <View style={styles.heading}>
+          <Title size={type.title1} style={styles.centerText}>Reset your password</Title>
+          <Body tone="muted" style={styles.centerText}>{sent ? "Check your inbox." : "We'll email you a link to set a new one."}</Body>
+        </View>
         {sent ? (
           <>
-            <Banner
-              tone="success"
-              message={`If an account exists for ${trimmed}, a reset link is on its way. Set a new password, then sign in here.`}
-            />
+            <Banner tone="success" message={`If an account exists for ${trimmed}, a reset link is on its way. Set a new password, then sign in here.`} />
             <Button label="Back to sign in" onPress={() => router.back()} />
           </>
         ) : (
-          <>
-            <Body size={type.callout} tone="muted">
-              Enter the email you signed up with and we will send you a link to set a new password.
-            </Body>
+          <View style={styles.form}>
             {error ? <Banner message={error} tone="error" /> : null}
-            <TextField
-              label="Email"
-              placeholder="you@example.com"
+            <AuthField
+              testID="reset-email"
+              accessibilityLabel="Email"
+              placeholder="Email"
               autoCapitalize="none"
               autoCorrect={false}
               autoComplete="email"
               textContentType="emailAddress"
               keyboardType="email-address"
-              returnKeyType="go"
-              onSubmitEditing={handleReset}
+              returnKeyType="send"
+              onSubmitEditing={() => void handleReset()}
               value={email}
               onChangeText={setEmail}
               editable={!submitting}
             />
-            <Button label="Send reset link" loading={submitting} disabled={!trimmed} onPress={handleReset} />
-          </>
+            <Button label="Send reset link" loading={submitting} onPress={() => void handleReset()} />
+          </View>
         )}
-      </Card>
-    </Screen>
+        <TestBuildNote />
+      </View>
+    </FitScreen>
   );
 }
 
 const styles = StyleSheet.create({
-  center: {
-    flexGrow: 1,
-    justifyContent: "center",
-  },
-  logoWrap: {
-    alignItems: "center",
-    paddingVertical: spacing.sm,
-  },
+  stack: { flexGrow: 1, justifyContent: "center", gap: spacing.xl },
+  stackCompact: { gap: spacing.lg },
+  heading: { gap: spacing.xs, alignItems: "center" },
+  logo: { alignItems: "center" },
+  centerText: { textAlign: "center" },
+  form: { gap: spacing.md },
 });

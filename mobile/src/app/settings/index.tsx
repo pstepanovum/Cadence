@@ -3,7 +3,7 @@
 // running setup again, and the app version.
 import Constants from "expo-constants";
 import { router } from "expo-router";
-import { Download, Laptop, RotateCcw, Sparkles, Volume2 } from "lucide-react-native";
+import { Download, KeyRound, Laptop, RotateCcw, Sparkles, Volume2 } from "lucide-react-native";
 import { useEffect, useState } from "react";
 import { Alert, AppState, Linking, StyleSheet, View } from "react-native";
 
@@ -24,7 +24,9 @@ import { setPref, usePrefs } from "@/lib/prefs";
 import { formatTime, inQuietHours } from "@/notifications/plan";
 import { askForNotifications, notificationPermission, type PermissionState } from "@/notifications/schedule";
 import { updateReminders, useReminderSettings } from "@/notifications/settings";
+import { haptics } from "@/lib/haptics";
 import { useConnection } from "@/pairing/context";
+import { linkedMethods, methodLabel } from "@/platform/sign-in-methods";
 import { colors, spacing, type } from "@/theme/theme";
 
 export default function SettingsScreen() {
@@ -78,8 +80,10 @@ export default function SettingsScreen() {
     try {
       const status = await restorePurchases();
       account.noteStoreStatus(status);
+      if (status.active) haptics.success();
       setMessage(status.active ? { tone: "success", text: "Plus restored." } : { tone: "info", text: "No Plus subscription found for this Apple Account." });
     } catch (error) {
+      haptics.error();
       setMessage({ tone: "error", text: error instanceof Error ? error.message : "Restore didn't work. Try again." });
     } finally {
       setRestoring(false);
@@ -183,6 +187,12 @@ export default function SettingsScreen() {
             {user.email ?? ""}
           </Body>
           <NewsletterToggle />
+          <SettingsRow
+            icon={<KeyRound color={colors.hunter} size={20} />}
+            title="Sign-in methods"
+            detail={linkedMethods(user.providers).map(methodLabel).join(", ") || "Apple, Google, or email and password."}
+            onPress={() => router.push("/settings/sign-in")}
+          />
           <SettingsRow
             icon={<Sparkles color={colors.hunter} size={20} />}
             title={account.plus ? "Plan: Cadence Plus" : "Plan: Free"}

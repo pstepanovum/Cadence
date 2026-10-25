@@ -16,7 +16,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { confirmPasswordReset, signInWithEmailAndPassword, verifyPasswordResetCode } from "firebase/auth";
-import { AuthCard, AuthNotice, FieldLabel } from "@/components/auth/AuthCard";
+import { AUTH_INPUT_CLASS, AuthCard, AuthNotice, FieldLabel } from "@/components/auth/AuthCard";
 import { PasswordChecklist } from "@/components/auth/PasswordChecklist";
 import { isPasswordAcceptable } from "@/components/auth/password-rules";
 import { Button } from "@/components/ui/button";
@@ -156,7 +156,7 @@ export function ResetPasswordForm() {
             required
             aria-describedby={`${id}-rules`}
             disabled={stage.name !== "ready"}
-            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
+            className={AUTH_INPUT_CLASS}
           />
           <PasswordChecklist id={`${id}-rules`} password={password} email={email} />
         </div>
@@ -170,7 +170,7 @@ export function ResetPasswordForm() {
             onChange={(event) => setConfirm(event.target.value)}
             required
             disabled={stage.name !== "ready"}
-            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
+            className={AUTH_INPUT_CLASS}
           />
         </div>
 

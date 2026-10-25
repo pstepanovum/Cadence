@@ -155,6 +155,7 @@ function RootNavigator() {
           <Stack.Screen name="settings/index" />
           <Stack.Screen name="settings/voice" />
           <Stack.Screen name="settings/packs" />
+          <Stack.Screen name="settings/sign-in" />
           <Stack.Screen name="settings/onboarding" options={{ gestureEnabled: false }} />
           <Stack.Screen name="practice/[mode]" />
           <Stack.Screen name="practice/lesson/[lessonId]" />

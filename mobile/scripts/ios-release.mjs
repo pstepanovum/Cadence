@@ -4,8 +4,12 @@
  * environment, or from mobile/.env.release (see .env.release.example).
  */
 import { execFileSync } from "node:child_process";
-import { existsSync } from "node:fs";
-import { homedir } from "node:os";
+import { existsSync, readdirSync, readFileSync, rmSync } from "node:fs";
+import { homedir, tmpdir } from "node:os";
+import { join } from "node:path";
+import { parseEnv } from "node:util";
+
+import { bundleProblems, releaseEnvProblems } from "../src/lib/firebase-env.ts";
 
 if (existsSync(".env.release")) process.loadEnvFile(".env.release");
 
@@ -26,6 +30,47 @@ function run(command, args) {
   }
 }
 
+/**
+ * The environment Expo bundles a release build with: the shell, then the
+ * .env files in Expo's order of precedence (the shell wins).
+ */
+function bundlingEnv() {
+  const files = [".env", ".env.production", ".env.local", ".env.production.local"];
+  const fromFiles = {};
+  for (const file of files) if (existsSync(file)) Object.assign(fromFiles, parseEnv(readFileSync(file, "utf8")));
+  return { ...fromFiles, ...process.env };
+}
+
+/**
+ * A store build must never carry the e2e values (the Auth emulator, a demo-
+ * project, the purchase stub, a LAN API). Refuse before archiving.
+ */
+function refuseTestEnv() {
+  const problems = releaseEnvProblems(bundlingEnv());
+  if (problems.length === 0) return;
+  console.error("This environment is for simulator tests, not for TestFlight or the App Store:");
+  for (const problem of problems) console.error(`  - ${problem}`);
+  console.error("Remove those values from mobile/.env (or the shell) and archive again.");
+  process.exit(1);
+}
+
+/** Checks the archived bundle itself, since Metro can reuse an older build's inlined values. */
+function checkArchivedBundle() {
+  const apps = "build/Cadence.xcarchive/Products/Applications";
+  const app = existsSync(apps) ? readdirSync(apps).find((name) => name.endsWith(".app")) : null;
+  const bundle = app ? join(apps, app, "main.jsbundle") : null;
+  if (!bundle || !existsSync(bundle)) {
+    console.error("No main.jsbundle in the archive; cannot check it for test values.");
+    process.exit(1);
+  }
+  const problems = bundleProblems(readFileSync(bundle, "latin1"));
+  if (problems.length === 0) return;
+  console.error("The archived app was built with test values and must not be uploaded:");
+  for (const problem of problems) console.error(`  - ${problem}`);
+  rmSync("build/Cadence.xcarchive", { recursive: true, force: true });
+  process.exit(1);
+}
+
 const step = process.argv[2];
 const auth = [
   "-allowProvisioningUpdates",
@@ -39,6 +84,11 @@ const auth = [
 
 if (step === "archive") {
   const team = required("APPLE_TEAM_ID");
+  refuseTestEnv();
+  // Expo inlines EXPO_PUBLIC_* values when Metro transforms a file, and the
+  // transform cache outlives builds: an e2e build's emulator address can come
+  // back in a store build. Start from an empty cache.
+  rmSync(join(tmpdir(), "metro-cache"), { recursive: true, force: true });
   run("npx", ["expo", "prebuild", "-p", "ios", "--clean"]);
   run("xcodebuild", [
     "-workspace", "ios/Cadence.xcworkspace",
@@ -51,7 +101,10 @@ if (step === "archive") {
     ...auth,
     "archive",
   ]);
+  checkArchivedBundle();
 } else if (step === "upload") {
+  refuseTestEnv();
+  checkArchivedBundle();
   run("xcodebuild", [
     "-exportArchive",
     "-archivePath", "build/Cadence.xcarchive",

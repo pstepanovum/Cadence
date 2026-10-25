@@ -36,6 +36,8 @@ describe("security headers", () => {
     assert.match(dev, /'unsafe-eval'/);
     assert.match(dev, /connect-src [^;]*http:\/\/127\.0\.0\.1:9099/);
     assert.match(dev, /frame-src [^;]*https:\/\/demo\.firebaseapp\.com/);
+    assert.match(dev, /frame-src [^;]*http:\/\/127\.0\.0\.1:9099/, "Google and Apple sign-in frame the emulator");
+    assert.doesNotMatch(buildCsp("n"), /9099/);
     assert.doesNotMatch(buildCsp("n", { authEmulatorHost: "evil.test; script-src *" }), /evil/);
   });
 });

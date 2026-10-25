@@ -11,7 +11,7 @@
 import Link from "next/link";
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { sendPasswordResetEmail } from "firebase/auth";
-import { AuthCard, AuthNotice, FieldLabel } from "@/components/auth/AuthCard";
+import { AUTH_INPUT_CLASS, AuthCard, AuthNotice, FieldLabel } from "@/components/auth/AuthCard";
 import { looksLikeEmail } from "@/components/newsletter/newsletter-api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -112,7 +112,7 @@ export function ForgotPasswordForm() {
             onChange={(event) => setEmail(event.target.value)}
             required
             aria-invalid={error ? true : undefined}
-            className="min-h-[52px] rounded-[14px] bg-bright-snow text-base text-carbon-black ring-1 ring-alabaster-grey focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hunter-green"
+            className={AUTH_INPUT_CLASS}
           />
         </div>
 

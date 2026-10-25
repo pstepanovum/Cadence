@@ -57,3 +57,8 @@ xcrun simctl keychain "$UDID" reset
 run 06-cloud-onboarding -e EMAIL="$EMAIL" -e PASSWORD="$PASSWORD"
 run 07-paywall
 run 08-account -e PASSWORD="$PASSWORD"
+# Every sign-in and setup screen, then Apple and Google through the
+# emulator's fake tokens, starting from the sign-in screen flow 09 ends on.
+xcrun simctl keychain "$UDID" reset
+run 09-auth-screens -e EMAIL="auth-$EMAIL" -e PASSWORD="$PASSWORD"
+run 10-apple-google -e APPLE_EMAIL="apple-$EMAIL" -e PASSWORD="$PASSWORD"

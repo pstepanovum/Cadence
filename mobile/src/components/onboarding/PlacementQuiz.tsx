@@ -5,14 +5,14 @@ import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { ExerciseView } from "@/components/exercises/ExerciseView";
-import { Body, Button, Card, SegmentedProgress } from "@/components/ui";
+import { Body, SegmentedProgress, TextLink } from "@/components/ui";
 import { usePracticeVoice } from "@/hooks/usePracticeVoice";
 import { finishSession } from "@/learning/state";
 import { today, updateLearning } from "@/learning/store";
 import { haptics } from "@/lib/haptics";
 import { PLACEMENT_QUESTIONS, placementLevel, placementScore } from "@/onboarding/placement";
 import { gradeExercise, type CefrLevel } from "@/platform/content-model";
-import { spacing, type } from "@/theme/theme";
+import { colors, radii, spacing, type, themed } from "@/theme/theme";
 
 export function PlacementQuiz({ onDone, result }: { onDone: (level: CefrLevel) => void; result: CefrLevel | null }) {
   const [index, setIndex] = useState(0);
@@ -23,15 +23,15 @@ export function PlacementQuiz({ onDone, result }: { onDone: (level: CefrLevel) =
 
   if (level) {
     return (
-      <Card>
+      <View style={styles.result}>
         <Body size={type.callout} tone="muted">
           Your starting level
         </Body>
-        <Body size={type.title1} weight="bold">
+        <Body size={type.display} weight="bold" style={styles.level}>
           {level}
         </Body>
         <Body size={type.callout}>Lessons and practice start here. You can change the level any time in Learn.</Body>
-      </Card>
+      </View>
     );
   }
 
@@ -65,7 +65,7 @@ export function PlacementQuiz({ onDone, result }: { onDone: (level: CefrLevel) =
   return (
     <View style={styles.root}>
       <SegmentedProgress total={PLACEMENT_QUESTIONS.length} currentIndex={index} />
-      <Card>
+      <View>
         <ExerciseView
           key={exercise.id}
           exercise={exercise}
@@ -76,13 +76,17 @@ export function PlacementQuiz({ onDone, result }: { onDone: (level: CefrLevel) =
             if (value?.kind === "multiple_choice") answer(value.choice);
           }}
         />
-      </Card>
+      </View>
       <Body size={type.footnote} tone="muted">{`Question ${index + 1} of ${PLACEMENT_QUESTIONS.length}. Not sure? Pick your best guess.`}</Body>
-      {index > 0 ? <Button label="Previous question" variant="neutral" onPress={() => setIndex(index - 1)} /> : null}
+      {index > 0 ? <TextLink label="Previous question" onPress={() => setIndex(index - 1)} /> : null}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  root: { gap: spacing.md },
-});
+const styles = themed(() =>
+  StyleSheet.create({
+    root: { gap: spacing.md },
+    result: { gap: spacing.xs, padding: spacing.xl, borderRadius: radii.card, backgroundColor: colors.platinum },
+    level: { color: colors.hunter },
+  }),
+);

@@ -13,7 +13,7 @@ import { useState } from "react";
 import { Linking, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { PaywallHero } from "@/components/billing/PaywallHero";
-import { Banner, Body, Button, Card, LoadingBlock, TextLink } from "@/components/ui";
+import { Banner, Body, Button, Card, LoadingBlock, TextLink, Title } from "@/components/ui";
 import { useAccount } from "@/context/account";
 import { renewalLine, yearlySavingsPercent, type PlusPlan, type PlusPlanId } from "@/lib/billing/plans";
 import { loadPlans, PurchaseError, purchasePlan, purchasesStubbed, restorePurchases, storeConfigured } from "@/lib/billing/purchases";
@@ -30,6 +30,9 @@ const BENEFITS = [
 /** Apple's standard licence agreement serves as the Terms of Use. */
 const TERMS_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/";
 
+/** The same three, short enough for one line each on an iPhone SE. */
+const COMPACT_BENEFITS = ["Scoring and the coach, anywhere", "Full progress synced across devices", "Every sound and grammar point tracked"];
+
 const planName = (id: PlusPlanId) => (id === "yearly" ? "Yearly" : "Monthly");
 const period = (id: PlusPlanId) => (id === "yearly" ? "year" : "month");
 
@@ -37,7 +40,20 @@ function planDetail(plan: PlusPlan): string {
   return plan.trialDays > 0 ? `${plan.trialDays}-day free trial, then ${plan.priceString} a ${period(plan.id)}` : `${plan.priceString} a ${period(plan.id)}`;
 }
 
-export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => void; doneLabel?: string }) {
+export function PlusPaywall({
+  onDone,
+  doneLabel = "Not now",
+  compact = false,
+}: {
+  onDone: () => void;
+  doneLabel?: string;
+  /**
+   * The last setup step: one screen with no scrolling, so no illustration,
+   * the benefits as a plain list, and "Not now" left to the caller (the
+   * setup top bar). The renewal terms and links stay, as the store requires.
+   */
+  compact?: boolean;
+}) {
   const account = useAccount();
   const enabled = storeConfigured && account.signedIn;
   const plansQuery = useQuery({ queryKey: ["plus-plans", account.signedIn], queryFn: loadPlans, enabled, staleTime: 5 * 60_000, retry: 1 });
@@ -93,13 +109,33 @@ export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => v
         : null;
 
   return (
-    <View style={styles.root}>
-      <PaywallHero
-        title={account.plus ? "You have Plus" : "Practise with AI anywhere"}
-        subtitle={account.plus ? (renewalLine(account.store.active ? account.store : (account.me?.plus ?? { expiresAt: null, willRenew: false })) ?? undefined) : "Lessons, quizzes, flashcards and the mouth map stay free for everyone."}
-      />
+    <View style={[styles.root, compact && styles.rootCompact]}>
+      {compact ? (
+        <View style={styles.compactHead}>
+          <Title size={type.title2}>{account.plus ? "You have Plus" : "Practise with AI anywhere"}</Title>
+          <Body size={type.callout} tone="muted">
+            {account.plus ? (renewalLine(account.store.active ? account.store : (account.me?.plus ?? { expiresAt: null, willRenew: false })) ?? "") : "Lessons, quizzes and flashcards stay free."}
+          </Body>
+        </View>
+      ) : (
+        <PaywallHero
+          title={account.plus ? "You have Plus" : "Practise with AI anywhere"}
+          subtitle={account.plus ? (renewalLine(account.store.active ? account.store : (account.me?.plus ?? { expiresAt: null, willRenew: false })) ?? undefined) : "Lessons, quizzes, flashcards and the mouth map stay free for everyone."}
+        />
+      )}
 
-      {account.plus ? null : (
+      {account.plus ? null : compact ? (
+        <View style={styles.compactBenefits}>
+          {COMPACT_BENEFITS.map((line) => (
+            <View key={line} style={styles.benefit}>
+              <Check color={colors.hunter} size={16} strokeWidth={3} />
+              <Body size={type.callout} style={styles.flex}>
+                {line}
+              </Body>
+            </View>
+          ))}
+        </View>
+      ) : (
         <Card>
           {BENEFITS.map((line) => (
             <View key={line} style={styles.benefit}>
@@ -138,7 +174,7 @@ export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => v
                   if (!chosen) haptics.select();
                   setSelected(item.id);
                 }}
-                style={[styles.plan, chosen && styles.planChosen]}>
+                style={[styles.plan, compact && styles.planCompact, chosen && styles.planChosen]}>
                 <View style={[styles.radio, chosen && styles.radioOn]}>{chosen ? <Check color={colors.hunter} size={14} strokeWidth={3} /> : null}</View>
                 <View style={styles.flex}>
                   <Text maxFontSizeMultiplier={maxScale.control} style={[styles.planTitle, chosen && styles.onChosen]}>
@@ -168,12 +204,12 @@ export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => v
           {plan && !unavailable ? (
             <Button label={plan.trialDays > 0 ? "Start free trial" : "Subscribe"} loading={busy === "buy"} disabled={busy !== null} onPress={() => void buy()} />
           ) : null}
-          <Button label={doneLabel} variant="neutral" disabled={busy === "buy"} onPress={onDone} />
+          {compact ? null : <Button label={doneLabel} variant="neutral" disabled={busy === "buy"} onPress={onDone} />}
         </>
       )}
 
-      <View style={styles.footer}>
-        <TextLink label="Restore purchases" onPress={() => (busy === null ? void restore() : undefined)} />
+      <View style={[styles.footer, compact && styles.footerCompact]}>
+        {compact ? null : <TextLink label="Restore purchases" onPress={() => (busy === null ? void restore() : undefined)} />}
         {plan && !unavailable && !account.plus ? (
           <Body size={type.caption} tone="muted" style={styles.center}>
             {plan.trialDays > 0
@@ -183,8 +219,9 @@ export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => v
           </Body>
         ) : null}
         <View style={styles.links}>
-          <TextLink label="Terms of Use" onPress={() => void Linking.openURL(TERMS_URL)} />
-          <TextLink label="Privacy Policy" onPress={() => void Linking.openURL(`${site}/privacy`)} />
+          {compact ? <TextLink label="Restore purchases" onPress={() => (busy === null ? void restore() : undefined)} /> : null}
+          <TextLink label={compact ? "Terms" : "Terms of Use"} onPress={() => void Linking.openURL(TERMS_URL)} />
+          <TextLink label={compact ? "Privacy" : "Privacy Policy"} onPress={() => void Linking.openURL(`${site}/privacy`)} />
         </View>
       </View>
     </View>
@@ -194,6 +231,11 @@ export function PlusPaywall({ onDone, doneLabel = "Not now" }: { onDone: () => v
 const styles = themed(() =>
   StyleSheet.create({
     root: { gap: spacing.lg },
+    rootCompact: { gap: spacing.md },
+    footerCompact: { gap: 0 },
+    compactHead: { gap: spacing.xs },
+    compactBenefits: { gap: spacing.sm },
+    planCompact: { minHeight: TAP_TARGET + 8, paddingVertical: spacing.md },
     benefit: { flexDirection: "row", gap: spacing.sm, alignItems: "flex-start" },
     flex: { flex: 1 },
     center: { textAlign: "center" },

@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react-native";
 import { Pressable, StyleSheet, Switch, View } from "react-native";
 
 import { Body, pressedCard, Title } from "@/components/ui";
+import { haptics } from "@/lib/haptics";
 import { colors, radii, shadows, spacing, type, themed } from "@/theme/theme";
 
 export function SettingsRow({
@@ -67,7 +68,10 @@ export function SwitchRow({
           accessibilityHint={detail}
           value={value}
           disabled={disabled}
-          onValueChange={onChange}
+          onValueChange={(next) => {
+            haptics.select();
+            onChange(next);
+          }}
           trackColor={{ true: colors.sage, false: colors.paleSlate }}
         />
       </View>

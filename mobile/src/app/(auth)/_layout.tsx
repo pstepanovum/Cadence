@@ -7,6 +7,8 @@ export default function AuthLayout() {
       screenOptions={{
         headerShown: false,
         contentStyle: { backgroundColor: colors.cream },
+        // Sign in and sign up replace each other; a fade reads as one screen changing.
+        animation: "fade",
       }}
     />
   );

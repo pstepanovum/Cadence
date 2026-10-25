@@ -11,20 +11,20 @@
 import { router } from "expo-router";
 import { Cloud, Laptop } from "lucide-react-native";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import { BackHandler, ScrollView, StyleSheet, View, useWindowDimensions } from "react-native";
+import { BackHandler, Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from "react-native-reanimated";
-import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { setNewsletter } from "@/api/account";
 import { PlusPaywall } from "@/components/billing/PlusPaywall";
 import { Illustration } from "@/components/Illustration";
+import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/auth/layout";
 import { AccountStep } from "@/components/onboarding/AccountStep";
 import { ChoiceCard } from "@/components/onboarding/ChoiceCard";
 import { OnboardingTopBar } from "@/components/onboarding/OnboardingTopBar";
 import { PlacementQuiz } from "@/components/onboarding/PlacementQuiz";
 import { StepHeading } from "@/components/onboarding/StepHeading";
 import { TimePicker } from "@/components/TimePicker";
-import { Banner, Body, Button, Card, Title } from "@/components/ui";
+import { Banner, Body, Button, Title } from "@/components/ui";
 import { rememberLearnLevel } from "@/content/useContent";
 import { useAccount } from "@/context/account";
 import { useAuth } from "@/context/auth";
@@ -56,7 +56,7 @@ import {
 } from "@/onboarding/flow";
 import { completeOnboarding, getOnboarding, saveOnboardingProgress } from "@/onboarding/store";
 import { useConnection } from "@/pairing/context";
-import { colors, radii, spacing, type, themed } from "@/theme/theme";
+import { colors, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 const SLIDES: { art: IllustrationName; title: string; body: string }[] = [
   { art: "welcome", title: "Speak English with confidence", body: "Pronunciation, grammar and conversation, a few minutes a day." },
@@ -76,7 +76,8 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
   const { user, profile, updateProfile } = useAuth();
   const account = useAccount();
   const connection = useConnection();
-  const insets = useSafeAreaInsets();
+  const compact = useCompactHeight();
+  const typing = useKeyboardVisible();
 
   const stored = getOnboarding();
   const saved = replay ? null : stored;
@@ -166,6 +167,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     const allowed = await askForNotifications();
     update({ remindersOn: allowed });
     if (!allowed) {
+      haptics.warning();
       setNotice("Notifications are off for Cadence. You can turn them on later in Settings.");
       return;
     }
@@ -191,10 +193,10 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "goal":
       body = (
         <View style={styles.section}>
-          <StepHeading title="What brings you to Cadence?" detail="We'll start your practice there." />
+          <StepHeading compact={compact} title="What brings you to Cadence?" detail="We'll start your practice there." />
           <View accessibilityRole="radiogroup" style={styles.choices}>
             {LEARNING_GOALS.map((goal) => (
-              <ChoiceCard key={goal.value} title={goal.title} detail={goal.detail} selected={answers.goal === goal.value} onPress={() => update({ goal: goal.value })} />
+              <ChoiceCard key={goal.value} compact={compact} title={goal.title} detail={goal.detail} selected={answers.goal === goal.value} onPress={() => update({ goal: goal.value })} />
             ))}
           </View>
         </View>
@@ -204,10 +206,10 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "level":
       body = (
         <View style={styles.section}>
-          <StepHeading title="How is your English now?" detail="A rough guess is fine." />
+          <StepHeading compact={compact} title="How is your English now?" detail="A rough guess is fine." />
           <View accessibilityRole="radiogroup" style={styles.choices}>
             {SELF_CHECK_LEVELS.map((level) => (
-              <ChoiceCard key={level.value} title={level.title} detail={level.detail} selected={answers.level === level.value} onPress={() => update({ level: level.value })} />
+              <ChoiceCard key={level.value} compact={compact} title={level.title} detail={level.detail} selected={answers.level === level.value} onPress={() => update({ level: level.value })} />
             ))}
           </View>
         </View>
@@ -224,7 +226,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "placement":
       body = (
         <View style={styles.section}>
-          <StepHeading title="A quick placement quiz" detail="Twelve questions, about two minutes." />
+          <StepHeading compact={compact} title="A quick placement quiz" detail="Twelve questions, about two minutes." />
           <PlacementQuiz result={answers.placementLevel} onDone={(level) => update({ placementLevel: level })} />
         </View>
       );
@@ -233,10 +235,10 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "minutes":
       body = (
         <View style={styles.section}>
-          <StepHeading title="Your daily goal" detail="Minutes of practice a day. Change it any time." />
+          <StepHeading compact={compact} title="Your daily goal" detail="Minutes of practice a day. Change it any time." />
           <View accessibilityRole="radiogroup" style={styles.choices}>
             {DAILY_GOAL_OPTIONS.map((minutes) => (
-              <ChoiceCard key={minutes} title={`${minutes} minutes`} detail={MINUTES_DETAIL[minutes]} selected={answers.minutes === minutes} onPress={() => update({ minutes })} />
+              <ChoiceCard key={minutes} compact={compact} title={`${minutes} minutes`} detail={MINUTES_DETAIL[minutes]} selected={answers.minutes === minutes} onPress={() => update({ minutes })} />
             ))}
           </View>
         </View>
@@ -246,7 +248,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       body = (
         <View style={styles.section}>
           <ArtHeader art="reminders" />
-          <StepHeading title="When should we remind you?" detail="One short reminder a day, skipped once your goal is met." />
+          <StepHeading compact={compact} title="When should we remind you?" detail="One short reminder a day, skipped once your goal is met." />
           <TimePicker value={answers.reminderTime} onChange={(reminderTime) => update({ reminderTime })} />
         </View>
       );
@@ -262,10 +264,11 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
     case "where":
       body = (
         <View style={styles.section}>
-          <StepHeading title="Where should Cadence run?" detail="Lessons, quizzes and flashcards work on this phone either way." />
+          <StepHeading compact={compact} title="Where should Cadence run?" detail="Lessons, quizzes and flashcards work on this phone either way." />
           <View accessibilityRole="radiogroup" style={styles.choices}>
             <ChoiceCard
-              icon={<Laptop color={colors.hunter} size={22} />}
+              compact={compact}
+              icon={(selected) => <Laptop color={selected ? colors.snow : colors.hunter} size={22} />}
               title="Connect your own Cadence server"
               detail="Cadence on your computer scores your voice and runs the coach over your home Wi-Fi. Free and open source."
               selected={answers.place === "own"}
@@ -273,7 +276,8 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
             />
             {isCloudConfigured ? (
               <ChoiceCard
-                icon={<Cloud color={colors.hunter} size={22} />}
+                compact={compact}
+                icon={(selected) => <Cloud color={selected ? colors.snow : colors.hunter} size={22} />}
                 title="Cadence cloud"
                 detail="Works on any network with a free account. Cloud AI practice comes with Cadence Plus."
                 selected={answers.place === "cloud"}
@@ -282,21 +286,18 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
             ) : null}
           </View>
           {answers.place === "own" ? (
-            <Card>
+            <View style={styles.ownServer}>
               {connection.mode === "local" && connection.paired ? (
                 <Body size={type.callout}>
                   {connection.state.status === "connected" ? `Connected to ${connection.state.serverName}.` : "Paired. Cadence finds your computer whenever it is on the same Wi-Fi."}
                 </Body>
               ) : (
                 <>
-                  <Body size={type.callout}>Open Cadence on your computer, choose Connect a Phone, and scan the code it shows.</Body>
-                  <Button label="Scan the code" variant="secondary" onPress={() => router.push("/connect/scan")} />
+                  <Body size={type.callout}>On your computer, open Cadence, choose Connect a Phone, and scan the code it shows. Always free.</Body>
+                  <Button label="Scan the code" variant="neutral" onPress={() => router.push("/connect/scan")} />
                 </>
               )}
-              <Body size={type.caption} tone="muted">
-                Connecting your own Cadence is always free.
-              </Body>
-            </Card>
+            </View>
           ) : null}
         </View>
       );
@@ -307,8 +308,9 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       body = (
         <View style={styles.section}>
           <StepHeading
+            compact={compact}
             title={signedIn ? "You're signed in" : optional ? "Keep your progress in sync" : "Create your free account"}
-            detail={signedIn ? undefined : optional ? "Add a free account to keep a summary of your progress across devices." : "Cadence cloud keeps your progress with your account."}
+            detail={signedIn || (typing && compact) ? undefined : optional ? "A free account keeps a summary of your progress across devices." : "Cadence cloud keeps your progress with your account."}
           />
           <AccountStep
             signedInEmail={signedIn ? (user?.email ?? "your account") : null}
@@ -321,11 +323,10 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
         </View>
       );
       primary = signedIn ? { label: nextPosition(position, steps) ? "Continue" : "Start practising", onPress: () => void advance() } : null;
-      secondary = !signedIn && optional ? { label: "Not now", onPress: () => void advance() } : null;
       break;
     }
     case "paywall":
-      body = <PlusPaywall onDone={() => void finish()} doneLabel="Not now" />;
+      body = <PlusPaywall compact onDone={() => void finish()} doneLabel="Not now" />;
       primary = null;
       break;
   }
@@ -334,36 +335,51 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
   if (primary && isLast && primary.label === "Continue") primary = { ...primary, label: replay ? "Save" : "Start practising" };
   if (finishing && primary) primary = { ...primary, disabled: true };
 
+  // An optional account is skipped from the top bar like any other step, so
+  // the form keeps the whole screen.
+  const accountSkippable = step === "account" && !signedIn && accountOptional(answers.place);
+  // Plus is always optional: "Not now" sits in the top bar, so the step fits one screen.
+  const paywallSkip = step === "paywall" && !account.plus;
+  const stepKey = step === "welcome" ? `welcome-${slide}` : step;
+
   return (
-    <SafeAreaView style={styles.screen} edges={["top", "left", "right"]}>
-      <View style={styles.topBar}>
+    <FitScreen
+      bodyKey={stepKey}
+      header={
         <OnboardingTopBar
           current={progressIndex(position, steps)}
           total={steps.length}
           onBack={back ? goBack : undefined}
-          onSkip={!replay && SKIPPABLE.has(step) ? skip : undefined}
+          onSkip={!replay && (SKIPPABLE.has(step) || accountSkippable) ? skip : paywallSkip ? () => void finish() : undefined}
+          skipLabel={paywallSkip ? "Not now" : undefined}
           onClose={replay ? leave : undefined}
         />
-      </View>
-      <ScrollView
-        // A new step starts at the top, not where the last one was scrolled to.
-        key={step === "welcome" ? `welcome-${slide}` : step}
-        style={styles.fill}
-        contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + spacing.lg }]}
-        keyboardShouldPersistTaps="handled"
-        keyboardDismissMode="interactive"
-        automaticallyAdjustKeyboardInsets
-        showsVerticalScrollIndicator={false}>
-        <StepTransition key={step === "welcome" ? `welcome-${slide}` : step} direction={direction}>
-          {body}
-        </StepTransition>
-        <View style={styles.footer}>
-          {notice ? <Banner tone="info" message={notice} actionLabel="Continue" onAction={() => void advance()} /> : null}
-          {primary ? <Button label={primary.label} disabled={primary.disabled} loading={finishing && isLast} onPress={primary.onPress} /> : null}
-          {secondary ? <Button label={secondary.label} variant="neutral" onPress={secondary.onPress} /> : null}
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+      }
+      bodyStyle={styles.body}
+      footer={
+        notice || primary || secondary ? (
+          <>
+            {notice ? <Banner tone="info" message={notice} actionLabel="Continue" onAction={() => void advance()} /> : null}
+            {primary ? <Button label={primary.label} disabled={primary.disabled} loading={finishing && isLast} onPress={primary.onPress} /> : null}
+            {secondary ? <QuietButton label={secondary.label} onPress={secondary.onPress} /> : null}
+          </>
+        ) : null
+      }>
+      <StepTransition key={stepKey} direction={direction}>
+        {body}
+      </StepTransition>
+    </FitScreen>
+  );
+}
+
+/** The quieter second choice under the primary button: text only, a full 44 pt target. */
+function QuietButton({ label, onPress }: { label: string; onPress: () => void }) {
+  return (
+    <Pressable accessibilityRole="button" accessibilityLabel={label} onPress={onPress} style={({ pressed }) => [styles.quiet, pressed && styles.quietPressed]}>
+      <Text maxFontSizeMultiplier={maxScale.control} style={styles.quietLabel}>
+        {label}
+      </Text>
+    </Pressable>
   );
 }
 
@@ -380,14 +396,14 @@ function ArtHeader({ art }: { art: IllustrationName }) {
 function IntroSlide({ index }: { index: number }) {
   const slide = SLIDES[Math.min(SLIDES.length - 1, Math.max(0, index))];
   const { width, height } = useWindowDimensions();
-  const size = Math.round(Math.min(width - 64, height * 0.38, 360));
+  const size = Math.round(Math.min(width - 96, height * 0.34, 340));
   return (
     <View style={styles.slide}>
       <View style={styles.slideArt}>
         <Illustration name={slide.art} size={size} />
       </View>
       <View style={styles.slideText}>
-        <Title size={type.title1}>{slide.title}</Title>
+        <Title size={height < 740 ? type.title2 : type.title1}>{slide.title}</Title>
         <Body size={type.body} tone="muted">
           {slide.body}
         </Body>
@@ -412,24 +428,25 @@ function StepTransition({ children, direction }: { children: ReactNode; directio
     opacity: progress.value,
     transform: [{ translateX: reduceMotion ? 0 : (1 - progress.value) * 24 * direction }],
   }));
-  return <Animated.View style={style}>{children}</Animated.View>;
+  return <Animated.View style={[styles.transition, style]}>{children}</Animated.View>;
 }
 
 const styles = themed(() =>
   StyleSheet.create({
-    screen: { flex: 1, backgroundColor: colors.cream },
-    fill: { flex: 1 },
-    topBar: { paddingHorizontal: spacing.lg, paddingTop: spacing.sm, paddingBottom: spacing.sm },
-    scroll: { flexGrow: 1, paddingHorizontal: spacing.lg, paddingTop: spacing.md, gap: spacing.xl, width: "100%", maxWidth: 640, alignSelf: "center", justifyContent: "space-between" },
+    body: { paddingTop: spacing.lg },
+    transition: { flexGrow: 1 },
     section: { gap: spacing.xl },
     choices: { gap: spacing.sm },
-    footer: { gap: spacing.sm },
+    ownServer: { gap: spacing.md },
     artHeader: { alignItems: "center" },
-    slide: { gap: spacing.xl },
-    slideArt: { alignItems: "center", justifyContent: "center", paddingVertical: spacing.lg, borderRadius: radii.cardLarge, backgroundColor: colors.limeSoft },
+    slide: { flexGrow: 1, justifyContent: "center", gap: spacing.xl },
+    slideArt: { alignItems: "center", justifyContent: "center", paddingVertical: spacing.lg, borderRadius: radii.cardLarge, backgroundColor: colors.platinum },
     slideText: { gap: spacing.sm },
     dots: { flexDirection: "row", gap: spacing.sm, justifyContent: "center" },
-    dot: { width: 8, height: 8, borderRadius: radii.pill, backgroundColor: colors.paleSlate },
-    dotOn: { width: 20, backgroundColor: colors.sage },
+    dot: { width: 8, height: 8, borderRadius: radii.pill, backgroundColor: colors.alabaster },
+    dotOn: { width: 20, backgroundColor: colors.hunter },
+    quiet: { minHeight: TAP_TARGET, alignItems: "center", justifyContent: "center", borderRadius: radii.control },
+    quietPressed: { opacity: 0.6 },
+    quietLabel: { fontFamily: fonts.bodySemiBold, fontSize: type.body, color: colors.hunter, textAlign: "center" },
   }),
 );
