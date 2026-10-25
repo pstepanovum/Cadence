@@ -1,0 +1,12 @@
+# iOS asks before an app opens its own link from outside ("Open in
+# "Cadence"?"), at least the first time on a fresh simulator. Accept it when
+# it shows; otherwise the alert lingers and covers every later screen.
+appId: dev.pstepanov.cadence
+---
+- extendedWaitUntil:
+    visible: "Open in .*"
+    timeout: 5000
+    optional: true
+- tapOn:
+    text: "Open"
+    optional: true

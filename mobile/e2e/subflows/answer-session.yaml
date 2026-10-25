@@ -54,6 +54,11 @@ appId: dev.pstepanov.cadence
             - tapOn:
                 id: "gap-0"
             - inputText: "is"
+            # The keyboard can cover the next gap (an iPhone SE, or three gaps);
+            # close it first, or the tap lands on the keyboard and types here again.
+            - tapOn:
+                text: "(?i).* · \\d+ of \\d+"
+                optional: true
       - runFlow:
           when:
             visible:
@@ -61,6 +66,28 @@ appId: dev.pstepanov.cadence
           commands:
             - tapOn:
                 id: "gap-1"
+            - inputText: "is"
+            - tapOn:
+                text: "(?i).* · \\d+ of \\d+"
+                optional: true
+      - runFlow:
+          when:
+            visible:
+              id: "gap-2"
+          commands:
+            - tapOn:
+                id: "gap-2"
+            - inputText: "is"
+            - tapOn:
+                text: "(?i).* · \\d+ of \\d+"
+                optional: true
+      - runFlow:
+          when:
+            visible:
+              id: "gap-3"
+          commands:
+            - tapOn:
+                id: "gap-3"
             - inputText: "is"
       - runFlow:
           when:
@@ -78,7 +105,12 @@ appId: dev.pstepanov.cadence
           when:
             visible: "Check"
           commands:
-            - hideKeyboard
+            # hideKeyboard fails on an iPhone SE once two gap fields are
+            # filled; a tap on the step's eyebrow (plain text in the scroll
+            # view) dismisses the keyboard and works on every exercise.
+            - tapOn:
+                text: "(?i).* · \\d+ of \\d+"
+                optional: true
             - tapOn:
                 text: "Check"
                 optional: true

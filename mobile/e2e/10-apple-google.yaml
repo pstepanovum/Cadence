@@ -18,9 +18,10 @@ name: Apple and Google
       - scrollUntilVisible:
           element: "Sign out"
       - tapOn: "Sign out"
+      # The alert's own button, beside "Stay signed in" (iOS 27 lays the two side by side).
       - tapOn:
           text: "Sign out"
-          above: "Stay signed in"
+          rightOf: "Stay signed in"
 - extendedWaitUntil:
     visible: "Welcome back"
     timeout: 15000

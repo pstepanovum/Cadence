@@ -6,6 +6,7 @@ name: Pair from a link
 ---
 - launchApp
 - openLink: ${PAIR_URI}
+- runFlow: subflows/accept-open-link.yaml
 - extendedWaitUntil:
     visible: "Connect to .*\\?"
     timeout: 10000

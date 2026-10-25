@@ -9,6 +9,7 @@ name: Mouth map
     timeout: 15000
 # The Learn tab lists it below every lesson of the level; the link is quicker.
 - openLink: "cadence:///sounds"
+- runFlow: subflows/accept-open-link.yaml
 - assertVisible: "(?i)compare"
 - tapOn: "think / sink"
 - assertVisible: "Side view of the mouth for /θ/ think.*"

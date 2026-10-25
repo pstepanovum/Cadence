@@ -27,7 +27,16 @@ name: Account
     visible: "cadence-data-export"
     timeout: 10000
 - takeScreenshot: 08-export
-- tapOn: "Close"
+# The iOS 27 share sheet has no Close button; a tap above it dismisses it.
+- tapOn:
+    text: "Close"
+    optional: true
+- runFlow:
+    when:
+      visible: "Save to Files"
+    commands:
+      - tapOn:
+          point: "50%,8%"
 - scrollUntilVisible:
     element: "Delete account"
 - tapOn: "Delete account"

@@ -62,3 +62,4 @@ run 08-account -e PASSWORD="$PASSWORD"
 xcrun simctl keychain "$UDID" reset
 run 09-auth-screens -e EMAIL="auth-$EMAIL" -e PASSWORD="$PASSWORD"
 run 10-apple-google -e APPLE_EMAIL="apple-$EMAIL" -e PASSWORD="$PASSWORD"
+run 11-advanced
