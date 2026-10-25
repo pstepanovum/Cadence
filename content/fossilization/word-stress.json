@@ -1,0 +1,87 @@
+{
+ "format": 1,
+ "id": "fossil.word-stress",
+ "area": "stress",
+ "title": "Word stress in long words",
+ "what": "stressing the wrong syllable in long or related words ('deVElopment' right, 'DEvelopment' wrong; 'PHOtograph', 'phoTOgraphy', 'photoGRAphic')",
+ "summary": "Misplaced word stress often persists because learners don't perceive it as an error. This can make speech sound unnatural, requiring listeners to exert more effort to process the intended meaning.",
+ "listenFor": "Pay close attention to which syllable you emphasize in longer words, especially when they are related to other words with different stress patterns.",
+ "grammarPointIds": [],
+ "soundIds": [],
+ "contrasts": [],
+ "drills": [
+  "The comprehensive analysis of the economic data revealed significant developmental opportunities.",
+  "Effective communication is fundamental for successful organizational collaboration and innovation.",
+  "Her academic achievements demonstrated exceptional analytical capabilities and intellectual curiosity.",
+  "We discussed the political implications of the new environmental regulations and their potential impact.",
+  "The comfortable accommodations provided a relaxing environment after the intensive educational seminar.",
+  "He documented the architectural details with meticulous photography, capturing every intricate element.",
+  "Prioritizing sustainable development is crucial for the long-term economic stability of the region.",
+  "The university's educational programs emphasize practical application and critical thinking development.",
+  "Responsible financial management is essential for the stability and growth of any organization.",
+  "The committee's recommendation for a comprehensive evaluation received unanimous approval."
+ ],
+ "probes": [
+  {
+   "sentence": "The organizational development plan requires careful consideration and strategic implementation."
+  },
+  {
+   "sentence": "Her academic background in economics provided a unique perspective on global financial markets."
+  },
+  {
+   "sentence": "The comfortable environment facilitated productive discussions during the international conference."
+  },
+  {
+   "sentence": "He presented a detailed photographic exhibition showcasing the cultural diversity of the continent."
+  },
+  {
+   "sentence": "The educational institution prioritizes the holistic development of its students and faculty."
+  },
+  {
+   "sentence": "Effective communication is paramount for successful collaboration in complex organizational structures."
+  }
+ ],
+ "pairs": [],
+ "stress": [
+  {
+   "text": "The development of the project was slow.",
+   "marked": "The deVElopment of the PROject was SLOW.",
+   "note": "Main stress on the second syllable of 'development'."
+  },
+  {
+   "text": "The organization's structure is hierarchical.",
+   "marked": "The orgaNIZAtion's STRUCture is hieRARchical.",
+   "note": "Main stress on the fourth syllable of 'organization'."
+  },
+  {
+   "text": "She pursued an academic career.",
+   "marked": "She purSUED an acaDEMic caREER.",
+   "note": "Main stress on the third syllable of 'academic'."
+  },
+  {
+   "text": "The economic situation is improving.",
+   "marked": "The ecoNOmic situAtion is imPROving.",
+   "note": "Main stress on the third syllable of 'economic'."
+  },
+  {
+   "text": "This sofa is quite comfortable.",
+   "marked": "This SOfa is quite comFORtable.",
+   "note": "Main stress on the second syllable of 'comfortable'."
+  },
+  {
+   "text": "He is passionate about photography.",
+   "marked": "He is PASsionate about phoTOgraphy.",
+   "note": "Main stress on the second syllable of 'photography'."
+  },
+  {
+   "text": "Effective communication is essential for collaboration.",
+   "marked": "EfFECtive commuNIcation is esSENtial for colLABorAtion.",
+   "note": "Main stress on the third syllable of 'communication'."
+  },
+  {
+   "text": "The analytical approach provided valuable insights.",
+   "marked": "The anaLYTical apPROACH proVIded VALuable INsights.",
+   "note": "Main stress on the third syllable of 'analytical'."
+  }
+ ]
+}

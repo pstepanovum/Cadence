@@ -1,0 +1,114 @@
+{
+ "format": 1,
+ "id": "fossil.final-devoicing",
+ "area": "pronunciation",
+ "title": "Voiced final consonants",
+ "what": "devoicing final consonants, so 'bed' sounds like 'bet', 'eyes' like 'ice', 'prize' like 'price'",
+ "summary": "This subtle devoicing often persists because it rarely causes complete misunderstanding, making it difficult to self-correct. However, it can subtly alter meaning and make speech sound less natural to native speakers.",
+ "listenFor": "Focus on maintaining vocal cord vibration through the entire duration of final voiced consonants like /b/, /d/, /g/, /v/, /z/, and /ʒ/.",
+ "grammarPointIds": [],
+ "soundIds": [
+  "sound.d",
+  "sound.z",
+  "sound.v",
+  "sound.b",
+  "sound.g"
+ ],
+ "contrasts": [
+  {
+   "wrong": "I need a new bet.",
+   "right": "I need a new bed.",
+   "note": "The final /d/ in 'bed' is voiced, while /t/ in 'bet' is unvoiced."
+  },
+  {
+   "wrong": "The price was fair.",
+   "right": "The prize was fair.",
+   "note": "The final /z/ in 'prize' is voiced, while /s/ in 'price' is unvoiced."
+  },
+  {
+   "wrong": "The rope was tight.",
+   "right": "The robe was tight.",
+   "note": "The final /b/ in 'robe' is voiced, while /p/ in 'rope' is unvoiced."
+  },
+  {
+   "wrong": "Don't loose your keys.",
+   "right": "Don't lose your keys.",
+   "note": "The final /z/ in 'lose' is voiced, while /s/ in 'loose' is unvoiced."
+  }
+ ],
+ "drills": [
+  "The judge advised the board to review the budget.",
+  "We observed the vivid blue birds grazing near the hedge.",
+  "Despite the bad weather, they managed to bridge the gap.",
+  "His detailed knowledge proved invaluable for the project's success.",
+  "The diverse group pledged to achieve their shared goals together.",
+  "She always gives good feedback regarding complex business decisions.",
+  "They believed the evidence provided a solid basis for their judgment.",
+  "The manager emphasized the need for a robust and flexible budget.",
+  "We analyzed the data to gauge the overall impact of the changes.",
+  "The team achieved significant progress despite the challenging deadlines."
+ ],
+ "probes": [
+  {
+   "sentence": "The judge's decision provided a solid basis for future legal judgments."
+  },
+  {
+   "sentence": "We observed the vivid blue birds grazing near the edge of the ridge."
+  },
+  {
+   "sentence": "Despite the bad weather, they managed to bridge the gap and move forward."
+  },
+  {
+   "sentence": "His detailed knowledge proved invaluable for the project's overall success."
+  },
+  {
+   "sentence": "The diverse group pledged to achieve their shared goals with great zeal."
+  },
+  {
+   "sentence": "She always gives good feedback regarding complex business development."
+  }
+ ],
+ "pairs": [
+  [
+   "bet",
+   "bed"
+  ],
+  [
+   "price",
+   "prize"
+  ],
+  [
+   "leaf",
+   "leave"
+  ],
+  [
+   "back",
+   "bag"
+  ],
+  [
+   "cap",
+   "cab"
+  ],
+  [
+   "proof",
+   "prove"
+  ],
+  [
+   "loose",
+   "lose"
+  ],
+  [
+   "peace",
+   "peas"
+  ],
+  [
+   "heart",
+   "hard"
+  ],
+  [
+   "rich",
+   "ridge"
+  ]
+ ],
+ "stress": []
+}

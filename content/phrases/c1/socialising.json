@@ -1,0 +1,2062 @@
+{
+ "format": 1,
+ "level": "C1",
+ "situation": "socialising",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "How about we",
+     "kind": "frame",
+     "form": "How about we",
+     "meaning": "A gentle way to suggest an activity or plan to someone.",
+     "example": "How about we grab a coffee next week to discuss the project?",
+     "plain": "Let's grab a coffee next week to discuss the project.",
+     "note": "Very common, friendly way to propose an idea. Can be used in many contexts."
+    },
+    {
+     "text": "Are you free to",
+     "kind": "frame",
+     "form": "Are you free to",
+     "meaning": "Asking if someone is available to do something specific.",
+     "example": "Are you free to meet up for lunch sometime next month?",
+     "plain": "Can you meet up for lunch sometime next month?",
+     "note": "A polite and direct way to check availability for a specific activity."
+    },
+    {
+     "text": "Does that work for you",
+     "kind": "chunk",
+     "form": "does that work for you",
+     "meaning": "Asking if a proposed time, date, or plan is convenient for the other person.",
+     "example": "I was thinking of Tuesday evening; does that work for you?",
+     "plain": "I was thinking of Tuesday evening; is that convenient for you?",
+     "note": "Standard phrase for confirming arrangements. Very versatile and polite."
+    },
+    {
+     "text": "What are you up to",
+     "kind": "chunk",
+     "form": "what are you up to",
+     "meaning": "Asking someone what they are currently doing or what their plans are.",
+     "example": "Hey, what are you up to this weekend? Fancy catching a movie?",
+     "plain": "Hey, what are your plans this weekend? Fancy catching a movie?",
+     "note": "Informal and friendly. Can refer to current activity or future plans."
+    },
+    {
+     "text": "Fancy getting together",
+     "kind": "chunk",
+     "form": "fancy getting together",
+     "meaning": "An informal and friendly way to suggest meeting up.",
+     "example": "It's been a while; fancy getting together for a drink soon?",
+     "plain": "It's been a while; would you like to meet for a drink soon?",
+     "note": "Common in British English, but understood in American English. Casual and warm."
+    },
+    {
+     "text": "I was thinking of",
+     "kind": "frame",
+     "form": "I was thinking of",
+     "meaning": "Introducing a suggestion or a plan you've been considering.",
+     "example": "I was thinking of hosting a small dinner party next Saturday.",
+     "plain": "I'm considering hosting a small dinner party next Saturday.",
+     "note": "A gentle way to float an idea, inviting feedback or agreement."
+    },
+    {
+     "text": "Let me know if",
+     "kind": "frame",
+     "form": "let me know if",
+     "meaning": "Asking someone to inform you about something, often their decision or availability.",
+     "example": "I'm free on Friday; let me know if that day works for you.",
+     "plain": "I'm free on Friday; tell me if that day works for you.",
+     "note": "Very common and useful for making flexible plans. Polite and open-ended."
+    },
+    {
+     "text": "We should definitely",
+     "kind": "chunk",
+     "form": "We should definitely",
+     "meaning": "Expressing a strong suggestion or intention to do something together.",
+     "example": "We should definitely try that new restaurant everyone's talking about.",
+     "plain": "We must try that new restaurant everyone's talking about.",
+     "note": "Enthusiastic and encouraging. Often used when making future plans."
+    },
+    {
+     "text": "I'm open to suggestions",
+     "kind": "collocation",
+     "form": "I'm open to suggestions",
+     "meaning": "Indicating that you are willing to consider other people's ideas or proposals.",
+     "example": "I'm not sure what to do for my birthday; I'm open to suggestions.",
+     "plain": "I'm not sure what to do for my birthday; I welcome your ideas.",
+     "note": "Friendly and collaborative, inviting others to contribute."
+    },
+    {
+     "text": "What's your availability like",
+     "kind": "chunk",
+     "form": "what's your availability like",
+     "meaning": "Asking someone about their free time or when they can meet.",
+     "example": "Before I suggest a date, what's your availability like next week?",
+     "plain": "Before I suggest a date, when are you free next week?",
+     "note": "A polite and slightly more formal way to inquire about someone's schedule."
+    },
+    {
+     "text": "Could you make it",
+     "kind": "frame",
+     "form": "could you make it",
+     "meaning": "Asking if someone is able to attend an event or meet at a specific time.",
+     "example": "The party starts at seven; could you make it then?",
+     "plain": "The party starts at seven; can you be there then?",
+     "note": "Common for checking attendance or punctuality. Polite and direct."
+    },
+    {
+     "text": "I'm free on",
+     "kind": "frame",
+     "form": "I'm free on",
+     "meaning": "Stating the specific days or times when you are available.",
+     "example": "I'm free on Wednesday evening if you want to grab dinner.",
+     "plain": "Wednesday evening works for me if you want to grab dinner.",
+     "note": "Simple and direct way to communicate your availability."
+    },
+    {
+     "text": "Let's pencil something in",
+     "kind": "collocation",
+     "form": "let's pencil something in",
+     "meaning": "Suggesting a tentative plan or appointment that can be confirmed later.",
+     "example": "We don't have to commit now, but let's pencil something in for next month.",
+     "plain": "We don't have to commit now, but let's make a tentative plan for next month.",
+     "note": "Implies flexibility and that the plan isn't set in stone yet."
+    },
+    {
+     "text": "I'll check my calendar",
+     "kind": "chunk",
+     "form": "I'll check my calendar",
+     "meaning": "Promising to look at your schedule to confirm availability for a proposed plan.",
+     "example": "That sounds good; I'll check my calendar and get back to you.",
+     "plain": "That sounds good; I'll look at my schedule and get back to you.",
+     "note": "Standard response when you need to verify your schedule before committing."
+    },
+    {
+     "text": "How does that sound",
+     "kind": "frame",
+     "form": "how does that sound",
+     "meaning": "Asking for feedback or agreement on a suggestion or plan you've just made.",
+     "example": "We could meet at the cafe around three; how does that sound?",
+     "plain": "We could meet at the cafe around three; is that acceptable?",
+     "note": "A very common and polite way to invite a response to a proposal."
+    },
+    {
+     "text": "Would you like to",
+     "kind": "frame",
+     "form": "Would you like to",
+     "meaning": "A polite and common way to invite someone to do something.",
+     "example": "Would you like to come over for dinner on Saturday?",
+     "plain": "Do you want to come over for dinner on Saturday?",
+     "note": "Versatile for invitations, offers, and suggestions. Polite and standard."
+    },
+    {
+     "text": "I'd love for you to",
+     "kind": "frame",
+     "form": "I'd love for you to",
+     "meaning": "Expressing a strong desire for someone to participate in an activity or event.",
+     "example": "I'd love for you to join us for the picnic in the park.",
+     "plain": "I really want you to join us for the picnic in the park.",
+     "note": "A warm and enthusiastic way to extend an invitation."
+    },
+    {
+     "text": "We're having a",
+     "kind": "frame",
+     "form": "We're having a",
+     "meaning": "Announcing an event or gathering that you are hosting.",
+     "example": "We're having a small get-together at our place next Friday.",
+     "plain": "We are hosting a small get-together at our place next Friday.",
+     "note": "Direct and common way to inform someone about an event."
+    },
+    {
+     "text": "You're welcome to join",
+     "kind": "chunk",
+     "form": "you're welcome to join",
+     "meaning": "Extending an open invitation, indicating that someone is free to participate.",
+     "example": "If you're free, you're welcome to join us for brunch on Sunday.",
+     "plain": "If you're free, you can join us for brunch on Sunday.",
+     "note": "Friendly and inclusive, often used for informal gatherings."
+    },
+    {
+     "text": "Come over for",
+     "kind": "chunk",
+     "form": "come over for",
+     "meaning": "An informal invitation for someone to visit your home for a specific purpose.",
+     "example": "Why don't you come over for a board game night next week?",
+     "plain": "Why don't you visit my home for a board game night next week?",
+     "note": "Casual and friendly, typically used among friends."
+    },
+    {
+     "text": "I was wondering if you'd",
+     "kind": "frame",
+     "form": "I was wondering if you'd",
+     "meaning": "A very polite and indirect way to make a request or extend an invitation.",
+     "example": "I was wondering if you'd be free to grab a coffee sometime soon.",
+     "plain": "Would you be free to grab a coffee sometime soon?",
+     "note": "Softens the request, making it less demanding. Good for sensitive topics."
+    },
+    {
+     "text": "We'd be delighted if",
+     "kind": "frame",
+     "form": "We'd be delighted if",
+     "meaning": "A formal and very polite way to express pleasure at someone's potential attendance.",
+     "example": "We'd be delighted if you could attend our anniversary celebration.",
+     "plain": "We would be very happy if you could attend our anniversary celebration.",
+     "note": "Quite formal, suitable for significant events or when addressing esteemed guests."
+    },
+    {
+     "text": "Are you free to come",
+     "kind": "frame",
+     "form": "are you free to come",
+     "meaning": "A direct way to ask about someone's availability to attend an event.",
+     "example": "We're having a barbecue on Saturday; are you free to come?",
+     "plain": "We're having a barbecue on Saturday; can you come?",
+     "note": "Straightforward and common for informal invitations."
+    },
+    {
+     "text": "Join us for",
+     "kind": "chunk",
+     "form": "join us for",
+     "meaning": "A direct invitation to participate in an activity or event with a group.",
+     "example": "We're heading to the park; join us for a walk if you like.",
+     "plain": "We're heading to the park; come with us for a walk if you like.",
+     "note": "Simple, friendly, and inclusive. Can be used spontaneously."
+    },
+    {
+     "text": "I'm hosting a",
+     "kind": "frame",
+     "form": "I'm hosting a",
+     "meaning": "Announcing that you are organizing and holding an event at your home or venue.",
+     "example": "I'm hosting a small gathering next weekend, just a few friends.",
+     "plain": "I am organizing a small gathering next weekend, just a few friends.",
+     "note": "Clear and direct way to inform someone about an event you are putting on."
+    },
+    {
+     "text": "I'd love to",
+     "kind": "chunk",
+     "form": "I'd love to",
+     "meaning": "An enthusiastic and polite way to accept an invitation or suggestion.",
+     "example": "\"Would you like to come to the concert?\" \"Yes, I'd love to!\"",
+     "plain": "\"Would you like to come to the concert?\" \"Yes, I would really like to!\"",
+     "note": "Very common, warm, and positive acceptance."
+    },
+    {
+     "text": "That sounds great",
+     "kind": "chunk",
+     "form": "That sounds great",
+     "meaning": "Expressing positive agreement or enthusiasm for a suggestion or plan.",
+     "example": "\"How about dinner on Friday?\" \"That sounds great!\"",
+     "plain": "\"How about dinner on Friday?\" \"That is a good idea!\"",
+     "note": "A very common and versatile positive response."
+    },
+    {
+     "text": "I'd be delighted to",
+     "kind": "chunk",
+     "form": "I'd be delighted to",
+     "meaning": "A formal and very polite way to accept an invitation.",
+     "example": "\"We'd love you to join us.\" \"Thank you, I'd be delighted to.\"",
+     "plain": "\"We'd love you to join us.\" \"Thank you, I would be very happy to.\"",
+     "note": "More formal than \"I'd love to,\" suitable for more formal invitations."
+    },
+    {
+     "text": "Count me in",
+     "kind": "chunk",
+     "form": "Count me in",
+     "meaning": "An informal and enthusiastic way to confirm your participation in an activity.",
+     "example": "\"We're going hiking on Saturday.\" \"Sounds fun, count me in!\"",
+     "plain": "\"We're going hiking on Saturday.\" \"Sounds fun, I'll join!\"",
+     "note": "Casual and friendly, often used among friends."
+    },
+    {
+     "text": "Thanks for the invitation",
+     "kind": "chunk",
+     "form": "Thanks for the invitation",
+     "meaning": "A polite and standard way to acknowledge and express gratitude for being invited.",
+     "example": "Thanks for the invitation to your party; I'm really looking forward to it.",
+     "plain": "I appreciate you inviting me to your party; I'm really looking forward to it.",
+     "note": "Essential for polite social interaction, whether accepting or declining."
+    },
+    {
+     "text": "I'm really looking forward to it",
+     "kind": "chunk",
+     "form": "I'm really looking forward to it",
+     "meaning": "Expressing eager anticipation for a future event or meeting.",
+     "example": "Thanks for inviting me to the concert; I'm really looking forward to it.",
+     "plain": "Thanks for inviting me to the concert; I'm very excited about it.",
+     "note": "A common and warm way to show enthusiasm for an upcoming event."
+    },
+    {
+     "text": "That works perfectly",
+     "kind": "chunk",
+     "form": "That works perfectly",
+     "meaning": "Confirming that a proposed time, date, or plan is entirely suitable and convenient.",
+     "example": "\"How about meeting at 7 PM?\" \"Yes, that works perfectly for me.\"",
+     "plain": "\"How about meeting at 7 PM?\" \"Yes, that time is completely suitable for me.\"",
+     "note": "A strong and clear affirmation of suitability."
+    },
+    {
+     "text": "I'll definitely be there",
+     "kind": "chunk",
+     "form": "I'll definitely be there",
+     "meaning": "Giving a strong assurance that you will attend an event or meeting.",
+     "example": "Don't worry, I'll definitely be there for your presentation.",
+     "plain": "Don't worry, I will certainly attend your presentation.",
+     "note": "Conveys commitment and reliability."
+    },
+    {
+     "text": "I'd love that",
+     "kind": "chunk",
+     "form": "I'd love that",
+     "meaning": "A warm and enthusiastic way to accept a suggestion or invitation.",
+     "example": "\"Would you like to join us for a walk?\" \"Oh, I'd love that!\"",
+     "plain": "\"Would you like to join us for a walk?\" \"Oh, I would really enjoy that!\"",
+     "note": "Similar to \"I'd love to,\" but often used as a standalone response."
+    },
+    {
+     "text": "Sounds like a plan",
+     "kind": "chunk",
+     "form": "Sounds like a plan",
+     "meaning": "An informal way to express agreement with a proposed plan or suggestion.",
+     "example": "\"So, we'll meet at the cafe at two?\" \"Yep, sounds like a plan!\"",
+     "plain": "\"So, we'll meet at the cafe at two?\" \"Yep, that's a good plan!\"",
+     "note": "Casual and friendly, often used to finalize informal arrangements."
+    },
+    {
+     "text": "I'm afraid I can't",
+     "kind": "frame",
+     "form": "I'm afraid I can't",
+     "meaning": "A polite and common way to decline an invitation or request.",
+     "example": "I'm afraid I can't make it to the party on Saturday.",
+     "plain": "Unfortunately, I cannot come to the party on Saturday.",
+     "note": "A standard softener for delivering bad news or a refusal."
+    },
+    {
+     "text": "Unfortunately, I'm not able to",
+     "kind": "frame",
+     "form": "Unfortunately, I'm not able to",
+     "meaning": "A polite and slightly more formal way to decline an invitation or request.",
+     "example": "Unfortunately, I'm not able to attend the meeting next week.",
+     "plain": "Sadly, I cannot attend the meeting next week.",
+     "note": "Suitable for both formal and informal contexts, conveying regret."
+    },
+    {
+     "text": "I already have plans",
+     "kind": "chunk",
+     "form": "I already have plans",
+     "meaning": "A common and straightforward reason for declining an invitation.",
+     "example": "Thanks for the invite, but I already have plans that evening.",
+     "plain": "Thanks for the invite, but I am busy that evening.",
+     "note": "A simple and generally accepted reason for unavailability."
+    },
+    {
+     "text": "Maybe another time",
+     "kind": "chunk",
+     "form": "maybe another time",
+     "meaning": "Suggesting the possibility of meeting or doing the activity at a later date.",
+     "example": "I can't make it this weekend, but maybe another time soon?",
+     "plain": "I can't make it this weekend, but perhaps we can meet another time soon?",
+     "note": "Softens a refusal and keeps the door open for future plans."
+    },
+    {
+     "text": "I'm really sorry but",
+     "kind": "frame",
+     "form": "I'm really sorry but",
+     "meaning": "Expressing sincere regret before delivering a refusal or bad news.",
+     "example": "I'm really sorry but I won't be able to join you for dinner.",
+     "plain": "I apologize, but I won't be able to join you for dinner.",
+     "note": "A strong apology, indicating genuine regret for the refusal."
+    },
+    {
+     "text": "I won't be able to make it",
+     "kind": "chunk",
+     "form": "I won't be able to make it",
+     "meaning": "A common and polite way to state that you cannot attend an event.",
+     "example": "Thanks for the invitation, but I won't be able to make it to the party.",
+     "plain": "Thanks for the invitation, but I cannot come to the party.",
+     "note": "Standard and clear way to decline attendance."
+    },
+    {
+     "text": "Thanks so much for",
+     "kind": "frame",
+     "form": "Thanks so much for",
+     "meaning": "Expressing strong gratitude, often used before declining an invitation.",
+     "example": "Thanks so much for thinking of me, but I'm already booked.",
+     "plain": "I really appreciate you thinking of me, but I'm already booked.",
+     "note": "Softens the refusal by emphasizing appreciation for the invitation."
+    },
+    {
+     "text": "I'm tied up with",
+     "kind": "collocation",
+     "form": "I'm tied up with",
+     "meaning": "Explaining that you are busy or committed to another activity.",
+     "example": "I'm tied up with work commitments all next week, unfortunately.",
+     "plain": "I am busy with work commitments all next week, unfortunately.",
+     "note": "A common and natural way to explain unavailability due to other obligations."
+    },
+    {
+     "text": "It sounds wonderful but",
+     "kind": "frame",
+     "form": "It sounds wonderful but",
+     "meaning": "Complimenting the invitation or idea before explaining why you cannot accept.",
+     "example": "It sounds wonderful but I'm afraid I have a prior engagement.",
+     "plain": "That sounds wonderful but I'm afraid I have a prior engagement.",
+     "note": "A polite softener, showing appreciation for the offer even if you can't accept."
+    },
+    {
+     "text": "I'll have to take a rain check",
+     "kind": "collocation",
+     "form": "I'll have to take a rain check",
+     "meaning": "Politely declining an invitation but suggesting to do it another time.",
+     "example": "I can't make it tonight, but I'll have to take a rain check.",
+     "plain": "I can't make it tonight, but let's do it another time.",
+     "note": "Very common idiom for postponing. Implies genuine interest in meeting later."
+    },
+    {
+     "text": "My apologies, I'm already booked",
+     "kind": "chunk",
+     "form": "My apologies, I'm already booked",
+     "meaning": "A formal apology followed by a reason for being unable to attend.",
+     "example": "My apologies, I'm already booked for that evening.",
+     "plain": "I apologize, I already have an appointment for that evening.",
+     "note": "Polite and clear, suitable for slightly more formal contexts."
+    },
+    {
+     "text": "I wish I could",
+     "kind": "frame",
+     "form": "I wish I could",
+     "meaning": "Expressing regret that you are unable to accept an invitation or do something.",
+     "example": "I wish I could join you for the concert, but I have to work late.",
+     "plain": "I regret that I cannot join you for the concert, as I have to work late.",
+     "note": "Conveys genuine desire to participate despite inability."
+    },
+    {
+     "text": "That's very kind of you",
+     "kind": "chunk",
+     "form": "That's very kind of you",
+     "meaning": "Expressing appreciation for someone's thoughtfulness or generosity.",
+     "example": "That's very kind of you to invite me, but I'm not feeling well.",
+     "plain": "It's thoughtful of you to invite me, but I'm not feeling well.",
+     "note": "A polite way to acknowledge an invitation, often used before declining."
+    },
+    {
+     "text": "I'm not sure I can commit",
+     "kind": "chunk",
+     "form": "I'm not sure I can commit",
+     "meaning": "Expressing uncertainty about being able to promise attendance or participation.",
+     "example": "I'm not sure I can commit to the weekly book club right now.",
+     "plain": "I'm uncertain if I can promise to attend the weekly book club right now.",
+     "note": "A gentle way to express hesitation without a firm refusal."
+    },
+    {
+     "text": "Make yourself at home",
+     "kind": "chunk",
+     "form": "Make yourself at home",
+     "meaning": "A warm welcome to guests, encouraging them to feel comfortable and relaxed.",
+     "example": "Come in, come in! Make yourself at home, the drinks are in the fridge.",
+     "plain": "Come in, come in! Feel comfortable and relaxed, the drinks are in the fridge.",
+     "note": "Standard welcoming phrase for guests in your home."
+    },
+    {
+     "text": "Can I get you anything",
+     "kind": "frame",
+     "form": "Can I get you anything",
+     "meaning": "Offering refreshments or assistance to a guest.",
+     "example": "Please sit down. Can I get you anything to drink?",
+     "plain": "Please sit down. Would you like something to drink?",
+     "note": "A polite and hospitable offer to guests."
+    },
+    {
+     "text": "Thanks for having me",
+     "kind": "chunk",
+     "form": "Thanks for having me",
+     "meaning": "A polite expression of gratitude from a guest to a host.",
+     "example": "As I was leaving, I said, \"Thanks for having me, it was a lovely evening.\"",
+     "plain": "As I was leaving, I said, \"Thank you for inviting me, it was a lovely evening.\"",
+     "note": "Essential phrase for guests when leaving someone's home."
+    },
+    {
+     "text": "It was lovely to see you",
+     "kind": "chunk",
+     "form": "it was lovely to see you",
+     "meaning": "A warm farewell expression, indicating pleasure at having met or spent time together.",
+     "example": "\"Goodbye!\" \"You too, it was lovely to see you again.\"",
+     "plain": "\"Goodbye!\" \"You too, I enjoyed seeing you again.\"",
+     "note": "Common and friendly closing remark for social interactions."
+    },
+    {
+     "text": "I really appreciate you",
+     "kind": "frame",
+     "form": "I really appreciate you",
+     "meaning": "Expressing sincere gratitude for someone's actions or presence.",
+     "example": "I really appreciate you coming all this way for my birthday.",
+     "plain": "I am very grateful that you came all this way for my birthday.",
+     "note": "A warm and heartfelt way to show thanks."
+    },
+    {
+     "text": "Let me know if you need",
+     "kind": "frame",
+     "form": "let me know if you need",
+     "meaning": "Offering help or assistance, inviting the other person to ask if necessary.",
+     "example": "If you're staying overnight, let me know if you need an extra blanket.",
+     "plain": "If you're staying overnight, tell me if you need an extra blanket.",
+     "note": "A polite and helpful offer, showing consideration for a guest."
+    },
+    {
+     "text": "Don't worry about a thing",
+     "kind": "chunk",
+     "form": "Don't worry about a thing",
+     "meaning": "Reassuring someone, especially a guest, that they don't need to be concerned or help.",
+     "example": "\"Can I help with the dishes?\" \"No, don't worry about a thing, I'll do them later.\"",
+     "plain": "\"Can I help with the dishes?\" \"No, don't be concerned, I'll do them later.\"",
+     "note": "A kind and hospitable phrase to put guests at ease."
+    },
+    {
+     "text": "I'll help clear up",
+     "kind": "chunk",
+     "form": "I'll help clear up",
+     "meaning": "Offering assistance with tidying or cleaning after a meal or gathering.",
+     "example": "That was a delicious meal; I'll help clear up the table.",
+     "plain": "That was a delicious meal; I will help tidy the table.",
+     "note": "A polite and helpful offer from a guest to a host."
+    },
+    {
+     "text": "It was a pleasure",
+     "kind": "chunk",
+     "form": "It was a pleasure",
+     "meaning": "A polite response to \"Thank you\" or a general expression of enjoyment.",
+     "example": "\"Thanks for coming!\" \"It was a pleasure, I had a wonderful time.\"",
+     "plain": "\"Thanks for coming!\" \"I enjoyed it, I had a wonderful time.\"",
+     "note": "Versatile, can be used by host or guest. Slightly more formal than \"no problem.\""
+    },
+    {
+     "text": "How have you been",
+     "kind": "chunk",
+     "form": "How have you been",
+     "meaning": "A common greeting used to ask about someone's well-being since the last meeting.",
+     "example": "Long time no see! How have you been since we last met?",
+     "plain": "Long time no see! How are you since we last met?",
+     "note": "Standard and friendly way to catch up with someone you haven't seen in a while."
+    },
+    {
+     "text": "What have you been up to",
+     "kind": "chunk",
+     "form": "What have you been up to",
+     "meaning": "Asking someone about their recent activities, experiences, or news.",
+     "example": "It's great to see you! What have you been up to lately?",
+     "plain": "It's great to see you! What have you been doing lately?",
+     "note": "A very common and natural way to initiate a catch-up conversation."
+    },
+    {
+     "text": "It's been ages",
+     "kind": "chunk",
+     "form": "It's been ages",
+     "meaning": "An informal way to express that a very long time has passed since the last meeting.",
+     "example": "Wow, it's been ages since we last saw each other!",
+     "plain": "Wow, a very long time has passed since we last saw each other!",
+     "note": "Casual and friendly, used among people who know each other well."
+    },
+    {
+     "text": "We should catch up properly",
+     "kind": "chunk",
+     "form": "we should catch up properly",
+     "meaning": "Suggesting a more in-depth meeting to discuss recent events and news.",
+     "example": "This is too quick; we should catch up properly over coffee soon.",
+     "plain": "This is too quick; we should meet for a longer chat over coffee soon.",
+     "note": "Implies that a brief encounter isn't enough to share everything."
+    },
+    {
+     "text": "Tell me all about it",
+     "kind": "chunk",
+     "form": "tell me all about it",
+     "meaning": "Inviting someone to share the full details of a story or experience.",
+     "example": "I heard you got a new job; tell me all about it!",
+     "plain": "I heard you got a new job; please share all the details!",
+     "note": "Enthusiastic and encouraging, shows genuine interest."
+    },
+    {
+     "text": "I was just thinking of you",
+     "kind": "chunk",
+     "form": "I was just thinking of you",
+     "meaning": "Expressing that someone was recently on your mind, often when you unexpectedly meet them.",
+     "example": "What a coincidence! I was just thinking of you the other day.",
+     "plain": "What a coincidence! I was thinking about you the other day.",
+     "note": "A warm and friendly phrase, often used when bumping into someone."
+    },
+    {
+     "text": "How's everything going",
+     "kind": "chunk",
+     "form": "How's everything going",
+     "meaning": "A general inquiry about someone's life, work, and overall well-being.",
+     "example": "It's good to see you! How's everything going with the new project?",
+     "plain": "It's good to see you! How are things with the new project?",
+     "note": "A versatile and common way to start a conversation or catch up."
+    },
+    {
+     "text": "It's good to see you",
+     "kind": "chunk",
+     "form": "It's good to see you",
+     "meaning": "Expressing pleasure at meeting or seeing someone again.",
+     "example": "Hi Sarah, it's good to see you after all this time!",
+     "plain": "Hi Sarah, I'm happy to see you after all this time!",
+     "note": "A standard and warm greeting, suitable for various social contexts."
+    },
+    {
+     "text": "Keep me in the loop",
+     "kind": "collocation",
+     "form": "keep me in the loop",
+     "meaning": "Asking someone to keep you updated with information or developments.",
+     "example": "Let me know how the plans for the trip progress; keep me in the loop.",
+     "plain": "Let me know how the plans for the trip progress; keep me updated.",
+     "note": "Informal and common, implies you want to stay informed."
+    },
+    {
+     "text": "We must do this again soon",
+     "kind": "chunk",
+     "form": "we must do this again soon",
+     "meaning": "Expressing a strong desire to repeat the social activity or meeting in the near future.",
+     "example": "That was a lovely evening; we must do this again soon.",
+     "plain": "That was a lovely evening; we should meet again soon.",
+     "note": "A warm and friendly closing remark, indicating enjoyment and future intent."
+    },
+    {
+     "text": "To be honest",
+     "kind": "chunk",
+     "form": "To be honest",
+     "meaning": "Introducing a frank or sincere opinion, sometimes a slightly critical one.",
+     "example": "To be honest, I wasn't entirely happy with the service at that restaurant.",
+     "plain": "Frankly, I wasn't entirely happy with the service at that restaurant.",
+     "note": "A common discourse marker, often used to soften a potentially negative comment."
+    },
+    {
+     "text": "If I'm being honest",
+     "kind": "frame",
+     "form": "If I'm being honest",
+     "meaning": "A slightly softer way to introduce a frank or personal opinion.",
+     "example": "If I'm being honest, I found the movie a bit disappointing.",
+     "plain": "Frankly, I found the movie a bit disappointing.",
+     "note": "Similar to \"to be honest,\" but the \"if\" adds a touch more politeness."
+    },
+    {
+     "text": "Just to clarify",
+     "kind": "chunk",
+     "form": "Just to clarify",
+     "meaning": "Introducing a request for more specific information or to confirm understanding.",
+     "example": "Just to clarify, are we meeting at seven or seven-thirty?",
+     "plain": "To confirm, are we meeting at seven or seven-thirty?",
+     "note": "Useful for ensuring mutual understanding and avoiding miscommunication."
+    },
+    {
+     "text": "On the other hand",
+     "kind": "chunk",
+     "form": "on the other hand",
+     "meaning": "Introducing a contrasting or alternative point of view or consideration.",
+     "example": "The restaurant is a bit pricey, but on the other hand, the food is excellent.",
+     "plain": "The restaurant is a bit pricey, but the food is excellent.",
+     "note": "A common discourse marker for presenting a balanced perspective."
+    },
+    {
+     "text": "Having said that",
+     "kind": "chunk",
+     "form": "Having said that",
+     "meaning": "Introducing a contrasting point or qualification after a previous statement.",
+     "example": "It was a tough week. Having said that, I did manage to finish the report.",
+     "plain": "It was a tough week. However, I did manage to finish the report.",
+     "note": "Used to add a nuance or counterpoint to what was just stated."
+    },
+    {
+     "text": "I mean, it's not",
+     "kind": "frame",
+     "form": "I mean, it's not",
+     "meaning": "Clarifying or softening a previous statement, often by rephrasing or adding context.",
+     "example": "I mean, it's not that I don't want to go, I just have too much work.",
+     "plain": "I don't want to go, but I just have too much work.",
+     "note": "A common filler and softener, used to explain or qualify."
+    },
+    {
+     "text": "I suppose you could say",
+     "kind": "frame",
+     "form": "I suppose you could say",
+     "meaning": "Introducing a tentative or slightly hesitant suggestion or interpretation.",
+     "example": "I suppose you could say the party was a success, despite the rain.",
+     "plain": "The party was a success, despite the rain.",
+     "note": "A softener, indicating a degree of uncertainty or modesty in the statement."
+    },
+    {
+     "text": "It's hard to say",
+     "kind": "chunk",
+     "form": "It's hard to say",
+     "meaning": "Expressing uncertainty or difficulty in giving a definitive answer or opinion.",
+     "example": "\"Will they come?\" \"It's hard to say, they're usually quite busy.\"",
+     "plain": "\"Will they come?\" \"I'm not sure, they're usually quite busy.\"",
+     "note": "A common way to acknowledge uncertainty without committing to an answer."
+    },
+    {
+     "text": "I wouldn't go that far",
+     "kind": "chunk",
+     "form": "I wouldn't go that far",
+     "meaning": "Gently disagreeing with an extreme statement or strong opinion.",
+     "example": "\"That was the worst movie ever!\" \"I wouldn't go that far, but it wasn't great.\"",
+     "plain": "\"That was the worst movie ever!\" \"I don't agree completely, but it wasn't great.\"",
+     "note": "A polite way to express partial disagreement or temper an exaggeration."
+    },
+    {
+     "text": "What I mean is",
+     "kind": "frame",
+     "form": "What I mean is",
+     "meaning": "Clarifying or rephrasing a previous statement to ensure better understanding.",
+     "example": "I'm not saying it's bad; what I mean is, it could be improved.",
+     "plain": "I'm not saying it's bad; I mean, it could be improved.",
+     "note": "Useful for explaining oneself more clearly, especially if misunderstood."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "Would you be interested in",
+     "kind": "frame",
+     "form": "Would you be interested in",
+     "meaning": "Asking if someone wants to do something or join an activity.",
+     "example": "Would you be interested in joining us for dinner next Saturday?",
+     "plain": "Do you want to join us for dinner next Saturday?",
+     "note": "A polite and open-ended way to invite someone, suggesting an option rather than a demand."
+    },
+    {
+     "text": "Let's try for",
+     "kind": "frame",
+     "form": "let's try for",
+     "meaning": "Suggesting a specific time or date for a plan, often when other options are difficult.",
+     "example": "I'm quite busy, but let's try for next Tuesday evening if that works for you.",
+     "plain": "I'm quite busy, but can we aim for next Tuesday evening?",
+     "note": "Used when proposing a specific time, implying flexibility might be limited."
+    },
+    {
+     "text": "I'm pretty flexible",
+     "kind": "chunk",
+     "form": "I'm pretty flexible",
+     "meaning": "Indicating that one's schedule is adaptable and open to various times or dates.",
+     "example": "I'm pretty flexible next week, so just let me know what day suits you best.",
+     "plain": "My schedule is open next week, so tell me what day is best.",
+     "note": "A common, friendly way to show willingness to accommodate others' schedules."
+    },
+    {
+     "text": "What time suits you",
+     "kind": "chunk",
+     "form": "what time suits you",
+     "meaning": "Asking someone to specify their preferred time for a meeting or activity.",
+     "example": "I'm free all afternoon, so what time suits you for our coffee?",
+     "plain": "I'm free all afternoon, so tell me what time is best for our coffee.",
+     "note": "A direct but polite way to ask about someone's availability."
+    },
+    {
+     "text": "I'll keep you posted",
+     "kind": "chunk",
+     "form": "I'll keep you posted",
+     "meaning": "Promising to provide updates or further information as it becomes available.",
+     "example": "The plans aren't firm yet, but I'll keep you posted on any changes.",
+     "plain": "The plans aren't firm yet, but I will tell you about any changes.",
+     "note": "Common in informal and semi-formal contexts when details are still developing."
+    },
+    {
+     "text": "I'm really keen to",
+     "kind": "frame",
+     "form": "I'm really keen to",
+     "meaning": "Expressing strong enthusiasm or eagerness to do something.",
+     "example": "I'm really keen to try that new restaurant, so thanks for the invitation!",
+     "plain": "I'm very eager to try that new restaurant, so thanks for the invitation!",
+     "note": "Shows genuine enthusiasm; common in both British and American English."
+    },
+    {
+     "text": "I'd be happy to",
+     "kind": "chunk",
+     "form": "I'd be happy to",
+     "meaning": "Expressing willingness or pleasure to do something.",
+     "example": "I'd be happy to bring a dessert if that would be helpful for the party.",
+     "plain": "I would gladly bring a dessert if that would help for the party.",
+     "note": "A polite and helpful way to offer assistance or accept a request."
+    },
+    {
+     "text": "We could always",
+     "kind": "frame",
+     "form": "we could always",
+     "meaning": "Suggesting an alternative or backup plan, often when the primary option is difficult.",
+     "example": "If the weather is bad, we could always have the picnic indoors at my place.",
+     "plain": "If the weather is bad, we can have the picnic indoors at my place.",
+     "note": "Used to propose a less ideal but still viable option."
+    },
+    {
+     "text": "Feel free to bring",
+     "kind": "frame",
+     "form": "Feel free to bring",
+     "meaning": "Giving permission or encouraging someone to bring something, like a guest or an item.",
+     "example": "Feel free to bring a friend along to the barbecue if you like.",
+     "plain": "You can bring a friend along to the barbecue if you like.",
+     "note": "A welcoming phrase used by a host to make guests feel comfortable."
+    },
+    {
+     "text": "It would be great to",
+     "kind": "frame",
+     "form": "It would be great to",
+     "meaning": "Expressing a desire or hope for something to happen, often an activity with others.",
+     "example": "It would be great to catch up properly soon, perhaps over coffee next week.",
+     "plain": "I would really like to catch up properly soon, perhaps over coffee next week.",
+     "note": "A warm and friendly way to suggest future plans or express a wish."
+    },
+    {
+     "text": "I'm afraid I have to",
+     "kind": "frame",
+     "form": "I'm afraid I have to",
+     "meaning": "Politically expressing regret when stating an unavoidable obligation or refusal.",
+     "example": "I'm afraid I have to decline your invitation as I'll be out of town.",
+     "plain": "I regret that I must decline your invitation as I'll be out of town.",
+     "note": "A polite and common way to deliver bad news or a refusal."
+    },
+    {
+     "text": "I have a prior engagement",
+     "kind": "collocation",
+     "form": "I have a prior engagement",
+     "meaning": "Politically stating that one already has a commitment or appointment.",
+     "example": "I'm so sorry, but I have a prior engagement that evening and can't make it.",
+     "plain": "I'm so sorry, but I already have something planned that evening.",
+     "note": "A formal and polite way to decline an invitation without giving too many details."
+    },
+    {
+     "text": "I'm double booked",
+     "kind": "chunk",
+     "form": "I'm double booked",
+     "meaning": "Explaining that one has two appointments or commitments scheduled for the same time.",
+     "example": "Unfortunately, I'm double booked for that time, so I'll have to miss the meeting.",
+     "plain": "Unfortunately, I have two things scheduled for that time, so I'll miss the meeting.",
+     "note": "A common, slightly informal way to explain a scheduling conflict."
+    },
+    {
+     "text": "I'll have to pass",
+     "kind": "chunk",
+     "form": "I'll have to pass",
+     "meaning": "Politically declining an invitation or opportunity.",
+     "example": "That sounds like fun, but I'll have to pass on the hiking trip this weekend.",
+     "plain": "That sounds like fun, but I cannot go on the hiking trip this weekend.",
+     "note": "A casual but clear way to decline, often used among friends."
+    },
+    {
+     "text": "I'm not feeling up to it",
+     "kind": "chunk",
+     "form": "I'm not feeling up to it",
+     "meaning": "Explaining that one lacks the energy or desire to do something, often due to tiredness or illness.",
+     "example": "I'm not feeling up to it tonight, so I think I'll stay home instead of going out.",
+     "plain": "I don't have the energy tonight, so I think I'll stay home instead of going out.",
+     "note": "A common, gentle way to decline due to personal well-being."
+    },
+    {
+     "text": "It's a shame I can't",
+     "kind": "frame",
+     "form": "It's a shame I can't",
+     "meaning": "Expressing regret or disappointment about being unable to do something.",
+     "example": "It's a shame I can't join you for the concert, as I already bought tickets for another show.",
+     "plain": "I'm disappointed I can't join you for the concert, as I already bought tickets for another show.",
+     "note": "Conveys regret without over-apologizing, often used when declining."
+    },
+    {
+     "text": "I had a wonderful time",
+     "kind": "chunk",
+     "form": "I had a wonderful time",
+     "meaning": "Expressing sincere enjoyment and gratitude after an event or visit.",
+     "example": "Thank you for inviting me; I had a wonderful time at your dinner party.",
+     "plain": "Thank you for inviting me; I really enjoyed myself at your dinner party.",
+     "note": "A standard and warm phrase used by a guest to thank a host."
+    },
+    {
+     "text": "I'm happy to contribute",
+     "kind": "chunk",
+     "form": "I'm happy to contribute",
+     "meaning": "Expressing willingness to provide something or help financially for a shared activity.",
+     "example": "I'm happy to contribute to the cost of the food for the picnic.",
+     "plain": "I am willing to pay for some of the food for the picnic.",
+     "note": "A polite way to offer to share expenses or provide items for a group event."
+    },
+    {
+     "text": "How's life treating you",
+     "kind": "chunk",
+     "form": "How's life treating you",
+     "meaning": "A friendly and informal way to ask someone how they are doing generally.",
+     "example": "It's been a while! How's life treating you these days?",
+     "plain": "It's been a while! How are you doing these days?",
+     "note": "A warm, slightly more reflective way to ask \"How are you?\""
+    },
+    {
+     "text": "Fill me in on",
+     "kind": "collocation",
+     "form": "fill me in on",
+     "meaning": "Asking someone to provide details or updates about a situation or recent events.",
+     "example": "It's been ages, so please fill me in on everything you've been up to.",
+     "plain": "It's been ages, so please tell me all the details about what you've been doing.",
+     "note": "Informal and friendly, used when catching up with someone you haven't seen in a while."
+    },
+    {
+     "text": "It's great to finally",
+     "kind": "frame",
+     "form": "It's great to finally",
+     "meaning": "Expressing satisfaction or relief that something long-awaited or desired is now happening.",
+     "example": "It's great to finally meet you in person after all our emails.",
+     "plain": "I'm very happy to meet you in person after all our emails.",
+     "note": "Used when an anticipated event or meeting is taking place."
+    },
+    {
+     "text": "I'm so glad we could",
+     "kind": "frame",
+     "form": "I'm so glad we could",
+     "meaning": "Expressing happiness or relief that a shared activity or meeting was possible.",
+     "example": "I'm so glad we could find a time to get together; it's been too long.",
+     "plain": "I'm very happy we found a time to meet; it's been too long.",
+     "note": "A warm and appreciative phrase, often used at the beginning or end of a social gathering."
+    },
+    {
+     "text": "It's good to hear from you",
+     "kind": "chunk",
+     "form": "It's good to hear from you",
+     "meaning": "Expressing pleasure at receiving communication from someone, often after a period of silence.",
+     "example": "Oh, hi Sarah! It's good to hear from you; I was just thinking about you.",
+     "plain": "Oh, hi Sarah! I'm happy you contacted me; I was just thinking about you.",
+     "note": "A standard, friendly greeting when someone calls, texts, or emails after a gap."
+    },
+    {
+     "text": "I've been meaning to ask",
+     "kind": "frame",
+     "form": "I've been meaning to ask",
+     "meaning": "Introducing a question or topic that one has intended to bring up for some time.",
+     "example": "I've been meaning to ask you about your new job; how's it going?",
+     "plain": "I wanted to ask you about your new job; how's it going?",
+     "note": "A natural way to transition to a new topic or ask a specific question."
+    },
+    {
+     "text": "Speaking of which",
+     "kind": "chunk",
+     "form": "speaking of which",
+     "meaning": "Introducing a related topic that comes to mind because of the current conversation.",
+     "example": "We were talking about travel; speaking of which, have you booked your summer holiday yet?",
+     "plain": "We were talking about travel; on that topic, have you booked your summer holiday yet?",
+     "note": "A common discourse marker to smoothly shift to a related subject."
+    },
+    {
+     "text": "Anyway, getting back to",
+     "kind": "frame",
+     "form": "Anyway, getting back to",
+     "meaning": "Redirecting the conversation to a previous topic after a digression.",
+     "example": "Anyway, getting back to our plans for the weekend, what did you decide?",
+     "plain": "So, returning to our plans for the weekend, what did you decide?",
+     "note": "Used to steer the conversation back to the main point after a tangent."
+    },
+    {
+     "text": "Where were we",
+     "kind": "chunk",
+     "form": "Where were we",
+     "meaning": "Asking to recall the last point of a conversation after an interruption or digression.",
+     "example": "Sorry, my phone rang. Where were we before I was interrupted?",
+     "plain": "Sorry, my phone rang. What were we talking about before I was interrupted?",
+     "note": "A common phrase to resume a conversation smoothly."
+    },
+    {
+     "text": "To cut a long story short",
+     "kind": "chunk",
+     "form": "To cut a long story short",
+     "meaning": "Introducing a summary of a lengthy explanation or narrative.",
+     "example": "To cut a long story short, we ended up missing our flight but still made it to the wedding.",
+     "plain": "In summary, we missed our flight but still made it to the wedding.",
+     "note": "Used to get to the main point quickly, implying there's more to the story."
+    },
+    {
+     "text": "Long time no see",
+     "kind": "chunk",
+     "form": "Long time no see",
+     "meaning": "A friendly, informal greeting used when encountering someone after a long period.",
+     "example": "Oh, Mark! Long time no see! How have you been?",
+     "plain": "Oh, Mark! I haven't seen you in a long time! How have you been?",
+     "note": "Very informal and friendly, suitable for close acquaintances."
+    },
+    {
+     "text": "How are things shaping up",
+     "kind": "chunk",
+     "form": "How are things shaping up",
+     "meaning": "Asking about the progress or development of a situation or plan.",
+     "example": "How are things shaping up with your move to the new apartment?",
+     "plain": "How is your move to the new apartment progressing?",
+     "note": "A natural way to inquire about ongoing plans or projects."
+    },
+    {
+     "text": "What's the latest with",
+     "kind": "chunk",
+     "form": "What's the latest with",
+     "meaning": "Asking for the most recent news or developments concerning a particular person or situation.",
+     "example": "What's the latest with your sister's job search? Has she found anything?",
+     "plain": "What is the newest information about your sister's job search?",
+     "note": "A common, informal way to ask for updates."
+    },
+    {
+     "text": "I'm curious to know",
+     "kind": "frame",
+     "form": "I'm curious to know",
+     "meaning": "Expressing a desire to learn or understand something.",
+     "example": "I'm curious to know what you thought of the new art exhibition.",
+     "plain": "I want to know what you thought of the new art exhibition.",
+     "note": "A polite and engaging way to ask a question, showing genuine interest."
+    },
+    {
+     "text": "I'm keen to hear",
+     "kind": "frame",
+     "form": "I'm keen to hear",
+     "meaning": "Expressing eagerness to receive information or an opinion from someone.",
+     "example": "I'm keen to hear all about your recent trip to Japan when we next meet.",
+     "plain": "I'm eager to hear all about your recent trip to Japan when we next meet.",
+     "note": "Shows strong interest in what someone has to say."
+    },
+    {
+     "text": "I'm available to meet",
+     "kind": "chunk",
+     "form": "I'm available to meet",
+     "meaning": "Stating one's readiness to attend a meeting or social gathering.",
+     "example": "I'm available to meet any time after 3 PM on Friday.",
+     "plain": "I can meet any time after 3 PM on Friday.",
+     "note": "A clear and direct way to communicate one's availability."
+    },
+    {
+     "text": "Let's coordinate our schedules",
+     "kind": "collocation",
+     "form": "let's coordinate our schedules",
+     "meaning": "Suggesting that people compare their calendars to find a mutually convenient time.",
+     "example": "It's hard to find a time for everyone, so let's coordinate our schedules soon.",
+     "plain": "It's hard to find a time for everyone, so let's compare our calendars soon.",
+     "note": "A slightly more formal or business-like way to suggest finding a meeting time."
+    },
+    {
+     "text": "I'm happy to help out",
+     "kind": "chunk",
+     "form": "I'm happy to help out",
+     "meaning": "Expressing willingness to assist with tasks or preparations.",
+     "example": "If you need an extra pair of hands for setting up, I'm happy to help out.",
+     "plain": "If you need an extra pair of hands for setting up, I am willing to assist.",
+     "note": "A friendly and common offer of practical assistance."
+    },
+    {
+     "text": "I'll give you a call",
+     "kind": "chunk",
+     "form": "I'll give you a call",
+     "meaning": "Promising to phone someone, often to finalize plans or catch up.",
+     "example": "I'll give you a call tomorrow to sort out the details for the weekend.",
+     "plain": "I will phone you tomorrow to sort out the details for the weekend.",
+     "note": "A common, informal way to arrange future communication."
+    },
+    {
+     "text": "I'll confirm closer to the date",
+     "kind": "chunk",
+     "form": "I'll confirm closer to the date",
+     "meaning": "Promising to finalize attendance or details nearer to the event day.",
+     "example": "I'm not sure about my work commitments yet, so I'll confirm closer to the date.",
+     "plain": "I'm not sure about my work commitments yet, so I will finalize my attendance nearer the date.",
+     "note": "A polite way to express uncertainty while keeping an option open."
+    },
+    {
+     "text": "I'll be in touch",
+     "kind": "chunk",
+     "form": "I'll be in touch",
+     "meaning": "Promising to communicate with someone again soon.",
+     "example": "It was great catching up; I'll be in touch next week about our plans.",
+     "plain": "It was great catching up; I will contact you next week about our plans.",
+     "note": "A polite and common way to end a conversation, indicating future communication."
+    },
+    {
+     "text": "Would you care to join us",
+     "kind": "frame",
+     "form": "Would you care to join us",
+     "meaning": "A polite way to invite someone to an activity or event.",
+     "example": "We're heading to the new gallery opening; would you care to join us?",
+     "plain": "We're going to the gallery opening; would you like to come?",
+     "note": "Very polite and slightly formal, suitable for new acquaintances or more formal invitations."
+    },
+    {
+     "text": "Let's make a plan",
+     "kind": "chunk",
+     "form": "Let's make a plan",
+     "meaning": "Suggesting to arrange details for a future meeting or activity.",
+     "example": "I'd love to catch up next week. Let's make a plan soon.",
+     "plain": "I want to meet next week. Let's arrange the details soon.",
+     "note": "Common, friendly way to initiate or follow up on arranging a social event."
+    },
+    {
+     "text": "I'm happy to go with the flow",
+     "kind": "chunk",
+     "form": "I'm happy to go with the flow",
+     "meaning": "Expressing willingness to adapt to whatever plans others decide.",
+     "example": "I don't have a strong preference for dinner, I'm happy to go with the flow.",
+     "plain": "I don't mind what we do for dinner, I'll adapt to your choices.",
+     "note": "Shows flexibility and an easygoing attitude, useful when others are making decisions."
+    },
+    {
+     "text": "Let's aim for next week",
+     "kind": "chunk",
+     "form": "Let's aim for next week",
+     "meaning": "Suggesting a general timeframe for when to meet or complete something.",
+     "example": "We need to discuss the project. Let's aim for next week to meet.",
+     "plain": "We should try to meet next week to discuss the project.",
+     "note": "A common way to propose a general time without committing to a specific day yet."
+    },
+    {
+     "text": "I'll make the arrangements",
+     "kind": "collocation",
+     "form": "I'll make the arrangements",
+     "meaning": "Offering to organize the details for an event or meeting.",
+     "example": "Don't worry about the restaurant booking, I'll make the arrangements.",
+     "plain": "I will book the restaurant, you don't need to worry about it.",
+     "note": "A helpful offer when hosting or taking initiative in planning a social gathering."
+    },
+    {
+     "text": "Keep me posted",
+     "kind": "chunk",
+     "form": "Keep me posted",
+     "meaning": "Asking someone to provide updates as new information becomes available.",
+     "example": "Let me know if the plans change for Saturday, keep me posted.",
+     "plain": "Tell me if the plans for Saturday change.",
+     "note": "Informal and direct, used among friends or close colleagues."
+    },
+    {
+     "text": "I'm keen to hear more",
+     "kind": "chunk",
+     "form": "I'm keen to hear more",
+     "meaning": "Expressing strong interest in receiving additional information or details.",
+     "example": "Your trip sounds fascinating, I'm keen to hear more about it.",
+     "plain": "Your trip sounds interesting, I really want to hear more details.",
+     "note": "Shows genuine interest in a conversation topic, encouraging the other person to continue."
+    },
+    {
+     "text": "I'm happy to chip in",
+     "kind": "chunk",
+     "form": "I'm happy to chip in",
+     "meaning": "Offering to contribute money or effort to a shared expense or task.",
+     "example": "If you're buying the tickets, I'm happy to chip in for the cost.",
+     "plain": "I'll gladly contribute money for the tickets if you buy them.",
+     "note": "Common and friendly, often used for shared expenses or group efforts."
+    },
+    {
+     "text": "I'll bring something to share",
+     "kind": "chunk",
+     "form": "I'll bring something to share",
+     "meaning": "Offering to contribute food or drink to a social gathering.",
+     "example": "Thanks for inviting me to the potluck, I'll bring something to share.",
+     "plain": "I'll bring some food or drink for everyone at the potluck.",
+     "note": "A polite and common offer when attending a casual meal or party."
+    },
+    {
+     "text": "I have firm plans",
+     "kind": "collocation",
+     "form": "I have firm plans",
+     "meaning": "Indicating that one has definite, unchangeable commitments.",
+     "example": "I'd love to come, but I have firm plans that evening.",
+     "plain": "I want to come, but I already have definite commitments for that evening.",
+     "note": "A polite but clear way to decline an invitation, suggesting the plans cannot be changed."
+    },
+    {
+     "text": "I'll get back to you",
+     "kind": "chunk",
+     "form": "I'll get back to you",
+     "meaning": "Promising to respond or provide information at a later time.",
+     "example": "I need to check my schedule, I'll get back to you by tomorrow.",
+     "plain": "I will check my schedule and reply to you by tomorrow.",
+     "note": "Standard phrase for deferring a response, common in both social and professional contexts."
+    },
+    {
+     "text": "Let's touch base soon",
+     "kind": "collocation",
+     "form": "Let's touch base soon",
+     "meaning": "Suggesting to make contact briefly to discuss something or catch up.",
+     "example": "Things are busy now, but let's touch base soon about that project.",
+     "plain": "We should talk briefly soon about that project.",
+     "note": "Often used in professional settings but also common among friends for quick updates."
+    },
+    {
+     "text": "It's been too long",
+     "kind": "chunk",
+     "form": "It's been too long",
+     "meaning": "Expressing that a significant amount of time has passed since the last meeting.",
+     "example": "Oh, Sarah! It's been too long, how have you been?",
+     "plain": "Sarah! We haven't seen each other in a very long time, how are you?",
+     "note": "A warm, friendly greeting used when reuniting with someone after a long absence."
+    },
+    {
+     "text": "How have things been",
+     "kind": "chunk",
+     "form": "How have things been",
+     "meaning": "A general inquiry about someone's life and circumstances.",
+     "example": "It's great to see you! How have things been since we last met?",
+     "plain": "It's good to see you! What has been happening in your life?",
+     "note": "A common, friendly way to start a conversation and catch up with someone."
+    },
+    {
+     "text": "What's new with you",
+     "kind": "chunk",
+     "form": "What's new with you",
+     "meaning": "Asking for updates on recent events or changes in someone's life.",
+     "example": "We haven't spoken in a while, what's new with you?",
+     "plain": "We haven't talked recently, tell me what has happened in your life.",
+     "note": "A casual and direct way to initiate catching up with a friend or acquaintance."
+    },
+    {
+     "text": "I'm glad we could make it work",
+     "kind": "chunk",
+     "form": "I'm glad we could make it work",
+     "meaning": "Expressing satisfaction that a plan or meeting was successfully arranged despite difficulties.",
+     "example": "With our busy schedules, I'm glad we could make it work for dinner tonight.",
+     "plain": "Given our busy schedules, I'm happy we managed to arrange dinner tonight.",
+     "note": "Used after successfully coordinating plans, especially when there were challenges."
+    },
+    {
+     "text": "It was lovely catching up",
+     "kind": "chunk",
+     "form": "It was lovely catching up",
+     "meaning": "A polite and warm way to express enjoyment after a conversation or meeting.",
+     "example": "Thanks for the coffee, it was lovely catching up with you.",
+     "plain": "Thank you for coffee, I really enjoyed talking and getting updated with you.",
+     "note": "A common closing remark after a social interaction, especially with friends."
+    },
+    {
+     "text": "I really enjoyed myself",
+     "kind": "chunk",
+     "form": "I really enjoyed myself",
+     "meaning": "Expressing sincere pleasure and satisfaction with an experience.",
+     "example": "Thank you for the party, I really enjoyed myself.",
+     "plain": "I had a wonderful time at your party.",
+     "note": "A common and heartfelt way to thank a host or express appreciation for an event."
+    },
+    {
+     "text": "Thanks for having me over",
+     "kind": "chunk",
+     "form": "Thanks for having me over",
+     "meaning": "A polite expression of gratitude to a host for inviting one to their home.",
+     "example": "The dinner was delicious, thanks for having me over.",
+     "plain": "The dinner was delicious, thank you for inviting me to your home.",
+     "note": "Standard polite phrase used when leaving someone's home after a visit."
+    },
+    {
+     "text": "I'll see you there",
+     "kind": "chunk",
+     "form": "I'll see you there",
+     "meaning": "Confirming attendance at a specific location for an event or meeting.",
+     "example": "Great, so the concert starts at eight. I'll see you there!",
+     "plain": "Okay, the concert begins at eight. I will meet you at the venue!",
+     "note": "A common and casual way to confirm plans and express anticipation for meeting."
+    },
+    {
+     "text": "I'm looking forward to seeing you",
+     "kind": "chunk",
+     "form": "I'm looking forward to seeing you",
+     "meaning": "Expressing anticipation and pleasure about an upcoming meeting with someone.",
+     "example": "Our dinner plans sound great, I'm looking forward to seeing you on Friday.",
+     "plain": "Our dinner plans are good, I'm excited to meet you on Friday.",
+     "note": "A warm and friendly way to end a conversation about future plans."
+    },
+    {
+     "text": "Let's set a date",
+     "kind": "collocation",
+     "form": "Let's set a date",
+     "meaning": "Suggesting to choose a specific day and time for a future meeting or event.",
+     "example": "We should definitely get together soon. Let's set a date next week.",
+     "plain": "We should meet soon. Let's choose a specific day and time next week.",
+     "note": "A common phrase for moving from a general intention to concrete planning."
+    },
+    {
+     "text": "I'm happy to host this time",
+     "kind": "chunk",
+     "form": "I'm happy to host this time",
+     "meaning": "Offering to be the host for a social gathering on a particular occasion.",
+     "example": "You hosted last time, so I'm happy to host this time.",
+     "plain": "You were the host last time, so I'd like to host now.",
+     "note": "A polite and reciprocal offer, often used among friends who take turns hosting."
+    },
+    {
+     "text": "I'll bring a dessert",
+     "kind": "chunk",
+     "form": "I'll bring a dessert",
+     "meaning": "Offering to contribute a sweet course to a meal or gathering.",
+     "example": "What can I bring to dinner? I'll bring a dessert.",
+     "plain": "What should I bring to dinner? I will bring a sweet dish.",
+     "note": "A common and polite offer when attending a dinner party or potluck."
+    },
+    {
+     "text": "I'm not sure I can make it",
+     "kind": "chunk",
+     "form": "I'm not sure I can make it",
+     "meaning": "Expressing uncertainty about being able to attend an event.",
+     "example": "Thanks for the invitation, but I'm not sure I can make it.",
+     "plain": "Thank you for inviting me, but I don't know if I can attend.",
+     "note": "A soft and polite way to indicate potential unavailability without a firm decline."
+    },
+    {
+     "text": "I'll let you know",
+     "kind": "chunk",
+     "form": "I'll let you know",
+     "meaning": "Promising to inform someone about something in the future.",
+     "example": "I need to check my calendar, I'll let you know by tomorrow morning.",
+     "plain": "I will check my calendar and inform you by tomorrow morning.",
+     "note": "A standard phrase for deferring a response, common in both social and professional contexts."
+    },
+    {
+     "text": "I'm swamped with work",
+     "kind": "collocation",
+     "form": "I'm swamped with work",
+     "meaning": "Expressing that one has an overwhelming amount of work to do.",
+     "example": "I'd love to join, but I'm swamped with work this week.",
+     "plain": "I want to come, but I have too much work to do this week.",
+     "note": "A common and understandable reason for declining social invitations."
+    },
+    {
+     "text": "I'm afraid I'm double-booked",
+     "kind": "chunk",
+     "form": "I'm afraid I'm double-booked",
+     "meaning": "A polite way to explain that one has two conflicting appointments.",
+     "example": "I'm afraid I'm double-booked that evening, so I can't make it.",
+     "plain": "Unfortunately, I have two appointments at the same time that evening, so I can't come.",
+     "note": "A polite and common way to decline an invitation due to a scheduling conflict."
+    },
+    {
+     "text": "I'll get the next round",
+     "kind": "chunk",
+     "form": "I'll get the next round",
+     "meaning": "Offering to pay for the next set of drinks or food for the group.",
+     "example": "You got the last one, so I'll get the next round.",
+     "plain": "You paid last time, so I will pay for the drinks this time.",
+     "note": "Common in casual social settings like bars or cafes, showing generosity."
+    },
+    {
+     "text": "It's on me",
+     "kind": "chunk",
+     "form": "It's on me",
+     "meaning": "Offering to pay for something, usually a meal or drinks, for others.",
+     "example": "Don't worry about the bill, it's on me tonight.",
+     "plain": "Don't worry about the bill, I will pay for it tonight.",
+     "note": "A casual and generous offer, often used among friends or when treating someone."
+    },
+    {
+     "text": "Let's catch up over coffee",
+     "kind": "collocation",
+     "form": "Let's catch up over coffee",
+     "meaning": "Suggesting a casual meeting to talk and update each other while having coffee.",
+     "example": "It's been a while, let's catch up over coffee next week.",
+     "plain": "We haven't met in a while, let's meet for coffee next week to talk.",
+     "note": "A very common and informal way to suggest a casual social meeting."
+    },
+    {
+     "text": "I'm just checking in",
+     "kind": "chunk",
+     "form": "I'm just checking in",
+     "meaning": "Making contact to see how someone is doing or to get an update.",
+     "example": "Hi, I'm just checking in to see how you're doing.",
+     "plain": "Hello, I'm contacting you to see how you are.",
+     "note": "A friendly and informal way to initiate contact, often by phone or message."
+    },
+    {
+     "text": "I'm free most evenings",
+     "kind": "chunk",
+     "form": "I'm free most evenings",
+     "meaning": "Indicating general availability during the evening hours on most days.",
+     "example": "I'm pretty flexible next week; I'm free most evenings.",
+     "plain": "I'm quite flexible next week; I am available on most evenings.",
+     "note": "Useful for giving a general idea of availability without listing specific days."
+    },
+    {
+     "text": "What are your thoughts on that",
+     "kind": "frame",
+     "form": "What are your thoughts on that",
+     "meaning": "Asking for someone's opinion or perspective on a particular topic.",
+     "example": "We're thinking of going to the new Italian place, what are your thoughts on that?",
+     "plain": "We're considering the new Italian restaurant, what do you think about it?",
+     "note": "A polite way to invite input and ensure everyone's opinion is considered."
+    },
+    {
+     "text": "I'm happy to reschedule",
+     "kind": "chunk",
+     "form": "I'm happy to reschedule",
+     "meaning": "Expressing willingness to change the time or date of a planned event.",
+     "example": "If that time doesn't work for you, I'm happy to reschedule.",
+     "plain": "If that time is not convenient for you, I am willing to change our meeting time.",
+     "note": "Shows flexibility and consideration for the other person's availability."
+    },
+    {
+     "text": "I'll drop you a line",
+     "kind": "chunk",
+     "form": "I'll drop you a line",
+     "meaning": "Promising to send a short message or email to someone.",
+     "example": "I'll drop you a line later with the details for the party.",
+     "plain": "I will send you a short message later with the party details.",
+     "note": "An informal and friendly way to say you'll contact someone, usually in writing."
+    },
+    {
+     "text": "I'm looking forward to hearing from you",
+     "kind": "chunk",
+     "form": "I'm looking forward to hearing from you",
+     "meaning": "Expressing anticipation for a response or communication from someone.",
+     "example": "Let me know your availability soon, I'm looking forward to hearing from you.",
+     "plain": "Please tell me your availability soon, I am eager to receive your reply.",
+     "note": "A polite closing remark in an email or conversation when awaiting a response."
+    },
+    {
+     "text": "I'm happy to pick you up",
+     "kind": "chunk",
+     "form": "I'm happy to pick you up",
+     "meaning": "Offering to collect someone by car from their location.",
+     "example": "If you don't want to take a taxi, I'm happy to pick you up.",
+     "plain": "If you prefer not to take a taxi, I can collect you by car.",
+     "note": "A kind and practical offer, especially when someone might have difficulty with transport."
+    },
+    {
+     "text": "I'm just about to head out",
+     "kind": "chunk",
+     "form": "I'm just about to head out",
+     "meaning": "Indicating that one is preparing to leave their current location very soon.",
+     "example": "I can't talk long, I'm just about to head out for dinner.",
+     "plain": "I cannot talk for long, I am leaving for dinner very soon.",
+     "note": "Used to politely shorten a conversation when one needs to depart."
+    },
+    {
+     "text": "I'm running a little late",
+     "kind": "chunk",
+     "form": "I'm running a little late",
+     "meaning": "Informing someone that one will arrive slightly after the scheduled time.",
+     "example": "Sorry, I'm running a little late, I'll be there in ten minutes.",
+     "plain": "Apologies, I will be slightly delayed, I'll arrive in ten minutes.",
+     "note": "A common and polite way to communicate a minor delay when meeting someone."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "how about we": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "are you free to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "does that work for you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what are you up to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "fancy getting together": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i was thinking of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let me know if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should definitely": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm open to suggestions": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's your availability like": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could you make it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm free on": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "let's pencil something in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll check my calendar": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how does that sound": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "would you like to": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'd love for you to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we're having a": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "you're welcome to join": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "come over for": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i was wondering if you'd": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we'd be delighted if": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "are you free to come": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "join us for": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm hosting a": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd love to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "that sounds great": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'd be delighted to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "count me in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "thanks for the invitation": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm really looking forward to it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that works perfectly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll definitely be there": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd love that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "sounds like a plan": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i can't": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "unfortunately, i'm not able to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i already have plans": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "maybe another time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm really sorry but": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i won't be able to make it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "thanks so much for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm tied up with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it sounds wonderful but": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll have to take a rain check": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my apologies, i'm already booked": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i wish i could": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's very kind of you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure i can commit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "make yourself at home": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "can i get you anything": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "thanks for having me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it was lovely to see you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i really appreciate you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let me know if you need": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "don't worry about a thing": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll help clear up": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it was a pleasure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how have you been": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what have you been up to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been ages": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should catch up properly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "tell me all about it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was just thinking of you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how's everything going": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's good to see you": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "keep me in the loop": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we must do this again soon": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i'm being honest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to clarify": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "having said that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i mean, it's not": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i suppose you could say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's hard to say": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i wouldn't go that far": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i mean is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "would you be interested in": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's try for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm pretty flexible": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what time suits you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll keep you posted": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm really keen to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd be happy to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we could always": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "feel free to bring": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it would be great to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i have to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a prior engagement": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm double booked": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll have to pass": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not feeling up to it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a shame i can't": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i had a wonderful time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to contribute": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how's life treating you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "fill me in on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's great to finally": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so glad we could": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's good to hear from you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i've been meaning to ask": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "speaking of which": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "anyway, getting back to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "where were we": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to cut a long story short": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "long time no see": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how are things shaping up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's the latest with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm curious to know": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm keen to hear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm available to meet": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's coordinate our schedules": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to help out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll give you a call": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll confirm closer to the date": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll be in touch": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "would you care to join us": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's make a plan": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to go with the flow": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's aim for next week": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll make the arrangements": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "keep me posted": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm keen to hear more": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to chip in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll bring something to share": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i have firm plans": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll get back to you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's touch base soon": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's been too long": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how have things been": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's new with you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad we could make it work": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was lovely catching up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i really enjoyed myself": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "thanks for having me over": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll see you there": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm looking forward to seeing you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's set a date": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to host this time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll bring a dessert": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm not sure i can make it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll let you know": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm swamped with work": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i'm double-booked": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll get the next round": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's on me": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's catch up over coffee": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just checking in": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm free most evenings": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what are your thoughts on that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to reschedule": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll drop you a line": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm looking forward to hearing from you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to pick you up": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just about to head out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm running a little late": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   }
+  }
+ }
+}

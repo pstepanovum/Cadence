@@ -21,7 +21,7 @@ import { deliverPending, mailKey, queueMail } from "./email/queue";
 import { readSummary } from "./sync";
 
 /** Collections that are Plus detail, purged after a lapse. */
-export const DETAIL_COLLECTIONS = ["srs", "mastery", "attempts", "coachSessions", "devices", "lessonAttempts", "lessonSessions", "conversationProgress", "moduleProgress"] as const;
+export const DETAIL_COLLECTIONS = ["srs", "mastery", "attempts", "coachSessions", "devices", "advanced", "lessonAttempts", "lessonSessions", "conversationProgress", "moduleProgress"] as const;
 
 export const BADGE_STREAKS = [7, 14, 30, 60, 100, 200, 365] as const;
 

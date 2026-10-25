@@ -1,0 +1,93 @@
+{
+ "format": 1,
+ "id": "fossil.contrastive-stress",
+ "area": "intonation",
+ "title": "Stress for contrast and focus",
+ "what": "not moving the main stress to the new or contrasted word ('I said TUESday, not Thursday'; 'It's not MY problem')",
+ "summary": "This subtle prosodic error often persists because it doesn't impede grammatical correctness, making it hard to self-correct. However, it can lead to misunderstandings, diminish the impact of your message, and make your speech sound less natural to native listeners.",
+ "listenFor": "Pay attention to whether the most important word in your sentence receives the primary stress, especially when correcting or contrasting information.",
+ "grammarPointIds": [],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "He said he would call, not E-mail.",
+   "right": "He said he would CALL, not email.",
+   "note": "Stress on 'call' clarifies the intended action."
+  }
+ ],
+ "drills": [
+  "I specifically requested the red folder, not the blue one.",
+  "We need to focus on the core issues, not the peripheral details.",
+  "She explicitly stated that the deadline is Friday, not next Monday.",
+  "It's not my responsibility to manage their budget; that's their job.",
+  "The report clearly indicates a significant increase, not a minor fluctuation.",
+  "He emphasized that the decision was final, with no room for further negotiation.",
+  "Are you sure you want to invest in this project, or just observe its progress?",
+  "The primary objective is to reduce costs, not merely maintain current spending levels.",
+  "I thought you said the meeting was at two, not three o'clock this afternoon.",
+  "We must prioritize quality over quantity in our production process."
+ ],
+ "probes": [
+  {
+   "sentence": "Did you mean the first draft, or the final version of the document?"
+  },
+  {
+   "sentence": "It's crucial to understand that this policy applies to everyone, not just a select few."
+  },
+  {
+   "sentence": "I distinctly remember saying we should postpone the launch, not cancel it entirely."
+  },
+  {
+   "sentence": "The committee decided to reallocate the funds, rather than request additional capital."
+  },
+  {
+   "sentence": "Are you suggesting we increase the budget, or simply optimize existing resources?"
+  },
+  {
+   "sentence": "He confirmed that the new regulations will affect all international transactions."
+  }
+ ],
+ "pairs": [],
+ "stress": [
+  {
+   "text": "I thought you said the meeting was on Tuesday.",
+   "marked": "I thought you said the meeting was on TUESday.",
+   "note": "Stress on 'Tuesday' as it's the new, key piece of information."
+  },
+  {
+   "text": "No, I said it was on Wednesday.",
+   "marked": "No, I said it was on WEDNESday.",
+   "note": "Stress on 'Wednesday' to correct the previous statement."
+  },
+  {
+   "text": "It's not my responsibility to fix this.",
+   "marked": "It's not MY responsibility to fix this.",
+   "note": "Stress on 'my' to emphasize personal non-involvement."
+  },
+  {
+   "text": "We need to focus on the actual problem, not the symptoms.",
+   "marked": "We need to focus on the ACTUAL problem, not the symptoms.",
+   "note": "Stress on 'actual' to distinguish from 'symptoms'."
+  },
+  {
+   "text": "Are you sure you want to proceed with this plan?",
+   "marked": "Are you SURE you want to proceed with this plan?",
+   "note": "Stress on 'sure' to question certainty."
+  },
+  {
+   "text": "I specifically asked for the larger size.",
+   "marked": "I SPECIFICALLY asked for the larger size.",
+   "note": "Stress on 'specifically' to emphasize the precise request."
+  },
+  {
+   "text": "The report clearly states the opposite conclusion.",
+   "marked": "The report CLEARLY states the opposite conclusion.",
+   "note": "Stress on 'clearly' to emphasize the unambiguous nature of the report."
+  },
+  {
+   "text": "He didn't just suggest it; he insisted on it.",
+   "marked": "He didn't just SUGGEST it; he INSISTED on it.",
+   "note": "Stress on 'suggest' and 'insisted' for contrast and emphasis."
+  }
+ ]
+}

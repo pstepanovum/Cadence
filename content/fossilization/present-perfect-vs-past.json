@@ -1,0 +1,64 @@
+{
+ "format": 1,
+ "id": "fossil.present-perfect-vs-past",
+ "area": "grammar",
+ "title": "Present perfect or past simple",
+ "what": "using the present perfect with a finished time ('I have seen him yesterday') or the past simple for life experience and recent news",
+ "summary": "This error persists because the distinction between finished and unfinished time can be subtle, especially when the past event has present relevance. It can lead to misunderstandings about the recency or ongoing nature of information.",
+ "listenFor": "Pay attention to whether you are discussing a specific past event or an experience relevant to the present moment.",
+ "grammarPointIds": [
+  "gp.present-perfect-vs-past-simple"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "I have seen that documentary last night.",
+   "right": "I saw that documentary last night.",
+   "note": "A specific past time adverbial requires the past simple."
+  },
+  {
+   "wrong": "We lived in this neighborhood since 2015.",
+   "right": "We have lived in this neighborhood since 2015.",
+   "note": "Duration continuing to the present uses the present perfect."
+  },
+  {
+   "wrong": "I have visited Berlin in 2019 for a conference.",
+   "right": "I visited Berlin in 2019 for a conference.",
+   "note": "A specific past year requires the past simple."
+  }
+ ],
+ "drills": [
+  "We have successfully implemented the new software system.",
+  "She has never encountered such a complex legal challenge.",
+  "The team has been working on this strategic plan for months.",
+  "I have already reviewed the financial statements for the quarter.",
+  "Have you ever considered investing in emerging markets?",
+  "Our company has expanded its global presence significantly.",
+  "He has just returned from an intensive training seminar.",
+  "They have not yet finalized the terms of the acquisition.",
+  "I have learned a great deal from my previous leadership roles.",
+  "The economic landscape has changed dramatically over the past decade."
+ ],
+ "probes": [
+  {
+   "sentence": "I have completed my executive MBA in 2021.",
+   "answers": [
+    "I completed my executive MBA in 2021."
+   ]
+  },
+  {
+   "sentence": "The CEO has announced the new policy yesterday.",
+   "answers": [
+    "The CEO announced the new policy yesterday."
+   ]
+  },
+  {
+   "sentence": "I didn't see her for ages.",
+   "answers": [
+    "I haven't seen her for ages."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

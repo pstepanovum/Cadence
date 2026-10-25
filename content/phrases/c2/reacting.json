@@ -1,0 +1,2299 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "reacting",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "I can only imagine",
+     "kind": "chunk",
+     "form": "I can only imagine",
+     "meaning": "Expresses empathy by acknowledging the difficulty of another's experience.",
+     "example": "You've been working non-stop for weeks; I can only imagine how exhausted you must be.",
+     "plain": "You've been working non-stop for weeks; I understand you must be very exhausted.",
+     "note": "A common empathetic response, showing understanding without claiming to fully know."
+    },
+    {
+     "text": "That must be tough",
+     "kind": "chunk",
+     "form": "That must be tough",
+     "meaning": "Acknowledges the difficulty of someone's situation, showing sympathy.",
+     "example": "Losing your pet after so many years, that must be tough to deal with.",
+     "plain": "Losing your pet after so many years, that is very difficult to deal with.",
+     "note": "A direct yet empathetic way to acknowledge someone's hardship."
+    },
+    {
+     "text": "I'm so sorry to hear that",
+     "kind": "chunk",
+     "form": "I'm so sorry to hear that",
+     "meaning": "Expresses sincere sympathy or regret upon receiving bad news.",
+     "example": "Oh, I'm so sorry to hear that your project didn't get approved.",
+     "plain": "Oh, I regret hearing that your project didn't get approved.",
+     "note": "A standard and heartfelt expression of sympathy for unfortunate news."
+    },
+    {
+     "text": "It sounds like a lot",
+     "kind": "frame",
+     "form": "It sounds like a lot",
+     "meaning": "Suggests that a situation or task is overwhelming or demanding.",
+     "example": "You're managing three different teams? It sounds like a lot to handle.",
+     "plain": "You're managing three different teams? That seems like a very demanding task.",
+     "note": "An empathetic way to acknowledge someone's heavy workload or stress."
+    },
+    {
+     "text": "I completely understand why",
+     "kind": "frame",
+     "form": "I completely understand why",
+     "meaning": "Affirms full comprehension of someone's reasons or feelings.",
+     "example": "Given the circumstances, I completely understand why you decided to resign.",
+     "plain": "Given the circumstances, I fully comprehend your reasons for resigning.",
+     "note": "Used to show strong agreement and validation of someone's decision or emotion."
+    },
+    {
+     "text": "I know how frustrating it can be",
+     "kind": "frame",
+     "form": "I know how frustrating it can be",
+     "meaning": "Expresses empathy by relating to someone's experience of annoyance.",
+     "example": "Waiting for bureaucracy to move slowly, I know how frustrating it can be.",
+     "plain": "Waiting for bureaucracy to move slowly, I understand that is very annoying.",
+     "note": "A common empathetic phrase, often implying shared experience."
+    },
+    {
+     "text": "It's perfectly understandable",
+     "kind": "chunk",
+     "form": "It's perfectly understandable",
+     "meaning": "States that a feeling or reaction is entirely reasonable and justified.",
+     "example": "After working overtime all week, it's perfectly understandable that you'd want to rest.",
+     "plain": "After working overtime all week, it is completely reasonable that you'd want to rest.",
+     "note": "A reassuring phrase, validating someone's feelings or actions."
+    },
+    {
+     "text": "I wouldn't blame you for",
+     "kind": "frame",
+     "form": "I wouldn't blame you for",
+     "meaning": "Indicates that someone's reaction or decision is justified and expected.",
+     "example": "After that treatment, I wouldn't blame you for wanting to find a new job.",
+     "plain": "After that treatment, I would not criticize you for wanting to find a new job.",
+     "note": "Shows strong support and validation for someone's potentially strong reaction."
+    },
+    {
+     "text": "I can see why you'd feel",
+     "kind": "frame",
+     "form": "I can see why you'd feel",
+     "meaning": "Expresses understanding of the reasons behind someone's emotions.",
+     "example": "With all the changes, I can see why you'd feel a bit overwhelmed.",
+     "plain": "With all the changes, I understand the reasons for you feeling a bit overwhelmed.",
+     "note": "A gentle way to acknowledge and validate someone's emotional state."
+    },
+    {
+     "text": "That's a real shame",
+     "kind": "chunk",
+     "form": "That's a real shame",
+     "meaning": "Expresses disappointment or regret about an unfortunate situation.",
+     "example": "Oh, the concert was cancelled? That's a real shame, I was looking forward to it.",
+     "plain": "Oh, the concert was cancelled? That is very disappointing, I was looking forward to it.",
+     "note": "A common, informal expression of disappointment or mild sympathy."
+    },
+    {
+     "text": "What a pity",
+     "kind": "chunk",
+     "form": "What a pity",
+     "meaning": "Expresses regret or sadness about something unfortunate.",
+     "example": "What a pity that your flight was delayed; I hope you still make it on time.",
+     "plain": "It is regrettable that your flight was delayed; I hope you still make it on time.",
+     "note": "A slightly more formal or classic way to express regret than \"that's a shame.\""
+    },
+    {
+     "text": "I appreciate that must be",
+     "kind": "frame",
+     "form": "I appreciate that must be",
+     "meaning": "Shows understanding and respect for someone's challenging experience.",
+     "example": "I appreciate that must be incredibly frustrating, but we need to find a solution.",
+     "plain": "I understand that is incredibly frustrating, but we need to find a solution.",
+     "note": "A polite and empathetic opening, often used before suggesting a path forward."
+    },
+    {
+     "text": "That's wonderful news",
+     "kind": "collocation",
+     "form": "That's wonderful news",
+     "meaning": "Expresses strong positive reaction to good information.",
+     "example": "You got the promotion? That's wonderful news, congratulations!",
+     "plain": "You got the promotion? That is very good information, congratulations!",
+     "note": "A standard and enthusiastic way to react to positive developments."
+    },
+    {
+     "text": "How absolutely delightful",
+     "kind": "chunk",
+     "form": "How absolutely delightful",
+     "meaning": "Expresses strong pleasure or joy about something.",
+     "example": "Oh, a surprise visit from your sister? How absolutely delightful!",
+     "plain": "Oh, a surprise visit from your sister? That is very pleasing!",
+     "note": "A slightly more formal or effusive expression of joy."
+    },
+    {
+     "text": "I'm thrilled for you",
+     "kind": "chunk",
+     "form": "I'm thrilled for you",
+     "meaning": "Expresses great happiness on behalf of someone else's good fortune.",
+     "example": "Hearing about your engagement, I'm thrilled for you both!",
+     "plain": "Hearing about your engagement, I am very happy for you both!",
+     "note": "A common and warm expression of shared joy."
+    },
+    {
+     "text": "That's fantastic",
+     "kind": "chunk",
+     "form": "That's fantastic",
+     "meaning": "Expresses strong approval or excitement about something positive.",
+     "example": "The project was a success? That's fantastic, well done everyone!",
+     "plain": "The project was a success? That is excellent, well done everyone!",
+     "note": "A very common and versatile expression of positive reaction."
+    },
+    {
+     "text": "What a pleasant surprise",
+     "kind": "collocation",
+     "form": "What a pleasant surprise",
+     "meaning": "Expresses mild delight or happiness about an unexpected positive event.",
+     "example": "Seeing you here, what a pleasant surprise! I didn't expect you until next week.",
+     "plain": "Seeing you here, that is a nice unexpected event! I didn't expect you until next week.",
+     "note": "A polite and common way to react to an unexpected positive encounter."
+    },
+    {
+     "text": "I couldn't be happier for you",
+     "kind": "frame",
+     "form": "I couldn't be happier for you",
+     "meaning": "Expresses the highest degree of happiness for someone else's success or joy.",
+     "example": "After all your hard work, I couldn't be happier for you getting that scholarship.",
+     "plain": "After all your hard work, I am extremely happy for you getting that scholarship.",
+     "note": "A very strong and sincere expression of shared joy."
+    },
+    {
+     "text": "That's truly excellent",
+     "kind": "chunk",
+     "form": "That's truly excellent",
+     "meaning": "Emphasizes the high quality or positive nature of something.",
+     "example": "Your presentation was so clear and insightful; that's truly excellent work.",
+     "plain": "Your presentation was so clear and insightful; that is genuinely superb work.",
+     "note": "A slightly more formal or emphatic way to praise or react positively."
+    },
+    {
+     "text": "I'm so pleased to hear",
+     "kind": "frame",
+     "form": "I'm so pleased to hear",
+     "meaning": "Expresses happiness or satisfaction upon receiving good news.",
+     "example": "I'm so pleased to hear that your recovery is going well.",
+     "plain": "I am very happy to hear that your recovery is going well.",
+     "note": "A polite and common way to express happiness about someone's positive situation."
+    },
+    {
+     "text": "That's a huge relief",
+     "kind": "collocation",
+     "form": "That's a huge relief",
+     "meaning": "Indicates great comfort or reassurance after a period of worry or stress.",
+     "example": "The test results came back negative, so that's a huge relief for everyone involved.",
+     "plain": "The test results came back negative, which makes everyone feel much better.",
+     "note": "Used to express significant comfort after a stressful situation. Very common."
+    },
+    {
+     "text": "It's great to hear",
+     "kind": "frame",
+     "form": "It's great to hear",
+     "meaning": "Expresses general satisfaction or happiness about information received.",
+     "example": "It's great to hear that you're settling into your new role so well.",
+     "plain": "I am happy to hear that you're settling into your new role so well.",
+     "note": "A versatile and common phrase for reacting positively to news."
+    },
+    {
+     "text": "I must admit I'm a little surprised",
+     "kind": "frame",
+     "form": "I must admit I'm a little surprised",
+     "meaning": "Expresses mild surprise, often implying a hint of disappointment or skepticism.",
+     "example": "Given his experience, I must admit I'm a little surprised by his decision.",
+     "plain": "Given his experience, I am somewhat surprised by his decision.",
+     "note": "A polite and understated way to express unexpectedness, often with a negative nuance."
+    },
+    {
+     "text": "I'm not entirely convinced",
+     "kind": "frame",
+     "form": "I'm not entirely convinced",
+     "meaning": "Expresses polite skepticism or mild disagreement without being confrontational.",
+     "example": "While the proposal sounds good on paper, I'm not entirely convinced it's feasible in practice.",
+     "plain": "While the proposal sounds good on paper, I doubt it's feasible in practice.",
+     "note": "A polite way to express doubt or partial disagreement. Common in professional settings."
+    },
+    {
+     "text": "I'm a little disappointed by",
+     "kind": "frame",
+     "form": "I'm a little disappointed by",
+     "meaning": "Expresses mild dissatisfaction or regret about something.",
+     "example": "I'm a little disappointed by the lack of progress on the project.",
+     "plain": "I am somewhat dissatisfied with the lack of progress on the project.",
+     "note": "A common and polite way to express mild disappointment."
+    },
+    {
+     "text": "I had rather hoped",
+     "kind": "frame",
+     "form": "I had rather hoped",
+     "meaning": "Expresses a polite, often understated, disappointment about an outcome.",
+     "example": "I had rather hoped we could finish this by Friday, but it seems unlikely now.",
+     "plain": "I had hoped we could finish this by Friday, but it seems unlikely now.",
+     "note": "A slightly formal and understated way to express disappointment."
+    },
+    {
+     "text": "I'm afraid I don't quite agree",
+     "kind": "frame",
+     "form": "I'm afraid I don't quite agree",
+     "meaning": "A polite and indirect way to express disagreement.",
+     "example": "I'm afraid I don't quite agree with your assessment of the market trends.",
+     "plain": "I politely disagree with your assessment of the market trends.",
+     "note": "A very polite and common way to express disagreement, often in professional contexts."
+    },
+    {
+     "text": "I'm not sure I follow",
+     "kind": "frame",
+     "form": "I'm not sure I follow",
+     "meaning": "Indicates that one doesn't fully understand what someone is saying.",
+     "example": "You lost me at the technical details; I'm not sure I follow your logic.",
+     "plain": "You lost me at the technical details; I don't understand your logic.",
+     "note": "A polite way to ask for clarification or express confusion."
+    },
+    {
+     "text": "I'm not sure that's entirely fair",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely fair",
+     "meaning": "Expresses polite disagreement or concern about perceived injustice.",
+     "example": "While I understand the policy, I'm not sure that's entirely fair to new employees.",
+     "plain": "While I understand the policy, I think it might be unfair to new employees.",
+     "note": "A diplomatic way to question fairness or express mild objection."
+    },
+    {
+     "text": "I'm a little concerned about",
+     "kind": "frame",
+     "form": "I'm a little concerned about",
+     "meaning": "Expresses mild worry or apprehension regarding a situation.",
+     "example": "I'm a little concerned about the tight deadline for this complex project.",
+     "plain": "I am somewhat worried about the tight deadline for this complex project.",
+     "note": "A polite and common way to voice a minor worry or reservation."
+    },
+    {
+     "text": "I'm not sure how to feel about that",
+     "kind": "frame",
+     "form": "I'm not sure how to feel about that",
+     "meaning": "Expresses mixed feelings, uncertainty, or mild confusion about news.",
+     "example": "They've changed the entire project scope; I'm not sure how to feel about that.",
+     "plain": "They've changed the entire project scope; I have mixed feelings about it.",
+     "note": "A common way to express ambivalence or uncertainty about a development."
+    },
+    {
+     "text": "I'm not sure I'm comfortable with",
+     "kind": "frame",
+     "form": "I'm not sure I'm comfortable with",
+     "meaning": "Expresses polite reluctance or objection to a proposal or situation.",
+     "example": "I'm not sure I'm comfortable with the new policy regarding remote work.",
+     "plain": "I am somewhat reluctant to accept the new policy regarding remote work.",
+     "note": "A diplomatic way to express unease or disagreement without being confrontational."
+    },
+    {
+     "text": "What a relief",
+     "kind": "chunk",
+     "form": "What a relief",
+     "meaning": "Expresses immediate comfort or reassurance after a period of worry.",
+     "example": "The flight wasn't cancelled after all; what a relief!",
+     "plain": "The flight wasn't cancelled after all; that is very comforting!",
+     "note": "A very common and direct expression of relief."
+    },
+    {
+     "text": "That's a huge weight off my mind",
+     "kind": "collocation",
+     "form": "That's a huge weight off my mind",
+     "meaning": "Expresses significant relief from a burden of worry or responsibility.",
+     "example": "Knowing the children are safe, that's a huge weight off my mind.",
+     "plain": "Knowing the children are safe, I feel much less worried.",
+     "note": "A very common and strong expression of relief."
+    },
+    {
+     "text": "I'm so relieved to hear",
+     "kind": "frame",
+     "form": "I'm so relieved to hear",
+     "meaning": "Expresses great comfort or reassurance upon receiving specific news.",
+     "example": "I'm so relieved to hear that your surgery went well.",
+     "plain": "I am very comforted to hear that your surgery went well.",
+     "note": "A common and sincere way to express relief about someone's situation."
+    },
+    {
+     "text": "Thank goodness for that",
+     "kind": "chunk",
+     "form": "Thank goodness for that",
+     "meaning": "Expresses strong relief or gratitude for a positive outcome.",
+     "example": "The train arrived just in time; thank goodness for that!",
+     "plain": "The train arrived just in time; I am very grateful for that!",
+     "note": "A common, slightly informal expression of relief."
+    },
+    {
+     "text": "It's good to know",
+     "kind": "frame",
+     "form": "It's good to know",
+     "meaning": "Expresses satisfaction or reassurance about information received.",
+     "example": "It's good to know that the project is still on schedule.",
+     "plain": "I am satisfied to know that the project is still on schedule.",
+     "note": "A versatile and common phrase for reacting positively to information."
+    },
+    {
+     "text": "I'm quite surprised to hear that",
+     "kind": "frame",
+     "form": "I'm quite surprised to hear that",
+     "meaning": "Expresses a moderate level of unexpectedness about information.",
+     "example": "I'm quite surprised to hear that they're closing the branch office.",
+     "plain": "I am moderately surprised to hear that they're closing the branch office.",
+     "note": "A polite and common way to express surprise."
+    },
+    {
+     "text": "That's unexpected",
+     "kind": "chunk",
+     "form": "That's unexpected",
+     "meaning": "States that something was not anticipated or foreseen.",
+     "example": "The sudden change in leadership? That's unexpected, to say the least.",
+     "plain": "The sudden change in leadership? That was not anticipated, to say the least.",
+     "note": "A concise and neutral way to express surprise."
+    },
+    {
+     "text": "I hadn't anticipated that",
+     "kind": "frame",
+     "form": "I hadn't anticipated that",
+     "meaning": "Expresses that something was not foreseen or prepared for.",
+     "example": "The sudden surge in demand, I hadn't anticipated that at all.",
+     "plain": "The sudden surge in demand, I had not foreseen that at all.",
+     "note": "A slightly more formal way to express surprise or lack of foresight."
+    },
+    {
+     "text": "Well, that's certainly something",
+     "kind": "chunk",
+     "form": "Well, that's certainly something",
+     "meaning": "An understated, often ironic, reaction to something unusual or significant.",
+     "example": "He just announced he's moving to Antarctica? Well, that's certainly something.",
+     "plain": "He just announced he's moving to Antarctica? That is certainly unusual.",
+     "note": "A common, understated, and often ironic reaction to surprising or odd news."
+    },
+    {
+     "text": "I see what you mean",
+     "kind": "frame",
+     "form": "I see what you mean",
+     "meaning": "Indicates understanding or acknowledgement of someone's point.",
+     "example": "Ah, I see what you mean about the project's potential risks now.",
+     "plain": "Ah, I understand your point about the project's potential risks now.",
+     "note": "A common phrase to confirm understanding, often after initial confusion."
+    },
+    {
+     "text": "That's an interesting development",
+     "kind": "collocation",
+     "form": "That's an interesting development",
+     "meaning": "A neutral or slightly understated reaction to new information or a change.",
+     "example": "The new competitor entering the market? That's an interesting development.",
+     "plain": "The new competitor entering the market? That is a noteworthy change.",
+     "note": "A polite and often diplomatic way to acknowledge new information, sometimes with implied caution."
+    },
+    {
+     "text": "I'm not sure what to make of that",
+     "kind": "frame",
+     "form": "I'm not sure what to make of that",
+     "meaning": "Expresses confusion or uncertainty about how to interpret something.",
+     "example": "The CEO's cryptic announcement, I'm not sure what to make of that.",
+     "plain": "The CEO's cryptic announcement, I don't know how to interpret it.",
+     "note": "A common way to express bewilderment or uncertainty about meaning."
+    },
+    {
+     "text": "That's food for thought",
+     "kind": "collocation",
+     "form": "That's food for thought",
+     "meaning": "Indicates that something provides material for careful consideration.",
+     "example": "Your perspective on the market trends, that's food for thought.",
+     "plain": "Your perspective on the market trends, that gives me something to think about.",
+     "note": "A common phrase for acknowledging a valuable or thought-provoking idea."
+    },
+    {
+     "text": "That's quite a turn of events",
+     "kind": "collocation",
+     "form": "That's quite a turn of events",
+     "meaning": "Expresses surprise or astonishment at an unexpected change in circumstances.",
+     "example": "The sudden resignation of the entire board? That's quite a turn of events.",
+     "plain": "The sudden resignation of the entire board? That is a very surprising change.",
+     "note": "A common expression for a significant and unexpected change in a situation."
+    },
+    {
+     "text": "It's certainly something to consider",
+     "kind": "frame",
+     "form": "It's certainly something to consider",
+     "meaning": "Acknowledges an idea or proposal as worthy of thought, often non-committally.",
+     "example": "Your suggestion for a new marketing strategy, it's certainly something to consider.",
+     "plain": "Your suggestion for a new marketing strategy, it is definitely worth thinking about.",
+     "note": "A polite, often diplomatic way to acknowledge an idea without fully endorsing it."
+    },
+    {
+     "text": "I'm intrigued by that",
+     "kind": "frame",
+     "form": "I'm intrigued by that",
+     "meaning": "Expresses curiosity or interest in something new or unusual.",
+     "example": "You mentioned a new approach to problem-solving; I'm intrigued by that.",
+     "plain": "You mentioned a new approach to problem-solving; I am curious about it.",
+     "note": "A polite and intellectual way to express interest."
+    },
+    {
+     "text": "That's certainly one way of looking at it",
+     "kind": "frame",
+     "form": "That's certainly one way of looking at it",
+     "meaning": "A diplomatic way to acknowledge a perspective without fully agreeing with it.",
+     "example": "You think the new policy is revolutionary? That's certainly one way of looking at it.",
+     "plain": "You think the new policy is revolutionary? That is one possible perspective.",
+     "note": "A common, often subtly ironic or skeptical, way to acknowledge a differing opinion."
+    },
+    {
+     "text": "I'm not sure I'd go that far",
+     "kind": "frame",
+     "form": "I'm not sure I'd go that far",
+     "meaning": "Expresses polite disagreement with an extreme statement or conclusion.",
+     "example": "Calling it a complete disaster? I'm not sure I'd go that far.",
+     "plain": "Calling it a complete disaster? I don't think it's that bad.",
+     "note": "A common, polite way to temper someone else's strong statement or opinion."
+    },
+    {
+     "text": "It's certainly a bold move",
+     "kind": "collocation",
+     "form": "It's certainly a bold move",
+     "meaning": "Describes an action as courageous or daring, often with implied risk.",
+     "example": "Launching a new product in this saturated market, it's certainly a bold move.",
+     "plain": "Launching a new product in this saturated market, that is a very daring action.",
+     "note": "A common phrase to describe a risky or audacious decision."
+    },
+    {
+     "text": "I'm not sure I'm entirely on board",
+     "kind": "frame",
+     "form": "I'm not sure I'm entirely on board",
+     "meaning": "Expresses partial disagreement or reluctance to fully support an idea.",
+     "example": "With the new restructuring plan, I'm not sure I'm entirely on board.",
+     "plain": "With the new restructuring plan, I am not fully in agreement.",
+     "note": "A polite and common way to express reservations or partial dissent."
+    },
+    {
+     "text": "I can relate to that",
+     "kind": "chunk",
+     "form": "I can relate to that",
+     "meaning": "Expresses empathy by indicating a shared experience or understanding.",
+     "example": "Dealing with endless paperwork, I can relate to that feeling of exhaustion.",
+     "plain": "Dealing with endless paperwork, I understand that feeling of exhaustion.",
+     "note": "A common, informal way to show empathy through shared experience."
+    },
+    {
+     "text": "That's a tough break",
+     "kind": "collocation",
+     "form": "That's a tough break",
+     "meaning": "Expresses sympathy for someone experiencing bad luck or misfortune.",
+     "example": "Missing out on the promotion by one vote, that's a tough break.",
+     "plain": "Missing out on the promotion by one vote, that is unfortunate.",
+     "note": "A common, informal expression of sympathy for bad luck."
+    },
+    {
+     "text": "My condolences",
+     "kind": "chunk",
+     "form": "My condolences",
+     "meaning": "Expresses formal sympathy for someone's loss or grief.",
+     "example": "Please accept my condolences on the passing of your grandmother.",
+     "plain": "Please accept my sympathy on the passing of your grandmother.",
+     "note": "A formal and traditional expression of sympathy for a death."
+    },
+    {
+     "text": "I'm genuinely sorry",
+     "kind": "chunk",
+     "form": "I'm genuinely sorry",
+     "meaning": "Expresses sincere regret or apology for something.",
+     "example": "I'm genuinely sorry for the misunderstanding; it was not my intention.",
+     "plain": "I am truly regretful for the misunderstanding; it was not my intention.",
+     "note": "A strong and sincere expression of apology or regret."
+    },
+    {
+     "text": "It's a crying shame",
+     "kind": "collocation",
+     "form": "It's a crying shame",
+     "meaning": "Expresses strong regret or disappointment about something unfortunate.",
+     "example": "It's a crying shame that such a talented artist never got recognition.",
+     "plain": "It is very regrettable that such a talented artist never got recognition.",
+     "note": "A common, slightly informal expression of strong regret or pity."
+    },
+    {
+     "text": "I'm absolutely delighted",
+     "kind": "chunk",
+     "form": "I'm absolutely delighted",
+     "meaning": "Expresses very strong pleasure or happiness.",
+     "example": "I'm absolutely delighted to hear about your successful fundraising campaign.",
+     "plain": "I am very happy to hear about your successful fundraising campaign.",
+     "note": "A strong and enthusiastic expression of happiness."
+    },
+    {
+     "text": "That's truly inspiring",
+     "kind": "collocation",
+     "form": "That's truly inspiring",
+     "meaning": "Expresses that something is genuinely motivating or uplifting.",
+     "example": "Her dedication to her work, despite challenges, that's truly inspiring.",
+     "plain": "Her dedication to her work, despite challenges, that is genuinely motivating.",
+     "note": "A common phrase to express admiration and motivation."
+    },
+    {
+     "text": "I'm over the moon",
+     "kind": "chunk",
+     "form": "I'm over the moon",
+     "meaning": "Expresses extreme happiness or excitement.",
+     "example": "My daughter got into her dream university; I'm over the moon!",
+     "plain": "My daughter got into her dream university; I am extremely happy!",
+     "note": "A very common, informal expression of intense joy."
+    },
+    {
+     "text": "It warms my heart",
+     "kind": "chunk",
+     "form": "It warms my heart",
+     "meaning": "Expresses that something evokes feelings of happiness, comfort, or tenderness.",
+     "example": "Seeing the community come together like that, it warms my heart.",
+     "plain": "Seeing the community come together like that, it makes me feel happy.",
+     "note": "A common, heartfelt expression of positive emotion."
+    },
+    {
+     "text": "I'm a bit put out",
+     "kind": "chunk",
+     "form": "I'm a bit put out",
+     "meaning": "Expresses mild annoyance or inconvenience.",
+     "example": "Having to rearrange my schedule at the last minute, I'm a bit put out.",
+     "plain": "Having to rearrange my schedule at the last minute, I am slightly annoyed.",
+     "note": "A common, understated British English expression for mild annoyance."
+    },
+    {
+     "text": "That's rather unfortunate",
+     "kind": "collocation",
+     "form": "That's rather unfortunate",
+     "meaning": "A polite and understated way to say something is regrettable or bad.",
+     "example": "The delay in the project timeline, that's rather unfortunate.",
+     "plain": "The delay in the project timeline, that is quite regrettable.",
+     "note": "A polite, slightly formal understatement for a negative situation."
+    },
+    {
+     "text": "I'm not best pleased",
+     "kind": "chunk",
+     "form": "I'm not best pleased",
+     "meaning": "An understated way to express significant displeasure or annoyance.",
+     "example": "After waiting an hour for the delivery, I'm not best pleased.",
+     "plain": "After waiting an hour for the delivery, I am quite annoyed.",
+     "note": "A common, understated British English expression for strong annoyance."
+    },
+    {
+     "text": "I'm quite relieved",
+     "kind": "chunk",
+     "form": "I'm quite relieved",
+     "meaning": "Expresses a moderate level of comfort or reassurance.",
+     "example": "The flight landed safely, so I'm quite relieved.",
+     "plain": "The flight landed safely, so I am moderately comforted.",
+     "note": "A common and polite way to express relief."
+    },
+    {
+     "text": "That's a huge weight lifted",
+     "kind": "collocation",
+     "form": "That's a huge weight lifted",
+     "meaning": "Expresses significant relief from a burden of worry or responsibility.",
+     "example": "Finishing the final exam, that's a huge weight lifted from my shoulders.",
+     "plain": "Finishing the final exam, I feel much less worried and burdened.",
+     "note": "A common and strong expression of relief, similar to \"off my mind.\""
+    },
+    {
+     "text": "I'm taken aback by",
+     "kind": "frame",
+     "form": "I'm taken aback by",
+     "meaning": "Expresses surprise or shock, often with a hint of disapproval.",
+     "example": "I'm taken aback by the sudden change in company policy.",
+     "plain": "I am surprised by the sudden change in company policy.",
+     "note": "A common expression for surprise or momentary shock, slightly more formal than \"a little taken aback.\""
+    },
+    {
+     "text": "It's a bit much to ask",
+     "kind": "frame",
+     "form": "It's a bit much to ask",
+     "meaning": "Suggests that a request is unreasonable or excessive.",
+     "example": "Expecting us to work unpaid overtime, it's a bit much to ask.",
+     "plain": "Expecting us to work unpaid overtime, that is an unreasonable request.",
+     "note": "A common, informal way to express disapproval of an excessive request."
+    },
+    {
+     "text": "I'm truly sorry for your loss",
+     "kind": "chunk",
+     "form": "I'm truly sorry for your loss",
+     "meaning": "Expresses deep sympathy and regret for someone's bereavement.",
+     "example": "I'm truly sorry for your loss; your father was a wonderful man.",
+     "plain": "I deeply regret your loss; your father was a wonderful man.",
+     "note": "A sincere and common expression of condolence for a death."
+    },
+    {
+     "text": "That's a real blow",
+     "kind": "collocation",
+     "form": "That's a real blow",
+     "meaning": "Describes an event as a significant setback or disappointment.",
+     "example": "Losing the contract at the last minute, that's a real blow to the team.",
+     "plain": "Losing the contract at the last minute, that is a significant disappointment to the team.",
+     "note": "A common, informal expression for a major disappointment or setback."
+    },
+    {
+     "text": "It's a tough pill to swallow",
+     "kind": "collocation",
+     "form": "It's a tough pill to swallow",
+     "meaning": "Describes something as a difficult or unpleasant truth to accept.",
+     "example": "Admitting the project failed, it's a tough pill to swallow for the team.",
+     "plain": "Admitting the project failed, that is a difficult truth for the team to accept.",
+     "note": "A common, informal idiom for accepting an unpleasant reality."
+    },
+    {
+     "text": "I'm absolutely thrilled",
+     "kind": "chunk",
+     "form": "I'm absolutely thrilled",
+     "meaning": "Expresses very strong excitement or happiness.",
+     "example": "I'm absolutely thrilled that we managed to secure the funding.",
+     "plain": "I am very excited that we managed to secure the funding.",
+     "note": "A strong and enthusiastic expression of happiness or excitement."
+    },
+    {
+     "text": "That's fantastic news",
+     "kind": "collocation",
+     "form": "That's fantastic news",
+     "meaning": "Expresses strong positive reaction to good information.",
+     "example": "Your promotion to director? That's fantastic news!",
+     "plain": "Your promotion to director? That is very good information!",
+     "note": "A common and enthusiastic way to react to positive developments."
+    },
+    {
+     "text": "I'm delighted to hear that",
+     "kind": "frame",
+     "form": "I'm delighted to hear that",
+     "meaning": "Expresses happiness or pleasure upon receiving good news.",
+     "example": "I'm delighted to hear that your family is doing so well.",
+     "plain": "I am happy to hear that your family is doing so well.",
+     "note": "A polite and common way to express happiness about someone's positive situation."
+    },
+    {
+     "text": "It's a real pleasure",
+     "kind": "collocation",
+     "form": "It's a real pleasure",
+     "meaning": "Expresses genuine enjoyment or satisfaction from an experience.",
+     "example": "Working with such a dedicated team, it's a real pleasure.",
+     "plain": "Working with such a dedicated team, that is genuinely enjoyable.",
+     "note": "A common and sincere expression of enjoyment or satisfaction."
+    },
+    {
+     "text": "I'm not entirely happy with",
+     "kind": "frame",
+     "form": "I'm not entirely happy with",
+     "meaning": "Expresses polite dissatisfaction or mild disapproval.",
+     "example": "I'm not entirely happy with the proposed changes to the schedule.",
+     "plain": "I am somewhat dissatisfied with the proposed changes to the schedule.",
+     "note": "A polite and common way to express mild dissatisfaction."
+    },
+    {
+     "text": "I'm rather annoyed by",
+     "kind": "frame",
+     "form": "I'm rather annoyed by",
+     "meaning": "Expresses mild to moderate irritation or displeasure.",
+     "example": "I'm rather annoyed by the constant interruptions during our meetings.",
+     "plain": "I am somewhat irritated by the constant interruptions during our meetings.",
+     "note": "A polite way to express annoyance, often used in British English."
+    },
+    {
+     "text": "That's a bit much to take in",
+     "kind": "frame",
+     "form": "That's a bit much to take in",
+     "meaning": "Suggests that information is overwhelming or difficult to process.",
+     "example": "All these new regulations at once, that's a bit much to take in.",
+     "plain": "All these new regulations at once, that is overwhelming to process.",
+     "note": "A common expression for feeling overwhelmed by too much information."
+    },
+    {
+     "text": "I'm not convinced that's wise",
+     "kind": "frame",
+     "form": "I'm not convinced that's wise",
+     "meaning": "Expresses polite skepticism about the prudence of a decision or action.",
+     "example": "While it's an option, I'm not convinced that's wise in the long run.",
+     "plain": "While it's an option, I doubt that is a good idea in the long run.",
+     "note": "A diplomatic way to express doubt about the wisdom of a choice."
+    },
+    {
+     "text": "I'm relieved to hear that",
+     "kind": "frame",
+     "form": "I'm relieved to hear that",
+     "meaning": "Expresses comfort or reassurance upon receiving specific news.",
+     "example": "I'm relieved to hear that the project deadline has been extended.",
+     "plain": "I am comforted to hear that the project deadline has been extended.",
+     "note": "A common and sincere way to express relief about a situation."
+    },
+    {
+     "text": "What a relief to know",
+     "kind": "frame",
+     "form": "What a relief to know",
+     "meaning": "Expresses comfort or reassurance upon gaining specific knowledge.",
+     "example": "What a relief to know that the missing documents have been found.",
+     "plain": "It is very comforting to know that the missing documents have been found.",
+     "note": "A common expression of relief, emphasizing the knowledge gained."
+    },
+    {
+     "text": "That's a huge relief to everyone",
+     "kind": "collocation",
+     "form": "That's a huge relief to everyone",
+     "meaning": "Indicates widespread comfort or reassurance after a period of worry.",
+     "example": "The successful audit, that's a huge relief to everyone in the department.",
+     "plain": "The successful audit, that makes everyone in the department feel much better.",
+     "note": "Used to express significant comfort shared by a group."
+    },
+    {
+     "text": "That's rather surprising",
+     "kind": "collocation",
+     "form": "That's rather surprising",
+     "meaning": "A polite and understated way to say something is unexpected.",
+     "example": "The sudden policy reversal, that's rather surprising given previous statements.",
+     "plain": "The sudden policy reversal, that is quite unexpected given previous statements.",
+     "note": "A polite, slightly formal understatement for an unexpected situation."
+    },
+    {
+     "text": "I hadn't expected that",
+     "kind": "frame",
+     "form": "I hadn't expected that",
+     "meaning": "Expresses that something was not foreseen or predicted.",
+     "example": "The sudden resignation of the CEO, I hadn't expected that at all.",
+     "plain": "The sudden resignation of the CEO, I had not predicted that at all.",
+     "note": "A common way to express surprise or lack of foresight."
+    },
+    {
+     "text": "Well, that's certainly unexpected",
+     "kind": "chunk",
+     "form": "Well, that's certainly unexpected",
+     "meaning": "Emphasizes the unexpected nature of news, often with a neutral or slightly negative tone.",
+     "example": "They decided to merge with our competitor? Well, that's certainly unexpected.",
+     "plain": "They decided to merge with our competitor? That is definitely not what we expected.",
+     "note": "A common, slightly understated reaction to surprising news."
+    },
+    {
+     "text": "I can appreciate that",
+     "kind": "chunk",
+     "form": "I can appreciate that",
+     "meaning": "Acknowledges and understands someone's point or situation, often empathetically.",
+     "example": "You're feeling overwhelmed by the workload; I can appreciate that.",
+     "plain": "You're feeling overwhelmed by the workload; I understand that.",
+     "note": "A polite and empathetic way to acknowledge someone's feelings or perspective."
+    },
+    {
+     "text": "That's an interesting perspective",
+     "kind": "collocation",
+     "form": "That's an interesting perspective",
+     "meaning": "Acknowledges an idea or viewpoint as noteworthy, often without full agreement.",
+     "example": "Your take on the market shift, that's an interesting perspective.",
+     "plain": "Your take on the market shift, that is a noteworthy viewpoint.",
+     "note": "A polite and often diplomatic way to acknowledge a different opinion."
+    },
+    {
+     "text": "I'm not entirely sure",
+     "kind": "frame",
+     "form": "I'm not entirely sure",
+     "meaning": "Expresses uncertainty or hesitation about something.",
+     "example": "I'm not entirely sure that's the best approach for this problem.",
+     "plain": "I am somewhat uncertain that is the best approach for this problem.",
+     "note": "A common and polite way to express doubt or hesitation."
+    },
+    {
+     "text": "It certainly makes you think",
+     "kind": "frame",
+     "form": "It certainly makes you think",
+     "meaning": "Suggests that something prompts careful consideration or reflection.",
+     "example": "The implications of AI on employment, it certainly makes you think.",
+     "plain": "The implications of AI on employment, that definitely prompts reflection.",
+     "note": "A common phrase for acknowledging a thought-provoking topic."
+    },
+    {
+     "text": "That's a fair point",
+     "kind": "collocation",
+     "form": "That's a fair point",
+     "meaning": "Acknowledges that an argument or observation is reasonable and valid.",
+     "example": "You're right about the budget constraints; that's a fair point.",
+     "plain": "You're right about the budget constraints; that is a valid observation.",
+     "note": "A common and polite way to concede a point in a discussion."
+    },
+    {
+     "text": "I'm not sure I agree with that",
+     "kind": "frame",
+     "form": "I'm not sure I agree with that",
+     "meaning": "Expresses polite disagreement without being confrontational.",
+     "example": "I'm not sure I agree with that assessment of the team's performance.",
+     "plain": "I politely disagree with that assessment of the team's performance.",
+     "note": "A common and diplomatic way to express disagreement."
+    },
+    {
+     "text": "I'm not sure I follow your logic",
+     "kind": "frame",
+     "form": "I'm not sure I follow your logic",
+     "meaning": "Indicates that one doesn't fully understand someone's reasoning.",
+     "example": "Could you explain that again? I'm not sure I follow your logic.",
+     "plain": "Could you explain that again? I don't understand your reasoning.",
+     "note": "A polite way to ask for clarification of someone's argument."
+    },
+    {
+     "text": "That's a bit much to ask for",
+     "kind": "frame",
+     "form": "That's a bit much to ask for",
+     "meaning": "Suggests that a request is unreasonable or excessive.",
+     "example": "Expecting us to work all weekend, that's a bit much to ask for.",
+     "plain": "Expecting us to work all weekend, that is an unreasonable request.",
+     "note": "A common, informal way to express disapproval of an excessive request."
+    },
+    {
+     "text": "I'm not entirely convinced by",
+     "kind": "frame",
+     "form": "I'm not entirely convinced by",
+     "meaning": "Expresses polite skepticism or mild disagreement with an argument.",
+     "example": "I'm not entirely convinced by their arguments for the new policy.",
+     "plain": "I am somewhat skeptical of their arguments for the new policy.",
+     "note": "A polite way to express doubt or partial disagreement with an argument."
+    },
+    {
+     "text": "I'm not sure I'm comfortable saying",
+     "kind": "frame",
+     "form": "I'm not sure I'm comfortable saying",
+     "meaning": "Expresses reluctance to state something, often due to sensitivity or uncertainty.",
+     "example": "I'm not sure I'm comfortable saying anything definitive at this stage.",
+     "plain": "I am reluctant to say anything definitive at this stage.",
+     "note": "A polite way to decline to comment or express an opinion."
+    },
+    {
+     "text": "That's a bit of a stretch",
+     "kind": "collocation",
+     "form": "That's a bit of a stretch",
+     "meaning": "Suggests that something is an exaggeration or unlikely to be true.",
+     "example": "Calling that a success, I think that's a bit of a stretch.",
+     "plain": "Calling that a success, I think that is an exaggeration.",
+     "note": "A common, informal way to express skepticism about a claim."
+    },
+    {
+     "text": "I'm not sure I'd put it that way",
+     "kind": "frame",
+     "form": "I'm not sure I'd put it that way",
+     "meaning": "Expresses polite disagreement with someone's choice of words or framing.",
+     "example": "While I understand, I'm not sure I'd put it that way myself.",
+     "plain": "While I understand, I would not phrase it like that myself.",
+     "note": "A diplomatic way to suggest a different, perhaps softer, phrasing."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "I can well imagine",
+     "kind": "chunk",
+     "form": "I can well imagine",
+     "meaning": "Expresses understanding of how difficult or challenging a situation must be.",
+     "example": "The project deadline was moved up by a month, so I can well imagine the pressure you're under.",
+     "plain": "The project deadline was moved up by a month, so I understand the pressure you're under.",
+     "note": "A polite and empathetic way to acknowledge someone's difficult experience."
+    },
+    {
+     "text": "That must be quite something",
+     "kind": "chunk",
+     "form": "That must be quite something",
+     "meaning": "Acknowledges an experience as significant or challenging, often with a hint of empathy.",
+     "example": "Living abroad for five years without speaking the language first, that must be quite something.",
+     "plain": "Living abroad for five years without speaking the language first, that must have been a significant challenge.",
+     "note": "Used to acknowledge a remarkable or difficult experience, often with a sense of awe or empathy."
+    },
+    {
+     "text": "It sounds rather challenging",
+     "kind": "chunk",
+     "form": "It sounds rather challenging",
+     "meaning": "Expresses mild sympathy or understanding that a situation is difficult, often an understatement.",
+     "example": "Having to manage two major projects simultaneously, it sounds rather challenging.",
+     "plain": "Having to manage two major projects simultaneously sounds very difficult.",
+     "note": "A polite, understated way to acknowledge difficulty, suitable for professional contexts."
+    },
+    {
+     "text": "I can appreciate your concern",
+     "kind": "chunk",
+     "form": "I can appreciate your concern",
+     "meaning": "Acknowledges and validates someone's worries or anxieties about a situation.",
+     "example": "Given the recent changes in policy, I can appreciate your concern about job security.",
+     "plain": "Given the recent changes in policy, I understand why you are worried about job security.",
+     "note": "A diplomatic and empathetic phrase, often used in professional or sensitive discussions."
+    },
+    {
+     "text": "I quite understand why",
+     "kind": "frame",
+     "form": "I quite understand why",
+     "meaning": "Expresses full comprehension of someone's reasons or feelings.",
+     "example": "After working so many extra hours, I quite understand why you'd want to take a long weekend.",
+     "plain": "After working so many extra hours, I completely understand your desire for a long weekend.",
+     "note": "A polite and empathetic way to show you grasp someone's perspective or motivation."
+    },
+    {
+     "text": "That's a difficult position",
+     "kind": "collocation",
+     "form": "That's a difficult position",
+     "meaning": "Acknowledges that someone is in a tough or awkward situation.",
+     "example": "Having to choose between two good job offers, that's a difficult position to be in.",
+     "plain": "Having to choose between two good job offers is a tough situation.",
+     "note": "Used to express empathy for someone facing a hard choice or circumstance."
+    },
+    {
+     "text": "It's understandable, of course",
+     "kind": "chunk",
+     "form": "It's understandable, of course",
+     "meaning": "Acknowledges that a reaction or situation is completely logical and expected.",
+     "example": "After working so many extra hours, it's understandable, of course, that you'd be tired.",
+     "plain": "After working so many extra hours, it is completely logical that you would be tired.",
+     "note": "A polite and empathetic way to validate someone's feelings or situation."
+    },
+    {
+     "text": "It's a lot to take on",
+     "kind": "chunk",
+     "form": "It's a lot to take on",
+     "meaning": "Acknowledges that a task or responsibility is substantial and potentially overwhelming.",
+     "example": "Managing the entire conference logistics single-handedly, it's a lot to take on.",
+     "plain": "Managing the entire conference logistics single-handedly is a huge responsibility.",
+     "note": "Used to express empathy for someone facing a significant workload or challenge."
+    },
+    {
+     "text": "I can only imagine the pressure",
+     "kind": "frame",
+     "form": "I can only imagine the pressure",
+     "meaning": "Expresses empathy for the stress or demands someone is experiencing.",
+     "example": "With two young children and a full-time job, I can only imagine the pressure you're under.",
+     "plain": "With two young children and a full-time job, I understand how much stress you must feel.",
+     "note": "A common empathetic phrase, acknowledging the difficulty of someone's situation."
+    },
+    {
+     "text": "That sounds like a burden",
+     "kind": "chunk",
+     "form": "That sounds like a burden",
+     "meaning": "Expresses sympathy by identifying a situation or responsibility as heavy or oppressive.",
+     "example": "Having to care for an elderly parent while working full-time, that sounds like a burden.",
+     "plain": "Having to care for an elderly parent while working full-time sounds very difficult and heavy.",
+     "note": "A direct but empathetic way to acknowledge someone's heavy responsibilities."
+    },
+    {
+     "text": "That's genuinely delightful",
+     "kind": "chunk",
+     "form": "That's genuinely delightful",
+     "meaning": "Expresses sincere pleasure or happiness about something.",
+     "example": "Hearing that your research was published in such a prestigious journal, that's genuinely delightful.",
+     "plain": "Hearing that your research was published in such a prestigious journal makes me very happy.",
+     "note": "A sophisticated and warm expression of happiness, often for someone else's success."
+    },
+    {
+     "text": "I'm genuinely happy for you",
+     "kind": "chunk",
+     "form": "I'm genuinely happy for you",
+     "meaning": "Expresses sincere joy and good wishes for someone else's success or good fortune.",
+     "example": "After all your hard work, I'm genuinely happy for you that you got the promotion.",
+     "plain": "After all your hard work, I am truly pleased that you got the promotion.",
+     "note": "A warm and sincere expression of happiness for another person's good news."
+    },
+    {
+     "text": "That's a pleasant turn",
+     "kind": "collocation",
+     "form": "That's a pleasant turn",
+     "meaning": "Expresses positive surprise at an unexpected and welcome change in events.",
+     "example": "After all the delays, getting the visa approved so quickly, that's a pleasant turn.",
+     "plain": "After all the delays, getting the visa approved so quickly is a welcome and unexpected change.",
+     "note": "Used to acknowledge a positive and unexpected development in a situation."
+    },
+    {
+     "text": "That's quite inspiring",
+     "kind": "chunk",
+     "form": "That's quite inspiring",
+     "meaning": "Expresses that something is very motivating or uplifting.",
+     "example": "Hearing about her journey from intern to CEO, that's quite inspiring.",
+     "plain": "Hearing about her journey from intern to CEO is very motivating.",
+     "note": "A slightly understated but sincere way to express admiration and motivation."
+    },
+    {
+     "text": "I couldn't be more pleased",
+     "kind": "chunk",
+     "form": "I couldn't be more pleased",
+     "meaning": "Expresses maximum happiness or satisfaction about a situation or outcome.",
+     "example": "With the project finishing ahead of schedule, I couldn't be more pleased.",
+     "plain": "With the project finishing ahead of schedule, I am extremely happy.",
+     "note": "A strong, emphatic expression of satisfaction, often used in professional contexts."
+    },
+    {
+     "text": "It's a real joy to hear",
+     "kind": "frame",
+     "form": "It's a real joy to hear",
+     "meaning": "Expresses genuine happiness and pleasure upon receiving good news.",
+     "example": "After all the uncertainty, it's a real joy to hear that your family is safe.",
+     "plain": "After all the uncertainty, I am truly happy to hear that your family is safe.",
+     "note": "A warm and heartfelt expression of happiness, especially for news about loved ones."
+    },
+    {
+     "text": "That's a fantastic outcome",
+     "kind": "collocation",
+     "form": "That's a fantastic outcome",
+     "meaning": "Expresses strong approval and happiness about a very positive result.",
+     "example": "Despite the initial setbacks, achieving all your targets, that's a fantastic outcome.",
+     "plain": "Despite the initial setbacks, achieving all your targets is a very positive result.",
+     "note": "A common and enthusiastic way to praise a successful result."
+    },
+    {
+     "text": "It's wonderful to know",
+     "kind": "frame",
+     "form": "It's wonderful to know",
+     "meaning": "Expresses happiness and satisfaction upon learning positive information.",
+     "example": "After all the hard work, it's wonderful to know that the new system is fully operational.",
+     "plain": "After all the hard work, I am happy to know that the new system is fully operational.",
+     "note": "A warm and appreciative way to acknowledge good news or a positive development."
+    },
+    {
+     "text": "That's a delightful piece of news",
+     "kind": "collocation",
+     "form": "That's a delightful piece of news",
+     "meaning": "Expresses strong pleasure and happiness about a specific item of good news.",
+     "example": "Your promotion to senior management, that's a delightful piece of news!",
+     "plain": "Your promotion to senior management is very happy news!",
+     "note": "A slightly more formal or elegant way to express joy about good news."
+    },
+    {
+     "text": "I'm genuinely delighted for you",
+     "kind": "chunk",
+     "form": "I'm genuinely delighted for you",
+     "meaning": "Expresses sincere and strong happiness for someone else's good fortune or success.",
+     "example": "After all your efforts, I'm genuinely delighted for you that you won the scholarship.",
+     "plain": "After all your efforts, I am truly very happy that you won the scholarship.",
+     "note": "A warm and sincere expression of joy for another person's achievement."
+    },
+    {
+     "text": "I'm rather taken aback",
+     "kind": "chunk",
+     "form": "I'm rather taken aback",
+     "meaning": "Expresses mild surprise and slight discomfort or disapproval.",
+     "example": "When they announced the sudden policy change, I'm rather taken aback.",
+     "plain": "When they announced the sudden policy change, I was quite surprised and a little unsettled.",
+     "note": "A polite, understated way to express surprise that borders on disapproval or discomfort."
+    },
+    {
+     "text": "I'm not entirely satisfied with",
+     "kind": "frame",
+     "form": "I'm not entirely satisfied with",
+     "meaning": "Expresses polite dissatisfaction or mild disappointment with something.",
+     "example": "While the report is thorough, I'm not entirely satisfied with the conclusions drawn.",
+     "plain": "While the report is thorough, I am not completely happy with the conclusions drawn.",
+     "note": "A diplomatic way to express mild criticism or disappointment, often in professional settings."
+    },
+    {
+     "text": "I'm a little disappointed to hear",
+     "kind": "frame",
+     "form": "I'm a little disappointed to hear",
+     "meaning": "Expresses mild regret or sadness upon receiving news that is not as hoped.",
+     "example": "I'm a little disappointed to hear that the conference has been postponed again.",
+     "plain": "I am slightly sad to hear that the conference has been postponed again.",
+     "note": "A polite and common way to express mild disappointment about news."
+    },
+    {
+     "text": "It's a little frustrating when",
+     "kind": "frame",
+     "form": "It's a little frustrating when",
+     "meaning": "Expresses mild irritation or annoyance about a recurring or specific situation.",
+     "example": "It's a little frustrating when you spend hours on a task only for it to be cancelled.",
+     "plain": "It is slightly annoying when you spend hours on a task only for it to be cancelled.",
+     "note": "A common, understated way to express mild annoyance or irritation."
+    },
+    {
+     "text": "I had hoped for something different",
+     "kind": "chunk",
+     "form": "I had hoped for something different",
+     "meaning": "Expresses disappointment that an outcome is not what was desired or expected.",
+     "example": "After all the discussions, I had hoped for something different from the final proposal.",
+     "plain": "After all the discussions, I expected a different outcome from the final proposal.",
+     "note": "A polite and slightly indirect way to express disappointment or dissatisfaction."
+    },
+    {
+     "text": "I'm not sure I entirely agree",
+     "kind": "chunk",
+     "form": "I'm not sure I entirely agree",
+     "meaning": "Expresses polite disagreement, often softening the directness of a refusal or counter-argument.",
+     "example": "While I see your point, I'm not sure I entirely agree with that approach.",
+     "plain": "While I see your point, I don't completely agree with that approach.",
+     "note": "A diplomatic and common way to express partial disagreement without being confrontational."
+    },
+    {
+     "text": "I'm not sure I quite follow",
+     "kind": "chunk",
+     "form": "I'm not sure I quite follow",
+     "meaning": "Expresses polite confusion or a request for clarification, implying mild skepticism or difficulty understanding.",
+     "example": "You mentioned a new metric, but I'm not sure I quite follow how it relates to our current goals.",
+     "plain": "You mentioned a new metric, but I don't completely understand how it relates to our current goals.",
+     "note": "A polite way to indicate a lack of understanding or to subtly question a point."
+    },
+    {
+     "text": "I'm not sure that's quite fair",
+     "kind": "chunk",
+     "form": "I'm not sure that's quite fair",
+     "meaning": "Expresses polite disagreement or mild objection to a statement or situation perceived as unjust.",
+     "example": "To blame the entire team for one person's mistake, I'm not sure that's quite fair.",
+     "plain": "To blame the entire team for one person's mistake, I don't think that is completely just.",
+     "note": "A diplomatic way to challenge a statement or action that seems unjust."
+    },
+    {
+     "text": "I have some reservations about",
+     "kind": "collocation",
+     "form": "I have some reservations about",
+     "meaning": "Expresses polite doubt or hesitation regarding a plan, idea, or situation.",
+     "example": "While the plan sounds good, I have some reservations about the proposed timeline.",
+     "plain": "While the plan sounds good, I have some doubts about the proposed timeline.",
+     "note": "A formal and diplomatic way to express mild concern or objection."
+    },
+    {
+     "text": "I'm not sure how to process that",
+     "kind": "chunk",
+     "form": "I'm not sure how to process that",
+     "meaning": "Expresses uncertainty or difficulty in understanding and reacting to new information.",
+     "example": "The news about the company restructuring, I'm not sure how to process that right now.",
+     "plain": "The news about the company restructuring, I don't know how to understand or react to it right now.",
+     "note": "Used when information is complex or emotionally impactful, requiring time to comprehend."
+    },
+    {
+     "text": "That's a great relief",
+     "kind": "chunk",
+     "form": "That's a great relief",
+     "meaning": "Expresses significant comfort and ease after a period of worry or stress.",
+     "example": "Hearing that the test results came back negative, that's a great relief.",
+     "plain": "Hearing that the test results came back negative makes me feel much better.",
+     "note": "A common and sincere expression of relief, slightly less emphatic than \"huge.\""
+    },
+    {
+     "text": "It's a relief to hear",
+     "kind": "frame",
+     "form": "It's a relief to hear",
+     "meaning": "Expresses comfort and ease upon receiving good news or a positive update.",
+     "example": "After all the uncertainty, it's a relief to hear that the flight wasn't cancelled.",
+     "plain": "After all the uncertainty, I feel much better knowing that the flight wasn't cancelled.",
+     "note": "A common and natural way to express relief about news."
+    },
+    {
+     "text": "I'm very relieved to hear that",
+     "kind": "chunk",
+     "form": "I'm very relieved to hear that",
+     "meaning": "Expresses strong comfort and ease upon receiving positive news.",
+     "example": "I'm very relieved to hear that your surgery went well and you're recovering.",
+     "plain": "I am very comforted to hear that your surgery went well and you're recovering.",
+     "note": "A sincere and common expression of relief, slightly less intense than \"so relieved.\""
+    },
+    {
+     "text": "Thank heavens for that",
+     "kind": "chunk",
+     "form": "Thank heavens for that",
+     "meaning": "Expresses strong relief and gratitude for a positive outcome or averted problem.",
+     "example": "The train was delayed, but we made it to the airport just in time, thank heavens for that!",
+     "plain": "The train was delayed, but we made it to the airport just in time, which is a great relief!",
+     "note": "A slightly more formal or traditional alternative to \"thank goodness,\" expressing strong relief."
+    },
+    {
+     "text": "It's reassuring to know that",
+     "kind": "frame",
+     "form": "It's reassuring to know that",
+     "meaning": "Expresses comfort and a reduction of anxiety upon learning something positive or certain.",
+     "example": "After the system crash, it's reassuring to know that all our data was backed up.",
+     "plain": "After the system crash, I feel calmer knowing that all our data was backed up.",
+     "note": "A common phrase to express that information has reduced worry or uncertainty."
+    },
+    {
+     "text": "That's a load off my mind",
+     "kind": "chunk",
+     "form": "That's a load off my mind",
+     "meaning": "Expresses great relief that a worry or responsibility has been removed.",
+     "example": "Finally submitting my tax return, that's a load off my mind.",
+     "plain": "Finally submitting my tax return makes me feel much less worried.",
+     "note": "An idiomatic expression for significant relief from a burden."
+    },
+    {
+     "text": "I'm rather relieved to hear",
+     "kind": "frame",
+     "form": "I'm rather relieved to hear",
+     "meaning": "Expresses a moderate degree of comfort and ease upon receiving news.",
+     "example": "I'm rather relieved to hear that the meeting has been rescheduled for next week.",
+     "plain": "I am somewhat comforted to hear that the meeting has been rescheduled for next week.",
+     "note": "A polite, understated way to express relief, common in British English."
+    },
+    {
+     "text": "That brings me great comfort",
+     "kind": "chunk",
+     "form": "That brings me great comfort",
+     "meaning": "Expresses that a piece of news or a situation provides significant emotional ease and reassurance.",
+     "example": "Knowing that my parents are settling in well in their new home, that brings me great comfort.",
+     "plain": "Knowing that my parents are settling in well in their new home makes me feel much better.",
+     "note": "A slightly more formal or heartfelt way to express deep relief and reassurance."
+    },
+    {
+     "text": "I'm glad that's resolved",
+     "kind": "chunk",
+     "form": "I'm glad that's resolved",
+     "meaning": "Expresses satisfaction and relief that a problem or issue has been successfully dealt with.",
+     "example": "After weeks of negotiations, I'm glad that's resolved and we can move forward.",
+     "plain": "After weeks of negotiations, I am happy that the issue is settled and we can move forward.",
+     "note": "A common and practical expression of relief when a problem is fixed."
+    },
+    {
+     "text": "I must say I'm surprised",
+     "kind": "chunk",
+     "form": "I must say I'm surprised",
+     "meaning": "Expresses a direct, often polite, admission of unexpectedness.",
+     "example": "I must say I'm surprised by the sudden change in the project's direction.",
+     "plain": "I am surprised by the sudden change in the project's direction.",
+     "note": "A polite and common way to express surprise, often used to introduce a reaction."
+    },
+    {
+     "text": "That's quite unexpected",
+     "kind": "chunk",
+     "form": "That's quite unexpected",
+     "meaning": "Expresses a moderate degree of surprise at something unforeseen.",
+     "example": "To see him at the conference after he said he couldn't make it, that's quite unexpected.",
+     "plain": "To see him at the conference after he said he couldn't make it is very surprising.",
+     "note": "A common, slightly understated way to express surprise."
+    },
+    {
+     "text": "I hadn't quite anticipated that",
+     "kind": "chunk",
+     "form": "I hadn't quite anticipated that",
+     "meaning": "Expresses mild surprise or a slight lack of foresight regarding an outcome.",
+     "example": "The sudden surge in demand, I hadn't quite anticipated that.",
+     "plain": "The sudden surge in demand, I didn't fully expect that.",
+     "note": "A polite way to admit a slight misjudgment or express mild surprise."
+    },
+    {
+     "text": "Well, that's certainly a development",
+     "kind": "chunk",
+     "form": "Well, that's certainly a development",
+     "meaning": "Acknowledges a new piece of information or event, often implying it's significant or unexpected.",
+     "example": "The CEO resigning without warning, well, that's certainly a development.",
+     "plain": "The CEO resigning without warning is definitely a significant new event.",
+     "note": "A neutral, often understated way to react to significant or surprising news."
+    },
+    {
+     "text": "I can see your point",
+     "kind": "chunk",
+     "form": "I can see your point",
+     "meaning": "Acknowledges understanding of someone's perspective or argument, without necessarily agreeing.",
+     "example": "I can see your point about the budget constraints, but we still need to innovate.",
+     "plain": "I understand your argument about the budget constraints, but we still need to innovate.",
+     "note": "A common phrase for acknowledging understanding in a discussion, often preceding a counterpoint."
+    },
+    {
+     "text": "That's an intriguing development",
+     "kind": "collocation",
+     "form": "That's an intriguing development",
+     "meaning": "Expresses curiosity and mild surprise about a new and potentially significant event.",
+     "example": "The competitor launching a similar product, that's an intriguing development.",
+     "plain": "The competitor launching a similar product is a surprising and interesting new event.",
+     "note": "A sophisticated way to acknowledge a new situation that sparks curiosity."
+    },
+    {
+     "text": "I'm not sure how to interpret that",
+     "kind": "chunk",
+     "form": "I'm not sure how to interpret that",
+     "meaning": "Expresses uncertainty about the meaning or implications of a statement or event.",
+     "example": "His sudden change of tone, I'm not sure how to interpret that.",
+     "plain": "His sudden change of tone, I don't know what it means.",
+     "note": "Used when something is ambiguous and you're seeking clarity or trying to understand motives."
+    },
+    {
+     "text": "That certainly gives one pause",
+     "kind": "chunk",
+     "form": "That certainly gives one pause",
+     "meaning": "Indicates that a piece of information or an event causes one to stop and think carefully.",
+     "example": "The unexpected market downturn, that certainly gives one pause before making new investments.",
+     "plain": "The unexpected market downturn certainly makes one stop and think carefully before making new investments.",
+     "note": "A slightly formal way to say something makes you think twice or reconsider."
+    },
+    {
+     "text": "That's quite a twist",
+     "kind": "chunk",
+     "form": "That's quite a twist",
+     "meaning": "Expresses surprise at a sudden and unexpected change or complication in a situation.",
+     "example": "After all the planning, for the venue to cancel last minute, that's quite a twist.",
+     "plain": "After all the planning, for the venue to cancel last minute is a very unexpected complication.",
+     "note": "Used for a surprising and often problematic development, often with a hint of irony."
+    },
+    {
+     "text": "It's definitely worth considering",
+     "kind": "chunk",
+     "form": "It's definitely worth considering",
+     "meaning": "Suggests that an idea or proposal merits serious thought and evaluation.",
+     "example": "Your suggestion for a new marketing strategy, it's definitely worth considering.",
+     "plain": "Your suggestion for a new marketing strategy should definitely be thought about seriously.",
+     "note": "A polite and encouraging way to acknowledge an idea's value."
+    },
+    {
+     "text": "I can only imagine the strain",
+     "kind": "frame",
+     "form": "I can only imagine the strain",
+     "meaning": "Expresses deep empathy for the mental or emotional pressure someone is under.",
+     "example": "Working two jobs while studying for your master's, I can only imagine the strain.",
+     "plain": "Working two jobs while studying for your master's, I understand how much pressure you must feel.",
+     "note": "A heartfelt way to acknowledge someone's significant stress or difficulty."
+    },
+    {
+     "text": "That's a tough call",
+     "kind": "collocation",
+     "form": "That's a tough call",
+     "meaning": "Acknowledges that a decision is difficult and requires careful consideration.",
+     "example": "Choosing between two equally qualified candidates, that's a tough call for the hiring committee.",
+     "plain": "Choosing between two equally qualified candidates is a difficult decision for the hiring committee.",
+     "note": "A common, informal but appropriate phrase for a hard decision."
+    },
+    {
+     "text": "I wouldn't wish that on anyone",
+     "kind": "chunk",
+     "form": "I wouldn't wish that on anyone",
+     "meaning": "Expresses strong empathy by stating that a difficult experience is something no one should endure.",
+     "example": "Dealing with that kind of bureaucratic nightmare, I wouldn't wish that on anyone.",
+     "plain": "Dealing with that kind of bureaucratic nightmare is so bad, I hope no one else has to experience it.",
+     "note": "A strong, empathetic expression of sympathy for a very unpleasant experience."
+    },
+    {
+     "text": "It's a challenging situation",
+     "kind": "collocation",
+     "form": "It's a challenging situation",
+     "meaning": "Describes a circumstance that presents significant difficulties or requires considerable effort.",
+     "example": "Navigating the new market regulations, it's a challenging situation for many businesses.",
+     "plain": "Navigating the new market regulations is a difficult situation for many businesses.",
+     "note": "A neutral, professional way to describe a difficult circumstance."
+    },
+    {
+     "text": "I can see where you're coming from",
+     "kind": "chunk",
+     "form": "I can see where you're coming from",
+     "meaning": "Expresses understanding of someone's perspective or reasoning, even if you don't fully agree.",
+     "example": "I can see where you're coming from regarding the budget cuts, but we need to find a solution.",
+     "plain": "I understand your perspective regarding the budget cuts, but we need to find a solution.",
+     "note": "A common, diplomatic phrase for acknowledging another's viewpoint."
+    },
+    {
+     "text": "That's a fair assessment",
+     "kind": "collocation",
+     "form": "That's a fair assessment",
+     "meaning": "Acknowledges that someone's evaluation or opinion is reasonable and accurate.",
+     "example": "Given the project's complexity, that's a fair assessment of the risks involved.",
+     "plain": "Given the project's complexity, that is a reasonable evaluation of the risks involved.",
+     "note": "Used to agree with someone's judgment, often in a professional context."
+    },
+    {
+     "text": "I'm not entirely convinced that",
+     "kind": "frame",
+     "form": "I'm not entirely convinced that",
+     "meaning": "Expresses polite skepticism or doubt about a statement or proposal.",
+     "example": "I'm not entirely convinced that the new strategy will yield the promised results.",
+     "plain": "I don't completely believe that the new strategy will yield the promised results.",
+     "note": "A diplomatic way to express doubt or disagreement without being confrontational."
+    },
+    {
+     "text": "I'm inclined to agree",
+     "kind": "chunk",
+     "form": "I'm inclined to agree",
+     "meaning": "Expresses a tendency or predisposition to concur with a statement or opinion.",
+     "example": "After reviewing the data, I'm inclined to agree with your analysis.",
+     "plain": "After reviewing the data, I tend to agree with your analysis.",
+     "note": "A polite and slightly formal way to express agreement."
+    },
+    {
+     "text": "I take your point",
+     "kind": "chunk",
+     "form": "I take your point",
+     "meaning": "Acknowledges understanding and acceptance of someone's argument or observation.",
+     "example": "I take your point about the tight deadline, but we still need to deliver quality.",
+     "plain": "I understand your argument about the tight deadline, but we still need to deliver quality.",
+     "note": "A common, concise way to acknowledge understanding, often preceding a counterpoint."
+    },
+    {
+     "text": "That's truly heartening",
+     "kind": "chunk",
+     "form": "That's truly heartening",
+     "meaning": "Expresses that something is genuinely encouraging and uplifting.",
+     "example": "Hearing about the community's support for the new initiative, that's truly heartening.",
+     "plain": "Hearing about the community's support for the new initiative is genuinely encouraging.",
+     "note": "A warm and sincere expression of finding something uplifting."
+    },
+    {
+     "text": "I'm quite pleased with",
+     "kind": "frame",
+     "form": "I'm quite pleased with",
+     "meaning": "Expresses a moderate degree of satisfaction or happiness about something.",
+     "example": "I'm quite pleased with how the team handled the unexpected challenges.",
+     "plain": "I am moderately happy with how the team handled the unexpected challenges.",
+     "note": "A polite and common way to express satisfaction, often in professional contexts."
+    },
+    {
+     "text": "It's a bit of a nuisance",
+     "kind": "chunk",
+     "form": "It's a bit of a nuisance",
+     "meaning": "Describes something as a minor annoyance or inconvenience.",
+     "example": "Having to redo the entire report due to a formatting error, it's a bit of a nuisance.",
+     "plain": "Having to redo the entire report due to a formatting error is a minor annoyance.",
+     "note": "A common, understated way to express mild irritation or inconvenience."
+    },
+    {
+     "text": "I'm rather disappointed that",
+     "kind": "frame",
+     "form": "I'm rather disappointed that",
+     "meaning": "Expresses a moderate degree of sadness or regret about an outcome or situation.",
+     "example": "I'm rather disappointed that the funding for the project was cut.",
+     "plain": "I am somewhat sad that the funding for the project was cut.",
+     "note": "A polite and common way to express mild disappointment."
+    },
+    {
+     "text": "That's a bit much",
+     "kind": "chunk",
+     "form": "That's a bit much",
+     "meaning": "Expresses that something is excessive, unreasonable, or overwhelming.",
+     "example": "Expecting us to work through the weekend without extra pay, that's a bit much.",
+     "plain": "Expecting us to work through the weekend without extra pay is unreasonable.",
+     "note": "An informal but common phrase to express mild indignation or that something is unfair."
+    },
+    {
+     "text": "I'm not entirely sure about that",
+     "kind": "chunk",
+     "form": "I'm not entirely sure about that",
+     "meaning": "Expresses polite uncertainty or mild skepticism regarding a statement or idea.",
+     "example": "You say it's a simple fix, but I'm not entirely sure about that.",
+     "plain": "You say it's a simple fix, but I am not completely certain about that.",
+     "note": "A common, diplomatic way to express doubt or hesitation."
+    },
+    {
+     "text": "That's certainly unexpected",
+     "kind": "chunk",
+     "form": "That's certainly unexpected",
+     "meaning": "Expresses a definite sense of surprise at something unforeseen.",
+     "example": "The sudden resignation of the director, that's certainly unexpected.",
+     "plain": "The sudden resignation of the director is definitely surprising.",
+     "note": "A common and direct way to express surprise."
+    },
+    {
+     "text": "I'm quite taken aback",
+     "kind": "chunk",
+     "form": "I'm quite taken aback",
+     "meaning": "Expresses a strong sense of surprise, often accompanied by slight shock or bewilderment.",
+     "example": "Her sudden outburst in the meeting, I'm quite taken aback by it.",
+     "plain": "Her sudden outburst in the meeting, I am very surprised by it.",
+     "note": "A polite but strong way to express surprise, often implying mild disapproval."
+    },
+    {
+     "text": "That's somewhat surprising",
+     "kind": "chunk",
+     "form": "That's somewhat surprising",
+     "meaning": "Expresses a moderate degree of unexpectedness or mild astonishment.",
+     "example": "To hear that they're moving to another country so soon, that's somewhat surprising.",
+     "plain": "To hear that they're moving to another country so soon is a little surprising.",
+     "note": "A polite, understated way to express mild surprise."
+    },
+    {
+     "text": "I'm not sure I follow your reasoning",
+     "kind": "frame",
+     "form": "I'm not sure I follow your reasoning",
+     "meaning": "Expresses polite confusion or disagreement with someone's logic, requesting clarification.",
+     "example": "Given the data, I'm not sure I follow your reasoning for increasing the budget.",
+     "plain": "Given the data, I don't completely understand your logic for increasing the budget.",
+     "note": "A diplomatic way to challenge someone's argument or request more explanation."
+    },
+    {
+     "text": "It's a huge relief to know",
+     "kind": "frame",
+     "form": "It's a huge relief to know",
+     "meaning": "Expresses great comfort and ease upon learning specific positive information.",
+     "example": "After waiting for weeks, it's a huge relief to know the funding has been approved.",
+     "plain": "After waiting for weeks, I feel much better knowing the funding has been approved.",
+     "note": "A common and strong expression of relief, focusing on the knowledge gained."
+    },
+    {
+     "text": "That's a weight off everyone's shoulders",
+     "kind": "chunk",
+     "form": "That's a weight off everyone's shoulders",
+     "meaning": "Expresses that a shared burden or worry has been removed, bringing relief to a group.",
+     "example": "The successful completion of the audit, that's a weight off everyone's shoulders.",
+     "plain": "The successful completion of the audit has relieved everyone of a great worry.",
+     "note": "An idiomatic expression for shared relief from a collective burden."
+    },
+    {
+     "text": "I'm pleased to hear that",
+     "kind": "chunk",
+     "form": "I'm pleased to hear that",
+     "meaning": "Expresses happiness or satisfaction upon receiving good news.",
+     "example": "I'm pleased to hear that your recovery is progressing well.",
+     "plain": "I am happy to hear that your recovery is progressing well.",
+     "note": "A polite and common way to express happiness about news."
+    },
+    {
+     "text": "It's certainly an interesting perspective",
+     "kind": "collocation",
+     "form": "It's certainly an interesting perspective",
+     "meaning": "Acknowledges an opinion or viewpoint as thought-provoking, often without fully agreeing.",
+     "example": "While I hadn't considered it, it's certainly an interesting perspective on the issue.",
+     "plain": "While I hadn't considered it, that is definitely a thought-provoking way of looking at the issue.",
+     "note": "A diplomatic way to acknowledge a viewpoint, often used as a polite hedge."
+    },
+    {
+     "text": "I'm not entirely persuaded by that",
+     "kind": "chunk",
+     "form": "I'm not entirely persuaded by that",
+     "meaning": "Expresses polite skepticism or a lack of full belief in an argument or statement.",
+     "example": "While the data is compelling, I'm not entirely persuaded by that conclusion.",
+     "plain": "While the data is compelling, I don't completely believe that conclusion.",
+     "note": "A formal and diplomatic way to express doubt or disagreement."
+    },
+    {
+     "text": "That's quite a stretch",
+     "kind": "chunk",
+     "form": "That's quite a stretch",
+     "meaning": "Expresses that a statement or claim is exaggerated, improbable, or difficult to believe.",
+     "example": "To say we'll double our profits this quarter, that's quite a stretch.",
+     "plain": "To say we'll double our profits this quarter is a significant exaggeration.",
+     "note": "An informal but common phrase to express skepticism about an ambitious claim."
+    },
+    {
+     "text": "I wouldn't quite put it that way",
+     "kind": "chunk",
+     "form": "I wouldn't quite put it that way",
+     "meaning": "Expresses polite disagreement with someone's phrasing or interpretation of a situation.",
+     "example": "While I agree with the sentiment, I wouldn't quite put it that way in a formal report.",
+     "plain": "While I agree with the sentiment, I would use different words in a formal report.",
+     "note": "A diplomatic way to suggest alternative phrasing or a different interpretation."
+    },
+    {
+     "text": "It's certainly a thought",
+     "kind": "chunk",
+     "form": "It's certainly a thought",
+     "meaning": "Acknowledges an idea or suggestion, often implying it's worth considering but not necessarily agreeing.",
+     "example": "Moving the entire department to a new city, it's certainly a thought, but perhaps not practical.",
+     "plain": "Moving the entire department to a new city is an idea, but perhaps not practical.",
+     "note": "A neutral, often understated way to acknowledge an idea, sometimes with implied reservation."
+    },
+    {
+     "text": "I'm rather looking forward to",
+     "kind": "frame",
+     "form": "I'm rather looking forward to",
+     "meaning": "Expresses a moderate degree of anticipation and pleasure about a future event.",
+     "example": "I'm rather looking forward to the team retreat next month.",
+     "plain": "I am somewhat anticipating the team retreat next month with pleasure.",
+     "note": "A polite and common way to express positive anticipation, often in British English."
+    },
+    {
+     "text": "That's a welcome development",
+     "kind": "collocation",
+     "form": "That's a welcome development",
+     "meaning": "Expresses pleasure and approval for a new and positive change or event.",
+     "example": "The new policy on flexible working, that's a welcome development for many employees.",
+     "plain": "The new policy on flexible working is a positive and appreciated change for many employees.",
+     "note": "A formal and positive way to acknowledge a beneficial change."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "i can only imagine": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that must be tough": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm so sorry to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it sounds like a lot": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i completely understand why": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i know how frustrating it can be": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's perfectly understandable": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i wouldn't blame you for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can see why you'd feel": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a real shame": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what a pity": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i appreciate that must be": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's wonderful news": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "how absolutely delightful": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm thrilled for you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's fantastic": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what a pleasant surprise": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i couldn't be happier for you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's truly excellent": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so pleased to hear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a huge relief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's great to hear": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i must admit i'm a little surprised": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely convinced": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a little disappointed by": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i had rather hoped": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid i don't quite agree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i follow": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's entirely fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a little concerned about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure how to feel about that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i'm comfortable with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what a relief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a huge weight off my mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so relieved to hear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "thank goodness for that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's good to know": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm quite surprised to hear that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's unexpected": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hadn't anticipated that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "well, that's certainly something": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i see what you mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's an interesting development": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure what to make of that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's food for thought": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's quite a turn of events": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's certainly something to consider": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm intrigued by that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's certainly one way of looking at it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure i'd go that far": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's certainly a bold move": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i'm entirely on board": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i can relate to that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a tough break": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my condolences": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm genuinely sorry": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a crying shame": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm absolutely delighted": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's truly inspiring": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm over the moon": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it warms my heart": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit put out": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's rather unfortunate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not best pleased": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite relieved": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a huge weight lifted": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm taken aback by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a bit much to ask": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm truly sorry for your loss": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a real blow": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a tough pill to swallow": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm absolutely thrilled": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's fantastic news": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's a real pleasure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not entirely happy with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm rather annoyed by": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a bit much to take in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not convinced that's wise": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm relieved to hear that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm delighted to hear that": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key accurately describes the expression's function of showing pleasure upon hearing good news."
+   },
+   "what a relief to know": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a huge relief to everyone": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's rather surprising": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i hadn't expected that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "well, that's certainly unexpected": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's an interesting perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it certainly makes you think": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a fair point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i agree with that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i follow your logic": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a bit much to ask for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely convinced by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure i'm comfortable saying": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a bit of a stretch": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure i'd put it that way": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i can appreciate that": {
+    "status": "pass",
+    "level": "C1",
+    "note": "Checker slip: The key accurately describes the empathetic understanding expressed in the example."
+   },
+   "i can well imagine": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that must be quite something": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it sounds rather challenging": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can appreciate your concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i quite understand why": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a difficult position": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's understandable, of course": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a lot to take on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can only imagine the pressure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that sounds like a burden": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's genuinely delightful": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm genuinely happy for you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a pleasant turn": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's quite inspiring": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i couldn't be more pleased": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a real joy to hear": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a fantastic outcome": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's wonderful to know": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a delightful piece of news": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm genuinely delighted for you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm rather taken aback": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely satisfied with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a little disappointed to hear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a little frustrating when": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i had hoped for something different": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i entirely agree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i quite follow": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's quite fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have some reservations about": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure how to process that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a great relief": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a relief to hear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "thank heavens for that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's reassuring to know that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a load off my mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm rather relieved to hear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that brings me great comfort": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm glad that's resolved": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i must say i'm surprised": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm very relieved to hear that": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes the expression of relief and comfort upon hearing good news."
+   },
+   "that's quite unexpected": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i hadn't quite anticipated that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "well, that's certainly a development": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can see your point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's an intriguing development": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure how to interpret that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that certainly gives one pause": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's quite a twist": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's definitely worth considering": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i can only imagine the strain": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a tough call": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i wouldn't wish that on anyone": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a challenging situation": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i can see where you're coming from": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a fair assessment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely convinced that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm inclined to agree": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i take your point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's truly heartening": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite pleased with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a bit of a nuisance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm rather disappointed that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a bit much": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely sure about that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's certainly unexpected": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite taken aback": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's somewhat surprising": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i follow your reasoning": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a huge relief to know": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a weight off everyone's shoulders": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm pleased to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's certainly an interesting perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely persuaded by that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's quite a stretch": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i wouldn't quite put it that way": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's certainly a thought": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm rather looking forward to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a welcome development": {
+    "status": "pass",
+    "level": "B2"
+   }
+  }
+ }
+}

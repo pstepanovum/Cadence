@@ -47,6 +47,10 @@ Pure TypeScript shared by every client lives in two byte-identical copies:
 | `src/lib/platform/daily-plan.ts` | `mobile/src/platform/daily-plan.ts` | `buildDailyPlan`: today's 10 to 15 minutes (section 7) |
 | `src/lib/platform/placement.ts` | `mobile/src/platform/placement.ts` | the adaptive test (`nextPlacementItem`, `placementDone`, `estimateAbility`, `adaptiveResult`), the seen-items encoding (`encodeSeen`, `decodeSeen`, `mergeSeen`), and the older `writtenLevel`, `writtenScore`, `writtenConfidence`, `combineLevels` (section 7) |
 | `src/lib/platform/levels.ts` | `mobile/src/platform/levels.ts` | `LEVEL_INFO` (description and approximate IELTS and TOEFL iBT per level), `LevelPrefs` (overall and per-skill levels), `parseLevelPrefs`, `levelFor`, `withLevel`, `newerLevelPrefs`, `prefsFromPlacement` (section 7.1) |
+| `src/lib/platform/phrase-bank.ts` | `mobile/src/platform/phrase-bank.ts` | phrase and slang records and validators, search, phrase drills and their grading, slang quizzes, result-to-grade mapping, the practice list (section 17) |
+| `src/lib/platform/fossilization.ts` | `mobile/src/platform/fossilization.ts` | the plateau track: evidence, `diagnose`, the diagnostic, `startTrack`, weeks and phases, `dailyDrills`, own sentences, re-tests, `errorProgress` (section 18) |
+| `src/lib/platform/practice-day.ts` | `mobile/src/platform/practice-day.ts` | `buildPracticeDay` (today's advanced drill list) and `spokenSteps` (sections 17, 18 and 20) |
+| `src/lib/platform/recordings.ts` | `mobile/src/platform/recordings.ts` | the recordings index every store keeps, limits and eviction, grouping, and the metadata Plus syncs (section 19) |
 
 Rules, enforced by `tests/platform/drift.test.ts`:
 
@@ -62,7 +66,7 @@ Rules, enforced by `tests/platform/drift.test.ts`:
 
 There is one scheduler: `tests/platform/drift.test.ts` also fails on any
 other `review` function or SM-2 interval rule under `src/` or `mobile/src/`.
-**Open:** no web screen calls `buildDailyPlan` yet.
+The web's `/today` (`src/components/advanced/TodayPlan.tsx`) calls `buildDailyPlan` with this browser's data. **Open:** the phone's Home screen does not call it yet.
 
 ---
 
@@ -145,7 +149,12 @@ public/packs/<packId>/v<version>/audio/<sha256-16>.m4a     pre-generated audio
   `placement` (the placement test's bank, section 7; exercises only, never
   used by quizzes, lookups or the MCP tools, so a retake meets fresh items),
   `core-a1` … `core-c2` (topics, grammar points, lessons, exercises,
-  flashcards, scenarios for that level).
+  flashcards, scenarios for that level), and the advanced packs:
+  `phrases-b2`, `phrases-c1`, `phrases-c2` (the phrase bank, section 17),
+  `slang` (section 17) and `fossilization` (the plateau track, section 18).
+  These carry their data in `content.json` beside the four standard lists,
+  which stay empty, and have no `level`, so nothing that looks a level up
+  ever picks one.
 - `manifest.json` lists every file with its SHA-256 and size. `version` is an
   integer that only goes up; any changed file means a new version directory.
   Versioned paths are immutable (`Cache-Control: public, max-age=31536000,
@@ -154,7 +163,7 @@ public/packs/<packId>/v<version>/audio/<sha256-16>.m4a     pre-generated audio
   (`CONTENT_MODEL_VERSION`) is the schema. `canReadPack` skips any pack the app
   does not understand rather than half-reading it; `packsToUpdate` picks the
   ones with a newer version.
-- Mobile bundles `sounds`, `placement`, `core-a1` … `core-b2` in the binary and downloads
+- Mobile bundles `sounds`, `placement`, `core-a1` … `core-b2` and the advanced packs in the binary and downloads
   `core-c1`, `core-c2` and newer versions on demand into the documents
   directory (the "offline content packs" setting lists them with sizes and a
   remove button). Desktop bundles all packs in the standalone build. The web
@@ -265,6 +274,8 @@ reads.
 | `users/{uid}` | all | profile (existing fields, plus `levels`: the `LevelPrefs` of section 7.1, and `placementSeen`: the compact seen-items string, under 1 KB), `plus`, `plusSources`, `stripeCustomerId`, `rcAppUserId`, `detailPurgeAt?` | 1 per session |
 | `users/{uid}/progress/summary` | all signed in | `ProgressSummary` (`progress-model.ts`): streak, minutes, lessons per level, placement level, last active, 20 most recent results; under 8 KB | 1 per session |
 | `users/{uid}/inbox/flashcards` | all signed in | cards added through MCP, waiting for a device (at most 200; deleted once delivered) | 1 per open, usually missing |
+| `users/{uid}/practice/inbox` | all signed in | `list`: the practice list the connector assigned (`PracticeListItem[]`, at most 200); `reviews`: drill results the connector logged for a free account, waiting for a device (at most 200) (section 20) | 1 per open of the advanced screens |
+| `users/{uid}/advanced/state` | Plus | `cards` (phrase and slang review state, `CardState & {updatedAt}`), `track` (the plateau `Track`), `recordings` (`RecordingMeta[]`, at most 500, never audio or file names), `updatedAt`, `lastInstallId`; one document, well under 1 MiB (section 20) | 1 per sync and per Plus teacher tool |
 | `users/{uid}/srs/{packId}` | Plus | `cards: {cardId: CardState & {updatedAt}}`, one document per pack (about 70 bytes a card, well under 1 MiB) | 1 per pack in use |
 | `users/{uid}/mastery/sounds` | Plus | `{soundId: {attempts, ema, best, lastAt, history: [{day, score}] (30 days)}}` | 1 when needed |
 | `users/{uid}/mastery/grammar` | Plus | `{gpId: {attempts, correct, ema, lastAt}}` | 1 when needed |
@@ -315,6 +326,8 @@ All under App Check (section 14) and the Firebase ID token.
 | `POST /api/sync/push` | full | `{installId, srs?, attempts?, mastery?, coach?}`; cards merge last-writer-wins by `updatedAt`; rate limited on the device document (a new install also against the account) |
 | `GET /api/sync/pull?since=` | full | changes since a cursor |
 | `POST /api/sync/import` | full | the one-time upload on upgrade |
+| `GET /api/practice`, `PATCH /api/practice` | summary, full | the practice inbox (section 20): `{list, reviews}`; PATCH `{reviewsUpTo?, done?}` acknowledges the logged reviews up to a time and removes finished items |
+| `GET /api/sync/advanced`, `POST /api/sync/advanced` | full | phrase and slang cards, the plateau track and recording metadata: POST `{installId, cards?, track?, recordings?: {upsert, remove}}` merges (cards by `updatedAt`, the newer track, metadata by id) and answers the merged state; rate limited per account; a free account gets 402 `needs_plus` |
 
 Session cost targets: free 2 reads and 1 write; Plus at most 10 reads and 5
 writes. A session is one open (`GET /api/me`) and one synced round, plus the
@@ -593,6 +606,17 @@ never learner text).
 | `get_due_flashcards` | Plus | `{limit? (1-50)}` | `{dueToday, overdue, cards: [{cardId, front, back, due, interval}]}` across devices |
 | `get_practice_history` | Plus | `{from?, to?, kind?, limit (1-100), cursor?}` | `{items: Attempt[], nextCursor}` |
 | `get_quiz_history` | Plus | `{limit (1-50), cursor?}` | `{quizzes: [{at, score, grammarPointIds}], nextCursor}` |
+| `search_phrases` | free | `{query?, situation?, level? (B2-C2), kind?, limit (1-25)}` | `{matches: [{id, text, kind, level, situations, meaning, example, note, audioUrl, pageUrl}], total}` |
+| `search_slang` | free | `{query?, fit?, region?, includeDated (default true), limit (1-25)}` | `{matches: [{id, term, meaning, register, fits, region, examples, usageNote, dated, datedNote?, audioUrl, pageUrl}], total}` |
+| `get_todays_drills` | free (Plus adds reviews and the plateau track) | `{limit (1-40)}` | `{day, items: [{itemId, kind, reason, say, meaning, tip, audioUrl, pageUrl}], counts: {assigned, due, new, plateau}, note}` |
+| `start_spoken_drill` | free | `{source: today\|list\|items\|search, itemIds?, query?, situation?, level?, count (3-20)}` | `{sessionId, step: {n, total, itemId, say, meaning, tip, reps, audioUrl, pageUrl}}`; `sessionId` is an HMAC-signed token of the item ids and expiry (six hours), prefixed `d1.` so it is never a quiz token |
+| `next_drill_step` | free | `{sessionId, after (0-30)}` | `{done: false, step}` or `{done: true, itemIds, total}` |
+| `get_plateau_progress` | Plus | `{}` | `{onTrack: false}` or `{onTrack, week, weeks, phase, phaseDetail, daysLeft, retestDue, nextRetestDay, errors: [{errorId, title, area, active, baseline, latest, history, trend, status}], ownSentences}` |
+| `list_recordings` | Plus | `{itemId?, limit (1-100)}` | `{recordings: [{id, itemId, kind, text, at, durationMs, score, device}], note}`: metadata only, never audio |
+| `assign_practice` | free, write | `{itemIds (1-50), note?, remove?}` | `{added, total, unknown}` or `{removed, unknown}`; ids must be phrase-bank or slang ids |
+| `log_drill_practice` | free, write | `{items: [{itemId, result: again\|hard\|good\|easy}] (1-50), minutes (1-180)}` | `{logged, streak, note}`; a `shadowing` activity on the summary; Plus: review state at once; free: queued in `practice/inbox` for the device |
+
+The teacher tools (the last nine rows) are section 20.
 
 **Open:** the brief lists the free tools as overview, streak, grammar lookup
 and add flashcards. `start_quiz`, `grade_quiz` and `log_practice` are free here
@@ -955,6 +979,7 @@ and, when signed in, the Firebase ID token.
 | `/contact` | `POST /api/support` (the form; `/support` holds the quick answers and links here) |
 | `/redeem?code=` | `GET /api/codes/redeem?code=` once for a code from a link, then `POST /api/codes/redeem {code}`; web only, never linked from the iPhone app |
 | `/practice/*`, `/grammar/*` | packs from `/packs` (built-in starter pack per level until they exist); each round is `POST /api/sync/summary {activities}` when signed in |
+| `/today`, `/phrases`, `/phrases/<id>`, `/phrases/practice`, `/slang`, `/slang/<id>`, `/slang/quiz`, `/plateau`, `/recordings` | the advanced packs from `/packs`; state in localStorage (`cadence.advanced.v1`), recordings in IndexedDB (`cadence-recordings`); signed in, `GET`/`PATCH /api/practice`; with Plus, `POST /api/sync/advanced` (`src/components/advanced/store.ts`). `/today` is the first web screen that calls `buildDailyPlan` |
 | `/practice`, every flashcard review | `src/components/learn-hub/sync.ts`: `GET`/`DELETE /api/sync/inbox` for every account (connector cards join the deck); with Plus, `POST /api/sync/import` once per browser, then `POST /api/sync/push` a few seconds after reviews and `GET /api/sync/pull?since=`, last writer wins per card (the phone's body shapes, `sync-logic.ts`) |
 | AI calls (assess, transcribe, coach, voices) | `{ai: true}`: a refusal (`needs_plus`, `daily_limit`, …) opens one banner offering "Connect your own Cadence" and Plus |
 
@@ -989,6 +1014,8 @@ commands.
 | Daily plan, placement scoring | `pnpm test` (`tests/platform/daily-plan.test.ts`, `placement.test.ts`, `adaptive-placement.test.ts`, `levels.test.ts`) | plan fits 10-15 minutes; deterministic for fixed input; simulated learners at every level placed at their level at least 75% of the time and never more than one level off; retakes ask fresh items; level settings parse and the newer copy wins |
 | Content packs | `node scripts/content/validate.mjs` | zero problems across every pack, including at least 60 placement items and all seven types per level |
 | Articulation targets | `node scripts/content/validate-articulation.mjs` | every `ENGLISH_SOUNDS` entry has a valid target per variant; `needsReview` list printed |
+| Phrase bank, slang, plateau track, recordings index | `pnpm test` (`tests/platform/phrase-bank.test.ts`, `fossilization.test.ts`, `practice-day.test.ts`, `recordings.test.ts`, and the plateau rows of the daily plan) | drills grade as documented; reviews go through the one scheduler; the program's weeks, phases, re-tests and progress per error; the plan still fits 10 to 15 minutes with the track and phrase reviews in it; eviction and metadata never carry audio or file names |
+| Advanced content | `node scripts/content/validate.mjs` (`advancedProblems`) | at least 3,000 phrases (600 per level, 60 per situation), 300 slang entries, 25 plateau errors; every record passes the shared validators; grammar points and sounds named by an error exist |
 
 ### Email
 
@@ -1006,6 +1033,7 @@ commands.
 | --- | --- | --- |
 | Route tests | `firebase emulators:exec --only auth,firestore --project demo-cadence "node --test --test-concurrency=1 --import ./tests/register.mjs 'tests/server/**/*.test.ts'"` (JDK 21+) | sync routes respect tiers and App Check; quotas return 429; circuit breaker returns 503 |
 | Webhooks | same run (`tests/server/emulator/webhooks.test.ts`), plus `node scripts/webhooks/replay-stripe.mjs --twice` and `node scripts/webhooks/replay-revenuecat.mjs --twice` against `pnpm dev` | bad signature or bearer is 400/401; every listed event maps per section 9; replays are `duplicate: true` with no change; `plus` correct with two sources |
+| MCP teacher tools | same run (`tests/server/emulator/mcp-teacher.test.ts`); pure parts in `pnpm test` (`tests/server/teacher.test.ts`) | output keys as section 8; audio links only where the file exists; a spoken drill steps through and ends with the ids; a forged or expired session is refused, and a quiz token is never a drill token; free logging queues for the device, Plus logging schedules reviews; Plus tools refuse a free account; recordings come back as metadata only |
 | MCP | same run (`tests/server/emulator/mcp.test.ts`) | no token: 401 with `WWW-Authenticate` and `resource_metadata`; wrong audience: 401; GET and DELETE: 405 after auth; read-only scope cannot call write tools; free account gets the Plus error on Plus tools; every tool's output matches section 8; the 31st call in an hour on free is rate limited |
 | Firestore rules | `firebase emulators:exec --only firestore --project demo-cadence "node --test tests/rules/firestore.test.ts"` (`@firebase/rules-unit-testing`) | every read and write from an unauthenticated and an authenticated client is denied, on every collection in section 5 |
 | Support and friend codes | same run (`tests/server/emulator/support-and-codes.test.ts`); pure rules in `pnpm test` (`tests/server/support-and-codes.test.ts`) | the form stores a request and queues one `support-request` with the writer as reply-to; the honeypot stores nothing; the sixth message in an hour from one IP is 429; admin routes refuse without `ADMIN_SECRET`; a reply queues `support-reply` and marks it answered; codes follow the dashboard contract (201, 409, 415, no lifetime codes, revoke); redeeming writes `plusSources.code` for the code's days and Plus ends with it; a subscription is never touched; ten tries an hour |
@@ -1046,9 +1074,9 @@ Run in `mobile/`. Simulators: "iPhone SE (3rd generation)" and
 
 | What | Command | Pass |
 | --- | --- | --- |
-| Typecheck, unit | `npx tsc --noEmit && npm test` | clean (exists) |
+| Typecheck, unit | `npx tsc --noEmit && npm test` | clean (exists); includes the bundled advanced packs and the stored advanced state (`tests/advanced.test.ts`) |
 | Simulator builds | `npx expo run:ios --device "iPhone SE (3rd generation)"` and `npx expo run:ios --device "iPhone 16 Pro Max"` | build, install, launch, no red box |
-| Flows | Maestro (`brew install mobile-dev-inc/tap/maestro`, JDK 17+), `e2e/run.sh <simulator udid> <name> [light\|dark]` against a release build made with the e2e environment (`.env.example`: a `demo-` Firebase project, `EXPO_PUBLIC_FIREBASE_AUTH_EMULATOR`, `EXPO_PUBLIC_PURCHASES_STUB=1`), a Cadence server and the Auth and Firestore emulators; the script header lists its variables | connect own server with no paywall shown; cloud sign-in; a lesson; a quiz; flashcards; matching; sentence building; paywall with RevenueCat in sandbox or the offline stub (`EXPO_PUBLIC_PURCHASES_STUB=1`); airplane mode keeps practice working and shows the AI offer instead of an error; mouth map compare view |
+| Flows | Maestro (`brew install mobile-dev-inc/tap/maestro`, JDK 17+), `e2e/run.sh <simulator udid> <name> [light\|dark]` against a release build made with the e2e environment (`.env.example`: a `demo-` Firebase project, `EXPO_PUBLIC_FIREBASE_AUTH_EMULATOR`, `EXPO_PUBLIC_PURCHASES_STUB=1`), a Cadence server and the Auth and Firestore emulators; the script header lists its variables | connect own server with no paywall shown; cloud sign-in; a lesson; a quiz; flashcards; matching; sentence building; paywall with RevenueCat in sandbox or the offline stub (`EXPO_PUBLIC_PURCHASES_STUB=1`); airplane mode keeps practice working and shows the AI offer instead of an error; mouth map compare view; the advanced screens (`e2e/11-advanced.yaml`: hub, phrase bank, slang, plateau diagnostic, recordings) |
 | Screenshots | flows call `takeScreenshot`; `e2e/run.sh` writes them to `build/screenshots/<name>-<theme>/` (not committed) | every screen captured on both devices, light and dark |
 | Dynamic Type | `xcrun simctl ui booted content_size accessibility-extra-extra-extra-large`, then the flows again | no clipped or overlapping text, every action reachable, no crash |
 | Crash check | `xcrun simctl spawn booted log show --last 10m --predicate 'process == "Cadence"' \| grep -i -E "fatal\|exception"` after the flows | nothing |
@@ -1068,3 +1096,201 @@ Run in `mobile/`. Simulators: "iPhone SE (3rd generation)" and
 
 `scripts/budgets/*.mjs` enforce these numbers; change them here and in the
 script together.
+
+---
+
+## 17. Phrase bank and modern slang
+
+"Learn phrases, not words": fluent speech is built from ready-made chunks,
+so the bank teaches multi-word expressions with a natural example rather
+than single words. Static content, free for everyone in every mode, offline.
+
+**Phrases** (`Phrase` in `phrase-bank.ts`): `id` (`phrase.<slug>`,
+permanent), `text` (dictionary form), `kind` (`chunk`, `collocation`,
+`frame`: the fixed opening of a sentence pattern), `form` (the exact words in
+the example, e.g. "raised a concern"), `level` (B2, C1, C2), `situations`
+(meetings, negotiation, small talk, disagreeing politely, storytelling,
+academic, interviews, travel, presenting, giving feedback, persuading,
+explaining, reacting and feelings, problem solving, socialising, calls and
+video calls), `meaning`, `example` (contains `form` once), `plain` (the same
+idea without the phrase, for the rephrase drill), `note` (register, tone, a
+trap) and `audio` (the example's pre-generated file). Packs `phrases-b2`,
+`phrases-c1`, `phrases-c2`; a level past 1,800 phrases is split into parts
+(`phrases-c1-2`, ...) so every `content.json` stays inside the size budget
+as the bank grows, and every reader takes any `phrases-*` pack.
+
+**Drills**, in this order in a session (`drillsForPhrase`): listen and
+repeat (three times, matching the rhythm), gap fill (the example with `form`
+blanked and an initials hint; `gradeGapFill` accepts the form or the
+dictionary form), rephrase (`plain` said again with the phrase; `gradeRephrase`
+accepts any verb form of a phrase of three words or more) and shadowing.
+Spoken steps record the learner for A/B comparison (section 19).
+
+**Slang** (`SlangEntry`): `id` (`slang.<slug>`), `term`, `partOfSpeech`,
+`meaning`, `register` (informal, very informal), `fits` (texting, with
+friends, fine at work, not at work; never both of the last two), `region`
+(US, UK, global), `category`, two or three `examples`, `usageNote` (who says
+it and how it sounds), `dated` with `datedNote` (still understood but a few
+years old), `popularSince`, and two stored quizzes: `contextQuiz` (where it
+fits, four options) and `replyQuiz` (the natural reply to a message, three or
+four). `buildSlangQuiz` asks those or the meaning (distractors from other
+entries), shuffled by a seed so every device asks the same.
+
+**Review.** Phrase and slang items are scheduled by the one scheduler
+(`srs.ts`), keyed by item id: `gradeFromAnswer` (wrong is again, right after
+a retry is hard), `gradeFromScore` for a scored take, `gradeFromSelf` (again,
+close, clean) after listening back. `planItemReview` and `dailyNewOrder` (new
+items in an order fixed per day, the same on every device).
+
+**Pipeline** (`scripts/content/`): `phrases.mjs` drafts 80 phrases per
+situation and level a round with Gemini, in our own words and never from a
+published list; a blind check gives a checker each phrase with its example
+and four meanings (the key and three from other phrases) and asks it to pick
+one and to say whether a fluent speaker would really say it; a miss goes to
+a stronger judge (a wrong key is dropped, a checker slip kept); unnatural
+phrases and anything rated A1 or A2 are dropped. Round 1 is the starter bank;
+`--round 2`, `--round 3` add phrases with everything already written
+excluded, which is how the bank grows towards 10,000 without renaming
+anything. The same phrase in several situations is kept once at its lowest
+level, with the situations merged. `slang.mjs` drafts about 40 terms per
+category; a blind check answers the meaning, context and reply quizzes
+without the key (any miss drops the entry), and a recency and
+appropriateness review drops slurs and sexual, drug, demeaning or obsolete
+terms and marks dated ones. The profanity list applies to every text.
+
+---
+
+## 18. The plateau track (fossilization)
+
+For C1 and C2 speakers whose remaining errors have set because nobody
+corrects them any more. A 10 to 12 week program (12 by default) on the
+errors that persist, with short daily drills and a re-test every week.
+
+**Errors** (`FossilError`, pack `fossilization`, 28 to start, outline in
+`scripts/content/data/fossilization-plan.mjs`): grammar (present perfect for
+duration, articles with general nouns, third-person -s in fast speech,
+uncountable nouns, indirect question order, "will" in if-clauses, gerund or
+infinitive, concession linkers, wishes, reporting verbs, time words), word
+choice (dependent prepositions, make and do, false friends), pronunciation
+(the TH sounds, ship and sheep, V and W, R and L, voiced finals, schwa, cup,
+cat and cot), stress (long words, noun and verb pairs, sentence stress) and
+intonation (contrastive stress, question tags, linking). Each carries the
+grammar points and sounds whose feedback counts as evidence, contrasts
+(wrong, right, note), drill sentences, probes (a sentence to correct, or one
+to read aloud), minimal pairs and stress-marked sentences. `fossilization.mjs`
+drafts them; a blind check corrects every wrong sentence and probe without
+the key, and a judge rejects any "wrong" sentence that is in fact fine, any
+correction it disputes and any drill sentence that is not natural.
+
+**Evidence and diagnosis.** `evidenceFromGrammarIssues` maps spoken-grammar
+feedback (section 7) onto errors by grammar point; `evidenceFromPhonemes`
+maps a take's worst score on an error's sounds (below 70 is a miss); the
+diagnostic (`diagnosticItems`: two written probes per grammar or word-choice
+error, one read-aloud per spoken one, about 40 items) counts twice. An error
+is persistent at a 40% miss rate with two diagnostic misses or misses on two
+different days, so one bad afternoon never starts a program. `startTrack`
+focuses on the four worst.
+
+**The program.** Weeks 1 and 2 notice (all focus errors, contrasts and
+pairs first), the middle rebuilds (two errors at a time, rotating weekly,
+fixed ones skipped), the last third automates (all of them, shadowing and
+full sentences first). `dailyDrills` fills about ten minutes round-robin
+across the week's errors, due steps before new ones, and gives a fifth of
+the time to the learner's own corrected sentences (`addOwnSentence`, at most
+40). Each step is rated after listening back (`recordDrill`, the one
+scheduler). On the last day of each week `retestDue` asks a re-test of one
+fresh probe per focus error (never a diagnostic item); `errorProgress`
+reports baseline, history, trend, and persistent, improving (15 points over
+the baseline) or fixed (two re-tests in a row at 85 or more).
+
+**Daily plan.** `buildDailyPlan` takes `plateau: {steps, retestDue}` and puts
+the track right after due flashcards (4 minutes, or 5 for a re-test), and
+`dueItems` (phrase and slang reviews, at most 3 minutes) after that; the plan
+still fits 10 to 15 minutes. `buildPracticeDay` lists the same day's items
+with what to say.
+
+Stored on the device for everyone (localStorage `cadence.advanced.v1` on the
+web, AsyncStorage `cadence_advanced:<learner>` on the phone) and, with Plus,
+in `users/{uid}/advanced/state`, the newer copy winning by `updatedAt`.
+
+---
+
+## 19. Recordings
+
+On every phrase, slang example, plateau step and diagnostic item the learner
+can record a take, keep it, and play it next to the target: Target, You, or
+A/B (target then take). The target is the pack's pre-generated audio, else
+the coach voice from the learner's own Cadence or, with Plus, the cloud
+(`/api/reference-audio`, asked quietly so a refusal raises no offer), else
+the device's own voice (expo-speech on the phone, `speechSynthesis` in a
+browser).
+
+**Where the audio lives.** Only where it was made, never uploaded to the
+Cadence cloud:
+
+- iPhone: the app's documents directory, `Documents/recordings/<id>.wav`,
+  with `index.json` beside it (`mobile/src/recordings/store.ts`). Export and
+  share through the share sheet (Files, AirDrop, a message) under a readable
+  name (`exportName`).
+- Optional iCloud: a copy of each take in a Cadence folder in the learner's
+  own iCloud Drive (`mobile/src/recordings/icloud.ts`, the local native module
+  `modules/cadence-icloud`), off by default, turned on from the Recordings
+  screen. It needs a build with the iCloud Documents entitlement
+  (`CADENCE_ICLOUD=1` makes `mobile/app.config.js` add
+  `plugins/with-icloud-recordings.js`); without it the screen says so and
+  everything stays on the phone. **Open (owner, developer portal):** before
+  any build with `CADENCE_ICLOUD=1`: in Certificates, Identifiers & Profiles
+  create the iCloud container `iCloud.dev.pstepanov.cadence`; on the App ID
+  `dev.pstepanov.cadence` enable the iCloud capability with "iCloud
+  Documents" (CloudKit not needed) and assign that container; regenerate the
+  development and App Store provisioning profiles (automatic signing does it
+  on the next archive with `-allowProvisioningUpdates`). Then archive with
+  `CADENCE_ICLOUD=1 npm run ios:archive`. The privacy policy should say that
+  the copy goes to the learner's own iCloud, never to Cadence.
+- Web: IndexedDB (`cadence-recordings`) in that browser. The desktop app
+  keeps it in its own local data folder, since Electron stores IndexedDB in
+  the app's profile directory.
+
+**Limits** (`recordings.ts`): at most 10 takes per item (the oldest goes
+first) and 1,000 in all, 30 seconds a take. The Recordings library shows
+them by item or by date with play, A/B, export and delete.
+
+**Plus** syncs only metadata (`metadataForSync`: id, item, kind, text, time,
+length, score, device; never a file name or audio) to
+`users/{uid}/advanced/state.recordings`, so the learner's assistant can see
+what was practised (`list_recordings`).
+
+---
+
+## 20. The connector as a teacher
+
+The learner's assistant can coach through the connector (section 8, the
+teacher rows; `src/lib/mcp/teacher-tools.ts`, content read by
+`src/lib/mcp/advanced-content.ts`, Firestore in
+`src/lib/server/mcp-teacher-store.ts`):
+
+- browse and search the phrase bank and slang (`search_phrases`,
+  `search_slang`), each item with an `audioUrl` to the pack audio when it
+  exists and a `pageUrl` to the item's web page;
+- today's drills (`get_todays_drills`, the same `buildPracticeDay` the apps
+  use, by UTC day): free accounts get the assigned list and the day's new
+  phrases at their level; Plus adds reviews due and the plateau steps from
+  the synced state;
+- assign items to the practice list (`assign_practice`), which every device
+  picks up from `GET /api/practice` and puts first;
+- a hands-free spoken drill (`start_spoken_drill`, `next_drill_step`):
+  stateless, one sentence at a time with what it means, a tip and how many
+  times to say it; the session id is signed with `QUIZ_TOKEN_SECRET` under
+  its own `d1.` prefix;
+- log practice (`log_drill_practice`): a `shadowing` activity on the
+  summary for everyone; with Plus each result is applied to review state at
+  once (`applyConnectorReviews`), otherwise it waits in
+  `practice/inbox.reviews` and the device applies it on its next open;
+- Plus only: the plateau track's progress (`get_plateau_progress`) and the
+  recordings' metadata (`list_recordings`; audio is never available).
+
+Tiers follow section 4.1: static content is free; anything kept in the cloud
+about the learner's practice beyond the summary is Plus. The server
+instructions tell the assistant to keep spoken turns short, never read ids
+or JSON aloud, give one specific note per sentence, and rate results
+honestly.

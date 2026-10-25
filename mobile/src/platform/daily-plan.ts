@@ -2,7 +2,9 @@
 //
 // Today's plan (docs/PLATFORM.md section 7): 10 to 15 minutes picked from
 // what is due and what is weak. Due flashcards first (at most 5 minutes),
-// then one or two weak sounds, one weak grammar point, then shadowing or a
+// then the plateau track's drills or re-test for a learner on it (section 18),
+// phrases and slang due for review (at most 3 minutes), then one or two weak
+// sounds, one weak grammar point, then shadowing or a
 // coach scenario when AI is available, topped up with a lesson at the
 // learner's level. The same function runs on the device with local data
 // (free) and with synced data (Plus). Pure and deterministic: the same input
@@ -30,6 +32,10 @@ export interface PlanInput {
   level: CefrLevel | null;
   /** A paired Cadence or cloud AI is available for shadowing or the coach. */
   aiAvailable: boolean;
+  /** The plateau track (fossilization.ts), when the learner is on it: drill steps left today and whether a re-test is due. */
+  plateau?: { steps: number; retestDue: boolean } | null;
+  /** Phrase-bank and slang items due for review, plus anything assigned to the practice list. */
+  dueItems?: readonly { itemId: string; due: string }[];
 }
 
 export type PlanItem =
@@ -38,7 +44,9 @@ export type PlanItem =
   | { kind: "grammar"; grammarPointId: string; minutes: number }
   | { kind: "shadowing"; soundId: string | null; minutes: number }
   | { kind: "coach"; minutes: number }
-  | { kind: "lesson"; level: CefrLevel; minutes: number };
+  | { kind: "lesson"; level: CefrLevel; minutes: number }
+  | { kind: "plateau"; retest: boolean; minutes: number }
+  | { kind: "phrases"; itemIds: string[]; minutes: number };
 
 export interface DailyPlan {
   day: string;
@@ -55,6 +63,10 @@ const SOUND_MINUTES = 3;
 const GRAMMAR_MINUTES = 3;
 const SHADOWING_MINUTES = 3;
 const COACH_MINUTES = 4;
+const PLATEAU_MINUTES = 4;
+const RETEST_MINUTES = 5;
+const ITEM_SECONDS = 30;
+const ITEMS_MAX_MINUTES = 3;
 /** Below this a sound or grammar point counts as weak. */
 const WEAK_BELOW = 80;
 
@@ -85,15 +97,31 @@ export function buildDailyPlan(input: PlanInput): DailyPlan {
     .slice(0, Math.floor((CARDS_MAX_MINUTES * 60) / CARD_SECONDS));
   if (cards.length) items.push({ kind: "flashcards", cardIds: cards.map((c) => c.cardId), minutes: Math.max(1, Math.ceil((cards.length * CARD_SECONDS) / 60)) });
 
+  // The plateau track comes next for a learner on it: a re-test on its day, else today's drills.
+  if (input.plateau && (input.plateau.retestDue || input.plateau.steps > 0)) {
+    items.push({ kind: "plateau", retest: input.plateau.retestDue, minutes: input.plateau.retestDue ? RETEST_MINUTES : PLATEAU_MINUTES });
+  }
+
+  // Phrases and slang due for review, most overdue first, at most three minutes.
+  const due = (input.dueItems ?? [])
+    .filter((item) => item.due <= input.today)
+    .sort((a, b) => byText(a.due, b.due) || byText(a.itemId, b.itemId))
+    .slice(0, Math.floor((ITEMS_MAX_MINUTES * 60) / ITEM_SECONDS));
+  if (due.length && total() + 1 <= PLAN_MAX_MINUTES) {
+    const minutes = Math.min(PLAN_MAX_MINUTES - total(), Math.max(1, Math.ceil((due.length * ITEM_SECONDS) / 60)));
+    items.push({ kind: "phrases", itemIds: due.slice(0, Math.floor((minutes * 60) / ITEM_SECONDS)).map((item) => item.itemId), minutes });
+  }
+
   // One or two sounds: the second only while it leaves room for grammar.
   const sounds = weakSounds(input);
   for (const sound of sounds.slice(0, 2)) {
     if (items.some((item) => item.kind === "sound") && total() + SOUND_MINUTES + GRAMMAR_MINUTES > PLAN_MAX_MINUTES - SHADOWING_MINUTES) break;
+    if (total() + SOUND_MINUTES > PLAN_MAX_MINUTES) break;
     items.push({ kind: "sound", soundId: sound.soundId, minutes: SOUND_MINUTES });
   }
 
   const grammar = weakGrammar(input)[0];
-  if (grammar) items.push({ kind: "grammar", grammarPointId: grammar.grammarPointId, minutes: GRAMMAR_MINUTES });
+  if (grammar && total() + GRAMMAR_MINUTES <= PLAN_MAX_MINUTES) items.push({ kind: "grammar", grammarPointId: grammar.grammarPointId, minutes: GRAMMAR_MINUTES });
 
   if (input.aiAvailable) {
     const ai: PlanItem = sounds.length ? { kind: "shadowing", soundId: sounds[0].soundId, minutes: SHADOWING_MINUTES } : { kind: "coach", minutes: COACH_MINUTES };

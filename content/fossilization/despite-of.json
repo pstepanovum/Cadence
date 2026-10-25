@@ -1,0 +1,103 @@
+{
+ "format": 1,
+ "id": "fossil.despite-of",
+ "area": "grammar",
+ "title": "Despite, although and however",
+ "what": "mixing up concession linkers ('despite of', 'although the rain', 'however' used like 'but' mid-sentence)",
+ "summary": "These errors persist because the core meaning of concession is understood, but the grammatical structures differ. This leads to subtle imprecision, undermining the speaker's advanced command of English.",
+ "listenFor": "Pay attention to whether you are using a full clause after 'although', a noun phrase after 'despite', and correct punctuation with 'however'.",
+ "grammarPointIds": [
+  "gp.despite-and-in-spite-of",
+  "gp.although-however-though",
+  "gp.concession-clauses"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "Despite of the recent downturn, investments are stable.",
+   "right": "Despite the recent downturn, investments are stable.",
+   "note": "'Despite' does not take 'of'."
+  },
+  {
+   "wrong": "Although the challenging circumstances, they met the deadline.",
+   "right": "Although the circumstances were challenging, they met the deadline.",
+   "note": "'Although' introduces a clause (subject + verb)."
+  },
+  {
+   "wrong": "The proposal was ambitious, however it gained approval.",
+   "right": "The proposal was ambitious; however, it gained approval.",
+   "note": "'However' is a conjunctive adverb, requiring stronger punctuation like a semicolon."
+  },
+  {
+   "wrong": "Despite of the fact that he disagreed, he supported the decision.",
+   "right": "Despite the fact that he disagreed, he supported the decision.",
+   "note": "'Despite' does not take 'of', even with 'the fact that'."
+  },
+  {
+   "wrong": "She felt exhausted, although her presentation was flawless.",
+   "right": "She felt exhausted; however, her presentation was flawless.",
+   "note": "'Although' connects clauses within a sentence; 'however' shows contrast between sentences."
+  },
+  {
+   "wrong": "Although the heavy rain, the outdoor concert proceeded.",
+   "right": "Although it rained heavily, the outdoor concert proceeded.",
+   "note": "'Although' requires a clause (subject + verb)."
+  }
+ ],
+ "drills": [
+  "Despite the initial setbacks, the project ultimately succeeded.",
+  "Although the market is volatile, long-term prospects remain strong.",
+  "The team faced significant obstacles; however, they persevered.",
+  "Despite the late hour, she meticulously reviewed every document.",
+  "Although he had limited resources, his innovative approach yielded results.",
+  "The data was complex; however, the analysis provided clear insights.",
+  "Despite the widespread skepticism, the new policy proved effective.",
+  "Although the journey was arduous, the cultural experience was enriching.",
+  "Funding was scarce; however, they secured a crucial grant.",
+  "Despite the pressure, she maintained her composure during the negotiation."
+ ],
+ "probes": [
+  {
+   "sentence": "Despite of his extensive experience, he found the task difficult.",
+   "answers": [
+    "Despite his extensive experience, he found the task difficult."
+   ]
+  },
+  {
+   "sentence": "Although the high cost, the company invested in new technology.",
+   "answers": [
+    "Although the cost was high, the company invested in new technology.",
+    "Despite the high cost, the company invested in new technology."
+   ]
+  },
+  {
+   "sentence": "The meeting ran late, however all agenda items were covered.",
+   "answers": [
+    "The meeting ran late; however, all agenda items were covered.",
+    "The meeting ran late, but all agenda items were covered."
+   ]
+  },
+  {
+   "sentence": "Despite of the fact that she was ill, she attended the conference.",
+   "answers": [
+    "Despite the fact that she was ill, she attended the conference."
+   ]
+  },
+  {
+   "sentence": "He was well-prepared, although his delivery seemed nervous.",
+   "answers": [
+    "He was well-prepared; however, his delivery seemed nervous.",
+    "He was well-prepared, but his delivery seemed nervous."
+   ]
+  },
+  {
+   "sentence": "Although the tight deadline, the team delivered quality work.",
+   "answers": [
+    "Although the deadline was tight, the team delivered quality work.",
+    "Despite the tight deadline, the team delivered quality work."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

@@ -1,0 +1,68 @@
+{
+ "format": 1,
+ "id": "fossil.false-friends",
+ "area": "word-choice",
+ "title": "False friends",
+ "what": "words that look like a word in another language but mean something else ('actual' for current, 'eventually' for possibly, 'sympathetic' for nice, 'propose' for suggest, 'control' for check)",
+ "summary": "False friends persist because their similarity to native language words makes them seem correct. This leads to subtle misunderstandings and can undermine the speaker's credibility in professional contexts.",
+ "listenFor": "Pay close attention to words that sound or look like terms in your native language but might carry different meanings in English.",
+ "grammarPointIds": [],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "We will eventually go to the conference next year.",
+   "right": "We will possibly go to the conference next year.",
+   "note": "\"Eventually\" means in the end; \"possibly\" means perhaps."
+  },
+  {
+   "wrong": "My new colleague is very sympathetic.",
+   "right": "My new colleague is very kind.",
+   "note": "\"Sympathetic\" means showing understanding; \"kind\" means friendly or generous."
+  },
+  {
+   "wrong": "Please control the documents before sending them.",
+   "right": "Please check the documents before sending them.",
+   "note": "\"Control\" means to direct or manage; \"check\" means to verify."
+  },
+  {
+   "wrong": "He is very sensible to criticism.",
+   "right": "He is very sensitive to criticism.",
+   "note": "\"Sensible\" means practical or reasonable; \"sensitive\" means easily affected."
+  }
+ ],
+ "drills": [
+  "The current market trends indicate a shift in consumer behavior.",
+  "We will possibly need to revise the project timeline.",
+  "She is a very kind person, always willing to help others.",
+  "I suggest we explore alternative solutions for this challenge.",
+  "Please check the figures carefully before submitting the report.",
+  "He is quite sensitive to strong opinions during discussions.",
+  "The actual cost exceeded our initial projections significantly.",
+  "They will eventually reach a consensus after thorough deliberation.",
+  "It was a sensible decision to invest in renewable energy sources.",
+  "We need to control the budget strictly to avoid overspending."
+ ],
+ "probes": [
+  {
+   "sentence": "He is a very sympathetic manager, always listening.",
+   "answers": [
+    "He is a very understanding manager, always listening.",
+    "He is a very friendly manager, always listening."
+   ]
+  },
+  {
+   "sentence": "Can you control if the data has been updated?",
+   "answers": [
+    "Can you check if the data has been updated?"
+   ]
+  },
+  {
+   "sentence": "Her skin is very sensible to sunlight.",
+   "answers": [
+    "Her skin is very sensitive to sunlight."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

@@ -1,0 +1,100 @@
+{
+ "format": 1,
+ "id": "fossil.gerund-infinitive",
+ "area": "grammar",
+ "title": "Gerund or infinitive after verbs",
+ "what": "choosing the wrong pattern after common verbs ('I suggest to meet', 'We look forward to hear from you', 'avoid to say', 'used to working' for past habits)",
+ "summary": "This error persists because it rarely impedes understanding, allowing it to become deeply ingrained. However, it subtly detracts from the speaker's fluency and precision, making their English sound less natural.",
+ "listenFor": "Pay close attention to the form of the second verb when it directly follows another verb in your sentences.",
+ "grammarPointIds": [
+  "gp.gerund-or-infinitive",
+  "gp.remember-stop-try-forget",
+  "gp.be-used-to-and-get-used-to",
+  "gp.verb-object-ing-patterns"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "I suggest to meet early to discuss the project timeline.",
+   "right": "I suggest meeting early to discuss the project timeline.",
+   "note": "\"Suggest\" is followed by a gerund."
+  },
+  {
+   "wrong": "We look forward to hear from you regarding the proposal.",
+   "right": "We look forward to hearing from you regarding the proposal.",
+   "note": "\"Look forward to\" is a phrasal verb followed by a gerund."
+  },
+  {
+   "wrong": "It's best to avoid to say anything controversial during negotiations.",
+   "right": "It's best to avoid saying anything controversial during negotiations.",
+   "note": "\"Avoid\" is followed by a gerund."
+  },
+  {
+   "wrong": "When I was younger, I used to working long hours without fatigue.",
+   "right": "When I was younger, I used to work long hours without fatigue.",
+   "note": "\"Used to\" for past habits is followed by the base form of the verb."
+  },
+  {
+   "wrong": "After much deliberation, they decided going with the alternative plan.",
+   "right": "After much deliberation, they decided to go with the alternative plan.",
+   "note": "\"Decide\" is followed by an infinitive."
+  },
+  {
+   "wrong": "Despite the tight deadline, we managed finishing the report on time.",
+   "right": "Despite the tight deadline, we managed to finish the report on time.",
+   "note": "\"Manage\" is followed by an infinitive."
+  }
+ ],
+ "drills": [
+  "We anticipate receiving the final figures by the end of the week.",
+  "She agreed to oversee the new marketing campaign personally.",
+  "They considered relocating the department to a more central office.",
+  "I regret to inform you that the project has been delayed.",
+  "He enjoys collaborating with diverse teams on complex challenges.",
+  "We need to learn to adapt quickly to changing market conditions.",
+  "They postponed launching the product until all tests were complete.",
+  "It's crucial to remember to submit the expense reports promptly.",
+  "She admitted making a mistake in the initial budget projections.",
+  "We aim to improve efficiency by streamlining our internal processes."
+ ],
+ "probes": [
+  {
+   "sentence": "The committee denied to approve the proposed budget increase.",
+   "answers": [
+    "The committee denied approving the proposed budget increase."
+   ]
+  },
+  {
+   "sentence": "He pretended not understanding the instructions given.",
+   "answers": [
+    "He pretended not to understand the instructions given."
+   ]
+  },
+  {
+   "sentence": "They avoided to discuss the sensitive topic during the meeting.",
+   "answers": [
+    "They avoided discussing the sensitive topic during the meeting."
+   ]
+  },
+  {
+   "sentence": "I can't imagine to work in such a high-pressure environment.",
+   "answers": [
+    "I can't imagine working in such a high-pressure environment."
+   ]
+  },
+  {
+   "sentence": "We failed achieving our quarterly targets due to unforeseen issues.",
+   "answers": [
+    "We failed to achieve our quarterly targets due to unforeseen issues."
+   ]
+  },
+  {
+   "sentence": "She suggested to review the contract terms before signing.",
+   "answers": [
+    "She suggested reviewing the contract terms before signing."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

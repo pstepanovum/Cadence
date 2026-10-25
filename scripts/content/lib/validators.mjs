@@ -6,6 +6,8 @@ import { gzipSync } from "node:zlib";
 import { LEVELS, profanityIn, textKey } from "./text.mjs";
 import { gradeExercise, validatePackContent } from "../../../src/lib/platform/content-model.ts";
 import { ENGLISH_SOUNDS } from "../../../src/lib/platform/vocal-tract/index.ts";
+import { PHRASE_LEVELS, PHRASE_SITUATIONS, validatePhrase, validateSlang } from "../../../src/lib/platform/phrase-bank.ts";
+import { validateFossilError } from "../../../src/lib/platform/fossilization.ts";
 
 export const BUDGET = { rawBytes: 1.5 * 1024 * 1024, gzipBytes: 300 * 1024 };
 export const COVERAGE = {
@@ -18,6 +20,12 @@ export const COVERAGE = {
   sentencesPerLevel: { A2: 800, B1: 800, B2: 800, C1: 800, C2: 600 },
   placementPerLevel: 60,
   placementTypesPerLevel: 7,
+  // The advanced packs (docs/PLATFORM.md sections 17 and 18).
+  phrases: 3000,
+  phrasesPerLevel: 600,
+  phrasesPerSituation: 60,
+  slang: 300,
+  fossilErrors: 25,
 };
 export const LIMITS = { definition: 120, tatoebaSentence: 160 };
 
@@ -230,5 +238,54 @@ export function tatoebaProblems(packs, exportMap) {
       if (ex?.source?.kind === "tatoeba") check(e.id, ex.source.sentenceId, ex.text, ex.source.author);
     }
   }
+  return p;
+}
+
+/**
+ * The phrase bank, slang and plateau packs: every record passes the shared
+ * validators, ids and texts are unique, grammar points and sounds they name
+ * exist, and the coverage is there.
+ */
+export function advancedProblems(packs) {
+  const p = [];
+  const gpIds = new Set(packs.flatMap((pk) => pk.files["content.json"].grammarPoints.map((g) => g.id)));
+  const phrases = packs.flatMap((pk) => pk.files["content.json"].phrases?.phrases ?? []);
+  const slang = packs.flatMap((pk) => pk.files["content.json"].slang?.entries ?? []);
+  const errors = packs.flatMap((pk) => pk.files["content.json"].fossilization?.errors ?? []);
+  const ids = new Set();
+  const claim = (id) => {
+    if (ids.has(id)) p.push(`${id}: duplicate id`);
+    ids.add(id);
+  };
+  const texts = new Map();
+  for (const phrase of phrases) {
+    claim(phrase.id);
+    p.push(...validatePhrase(phrase));
+    const key = textKey(phrase.text);
+    if (texts.has(key)) p.push(`${phrase.id}: same phrase as ${texts.get(key)}`);
+    texts.set(key, phrase.id);
+  }
+  for (const entry of slang) {
+    claim(entry.id);
+    p.push(...validateSlang(entry));
+    for (const text of [entry.term, ...entry.examples]) if (profanityIn(text).length) p.push(`${entry.id}: profanity`);
+  }
+  for (const error of errors) {
+    claim(error.id);
+    p.push(...validateFossilError(error));
+    for (const gp of error.grammarPointIds) if (!gpIds.has(gp)) p.push(`${error.id}: unknown grammar point ${gp}`);
+    for (const sound of error.soundIds) if (!soundIds.has(sound)) p.push(`${error.id}: unknown sound ${sound}`);
+  }
+  if (phrases.length < COVERAGE.phrases) p.push(`coverage: ${phrases.length} phrases, need ${COVERAGE.phrases}`);
+  for (const level of PHRASE_LEVELS) {
+    const n = phrases.filter((x) => x.level === level).length;
+    if (n < COVERAGE.phrasesPerLevel) p.push(`coverage: ${n} ${level} phrases, need ${COVERAGE.phrasesPerLevel}`);
+  }
+  for (const s of PHRASE_SITUATIONS) {
+    const n = phrases.filter((x) => x.situations.includes(s.id)).length;
+    if (n < COVERAGE.phrasesPerSituation) p.push(`coverage: ${n} phrases for ${s.id}, need ${COVERAGE.phrasesPerSituation}`);
+  }
+  if (slang.length < COVERAGE.slang) p.push(`coverage: ${slang.length} slang entries, need ${COVERAGE.slang}`);
+  if (errors.length < COVERAGE.fossilErrors) p.push(`coverage: ${errors.length} plateau errors, need ${COVERAGE.fossilErrors}`);
   return p;
 }

@@ -1,0 +1,1616 @@
+{
+ "format": 1,
+ "level": "B2",
+ "situation": "travel",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "fully booked",
+     "kind": "chunk",
+     "form": "fully booked",
+     "meaning": "no more rooms, tables, or tickets are available.",
+     "example": "Unfortunately, the hotel is fully booked for the dates you requested.",
+     "plain": "Unfortunately, the hotel has no rooms left for the dates you requested.",
+     "note": "A common response when trying to reserve something popular."
+    },
+    {
+     "text": "check in",
+     "kind": "chunk",
+     "form": "check in",
+     "meaning": "to register your arrival at a hotel or airport.",
+     "example": "We need to check in at least two hours before our flight departs.",
+     "plain": "We need to register our arrival at least two hours before our flight departs.",
+     "note": "Essential for flights and hotels."
+    },
+    {
+     "text": "check out",
+     "kind": "chunk",
+     "form": "check out",
+     "meaning": "to pay your bill and leave a hotel.",
+     "example": "What time do we need to check out of the hotel tomorrow morning?",
+     "plain": "When do we need to leave the hotel tomorrow morning after paying?",
+     "note": "Standard for hotel departures."
+    },
+    {
+     "text": "out of order",
+     "kind": "chunk",
+     "form": "out of order",
+     "meaning": "not working correctly or broken.",
+     "example": "The elevator is out of order, so we'll have to use the stairs.",
+     "plain": "The elevator is broken, so we'll have to use the stairs.",
+     "note": "Common sign or announcement for broken equipment."
+    },
+    {
+     "text": "get off at",
+     "kind": "chunk",
+     "form": "get off at",
+     "meaning": "to leave a bus, train, or other public transport at a specific stop.",
+     "example": "You need to get off at the third stop after the bridge.",
+     "plain": "You need to leave the bus at the third stop after the bridge.",
+     "note": "Essential for giving/receiving directions on public transport."
+    },
+    {
+     "text": "get on the",
+     "kind": "chunk",
+     "form": "get on the",
+     "meaning": "to board a bus, train, or other public transport.",
+     "example": "You should get on the number 14 bus to reach the city centre.",
+     "plain": "You should board the number 14 bus to reach the city centre.",
+     "note": "Essential for giving/receiving directions on public transport."
+    },
+    {
+     "text": "look into it",
+     "kind": "chunk",
+     "form": "look into it",
+     "meaning": "to investigate or examine a problem.",
+     "example": "The hotel manager said he would look into it and get back to us.",
+     "plain": "The hotel manager said he would investigate the problem and get back to us.",
+     "note": "Common response when someone promises to address a problem."
+    },
+    {
+     "text": "point me in the direction of",
+     "kind": "chunk",
+     "form": "point me in the direction of",
+     "meaning": "to show someone where something is.",
+     "example": "Could you please point me in the direction of the nearest ATM?",
+     "plain": "Could you please show me where the nearest ATM is?",
+     "note": "Polite way to ask for directions."
+    },
+    {
+     "text": "on foot",
+     "kind": "chunk",
+     "form": "on foot",
+     "meaning": "walking rather than using transport.",
+     "example": "The museum is only ten minutes away if you go on foot.",
+     "plain": "The museum is only ten minutes away if you walk.",
+     "note": "Common way to describe walking distance."
+    },
+    {
+     "text": "by bus",
+     "kind": "chunk",
+     "form": "by bus",
+     "meaning": "using a bus as a mode of transport.",
+     "example": "We decided to go by bus to save money on taxis.",
+     "plain": "We decided to use the bus to save money on taxis.",
+     "note": "Common way to specify transport method."
+    },
+    {
+     "text": "by train",
+     "kind": "chunk",
+     "form": "by train",
+     "meaning": "using a train as a mode of transport.",
+     "example": "It's quicker to get there by train than by car during peak hours.",
+     "plain": "It's quicker to use the train than a car during peak hours.",
+     "note": "Common way to specify transport method."
+    },
+    {
+     "text": "by taxi",
+     "kind": "chunk",
+     "form": "by taxi",
+     "meaning": "using a taxi as a mode of transport.",
+     "example": "We'll go by taxi directly to the airport to avoid any delays.",
+     "plain": "We'll use a taxi directly to the airport to avoid any delays.",
+     "note": "Common way to specify transport method."
+    },
+    {
+     "text": "on the left",
+     "kind": "chunk",
+     "form": "on the left",
+     "meaning": "located to the left side.",
+     "example": "The entrance to the park is just past the fountain, on the left.",
+     "plain": "The entrance to the park is just past the fountain, to the left side.",
+     "note": "Essential for giving directions."
+    },
+    {
+     "text": "on the right",
+     "kind": "chunk",
+     "form": "on the right",
+     "meaning": "located to the right side.",
+     "example": "You'll see the hotel sign on the right after you turn the corner.",
+     "plain": "You'll see the hotel sign to the right after you turn the corner.",
+     "note": "Essential for giving directions."
+    },
+    {
+     "text": "straight ahead",
+     "kind": "chunk",
+     "form": "straight ahead",
+     "meaning": "directly forward without turning.",
+     "example": "Just keep walking straight ahead for about five minutes, and you'll see it.",
+     "plain": "Just keep walking directly forward for about five minutes, and you'll see it.",
+     "note": "Essential for giving directions."
+    },
+    {
+     "text": "turn left",
+     "kind": "chunk",
+     "form": "turn left",
+     "meaning": "to change direction to the left.",
+     "example": "At the next intersection, you need to turn left towards the river.",
+     "plain": "At the next intersection, you need to go left towards the river.",
+     "note": "Essential for giving directions."
+    },
+    {
+     "text": "turn right",
+     "kind": "chunk",
+     "form": "turn right",
+     "meaning": "to change direction to the right.",
+     "example": "After the bakery, turn right, and the museum will be on your left.",
+     "plain": "After the bakery, go right, and the museum will be on your left.",
+     "note": "Essential for giving directions."
+    },
+    {
+     "text": "on the corner",
+     "kind": "chunk",
+     "form": "on the corner",
+     "meaning": "located at the intersection of two streets.",
+     "example": "The cafe you're looking for is right on the corner of Main Street and Elm Avenue.",
+     "plain": "The cafe you're looking for is at the intersection of Main Street and Elm Avenue.",
+     "note": "Common for describing locations."
+    },
+    {
+     "text": "just around the corner",
+     "kind": "chunk",
+     "form": "just around the corner",
+     "meaning": "a very short distance away.",
+     "example": "Don't worry, the train station is just around the corner from here.",
+     "plain": "Don't worry, the train station is very close to here.",
+     "note": "Informal way to indicate proximity."
+    },
+    {
+     "text": "a few blocks away",
+     "kind": "chunk",
+     "form": "a few blocks away",
+     "meaning": "a short distance, typically in a city grid.",
+     "example": "The art gallery is just a few blocks away, an easy walk.",
+     "plain": "The art gallery is a short distance away, an easy walk.",
+     "note": "Common for describing distance in urban areas."
+    },
+    {
+     "text": "make it on time",
+     "kind": "chunk",
+     "form": "make it on time",
+     "meaning": "to arrive at the scheduled moment.",
+     "example": "We left early to make it on time for our train departure.",
+     "plain": "We left early to arrive at the scheduled moment for our train departure.",
+     "note": "Common for punctuality."
+    },
+    {
+     "text": "running late",
+     "kind": "chunk",
+     "form": "running late",
+     "meaning": "to be delayed and behind schedule.",
+     "example": "Our flight is running late due to unexpected weather conditions.",
+     "plain": "Our flight is delayed due to unexpected weather conditions.",
+     "note": "Common announcement for delays."
+    },
+    {
+     "text": "on schedule",
+     "kind": "chunk",
+     "form": "on schedule",
+     "meaning": "happening at the planned time.",
+     "example": "Good news, our train is running perfectly on schedule.",
+     "plain": "Good news, our train is running exactly at the planned time.",
+     "note": "Positive update for travel."
+    },
+    {
+     "text": "behind schedule",
+     "kind": "chunk",
+     "form": "behind schedule",
+     "meaning": "happening later than planned.",
+     "example": "Unfortunately, the bus is running behind schedule by about 20 minutes.",
+     "plain": "Unfortunately, the bus is running later than planned by about 20 minutes.",
+     "note": "Negative update for travel."
+    },
+    {
+     "text": "sign here",
+     "kind": "chunk",
+     "form": "sign here",
+     "meaning": "an instruction to put your signature on a document.",
+     "example": "Please sign here to confirm you've received your rental car keys.",
+     "plain": "Please put your signature here to confirm you've received your rental car keys.",
+     "note": "Common instruction when completing paperwork."
+    },
+    {
+     "text": "what time is",
+     "kind": "frame",
+     "form": "What time is",
+     "meaning": "asking for the scheduled hour of an event or service.",
+     "example": "What time is the last train to Edinburgh tonight?",
+     "plain": "When does the last train to Edinburgh leave tonight?",
+     "note": "Very common for transport schedules."
+    },
+    {
+     "text": "how much does it cost",
+     "kind": "frame",
+     "form": "How much does it cost",
+     "meaning": "asking for the price of something.",
+     "example": "How much does it cost to get a taxi from the airport to the city centre?",
+     "plain": "What is the price of a taxi from the airport to the city centre?",
+     "note": "Direct and common way to ask about prices."
+    },
+    {
+     "text": "there's a problem with",
+     "kind": "frame",
+     "form": "There's a problem with",
+     "meaning": "to state that something is not working or is incorrect.",
+     "example": "There's a problem with the heating in our room; it's not working.",
+     "plain": "The heating in our room isn't working; it's not functioning.",
+     "note": "Direct and common way to report an issue."
+    },
+    {
+     "text": "I'd like to complain about",
+     "kind": "frame",
+     "form": "I'd like to complain about",
+     "meaning": "to express dissatisfaction with a service or product.",
+     "example": "I'd like to complain about the noise from the room next door.",
+     "plain": "I want to express my dissatisfaction with the noise from the room next door.",
+     "note": "Polite but firm way to make a complaint."
+    },
+    {
+     "text": "something is wrong with",
+     "kind": "frame",
+     "form": "Something is wrong with",
+     "meaning": "to indicate that an item or situation is faulty or incorrect.",
+     "example": "Something is wrong with the Wi-Fi connection; I can't get online.",
+     "plain": "The Wi-Fi connection is faulty; I can't get online.",
+     "note": "General way to report a malfunction."
+    },
+    {
+     "text": "could you tell me",
+     "kind": "frame",
+     "form": "Could you tell me",
+     "meaning": "polite way to ask for information.",
+     "example": "Could you tell me how to get to the nearest post office?",
+     "plain": "Please inform me how to get to the nearest post office.",
+     "note": "Very common and polite way to ask questions."
+    },
+    {
+     "text": "I'm looking for",
+     "kind": "frame",
+     "form": "I'm looking for",
+     "meaning": "to state what you are trying to find.",
+     "example": "I'm looking for a good coffee shop with free Wi-Fi nearby.",
+     "plain": "I want to find a good coffee shop with free Wi-Fi nearby.",
+     "note": "Common way to ask for directions or recommendations."
+    },
+    {
+     "text": "do you know if",
+     "kind": "frame",
+     "form": "Do you know if",
+     "meaning": "polite way to ask for specific information.",
+     "example": "Do you know if this bus goes to the city centre?",
+     "plain": "Can you tell me if this bus goes to the city centre?",
+     "note": "Useful for indirect questions."
+    },
+    {
+     "text": "where can I find",
+     "kind": "frame",
+     "form": "Where can I find",
+     "meaning": "asking for the location of something.",
+     "example": "Excuse me, where can I find the departure lounge for international flights?",
+     "plain": "Excuse me, where is the departure lounge for international flights?",
+     "note": "Direct way to ask for a location."
+    },
+    {
+     "text": "how do I get to",
+     "kind": "frame",
+     "form": "How do I get to",
+     "meaning": "asking for directions to a place.",
+     "example": "Excuse me, how do I get to the main square from here?",
+     "plain": "Excuse me, what's the way to the main square from here?",
+     "note": "Very common for asking directions."
+    },
+    {
+     "text": "could you help me",
+     "kind": "frame",
+     "form": "Could you help me",
+     "meaning": "polite way to ask for assistance.",
+     "example": "Excuse me, could you help me with my luggage up these stairs?",
+     "plain": "Excuse me, would you assist me with my luggage up these stairs?",
+     "note": "Standard polite request for help."
+    },
+    {
+     "text": "I need assistance with",
+     "kind": "frame",
+     "form": "I need assistance with",
+     "meaning": "to state that you require help with a specific task.",
+     "example": "I need assistance with checking in my oversized baggage.",
+     "plain": "I require help with checking in my oversized baggage.",
+     "note": "Slightly more formal than 'could you help me'."
+    },
+    {
+     "text": "what's the best way",
+     "kind": "frame",
+     "form": "What's the best way",
+     "meaning": "asking for the most efficient or suitable method.",
+     "example": "What's the best way to get to the airport at this time of day?",
+     "plain": "What is the most efficient method to get to the airport now?",
+     "note": "Common for seeking advice on routes or methods."
+    },
+    {
+     "text": "is there a discount",
+     "kind": "frame",
+     "form": "Is there a discount",
+     "meaning": "asking if a reduced price is available.",
+     "example": "Is there a discount for students or seniors on this tour?",
+     "plain": "Do you offer a reduced price for students or seniors on this tour?",
+     "note": "Polite way to inquire about special rates."
+    },
+    {
+     "text": "do you accept",
+     "kind": "frame",
+     "form": "Do you accept",
+     "meaning": "asking if a particular payment method is valid.",
+     "example": "Do you accept credit cards, or is it cash only for this purchase?",
+     "plain": "Can I pay with a credit card, or do I need cash for this purchase?",
+     "note": "Common when asking about payment options."
+    },
+    {
+     "text": "make a reservation",
+     "kind": "collocation",
+     "form": "make a reservation",
+     "meaning": "to book a place or service in advance.",
+     "example": "I called the restaurant to make a reservation for two for Friday evening.",
+     "plain": "I called the restaurant to book a table for two for Friday evening.",
+     "note": "Standard for booking tables, rooms, or tickets."
+    },
+    {
+     "text": "check availability",
+     "kind": "collocation",
+     "form": "check availability",
+     "meaning": "to find out if something is free or can be used.",
+     "example": "Could you please check availability for a double room next week?",
+     "plain": "Could you please see if a double room is free next week?",
+     "note": "Common when booking hotels or services."
+    },
+    {
+     "text": "confirm the booking",
+     "kind": "collocation",
+     "form": "confirm the booking",
+     "meaning": "to verify that a reservation is still valid.",
+     "example": "I'd like to confirm the booking I made online for next Tuesday.",
+     "plain": "I'd like to verify the reservation I made online for next Tuesday.",
+     "note": "Essential for peace of mind before travel."
+    },
+    {
+     "text": "cancel a reservation",
+     "kind": "collocation",
+     "form": "cancel a reservation",
+     "meaning": "to call off a booking.",
+     "example": "I need to cancel a reservation I made for tomorrow night.",
+     "plain": "I need to call off the booking I made for tomorrow night.",
+     "note": "Standard phrase for cancelling any booking."
+    },
+    {
+     "text": "boarding pass",
+     "kind": "collocation",
+     "form": "boarding pass",
+     "meaning": "a document allowing you to board a plane or ship.",
+     "example": "Please have your boarding pass and passport ready at the gate.",
+     "plain": "Please have your ticket and passport ready at the gate.",
+     "note": "Crucial for air travel."
+    },
+    {
+     "text": "baggage claim",
+     "kind": "collocation",
+     "form": "baggage claim",
+     "meaning": "the area in an airport where you collect your luggage.",
+     "example": "After landing, we headed straight to baggage claim to pick up our suitcases.",
+     "plain": "After landing, we went directly to the area where you collect luggage.",
+     "note": "Standard airport terminology."
+    },
+    {
+     "text": "connecting flight",
+     "kind": "collocation",
+     "form": "connecting flight",
+     "meaning": "a second flight taken to reach your final destination.",
+     "example": "Our connecting flight to Rome departs from Gate B12 in an hour.",
+     "plain": "Our next flight to Rome leaves from Gate B12 in an hour.",
+     "note": "Common for longer journeys."
+    },
+    {
+     "text": "departure gate",
+     "kind": "collocation",
+     "form": "departure gate",
+     "meaning": "the specific exit point for boarding a flight.",
+     "example": "Please proceed to your departure gate as boarding will begin shortly.",
+     "plain": "Please go to your specific exit point for boarding as it starts soon.",
+     "note": "Essential airport announcement phrase."
+    },
+    {
+     "text": "room service",
+     "kind": "collocation",
+     "form": "room service",
+     "meaning": "food and drink delivered to your hotel room.",
+     "example": "I'll order room service for dinner tonight; I'm too tired to go out.",
+     "plain": "I'll have dinner delivered to my hotel room tonight; I'm too tired.",
+     "note": "Common hotel amenity."
+    },
+    {
+     "text": "complimentary breakfast",
+     "kind": "collocation",
+     "form": "complimentary breakfast",
+     "meaning": "a free breakfast provided by the hotel.",
+     "example": "Our stay includes a complimentary breakfast served in the dining room.",
+     "plain": "Our stay includes a free breakfast served in the dining room.",
+     "note": "A common perk at hotels."
+    },
+    {
+     "text": "front desk",
+     "kind": "collocation",
+     "form": "front desk",
+     "meaning": "the reception area of a hotel.",
+     "example": "Please report any issues with your room to the front desk.",
+     "plain": "Please report any issues with your room to the reception area.",
+     "note": "Main point of contact in a hotel."
+    },
+    {
+     "text": "public transport",
+     "kind": "collocation",
+     "form": "public transport",
+     "meaning": "buses, trains, and subways available to everyone.",
+     "example": "Is it easy to get around the city using public transport?",
+     "plain": "Is it easy to get around the city using buses, trains, and subways?",
+     "note": "General term for shared transportation."
+    },
+    {
+     "text": "taxi stand",
+     "kind": "collocation",
+     "form": "taxi stand",
+     "meaning": "a designated place where taxis wait for passengers.",
+     "example": "You can find a taxi stand just outside the main entrance of the station.",
+     "plain": "You can find a place where taxis wait just outside the main entrance.",
+     "note": "Useful for finding a cab."
+    },
+    {
+     "text": "bus stop",
+     "kind": "collocation",
+     "form": "bus stop",
+     "meaning": "a place where a bus regularly stops to pick up or drop off passengers.",
+     "example": "Which bus stop should I use to get to the museum from here?",
+     "plain": "Where does the bus stop that goes to the museum from here?",
+     "note": "Essential for bus travel."
+    },
+    {
+     "text": "train station",
+     "kind": "collocation",
+     "form": "train station",
+     "meaning": "a place where trains stop for passengers.",
+     "example": "How far is the nearest train station from our hotel?",
+     "plain": "How far is the nearest place where trains stop from our hotel?",
+     "note": "Common landmark for travel."
+    },
+    {
+     "text": "rental car",
+     "kind": "collocation",
+     "form": "rental car",
+     "meaning": "a car you hire for a period of time.",
+     "example": "We decided to get a rental car to explore the countryside at our own pace.",
+     "plain": "We decided to hire a car to explore the countryside at our own pace.",
+     "note": "Popular for independent travel."
+    },
+    {
+     "text": "one way ticket",
+     "kind": "collocation",
+     "form": "one way ticket",
+     "meaning": "a ticket for a journey to a destination but not back.",
+     "example": "I'd like to buy a one way ticket to London for tomorrow morning.",
+     "plain": "I'd like to buy a ticket to London for tomorrow morning, but not back.",
+     "note": "Standard for single journeys."
+    },
+    {
+     "text": "return ticket",
+     "kind": "collocation",
+     "form": "return ticket",
+     "meaning": "a ticket for a journey to a destination and back again.",
+     "example": "Could I get a return ticket to the city centre, please?",
+     "plain": "Could I get a ticket to the city centre and back, please?",
+     "note": "Standard for round trips."
+    },
+    {
+     "text": "rush hour",
+     "kind": "collocation",
+     "form": "rush hour",
+     "meaning": "the busiest time for travel, usually morning and evening.",
+     "example": "Try to avoid travelling during rush hour if you want to miss the crowds.",
+     "plain": "Try to avoid travelling during the busiest time if you want to miss the crowds.",
+     "note": "Important for planning travel in cities."
+    },
+    {
+     "text": "traffic jam",
+     "kind": "collocation",
+     "form": "traffic jam",
+     "meaning": "a long line of vehicles that cannot move or move very slowly.",
+     "example": "We got stuck in a huge traffic jam on the way to the airport.",
+     "plain": "We got stuck in a huge line of unmoving cars on the way to the airport.",
+     "note": "Common travel frustration."
+    },
+    {
+     "text": "change trains",
+     "kind": "collocation",
+     "form": "change trains",
+     "meaning": "to switch from one train to another to continue a journey.",
+     "example": "We need to change trains at the next station to get to our destination.",
+     "plain": "We need to switch from one train to another at the next station.",
+     "note": "Common instruction for train travel."
+    },
+    {
+     "text": "lost my passport",
+     "kind": "collocation",
+     "form": "lost my passport",
+     "meaning": "to no longer have one's passport, usually by misplacing it.",
+     "example": "I've lost my passport and need to report it to the embassy.",
+     "plain": "My passport is missing and I need to report it to the embassy.",
+     "note": "Serious travel problem."
+    },
+    {
+     "text": "missing luggage",
+     "kind": "collocation",
+     "form": "missing luggage",
+     "meaning": "bags that have not arrived at the destination with the passenger.",
+     "example": "I need to report some missing luggage from my flight from Dublin.",
+     "plain": "I need to report that my bags didn't arrive from my flight from Dublin.",
+     "note": "Common airport issue."
+    },
+    {
+     "text": "overcharged me",
+     "kind": "collocation",
+     "form": "overcharged me",
+     "meaning": "to charge someone too much money for something.",
+     "example": "I think the taxi driver overcharged me for the ride to the hotel.",
+     "plain": "I think the taxi driver charged me too much for the ride to the hotel.",
+     "note": "Common complaint about unfair pricing."
+    },
+    {
+     "text": "get a refund",
+     "kind": "collocation",
+     "form": "get a refund",
+     "meaning": "to receive money back for a product or service.",
+     "example": "I'd like to get a refund for the tour that was cancelled.",
+     "plain": "I'd like to receive my money back for the tour that was cancelled.",
+     "note": "Standard request for money back."
+    },
+    {
+     "text": "sort out the issue",
+     "kind": "collocation",
+     "form": "sort out the issue",
+     "meaning": "to resolve a problem or difficulty.",
+     "example": "Could you please help me sort out the issue with my booking?",
+     "plain": "Could you please help me resolve the problem with my booking?",
+     "note": "Common way to ask for problem resolution."
+    },
+    {
+     "text": "local currency",
+     "kind": "collocation",
+     "form": "local currency",
+     "meaning": "the money used in a particular country.",
+     "example": "Do you know where I can exchange my money for local currency?",
+     "plain": "Do you know where I can exchange my money for the country's money?",
+     "note": "Essential for financial transactions abroad."
+    },
+    {
+     "text": "exchange rate",
+     "kind": "collocation",
+     "form": "exchange rate",
+     "meaning": "the value of one currency in relation to another.",
+     "example": "What's the current exchange rate for euros to US dollars?",
+     "plain": "What is the current value of euros compared to US dollars?",
+     "note": "Important for money exchange."
+    },
+    {
+     "text": "tourist information centre",
+     "kind": "collocation",
+     "form": "tourist information centre",
+     "meaning": "a place providing advice and maps for visitors.",
+     "example": "We should visit the tourist information centre for maps and local tips.",
+     "plain": "We should visit the place that gives advice and maps for visitors.",
+     "note": "Key resource for travellers."
+    },
+    {
+     "text": "opening hours",
+     "kind": "collocation",
+     "form": "opening hours",
+     "meaning": "the times a business or attraction is open.",
+     "example": "What are the opening hours for the museum on weekends?",
+     "plain": "When is the museum open on weekends?",
+     "note": "Essential for planning visits."
+    },
+    {
+     "text": "entrance fee",
+     "kind": "collocation",
+     "form": "entrance fee",
+     "meaning": "the money you pay to enter a place.",
+     "example": "Is there an entrance fee to get into the botanical gardens?",
+     "plain": "Do I have to pay money to get into the botanical gardens?",
+     "note": "Common for attractions."
+    },
+    {
+     "text": "free Wi-Fi",
+     "kind": "collocation",
+     "form": "free Wi-Fi",
+     "meaning": "internet access available without charge.",
+     "example": "Does this cafe offer free Wi-Fi for customers?",
+     "plain": "Does this cafe offer internet access without charge for customers?",
+     "note": "Highly sought-after amenity for travellers."
+    },
+    {
+     "text": "travel insurance",
+     "kind": "collocation",
+     "form": "travel insurance",
+     "meaning": "insurance that covers losses and medical expenses while travelling.",
+     "example": "Make sure you have good travel insurance before you leave for your trip.",
+     "plain": "Make sure you have insurance for your trip before you leave.",
+     "note": "Crucial for peace of mind."
+    },
+    {
+     "text": "emergency contact",
+     "kind": "collocation",
+     "form": "emergency contact",
+     "meaning": "a person to be notified in case of an emergency.",
+     "example": "Please provide an emergency contact number when filling out this form.",
+     "plain": "Please provide a number for someone to call in an emergency.",
+     "note": "Important safety measure."
+    },
+    {
+     "text": "lost and found",
+     "kind": "collocation",
+     "form": "lost and found",
+     "meaning": "a place where lost items are kept.",
+     "example": "I left my umbrella on the train; I'll check the lost and found.",
+     "plain": "I left my umbrella on the train; I'll check the place for lost items.",
+     "note": "Common service in public places."
+    },
+    {
+     "text": "local time",
+     "kind": "collocation",
+     "form": "local time",
+     "meaning": "the current time in a specific geographical area.",
+     "example": "What's the local time in Tokyo right now?",
+     "plain": "What is the current time in Tokyo right now?",
+     "note": "Important for communication across time zones."
+    },
+    {
+     "text": "time difference",
+     "kind": "collocation",
+     "form": "time difference",
+     "meaning": "the variation in time between two places.",
+     "example": "There's a six-hour time difference between here and my home country.",
+     "plain": "There's a six-hour variation in time between here and my home country.",
+     "note": "Important for planning calls home."
+    },
+    {
+     "text": "currency exchange",
+     "kind": "collocation",
+     "form": "currency exchange",
+     "meaning": "the service of converting one country's money into another's.",
+     "example": "Is there a currency exchange office at the airport?",
+     "plain": "Is there a place to convert money at the airport?",
+     "note": "Essential service for international travellers."
+    },
+    {
+     "text": "travel adapter",
+     "kind": "collocation",
+     "form": "travel adapter",
+     "meaning": "a device that allows electronic devices to be used in different countries.",
+     "example": "Don't forget to pack a travel adapter for your phone charger.",
+     "plain": "Don't forget to pack a device for your phone charger to use abroad.",
+     "note": "Crucial for charging electronics internationally."
+    },
+    {
+     "text": "pick up point",
+     "kind": "collocation",
+     "form": "pick up point",
+     "meaning": "a designated location where someone or something is collected.",
+     "example": "The shuttle bus has a designated pick up point outside the terminal.",
+     "plain": "The shuttle bus has a designated place to collect passengers outside the terminal.",
+     "note": "Common for tours, taxis, or shuttles."
+    },
+    {
+     "text": "drop off point",
+     "kind": "collocation",
+     "form": "drop off point",
+     "meaning": "a designated location where someone or something is left.",
+     "example": "The taxi driver will take us directly to the drop off point at the hotel entrance.",
+     "plain": "The taxi driver will take us directly to the place where we get out at the hotel entrance.",
+     "note": "Common for taxis or shuttles."
+    },
+    {
+     "text": "cross the street",
+     "kind": "collocation",
+     "form": "cross the street",
+     "meaning": "to walk from one side of a road to the other.",
+     "example": "You'll need to cross the street at the traffic lights to reach the park.",
+     "plain": "You'll need to walk to the other side of the street at the traffic lights.",
+     "note": "Basic direction."
+    },
+    {
+     "text": "take the subway",
+     "kind": "collocation",
+     "form": "take the subway",
+     "meaning": "to use the underground train system.",
+     "example": "It's faster to take the subway to the museum during peak traffic.",
+     "plain": "It's faster to use the underground train system to the museum during peak traffic.",
+     "note": "Common for city transport."
+    },
+    {
+     "text": "take a bus",
+     "kind": "collocation",
+     "form": "take a bus",
+     "meaning": "to use a bus for transportation.",
+     "example": "We can take a bus from the hotel directly to the beach.",
+     "plain": "We can use a bus from the hotel directly to the beach.",
+     "note": "Common for city transport."
+    },
+    {
+     "text": "take a taxi",
+     "kind": "collocation",
+     "form": "take a taxi",
+     "meaning": "to use a taxi for transportation.",
+     "example": "It's late, so let's take a taxi back to the apartment.",
+     "plain": "It's late, so let's use a taxi back to the apartment.",
+     "note": "Common for convenience."
+    },
+    {
+     "text": "catch a train",
+     "kind": "collocation",
+     "form": "catch a train",
+     "meaning": "to get on a train to travel.",
+     "example": "We need to hurry if we want to catch a train before midnight.",
+     "plain": "We need to hurry if we want to get on a train before midnight.",
+     "note": "Common for train travel."
+    },
+    {
+     "text": "miss a flight",
+     "kind": "collocation",
+     "form": "miss a flight",
+     "meaning": "to fail to board a plane at the scheduled time.",
+     "example": "I hope we don't miss a flight because of this traffic.",
+     "plain": "I hope we don't fail to board our plane because of this traffic.",
+     "note": "Common travel anxiety."
+    },
+    {
+     "text": "fill out a form",
+     "kind": "collocation",
+     "form": "fill out a form",
+     "meaning": "to complete a document with required information.",
+     "example": "You'll need to fill out a form at the reception desk for your check-in.",
+     "plain": "You'll need to complete a document at the reception desk for your check-in.",
+     "note": "Common administrative task."
+    },
+    {
+     "text": "passport control",
+     "kind": "collocation",
+     "form": "passport control",
+     "meaning": "the area where passports are checked when entering or leaving a country.",
+     "example": "We spent a long time waiting at passport control after our international flight.",
+     "plain": "We spent a long time waiting where passports are checked after our international flight.",
+     "note": "Essential part of international travel."
+    },
+    {
+     "text": "security check",
+     "kind": "collocation",
+     "form": "security check",
+     "meaning": "an inspection to ensure safety, especially at airports.",
+     "example": "All passengers must go through a security check before boarding.",
+     "plain": "All passengers must go through an inspection for safety before boarding.",
+     "note": "Mandatory at airports."
+    },
+    {
+     "text": "duty-free shop",
+     "kind": "collocation",
+     "form": "duty-free shop",
+     "meaning": "a store at an airport or port where goods are sold without tax.",
+     "example": "I'll buy some souvenirs at the duty-free shop before my flight.",
+     "plain": "I'll buy some souvenirs at the tax-free shop before my flight.",
+     "note": "Common at international airports."
+    },
+    {
+     "text": "travel guide",
+     "kind": "collocation",
+     "form": "travel guide",
+     "meaning": "a book or person that provides information about a place for tourists.",
+     "example": "We bought a travel guide to help us plan our itinerary for the trip.",
+     "plain": "We bought a book with information about the place to plan our itinerary.",
+     "note": "Helpful resource for planning."
+    },
+    {
+     "text": "city map",
+     "kind": "collocation",
+     "form": "city map",
+     "meaning": "a map showing the streets and features of a city.",
+     "example": "Do you have a free city map available at the reception?",
+     "plain": "Do you have a free map of the city available at the reception?",
+     "note": "Essential for navigating a new city."
+    },
+    {
+     "text": "tourist attraction",
+     "kind": "collocation",
+     "form": "tourist attraction",
+     "meaning": "a place of interest for tourists.",
+     "example": "The Eiffel Tower is a famous tourist attraction in Paris.",
+     "plain": "The Eiffel Tower is a famous place of interest for tourists in Paris.",
+     "note": "Common term for sights."
+    },
+    {
+     "text": "local cuisine",
+     "kind": "collocation",
+     "form": "local cuisine",
+     "meaning": "the traditional food of a particular region or country.",
+     "example": "We're excited to try the local cuisine during our trip to Italy.",
+     "plain": "We're excited to try the traditional food of the region during our trip to Italy.",
+     "note": "Important aspect of cultural experience."
+    },
+    {
+     "text": "souvenir shop",
+     "kind": "collocation",
+     "form": "souvenir shop",
+     "meaning": "a store selling items kept as a reminder of a place.",
+     "example": "Let's stop at that souvenir shop to buy gifts for our family.",
+     "plain": "Let's stop at that store selling items to remember the place.",
+     "note": "Common for buying gifts."
+    },
+    {
+     "text": "cash machine",
+     "kind": "collocation",
+     "form": "cash machine",
+     "meaning": "a machine that dispenses money; an ATM.",
+     "example": "Is there a cash machine inside the airport terminal?",
+     "plain": "Is there an ATM inside the airport terminal?",
+     "note": "Common British English for ATM."
+    },
+    {
+     "text": "credit card",
+     "kind": "collocation",
+     "form": "credit card",
+     "meaning": "a plastic card used to make purchases on credit.",
+     "example": "Do you accept credit card payments here, or is it cash only?",
+     "plain": "Do you accept plastic card payments here, or is it cash only?",
+     "note": "Common payment method."
+    },
+    {
+     "text": "travel agency",
+     "kind": "collocation",
+     "form": "travel agency",
+     "meaning": "a business that helps people plan and book trips.",
+     "example": "We booked our entire holiday through a local travel agency.",
+     "plain": "We booked our entire holiday through a local business that plans trips.",
+     "note": "Useful for complex travel plans."
+    },
+    {
+     "text": "travel itinerary",
+     "kind": "collocation",
+     "form": "travel itinerary",
+     "meaning": "a detailed plan for a journey, including routes and times.",
+     "example": "Our travel itinerary includes visits to three different cities.",
+     "plain": "Our detailed plan for the journey includes visits to three different cities.",
+     "note": "Important for organized trips."
+    },
+    {
+     "text": "hotel staff",
+     "kind": "collocation",
+     "form": "hotel staff",
+     "meaning": "the employees who work at a hotel.",
+     "example": "The hotel staff were very helpful when we had a problem with our room.",
+     "plain": "The employees who work at the hotel were very helpful when we had a problem.",
+     "note": "General term for hotel employees."
+    },
+    {
+     "text": "reception desk",
+     "kind": "collocation",
+     "form": "reception desk",
+     "meaning": "the main counter in a hotel or office where visitors are greeted.",
+     "example": "You can pick up your keys at the reception desk upon arrival.",
+     "plain": "You can pick up your keys at the main counter upon arrival.",
+     "note": "Primary point of contact in a hotel."
+    },
+    {
+     "text": "room key",
+     "kind": "collocation",
+     "form": "room key",
+     "meaning": "the key or card that opens a hotel room.",
+     "example": "I seem to have lost my room key; could I get a replacement?",
+     "plain": "I seem to have lost the key to my room; could I get a replacement?",
+     "note": "Essential for hotel access."
+    },
+    {
+     "text": "shuttle bus",
+     "kind": "collocation",
+     "form": "shuttle bus",
+     "meaning": "a bus that travels regularly between two places.",
+     "example": "There's a free shuttle bus from the airport to the hotel every 30 minutes.",
+     "plain": "There's a free bus that travels regularly from the airport to the hotel.",
+     "note": "Common for airport/hotel transfers."
+    },
+    {
+     "text": "baggage allowance",
+     "kind": "collocation",
+     "form": "baggage allowance",
+     "meaning": "the amount of luggage a passenger is permitted to carry.",
+     "example": "Check your baggage allowance carefully to avoid extra fees.",
+     "plain": "Check the amount of luggage you can carry carefully to avoid extra fees.",
+     "note": "Important for air travel."
+    },
+    {
+     "text": "hand luggage",
+     "kind": "collocation",
+     "form": "hand luggage",
+     "meaning": "small bags that passengers are allowed to carry onto an aircraft.",
+     "example": "Make sure your hand luggage fits the airline's size restrictions.",
+     "plain": "Make sure your small bags you carry onto the plane fit the size restrictions.",
+     "note": "Also known as carry-on luggage."
+    },
+    {
+     "text": "checked luggage",
+     "kind": "collocation",
+     "form": "checked luggage",
+     "meaning": "luggage that is put in the hold of an aircraft.",
+     "example": "We only have one piece of checked luggage for our entire trip.",
+     "plain": "We only have one piece of luggage that goes in the plane's hold.",
+     "note": "Luggage that is not carried into the cabin."
+    },
+    {
+     "text": "departure lounge",
+     "kind": "collocation",
+     "form": "departure lounge",
+     "meaning": "the area in an airport where passengers wait to board their flights.",
+     "example": "We'll meet you in the departure lounge after we go through security.",
+     "plain": "We'll meet you in the area where passengers wait to board flights.",
+     "note": "Common airport area."
+    },
+    {
+     "text": "arrival hall",
+     "kind": "collocation",
+     "form": "arrival hall",
+     "meaning": "the area in an airport where passengers arrive.",
+     "example": "My family will be waiting for me in the arrival hall.",
+     "plain": "My family will be waiting for me in the area where passengers arrive.",
+     "note": "Common airport area."
+    },
+    {
+     "text": "information desk",
+     "kind": "collocation",
+     "form": "information desk",
+     "meaning": "a place where you can get information, often in a public building.",
+     "example": "If you have any questions, please ask at the information desk.",
+     "plain": "If you have any questions, please ask at the place where you get information.",
+     "note": "Common in airports, stations, hotels."
+    },
+    {
+     "text": "lost property",
+     "kind": "collocation",
+     "form": "lost property",
+     "meaning": "items that have been lost and found.",
+     "example": "I reported my lost wallet at the lost property office at the station.",
+     "plain": "I reported my lost wallet at the office for lost and found items.",
+     "note": "British English for lost and found."
+    },
+    {
+     "text": "travel sickness",
+     "kind": "collocation",
+     "form": "travel sickness",
+     "meaning": "nausea and vomiting caused by motion during travel.",
+     "example": "I always get travel sickness on long bus journeys, so I take medication.",
+     "plain": "I always feel nauseous on long bus journeys, so I take medication.",
+     "note": "Common ailment during travel."
+    },
+    {
+     "text": "jet lag",
+     "kind": "collocation",
+     "form": "jet lag",
+     "meaning": "extreme tiredness and other physical effects felt after a long flight across time zones.",
+     "example": "I'm still suffering from jet lag after my flight from Australia.",
+     "plain": "I'm still suffering from tiredness after my long flight across time zones.",
+     "note": "Common after long-haul flights."
+    },
+    {
+     "text": "check-in counter",
+     "kind": "collocation",
+     "form": "check-in counter",
+     "meaning": "the desk at an airport where you register for your flight.",
+     "example": "Please proceed to the check-in counter for your flight to New York.",
+     "plain": "Please proceed to the desk where you register for your flight to New York.",
+     "note": "Essential airport location."
+    },
+    {
+     "text": "security gate",
+     "kind": "collocation",
+     "form": "security gate",
+     "meaning": "the point at an airport where passengers and their luggage are screened.",
+     "example": "We need to be at the security gate at least an hour before boarding.",
+     "plain": "We need to be at the screening point at least an hour before boarding.",
+     "note": "Important airport checkpoint."
+    },
+    {
+     "text": "departure board",
+     "kind": "collocation",
+     "form": "departure board",
+     "meaning": "a display showing flight or train departure times and gates.",
+     "example": "Check the departure board for the latest information on your flight.",
+     "plain": "Check the display showing flight departure times for the latest information.",
+     "note": "Essential for airport/station navigation."
+    },
+    {
+     "text": "arrival board",
+     "kind": "collocation",
+     "form": "arrival board",
+     "meaning": "a display showing flight or train arrival times.",
+     "example": "My friend is arriving soon; I'll check the arrival board for her flight number.",
+     "plain": "My friend is arriving soon; I'll check the display showing flight arrival times.",
+     "note": "Essential for meeting arriving passengers."
+    },
+    {
+     "text": "connecting train",
+     "kind": "collocation",
+     "form": "connecting train",
+     "meaning": "a second train taken to reach your final destination.",
+     "example": "We have ten minutes to catch our connecting train to Manchester.",
+     "plain": "We have ten minutes to catch our second train to Manchester.",
+     "note": "Common for train journeys with transfers."
+    },
+    {
+     "text": "local transport",
+     "kind": "collocation",
+     "form": "local transport",
+     "meaning": "public transportation within a specific area or city.",
+     "example": "The hotel provides excellent information about local transport options.",
+     "plain": "The hotel provides excellent information about public transportation within the city.",
+     "note": "General term for city-specific transport."
+    },
+    {
+     "text": "travel documents",
+     "kind": "collocation",
+     "form": "travel documents",
+     "meaning": "passports, visas, tickets, and other papers needed for a trip.",
+     "example": "Make sure you have all your travel documents ready before you leave.",
+     "plain": "Make sure you have all your passports, visas, and tickets ready before you leave.",
+     "note": "Essential for any journey."
+    },
+    {
+     "text": "visa requirements",
+     "kind": "collocation",
+     "form": "visa requirements",
+     "meaning": "the conditions and documents needed to obtain a visa.",
+     "example": "You should check the visa requirements for your destination country well in advance.",
+     "plain": "You should check what you need to get a visa for your destination country.",
+     "note": "Crucial for international travel planning."
+    },
+    {
+     "text": "customs official",
+     "kind": "collocation",
+     "form": "customs official",
+     "meaning": "an officer who checks goods entering a country.",
+     "example": "The customs official asked me about the items in my suitcase.",
+     "plain": "The officer who checks goods entering the country asked me about my suitcase.",
+     "note": "Encountered at borders/airports."
+    },
+    {
+     "text": "immigration officer",
+     "kind": "collocation",
+     "form": "immigration officer",
+     "meaning": "an officer who checks people entering a country.",
+     "example": "The immigration officer stamped my passport and welcomed me to the country.",
+     "plain": "The officer who checks people entering the country stamped my passport.",
+     "note": "Encountered at borders/airports."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "fully booked": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "check in": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "check out": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "out of order": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "get off at": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "get on the": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "look into it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "point me in the direction of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "on foot": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "by bus": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "by train": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "by taxi": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "on the left": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "on the right": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "straight ahead": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "turn left": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "turn right": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "on the corner": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "just around the corner": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a few blocks away": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "make it on time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "running late": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "on schedule": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "sign here": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what time is": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "how much does it cost": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "there's a problem with": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'd like to complain about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "something is wrong with": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "could you tell me": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm looking for": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "do you know if": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "where can i find": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "how do i get to": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "could you help me": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i need assistance with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's the best way": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "is there a discount": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "do you accept": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "behind schedule": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key accurately defines 'behind schedule' in the given example."
+   },
+   "make a reservation": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "check availability": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "confirm the booking": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "cancel a reservation": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "boarding pass": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "baggage claim": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "connecting flight": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "departure gate": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "room service": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "complimentary breakfast": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "front desk": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "public transport": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "taxi stand": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "bus stop": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "train station": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "rental car": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "one way ticket": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "return ticket": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "rush hour": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "traffic jam": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "change trains": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "lost my passport": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "missing luggage": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "overcharged me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "get a refund": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "sort out the issue": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "local currency": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "exchange rate": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "tourist information centre": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "opening hours": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "entrance fee": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "free wi-fi": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "travel insurance": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "emergency contact": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "lost and found": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "local time": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "time difference": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "currency exchange": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "travel adapter": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "pick up point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "drop off point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "cross the street": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "take the subway": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "take a bus": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "take a taxi": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "catch a train": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "miss a flight": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "fill out a form": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "passport control": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "security check": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "duty-free shop": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "travel guide": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "city map": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "tourist attraction": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "local cuisine": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "souvenir shop": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "cash machine": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "credit card": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "travel agency": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "travel itinerary": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "hotel staff": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "reception desk": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "room key": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "shuttle bus": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "baggage allowance": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "hand luggage": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "checked luggage": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "departure lounge": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "arrival hall": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "information desk": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "lost property": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "travel sickness": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "jet lag": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "check-in counter": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "security gate": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "departure board": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "arrival board": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "connecting train": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "local transport": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "travel documents": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "visa requirements": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "customs official": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "immigration officer": {
+    "status": "pass",
+    "level": "B1"
+   }
+  }
+ }
+}

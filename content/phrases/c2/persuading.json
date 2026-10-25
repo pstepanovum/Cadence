@@ -1,0 +1,2335 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "persuading",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "The way I see it",
+     "kind": "frame",
+     "form": "The way I see it",
+     "meaning": "Introduces your personal perspective or opinion on a matter, often to begin a persuasive argument.",
+     "example": "The way I see it, investing in new software will streamline our operations significantly.",
+     "plain": "In my opinion, new software will make our operations much more efficient.",
+     "note": "A common, natural way to introduce a personal viewpoint, inviting others to consider it."
+    },
+    {
+     "text": "make a strong case",
+     "kind": "collocation",
+     "form": "make a strong case",
+     "meaning": "To present a compelling argument or set of reasons in support of something.",
+     "example": "We need to make a strong case for increased funding if we want to expand the project next year.",
+     "plain": "We must present convincing reasons for more funding to expand the project.",
+     "note": "Used when you need to be very convincing; implies thorough preparation and good reasoning."
+    },
+    {
+     "text": "It boils down to",
+     "kind": "chunk",
+     "form": "It boils down to",
+     "meaning": "Explains that the most important or fundamental aspect of a complex situation is a particular point.",
+     "example": "Ultimately, it boils down to whether we prioritize short-term gains or long-term sustainability.",
+     "plain": "The main issue is whether we choose short-term profits or long-term environmental responsibility.",
+     "note": "Useful for simplifying complex arguments; often used to get to the core issue."
+    },
+    {
+     "text": "underscore the importance",
+     "kind": "collocation",
+     "form": "underscore the importance",
+     "meaning": "To emphasize how crucial or significant something is.",
+     "example": "I want to underscore the importance of timely communication for the success of this cross-functional team.",
+     "plain": "I want to emphasize that communicating on time is crucial for this team's success.",
+     "note": "A slightly formal but common way to highlight a critical aspect; often used in professional settings."
+    },
+    {
+     "text": "Having said that",
+     "kind": "chunk",
+     "form": "Having said that",
+     "meaning": "Introduces a contrasting point or a qualification to a previous statement, often to acknowledge another side.",
+     "example": "The proposal has some excellent points; having said that, we need to consider the budget implications carefully.",
+     "plain": "The proposal has good points, but we must carefully consider the budget.",
+     "note": "A sophisticated way to introduce a counter-argument or a caveat without dismissing the previous point."
+    },
+    {
+     "text": "address a concern",
+     "kind": "collocation",
+     "form": "address a concern",
+     "meaning": "To deal with or respond to a worry or issue that someone has raised.",
+     "example": "Before we proceed, I'd like to address a concern raised earlier about the project's timeline.",
+     "plain": "Before we continue, I want to respond to the worry about the project's schedule.",
+     "note": "A polite and professional way to acknowledge and respond to objections or worries."
+    },
+    {
+     "text": "It might be worth considering",
+     "kind": "frame",
+     "form": "It might be worth considering",
+     "meaning": "Suggests an idea or option gently, inviting others to think about it without being forceful.",
+     "example": "It might be worth considering a phased implementation rather than a complete overhaul all at once.",
+     "plain": "Perhaps we should think about implementing it in stages instead of doing everything at once.",
+     "note": "An elegant hedge, making a suggestion sound less like a demand and more like an open idea."
+    },
+    {
+     "text": "For what it's worth",
+     "kind": "chunk",
+     "form": "For what it's worth",
+     "meaning": "Introduces a piece of information or an opinion that you think might be helpful, even if it's not definitive.",
+     "example": "For what it's worth, I've heard similar strategies have worked well in other departments.",
+     "plain": "I've heard similar strategies succeeded elsewhere, and that might be useful information.",
+     "note": "A humble way to offer an opinion or information, implying you don't expect it to be decisive."
+    },
+    {
+     "text": "I would argue that",
+     "kind": "frame",
+     "form": "I would argue that",
+     "meaning": "Introduces a point you believe strongly in and are prepared to defend, often in a formal discussion.",
+     "example": "I would argue that our current marketing strategy isn't reaching our target demographic effectively.",
+     "plain": "I believe our current marketing strategy isn't effectively reaching the people we want to target.",
+     "note": "A strong but polite way to present a contentious point or a firm opinion."
+    },
+    {
+     "text": "One could make the case that",
+     "kind": "frame",
+     "form": "One could make the case that",
+     "meaning": "Suggests that a particular argument or viewpoint is plausible or defensible, without fully committing to it.",
+     "example": "One could make the case that remote work offers greater flexibility and boosts employee morale.",
+     "plain": "It's possible to argue that working remotely provides more flexibility and improves staff happiness.",
+     "note": "A sophisticated way to introduce an argument, often used to explore possibilities or anticipate others' views."
+    },
+    {
+     "text": "strike a balance",
+     "kind": "collocation",
+     "form": "strike a balance",
+     "meaning": "To find a satisfactory compromise between two opposing or contrasting things.",
+     "example": "We need to strike a balance between innovation and maintaining our core product's reliability.",
+     "plain": "We must find a good compromise between creating new things and keeping our main product dependable.",
+     "note": "Very common in discussions about decision-making, implying a thoughtful, measured approach."
+    },
+    {
+     "text": "I'm inclined to think",
+     "kind": "frame",
+     "form": "I'm inclined to think",
+     "meaning": "Expresses a tentative opinion or belief, suggesting you lean towards a particular conclusion.",
+     "example": "I'm inclined to think that a smaller, more focused team would be more productive for this task.",
+     "plain": "I tend to believe that a smaller, more focused team would work better for this task.",
+     "note": "A polite and slightly formal way to express a preference or a developing opinion."
+    },
+    {
+     "text": "It's fair to say",
+     "kind": "chunk",
+     "form": "It's fair to say",
+     "meaning": "Introduces a statement that you believe is generally accepted as true or reasonable.",
+     "example": "It's fair to say that the initial rollout of the new system encountered some unexpected challenges.",
+     "plain": "We can agree that the new system's first launch faced some unforeseen difficulties.",
+     "note": "Used to state something that is likely to be agreed upon, often to set common ground."
+    },
+    {
+     "text": "lend weight to",
+     "kind": "collocation",
+     "form": "lend weight to",
+     "meaning": "To provide support or credibility to an argument, idea, or claim.",
+     "example": "The recent market research findings certainly lend weight to our proposal for product diversification.",
+     "plain": "The latest market research definitely supports our idea to offer more varied products.",
+     "note": "A formal but common expression, suggesting that evidence strengthens an argument."
+    },
+    {
+     "text": "make a concession",
+     "kind": "collocation",
+     "form": "make a concession",
+     "meaning": "To agree to something or allow something to happen, often reluctantly, in order to reach an agreement.",
+     "example": "To move forward, we might need to make a concession on the project timeline, perhaps extending it slightly.",
+     "plain": "To progress, we might have to agree to a slightly longer project schedule.",
+     "note": "Implies a willingness to compromise, often in negotiations or debates."
+    },
+    {
+     "text": "On the one hand",
+     "kind": "chunk",
+     "form": "On the one hand",
+     "meaning": "Introduces one side of a two-part argument or a contrasting idea.",
+     "example": "On the one hand, the new policy offers greater flexibility for employees.",
+     "plain": "The new policy gives employees more flexibility.",
+     "note": "Always followed by \"on the other hand\" to present a balanced view."
+    },
+    {
+     "text": "On the other hand",
+     "kind": "chunk",
+     "form": "On the other hand",
+     "meaning": "Introduces the contrasting or opposing side of an argument or idea, following \"on the one hand\".",
+     "example": "On the other hand, it could also lead to coordination challenges within the team.",
+     "plain": "However, it might also cause problems with team coordination.",
+     "note": "Used to present a balanced perspective, acknowledging both pros and cons."
+    },
+    {
+     "text": "It goes without saying",
+     "kind": "chunk",
+     "form": "It goes without saying",
+     "meaning": "States something that is so obvious or fundamental that it doesn't need to be explicitly mentioned.",
+     "example": "It goes without saying that client satisfaction is our top priority in this service industry.",
+     "plain": "Obviously, keeping clients happy is our main goal in this service business.",
+     "note": "Used to emphasize a universally accepted truth or a fundamental principle."
+    },
+    {
+     "text": "put forward a proposal",
+     "kind": "collocation",
+     "form": "put forward a proposal",
+     "meaning": "To formally present an idea or plan for consideration.",
+     "example": "I'd like to put forward a proposal for restructuring our customer support department.",
+     "plain": "I want to suggest a plan to reorganize our customer support department.",
+     "note": "A standard, professional way to introduce a new idea or plan for discussion."
+    },
+    {
+     "text": "It's worth noting that",
+     "kind": "frame",
+     "form": "It's worth noting that",
+     "meaning": "Highlights a piece of information that is important or relevant to the discussion.",
+     "example": "It's worth noting that our competitors have already adopted similar sustainable practices.",
+     "plain": "It's important to remember that our rivals have already started using similar eco-friendly methods.",
+     "note": "Draws attention to a specific detail that supports or influences the argument."
+    },
+    {
+     "text": "explore the possibility",
+     "kind": "collocation",
+     "form": "explore the possibility",
+     "meaning": "To investigate or consider whether something is feasible or could happen.",
+     "example": "Before deciding, we should explore the possibility of collaborating with an external agency.",
+     "plain": "Before we decide, we should investigate if we can work with an outside agency.",
+     "note": "Suggests an open-minded and thorough approach to decision-making."
+    },
+    {
+     "text": "a key consideration",
+     "kind": "collocation",
+     "form": "a key consideration",
+     "meaning": "An important factor or element that must be taken into account when making a decision.",
+     "example": "Cost-effectiveness is always a key consideration when evaluating new vendor contracts.",
+     "plain": "How cost-effective something is always an important factor when we look at new vendor agreements.",
+     "note": "Highlights a crucial aspect that influences judgment or choice."
+    },
+    {
+     "text": "a crucial factor",
+     "kind": "collocation",
+     "form": "a crucial factor",
+     "meaning": "A decisive or extremely important element that influences an outcome.",
+     "example": "Employee engagement will be a crucial factor in the successful implementation of these changes.",
+     "plain": "How involved employees are will be an extremely important element for these changes to succeed.",
+     "note": "Emphasizes something that is absolutely essential for success or failure."
+    },
+    {
+     "text": "a clear advantage",
+     "kind": "collocation",
+     "form": "a clear advantage",
+     "meaning": "A distinct and obvious benefit or superiority over others.",
+     "example": "This new software offers a clear advantage in terms of data processing speed and accuracy.",
+     "plain": "This new software is distinctly better because of its faster and more accurate data processing.",
+     "note": "Used to highlight a strong positive point that is easily recognizable."
+    },
+    {
+     "text": "a significant benefit",
+     "kind": "collocation",
+     "form": "a significant benefit",
+     "meaning": "A noticeable and important positive outcome or advantage.",
+     "example": "Implementing flexible working hours would bring a significant benefit to staff morale and retention.",
+     "plain": "Having flexible work hours would greatly improve staff happiness and keep employees longer.",
+     "note": "Emphasizes a substantial positive impact or gain."
+    },
+    {
+     "text": "I firmly believe that",
+     "kind": "frame",
+     "form": "I firmly believe that",
+     "meaning": "Expresses a strong and unwavering conviction about something.",
+     "example": "I firmly believe that investing in employee training will yield long-term positive results for the company.",
+     "plain": "I strongly think that training employees will bring good long-term outcomes for the company.",
+     "note": "A powerful way to convey personal conviction, often used when trying to persuade."
+    },
+    {
+     "text": "a strong foundation",
+     "kind": "collocation",
+     "form": "a strong foundation",
+     "meaning": "A solid and reliable basis upon which something can be built or developed.",
+     "example": "Our current client relationships provide a strong foundation for expanding into new markets.",
+     "plain": "Our existing client connections give us a solid basis to grow into new markets.",
+     "note": "Implies stability and potential for future growth, often used metaphorically."
+    },
+    {
+     "text": "Let's not forget",
+     "kind": "chunk",
+     "form": "Let's not forget",
+     "meaning": "Reminds people of an important point that might be overlooked or forgotten.",
+     "example": "Let's not forget that our primary goal is to enhance customer experience, not just cut costs.",
+     "plain": "We must remember that our main aim is to improve how customers experience our service, not just save money.",
+     "note": "Used to bring attention back to a fundamental principle or objective."
+    },
+    {
+     "text": "a compelling vision",
+     "kind": "collocation",
+     "form": "a compelling vision",
+     "meaning": "An inspiring and attractive idea of what the future could be, which motivates people.",
+     "example": "The CEO presented a compelling vision for the company's future, which really energized the team.",
+     "plain": "The CEO showed an inspiring idea for the company's future, which truly motivated the team.",
+     "note": "Describes a powerful and attractive future state that can win people over."
+    },
+    {
+     "text": "It's vital to ensure",
+     "kind": "frame",
+     "form": "It's vital to ensure",
+     "meaning": "Emphasizes the extreme importance of making certain that something happens or is true.",
+     "example": "It's vital to ensure that all team members understand their roles and responsibilities clearly.",
+     "plain": "It's extremely important to make sure every team member clearly knows their job and duties.",
+     "note": "A strong statement of necessity, often used when setting critical objectives."
+    },
+    {
+     "text": "a shared understanding",
+     "kind": "collocation",
+     "form": "a shared understanding",
+     "meaning": "A common agreement or comprehension among a group of people about a particular matter.",
+     "example": "Before moving forward, we need to establish a shared understanding of the project's scope.",
+     "plain": "Before we continue, we must all agree on what the project includes.",
+     "note": "Crucial for collaboration and avoiding miscommunication; implies consensus."
+    },
+    {
+     "text": "I'm keen to hear",
+     "kind": "frame",
+     "form": "I'm keen to hear",
+     "meaning": "Expresses eagerness or strong interest in listening to others' opinions or ideas.",
+     "example": "I'm keen to hear everyone's thoughts on how we can improve our internal communication processes.",
+     "plain": "I'm very interested in listening to everyone's ideas on making our internal communication better.",
+     "note": "Shows openness and a collaborative spirit, inviting input from others."
+    },
+    {
+     "text": "a constructive dialogue",
+     "kind": "collocation",
+     "form": "a constructive dialogue",
+     "meaning": "A productive conversation aimed at resolving issues or making progress.",
+     "example": "Let's engage in a constructive dialogue to find solutions that benefit all departments involved.",
+     "plain": "Let's have a productive talk to find answers that help all the departments.",
+     "note": "Implies a positive and goal-oriented discussion, avoiding unproductive arguments."
+    },
+    {
+     "text": "a mutually beneficial outcome",
+     "kind": "collocation",
+     "form": "a mutually beneficial outcome",
+     "meaning": "A result or solution that provides advantages or gains for all parties involved.",
+     "example": "Our goal is to negotiate a mutually beneficial outcome that satisfies both our company and the client.",
+     "plain": "We aim to negotiate a result that helps both our company and the client.",
+     "note": "Highlights a win-win situation, often used in negotiations or partnerships."
+    },
+    {
+     "text": "My primary concern is",
+     "kind": "frame",
+     "form": "My primary concern is",
+     "meaning": "States the most important worry or issue that you have regarding a situation.",
+     "example": "My primary concern is ensuring that any new policy doesn't negatively impact employee well-being.",
+     "plain": "My main worry is to make sure that no new policy harms how well employees are doing.",
+     "note": "Clearly articulates a key reservation, often used to guide discussion or decision-making."
+    },
+    {
+     "text": "It's worth exploring",
+     "kind": "frame",
+     "form": "It's worth exploring",
+     "meaning": "Suggests that an idea or option deserves further investigation or consideration.",
+     "example": "It's worth exploring whether a flexible work model could improve productivity and staff retention.",
+     "plain": "We should investigate if a flexible work model might make us more productive and keep staff longer.",
+     "note": "A polite way to suggest looking into something more deeply."
+    },
+    {
+     "text": "a viable option",
+     "kind": "collocation",
+     "form": "a viable option",
+     "meaning": "A practical and feasible choice or alternative that can be successfully implemented.",
+     "example": "After reviewing the data, we concluded that outsourcing this task is a viable option for cost savings.",
+     "plain": "After checking the data, we decided that hiring an outside company for this task is a practical way to save money.",
+     "note": "Describes an option that is realistic and has a good chance of working."
+    },
+    {
+     "text": "I'd be remiss not to mention",
+     "kind": "frame",
+     "form": "I'd be remiss not to mention",
+     "meaning": "States that you feel obligated to bring up a particular point, implying it's important.",
+     "example": "I'd be remiss not to mention the excellent work done by the development team on this project.",
+     "plain": "I feel I must mention the great work the development team did on this project.",
+     "note": "A formal and polite way to ensure an important detail or person is acknowledged."
+    },
+    {
+     "text": "a critical juncture",
+     "kind": "collocation",
+     "form": "a critical juncture",
+     "meaning": "A crucial or decisive point in time, often when important decisions must be made.",
+     "example": "We are at a critical juncture in the project, and our next steps will determine its ultimate success.",
+     "plain": "We are at a very important point in the project, and what we do next will decide if it succeeds.",
+     "note": "Emphasizes the high stakes and importance of current decisions."
+    },
+    {
+     "text": "Let's consider this from",
+     "kind": "frame",
+     "form": "Let's consider this from",
+     "meaning": "Invites others to view a situation or problem from a different perspective.",
+     "example": "Let's consider this from the client's perspective; what are their primary needs and expectations?",
+     "plain": "Let's think about this from the client's point of view; what do they mainly need and expect?",
+     "note": "Encourages empathy and a broader understanding of the situation."
+    },
+    {
+     "text": "a different perspective",
+     "kind": "collocation",
+     "form": "a different perspective",
+     "meaning": "A new or alternative way of looking at or understanding a situation.",
+     "example": "Hearing from the sales team offered a different perspective on the challenges faced by our customers.",
+     "plain": "Listening to the sales team gave us a new way to understand our customers' problems.",
+     "note": "Useful for broadening understanding and finding new solutions."
+    },
+    {
+     "text": "The bottom line is",
+     "kind": "chunk",
+     "form": "The bottom line is",
+     "meaning": "States the most important fact or the essential truth of a situation.",
+     "example": "The bottom line is, we need to increase our market share to remain competitive in this industry.",
+     "plain": "The most important thing is that we must grow our market share to stay competitive.",
+     "note": "Used to summarize or emphasize the ultimate, unavoidable truth or requirement."
+    },
+    {
+     "text": "a strategic imperative",
+     "kind": "collocation",
+     "form": "a strategic imperative",
+     "meaning": "Something that is absolutely necessary for achieving long-term goals or competitive advantage.",
+     "example": "Digital transformation is no longer optional; it's a strategic imperative for modern businesses.",
+     "plain": "Changing to digital is no longer a choice; it's absolutely necessary for businesses today.",
+     "note": "Highlights something as a critical, non-negotiable requirement for future success."
+    },
+    {
+     "text": "I'm open to suggestions",
+     "kind": "frame",
+     "form": "I'm open to suggestions",
+     "meaning": "Indicates a willingness to hear and consider ideas or advice from others.",
+     "example": "I'm open to suggestions on how we can best allocate our remaining budget for the quarter.",
+     "plain": "I'm willing to hear ideas on the best way to use our leftover budget for this quarter.",
+     "note": "Shows flexibility and a collaborative approach, inviting input."
+    },
+    {
+     "text": "a collaborative effort",
+     "kind": "collocation",
+     "form": "a collaborative effort",
+     "meaning": "Work or activity done jointly by several people or groups.",
+     "example": "Achieving these ambitious targets will require a collaborative effort from every department.",
+     "plain": "Reaching these big goals will need everyone in every department to work together.",
+     "note": "Emphasizes teamwork and shared responsibility for success."
+    },
+    {
+     "text": "We need to be mindful of",
+     "kind": "frame",
+     "form": "We need to be mindful of",
+     "meaning": "Advises caution and awareness regarding a particular aspect or potential issue.",
+     "example": "We need to be mindful of the potential impact on our existing customer base when launching this new product.",
+     "plain": "We must be careful about how this new product might affect our current customers.",
+     "note": "A polite way to introduce a warning or a factor that requires careful consideration."
+    },
+    {
+     "text": "a potential drawback",
+     "kind": "collocation",
+     "form": "a potential drawback",
+     "meaning": "A possible disadvantage or negative aspect of a plan or situation.",
+     "example": "A potential drawback of this approach is the increased workload for the administrative staff.",
+     "plain": "A possible negative point of this method is that it will make more work for the office staff.",
+     "note": "Used to identify a possible negative consequence, often when weighing pros and cons."
+    },
+    {
+     "text": "It's important to acknowledge",
+     "kind": "frame",
+     "form": "It's important to acknowledge",
+     "meaning": "Emphasizes the necessity of recognizing or admitting a particular fact or situation.",
+     "example": "It's important to acknowledge that not all team members may be comfortable with the proposed changes.",
+     "plain": "We must recognize that some team members might not be happy with the suggested changes.",
+     "note": "Shows empathy and a realistic understanding of potential resistance or differing views."
+    },
+    {
+     "text": "a legitimate concern",
+     "kind": "collocation",
+     "form": "a legitimate concern",
+     "meaning": "A valid and reasonable worry or issue that deserves attention.",
+     "example": "I believe that the environmental impact of our operations is a legitimate concern for our stakeholders.",
+     "plain": "I think our operations' effect on the environment is a valid worry for those invested in our company.",
+     "note": "Validates someone's worry, showing respect and a willingness to address it."
+    },
+    {
+     "text": "I'm confident we can find",
+     "kind": "frame",
+     "form": "I'm confident we can find",
+     "meaning": "Expresses optimism and belief in the ability to discover a solution or way forward.",
+     "example": "I'm confident we can find a workable solution that addresses everyone's needs and concerns.",
+     "plain": "I believe we can discover a practical answer that deals with what everyone needs and worries about.",
+     "note": "Projects a positive and proactive attitude, encouraging collaboration."
+    },
+    {
+     "text": "a workable solution",
+     "kind": "collocation",
+     "form": "a workable solution",
+     "meaning": "A practical and effective answer to a problem that can be successfully implemented.",
+     "example": "Let's focus on developing a workable solution that can be implemented within our current budget.",
+     "plain": "Let's concentrate on creating a practical answer that we can put into action with our existing budget.",
+     "note": "Describes a solution that is realistic and achievable."
+    },
+    {
+     "text": "Let's focus on",
+     "kind": "frame",
+     "form": "Let's focus on",
+     "meaning": "Directs attention to a specific aspect or goal, often to streamline discussion or action.",
+     "example": "Let's focus on the immediate next steps to ensure we meet the project deadline.",
+     "plain": "Let's concentrate on what we need to do right away to make sure we finish the project on time.",
+     "note": "Used to guide a discussion towards practical steps or key priorities."
+    },
+    {
+     "text": "a common objective",
+     "kind": "collocation",
+     "form": "a common objective",
+     "meaning": "A shared goal or aim that all members of a group are working towards.",
+     "example": "Despite our different departmental goals, client satisfaction remains a common objective for us all.",
+     "plain": "Even though our departments have different goals, we all share the aim of making clients happy.",
+     "note": "Emphasizes unity and shared purpose, useful for building consensus."
+    },
+    {
+     "text": "I'd like to emphasize",
+     "kind": "frame",
+     "form": "I'd like to emphasize",
+     "meaning": "States your intention to highlight or give particular importance to a specific point.",
+     "example": "I'd like to emphasize the importance of clear communication throughout this transition period.",
+     "plain": "I want to stress how important clear communication is during this change.",
+     "note": "A polite but firm way to draw attention to a crucial aspect."
+    },
+    {
+     "text": "a crucial point",
+     "kind": "collocation",
+     "form": "a crucial point",
+     "meaning": "A very important or decisive detail or argument.",
+     "example": "You've raised a crucial point about the long-term maintenance costs of this new system.",
+     "plain": "You've brought up a very important detail about how much this new system will cost to maintain over time.",
+     "note": "Acknowledges the significance of a particular piece of information or argument."
+    },
+    {
+     "text": "It's essential to grasp",
+     "kind": "frame",
+     "form": "It's essential to grasp",
+     "meaning": "Stresses the absolute necessity of understanding something fully.",
+     "example": "It's essential to grasp the underlying reasons for customer dissatisfaction before proposing solutions.",
+     "plain": "It's absolutely necessary to fully understand why customers are unhappy before suggesting answers.",
+     "note": "Highlights the critical need for deep comprehension."
+    },
+    {
+     "text": "a fundamental principle",
+     "kind": "collocation",
+     "form": "a fundamental principle",
+     "meaning": "A basic and essential rule or belief that forms the foundation of a system or idea.",
+     "example": "Transparency is a fundamental principle that guides all our interactions with clients and partners.",
+     "plain": "Being open is a basic rule that guides how we deal with clients and partners.",
+     "note": "Refers to a core belief or rule that is non-negotiable."
+    },
+    {
+     "text": "We should strive for",
+     "kind": "frame",
+     "form": "We should strive for",
+     "meaning": "Suggests an ideal or ambitious goal that a group should work hard to achieve.",
+     "example": "We should strive for continuous improvement in our service delivery and customer support.",
+     "plain": "We should work hard to constantly make our service and customer support better.",
+     "note": "Encourages ambition and a commitment to excellence."
+    },
+    {
+     "text": "a sustainable model",
+     "kind": "collocation",
+     "form": "a sustainable model",
+     "meaning": "A system or approach that can be maintained over a long period without depleting resources or causing harm.",
+     "example": "Our aim is to develop a sustainable model for growth that balances profit with environmental responsibility.",
+     "plain": "Our goal is to create a long-lasting way to grow that balances making money with protecting the environment.",
+     "note": "Often used in discussions about long-term planning, environment, or business viability."
+    },
+    {
+     "text": "I'm hopeful that",
+     "kind": "frame",
+     "form": "I'm hopeful that",
+     "meaning": "Expresses optimism and a positive expectation about a future outcome.",
+     "example": "I'm hopeful that by implementing these changes, we'll see a significant improvement in team morale.",
+     "plain": "I hope that by making these changes, our team's happiness will greatly improve.",
+     "note": "Conveys a positive outlook, often used to encourage others."
+    },
+    {
+     "text": "a positive outcome",
+     "kind": "collocation",
+     "form": "a positive outcome",
+     "meaning": "A favorable or successful result.",
+     "example": "With careful planning and execution, I'm confident we can achieve a positive outcome for this project.",
+     "plain": "With good planning and doing the work well, I believe we can get a good result for this project.",
+     "note": "A general term for a good result, often used to express optimism."
+    },
+    {
+     "text": "It's important to distinguish between",
+     "kind": "frame",
+     "form": "It's important to distinguish between",
+     "meaning": "Highlights the necessity of recognizing the differences between two similar things.",
+     "example": "It's important to distinguish between constructive feedback and mere criticism when reviewing performance.",
+     "plain": "We must tell the difference between helpful advice and just criticism when looking at performance.",
+     "note": "Used to clarify concepts and avoid confusion in an argument."
+    },
+    {
+     "text": "a subtle difference",
+     "kind": "collocation",
+     "form": "a subtle difference",
+     "meaning": "A slight, delicate, or hard-to-notice distinction between things.",
+     "example": "There's a subtle difference in how these two marketing campaigns target different age groups.",
+     "plain": "There's a slight distinction in how these two marketing campaigns aim at various age groups.",
+     "note": "Implies a nuanced understanding and careful observation."
+    },
+    {
+     "text": "I'd like to draw your attention to",
+     "kind": "frame",
+     "form": "I'd like to draw your attention to",
+     "meaning": "Politely asks someone to notice or consider a specific point or detail.",
+     "example": "I'd like to draw your attention to the latest sales figures, which show a promising upward trend.",
+     "plain": "I want you to notice the newest sales numbers, which indicate a good increase.",
+     "note": "A formal and polite way to highlight important information."
+    },
+    {
+     "text": "a key aspect",
+     "kind": "collocation",
+     "form": "a key aspect",
+     "meaning": "A very important part or feature of something.",
+     "example": "Customer feedback is a key aspect of our product development cycle, guiding our improvements.",
+     "plain": "What customers say is a very important part of how we develop products, helping us make them better.",
+     "note": "Similar to \"key consideration\" but refers more to a component or feature."
+    },
+    {
+     "text": "We must not lose sight of",
+     "kind": "chunk",
+     "form": "We must not lose sight of",
+     "meaning": "Emphasizes the need to remember an important goal or principle, especially when facing distractions.",
+     "example": "We must not lose sight of our long-term strategic goals while dealing with immediate operational issues.",
+     "plain": "We must remember our long-term plans even when handling current daily problems.",
+     "note": "A strong reminder to stay focused on the main objective."
+    },
+    {
+     "text": "the bigger picture",
+     "kind": "collocation",
+     "form": "the bigger picture",
+     "meaning": "The overall perspective or context of a situation, rather than just the details.",
+     "example": "While individual tasks are important, we need to consider the bigger picture of how they contribute to our mission.",
+     "plain": "Individual tasks matter, but we must also think about the overall context of how they help our mission.",
+     "note": "Encourages a broader, more strategic view."
+    },
+    {
+     "text": "It's imperative that we",
+     "kind": "frame",
+     "form": "It's imperative that we",
+     "meaning": "States that something is absolutely essential and urgent for a group to do.",
+     "example": "It's imperative that we secure approval for the budget increase before the end of the fiscal quarter.",
+     "plain": "It's absolutely essential that we get approval for more budget before the fiscal quarter ends.",
+     "note": "A very strong and formal way to express necessity."
+    },
+    {
+     "text": "secure approval",
+     "kind": "collocation",
+     "form": "secure approval",
+     "meaning": "To obtain official permission or agreement for something.",
+     "example": "Our next step is to secure approval from the board for the proposed expansion plan.",
+     "plain": "Our next action is to get the board's permission for the suggested growth plan.",
+     "note": "Common in business and formal contexts when seeking official consent."
+    },
+    {
+     "text": "I'm convinced that",
+     "kind": "frame",
+     "form": "I'm convinced that",
+     "meaning": "Expresses a strong belief or certainty about something, often based on evidence or reasoning.",
+     "example": "I'm convinced that this new approach will significantly improve our team's efficiency and output.",
+     "plain": "I strongly believe that this new method will greatly make our team more efficient and productive.",
+     "note": "A confident statement of belief, used to persuade others."
+    },
+    {
+     "text": "the right approach",
+     "kind": "collocation",
+     "form": "the right approach",
+     "meaning": "The most suitable or correct method or way of dealing with something.",
+     "example": "I believe that a phased implementation is the right approach for integrating the new software.",
+     "plain": "I think that putting the new software in place step-by-step is the best method.",
+     "note": "Suggests a well-considered and optimal strategy."
+    },
+    {
+     "text": "Let's explore how we can",
+     "kind": "frame",
+     "form": "Let's explore how we can",
+     "meaning": "Invites collaborative investigation into methods for achieving a goal.",
+     "example": "Let's explore how we can bridge the gap between our current capabilities and future market demands.",
+     "plain": "Let's investigate ways to connect what we can do now with what the market will need later.",
+     "note": "Encourages creative problem-solving and strategic thinking."
+    },
+    {
+     "text": "bridge the gap",
+     "kind": "collocation",
+     "form": "bridge the gap",
+     "meaning": "To connect two things or overcome a difference or disparity between them.",
+     "example": "Our new training program aims to bridge the gap between theoretical knowledge and practical application.",
+     "plain": "Our new training program intends to connect what people learn in theory with how they use it in practice.",
+     "note": "A common metaphor for resolving differences or connecting disparate elements."
+    },
+    {
+     "text": "It's crucial to understand",
+     "kind": "frame",
+     "form": "It's crucial to understand",
+     "meaning": "Emphasizes the extreme importance of comprehending a particular aspect.",
+     "example": "It's crucial to understand the underlying reasons for the recent decline in sales figures.",
+     "plain": "It's extremely important to know the main causes behind the recent drop in sales.",
+     "note": "A strong statement highlighting the necessity of deep comprehension."
+    },
+    {
+     "text": "the underlying reasons",
+     "kind": "collocation",
+     "form": "the underlying reasons",
+     "meaning": "The fundamental or hidden causes of a situation or problem.",
+     "example": "Before we react, we need to investigate the underlying reasons for the unexpected project delay.",
+     "plain": "Before we respond, we must look into the basic causes of the project's unexpected delay.",
+     "note": "Implies a need for deeper analysis beyond surface-level symptoms."
+    },
+    {
+     "text": "I'd like to put forward",
+     "kind": "frame",
+     "form": "I'd like to put forward",
+     "meaning": "Politely introduces an idea, suggestion, or proposal for consideration.",
+     "example": "I'd like to put forward a new perspective on how we approach client engagement.",
+     "plain": "I want to suggest a new way of thinking about how we interact with clients.",
+     "note": "A formal and polite way to introduce a new idea or viewpoint."
+    },
+    {
+     "text": "a new perspective",
+     "kind": "collocation",
+     "form": "a new perspective",
+     "meaning": "A fresh or different way of looking at a situation or problem.",
+     "example": "Hearing from the junior staff offered a new perspective on the challenges of daily operations.",
+     "plain": "Listening to the junior staff gave us a fresh way to see the difficulties of everyday work.",
+     "note": "Encourages innovative thinking and a broader understanding."
+    },
+    {
+     "text": "We need to ensure that",
+     "kind": "frame",
+     "form": "We need to ensure that",
+     "meaning": "States the necessity of making certain that a particular condition or outcome is met.",
+     "example": "We need to ensure that our efforts are aligned with the company's overall strategic objectives.",
+     "plain": "We must make sure that what we do matches the company's main strategic goals.",
+     "note": "A common phrase for setting requirements or confirming alignment."
+    },
+    {
+     "text": "align with our objectives",
+     "kind": "collocation",
+     "form": "align with our objectives",
+     "meaning": "To be consistent or in agreement with our goals.",
+     "example": "This new initiative must align with our objectives for sustainable growth.",
+     "plain": "This new plan must match our goals for long-term growth.",
+     "note": "Used to ensure consistency and strategic fit."
+    },
+    {
+     "text": "reach a consensus",
+     "kind": "collocation",
+     "form": "reach a consensus",
+     "meaning": "To arrive at a general agreement among a group of people.",
+     "example": "Our goal for this meeting is to reach a consensus on the best way to proceed with the project.",
+     "plain": "We aim for everyone in this meeting to agree on the best way to continue the project.",
+     "note": "Emphasizes the importance of collective agreement and shared decision-making."
+    },
+    {
+     "text": "secure buy-in",
+     "kind": "collocation",
+     "form": "secure buy-in",
+     "meaning": "To gain agreement and commitment from others for a plan or idea.",
+     "example": "We need to present a clear strategy to secure buy-in from all key stakeholders.",
+     "plain": "We must show a clear plan to get agreement and commitment from all important people involved.",
+     "note": "Crucial for successful implementation, as it implies gaining support and acceptance."
+    },
+    {
+     "text": "gently suggest",
+     "kind": "collocation",
+     "form": "gently suggest",
+     "meaning": "To propose an idea or course of action in a polite and non-forceful manner.",
+     "example": "I would gently suggest that we reconsider the timeline for the next phase of development.",
+     "plain": "I would politely propose that we think again about the schedule for the next development stage.",
+     "note": "An elegant way to offer advice or an alternative without sounding demanding."
+    },
+    {
+     "text": "a nuanced approach",
+     "kind": "collocation",
+     "form": "a nuanced approach",
+     "meaning": "A method that considers subtle differences and complexities in a situation.",
+     "example": "Addressing this sensitive issue requires a nuanced approach, considering all perspectives.",
+     "plain": "Dealing with this delicate problem needs a careful method that looks at all viewpoints.",
+     "note": "Implies sophistication and a deep understanding of complexities."
+    },
+    {
+     "text": "a compelling reason",
+     "kind": "collocation",
+     "form": "a compelling reason",
+     "meaning": "A very strong and convincing justification for something.",
+     "example": "There's a compelling reason to invest in renewable energy: long-term cost savings and environmental benefits.",
+     "plain": "There's a very strong justification to put money into green energy: it saves money and helps the environment.",
+     "note": "Highlights a powerful and persuasive argument."
+    },
+    {
+     "text": "a strong argument",
+     "kind": "collocation",
+     "form": "a strong argument",
+     "meaning": "A well-supported and convincing set of reasons for a particular viewpoint.",
+     "example": "The data provides a strong argument for increasing our online advertising budget next quarter.",
+     "plain": "The data gives us good reasons to spend more on online ads next quarter.",
+     "note": "Refers to a robust and persuasive line of reasoning."
+    },
+    {
+     "text": "a persuasive argument",
+     "kind": "collocation",
+     "form": "a persuasive argument",
+     "meaning": "An argument that is effective in convincing someone to believe or do something.",
+     "example": "She presented a persuasive argument for adopting a four-day work week, highlighting productivity gains.",
+     "plain": "She gave a convincing argument for a four-day work week, showing how it would make us more productive.",
+     "note": "Focuses on the effectiveness of the argument in winning people over."
+    },
+    {
+     "text": "underscore the need",
+     "kind": "collocation",
+     "form": "underscore the need",
+     "meaning": "To emphasize the necessity or requirement for something.",
+     "example": "The recent security breach serves to underscore the need for stronger data protection measures.",
+     "plain": "The recent security breach highlights that we really need better data protection.",
+     "note": "A formal way to stress the urgency or importance of a requirement."
+    },
+    {
+     "text": "our efforts are aligned",
+     "kind": "collocation",
+     "form": "our efforts are aligned",
+     "meaning": "Our actions are coordinated and consistent with a common goal or strategy.",
+     "example": "We need to ensure that our efforts are aligned with the company's overall strategic objectives.",
+     "plain": "We must make sure that what we do matches the company's main strategic goals.",
+     "note": "Emphasizes coordination and consistency in achieving objectives."
+    },
+    {
+     "text": "yield positive results",
+     "kind": "collocation",
+     "form": "yield positive results",
+     "meaning": "To produce favorable or successful outcomes.",
+     "example": "I'm confident that this new marketing campaign will yield positive results for our brand awareness.",
+     "plain": "I believe this new marketing campaign will bring good outcomes for how well people know our brand.",
+     "note": "Used to express optimism about the success of an action or plan."
+    },
+    {
+     "text": "an alternative approach",
+     "kind": "collocation",
+     "form": "an alternative approach",
+     "meaning": "A different method or way of dealing with a situation or problem.",
+     "example": "It's worth considering whether an alternative approach to customer service might improve satisfaction.",
+     "plain": "We should think about if a different way of doing customer service could make people happier.",
+     "note": "Suggests exploring other options, showing flexibility."
+    },
+    {
+     "text": "a strategic shift",
+     "kind": "collocation",
+     "form": "a strategic shift",
+     "meaning": "A significant change in the overall plan or direction of an organization or project.",
+     "example": "I'd like to make a case for a strategic shift towards digital-first content creation.",
+     "plain": "I want to argue for a big change in our plan to focus on creating digital content first.",
+     "note": "Implies a major change in direction, often with long-term implications."
+    },
+    {
+     "text": "long-term benefits",
+     "kind": "collocation",
+     "form": "long-term benefits",
+     "meaning": "Advantages or positive outcomes that will be realized over an extended period.",
+     "example": "We should prioritize investments that offer long-term benefits, even if initial costs are higher.",
+     "plain": "We should focus on investments that will help us for a long time, even if they cost more at first.",
+     "note": "Emphasizes future gains over immediate returns, often in strategic planning."
+    },
+    {
+     "text": "potential resistance",
+     "kind": "collocation",
+     "form": "potential resistance",
+     "meaning": "Possible opposition or unwillingness to accept something new or different.",
+     "example": "It's important to address potential resistance from employees early in the change management process.",
+     "plain": "We must deal with possible opposition from staff early when managing changes.",
+     "note": "Highlights the need to anticipate and manage objections or reluctance."
+    },
+    {
+     "text": "the prospects for success",
+     "kind": "collocation",
+     "form": "the prospects for success",
+     "meaning": "The likelihood or chances of achieving a favorable outcome.",
+     "example": "I'm optimistic about the prospects for success of our new product launch in the Asian market.",
+     "plain": "I feel positive about the chances that our new product launch in Asia will do well.",
+     "note": "Refers to the likelihood of a positive result, often used in business contexts."
+    },
+    {
+     "text": "their point of view",
+     "kind": "collocation",
+     "form": "their point of view",
+     "meaning": "The way someone else sees or understands a situation.",
+     "example": "Let's try to see things from their point of view to better understand their concerns.",
+     "plain": "Let's try to understand their perspective to better grasp what worries them.",
+     "note": "Encourages empathy and understanding of others' positions."
+    },
+    {
+     "text": "a collaborative spirit",
+     "kind": "collocation",
+     "form": "a collaborative spirit",
+     "meaning": "An attitude of willingness to work together and cooperate with others.",
+     "example": "It's vital to maintain a collaborative spirit as we navigate these complex negotiations.",
+     "plain": "It's crucial to keep a cooperative attitude while we handle these difficult talks.",
+     "note": "Emphasizes the importance of teamwork and cooperation, especially during challenges."
+    },
+    {
+     "text": "we move forward",
+     "kind": "collocation",
+     "form": "we move forward",
+     "meaning": "We progress or continue with a plan or action.",
+     "example": "I'd like to propose that we move forward with the pilot program next quarter.",
+     "plain": "I suggest we continue with the trial program in the next quarter.",
+     "note": "Used to suggest progression or taking the next step in a plan."
+    },
+    {
+     "text": "the practical implications",
+     "kind": "collocation",
+     "form": "the practical implications",
+     "meaning": "The real-world consequences or effects of a decision or action.",
+     "example": "We need to be pragmatic about the practical implications of implementing such a large-scale change.",
+     "plain": "We must be realistic about the real-world effects of making such a big change.",
+     "note": "Focuses on the tangible effects and feasibility of a plan."
+    },
+    {
+     "text": "overcome these challenges",
+     "kind": "collocation",
+     "form": "overcome these challenges",
+     "meaning": "To successfully deal with or surmount difficulties.",
+     "example": "I'm confident that together we can overcome these challenges and achieve our goals.",
+     "plain": "I believe that working together, we can conquer these difficulties and reach our goals.",
+     "note": "Expresses optimism and a belief in collective problem-solving."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "I'd like to propose",
+     "kind": "frame",
+     "form": "I'd like to propose",
+     "meaning": "To introduce a new idea or plan for consideration.",
+     "example": "I'd like to propose a new project timeline that better reflects our current resources.",
+     "plain": "I want to suggest a new project timeline that better reflects our current resources.",
+     "note": "A polite and formal way to introduce a suggestion or plan."
+    },
+    {
+     "text": "It seems to me",
+     "kind": "frame",
+     "form": "It seems to me",
+     "meaning": "To express an opinion or observation, often with a degree of politeness or tentativeness.",
+     "example": "It seems to me that we're overlooking a simpler solution to this complex problem.",
+     "plain": "I think we're overlooking a simpler solution to this complex problem.",
+     "note": "A common, slightly informal way to offer an opinion without being overly assertive."
+    },
+    {
+     "text": "What I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "To clarify the main point or intention after some explanation.",
+     "example": "What I'm getting at is that we need to prioritize efficiency over immediate cost savings.",
+     "plain": "My main point is that we need to prioritize efficiency over immediate cost savings.",
+     "note": "Useful for clarifying your core message, especially if previous points were complex."
+    },
+    {
+     "text": "To put it another way",
+     "kind": "chunk",
+     "form": "To put it another way",
+     "meaning": "To rephrase something for clarity or emphasis.",
+     "example": "To put it another way, our current strategy isn't sustainable in the long term.",
+     "plain": "In other words, our current strategy isn't sustainable in the long term.",
+     "note": "Helps ensure understanding by offering a different phrasing of a complex idea."
+    },
+    {
+     "text": "I hear what you're saying",
+     "kind": "chunk",
+     "form": "I hear what you're saying",
+     "meaning": "To acknowledge someone's point of view, even if you don't fully agree.",
+     "example": "I hear what you're saying about the budget constraints, but we also need to consider quality.",
+     "plain": "I understand your point about the budget constraints, but we also need to consider quality.",
+     "note": "A diplomatic way to show you've listened before presenting a counter-point."
+    },
+    {
+     "text": "Let's look at this",
+     "kind": "frame",
+     "form": "Let's look at this",
+     "meaning": "To invite others to consider a situation or problem from a particular angle.",
+     "example": "Let's look at this from the client's perspective to understand their hesitation.",
+     "plain": "We should consider this from the client's perspective to understand their hesitation.",
+     "note": "Encourages a shared analytical approach; inclusive."
+    },
+    {
+     "text": "I'm confident that",
+     "kind": "frame",
+     "form": "I'm confident that",
+     "meaning": "To express strong belief in a positive outcome or statement.",
+     "example": "I'm confident that with these adjustments, we can meet our targets ahead of schedule.",
+     "plain": "I believe that with these adjustments, we can meet our targets ahead of schedule.",
+     "note": "Conveys assurance and can inspire trust in your proposal."
+    },
+    {
+     "text": "We need to consider",
+     "kind": "frame",
+     "form": "We need to consider",
+     "meaning": "To highlight an important aspect that requires attention.",
+     "example": "We need to consider the long-term implications of this decision on our team's morale.",
+     "plain": "It's important to think about the long-term implications of this decision on our team's morale.",
+     "note": "Emphasizes a necessary point for collective thought."
+    },
+    {
+     "text": "It's worth considering",
+     "kind": "chunk",
+     "form": "It's worth considering",
+     "meaning": "To suggest an idea or option that merits attention.",
+     "example": "It's worth considering whether a phased implementation would reduce potential risks.",
+     "plain": "We should think about whether a phased implementation would reduce potential risks.",
+     "note": "A polite and indirect way to introduce a suggestion."
+    },
+    {
+     "text": "I'd like to suggest",
+     "kind": "frame",
+     "form": "I'd like to suggest",
+     "meaning": "To politely offer an idea or recommendation.",
+     "example": "I'd like to suggest we allocate more resources to the initial research phase.",
+     "plain": "I want to suggest we allocate more resources to the initial research phase.",
+     "note": "A standard, polite way to make a suggestion."
+    },
+    {
+     "text": "To be perfectly frank",
+     "kind": "chunk",
+     "form": "To be perfectly frank",
+     "meaning": "To introduce a direct or honest statement, sometimes implying a slight criticism.",
+     "example": "To be perfectly frank, I don't think the current plan addresses the core issue effectively.",
+     "plain": "Honestly, I don't think the current plan addresses the core issue effectively.",
+     "note": "Signals a direct, unvarnished opinion; can be perceived as strong."
+    },
+    {
+     "text": "Let's not lose sight of",
+     "kind": "frame",
+     "form": "Let's not lose sight of",
+     "meaning": "To remind everyone of an important goal or principle.",
+     "example": "Let's not lose sight of our primary objective: delivering value to our customers.",
+     "plain": "We must remember our primary objective: delivering value to our customers.",
+     "note": "Used to refocus discussion on the main purpose or goal."
+    },
+    {
+     "text": "I'm inclined to agree",
+     "kind": "chunk",
+     "form": "I'm inclined to agree",
+     "meaning": "To express a tendency to agree with a point, often with a slight reservation or politeness.",
+     "example": "I'm inclined to agree with Sarah's assessment of the market trends.",
+     "plain": "I tend to agree with Sarah's assessment of the market trends.",
+     "note": "A polite and slightly formal way to express agreement."
+    },
+    {
+     "text": "It's important to remember",
+     "kind": "frame",
+     "form": "It's important to remember",
+     "meaning": "To highlight a fact or principle that should not be forgotten.",
+     "example": "It's important to remember that our competitors are constantly innovating.",
+     "plain": "We must remember that our competitors are constantly innovating.",
+     "note": "Used to bring a crucial piece of information back into focus."
+    },
+    {
+     "text": "We should aim for",
+     "kind": "frame",
+     "form": "We should aim for",
+     "meaning": "To propose a goal or standard to work towards.",
+     "example": "We should aim for a solution that is both innovative and cost-effective.",
+     "plain": "Our goal should be a solution that is both innovative and cost-effective.",
+     "note": "Encourages collective aspiration towards a specific outcome."
+    },
+    {
+     "text": "I'd like to underscore",
+     "kind": "frame",
+     "form": "I'd like to underscore",
+     "meaning": "To emphasize a particular point or aspect.",
+     "example": "I'd like to underscore the urgency of securing these permits before the deadline.",
+     "plain": "I want to emphasize the urgency of securing these permits before the deadline.",
+     "note": "A more formal and strong way to highlight importance than \"emphasize\"."
+    },
+    {
+     "text": "This brings me to",
+     "kind": "frame",
+     "form": "This brings me to",
+     "meaning": "To transition smoothly to the next point in an argument or presentation.",
+     "example": "This brings me to the core of my proposal: a revised budget allocation.",
+     "plain": "Now I will discuss the core of my proposal: a revised budget allocation.",
+     "note": "Useful for structuring a persuasive argument logically."
+    },
+    {
+     "text": "We need to ensure",
+     "kind": "frame",
+     "form": "We need to ensure",
+     "meaning": "To state a necessary condition or action for success.",
+     "example": "We need to ensure that all stakeholders are on board with the new strategy.",
+     "plain": "It's necessary to make sure that all stakeholders agree with the new strategy.",
+     "note": "Highlights a critical requirement for a successful outcome."
+    },
+    {
+     "text": "I'm confident we can",
+     "kind": "frame",
+     "form": "I'm confident we can",
+     "meaning": "To express belief in the group's ability to achieve something.",
+     "example": "I'm confident we can overcome these initial hurdles with a bit more planning.",
+     "plain": "I believe we can overcome these initial hurdles with a bit more planning.",
+     "note": "Projects optimism and encourages collective effort."
+    },
+    {
+     "text": "It's worth considering that",
+     "kind": "frame",
+     "form": "It's worth considering that",
+     "meaning": "To introduce a point that merits careful thought.",
+     "example": "It's worth considering that our competitors might react aggressively to this market entry.",
+     "plain": "We should think about the fact that our competitors might react aggressively to this market entry.",
+     "note": "A polite way to introduce a potential challenge or factor."
+    },
+    {
+     "text": "Let's try to",
+     "kind": "frame",
+     "form": "Let's try to",
+     "meaning": "To suggest a collaborative effort towards a specific action or goal.",
+     "example": "Let's try to find a middle ground that satisfies both departments' requirements.",
+     "plain": "We should attempt to find a middle ground that satisfies both departments' requirements.",
+     "note": "Encourages a cooperative approach to problem-solving."
+    },
+    {
+     "text": "I'd like to point out",
+     "kind": "frame",
+     "form": "I'd like to point out",
+     "meaning": "To draw attention to a specific fact or detail.",
+     "example": "I'd like to point out that our initial projections were based on different market conditions.",
+     "plain": "I want to mention that our initial projections were based on different market conditions.",
+     "note": "Used to highlight a specific piece of information, often to support an argument."
+    },
+    {
+     "text": "We should also consider",
+     "kind": "frame",
+     "form": "We should also consider",
+     "meaning": "To introduce an additional factor or perspective for discussion.",
+     "example": "We should also consider the potential impact on our existing customer base.",
+     "plain": "We also need to think about the potential impact on our existing customer base.",
+     "note": "Broadens the scope of the discussion, ensuring all angles are covered."
+    },
+    {
+     "text": "It's important to highlight",
+     "kind": "frame",
+     "form": "It's important to highlight",
+     "meaning": "To emphasize a particular aspect or achievement.",
+     "example": "It's important to highlight the innovative features of our new software update.",
+     "plain": "We need to emphasize the innovative features of our new software update.",
+     "note": "A slightly more formal way to draw attention to something positive or significant."
+    },
+    {
+     "text": "We need to address",
+     "kind": "frame",
+     "form": "We need to address",
+     "meaning": "To state that a problem or issue requires attention and action.",
+     "example": "We need to address the feedback from our pilot program before full rollout.",
+     "plain": "We must deal with the feedback from our pilot program before full rollout.",
+     "note": "Highlights a necessary action to resolve an issue."
+    },
+    {
+     "text": "It's crucial to recognize",
+     "kind": "frame",
+     "form": "It's crucial to recognize",
+     "meaning": "To emphasize the importance of acknowledging a particular fact or truth.",
+     "example": "It's crucial to recognize that market dynamics have shifted considerably.",
+     "plain": "It's very important to understand that market dynamics have shifted considerably.",
+     "note": "A strong way to ensure a key point is understood and accepted."
+    },
+    {
+     "text": "I'd like to suggest that",
+     "kind": "frame",
+     "form": "I'd like to suggest that",
+     "meaning": "To politely propose an idea or course of action.",
+     "example": "I'd like to suggest that we form a small task force to investigate this further.",
+     "plain": "I want to propose that we form a small task force to investigate this further.",
+     "note": "A polite and common way to introduce a suggestion."
+    },
+    {
+     "text": "We should bear in mind",
+     "kind": "frame",
+     "form": "We should bear in mind",
+     "meaning": "To remind others to remember an important fact or consideration.",
+     "example": "We should bear in mind the potential for unforeseen technical challenges.",
+     "plain": "We should remember the potential for unforeseen technical challenges.",
+     "note": "A slightly formal way to introduce a cautionary point."
+    },
+    {
+     "text": "It's important to bear in mind",
+     "kind": "frame",
+     "form": "It's important to bear in mind",
+     "meaning": "To emphasize the necessity of remembering a particular fact or consideration.",
+     "example": "It's important to bear in mind that our budget is finite for this quarter.",
+     "plain": "We must remember that our budget is finite for this quarter.",
+     "note": "A more emphatic version of \"We should bear in mind\"."
+    },
+    {
+     "text": "I'm confident that we",
+     "kind": "frame",
+     "form": "I'm confident that we",
+     "meaning": "To express belief in the group's ability to achieve something.",
+     "example": "I'm confident that we can find a way to make this work for everyone.",
+     "plain": "I believe we can find a way to make this work for everyone.",
+     "note": "Projects optimism and encourages collective effort."
+    },
+    {
+     "text": "Let's consider the implications",
+     "kind": "frame",
+     "form": "Let's consider the implications",
+     "meaning": "To invite a discussion about the potential consequences of a decision or action.",
+     "example": "Let's consider the implications of delaying this launch for another month.",
+     "plain": "We should think about the consequences of delaying this launch for another month.",
+     "note": "Encourages forward-thinking and risk assessment."
+    },
+    {
+     "text": "I'd like to make a case for",
+     "kind": "frame",
+     "form": "I'd like to make a case for",
+     "meaning": "To argue in favor of a particular idea or course of action.",
+     "example": "I'd like to make a case for investing more heavily in renewable energy sources.",
+     "plain": "I want to argue for investing more heavily in renewable energy sources.",
+     "note": "A formal and direct way to advocate for something."
+    },
+    {
+     "text": "We need to be clear",
+     "kind": "frame",
+     "form": "We need to be clear",
+     "meaning": "To emphasize the necessity of clear communication or understanding.",
+     "example": "We need to be clear about the project's scope from the outset to avoid misunderstandings.",
+     "plain": "It's necessary to be clear about the project's scope from the outset to avoid misunderstandings.",
+     "note": "Stresses the importance of precision and transparency."
+    },
+    {
+     "text": "It's worth reiterating",
+     "kind": "frame",
+     "form": "It's worth reiterating",
+     "meaning": "To emphasize a point by repeating it, suggesting its importance.",
+     "example": "It's worth reiterating that customer satisfaction is our top priority.",
+     "plain": "It's important to repeat that customer satisfaction is our top priority.",
+     "note": "Used to reinforce a key message, often when summarizing."
+    },
+    {
+     "text": "I'm of the opinion that",
+     "kind": "frame",
+     "form": "I'm of the opinion that",
+     "meaning": "To formally state one's belief or viewpoint.",
+     "example": "I'm of the opinion that a more flexible work schedule would boost productivity.",
+     "plain": "I believe that a more flexible work schedule would boost productivity.",
+     "note": "A formal and slightly old-fashioned way to express an opinion."
+    },
+    {
+     "text": "We should prioritize",
+     "kind": "frame",
+     "form": "We should prioritize",
+     "meaning": "To suggest focusing on certain tasks or goals over others.",
+     "example": "We should prioritize developing a robust cybersecurity framework for our new system.",
+     "plain": "We need to focus on developing a robust cybersecurity framework for our new system.",
+     "note": "Directs attention to the most important tasks."
+    },
+    {
+     "text": "It's important to consider",
+     "kind": "frame",
+     "form": "It's important to consider",
+     "meaning": "To highlight the necessity of taking something into account.",
+     "example": "It's important to consider the cultural nuances when expanding into new markets.",
+     "plain": "We must think about the cultural nuances when expanding into new markets.",
+     "note": "A common and polite way to introduce a relevant factor."
+    },
+    {
+     "text": "I'd like to propose that",
+     "kind": "frame",
+     "form": "I'd like to propose that",
+     "meaning": "To formally suggest an idea or plan for consideration.",
+     "example": "I'd like to propose that we implement a new feedback system for all employees.",
+     "plain": "I want to suggest that we implement a new feedback system for all employees.",
+     "note": "A polite and formal way to introduce a suggestion or plan."
+    },
+    {
+     "text": "We need to take into account",
+     "kind": "frame",
+     "form": "We need to take into account",
+     "meaning": "To emphasize the necessity of considering specific factors.",
+     "example": "We need to take into account the feedback from our early adopters.",
+     "plain": "We must consider the feedback from our early adopters.",
+     "note": "Highlights factors that must be included in decision-making."
+    },
+    {
+     "text": "It's worth remembering",
+     "kind": "chunk",
+     "form": "It's worth remembering",
+     "meaning": "To remind others of an important fact or principle.",
+     "example": "It's worth remembering that our initial budget was quite conservative.",
+     "plain": "We should remember that our initial budget was quite conservative.",
+     "note": "A gentle reminder of a relevant piece of information."
+    },
+    {
+     "text": "I'm confident in our ability",
+     "kind": "frame",
+     "form": "I'm confident in our ability",
+     "meaning": "To express belief in the group's capacity to succeed.",
+     "example": "I'm confident in our ability to deliver this complex project on time and within budget.",
+     "plain": "I believe we can deliver this complex project on time and within budget.",
+     "note": "Projects assurance and can motivate the team."
+    },
+    {
+     "text": "We should strive to",
+     "kind": "frame",
+     "form": "We should strive to",
+     "meaning": "To suggest aiming for a particular goal or standard.",
+     "example": "We should strive to create a more inclusive and diverse workplace environment.",
+     "plain": "We should try hard to create a more inclusive and diverse workplace environment.",
+     "note": "Encourages effort towards an ideal outcome."
+    },
+    {
+     "text": "It's important to underscore",
+     "kind": "frame",
+     "form": "It's important to underscore",
+     "meaning": "To emphasize the necessity of highlighting a particular point.",
+     "example": "It's important to underscore the potential for significant market growth in this sector.",
+     "plain": "We need to emphasize the potential for significant market growth in this sector.",
+     "note": "A strong way to draw attention to a crucial aspect."
+    },
+    {
+     "text": "I'd like to suggest a different",
+     "kind": "frame",
+     "form": "I'd like to suggest a different",
+     "meaning": "To politely introduce an alternative idea or approach.",
+     "example": "I'd like to suggest a different approach to our marketing campaign this quarter.",
+     "plain": "I want to suggest an alternative approach to our marketing campaign this quarter.",
+     "note": "A diplomatic way to propose a change of direction."
+    },
+    {
+     "text": "We need to be mindful",
+     "kind": "frame",
+     "form": "We need to be mindful",
+     "meaning": "To emphasize the necessity of being aware of something.",
+     "example": "We need to be mindful of the cultural sensitivities when launching this product globally.",
+     "plain": "We must be aware of the cultural sensitivities when launching this product globally.",
+     "note": "Highlights the need for careful consideration and awareness."
+    },
+    {
+     "text": "It's worth considering the fact",
+     "kind": "frame",
+     "form": "It's worth considering the fact",
+     "meaning": "To introduce a specific piece of information that should be taken into account.",
+     "example": "It's worth considering the fact that our main competitor just released a similar product.",
+     "plain": "We should think about the fact that our main competitor just released a similar product.",
+     "note": "A more formal way to introduce a relevant piece of information."
+    },
+    {
+     "text": "I'm confident that this",
+     "kind": "frame",
+     "form": "I'm confident that this",
+     "meaning": "To express strong belief in a specific plan or item.",
+     "example": "I'm confident that this new software will streamline our workflow considerably.",
+     "plain": "I believe this new software will streamline our workflow considerably.",
+     "note": "Conveys assurance about a particular solution or tool."
+    },
+    {
+     "text": "We should also bear in mind",
+     "kind": "frame",
+     "form": "We should also bear in mind",
+     "meaning": "To introduce an additional important consideration.",
+     "example": "We should also bear in mind the feedback from our recent customer survey.",
+     "plain": "We should also remember the feedback from our recent customer survey.",
+     "note": "Adds another relevant point to the discussion."
+    },
+    {
+     "text": "It's important to acknowledge that",
+     "kind": "frame",
+     "form": "It's important to acknowledge that",
+     "meaning": "To emphasize the necessity of recognizing a particular truth or situation.",
+     "example": "It's important to acknowledge that this transition will present some challenges.",
+     "plain": "We must recognize that this transition will present some challenges.",
+     "note": "Shows awareness of potential difficulties, building trust."
+    },
+    {
+     "text": "I'd like to make the point",
+     "kind": "frame",
+     "form": "I'd like to make the point",
+     "meaning": "To introduce a specific argument or observation.",
+     "example": "I'd like to make the point that our current resources are stretched thin.",
+     "plain": "I want to state that our current resources are stretched thin.",
+     "note": "A direct way to introduce a key argument."
+    },
+    {
+     "text": "We need to be proactive",
+     "kind": "frame",
+     "form": "We need to be proactive",
+     "meaning": "To emphasize the necessity of taking initiative rather than reacting.",
+     "example": "We need to be proactive in addressing potential security vulnerabilities.",
+     "plain": "We must take action early to address potential security vulnerabilities.",
+     "note": "Encourages foresight and preventative measures."
+    },
+    {
+     "text": "I'd suggest we",
+     "kind": "frame",
+     "form": "I'd suggest we",
+     "meaning": "To politely offer a recommendation for a group action.",
+     "example": "I'd suggest we revisit the budget allocations for the next quarter.",
+     "plain": "I recommend we revisit the budget allocations for the next quarter.",
+     "note": "A common and polite way to make a suggestion to a group."
+    },
+    {
+     "text": "I'm confident in the team's",
+     "kind": "frame",
+     "form": "I'm confident in the team's",
+     "meaning": "To express belief in the capabilities of the group.",
+     "example": "I'm confident in the team's ability to deliver exceptional results on this project.",
+     "plain": "I believe the team can deliver exceptional results on this project.",
+     "note": "Boosts morale and shows trust in collective effort."
+    },
+    {
+     "text": "We should also factor in",
+     "kind": "frame",
+     "form": "We should also factor in",
+     "meaning": "To introduce an additional element that needs to be considered.",
+     "example": "We should also factor in the potential for supply chain disruptions.",
+     "plain": "We also need to consider the potential for supply chain disruptions.",
+     "note": "Ensures all relevant variables are included in planning."
+    },
+    {
+     "text": "It's important to emphasize",
+     "kind": "frame",
+     "form": "It's important to emphasize",
+     "meaning": "To highlight the necessity of stressing a particular point.",
+     "example": "It's important to emphasize the long-term benefits of this investment.",
+     "plain": "We need to stress the long-term benefits of this investment.",
+     "note": "A strong way to draw attention to a crucial aspect."
+    },
+    {
+     "text": "I'd like to highlight",
+     "kind": "frame",
+     "form": "I'd like to highlight",
+     "meaning": "To draw attention to a specific important detail or aspect.",
+     "example": "I'd like to highlight the innovative design elements of our new product.",
+     "plain": "I want to draw attention to the innovative design elements of our new product.",
+     "note": "A polite and common way to emphasize a positive feature."
+    },
+    {
+     "text": "We need to be realistic",
+     "kind": "frame",
+     "form": "We need to be realistic",
+     "meaning": "To emphasize the necessity of having a practical and sensible outlook.",
+     "example": "We need to be realistic about the timeline for achieving these ambitious goals.",
+     "plain": "We must be practical about the timeline for achieving these ambitious goals.",
+     "note": "Encourages a grounded perspective, managing expectations."
+    },
+    {
+     "text": "It's worth considering how",
+     "kind": "frame",
+     "form": "It's worth considering how",
+     "meaning": "To suggest exploring the methods or processes for a particular outcome.",
+     "example": "It's worth considering how we can better integrate these two systems.",
+     "plain": "We should think about how we can better integrate these two systems.",
+     "note": "Promotes analytical thought about implementation."
+    },
+    {
+     "text": "I'm confident that our",
+     "kind": "frame",
+     "form": "I'm confident that our",
+     "meaning": "To express strong belief in the effectiveness of a group's resources or plans.",
+     "example": "I'm confident that our new marketing strategy will significantly boost sales.",
+     "plain": "I believe our new marketing strategy will significantly boost sales.",
+     "note": "Conveys assurance about a specific plan or resource."
+    },
+    {
+     "text": "We should also take into account",
+     "kind": "frame",
+     "form": "We should also take into account",
+     "meaning": "To introduce an additional factor that needs to be considered.",
+     "example": "We should also take into account the feedback from our recent customer survey.",
+     "plain": "We also need to consider the feedback from our recent customer survey.",
+     "note": "Ensures all relevant variables are included in planning."
+    },
+    {
+     "text": "It's important to remember that",
+     "kind": "frame",
+     "form": "It's important to remember that",
+     "meaning": "To highlight a fact or principle that should not be forgotten.",
+     "example": "It's important to remember that our core values guide all our decisions.",
+     "plain": "We must remember that our core values guide all our decisions.",
+     "note": "Used to bring a crucial piece of information back into focus."
+    },
+    {
+     "text": "I'd like to draw attention to",
+     "kind": "frame",
+     "form": "I'd like to draw attention to",
+     "meaning": "To politely direct focus towards a specific point or issue.",
+     "example": "I'd like to draw attention to the potential cost savings of this new approach.",
+     "plain": "I want to highlight the potential cost savings of this new approach.",
+     "note": "A formal way to emphasize a particular aspect."
+    },
+    {
+     "text": "We need to be flexible",
+     "kind": "frame",
+     "form": "We need to be flexible",
+     "meaning": "To emphasize the necessity of adaptability.",
+     "example": "We need to be flexible in our approach to accommodate unforeseen market changes.",
+     "plain": "We must be adaptable in our approach to accommodate unforeseen market changes.",
+     "note": "Encourages openness to change and new ideas."
+    },
+    {
+     "text": "It's worth considering the long-term",
+     "kind": "frame",
+     "form": "It's worth considering the long-term",
+     "meaning": "To suggest evaluating the future consequences of a decision.",
+     "example": "It's worth considering the long-term impact of this policy on employee retention.",
+     "plain": "We should think about the future impact of this policy on employee retention.",
+     "note": "Encourages strategic, forward-thinking analysis."
+    },
+    {
+     "text": "I'm confident that we'll",
+     "kind": "frame",
+     "form": "I'm confident that we'll",
+     "meaning": "To express strong belief in a future positive outcome for the group.",
+     "example": "I'm confident that we'll achieve our sales targets by the end of the quarter.",
+     "plain": "I believe we will achieve our sales targets by the end of the quarter.",
+     "note": "Projects optimism and assurance about future success."
+    },
+    {
+     "text": "We should also be aware of",
+     "kind": "frame",
+     "form": "We should also be aware of",
+     "meaning": "To introduce an additional factor that requires vigilance.",
+     "example": "We should also be aware of the regulatory changes coming into effect next year.",
+     "plain": "We also need to know about the regulatory changes coming into effect next year.",
+     "note": "Highlights the need for awareness of external factors."
+    },
+    {
+     "text": "It's important to keep in mind",
+     "kind": "frame",
+     "form": "It's important to keep in mind",
+     "meaning": "To emphasize the necessity of remembering a particular fact or consideration.",
+     "example": "It's important to keep in mind that resources are limited for this phase.",
+     "plain": "We must remember that resources are limited for this phase.",
+     "note": "A common way to introduce a crucial reminder."
+    },
+    {
+     "text": "I'd like to put it this way",
+     "kind": "chunk",
+     "form": "I'd like to put it this way",
+     "meaning": "To rephrase an idea, often to make it clearer or more impactful.",
+     "example": "I'd like to put it this way: our current approach is simply not sustainable.",
+     "plain": "Let me say it like this: our current approach is simply not sustainable.",
+     "note": "Used to introduce a more direct or concise explanation."
+    },
+    {
+     "text": "We need to be strategic",
+     "kind": "frame",
+     "form": "We need to be strategic",
+     "meaning": "To emphasize the necessity of careful planning and foresight.",
+     "example": "We need to be strategic in how we allocate our marketing budget for maximum impact.",
+     "plain": "We must plan carefully how we allocate our marketing budget for maximum impact.",
+     "note": "Encourages thoughtful, long-term planning."
+    },
+    {
+     "text": "It's worth considering the impact",
+     "kind": "frame",
+     "form": "It's worth considering the impact",
+     "meaning": "To suggest evaluating the effects or consequences of something.",
+     "example": "It's worth considering the impact of this decision on our brand reputation.",
+     "plain": "We should think about the effect of this decision on our brand reputation.",
+     "note": "Promotes a thorough assessment of consequences."
+    },
+    {
+     "text": "I'm confident that the",
+     "kind": "frame",
+     "form": "I'm confident that the",
+     "meaning": "To express strong belief in a specific entity or plan.",
+     "example": "I'm confident that the new policy will be well-received by employees.",
+     "plain": "I believe the new policy will be well-received by employees.",
+     "note": "Conveys assurance about a particular policy or entity."
+    },
+    {
+     "text": "We should also consider the",
+     "kind": "frame",
+     "form": "We should also consider the",
+     "meaning": "To introduce an additional factor or perspective for discussion.",
+     "example": "We should also consider the ethical implications of using this new technology.",
+     "plain": "We also need to think about the ethical implications of using this new technology.",
+     "note": "Broadens the scope of the discussion, ensuring all angles are covered."
+    },
+    {
+     "text": "It's important to highlight that",
+     "kind": "frame",
+     "form": "It's important to highlight that",
+     "meaning": "To emphasize the necessity of drawing attention to a particular fact.",
+     "example": "It's important to highlight that our market share has grown significantly this quarter.",
+     "plain": "We need to emphasize that our market share has grown significantly this quarter.",
+     "note": "A strong way to draw attention to a crucial positive fact."
+    },
+    {
+     "text": "I'd like to make it clear",
+     "kind": "frame",
+     "form": "I'd like to make it clear",
+     "meaning": "To state something explicitly to avoid misunderstanding.",
+     "example": "I'd like to make it clear that this is a collaborative effort, not a directive.",
+     "plain": "I want to state clearly that this is a collaborative effort, not a directive.",
+     "note": "Used to ensure there is no ambiguity about a point."
+    },
+    {
+     "text": "We need to be prepared for",
+     "kind": "frame",
+     "form": "We need to be prepared for",
+     "meaning": "To emphasize the necessity of anticipating and planning for future events.",
+     "example": "We need to be prepared for increased demand during the holiday season.",
+     "plain": "We must get ready for increased demand during the holiday season.",
+     "note": "Encourages foresight and readiness for future scenarios."
+    },
+    {
+     "text": "It's worth considering all",
+     "kind": "frame",
+     "form": "It's worth considering all",
+     "meaning": "To suggest a comprehensive review of available options or factors.",
+     "example": "It's worth considering all the potential risks before making a final decision.",
+     "plain": "We should think about all the potential risks before making a final decision.",
+     "note": "Promotes thoroughness in decision-making."
+    },
+    {
+     "text": "I'm confident that our team",
+     "kind": "frame",
+     "form": "I'm confident that our team",
+     "meaning": "To express strong belief in the capabilities of the group.",
+     "example": "I'm confident that our team can adapt quickly to these new market conditions.",
+     "plain": "I believe our team can adapt quickly to these new market conditions.",
+     "note": "Boosts morale and shows trust in collective effort."
+    },
+    {
+     "text": "We should also be mindful of",
+     "kind": "frame",
+     "form": "We should also be mindful of",
+     "meaning": "To introduce an additional factor that requires careful consideration.",
+     "example": "We should also be mindful of the potential for negative public perception.",
+     "plain": "We also need to be aware of the potential for negative public perception.",
+     "note": "Highlights the need for careful consideration and awareness."
+    },
+    {
+     "text": "It's important to stress",
+     "kind": "frame",
+     "form": "It's important to stress",
+     "meaning": "To emphasize the necessity of highlighting a particular point strongly.",
+     "example": "It's important to stress the urgency of completing this report by Friday.",
+     "plain": "We need to emphasize the urgency of completing this report by Friday.",
+     "note": "A strong way to draw attention to a crucial aspect."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "the way i see it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "make a strong case": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it boils down to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "underscore the importance": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "having said that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "address a concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it might be worth considering": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "for what it's worth": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i would argue that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "one could make the case that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "strike a balance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm inclined to think": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's fair to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "lend weight to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "make a concession": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the one hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it goes without saying": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "put forward a proposal": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "explore the possibility": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a key consideration": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a crucial factor": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a clear advantage": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a significant benefit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i firmly believe that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strong foundation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's not forget": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a compelling vision": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's vital to ensure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a shared understanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm keen to hear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a constructive dialogue": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a mutually beneficial outcome": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "my primary concern is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth exploring": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a viable option": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd be remiss not to mention": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a critical juncture": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's consider this from": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a different perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the bottom line is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strategic imperative": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm open to suggestions": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a collaborative effort": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to be mindful of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a potential drawback": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to acknowledge": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a legitimate concern": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm confident we can find": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a workable solution": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's focus on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a common objective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to emphasize": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a crucial point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's essential to grasp": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a fundamental principle": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we should strive for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a sustainable model": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm hopeful that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a positive outcome": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's important to distinguish between": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a subtle difference": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to draw your attention to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a key aspect": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we must not lose sight of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the bigger picture": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's imperative that we": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "secure approval": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm convinced that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the right approach": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's explore how we can": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "bridge the gap": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's crucial to understand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the underlying reasons": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to put forward": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a new perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to ensure that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "align with our objectives": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "reach a consensus": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "secure buy-in": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "gently suggest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a nuanced approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a compelling reason": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a strong argument": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a persuasive argument": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "underscore the need": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "our efforts are aligned": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "yield positive results": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "an alternative approach": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strategic shift": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "long-term benefits": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "potential resistance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the prospects for success": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "their point of view": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a collaborative spirit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we move forward": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the practical implications": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "overcome these challenges": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to propose": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it seems to me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i hear what you're saying": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's look at this": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm confident that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to consider": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth considering": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to suggest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be perfectly frank": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's not lose sight of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm inclined to agree": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to remember": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should aim for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to underscore": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this brings me to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to ensure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm confident we can": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth considering that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's try to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'd like to point out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should also consider": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's important to highlight": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to address": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's crucial to recognize": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to suggest that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should bear in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to bear in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident that we": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's consider the implications": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to make a case for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we need to be clear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth reiterating": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm of the opinion that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we should prioritize": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to consider": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to propose that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to take into account": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth remembering": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident in our ability": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we should strive to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to underscore": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to suggest a different": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to be mindful": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth considering the fact": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident that this": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should also bear in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to acknowledge that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to make the point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to be proactive": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd suggest we": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm confident in the team's": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we should also factor in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to emphasize": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to highlight": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to be realistic": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth considering how": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident that our": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should also take into account": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to remember that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to draw attention to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to be flexible": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth considering the long-term": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident that we'll": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should also be aware of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to keep in mind": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to put it this way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to be strategic": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth considering the impact": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident that the": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should also consider the": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to highlight that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to make it clear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to be prepared for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth considering all": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident that our team": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we should also be mindful of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to stress": {
+    "status": "pass",
+    "level": "B1"
+   }
+  }
+ }
+}

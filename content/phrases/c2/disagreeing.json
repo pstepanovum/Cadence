@@ -1,0 +1,2458 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "disagreeing",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "I beg to differ",
+     "kind": "chunk",
+     "form": "I beg to differ",
+     "meaning": "A polite, slightly formal way to say you disagree with someone's statement or opinion.",
+     "example": "While I understand your perspective, I beg to differ on the feasibility of that timeline.",
+     "plain": "While I understand your perspective, I disagree about whether that timeline is feasible.",
+     "note": "Formal and polite. Can sound a bit old-fashioned if not used carefully, but still common."
+    },
+    {
+     "text": "with all due respect",
+     "kind": "chunk",
+     "form": "With all due respect",
+     "meaning": "Used to introduce a statement that politely disagrees with someone, especially a superior, despite respecting them.",
+     "example": "With all due respect, I think we might be overlooking some critical data points here.",
+     "plain": "I respect your opinion, but I think we might be overlooking some critical data points here.",
+     "note": "A classic polite disagreement opener, often used when challenging an authority figure's view."
+    },
+    {
+     "text": "I'm not sure I agree",
+     "kind": "frame",
+     "form": "I'm not sure I agree",
+     "meaning": "A common, gentle way to express disagreement or doubt about a statement or proposal.",
+     "example": "I'm not sure I agree that cutting the budget further is the best long-term solution.",
+     "plain": "I doubt that cutting the budget further is the best long-term solution.",
+     "note": "A very common and versatile phrase for softening disagreement."
+    },
+    {
+     "text": "I see your point",
+     "kind": "frame",
+     "form": "I see your point",
+     "meaning": "Acknowledges the other person's argument before introducing a counter-argument or disagreement.",
+     "example": "I see your point about the cost savings, but we also need to consider the impact on quality.",
+     "plain": "I understand your argument about the cost savings, but we also need to consider the impact on quality.",
+     "note": "Often followed by \"but\" or \"however\" to introduce a contrasting idea."
+    },
+    {
+     "text": "I'd push back on that",
+     "kind": "chunk",
+     "form": "I'd push back on that",
+     "meaning": "To gently resist or challenge an idea or statement, indicating disagreement or a need for more discussion.",
+     "example": "I'd push back on that assumption; our initial findings suggest a different trend.",
+     "plain": "I would challenge that assumption; our initial findings suggest a different trend.",
+     "note": "Common in professional settings, signals a polite but firm disagreement."
+    },
+    {
+     "text": "I have a slight reservation",
+     "kind": "collocation",
+     "form": "I have a slight reservation",
+     "meaning": "To express a minor doubt or concern about a plan or idea.",
+     "example": "I have a slight reservation about launching the product without more extensive user testing.",
+     "plain": "I have a minor doubt about launching the product without more extensive user testing.",
+     "note": "Polite and understated way to voice a concern without outright rejecting an idea."
+    },
+    {
+     "text": "I'm not entirely convinced",
+     "kind": "frame",
+     "form": "I'm not entirely convinced",
+     "meaning": "Expresses a lack of full belief or agreement, suggesting more evidence or discussion is needed.",
+     "example": "I'm not entirely convinced that this strategy will yield the desired results in the current market.",
+     "plain": "I don't fully believe this strategy will yield the desired results in the current market.",
+     "note": "A sophisticated way to express doubt without being confrontational."
+    },
+    {
+     "text": "that's not quite right",
+     "kind": "chunk",
+     "form": "that's not quite right",
+     "meaning": "A gentle and indirect way to correct someone or indicate that their statement is inaccurate.",
+     "example": "While I appreciate the effort, that's not quite right regarding the project's original scope.",
+     "plain": "While I appreciate the effort, that's inaccurate regarding the project's original scope.",
+     "note": "Softens a direct correction, making it less confrontational."
+    },
+    {
+     "text": "I take your point",
+     "kind": "chunk",
+     "form": "I take your point",
+     "meaning": "Acknowledges understanding of an argument, often preceding a counter-argument or disagreement.",
+     "example": "I take your point about the budget constraints, but we must prioritize long-term sustainability.",
+     "plain": "I understand your argument about the budget constraints, but we must prioritize long-term sustainability.",
+     "note": "Similar to \"I see your point,\" but can imply a slightly deeper consideration."
+    },
+    {
+     "text": "I'm inclined to disagree",
+     "kind": "frame",
+     "form": "I'm inclined to disagree",
+     "meaning": "A polite and somewhat formal way to state that you lean towards a different opinion.",
+     "example": "While the data is compelling, I'm inclined to disagree with the conclusion drawn from it.",
+     "plain": "While the data is compelling, I tend to disagree with the conclusion drawn from it.",
+     "note": "Suggests a considered opinion rather than an immediate, strong rejection."
+    },
+    {
+     "text": "I have to disagree",
+     "kind": "frame",
+     "form": "I have to disagree",
+     "meaning": "A direct but still polite way to state your disagreement, often implying a strong conviction.",
+     "example": "On this particular issue, I have to disagree with the proposed course of action.",
+     "plain": "On this particular issue, I must disagree with the proposed course of action.",
+     "note": "More direct than \"I'm inclined to disagree,\" but still respectful."
+    },
+    {
+     "text": "I'm not so sure",
+     "kind": "frame",
+     "form": "I'm not so sure",
+     "meaning": "Expresses doubt or uncertainty about a statement or idea, implying potential disagreement.",
+     "example": "I'm not so sure that approach will work effectively given the current team dynamics.",
+     "plain": "I doubt that approach will work effectively given the current team dynamics.",
+     "note": "A casual yet polite way to express skepticism."
+    },
+    {
+     "text": "I'd question whether",
+     "kind": "frame",
+     "form": "I'd question whether",
+     "meaning": "Introduces a doubt or challenge to an assumption or statement in a polite manner.",
+     "example": "I'd question whether those figures fully account for the seasonal variations in sales.",
+     "plain": "I doubt if those figures fully account for the seasonal variations in sales.",
+     "note": "A good way to raise a specific point of doubt or ask for clarification."
+    },
+    {
+     "text": "I'd beg to differ",
+     "kind": "chunk",
+     "form": "I'd beg to differ",
+     "meaning": "A slightly softer version of \"I beg to differ,\" indicating polite disagreement.",
+     "example": "I'd beg to differ on the idea that experience alone guarantees success in this role.",
+     "plain": "I would politely disagree with the idea that experience alone guarantees success in this role.",
+     "note": "The \"d\" (would) makes it slightly less direct and more tentative than \"I beg to differ.\""
+    },
+    {
+     "text": "I'm not entirely sure",
+     "kind": "frame",
+     "form": "I'm not entirely sure",
+     "meaning": "Expresses a lack of complete certainty or agreement, often leading to a counter-point.",
+     "example": "I'm not entirely sure that's the most efficient way to allocate our limited resources.",
+     "plain": "I don't completely believe that's the most efficient way to allocate our limited resources.",
+     "note": "A common and versatile phrase for expressing polite doubt."
+    },
+    {
+     "text": "I have some reservations",
+     "kind": "collocation",
+     "form": "I have some reservations",
+     "meaning": "To express doubts or concerns about a plan, proposal, or statement.",
+     "example": "I have some reservations about moving forward without a clearer understanding of the risks involved.",
+     "plain": "I have some doubts about moving forward without a clearer understanding of the risks involved.",
+     "note": "More direct than \"a slight reservation,\" but still polite."
+    },
+    {
+     "text": "I'm afraid I disagree",
+     "kind": "frame",
+     "form": "I'm afraid I disagree",
+     "meaning": "A polite and apologetic way to state disagreement, softening the impact.",
+     "example": "I'm afraid I disagree with your assessment of the team's current morale.",
+     "plain": "I regret to say I disagree with your assessment of the team's current morale.",
+     "note": "The \"I'm afraid\" softens the directness of the disagreement."
+    },
+    {
+     "text": "I'm not convinced that",
+     "kind": "frame",
+     "form": "I'm not convinced that",
+     "meaning": "Expresses a lack of belief or agreement, suggesting more evidence is needed.",
+     "example": "I'm not convinced that simply increasing advertising spend will solve our sales problem.",
+     "plain": "I don't believe that simply increasing advertising spend will solve our sales problem.",
+     "note": "A common way to express skepticism about a proposed solution or idea."
+    },
+    {
+     "text": "I'd like to challenge",
+     "kind": "frame",
+     "form": "I'd like to challenge",
+     "meaning": "To politely question or dispute an idea, assumption, or statement.",
+     "example": "I'd like to challenge the notion that our current process is as efficient as it could be.",
+     "plain": "I want to question the idea that our current process is as efficient as it could be.",
+     "note": "Professional and direct, but still polite due to \"I'd like to.\""
+    },
+    {
+     "text": "I'm not entirely comfortable",
+     "kind": "frame",
+     "form": "I'm not entirely comfortable",
+     "meaning": "Expresses unease or disagreement with a situation or proposal without being confrontational.",
+     "example": "I'm not entirely comfortable with the idea of making such a significant change without consulting everyone.",
+     "plain": "I feel uneasy about making such a significant change without consulting everyone.",
+     "note": "Signals a personal objection or concern, often implying ethical or practical issues."
+    },
+    {
+     "text": "I have a different take",
+     "kind": "collocation",
+     "form": "I have a different take",
+     "meaning": "To offer an alternative perspective or interpretation of a situation or idea.",
+     "example": "While I understand your analysis, I have a different take on the potential market reaction.",
+     "plain": "While I understand your analysis, I have a different interpretation of the potential market reaction.",
+     "note": "A good way to introduce a contrasting viewpoint without directly saying \"you're wrong.\""
+    },
+    {
+     "text": "I'm not sure that's fair",
+     "kind": "frame",
+     "form": "I'm not sure that's fair",
+     "meaning": "Expresses doubt about the fairness or appropriateness of a statement or action.",
+     "example": "I'm not sure that's fair to the team members who have been working overtime.",
+     "plain": "I doubt that's fair to the team members who have been working overtime.",
+     "note": "Challenges the equity or justice of a situation."
+    },
+    {
+     "text": "I'd respectfully disagree",
+     "kind": "chunk",
+     "form": "I'd respectfully disagree",
+     "meaning": "A formal and polite way to state disagreement, emphasizing respect for the other person.",
+     "example": "I'd respectfully disagree with the premise that our current challenges are solely due to external factors.",
+     "plain": "I would politely disagree with the idea that our current challenges are solely due to external factors.",
+     "note": "Very formal and deferential, suitable for high-stakes or hierarchical discussions."
+    },
+    {
+     "text": "I'm not convinced we should",
+     "kind": "frame",
+     "form": "I'm not convinced we should",
+     "meaning": "Expresses doubt about the wisdom or necessity of a proposed action.",
+     "example": "I'm not convinced we should proceed with the merger without a more thorough due diligence process.",
+     "plain": "I don't believe we should proceed with the merger without a more thorough due diligence process.",
+     "note": "Focuses on the action itself, rather than just the idea."
+    },
+    {
+     "text": "I'd like to offer a different perspective",
+     "kind": "frame",
+     "form": "I'd like to offer a different perspective",
+     "meaning": "Introduces an alternative viewpoint or interpretation, often to challenge an existing one.",
+     "example": "I'd like to offer a different perspective on how we might approach this complex problem.",
+     "plain": "I want to suggest another way of looking at how we might approach this complex problem.",
+     "note": "A collaborative way to introduce disagreement, inviting discussion."
+    },
+    {
+     "text": "I have a concern about",
+     "kind": "collocation",
+     "form": "I have a concern about",
+     "meaning": "To express a specific worry or issue regarding a plan or situation.",
+     "example": "I have a concern about the potential impact of these changes on our long-standing clients.",
+     "plain": "I am worried about the potential impact of these changes on our long-standing clients.",
+     "note": "Direct but polite, focuses on a specific point of contention."
+    },
+    {
+     "text": "I'm not sure that holds",
+     "kind": "frame",
+     "form": "I'm not sure that holds",
+     "meaning": "Expresses doubt about the validity or truth of a statement or argument.",
+     "example": "I'm not sure that holds true for all demographics, especially younger consumers.",
+     "plain": "I doubt that is true for all demographics, especially younger consumers.",
+     "note": "Implies that the statement might not be universally applicable or logically sound."
+    },
+    {
+     "text": "I'd hesitate to say",
+     "kind": "frame",
+     "form": "I'd hesitate to say",
+     "meaning": "Expresses reluctance to agree with a statement, implying disagreement without stating it directly.",
+     "example": "I'd hesitate to say that the project was a complete success given the budget overruns.",
+     "plain": "I would be reluctant to say that the project was a complete success given the budget overruns.",
+     "note": "An understated way to express disagreement or reservation."
+    },
+    {
+     "text": "I'm not entirely convinced that's the case",
+     "kind": "frame",
+     "form": "I'm not entirely convinced that's the case",
+     "meaning": "Expresses doubt about the accuracy or truth of a statement.",
+     "example": "I'm not entirely convinced that's the case, as our internal data suggests otherwise.",
+     "plain": "I don't fully believe that is true, as our internal data suggests otherwise.",
+     "note": "A sophisticated and polite way to dispute a factual claim."
+    },
+    {
+     "text": "I'd like to raise a point",
+     "kind": "frame",
+     "form": "I'd like to raise a point",
+     "meaning": "To introduce a specific issue or argument for consideration, often to challenge an existing view.",
+     "example": "I'd like to raise a point about the ethical implications of this new technology.",
+     "plain": "I want to bring up an issue about the ethical implications of this new technology.",
+     "note": "A common way to introduce a counter-argument or a new consideration."
+    },
+    {
+     "text": "I'm not sure I follow",
+     "kind": "frame",
+     "form": "I'm not sure I follow",
+     "meaning": "Indicates confusion or a lack of understanding, often as a polite way to question an argument's logic.",
+     "example": "I'm not sure I follow your reasoning for prioritizing speed over accuracy in this instance.",
+     "plain": "I don't fully understand your reasoning for prioritizing speed over accuracy in this instance.",
+     "note": "Can be a gentle way to ask for clarification or to highlight a perceived flaw in logic."
+    },
+    {
+     "text": "I'd like to respectfully disagree",
+     "kind": "chunk",
+     "form": "I'd like to respectfully disagree",
+     "meaning": "A very polite and formal way to state disagreement, emphasizing respect.",
+     "example": "I'd like to respectfully disagree with the notion that our current strategy is sustainable long-term.",
+     "plain": "I want to politely disagree with the idea that our current strategy is sustainable long-term.",
+     "note": "Highly formal, often used in professional or academic debates."
+    },
+    {
+     "text": "I have a different view",
+     "kind": "collocation",
+     "form": "I have a different view",
+     "meaning": "To state that your opinion or perspective differs from what has been said.",
+     "example": "While I appreciate your analysis, I have a different view on the root cause of the problem.",
+     "plain": "While I appreciate your analysis, my opinion on the root cause of the problem is different.",
+     "note": "A straightforward and polite way to introduce a contrasting opinion."
+    },
+    {
+     "text": "I'm not sure that's entirely accurate",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely accurate",
+     "meaning": "Expresses polite doubt about the correctness or precision of a statement.",
+     "example": "I'm not sure that's entirely accurate, as the latest report shows slightly different figures.",
+     "plain": "I doubt that is completely correct, as the latest report shows slightly different figures.",
+     "note": "A gentle way to correct someone without directly saying they are wrong."
+    },
+    {
+     "text": "I'd like to interject",
+     "kind": "chunk",
+     "form": "I'd like to interject",
+     "meaning": "To politely interrupt a discussion to introduce a point, often a dissenting one.",
+     "example": "If I may, I'd like to interject a thought about the potential risks involved.",
+     "plain": "If I may, I want to interrupt to share a thought about the potential risks involved.",
+     "note": "Signals an interruption, but the \"I'd like to\" makes it polite."
+    },
+    {
+     "text": "I'm not sure that's the best approach",
+     "kind": "frame",
+     "form": "I'm not sure that's the best approach",
+     "meaning": "Expresses doubt about the effectiveness or suitability of a proposed method or strategy.",
+     "example": "I'm not sure that's the best approach for engaging with such a diverse group of stakeholders.",
+     "plain": "I doubt that is the best approach for engaging with such a diverse group of stakeholders.",
+     "note": "Challenges the chosen method without rejecting the overall goal."
+    },
+    {
+     "text": "I have to take issue with",
+     "kind": "frame",
+     "form": "I have to take issue with",
+     "meaning": "To disagree strongly but politely with a specific point or statement.",
+     "example": "I have to take issue with the claim that our team lacks motivation.",
+     "plain": "I must disagree with the claim that our team lacks motivation.",
+     "note": "More direct and firm than some other phrases, but still professional."
+    },
+    {
+     "text": "I'm not convinced it's feasible",
+     "kind": "frame",
+     "form": "I'm not convinced it's feasible",
+     "meaning": "Expresses doubt about the practicality or possibility of an idea or plan.",
+     "example": "I'm not convinced it's feasible to implement all these changes within the given timeframe.",
+     "plain": "I don't believe it's possible to implement all these changes within the given timeframe.",
+     "note": "Focuses on the practical aspects of a proposal."
+    },
+    {
+     "text": "I'd like to push back",
+     "kind": "chunk",
+     "form": "I'd like to push back",
+     "meaning": "To politely resist or challenge an idea, decision, or statement.",
+     "example": "I'd like to push back on the idea that we need to cut staff to meet our targets.",
+     "plain": "I want to challenge the idea that we need to cut staff to meet our targets.",
+     "note": "Professional and common in business contexts for gentle resistance."
+    },
+    {
+     "text": "I'm not sure I can agree",
+     "kind": "frame",
+     "form": "I'm not sure I can agree",
+     "meaning": "Expresses a personal inability to concur with a statement or proposal.",
+     "example": "On that particular point, I'm not sure I can agree with your assessment.",
+     "plain": "On that particular point, I doubt I can agree with your assessment.",
+     "note": "A polite way to state personal disagreement, often implying a matter of principle."
+    },
+    {
+     "text": "I have a counter-argument",
+     "kind": "collocation",
+     "form": "I have a counter-argument",
+     "meaning": "To present an opposing argument or point of view.",
+     "example": "While your points are strong, I have a counter-argument regarding the long-term market trends.",
+     "plain": "While your points are strong, I have an opposing argument regarding the long-term market trends.",
+     "note": "Direct and academic, suitable for structured discussions."
+    },
+    {
+     "text": "I'm not sure that's entirely fair",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely fair",
+     "meaning": "Expresses doubt about the complete fairness or justice of a statement or action.",
+     "example": "I'm not sure that's entirely fair to attribute all the success solely to one department.",
+     "plain": "I doubt that is completely fair to attribute all the success solely to one department.",
+     "note": "A slightly stronger version of \"I'm not sure that's fair.\""
+    },
+    {
+     "text": "I'd like to add a caveat",
+     "kind": "collocation",
+     "form": "I'd like to add a caveat",
+     "meaning": "To introduce a warning or condition that limits a general statement or agreement.",
+     "example": "I'd like to add a caveat that these projections are highly dependent on stable economic conditions.",
+     "plain": "I want to add a warning that these projections are highly dependent on stable economic conditions.",
+     "note": "Formal and precise, used to qualify an agreement or statement."
+    },
+    {
+     "text": "I'm not sure that's the whole story",
+     "kind": "frame",
+     "form": "I'm not sure that's the whole story",
+     "meaning": "Suggests that there are additional facts or perspectives that have not been presented.",
+     "example": "I'm not sure that's the whole story; there might be other factors at play here.",
+     "plain": "I doubt that is all the information; there might be other factors at play here.",
+     "note": "Implies a lack of complete information or a hidden agenda, but politely."
+    },
+    {
+     "text": "I'd like to challenge that assumption",
+     "kind": "frame",
+     "form": "I'd like to challenge that assumption",
+     "meaning": "To politely question the basis or premise of an argument or statement.",
+     "example": "I'd like to challenge that assumption about our customers' willingness to pay more.",
+     "plain": "I want to question the idea that our customers are willing to pay more.",
+     "note": "Direct and analytical, used to get to the root of a disagreement."
+    },
+    {
+     "text": "I'm not sure I'd go that far",
+     "kind": "frame",
+     "form": "I'm not sure I'd go that far",
+     "meaning": "Expresses disagreement with the extent or strength of a statement, implying it's an overstatement.",
+     "example": "While it's a good idea, I'm not sure I'd go that far as to call it revolutionary.",
+     "plain": "While it's a good idea, I wouldn't describe it as revolutionary.",
+     "note": "An understated way to temper an enthusiastic or exaggerated claim."
+    },
+    {
+     "text": "I have a different perspective",
+     "kind": "collocation",
+     "form": "I have a different perspective",
+     "meaning": "To offer an alternative way of looking at a situation or problem.",
+     "example": "I have a different perspective on how we should allocate resources for the next quarter.",
+     "plain": "My way of looking at how we should allocate resources for the next quarter is different.",
+     "note": "Similar to \"different take,\" but perhaps slightly more formal."
+    },
+    {
+     "text": "I'm not sure that's entirely correct",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely correct",
+     "meaning": "Expresses polite doubt about the complete accuracy of a statement.",
+     "example": "I'm not sure that's entirely correct regarding the legal implications of this decision.",
+     "plain": "I doubt that is completely correct regarding the legal implications of this decision.",
+     "note": "A very common and gentle way to correct factual errors."
+    },
+    {
+     "text": "I'd like to respectfully point out",
+     "kind": "frame",
+     "form": "I'd like to respectfully point out",
+     "meaning": "To politely draw attention to a fact or detail that contradicts a previous statement.",
+     "example": "I'd like to respectfully point out that the deadline was actually last Friday.",
+     "plain": "I want to politely mention that the deadline was actually last Friday.",
+     "note": "Formal and polite, used for corrections or bringing up overlooked facts."
+    },
+    {
+     "text": "I'm not convinced this is the right path",
+     "kind": "frame",
+     "form": "I'm not convinced this is the right path",
+     "meaning": "Expresses doubt about the overall direction or strategy being proposed.",
+     "example": "I'm not convinced this is the right path for our company's long-term growth.",
+     "plain": "I don't believe this is the correct direction for our company's long-term growth.",
+     "note": "Challenges the fundamental strategy rather than just a detail."
+    },
+    {
+     "text": "I have a slight disagreement",
+     "kind": "collocation",
+     "form": "I have a slight disagreement",
+     "meaning": "To express a minor difference of opinion in a polite and understated way.",
+     "example": "I have a slight disagreement with the proposed wording for the new policy document.",
+     "plain": "I have a minor difference of opinion with the proposed wording for the new policy document.",
+     "note": "Very gentle and diplomatic, suitable for minor points."
+    },
+    {
+     "text": "I'm not sure that's a fair assessment",
+     "kind": "frame",
+     "form": "I'm not sure that's a fair assessment",
+     "meaning": "Expresses doubt about the impartiality or accuracy of an evaluation or judgment.",
+     "example": "I'm not sure that's a fair assessment of the team's performance given the circumstances.",
+     "plain": "I doubt that is an impartial evaluation of the team's performance given the circumstances.",
+     "note": "Challenges the objectivity of an opinion or judgment."
+    },
+    {
+     "text": "I'd like to offer a nuance",
+     "kind": "collocation",
+     "form": "I'd like to offer a nuance",
+     "meaning": "To introduce a subtle distinction or qualification to a statement, often to refine or challenge it.",
+     "example": "I'd like to offer a nuance to that argument, considering the cultural differences involved.",
+     "plain": "I want to add a subtle distinction to that argument, considering the cultural differences involved.",
+     "note": "Sophisticated way to refine an argument rather than directly contradict it."
+    },
+    {
+     "text": "I'm not sure that's entirely true",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely true",
+     "meaning": "Expresses polite doubt about the complete truthfulness or accuracy of a statement.",
+     "example": "I'm not sure that's entirely true about the market's reaction to our last product launch.",
+     "plain": "I doubt that is completely true about the market's reaction to our last product launch.",
+     "note": "A common and gentle way to question a factual claim."
+    },
+    {
+     "text": "I'd like to raise a concern",
+     "kind": "collocation",
+     "form": "I'd like to raise a concern",
+     "meaning": "To politely bring up a worry or issue that needs to be addressed.",
+     "example": "I'd like to raise a concern about the potential for data breaches with this new system.",
+     "plain": "I want to bring up a worry about the potential for data breaches with this new system.",
+     "note": "Professional and direct, but still polite."
+    },
+    {
+     "text": "I have a different interpretation",
+     "kind": "collocation",
+     "form": "I have a different interpretation",
+     "meaning": "To offer an alternative understanding or explanation of facts or events.",
+     "example": "Based on the same data, I have a different interpretation of what caused the decline.",
+     "plain": "Based on the same data, my understanding of what caused the decline is different.",
+     "note": "Suggests a re-evaluation of existing information."
+    },
+    {
+     "text": "I'm not sure that's the right word",
+     "kind": "frame",
+     "form": "I'm not sure that's the right word",
+     "meaning": "Politely questions the choice of vocabulary, implying a more accurate term is needed.",
+     "example": "I'm not sure that's the right word to describe the situation; \"challenging\" might be better.",
+     "plain": "I doubt that is the correct word to describe the situation; \"challenging\" might be better.",
+     "note": "A subtle way to correct or refine someone's language."
+    },
+    {
+     "text": "I'd like to offer a counterpoint",
+     "kind": "collocation",
+     "form": "I'd like to offer a counterpoint",
+     "meaning": "To present an opposing argument or idea in a discussion.",
+     "example": "I'd like to offer a counterpoint to the idea that remote work reduces productivity.",
+     "plain": "I want to present an opposing argument to the idea that remote work reduces productivity.",
+     "note": "Formal and academic, used to introduce a contrasting argument."
+    },
+    {
+     "text": "I'm not sure that's entirely justified",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely justified",
+     "meaning": "Expresses doubt about the complete validity or reasonableness of an action or statement.",
+     "example": "I'm not sure that's entirely justified to cut funding for such a vital community program.",
+     "plain": "I doubt that is completely reasonable to cut funding for such a vital community program.",
+     "note": "Challenges the rationale or fairness of a decision."
+    },
+    {
+     "text": "I have a slight quibble",
+     "kind": "collocation",
+     "form": "I have a slight quibble",
+     "meaning": "To express a minor objection or criticism about a small detail.",
+     "example": "I have a slight quibble with the formatting of the report, but the content is excellent.",
+     "plain": "I have a minor objection to the formatting of the report, but the content is excellent.",
+     "note": "Very understated and informal, used for small, non-critical points."
+    },
+    {
+     "text": "I'm not sure that's the only way",
+     "kind": "frame",
+     "form": "I'm not sure that's the only way",
+     "meaning": "Suggests that there are alternative solutions or approaches to a problem.",
+     "example": "I'm not sure that's the only way to achieve our goals; perhaps we could explore other options.",
+     "plain": "I doubt that is the sole method to achieve our goals; perhaps we could explore other options.",
+     "note": "Opens up the discussion to alternative solutions."
+    },
+    {
+     "text": "I'd like to challenge the premise",
+     "kind": "frame",
+     "form": "I'd like to challenge the premise",
+     "meaning": "To question the fundamental assumption or basis of an argument.",
+     "example": "I'd like to challenge the premise that our target audience is solely interested in low prices.",
+     "plain": "I want to question the basic idea that our target audience is solely interested in low prices.",
+     "note": "A strong but polite way to dispute the foundation of an argument."
+    },
+    {
+     "text": "I'm not sure that's a given",
+     "kind": "frame",
+     "form": "I'm not sure that's a given",
+     "meaning": "Expresses doubt about something being a certainty or an established fact.",
+     "example": "I'm not sure that's a given; we still need to secure external funding for the project.",
+     "plain": "I doubt that is a certainty; we still need to secure external funding for the project.",
+     "note": "Challenges an assumption that something is automatically true or will happen."
+    },
+    {
+     "text": "I have a different understanding",
+     "kind": "collocation",
+     "form": "I have a different understanding",
+     "meaning": "To state that your comprehension of a situation or agreement differs from another's.",
+     "example": "I have a different understanding of the terms we agreed upon in our last meeting.",
+     "plain": "My comprehension of the terms we agreed upon in our last meeting is different.",
+     "note": "Useful for clarifying misunderstandings or politely correcting someone's memory."
+    },
+    {
+     "text": "I'm not sure that's entirely appropriate",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely appropriate",
+     "meaning": "Expresses polite doubt about the suitability or correctness of an action or statement.",
+     "example": "I'm not sure that's entirely appropriate for a formal business presentation.",
+     "plain": "I doubt that is completely suitable for a formal business presentation.",
+     "note": "Challenges the decorum or fit of something in a given context."
+    },
+    {
+     "text": "I'd like to respectfully suggest",
+     "kind": "frame",
+     "form": "I'd like to respectfully suggest",
+     "meaning": "To offer an alternative idea or course of action in a very polite and deferential way.",
+     "example": "I'd like to respectfully suggest a slightly different approach to managing this conflict.",
+     "plain": "I want to politely suggest a slightly different approach to managing this conflict.",
+     "note": "Very formal and diplomatic, often used when proposing an alternative to a superior's idea."
+    },
+    {
+     "text": "I'm not sure that's the best use",
+     "kind": "frame",
+     "form": "I'm not sure that's the best use",
+     "meaning": "Expresses doubt about the optimal allocation of resources or effort.",
+     "example": "I'm not sure that's the best use of our limited marketing budget right now.",
+     "plain": "I doubt that is the best way to use our limited marketing budget right now.",
+     "note": "Challenges the efficiency or strategic value of a proposed action."
+    },
+    {
+     "text": "I have a minor point of contention",
+     "kind": "collocation",
+     "form": "I have a minor point of contention",
+     "meaning": "To express a small disagreement or area of dispute.",
+     "example": "I have a minor point of contention regarding the proposed timeline for phase two.",
+     "plain": "I have a small disagreement regarding the proposed timeline for phase two.",
+     "note": "Formal and precise, used for specific, smaller disagreements."
+    },
+    {
+     "text": "I'm not sure that's entirely fair to say",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely fair to say",
+     "meaning": "Expresses doubt about the complete fairness or justification of a particular statement.",
+     "example": "I'm not sure that's entirely fair to say, considering all the hard work the team put in.",
+     "plain": "I doubt that is completely fair to say, considering all the hard work the team put in.",
+     "note": "A slightly longer, more emphatic version of questioning fairness."
+    },
+    {
+     "text": "I'd like to offer a different angle",
+     "kind": "collocation",
+     "form": "I'd like to offer a different angle",
+     "meaning": "To present an alternative perspective or way of looking at a problem.",
+     "example": "I'd like to offer a different angle on the customer feedback we received.",
+     "plain": "I want to present another way of looking at the customer feedback we received.",
+     "note": "Suggests a fresh perspective, often to move past a deadlock."
+    },
+    {
+     "text": "I'm not sure that's the right conclusion",
+     "kind": "frame",
+     "form": "I'm not sure that's the right conclusion",
+     "meaning": "Expresses doubt about the validity of a deduction or inference made from evidence.",
+     "example": "Based on the data, I'm not sure that's the right conclusion to draw about future trends.",
+     "plain": "Based on the data, I doubt that is the correct conclusion to draw about future trends.",
+     "note": "Challenges the interpretation of facts rather than the facts themselves."
+    },
+    {
+     "text": "I have a slight reservation about that",
+     "kind": "collocation",
+     "form": "I have a slight reservation about that",
+     "meaning": "To express a minor doubt or concern about a specific point or idea.",
+     "example": "I have a slight reservation about that particular clause in the contract.",
+     "plain": "I have a minor doubt about that particular clause in the contract.",
+     "note": "Focuses on a very specific, small point of concern."
+    },
+    {
+     "text": "I'm not sure that's entirely accurate to say",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely accurate to say",
+     "meaning": "Expresses polite doubt about the complete correctness of a statement.",
+     "example": "I'm not sure that's entirely accurate to say, as the market has shifted considerably.",
+     "plain": "I doubt that is completely correct to say, as the market has shifted considerably.",
+     "note": "A slightly longer, more emphatic version of questioning accuracy."
+    },
+    {
+     "text": "I'd like to challenge the notion",
+     "kind": "frame",
+     "form": "I'd like to challenge the notion",
+     "meaning": "To politely dispute a widely held belief or idea.",
+     "example": "I'd like to challenge the notion that success is solely dependent on individual effort.",
+     "plain": "I want to dispute the idea that success is solely dependent on individual effort.",
+     "note": "Targets a general concept or common belief."
+    },
+    {
+     "text": "I'm not sure that's the most effective",
+     "kind": "frame",
+     "form": "I'm not sure that's the most effective",
+     "meaning": "Expresses doubt about the efficiency or success of a proposed method or tool.",
+     "example": "I'm not sure that's the most effective way to communicate complex information to a broad audience.",
+     "plain": "I doubt that is the most effective way to communicate complex information to a broad audience.",
+     "note": "Challenges the method's ability to achieve its goal."
+    },
+    {
+     "text": "I have a different opinion",
+     "kind": "collocation",
+     "form": "I have a different opinion",
+     "meaning": "To state directly but politely that your view differs from another's.",
+     "example": "While I respect your analysis, I have a different opinion on the best course of action.",
+     "plain": "While I respect your analysis, my view on the best course of action is different.",
+     "note": "Straightforward and clear, but still polite."
+    },
+    {
+     "text": "I'm not sure that's entirely practical",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely practical",
+     "meaning": "Expresses doubt about the feasibility or realism of an idea or plan.",
+     "example": "I'm not sure that's entirely practical given our current resource limitations.",
+     "plain": "I doubt that is completely practical given our current resource limitations.",
+     "note": "Focuses on the real-world applicability and constraints."
+    },
+    {
+     "text": "I'd like to offer a qualification",
+     "kind": "collocation",
+     "form": "I'd like to offer a qualification",
+     "meaning": "To add a condition or restriction to a statement, often to limit its scope or accuracy.",
+     "example": "I'd like to offer a qualification that these results are preliminary and subject to change.",
+     "plain": "I want to add a condition that these results are preliminary and subject to change.",
+     "note": "Formal, used to refine or limit a statement's applicability."
+    },
+    {
+     "text": "I'm not sure that's the only factor",
+     "kind": "frame",
+     "form": "I'm not sure that's the only factor",
+     "meaning": "Suggests that other elements or considerations are also important, challenging a singular focus.",
+     "example": "I'm not sure that's the only factor contributing to the problem; there are other variables.",
+     "plain": "I doubt that is the sole factor contributing to the problem; there are other variables.",
+     "note": "Broadens the discussion, implying a more complex situation."
+    },
+    {
+     "text": "I'm not sure I agree with that",
+     "kind": "frame",
+     "form": "I'm not sure I agree with that",
+     "meaning": "A common, gentle way to express disagreement or doubt about a statement or proposal.",
+     "example": "I'm not sure I agree with that assessment of the market's readiness for our product.",
+     "plain": "I doubt that assessment of the market's readiness for our product is correct.",
+     "note": "Very versatile for softening disagreement on a specific point."
+    },
+    {
+     "text": "I have a different perspective on this",
+     "kind": "collocation",
+     "form": "I have a different perspective on this",
+     "meaning": "To offer an alternative way of looking at a situation or problem.",
+     "example": "I have a different perspective on this, especially concerning the long-term implications.",
+     "plain": "My way of looking at this is different, especially concerning the long-term implications.",
+     "note": "A polite way to introduce a contrasting viewpoint."
+    },
+    {
+     "text": "I'm not entirely convinced by that",
+     "kind": "frame",
+     "form": "I'm not entirely convinced by that",
+     "meaning": "Expresses a lack of full belief or agreement, suggesting more evidence or discussion is needed.",
+     "example": "I'm not entirely convinced by that argument, as it seems to overlook key demographic shifts.",
+     "plain": "I don't fully believe that argument, as it seems to overlook key demographic shifts.",
+     "note": "Similar to \"I'm not entirely convinced,\" but focuses on the argument itself."
+    },
+    {
+     "text": "I'd like to respectfully challenge",
+     "kind": "frame",
+     "form": "I'd like to respectfully challenge",
+     "meaning": "To politely question or dispute an idea, assumption, or statement, emphasizing respect.",
+     "example": "I'd like to respectfully challenge the assumption that our current strategy is sufficient.",
+     "plain": "I want to politely question the assumption that our current strategy is sufficient.",
+     "note": "Formal and deferential, suitable for challenging superiors or established ideas."
+    },
+    {
+     "text": "I have a slight concern",
+     "kind": "collocation",
+     "form": "I have a slight concern",
+     "meaning": "To express a minor worry or issue regarding a plan or situation.",
+     "example": "I have a slight concern about the timeline for the next phase of the project.",
+     "plain": "I have a minor worry about the timeline for the next phase of the project.",
+     "note": "A gentle way to voice a specific, minor worry."
+    },
+    {
+     "text": "I'd like to offer a different interpretation",
+     "kind": "collocation",
+     "form": "I'd like to offer a different interpretation",
+     "meaning": "To present an alternative understanding or explanation of facts or events.",
+     "example": "I'd like to offer a different interpretation of the survey results we just reviewed.",
+     "plain": "I want to present another understanding of the survey results we just reviewed.",
+     "note": "Suggests a re-evaluation of existing information, often in a formal context."
+    },
+    {
+     "text": "I'm not sure that's the right way forward",
+     "kind": "frame",
+     "form": "I'm not sure that's the right way forward",
+     "meaning": "Expresses doubt about the overall direction or strategy being proposed.",
+     "example": "I'm not sure that's the right way forward for our team, given our current constraints.",
+     "plain": "I doubt that is the correct direction for our team, given our current constraints.",
+     "note": "Challenges the fundamental strategy rather than just a detail."
+    },
+    {
+     "text": "I have a minor reservation",
+     "kind": "collocation",
+     "form": "I have a minor reservation",
+     "meaning": "To express a small doubt or concern about a plan or idea.",
+     "example": "I have a minor reservation about the proposed changes to the project scope.",
+     "plain": "I have a small doubt about the proposed changes to the project scope.",
+     "note": "Similar to \"slight reservation,\" but emphasizes the smallness of the concern."
+    },
+    {
+     "text": "I'm not sure that's entirely reasonable",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely reasonable",
+     "meaning": "Expresses doubt about the complete rationality or fairness of a statement or action.",
+     "example": "I'm not sure that's entirely reasonable to expect such a quick turnaround on this complex task.",
+     "plain": "I doubt that is completely reasonable to expect such a quick turnaround on this complex task.",
+     "note": "Challenges the logic or fairness of an expectation or demand."
+    },
+    {
+     "text": "I'd like to offer a different viewpoint",
+     "kind": "collocation",
+     "form": "I'd like to offer a different viewpoint",
+     "meaning": "To present an alternative perspective or way of looking at a problem.",
+     "example": "I'd like to offer a different viewpoint on the potential impact of these regulations.",
+     "plain": "I want to present another way of looking at the potential impact of these regulations.",
+     "note": "A collaborative way to introduce disagreement, inviting discussion."
+    },
+    {
+     "text": "I have a different understanding of that",
+     "kind": "collocation",
+     "form": "I have a different understanding of that",
+     "meaning": "To state that your comprehension of a situation or agreement differs from another's.",
+     "example": "I have a different understanding of that particular clause in the contract.",
+     "plain": "My comprehension of that particular clause in the contract is different.",
+     "note": "Useful for clarifying misunderstandings or politely correcting someone's memory."
+    },
+    {
+     "text": "I'd like to challenge the assumption that",
+     "kind": "frame",
+     "form": "I'd like to challenge the assumption that",
+     "meaning": "To politely question the basis or premise of an argument or statement.",
+     "example": "I'd like to challenge the assumption that our target audience is solely interested in low prices.",
+     "plain": "I want to question the basic idea that our target audience is solely interested in low prices.",
+     "note": "Direct and analytical, used to get to the root of a disagreement."
+    },
+    {
+     "text": "I'm not sure that's the most efficient way",
+     "kind": "frame",
+     "form": "I'm not sure that's the most efficient way",
+     "meaning": "Expresses doubt about the efficiency or success of a proposed method or tool.",
+     "example": "I'm not sure that's the most efficient way to communicate complex information to a broad audience.",
+     "plain": "I doubt that is the most efficient way to communicate complex information to a broad audience.",
+     "note": "Challenges the method's ability to achieve its goal."
+    },
+    {
+     "text": "I have a different take on that",
+     "kind": "collocation",
+     "form": "I have a different take on that",
+     "meaning": "To offer an alternative perspective or interpretation of a situation or idea.",
+     "example": "While I understand your analysis, I have a different take on that particular issue.",
+     "plain": "While I understand your analysis, I have a different interpretation of that particular issue.",
+     "note": "A good way to introduce a contrasting viewpoint without directly saying \"you're wrong.\""
+    },
+    {
+     "text": "I'm not sure that's entirely feasible",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely feasible",
+     "meaning": "Expresses doubt about the complete practicality or possibility of an idea or plan.",
+     "example": "I'm not sure that's entirely feasible to implement all these changes within the given timeframe.",
+     "plain": "I doubt that is completely possible to implement all these changes within the given timeframe.",
+     "note": "Focuses on the practical aspects of a proposal, slightly stronger than just \"feasible.\""
+    },
+    {
+     "text": "I'm not sure that's the only option",
+     "kind": "frame",
+     "form": "I'm not sure that's the only option",
+     "meaning": "Suggests that there are alternative solutions or approaches to a problem.",
+     "example": "I'm not sure that's the only option we have; perhaps we could explore other avenues.",
+     "plain": "I doubt that is the sole option we have; perhaps we could explore other avenues.",
+     "note": "Opens up the discussion to alternative solutions."
+    },
+    {
+     "text": "I have a slight reservation about that point",
+     "kind": "collocation",
+     "form": "I have a slight reservation about that point",
+     "meaning": "To express a minor doubt or concern about a specific point or idea.",
+     "example": "I have a slight reservation about that point regarding the budget allocation.",
+     "plain": "I have a minor doubt about that point regarding the budget allocation.",
+     "note": "Focuses on a very specific, small point of concern."
+    },
+    {
+     "text": "I'm not sure that's entirely justified to say",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely justified to say",
+     "meaning": "Expresses doubt about the complete validity or reasonableness of a particular statement.",
+     "example": "I'm not sure that's entirely justified to say, considering all the effort involved.",
+     "plain": "I doubt that is completely reasonable to say, considering all the effort involved.",
+     "note": "A slightly longer, more emphatic version of questioning justification."
+    },
+    {
+     "text": "I have a minor point of disagreement",
+     "kind": "collocation",
+     "form": "I have a minor point of disagreement",
+     "meaning": "To express a small disagreement or area of dispute.",
+     "example": "I have a minor point of disagreement regarding the proposed timeline for phase two.",
+     "plain": "I have a small disagreement regarding the proposed timeline for phase two.",
+     "note": "Formal and precise, used for specific, smaller disagreements."
+    },
+    {
+     "text": "I'm not sure that's entirely appropriate to say",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely appropriate to say",
+     "meaning": "Expresses polite doubt about the complete suitability or correctness of a statement.",
+     "example": "I'm not sure that's entirely appropriate to say in a public forum.",
+     "plain": "I doubt that is completely suitable to say in a public forum.",
+     "note": "A slightly longer, more emphatic version of questioning appropriateness."
+    },
+    {
+     "text": "I'm not sure that's the most effective approach",
+     "kind": "frame",
+     "form": "I'm not sure that's the most effective approach",
+     "meaning": "Expresses doubt about the efficiency or success of a proposed method or tool.",
+     "example": "I'm not sure that's the most effective approach for engaging with such a diverse group.",
+     "plain": "I doubt that is the most effective approach for engaging with such a diverse group.",
+     "note": "Challenges the method's ability to achieve its goal."
+    },
+    {
+     "text": "I have a different opinion on that",
+     "kind": "collocation",
+     "form": "I have a different opinion on that",
+     "meaning": "To state directly but politely that your view differs from another's.",
+     "example": "While I respect your analysis, I have a different opinion on that particular point.",
+     "plain": "While I respect your analysis, my view on that particular point is different.",
+     "note": "Straightforward and clear, but still polite."
+    },
+    {
+     "text": "I'm not sure that's entirely practical to implement",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely practical to implement",
+     "meaning": "Expresses doubt about the complete feasibility or realism of an idea or plan.",
+     "example": "I'm not sure that's entirely practical to implement given our current resource limitations.",
+     "plain": "I doubt that is completely practical to implement given our current resource limitations.",
+     "note": "Focuses on the real-world applicability and constraints of implementation."
+    },
+    {
+     "text": "I'd like to offer a qualification to that",
+     "kind": "collocation",
+     "form": "I'd like to offer a qualification to that",
+     "meaning": "To add a condition or restriction to a statement, often to limit its scope or accuracy.",
+     "example": "I'd like to offer a qualification to that, as these results are preliminary.",
+     "plain": "I want to add a condition to that, as these results are preliminary.",
+     "note": "Formal, used to refine or limit a statement's applicability."
+    },
+    {
+     "text": "I'm not sure that's the only consideration",
+     "kind": "frame",
+     "form": "I'm not sure that's the only consideration",
+     "meaning": "Suggests that other elements or considerations are also important, challenging a singular focus.",
+     "example": "I'm not sure that's the only consideration; there are other factors at play.",
+     "plain": "I doubt that is the sole consideration; there are other factors at play.",
+     "note": "Broadens the discussion, implying a more complex situation."
+    },
+    {
+     "text": "I'm not sure I can fully agree",
+     "kind": "frame",
+     "form": "I'm not sure I can fully agree",
+     "meaning": "Expresses a personal inability to completely concur with a statement or proposal.",
+     "example": "On that particular point, I'm not sure I can fully agree with your assessment.",
+     "plain": "On that particular point, I doubt I can completely agree with your assessment.",
+     "note": "A polite way to state personal disagreement, often implying a matter of principle."
+    },
+    {
+     "text": "I have a different perspective on the situation",
+     "kind": "collocation",
+     "form": "I have a different perspective on the situation",
+     "meaning": "To offer an alternative way of looking at a situation or problem.",
+     "example": "I have a different perspective on the situation, especially concerning the long-term implications.",
+     "plain": "My way of looking at the situation is different, especially concerning the long-term implications.",
+     "note": "A polite way to introduce a contrasting viewpoint."
+    },
+    {
+     "text": "I'm not entirely convinced by that argument",
+     "kind": "frame",
+     "form": "I'm not entirely convinced by that argument",
+     "meaning": "Expresses a lack of full belief or agreement, suggesting more evidence or discussion is needed.",
+     "example": "I'm not entirely convinced by that argument, as it seems to overlook key demographic shifts.",
+     "plain": "I don't fully believe that argument, as it seems to overlook key demographic shifts.",
+     "note": "Similar to \"I'm not entirely convinced,\" but focuses on the argument itself."
+    },
+    {
+     "text": "I'd like to respectfully challenge that",
+     "kind": "frame",
+     "form": "I'd like to respectfully challenge that",
+     "meaning": "To politely question or dispute an idea, assumption, or statement, emphasizing respect.",
+     "example": "I'd like to respectfully challenge that assumption about our customers' willingness to pay more.",
+     "plain": "I want to politely question that assumption about our customers' willingness to pay more.",
+     "note": "Formal and deferential, suitable for challenging superiors or established ideas."
+    },
+    {
+     "text": "I have a slight concern about the implications",
+     "kind": "collocation",
+     "form": "I have a slight concern about the implications",
+     "meaning": "To express a minor worry or issue regarding a plan or situation.",
+     "example": "I have a slight concern about the implications of this decision for our international partners.",
+     "plain": "I have a minor worry about the implications of this decision for our international partners.",
+     "note": "A gentle way to voice a specific, minor worry about consequences."
+    },
+    {
+     "text": "I'm not sure that's entirely accurate to state",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely accurate to state",
+     "meaning": "Expresses polite doubt about the complete correctness of a statement.",
+     "example": "I'm not sure that's entirely accurate to state, as the market has shifted considerably.",
+     "plain": "I doubt that is completely correct to state, as the market has shifted considerably.",
+     "note": "A slightly longer, more emphatic version of questioning accuracy."
+    },
+    {
+     "text": "I'm not sure that's the right direction",
+     "kind": "frame",
+     "form": "I'm not sure that's the right direction",
+     "meaning": "Expresses doubt about the overall direction or strategy being proposed.",
+     "example": "I'm not sure that's the right direction for our team, given our current constraints.",
+     "plain": "I doubt that is the correct direction for our team, given our current constraints.",
+     "note": "Challenges the fundamental strategy rather than just a detail."
+    },
+    {
+     "text": "I have a minor reservation about the proposal",
+     "kind": "collocation",
+     "form": "I have a minor reservation about the proposal",
+     "meaning": "To express a small doubt or concern about a plan or idea.",
+     "example": "I have a minor reservation about the proposal to expand into that new market.",
+     "plain": "I have a small doubt about the proposal to expand into that new market.",
+     "note": "Similar to \"slight reservation,\" but emphasizes the smallness of the concern."
+    },
+    {
+     "text": "I'm not sure that's entirely reasonable to suggest",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely reasonable to suggest",
+     "meaning": "Expresses doubt about the complete rationality or fairness of a statement or action.",
+     "example": "I'm not sure that's entirely reasonable to suggest such a drastic change without consultation.",
+     "plain": "I doubt that is completely reasonable to suggest such a drastic change without consultation.",
+     "note": "Challenges the logic or fairness of an expectation or demand."
+    },
+    {
+     "text": "I have a different understanding of the situation",
+     "kind": "collocation",
+     "form": "I have a different understanding of the situation",
+     "meaning": "To state that your comprehension of a situation or agreement differs from another's.",
+     "example": "I have a different understanding of the situation, especially regarding the timeline.",
+     "plain": "My comprehension of the situation is different, especially regarding the timeline.",
+     "note": "Useful for clarifying misunderstandings or politely correcting someone's memory."
+    },
+    {
+     "text": "I'm not sure that's entirely appropriate to suggest",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely appropriate to suggest",
+     "meaning": "Expresses polite doubt about the complete suitability or correctness of a statement.",
+     "example": "I'm not sure that's entirely appropriate to suggest in a formal business meeting.",
+     "plain": "I doubt that is completely suitable to suggest in a formal business meeting.",
+     "note": "A slightly longer, more emphatic version of questioning appropriateness."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "I'm not sure I see it",
+     "kind": "chunk",
+     "form": "I'm not sure I see it",
+     "meaning": "Expresses that you don't understand or agree with a particular perspective or point.",
+     "example": "I'm not sure I see it that way; the data suggests a different conclusion.",
+     "plain": "I don't understand or agree with that perspective; the data suggests a different conclusion.",
+     "note": "A polite and common way to indicate a differing viewpoint or lack of understanding."
+    },
+    {
+     "text": "I'd take a different view",
+     "kind": "chunk",
+     "form": "I'd take a different view",
+     "meaning": "To express that your opinion or perspective on a topic is not the same as the one just presented.",
+     "example": "I'd take a different view on the potential risks involved with this new venture.",
+     "plain": "My opinion on the potential risks involved with this new venture is different.",
+     "note": "A polite and common way to introduce an alternative perspective."
+    },
+    {
+     "text": "I'm not sure that's accurate",
+     "kind": "chunk",
+     "form": "I'm not sure that's accurate",
+     "meaning": "Expresses doubt about the correctness or precision of a statement or information.",
+     "example": "I'm not sure that's accurate; my records show a slightly different figure for expenses.",
+     "plain": "I doubt that's correct; my records show a slightly different figure for expenses.",
+     "note": "A polite way to question factual information without being confrontational."
+    },
+    {
+     "text": "I'd like to offer an alternative",
+     "kind": "frame",
+     "form": "I'd like to offer an alternative",
+     "meaning": "To politely suggest a different option or solution, implying disagreement with the current one.",
+     "example": "I'd like to offer an alternative approach to solving the current staffing shortage.",
+     "plain": "I want to suggest a different approach to solving the current staffing shortage.",
+     "note": "A constructive way to disagree by proposing another option."
+    },
+    {
+     "text": "I'm not sure that's the full picture",
+     "kind": "chunk",
+     "form": "I'm not sure that's the full picture",
+     "meaning": "Expresses doubt that all relevant information or aspects of a situation have been considered.",
+     "example": "I'm not sure that's the full picture; we haven't discussed the long-term implications yet.",
+     "plain": "I doubt that includes all the information; we haven't discussed the long-term implications yet.",
+     "note": "A polite way to suggest that more context or information is needed."
+    },
+    {
+     "text": "I'd be hesitant to agree",
+     "kind": "frame",
+     "form": "I'd be hesitant to agree",
+     "meaning": "Expresses reluctance to give full agreement, implying reservations or partial disagreement.",
+     "example": "I'd be hesitant to agree to those terms without reviewing the full contract details first.",
+     "plain": "I would be reluctant to agree to those terms without reviewing the full contract details first.",
+     "note": "A polite and indirect way to signal reservations or partial disagreement."
+    },
+    {
+     "text": "I'd take issue with",
+     "kind": "collocation",
+     "form": "I'd take issue with",
+     "meaning": "To disagree strongly but politely with a statement or idea.",
+     "example": "I'd take issue with the idea that our team isn't committed to the project's success.",
+     "plain": "I disagree with the idea that our team isn't committed to the project's success.",
+     "note": "A polite but firm way to challenge a statement. Often used in professional settings."
+    },
+    {
+     "text": "I wouldn't go that far",
+     "kind": "chunk",
+     "form": "I wouldn't go that far",
+     "meaning": "Expresses that you disagree with an extreme statement or conclusion, finding it an overstatement.",
+     "example": "While it's challenging, I wouldn't go that far as to say the project is a complete failure.",
+     "plain": "While it's challenging, I wouldn't say the project is a complete failure.",
+     "note": "A common way to temper an over-the-top statement or express partial disagreement."
+    },
+    {
+     "text": "I'd like to question that",
+     "kind": "frame",
+     "form": "I'd like to question that",
+     "meaning": "To politely express doubt or ask for clarification about a statement or assumption.",
+     "example": "I'd like to question that assumption about our target demographic's spending habits.",
+     "plain": "I want to ask about that assumption about our target demographic's spending habits.",
+     "note": "A polite and direct way to challenge a statement or underlying belief."
+    },
+    {
+     "text": "I'm not sure that's the best way",
+     "kind": "chunk",
+     "form": "I'm not sure that's the best way",
+     "meaning": "Expresses doubt about the effectiveness or suitability of a proposed method or approach.",
+     "example": "I'm not sure that's the best way to handle the client's complaint; it might escalate things.",
+     "plain": "I doubt that's the most effective method to handle the client's complaint; it might escalate things.",
+     "note": "A polite way to suggest an alternative might be better."
+    },
+    {
+     "text": "I'm not sure that's the right term",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right term",
+     "meaning": "Expresses doubt about the accuracy or appropriateness of a specific word or phrase used.",
+     "example": "I'm not sure that's the right term to describe our current market position; 'challenging' might be better.",
+     "plain": "I doubt that's the correct word to describe our current market position; 'challenging' might be better.",
+     "note": "A polite way to correct vocabulary or suggest a more precise word."
+    },
+    {
+     "text": "I'm not sure that's a certainty",
+     "kind": "chunk",
+     "form": "I'm not sure that's a certainty",
+     "meaning": "Expresses doubt about the absolute truth or guaranteed outcome of a statement or prediction.",
+     "example": "I'm not sure that's a certainty, as external factors could still influence the results significantly.",
+     "plain": "I doubt that's guaranteed, as external factors could still influence the results significantly.",
+     "note": "A polite way to introduce an element of doubt or contingency."
+    },
+    {
+     "text": "I'm not sure that's the sole option",
+     "kind": "chunk",
+     "form": "I'm not sure that's the sole option",
+     "meaning": "Expresses doubt that only one choice or possibility exists, implying there are others.",
+     "example": "I'm not sure that's the sole option we have; perhaps we should explore other avenues.",
+     "plain": "I doubt that's the only choice we have; perhaps we should explore other avenues.",
+     "note": "A polite way to open up discussion for alternative solutions."
+    },
+    {
+     "text": "I'm not sure that's the logical conclusion",
+     "kind": "chunk",
+     "form": "I'm not sure that's the logical conclusion",
+     "meaning": "Expresses doubt about whether a statement logically follows from the preceding information.",
+     "example": "I'm not sure that's the logical conclusion based on the data we've reviewed so far.",
+     "plain": "I doubt that's the correct conclusion based on the data we've reviewed so far.",
+     "note": "A polite way to challenge the reasoning or inference made."
+    },
+    {
+     "text": "I'm not sure that's the optimal solution",
+     "kind": "chunk",
+     "form": "I'm not sure that's the optimal solution",
+     "meaning": "Expresses doubt that a proposed solution is the best possible one, implying room for improvement.",
+     "example": "I'm not sure that's the optimal solution for long-term sustainability, despite its immediate benefits.",
+     "plain": "I doubt that's the best solution for long-term sustainability, despite its immediate benefits.",
+     "note": "A polite way to suggest that a better solution might exist."
+    },
+    {
+     "text": "I'm not sure that's the only element",
+     "kind": "chunk",
+     "form": "I'm not sure that's the only element",
+     "meaning": "Expresses doubt that a single factor is solely responsible, implying other contributing factors.",
+     "example": "I'm not sure that's the only element contributing to the team's low morale; other issues might exist.",
+     "plain": "I doubt that's the only factor contributing to the team's low morale; other issues might exist.",
+     "note": "A polite way to broaden the scope of discussion or analysis."
+    },
+    {
+     "text": "I'm not sure that's the best direction",
+     "kind": "chunk",
+     "form": "I'm not sure that's the best direction",
+     "meaning": "Expresses doubt about the overall course of action or strategic path being taken.",
+     "example": "I'm not sure that's the best direction for our company in the current economic climate.",
+     "plain": "I doubt that's the best course of action for our company in the current economic climate.",
+     "note": "A polite way to question the strategic wisdom of a plan."
+    },
+    {
+     "text": "I'm not sure that's the correct path",
+     "kind": "chunk",
+     "form": "I'm not sure that's the correct path",
+     "meaning": "Expresses doubt about whether a chosen course of action is the right one to achieve a goal.",
+     "example": "I'm not sure that's the correct path to achieve our sustainability targets within the given timeframe.",
+     "plain": "I doubt that's the right way to achieve our sustainability targets within the given timeframe.",
+     "note": "A polite way to question the suitability of a chosen method or strategy."
+    },
+    {
+     "text": "I'm not sure that's the best way forward",
+     "kind": "chunk",
+     "form": "I'm not sure that's the best way forward",
+     "meaning": "Expresses doubt about the most effective or appropriate future course of action.",
+     "example": "I'm not sure that's the best way forward for the project, given the recent changes in requirements.",
+     "plain": "I doubt that's the most effective future course of action for the project, given the recent changes.",
+     "note": "A polite way to express reservations about a proposed future plan."
+    },
+    {
+     "text": "I'm not sure that's the best allocation",
+     "kind": "chunk",
+     "form": "I'm not sure that's the best allocation",
+     "meaning": "Expresses doubt about whether resources (time, money, staff) are being distributed most effectively.",
+     "example": "I'm not sure that's the best allocation of our marketing budget for the upcoming campaign.",
+     "plain": "I doubt that's the most effective distribution of our marketing budget for the upcoming campaign.",
+     "note": "A polite way to question resource management decisions."
+    },
+    {
+     "text": "I'm not sure that's the most effective strategy",
+     "kind": "chunk",
+     "form": "I'm not sure that's the most effective strategy",
+     "meaning": "Expresses doubt about whether a particular plan of action will achieve the desired results.",
+     "example": "I'm not sure that's the most effective strategy for increasing our market share in this competitive environment.",
+     "plain": "I doubt that's the best plan of action for increasing our market share in this competitive environment.",
+     "note": "A polite way to challenge the efficacy of a strategic plan."
+    },
+    {
+     "text": "I'm not sure that's the only possibility",
+     "kind": "chunk",
+     "form": "I'm not sure that's the only possibility",
+     "meaning": "Expresses doubt that there are no other potential outcomes or solutions.",
+     "example": "I'm not sure that's the only possibility; we might find other ways to mitigate the risk.",
+     "plain": "I doubt that's the only potential outcome; we might find other ways to mitigate the risk.",
+     "note": "A polite way to encourage further brainstorming or consideration of alternatives."
+    },
+    {
+     "text": "I'm not sure that's the right approach",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right approach",
+     "meaning": "Expresses doubt about the suitability or correctness of a method or way of dealing with something.",
+     "example": "I'm not sure that's the right approach to resolving the conflict between the two departments.",
+     "plain": "I doubt that's the correct method to resolve the conflict between the two departments.",
+     "note": "A polite way to question the chosen method for a task or problem."
+    },
+    {
+     "text": "I'm not sure that's the right solution",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right solution",
+     "meaning": "Expresses doubt about whether a proposed answer or fix will effectively solve a problem.",
+     "example": "I'm not sure that's the right solution for our long-standing technical issues.",
+     "plain": "I doubt that's the correct answer for our long-standing technical issues.",
+     "note": "A polite way to question the effectiveness of a proposed fix."
+    },
+    {
+     "text": "I'm not sure that's the right decision",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right decision",
+     "meaning": "Expresses doubt about the wisdom or correctness of a choice that has been made or is being considered.",
+     "example": "I'm not sure that's the right decision for the company's future, given the market volatility.",
+     "plain": "I doubt that's the correct choice for the company's future, given the market volatility.",
+     "note": "A polite way to question a choice, often implying potential negative consequences."
+    },
+    {
+     "text": "I'm not sure that's the right time",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right time",
+     "meaning": "Expresses doubt about the appropriateness of the timing for an action or event.",
+     "example": "I'm not sure that's the right time to introduce a new product line during a recession.",
+     "plain": "I doubt that's the correct moment to introduce a new product line during a recession.",
+     "note": "A polite way to question the timing of a proposed action."
+    },
+    {
+     "text": "I'm not sure that's the right place",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right place",
+     "meaning": "Expresses doubt about the suitability of a location or context for something.",
+     "example": "I'm not sure that's the right place to discuss sensitive personnel matters.",
+     "plain": "I doubt that's the correct location to discuss sensitive personnel matters.",
+     "note": "A polite way to suggest a different setting or context is more appropriate."
+    },
+    {
+     "text": "I'm not sure that's the right person",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right person",
+     "meaning": "Expresses doubt about the suitability or qualifications of an individual for a role or task.",
+     "example": "I'm not sure that's the right person to lead this complex project, given their limited experience.",
+     "plain": "I doubt that's the correct individual to lead this complex project, given their limited experience.",
+     "note": "A polite way to question a personnel choice."
+    },
+    {
+     "text": "I'm not sure that's the right fit",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right fit",
+     "meaning": "Expresses doubt about the compatibility or suitability of something for a particular situation or role.",
+     "example": "I'm not sure that's the right fit for our company culture, despite their impressive resume.",
+     "plain": "I doubt that's the correct match for our company culture, despite their impressive resume.",
+     "note": "A polite way to express concerns about compatibility."
+    },
+    {
+     "text": "I'm not sure that's the right priority",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right priority",
+     "meaning": "Expresses doubt about whether a particular task or goal is the most important one at a given time.",
+     "example": "I'm not sure that's the right priority when we have more urgent issues to address.",
+     "plain": "I doubt that's the most important task when we have more urgent issues to address.",
+     "note": "A polite way to question the ranking of tasks or goals."
+    },
+    {
+     "text": "I'm not sure that's the right focus",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right focus",
+     "meaning": "Expresses doubt about whether attention is being directed towards the most important aspect.",
+     "example": "I'm not sure that's the right focus for our next team meeting; we have other pressing matters.",
+     "plain": "I doubt that's the correct area of attention for our next team meeting; we have other pressing matters.",
+     "note": "A polite way to suggest shifting attention to a different area."
+    },
+    {
+     "text": "I'm not sure that's the right message",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right message",
+     "meaning": "Expresses doubt about whether a communication conveys the intended meaning or is appropriate.",
+     "example": "I'm not sure that's the right message to send to our stakeholders at this sensitive time.",
+     "plain": "I doubt that's the correct communication to send to our stakeholders at this sensitive time.",
+     "note": "A polite way to question the content or tone of a communication."
+    },
+    {
+     "text": "I'm not sure that's the right tone",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right tone",
+     "meaning": "Expresses doubt about the appropriateness of the emotional quality or style of communication.",
+     "example": "I'm not sure that's the right tone for a formal apology; it sounds a bit dismissive.",
+     "plain": "I doubt that's the correct style for a formal apology; it sounds a bit dismissive.",
+     "note": "A polite way to critique the manner of expression."
+    },
+    {
+     "text": "I'm not sure that's the right balance",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right balance",
+     "meaning": "Expresses doubt about whether different elements are appropriately proportioned or weighted.",
+     "example": "I'm not sure that's the right balance between cost-cutting and maintaining service quality.",
+     "plain": "I doubt that's the correct proportion between cost-cutting and maintaining service quality.",
+     "note": "A polite way to question the equilibrium between competing factors."
+    },
+    {
+     "text": "I'm not sure that's the right interpretation",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right interpretation",
+     "meaning": "Expresses doubt about whether a particular explanation or understanding of something is correct.",
+     "example": "I'm not sure that's the right interpretation of the survey results; there could be other factors.",
+     "plain": "I doubt that's the correct explanation of the survey results; there could be other factors.",
+     "note": "A polite way to challenge an understanding or analysis."
+    },
+    {
+     "text": "I'm not sure that's the right understanding",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right understanding",
+     "meaning": "Expresses doubt about whether someone has correctly grasped a concept or situation.",
+     "example": "I'm not sure that's the right understanding of the new policy's implications for our team.",
+     "plain": "I doubt that's the correct grasp of the new policy's implications for our team.",
+     "note": "A polite way to clarify or correct someone's comprehension."
+    },
+    {
+     "text": "I'm not sure that's the right assessment",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right assessment",
+     "meaning": "Expresses doubt about the accuracy or fairness of an evaluation or judgment.",
+     "example": "I'm not sure that's the right assessment of the market's potential for our new product.",
+     "plain": "I doubt that's the correct evaluation of the market's potential for our new product.",
+     "note": "A polite way to challenge an evaluation or judgment."
+    },
+    {
+     "text": "I'm not sure that's the right takeaway",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right takeaway",
+     "meaning": "Expresses doubt about whether the most important point or conclusion has been correctly identified.",
+     "example": "I'm not sure that's the right takeaway from the meeting; I thought we agreed on something different.",
+     "plain": "I doubt that's the correct main point from the meeting; I thought we agreed on something different.",
+     "note": "A polite way to question the main conclusion drawn from a discussion."
+    },
+    {
+     "text": "I'm not sure that's the right way",
+     "kind": "chunk",
+     "form": "I'm not sure that's the right way",
+     "meaning": "Expresses doubt about the correctness or appropriateness of a method or manner of doing something.",
+     "example": "I'm not sure that's the right way to motivate the team; positive reinforcement might be better.",
+     "plain": "I doubt that's the correct method to motivate the team; positive reinforcement might be better.",
+     "note": "A polite way to question a method or approach."
+    },
+    {
+     "text": "I'm not sure that's the main point",
+     "kind": "chunk",
+     "form": "I'm not sure that's the main point",
+     "meaning": "Expresses doubt about whether the most crucial aspect of a discussion or argument has been identified.",
+     "example": "I'm not sure that's the main point we should be focusing on in this strategic review.",
+     "plain": "I doubt that's the most crucial aspect we should be focusing on in this strategic review.",
+     "note": "A polite way to redirect focus or challenge a perceived emphasis."
+    },
+    {
+     "text": "It's not quite as simple",
+     "kind": "frame",
+     "form": "It's not quite as simple",
+     "meaning": "To suggest that a situation or idea is more complex than presented, implying a gentle disagreement.",
+     "example": "While the solution seems straightforward, it's not quite as simple when you consider the regulatory hurdles.",
+     "plain": "While the solution seems straightforward, it's more complex when you consider the regulatory hurdles.",
+     "note": "A polite way to introduce complexity or nuance, often used to push back on an oversimplified view."
+    },
+    {
+     "text": "I'm not convinced we're there yet",
+     "kind": "frame",
+     "form": "I'm not convinced we're there yet",
+     "meaning": "To express doubt that a goal or agreement has been fully reached, implying further discussion is needed.",
+     "example": "I appreciate the progress, but I'm not convinced we're there yet regarding the final budget approval.",
+     "plain": "I appreciate the progress, but I don't think we've reached the final budget approval yet.",
+     "note": "A diplomatic way to indicate that more work or discussion is required before full agreement."
+    },
+    {
+     "text": "I'd like to clarify one point",
+     "kind": "frame",
+     "form": "I'd like to clarify one point",
+     "meaning": "To politely interject and correct or elaborate on a specific detail, often implying a subtle disagreement.",
+     "example": "Before we move on, I'd like to clarify one point about the project timeline.",
+     "plain": "Before we move on, I want to correct a detail about the project timeline.",
+     "note": "Used to gently correct or add precision to a statement, often to prevent misunderstanding."
+    },
+    {
+     "text": "That's one way of looking at it",
+     "kind": "chunk",
+     "form": "That's one way of looking at it",
+     "meaning": "To acknowledge a perspective without fully agreeing, implying there are other valid viewpoints.",
+     "example": "That's one way of looking at it, but I think we need to consider the long-term implications.",
+     "plain": "I understand your perspective, but I think we need to consider the long-term implications.",
+     "note": "A polite, slightly indirect way to signal disagreement or to introduce an alternative view."
+    },
+    {
+     "text": "There's a slight complication",
+     "kind": "collocation",
+     "form": "There's a slight complication",
+     "meaning": "To gently introduce a problem or difficulty that challenges a proposed idea or plan.",
+     "example": "That sounds like a good plan, but there's a slight complication with the venue availability.",
+     "plain": "That sounds like a good plan, but the venue availability is a small problem.",
+     "note": "A mild, understated way to express a potential issue or objection."
+    },
+    {
+     "text": "We might want to reconsider",
+     "kind": "frame",
+     "form": "We might want to reconsider",
+     "meaning": "To politely suggest a change of mind or approach, implying the current idea isn't optimal.",
+     "example": "Given the new data, we might want to reconsider our initial strategy for market entry.",
+     "plain": "Given the new data, we should think again about our initial strategy for market entry.",
+     "note": "A collaborative and gentle way to express doubt about a decision or plan."
+    },
+    {
+     "text": "I'd lean towards a different approach",
+     "kind": "frame",
+     "form": "I'd lean towards a different approach",
+     "meaning": "To express a preference for an alternative method or idea, subtly disagreeing with the current one.",
+     "example": "I understand your reasoning, but I'd lean towards a different approach for resolving this conflict.",
+     "plain": "I understand your reasoning, but I prefer a different approach for resolving this conflict.",
+     "note": "A polite and indirect way to suggest an alternative without directly rejecting the current idea."
+    },
+    {
+     "text": "I'd like to add a point of clarification",
+     "kind": "frame",
+     "form": "I'd like to add a point of clarification",
+     "meaning": "To interject with additional information that might alter the understanding or challenge a statement.",
+     "example": "Before we conclude, I'd like to add a point of clarification regarding the project's scope.",
+     "plain": "Before we conclude, I want to add some clarifying information regarding the project's scope.",
+     "note": "A polite way to introduce a detail that might subtly contradict or refine what was said."
+    },
+    {
+     "text": "It seems to me that",
+     "kind": "frame",
+     "form": "It seems to me that",
+     "meaning": "To introduce a personal opinion or observation, often subtly differing from what was just said.",
+     "example": "It seems to me that we're overlooking some key data points in this analysis.",
+     "plain": "I think we're overlooking some key data points in this analysis.",
+     "note": "A polite, less direct way to express a personal view, inviting discussion rather than direct confrontation."
+    },
+    {
+     "text": "My only reservation is",
+     "kind": "frame",
+     "form": "My only reservation is",
+     "meaning": "To state a single, specific point of doubt or disagreement, often after acknowledging other positive aspects.",
+     "example": "The proposal is strong, but my only reservation is the tight deadline for implementation.",
+     "plain": "The proposal is strong, but I'm concerned about the tight deadline for implementation.",
+     "note": "Used to express a specific, often minor, point of disagreement or concern in an otherwise positive assessment."
+    },
+    {
+     "text": "Perhaps we could consider",
+     "kind": "frame",
+     "form": "Perhaps we could consider",
+     "meaning": "To gently suggest an alternative course of action or idea, implying the current one might not be best.",
+     "example": "Instead of rushing, perhaps we could consider a phased rollout for the new software.",
+     "plain": "Instead of rushing, maybe we should think about a phased rollout for the new software.",
+     "note": "A collaborative and polite way to introduce an alternative, often when disagreeing with the current plan."
+    },
+    {
+     "text": "On the other hand",
+     "kind": "chunk",
+     "form": "On the other hand",
+     "meaning": "To introduce a contrasting idea or perspective, often to balance or challenge a previous statement.",
+     "example": "The new policy saves money; on the other hand, it might negatively impact employee morale.",
+     "plain": "The new policy saves money, but it might negatively impact employee morale.",
+     "note": "Used to present a different side of an argument, often implying a subtle disagreement or caution."
+    },
+    {
+     "text": "While I agree up to a point",
+     "kind": "frame",
+     "form": "While I agree up to a point",
+     "meaning": "To acknowledge partial agreement before introducing a point of disagreement or qualification.",
+     "example": "While I agree up to a point, I think the cost estimates are overly optimistic.",
+     "plain": "I agree with some of what you said, but I think the cost estimates are overly optimistic.",
+     "note": "A diplomatic way to show you've listened and found common ground before expressing a difference."
+    },
+    {
+     "text": "To play devil's advocate",
+     "kind": "chunk",
+     "form": "To play devil's advocate",
+     "meaning": "To introduce a counter-argument or opposing viewpoint, often to stimulate discussion rather than express personal belief.",
+     "example": "To play devil's advocate, what if the market doesn't react as positively as we expect?",
+     "plain": "Let's consider the opposing view: what if the market doesn't react as positively as we expect?",
+     "note": "Used to introduce a challenging perspective in a non-confrontational way, often in a group discussion."
+    },
+    {
+     "text": "I'm not sure that's entirely what I meant",
+     "kind": "frame",
+     "form": "I'm not sure that's entirely what I meant",
+     "meaning": "To gently correct someone's interpretation of your words, implying a misunderstanding or misrepresentation.",
+     "example": "I appreciate your summary, but I'm not sure that's entirely what I meant regarding the project's scope.",
+     "plain": "I appreciate your summary, but I think you misunderstood what I meant regarding the project's scope.",
+     "note": "A polite way to clarify a point, often used when someone has drawn a conclusion you don't agree with."
+    },
+    {
+     "text": "I see where you're coming from",
+     "kind": "frame",
+     "form": "I see where you're coming from",
+     "meaning": "To acknowledge understanding of someone's perspective before expressing a different view or reservation.",
+     "example": "I see where you're coming from, but I'm concerned about the practical implementation.",
+     "plain": "I understand your perspective, but I'm concerned about the practical implementation.",
+     "note": "A common, empathetic opening to a polite disagreement, showing you've listened."
+    },
+    {
+     "text": "I'd argue the opposite",
+     "kind": "frame",
+     "form": "I'd argue the opposite",
+     "meaning": "To state a directly contrasting opinion in a polite, yet firm, manner.",
+     "example": "While that's a valid point, I'd argue the opposite regarding the project's long-term viability.",
+     "plain": "While that's a valid point, I believe the project's long-term viability is actually the reverse.",
+     "note": "A more direct but still polite way to express a strong counter-argument."
+    },
+    {
+     "text": "I'd hesitate to endorse",
+     "kind": "frame",
+     "form": "I'd hesitate to endorse",
+     "meaning": "To express reluctance to fully support or approve something, indicating a significant reservation.",
+     "example": "While the idea has merit, I'd hesitate to endorse it without a more detailed risk assessment.",
+     "plain": "While the idea has merit, I wouldn't support it without a more detailed risk assessment.",
+     "note": "A formal and cautious way to express strong reservations or a refusal to approve."
+    },
+    {
+     "text": "I'd be wary of",
+     "kind": "frame",
+     "form": "I'd be wary of",
+     "meaning": "To express caution or concern about a particular idea or action, implying potential negative outcomes.",
+     "example": "I'd be wary of making such a significant investment without thoroughly researching the market.",
+     "plain": "I would be cautious about making such a significant investment without thoroughly researching the market.",
+     "note": "Used to express a strong sense of caution or potential risk, often implying disagreement with a proposed action."
+    },
+    {
+     "text": "That might be an oversimplification",
+     "kind": "frame",
+     "form": "That might be an oversimplification",
+     "meaning": "To suggest that an explanation or idea is too basic and lacks necessary detail or nuance.",
+     "example": "While the concept is clear, that might be an oversimplification of the complex issues involved.",
+     "plain": "While the concept is clear, that might be too simple an explanation for the complex issues involved.",
+     "note": "A polite, intellectual way to challenge a statement by suggesting it lacks depth or nuance."
+    },
+    {
+     "text": "I'm not sure that fully accounts for",
+     "kind": "frame",
+     "form": "I'm not sure that fully accounts for",
+     "meaning": "To express doubt that a statement or plan considers all relevant factors, implying incompleteness.",
+     "example": "Your analysis is thorough, but I'm not sure that fully accounts for the recent market shifts.",
+     "plain": "Your analysis is thorough, but I don't think it completely considers the recent market shifts.",
+     "note": "Used to point out a potential oversight or missing element in an argument or plan."
+    },
+    {
+     "text": "I'd like to respectfully add",
+     "kind": "frame",
+     "form": "I'd like to respectfully add",
+     "meaning": "To politely introduce an additional point that might contradict or qualify what was just said.",
+     "example": "I'd like to respectfully add that the previous quarter's results tell a different story.",
+     "plain": "I want to politely add that the previous quarter's results tell a different story.",
+     "note": "A formal and polite way to introduce a contrasting piece of information."
+    },
+    {
+     "text": "That's a valid point, however",
+     "kind": "frame",
+     "form": "That's a valid point, however",
+     "meaning": "To acknowledge the strength of an argument before introducing a contrasting or dissenting idea.",
+     "example": "That's a valid point, however, the implementation costs might outweigh the benefits.",
+     "plain": "Your point is valid, but the implementation costs might outweigh the benefits.",
+     "note": "A common, polite way to transition from agreement to disagreement, often used in formal discussions."
+    },
+    {
+     "text": "There's a slight nuance",
+     "kind": "chunk",
+     "form": "There's a slight nuance",
+     "meaning": "To indicate that a situation or idea is more complex than it appears, implying a subtle disagreement.",
+     "example": "While the data seems clear, there's a slight nuance in how it applies to our specific market.",
+     "plain": "While the data seems clear, there's a subtle difference in how it applies to our specific market.",
+     "note": "Used to introduce a subtle distinction or complexity that challenges a straightforward interpretation."
+    },
+    {
+     "text": "I'd be inclined to think otherwise",
+     "kind": "frame",
+     "form": "I'd be inclined to think otherwise",
+     "meaning": "To politely state a preference for a different conclusion or opinion, implying disagreement.",
+     "example": "While the data suggests one thing, I'd be inclined to think otherwise given our past experiences.",
+     "plain": "While the data suggests one thing, I would prefer to think differently given our past experiences.",
+     "note": "A formal and understated way to express a differing opinion or conclusion."
+    },
+    {
+     "text": "I'd like to offer a different assessment",
+     "kind": "frame",
+     "form": "I'd like to offer a different assessment",
+     "meaning": "To politely present an alternative evaluation or judgment of a situation or proposal.",
+     "example": "While I respect your analysis, I'd like to offer a different assessment of the project's risks.",
+     "plain": "While I respect your analysis, I want to present a different evaluation of the project's risks.",
+     "note": "A formal way to introduce a contrasting evaluation, often used in professional contexts."
+    },
+    {
+     "text": "I'd like to offer a different conclusion",
+     "kind": "frame",
+     "form": "I'd like to offer a different conclusion",
+     "meaning": "To politely present an alternative outcome or deduction, implying disagreement with the one stated.",
+     "example": "Based on these figures, I'd like to offer a different conclusion regarding our market share.",
+     "plain": "Based on these figures, I want to present a different outcome regarding our market share.",
+     "note": "Used to suggest an alternative interpretation of facts, leading to a different understanding."
+    },
+    {
+     "text": "I'd like to offer a different solution",
+     "kind": "frame",
+     "form": "I'd like to offer a different solution",
+     "meaning": "To politely propose an alternative way to resolve a problem, implying the current one isn't ideal.",
+     "example": "I appreciate the effort, but I'd like to offer a different solution for streamlining this process.",
+     "plain": "I appreciate the effort, but I want to propose an alternative way to streamline this process.",
+     "note": "A constructive way to disagree with a proposed solution by presenting another option."
+    },
+    {
+     "text": "I'd like to offer a different approach",
+     "kind": "frame",
+     "form": "I'd like to offer a different approach",
+     "meaning": "To politely suggest an alternative method or strategy, implying the current one is not the best.",
+     "example": "For this particular challenge, I'd like to offer a different approach that might be more effective.",
+     "plain": "For this particular challenge, I want to suggest an alternative method that might be more effective.",
+     "note": "Used to propose an alternative strategy, often when the current one is seen as suboptimal."
+    },
+    {
+     "text": "I'd like to offer a different strategy",
+     "kind": "frame",
+     "form": "I'd like to offer a different strategy",
+     "meaning": "To politely propose an alternative plan of action, implying the current one is not the most suitable.",
+     "example": "Considering the new market conditions, I'd like to offer a different strategy for our expansion.",
+     "plain": "Considering the new market conditions, I want to propose an alternative plan for our expansion.",
+     "note": "A formal way to suggest an alternative plan, often in a business or strategic discussion."
+    },
+    {
+     "text": "I'd like to offer a different framework",
+     "kind": "frame",
+     "form": "I'd like to offer a different framework",
+     "meaning": "To politely suggest an alternative conceptual structure for understanding or addressing an issue.",
+     "example": "To analyze this problem, I'd like to offer a different framework that considers social impact.",
+     "plain": "To analyze this problem, I want to suggest an alternative conceptual structure that considers social impact.",
+     "note": "Used in academic or complex discussions to propose a new way of thinking about a topic."
+    },
+    {
+     "text": "I'd like to offer a different model",
+     "kind": "frame",
+     "form": "I'd like to offer a different model",
+     "meaning": "To politely propose an alternative representation or system for understanding a concept or process.",
+     "example": "The current model is useful, but I'd like to offer a different model for predicting consumer behavior.",
+     "plain": "The current model is useful, but I want to propose an alternative system for predicting consumer behavior.",
+     "note": "Used in technical or analytical discussions to suggest an alternative way of conceptualizing something."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "i beg to differ": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "with all due respect": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i agree": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i see your point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd push back on that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a slight reservation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely convinced": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's not quite right": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i take your point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm inclined to disagree": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have to disagree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not so sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd question whether": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd beg to differ": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely sure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have some reservations": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i disagree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not convinced that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to challenge": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely comfortable": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different take": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's fair": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd respectfully disagree": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not convinced we should": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer a different perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a concern about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that holds": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd hesitate to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely convinced that's the case": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to raise a point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i follow": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i have a different view": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely accurate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to interject": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the best approach": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have to take issue with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not convinced it's feasible": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to push back": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure i can agree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to respectfully disagree": {
+    "status": "pass",
+    "level": "C1",
+    "note": "Checker slip: The key accurately describes the polite and formal disagreement expressed in the example."
+   },
+   "i have a counter-argument": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's entirely fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to add a caveat": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the whole story": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to challenge that assumption": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure i'd go that far": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely correct": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to respectfully point out": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not convinced this is the right path": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a slight disagreement": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's a fair assessment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer a nuance": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's entirely true": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to raise a concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different interpretation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the right word": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer a counterpoint": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's entirely justified": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a slight quibble": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the only way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to challenge the premise": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's a given": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different understanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely appropriate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to respectfully suggest": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the best use": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a minor point of contention": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's entirely fair to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer a different angle": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right conclusion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a slight reservation about that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to challenge the notion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a different opinion": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer a qualification": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure i agree with that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely accurate to say": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes the polite expression of doubt in the example."
+   },
+   "i'm not sure that's the most effective": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately reflects the doubt regarding the method's effectiveness."
+   },
+   "i'm not sure that's entirely practical": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key correctly identifies the doubt expressed about feasibility."
+   },
+   "i'm not sure that's the only factor": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately explains the function of pointing to other contributing factors."
+   },
+   "i have a different perspective on this": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely convinced by that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to respectfully challenge": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a slight concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer a different interpretation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the right way forward": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a minor reservation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely reasonable": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer a different viewpoint": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a different understanding of that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to challenge the assumption that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the most efficient way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different take on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely feasible": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the only option": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a slight reservation about that point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely justified to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a minor point of disagreement": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely appropriate to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the most effective approach": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different opinion on that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to offer a qualification to that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the only consideration": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i can fully agree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different perspective on the situation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely convinced by that argument": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to respectfully challenge that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have a slight concern about the implications": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely accurate to state": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right direction": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a minor reservation about the proposal": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely reasonable to suggest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have a different understanding of the situation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's entirely appropriate to suggest": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's entirely practical to implement": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The intended key accurately captures the nuanced doubt regarding feasibility expressed in the example."
+   },
+   "i'm not sure i see it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd take a different view": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's accurate": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to offer an alternative": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the full picture": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd be hesitant to agree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd take issue with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i wouldn't go that far": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to question that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the best way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the right term": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's a certainty": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the sole option": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the logical conclusion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the optimal solution": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the only element": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the best direction": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the correct path": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the best way forward": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the best allocation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the most effective strategy": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the only possibility": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right approach": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the right solution": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the right decision": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the right time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the right place": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the right person": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right fit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right priority": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right focus": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right message": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right tone": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right balance": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the right interpretation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right understanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right assessment": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that's the right takeaway": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure that's the right way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure that's the main point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not quite as simple": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not convinced we're there yet": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to clarify one point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's one way of looking at it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "there's a slight complication": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we might want to reconsider": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd lean towards a different approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to add a point of clarification": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it seems to me that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my only reservation is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "perhaps we could consider": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "while i agree up to a point": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to play devil's advocate": {
+    "status": "pass",
+    "level": "C2"
+   },
+   "i'm not sure that's entirely what i meant": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i see where you're coming from": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd argue the opposite": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd hesitate to endorse": {
+    "status": "pass",
+    "level": "C2"
+   },
+   "i'd be wary of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that might be an oversimplification": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure that fully accounts for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to respectfully add": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a valid point, however": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "there's a slight nuance": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd be inclined to think otherwise": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to offer a different assessment": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to offer a different conclusion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to offer a different solution": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to offer a different approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to offer a different strategy": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to offer a different framework": {
+    "status": "pass",
+    "level": "C2"
+   },
+   "i'd like to offer a different model": {
+    "status": "pass",
+    "level": "C2"
+   }
+  }
+ }
+}

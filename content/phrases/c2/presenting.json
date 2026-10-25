@@ -1,0 +1,2520 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "presenting",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "Let's move on to",
+     "kind": "chunk",
+     "form": "Let's move on to",
+     "meaning": "To transition to the next topic or section of the presentation.",
+     "example": "Let's move on to the practical implications of these findings for our project.",
+     "plain": "Now we will discuss the practical implications of these findings for our project.",
+     "note": "A very common, direct way to signal a topic change. Suitable for most professional settings."
+    },
+    {
+     "text": "Turning our attention to",
+     "kind": "chunk",
+     "form": "Turning our attention to",
+     "meaning": "To direct the audience's focus towards a new subject.",
+     "example": "Turning our attention to the budget, you'll see a significant increase in operational costs.",
+     "plain": "Now let's look at the budget; you'll see a significant increase in operational costs.",
+     "note": "Slightly more formal than \"Let's move on to,\" often used for a more significant shift in focus."
+    },
+    {
+     "text": "To recap briefly",
+     "kind": "chunk",
+     "form": "To recap briefly",
+     "meaning": "To quickly summarise the main points just discussed.",
+     "example": "To recap briefly, we've covered the historical context and current market trends.",
+     "plain": "Let me quickly summarise: we've discussed the historical context and current market trends.",
+     "note": "Useful for reinforcing understanding before moving to a new section or concluding."
+    },
+    {
+     "text": "What I'd like to do now is",
+     "kind": "frame",
+     "form": "What I'd like to do now is",
+     "meaning": "To introduce the speaker's next intended action or topic.",
+     "example": "What I'd like to do now is open the floor for any questions you might have.",
+     "plain": "I want to open the floor for any questions you might have.",
+     "note": "A polite and clear way to signal a transition, often to a different activity like Q&A."
+    },
+    {
+     "text": "This brings me to",
+     "kind": "chunk",
+     "form": "this brings me to",
+     "meaning": "To indicate that the previous point naturally leads to the next one.",
+     "example": "The challenges we've discussed, this brings me to our proposed solutions.",
+     "plain": "The challenges we've discussed lead directly to our proposed solutions.",
+     "note": "Creates a smooth, logical flow between different parts of the presentation."
+    },
+    {
+     "text": "As you can see",
+     "kind": "chunk",
+     "form": "As you can see",
+     "meaning": "To draw attention to something visually evident, often on a slide or chart.",
+     "example": "As you can see from the graph, our sales figures have steadily improved this quarter.",
+     "plain": "The graph shows that our sales figures have steadily improved this quarter.",
+     "note": "A common phrase to direct audience's attention to visual aids. Can be slightly informal."
+    },
+    {
+     "text": "I'll just quickly touch on",
+     "kind": "chunk",
+     "form": "I'll just quickly touch on",
+     "meaning": "To briefly mention a topic without going into great detail.",
+     "example": "I'll just quickly touch on the regulatory changes before we conclude.",
+     "plain": "I will briefly mention the regulatory changes before we conclude.",
+     "note": "Signals that a point is minor or will not be explored in depth. Good for time management."
+    },
+    {
+     "text": "Before I go any further",
+     "kind": "chunk",
+     "form": "Before I go any further",
+     "meaning": "To pause and check understanding or invite questions before continuing.",
+     "example": "Before I go any further, are there any questions about the initial project scope?",
+     "plain": "Do you have any questions about the initial project scope before I continue?",
+     "note": "Useful for breaking up a presentation and ensuring the audience is following along."
+    },
+    {
+     "text": "To put it another way",
+     "kind": "chunk",
+     "form": "To put it another way",
+     "meaning": "To rephrase an idea for clarity or to offer a different perspective.",
+     "example": "To put it another way, our strategy focuses on long-term sustainability over quick profits.",
+     "plain": "Our strategy focuses on long-term sustainability rather than quick profits.",
+     "note": "Helps clarify complex ideas or appeal to different learning styles in the audience."
+    },
+    {
+     "text": "In a nutshell",
+     "kind": "chunk",
+     "form": "In a nutshell",
+     "meaning": "To summarise something very concisely.",
+     "example": "In a nutshell, the new policy aims to streamline our internal communication processes.",
+     "plain": "The new policy aims to streamline our internal communication processes.",
+     "note": "Informal but widely accepted in professional settings for quick summaries."
+    },
+    {
+     "text": "To summarise then",
+     "kind": "chunk",
+     "form": "To summarise then",
+     "meaning": "To conclude a section or the entire presentation by restating key points.",
+     "example": "To summarise then, our research indicates a strong market demand for this innovative product.",
+     "plain": "Our research indicates a strong market demand for this innovative product.",
+     "note": "A clear signal that the speaker is moving towards a conclusion or a summary."
+    },
+    {
+     "text": "I'd like to draw your attention to",
+     "kind": "frame",
+     "form": "I'd like to draw your attention to",
+     "meaning": "To politely ask the audience to focus on a specific detail or aspect.",
+     "example": "I'd like to draw your attention to the projected growth figures on slide seven.",
+     "plain": "Please look at the projected growth figures on slide seven.",
+     "note": "A formal and polite way to highlight something important, often on a visual aid."
+    },
+    {
+     "text": "The next point I want to make is",
+     "kind": "frame",
+     "form": "The next point I want to make is",
+     "meaning": "To introduce the subsequent main idea or argument.",
+     "example": "The next point I want to make is about the potential risks involved in this venture.",
+     "plain": "My next point is about the potential risks involved in this venture.",
+     "note": "A straightforward and clear way to signpost the progression of ideas."
+    },
+    {
+     "text": "We'll delve into that later",
+     "kind": "chunk",
+     "form": "we'll delve into that later",
+     "meaning": "To indicate that a topic will be discussed in more detail at a subsequent time.",
+     "example": "That's an excellent question, and we'll delve into that later in the Q&A session.",
+     "plain": "That's an excellent question, and we will discuss it in more detail during the Q&A session.",
+     "note": "Useful for deferring questions or complex topics to maintain presentation flow."
+    },
+    {
+     "text": "Let me elaborate on that",
+     "kind": "chunk",
+     "form": "Let me elaborate on that",
+     "meaning": "To provide more details or a fuller explanation of a previous statement.",
+     "example": "Let me elaborate on that point about market saturation; it's a critical concern.",
+     "plain": "I will provide more details about market saturation; it's a critical concern.",
+     "note": "Used when a point needs further explanation, often in response to a puzzled look or question."
+    },
+    {
+     "text": "That's a good question",
+     "kind": "chunk",
+     "form": "That's a good question",
+     "meaning": "To acknowledge the value or relevance of an audience member's query.",
+     "example": "That's a good question, and it touches on the core of our strategic planning.",
+     "plain": "Your question is relevant and touches on the core of our strategic planning.",
+     "note": "A polite and common way to buy a moment to think or to praise the questioner."
+    },
+    {
+     "text": "I'll come back to that",
+     "kind": "chunk",
+     "form": "I'll come back to that",
+     "meaning": "To promise to address a question or topic at a later point in the presentation.",
+     "example": "I'll come back to that specific point during the discussion section, if that's okay.",
+     "plain": "I will address that specific point during the discussion section, if that's okay.",
+     "note": "A common way to manage questions and maintain the flow of the presentation."
+    },
+    {
+     "text": "Perhaps we can discuss that",
+     "kind": "chunk",
+     "form": "Perhaps we can discuss that",
+     "meaning": "To suggest deferring a detailed discussion to a more appropriate time.",
+     "example": "Perhaps we can discuss that in more detail offline, as it's quite specific.",
+     "plain": "We can discuss that in more detail offline, as it's quite specific.",
+     "note": "A polite and diplomatic way to manage time or avoid getting sidetracked."
+    },
+    {
+     "text": "To clarify what you mean",
+     "kind": "frame",
+     "form": "To clarify what you mean",
+     "meaning": "To ask the questioner to explain their query more precisely.",
+     "example": "To clarify what you mean, are you asking about the short-term or long-term impact?",
+     "plain": "Could you explain your question more precisely? Are you asking about the short-term or long-term impact?",
+     "note": "Essential for ensuring you understand the question before attempting to answer it."
+    },
+    {
+     "text": "If I understand correctly",
+     "kind": "frame",
+     "form": "If I understand correctly",
+     "meaning": "To paraphrase the question or statement to confirm comprehension.",
+     "example": "If I understand correctly, you're concerned about the scalability of this solution.",
+     "plain": "You are concerned about the scalability of this solution, right?",
+     "note": "Shows active listening and helps avoid miscommunication. Very useful in Q&A."
+    },
+    {
+     "text": "I'm not sure I follow",
+     "kind": "chunk",
+     "form": "I'm not sure I follow",
+     "meaning": "To politely admit confusion and ask for further explanation.",
+     "example": "I'm not sure I follow your reasoning regarding the projected revenue.",
+     "plain": "I don't understand your reasoning regarding the projected revenue.",
+     "note": "A polite and humble way to ask for clarification, often used when a question is unclear."
+    },
+    {
+     "text": "That's beyond the scope of",
+     "kind": "chunk",
+     "form": "that's beyond the scope of",
+     "meaning": "To indicate that a question or topic falls outside the boundaries of the current discussion.",
+     "example": "While interesting, that's beyond the scope of today's presentation on project timelines.",
+     "plain": "That topic is outside the boundaries of today's presentation on project timelines.",
+     "note": "A professional way to politely decline to answer a question that is off-topic."
+    },
+    {
+     "text": "I'd rather not speculate",
+     "kind": "chunk",
+     "form": "I'd rather not speculate",
+     "meaning": "To politely decline to offer an opinion or guess about something uncertain.",
+     "example": "I'd rather not speculate on future market fluctuations without more data.",
+     "plain": "I prefer not to guess about future market fluctuations without more data.",
+     "note": "A diplomatic way to avoid making unsubstantiated claims or predictions."
+    },
+    {
+     "text": "We can explore that further",
+     "kind": "chunk",
+     "form": "we can explore that further",
+     "meaning": "To suggest a deeper investigation into a topic at a later time.",
+     "example": "That's a complex issue, and we can explore that further in a dedicated workshop.",
+     "plain": "That's a complex issue, and we can investigate it more deeply in a dedicated workshop.",
+     "note": "A positive way to acknowledge a complex question without getting bogged down during the presentation."
+    },
+    {
+     "text": "To address your point",
+     "kind": "frame",
+     "form": "To address your point",
+     "meaning": "To directly respond to a specific comment or question made by an audience member.",
+     "example": "To address your point about resource allocation, we've already factored that into the budget.",
+     "plain": "Regarding your point about resource allocation, we've already factored that into the budget.",
+     "note": "A clear and direct way to signal that you are now answering a specific question."
+    },
+    {
+     "text": "I appreciate the question",
+     "kind": "chunk",
+     "form": "I appreciate the question",
+     "meaning": "To express gratitude for an audience member's query.",
+     "example": "I appreciate the question; it highlights a common challenge in this field.",
+     "plain": "Thank you for the question; it highlights a common challenge in this field.",
+     "note": "A polite and encouraging way to respond to questions, fostering a positive atmosphere."
+    },
+    {
+     "text": "Let me rephrase that",
+     "kind": "chunk",
+     "form": "Let me rephrase that",
+     "meaning": "To say something again in different words, usually for clarity or correction.",
+     "example": "Let me rephrase that: our primary goal is to enhance user experience, not just add features.",
+     "plain": "I will say that again in different words: our primary goal is to enhance user experience.",
+     "note": "Useful for clarifying a statement that might have been unclear or poorly worded initially."
+    },
+    {
+     "text": "I hope that answers your question",
+     "kind": "chunk",
+     "form": "I hope that answers your question",
+     "meaning": "To politely check if the questioner is satisfied with the response.",
+     "example": "I hope that answers your question about the project timeline and deliverables.",
+     "plain": "Did my response address your question about the project timeline and deliverables?",
+     "note": "A polite closing to an answer, inviting further clarification if needed."
+    },
+    {
+     "text": "A pertinent question",
+     "kind": "collocation",
+     "form": "a pertinent question",
+     "meaning": "A question that is highly relevant and appropriate to the topic.",
+     "example": "That's a pertinent question regarding the ethical implications of our AI development.",
+     "plain": "That's a very relevant question regarding the ethical implications of our AI development.",
+     "note": "More formal and sophisticated than \"good question,\" indicating deep relevance."
+    },
+    {
+     "text": "To field a question",
+     "kind": "collocation",
+     "form": "to field a question",
+     "meaning": "To receive and respond to a question, especially in a public setting.",
+     "example": "I'm happy to field a question about the financial projections now, if anyone has one.",
+     "plain": "I'm happy to answer a question about the financial projections now, if anyone has one.",
+     "note": "Common in professional contexts, implies readiness and competence in handling queries."
+    },
+    {
+     "text": "It's worth bearing in mind",
+     "kind": "chunk",
+     "form": "It's worth bearing in mind",
+     "meaning": "To suggest that a particular fact or idea should be remembered as important.",
+     "example": "It's worth bearing in mind that market conditions can change rapidly.",
+     "plain": "Remember that market conditions can change rapidly.",
+     "note": "A polite but firm way to emphasize a crucial point that might be overlooked."
+    },
+    {
+     "text": "The key takeaway here is",
+     "kind": "frame",
+     "form": "The key takeaway here is",
+     "meaning": "To highlight the most important piece of information or conclusion.",
+     "example": "The key takeaway here is that customer satisfaction directly impacts retention rates.",
+     "plain": "The most important point is that customer satisfaction directly impacts retention rates.",
+     "note": "Very common in business presentations to summarise the main message."
+    },
+    {
+     "text": "What I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "To clarify the main point or underlying message the speaker is trying to convey.",
+     "example": "What I'm getting at is that we need to prioritize innovation to stay competitive.",
+     "plain": "My main point is that we need to prioritize innovation to stay competitive.",
+     "note": "Used when the speaker feels their point might not be fully understood or needs emphasis."
+    },
+    {
+     "text": "It's important to note that",
+     "kind": "frame",
+     "form": "It's important to note that",
+     "meaning": "To draw attention to a significant piece of information.",
+     "example": "It's important to note that these figures are preliminary and subject to change.",
+     "plain": "Please note that these figures are preliminary and subject to change.",
+     "note": "A standard, formal way to highlight crucial information or caveats."
+    },
+    {
+     "text": "I cannot stress enough that",
+     "kind": "frame",
+     "form": "I cannot stress enough that",
+     "meaning": "To strongly emphasize the critical importance of a particular point.",
+     "example": "I cannot stress enough that data security must be our top priority.",
+     "plain": "Data security must be our top priority; this is extremely important.",
+     "note": "A very strong emphasis, used for truly critical points. Can sound a bit dramatic if overused."
+    },
+    {
+     "text": "This is crucial because",
+     "kind": "frame",
+     "form": "This is crucial because",
+     "meaning": "To explain why a particular point is extremely important.",
+     "example": "This is crucial because it directly impacts our ability to meet regulatory compliance.",
+     "plain": "This is extremely important because it directly impacts our ability to meet regulatory compliance.",
+     "note": "Clearly links a point to its significance, providing justification for its importance."
+    },
+    {
+     "text": "To put it simply",
+     "kind": "chunk",
+     "form": "To put it simply",
+     "meaning": "To explain a complex idea in an easy-to-understand way.",
+     "example": "To put it simply, we need to reduce costs without compromising quality.",
+     "plain": "We need to reduce costs without compromising quality.",
+     "note": "Useful for simplifying jargon or complex concepts for a broader audience."
+    },
+    {
+     "text": "The bottom line is",
+     "kind": "chunk",
+     "form": "The bottom line is",
+     "meaning": "To state the most essential fact or the ultimate outcome.",
+     "example": "The bottom line is, we need to adapt quickly to changing consumer demands.",
+     "plain": "Ultimately, we need to adapt quickly to changing consumer demands.",
+     "note": "Informal but very common in business to get straight to the main point or consequence."
+    },
+    {
+     "text": "This really boils down to",
+     "kind": "frame",
+     "form": "This really boils down to",
+     "meaning": "To explain the fundamental essence or core issue of a complex situation.",
+     "example": "This really boils down to a question of resource allocation and strategic priorities.",
+     "plain": "The fundamental issue here is resource allocation and strategic priorities.",
+     "note": "Helps to simplify complex discussions by identifying the core elements."
+    },
+    {
+     "text": "It's not so much that",
+     "kind": "frame",
+     "form": "It's not so much that",
+     "meaning": "To clarify a nuance by stating what is not the case before stating what is.",
+     "example": "It's not so much that we lack talent, but rather that our processes are inefficient.",
+     "plain": "We don't lack talent; our processes are inefficient.",
+     "note": "Useful for correcting potential misunderstandings or adding precision to a statement."
+    },
+    {
+     "text": "I want to underscore",
+     "kind": "collocation",
+     "form": "I want to underscore",
+     "meaning": "To emphasize a particular point or idea.",
+     "example": "I want to underscore the importance of cross-departmental collaboration for this project.",
+     "plain": "I want to emphasize the importance of cross-departmental collaboration for this project.",
+     "note": "A more formal and strong way to emphasize than \"highlight.\""
+    },
+    {
+     "text": "A significant factor",
+     "kind": "collocation",
+     "form": "a significant factor",
+     "meaning": "An important element or contributing cause.",
+     "example": "Employee engagement is a significant factor in overall team productivity.",
+     "plain": "Employee engagement is an important element in overall team productivity.",
+     "note": "A common academic and professional collocation to describe important influences."
+    },
+    {
+     "text": "To highlight the importance",
+     "kind": "collocation",
+     "form": "to highlight the importance",
+     "meaning": "To draw attention to how crucial something is.",
+     "example": "I'd like to highlight the importance of regular feedback in professional development.",
+     "plain": "I'd like to draw attention to how crucial regular feedback is in professional development.",
+     "note": "A standard phrase for emphasizing the value or necessity of something."
+    },
+    {
+     "text": "It's a common misconception",
+     "kind": "collocation",
+     "form": "It's a common misconception",
+     "meaning": "To state that a widely held belief is actually incorrect.",
+     "example": "It's a common misconception that innovation always requires a huge budget.",
+     "plain": "Many people wrongly believe that innovation always requires a huge budget.",
+     "note": "Useful for correcting popular but inaccurate ideas, often used to introduce a counter-argument."
+    },
+    {
+     "text": "My apologies, I misspoke",
+     "kind": "chunk",
+     "form": "My apologies, I misspoke",
+     "meaning": "To politely correct oneself after saying something incorrectly or unintentionally.",
+     "example": "My apologies, I misspoke; the deadline is next Tuesday, not this Friday.",
+     "plain": "I'm sorry, I said that incorrectly; the deadline is next Tuesday, not this Friday.",
+     "note": "A polite and professional way to acknowledge and correct a verbal error."
+    },
+    {
+     "text": "What I meant to say was",
+     "kind": "frame",
+     "form": "What I meant to say was",
+     "meaning": "To clarify or correct a previous statement by explaining the intended meaning.",
+     "example": "What I meant to say was that the project is on track, despite minor delays.",
+     "plain": "I intended to say that the project is on track, despite minor delays.",
+     "note": "A very common and natural way to correct oneself or clarify a potentially confusing statement."
+    },
+    {
+     "text": "To clarify, I meant",
+     "kind": "frame",
+     "form": "To clarify, I meant",
+     "meaning": "To provide a clearer explanation of a previous statement.",
+     "example": "To clarify, I meant that the initial phase is complete, not the entire project.",
+     "plain": "To make it clearer, I intended to say that the initial phase is complete.",
+     "note": "Direct and concise for correcting or adding precision to a statement."
+    },
+    {
+     "text": "Allow me to correct myself",
+     "kind": "chunk",
+     "form": "Allow me to correct myself",
+     "meaning": "A formal way to ask permission to amend a previous statement.",
+     "example": "Allow me to correct myself; the data was collected in Q3, not Q2.",
+     "plain": "Let me correct my previous statement; the data was collected in Q3, not Q2.",
+     "note": "More formal than \"Let me rephrase that,\" used for a clear factual correction."
+    },
+    {
+     "text": "Bear with me for a moment",
+     "kind": "chunk",
+     "form": "Bear with me for a moment",
+     "meaning": "To ask the audience to be patient while the speaker pauses or collects themselves.",
+     "example": "Bear with me for a moment while I pull up the next slide.",
+     "plain": "Please be patient for a moment while I pull up the next slide.",
+     "note": "A polite request for patience, often used when there's a slight technical delay or a pause."
+    },
+    {
+     "text": "Let me just gather my thoughts",
+     "kind": "chunk",
+     "form": "let me just gather my thoughts",
+     "meaning": "To ask for a brief pause to organize one's ideas before speaking.",
+     "example": "That's a complex question; let me just gather my thoughts before I answer.",
+     "plain": "That's a complex question; I need a moment to organize my ideas before I answer.",
+     "note": "A natural way to buy time to formulate a coherent response, especially to a difficult question."
+    },
+    {
+     "text": "I've gone off on a tangent",
+     "kind": "chunk",
+     "form": "I've gone off on a tangent",
+     "meaning": "To admit that one has strayed from the main topic of discussion.",
+     "example": "Apologies, I've gone off on a tangent; let's get back to the main agenda.",
+     "plain": "Sorry, I've strayed from the main topic; let's return to the main agenda.",
+     "note": "A self-deprecating but honest way to acknowledge a digression and redirect."
+    },
+    {
+     "text": "Coming back to my point",
+     "kind": "chunk",
+     "form": "Coming back to my point",
+     "meaning": "To return to the main topic after a digression or interruption.",
+     "example": "Coming back to my point about market research, the data clearly supports our strategy.",
+     "plain": "Returning to my main point about market research, the data clearly supports our strategy.",
+     "note": "Useful for refocusing the audience after a brief digression or interruption."
+    },
+    {
+     "text": "Where was I",
+     "kind": "chunk",
+     "form": "Where was I",
+     "meaning": "To ask the audience or oneself to recall the last point made before an interruption or pause.",
+     "example": "Oh, right, where was I? Yes, the impact of digital transformation.",
+     "plain": "What was I talking about? Yes, the impact of digital transformation.",
+     "note": "Informal but common, often used after a brief interruption or a moment of distraction."
+    },
+    {
+     "text": "Forgive me, I got ahead of myself",
+     "kind": "chunk",
+     "form": "Forgive me, I got ahead of myself",
+     "meaning": "To apologize for discussing something prematurely or out of order.",
+     "example": "Forgive me, I got ahead of myself; we'll cover the budget details in the next section.",
+     "plain": "Sorry, I spoke too soon; we'll cover the budget details in the next section.",
+     "note": "A polite way to acknowledge jumping the gun or revealing information too early."
+    },
+    {
+     "text": "That wasn't quite what I intended",
+     "kind": "chunk",
+     "form": "That wasn't quite what I intended",
+     "meaning": "To indicate that a statement or outcome was not exactly what was meant or desired.",
+     "example": "That wasn't quite what I intended to convey about the project's timeline.",
+     "plain": "That's not exactly what I meant to say about the project's timeline.",
+     "note": "A gentle way to correct a misunderstanding or a poorly phrased statement."
+    },
+    {
+     "text": "Let me put that differently",
+     "kind": "chunk",
+     "form": "Let me put that differently",
+     "meaning": "To rephrase a statement to make it clearer or more accurate.",
+     "example": "Let me put that differently: our focus is on long-term growth, not just quarterly gains.",
+     "plain": "I will say that in another way: our focus is on long-term growth, not just quarterly gains.",
+     "note": "Similar to \"let me rephrase that,\" but often implies a more significant change in wording."
+    },
+    {
+     "text": "I should have been clearer",
+     "kind": "chunk",
+     "form": "I should have been clearer",
+     "meaning": "To take responsibility for a lack of clarity in one's communication.",
+     "example": "I should have been clearer about the scope of the pilot program.",
+     "plain": "I apologize, I did not explain the scope of the pilot program clearly enough.",
+     "note": "A humble and professional way to acknowledge one's own role in a misunderstanding."
+    },
+    {
+     "text": "To elaborate further",
+     "kind": "chunk",
+     "form": "To elaborate further",
+     "meaning": "To provide additional details or explanation on a topic.",
+     "example": "To elaborate further, the initial data collection phase took longer than anticipated.",
+     "plain": "To provide more details, the initial data collection phase took longer than anticipated.",
+     "note": "A formal way to signal that more in-depth information is about to be provided."
+    },
+    {
+     "text": "On that note",
+     "kind": "chunk",
+     "form": "On that note",
+     "meaning": "To transition to a related topic or action, often a conclusion, based on the previous point.",
+     "example": "On that note, I'd like to thank you all for your attention and participation.",
+     "plain": "Based on what I just said, I'd like to thank you all for your attention and participation.",
+     "note": "A smooth, slightly informal way to link the end of a discussion to a concluding remark."
+    },
+    {
+     "text": "Moving swiftly on",
+     "kind": "chunk",
+     "form": "Moving swiftly on",
+     "meaning": "To indicate a quick transition to the next topic, often to save time.",
+     "example": "Moving swiftly on, let's look at the projected budget for the next fiscal year.",
+     "plain": "Let's quickly move to the projected budget for the next fiscal year.",
+     "note": "Common in British English, signals a desire to keep the pace of the presentation moving."
+    },
+    {
+     "text": "Just to reiterate",
+     "kind": "chunk",
+     "form": "Just to reiterate",
+     "meaning": "To repeat a point for emphasis or clarity.",
+     "example": "Just to reiterate, our primary objective is to enhance customer satisfaction.",
+     "plain": "I want to repeat that our primary objective is to enhance customer satisfaction.",
+     "note": "Used to reinforce a key message, ensuring it is understood and remembered."
+    },
+    {
+     "text": "I'd like to underscore",
+     "kind": "frame",
+     "form": "I'd like to underscore",
+     "meaning": "To politely emphasize the importance of a particular point.",
+     "example": "I'd like to underscore the critical role of teamwork in achieving these goals.",
+     "plain": "I want to emphasize the critical role of teamwork in achieving these goals.",
+     "note": "A slightly more formal and strong way to emphasize than \"highlight.\""
+    },
+    {
+     "text": "To put things in perspective",
+     "kind": "chunk",
+     "form": "To put things in perspective",
+     "meaning": "To provide context or a broader view to help understand a specific point.",
+     "example": "To put things in perspective, our current growth rate is double the industry average.",
+     "plain": "To provide context, our current growth rate is double the industry average.",
+     "note": "Useful for adding context or showing the relative importance of a piece of information."
+    },
+    {
+     "text": "I'm confident that",
+     "kind": "frame",
+     "form": "I'm confident that",
+     "meaning": "To express strong belief or assurance in a statement or outcome.",
+     "example": "I'm confident that our team can overcome these initial challenges.",
+     "plain": "I strongly believe that our team can overcome these initial challenges.",
+     "note": "Projects assurance and conviction, useful when presenting solutions or future plans."
+    },
+    {
+     "text": "It's worth noting that",
+     "kind": "frame",
+     "form": "It's worth noting that",
+     "meaning": "To highlight a piece of information that is important to remember.",
+     "example": "It's worth noting that the pilot program exceeded expectations in all key metrics.",
+     "plain": "It is important to remember that the pilot program exceeded expectations in all key metrics.",
+     "note": "A polite way to draw attention to a significant detail without over-emphasizing."
+    },
+    {
+     "text": "Let me clarify",
+     "kind": "chunk",
+     "form": "Let me clarify",
+     "meaning": "To explain something more clearly, often in response to a perceived misunderstanding.",
+     "example": "Let me clarify: the new policy applies to all employees, not just management.",
+     "plain": "I will explain this more clearly: the new policy applies to all employees.",
+     "note": "Direct and efficient for correcting or adding precision to a statement."
+    },
+    {
+     "text": "I'd like to briefly touch upon",
+     "kind": "frame",
+     "form": "I'd like to briefly touch upon",
+     "meaning": "To mention a topic quickly without going into extensive detail.",
+     "example": "I'd like to briefly touch upon the ethical considerations of AI development.",
+     "plain": "I want to quickly mention the ethical considerations of AI development.",
+     "note": "A polite and formal way to introduce a minor point or a topic that won't be fully explored."
+    },
+    {
+     "text": "To sum up",
+     "kind": "chunk",
+     "form": "To sum up",
+     "meaning": "To provide a concise summary of the main points.",
+     "example": "To sum up, our strategy focuses on innovation, efficiency, and customer satisfaction.",
+     "plain": "In summary, our strategy focuses on innovation, efficiency, and customer satisfaction.",
+     "note": "A common and straightforward way to conclude a section or the entire presentation."
+    },
+    {
+     "text": "I'd like to reiterate",
+     "kind": "frame",
+     "form": "I'd like to reiterate",
+     "meaning": "To repeat a point for emphasis or to ensure it is fully understood.",
+     "example": "I'd like to reiterate that our commitment to sustainability is unwavering.",
+     "plain": "I want to repeat that our commitment to sustainability is unwavering.",
+     "note": "A more formal version of \"just to reiterate,\" used for important points."
+    },
+    {
+     "text": "I trust that",
+     "kind": "frame",
+     "form": "I trust that",
+     "meaning": "To express an expectation or belief that something is true or will happen.",
+     "example": "I trust that you found this overview of our progress informative.",
+     "plain": "I hope you found this overview of our progress informative.",
+     "note": "A formal and polite way to express confidence in the audience's understanding or the value of the content."
+    },
+    {
+     "text": "Let's consider",
+     "kind": "chunk",
+     "form": "Let's consider",
+     "meaning": "To invite the audience to think about a particular aspect or idea.",
+     "example": "Let's consider the potential impact of these changes on our remote workforce.",
+     "plain": "We should think about the potential impact of these changes on our remote workforce.",
+     "note": "A collaborative way to introduce a new point for discussion or analysis."
+    },
+    {
+     "text": "To give you an idea",
+     "kind": "chunk",
+     "form": "To give you an idea",
+     "meaning": "To provide an example or illustration to help the audience understand.",
+     "example": "To give you an idea, the new system processes transactions 50% faster.",
+     "plain": "For example, the new system processes transactions 50% faster.",
+     "note": "Informal but common, used to introduce a concrete example or metric."
+    },
+    {
+     "text": "I'd like to emphasize",
+     "kind": "frame",
+     "form": "I'd like to emphasize",
+     "meaning": "To politely highlight the importance of a specific point.",
+     "example": "I'd like to emphasize the need for clear communication throughout this transition.",
+     "plain": "I want to highlight the need for clear communication throughout this transition.",
+     "note": "A standard and professional way to draw attention to a crucial aspect."
+    },
+    {
+     "text": "I hope that makes sense",
+     "kind": "chunk",
+     "form": "I hope that makes sense",
+     "meaning": "To politely check if the audience has understood the explanation.",
+     "example": "I hope that makes sense, especially for those new to this technical concept.",
+     "plain": "I hope you understand that, especially for those new to this technical concept.",
+     "note": "A common, slightly informal way to invite questions if clarity is still needed."
+    },
+    {
+     "text": "We're running a bit short on time",
+     "kind": "chunk",
+     "form": "We're running a bit short on time",
+     "meaning": "To politely indicate that there is not much time left for the presentation or Q&A.",
+     "example": "We're running a bit short on time, so I'll take just one more question.",
+     "plain": "We don't have much time left, so I'll take just one more question.",
+     "note": "A polite and common way to manage time and signal the nearing end of a session."
+    },
+    {
+     "text": "To reiterate my point",
+     "kind": "frame",
+     "form": "To reiterate my point",
+     "meaning": "To repeat a specific argument or idea for emphasis or clarity.",
+     "example": "To reiterate my point, effective communication is paramount for team cohesion.",
+     "plain": "I want to repeat that effective communication is paramount for team cohesion.",
+     "note": "A formal way to reinforce a key message, ensuring it is fully absorbed."
+    },
+    {
+     "text": "Let's take a moment to",
+     "kind": "frame",
+     "form": "Let's take a moment to",
+     "meaning": "To suggest a brief pause for reflection or to perform a quick action.",
+     "example": "Let's take a moment to review the key performance indicators on this slide.",
+     "plain": "We should briefly review the key performance indicators on this slide.",
+     "note": "A collaborative way to guide the audience through a short, focused activity."
+    },
+    {
+     "text": "I'd like to briefly outline",
+     "kind": "frame",
+     "form": "I'd like to briefly outline",
+     "meaning": "To present the main points or structure of a topic concisely.",
+     "example": "I'd like to briefly outline our strategy for market entry in the coming year.",
+     "plain": "I want to quickly present the main points of our market entry strategy for the coming year.",
+     "note": "A formal way to introduce a summary or overview of a plan or topic."
+    },
+    {
+     "text": "To put it bluntly",
+     "kind": "chunk",
+     "form": "To put it bluntly",
+     "meaning": "To state something directly and without softening the impact, often for emphasis.",
+     "example": "To put it bluntly, we need to cut costs or face significant financial losses.",
+     "plain": "Frankly, we need to cut costs or face significant financial losses.",
+     "note": "Used for strong emphasis, can be perceived as very direct or even slightly impolite if not used carefully."
+    },
+    {
+     "text": "It's worth considering",
+     "kind": "frame",
+     "form": "It's worth considering",
+     "meaning": "To suggest that a particular idea or option deserves attention and thought.",
+     "example": "It's worth considering the long-term implications of this policy change.",
+     "plain": "We should think about the long-term implications of this policy change.",
+     "note": "A polite way to introduce an important point for reflection or discussion."
+    },
+    {
+     "text": "To be precise",
+     "kind": "chunk",
+     "form": "To be precise",
+     "meaning": "To provide exact or more accurate information.",
+     "example": "To be precise, the project completion date is October 26th, not just late October.",
+     "plain": "The exact project completion date is October 26th, not just late October.",
+     "note": "Used to add specific details or correct a general statement with exact information."
+    },
+    {
+     "text": "The point I'm trying to make is",
+     "kind": "frame",
+     "form": "The point I'm trying to make is",
+     "meaning": "To clarify the main message or argument the speaker is attempting to convey.",
+     "example": "The point I'm trying to make is that flexibility is key in a dynamic market.",
+     "plain": "My main message is that flexibility is key in a dynamic market.",
+     "note": "Used when the speaker feels their message needs clearer articulation or emphasis."
+    },
+    {
+     "text": "I'd like to elaborate on",
+     "kind": "frame",
+     "form": "I'd like to elaborate on",
+     "meaning": "To provide more details or a fuller explanation of a specific topic.",
+     "example": "I'd like to elaborate on the methodology used for our recent customer survey.",
+     "plain": "I want to provide more details about the methodology used for our recent customer survey.",
+     "note": "A polite and formal way to signal a deeper dive into a particular subject."
+    },
+    {
+     "text": "This serves to illustrate",
+     "kind": "frame",
+     "form": "This serves to illustrate",
+     "meaning": "To show that a previous point or example helps to explain a concept.",
+     "example": "This serves to illustrate the importance of proactive risk management.",
+     "plain": "This helps to explain the importance of proactive risk management.",
+     "note": "A formal way to connect an example or piece of data to a broader principle."
+    },
+    {
+     "text": "Let's briefly touch on",
+     "kind": "chunk",
+     "form": "Let's briefly touch on",
+     "meaning": "To quickly mention a topic without going into extensive detail.",
+     "example": "Let's briefly touch on the feedback we received from the pilot group.",
+     "plain": "Let's quickly mention the feedback we received from the pilot group.",
+     "note": "A common and polite way to introduce a minor point or a topic that won't be fully explored."
+    },
+    {
+     "text": "I'm happy to take questions",
+     "kind": "chunk",
+     "form": "I'm happy to take questions",
+     "meaning": "To invite the audience to ask questions.",
+     "example": "I'm happy to take questions now, or we can discuss them after the break.",
+     "plain": "I can answer questions now, or we can discuss them after the break.",
+     "note": "A standard and welcoming way to open the floor for Q&A."
+    },
+    {
+     "text": "To summarise my main points",
+     "kind": "frame",
+     "form": "To summarise my main points",
+     "meaning": "To provide a concise overview of the most important ideas presented.",
+     "example": "To summarise my main points, collaboration and adaptability are key to our success.",
+     "plain": "In summary, collaboration and adaptability are key to our success.",
+     "note": "A clear signal that the speaker is moving towards a conclusion by restating core messages."
+    },
+    {
+     "text": "I hope I've made that clear",
+     "kind": "chunk",
+     "form": "I hope I've made that clear",
+     "meaning": "To politely check if the audience has understood the explanation.",
+     "example": "I hope I've made that clear regarding the new reporting procedures.",
+     "plain": "I hope you understand the new reporting procedures.",
+     "note": "A common way to conclude an explanation, inviting questions if there's still confusion."
+    },
+    {
+     "text": "To reiterate for clarity",
+     "kind": "frame",
+     "form": "To reiterate for clarity",
+     "meaning": "To repeat a point to ensure it is fully understood and unambiguous.",
+     "example": "To reiterate for clarity, the new policy takes effect from the first of next month.",
+     "plain": "To make it clear, the new policy takes effect from the first of next month.",
+     "note": "Used when a point is particularly important or might have been misunderstood."
+    },
+    {
+     "text": "I'd like to conclude by saying",
+     "kind": "frame",
+     "form": "I'd like to conclude by saying",
+     "meaning": "To introduce the final remarks or summary of the presentation.",
+     "example": "I'd like to conclude by saying that our future looks promising with these initiatives.",
+     "plain": "In conclusion, our future looks promising with these initiatives.",
+     "note": "A formal and polite way to signal the end of the presentation and deliver a final message."
+    },
+    {
+     "text": "Let's consider for a moment",
+     "kind": "frame",
+     "form": "Let's consider for a moment",
+     "meaning": "To invite the audience to briefly reflect on a specific idea or scenario.",
+     "example": "Let's consider for a moment the potential impact of AI on our daily workflows.",
+     "plain": "Let's briefly think about the potential impact of AI on our daily workflows.",
+     "note": "Encourages audience engagement and deeper thought on a particular aspect."
+    },
+    {
+     "text": "I'm happy to clarify",
+     "kind": "chunk",
+     "form": "I'm happy to clarify",
+     "meaning": "To offer to explain something more clearly.",
+     "example": "I'm happy to clarify any points that might still be unclear.",
+     "plain": "I can explain any points that might still be unclear.",
+     "note": "A polite and helpful offer to address any remaining confusion."
+    },
+    {
+     "text": "This highlights the fact that",
+     "kind": "frame",
+     "form": "This highlights the fact that",
+     "meaning": "To draw attention to a specific truth or reality revealed by previous information.",
+     "example": "This highlights the fact that customer feedback is invaluable for product development.",
+     "plain": "This shows that customer feedback is invaluable for product development.",
+     "note": "A formal way to emphasize a conclusion drawn from presented data or arguments."
+    },
+    {
+     "text": "To put it mildly",
+     "kind": "chunk",
+     "form": "To put it mildly",
+     "meaning": "To state something in an understated way, implying it is actually more extreme.",
+     "example": "To put it mildly, the project encountered some unexpected challenges.",
+     "plain": "The project encountered many unexpected challenges.",
+     "note": "An ironic understatement, suggesting the situation was more difficult than stated. C2 level."
+    },
+    {
+     "text": "I'd like to draw your attention back to",
+     "kind": "frame",
+     "form": "I'd like to draw your attention back to",
+     "meaning": "To redirect the audience's focus to a previous point or visual aid.",
+     "example": "I'd like to draw your attention back to the initial market analysis on slide three.",
+     "plain": "Please look again at the initial market analysis on slide three.",
+     "note": "A polite way to refocus the audience, often after a digression or a complex explanation."
+    },
+    {
+     "text": "It's worth emphasizing",
+     "kind": "frame",
+     "form": "It's worth emphasizing",
+     "meaning": "To suggest that a particular point is important enough to be highlighted.",
+     "example": "It's worth emphasizing that our team achieved these results with limited resources.",
+     "plain": "It is important to highlight that our team achieved these results with limited resources.",
+     "note": "A polite but firm way to draw attention to a significant achievement or factor."
+    },
+    {
+     "text": "Let's move forward to",
+     "kind": "chunk",
+     "form": "Let's move forward to",
+     "meaning": "To transition to the next topic or stage of the presentation.",
+     "example": "Let's move forward to the implementation phase of our new strategy.",
+     "plain": "Now we will discuss the implementation phase of our new strategy.",
+     "note": "A common and direct way to signal progression in the presentation's agenda."
+    },
+    {
+     "text": "I'm happy to elaborate",
+     "kind": "chunk",
+     "form": "I'm happy to elaborate",
+     "meaning": "To offer to provide more details or a fuller explanation.",
+     "example": "If you have further questions, I'm happy to elaborate on any of these points.",
+     "plain": "If you have further questions, I can provide more details on any of these points.",
+     "note": "A polite and helpful offer to provide more in-depth information."
+    },
+    {
+     "text": "This brings me to the end of",
+     "kind": "frame",
+     "form": "This brings me to the end of",
+     "meaning": "To signal the conclusion of a section or the entire presentation.",
+     "example": "This brings me to the end of my overview of the project's progress.",
+     "plain": "This concludes my overview of the project's progress.",
+     "note": "A formal and clear way to indicate that a section or the talk is finishing."
+    },
+    {
+     "text": "To put it in context",
+     "kind": "chunk",
+     "form": "To put it in context",
+     "meaning": "To provide background information to help understand a specific point.",
+     "example": "To put it in context, this growth occurred during a period of economic downturn.",
+     "plain": "To provide background, this growth occurred during a period of economic downturn.",
+     "note": "Useful for adding perspective and showing the significance of a piece of information."
+    },
+    {
+     "text": "I'd like to briefly summarise",
+     "kind": "frame",
+     "form": "I'd like to briefly summarise",
+     "meaning": "To provide a quick overview of the main points.",
+     "example": "I'd like to briefly summarise the key findings from our market research.",
+     "plain": "I want to quickly summarise the key findings from our market research.",
+     "note": "A polite and formal way to introduce a concise summary."
+    },
+    {
+     "text": "It's important to highlight",
+     "kind": "frame",
+     "form": "It's important to highlight",
+     "meaning": "To draw attention to a significant piece of information.",
+     "example": "It's important to highlight the collaborative effort behind this successful outcome.",
+     "plain": "It is important to draw attention to the collaborative effort behind this successful outcome.",
+     "note": "A standard and professional way to emphasize a crucial aspect."
+    },
+    {
+     "text": "This leads me to conclude that",
+     "kind": "frame",
+     "form": "This leads me to conclude that",
+     "meaning": "To state the logical inference or final judgment based on the presented information.",
+     "example": "This leads me to conclude that our current strategy needs significant adjustments.",
+     "plain": "Based on this, I conclude that our current strategy needs significant adjustments.",
+     "note": "A formal way to present a conclusion that logically follows from the evidence."
+    },
+    {
+     "text": "I hope this has been informative",
+     "kind": "chunk",
+     "form": "I hope this has been informative",
+     "meaning": "To politely express the wish that the audience found the presentation useful.",
+     "example": "I hope this has been informative and provided valuable insights for your work.",
+     "plain": "I hope you found this useful and it provided valuable insights for your work.",
+     "note": "A polite and common closing remark, expressing the speaker's intent."
+    },
+    {
+     "text": "Let's turn our attention to",
+     "kind": "chunk",
+     "form": "Let's turn our attention to",
+     "meaning": "To direct the audience's focus towards a new subject.",
+     "example": "Let's turn our attention to the challenges we anticipate in the next quarter.",
+     "plain": "Now let's look at the challenges we anticipate in the next quarter.",
+     "note": "A slightly more formal way to transition than \"Let's move on to.\""
+    },
+    {
+     "text": "I'd like to underscore the fact that",
+     "kind": "frame",
+     "form": "I'd like to underscore the fact that",
+     "meaning": "To politely emphasize a particular truth or reality.",
+     "example": "I'd like to underscore the fact that these results are preliminary.",
+     "plain": "I want to emphasize that these results are preliminary.",
+     "note": "A strong and formal way to highlight a crucial piece of information or a caveat."
+    },
+    {
+     "text": "To give you a sense of",
+     "kind": "chunk",
+     "form": "To give you a sense of",
+     "meaning": "To provide an impression or general understanding of something.",
+     "example": "To give you a sense of the scale, we're talking about a global rollout.",
+     "plain": "To help you understand the scale, we're talking about a global rollout.",
+     "note": "Used to provide context or a general idea without going into full detail."
+    },
+    {
+     "text": "This brings me to my final point",
+     "kind": "chunk",
+     "form": "This brings me to my final point",
+     "meaning": "To signal the introduction of the last main idea or argument.",
+     "example": "This brings me to my final point about the importance of continuous learning.",
+     "plain": "This leads me to my last point about the importance of continuous learning.",
+     "note": "A clear way to signpost the nearing end of the main content of the presentation."
+    },
+    {
+     "text": "I trust you'll agree that",
+     "kind": "frame",
+     "form": "I trust you'll agree that",
+     "meaning": "To express confidence that the audience will concur with a statement.",
+     "example": "I trust you'll agree that these findings present a compelling case for change.",
+     "plain": "I believe you'll agree that these findings present a compelling case for change.",
+     "note": "A polite and persuasive way to seek agreement from the audience."
+    },
+    {
+     "text": "Let's consider the implications of",
+     "kind": "frame",
+     "form": "Let's consider the implications of",
+     "meaning": "To invite the audience to think about the consequences or effects of something.",
+     "example": "Let's consider the implications of these technological advancements for our industry.",
+     "plain": "We should think about the consequences of these technological advancements for our industry.",
+     "note": "A collaborative way to introduce a point for deeper analysis and discussion."
+    },
+    {
+     "text": "To be perfectly clear",
+     "kind": "chunk",
+     "form": "To be perfectly clear",
+     "meaning": "To state something in an unambiguous way, ensuring no misunderstanding.",
+     "example": "To be perfectly clear, this initiative requires commitment from every department.",
+     "plain": "I want to be completely clear: this initiative requires commitment from every department.",
+     "note": "Used for strong emphasis and to eliminate any potential ambiguity."
+    },
+    {
+     "text": "This serves to highlight",
+     "kind": "frame",
+     "form": "This serves to highlight",
+     "meaning": "To show that a previous point or example draws attention to something important.",
+     "example": "This serves to highlight the critical role of data analytics in modern business.",
+     "plain": "This helps to show the critical role of data analytics in modern business.",
+     "note": "A formal way to connect an example or piece of data to a significant observation."
+    },
+    {
+     "text": "I'm confident we can",
+     "kind": "frame",
+     "form": "I'm confident we can",
+     "meaning": "To express strong belief in the ability to achieve something.",
+     "example": "I'm confident we can meet these ambitious targets with our dedicated team.",
+     "plain": "I strongly believe we can meet these ambitious targets with our dedicated team.",
+     "note": "Projects assurance and conviction, useful when presenting solutions or future plans."
+    },
+    {
+     "text": "To put it simply, then",
+     "kind": "chunk",
+     "form": "To put it simply, then",
+     "meaning": "To provide a straightforward summary after a more complex explanation.",
+     "example": "To put it simply, then, our goal is to innovate faster than the competition.",
+     "plain": "In simple terms, our goal is to innovate faster than the competition.",
+     "note": "Used to simplify a complex idea, often as a concluding summary of a point."
+    },
+    {
+     "text": "I hope you found this useful",
+     "kind": "chunk",
+     "form": "I hope you found this useful",
+     "meaning": "To politely express the wish that the audience gained value from the presentation.",
+     "example": "I hope you found this useful for your strategic planning discussions.",
+     "plain": "I hope this was useful for your strategic planning discussions.",
+     "note": "A common and polite closing remark, expressing the speaker's intent."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "To begin with",
+     "kind": "chunk",
+     "form": "To begin with",
+     "meaning": "Used to introduce the first point or topic in a presentation.",
+     "example": "To begin with, I'll outline the project's objectives and scope.",
+     "plain": "First, I'll outline the project's objectives and scope.",
+     "note": "A common, straightforward way to start. Suitable for any formal or informal presentation."
+    },
+    {
+     "text": "Let's kick off by",
+     "kind": "frame",
+     "form": "Let's kick off by",
+     "meaning": "An informal but professional way to start a presentation or a new section.",
+     "example": "Let's kick off by reviewing the market research findings from last quarter.",
+     "plain": "We'll start by reviewing the market research findings from last quarter.",
+     "note": "Slightly informal, but perfectly acceptable in a professional setting, especially in British English."
+    },
+    {
+     "text": "I'd like to start by",
+     "kind": "frame",
+     "form": "I'd like to start by",
+     "meaning": "A polite and common way to introduce the initial topic or action of a presentation.",
+     "example": "I'd like to start by thanking you all for attending today's session.",
+     "plain": "I want to thank you all for attending today's session.",
+     "note": "Very common and polite. Good for setting a professional tone."
+    },
+    {
+     "text": "Moving forward, we'll",
+     "kind": "frame",
+     "form": "Moving forward, we'll",
+     "meaning": "Indicates a transition to the next topic or stage in the presentation.",
+     "example": "Moving forward, we'll examine the proposed solutions and their potential impact.",
+     "plain": "Next, we'll examine the proposed solutions and their potential impact.",
+     "note": "A standard signposting phrase, useful for guiding the audience through the agenda."
+    },
+    {
+     "text": "Next on the agenda",
+     "kind": "chunk",
+     "form": "Next on the agenda",
+     "meaning": "Used to introduce the subsequent item or topic that will be discussed.",
+     "example": "Next on the agenda, we'll discuss the budget allocation for the upcoming fiscal year.",
+     "plain": "The next topic we'll discuss is the budget allocation for the upcoming fiscal year.",
+     "note": "Clear and direct, often used when following a structured agenda."
+    },
+    {
+     "text": "This naturally leads to",
+     "kind": "frame",
+     "form": "This naturally leads to",
+     "meaning": "Connects the current point to the next logical topic, showing a smooth progression.",
+     "example": "This naturally leads to our discussion on how to implement these new guidelines effectively.",
+     "plain": "This connects to our discussion on how to implement these new guidelines effectively.",
+     "note": "Creates a sense of logical flow, making transitions feel seamless."
+    },
+    {
+     "text": "As an aside",
+     "kind": "chunk",
+     "form": "As an aside",
+     "meaning": "Introduces a brief, related point that is not central to the main discussion.",
+     "example": "As an aside, the initial feedback from the pilot group was overwhelmingly positive.",
+     "plain": "The initial feedback from the pilot group was overwhelmingly positive, just as a side note.",
+     "note": "Useful for adding extra context or interesting but non-essential information."
+    },
+    {
+     "text": "Before we proceed",
+     "kind": "chunk",
+     "form": "Before we proceed",
+     "meaning": "A formal way to pause or introduce a preliminary remark before continuing.",
+     "example": "Before we proceed, are there any immediate questions about the data presented so far?",
+     "plain": "Are there any immediate questions about the data presented so far before we continue?",
+     "note": "Polite and slightly formal, good for checking understanding or taking a brief break."
+    },
+    {
+     "text": "To provide some context",
+     "kind": "frame",
+     "form": "To provide some context",
+     "meaning": "Offers background information to help the audience understand the relevance of a point.",
+     "example": "To provide some context, our competitors have already adopted similar strategies.",
+     "plain": "To help you understand this, our competitors have already adopted similar strategies.",
+     "note": "Helps the audience grasp the bigger picture."
+    },
+    {
+     "text": "We'll revisit that later",
+     "kind": "chunk",
+     "form": "We'll revisit that later",
+     "meaning": "Indicates that a topic will be discussed again in more detail at a subsequent time.",
+     "example": "We'll revisit that later when we discuss the long-term financial projections.",
+     "plain": "We will discuss that again later when we discuss the long-term financial projections.",
+     "note": "Useful for deferring questions or complex points without dismissing them."
+    },
+    {
+     "text": "To expand on this",
+     "kind": "frame",
+     "form": "To expand on this",
+     "meaning": "Used to give more details or further explanation about a particular point.",
+     "example": "To expand on this, we conducted extensive interviews with key stakeholders.",
+     "plain": "To give more details on this, we conducted extensive interviews with key stakeholders.",
+     "note": "A clear way to signal that you are providing additional information."
+    },
+    {
+     "text": "Let's explore the ramifications",
+     "kind": "chunk",
+     "form": "Let's explore the ramifications",
+     "meaning": "Invites the audience to think about the potential negative consequences or effects of something.",
+     "example": "Let's explore the ramifications of these policy changes for our international operations.",
+     "plain": "Let's think about the potential negative effects of these policy changes for our international operations.",
+     "note": "Slightly more formal, often used when discussing potential negative outcomes."
+    },
+    {
+     "text": "To conclude my remarks",
+     "kind": "frame",
+     "form": "To conclude my remarks",
+     "meaning": "A formal way to signal the end of a presentation or a specific section.",
+     "example": "To conclude my remarks, I want to reiterate our commitment to sustainable practices.",
+     "plain": "To finish my talk, I want to repeat our commitment to sustainable practices.",
+     "note": "Formal and clear, suitable for wrapping up a speech or presentation."
+    },
+    {
+     "text": "To offer a brief summary",
+     "kind": "frame",
+     "form": "To offer a brief summary",
+     "meaning": "Used to introduce a short overview of the main points discussed.",
+     "example": "To offer a brief summary, our strategy focuses on innovation, efficiency, and customer satisfaction.",
+     "plain": "To give a short summary, our strategy focuses on innovation, efficiency, and customer satisfaction.",
+     "note": "A polite and concise way to recap."
+    },
+    {
+     "text": "To gain some perspective",
+     "kind": "frame",
+     "form": "To gain some perspective",
+     "meaning": "Helps the audience understand the relative importance or scale of a point.",
+     "example": "To gain some perspective, this small increase in cost will yield significant long-term benefits.",
+     "plain": "To help you understand the relative importance, this small cost increase will yield significant long-term benefits.",
+     "note": "Useful for clarifying the true significance of a piece of information."
+    },
+    {
+     "text": "Let's delve into",
+     "kind": "frame",
+     "form": "Let's delve into",
+     "meaning": "Suggests a deeper exploration or detailed examination of a topic.",
+     "example": "Let's delve into the specifics of the new regulatory framework.",
+     "plain": "Let's examine the specifics of the new regulatory framework in detail.",
+     "note": "Implies a thorough and in-depth discussion."
+    },
+    {
+     "text": "I'd like to walk you through",
+     "kind": "frame",
+     "form": "I'd like to walk you through",
+     "meaning": "Offers to guide the audience step-by-step through a process, data, or explanation.",
+     "example": "I'd like to walk you through the new onboarding process for remote employees.",
+     "plain": "I want to guide you through the new onboarding process for remote employees.",
+     "note": "Creates a sense of guidance and clarity, often used for procedures or complex data."
+    },
+    {
+     "text": "To give you a sense of scale",
+     "kind": "frame",
+     "form": "To give you a sense of scale",
+     "meaning": "Provides information to help the audience understand the magnitude or size of something.",
+     "example": "To give you a sense of scale, this project involves over 500 team members globally.",
+     "plain": "To help you understand the size, this project involves over 500 team members globally.",
+     "note": "Useful for illustrating the scope or size of a project, problem, or achievement."
+    },
+    {
+     "text": "We can look into that more",
+     "kind": "chunk",
+     "form": "We can look into that more",
+     "meaning": "Indicates that a topic can be examined in more detail at a later point.",
+     "example": "We can look into that more in the Q&A session, if time permits.",
+     "plain": "We can examine that in more detail later, if time permits.",
+     "note": "A polite way to defer a detailed discussion without dismissing the topic."
+    },
+    {
+     "text": "I'm glad you asked that",
+     "kind": "chunk",
+     "form": "I'm glad you asked that",
+     "meaning": "Expresses appreciation for a question, often because it leads to an important point.",
+     "example": "I'm glad you asked that, as it allows me to clarify our long-term strategy.",
+     "plain": "Your question is good because it allows me to clarify our long-term strategy.",
+     "note": "Positive and engaging, often used when a question is particularly relevant."
+    },
+    {
+     "text": "That's a fair point",
+     "kind": "chunk",
+     "form": "That's a fair point",
+     "meaning": "Acknowledges the validity of someone's argument or question.",
+     "example": "That's a fair point regarding the timeline; we might need to adjust our expectations.",
+     "plain": "Your point about the timeline is valid; we might need to adjust our expectations.",
+     "note": "Diplomatic and shows you've considered the other person's perspective."
+    },
+    {
+     "text": "A very insightful question",
+     "kind": "chunk",
+     "form": "A very insightful question",
+     "meaning": "Praises a question for showing deep understanding or thought.",
+     "example": "A very insightful question, and one that gets to the heart of the matter.",
+     "plain": "That's a very thoughtful question, and one that gets to the heart of the matter.",
+     "note": "Highly complimentary, used for particularly well-considered questions."
+    },
+    {
+     "text": "I appreciate you raising that",
+     "kind": "frame",
+     "form": "I appreciate you raising that",
+     "meaning": "Expresses gratitude for someone bringing up a specific point or concern.",
+     "example": "I appreciate you raising that concern about data security; it's a top priority.",
+     "plain": "Thank you for bringing up that concern about data security; it's a top priority.",
+     "note": "Polite and professional, especially when addressing a potential issue."
+    },
+    {
+     "text": "To answer your question directly",
+     "kind": "frame",
+     "form": "To answer your question directly",
+     "meaning": "Signals that you are about to give a straightforward and concise response.",
+     "example": "To answer your question directly, no, we do not anticipate any further delays.",
+     "plain": "To give you a direct answer, no, we do not anticipate any further delays.",
+     "note": "Useful for cutting through ambiguity and providing a clear response."
+    },
+    {
+     "text": "That's an excellent question",
+     "kind": "chunk",
+     "form": "That's an excellent question",
+     "meaning": "Praises a question for being particularly good, relevant, or thought-provoking.",
+     "example": "That's an excellent question, and one I'm happy to address in detail.",
+     "plain": "That's a very good question, and one I'm happy to address in detail.",
+     "note": "A common and polite way to acknowledge a good question."
+    },
+    {
+     "text": "I'll address that in a moment",
+     "kind": "chunk",
+     "form": "I'll address that in a moment",
+     "meaning": "Indicates that you will answer the question very soon, but not immediately.",
+     "example": "I'll address that in a moment, after I've finished explaining this slide.",
+     "plain": "I will answer that very soon, after I've finished explaining this slide.",
+     "note": "Used to manage the flow of questions and keep the presentation on track."
+    },
+    {
+     "text": "We'll get to that shortly",
+     "kind": "chunk",
+     "form": "We'll get to that shortly",
+     "meaning": "Informs the questioner that their point will be covered very soon in the presentation.",
+     "example": "We'll get to that shortly when we discuss the implementation phase of the project.",
+     "plain": "We will discuss that very soon when we discuss the implementation phase of the project.",
+     "note": "A polite way to defer a question that is already part of the planned content."
+    },
+    {
+     "text": "I hope that clarifies",
+     "kind": "frame",
+     "form": "I hope that clarifies",
+     "meaning": "Asks if the explanation provided has made the point clear.",
+     "example": "I hope that clarifies the distinction between the two software versions.",
+     "plain": "I hope that makes the distinction between the two software versions clear.",
+     "note": "A polite way to check for understanding after an explanation."
+    },
+    {
+     "text": "Is that clear enough",
+     "kind": "chunk",
+     "form": "Is that clear enough",
+     "meaning": "Asks the audience if they fully understand what has been explained.",
+     "example": "Is that clear enough regarding the new policy on remote work?",
+     "plain": "Do you understand that fully regarding the new policy on remote work?",
+     "note": "A direct way to check for comprehension, slightly more formal than \"Does that make sense?\"."
+    },
+    {
+     "text": "Any further questions",
+     "kind": "chunk",
+     "form": "Any further questions",
+     "meaning": "Asks if there are more questions after a previous round of questions or explanation.",
+     "example": "Any further questions before we move on to the next section?",
+     "plain": "Do you have any more questions before we move on to the next section?",
+     "note": "Concise and common for inviting additional questions."
+    },
+    {
+     "text": "I'm happy to take a few more",
+     "kind": "frame",
+     "form": "I'm happy to take a few more",
+     "meaning": "Indicates willingness to answer a limited number of additional questions.",
+     "example": "I'm happy to take a few more questions if anyone has them.",
+     "plain": "I can answer a few more questions if anyone has them.",
+     "note": "Polite and sets an expectation for the number of questions."
+    },
+    {
+     "text": "We have time for one more",
+     "kind": "chunk",
+     "form": "We have time for one more",
+     "meaning": "Informs the audience that only one final question can be answered due to time constraints.",
+     "example": "We have time for one more question before we need to wrap up.",
+     "plain": "We can only answer one more question before we need to finish.",
+     "note": "Manages expectations about the Q&A session efficiently."
+    },
+    {
+     "text": "I'll be around afterwards",
+     "kind": "chunk",
+     "form": "I'll be around afterwards",
+     "meaning": "Offers to answer further questions informally after the presentation has concluded.",
+     "example": "I'll be around afterwards if anyone has more specific questions they'd like to discuss.",
+     "plain": "I will be available after the presentation if anyone has more specific questions.",
+     "note": "A polite way to offer continued engagement without extending the formal Q&A."
+    },
+    {
+     "text": "Feel free to approach me",
+     "kind": "frame",
+     "form": "Feel free to approach me",
+     "meaning": "Invites individuals to speak to you directly after the presentation.",
+     "example": "Feel free to approach me during the break if you have any confidential queries.",
+     "plain": "Please come and speak to me during the break if you have any confidential queries.",
+     "note": "Friendly and open, encourages one-on-one discussion."
+    },
+    {
+     "text": "I'm happy to discuss this offline",
+     "kind": "frame",
+     "form": "I'm happy to discuss this offline",
+     "meaning": "Suggests continuing a detailed or sensitive discussion privately after the presentation.",
+     "example": "I'm happy to discuss this offline if you'd like to go into more detail about your specific case.",
+     "plain": "I can discuss this privately with you later if you'd like to go into more detail about your specific case.",
+     "note": "Professional way to manage time or sensitive topics during a public Q&A."
+    },
+    {
+     "text": "That's a complex issue",
+     "kind": "chunk",
+     "form": "That's a complex issue",
+     "meaning": "Acknowledges that a question or topic is intricate and requires careful consideration.",
+     "example": "That's a complex issue, and one that requires a multi-faceted approach.",
+     "plain": "That's an intricate problem, and one that requires a multi-faceted approach.",
+     "note": "Used to indicate that a simple answer is not possible, often to buy time or defer."
+    },
+    {
+     "text": "It's not a simple answer",
+     "kind": "chunk",
+     "form": "It's not a simple answer",
+     "meaning": "States that the response to a question is nuanced and cannot be given briefly.",
+     "example": "It's not a simple answer, as several variables influence the outcome.",
+     "plain": "The answer is not simple, as several variables influence the outcome.",
+     "note": "Prepares the audience for a more detailed explanation or a qualified response."
+    },
+    {
+     "text": "I'm not sure I have the answer",
+     "kind": "frame",
+     "form": "I'm not sure I have the answer",
+     "meaning": "A polite and honest way to admit you don't know the answer to a question.",
+     "example": "I'm not sure I have the answer to that specific technical query right now.",
+     "plain": "I don't think I know the answer to that specific technical query right now.",
+     "note": "Professional and transparent, often followed by an offer to find out."
+    },
+    {
+     "text": "It's crucial to recognise",
+     "kind": "frame",
+     "form": "It's crucial to recognise",
+     "meaning": "Highlights the vital importance of understanding a particular point.",
+     "example": "It's crucial to recognise that market trends are constantly shifting.",
+     "plain": "It's very important to understand that market trends are constantly shifting.",
+     "note": "Emphasizes a key insight or understanding."
+    },
+    {
+     "text": "This underscores the necessity of",
+     "kind": "frame",
+     "form": "This underscores the necessity of",
+     "meaning": "Emphasizes the vital need for a particular action or factor.",
+     "example": "This underscores the necessity of clear communication in remote teams.",
+     "plain": "This emphasizes the vital need for clear communication in remote teams.",
+     "note": "A strong way to emphasize a key takeaway or lesson, slightly more formal."
+    },
+    {
+     "text": "I want to draw your attention to",
+     "kind": "frame",
+     "form": "I want to draw your attention to",
+     "meaning": "Directs the audience's focus to a specific detail or piece of information.",
+     "example": "I want to draw your attention to the significant growth in our online sales figures.",
+     "plain": "I want you to notice the significant growth in our online sales figures.",
+     "note": "A direct and polite way to highlight something important."
+    },
+    {
+     "text": "It's imperative that we",
+     "kind": "frame",
+     "form": "It's imperative that we",
+     "meaning": "States that something is absolutely essential or urgent.",
+     "example": "It's imperative that we secure additional funding for the next phase.",
+     "plain": "It's absolutely essential that we secure additional funding for the next phase.",
+     "note": "Conveys a strong sense of urgency and importance."
+    },
+    {
+     "text": "This is particularly relevant because",
+     "kind": "frame",
+     "form": "This is particularly relevant because",
+     "meaning": "Explains why a specific point or piece of information is especially important in the current context.",
+     "example": "This is particularly relevant because our target demographic is shifting rapidly.",
+     "plain": "This is especially important because our target demographic is shifting rapidly.",
+     "note": "Connects a detail to the broader picture, justifying its inclusion."
+    },
+    {
+     "text": "What's important to grasp is",
+     "kind": "frame",
+     "form": "What's important to grasp is",
+     "meaning": "Emphasizes the key understanding or concept that the audience should take away.",
+     "example": "What's important to grasp is that this isn't a quick fix, but a long-term strategy.",
+     "plain": "The key thing to understand is that this isn't a quick fix, but a long-term strategy.",
+     "note": "Focuses the audience on the core message or insight."
+    },
+    {
+     "text": "The main takeaway is",
+     "kind": "frame",
+     "form": "The main takeaway is",
+     "meaning": "Introduces the most important piece of information or conclusion from a discussion.",
+     "example": "The main takeaway is that customer satisfaction directly impacts retention rates.",
+     "plain": "The most important point is that customer satisfaction directly impacts retention rates.",
+     "note": "A very common phrase for summarizing the main message."
+    },
+    {
+     "text": "It bears repeating that",
+     "kind": "frame",
+     "form": "It bears repeating that",
+     "meaning": "Highlights a point that deserves special attention or repetition due to its significance.",
+     "example": "It bears repeating that our projections are based on current market conditions.",
+     "plain": "It's important to repeat that our projections are based on current market conditions.",
+     "note": "A polite but firm way to draw attention to a crucial detail."
+    },
+    {
+     "text": "It's vital to understand",
+     "kind": "frame",
+     "form": "It's vital to understand",
+     "meaning": "Stresses the absolute necessity of comprehending a particular concept or fact.",
+     "example": "It's vital to understand the cultural nuances when expanding into new markets.",
+     "plain": "It's absolutely necessary to understand the cultural nuances when expanding into new markets.",
+     "note": "Conveys a strong sense of importance for comprehension."
+    },
+    {
+     "text": "I must stress that",
+     "kind": "frame",
+     "form": "I must stress that",
+     "meaning": "Used to strongly emphasize a point, indicating its critical importance.",
+     "example": "I must stress that adherence to safety protocols is non-negotiable.",
+     "plain": "I need to emphasize that adherence to safety protocols is non-negotiable.",
+     "note": "A direct and forceful way to highlight a critical rule or fact."
+    },
+    {
+     "text": "This is fundamental to",
+     "kind": "frame",
+     "form": "This is fundamental to",
+     "meaning": "Explains that a particular point forms the basic foundation or core of something.",
+     "example": "This is fundamental to our understanding of customer behavior.",
+     "plain": "This is basic to our understanding of customer behavior.",
+     "note": "Used to highlight foundational principles or essential elements."
+    },
+    {
+     "text": "It's essential to consider",
+     "kind": "frame",
+     "form": "It's essential to consider",
+     "meaning": "Highlights the absolute necessity of taking a particular factor into account.",
+     "example": "It's essential to consider the long-term environmental impact of our production methods.",
+     "plain": "It's absolutely necessary to think about the long-term environmental impact of our production methods.",
+     "note": "A polite but firm way to ensure a factor is not overlooked."
+    },
+    {
+     "text": "The core message here is",
+     "kind": "frame",
+     "form": "The core message here is",
+     "meaning": "Introduces the central, most important idea or meaning of the discussion.",
+     "example": "The core message here is that collaboration across departments is key to innovation.",
+     "plain": "The central idea here is that collaboration across departments is key to innovation.",
+     "note": "Helps to distil complex information into its most important point."
+    },
+    {
+     "text": "Keep in mind that",
+     "kind": "frame",
+     "form": "Keep in mind that",
+     "meaning": "Advises the audience to remember a particular fact or consideration.",
+     "example": "Keep in mind that these figures are preliminary and subject to change.",
+     "plain": "Remember that these figures are preliminary and subject to change.",
+     "note": "A common and slightly less formal way to introduce a caveat or crucial context."
+    },
+    {
+     "text": "This is a critical aspect",
+     "kind": "chunk",
+     "form": "This is a critical aspect",
+     "meaning": "Identifies a particular part or feature as being extremely important.",
+     "example": "This is a critical aspect of our new security protocol that requires careful attention.",
+     "plain": "This is an extremely important part of our new security protocol that requires careful attention.",
+     "note": "Emphasizes the importance of a specific component or detail."
+    },
+    {
+     "text": "We need to be clear that",
+     "kind": "frame",
+     "form": "We need to be clear that",
+     "meaning": "Used to state something unequivocally, ensuring no misunderstanding.",
+     "example": "We need to be clear that this decision will have long-term financial implications.",
+     "plain": "We must state clearly that this decision will have long-term financial implications.",
+     "note": "Emphasizes the need for clarity and directness on a particular point."
+    },
+    {
+     "text": "It's important to acknowledge",
+     "kind": "frame",
+     "form": "It's important to acknowledge",
+     "meaning": "Highlights the necessity of recognizing or admitting a particular fact or situation.",
+     "example": "It's important to acknowledge the challenges we faced during the initial rollout.",
+     "plain": "It's important to recognize the challenges we faced during the initial rollout.",
+     "note": "Shows transparency and addresses potential difficulties or sensitive points."
+    },
+    {
+     "text": "This is a key distinction",
+     "kind": "chunk",
+     "form": "This is a key distinction",
+     "meaning": "Points out a crucial difference between two things that might otherwise be confused.",
+     "example": "This is a key distinction between our product and that of our main competitor.",
+     "plain": "This is a crucial difference between our product and that of our main competitor.",
+     "note": "Useful for clarifying nuances and avoiding misunderstandings."
+    },
+    {
+     "text": "Let me rephrase that slightly",
+     "kind": "frame",
+     "form": "Let me rephrase that slightly",
+     "meaning": "Used to express something again in a slightly different way for better clarity.",
+     "example": "Let me rephrase that slightly: our goal is to optimize, not just automate.",
+     "plain": "Let me say that again in a slightly different way: our goal is to optimize, not just automate.",
+     "note": "A polite way to correct or improve an earlier statement."
+    },
+    {
+     "text": "What I meant to imply was",
+     "kind": "frame",
+     "form": "What I meant to imply was",
+     "meaning": "Clarifies an earlier statement, explaining the intended underlying message.",
+     "example": "What I meant to imply was that the current system has inherent limitations.",
+     "plain": "My intention was to suggest that the current system has inherent limitations.",
+     "note": "Useful for clarifying a subtle or indirect message that might have been missed."
+    },
+    {
+     "text": "I should clarify my statement",
+     "kind": "frame",
+     "form": "I should clarify my statement",
+     "meaning": "Indicates a need to make an earlier remark more precise or understandable.",
+     "example": "I should clarify my statement about the budget; it applies only to operational costs.",
+     "plain": "I need to make my statement about the budget clearer; it applies only to operational costs.",
+     "note": "A polite way to self-correct or add necessary detail."
+    },
+    {
+     "text": "My apologies, that came out wrong",
+     "kind": "chunk",
+     "form": "My apologies, that came out wrong",
+     "meaning": "Expresses regret for an unintended or poorly worded statement.",
+     "example": "My apologies, that came out wrong; I didn't mean to suggest any blame.",
+     "plain": "I'm sorry, I said that badly; I didn't mean to suggest any blame.",
+     "note": "A polite and immediate apology for a verbal slip."
+    },
+    {
+     "text": "Let me try that again",
+     "kind": "chunk",
+     "form": "Let me try that again",
+     "meaning": "Indicates a desire to re-explain something after an initial attempt was unclear or incorrect.",
+     "example": "Let me try that again, focusing on the practical applications rather than the theory.",
+     "plain": "I'll try to explain that once more, focusing on the practical applications rather than the theory.",
+     "note": "A straightforward way to signal a re-attempt at explanation."
+    },
+    {
+     "text": "Where was I going with that",
+     "kind": "chunk",
+     "form": "Where was I going with that",
+     "meaning": "Asks rhetorically or to the audience for a reminder of the point being made.",
+     "example": "Where was I going with that? Oh yes, the importance of stakeholder engagement.",
+     "plain": "What was my point? Oh yes, the importance of stakeholder engagement.",
+     "note": "Informal and conversational, used to get back on track."
+    },
+    {
+     "text": "Just a moment to think",
+     "kind": "chunk",
+     "form": "Just a moment to think",
+     "meaning": "Asks for a brief pause to organize one's ideas before speaking.",
+     "example": "Just a moment to think before I respond to that complex question.",
+     "plain": "Please give me a moment to organize my ideas before I respond to that complex question.",
+     "note": "A polite way to ask for a brief pause, showing thoughtfulness."
+    },
+    {
+     "text": "I got a bit sidetracked",
+     "kind": "chunk",
+     "form": "I got a bit sidetracked",
+     "meaning": "Explains that you have deviated from the main topic of discussion.",
+     "example": "I got a bit sidetracked discussing the historical context; let's return to the present.",
+     "plain": "I went off topic discussing the historical context; let's return to the present.",
+     "note": "Informal and self-deprecating, used to acknowledge a digression."
+    },
+    {
+     "text": "To get back on track",
+     "kind": "chunk",
+     "form": "To get back on track",
+     "meaning": "Used to signal a return to the main topic after a digression.",
+     "example": "To get back on track, let's review the key performance indicators for this quarter.",
+     "plain": "To return to the main topic, let's review the key performance indicators for this quarter.",
+     "note": "A common phrase for refocusing the discussion."
+    },
+    {
+     "text": "I made a slight error",
+     "kind": "chunk",
+     "form": "I made a slight error",
+     "meaning": "Acknowledges that you said something incorrectly or inaccurately before.",
+     "example": "I made a slight error earlier when I mentioned the deadline; it's actually next Friday.",
+     "plain": "I said something wrong earlier when I mentioned the deadline; it's actually next Friday.",
+     "note": "A direct and professional way to correct a factual error."
+    },
+    {
+     "text": "That's not what I meant",
+     "kind": "chunk",
+     "form": "That's not what I meant",
+     "meaning": "Explains that your previous statement did not accurately convey your meaning.",
+     "example": "That's not what I meant to say about the project's scope.",
+     "plain": "That's not exactly what I intended to say about the project's scope.",
+     "note": "A polite way to indicate a miscommunication or poor phrasing."
+    },
+    {
+     "text": "I should have been more precise",
+     "kind": "frame",
+     "form": "I should have been more precise",
+     "meaning": "Expresses regret for not having been exact or detailed enough in an earlier statement.",
+     "example": "I should have been more precise about the budget figures; they exclude marketing costs.",
+     "plain": "I should have been more exact about the budget figures; they exclude marketing costs.",
+     "note": "A self-correction that shows attention to detail and accuracy."
+    },
+    {
+     "text": "To simplify things",
+     "kind": "frame",
+     "form": "To simplify things",
+     "meaning": "Offers to explain something in an easier-to-understand way.",
+     "example": "To simplify things, we need to reduce overheads across the board.",
+     "plain": "To make it easier to understand, we need to reduce overheads across the board.",
+     "note": "Useful when the audience seems confused or the explanation was too complex."
+    },
+    {
+     "text": "I hope I'm making sense",
+     "kind": "chunk",
+     "form": "I hope I'm making sense",
+     "meaning": "Expresses a desire that the audience is understanding the explanation.",
+     "example": "I hope I'm making sense as I explain these complex technical specifications.",
+     "plain": "I hope you are understanding me as I explain these complex technical specifications.",
+     "note": "A polite way to check for audience comprehension, often used with complex topics."
+    },
+    {
+     "text": "I'm not sure I articulated that well",
+     "kind": "frame",
+     "form": "I'm not sure I articulated that well",
+     "meaning": "Expresses doubt about the clarity or effectiveness of one's explanation.",
+     "example": "I'm not sure I articulated that well, so let me try a different analogy.",
+     "plain": "I don't think I explained that clearly, so let me try a different analogy.",
+     "note": "A humble way to acknowledge potential lack of clarity and offer a re-explanation."
+    },
+    {
+     "text": "Let me try to explain",
+     "kind": "frame",
+     "form": "Let me try to explain",
+     "meaning": "Offers to provide an explanation, often after a question or perceived confusion.",
+     "example": "Let me try to explain the rationale behind our decision to pivot.",
+     "plain": "I will try to explain the reasons behind our decision to pivot.",
+     "note": "A straightforward way to introduce an explanation."
+    },
+    {
+     "text": "I trust that's clear",
+     "kind": "chunk",
+     "form": "I trust that's clear",
+     "meaning": "Expresses confidence that the audience has understood the explanation.",
+     "example": "I trust that's clear regarding the new policy on expense claims.",
+     "plain": "I believe you understand the new policy on expense claims.",
+     "note": "A polite and slightly formal way to conclude an explanation."
+    },
+    {
+     "text": "I'm happy to elaborate further",
+     "kind": "frame",
+     "form": "I'm happy to elaborate further",
+     "meaning": "Offers to provide more details or a deeper explanation if needed.",
+     "example": "I'm happy to elaborate further on any of these points during the Q&A.",
+     "plain": "I can give more details on any of these points during the Q&A.",
+     "note": "A polite and open invitation for more questions or deeper discussion."
+    },
+    {
+     "text": "Let me phrase it differently",
+     "kind": "frame",
+     "form": "Let me phrase it differently",
+     "meaning": "Used to rephrase something for clarity after an initial explanation wasn't clear.",
+     "example": "Let me phrase it differently: our primary goal is to enhance user experience, not just add features.",
+     "plain": "To explain it differently, our primary goal is to enhance user experience, not just add features.",
+     "note": "Useful for offering an alternative explanation."
+    },
+    {
+     "text": "This brings me to my next point",
+     "kind": "frame",
+     "form": "This brings me to my next point",
+     "meaning": "A common transition phrase to introduce the subsequent topic in a presentation.",
+     "example": "This brings me to my next point, which is the projected growth in emerging markets.",
+     "plain": "Now I will discuss my next point, which is the projected growth in emerging markets.",
+     "note": "A very common and smooth way to move between topics."
+    },
+    {
+     "text": "I trust this was informative",
+     "kind": "chunk",
+     "form": "I trust this was informative",
+     "meaning": "A polite closing remark, expressing confidence that the audience found the information beneficial.",
+     "example": "I trust this was informative in understanding our new strategic direction.",
+     "plain": "I believe this information was beneficial in understanding our new strategic direction.",
+     "note": "A slightly more formal and confident way to conclude a presentation."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "let's move on to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "turning our attention to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to recap briefly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what i'd like to do now is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "this brings me to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as you can see": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "before i go any further": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it another way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "in a nutshell": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to summarise then": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to draw your attention to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the next point i want to make is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we'll delve into that later": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let me elaborate on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a good question": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll come back to that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "perhaps we can discuss that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to clarify what you mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i understand correctly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure i follow": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's beyond the scope of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd rather not speculate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we can explore that further": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to address your point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me rephrase that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hope that answers your question": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a pertinent question": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to field a question": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth bearing in mind": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the key takeaway here is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to note that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i cannot stress enough that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this is crucial because": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it simply": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the bottom line is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this really boils down to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's not so much that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'll just quickly touch on": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes the meaning of briefly mentioning a topic."
+   },
+   "i appreciate the question": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key accurately describes expressing gratitude for a question."
+   },
+   "i want to underscore": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a significant factor": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to highlight the importance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a common misconception": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "my apologies, i misspoke": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i meant to say was": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to clarify, i meant": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "allow me to correct myself": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "bear with me for a moment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me just gather my thoughts": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i've gone off on a tangent": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "coming back to my point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "where was i": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "forgive me, i got ahead of myself": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that wasn't quite what i intended": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me put that differently": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i should have been clearer": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to elaborate further": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on that note": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "moving swiftly on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to reiterate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to underscore": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put things in perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm confident that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to briefly touch upon": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to sum up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to reiterate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i trust that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's consider": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to give you an idea": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to emphasize": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i hope that makes sense": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're running a bit short on time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to reiterate my point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's take a moment to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to briefly outline": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it bluntly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth considering": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be precise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the point i'm trying to make is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to elaborate on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this serves to illustrate": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's briefly touch on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to take questions": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to summarise my main points": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hope i've made that clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to reiterate for clarity": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to conclude by saying": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's consider for a moment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "this highlights the fact that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it mildly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to draw your attention back to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth emphasizing": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's move forward to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to elaborate": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "this brings me to the end of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it in context": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to briefly summarise": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "this leads me to conclude that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i hope this has been informative": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's turn our attention to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to underscore the fact that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you a sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this brings me to my final point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i trust you'll agree that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's consider the implications of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be perfectly clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this serves to highlight": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm confident we can": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it simply, then": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i hope you found this useful": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's important to highlight": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The intended meaning accurately captures how the phrase is used to draw attention to important information in the sentence."
+   },
+   "to begin with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's kick off by": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to start by": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "moving forward, we'll": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "next on the agenda": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "this naturally leads to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as an aside": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "before we proceed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to provide some context": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we'll revisit that later": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to expand on this": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's explore the ramifications": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to conclude my remarks": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to offer a brief summary": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to gain some perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's delve into": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to walk you through": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give you a sense of scale": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we can look into that more": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm glad you asked that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a fair point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a very insightful question": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i appreciate you raising that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to answer your question directly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's an excellent question": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll address that in a moment": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we'll get to that shortly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hope that clarifies": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "is that clear enough": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "any further questions": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm happy to take a few more": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we have time for one more": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be around afterwards": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "feel free to approach me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to discuss this offline": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a complex issue": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not a simple answer": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i have the answer": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's crucial to recognise": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this underscores the necessity of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i want to draw your attention to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's imperative that we": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this is particularly relevant because": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what's important to grasp is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the main takeaway is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it bears repeating that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's vital to understand": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i must stress that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is fundamental to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's essential to consider": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the core message here is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "keep in mind that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "this is a critical aspect": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we need to be clear that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to acknowledge": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is a key distinction": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let me rephrase that slightly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i meant to imply was": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i should clarify my statement": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my apologies, that came out wrong": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let me try that again": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "where was i going with that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just a moment to think": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i got a bit sidetracked": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get back on track": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i made a slight error": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's not what i meant": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i should have been more precise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to simplify things": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hope i'm making sense": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure i articulated that well": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let me try to explain": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i trust that's clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to elaborate further": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me phrase it differently": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this brings me to my next point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i trust this was informative": {
+    "status": "pass",
+    "level": "B2"
+   }
+  }
+ }
+}

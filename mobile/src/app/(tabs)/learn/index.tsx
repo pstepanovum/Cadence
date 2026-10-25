@@ -1,10 +1,11 @@
 // The Learn hub: pick a level, then practise (quiz, matching, grammar
 // builder, sentence practice, flashcards), work through lessons, look up
-// grammar, or open the sounds library and the pronunciation modules.
+// grammar, or open the sounds library, the pronunciation modules and the
+// advanced practice (phrase bank, slang, the plateau track).
 // Everything here runs from the content packs on the phone, with no AI and
 // no network.
 import { Link, router, useFocusEffect } from "expo-router";
-import { BookOpenText, Brain, Check, ChevronRight, Layers, ListChecks, Mic, Puzzle, Shapes, Smile } from "lucide-react-native";
+import { BookOpenText, Brain, Check, ChevronRight, Layers, ListChecks, Mic, Mountain, Puzzle, Shapes, Smile } from "lucide-react-native";
 import { useCallback, useMemo, useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 
@@ -126,6 +127,7 @@ export default function LearnHub() {
 
       <View style={styles.section}>
         <Eyebrow>More</Eyebrow>
+        <HubRow icon={<Mountain color={colors.carbon} size={20} />} title="Phrases, slang and the plateau" detail="Learn phrases, not words; current slang; twelve weeks on the errors that persist." onPress={() => router.push("/advanced")} />
         <HubRow icon={<BookOpenText color={colors.carbon} size={20} />} title="Grammar reference" detail={`Every ${level} grammar point, with examples and common mistakes.`} onPress={() => router.push({ pathname: "/grammar", params: { level } })} />
         <HubRow icon={<Smile color={colors.carbon} size={20} />} title="Sounds and the mouth map" detail="See where the tongue and lips go for every English sound." onPress={() => router.push("/sounds")} />
         <HubRow icon={<Mic color={colors.carbon} size={20} />} title="Pronunciation modules" detail="Theory, practice and exams, scored by your voice." onPress={() => router.push("/learn/modules")} />

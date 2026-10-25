@@ -1,0 +1,82 @@
+{
+ "format": 1,
+ "id": "fossil.noun-verb-stress",
+ "area": "stress",
+ "title": "Stress that changes the word",
+ "what": "the same stress for noun and verb pairs ('a REcord' and 'to reCORD', 'an INcrease' and 'to inCREASE')",
+ "summary": "This error persists because many noun-verb pairs are spelled identically, making the subtle shift in stress easily overlooked. Misplacing stress can obscure meaning or make speech sound less natural, despite advanced fluency.",
+ "listenFor": "Notice if the primary stress in two-syllable words shifts when the word functions as a noun versus a verb.",
+ "grammarPointIds": [],
+ "soundIds": [],
+ "contrasts": [],
+ "drills": [
+  "The REcord of their progress will reCORD their achievements.",
+  "We must inCREASE the INcrease in our productivity.",
+  "The PREsent situation requires us to preSENT a new strategy.",
+  "Do you obJECT to the OBject being moved?",
+  "They will perMIT us to obtain a PERmit for the construction.",
+  "The PROject manager will proJECT the budget for the next quarter.",
+  "The REbel leader chose to reBEL against the regime.",
+  "We need to conDUCT a thorough CONduct review."
+ ],
+ "probes": [
+  {
+   "sentence": "The REcord of the meeting clearly states that we must reCORD all decisions."
+  },
+  {
+   "sentence": "A significant INcrease in demand will require us to inCREASE our output."
+  },
+  {
+   "sentence": "The OBject of the discussion was to determine why they obJECTed."
+  },
+  {
+   "sentence": "We need a PERmit to perMIT us to proceed with the development."
+  },
+  {
+   "sentence": "The PROject team will proJECT the financial implications of the new venture."
+  }
+ ],
+ "pairs": [],
+ "stress": [
+  {
+   "text": "The company maintains a comprehensive record of all transactions.",
+   "marked": "The COMpany mainTAINS a compreHENSIVE REcord of all transACTIONS.",
+   "note": "Noun 'record' stresses the first syllable."
+  },
+  {
+   "text": "We need to record every detail of the experiment for future analysis.",
+   "marked": "We need to reCORD EVery DEtail of the exPERiment for FUture anALysis.",
+   "note": "Verb 'record' stresses the second syllable."
+  },
+  {
+   "text": "There has been a noticeable increase in global temperatures.",
+   "marked": "There has been a NOticeable INcrease in GLObal TEMperatures.",
+   "note": "Noun 'increase' stresses the first syllable."
+  },
+  {
+   "text": "The government plans to increase funding for public services.",
+   "marked": "The GOVernment plans to inCREASE FUNding for PUBlic SERvices.",
+   "note": "Verb 'increase' stresses the second syllable."
+  },
+  {
+   "text": "She received a thoughtful present from her colleagues.",
+   "marked": "She reCEIVED a THOUGHTful PREsent from her COLleagues.",
+   "note": "Noun 'present' stresses the first syllable."
+  },
+  {
+   "text": "He will present his findings at the upcoming conference.",
+   "marked": "He will preSENT his FINdings at the UPcoming CONference.",
+   "note": "Verb 'present' stresses the second syllable."
+  },
+  {
+   "text": "The new research project aims to explore sustainable energy solutions.",
+   "marked": "The new REsearch PROject aims to exPLORE susTAINable ENergy soLUtions.",
+   "note": "Noun 'project' stresses the first syllable."
+  },
+  {
+   "text": "It is crucial to project a confident image during negotiations.",
+   "marked": "It is CRUcial to proJECT a CONfident IMage DUring neGOtiations.",
+   "note": "Verb 'project' stresses the second syllable."
+  }
+ ]
+}

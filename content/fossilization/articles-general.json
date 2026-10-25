@@ -1,0 +1,98 @@
+{
+ "format": 1,
+ "id": "fossil.articles-general",
+ "area": "grammar",
+ "title": "Articles with general and abstract nouns",
+ "what": "adding 'the' to general statements ('The life is hard', 'I like the music') or dropping 'a/the' with singular countable nouns ('She is engineer')",
+ "summary": "Article usage is highly idiomatic, making it a persistent challenge even for advanced speakers. Inaccurate article use can subtly undermine fluency and make speech sound less natural.",
+ "listenFor": "Notice if you add 'the' before general concepts or omit 'a' or 'the' before singular countable nouns.",
+ "grammarPointIds": [
+  "gp.articles-in-general-statements",
+  "gp.articles-with-abstract-nouns"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "The life in the city is often very demanding.",
+   "right": "Life in the city is often very demanding.",
+   "note": "'Life' in general does not take 'the'."
+  },
+  {
+   "wrong": "I find the happiness in simple daily routines.",
+   "right": "I find happiness in simple daily routines.",
+   "note": "'Happiness' as a general concept does not take 'the'."
+  },
+  {
+   "wrong": "The knowledge is power in today's economy.",
+   "right": "Knowledge is power in today's economy.",
+   "note": "'Knowledge' as an abstract concept does not take 'the'."
+  },
+  {
+   "wrong": "She is experienced architect with a strong portfolio.",
+   "right": "She is an experienced architect with a strong portfolio.",
+   "note": "'Architect' is a singular countable noun requiring 'a'."
+  },
+  {
+   "wrong": "We need to find solution to this complex problem.",
+   "right": "We need to find a solution to this complex problem.",
+   "note": "'Solution' is a singular countable noun requiring 'a'."
+  },
+  {
+   "wrong": "He presented very compelling argument during the debate.",
+   "right": "He presented a very compelling argument during the debate.",
+   "note": "'Argument' is a singular countable noun requiring 'a'."
+  }
+ ],
+ "drills": [
+  "Education is a lifelong pursuit that enriches the mind.",
+  "Time management is a crucial skill for any professional.",
+  "Innovation requires a willingness to embrace new ideas.",
+  "The company needs a clear vision for its future growth.",
+  "Patience is a virtue, especially when dealing with complex projects.",
+  "He is a dedicated researcher with a passion for discovery.",
+  "Access to information is a fundamental right in a democratic society.",
+  "She developed a comprehensive strategy for market expansion.",
+  "Understanding human behavior is a key aspect of effective leadership.",
+  "A strong work ethic is essential for achieving long-term success."
+ ],
+ "probes": [
+  {
+   "sentence": "The communication is vital for team cohesion.",
+   "answers": [
+    "Communication is vital for team cohesion."
+   ]
+  },
+  {
+   "sentence": "I appreciate the honesty in professional dealings.",
+   "answers": [
+    "I appreciate honesty in professional dealings."
+   ]
+  },
+  {
+   "sentence": "The technology has transformed how we conduct business.",
+   "answers": [
+    "Technology has transformed how we conduct business."
+   ]
+  },
+  {
+   "sentence": "She holds important position in the finance department.",
+   "answers": [
+    "She holds an important position in the finance department."
+   ]
+  },
+  {
+   "sentence": "We discussed interesting proposal at the meeting.",
+   "answers": [
+    "We discussed an interesting proposal at the meeting."
+   ]
+  },
+  {
+   "sentence": "He is truly inspiring leader in his field.",
+   "answers": [
+    "He is truly an inspiring leader in his field."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

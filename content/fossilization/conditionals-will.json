@@ -1,0 +1,101 @@
+{
+ "format": 1,
+ "id": "fossil.conditionals-will",
+ "area": "grammar",
+ "title": "'Will' in if- and time clauses",
+ "what": "putting 'will' or 'would' in the if-clause or time clause ('If it will rain, we stay inside', 'When I will arrive, I call you', 'If I would know')",
+ "summary": "This error persists because context often clarifies meaning, making it less noticeable. However, it subtly detracts from fluency and precision, signaling a non-native command of advanced English grammar.",
+ "listenFor": "Pay close attention to whether you use 'will' or 'would' immediately following conjunctions like 'if', 'when', 'as soon as', or 'until'.",
+ "grammarPointIds": [
+  "gp.first-conditional",
+  "gp.second-conditional",
+  "gp.time-clauses",
+  "gp.third-conditional",
+  "gp.mixed-conditionals"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "If it will rain tomorrow, we should reschedule the outdoor event.",
+   "right": "If it rains tomorrow, we should reschedule the outdoor event.",
+   "note": "Use simple present in the if-clause for future conditions."
+  },
+  {
+   "wrong": "When I will finish this report, I will send it to the team.",
+   "right": "When I finish this report, I will send it to the team.",
+   "note": "Use simple present in time clauses referring to the future."
+  },
+  {
+   "wrong": "As soon as she will arrive, we can begin the presentation.",
+   "right": "As soon as she arrives, we can begin the presentation.",
+   "note": "Simple present for future actions in time clauses."
+  },
+  {
+   "wrong": "If I would know the answer, I would certainly tell you.",
+   "right": "If I knew the answer, I would certainly tell you.",
+   "note": "Use simple past in the if-clause for hypothetical present conditions."
+  },
+  {
+   "wrong": "Until the new policy will be implemented, we must follow the old guidelines.",
+   "right": "Until the new policy is implemented, we must follow the old guidelines.",
+   "note": "Simple present for future events in time clauses."
+  },
+  {
+   "wrong": "I will inform you if there will be any changes to the schedule.",
+   "right": "I will inform you if there are any changes to the schedule.",
+   "note": "Simple present for future conditions in if-clauses."
+  }
+ ],
+ "drills": [
+  "If the market shifts, our strategy will need immediate adjustment.",
+  "When the project concludes, we will evaluate its overall impact.",
+  "As soon as the data arrives, we can finalize the quarterly report.",
+  "Should the client approve, we will proceed with the next phase.",
+  "Unless the weather improves, the outdoor conference will be moved indoors.",
+  "If you require further clarification, please do not hesitate to ask.",
+  "Once the contract is signed, the legal team will review the terms.",
+  "We will not launch the product until all safety checks are complete.",
+  "If the budget allows, we plan to expand our international operations.",
+  "When she returns from her sabbatical, she will resume her leadership role."
+ ],
+ "probes": [
+  {
+   "sentence": "If he will accept the offer, we can start negotiations immediately.",
+   "answers": [
+    "If he accepts the offer, we can start negotiations immediately."
+   ]
+  },
+  {
+   "sentence": "I will call you back as soon as I will finish this urgent task.",
+   "answers": [
+    "I will call you back as soon as I finish this urgent task."
+   ]
+  },
+  {
+   "sentence": "If I would have more time, I would dedicate it to learning a new skill.",
+   "answers": [
+    "If I had more time, I would dedicate it to learning a new skill."
+   ]
+  },
+  {
+   "sentence": "They will not leave until the final decision will be made.",
+   "answers": [
+    "They will not leave until the final decision is made."
+   ]
+  },
+  {
+   "sentence": "We will proceed with the plan if the board will give its approval.",
+   "answers": [
+    "We will proceed with the plan if the board gives its approval."
+   ]
+  },
+  {
+   "sentence": "When the new system will be fully operational, efficiency will greatly improve.",
+   "answers": [
+    "When the new system is fully operational, efficiency will greatly improve."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

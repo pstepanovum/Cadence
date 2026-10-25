@@ -1,0 +1,1541 @@
+{
+ "format": 1,
+ "level": "B2",
+ "situation": "feedback",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "give credit where credit is due",
+     "kind": "chunk",
+     "form": "give credit where credit is due",
+     "meaning": "Acknowledge someone's achievement or contribution, especially if it might otherwise be overlooked.",
+     "example": "I have to give credit where credit is due; your presentation really turned the project around.",
+     "plain": "Your presentation really turned the project around, and I want to acknowledge that.",
+     "note": "Used to ensure someone gets recognition. Often said by a manager or colleague."
+    },
+    {
+     "text": "go above and beyond",
+     "kind": "chunk",
+     "form": "went above and beyond",
+     "meaning": "To do more than what is expected or required.",
+     "example": "Sarah really went above and beyond on this report, adding extra research that wasn't requested.",
+     "plain": "Sarah did more than expected on this report, adding extra research.",
+     "note": "A common way to praise exceptional effort. Positive and appreciative."
+    },
+    {
+     "text": "really appreciate your",
+     "kind": "frame",
+     "form": "really appreciate your",
+     "meaning": "Express sincere gratitude for someone's effort or contribution.",
+     "example": "I really appreciate your quick turnaround on those edits; it helped us meet the deadline.",
+     "plain": "Thank you for editing those so quickly; it helped us meet the deadline.",
+     "note": "A very common and polite way to express thanks for specific actions."
+    },
+    {
+     "text": "a job well done",
+     "kind": "collocation",
+     "form": "a job well done",
+     "meaning": "A task or piece of work that has been completed successfully and to a high standard.",
+     "example": "I just wanted to say congratulations on a job well done with the new client proposal.",
+     "plain": "Congratulations on successfully completing the new client proposal.",
+     "note": "A standard, positive phrase for acknowledging good work. Can be formal or informal."
+    },
+    {
+     "text": "keep up the good work",
+     "kind": "chunk",
+     "form": "keep up the good work",
+     "meaning": "Encourage someone to continue performing at their current high standard.",
+     "example": "Your analysis was excellent this quarter, so keep up the good work.",
+     "plain": "Your analysis was excellent this quarter; continue doing well.",
+     "note": "A common, encouraging phrase, often used by managers."
+    },
+    {
+     "text": "exceeded expectations",
+     "kind": "collocation",
+     "form": "exceeded expectations",
+     "meaning": "Performed better than what was anticipated or hoped for.",
+     "example": "Your performance on the recent project truly exceeded expectations, especially under pressure.",
+     "plain": "You performed better than expected on the recent project, especially under pressure.",
+     "note": "A strong positive phrase, often used in formal reviews or significant praise."
+    },
+    {
+     "text": "a real asset",
+     "kind": "collocation",
+     "form": "a real asset",
+     "meaning": "Someone or something that is very valuable or useful.",
+     "example": "Your problem-solving skills make you a real asset to the team, especially during challenging times.",
+     "plain": "Your problem-solving skills are very valuable to the team during challenging times.",
+     "note": "A strong compliment, highlighting someone's value to a group or organization."
+    },
+    {
+     "text": "shine a light on",
+     "kind": "collocation",
+     "form": "shine a light on",
+     "meaning": "To highlight or draw attention to something, often positive.",
+     "example": "I want to shine a light on Mark's innovative approach to the budget, which saved us money.",
+     "plain": "I want to highlight Mark's innovative approach to the budget, which saved us money.",
+     "note": "Used to bring attention to a specific positive contribution."
+    },
+    {
+     "text": "that's a great point",
+     "kind": "chunk",
+     "form": "That's a great point",
+     "meaning": "Acknowledge that someone has made a valid, insightful, or useful observation.",
+     "example": "That's a great point about the timeline; I hadn't considered the external dependencies.",
+     "plain": "You made a good observation about the timeline; I hadn't considered the external dependencies.",
+     "note": "A common, positive way to acknowledge someone's contribution in a discussion."
+    },
+    {
+     "text": "I'm impressed by",
+     "kind": "frame",
+     "form": "I'm impressed by",
+     "meaning": "Express admiration for someone's skill, effort, or achievement.",
+     "example": "I'm impressed by how quickly you adapted to the new software, despite the steep learning curve.",
+     "plain": "I admire how quickly you adapted to the new software, despite it being difficult to learn.",
+     "note": "A direct and sincere way to give praise."
+    },
+    {
+     "text": "I have a suggestion",
+     "kind": "frame",
+     "form": "I have a suggestion",
+     "meaning": "Introduce a piece of advice or an alternative idea in a polite way.",
+     "example": "I have a suggestion regarding the report's structure that might make it clearer for readers.",
+     "plain": "I want to suggest something about the report's structure to make it clearer.",
+     "note": "A polite and common way to offer advice without sounding demanding."
+    },
+    {
+     "text": "just to be clear",
+     "kind": "chunk",
+     "form": "Just to be clear",
+     "meaning": "Used to ensure understanding or to clarify a point, often before giving feedback.",
+     "example": "Just to be clear, I think the content is strong, but the formatting needs some adjustments.",
+     "plain": "I want to make sure you understand: the content is strong, but the formatting needs adjustments.",
+     "note": "Used to preface a clarification or to ensure no misunderstanding."
+    },
+    {
+     "text": "my only concern is",
+     "kind": "frame",
+     "form": "My only concern is",
+     "meaning": "Introduce a single, specific worry or issue you have.",
+     "example": "My only concern is that the proposed solution might not be scalable for future growth.",
+     "plain": "I am only worried that the proposed solution might not be scalable for future growth.",
+     "note": "A polite way to express a reservation, often implying other aspects are fine."
+    },
+    {
+     "text": "it might be helpful to",
+     "kind": "frame",
+     "form": "It might be helpful to",
+     "meaning": "Suggest an action or approach in a gentle, non-directive way.",
+     "example": "It might be helpful to include more data points to support your conclusions in the next draft.",
+     "plain": "Including more data points to support your conclusions in the next draft could be useful.",
+     "note": "A very soft and indirect way to give advice or suggest an improvement."
+    },
+    {
+     "text": "I'm not sure if",
+     "kind": "frame",
+     "form": "I'm not sure if",
+     "meaning": "Express uncertainty or introduce a gentle critique or question.",
+     "example": "I'm not sure if the current approach fully addresses the client's core needs.",
+     "plain": "I question whether the current approach fully addresses the client's core needs.",
+     "note": "A polite way to express doubt or suggest a potential problem."
+    },
+    {
+     "text": "from my perspective",
+     "kind": "chunk",
+     "form": "From my perspective",
+     "meaning": "Introduce your personal opinion or viewpoint, acknowledging it might differ from others.",
+     "example": "From my perspective, the presentation could benefit from a stronger opening statement.",
+     "plain": "In my opinion, the presentation could benefit from a stronger opening statement.",
+     "note": "Used to soften feedback by framing it as a personal view, not an absolute truth."
+    },
+    {
+     "text": "to be honest",
+     "kind": "chunk",
+     "form": "To be honest",
+     "meaning": "Introduce a frank or direct statement, often one that might be slightly critical.",
+     "example": "To be honest, I think we need to reconsider the entire strategy for this quarter.",
+     "plain": "Frankly, I think we need to reconsider the entire strategy for this quarter.",
+     "note": "Can soften or strengthen a statement. Use carefully, as it can imply previous dishonesty."
+    },
+    {
+     "text": "I'd like to raise",
+     "kind": "frame",
+     "form": "I'd like to raise",
+     "meaning": "Introduce a topic for discussion, often a concern or a point that needs attention.",
+     "example": "I'd like to raise a point about the budget allocation for the upcoming marketing campaign.",
+     "plain": "I want to discuss the budget allocation for the upcoming marketing campaign.",
+     "note": "A polite and professional way to introduce a topic, often a concern."
+    },
+    {
+     "text": "room for improvement",
+     "kind": "collocation",
+     "form": "room for improvement",
+     "meaning": "Areas where something could be made better or more effective.",
+     "example": "While the initial draft was good, there's still room for improvement in the data visualization.",
+     "plain": "While the initial draft was good, the data visualization could still be better.",
+     "note": "A common, polite, and indirect way to suggest that something is not perfect."
+    },
+    {
+     "text": "fall short of",
+     "kind": "collocation",
+     "form": "fell short of",
+     "meaning": "To fail to meet an expectation or standard.",
+     "example": "Unfortunately, the final report fell short of the quality we usually expect from this team.",
+     "plain": "Unfortunately, the final report was not as good as the quality we usually expect.",
+     "note": "A polite but clear way to indicate something didn't meet standards."
+    },
+    {
+     "text": "on the other hand",
+     "kind": "chunk",
+     "form": "On the other hand",
+     "meaning": "Introduce a contrasting point or an alternative perspective.",
+     "example": "The design is innovative; on the other hand, it might be too complex for our target audience.",
+     "plain": "The design is innovative, but it might be too complex for our target audience.",
+     "note": "Used to balance positive feedback with constructive criticism."
+    },
+    {
+     "text": "with all due respect",
+     "kind": "chunk",
+     "form": "With all due respect",
+     "meaning": "A polite but firm way to introduce a disagreement or criticism.",
+     "example": "With all due respect, I think your analysis overlooks some key market trends.",
+     "plain": "I respectfully disagree; I think your analysis overlooks some key market trends.",
+     "note": "A formal phrase, often used when disagreeing with someone in authority. Can sound a bit confrontational."
+    },
+    {
+     "text": "I'm a bit concerned about",
+     "kind": "frame",
+     "form": "I'm a bit concerned about",
+     "meaning": "Express a mild worry or reservation about something.",
+     "example": "I'm a bit concerned about the tight deadline for this project, given our current workload.",
+     "plain": "I'm slightly worried about the tight deadline for this project, given our current workload.",
+     "note": "A common and polite way to express a reservation without being overly negative."
+    },
+    {
+     "text": "it seems to me that",
+     "kind": "frame",
+     "form": "It seems to me that",
+     "meaning": "Introduce a personal observation or opinion, often a gentle suggestion or critique.",
+     "example": "It seems to me that the new process adds an unnecessary step, slowing things down.",
+     "plain": "I think the new process adds an unnecessary step, slowing things down.",
+     "note": "A polite and indirect way to offer an opinion or observation."
+    },
+    {
+     "text": "I would suggest that",
+     "kind": "frame",
+     "form": "I would suggest that",
+     "meaning": "Offer advice or a recommendation in a polite and indirect manner.",
+     "example": "I would suggest that we revisit the budget figures before presenting them to the board.",
+     "plain": "I recommend that we revisit the budget figures before presenting them to the board.",
+     "note": "A polite and professional way to give advice."
+    },
+    {
+     "text": "point out that",
+     "kind": "collocation",
+     "form": "point out that",
+     "meaning": "To draw attention to a specific fact or detail.",
+     "example": "I wanted to point out that the data in section three seems inconsistent with the appendix.",
+     "plain": "I wanted to mention that the data in section three seems inconsistent with the appendix.",
+     "note": "Used to highlight a specific detail, often a problem or discrepancy."
+    },
+    {
+     "text": "bear in mind",
+     "kind": "chunk",
+     "form": "bear in mind",
+     "meaning": "Remember or consider a particular fact or circumstance.",
+     "example": "When giving feedback, bear in mind that everyone responds differently to criticism.",
+     "plain": "When giving feedback, remember that everyone responds differently to criticism.",
+     "note": "Used to remind someone of an important consideration."
+    },
+    {
+     "text": "for future reference",
+     "kind": "chunk",
+     "form": "for future reference",
+     "meaning": "For use or consideration at a later time, often when giving advice.",
+     "example": "For future reference, it's better to confirm meeting times with all attendees beforehand.",
+     "plain": "In the future, it's better to confirm meeting times with all attendees beforehand.",
+     "note": "Used to give advice that applies to similar situations in the future."
+    },
+    {
+     "text": "I'm not entirely sure",
+     "kind": "frame",
+     "form": "I'm not entirely sure",
+     "meaning": "Express a degree of doubt or uncertainty, often preceding a gentle critique.",
+     "example": "I'm not entirely sure this solution aligns with our long-term strategic goals.",
+     "plain": "I doubt this solution fully aligns with our long-term strategic goals.",
+     "note": "A polite and indirect way to express a reservation or disagreement."
+    },
+    {
+     "text": "it might be worth",
+     "kind": "frame",
+     "form": "It might be worth",
+     "meaning": "Suggest that something is a good idea to consider or try.",
+     "example": "It might be worth exploring alternative software options before making a final decision.",
+     "plain": "We should consider exploring alternative software options before making a final decision.",
+     "note": "A gentle way to suggest an action or idea."
+    },
+    {
+     "text": "I'd like to offer",
+     "kind": "frame",
+     "form": "I'd like to offer",
+     "meaning": "Introduce a suggestion, advice, or help in a polite manner.",
+     "example": "I'd like to offer some thoughts on how we could streamline the onboarding process.",
+     "plain": "I want to share some thoughts on how we could streamline the onboarding process.",
+     "note": "A polite and professional way to give advice or suggestions."
+    },
+    {
+     "text": "a bit more",
+     "kind": "chunk",
+     "form": "a bit more",
+     "meaning": "A small additional amount or degree, often used to soften a suggestion for improvement.",
+     "example": "The report needs a bit more detail in the executive summary to be truly effective.",
+     "plain": "The report needs more detail in the executive summary to be truly effective.",
+     "note": "Used to soften a request for improvement, making it sound less demanding."
+    },
+    {
+     "text": "could be improved",
+     "kind": "collocation",
+     "form": "could be improved",
+     "meaning": "Indicates that something is not perfect and has potential for betterment.",
+     "example": "The communication between departments could be improved to avoid future misunderstandings.",
+     "plain": "The communication between departments needs to get better to avoid future misunderstandings.",
+     "note": "A common and polite way to suggest an area for development."
+    },
+    {
+     "text": "I'd recommend that",
+     "kind": "frame",
+     "form": "I'd recommend that",
+     "meaning": "Offer a strong suggestion or piece of advice.",
+     "example": "I'd recommend that you review the client's previous feedback before finalizing the design.",
+     "plain": "I advise you to review the client's previous feedback before finalizing the design.",
+     "note": "A professional way to give advice, slightly stronger than \"I would suggest\"."
+    },
+    {
+     "text": "take into account",
+     "kind": "collocation",
+     "form": "take into account",
+     "meaning": "To consider particular facts, circumstances, or opinions when making a decision.",
+     "example": "We need to take into account the team's workload before assigning any new tasks.",
+     "plain": "We need to consider the team's workload before assigning any new tasks.",
+     "note": "A common phrase for emphasizing the need to consider all relevant factors."
+    },
+    {
+     "text": "I'm wondering if",
+     "kind": "frame",
+     "form": "I'm wondering if",
+     "meaning": "Introduce a question or a gentle suggestion in a tentative way.",
+     "example": "I'm wondering if we should consider a different approach to reach a wider audience.",
+     "plain": "Should we consider a different approach to reach a wider audience?",
+     "note": "A polite and indirect way to ask a question or make a suggestion."
+    },
+    {
+     "text": "it's worth noting that",
+     "kind": "chunk",
+     "form": "It's worth noting that",
+     "meaning": "Introduce an important piece of information or a relevant fact.",
+     "example": "It's worth noting that the project timeline has shifted, impacting our delivery date.",
+     "plain": "We should note that the project timeline has shifted, impacting our delivery date.",
+     "note": "Used to highlight an important detail, often when giving an update or context."
+    },
+    {
+     "text": "I just wanted to",
+     "kind": "frame",
+     "form": "I just wanted to",
+     "meaning": "Introduce the purpose of your communication, often to give feedback or make a point.",
+     "example": "I just wanted to mention that the report contains a few minor typos.",
+     "plain": "I wanted to mention that the report contains a few minor typos.",
+     "note": "A common, informal way to introduce a point, often a gentle one."
+    },
+    {
+     "text": "in my opinion",
+     "kind": "chunk",
+     "form": "In my opinion",
+     "meaning": "Introduce a personal viewpoint or judgment.",
+     "example": "In my opinion, the new marketing campaign needs a stronger call to action.",
+     "plain": "I think the new marketing campaign needs a stronger call to action.",
+     "note": "A standard way to express a personal view. Can be softened with \"humble\" or \"honest\"."
+    },
+    {
+     "text": "I think we should",
+     "kind": "frame",
+     "form": "I think we should",
+     "meaning": "Introduce a suggestion or recommendation for a course of action.",
+     "example": "I think we should schedule a follow-up meeting to discuss these points further.",
+     "plain": "We should schedule a follow-up meeting to discuss these points further.",
+     "note": "A direct but collaborative way to suggest an action."
+    },
+    {
+     "text": "I appreciate your feedback",
+     "kind": "chunk",
+     "form": "I appreciate your feedback",
+     "meaning": "Acknowledge and thank someone for their comments or critique.",
+     "example": "I appreciate your feedback on the presentation; I'll definitely consider your points.",
+     "plain": "Thank you for your comments on the presentation; I'll definitely consider your points.",
+     "note": "A polite and professional way to acknowledge feedback, even if you don't fully agree."
+    },
+    {
+     "text": "take something on board",
+     "kind": "collocation",
+     "form": "take that on board",
+     "meaning": "To understand and accept an idea or suggestion, often for future action.",
+     "example": "That's a valid point about the timeline; I'll take that on board for the next project.",
+     "plain": "That's a valid point about the timeline; I'll consider it for the next project.",
+     "note": "A common British English phrase for accepting advice or criticism."
+    },
+    {
+     "text": "I hear what you're saying",
+     "kind": "chunk",
+     "form": "I hear what you're saying",
+     "meaning": "Acknowledge and understand someone's point, even if you don't fully agree.",
+     "example": "I hear what you're saying about the budget constraints, but we need to invest in quality.",
+     "plain": "I understand your point about the budget constraints, but we need to invest in quality.",
+     "note": "Used to show you've listened, often before presenting a counter-argument."
+    },
+    {
+     "text": "that's a fair point",
+     "kind": "chunk",
+     "form": "That's a fair point",
+     "meaning": "Acknowledge that someone's observation or criticism is reasonable and valid.",
+     "example": "That's a fair point about the lack of communication; we definitely need to improve there.",
+     "plain": "You're right about the lack of communication; we definitely need to improve there.",
+     "note": "A common way to acknowledge valid criticism without necessarily agreeing to change."
+    },
+    {
+     "text": "I'll look into that",
+     "kind": "chunk",
+     "form": "I'll look into that",
+     "meaning": "Promise to investigate or examine a matter further.",
+     "example": "You mentioned a discrepancy in the figures; I'll look into that right away.",
+     "plain": "You mentioned a discrepancy in the figures; I will investigate it right away.",
+     "note": "A common, reassuring response when someone raises a problem."
+    },
+    {
+     "text": "I understand your concern",
+     "kind": "frame",
+     "form": "I understand your concern",
+     "meaning": "Acknowledge someone's worry or issue, showing empathy.",
+     "example": "I understand your concern about the project's scope, and we're actively managing it.",
+     "plain": "I recognize your worry about the project's scope, and we're actively managing it.",
+     "note": "A polite and empathetic way to respond to someone's worry."
+    },
+    {
+     "text": "thanks for bringing that up",
+     "kind": "chunk",
+     "form": "Thanks for bringing that up",
+     "meaning": "Express gratitude for someone raising an issue or topic.",
+     "example": "Thanks for bringing that up; it's an important point we need to address in the meeting.",
+     "plain": "I appreciate you mentioning that; it's an important point we need to address.",
+     "note": "A polite and common way to acknowledge someone for raising a topic."
+    },
+    {
+     "text": "I'll keep that in mind",
+     "kind": "chunk",
+     "form": "I'll keep that in mind",
+     "meaning": "Promise to remember a piece of information or advice for future consideration.",
+     "example": "Your suggestion about the new software is helpful; I'll keep that in mind for our next review.",
+     "plain": "Your suggestion about the new software is helpful; I'll remember it for our next review.",
+     "note": "A common, polite way to acknowledge advice without committing to immediate action."
+    },
+    {
+     "text": "you've got a point",
+     "kind": "chunk",
+     "form": "You've got a point",
+     "meaning": "Acknowledge that someone has made a valid or reasonable argument.",
+     "example": "You've got a point about the tight deadline; we might need to re-prioritize some tasks.",
+     "plain": "You're right about the tight deadline; we might need to re-prioritize some tasks.",
+     "note": "An informal but common way to concede a point in a discussion."
+    },
+    {
+     "text": "I see what you mean",
+     "kind": "chunk",
+     "form": "I see what you mean",
+     "meaning": "Indicate that you understand someone's perspective or explanation.",
+     "example": "I see what you mean about the client's expectations; they are quite high for this project.",
+     "plain": "I understand your point about the client's expectations; they are quite high.",
+     "note": "A common, neutral phrase to show understanding."
+    },
+    {
+     "text": "let me clarify",
+     "kind": "frame",
+     "form": "Let me clarify",
+     "meaning": "Introduce an explanation to make something clearer or correct a misunderstanding.",
+     "example": "Let me clarify my previous statement; I meant the *initial* proposal, not the final one.",
+     "plain": "I want to make my previous statement clearer; I meant the *initial* proposal.",
+     "note": "Used when you need to explain something further or correct a misinterpretation."
+    },
+    {
+     "text": "I take full responsibility",
+     "kind": "chunk",
+     "form": "I take full responsibility",
+     "meaning": "Accept complete blame or accountability for a mistake or outcome.",
+     "example": "I take full responsibility for the oversight in the budget calculations; it won't happen again.",
+     "plain": "I am completely responsible for the oversight in the budget calculations; it won't happen again.",
+     "note": "A strong and direct way to admit fault."
+    },
+    {
+     "text": "I'm open to suggestions",
+     "kind": "chunk",
+     "form": "I'm open to suggestions",
+     "meaning": "Indicate willingness to hear and consider new ideas or advice.",
+     "example": "I'm open to suggestions on how we can improve our team's communication flow.",
+     "plain": "I am willing to hear new ideas on how we can improve our team's communication flow.",
+     "note": "A positive and collaborative phrase, inviting input from others."
+    },
+    {
+     "text": "I'll make sure to",
+     "kind": "frame",
+     "form": "I'll make sure to",
+     "meaning": "Promise to take a specific action or ensure something happens.",
+     "example": "I'll make sure to double-check all the figures before submitting the final report.",
+     "plain": "I will double-check all the figures before submitting the final report.",
+     "note": "A common way to reassure someone that you will address their point."
+    },
+    {
+     "text": "I'm glad you brought that up",
+     "kind": "chunk",
+     "form": "I'm glad you brought that up",
+     "meaning": "Express appreciation that someone raised a particular topic or issue.",
+     "example": "I'm glad you brought that up; it's an important point we need to discuss as a team.",
+     "plain": "I'm happy you mentioned that; it's an important point we need to discuss as a team.",
+     "note": "A positive way to acknowledge someone for raising a relevant issue."
+    },
+    {
+     "text": "I'll do my best",
+     "kind": "chunk",
+     "form": "I'll do my best",
+     "meaning": "Promise to try as hard as possible to achieve something.",
+     "example": "I'll do my best to incorporate your feedback into the next iteration of the design.",
+     "plain": "I will try my hardest to incorporate your feedback into the next iteration of the design.",
+     "note": "A common, reassuring phrase when committing to an effort."
+    },
+    {
+     "text": "point taken",
+     "kind": "chunk",
+     "form": "Point taken",
+     "meaning": "Acknowledge that you understand and accept a criticism or suggestion.",
+     "example": "Point taken; I should have communicated the changes more clearly to the whole team.",
+     "plain": "I understand your criticism; I should have communicated the changes more clearly.",
+     "note": "A concise and direct way to acknowledge and accept a valid point."
+    },
+    {
+     "text": "I'll keep an eye on",
+     "kind": "frame",
+     "form": "I'll keep an eye on",
+     "meaning": "Promise to monitor or pay attention to a situation or issue.",
+     "example": "I'll keep an eye on the project's progress to ensure we stay within budget.",
+     "plain": "I will monitor the project's progress to ensure we stay within budget.",
+     "note": "A common way to reassure someone that you will be vigilant about something."
+    },
+    {
+     "text": "I'm working on it",
+     "kind": "chunk",
+     "form": "I'm working on it",
+     "meaning": "Indicate that you are currently addressing or trying to resolve an issue.",
+     "example": "You mentioned the report's formatting issues; I'm working on it and expect to finish soon.",
+     "plain": "You mentioned the report's formatting issues; I am currently fixing them.",
+     "note": "A common, informal response to indicate progress on a task or issue."
+    },
+    {
+     "text": "I'll get back to you",
+     "kind": "chunk",
+     "form": "I'll get back to you",
+     "meaning": "Promise to respond or provide more information at a later time.",
+     "example": "That's a complex question about the new policy; I'll get back to you with a detailed answer.",
+     "plain": "That's a complex question about the new policy; I will give you a detailed answer later.",
+     "note": "A common, polite way to defer an answer when you need more time or information."
+    },
+    {
+     "text": "let's talk about",
+     "kind": "frame",
+     "form": "Let's talk about",
+     "meaning": "Introduce a topic for discussion in a direct and collaborative way.",
+     "example": "Let's talk about the recent project's outcomes and what we can learn from them.",
+     "plain": "We should discuss the recent project's outcomes and what we can learn from them.",
+     "note": "A common, direct, and inclusive way to start a discussion."
+    },
+    {
+     "text": "I wanted to touch on",
+     "kind": "frame",
+     "form": "I wanted to touch on",
+     "meaning": "Introduce a topic briefly or mention it as part of a broader discussion.",
+     "example": "I wanted to touch on your performance this quarter, specifically your excellent client communication.",
+     "plain": "I wanted to briefly mention your performance this quarter, specifically your excellent client communication.",
+     "note": "A polite way to introduce a topic, often implying it's one of several points."
+    },
+    {
+     "text": "to sum up",
+     "kind": "chunk",
+     "form": "To sum up",
+     "meaning": "Introduce a summary of the main points that have been discussed.",
+     "example": "To sum up, the project was successful, but we need to improve our internal communication.",
+     "plain": "In summary, the project was successful, but we need to improve our internal communication.",
+     "note": "A common phrase for concluding a discussion or presentation."
+    },
+    {
+     "text": "on the whole",
+     "kind": "chunk",
+     "form": "On the whole",
+     "meaning": "Considering most aspects of a situation; generally.",
+     "example": "On the whole, the team's performance this year has been outstanding, with only minor issues.",
+     "plain": "Generally, the team's performance this year has been outstanding, with only minor issues.",
+     "note": "Used to give a general assessment, often before mentioning specific details."
+    },
+    {
+     "text": "all things considered",
+     "kind": "chunk",
+     "form": "All things considered",
+     "meaning": "Taking all factors and circumstances into account.",
+     "example": "All things considered, the launch went smoothly, despite the initial technical glitches.",
+     "plain": "Considering all factors, the launch went smoothly, despite the initial technical glitches.",
+     "note": "Used to introduce a balanced conclusion after weighing various factors."
+    },
+    {
+     "text": "in general",
+     "kind": "chunk",
+     "form": "In general",
+     "meaning": "Usually; mostly; considering the overall situation rather than specific details.",
+     "example": "In general, your work is excellent, but this particular report needs more attention to detail.",
+     "plain": "Usually, your work is excellent, but this particular report needs more attention to detail.",
+     "note": "Used to give a broad overview before diving into specifics."
+    },
+    {
+     "text": "what I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "Explain the main point or intention behind what you are saying.",
+     "example": "What I'm getting at is that we need a clearer strategy for client retention next quarter.",
+     "plain": "My main point is that we need a clearer strategy for client retention next quarter.",
+     "note": "Used to clarify your main message, especially if you've been indirect."
+    },
+    {
+     "text": "the bottom line is",
+     "kind": "frame",
+     "form": "The bottom line is",
+     "meaning": "State the most important fact or the essential truth of a situation.",
+     "example": "The bottom line is, we need to improve our efficiency to meet these new targets.",
+     "plain": "The most important thing is that we need to improve our efficiency to meet these new targets.",
+     "note": "Used to emphasize the crucial point or outcome. Can be quite direct."
+    },
+    {
+     "text": "to be fair",
+     "kind": "chunk",
+     "form": "To be fair",
+     "meaning": "Introduce a mitigating factor or a balanced perspective, often to defend someone or something.",
+     "example": "To be fair, the team was under immense pressure, which explains some of the delays.",
+     "plain": "We should acknowledge that the team was under immense pressure, which explains some delays.",
+     "note": "Used to introduce a point that balances a previous criticism or negative statement."
+    },
+    {
+     "text": "for what it's worth",
+     "kind": "chunk",
+     "form": "For what it's worth",
+     "meaning": "Introduce a piece of advice or an opinion that you think might be helpful, but might not be.",
+     "example": "For what it's worth, I think a different color scheme would make the slides more engaging.",
+     "plain": "I think a different color scheme would make the slides more engaging, but it's just my opinion.",
+     "note": "Used to offer a suggestion or opinion humbly, acknowledging it might not be highly valued."
+    },
+    {
+     "text": "I'll keep it brief",
+     "kind": "chunk",
+     "form": "I'll keep it brief",
+     "meaning": "State your intention to speak concisely or to summarize quickly.",
+     "example": "I'll keep it brief, but I wanted to highlight a few key successes from this quarter.",
+     "plain": "I will speak briefly, but I wanted to highlight a few key successes from this quarter.",
+     "note": "Used to signal that you won't take up much time, often at the start of a short speech."
+    },
+    {
+     "text": "let's move on to",
+     "kind": "frame",
+     "form": "Let's move on to",
+     "meaning": "Suggest transitioning to the next topic or agenda item.",
+     "example": "Now that we've discussed the budget, let's move on to the marketing strategy.",
+     "plain": "Now that we've discussed the budget, let's proceed to the marketing strategy.",
+     "note": "A common phrase for guiding a discussion or meeting."
+    },
+    {
+     "text": "I'd like to add",
+     "kind": "frame",
+     "form": "I'd like to add",
+     "meaning": "Introduce an additional point or piece of information to a discussion.",
+     "example": "I'd like to add that the team's collaboration on this project was exceptional.",
+     "plain": "I want to also say that the team's collaboration on this project was exceptional.",
+     "note": "A polite way to contribute an extra point to a conversation."
+    },
+    {
+     "text": "to be perfectly honest",
+     "kind": "chunk",
+     "form": "To be perfectly honest",
+     "meaning": "Emphasize that you are about to state your true and frank opinion.",
+     "example": "To be perfectly honest, I don't think the current timeline is realistic for this complex task.",
+     "plain": "Frankly, I don't think the current timeline is realistic for this complex task.",
+     "note": "A stronger version of \"to be honest,\" indicating a very direct or potentially difficult truth."
+    },
+    {
+     "text": "the way I see it",
+     "kind": "frame",
+     "form": "The way I see it",
+     "meaning": "Introduce your personal interpretation or understanding of a situation.",
+     "example": "The way I see it, we have two main options for resolving this client issue.",
+     "plain": "In my opinion, we have two main options for resolving this client issue.",
+     "note": "A common way to present your perspective, often before offering a solution."
+    },
+    {
+     "text": "it's important to",
+     "kind": "frame",
+     "form": "It's important to",
+     "meaning": "Emphasize the significance or necessity of a particular action or consideration.",
+     "example": "It's important to acknowledge the hard work everyone put into this successful launch.",
+     "plain": "We must acknowledge the hard work everyone put into this successful launch.",
+     "note": "Used to highlight the significance of something, often when giving praise or advice."
+    },
+    {
+     "text": "I just wanted to check in",
+     "kind": "frame",
+     "form": "I just wanted to check in",
+     "meaning": "Initiate a conversation to see how someone is doing or to get an update.",
+     "example": "I just wanted to check in on your progress with the new software implementation.",
+     "plain": "I wanted to ask about your progress with the new software implementation.",
+     "note": "A common, informal way to start a conversation, often for a quick update or to offer support."
+    },
+    {
+     "text": "I'm happy to help",
+     "kind": "chunk",
+     "form": "I'm happy to help",
+     "meaning": "Offer assistance or support willingly.",
+     "example": "If you need any guidance on the new project, I'm happy to help.",
+     "plain": "If you need any guidance on the new project, I will gladly assist you.",
+     "note": "A common and polite way to offer support."
+    },
+    {
+     "text": "I'm confident that",
+     "kind": "frame",
+     "form": "I'm confident that",
+     "meaning": "Express strong belief or assurance about a future outcome or fact.",
+     "example": "I'm confident that with a few adjustments, this proposal will be very strong.",
+     "plain": "I strongly believe that with a few adjustments, this proposal will be very strong.",
+     "note": "Used to express certainty or positive expectation, often when giving encouraging feedback."
+    },
+    {
+     "text": "let's focus on",
+     "kind": "frame",
+     "form": "let's focus on",
+     "meaning": "Suggest directing attention and effort towards a specific area or task.",
+     "example": "For the next quarter, let's focus on improving our customer satisfaction scores.",
+     "plain": "For the next quarter, we should concentrate on improving our customer satisfaction scores.",
+     "note": "A common way to guide a team or individual towards a specific goal."
+    },
+    {
+     "text": "I'm pleased with",
+     "kind": "frame",
+     "form": "I'm pleased with",
+     "meaning": "Express satisfaction or happiness about something.",
+     "example": "I'm pleased with the progress you've made on the project this week.",
+     "plain": "I'm happy about the progress you've made on the project this week.",
+     "note": "A common and positive way to give feedback, often from a manager."
+    },
+    {
+     "text": "you did a great job",
+     "kind": "chunk",
+     "form": "You did a great job",
+     "meaning": "Praise someone for performing a task very well.",
+     "example": "You did a great job handling that difficult client situation yesterday.",
+     "plain": "You handled that difficult client situation very well yesterday.",
+     "note": "A common, direct, and enthusiastic way to give praise."
+    },
+    {
+     "text": "I'm impressed with",
+     "kind": "frame",
+     "form": "I'm impressed with",
+     "meaning": "Express admiration for someone's qualities or achievements.",
+     "example": "I'm impressed with your ability to manage multiple tasks effectively.",
+     "plain": "I admire your ability to manage multiple tasks effectively.",
+     "note": "A sincere way to give praise, focusing on a skill or quality."
+    },
+    {
+     "text": "well done on",
+     "kind": "frame",
+     "form": "Well done on",
+     "meaning": "Congratulate someone on a specific achievement or successful action.",
+     "example": "Well done on securing that new contract; it's a significant win for the team.",
+     "plain": "Congratulations on securing that new contract; it's a significant win.",
+     "note": "A common and direct way to praise a specific accomplishment."
+    },
+    {
+     "text": "you've really excelled at",
+     "kind": "frame",
+     "form": "You've really excelled at",
+     "meaning": "Praise someone for performing exceptionally well in a particular area.",
+     "example": "You've really excelled at client presentations this quarter, showing great confidence.",
+     "plain": "You've performed exceptionally well at client presentations this quarter.",
+     "note": "A strong compliment, highlighting outstanding performance in a specific skill."
+    },
+    {
+     "text": "I'm happy to see",
+     "kind": "frame",
+     "form": "I'm happy to see",
+     "meaning": "Express pleasure or satisfaction about an observation or development.",
+     "example": "I'm happy to see your proactive approach to problem-solving on this project.",
+     "plain": "I'm pleased by your proactive approach to problem-solving on this project.",
+     "note": "A positive and encouraging way to give feedback, often from a manager."
+    },
+    {
+     "text": "that's a solid idea",
+     "kind": "chunk",
+     "form": "That's a solid idea",
+     "meaning": "Acknowledge that an idea is good, well-thought-out, and practical.",
+     "example": "That's a solid idea for improving our workflow; let's explore it further.",
+     "plain": "That's a good idea for improving our workflow; let's explore it further.",
+     "note": "A common, positive way to affirm a good suggestion."
+    },
+    {
+     "text": "I'm really impressed by",
+     "kind": "frame",
+     "form": "I'm really impressed by",
+     "meaning": "Express strong admiration for someone's qualities or actions.",
+     "example": "I'm really impressed by your resilience in handling the unexpected challenges.",
+     "plain": "I truly admire your resilience in handling the unexpected challenges.",
+     "note": "A stronger version of \"I'm impressed by,\" conveying deeper admiration."
+    },
+    {
+     "text": "it would be great if",
+     "kind": "frame",
+     "form": "It would be great if",
+     "meaning": "Introduce a polite suggestion for an improvement or desired outcome.",
+     "example": "It would be great if you could provide more regular updates on your progress.",
+     "plain": "Please provide more regular updates on your progress; that would be helpful.",
+     "note": "A polite and indirect way to make a request or suggest an improvement."
+    },
+    {
+     "text": "I'd like to see",
+     "kind": "frame",
+     "form": "I'd like to see",
+     "meaning": "Express a desire for a particular action or outcome, often as a suggestion.",
+     "example": "I'd like to see more proactive communication from the team on potential roadblocks.",
+     "plain": "I want to see more proactive communication from the team on potential roadblocks.",
+     "note": "A common way for a manager to express expectations or desired changes."
+    },
+    {
+     "text": "it might be better to",
+     "kind": "frame",
+     "form": "It might be better to",
+     "meaning": "Suggest an alternative approach or action that could be more effective.",
+     "example": "It might be better to schedule a separate meeting for brainstorming new ideas.",
+     "plain": "Scheduling a separate meeting for brainstorming new ideas could be better.",
+     "note": "A gentle and indirect way to suggest an alternative or improvement."
+    },
+    {
+     "text": "I'm a little worried about",
+     "kind": "frame",
+     "form": "I'm a little worried about",
+     "meaning": "Express a slight concern or apprehension about something.",
+     "example": "I'm a little worried about the potential impact of these changes on team morale.",
+     "plain": "I'm slightly concerned about the potential impact of these changes on team morale.",
+     "note": "A common and polite way to express a mild reservation."
+    },
+    {
+     "text": "we need to address",
+     "kind": "frame",
+     "form": "We need to address",
+     "meaning": "Indicate that a particular issue or problem requires attention and action.",
+     "example": "We need to address the inconsistencies in the data before the final presentation.",
+     "plain": "We must deal with the inconsistencies in the data before the final presentation.",
+     "note": "A direct and clear way to highlight a problem that requires resolution."
+    },
+    {
+     "text": "I'm not entirely convinced that",
+     "kind": "frame",
+     "form": "I'm not entirely convinced that",
+     "meaning": "Express a degree of doubt or disagreement with an idea or statement.",
+     "example": "I'm not entirely convinced that this strategy will yield the desired results.",
+     "plain": "I doubt this strategy will fully achieve the desired results.",
+     "note": "A polite and indirect way to express skepticism or disagreement."
+    },
+    {
+     "text": "there's an opportunity to",
+     "kind": "frame",
+     "form": "There's an opportunity to",
+     "meaning": "Highlight a chance for improvement or development.",
+     "example": "There's an opportunity to streamline this process and save significant time.",
+     "plain": "We have a chance to streamline this process and save significant time.",
+     "note": "A positive way to frame a suggestion for improvement, focusing on potential gains."
+    },
+    {
+     "text": "I'd encourage you to",
+     "kind": "frame",
+     "form": "I'd encourage you to",
+     "meaning": "Suggest or advise someone to take a particular action.",
+     "example": "I'd encourage you to seek out more training opportunities in project management.",
+     "plain": "I advise you to seek out more training opportunities in project management.",
+     "note": "A polite and supportive way to give advice or suggest development."
+    },
+    {
+     "text": "I'm not sure about",
+     "kind": "frame",
+     "form": "I'm not sure about",
+     "meaning": "Express uncertainty or reservation regarding a specific aspect.",
+     "example": "I'm not sure about the feasibility of implementing this new system by next month.",
+     "plain": "I'm uncertain about whether we can implement this new system by next month.",
+     "note": "A common and polite way to express doubt or a potential problem."
+    },
+    {
+     "text": "I'll take that into consideration",
+     "kind": "chunk",
+     "form": "I'll take that into consideration",
+     "meaning": "Promise to think about a suggestion or piece of feedback.",
+     "example": "Your point about the budget is noted; I'll take that into consideration for the next phase.",
+     "plain": "Your point about the budget is noted; I will think about it for the next phase.",
+     "note": "A polite way to acknowledge feedback without committing to immediate action."
+    },
+    {
+     "text": "I appreciate you pointing that out",
+     "kind": "chunk",
+     "form": "I appreciate you pointing that out",
+     "meaning": "Thank someone for drawing attention to a specific detail or issue.",
+     "example": "I appreciate you pointing that out; I hadn't noticed the error in the calculations.",
+     "plain": "Thank you for mentioning that; I hadn't noticed the error in the calculations.",
+     "note": "A polite and common way to thank someone for highlighting a detail, often a mistake."
+    },
+    {
+     "text": "you're absolutely right",
+     "kind": "chunk",
+     "form": "You're absolutely right",
+     "meaning": "Express complete agreement with someone's statement or observation.",
+     "example": "You're absolutely right; we should have involved the legal team earlier in the process.",
+     "plain": "You are completely correct; we should have involved the legal team earlier.",
+     "note": "A strong and direct way to agree with someone, often acknowledging a mistake."
+    },
+    {
+     "text": "I'll make a note of that",
+     "kind": "chunk",
+     "form": "I'll make a note of that",
+     "meaning": "Promise to record a piece of information or a suggestion.",
+     "example": "That's a good idea for the next meeting agenda; I'll make a note of that.",
+     "plain": "That's a good idea for the next meeting agenda; I will write it down.",
+     "note": "A common, reassuring phrase indicating that a point has been heard and will be remembered."
+    },
+    {
+     "text": "I'll follow up on that",
+     "kind": "chunk",
+     "form": "I'll follow up on that",
+     "meaning": "Promise to take further action or investigate a matter.",
+     "example": "You raised a question about the client's budget; I'll follow up on that and get back to you.",
+     "plain": "You raised a question about the client's budget; I will investigate it and respond.",
+     "note": "A common, professional way to commit to taking action on an issue."
+    },
+    {
+     "text": "I'll be sure to",
+     "kind": "frame",
+     "form": "I'll be sure to",
+     "meaning": "Promise to definitely take a specific action.",
+     "example": "I'll be sure to include your feedback in the revised project proposal.",
+     "plain": "I will definitely include your feedback in the revised project proposal.",
+     "note": "A strong commitment to perform an action."
+    },
+    {
+     "text": "I'm committed to",
+     "kind": "frame",
+     "form": "I'm committed to",
+     "meaning": "Express strong dedication or promise to a particular goal or action.",
+     "example": "I'm committed to improving my time management skills after this feedback session.",
+     "plain": "I promise to improve my time management skills after this feedback session.",
+     "note": "A strong statement of dedication, often used when accepting criticism."
+    },
+    {
+     "text": "I'll try to be more",
+     "kind": "frame",
+     "form": "I'll try to be more",
+     "meaning": "Promise to make an effort to improve a specific behavior or quality.",
+     "example": "I'll try to be more proactive in communicating updates to the team moving forward.",
+     "plain": "I will make an effort to communicate updates to the team more proactively.",
+     "note": "A common way to respond to constructive criticism by committing to change."
+    },
+    {
+     "text": "I'll work on that",
+     "kind": "chunk",
+     "form": "I'll work on that",
+     "meaning": "Promise to address or improve a specific area or task.",
+     "example": "You mentioned my presentation style; I'll work on that to make it more engaging.",
+     "plain": "You mentioned my presentation style; I will try to improve it.",
+     "note": "A common, concise way to accept criticism and commit to improvement."
+    },
+    {
+     "text": "I'll keep you updated",
+     "kind": "chunk",
+     "form": "I'll keep you updated",
+     "meaning": "Promise to provide regular information about progress or developments.",
+     "example": "Regarding the software bug, I'll keep you updated on our progress in resolving it.",
+     "plain": "Regarding the software bug, I will regularly inform you about our progress.",
+     "note": "A common, reassuring phrase used to manage expectations and maintain communication."
+    },
+    {
+     "text": "I'm grateful for",
+     "kind": "frame",
+     "form": "I'm grateful for",
+     "meaning": "Express deep appreciation or thankfulness for something.",
+     "example": "I'm grateful for your honest feedback; it helps me grow professionally.",
+     "plain": "I appreciate your honest feedback; it helps me grow professionally.",
+     "note": "A sincere way to express thanks, especially for valuable input."
+    },
+    {
+     "text": "I'm taking steps to",
+     "kind": "frame",
+     "form": "I'm taking steps to",
+     "meaning": "Indicate that you are actively implementing measures to achieve a goal or address an issue.",
+     "example": "I'm taking steps to improve my project planning after reviewing your comments.",
+     "plain": "I am actively working to improve my project planning after reviewing your comments.",
+     "note": "Used to show proactive engagement in addressing feedback or making improvements."
+    },
+    {
+     "text": "I'm confident we can",
+     "kind": "frame",
+     "form": "I'm confident we can",
+     "meaning": "Express strong belief in the ability of a group to achieve something.",
+     "example": "I'm confident we can overcome these challenges with a collaborative approach.",
+     "plain": "I strongly believe we can overcome these challenges with a collaborative approach.",
+     "note": "Used to express optimism and encourage teamwork, often after discussing issues."
+    },
+    {
+     "text": "I'm looking forward to",
+     "kind": "frame",
+     "form": "I'm looking forward to",
+     "meaning": "Express anticipation or eagerness for a future event or outcome.",
+     "example": "I'm looking forward to seeing the improvements in the next version of the report.",
+     "plain": "I'm excited to see the improvements in the next version of the report.",
+     "note": "A positive way to express expectation, often after giving constructive feedback."
+    },
+    {
+     "text": "I'm happy to discuss",
+     "kind": "frame",
+     "form": "I'm happy to discuss",
+     "meaning": "Offer to talk further about a topic or issue.",
+     "example": "If you have more questions about the new policy, I'm happy to discuss them.",
+     "plain": "If you have more questions about the new policy, I will gladly discuss them.",
+     "note": "A polite and open offer to continue a conversation or provide more information."
+    },
+    {
+     "text": "I'm here to support you",
+     "kind": "chunk",
+     "form": "I'm here to support you",
+     "meaning": "Offer help and encouragement to someone.",
+     "example": "As you implement these changes, remember I'm here to support you every step of the way.",
+     "plain": "As you implement these changes, remember I will help you every step of the way.",
+     "note": "A common, reassuring phrase from a manager or mentor offering assistance."
+    },
+    {
+     "text": "I'm sure that",
+     "kind": "frame",
+     "form": "I'm sure that",
+     "meaning": "Express certainty or strong belief about a fact or outcome.",
+     "example": "I'm sure that with a bit more practice, you'll master the new software.",
+     "plain": "I believe that with a bit more practice, you'll master the new software.",
+     "note": "Used to express confidence, often when giving encouraging feedback."
+    },
+    {
+     "text": "I'm pleased to announce",
+     "kind": "frame",
+     "form": "I'm pleased to announce",
+     "meaning": "Introduce positive news or a positive development.",
+     "example": "I'm pleased to announce that the team successfully met all project milestones.",
+     "plain": "I'm happy to share that the team successfully met all project milestones.",
+     "note": "A formal and positive way to deliver good news, often in a team setting."
+    },
+    {
+     "text": "I'm glad to hear that",
+     "kind": "chunk",
+     "form": "I'm glad to hear that",
+     "meaning": "Express happiness or relief about information received.",
+     "example": "I'm glad to hear that you've already started implementing the feedback.",
+     "plain": "I'm happy to know that you've already started implementing the feedback.",
+     "note": "A common, positive response to good news or progress."
+    },
+    {
+     "text": "I'm happy with",
+     "kind": "frame",
+     "form": "I'm happy with",
+     "meaning": "Express satisfaction or contentment with something.",
+     "example": "I'm happy with the overall quality of the final report, despite minor issues.",
+     "plain": "I'm satisfied with the overall quality of the final report, despite minor issues.",
+     "note": "A common and direct way to express positive feedback."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "give credit where credit is due": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "go above and beyond": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "really appreciate your": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a job well done": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "keep up the good work": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "exceeded expectations": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a real asset": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "shine a light on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a great point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm impressed by": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i have a suggestion": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just to be clear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my only concern is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it might be helpful to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "from my perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to raise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "fall short of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "with all due respect": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm a bit concerned about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it seems to me that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i would suggest that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "point out that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "bear in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "for future reference": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely sure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it might be worth": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to offer": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a bit more": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could be improved": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd recommend that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "take into account": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm wondering if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i just wanted to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "in my opinion": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i think we should": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "room for improvement": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key definition accurately describes the meaning of the phrase in the given example."
+   },
+   "i appreciate your feedback": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "take something on board": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i hear what you're saying": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a fair point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll look into that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i understand your concern": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "thanks for bringing that up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll keep that in mind": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "you've got a point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i see what you mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let me clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i take full responsibility": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm open to suggestions": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll make sure to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad you brought that up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll do my best": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "point taken": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll keep an eye on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm working on it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll get back to you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's talk about": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i wanted to touch on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to sum up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "on the whole": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "all things considered": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in general": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the bottom line is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "for what it's worth": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'll keep it brief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's move on to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to add": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be perfectly honest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the way i see it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's important to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i just wanted to check in": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to help": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm confident that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's focus on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm pleased with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "you did a great job": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "well done on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "you've really excelled at": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm happy to see": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a solid idea": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm really impressed by": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it would be great if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to see": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it might be better to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to address": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely convinced that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "there's an opportunity to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd encourage you to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll take that into consideration": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i appreciate you pointing that out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "you're absolutely right": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll make a note of that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll follow up on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll be sure to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm committed to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll work on that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll keep you updated": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm grateful for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm taking steps to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident we can": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm looking forward to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm happy to discuss": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm here to support you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm sure that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm pleased to announce": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm glad to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm happy with": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm impressed with": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes expressing admiration for someone's qualities or achievements."
+   },
+   "i'm a little worried about": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key correctly defines expressing a mild concern or worry."
+   },
+   "i'll try to be more": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key accurately captures the commitment to improve a specific behavior or trait."
+   }
+  }
+ }
+}

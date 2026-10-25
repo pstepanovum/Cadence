@@ -76,4 +76,49 @@ export const BUNDLED_PACKS: BundledPack[] = [
     audio: {
     },
   },
+  {
+    id: "phrases-b2",
+    version: 1,
+    title: "Cadence phrases B2",
+    bytes: 660162,
+    content: require("../../assets/packs/phrases-b2/content.cpack"),
+    audio: {
+    },
+  },
+  {
+    id: "phrases-c1",
+    version: 1,
+    title: "Cadence phrases C1",
+    bytes: 878601,
+    content: require("../../assets/packs/phrases-c1/content.cpack"),
+    audio: {
+    },
+  },
+  {
+    id: "phrases-c2",
+    version: 1,
+    title: "Cadence phrases C2",
+    bytes: 954209,
+    content: require("../../assets/packs/phrases-c2/content.cpack"),
+    audio: {
+    },
+  },
+  {
+    id: "slang",
+    version: 1,
+    title: "Cadence slang",
+    bytes: 390731,
+    content: require("../../assets/packs/slang/content.cpack"),
+    audio: {
+    },
+  },
+  {
+    id: "fossilization",
+    version: 1,
+    title: "Cadence plateau track",
+    bytes: 89776,
+    content: require("../../assets/packs/fossilization/content.cpack"),
+    audio: {
+    },
+  },
 ];

@@ -1,0 +1,2205 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "interviews",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "draw on my experience",
+     "kind": "collocation",
+     "form": "draw on my experience",
+     "meaning": "To use one's past knowledge and skills to handle a current situation or task.",
+     "example": "I can draw on my experience in project management to lead this initiative effectively.",
+     "plain": "I can use my past knowledge in project management to lead this initiative effectively.",
+     "note": "Commonly used by candidates to highlight how their past roles prepare them for new challenges."
+    },
+    {
+     "text": "a steep learning curve",
+     "kind": "collocation",
+     "form": "a steep learning curve",
+     "meaning": "Describes a situation where a lot of new information or skills must be acquired quickly.",
+     "example": "Initially, there was a steep learning curve, but I quickly adapted to the new software.",
+     "plain": "Initially, I had to learn a lot very quickly, but I quickly adapted to the new software.",
+     "note": "Often used to describe a challenging but ultimately successful adaptation to a new role or skill."
+    },
+    {
+     "text": "to be fair",
+     "kind": "chunk",
+     "form": "To be fair",
+     "meaning": "Introduces a point that acknowledges another perspective or mitigates a previous statement.",
+     "example": "To be fair, the previous role had limited scope for independent decision-making.",
+     "plain": "The previous role had limited scope for independent decision-making, which is an important point.",
+     "note": "Used to introduce a balanced or mitigating point. Common in both formal and informal speech."
+    },
+    {
+     "text": "What I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "Used to clarify or summarize the main point the speaker is trying to make.",
+     "example": "What I'm getting at is, we need a candidate who can lead a team effectively from day one.",
+     "plain": "We need a candidate who can lead a team effectively from day one, that's my main point.",
+     "note": "A common way to rephrase or emphasize a point, often when the listener seems confused or needs clarification."
+    },
+    {
+     "text": "a proven track record",
+     "kind": "collocation",
+     "form": "a proven track record",
+     "meaning": "Evidence of past successes and achievements in a particular area.",
+     "example": "Our ideal candidate will have a proven track record in managing large-scale projects.",
+     "plain": "Our ideal candidate will have evidence of past successes in managing large-scale projects.",
+     "note": "Frequently used in job descriptions and by candidates to highlight their reliability and success."
+    },
+    {
+     "text": "take ownership of",
+     "kind": "collocation",
+     "form": "take ownership of",
+     "meaning": "To accept responsibility for a task or problem and ensure it is completed or resolved.",
+     "example": "I always encourage my team members to take ownership of their projects from start to finish.",
+     "plain": "I always encourage my team members to accept responsibility for their projects from start to finish.",
+     "note": "Highlights a proactive and responsible attitude. Highly valued in professional settings."
+    },
+    {
+     "text": "foster collaboration",
+     "kind": "collocation",
+     "form": "foster collaboration",
+     "meaning": "To encourage and promote teamwork and cooperation among individuals or groups.",
+     "example": "My leadership style aims to foster collaboration and open communication within the team.",
+     "plain": "My leadership style aims to encourage teamwork and open communication within the team.",
+     "note": "A positive and professional way to describe promoting teamwork. Often used by managers."
+    },
+    {
+     "text": "navigate complex situations",
+     "kind": "collocation",
+     "form": "navigate complex situations",
+     "meaning": "To successfully manage and find solutions in difficult or intricate circumstances.",
+     "example": "My previous role required me to navigate complex situations involving multiple stakeholders.",
+     "plain": "My previous role required me to successfully manage difficult situations involving multiple stakeholders.",
+     "note": "Suggests problem-solving skills and adaptability. Useful for describing challenging past experiences."
+    },
+    {
+     "text": "demonstrate resilience",
+     "kind": "collocation",
+     "form": "demonstrate resilience",
+     "meaning": "To show the ability to recover quickly from difficulties or setbacks.",
+     "example": "In times of change, it's crucial for leaders to demonstrate resilience and adaptability.",
+     "plain": "In times of change, it's crucial for leaders to show the ability to recover quickly from difficulties.",
+     "note": "A professional way to describe bouncing back from challenges. Highly valued in dynamic environments."
+    },
+    {
+     "text": "room for improvement",
+     "kind": "collocation",
+     "form": "room for improvement",
+     "meaning": "Indicates that something is not perfect and can be made better.",
+     "example": "While the project was successful, there's always room for improvement in our processes.",
+     "plain": "While the project was successful, our processes can always be made better.",
+     "note": "A humble and constructive phrase, often used when discussing past performance or future goals."
+    },
+    {
+     "text": "my greatest strength lies in",
+     "kind": "frame",
+     "form": "My greatest strength lies in",
+     "meaning": "Used to introduce and highlight one's most significant positive attribute or skill.",
+     "example": "My greatest strength lies in my ability to simplify complex technical information.",
+     "plain": "My most significant positive attribute is my ability to simplify complex technical information.",
+     "note": "A formal and direct way to state a key strength during an interview."
+    },
+    {
+     "text": "where I excel is",
+     "kind": "frame",
+     "form": "Where I excel is",
+     "meaning": "Used to specify a particular area or skill in which one performs exceptionally well.",
+     "example": "Where I excel is in building strong client relationships and understanding their needs.",
+     "plain": "I perform exceptionally well in building strong client relationships and understanding their needs.",
+     "note": "A confident way to highlight a specific area of expertise or talent."
+    },
+    {
+     "text": "a growth mindset",
+     "kind": "collocation",
+     "form": "a growth mindset",
+     "meaning": "The belief that abilities and intelligence can be developed through dedication and hard work.",
+     "example": "We look for candidates who demonstrate a growth mindset and are eager to learn new skills.",
+     "plain": "We look for candidates who believe their abilities can be developed and are eager to learn new skills.",
+     "note": "A highly valued trait in modern workplaces, indicating adaptability and a desire for self-improvement."
+    },
+    {
+     "text": "could you elaborate on",
+     "kind": "frame",
+     "form": "Could you elaborate on",
+     "meaning": "A polite way to ask for more details or a fuller explanation about something.",
+     "example": "Could you elaborate on the day-to-day responsibilities of this role?",
+     "plain": "Could you give me more details about the day-to-day responsibilities of this role?",
+     "note": "A professional and common way for candidates to ask clarifying questions."
+    },
+    {
+     "text": "what does success look like",
+     "kind": "frame",
+     "form": "What does success look like",
+     "meaning": "Asks for a clear definition of what achieving goals or performing well in a role entails.",
+     "example": "What does success look like for someone in this position within the first six months?",
+     "plain": "How do you define achieving goals for someone in this position within the first six months?",
+     "note": "A strategic question for candidates to understand expectations and performance metrics."
+    },
+    {
+     "text": "how do you envision",
+     "kind": "frame",
+     "form": "How do you envision",
+     "meaning": "Asks about someone's mental picture or plan for a future situation or role.",
+     "example": "How do you envision this team evolving over the next couple of years?",
+     "plain": "What is your plan for this team evolving over the next couple of years?",
+     "note": "A forward-looking question, useful for candidates to gauge future opportunities and company vision."
+    },
+    {
+     "text": "what are the key priorities",
+     "kind": "frame",
+     "form": "What are the key priorities",
+     "meaning": "Asks about the most important tasks or goals that need to be addressed.",
+     "example": "What are the key priorities for this department in the upcoming quarter?",
+     "plain": "What are the most important tasks for this department in the upcoming quarter?",
+     "note": "A practical question for candidates to understand immediate challenges and focus areas."
+    },
+    {
+     "text": "what's the culture like",
+     "kind": "frame",
+     "form": "What's the culture like",
+     "meaning": "Asks about the typical atmosphere, values, and behaviors within a workplace.",
+     "example": "What's the culture like here, and how would you describe the team dynamics?",
+     "plain": "How would you describe the typical atmosphere and team dynamics here?",
+     "note": "A common and important question for candidates to assess fit beyond job responsibilities."
+    },
+    {
+     "text": "let me rephrase that",
+     "kind": "chunk",
+     "form": "Let me rephrase that",
+     "meaning": "Used to indicate that the speaker wants to express something in a different, clearer way.",
+     "example": "Let me rephrase that: I believe my skills are a strong match for your requirements.",
+     "plain": "I want to say that again in a different way: I believe my skills are a strong match for your requirements.",
+     "note": "Useful for clarifying a point or correcting a potentially misunderstood statement."
+    },
+    {
+     "text": "if I understand correctly",
+     "kind": "frame",
+     "form": "If I understand correctly",
+     "meaning": "Used to check for comprehension and confirm that one has accurately grasped what was said.",
+     "example": "If I understand correctly, you're looking for someone with strong analytical and communication skills.",
+     "plain": "You're looking for someone with strong analytical and communication skills, is that right?",
+     "note": "A polite way to confirm understanding, showing active listening and attention to detail."
+    },
+    {
+     "text": "it's an interesting question",
+     "kind": "chunk",
+     "form": "It's an interesting question",
+     "meaning": "A polite way to acknowledge a question, often used to buy a moment to think before answering.",
+     "example": "It's an interesting question; I'd say my biggest challenge was managing conflicting priorities.",
+     "plain": "That's a good question; I'd say my biggest challenge was managing conflicting priorities.",
+     "note": "A common filler phrase that sounds thoughtful and buys a few seconds for reflection."
+    },
+    {
+     "text": "that's a good point",
+     "kind": "chunk",
+     "form": "That's a good point",
+     "meaning": "Acknowledges the validity or relevance of something someone else has said.",
+     "example": "That's a good point about the market changes; we need to adapt our strategy accordingly.",
+     "plain": "You're right about the market changes; we need to adapt our strategy accordingly.",
+     "note": "Shows active listening and agreement, fostering a positive conversational flow."
+    },
+    {
+     "text": "I'd say",
+     "kind": "chunk",
+     "form": "I'd say",
+     "meaning": "Introduces an opinion or a slightly hesitant answer, making it sound less definitive.",
+     "example": "I'd say my biggest achievement was successfully launching the new product line ahead of schedule.",
+     "plain": "My biggest achievement was successfully launching the new product line ahead of schedule.",
+     "note": "Softens a statement, making it sound more conversational and less assertive. Very common."
+    },
+    {
+     "text": "it depends on",
+     "kind": "frame",
+     "form": "It depends on",
+     "meaning": "Indicates that the answer or outcome is conditional and varies based on certain factors.",
+     "example": "It depends on the specific project requirements, but I'm flexible with my working hours.",
+     "plain": "The answer varies based on the specific project requirements, but I'm flexible with my working hours.",
+     "note": "Useful for giving nuanced answers, avoiding overly simplistic or definitive statements."
+    },
+    {
+     "text": "broadly speaking",
+     "kind": "chunk",
+     "form": "Broadly speaking",
+     "meaning": "Used to introduce a general statement that may not be entirely precise or detailed.",
+     "example": "Broadly speaking, my role involved overseeing all aspects of client relations.",
+     "plain": "In general, my role involved overseeing all aspects of client relations.",
+     "note": "Helps to give a summary or overview without getting bogged down in specifics. Slightly formal."
+    },
+    {
+     "text": "thank you for your time",
+     "kind": "chunk",
+     "form": "Thank you for your time",
+     "meaning": "A polite expression of gratitude for the time and attention given by the interviewer.",
+     "example": "Thank you for your time today; I really enjoyed learning more about this opportunity.",
+     "plain": "I appreciate the time you spent with me today; I really enjoyed learning more about this opportunity.",
+     "note": "Essential closing phrase for candidates, showing politeness and professionalism."
+    },
+    {
+     "text": "I appreciate the opportunity",
+     "kind": "chunk",
+     "form": "I appreciate the opportunity",
+     "meaning": "Expresses gratitude for being considered for a role or for the chance to interview.",
+     "example": "I appreciate the opportunity to discuss how my skills align with your company's goals.",
+     "plain": "I am grateful for the chance to discuss how my skills align with your company's goals.",
+     "note": "A formal and polite way to express thanks at the beginning or end of an interview."
+    },
+    {
+     "text": "looking forward to hearing from you",
+     "kind": "chunk",
+     "form": "looking forward to hearing from you",
+     "meaning": "Expresses anticipation for a response or update from the interviewer.",
+     "example": "I'm looking forward to hearing from you regarding the next steps in the process.",
+     "plain": "I anticipate receiving an update from you regarding the next steps in the process.",
+     "note": "A standard and polite closing statement for candidates after an interview."
+    },
+    {
+     "text": "I'm confident that",
+     "kind": "frame",
+     "form": "I'm confident that",
+     "meaning": "Expresses a strong belief or certainty about a future outcome or one's abilities.",
+     "example": "I'm confident that my experience makes me a strong candidate for this position.",
+     "plain": "I strongly believe that my experience makes me a strong candidate for this position.",
+     "note": "Projects self-assurance and belief in one's capabilities. Use with genuine conviction."
+    },
+    {
+     "text": "I'm keen to learn more",
+     "kind": "chunk",
+     "form": "I'm keen to learn more",
+     "meaning": "Expresses strong interest and eagerness to acquire additional information or knowledge.",
+     "example": "I'm keen to learn more about the team's current projects and challenges.",
+     "plain": "I'm very interested in acquiring more information about the team's current projects and challenges.",
+     "note": "Shows enthusiasm and a proactive attitude. Common in British English, also used in American English."
+    },
+    {
+     "text": "honed my skills",
+     "kind": "collocation",
+     "form": "honed my skills",
+     "meaning": "To refine and improve one's abilities through practice and experience.",
+     "example": "In my previous role, I honed my skills in data analysis and strategic planning.",
+     "plain": "In my previous role, I refined my abilities in data analysis and strategic planning.",
+     "note": "A sophisticated way to describe skill development, implying precision and expertise."
+    },
+    {
+     "text": "drive initiatives",
+     "kind": "collocation",
+     "form": "drive initiatives",
+     "meaning": "To lead and propel new projects or plans forward to achieve specific goals.",
+     "example": "I'm looking for a role where I can drive initiatives and make a tangible impact.",
+     "plain": "I'm looking for a role where I can lead new projects and make a tangible impact.",
+     "note": "Suggests leadership, proactivity, and a results-oriented approach. Highly valued."
+    },
+    {
+     "text": "strike a balance",
+     "kind": "collocation",
+     "form": "strike a balance",
+     "meaning": "To find a satisfactory compromise between two conflicting or opposing elements.",
+     "example": "It's important to strike a balance between innovation and maintaining established processes.",
+     "plain": "It's important to find a satisfactory compromise between innovation and maintaining established processes.",
+     "note": "Indicates good judgment and the ability to manage competing demands effectively."
+    },
+    {
+     "text": "on reflection",
+     "kind": "chunk",
+     "form": "On reflection",
+     "meaning": "Used to introduce a thought or conclusion reached after careful consideration.",
+     "example": "On reflection, I believe the key lesson was the importance of clear communication.",
+     "plain": "After careful consideration, I believe the key lesson was the importance of clear communication.",
+     "note": "Sounds thoughtful and considered. Useful when asked about past experiences or challenges."
+    },
+    {
+     "text": "to put it another way",
+     "kind": "frame",
+     "form": "To put it another way",
+     "meaning": "Used to rephrase something for clarity or to offer an alternative explanation.",
+     "example": "To put it another way, we need someone who can adapt quickly to changing market conditions.",
+     "plain": "In other words, we need someone who can adapt quickly to changing market conditions.",
+     "note": "Helps to clarify a point, especially if the initial explanation might have been unclear."
+    },
+    {
+     "text": "my understanding is that",
+     "kind": "frame",
+     "form": "My understanding is that",
+     "meaning": "Used to state what one believes to be true, often based on information received.",
+     "example": "My understanding is that this role involves a significant amount of client interaction.",
+     "plain": "I believe this role involves a significant amount of client interaction, based on what I've heard.",
+     "note": "A polite and professional way to confirm information or state an assumption."
+    },
+    {
+     "text": "from my perspective",
+     "kind": "frame",
+     "form": "From my perspective",
+     "meaning": "Used to introduce one's personal viewpoint or opinion on a matter.",
+     "example": "From my perspective, a collaborative environment is essential for team success.",
+     "plain": "In my opinion, a collaborative environment is essential for team success.",
+     "note": "A professional way to offer an opinion, acknowledging that others may have different views."
+    },
+    {
+     "text": "I'm particularly interested in",
+     "kind": "frame",
+     "form": "I'm particularly interested in",
+     "meaning": "Expresses a specific and strong curiosity or desire to know more about something.",
+     "example": "I'm particularly interested in how your company supports professional development.",
+     "plain": "I have a specific and strong curiosity about how your company supports professional development.",
+     "note": "Highlights genuine interest in specific aspects of the role or company."
+    },
+    {
+     "text": "a strong fit for",
+     "kind": "collocation",
+     "form": "a strong fit for",
+     "meaning": "Describes someone or something that is highly suitable or compatible with a role or environment.",
+     "example": "I believe my background makes me a strong fit for your innovative team.",
+     "plain": "I believe my background makes me highly suitable for your innovative team.",
+     "note": "Commonly used by candidates to express their suitability for a position or company culture."
+    },
+    {
+     "text": "bring to the table",
+     "kind": "collocation",
+     "form": "bring to the table",
+     "meaning": "To contribute specific skills, experience, or qualities to a discussion or project.",
+     "example": "What unique skills and perspectives do you think you would bring to the table?",
+     "plain": "What unique skills and perspectives do you think you would contribute to the discussion?",
+     "note": "A common idiom in business contexts, referring to one's contributions."
+    },
+    {
+     "text": "my core competencies include",
+     "kind": "frame",
+     "form": "My core competencies include",
+     "meaning": "Used to list one's fundamental and most important skills or abilities.",
+     "example": "My core competencies include strategic planning, team leadership, and stakeholder management.",
+     "plain": "My fundamental and most important skills include strategic planning, team leadership, and stakeholder management.",
+     "note": "Formal and professional, ideal for summarizing key qualifications."
+    },
+    {
+     "text": "a collaborative environment",
+     "kind": "collocation",
+     "form": "a collaborative environment",
+     "meaning": "A workplace setting where teamwork, cooperation, and shared goals are emphasized.",
+     "example": "I thrive in a collaborative environment where ideas are openly shared and discussed.",
+     "plain": "I thrive in a workplace setting where teamwork and shared goals are emphasized.",
+     "note": "A positive term to describe a desired work culture, often used by candidates."
+    },
+    {
+     "text": "align with my values",
+     "kind": "collocation",
+     "form": "align with my values",
+     "meaning": "To be consistent or in agreement with one's personal principles and beliefs.",
+     "example": "I'm seeking a company whose mission and values align with my values of social responsibility.",
+     "plain": "I'm seeking a company whose mission and values are consistent with my principles of social responsibility.",
+     "note": "Shows a candidate's thoughtful approach to career choices, beyond just job duties."
+    },
+    {
+     "text": "a challenging role",
+     "kind": "collocation",
+     "form": "a challenging role",
+     "meaning": "A job position that requires significant effort, skill, and problem-solving abilities.",
+     "example": "I'm looking for a challenging role where I can continuously develop my expertise.",
+     "plain": "I'm looking for a job position that requires significant effort where I can continuously develop my expertise.",
+     "note": "Indicates ambition and a desire for growth, not a fear of difficulty."
+    },
+    {
+     "text": "gain further insight into",
+     "kind": "collocation",
+     "form": "gain further insight into",
+     "meaning": "To acquire a deeper and more comprehensive understanding of a topic or situation.",
+     "example": "I'd like to gain further insight into the company's long-term strategic vision.",
+     "plain": "I'd like to acquire a deeper understanding of the company's long-term strategic vision.",
+     "note": "A professional way to express a desire for more detailed information."
+    },
+    {
+     "text": "my understanding of the role",
+     "kind": "frame",
+     "form": "My understanding of the role",
+     "meaning": "Used to state one's interpretation of the job responsibilities and expectations.",
+     "example": "My understanding of the role is that it involves leading a small team and managing client accounts.",
+     "plain": "My interpretation of the job responsibilities is that it involves leading a small team and managing client accounts.",
+     "note": "Allows a candidate to confirm their grasp of the position's requirements."
+    },
+    {
+     "text": "to that end",
+     "kind": "chunk",
+     "form": "To that end",
+     "meaning": "For that purpose; with that goal in mind.",
+     "example": "We need to improve our customer service. To that end, we're implementing new training programs.",
+     "plain": "We need to improve our customer service. For that purpose, we're implementing new training programs.",
+     "note": "Formal and concise, used to link an action to a previously stated goal."
+    },
+    {
+     "text": "on the one hand",
+     "kind": "chunk",
+     "form": "On the one hand",
+     "meaning": "Used to introduce the first of two contrasting points or aspects of an issue.",
+     "example": "On the one hand, the project was very successful; on the other hand, it ran over budget.",
+     "plain": "The project was very successful, but it also ran over budget.",
+     "note": "Helps to present a balanced view, acknowledging different sides of a situation."
+    },
+    {
+     "text": "on the other hand",
+     "kind": "chunk",
+     "form": "on the other hand",
+     "meaning": "Used to introduce a contrasting or opposing point to one previously mentioned.",
+     "example": "On the one hand, the project was very successful; on the other hand, it ran over budget.",
+     "plain": "The project was very successful, but it also ran over budget.",
+     "note": "Always used in conjunction with 'on the one hand' to present a balanced argument."
+    },
+    {
+     "text": "I'm confident I can",
+     "kind": "frame",
+     "form": "I'm confident I can",
+     "meaning": "Expresses strong belief in one's ability to perform a specific action or task.",
+     "example": "I'm confident I can quickly integrate into your team and contribute effectively.",
+     "plain": "I strongly believe I can quickly integrate into your team and contribute effectively.",
+     "note": "A direct and assertive way to convey self-assurance in one's capabilities."
+    },
+    {
+     "text": "my key takeaway was",
+     "kind": "frame",
+     "form": "My key takeaway was",
+     "meaning": "Used to state the most important lesson or conclusion drawn from an experience or discussion.",
+     "example": "My key takeaway was the importance of proactive communication in managing client expectations.",
+     "plain": "The most important lesson I learned was the importance of proactive communication in managing client expectations.",
+     "note": "A common phrase in professional settings for summarizing learning points."
+    },
+    {
+     "text": "a good cultural fit",
+     "kind": "collocation",
+     "form": "a good cultural fit",
+     "meaning": "Describes a candidate whose personality and values align well with the company's workplace environment.",
+     "example": "We're looking for someone who is not only skilled but also a good cultural fit for our team.",
+     "plain": "We're looking for someone who is not only skilled but also aligns well with our team's workplace environment.",
+     "note": "Crucial for employers; candidates should demonstrate awareness of company values."
+    },
+    {
+     "text": "to elaborate further",
+     "kind": "chunk",
+     "form": "To elaborate further",
+     "meaning": "Used to indicate that one is about to provide more detailed information or explanation.",
+     "example": "To elaborate further, my experience includes managing cross-functional teams in a global setting.",
+     "plain": "To explain in more detail, my experience includes managing cross-functional teams in a global setting.",
+     "note": "A formal way to expand on a previous point, often in response to a prompt."
+    },
+    {
+     "text": "I'd be happy to",
+     "kind": "frame",
+     "form": "I'd be happy to",
+     "meaning": "A polite and enthusiastic way to offer to do something.",
+     "example": "I'd be happy to provide references or a portfolio of my work if needed.",
+     "plain": "I would gladly provide references or a portfolio of my work if needed.",
+     "note": "Shows willingness and helpfulness. Very common in professional interactions."
+    },
+    {
+     "text": "a valuable asset",
+     "kind": "collocation",
+     "form": "a valuable asset",
+     "meaning": "Describes someone or something that is highly beneficial or advantageous.",
+     "example": "I believe my problem-solving skills would make me a valuable asset to your team.",
+     "plain": "I believe my problem-solving skills would be highly beneficial to your team.",
+     "note": "A strong way for candidates to describe their potential contribution."
+    },
+    {
+     "text": "my understanding of the company",
+     "kind": "frame",
+     "form": "My understanding of the company",
+     "meaning": "Used to state one's interpretation of the organization's mission, values, or operations.",
+     "example": "My understanding of the company is that it prioritizes innovation and customer satisfaction.",
+     "plain": "My interpretation of the company is that it prioritizes innovation and customer satisfaction.",
+     "note": "Allows a candidate to demonstrate research and alignment with the company."
+    },
+    {
+     "text": "to give you an idea",
+     "kind": "frame",
+     "form": "To give you an idea",
+     "meaning": "Used to introduce an example or explanation that helps clarify a point.",
+     "example": "To give you an idea, I managed a budget of over five million dollars in my last role.",
+     "plain": "For example, I managed a budget of over five million dollars in my last role.",
+     "note": "A conversational way to provide context or an illustrative example."
+    },
+    {
+     "text": "I'm eager to contribute to",
+     "kind": "frame",
+     "form": "I'm eager to contribute to",
+     "meaning": "Expresses strong enthusiasm and desire to play an active part in something.",
+     "example": "I'm eager to contribute to your team's success and help achieve its strategic objectives.",
+     "plain": "I'm very enthusiastic about playing an active part in your team's success and helping achieve its strategic objectives.",
+     "note": "Shows proactivity and a team-oriented mindset. Highly positive."
+    },
+    {
+     "text": "a key factor",
+     "kind": "collocation",
+     "form": "a key factor",
+     "meaning": "An important element or influence that contributes significantly to a result or situation.",
+     "example": "Effective communication was a key factor in the successful completion of the project.",
+     "plain": "Effective communication was an important element in the successful completion of the project.",
+     "note": "Highlights the most significant cause or influence. Useful for analysis."
+    },
+    {
+     "text": "to put it simply",
+     "kind": "frame",
+     "form": "To put it simply",
+     "meaning": "Used to explain something in an easy-to-understand way, avoiding complexity.",
+     "example": "To put it simply, we need to increase our market share in the next fiscal year.",
+     "plain": "In simple terms, we need to increase our market share in the next fiscal year.",
+     "note": "Useful for clarifying complex ideas or summarizing a main point concisely."
+    },
+    {
+     "text": "I'm looking for a role where",
+     "kind": "frame",
+     "form": "I'm looking for a role where",
+     "meaning": "Used by a candidate to describe the ideal characteristics or opportunities they seek in a job.",
+     "example": "I'm looking for a role where I can apply my leadership skills and mentor junior colleagues.",
+     "plain": "I want a job where I can apply my leadership skills and mentor junior colleagues.",
+     "note": "Helps candidates articulate their career aspirations and what motivates them."
+    },
+    {
+     "text": "my long-term goal is",
+     "kind": "frame",
+     "form": "My long-term goal is",
+     "meaning": "Used to state one's primary objective or aspiration for the distant future.",
+     "example": "My long-term goal is to become a recognized expert in sustainable energy solutions.",
+     "plain": "My primary objective for the distant future is to become a recognized expert in sustainable energy solutions.",
+     "note": "Shows ambition and strategic thinking. Important for career planning discussions."
+    },
+    {
+     "text": "a hands-on approach",
+     "kind": "collocation",
+     "form": "a hands-on approach",
+     "meaning": "A method of working that involves direct personal involvement rather than just supervision.",
+     "example": "I prefer a hands-on approach to project management, working closely with the team.",
+     "plain": "I prefer a method of working that involves direct personal involvement in project management, working closely with the team.",
+     "note": "Describes a practical and engaged work style. Often valued in dynamic roles."
+    },
+    {
+     "text": "to be perfectly honest",
+     "kind": "chunk",
+     "form": "To be perfectly honest",
+     "meaning": "Used to introduce a frank or candid statement, sometimes implying a slight hesitation.",
+     "example": "To be perfectly honest, I found the initial transition to remote work quite challenging.",
+     "plain": "Frankly, I found the initial transition to remote work quite challenging.",
+     "note": "Adds emphasis to sincerity. Can soften a potentially negative or critical point."
+    },
+    {
+     "text": "I'm keen to understand",
+     "kind": "frame",
+     "form": "I'm keen to understand",
+     "meaning": "Expresses strong interest and eagerness to comprehend something fully.",
+     "example": "I'm keen to understand the specific metrics used to measure success in this department.",
+     "plain": "I'm very interested in fully comprehending the specific metrics used to measure success in this department.",
+     "note": "Shows intellectual curiosity and a desire for clarity. Professional and proactive."
+    },
+    {
+     "text": "to give you some context",
+     "kind": "frame",
+     "form": "To give you some context",
+     "meaning": "Used to provide background information necessary for understanding a situation or statement.",
+     "example": "To give you some context, my previous company was undergoing a major digital transformation.",
+     "plain": "To provide you with background information, my previous company was undergoing a major digital transformation.",
+     "note": "Helps the listener understand the circumstances surrounding a story or explanation."
+    },
+    {
+     "text": "I'm confident in my ability to",
+     "kind": "frame",
+     "form": "I'm confident in my ability to",
+     "meaning": "Expresses strong belief in one's capacity to successfully perform a particular action.",
+     "example": "I'm confident in my ability to lead diverse teams and achieve ambitious targets.",
+     "plain": "I strongly believe I have the capacity to lead diverse teams and achieve ambitious targets.",
+     "note": "A strong and direct statement of self-assurance, suitable for interviews."
+    },
+    {
+     "text": "a strong emphasis on",
+     "kind": "collocation",
+     "form": "a strong emphasis on",
+     "meaning": "Indicates that particular importance or priority is given to something.",
+     "example": "Our company places a strong emphasis on employee well-being and professional growth.",
+     "plain": "Our company gives particular importance to employee well-being and professional growth.",
+     "note": "Useful for describing company values or priorities. Can be used by both sides."
+    },
+    {
+     "text": "to be more specific",
+     "kind": "frame",
+     "form": "To be more specific",
+     "meaning": "Used to provide more precise or detailed information after a general statement.",
+     "example": "To be more specific, I managed a portfolio of 20 key accounts in the tech sector.",
+     "plain": "More precisely, I managed a portfolio of 20 key accounts in the tech sector.",
+     "note": "Helps to add clarity and detail, ensuring the listener fully understands."
+    },
+    {
+     "text": "I'm looking to transition into",
+     "kind": "frame",
+     "form": "I'm looking to transition into",
+     "meaning": "Used by a candidate to explain their desire to move into a different type of role or industry.",
+     "example": "I'm looking to transition into a more strategic role with greater leadership responsibilities.",
+     "plain": "I want to move into a more strategic role with greater leadership responsibilities.",
+     "note": "Explains career change aspirations clearly and professionally."
+    },
+    {
+     "text": "a highly collaborative environment",
+     "kind": "collocation",
+     "form": "a highly collaborative environment",
+     "meaning": "A workplace setting where teamwork, cooperation, and shared goals are strongly emphasized.",
+     "example": "I thrive in a highly collaborative environment where diverse perspectives are valued.",
+     "plain": "I thrive in a workplace setting where teamwork and diverse perspectives are strongly emphasized.",
+     "note": "Emphasizes the importance of teamwork even more than 'a collaborative environment'."
+    },
+    {
+     "text": "my primary motivation is",
+     "kind": "frame",
+     "form": "My primary motivation is",
+     "meaning": "Used to state the main reason or driving force behind one's actions or career choices.",
+     "example": "My primary motivation is to work for a company that makes a positive societal impact.",
+     "plain": "The main reason I do things is to work for a company that makes a positive societal impact.",
+     "note": "Helps candidates articulate their core drivers and align them with the company's mission."
+    },
+    {
+     "text": "to address your point",
+     "kind": "frame",
+     "form": "To address your point",
+     "meaning": "Used to indicate that the speaker is about to respond directly to a specific comment or question.",
+     "example": "To address your point about work-life balance, we offer flexible working arrangements.",
+     "plain": "Regarding your comment about work-life balance, we offer flexible working arrangements.",
+     "note": "A formal and direct way to respond to a specific query or statement."
+    },
+    {
+     "text": "I'm particularly drawn to",
+     "kind": "frame",
+     "form": "I'm particularly drawn to",
+     "meaning": "Expresses a strong attraction or inclination towards something specific.",
+     "example": "I'm particularly drawn to your company's innovative approach to product development.",
+     "plain": "I have a strong attraction to your company's innovative approach to product development.",
+     "note": "Highlights specific aspects of the company or role that appeal to the candidate."
+    },
+    {
+     "text": "a strong sense of ownership",
+     "kind": "collocation",
+     "form": "a strong sense of ownership",
+     "meaning": "A feeling of personal responsibility and accountability for one's work or projects.",
+     "example": "We value employees who demonstrate a strong sense of ownership and initiative.",
+     "plain": "We value employees who demonstrate a feeling of personal responsibility and initiative for their work.",
+     "note": "Indicates a proactive and dedicated attitude, highly desirable in employees."
+    },
+    {
+     "text": "to recap briefly",
+     "kind": "chunk",
+     "form": "To recap briefly",
+     "meaning": "Used to summarize the main points that have been discussed so far.",
+     "example": "To recap briefly, we've discussed your experience, strengths, and career aspirations.",
+     "plain": "To summarize the main points, we've discussed your experience, strengths, and career aspirations.",
+     "note": "Useful for structuring a conversation or ensuring mutual understanding."
+    },
+    {
+     "text": "I'm confident that I can",
+     "kind": "frame",
+     "form": "I'm confident that I can",
+     "meaning": "Expresses strong belief in one's ability to successfully perform a particular action.",
+     "example": "I'm confident that I can quickly adapt to new technologies and workflows.",
+     "plain": "I strongly believe I can quickly adapt to new technologies and workflows.",
+     "note": "A slightly more formal variant of 'I'm confident I can', emphasizing certainty."
+    },
+    {
+     "text": "a clear understanding of",
+     "kind": "collocation",
+     "form": "a clear understanding of",
+     "meaning": "A precise and comprehensive grasp of a topic, situation, or requirements.",
+     "example": "Do you have a clear understanding of the challenges facing this industry?",
+     "plain": "Do you have a precise and comprehensive grasp of the challenges facing this industry?",
+     "note": "Indicates thorough comprehension. Often used in questions to assess knowledge."
+    },
+    {
+     "text": "to put it mildly",
+     "kind": "chunk",
+     "form": "To put it mildly",
+     "meaning": "Used to suggest that a situation is actually more extreme or serious than stated.",
+     "example": "To put it mildly, the project faced some significant hurdles, but we overcame them.",
+     "plain": "The project faced some significant hurdles, which is an understatement, but we overcame them.",
+     "note": "An understatement, often used with a touch of irony or to soften a strong statement."
+    },
+    {
+     "text": "I'm looking for opportunities to",
+     "kind": "frame",
+     "form": "I'm looking for opportunities to",
+     "meaning": "Used by a candidate to express their desire for specific chances for growth or contribution.",
+     "example": "I'm looking for opportunities to take on more strategic planning responsibilities.",
+     "plain": "I want chances to take on more strategic planning responsibilities.",
+     "note": "Highlights ambition and a proactive approach to career development."
+    },
+    {
+     "text": "a strong work ethic",
+     "kind": "collocation",
+     "form": "a strong work ethic",
+     "meaning": "A belief in the moral benefit and importance of hard work and diligence.",
+     "example": "We seek candidates who possess a strong work ethic and a commitment to excellence.",
+     "plain": "We seek candidates who believe in the importance of hard work and a commitment to excellence.",
+     "note": "A highly valued trait in employees, indicating dedication and reliability."
+    },
+    {
+     "text": "to be frank",
+     "kind": "chunk",
+     "form": "To be frank",
+     "meaning": "Used to introduce a direct and honest statement, sometimes implying bluntness.",
+     "example": "To be frank, I believe our current strategy needs a significant overhaul.",
+     "plain": "Honestly, I believe our current strategy needs a significant overhaul.",
+     "note": "More direct than 'to be perfectly honest', can sound slightly blunt but sincere."
+    },
+    {
+     "text": "I'm eager to learn",
+     "kind": "chunk",
+     "form": "I'm eager to learn",
+     "meaning": "Expresses strong enthusiasm and desire to acquire new knowledge or skills.",
+     "example": "I'm eager to learn about your company's innovative technologies and processes.",
+     "plain": "I'm very enthusiastic about acquiring knowledge about your company's innovative technologies and processes.",
+     "note": "Shows a proactive and adaptable mindset, highly valued in dynamic environments."
+    },
+    {
+     "text": "a results-oriented approach",
+     "kind": "collocation",
+     "form": "a results-oriented approach",
+     "meaning": "A method of working that focuses primarily on achieving specific outcomes and goals.",
+     "example": "My management style is characterized by a results-oriented approach and clear goal setting.",
+     "plain": "My management style focuses primarily on achieving specific outcomes and clear goal setting.",
+     "note": "Highlights efficiency and effectiveness in achieving objectives. Desirable in many roles."
+    },
+    {
+     "text": "to summarize my qualifications",
+     "kind": "frame",
+     "form": "To summarize my qualifications",
+     "meaning": "Used to briefly list one's relevant skills, experience, and education.",
+     "example": "To summarize my qualifications, I have 10 years of experience in marketing and a master's degree.",
+     "plain": "To briefly list my relevant skills and experience, I have 10 years in marketing and a master's degree.",
+     "note": "A formal way to provide a concise overview of one's professional background."
+    },
+    {
+     "text": "I'm looking for a company that",
+     "kind": "frame",
+     "form": "I'm looking for a company that",
+     "meaning": "Used by a candidate to describe the ideal characteristics or values they seek in an employer.",
+     "example": "I'm looking for a company that values innovation and invests in employee development.",
+     "plain": "I want an employer that values innovation and invests in employee development.",
+     "note": "Helps candidates articulate their preferences for company culture and values."
+    },
+    {
+     "text": "a strong team player",
+     "kind": "collocation",
+     "form": "a strong team player",
+     "meaning": "Describes someone who works well with others and contributes effectively to group goals.",
+     "example": "We need a strong team player who can collaborate across departments.",
+     "plain": "We need someone who works well with others and can collaborate across departments.",
+     "note": "A common and positive descriptor for someone who contributes positively to group efforts."
+    },
+    {
+     "text": "to be precise",
+     "kind": "chunk",
+     "form": "To be precise",
+     "meaning": "Used to indicate that one is about to give exact or very accurate information.",
+     "example": "To be precise, the project deadline is actually the 15th of next month, not the 20th.",
+     "plain": "The exact project deadline is actually the 15th of next month, not the 20th.",
+     "note": "Adds accuracy and detail to a statement. Can correct a previous, less accurate point."
+    },
+    {
+     "text": "a proactive approach",
+     "kind": "collocation",
+     "form": "a proactive approach",
+     "meaning": "A method of dealing with situations by causing things to happen rather than waiting for them.",
+     "example": "I always take a proactive approach to problem-solving, anticipating potential issues.",
+     "plain": "I always deal with situations by causing things to happen rather than waiting for them, anticipating potential issues.",
+     "note": "Highly valued in dynamic roles, indicating initiative and foresight."
+    },
+    {
+     "text": "to put it bluntly",
+     "kind": "chunk",
+     "form": "To put it bluntly",
+     "meaning": "Used to introduce a very direct and straightforward statement, often without softening words.",
+     "example": "To put it bluntly, we need to cut costs significantly to remain competitive.",
+     "plain": "Very directly, we need to cut costs significantly to remain competitive.",
+     "note": "Indicates a very direct, possibly harsh, statement. Use with caution."
+    },
+    {
+     "text": "I'm eager to take on",
+     "kind": "frame",
+     "form": "I'm eager to take on",
+     "meaning": "Expresses strong enthusiasm and desire to accept a new responsibility or challenge.",
+     "example": "I'm eager to take on new challenges and expand my skill set in this role.",
+     "plain": "I'm very enthusiastic about accepting new challenges and expanding my skill set in this role.",
+     "note": "Shows ambition and a willingness to grow. Positive for candidates."
+    },
+    {
+     "text": "a strategic thinker",
+     "kind": "collocation",
+     "form": "a strategic thinker",
+     "meaning": "Describes someone who can plan effectively for the long term, considering overall goals.",
+     "example": "We're looking for a strategic thinker who can contribute to our long-term vision.",
+     "plain": "We're looking for someone who can plan effectively for the long term and contribute to our vision.",
+     "note": "Highlights the ability to see the bigger picture and plan for future success."
+    },
+    {
+     "text": "to be quite honest",
+     "kind": "chunk",
+     "form": "To be quite honest",
+     "meaning": "Used to introduce a frank or candid statement, similar to 'to be perfectly honest'.",
+     "example": "To be quite honest, I'm looking for a role with more opportunities for international travel.",
+     "plain": "Frankly, I'm looking for a role with more opportunities for international travel.",
+     "note": "A common way to introduce a sincere, sometimes slightly sensitive, point."
+    },
+    {
+     "text": "I'm looking for a culture where",
+     "kind": "frame",
+     "form": "I'm looking for a culture where",
+     "meaning": "Used by a candidate to describe the ideal workplace environment they seek.",
+     "example": "I'm looking for a culture where innovation is encouraged and mistakes are seen as learning opportunities.",
+     "plain": "I want a workplace environment where innovation is encouraged and mistakes are seen as learning opportunities.",
+     "note": "Helps candidates articulate their preferences for company values and dynamics."
+    },
+    {
+     "text": "a strong communicator",
+     "kind": "collocation",
+     "form": "a strong communicator",
+     "meaning": "Describes someone who can express ideas clearly and effectively, both verbally and in writing.",
+     "example": "The role requires a strong communicator who can present complex information to diverse audiences.",
+     "plain": "The role requires someone who can express ideas clearly and effectively to diverse audiences.",
+     "note": "A fundamental skill in almost any professional role, highly valued."
+    },
+    {
+     "text": "to put things in perspective",
+     "kind": "frame",
+     "form": "To put things in perspective",
+     "meaning": "Used to help someone understand the true importance or scale of a situation.",
+     "example": "To put things in perspective, while that project had issues, it was a small part of our overall success.",
+     "plain": "To help understand the true importance, while that project had issues, it was a small part of our overall success.",
+     "note": "Helps to provide a balanced view, especially when discussing challenges or setbacks."
+    },
+    {
+     "text": "I'm confident that my skills",
+     "kind": "frame",
+     "form": "I'm confident that my skills",
+     "meaning": "Expresses strong belief that one's abilities are suitable or effective for a task or role.",
+     "example": "I'm confident that my skills in data analysis will be highly beneficial to your team.",
+     "plain": "I strongly believe that my skills in data analysis will be highly beneficial to your team.",
+     "note": "A direct and professional way to link one's abilities to the job requirements."
+    },
+    {
+     "text": "to be perfectly clear",
+     "kind": "chunk",
+     "form": "To be perfectly clear",
+     "meaning": "Used to emphasize that one is stating something unequivocally and without ambiguity.",
+     "example": "To be perfectly clear, we expect all team members to adhere to our ethical guidelines.",
+     "plain": "Unequivocally, we expect all team members to adhere to our ethical guidelines.",
+     "note": "Adds strong emphasis to a statement, ensuring no misunderstanding. Can sound firm."
+    },
+    {
+     "text": "I'm looking for a mentor who",
+     "kind": "frame",
+     "form": "I'm looking for a mentor who",
+     "meaning": "Used by a candidate to express their desire for guidance and support from an experienced person.",
+     "example": "I'm looking for a mentor who can guide me through complex leadership challenges.",
+     "plain": "I want guidance and support from an experienced person who can guide me through complex leadership challenges.",
+     "note": "Shows a desire for continuous learning and professional development."
+    },
+    {
+     "text": "a strong sense of purpose",
+     "kind": "collocation",
+     "form": "a strong sense of purpose",
+     "meaning": "A clear understanding of one's goals and motivations, providing direction and meaning.",
+     "example": "Our team is driven by a strong sense of purpose to deliver innovative solutions.",
+     "plain": "Our team is driven by a clear understanding of its goals to deliver innovative solutions.",
+     "note": "Indicates motivation and alignment with a larger mission. Positive for both sides."
+    },
+    {
+     "text": "to be fair to them",
+     "kind": "chunk",
+     "form": "To be fair to them",
+     "meaning": "Introduces a point that acknowledges another party's perspective or mitigates their actions.",
+     "example": "To be fair to them, they were working with very limited resources at the time.",
+     "plain": "They were working with very limited resources at the time, which is an important point to consider.",
+     "note": "Used to offer a balanced view, often when discussing past colleagues or employers."
+    },
+    {
+     "text": "I'm looking for a team that",
+     "kind": "frame",
+     "form": "I'm looking for a team that",
+     "meaning": "Used by a candidate to describe the ideal characteristics or dynamics they seek in a workgroup.",
+     "example": "I'm looking for a team that fosters open communication and mutual support.",
+     "plain": "I want a workgroup that fosters open communication and mutual support.",
+     "note": "Helps candidates articulate their preferences for team culture and collaboration."
+    },
+    {
+     "text": "a strong track record of",
+     "kind": "collocation",
+     "form": "a strong track record of",
+     "meaning": "Evidence of consistent success and achievement in a particular area.",
+     "example": "She has a strong track record of exceeding sales targets in previous roles.",
+     "plain": "She has consistent evidence of exceeding sales targets in previous roles.",
+     "note": "Similar to 'proven track record' but emphasizes consistency over time."
+    },
+    {
+     "text": "to be honest with you",
+     "kind": "chunk",
+     "form": "To be honest with you",
+     "meaning": "Used to introduce a frank or candid statement, often personal or slightly sensitive.",
+     "example": "To be honest with you, I'm seeking a role that offers more opportunities for growth.",
+     "plain": "Frankly, I'm seeking a role that offers more opportunities for growth.",
+     "note": "A common, slightly informal way to introduce a sincere point. Builds rapport."
+    },
+    {
+     "text": "I'm looking for a role with",
+     "kind": "frame",
+     "form": "I'm looking for a role with",
+     "meaning": "Used by a candidate to describe specific features or benefits they seek in a job position.",
+     "example": "I'm looking for a role with greater autonomy and direct impact on strategic decisions.",
+     "plain": "I want a job position that has greater autonomy and direct impact on strategic decisions.",
+     "note": "Helps candidates specify desired job characteristics beyond basic duties."
+    },
+    {
+     "text": "a strong sense of accountability",
+     "kind": "collocation",
+     "form": "a strong sense of accountability",
+     "meaning": "A feeling of being responsible for one's actions and decisions, and for their outcomes.",
+     "example": "We expect all team members to have a strong sense of accountability for their tasks.",
+     "plain": "We expect all team members to feel responsible for their actions and decisions.",
+     "note": "Indicates reliability and trustworthiness. Highly valued in professional settings."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "to articulate my vision",
+     "kind": "collocation",
+     "form": "to articulate my vision",
+     "meaning": "To express one's ideas and goals clearly and persuasively.",
+     "example": "I'm eager to articulate my vision for how this department can achieve its strategic objectives.",
+     "plain": "I want to clearly explain my ideas for how this department can reach its goals.",
+     "note": "Used by candidates to show leadership and strategic thinking."
+    },
+    {
+     "text": "a nuanced understanding",
+     "kind": "collocation",
+     "form": "a nuanced understanding",
+     "meaning": "A detailed and subtle comprehension of a complex subject or situation.",
+     "example": "My experience has given me a nuanced understanding of market dynamics in this sector.",
+     "plain": "My experience has given me a detailed and subtle understanding of market dynamics in this sector.",
+     "note": "Sounds sophisticated; implies deep knowledge beyond surface level."
+    },
+    {
+     "text": "to gain traction",
+     "kind": "collocation",
+     "form": "gained traction",
+     "meaning": "To start to become popular, accepted, or make progress.",
+     "example": "The new initiative I led quickly gained traction among employees, improving engagement.",
+     "plain": "The new initiative I led quickly became popular among employees, improving engagement.",
+     "note": "Common in business contexts; implies successful adoption or progress."
+    },
+    {
+     "text": "to foster a culture of",
+     "kind": "frame",
+     "form": "to foster a culture of",
+     "meaning": "To encourage and develop a specific type of environment or set of values.",
+     "example": "I believe it's crucial to foster a culture of continuous learning within any team.",
+     "plain": "I believe it's crucial to encourage continuous learning within any team.",
+     "note": "Often used by managers or leaders; sounds proactive and strategic."
+    },
+    {
+     "text": "to mitigate risks",
+     "kind": "collocation",
+     "form": "mitigated risks",
+     "meaning": "To reduce the severity or likelihood of potential problems or dangers.",
+     "example": "In my previous role, I successfully identified and mitigated risks associated with new product launches.",
+     "plain": "In my previous role, I successfully identified and reduced problems associated with new product launches.",
+     "note": "Formal business language; shows foresight and problem-solving."
+    },
+    {
+     "text": "to set the stage for",
+     "kind": "chunk",
+     "form": "set the stage for",
+     "meaning": "To create the conditions or prepare for something to happen.",
+     "example": "My initial work on the project helped set the stage for its successful implementation later on.",
+     "plain": "My initial work on the project helped prepare for its successful implementation later on.",
+     "note": "Implies foundational work; often used when describing past contributions."
+    },
+    {
+     "text": "to be instrumental in",
+     "kind": "chunk",
+     "form": "was instrumental in",
+     "meaning": "To play a crucial or essential role in achieving a particular outcome.",
+     "example": "I was instrumental in developing the new client onboarding process, which improved efficiency.",
+     "plain": "I was very important in developing the new client onboarding process, which improved efficiency.",
+     "note": "Strong way to highlight significant contributions; sounds formal and impactful."
+    },
+    {
+     "text": "to be well-versed in",
+     "kind": "chunk",
+     "form": "am well-versed in",
+     "meaning": "To be very knowledgeable or skilled in a particular subject or area.",
+     "example": "I am well-versed in various data analysis techniques, including statistical modeling.",
+     "plain": "I am very knowledgeable about various data analysis techniques, including statistical modeling.",
+     "note": "A formal way to express expertise; often used in professional contexts."
+    },
+    {
+     "text": "to bring a fresh perspective",
+     "kind": "collocation",
+     "form": "bring a fresh perspective",
+     "meaning": "To offer new and different ideas or ways of looking at a situation.",
+     "example": "I believe I can bring a fresh perspective to your team's current marketing strategies.",
+     "plain": "I believe I can offer new ideas to your team's current marketing strategies.",
+     "note": "Used by candidates to highlight innovation and creativity."
+    },
+    {
+     "text": "to align with the company's objectives",
+     "kind": "collocation",
+     "form": "align with the company's objectives",
+     "meaning": "To be consistent with or match the goals and aims of the organization.",
+     "example": "My career aspirations truly align with the company's objectives for growth and innovation.",
+     "plain": "My career aspirations truly match the company's goals for growth and innovation.",
+     "note": "Shows strategic thinking and understanding of the company's mission."
+    },
+    {
+     "text": "to take initiative",
+     "kind": "collocation",
+     "form": "took initiative",
+     "meaning": "To act independently and proactively, without needing to be prompted.",
+     "example": "I often took initiative to identify process improvements, even beyond my direct responsibilities.",
+     "plain": "I often acted proactively to identify process improvements, even beyond my direct responsibilities.",
+     "note": "A highly valued trait in employees; shows proactivity and leadership potential."
+    },
+    {
+     "text": "to think outside the box",
+     "kind": "chunk",
+     "form": "think outside the box",
+     "meaning": "To think creatively and unconventionally, not limited by traditional ideas.",
+     "example": "We needed to think outside the box to solve that complex client problem effectively.",
+     "plain": "We needed to think creatively to solve that complex client problem effectively.",
+     "note": "A common idiom for innovation; can sound slightly cliché if overused."
+    },
+    {
+     "text": "to embrace change",
+     "kind": "collocation",
+     "form": "embrace change",
+     "meaning": "To readily accept and adapt to new situations, ideas, or developments.",
+     "example": "In a fast-paced industry, it's essential to embrace change and adapt quickly.",
+     "plain": "In a fast-paced industry, it's essential to accept new things and adapt quickly.",
+     "note": "Shows flexibility and a positive attitude towards evolving environments."
+    },
+    {
+     "text": "to learn from setbacks",
+     "kind": "collocation",
+     "form": "learned from setbacks",
+     "meaning": "To gain knowledge or experience from failures or temporary difficulties.",
+     "example": "Even when projects didn't go as planned, I always learned from setbacks and applied those lessons.",
+     "plain": "Even when projects didn't go as planned, I always gained knowledge from failures and applied those lessons.",
+     "note": "Shows a growth mindset and ability to reflect constructively."
+    },
+    {
+     "text": "to contribute meaningfully",
+     "kind": "collocation",
+     "form": "contribute meaningfully",
+     "meaning": "To make a significant and valuable input or impact.",
+     "example": "I'm looking for a role where I can contribute meaningfully to the company's mission.",
+     "plain": "I'm looking for a role where I can make a significant contribution to the company's mission.",
+     "note": "Expresses a desire for impact beyond just completing tasks."
+    },
+    {
+     "text": "to be a self-starter",
+     "kind": "chunk",
+     "form": "am a self-starter",
+     "meaning": "To be a person who is motivated and able to work independently without constant supervision.",
+     "example": "I am a self-starter who thrives in environments where autonomy is encouraged.",
+     "plain": "I am someone who can work independently and thrives in environments where autonomy is encouraged.",
+     "note": "Highly valued trait; implies proactivity and reliability."
+    },
+    {
+     "text": "to demonstrate initiative",
+     "kind": "collocation",
+     "form": "demonstrated initiative",
+     "meaning": "To show a willingness to act independently and proactively.",
+     "example": "I consistently demonstrated initiative by proposing new solutions to recurring operational issues.",
+     "plain": "I consistently showed willingness to act by proposing new solutions to recurring operational issues.",
+     "note": "Formal way to describe proactive behavior; often used in performance reviews."
+    },
+    {
+     "text": "to articulate complex ideas",
+     "kind": "collocation",
+     "form": "articulate complex ideas",
+     "meaning": "To explain difficult or intricate concepts clearly and effectively.",
+     "example": "My role often required me to articulate complex ideas to non-technical stakeholders.",
+     "plain": "My role often required me to explain difficult concepts clearly to non-technical stakeholders.",
+     "note": "Highlights strong communication skills, especially for technical or specialized roles."
+    },
+    {
+     "text": "to foster a sense of",
+     "kind": "frame",
+     "form": "to foster a sense of",
+     "meaning": "To encourage and develop a particular feeling or atmosphere.",
+     "example": "As a team leader, I always aimed to foster a sense of shared purpose among my colleagues.",
+     "plain": "As a team leader, I always aimed to encourage a feeling of shared purpose among my colleagues.",
+     "note": "Used by leaders to describe their approach to team building and morale."
+    },
+    {
+     "text": "to cultivate relationships",
+     "kind": "collocation",
+     "form": "cultivated relationships",
+     "meaning": "To develop and maintain connections with people, often for professional benefit.",
+     "example": "I successfully cultivated relationships with key clients, leading to increased retention rates.",
+     "plain": "I successfully developed connections with key clients, leading to increased retention rates.",
+     "note": "Implies strategic networking and interpersonal skills."
+    },
+    {
+     "text": "to facilitate discussions",
+     "kind": "collocation",
+     "form": "facilitated discussions",
+     "meaning": "To make conversations or meetings easier and more productive.",
+     "example": "I often facilitated discussions between different departments to ensure project alignment.",
+     "plain": "I often helped conversations happen between different departments to ensure project alignment.",
+     "note": "Highlights mediation and communication skills, especially in collaborative settings."
+    },
+    {
+     "text": "to streamline processes",
+     "kind": "collocation",
+     "form": "streamlined processes",
+     "meaning": "To make procedures or operations more efficient and simpler.",
+     "example": "I was responsible for identifying bottlenecks and streamlined processes to improve workflow.",
+     "plain": "I was responsible for identifying bottlenecks and made procedures more efficient to improve workflow.",
+     "note": "Common in operational or project management roles; shows efficiency focus."
+    },
+    {
+     "text": "to champion new ideas",
+     "kind": "collocation",
+     "form": "championed new ideas",
+     "meaning": "To strongly support and promote new concepts or initiatives.",
+     "example": "I consistently championed new ideas for product development, leading to several successful launches.",
+     "plain": "I consistently supported and promoted new ideas for product development, leading to several successful launches.",
+     "note": "Shows leadership, innovation, and persuasive skills."
+    },
+    {
+     "text": "to be adept at",
+     "kind": "chunk",
+     "form": "am adept at",
+     "meaning": "To be very skilled or proficient at something.",
+     "example": "I am adept at managing multiple projects simultaneously while maintaining high quality.",
+     "plain": "I am very skilled at managing multiple projects simultaneously while maintaining high quality.",
+     "note": "Formal and precise way to state a skill; sounds confident."
+    },
+    {
+     "text": "to be passionate about",
+     "kind": "chunk",
+     "form": "am passionate about",
+     "meaning": "To have very strong feelings or enthusiasm for something.",
+     "example": "I am passionate about leveraging technology to solve real-world business problems.",
+     "plain": "I have very strong feelings about leveraging technology to solve real-world business problems.",
+     "note": "Common in interviews to express genuine interest and motivation."
+    },
+    {
+     "text": "to be committed to",
+     "kind": "chunk",
+     "form": "am committed to",
+     "meaning": "To be dedicated and loyal to a particular task, cause, or organization.",
+     "example": "I am committed to continuous professional development and staying current with industry trends.",
+     "plain": "I am dedicated to continuous professional development and staying current with industry trends.",
+     "note": "Shows reliability and a strong work ethic."
+    },
+    {
+     "text": "to be eager to",
+     "kind": "frame",
+     "form": "am eager to",
+     "meaning": "To be very keen and enthusiastic to do something.",
+     "example": "I am eager to apply my skills in a dynamic and forward-thinking environment.",
+     "plain": "I am very keen to apply my skills in a dynamic and forward-thinking environment.",
+     "note": "Expresses enthusiasm and readiness; versatile frame."
+    },
+    {
+     "text": "to be open to feedback",
+     "kind": "chunk",
+     "form": "am open to feedback",
+     "meaning": "To be willing to accept criticism or suggestions for improvement.",
+     "example": "I am open to feedback and always seek opportunities to refine my approach.",
+     "plain": "I am willing to accept criticism and always seek opportunities to refine my approach.",
+     "note": "Shows humility and a desire for growth; a positive trait."
+    },
+    {
+     "text": "to be a quick study",
+     "kind": "chunk",
+     "form": "am a quick study",
+     "meaning": "To be someone who can learn new information or skills very quickly.",
+     "example": "I am a quick study, which allowed me to adapt rapidly to new software systems.",
+     "plain": "I learn new things quickly, which allowed me to adapt rapidly to new software systems.",
+     "note": "Highlights adaptability and intelligence; useful for roles requiring rapid learning."
+    },
+    {
+     "text": "to be a team player",
+     "kind": "chunk",
+     "form": "am a team player",
+     "meaning": "To be someone who works well with others as part of a group.",
+     "example": "I am a team player who enjoys collaborating with colleagues to achieve shared goals.",
+     "plain": "I work well with others and enjoy collaborating with colleagues to achieve shared goals.",
+     "note": "Essential quality for most roles; emphasizes collaborative spirit."
+    },
+    {
+     "text": "to be a problem solver",
+     "kind": "chunk",
+     "form": "am a problem solver",
+     "meaning": "To be someone who is good at finding solutions to difficulties.",
+     "example": "I am a problem solver by nature, always looking for efficient ways to overcome obstacles.",
+     "plain": "I am someone who finds solutions by nature, always looking for efficient ways to overcome obstacles.",
+     "note": "Highly valued skill; implies analytical thinking and initiative."
+    },
+    {
+     "text": "to be results-driven",
+     "kind": "chunk",
+     "form": "am results-driven",
+     "meaning": "To be focused on achieving specific outcomes and measurable results.",
+     "example": "I am results-driven and consistently strive to exceed performance targets.",
+     "plain": "I am focused on achieving outcomes and consistently strive to exceed performance targets.",
+     "note": "Common in sales, marketing, and management roles; emphasizes effectiveness."
+    },
+    {
+     "text": "to be detail-oriented",
+     "kind": "chunk",
+     "form": "am detail-oriented",
+     "meaning": "To pay close attention to small elements and ensure accuracy.",
+     "example": "I am detail-oriented, which is crucial for ensuring accuracy in financial reporting.",
+     "plain": "I pay close attention to small things, which is crucial for ensuring accuracy in financial reporting.",
+     "note": "Important for roles requiring precision and accuracy."
+    },
+    {
+     "text": "to be adaptable to",
+     "kind": "chunk",
+     "form": "am adaptable to",
+     "meaning": "To be able to adjust easily to new conditions, environments, or changes.",
+     "example": "I am adaptable to new technologies and quickly learn how to utilize them effectively.",
+     "plain": "I am able to adjust to new technologies and quickly learn how to utilize them effectively.",
+     "note": "Shows flexibility and resilience in dynamic workplaces."
+    },
+    {
+     "text": "to be proactive in",
+     "kind": "chunk",
+     "form": "am proactive in",
+     "meaning": "To take action and anticipate problems before they occur.",
+     "example": "I am proactive in identifying potential issues and implementing preventative measures.",
+     "plain": "I take action before problems arise in identifying potential issues and implementing preventative measures.",
+     "note": "Highly valued trait; shows foresight and responsibility."
+    },
+    {
+     "text": "to be resourceful in",
+     "kind": "chunk",
+     "form": "am resourceful in",
+     "meaning": "To be good at finding quick and clever ways to overcome difficulties.",
+     "example": "When faced with limited resources, I am resourceful in finding alternative solutions.",
+     "plain": "When faced with limited resources, I am good at finding clever ways to overcome difficulties.",
+     "note": "Implies creativity and problem-solving under constraints."
+    },
+    {
+     "text": "to be a critical thinker",
+     "kind": "chunk",
+     "form": "am a critical thinker",
+     "meaning": "To be someone who analyzes information objectively and evaluates arguments.",
+     "example": "I am a critical thinker, always questioning assumptions to arrive at the best solutions.",
+     "plain": "I analyze information objectively, always questioning assumptions to arrive at the best solutions.",
+     "note": "Essential for analytical and strategic roles; shows intellectual rigor."
+    },
+    {
+     "text": "to be a strategic planner",
+     "kind": "chunk",
+     "form": "am a strategic planner",
+     "meaning": "To be someone who plans with a focus on long-term goals and overall objectives.",
+     "example": "I am a strategic planner, always considering the broader implications of immediate decisions.",
+     "plain": "I plan with long-term goals in mind, always considering the broader implications of immediate decisions.",
+     "note": "Highlights foresight and ability to connect actions to larger objectives."
+    },
+    {
+     "text": "to be a strong leader",
+     "kind": "chunk",
+     "form": "am a strong leader",
+     "meaning": "To be someone who effectively guides, motivates, and inspires a team or organization.",
+     "example": "I am a strong leader who empowers team members to take ownership of their projects.",
+     "plain": "I guide and inspire effectively, empowering team members to take ownership of their projects.",
+     "note": "Direct way to state leadership qualities; confident tone."
+    },
+    {
+     "text": "to be a mentor to",
+     "kind": "chunk",
+     "form": "was a mentor to",
+     "meaning": "To guide and advise someone, especially a less experienced person, in their career.",
+     "example": "In my previous role, I was a mentor to junior colleagues, helping them develop their skills.",
+     "plain": "In my previous role, I guided and advised junior colleagues, helping them develop their skills.",
+     "note": "Shows leadership, teaching ability, and a collaborative spirit."
+    },
+    {
+     "text": "to be a coach to",
+     "kind": "chunk",
+     "form": "was a coach to",
+     "meaning": "To train and instruct someone, helping them improve their performance.",
+     "example": "I was a coach to new hires, ensuring they quickly integrated into the team and understood their roles.",
+     "plain": "I trained and instructed new hires, ensuring they quickly integrated into the team and understood their roles.",
+     "note": "Similar to mentor, but often implies more direct instruction and skill development."
+    },
+    {
+     "text": "to be a facilitator of",
+     "kind": "chunk",
+     "form": "am a facilitator of",
+     "meaning": "To be someone who helps a process or discussion happen more easily and effectively.",
+     "example": "I am a facilitator of cross-functional collaboration, ensuring smooth communication between departments.",
+     "plain": "I make cross-functional collaboration easier, ensuring smooth communication between departments.",
+     "note": "Highlights interpersonal skills and ability to bridge gaps."
+    },
+    {
+     "text": "to be a catalyst for",
+     "kind": "chunk",
+     "form": "was a catalyst for",
+     "meaning": "To be a person or thing that causes a significant change or event to happen.",
+     "example": "I was a catalyst for implementing new digital tools, significantly improving team productivity.",
+     "plain": "I caused the implementation of new digital tools, significantly improving team productivity.",
+     "note": "Strong, impactful phrase; implies driving innovation and progress."
+    },
+    {
+     "text": "to be a proponent of",
+     "kind": "chunk",
+     "form": "am a proponent of",
+     "meaning": "To be someone who supports an idea, plan, or way of doing things.",
+     "example": "I am a proponent of agile methodologies, believing they lead to more efficient project delivery.",
+     "plain": "I support agile methodologies, believing they lead to more efficient project delivery.",
+     "note": "Formal way to express support for a particular approach or philosophy."
+    },
+    {
+     "text": "to be a champion of",
+     "kind": "chunk",
+     "form": "am a champion of",
+     "meaning": "To be someone who strongly supports or defends a particular cause, idea, or person.",
+     "example": "I am a champion of customer-centric design, always prioritizing user experience in product development.",
+     "plain": "I strongly support customer-centric design, always prioritizing user experience in product development.",
+     "note": "Stronger than \"proponent\"; implies active advocacy and belief."
+    },
+    {
+     "text": "to be a driving force",
+     "kind": "chunk",
+     "form": "was a driving force",
+     "meaning": "To be the main influence or power behind a particular action or development.",
+     "example": "I was a driving force behind the successful integration of our new CRM system.",
+     "plain": "I was the main influence behind the successful integration of our new CRM system.",
+     "note": "Highlights leadership and significant impact on projects."
+    },
+    {
+     "text": "to be a key contributor",
+     "kind": "chunk",
+     "form": "was a key contributor",
+     "meaning": "To make an important and significant input to a project or team.",
+     "example": "I was a key contributor to the strategic planning process, shaping future company direction.",
+     "plain": "I made an important input to the strategic planning process, shaping future company direction.",
+     "note": "Modest yet impactful way to describe one's role in a team."
+    },
+    {
+     "text": "to be a good listener",
+     "kind": "chunk",
+     "form": "am a good listener",
+     "meaning": "To be someone who pays close attention to what others are saying.",
+     "example": "I am a good listener, which helps me understand client needs and build strong relationships.",
+     "plain": "I pay close attention to what others say, which helps me understand client needs and build strong relationships.",
+     "note": "Important interpersonal skill, especially for client-facing or leadership roles."
+    },
+    {
+     "text": "to be a clear communicator",
+     "kind": "chunk",
+     "form": "am a clear communicator",
+     "meaning": "To be someone who expresses ideas and information effectively and understandably.",
+     "example": "I am a clear communicator, ensuring that complex project updates are easily understood by all.",
+     "plain": "I express ideas well, ensuring that complex project updates are easily understood by all.",
+     "note": "Essential for any professional role; emphasizes effective information exchange."
+    },
+    {
+     "text": "to be a confident speaker",
+     "kind": "chunk",
+     "form": "am a confident speaker",
+     "meaning": "To be someone who speaks with assurance and self-possession.",
+     "example": "I am a confident speaker, comfortable presenting to large groups and senior management.",
+     "plain": "I speak with assurance, comfortable presenting to large groups and senior management.",
+     "note": "Useful for roles involving presentations, public speaking, or client interaction."
+    },
+    {
+     "text": "to be a persuasive speaker",
+     "kind": "chunk",
+     "form": "am a persuasive speaker",
+     "meaning": "To be someone who is good at convincing others to agree with their point of view.",
+     "example": "I am a persuasive speaker, often successfully advocating for new strategies within the team.",
+     "plain": "I am good at convincing others, often successfully advocating for new strategies within the team.",
+     "note": "Highlights influence and negotiation skills."
+    },
+    {
+     "text": "to be a skilled negotiator",
+     "kind": "chunk",
+     "form": "am a skilled negotiator",
+     "meaning": "To be someone who is good at discussing things formally to reach an agreement.",
+     "example": "I am a skilled negotiator, having successfully closed several high-value contracts.",
+     "plain": "I am good at reaching agreements, having successfully closed several high-value contracts.",
+     "note": "Important for sales, business development, or management roles."
+    },
+    {
+     "text": "a diplomatic approach",
+     "kind": "collocation",
+     "form": "a diplomatic approach",
+     "meaning": "A sensitive and tactful way of dealing with difficult situations or people.",
+     "example": "I believe in taking a diplomatic approach when resolving conflicts within a team.",
+     "plain": "I believe in taking a sensitive way when resolving conflicts within a team.",
+     "note": "Shows emotional intelligence and conflict resolution skills."
+    },
+    {
+     "text": "a collaborative spirit",
+     "kind": "collocation",
+     "form": "a collaborative spirit",
+     "meaning": "A willingness and eagerness to work together with others towards a common goal.",
+     "example": "Our team thrives because everyone brings a collaborative spirit to daily tasks.",
+     "plain": "Our team thrives because everyone brings a willingness to work together to daily tasks.",
+     "note": "Emphasizes teamwork and positive interpersonal dynamics."
+    },
+    {
+     "text": "a positive attitude",
+     "kind": "collocation",
+     "form": "a positive attitude",
+     "meaning": "An optimistic and constructive way of thinking or feeling.",
+     "example": "Even during challenging projects, I maintain a positive attitude and motivate my team.",
+     "plain": "Even during challenging projects, I maintain an optimistic outlook and motivate my team.",
+     "note": "General positive trait; shows resilience and leadership."
+    },
+    {
+     "text": "a sense of urgency",
+     "kind": "collocation",
+     "form": "a sense of urgency",
+     "meaning": "A feeling that something is important and needs to be dealt with quickly.",
+     "example": "I approach all tasks with a sense of urgency, ensuring deadlines are consistently met.",
+     "plain": "I approach all tasks with a feeling that they need immediate attention, ensuring deadlines are consistently met.",
+     "note": "Shows proactivity and commitment to timely delivery."
+    },
+    {
+     "text": "a sense of belonging",
+     "kind": "collocation",
+     "form": "a sense of belonging",
+     "meaning": "A feeling of being accepted and valued by a group or community.",
+     "example": "It's important for me to work in an environment where everyone feels a sense of belonging.",
+     "plain": "It's important for me to work in an environment where everyone feels accepted by a group.",
+     "note": "Highlights desire for inclusive and supportive workplace culture."
+    },
+    {
+     "text": "a sense of community",
+     "kind": "collocation",
+     "form": "a sense of community",
+     "meaning": "A feeling of shared identity and connection among a group of people.",
+     "example": "I value companies that actively foster a sense of community among their employees.",
+     "plain": "I value companies that actively foster a feeling of shared identity among their employees.",
+     "note": "Similar to belonging, but often broader, referring to the entire organization."
+    },
+    {
+     "text": "a sense of perspective",
+     "kind": "collocation",
+     "form": "a sense of perspective",
+     "meaning": "The ability to judge the relative importance of things.",
+     "example": "It's crucial to maintain a sense of perspective, especially when facing minor setbacks.",
+     "plain": "It's crucial to maintain the ability to judge the importance of things, especially when facing minor setbacks.",
+     "note": "Shows maturity and ability to prioritize; useful for managing stress."
+    },
+    {
+     "text": "a sense of proportion",
+     "kind": "collocation",
+     "form": "a sense of proportion",
+     "meaning": "The ability to judge the relative importance of things and react appropriately.",
+     "example": "I always try to keep a sense of proportion, not overreacting to small issues.",
+     "plain": "I always try to keep the ability to judge relative importance, not overreacting to small issues.",
+     "note": "Similar to \"sense of perspective,\" emphasizing balanced reactions."
+    },
+    {
+     "text": "a sense of balance",
+     "kind": "collocation",
+     "form": "a sense of balance",
+     "meaning": "An understanding of how different elements relate to each other, or a stable mental state.",
+     "example": "Achieving a good work-life balance is important, and I seek a company that supports a sense of balance.",
+     "plain": "Achieving a good work-life balance is important, and I seek a company that supports a stable mental state.",
+     "note": "Can refer to work-life or mental stability; shows self-awareness."
+    },
+    {
+     "text": "a sense of compassion",
+     "kind": "collocation",
+     "form": "a sense of compassion",
+     "meaning": "A feeling of sympathy and concern for the sufferings or misfortunes of others.",
+     "example": "Our company culture emphasizes a sense of compassion towards both employees and customers.",
+     "plain": "Our company culture emphasizes a feeling of sympathy for both employees and customers.",
+     "note": "Highlights a caring and supportive organizational culture."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "draw on my experience": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a steep learning curve": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a proven track record": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "take ownership of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "foster collaboration": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "navigate complex situations": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "demonstrate resilience": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "room for improvement": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my greatest strength lies in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "where i excel is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a growth mindset": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "could you elaborate on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what does success look like": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "how do you envision": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what are the key priorities": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's the culture like": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me rephrase that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i understand correctly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's an interesting question": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a good point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it depends on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "broadly speaking": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "thank you for your time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i appreciate the opportunity": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "looking forward to hearing from you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm confident that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm keen to learn more": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "honed my skills": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "drive initiatives": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "strike a balance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on reflection": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my understanding is that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "from my perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm particularly interested in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strong fit for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "bring to the table": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my core competencies include": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a collaborative environment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "align with my values": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a challenging role": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "gain further insight into": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "my understanding of the role": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to that end": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the one hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm confident i can": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my key takeaway was": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a good cultural fit": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to elaborate further": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd be happy to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "a valuable asset": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my understanding of the company": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give you an idea": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm eager to contribute to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a key factor": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it simply": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm looking for a role where": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my long-term goal is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a hands-on approach": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm keen to understand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give you some context": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm confident in my ability to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strong emphasis on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be more specific": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm looking to transition into": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a highly collaborative environment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my primary motivation is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to address your point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm particularly drawn to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strong sense of ownership": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to recap briefly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm confident that i can": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a clear understanding of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it mildly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm looking for opportunities to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a strong work ethic": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be frank": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm eager to learn": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a results-oriented approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to summarize my qualifications": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm looking for a company that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a strong team player": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be precise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a proactive approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it bluntly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm eager to take on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strategic thinker": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be quite honest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm looking for a culture where": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strong communicator": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put things in perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm confident that my skills": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly clear": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm looking for a mentor who": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strong sense of purpose": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be fair to them": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm looking for a team that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a strong track record of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be honest with you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm looking for a role with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a strong sense of accountability": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to articulate my vision": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a nuanced understanding": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to gain traction": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to foster a culture of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to mitigate risks": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to set the stage for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be instrumental in": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be well-versed in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to bring a fresh perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to align with the company's objectives": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to take initiative": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to think outside the box": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to embrace change": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to learn from setbacks": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to contribute meaningfully": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a self-starter": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to demonstrate initiative": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to articulate complex ideas": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to foster a sense of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to cultivate relationships": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to facilitate discussions": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to streamline processes": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to champion new ideas": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be adept at": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be passionate about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be committed to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be eager to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be open to feedback": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a quick study": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a team player": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be a problem solver": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be results-driven": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be detail-oriented": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be adaptable to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be proactive in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be resourceful in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a critical thinker": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a strategic planner": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a strong leader": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a mentor to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a coach to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a facilitator of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a catalyst for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a proponent of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a champion of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a driving force": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a key contributor": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a good listener": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be a clear communicator": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be a confident speaker": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be a persuasive speaker": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a skilled negotiator": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a diplomatic approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a collaborative spirit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a positive attitude": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a sense of urgency": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a sense of belonging": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a sense of community": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a sense of perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a sense of proportion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a sense of balance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a sense of compassion": {
+    "status": "pass",
+    "level": "B2"
+   }
+  }
+ }
+}

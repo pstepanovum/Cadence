@@ -1,0 +1,2713 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "problem-solving",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "to get to the bottom of",
+     "kind": "chunk",
+     "form": "get to the bottom of",
+     "meaning": "To discover the real reason or cause of a problem.",
+     "example": "We need to get to the bottom of why these errors are occurring before we can fix them.",
+     "plain": "We need to understand the real cause of these errors before we can fix them.",
+     "note": "Common in professional settings when investigating issues."
+    },
+    {
+     "text": "What I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "Used to clarify or explain the main point you are trying to make.",
+     "example": "What I'm getting at is, we need a more robust system to prevent this from happening again.",
+     "plain": "My main point is that we need a more robust system to prevent this from happening again.",
+     "note": "Helps to rephrase or emphasize a point, often when the listener seems confused."
+    },
+    {
+     "text": "to raise a concern",
+     "kind": "collocation",
+     "form": "raise a concern",
+     "meaning": "To mention an issue or worry that you have about something.",
+     "example": "I wanted to raise a concern about the timeline for the project; it seems quite ambitious.",
+     "plain": "I wanted to mention my worry about the project timeline; it seems quite ambitious.",
+     "note": "A polite and professional way to introduce a potential problem."
+    },
+    {
+     "text": "to weigh the options",
+     "kind": "chunk",
+     "form": "weigh the options",
+     "meaning": "To carefully consider all available choices before making a decision.",
+     "example": "Before we decide, let's take some time to weigh the options and their potential impact.",
+     "plain": "Before we decide, let's take some time to consider all the choices and their potential impact.",
+     "note": "Implies a thoughtful and analytical approach to decision-making."
+    },
+    {
+     "text": "to come up with a solution",
+     "kind": "chunk",
+     "form": "come up with a solution",
+     "meaning": "To think of or create an answer to a problem.",
+     "example": "We need to brainstorm quickly and come up with a solution for the unexpected budget cut.",
+     "plain": "We need to brainstorm quickly and find an answer for the unexpected budget cut.",
+     "note": "Focuses on the act of generating a resolution."
+    },
+    {
+     "text": "to be on the same page",
+     "kind": "chunk",
+     "form": "on the same page",
+     "meaning": "To have a shared understanding or agreement about a situation or plan.",
+     "example": "Let's quickly review the action points to ensure we're all on the same page.",
+     "plain": "Let's quickly review the action points to ensure we all understand and agree.",
+     "note": "Essential for team collaboration and avoiding misunderstandings."
+    },
+    {
+     "text": "to iron out the details",
+     "kind": "chunk",
+     "form": "iron out the details",
+     "meaning": "To resolve small problems or disagreements in a plan or agreement.",
+     "example": "We've agreed on the main strategy, now we just need to iron out the details of implementation.",
+     "plain": "We've agreed on the main strategy, now we just need to resolve the small problems of implementation.",
+     "note": "Suggests a process of refining and perfecting a plan."
+    },
+    {
+     "text": "to take a pragmatic view",
+     "kind": "collocation",
+     "form": "take a pragmatic view",
+     "meaning": "To approach a situation in a practical and realistic way, focusing on what works.",
+     "example": "Given the limited resources, we need to take a pragmatic view of what's achievable.",
+     "plain": "Given the limited resources, we need to be practical and realistic about what's achievable.",
+     "note": "Emphasizes practicality over idealism, common in business discussions."
+    },
+    {
+     "text": "to get buy-in",
+     "kind": "collocation",
+     "form": "get buy-in",
+     "meaning": "To gain agreement and support from others for a plan or idea.",
+     "example": "We won't be able to proceed until we get buy-in from all the key stakeholders.",
+     "plain": "We won't be able to proceed until we gain agreement and support from all the key stakeholders.",
+     "note": "Crucial for successful project implementation, especially in larger organizations."
+    },
+    {
+     "text": "to touch base",
+     "kind": "chunk",
+     "form": "touch base",
+     "meaning": "To briefly communicate with someone, often to check in or update.",
+     "example": "Let's touch base again on Friday to see how the new process is working out.",
+     "plain": "Let's communicate briefly again on Friday to see how the new process is working out.",
+     "note": "Informal yet professional, used for quick check-ins."
+    },
+    {
+     "text": "to circle back",
+     "kind": "chunk",
+     "form": "circle back",
+     "meaning": "To return to a previous topic or issue later.",
+     "example": "That's a good point, but let's circle back to it after we've discussed the main agenda items.",
+     "plain": "That's a good point, but let's return to it after we've discussed the main agenda items.",
+     "note": "Useful for managing meeting agendas and deferring discussions politely."
+    },
+    {
+     "text": "to keep an eye on",
+     "kind": "chunk",
+     "form": "keep an eye on",
+     "meaning": "To monitor or watch something carefully.",
+     "example": "I'll keep an eye on the budget projections to ensure we don't overspend this quarter.",
+     "plain": "I'll monitor the budget projections to ensure we don't overspend this quarter.",
+     "note": "Implies ongoing vigilance and responsibility."
+    },
+    {
+     "text": "to address the issue",
+     "kind": "collocation",
+     "form": "address the issue",
+     "meaning": "To deal with a problem or concern directly and effectively.",
+     "example": "We need to address the issue of low team morale before it impacts productivity further.",
+     "plain": "We need to deal with the problem of low team morale before it impacts productivity further.",
+     "note": "A direct and professional way to state the need for action."
+    },
+    {
+     "text": "to put a plan in place",
+     "kind": "collocation",
+     "form": "put a plan in place",
+     "meaning": "To establish a detailed strategy or set of actions.",
+     "example": "Once we've identified the root cause, we can put a plan in place to prevent recurrence.",
+     "plain": "Once we've identified the root cause, we can establish a strategy to prevent recurrence.",
+     "note": "Emphasizes the formal creation and implementation of a strategy."
+    },
+    {
+     "text": "to outline the next steps",
+     "kind": "collocation",
+     "form": "outline the next steps",
+     "meaning": "To describe the subsequent actions that need to be taken.",
+     "example": "Before we adjourn, let's quickly outline the next steps and assign responsibilities.",
+     "plain": "Before we adjourn, let's quickly describe the subsequent actions and assign responsibilities.",
+     "note": "Provides clarity and structure for moving forward after a discussion."
+    },
+    {
+     "text": "to get to the crux of",
+     "kind": "collocation",
+     "form": "get to the crux of",
+     "meaning": "To identify the most important or fundamental part of a problem or matter.",
+     "example": "We spent too long on minor points; let's try to get to the crux of the matter.",
+     "plain": "We spent too long on minor points; let's try to identify the most important part of the matter.",
+     "note": "Suggests a desire to focus on the core issue, often after tangential discussions."
+    },
+    {
+     "text": "to take a step back",
+     "kind": "chunk",
+     "form": "take a step back",
+     "meaning": "To temporarily disengage from a situation to gain a broader perspective.",
+     "example": "This problem is complex; perhaps we should take a step back and look at it from a different angle.",
+     "plain": "This problem is complex; perhaps we should temporarily disengage and look at it from a different angle.",
+     "note": "Useful when feeling overwhelmed or stuck, encouraging a fresh perspective."
+    },
+    {
+     "text": "to gain some clarity",
+     "kind": "collocation",
+     "form": "gain some clarity",
+     "meaning": "To achieve a better understanding of a situation or problem.",
+     "example": "I'd like to speak with Sarah to gain some clarity on her team's current workload.",
+     "plain": "I'd like to speak with Sarah to better understand her team's current workload.",
+     "note": "Implies seeking specific information to resolve ambiguity."
+    },
+    {
+     "text": "to get a handle on",
+     "kind": "chunk",
+     "form": "get a handle on",
+     "meaning": "To understand and be able to manage a situation or problem.",
+     "example": "It took a few weeks, but I think I'm finally starting to get a handle on the new software.",
+     "plain": "It took a few weeks, but I think I'm finally starting to understand and manage the new software.",
+     "note": "Suggests gaining control and competence over something challenging."
+    },
+    {
+     "text": "to be proactive",
+     "kind": "chunk",
+     "form": "be proactive",
+     "meaning": "To act in anticipation of future problems, needs, or changes.",
+     "example": "We need to be proactive in identifying potential risks, rather than just reacting to them.",
+     "plain": "We need to act in anticipation of potential risks, rather than just reacting to them.",
+     "note": "Emphasizes foresight and taking initiative."
+    },
+    {
+     "text": "to take a measured approach",
+     "kind": "collocation",
+     "form": "take a measured approach",
+     "meaning": "To deal with a situation carefully and thoughtfully, avoiding hasty actions.",
+     "example": "This is a sensitive issue, so we should take a measured approach to our response.",
+     "plain": "This is a sensitive issue, so we should deal with our response carefully and thoughtfully.",
+     "note": "Suggests prudence and a well-considered strategy."
+    },
+    {
+     "text": "to err on the side of caution",
+     "kind": "chunk",
+     "form": "err on the side of caution",
+     "meaning": "To choose the safer or less risky option, even if it means being overly careful.",
+     "example": "I think we should err on the side of caution and double-check all the figures before submitting.",
+     "plain": "I think we should choose the safer option and double-check all the figures before submitting.",
+     "note": "A common idiom for recommending a conservative approach."
+    },
+    {
+     "text": "to face a dilemma",
+     "kind": "collocation",
+     "form": "face a dilemma",
+     "meaning": "To be in a difficult situation requiring a choice between two undesirable options.",
+     "example": "We face a dilemma: either delay the launch or release with known bugs.",
+     "plain": "We are in a difficult situation: either delay the launch or release with known bugs.",
+     "note": "Highlights a challenging choice with no easy answer."
+    },
+    {
+     "text": "to be in a bind",
+     "kind": "chunk",
+     "form": "in a bind",
+     "meaning": "To be in a difficult or awkward situation.",
+     "example": "If we lose that client, we'll really be in a bind financially for the next quarter.",
+     "plain": "If we lose that client, we'll really be in a difficult situation financially for the next quarter.",
+     "note": "Informal but widely used in professional contexts to describe a predicament."
+    },
+    {
+     "text": "to be up against it",
+     "kind": "chunk",
+     "form": "up against it",
+     "meaning": "To be facing significant difficulties or strong opposition.",
+     "example": "With the tight deadline and limited staff, we're really up against it to finish on time.",
+     "plain": "With the tight deadline and limited staff, we're really facing significant difficulties to finish on time.",
+     "note": "Conveys a sense of struggle against challenging circumstances."
+    },
+    {
+     "text": "to be stretched thin",
+     "kind": "chunk",
+     "form": "stretched thin",
+     "meaning": "To have too much work or too many responsibilities, leading to being overworked.",
+     "example": "Everyone on the team is stretched thin, so adding another project right now isn't feasible.",
+     "plain": "Everyone on the team has too much work, so adding another project right now isn't feasible.",
+     "note": "A common way to describe resource constraints and workload issues."
+    },
+    {
+     "text": "to be at a crossroads",
+     "kind": "chunk",
+     "form": "at a crossroads",
+     "meaning": "To be at a point where an important decision must be made, with significant consequences.",
+     "example": "The company is at a crossroads, needing to decide whether to expand internationally or focus domestically.",
+     "plain": "The company is at a point where an important decision must be made, needing to decide whether to expand internationally or focus domestically.",
+     "note": "Implies a critical juncture requiring careful consideration."
+    },
+    {
+     "text": "to be in uncharted territory",
+     "kind": "collocation",
+     "form": "in uncharted territory",
+     "meaning": "To be in a new or unfamiliar situation with no previous experience to guide you.",
+     "example": "Implementing this new technology means we're in uncharted territory, so we'll learn as we go.",
+     "plain": "Implementing this new technology means we're in a new situation, so we'll learn as we go.",
+     "note": "Highlights novelty and the need for adaptability."
+    },
+    {
+     "text": "to be on thin ice",
+     "kind": "chunk",
+     "form": "on thin ice",
+     "meaning": "To be in a precarious or risky situation, where one wrong move could lead to trouble.",
+     "example": "After missing two deadlines, John is really on thin ice with the project manager.",
+     "plain": "After missing two deadlines, John is in a precarious situation with the project manager.",
+     "note": "Implies a warning or a delicate situation requiring extreme care."
+    },
+    {
+     "text": "to be under scrutiny",
+     "kind": "chunk",
+     "form": "under scrutiny",
+     "meaning": "To be subjected to close and careful examination or observation.",
+     "example": "Our department is currently under scrutiny due to the recent performance dip.",
+     "plain": "Our department is currently being closely examined due to the recent performance dip.",
+     "note": "Suggests a period of intense review, often implying potential problems."
+    },
+    {
+     "text": "to be under review",
+     "kind": "chunk",
+     "form": "under review",
+     "meaning": "To be in the process of being formally examined or evaluated.",
+     "example": "The new proposal is currently under review by the executive committee.",
+     "plain": "The new proposal is currently being formally examined by the executive committee.",
+     "note": "A neutral term for an ongoing evaluation process."
+    },
+    {
+     "text": "to be under discussion",
+     "kind": "chunk",
+     "form": "under discussion",
+     "meaning": "To be the subject of conversation or debate.",
+     "example": "The possibility of extending the project deadline is still under discussion.",
+     "plain": "The possibility of extending the project deadline is still being talked about.",
+     "note": "Indicates that a topic is being actively considered but not yet decided."
+    },
+    {
+     "text": "to be under no illusion",
+     "kind": "chunk",
+     "form": "under no illusion",
+     "meaning": "To fully understand the reality of a difficult situation, without false hopes.",
+     "example": "I'm under no illusion that this will be an easy task; it will require significant effort.",
+     "plain": "I fully understand that this will not be an easy task; it will require significant effort.",
+     "note": "Expresses a realistic and often sober assessment of a challenge."
+    },
+    {
+     "text": "to be under the impression",
+     "kind": "chunk",
+     "form": "under the impression",
+     "meaning": "To believe something, often based on indirect information, which may or may not be true.",
+     "example": "I was under the impression that the report was due next Friday, not this Friday.",
+     "plain": "I believed that the report was due next Friday, not this Friday.",
+     "note": "Used to politely correct a misunderstanding or state a belief that might be wrong."
+    },
+    {
+     "text": "to put things in perspective",
+     "kind": "chunk",
+     "form": "put things in perspective",
+     "meaning": "To consider a situation in relation to other facts, to understand its true importance.",
+     "example": "Let's put things in perspective; while this setback is frustrating, it's not a catastrophic failure.",
+     "plain": "Let's consider other facts; while this setback is frustrating, it's not a catastrophic failure.",
+     "note": "Helps to calm anxieties and provide a balanced view of a problem."
+    },
+    {
+     "text": "to clear the air",
+     "kind": "chunk",
+     "form": "clear the air",
+     "meaning": "To resolve misunderstandings or bad feelings between people.",
+     "example": "There's been some tension, so I think we need to meet to clear the air about the project roles.",
+     "plain": "There's been some tension, so I think we need to meet to resolve misunderstandings about the project roles.",
+     "note": "Focuses on improving interpersonal relations after conflict."
+    },
+    {
+     "text": "to bridge the gap",
+     "kind": "collocation",
+     "form": "bridge the gap",
+     "meaning": "To connect two things or groups that are separate or different.",
+     "example": "We need to find a way to bridge the gap between the sales and marketing teams' objectives.",
+     "plain": "We need to find a way to connect the sales and marketing teams' different objectives.",
+     "note": "Implies resolving differences or creating synergy."
+    },
+    {
+     "text": "to find common ground",
+     "kind": "collocation",
+     "form": "find common ground",
+     "meaning": "To discover shared interests, beliefs, or areas of agreement.",
+     "example": "Despite our initial disagreements, I'm confident we can find common ground on the budget.",
+     "plain": "Despite our initial disagreements, I'm confident we can discover shared interests on the budget.",
+     "note": "Essential for negotiation and reaching consensus."
+    },
+    {
+     "text": "to manage expectations",
+     "kind": "collocation",
+     "form": "manage expectations",
+     "meaning": "To ensure that others have realistic ideas about what is possible or likely.",
+     "example": "We need to manage expectations with the client about how quickly we can deliver the new features.",
+     "plain": "We need to ensure the client has realistic ideas about how quickly we can deliver the new features.",
+     "note": "Prevents disappointment by setting realistic boundaries."
+    },
+    {
+     "text": "to mitigate the risk",
+     "kind": "collocation",
+     "form": "mitigate the risk",
+     "meaning": "To make a potential problem or danger less severe or serious.",
+     "example": "We've implemented new security protocols to mitigate the risk of data breaches.",
+     "plain": "We've implemented new security protocols to make the risk of data breaches less severe.",
+     "note": "A key term in project management and strategic planning."
+    },
+    {
+     "text": "to take ownership of",
+     "kind": "collocation",
+     "form": "take ownership of",
+     "meaning": "To accept responsibility for something, especially a problem or task.",
+     "example": "Someone needs to take ownership of this bug and ensure it gets fixed promptly.",
+     "plain": "Someone needs to accept responsibility for this bug and ensure it gets fixed promptly.",
+     "note": "Emphasizes accountability and initiative."
+    },
+    {
+     "text": "to learn from our mistakes",
+     "kind": "chunk",
+     "form": "learn from our mistakes",
+     "meaning": "To gain knowledge or improve behavior by reflecting on past errors.",
+     "example": "This project didn't go as planned, but we must learn from our mistakes for next time.",
+     "plain": "This project didn't go as planned, but we must gain knowledge from our past errors for next time.",
+     "note": "A common phrase for promoting growth and continuous improvement."
+    },
+    {
+     "text": "to move past this",
+     "kind": "chunk",
+     "form": "move past this",
+     "meaning": "To overcome a problem or difficult situation and continue forward.",
+     "example": "We've spent enough time dwelling on what went wrong; it's time to move past this.",
+     "plain": "We've spent enough time dwelling on what went wrong; it's time to overcome this.",
+     "note": "Encourages forward momentum and resolution."
+    },
+    {
+     "text": "to keep lines of communication open",
+     "kind": "collocation",
+     "form": "keep lines of communication open",
+     "meaning": "To ensure that people continue to talk to each other and share information.",
+     "example": "It's vital to keep lines of communication open between departments during this transition.",
+     "plain": "It's vital to ensure people continue to talk to each other between departments during this transition.",
+     "note": "Stresses the importance of ongoing dialogue to prevent issues."
+    },
+    {
+     "text": "to ensure accountability",
+     "kind": "collocation",
+     "form": "ensure accountability",
+     "meaning": "To make certain that individuals or teams are responsible for their actions and outcomes.",
+     "example": "We need clearer roles to ensure accountability for each stage of the project.",
+     "plain": "We need clearer roles to make certain that individuals are responsible for each stage of the project.",
+     "note": "A formal term for establishing responsibility."
+    },
+    {
+     "text": "to get things back on track",
+     "kind": "chunk",
+     "form": "get things back on track",
+     "meaning": "To restore a project or situation to its normal or desired course after a deviation.",
+     "example": "The delay was significant, but we're working hard to get things back on track.",
+     "plain": "The delay was significant, but we're working hard to restore the situation to its desired course.",
+     "note": "Implies corrective action to return to a planned schedule or state."
+    },
+    {
+     "text": "to address the issue head-on",
+     "kind": "chunk",
+     "form": "address the issue head-on",
+     "meaning": "To confront a problem directly and without avoidance.",
+     "example": "This conflict won't resolve itself; we need to address the issue head-on.",
+     "plain": "This conflict won't resolve itself; we need to confront the problem directly.",
+     "note": "Suggests courage and a direct approach to difficult problems."
+    },
+    {
+     "text": "to put a stop to",
+     "kind": "chunk",
+     "form": "put a stop to",
+     "meaning": "To cause something to cease or end.",
+     "example": "We need to put a stop to these recurring errors by implementing stricter quality checks.",
+     "plain": "We need to cause these recurring errors to end by implementing stricter quality checks.",
+     "note": "Implies decisive action to terminate an undesirable situation."
+    },
+    {
+     "text": "to get ahead of the curve",
+     "kind": "chunk",
+     "form": "get ahead of the curve",
+     "meaning": "To be in front of current trends or developments, anticipating future needs.",
+     "example": "By investing in new technology now, we can get ahead of the curve in market innovation.",
+     "plain": "By investing in new technology now, we can be in front of current trends in market innovation.",
+     "note": "Focuses on proactive strategy and competitive advantage."
+    },
+    {
+     "text": "to take a proactive stance",
+     "kind": "collocation",
+     "form": "take a proactive stance",
+     "meaning": "To adopt an attitude or position of acting in anticipation of future problems or needs.",
+     "example": "Instead of waiting for problems, we should take a proactive stance on risk management.",
+     "plain": "Instead of waiting for problems, we should adopt an attitude of acting in anticipation of risk.",
+     "note": "Similar to \"to be proactive\" but emphasizes the deliberate adoption of this approach."
+    },
+    {
+     "text": "to exercise caution",
+     "kind": "collocation",
+     "form": "exercise caution",
+     "meaning": "To be careful and prudent in one's actions or decisions.",
+     "example": "We should exercise caution when dealing with this new vendor until we build trust.",
+     "plain": "We should be careful when dealing with this new vendor until we build trust.",
+     "note": "A formal way to advise prudence."
+    },
+    {
+     "text": "to be in a tight spot",
+     "kind": "chunk",
+     "form": "in a tight spot",
+     "meaning": "To be in a difficult or awkward situation.",
+     "example": "If we don't secure that funding, we'll be in a tight spot regarding project completion.",
+     "plain": "If we don't secure that funding, we'll be in a difficult situation regarding project completion.",
+     "note": "Similar to \"in a bind,\" but perhaps slightly more common in general conversation."
+    },
+    {
+     "text": "to be caught in the crossfire",
+     "kind": "chunk",
+     "form": "caught in the crossfire",
+     "meaning": "To be unintentionally involved in a conflict between other people or groups.",
+     "example": "I feel like I'm caught in the crossfire between the two department heads arguing over resources.",
+     "plain": "I feel like I'm unintentionally involved in the conflict between the two department heads arguing over resources.",
+     "note": "Describes being an innocent party affected by others' disputes."
+    },
+    {
+     "text": "to be in the firing line",
+     "kind": "chunk",
+     "form": "in the firing line",
+     "meaning": "To be in a position where one is likely to be criticized or blamed.",
+     "example": "If this project fails, the whole team will be in the firing line, not just the manager.",
+     "plain": "If this project fails, the whole team will be in a position to be criticized, not just the manager.",
+     "note": "Suggests vulnerability to criticism or negative consequences."
+    },
+    {
+     "text": "to be under the microscope",
+     "kind": "chunk",
+     "form": "under the microscope",
+     "meaning": "To be subjected to extremely close and detailed examination.",
+     "example": "After the audit, our financial records are really under the microscope.",
+     "plain": "After the audit, our financial records are being extremely closely examined.",
+     "note": "Stronger than \"under scrutiny,\" implying intense and detailed inspection."
+    },
+    {
+     "text": "to be under consideration",
+     "kind": "chunk",
+     "form": "under consideration",
+     "meaning": "To be being thought about or discussed.",
+     "example": "Your proposal for the new marketing campaign is currently under consideration.",
+     "plain": "Your proposal for the new marketing campaign is currently being thought about.",
+     "note": "A formal way to indicate that something is being evaluated."
+    },
+    {
+     "text": "to be under negotiation",
+     "kind": "chunk",
+     "form": "under negotiation",
+     "meaning": "To be in the process of being discussed in order to reach an agreement.",
+     "example": "The terms of the new contract are still under negotiation with the supplier.",
+     "plain": "The terms of the new contract are still being discussed to reach an agreement with the supplier.",
+     "note": "Indicates an ongoing process of bargaining and discussion."
+    },
+    {
+     "text": "to be under wraps",
+     "kind": "chunk",
+     "form": "under wraps",
+     "meaning": "To be kept secret or hidden from public knowledge.",
+     "example": "The details of the new product launch are still under wraps until the official announcement.",
+     "plain": "The details of the new product launch are still being kept secret until the official announcement.",
+     "note": "Used for confidential information or plans."
+    },
+    {
+     "text": "to be under way",
+     "kind": "chunk",
+     "form": "under way",
+     "meaning": "To be in progress; happening now.",
+     "example": "The implementation of the new system is now under way and progressing well.",
+     "plain": "The implementation of the new system is now in progress and progressing well.",
+     "note": "A formal way to state that an activity has started and is continuing."
+    },
+    {
+     "text": "to keep momentum going",
+     "kind": "collocation",
+     "form": "keep momentum going",
+     "meaning": "To maintain the speed or progress of an activity.",
+     "example": "We've had a great start to the project; let's keep momentum going with regular updates.",
+     "plain": "We've had a great start to the project; let's maintain the progress with regular updates.",
+     "note": "Focuses on sustaining positive progress and energy."
+    },
+    {
+     "text": "to make an informed decision",
+     "kind": "collocation",
+     "form": "make an informed decision",
+     "meaning": "To make a choice based on a thorough understanding of the facts and options.",
+     "example": "We need more data before we can make an informed decision about the investment.",
+     "plain": "We need more data before we can make a choice based on a thorough understanding about the investment.",
+     "note": "Emphasizes the importance of data and knowledge in decision-making."
+    },
+    {
+     "text": "to reach a consensus",
+     "kind": "collocation",
+     "form": "reach a consensus",
+     "meaning": "To arrive at a general agreement among a group of people.",
+     "example": "It's important that we discuss this until we can reach a consensus on the best path forward.",
+     "plain": "It's important that we discuss this until we can arrive at a general agreement on the best path forward.",
+     "note": "Highlights the goal of collective agreement, often after discussion."
+    },
+    {
+     "text": "to put forward a proposal",
+     "kind": "collocation",
+     "form": "put forward a proposal",
+     "meaning": "To present an idea or plan for consideration.",
+     "example": "I'd like to put forward a proposal for restructuring the customer support team.",
+     "plain": "I'd like to present an idea for restructuring the customer support team.",
+     "note": "A formal way to introduce a suggestion or plan."
+    },
+    {
+     "text": "to float an idea",
+     "kind": "collocation",
+     "form": "float an idea",
+     "meaning": "To suggest an idea tentatively to see how others react to it.",
+     "example": "I just wanted to float an idea about a new marketing campaign; it's still very rough.",
+     "plain": "I just wanted to suggest an idea tentatively about a new marketing campaign; it's still very rough.",
+     "note": "Implies a preliminary suggestion, inviting feedback."
+    },
+    {
+     "text": "to explore alternatives",
+     "kind": "collocation",
+     "form": "explore alternatives",
+     "meaning": "To investigate other possible options or solutions.",
+     "example": "If this approach doesn't work, we'll need to explore alternatives quickly.",
+     "plain": "If this approach doesn't work, we'll need to investigate other possible options quickly.",
+     "note": "Suggests a willingness to consider different paths if the current one fails."
+    },
+    {
+     "text": "to offer a suggestion",
+     "kind": "collocation",
+     "form": "offer a suggestion",
+     "meaning": "To propose an idea or plan for someone to consider.",
+     "example": "May I offer a suggestion on how we might streamline this particular process?",
+     "plain": "May I propose an idea on how we might streamline this particular process?",
+     "note": "A polite and formal way to contribute an idea."
+    },
+    {
+     "text": "to be a viable path",
+     "kind": "collocation",
+     "form": "be a viable path",
+     "meaning": "To be a practical and achievable course of action.",
+     "example": "Outsourcing this task could be a viable path if we can't hire more staff internally.",
+     "plain": "Outsourcing this task could be a practical and achievable course of action if we can't hire more staff internally.",
+     "note": "Assesses the feasibility and effectiveness of an option."
+    },
+    {
+     "text": "to monitor progress",
+     "kind": "collocation",
+     "form": "monitor progress",
+     "meaning": "To regularly check the development or improvement of something.",
+     "example": "We need to monitor progress closely on the new software rollout to catch any issues early.",
+     "plain": "We need to regularly check the development closely on the new software rollout to catch any issues early.",
+     "note": "Essential for project management and ensuring goals are met."
+    },
+    {
+     "text": "to review the situation",
+     "kind": "collocation",
+     "form": "review the situation",
+     "meaning": "To formally examine and assess the current state of affairs.",
+     "example": "Let's schedule a meeting next week to review the situation after the initial implementation phase.",
+     "plain": "Let's schedule a meeting next week to formally examine the current state of affairs after the initial implementation phase.",
+     "note": "Implies a formal assessment or evaluation."
+    },
+    {
+     "text": "to ensure smooth implementation",
+     "kind": "collocation",
+     "form": "ensure smooth implementation",
+     "meaning": "To make certain that a plan or system is put into effect without problems.",
+     "example": "We need a detailed checklist to ensure smooth implementation of the new policy.",
+     "plain": "We need a detailed checklist to make certain that the new policy is put into effect without problems.",
+     "note": "Focuses on the execution phase of a plan."
+    },
+    {
+     "text": "to schedule a follow-up",
+     "kind": "collocation",
+     "form": "schedule a follow-up",
+     "meaning": "To arrange a subsequent meeting or communication to check on progress or discuss further.",
+     "example": "Let's schedule a follow-up for next month to discuss the long-term impact of these changes.",
+     "plain": "Let's arrange a subsequent meeting for next month to discuss the long-term impact of these changes.",
+     "note": "A standard professional practice for ongoing management."
+    },
+    {
+     "text": "to make sure we're aligned",
+     "kind": "chunk",
+     "form": "make sure we're aligned",
+     "meaning": "To ensure that everyone involved has the same goals and understanding.",
+     "example": "Before we start, let's quickly discuss the objectives to make sure we're aligned.",
+     "plain": "Before we start, let's quickly discuss the objectives to ensure everyone has the same goals and understanding.",
+     "note": "Crucial for team cohesion and preventing conflicting efforts."
+    },
+    {
+     "text": "What's the status update",
+     "kind": "collocation",
+     "form": "What's the status update",
+     "meaning": "A request for current information on the progress of a task or project.",
+     "example": "Before the meeting, could you send out a quick email with what's the status update on your tasks?",
+     "plain": "Before the meeting, could you send out a quick email with current information on the progress of your tasks?",
+     "note": "A common and direct way to ask for progress reports."
+    },
+    {
+     "text": "to fine-tune",
+     "kind": "chunk",
+     "form": "fine-tune",
+     "meaning": "To make small adjustments to improve something.",
+     "example": "The new process is working well, but we still need to fine-tune a few steps for efficiency.",
+     "plain": "The new process is working well, but we still need to make small adjustments to a few steps for efficiency.",
+     "note": "Implies making minor, precise improvements."
+    },
+    {
+     "text": "to acknowledge a concern",
+     "kind": "collocation",
+     "form": "acknowledge a concern",
+     "meaning": "To recognize and show that you understand someone's worry or issue.",
+     "example": "I want to acknowledge a concern raised by the team about the increased workload.",
+     "plain": "I want to recognize and show that I understand the worry raised by the team about the increased workload.",
+     "note": "A diplomatic way to show empathy and validate another's point."
+    },
+    {
+     "text": "to take responsibility for",
+     "kind": "collocation",
+     "form": "take responsibility for",
+     "meaning": "To accept the duty of dealing with something or being accountable for it.",
+     "example": "I will take responsibility for coordinating the next phase of the project.",
+     "plain": "I will accept the duty of coordinating the next phase of the project.",
+     "note": "A formal way to state one's commitment to a task or outcome."
+    },
+    {
+     "text": "to have a slight hiccup",
+     "kind": "collocation",
+     "form": "have a slight hiccup",
+     "meaning": "To experience a minor, temporary problem or delay.",
+     "example": "We might have a slight hiccup with the server migration, but it should be resolved quickly.",
+     "plain": "We might experience a minor, temporary problem with the server migration, but it should be resolved quickly.",
+     "note": "An understated way to refer to a small, usually manageable issue."
+    },
+    {
+     "text": "to notice a pattern emerging",
+     "kind": "collocation",
+     "form": "noticed a pattern emerging",
+     "meaning": "To observe a recurring trend or sequence of events.",
+     "example": "I've noticed a pattern emerging in the customer feedback, suggesting a common usability issue.",
+     "plain": "I've observed a recurring trend in the customer feedback, suggesting a common usability issue.",
+     "note": "Used when identifying a trend that might indicate a systemic problem."
+    },
+    {
+     "text": "there's a bit of a disconnect",
+     "kind": "chunk",
+     "form": "there's a bit of a disconnect",
+     "meaning": "There is a lack of connection or understanding between two things or people.",
+     "example": "It seems there's a bit of a disconnect between what the client expects and what we can deliver.",
+     "plain": "It seems there's a lack of connection between what the client expects and what we can deliver.",
+     "note": "A polite way to point out a gap in understanding or alignment."
+    },
+    {
+     "text": "to revisit this",
+     "kind": "chunk",
+     "form": "revisit this",
+     "meaning": "To discuss or consider something again, often because new information has emerged.",
+     "example": "Given the new budget constraints, we might need to revisit this decision about the software upgrade.",
+     "plain": "Given the new budget constraints, we might need to discuss this decision about the software upgrade again.",
+     "note": "Suggests a need to re-evaluate a previous choice or plan."
+    },
+    {
+     "text": "I'm a little concerned about",
+     "kind": "frame",
+     "form": "I'm a little concerned about",
+     "meaning": "A polite and understated way to express worry or apprehension.",
+     "example": "I'm a little concerned about the potential impact of these changes on team morale.",
+     "plain": "I'm worried about the potential impact of these changes on team morale.",
+     "note": "A soft opening for expressing a reservation, often to invite discussion."
+    },
+    {
+     "text": "it's come to my attention that",
+     "kind": "frame",
+     "form": "It's come to my attention that",
+     "meaning": "A formal way to introduce information you have recently learned, often about a problem.",
+     "example": "It's come to my attention that some deadlines are being consistently missed.",
+     "plain": "I've recently learned that some deadlines are being consistently missed.",
+     "note": "Formal and often used when addressing an issue that needs to be resolved."
+    },
+    {
+     "text": "to run into a snag",
+     "kind": "collocation",
+     "form": "run into a snag",
+     "meaning": "To encounter an unexpected difficulty or obstacle.",
+     "example": "We've run into a snag with the data migration, which might delay the launch.",
+     "plain": "We've encountered an unexpected difficulty with the data migration, which might delay the launch.",
+     "note": "Informal but common, referring to a minor but disruptive problem."
+    },
+    {
+     "text": "what's the root cause",
+     "kind": "collocation",
+     "form": "what's the root cause",
+     "meaning": "A question asking for the fundamental underlying reason for a problem.",
+     "example": "Before we implement any fixes, we need to understand what's the root cause of these system failures.",
+     "plain": "Before we implement any fixes, we need to understand the fundamental reason for these system failures.",
+     "note": "Focuses on deep analysis rather than superficial solutions."
+    },
+    {
+     "text": "to unpack this a bit",
+     "kind": "chunk",
+     "form": "unpack this a bit",
+     "meaning": "To analyze or discuss a complex issue in more detail.",
+     "example": "This feedback is quite broad; let's unpack this a bit to identify specific actionable points.",
+     "plain": "This feedback is quite broad; let's analyze this in more detail to identify specific actionable points.",
+     "note": "Suggests a collaborative and detailed examination of a topic."
+    },
+    {
+     "text": "to face a challenge",
+     "kind": "collocation",
+     "form": "face a challenge",
+     "meaning": "To confront a difficult situation or task.",
+     "example": "Our team will face a challenge in integrating the new software with our legacy systems.",
+     "plain": "Our team will confront a difficult situation in integrating the new software with our legacy systems.",
+     "note": "A neutral and professional way to describe a difficulty."
+    },
+    {
+     "text": "to drill down",
+     "kind": "chunk",
+     "form": "drill down",
+     "meaning": "To examine something in more detail or to a deeper level.",
+     "example": "The initial report shows an issue, but we need to drill down into the data to understand why.",
+     "plain": "The initial report shows an issue, but we need to examine the data in more detail to understand why.",
+     "note": "Common in data analysis and problem-solving discussions."
+    },
+    {
+     "text": "I'm seeing a red flag",
+     "kind": "collocation",
+     "form": "I'm seeing a red flag",
+     "meaning": "I am noticing a warning sign that indicates a potential problem or danger.",
+     "example": "I'm seeing a red flag with the supplier's inconsistent delivery times; we should investigate.",
+     "plain": "I am noticing a warning sign with the supplier's inconsistent delivery times; we should investigate.",
+     "note": "Used to alert others to a potential issue that requires attention."
+    },
+    {
+     "text": "this could be problematic",
+     "kind": "chunk",
+     "form": "this could be problematic",
+     "meaning": "This has the potential to cause difficulties or issues.",
+     "example": "If we don't secure the necessary permits, this could be problematic for the construction schedule.",
+     "plain": "If we don't secure the necessary permits, this has the potential to cause difficulties for the construction schedule.",
+     "note": "A polite and slightly understated way to express concern about a potential issue."
+    },
+    {
+     "text": "it's not quite adding up",
+     "kind": "chunk",
+     "form": "it's not quite adding up",
+     "meaning": "Something doesn't seem logical or consistent, suggesting a discrepancy.",
+     "example": "The numbers in the report are conflicting; it's not quite adding up.",
+     "plain": "The numbers in the report are conflicting; it doesn't seem logical.",
+     "note": "Used when something feels wrong or inconsistent, prompting further investigation."
+    },
+    {
+     "text": "a slight complication",
+     "kind": "collocation",
+     "form": "a slight complication",
+     "meaning": "A minor difficulty that makes a situation more complex.",
+     "example": "There's a slight complication with the scheduling, but I think we can work around it.",
+     "plain": "There's a minor difficulty with the scheduling, but I think we can work around it.",
+     "note": "An understated way to refer to a small, manageable problem."
+    },
+    {
+     "text": "one option would be to",
+     "kind": "frame",
+     "form": "One option would be to",
+     "meaning": "Used to introduce a possible course of action or solution.",
+     "example": "One option would be to reallocate resources from a less critical project.",
+     "plain": "A possible course of action would be to reallocate resources from a less critical project.",
+     "note": "A common and polite way to suggest a solution."
+    },
+    {
+     "text": "what if we tried",
+     "kind": "frame",
+     "form": "What if we tried",
+     "meaning": "Used to propose an idea or approach for consideration.",
+     "example": "What if we tried a different vendor for the raw materials to cut costs?",
+     "plain": "How about we try a different vendor for the raw materials to cut costs?",
+     "note": "An open-ended question inviting collaborative brainstorming."
+    },
+    {
+     "text": "we could explore the possibility of",
+     "kind": "frame",
+     "form": "We could explore the possibility of",
+     "meaning": "Used to suggest investigating a potential course of action.",
+     "example": "We could explore the possibility of extending the deadline if the team needs more time.",
+     "plain": "We could investigate the potential course of action of extending the deadline if the team needs more time.",
+     "note": "A diplomatic and collaborative way to suggest a new avenue."
+    },
+    {
+     "text": "perhaps we should consider",
+     "kind": "frame",
+     "form": "Perhaps we should consider",
+     "meaning": "A polite and tentative way to suggest a course of action or idea.",
+     "example": "Perhaps we should consider the long-term implications before making a hasty decision.",
+     "plain": "Maybe we should think about the long-term implications before making a hasty decision.",
+     "note": "Softens a suggestion, making it less direct and more open to discussion."
+    },
+    {
+     "text": "my initial thought is to",
+     "kind": "frame",
+     "form": "My initial thought is to",
+     "meaning": "Used to share a first idea or preliminary plan.",
+     "example": "My initial thought is to prioritize the critical bugs and then address the minor ones.",
+     "plain": "My first idea is to prioritize the critical bugs and then address the minor ones.",
+     "note": "Indicates a starting point for discussion, not a final decision."
+    },
+    {
+     "text": "to play devil's advocate",
+     "kind": "chunk",
+     "form": "play devil's advocate",
+     "meaning": "To argue against an idea or plan, not because you disagree, but to test its strength.",
+     "example": "Just to play devil's advocate, what if the new system fails completely?",
+     "plain": "Just to test the idea, what if the new system fails completely?",
+     "note": "Used to introduce a challenging perspective for robust discussion."
+    },
+    {
+     "text": "to take a different tack",
+     "kind": "chunk",
+     "form": "take a different tack",
+     "meaning": "To try a different method or approach to a problem.",
+     "example": "Our current strategy isn't working; we need to take a different tack to solve this.",
+     "plain": "Our current strategy isn't working; we need to try a different method to solve this.",
+     "note": "Suggests a change in strategy or direction."
+    },
+    {
+     "text": "to try a phased approach",
+     "kind": "collocation",
+     "form": "try a phased approach",
+     "meaning": "To implement a plan in stages rather than all at once.",
+     "example": "Given the complexity, we should try a phased approach to the software rollout.",
+     "plain": "Given the complexity, we should implement the software rollout in stages.",
+     "note": "A common strategy for managing large or complex projects."
+    },
+    {
+     "text": "to brainstorm some ideas",
+     "kind": "collocation",
+     "form": "brainstorm some ideas",
+     "meaning": "To generate a large number of creative ideas quickly, often in a group.",
+     "example": "Let's take 15 minutes to brainstorm some ideas for improving team collaboration.",
+     "plain": "Let's take 15 minutes to generate a large number of ideas for improving team collaboration.",
+     "note": "Focuses on creative, uninhibited idea generation."
+    },
+    {
+     "text": "what are our options here",
+     "kind": "chunk",
+     "form": "What are our options here",
+     "meaning": "A question asking for the available choices or courses of action.",
+     "example": "The client rejected our proposal, so what are our options here?",
+     "plain": "The client rejected our proposal, so what are our available choices?",
+     "note": "A direct question to initiate discussion about possible solutions."
+    },
+    {
+     "text": "to consider all angles",
+     "kind": "chunk",
+     "form": "consider all angles",
+     "meaning": "To think about a situation or problem from every possible perspective.",
+     "example": "Before we make a final decision, let's consider all angles of this complex issue.",
+     "plain": "Before we make a final decision, let's think about every possible perspective of this complex issue.",
+     "note": "Emphasizes thoroughness and comprehensive analysis."
+    },
+    {
+     "text": "it boils down to",
+     "kind": "chunk",
+     "form": "it boils down to",
+     "meaning": "The main or essential point of a complex situation or discussion.",
+     "example": "Ultimately, it boils down to whether we have the resources to execute this plan.",
+     "plain": "Ultimately, the main point is whether we have the resources to execute this plan.",
+     "note": "Used to summarize or simplify a complex matter to its core essence."
+    },
+    {
+     "text": "the deciding factor is",
+     "kind": "collocation",
+     "form": "The deciding factor is",
+     "meaning": "The most important element that influences a choice or outcome.",
+     "example": "The deciding factor is often the cost, even if other options seem better.",
+     "plain": "The most important element is often the cost, even if other options seem better.",
+     "note": "Highlights the critical element that determines a decision."
+    },
+    {
+     "text": "let's make a call",
+     "kind": "chunk",
+     "form": "let's make a call",
+     "meaning": "Let's make a decision.",
+     "example": "We've discussed this enough; let's make a call on the best way forward.",
+     "plain": "We've discussed this enough; let's make a decision on the best way forward.",
+     "note": "Informal but common, used to prompt a decision after discussion."
+    },
+    {
+     "text": "to commit to a course of action",
+     "kind": "collocation",
+     "form": "commit to a course of action",
+     "meaning": "To firmly decide on a particular plan or strategy.",
+     "example": "Once we commit to a course of action, we need to stick to it.",
+     "plain": "Once we firmly decide on a particular plan, we need to stick to it.",
+     "note": "Emphasizes firm decision-making and follow-through."
+    },
+    {
+     "text": "this seems like the most sensible approach",
+     "kind": "chunk",
+     "form": "this seems like the most sensible approach",
+     "meaning": "This appears to be the most reasonable and practical way to deal with something.",
+     "example": "Given our current constraints, this seems like the most sensible approach.",
+     "plain": "Given our current constraints, this appears to be the most reasonable and practical way.",
+     "note": "A polite way to express a preference for a particular solution."
+    },
+    {
+     "text": "I'm leaning towards",
+     "kind": "frame",
+     "form": "I'm leaning towards",
+     "meaning": "I am tending to favor a particular option or decision.",
+     "example": "I'm leaning towards the option that offers long-term sustainability, despite higher initial costs.",
+     "plain": "I am tending to favor the option that offers long-term sustainability, despite higher initial costs.",
+     "note": "Expresses a preference without being definitive, inviting further discussion."
+    },
+    {
+     "text": "to give it the green light",
+     "kind": "collocation",
+     "form": "give it the green light",
+     "meaning": "To give official permission for something to proceed.",
+     "example": "Once legal reviews it, we can give it the green light to start production.",
+     "plain": "Once legal reviews it, we can give official permission to start production.",
+     "note": "Informal but widely understood, meaning approval to proceed."
+    },
+    {
+     "text": "to prioritize",
+     "kind": "chunk",
+     "form": "prioritize",
+     "meaning": "To determine the order of importance for tasks or issues.",
+     "example": "We have too many tasks; we need to prioritize what's most critical for this week.",
+     "plain": "We have too many tasks; we need to determine the order of importance for what's most critical for this week.",
+     "note": "A fundamental action in problem-solving and project management."
+    },
+    {
+     "text": "it's a tough call",
+     "kind": "collocation",
+     "form": "it's a tough call",
+     "meaning": "It is a difficult decision to make.",
+     "example": "Choosing between these two excellent candidates, it's a tough call.",
+     "plain": "Choosing between these two excellent candidates, it is a difficult decision to make.",
+     "note": "Informal but common, acknowledging the difficulty of a choice."
+    },
+    {
+     "text": "the optimal solution",
+     "kind": "collocation",
+     "form": "the optimal solution",
+     "meaning": "The best or most favorable answer to a problem.",
+     "example": "Finding the optimal solution for resource allocation will save us significant time.",
+     "plain": "Finding the best answer for resource allocation will save us significant time.",
+     "note": "A formal term for the most effective or efficient resolution."
+    },
+    {
+     "text": "to weigh up the options",
+     "kind": "chunk",
+     "form": "weigh up the options",
+     "meaning": "To carefully consider all available choices before making a decision.",
+     "example": "Let's take a moment to weigh up the options before we vote on the proposal.",
+     "plain": "Let's take a moment to carefully consider all available choices before we vote on the proposal.",
+     "note": "Similar to \"weigh the options,\" common in British English."
+    },
+    {
+     "text": "let's move forward with this",
+     "kind": "chunk",
+     "form": "let's move forward with this",
+     "meaning": "Let's proceed with this plan or decision.",
+     "example": "We've discussed it thoroughly, so let's move forward with this approach.",
+     "plain": "We've discussed it thoroughly, so let's proceed with this approach.",
+     "note": "Used to signal the end of discussion and the start of action."
+    },
+    {
+     "text": "to come to a conclusion",
+     "kind": "chunk",
+     "form": "come to a conclusion",
+     "meaning": "To reach a final decision or judgment after consideration.",
+     "example": "After reviewing all the data, we've come to a conclusion about the best strategy.",
+     "plain": "After reviewing all the data, we've reached a final decision about the best strategy.",
+     "note": "Implies a definitive outcome after a process of analysis."
+    },
+    {
+     "text": "this feels like the right direction",
+     "kind": "chunk",
+     "form": "this feels like the right direction",
+     "meaning": "This seems to be the correct or most appropriate course of action.",
+     "example": "Based on the feedback, this feels like the right direction for the project.",
+     "plain": "Based on the feedback, this seems to be the correct course of action for the project.",
+     "note": "Expresses a strong intuition or general agreement about a path."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "It seems to me that",
+     "kind": "frame",
+     "form": "It seems to me that",
+     "meaning": "Used to introduce a personal opinion or observation, often with a degree of politeness or tentativeness.",
+     "example": "It seems to me that we're overlooking a simpler solution to this scheduling conflict.",
+     "plain": "I think we're overlooking a simpler solution to this scheduling conflict.",
+     "note": "A polite and common way to offer an opinion, suggesting it's a personal view rather than a definitive statement."
+    },
+    {
+     "text": "My concern is that",
+     "kind": "frame",
+     "form": "My concern is that",
+     "meaning": "Used to state a specific worry or apprehension about a situation or proposed action.",
+     "example": "My concern is that the new timeline might not be realistic given our current resources.",
+     "plain": "I'm worried that the new timeline might not be realistic given our current resources.",
+     "note": "Directly expresses a worry in a professional and clear manner, inviting discussion."
+    },
+    {
+     "text": "What worries me is",
+     "kind": "frame",
+     "form": "What worries me is",
+     "meaning": "Used to highlight a specific anxiety or aspect of a situation that causes apprehension.",
+     "example": "What worries me is the potential for this issue to escalate if we don't act quickly.",
+     "plain": "I'm anxious about the potential for this issue to escalate if we don't act quickly.",
+     "note": "Emphasizes the specific element causing concern, often used when a problem is developing."
+    },
+    {
+     "text": "The challenge here is",
+     "kind": "frame",
+     "form": "The challenge here is",
+     "meaning": "Used to identify and articulate the main difficulty or obstacle in a situation.",
+     "example": "The challenge here is balancing the client's demands with our team's capacity.",
+     "plain": "The main difficulty is balancing the client's demands with our team's capacity.",
+     "note": "Clearly defines the core problem, framing it as something to be overcome."
+    },
+    {
+     "text": "The key takeaway is",
+     "kind": "frame",
+     "form": "The key takeaway is",
+     "meaning": "Used to summarize the most important point or conclusion from a discussion or analysis.",
+     "example": "The key takeaway is that we need to improve internal communication to avoid future misunderstandings.",
+     "plain": "The most important point is that we need to improve internal communication to avoid future misunderstandings.",
+     "note": "Common in business and academic contexts to highlight the main learning or conclusion."
+    },
+    {
+     "text": "It's worth noting that",
+     "kind": "frame",
+     "form": "It's worth noting that",
+     "meaning": "Used to highlight an important piece of information that should be considered.",
+     "example": "It's worth noting that similar problems arose during the last project launch.",
+     "plain": "We should remember that similar problems arose during the last project launch.",
+     "note": "A polite way to draw attention to a relevant fact without being overly assertive."
+    },
+    {
+     "text": "It's important to remember that",
+     "kind": "frame",
+     "form": "It's important to remember that",
+     "meaning": "Used to emphasize a crucial fact or principle that should not be forgotten.",
+     "example": "It's important to remember that our primary goal is customer satisfaction, even with this setback.",
+     "plain": "We must not forget that our primary goal is customer satisfaction, even with this setback.",
+     "note": "A strong reminder of a fundamental point, often used to refocus a discussion."
+    },
+    {
+     "text": "We need to ensure that",
+     "kind": "frame",
+     "form": "We need to ensure that",
+     "meaning": "Used to state a requirement or a necessary condition for success.",
+     "example": "We need to ensure that all team members understand their roles in the new process.",
+     "plain": "We must make sure that all team members understand their roles in the new process.",
+     "note": "Highlights a critical action or outcome that must be guaranteed."
+    },
+    {
+     "text": "It's crucial that we",
+     "kind": "frame",
+     "form": "It's crucial that we",
+     "meaning": "Used to emphasize the urgency or extreme importance of a particular action.",
+     "example": "It's crucial that we address these security vulnerabilities before the next update.",
+     "plain": "It's extremely important that we address these security vulnerabilities before the next update.",
+     "note": "Conveys a strong sense of necessity and high stakes, often used in serious situations."
+    },
+    {
+     "text": "I'm inclined to think that",
+     "kind": "frame",
+     "form": "I'm inclined to think that",
+     "meaning": "Used to express a tentative opinion or a leaning towards a particular belief.",
+     "example": "I'm inclined to think that a phased rollout would minimize potential disruptions.",
+     "plain": "I tend to believe that a phased rollout would minimize potential disruptions.",
+     "note": "A polite and slightly formal way to offer an opinion, suggesting it's a considered view."
+    },
+    {
+     "text": "I'm of the opinion that",
+     "kind": "frame",
+     "form": "I'm of the opinion that",
+     "meaning": "Used to state a formal or considered opinion, often in a professional context.",
+     "example": "I'm of the opinion that we should prioritize long-term stability over short-term gains.",
+     "plain": "I believe that we should prioritize long-term stability over short-term gains.",
+     "note": "More formal than 'I think', suitable for serious discussions or when stating a firm stance."
+    },
+    {
+     "text": "I'm not convinced that",
+     "kind": "frame",
+     "form": "I'm not convinced that",
+     "meaning": "Used to express doubt or skepticism about a statement, argument, or plan.",
+     "example": "I'm not convinced that simply adding more staff will solve the underlying efficiency problem.",
+     "plain": "I don't believe that simply adding more staff will solve the underlying efficiency problem.",
+     "note": "Politely expresses disagreement or a need for more evidence, without being confrontational."
+    },
+    {
+     "text": "I'm not entirely comfortable with",
+     "kind": "frame",
+     "form": "I'm not entirely comfortable with",
+     "meaning": "Used to express slight disapproval or unease about a situation or proposal.",
+     "example": "I'm not entirely comfortable with the idea of proceeding without a clear risk assessment.",
+     "plain": "I feel uneasy about the idea of proceeding without a clear risk assessment.",
+     "note": "A diplomatic way to voice reservations or concerns, suggesting a need for caution."
+    },
+    {
+     "text": "I'm not entirely sold on",
+     "kind": "frame",
+     "form": "I'm not entirely sold on",
+     "meaning": "Used to express skepticism or a lack of full belief in an idea or proposal.",
+     "example": "I'm not entirely sold on the new marketing strategy; I think it needs more refinement.",
+     "plain": "I'm not fully convinced by the new marketing strategy; I think it needs more refinement.",
+     "note": "Informal but common in professional settings to express reservations about an idea."
+    },
+    {
+     "text": "I'm not entirely clear on",
+     "kind": "frame",
+     "form": "I'm not entirely clear on",
+     "meaning": "Used to express a lack of full understanding about a specific detail or aspect.",
+     "example": "I'm not entirely clear on the exact responsibilities of each team member in this new structure.",
+     "plain": "I don't fully understand the exact responsibilities of each team member in this new structure.",
+     "note": "A polite way to ask for clarification without implying fault, common in meetings."
+    },
+    {
+     "text": "I'm not entirely ruling out",
+     "kind": "frame",
+     "form": "I'm not entirely ruling out",
+     "meaning": "Used to indicate that a possibility is still open for consideration, despite reservations.",
+     "example": "I'm not entirely ruling out the option of outsourcing, but we need to explore internal solutions first.",
+     "plain": "I'm not completely dismissing the option of outsourcing, but we need to explore internal solutions first.",
+     "note": "Suggests flexibility and openness to ideas, even if not fully committed yet."
+    },
+    {
+     "text": "I'm not entirely opposed to",
+     "kind": "frame",
+     "form": "I'm not entirely opposed to",
+     "meaning": "Used to indicate mild agreement or a willingness to consider something, despite initial hesitation.",
+     "example": "I'm not entirely opposed to extending the deadline if it means a higher quality deliverable.",
+     "plain": "I'm not completely against extending the deadline if it means a higher quality deliverable.",
+     "note": "A diplomatic way to express conditional acceptance or a lack of strong objection."
+    },
+    {
+     "text": "I'm not entirely sure what",
+     "kind": "frame",
+     "form": "I'm not entirely sure what",
+     "meaning": "Used to express uncertainty about specific details or the nature of something.",
+     "example": "I'm not entirely sure what the client expects from us regarding the final report format.",
+     "plain": "I don't know exactly what the client expects from us regarding the final report format.",
+     "note": "A common way to admit a lack of precise information, often preceding a question."
+    },
+    {
+     "text": "I'm not entirely sure how",
+     "kind": "frame",
+     "form": "I'm not entirely sure how",
+     "meaning": "Used to express uncertainty about the method or process for achieving something.",
+     "example": "I'm not entirely sure how we can implement this new policy without disrupting current operations.",
+     "plain": "I don't know exactly how we can implement this new policy without disrupting current operations.",
+     "note": "Indicates a need for more planning or clarification on the practical steps."
+    },
+    {
+     "text": "I'm not entirely sure why",
+     "kind": "frame",
+     "form": "I'm not entirely sure why",
+     "meaning": "Used to express uncertainty about the reason or justification for something.",
+     "example": "I'm not entirely sure why the previous team decided to use this outdated software.",
+     "plain": "I don't know exactly why the previous team decided to use this outdated software.",
+     "note": "Often used when questioning past decisions or seeking a deeper understanding of motives."
+    },
+    {
+     "text": "I'm not entirely sure if",
+     "kind": "frame",
+     "form": "I'm not entirely sure if",
+     "meaning": "Used to express uncertainty about a condition or the truth of a statement.",
+     "example": "I'm not entirely sure if the budget allows for such a significant upgrade at this time.",
+     "plain": "I don't know if the budget allows for such a significant upgrade at this time.",
+     "note": "A polite way to express doubt about a possibility or a factual constraint."
+    },
+    {
+     "text": "The way forward is to",
+     "kind": "frame",
+     "form": "The way forward is to",
+     "meaning": "Used to suggest a specific course of action or strategy for progress.",
+     "example": "The way forward is to gather more data before making any hasty decisions.",
+     "plain": "The next step is to gather more data before making any hasty decisions.",
+     "note": "Clearly states a proposed next step, often after a period of analysis."
+    },
+    {
+     "text": "The bottom line is",
+     "kind": "frame",
+     "form": "The bottom line is",
+     "meaning": "Used to state the essential point or the most important fact of a situation.",
+     "example": "The bottom line is, we need to deliver this project on time and within budget.",
+     "plain": "The most important thing is, we need to deliver this project on time and within budget.",
+     "note": "Emphasizes the ultimate truth or core requirement, often used to cut to the chase."
+    },
+    {
+     "text": "The long and short of it is",
+     "kind": "frame",
+     "form": "The long and short of it is",
+     "meaning": "Used to summarize the main facts of a situation concisely, omitting details.",
+     "example": "The long and short of it is, we missed a critical deadline due to unforeseen technical issues.",
+     "plain": "In summary, we missed a critical deadline due to unforeseen technical issues.",
+     "note": "An informal but common way to quickly get to the main point, often used in explanations."
+    },
+    {
+     "text": "The reality of the situation is",
+     "kind": "frame",
+     "form": "The reality of the situation is",
+     "meaning": "Used to state the true facts of a situation, often contrasting with assumptions or hopes.",
+     "example": "The reality of the situation is, we don't have the resources to take on another major client right now.",
+     "plain": "The truth is, we don't have the resources to take on another major client right now.",
+     "note": "Used to bring a dose of realism to a discussion, often when facing difficult truths."
+    },
+    {
+     "text": "The truth of the matter is",
+     "kind": "frame",
+     "form": "The truth of the matter is",
+     "meaning": "Used to state the actual facts, often to clarify or correct a misunderstanding.",
+     "example": "The truth of the matter is, the budget was approved, but the funds haven't been released yet.",
+     "plain": "Actually, the budget was approved, but the funds haven't been released yet.",
+     "note": "Emphasizes the factual basis of a statement, often used to set the record straight."
+    },
+    {
+     "text": "The fact of the matter is",
+     "kind": "frame",
+     "form": "The fact of the matter is",
+     "meaning": "Used to state the actual facts, often to emphasize a point or correct a misconception.",
+     "example": "The fact of the matter is, our competitors are already implementing similar solutions.",
+     "plain": "Actually, our competitors are already implementing similar solutions.",
+     "note": "Similar to 'the truth of the matter is', used to underscore a factual point."
+    },
+    {
+     "text": "The point is",
+     "kind": "frame",
+     "form": "The point is",
+     "meaning": "Used to emphasize the main idea or purpose of what is being said.",
+     "example": "The point is, we need to learn from this mistake and prevent it from happening again.",
+     "plain": "The main idea is, we need to learn from this mistake and prevent it from happening again.",
+     "note": "A direct way to highlight the core message or objective, often used to refocus."
+    },
+    {
+     "text": "The issue at hand is",
+     "kind": "frame",
+     "form": "The issue at hand is",
+     "meaning": "Used to refer to the current problem or topic being discussed.",
+     "example": "The issue at hand is how to reallocate tasks to cover for the absent team member.",
+     "plain": "The current problem is how to reallocate tasks to cover for the absent team member.",
+     "note": "A formal way to specify the immediate subject of discussion or concern."
+    },
+    {
+     "text": "The question is",
+     "kind": "frame",
+     "form": "The question is",
+     "meaning": "Used to introduce a key query or the central problem that needs to be addressed.",
+     "example": "The question is, can we realistically meet these aggressive targets without compromising quality?",
+     "plain": "The main problem is, can we realistically meet these aggressive targets without compromising quality?",
+     "note": "Frames the core dilemma or decision point, inviting discussion or a solution."
+    },
+    {
+     "text": "to put our heads together",
+     "kind": "chunk",
+     "form": "put our heads together",
+     "meaning": "To collaborate and work together to solve a problem or generate ideas.",
+     "example": "Let's put our heads together after lunch and see if we can find a way forward.",
+     "plain": "Let's collaborate after lunch and see if we can find a way forward.",
+     "note": "An informal but common expression for teamwork and brainstorming."
+    },
+    {
+     "text": "to bounce ideas off",
+     "kind": "chunk",
+     "form": "bounce some ideas off",
+     "meaning": "To discuss ideas with someone to get their feedback and perspective.",
+     "example": "Could I bounce some ideas off you about the project proposal before I finalize it?",
+     "plain": "Could I discuss some ideas with you about the project proposal before I finalize it?",
+     "note": "Suggests an informal, exploratory discussion to refine thoughts."
+    },
+    {
+     "text": "to leave no stone unturned",
+     "kind": "chunk",
+     "form": "leave no stone unturned",
+     "meaning": "To do everything possible to find a solution or gather information.",
+     "example": "We need to leave no stone unturned in our investigation to understand the system failure.",
+     "plain": "We need to do everything possible in our investigation to understand the system failure.",
+     "note": "Emphasizes thoroughness and persistence in problem-solving or searching."
+    },
+    {
+     "text": "to think outside the box",
+     "kind": "chunk",
+     "form": "think outside the box",
+     "meaning": "To think creatively and unconventionally, beyond traditional methods.",
+     "example": "This complex issue requires us to think outside the box for truly innovative solutions.",
+     "plain": "This complex issue requires us to think creatively for truly innovative solutions.",
+     "note": "Encourages innovative thinking, often used when conventional approaches have failed."
+    },
+    {
+     "text": "to sound out",
+     "kind": "chunk",
+     "form": "sound out",
+     "meaning": "To discreetly ask someone for their opinion or reaction before making a formal proposal.",
+     "example": "I'll sound out the team lead on the new project idea before presenting it to management.",
+     "plain": "I'll discreetly ask the team lead for their opinion on the new project idea before presenting it to management.",
+     "note": "Suggests a preliminary, informal inquiry to gauge reception or gather initial feedback."
+    },
+    {
+     "text": "to test the waters",
+     "kind": "chunk",
+     "form": "test the waters",
+     "meaning": "To try something out cautiously before committing fully, to see how it goes.",
+     "example": "We should test the waters with a small pilot program before rolling out the new software company-wide.",
+     "plain": "We should try a small pilot program before rolling out the new software company-wide.",
+     "note": "Implies a cautious, experimental approach to gauge reaction or feasibility."
+    },
+    {
+     "text": "to get a sense of",
+     "kind": "chunk",
+     "form": "get a sense of",
+     "meaning": "To understand or perceive something, often intuitively or generally.",
+     "example": "I need to talk to the client again to get a sense of their true priorities for this phase.",
+     "plain": "I need to talk to the client again to understand their true priorities for this phase.",
+     "note": "Refers to gaining an overall impression or understanding, not necessarily precise details."
+    },
+    {
+     "text": "to get a feel for",
+     "kind": "chunk",
+     "form": "get a feel for",
+     "meaning": "To develop an intuitive understanding or familiarity with something.",
+     "example": "Let's run a small test to get a feel for how the new system performs under pressure.",
+     "plain": "Let's run a small test to understand how the new system performs under pressure.",
+     "note": "Similar to 'get a sense of', often implies hands-on experience or observation."
+    },
+    {
+     "text": "to get a read on",
+     "kind": "chunk",
+     "form": "get a read on",
+     "meaning": "To understand a situation or a person's intentions or mood.",
+     "example": "I'm trying to get a read on the market's reaction to our competitor's recent product launch.",
+     "plain": "I'm trying to understand the market's reaction to our competitor's recent product launch.",
+     "note": "Informal but common, implies assessing a situation or person's state of mind."
+    },
+    {
+     "text": "to get a grip on",
+     "kind": "chunk",
+     "form": "get a grip on",
+     "meaning": "To take control of a situation, often one that is becoming difficult or chaotic.",
+     "example": "We need to get a grip on these escalating costs before they impact our profitability.",
+     "plain": "We need to take control of these escalating costs before they impact our profitability.",
+     "note": "Suggests regaining control or understanding of a challenging situation."
+    },
+    {
+     "text": "to come down to",
+     "kind": "chunk",
+     "form": "comes down to",
+     "meaning": "To be essentially a matter of; to be the most important factor.",
+     "example": "Ultimately, the success of this project comes down to effective teamwork and communication.",
+     "plain": "Ultimately, the success of this project depends on effective teamwork and communication.",
+     "note": "Used to simplify a complex situation to its core element or deciding factor."
+    },
+    {
+     "text": "to bite the bullet",
+     "kind": "chunk",
+     "form": "bite the bullet",
+     "meaning": "To face a difficult or unpleasant situation with courage and endure it.",
+     "example": "We'll just have to bite the bullet and work extra hours to meet this tight deadline.",
+     "plain": "We'll just have to face the difficult situation and work extra hours to meet this tight deadline.",
+     "note": "Implies accepting an unavoidable hardship, often with a sense of resignation."
+    },
+    {
+     "text": "to take the plunge",
+     "kind": "chunk",
+     "form": "take the plunge",
+     "meaning": "To commit to a course of action after hesitation, especially a significant one.",
+     "example": "After much deliberation, we decided to take the plunge and invest in the new technology.",
+     "plain": "After much deliberation, we decided to commit and invest in the new technology.",
+     "note": "Suggests a bold decision after a period of uncertainty or careful thought."
+    },
+    {
+     "text": "to give it some thought",
+     "kind": "chunk",
+     "form": "give it some thought",
+     "meaning": "To consider something carefully and reflect on it.",
+     "example": "I'll give it some thought over the weekend and get back to you with my decision.",
+     "plain": "I'll consider it over the weekend and get back to you with my decision.",
+     "note": "A polite way to indicate that a decision or idea requires careful consideration."
+    },
+    {
+     "text": "to sleep on it",
+     "kind": "chunk",
+     "form": "sleep on it",
+     "meaning": "To delay making a decision until the next day, allowing time for reflection.",
+     "example": "This is a big decision, so I'd like to sleep on it before giving you an answer.",
+     "plain": "This is a big decision, so I'd like to wait until tomorrow before giving you an answer.",
+     "note": "An informal but widely accepted way to request time for careful consideration."
+    },
+    {
+     "text": "to mull it over",
+     "kind": "chunk",
+     "form": "mull it over",
+     "meaning": "To think about something carefully and at length, often before making a decision.",
+     "example": "I need a few days to mull it over before I can offer a comprehensive proposal.",
+     "plain": "I need a few days to think about it carefully before I can offer a comprehensive proposal.",
+     "note": "Suggests a process of deep, unhurried consideration, often for complex issues."
+    },
+    {
+     "text": "to take into account",
+     "kind": "chunk",
+     "form": "take into account",
+     "meaning": "To consider something as a relevant factor when making a decision or judgment.",
+     "example": "We must take into account the potential impact on employee morale when implementing these changes.",
+     "plain": "We must consider the potential impact on employee morale when implementing these changes.",
+     "note": "Emphasizes including all relevant factors in a decision-making process."
+    },
+    {
+     "text": "to factor in",
+     "kind": "chunk",
+     "form": "factor in",
+     "meaning": "To include something as a relevant element or consideration.",
+     "example": "Did you factor in the increased shipping costs when calculating the project budget?",
+     "plain": "Did you include the increased shipping costs when calculating the project budget?",
+     "note": "A concise way to ask if a specific element has been considered in calculations or plans."
+    },
+    {
+     "text": "to bear in mind",
+     "kind": "chunk",
+     "form": "bear in mind",
+     "meaning": "To remember a piece of information or a fact, especially when making decisions.",
+     "example": "Please bear in mind that the client has a very tight budget for this particular task.",
+     "plain": "Please remember that the client has a very tight budget for this particular task.",
+     "note": "A polite and slightly formal way to remind someone of an important consideration."
+    },
+    {
+     "text": "to keep in mind",
+     "kind": "chunk",
+     "form": "keep in mind",
+     "meaning": "To remember a piece of information or a fact, especially when making decisions.",
+     "example": "We need to keep in mind the long-term sustainability of any solution we propose.",
+     "plain": "We need to remember the long-term sustainability of any solution we propose.",
+     "note": "Similar to 'bear in mind', but slightly less formal and very common."
+    },
+    {
+     "text": "to keep an open mind",
+     "kind": "chunk",
+     "form": "keep an open mind",
+     "meaning": "To be willing to consider new ideas or opinions, even if they differ from one's own.",
+     "example": "Let's keep an open mind during the brainstorming session; all suggestions are welcome.",
+     "plain": "Let's be willing to consider new ideas during the brainstorming session; all suggestions are welcome.",
+     "note": "Encourages receptiveness to diverse perspectives, crucial for effective problem-solving."
+    },
+    {
+     "text": "to keep our options open",
+     "kind": "chunk",
+     "form": "keep our options open",
+     "meaning": "To avoid making a final decision too soon, allowing for flexibility and alternative choices.",
+     "example": "For now, let's keep our options open regarding the vendor until we receive all quotes.",
+     "plain": "For now, let's avoid making a final decision regarding the vendor until we receive all quotes.",
+     "note": "Suggests a strategic delay in commitment to maintain flexibility."
+    },
+    {
+     "text": "to play it safe",
+     "kind": "chunk",
+     "form": "play it safe",
+     "meaning": "To avoid risks and choose the safest or most cautious course of action.",
+     "example": "Given the uncertainties, I think we should play it safe and stick to the proven method.",
+     "plain": "Given the uncertainties, I think we should avoid risks and stick to the proven method.",
+     "note": "Implies a preference for caution and minimal risk, often in uncertain situations."
+    },
+    {
+     "text": "to play it by ear",
+     "kind": "chunk",
+     "form": "play it by ear",
+     "meaning": "To decide how to deal with a situation as it develops, rather than planning in advance.",
+     "example": "We don't have all the information yet, so let's play it by ear for the next few days.",
+     "plain": "We don't have all the information yet, so let's decide as the situation develops for the next few days.",
+     "note": "Suggests flexibility and adaptability, often when faced with unpredictable circumstances."
+    },
+    {
+     "text": "to shed some light on",
+     "kind": "collocation",
+     "form": "shed some light on",
+     "meaning": "To clarify or explain something, making it easier to understand.",
+     "example": "Could you shed some light on why the project budget was suddenly increased?",
+     "plain": "Could you explain why the project budget was suddenly increased?",
+     "note": "Commonly used when seeking clarification or an explanation for a confusing situation."
+    },
+    {
+     "text": "to be a sticking point",
+     "kind": "collocation",
+     "form": "a sticking point",
+     "meaning": "A specific issue or detail that causes disagreement or difficulty, preventing progress.",
+     "example": "The allocation of resources has become a sticking point in our negotiations with the partner.",
+     "plain": "The allocation of resources has become a difficult issue in our negotiations with the partner.",
+     "note": "Highlights a particular obstacle that is hard to resolve, often in negotiations."
+    },
+    {
+     "text": "to be a bottleneck",
+     "kind": "collocation",
+     "form": "a bottleneck",
+     "meaning": "A point in a process where progress slows down or stops, causing delays.",
+     "example": "The approval process is currently a bottleneck, delaying all subsequent project phases.",
+     "plain": "The approval process is currently causing delays, slowing all subsequent project phases.",
+     "note": "Identifies a specific constraint that impedes efficiency or flow."
+    },
+    {
+     "text": "to pinpoint the problem",
+     "kind": "collocation",
+     "form": "pinpoint the problem",
+     "meaning": "To identify the exact nature or location of an issue with precision.",
+     "example": "We need to pinpoint the problem with the software before we can develop a fix.",
+     "plain": "We need to identify the exact problem with the software before we can develop a fix.",
+     "note": "Emphasizes the need for precise identification of the core issue."
+    },
+    {
+     "text": "to be symptomatic of",
+     "kind": "collocation",
+     "form": "symptomatic of",
+     "meaning": "To indicate a larger, underlying issue or trend.",
+     "example": "The recent decline in sales is symptomatic of deeper issues within our marketing strategy.",
+     "plain": "The recent decline in sales indicates deeper issues within our marketing strategy.",
+     "note": "Suggests that a visible problem is merely a sign of a more fundamental, hidden issue."
+    },
+    {
+     "text": "to be a contributing factor",
+     "kind": "collocation",
+     "form": "a contributing factor",
+     "meaning": "Something that helps cause a particular outcome or problem.",
+     "example": "Lack of clear communication was a contributing factor to the project's delay.",
+     "plain": "Lack of clear communication helped cause the project's delay.",
+     "note": "Identifies one element among several that led to a specific result."
+    },
+    {
+     "text": "to be a significant hurdle",
+     "kind": "collocation",
+     "form": "a significant hurdle",
+     "meaning": "A major obstacle or difficulty that must be overcome.",
+     "example": "Securing adequate funding remains a significant hurdle for the expansion plan.",
+     "plain": "Securing adequate funding remains a major obstacle for the expansion plan.",
+     "note": "Highlights a substantial challenge that requires considerable effort to surmount."
+    },
+    {
+     "text": "to encounter resistance",
+     "kind": "collocation",
+     "form": "encountered resistance",
+     "meaning": "To meet with opposition, unwillingness to cooperate, or difficulty.",
+     "example": "We encountered resistance from some departments regarding the new data privacy regulations.",
+     "plain": "We met opposition from some departments regarding the new data privacy regulations.",
+     "note": "Describes facing opposition or difficulty, often from people or established systems."
+    },
+    {
+     "text": "to be a cause for concern",
+     "kind": "collocation",
+     "form": "a cause for concern",
+     "meaning": "Something that gives reason to worry or be anxious.",
+     "example": "The unexpected drop in server performance is definitely a cause for concern.",
+     "plain": "The unexpected drop in server performance is definitely something to worry about.",
+     "note": "A formal way to state that something is worrying, often used in reports or meetings."
+    },
+    {
+     "text": "to be a pressing matter",
+     "kind": "collocation",
+     "form": "a pressing matter",
+     "meaning": "An urgent issue that needs immediate attention or action.",
+     "example": "Resolving the client's complaint is a pressing matter that requires our full focus.",
+     "plain": "Resolving the client's complaint is an urgent issue that requires our full focus.",
+     "note": "Emphasizes the urgency and importance of an issue, demanding prompt resolution."
+    },
+    {
+     "text": "to be a key consideration",
+     "kind": "collocation",
+     "form": "a key consideration",
+     "meaning": "An important point or factor that must be thought about carefully.",
+     "example": "User experience is always a key consideration when developing new software features.",
+     "plain": "User experience is always an important point when developing new software features.",
+     "note": "Identifies a crucial factor that influences decisions or outcomes."
+    },
+    {
+     "text": "to be a stumbling block",
+     "kind": "collocation",
+     "form": "a stumbling block",
+     "meaning": "An obstacle or difficulty that prevents progress or success.",
+     "example": "Lack of clear leadership proved to be a stumbling block for the entire initiative.",
+     "plain": "Lack of clear leadership proved to be an obstacle for the entire initiative.",
+     "note": "Highlights a specific impediment that hinders advancement."
+    },
+    {
+     "text": "to be a tricky situation",
+     "kind": "collocation",
+     "form": "a tricky situation",
+     "meaning": "A difficult or complicated circumstance that requires careful handling.",
+     "example": "Dealing with the conflicting demands of two major stakeholders is a tricky situation.",
+     "plain": "Dealing with the conflicting demands of two major stakeholders is a difficult circumstance.",
+     "note": "Describes a complex scenario that needs skill and diplomacy to navigate."
+    },
+    {
+     "text": "to be a delicate matter",
+     "kind": "collocation",
+     "form": "a delicate matter",
+     "meaning": "A sensitive issue requiring careful and tactful handling to avoid offense or problems.",
+     "example": "Discussing budget cuts with the team is always a delicate matter that needs careful preparation.",
+     "plain": "Discussing budget cuts with the team is always a sensitive issue that needs careful preparation.",
+     "note": "Implies that an issue is sensitive and requires diplomacy and caution."
+    },
+    {
+     "text": "to be a thorny issue",
+     "kind": "collocation",
+     "form": "a thorny issue",
+     "meaning": "A difficult and often controversial problem that is hard to resolve.",
+     "example": "Employee compensation remains a thorny issue that we need to address in the next quarter.",
+     "plain": "Employee compensation remains a difficult and controversial problem that we need to address in the next quarter.",
+     "note": "Describes a problem that is complex, contentious, and potentially painful to deal with."
+    },
+    {
+     "text": "to be a grey area",
+     "kind": "collocation",
+     "form": "a grey area",
+     "meaning": "Something unclear, undefined, or open to interpretation, lacking clear rules.",
+     "example": "The company policy on remote work is still a grey area, causing some confusion.",
+     "plain": "The company policy on remote work is still unclear, causing some confusion.",
+     "note": "Refers to a situation where rules or definitions are ambiguous, leading to uncertainty."
+    },
+    {
+     "text": "to be a non-starter",
+     "kind": "collocation",
+     "form": "a non-starter",
+     "meaning": "An idea or plan that has no chance of success or is not worth pursuing.",
+     "example": "Proposing a complete overhaul of the system right now would be a non-starter.",
+     "plain": "Proposing a complete overhaul of the system right now would have no chance of success.",
+     "note": "Indicates that an idea is unfeasible or unacceptable from the outset."
+    },
+    {
+     "text": "to be a tall order",
+     "kind": "collocation",
+     "form": "a tall order",
+     "meaning": "A difficult or demanding task or request.",
+     "example": "Completing the entire project by Friday is a tall order, but we'll do our best.",
+     "plain": "Completing the entire project by Friday is a difficult task, but we'll do our best.",
+     "note": "Suggests a challenging request that will require significant effort to fulfill."
+    },
+    {
+     "text": "to be a tough nut to crack",
+     "kind": "collocation",
+     "form": "a tough nut to crack",
+     "meaning": "A difficult problem or person to deal with or understand.",
+     "example": "This persistent bug in the software is proving to be a tough nut to crack.",
+     "plain": "This persistent bug in the software is proving to be a difficult problem to solve.",
+     "note": "Informal but common, describes something very challenging to resolve or comprehend."
+    },
+    {
+     "text": "to be a vicious circle",
+     "kind": "collocation",
+     "form": "a vicious circle",
+     "meaning": "A continuing unpleasant situation that causes itself and is difficult to escape.",
+     "example": "The lack of training leads to errors, which then require more training; it's a vicious circle.",
+     "plain": "The lack of training leads to errors, which then require more training; it's a continuing unpleasant situation.",
+     "note": "Describes a self-perpetuating negative cycle, often hard to break."
+    },
+    {
+     "text": "to be a double-edged sword",
+     "kind": "collocation",
+     "form": "a double-edged sword",
+     "meaning": "Something that has both advantages and disadvantages, or positive and negative effects.",
+     "example": "Expanding rapidly can be a double-edged sword, bringing growth but also increased risks.",
+     "plain": "Expanding rapidly can have both advantages and disadvantages, bringing growth but also increased risks.",
+     "note": "Highlights the dual nature of something, where benefits come with drawbacks."
+    },
+    {
+     "text": "to be a slippery slope",
+     "kind": "collocation",
+     "form": "a slippery slope",
+     "meaning": "A course of action that will lead to increasingly bad or undesirable results.",
+     "example": "Compromising on quality standards could be a slippery slope towards losing customer trust.",
+     "plain": "Compromising on quality standards could lead to increasingly bad results towards losing customer trust.",
+     "note": "Warns that a seemingly small negative step could lead to a series of worse outcomes."
+    },
+    {
+     "text": "to be a wake-up call",
+     "kind": "collocation",
+     "form": "a wake-up call",
+     "meaning": "An event that makes one realize a problem or danger that was previously ignored.",
+     "example": "The recent security breach was a wake-up call for us to invest more in cybersecurity.",
+     "plain": "The recent security breach made us realize we needed to invest more in cybersecurity.",
+     "note": "Describes an event that forces a realization of a serious issue, prompting action."
+    },
+    {
+     "text": "to be a game changer",
+     "kind": "collocation",
+     "form": "a game changer",
+     "meaning": "Something that significantly alters a situation, strategy, or outcome.",
+     "example": "The new AI integration could be a game changer for our product development process.",
+     "plain": "The new AI integration could significantly alter our product development process.",
+     "note": "Describes an innovation or event that fundamentally changes the competitive landscape."
+    },
+    {
+     "text": "to weigh the pros and cons",
+     "kind": "collocation",
+     "form": "weigh the pros and cons",
+     "meaning": "To consider the advantages and disadvantages of a particular course of action.",
+     "example": "Before deciding, we need to carefully weigh the pros and cons of each proposed solution.",
+     "plain": "Before deciding, we need to carefully consider the advantages and disadvantages of each proposed solution.",
+     "note": "A common and clear way to describe the process of evaluating options."
+    },
+    {
+     "text": "to narrow down the options",
+     "kind": "collocation",
+     "form": "narrow down the options",
+     "meaning": "To reduce the number of available choices or possibilities.",
+     "example": "Let's narrow down the options to the top three most viable solutions for further analysis.",
+     "plain": "Let's reduce the number of options to the top three most viable solutions for further analysis.",
+     "note": "Describes the process of making a selection from a larger set of choices."
+    },
+    {
+     "text": "to make a judgment call",
+     "kind": "collocation",
+     "form": "make a judgment call",
+     "meaning": "To make a decision based on one's own discretion and assessment, often without clear rules.",
+     "example": "Ultimately, it's up to the project manager to make a judgment call on the best approach.",
+     "plain": "Ultimately, it's up to the project manager to make a decision based on their own assessment on the best approach.",
+     "note": "Implies a decision made based on experience and intuition rather than strict guidelines."
+    },
+    {
+     "text": "to explore all avenues",
+     "kind": "collocation",
+     "form": "explore all avenues",
+     "meaning": "To investigate every possible method or approach to solve a problem.",
+     "example": "We must explore all avenues to find a sustainable energy source for the new facility.",
+     "plain": "We must investigate every possible method to find a sustainable energy source for the new facility.",
+     "note": "Emphasizes a comprehensive search for solutions, leaving no possibility unexamined."
+    },
+    {
+     "text": "to consider the implications",
+     "kind": "collocation",
+     "form": "consider the implications",
+     "meaning": "To think about the possible future effects or consequences of an action or decision.",
+     "example": "Before launching, we need to carefully consider the implications of this new feature on user privacy.",
+     "plain": "Before launching, we need to carefully think about the possible future effects of this new feature on user privacy.",
+     "note": "Highlights the importance of foresight and understanding potential outcomes."
+    },
+    {
+     "text": "to map out a strategy",
+     "kind": "collocation",
+     "form": "map out a strategy",
+     "meaning": "To plan a detailed course of action to achieve a specific goal.",
+     "example": "Let's map out a strategy for improving customer retention over the next six months.",
+     "plain": "Let's plan a detailed course of action for improving customer retention over the next six months.",
+     "note": "Suggests a thorough and systematic approach to planning."
+    },
+    {
+     "text": "to sketch out a plan",
+     "kind": "collocation",
+     "form": "sketch out a plan",
+     "meaning": "To create a rough outline or preliminary version of a plan.",
+     "example": "Can you quickly sketch out a plan for the emergency response protocol?",
+     "plain": "Can you quickly create a rough outline of a plan for the emergency response protocol?",
+     "note": "Implies creating a basic, non-detailed plan, often as a starting point."
+    },
+    {
+     "text": "to put a proposal on the table",
+     "kind": "collocation",
+     "form": "put a proposal on the table",
+     "meaning": "To formally suggest an idea or plan for consideration and discussion.",
+     "example": "I'd like to put a proposal on the table for restructuring the project teams.",
+     "plain": "I'd like to formally suggest an idea for restructuring the project teams.",
+     "note": "A formal way to introduce an idea for collective review and decision-making."
+    },
+    {
+     "text": "to get a clear picture",
+     "kind": "collocation",
+     "form": "get a clear picture",
+     "meaning": "To understand a situation fully and without confusion.",
+     "example": "We need more data to get a clear picture of the market trends before investing.",
+     "plain": "We need more data to understand the market trends fully before investing.",
+     "note": "Emphasizes the need for comprehensive understanding to make informed decisions."
+    },
+    {
+     "text": "to get a better understanding",
+     "kind": "collocation",
+     "form": "get a better understanding",
+     "meaning": "To improve one's comprehension or knowledge of something.",
+     "example": "Let's review the report again to get a better understanding of the financial projections.",
+     "plain": "Let's review the report again to improve our comprehension of the financial projections.",
+     "note": "Suggests a need for deeper insight or clarification on a topic."
+    },
+    {
+     "text": "to get a fresh perspective",
+     "kind": "collocation",
+     "form": "get a fresh perspective",
+     "meaning": "To view a situation from a new or different angle, often by seeking outside input.",
+     "example": "Inviting an external consultant might help us get a fresh perspective on this long-standing problem.",
+     "plain": "Inviting an external consultant might help us view this long-standing problem from a new angle.",
+     "note": "Encourages seeking new viewpoints to overcome entrenched thinking."
+    },
+    {
+     "text": "to get a different angle",
+     "kind": "collocation",
+     "form": "get a different angle",
+     "meaning": "To consider a situation from an alternative viewpoint or approach.",
+     "example": "Perhaps we should talk to the sales team to get a different angle on customer feedback.",
+     "plain": "Perhaps we should talk to the sales team to consider customer feedback from an alternative viewpoint.",
+     "note": "Similar to 'fresh perspective', but often implies seeking a specific, alternative viewpoint."
+    },
+    {
+     "text": "to get a new take on",
+     "kind": "collocation",
+     "form": "get a new take on",
+     "meaning": "To consider a new interpretation or understanding of a situation or idea.",
+     "example": "I'm hoping the workshop will help us get a new take on how to approach client engagement.",
+     "plain": "I'm hoping the workshop will help us consider a new interpretation of how to approach client engagement.",
+     "note": "Suggests gaining a novel or updated understanding of a subject."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "to get to the bottom of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to raise a concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to weigh the options": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to come up with a solution": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be on the same page": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to iron out the details": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to take a pragmatic view": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to get buy-in": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to touch base": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to circle back": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to keep an eye on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to address the issue": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put a plan in place": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to outline the next steps": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get to the crux of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to take a step back": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to gain some clarity": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a handle on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be proactive": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to take a measured approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to err on the side of caution": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to face a dilemma": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be in a bind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be up against it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be stretched thin": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be at a crossroads": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be in uncharted territory": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be on thin ice": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be under scrutiny": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be under review": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be under discussion": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be under no illusion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be under the impression": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put things in perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to clear the air": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to bridge the gap": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to find common ground": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to manage expectations": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to mitigate the risk": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to take ownership of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to learn from our mistakes": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to move past this": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to keep lines of communication open": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to ensure accountability": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to get things back on track": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to address the issue head-on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put a stop to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to get ahead of the curve": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to take a proactive stance": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to exercise caution": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be in a tight spot": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be caught in the crossfire": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be in the firing line": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be under the microscope": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be under consideration": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be under negotiation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be under wraps": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be under way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to keep momentum going": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to make an informed decision": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to reach a consensus": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put forward a proposal": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to float an idea": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to explore alternatives": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to offer a suggestion": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be a viable path": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to monitor progress": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to review the situation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to ensure smooth implementation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to schedule a follow-up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to make sure we're aligned": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's the status update": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to fine-tune": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to acknowledge a concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to take responsibility for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to have a slight hiccup": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to notice a pattern emerging": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "there's a bit of a disconnect": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to revisit this": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a little concerned about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's come to my attention that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to run into a snag": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's the root cause": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to unpack this a bit": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to face a challenge": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to drill down": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm seeing a red flag": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this could be problematic": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not quite adding up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a slight complication": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "one option would be to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what if we tried": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we could explore the possibility of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "perhaps we should consider": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my initial thought is to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to play devil's advocate": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to take a different tack": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to try a phased approach": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to brainstorm some ideas": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what are our options here": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to consider all angles": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it boils down to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the deciding factor is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's make a call": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to commit to a course of action": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this seems like the most sensible approach": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm leaning towards": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give it the green light": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to prioritize": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a tough call": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the optimal solution": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to weigh up the options": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's move forward with this": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to come to a conclusion": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this feels like the right direction": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it seems to me that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my concern is that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what worries me is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the challenge here is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the key takeaway is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to remember that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to ensure that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's crucial that we": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm inclined to think that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm of the opinion that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not convinced that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely comfortable with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely sold on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely clear on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely ruling out": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely opposed to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely sure what": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not entirely sure how": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not entirely sure why": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not entirely sure if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the way forward is to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the bottom line is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the long and short of it is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the reality of the situation is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the truth of the matter is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the fact of the matter is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the point is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the issue at hand is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the question is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put our heads together": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to bounce ideas off": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to leave no stone unturned": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to think outside the box": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to sound out": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to test the waters": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a feel for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a read on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to get a grip on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to come down to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to bite the bullet": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to take the plunge": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give it some thought": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to sleep on it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to mull it over": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to take into account": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to factor in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to bear in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to keep in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to keep an open mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to keep our options open": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to play it safe": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to play it by ear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to shed some light on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a sticking point": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a bottleneck": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to pinpoint the problem": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be symptomatic of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a contributing factor": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a significant hurdle": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to encounter resistance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a cause for concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a pressing matter": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a stumbling block": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a tricky situation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a delicate matter": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a thorny issue": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a grey area": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a non-starter": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a tall order": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a tough nut to crack": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a vicious circle": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a double-edged sword": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a slippery slope": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a wake-up call": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be a game changer": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to weigh the pros and cons": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to narrow down the options": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a key consideration": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key definition accurately captures the meaning of an important factor to consider in the given context."
+   },
+   "to make a judgment call": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to explore all avenues": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to consider the implications": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to map out a strategy": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to sketch out a plan": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put a proposal on the table": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a clear picture": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to get a better understanding": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to get a fresh perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a different angle": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a new take on": {
+    "status": "pass",
+    "level": "B2"
+   }
+  }
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "format": 1,
+ "id": "fossil.uncountable-nouns",
+ "area": "grammar",
+ "title": "Uncountable nouns",
+ "what": "pluralising or counting uncountable nouns ('informations', 'advices', 'a feedback', 'researches', 'equipments')",
+ "summary": "This error often persists because many languages treat these nouns as countable, making the distinction subtle for advanced learners. It can make speech sound less natural and occasionally obscure the intended meaning.",
+ "listenFor": "Notice if you are adding an 's' or using 'a/an' before common uncountable nouns like 'information', 'advice', 'feedback', 'research', or 'equipment'.",
+ "grammarPointIds": [],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "The team received several important informations regarding the project timeline.",
+   "right": "The team received several important pieces of information regarding the project timeline.",
+   "note": "Information is uncountable; use 'pieces of information' to quantify."
+  },
+  {
+   "wrong": "I need some advices on how to manage my finances more effectively.",
+   "right": "I need some advice on how to manage my finances more effectively.",
+   "note": "Advice is uncountable; do not pluralize with 's'."
+  },
+  {
+   "wrong": "We received a valuable feedback from the client after the presentation.",
+   "right": "We received valuable feedback from the client after the presentation.",
+   "note": "Feedback is uncountable; do not use 'a' before it."
+  },
+  {
+   "wrong": "Her latest researches have significantly advanced the field of neuroscience.",
+   "right": "Her latest research has significantly advanced the field of neuroscience.",
+   "note": "Research is uncountable; do not pluralize with 's'."
+  },
+  {
+   "wrong": "The laboratory requires new equipments to conduct the advanced experiments.",
+   "right": "The laboratory requires new equipment to conduct the advanced experiments.",
+   "note": "Equipment is uncountable; do not pluralize with 's'."
+  },
+  {
+   "wrong": "They purchased many new furnitures for their renovated office space.",
+   "right": "They purchased many new pieces of furniture for their renovated office space.",
+   "note": "Furniture is uncountable; use 'pieces of furniture' to quantify."
+  }
+ ],
+ "drills": [
+  "We need to gather more information before making a final decision.",
+  "The professor offered sound advice on career development.",
+  "Constructive feedback is essential for professional growth.",
+  "Extensive research was conducted to support the new policy.",
+  "All the necessary equipment arrived on schedule for the conference.",
+  "The office decor includes modern furniture and subtle lighting.",
+  "Significant progress has been made on the complex negotiation.",
+  "We received valuable insight into market trends from the report.",
+  "The company invested in new machinery to boost production efficiency.",
+  "She provided excellent guidance on navigating the bureaucratic process."
+ ],
+ "probes": [
+  {
+   "sentence": "The manager gave me several good advices on how to improve my presentation skills.",
+   "answers": [
+    "The manager gave me several good pieces of advice on how to improve my presentation skills.",
+    "The manager gave me several good tips on how to improve my presentation skills."
+   ]
+  },
+  {
+   "sentence": "We are still waiting for the latest informations regarding the merger.",
+   "answers": [
+    "We are still waiting for the latest information regarding the merger."
+   ]
+  },
+  {
+   "sentence": "The factory needs to upgrade its old equipments to meet safety standards.",
+   "answers": [
+    "The factory needs to upgrade its old equipment to meet safety standards."
+   ]
+  },
+  {
+   "sentence": "Could you give me a feedback on my proposal by tomorrow morning?",
+   "answers": [
+    "Could you give me feedback on my proposal by tomorrow morning?"
+   ]
+  },
+  {
+   "sentence": "They bought some new furnitures for their apartment last weekend.",
+   "answers": [
+    "They bought some new furniture for their apartment last weekend."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

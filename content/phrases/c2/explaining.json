@@ -1,0 +1,2219 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "explaining",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "to put it simply",
+     "kind": "chunk",
+     "form": "To put it simply",
+     "meaning": "to explain something in a straightforward way, avoiding complexity.",
+     "example": "To put it simply, the new policy means we'll all be working from home two days a week.",
+     "plain": "The new policy means we'll all be working from home two days a week.",
+     "note": "A common way to introduce a simplified explanation. Useful when summarizing a complex idea."
+    },
+    {
+     "text": "in a nutshell",
+     "kind": "chunk",
+     "form": "in a nutshell",
+     "meaning": "to summarize something very briefly and concisely.",
+     "example": "So, in a nutshell, our strategy is to focus on customer retention rather than new acquisitions.",
+     "plain": "So, our strategy is to focus on customer retention rather than new acquisitions.",
+     "note": "Informal but widely used. Implies a very brief summary of a larger topic."
+    },
+    {
+     "text": "boil it down to",
+     "kind": "collocation",
+     "form": "boil it down to",
+     "meaning": "to reduce a complex idea to its most essential elements.",
+     "example": "If we boil it down to its core, the problem is a lack of clear communication between departments.",
+     "plain": "The core problem is a lack of clear communication between departments.",
+     "note": "Suggests getting to the fundamental truth or essence of something."
+    },
+    {
+     "text": "make sense of",
+     "kind": "collocation",
+     "form": "make sense of",
+     "meaning": "to understand something that is confusing or difficult.",
+     "example": "It took me a while to make sense of the new tax regulations, but I think I've got it now.",
+     "plain": "It took me a while to understand the new tax regulations, but I think I've got it now.",
+     "note": "Often used when someone is struggling with comprehension."
+    },
+    {
+     "text": "to be clear",
+     "kind": "chunk",
+     "form": "To be clear",
+     "meaning": "to ensure there is no misunderstanding about what is being said.",
+     "example": "To be clear, we're aiming for a 15% increase in sales, not just a general improvement.",
+     "plain": "We're aiming for a 15% increase in sales, not just a general improvement.",
+     "note": "Used to emphasize a point or correct a potential misinterpretation."
+    },
+    {
+     "text": "put another way",
+     "kind": "chunk",
+     "form": "Put another way",
+     "meaning": "to rephrase something in different words to aid understanding.",
+     "example": "Put another way, we need to prioritize efficiency over expansion for the next quarter.",
+     "plain": "We need to prioritize efficiency over expansion for the next quarter.",
+     "note": "A common transition phrase when offering an alternative explanation."
+    },
+    {
+     "text": "what I mean is",
+     "kind": "frame",
+     "form": "What I mean is",
+     "meaning": "to clarify or elaborate on a previous statement.",
+     "example": "What I mean is, the budget cuts will affect everyone, not just the new hires.",
+     "plain": "The budget cuts will affect everyone, not just the new hires.",
+     "note": "Used to provide a more precise or detailed explanation after a general statement."
+    },
+    {
+     "text": "let me rephrase",
+     "kind": "chunk",
+     "form": "Let me rephrase",
+     "meaning": "to say something again using different words, often for clarity.",
+     "example": "Let me rephrase: the project timeline is flexible, but the core deliverables are not.",
+     "plain": "The project timeline is flexible, but the core deliverables are not.",
+     "note": "Polite and direct way to indicate you're going to try explaining again."
+    },
+    {
+     "text": "to spell it out",
+     "kind": "chunk",
+     "form": "to spell it out",
+     "meaning": "to explain something in very explicit and detailed terms.",
+     "example": "I don't want to have to spell it out for you, but the deadline is firm.",
+     "plain": "I don't want to have to explain it in detail, but the deadline is firm.",
+     "note": "Can sound slightly impatient if not used carefully, implying the listener should already understand."
+    },
+    {
+     "text": "the bottom line",
+     "kind": "chunk",
+     "form": "The bottom line",
+     "meaning": "the most important fact or the essential point of a situation.",
+     "example": "The bottom line is, we need to increase our market share to remain competitive.",
+     "plain": "The most important thing is, we need to increase our market share to remain competitive.",
+     "note": "Often used to summarize the ultimate consequence or main takeaway."
+    },
+    {
+     "text": "in simple terms",
+     "kind": "chunk",
+     "form": "In simple terms",
+     "meaning": "to explain something using easy-to-understand language.",
+     "example": "In simple terms, the new software automates tasks that used to take hours manually.",
+     "plain": "The new software automates tasks that used to take hours manually.",
+     "note": "Indicates a deliberate effort to simplify complex information."
+    },
+    {
+     "text": "to break it down",
+     "kind": "collocation",
+     "form": "to break it down",
+     "meaning": "to explain something by dividing it into smaller, more manageable parts.",
+     "example": "Let me try to break it down for you: first, we analyze the data, then we strategize.",
+     "plain": "Let me try to explain it in parts: first, we analyze the data, then we strategize.",
+     "note": "Useful when explaining a process or a complex system step-by-step."
+    },
+    {
+     "text": "to give you an idea",
+     "kind": "frame",
+     "form": "To give you an idea",
+     "meaning": "to provide an example or some context to help someone understand.",
+     "example": "To give you an idea, last year's profits were almost double what we're seeing now.",
+     "plain": "Last year's profits were almost double what we're seeing now.",
+     "note": "Introduces an illustrative example or comparison."
+    },
+    {
+     "text": "the gist of it",
+     "kind": "chunk",
+     "form": "the gist of it",
+     "meaning": "the main point or general sense of something, without the details.",
+     "example": "The gist of it is that we need to adapt quickly to changing market conditions.",
+     "plain": "The main point is that we need to adapt quickly to changing market conditions.",
+     "note": "Implies a summary that captures the essence without getting bogged down in specifics."
+    },
+    {
+     "text": "to put it mildly",
+     "kind": "chunk",
+     "form": "To put it mildly",
+     "meaning": "to state something in a way that is less strong or extreme than it could be.",
+     "example": "To put it mildly, the presentation was not well-received by the board members.",
+     "plain": "The presentation was not well-received by the board members.",
+     "note": "An understatement, often used for ironic effect or to soften negative feedback."
+    },
+    {
+     "text": "to clarify my point",
+     "kind": "chunk",
+     "form": "To clarify my point",
+     "meaning": "to make one's statement or argument clearer and easier to understand.",
+     "example": "To clarify my point, the issue isn't the budget itself, but how it's allocated.",
+     "plain": "The issue isn't the budget itself, but how it's allocated.",
+     "note": "Used when you feel your previous statement might have been misunderstood."
+    },
+    {
+     "text": "to give you a sense",
+     "kind": "frame",
+     "form": "To give you a sense",
+     "meaning": "to provide enough information for someone to form a general understanding.",
+     "example": "To give you a sense of the scale, we're talking about millions of data points daily.",
+     "plain": "We're talking about millions of data points daily.",
+     "note": "Similar to \"to give you an idea,\" but often implies a more abstract or qualitative understanding."
+    },
+    {
+     "text": "to put it bluntly",
+     "kind": "chunk",
+     "form": "To put it bluntly",
+     "meaning": "to state something directly and without trying to be polite or subtle.",
+     "example": "To put it bluntly, your proposal lacks a clear financial strategy.",
+     "plain": "Your proposal lacks a clear financial strategy.",
+     "note": "Used when delivering a direct, often critical, assessment. Can be perceived as rude if not careful."
+    },
+    {
+     "text": "to illustrate my point",
+     "kind": "chunk",
+     "form": "To illustrate my point",
+     "meaning": "to provide an example or explanation that helps make a statement clearer.",
+     "example": "To illustrate my point, consider the success of our competitor's recent marketing campaign.",
+     "plain": "Consider the success of our competitor's recent marketing campaign.",
+     "note": "Introduces an example or analogy to support an argument."
+    },
+    {
+     "text": "what I'm getting at",
+     "kind": "frame",
+     "form": "What I'm getting at",
+     "meaning": "to explain the main point or intention behind what one is saying.",
+     "example": "What I'm getting at is that we need to rethink our entire approach to customer service.",
+     "plain": "We need to rethink our entire approach to customer service.",
+     "note": "Used to clarify one's underlying message or purpose."
+    },
+    {
+     "text": "to recap briefly",
+     "kind": "chunk",
+     "form": "To recap briefly",
+     "meaning": "to summarize the main points that have been discussed so far.",
+     "example": "To recap briefly, we've covered the budget, the timeline, and the team roles.",
+     "plain": "We've covered the budget, the timeline, and the team roles.",
+     "note": "Useful for summarizing before moving on or concluding."
+    },
+    {
+     "text": "to be more precise",
+     "kind": "chunk",
+     "form": "To be more precise",
+     "meaning": "to give a more exact or accurate explanation.",
+     "example": "To be more precise, the deadline is Friday at 5 PM, not just sometime next week.",
+     "plain": "The deadline is Friday at 5 PM, not just sometime next week.",
+     "note": "Used to refine a previous statement with greater accuracy."
+    },
+    {
+     "text": "to put it succinctly",
+     "kind": "chunk",
+     "form": "To put it succinctly",
+     "meaning": "to express something clearly and briefly, using few words.",
+     "example": "To put it succinctly, we need to innovate or risk falling behind our competitors.",
+     "plain": "We need to innovate or risk falling behind our competitors.",
+     "note": "Slightly more formal than \"in a nutshell,\" emphasizing conciseness and clarity."
+    },
+    {
+     "text": "Does that make sense",
+     "kind": "chunk",
+     "form": "Does that make sense",
+     "meaning": "to ask if the listener understands what has been explained.",
+     "example": "So, the first step is to gather all the relevant data. Does that make sense?",
+     "plain": "So, the first step is to gather all the relevant data. Do you understand?",
+     "note": "A common and polite way to check for comprehension."
+    },
+    {
+     "text": "Am I making sense",
+     "kind": "chunk",
+     "form": "Am I making sense",
+     "meaning": "to ask if one's explanation is clear and understandable to the listener.",
+     "example": "I know this is a bit technical, but am I making sense so far?",
+     "plain": "I know this is a bit technical, but is my explanation clear so far?",
+     "note": "Shows consideration for the listener, especially with complex topics."
+    },
+    {
+     "text": "Are you with me",
+     "kind": "chunk",
+     "form": "Are you with me",
+     "meaning": "to ask if the listener is following the explanation or argument.",
+     "example": "We've adjusted the budget based on the new projections. Are you with me?",
+     "plain": "We've adjusted the budget based on the new projections. Are you following?",
+     "note": "Informal and direct. Good for checking engagement during a detailed explanation."
+    },
+    {
+     "text": "Do you follow",
+     "kind": "chunk",
+     "form": "Do you follow",
+     "meaning": "to ask if the listener understands the progression of an explanation.",
+     "example": "So, the data suggests a shift in consumer preferences. Do you follow?",
+     "plain": "So, the data suggests a shift in consumer preferences. Do you understand?",
+     "note": "Similar to \"Are you with me,\" but slightly more formal."
+    },
+    {
+     "text": "Is that clear",
+     "kind": "chunk",
+     "form": "Is that clear",
+     "meaning": "to ask if a statement or instruction is understood without ambiguity.",
+     "example": "We need to submit the report by Friday, no exceptions. Is that clear?",
+     "plain": "We need to submit the report by Friday, no exceptions. Do you understand?",
+     "note": "Can sound firm or even slightly demanding, depending on tone."
+    },
+    {
+     "text": "Just to be sure",
+     "kind": "chunk",
+     "form": "Just to be sure",
+     "meaning": "to reconfirm understanding or clarify a point to avoid mistakes.",
+     "example": "Just to be sure, you're confirming the meeting is at 10 AM tomorrow, right?",
+     "plain": "You're confirming the meeting is at 10 AM tomorrow, right?",
+     "note": "Used when seeking confirmation or double-checking information."
+    },
+    {
+     "text": "Let me know if",
+     "kind": "frame",
+     "form": "Let me know if",
+     "meaning": "to invite the listener to ask questions or indicate confusion.",
+     "example": "Let me know if anything I've said isn't entirely clear.",
+     "plain": "Please tell me if anything I've said isn't entirely clear.",
+     "note": "Polite and open-ended, encouraging questions."
+    },
+    {
+     "text": "Feel free to interrupt",
+     "kind": "chunk",
+     "form": "Feel free to interrupt",
+     "meaning": "to encourage the listener to ask questions at any point during the explanation.",
+     "example": "Feel free to interrupt if you have any questions as I go through the slides.",
+     "plain": "Please ask questions if you have any as I go through the slides.",
+     "note": "Creates a welcoming and interactive environment for discussion."
+    },
+    {
+     "text": "Any questions so far",
+     "kind": "chunk",
+     "form": "Any questions so far",
+     "meaning": "to pause and invite questions about the explanation given up to that point.",
+     "example": "We've covered the initial setup process. Any questions so far?",
+     "plain": "We've covered the initial setup process. Do you have any questions?",
+     "note": "A standard way to check for understanding at natural breaks in an explanation."
+    },
+    {
+     "text": "Does that clarify things",
+     "kind": "chunk",
+     "form": "Does that clarify things",
+     "meaning": "to ask if a recent explanation has made a situation or concept clearer.",
+     "example": "I hope my example about the budget helped. Does that clarify things for you?",
+     "plain": "I hope my example about the budget helped. Is it clearer now?",
+     "note": "Used after providing additional information or a rephrasing."
+    },
+    {
+     "text": "For instance",
+     "kind": "chunk",
+     "form": "For instance",
+     "meaning": "to introduce a specific example to support or clarify a general statement.",
+     "example": "Many companies are adopting flexible work models; for instance, ours now offers unlimited remote days.",
+     "plain": "Many companies are adopting flexible work models; ours now offers unlimited remote days.",
+     "note": "A formal and versatile way to introduce an example."
+    },
+    {
+     "text": "To give you an example",
+     "kind": "frame",
+     "form": "To give you an example",
+     "meaning": "to introduce a specific case or illustration to make a point clearer.",
+     "example": "To give you an example, consider how our competitors handled a similar market downturn.",
+     "plain": "Consider how our competitors handled a similar market downturn.",
+     "note": "A common and direct way to offer an illustrative example."
+    },
+    {
+     "text": "Take for example",
+     "kind": "frame",
+     "form": "Take for example",
+     "meaning": "to present a specific case as an illustration of a general point.",
+     "example": "Take for example the recent changes in consumer behavior due to online shopping.",
+     "plain": "Consider the recent changes in consumer behavior due to online shopping.",
+     "note": "Invites the listener to consider a particular case."
+    },
+    {
+     "text": "A case in point",
+     "kind": "chunk",
+     "form": "A case in point",
+     "meaning": "an example that strongly supports or illustrates the argument being made.",
+     "example": "The success of our pilot program is a case in point for investing in new technologies.",
+     "plain": "The success of our pilot program supports investing in new technologies.",
+     "note": "Often used to introduce a particularly relevant or compelling example."
+    },
+    {
+     "text": "By way of illustration",
+     "kind": "chunk",
+     "form": "By way of illustration",
+     "meaning": "to introduce an example or analogy to help explain a concept.",
+     "example": "By way of illustration, think of our team as a well-oiled machine, each part crucial.",
+     "plain": "Think of our team as a well-oiled machine, each part crucial.",
+     "note": "More formal. Suggests a deliberate effort to make something clearer through an example."
+    },
+    {
+     "text": "Imagine a scenario where",
+     "kind": "frame",
+     "form": "Imagine a scenario where",
+     "meaning": "to ask the listener to visualize a hypothetical situation to understand a concept.",
+     "example": "Imagine a scenario where our main competitor suddenly goes out of business.",
+     "plain": "Consider what would happen if our main competitor suddenly goes out of business.",
+     "note": "Engages the listener by inviting them to think through a hypothetical situation."
+    },
+    {
+     "text": "To put it visually",
+     "kind": "chunk",
+     "form": "To put it visually",
+     "meaning": "to explain something using an image or metaphor to aid understanding.",
+     "example": "To put it visually, our current process is like trying to fit a square peg in a round hole.",
+     "plain": "Our current process is like trying to fit a square peg in a round hole.",
+     "note": "Introduces a metaphor or simile to create a clearer mental picture."
+    },
+    {
+     "text": "Let's say for example",
+     "kind": "frame",
+     "form": "Let's say for example",
+     "meaning": "to introduce a hypothetical situation or specific instance as an example.",
+     "example": "Let's say for example you're managing a project with a very tight deadline.",
+     "plain": "Imagine you're managing a project with a very tight deadline.",
+     "note": "A common and conversational way to introduce a hypothetical example."
+    },
+    {
+     "text": "In other words",
+     "kind": "chunk",
+     "form": "In other words",
+     "meaning": "to rephrase something in a simpler or different way for clarity.",
+     "example": "The new system is designed for optimal user experience. In other words, it's very intuitive.",
+     "plain": "The new system is designed for optimal user experience. It's very intuitive.",
+     "note": "A very common phrase for rephrasing or simplifying."
+    },
+    {
+     "text": "What I'm trying to say",
+     "kind": "frame",
+     "form": "What I'm trying to say",
+     "meaning": "to clarify one's intended message, often after a less clear initial attempt.",
+     "example": "What I'm trying to say is that we need to be more proactive, not just reactive.",
+     "plain": "We need to be more proactive, not just reactive.",
+     "note": "Used when you feel you haven't expressed yourself clearly enough."
+    },
+    {
+     "text": "To reiterate",
+     "kind": "chunk",
+     "form": "To reiterate",
+     "meaning": "to repeat a statement or point for emphasis or clarity.",
+     "example": "To reiterate, the deadline for all submissions is strictly end of day Friday.",
+     "plain": "The deadline for all submissions is strictly end of day Friday.",
+     "note": "Formal. Used to emphasize or repeat a crucial piece of information."
+    },
+    {
+     "text": "To put it differently",
+     "kind": "chunk",
+     "form": "To put it differently",
+     "meaning": "to express the same idea using alternative phrasing for better understanding.",
+     "example": "To put it differently, our goal is not just growth, but sustainable growth.",
+     "plain": "Our goal is not just growth, but sustainable growth.",
+     "note": "A polite and clear way to offer an alternative explanation."
+    },
+    {
+     "text": "Let me put it this way",
+     "kind": "frame",
+     "form": "Let me put it this way",
+     "meaning": "to introduce a new, often more direct or illustrative, way of explaining something.",
+     "example": "Let me put it this way: if we don't adapt, we'll be left behind.",
+     "plain": "If we don't adapt, we'll be left behind.",
+     "note": "Often used to introduce a more impactful or simplified explanation."
+    },
+    {
+     "text": "To phrase it another way",
+     "kind": "chunk",
+     "form": "To phrase it another way",
+     "meaning": "to express the same idea using different words to improve clarity.",
+     "example": "To phrase it another way, the success of this project hinges on team collaboration.",
+     "plain": "The success of this project hinges on team collaboration.",
+     "note": "A slightly more formal alternative to \"to put it another way.\""
+    },
+    {
+     "text": "What I'm driving at",
+     "kind": "frame",
+     "form": "What I'm driving at",
+     "meaning": "to explain the underlying point or ultimate intention of one's statement.",
+     "example": "What I'm driving at is that we need to consider the long-term implications of this decision.",
+     "plain": "We need to consider the long-term implications of this decision.",
+     "note": "Informal. Used to clarify the main message or purpose."
+    },
+    {
+     "text": "To sum up",
+     "kind": "chunk",
+     "form": "To sum up",
+     "meaning": "to briefly summarize the main points of a discussion or explanation.",
+     "example": "To sum up, we've agreed on the budget, the timeline, and the key responsibilities.",
+     "plain": "We've agreed on the budget, the timeline, and the key responsibilities.",
+     "note": "A common and concise way to conclude an explanation or discussion."
+    },
+    {
+     "text": "In summary",
+     "kind": "chunk",
+     "form": "In summary",
+     "meaning": "to present a brief overview of the main points discussed.",
+     "example": "In summary, the new strategy focuses on digital transformation and customer engagement.",
+     "plain": "The new strategy focuses on digital transformation and customer engagement.",
+     "note": "Formal. Used to introduce a concise overview of key information."
+    },
+    {
+     "text": "The takeaway here is",
+     "kind": "frame",
+     "form": "The takeaway here is",
+     "meaning": "to highlight the most important lesson or conclusion from a discussion.",
+     "example": "The takeaway here is that adaptability is crucial for navigating market changes.",
+     "plain": "Adaptability is crucial for navigating market changes.",
+     "note": "Informal but widely used. Emphasizes the main point to remember."
+    },
+    {
+     "text": "To conclude",
+     "kind": "chunk",
+     "form": "To conclude",
+     "meaning": "to bring an explanation or discussion to an end by summarizing.",
+     "example": "To conclude, our efforts must now focus on execution and continuous improvement.",
+     "plain": "Our efforts must now focus on execution and continuous improvement.",
+     "note": "Formal. Used to signal the end of a presentation or detailed explanation."
+    },
+    {
+     "text": "All in all",
+     "kind": "chunk",
+     "form": "All in all",
+     "meaning": "considering everything, to give a general summary or overall impression.",
+     "example": "All in all, despite a few minor issues, the project was a resounding success.",
+     "plain": "Despite a few minor issues, the project was a resounding success.",
+     "note": "Informal. Used to provide a general conclusion after considering various factors."
+    },
+    {
+     "text": "The upshot is",
+     "kind": "frame",
+     "form": "The upshot is",
+     "meaning": "the final result or outcome of a series of events or discussions.",
+     "example": "The upshot is, we'll need to reallocate resources to meet the new targets.",
+     "plain": "We'll need to reallocate resources to meet the new targets.",
+     "note": "Informal. Refers to the ultimate consequence or main result."
+    },
+    {
+     "text": "Having said that",
+     "kind": "chunk",
+     "form": "Having said that",
+     "meaning": "to introduce a contrasting point or qualification after a previous statement.",
+     "example": "The new software is very efficient. Having said that, it does have a steep learning curve.",
+     "plain": "The new software is very efficient, but it does have a steep learning curve.",
+     "note": "A common way to introduce a caveat or counter-argument."
+    },
+    {
+     "text": "It's worth noting that",
+     "kind": "frame",
+     "form": "It's worth noting that",
+     "meaning": "to highlight an important piece of information that should be considered.",
+     "example": "It's worth noting that market conditions can change rapidly, impacting our projections.",
+     "plain": "Market conditions can change rapidly, impacting our projections.",
+     "note": "Draws attention to a significant detail or factor."
+    },
+    {
+     "text": "On the other hand",
+     "kind": "chunk",
+     "form": "On the other hand",
+     "meaning": "to introduce a contrasting or alternative perspective or point of view.",
+     "example": "The new strategy is ambitious. On the other hand, it offers significant potential rewards.",
+     "plain": "The new strategy is ambitious, but it offers significant potential rewards.",
+     "note": "Used to present a different side of an argument or situation."
+    },
+    {
+     "text": "To be fair",
+     "kind": "chunk",
+     "form": "To be fair",
+     "meaning": "to acknowledge a valid point or mitigating factor, often in a balanced discussion.",
+     "example": "The project ran over budget, but to be fair, we faced unexpected material costs.",
+     "plain": "The project ran over budget, but we faced unexpected material costs.",
+     "note": "Used to introduce a concession or a balanced perspective."
+    },
+    {
+     "text": "It's not so much that",
+     "kind": "frame",
+     "form": "It's not so much that",
+     "meaning": "to clarify a misconception by stating what is *not* the case before stating what *is*.",
+     "example": "It's not so much that I disagree, but rather that I see a different approach.",
+     "plain": "I don't disagree, but I see a different approach.",
+     "note": "Used to correct a potential misunderstanding or refine a statement."
+    },
+    {
+     "text": "The caveat here is",
+     "kind": "frame",
+     "form": "The caveat here is",
+     "meaning": "to introduce a warning or condition that limits the scope of a statement.",
+     "example": "The caveat here is that these projections are based on current market stability.",
+     "plain": "These projections are based on current market stability.",
+     "note": "Highlights a specific limitation or condition."
+    },
+    {
+     "text": "It's important to distinguish",
+     "kind": "frame",
+     "form": "It's important to distinguish",
+     "meaning": "to emphasize the need to differentiate between two similar but distinct concepts.",
+     "example": "It's important to distinguish between correlation and causation in our data analysis.",
+     "plain": "We must differentiate between correlation and causation in our data analysis.",
+     "note": "Used to prevent confusion between closely related ideas."
+    },
+    {
+     "text": "That being said",
+     "kind": "chunk",
+     "form": "That being said",
+     "meaning": "to introduce a contrasting or qualifying statement after a previous point.",
+     "example": "The new policy has its benefits. That being said, implementation will be challenging.",
+     "plain": "The new policy has its benefits, but implementation will be challenging.",
+     "note": "Very common, similar to \"having said that.\""
+    },
+    {
+     "text": "It's worth bearing in mind",
+     "kind": "frame",
+     "form": "It's worth bearing in mind",
+     "meaning": "to suggest that a particular fact or consideration should be remembered.",
+     "example": "It's worth bearing in mind that our competitors are also innovating rapidly.",
+     "plain": "Remember that our competitors are also innovating rapidly.",
+     "note": "Polite way to introduce an important consideration."
+    },
+    {
+     "text": "Let me explain",
+     "kind": "chunk",
+     "form": "Let me explain",
+     "meaning": "to signal that one is about to provide a detailed explanation.",
+     "example": "I know that sounds complicated, but let me explain how it works.",
+     "plain": "I know that sounds complicated, but I will explain how it works.",
+     "note": "Direct and common way to begin an explanation."
+    },
+    {
+     "text": "The way I see it",
+     "kind": "frame",
+     "form": "The way I see it",
+     "meaning": "to introduce one's personal perspective or interpretation of a situation.",
+     "example": "The way I see it, we need to invest more in training our existing staff.",
+     "plain": "I think we need to invest more in training our existing staff.",
+     "note": "Introduces a personal opinion or analysis."
+    },
+    {
+     "text": "What it comes down to",
+     "kind": "frame",
+     "form": "What it comes down to",
+     "meaning": "to state the fundamental or most important aspect of a complex situation.",
+     "example": "What it comes down to is whether we prioritize short-term gains or long-term stability.",
+     "plain": "The main point is whether we prioritize short-term gains or long-term stability.",
+     "note": "Used to simplify a complex issue to its core choice or problem."
+    },
+    {
+     "text": "To give you some background",
+     "kind": "frame",
+     "form": "To give you some background",
+     "meaning": "to provide preliminary information necessary for understanding a situation.",
+     "example": "To give you some background, the project started two years ago with a different team.",
+     "plain": "The project started two years ago with a different team.",
+     "note": "Useful for setting the scene before diving into details."
+    },
+    {
+     "text": "The point is",
+     "kind": "frame",
+     "form": "The point is",
+     "meaning": "to emphasize the main idea or most important aspect of what is being said.",
+     "example": "The point is, we can't afford to make the same mistakes again.",
+     "plain": "We can't afford to make the same mistakes again.",
+     "note": "Used to highlight the central message or argument."
+    },
+    {
+     "text": "Allow me to clarify",
+     "kind": "chunk",
+     "form": "Allow me to clarify",
+     "meaning": "a polite way to offer a clearer explanation or correct a misunderstanding.",
+     "example": "Allow me to clarify: the new system integrates with existing platforms, it doesn't replace them.",
+     "plain": "The new system integrates with existing platforms, it doesn't replace them.",
+     "note": "Formal and polite. Used when there might be confusion."
+    },
+    {
+     "text": "What I'm trying to get across",
+     "kind": "frame",
+     "form": "What I'm trying to get across",
+     "meaning": "to explain the main message or idea one is attempting to communicate.",
+     "example": "What I'm trying to get across is the importance of cross-departmental collaboration.",
+     "plain": "The importance of cross-departmental collaboration is what I'm trying to communicate.",
+     "note": "Used when you want to ensure your main message is understood."
+    },
+    {
+     "text": "The reason being",
+     "kind": "frame",
+     "form": "The reason being",
+     "meaning": "to introduce the explanation or justification for a previous statement.",
+     "example": "We decided to postpone the launch, the reason being that we need more testing time.",
+     "plain": "We decided to postpone the launch because we need more testing time.",
+     "note": "Slightly formal. Provides a direct explanation for a decision or situation."
+    },
+    {
+     "text": "To elaborate further",
+     "kind": "chunk",
+     "form": "To elaborate further",
+     "meaning": "to provide additional details or a more in-depth explanation.",
+     "example": "To elaborate further, the market research indicates a strong demand for this specific feature.",
+     "plain": "The market research indicates a strong demand for this specific feature.",
+     "note": "Used when you want to expand on a point you've already made."
+    },
+    {
+     "text": "The crux of the matter",
+     "kind": "chunk",
+     "form": "The crux of the matter",
+     "meaning": "the most important or difficult part of a problem or issue.",
+     "example": "The crux of the matter is how we can scale our operations without compromising quality.",
+     "plain": "The most important part is how we can scale our operations without compromising quality.",
+     "note": "Formal. Highlights the central, often challenging, aspect of a situation."
+    },
+    {
+     "text": "It's a complex issue",
+     "kind": "chunk",
+     "form": "It's a complex issue",
+     "meaning": "to acknowledge that a topic or problem is intricate and not easily resolved.",
+     "example": "It's a complex issue with many interconnected factors, so there's no simple solution.",
+     "plain": "This issue has many interconnected factors, so there's no simple solution.",
+     "note": "Used to manage expectations about the ease of understanding or solving a problem."
+    },
+    {
+     "text": "It's a nuanced discussion",
+     "kind": "chunk",
+     "form": "It's a nuanced discussion",
+     "meaning": "to describe a conversation that involves subtle distinctions and careful consideration.",
+     "example": "It's a nuanced discussion, and we need to consider all perspectives before deciding.",
+     "plain": "This discussion involves subtle distinctions, and we need to consider all perspectives before deciding.",
+     "note": "Highlights the need for careful attention to subtle differences."
+    },
+    {
+     "text": "It's easier said than done",
+     "kind": "chunk",
+     "form": "It's easier said than done",
+     "meaning": "to acknowledge that a proposed solution or task is more difficult in practice than in theory.",
+     "example": "Increasing productivity by 20% sounds good, but it's easier said than done.",
+     "plain": "Increasing productivity by 20% sounds good, but it's difficult to achieve.",
+     "note": "A common idiom to express practical difficulty."
+    },
+    {
+     "text": "It's a fine line",
+     "kind": "chunk",
+     "form": "It's a fine line",
+     "meaning": "to describe a situation where two things are very similar, and it's hard to distinguish them.",
+     "example": "It's a fine line between being assertive and being aggressive in negotiations.",
+     "plain": "It's hard to distinguish between being assertive and being aggressive in negotiations.",
+     "note": "Used when discussing a delicate balance or distinction."
+    },
+    {
+     "text": "To contextualize this",
+     "kind": "chunk",
+     "form": "To contextualize this",
+     "meaning": "to provide background information to help understand a specific point.",
+     "example": "To contextualize this, our previous attempts at automation were met with significant resistance.",
+     "plain": "Our previous attempts at automation were met with significant resistance.",
+     "note": "Formal. Used to provide relevant background for a statement."
+    },
+    {
+     "text": "The underlying principle",
+     "kind": "collocation",
+     "form": "The underlying principle",
+     "meaning": "the fundamental rule or idea that forms the basis of something.",
+     "example": "The underlying principle of this new software is to simplify complex data analysis.",
+     "plain": "The fundamental idea of this new software is to simplify complex data analysis.",
+     "note": "Refers to the core concept or foundation."
+    },
+    {
+     "text": "To elaborate a little",
+     "kind": "chunk",
+     "form": "To elaborate a little",
+     "meaning": "to add a few more details or expand slightly on a previous point.",
+     "example": "To elaborate a little, the market shift is driven by changing consumer demographics.",
+     "plain": "The market shift is driven by changing consumer demographics.",
+     "note": "A polite way to offer more detail without going into excessive depth."
+    },
+    {
+     "text": "It boils down to",
+     "kind": "frame",
+     "form": "It boils down to",
+     "meaning": "to state the most essential or fundamental aspect of a situation.",
+     "example": "Ultimately, it boils down to whether we have the resources to execute this plan effectively.",
+     "plain": "Ultimately, the main point is whether we have the resources to execute this plan effectively.",
+     "note": "Used to simplify a complex issue to its core element."
+    },
+    {
+     "text": "To give you a clearer picture",
+     "kind": "frame",
+     "form": "To give you a clearer picture",
+     "meaning": "to provide additional information or explanation to improve understanding.",
+     "example": "To give you a clearer picture, I've prepared a detailed report with all the figures.",
+     "plain": "I've prepared a detailed report with all the figures.",
+     "note": "Suggests that more comprehensive information is about to be provided."
+    },
+    {
+     "text": "The key takeaway",
+     "kind": "collocation",
+     "form": "The key takeaway",
+     "meaning": "the most important piece of information or lesson to remember from a discussion.",
+     "example": "The key takeaway from this workshop is the importance of continuous learning.",
+     "plain": "The most important lesson from this workshop is the importance of continuous learning.",
+     "note": "Highlights the central message or conclusion."
+    },
+    {
+     "text": "To be more specific",
+     "kind": "chunk",
+     "form": "To be more specific",
+     "meaning": "to provide more detailed or exact information about a general statement.",
+     "example": "To be more specific, we're targeting a 10% reduction in operational costs by Q3.",
+     "plain": "We're targeting a 10% reduction in operational costs by Q3.",
+     "note": "Used to refine a previous statement with greater detail."
+    },
+    {
+     "text": "What I'm trying to convey",
+     "kind": "frame",
+     "form": "What I'm trying to convey",
+     "meaning": "to express the main message or idea one is attempting to communicate.",
+     "example": "What I'm trying to convey is that flexibility is paramount in this evolving market.",
+     "plain": "Flexibility is paramount in this evolving market.",
+     "note": "Similar to \"what I'm trying to get across,\" but slightly more formal."
+    },
+    {
+     "text": "To be perfectly frank",
+     "kind": "chunk",
+     "form": "To be perfectly frank",
+     "meaning": "to state something honestly and directly, even if it might be unwelcome.",
+     "example": "To be perfectly frank, I don't think this strategy will yield the desired results.",
+     "plain": "I don't think this strategy will yield the desired results.",
+     "note": "Used to introduce a candid, often critical, opinion. Can be softened with tone."
+    },
+    {
+     "text": "The essence of it",
+     "kind": "chunk",
+     "form": "The essence of it",
+     "meaning": "the fundamental nature or most important quality of something.",
+     "example": "The essence of it is that we need to foster a culture of continuous improvement.",
+     "plain": "We need to foster a culture of continuous improvement.",
+     "note": "Refers to the core, intrinsic nature of a concept or situation."
+    },
+    {
+     "text": "To give you a rough idea",
+     "kind": "frame",
+     "form": "To give you a rough idea",
+     "meaning": "to provide an approximate or general understanding without precise details.",
+     "example": "To give you a rough idea, the project will cost somewhere in the region of fifty thousand.",
+     "plain": "The project will cost somewhere in the region of fifty thousand.",
+     "note": "Implies an estimate or general overview, not exact figures."
+    },
+    {
+     "text": "To be more exact",
+     "kind": "chunk",
+     "form": "To be more exact",
+     "meaning": "to provide a more precise or accurate piece of information.",
+     "example": "To be more exact, the meeting starts at 9:05 AM, not just \"after nine.\"",
+     "plain": "The meeting starts at 9:05 AM, not just \"after nine.\"",
+     "note": "Used to correct or refine a previous, less precise statement."
+    },
+    {
+     "text": "The general idea is",
+     "kind": "frame",
+     "form": "The general idea is",
+     "meaning": "to introduce the main concept or overall plan without going into specifics.",
+     "example": "The general idea is to streamline our workflow using automation tools.",
+     "plain": "We plan to streamline our workflow using automation tools.",
+     "note": "Provides a broad overview of a concept or strategy."
+    },
+    {
+     "text": "To put it in layman's terms",
+     "kind": "chunk",
+     "form": "To put it in layman's terms",
+     "meaning": "to explain something technical or complex in simple language for a non-expert.",
+     "example": "To put it in layman's terms, the algorithm learns from past data to predict future trends.",
+     "plain": "The algorithm learns from past data to predict future trends.",
+     "note": "Used when explaining technical jargon to a general audience."
+    },
+    {
+     "text": "To give you a flavour",
+     "kind": "frame",
+     "form": "To give you a flavour",
+     "meaning": "to provide a general impression or a small sample of something.",
+     "example": "To give you a flavour of the event, we'll have keynote speakers and interactive workshops.",
+     "plain": "The event will have keynote speakers and interactive workshops.",
+     "note": "Informal. Offers a brief taste or impression of something."
+    },
+    {
+     "text": "The crux of the argument",
+     "kind": "collocation",
+     "form": "The crux of the argument",
+     "meaning": "the most important or central point of a discussion or debate.",
+     "example": "The crux of the argument is whether the benefits outweigh the implementation costs.",
+     "plain": "The most important point is whether the benefits outweigh the implementation costs.",
+     "note": "Highlights the central, often contentious, point of a debate."
+    },
+    {
+     "text": "To be perfectly clear",
+     "kind": "chunk",
+     "form": "To be perfectly clear",
+     "meaning": "to emphasize that one's statement is unambiguous and leaves no room for doubt.",
+     "example": "To be perfectly clear, this project is a top priority and must be completed on time.",
+     "plain": "This project is a top priority and must be completed on time.",
+     "note": "Stronger than \"to be clear,\" used for emphasis or to prevent misinterpretation."
+    },
+    {
+     "text": "To give you the picture",
+     "kind": "frame",
+     "form": "To give you the picture",
+     "meaning": "to provide a comprehensive overview or understanding of a situation.",
+     "example": "To give you the picture, our sales have dropped significantly in the last quarter.",
+     "plain": "Our sales have dropped significantly in the last quarter.",
+     "note": "Informal. Suggests providing a full, clear understanding of a situation."
+    },
+    {
+     "text": "The way I see things",
+     "kind": "frame",
+     "form": "The way I see things",
+     "meaning": "to introduce one's personal opinion or interpretation of a situation.",
+     "example": "The way I see things, we need to prioritize long-term sustainability over quick profits.",
+     "plain": "I think we need to prioritize long-term sustainability over quick profits.",
+     "note": "Similar to \"the way I see it,\" but slightly more general."
+    },
+    {
+     "text": "To be absolutely clear",
+     "kind": "chunk",
+     "form": "To be absolutely clear",
+     "meaning": "to emphasize that there should be no doubt or misunderstanding about a statement.",
+     "example": "To be absolutely clear, this policy applies to all employees, without exception.",
+     "plain": "This policy applies to all employees, without exception.",
+     "note": "Strongest form of \"to be clear,\" used for critical or non-negotiable points."
+    },
+    {
+     "text": "The gist of the argument",
+     "kind": "collocation",
+     "form": "The gist of the argument",
+     "meaning": "the main point or general sense of a discussion or debate.",
+     "example": "The gist of the argument is that we need to adapt to changing consumer habits.",
+     "plain": "The main point is that we need to adapt to changing consumer habits.",
+     "note": "Informal. Refers to the essential meaning of a discussion."
+    },
+    {
+     "text": "To give you the full picture",
+     "kind": "frame",
+     "form": "To give you the full picture",
+     "meaning": "to provide all the necessary information for a complete understanding of a situation.",
+     "example": "To give you the full picture, we also need to consider the regulatory environment.",
+     "plain": "We also need to consider the regulatory environment.",
+     "note": "Implies a comprehensive explanation, including all relevant details."
+    },
+    {
+     "text": "The bottom line is",
+     "kind": "frame",
+     "form": "The bottom line is",
+     "meaning": "to state the most important fact or the essential point of a situation.",
+     "example": "The bottom line is, we need to increase our market share to remain competitive.",
+     "plain": "We need to increase our market share to remain competitive.",
+     "note": "Often used to summarize the ultimate consequence or main takeaway."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "To cut a long story short",
+     "kind": "chunk",
+     "form": "To cut a long story short",
+     "meaning": "To quickly summarize the main points of a lengthy explanation or narrative.",
+     "example": "To cut a long story short, the project was approved after several rounds of revisions.",
+     "plain": "The project was approved after several rounds of revisions, to summarize.",
+     "note": "Common in spoken English, signals a concise summary. Can be slightly informal but widely accepted."
+    },
+    {
+     "text": "To get to the heart of the matter",
+     "kind": "collocation",
+     "form": "To get to the heart of the matter",
+     "meaning": "To focus on the most crucial or central aspect of a complex issue.",
+     "example": "To get to the heart of the matter, our budget constraints mean we can't pursue both options.",
+     "plain": "Our budget constraints mean we can't pursue both options, which is the main issue.",
+     "note": "Used when you want to move past superficial details and address the core problem or idea."
+    },
+    {
+     "text": "The long and short of it",
+     "kind": "chunk",
+     "form": "The long and short of it",
+     "meaning": "The essential facts or main point of something, without all the details.",
+     "example": "The long and short of it is that we need to increase our online presence significantly.",
+     "plain": "We need to increase our online presence significantly, that's the main point.",
+     "note": "A common, slightly informal way to give a summary. Often used to conclude an explanation."
+    },
+    {
+     "text": "In essence",
+     "kind": "chunk",
+     "form": "In essence",
+     "meaning": "Referring to the fundamental or intrinsic nature of something, its core meaning.",
+     "example": "In essence, the new policy aims to streamline communication between departments.",
+     "plain": "The new policy fundamentally aims to streamline communication between departments.",
+     "note": "More formal than \"in a nutshell,\" used to capture the fundamental truth or core idea."
+    },
+    {
+     "text": "The core idea",
+     "kind": "collocation",
+     "form": "The core idea",
+     "meaning": "The central or most important concept or principle.",
+     "example": "The core idea behind this initiative is to empower local communities.",
+     "plain": "The central concept behind this initiative is to empower local communities.",
+     "note": "A straightforward way to identify the fundamental concept of a plan or argument."
+    },
+    {
+     "text": "The fundamental principle",
+     "kind": "collocation",
+     "form": "The fundamental principle",
+     "meaning": "The basic, essential truth or rule that forms the foundation of something.",
+     "example": "The fundamental principle of our approach is user-centric design.",
+     "plain": "The basic rule of our approach is user-centric design.",
+     "note": "Used for explaining the foundational beliefs or rules guiding a system, philosophy, or method."
+    },
+    {
+     "text": "To elaborate on that",
+     "kind": "chunk",
+     "form": "To elaborate on that",
+     "meaning": "To provide more details or further explanation about a previously mentioned point.",
+     "example": "To elaborate on that, we're looking at a phased implementation over six months.",
+     "plain": "To give more details about that, we're looking at a phased implementation over six months.",
+     "note": "A polite way to offer more information without being asked directly."
+    },
+    {
+     "text": "To put it more simply",
+     "kind": "chunk",
+     "form": "To put it more simply",
+     "meaning": "To rephrase something in an easier-to-understand way.",
+     "example": "To put it more simply, we need to reduce costs without sacrificing quality.",
+     "plain": "We need to reduce costs without sacrificing quality, to say it in an easier way.",
+     "note": "Direct and clear, used when you suspect your initial explanation might have been too complex."
+    },
+    {
+     "text": "To clarify what I mean",
+     "kind": "frame",
+     "form": "To clarify what I mean",
+     "meaning": "To explain a previous statement more clearly, often because it might have been misunderstood.",
+     "example": "To clarify what I mean, I'm suggesting a temporary solution, not a permanent one.",
+     "plain": "I'm suggesting a temporary solution, not a permanent one, to explain my previous statement more clearly.",
+     "note": "Useful for correcting potential misinterpretations or adding precision to a statement."
+    },
+    {
+     "text": "To expand on that",
+     "kind": "chunk",
+     "form": "To expand on that",
+     "meaning": "To add more information or develop a point further.",
+     "example": "To expand on that, our market research indicates a strong demand for this feature.",
+     "plain": "Our market research indicates a strong demand for this feature, to add more information.",
+     "note": "Similar to \"to elaborate on that,\" but can imply a broader development of the idea."
+    },
+    {
+     "text": "To flesh out the details",
+     "kind": "collocation",
+     "form": "To flesh out the details",
+     "meaning": "To add more specific information or substance to an idea or plan.",
+     "example": "We have the basic concept, now we need to flesh out the details of implementation.",
+     "plain": "We have the basic concept, now we need to add more specific information about implementation.",
+     "note": "Suggests moving from a general idea to a more concrete and comprehensive plan."
+    },
+    {
+     "text": "To give you a better idea",
+     "kind": "frame",
+     "form": "To give you a better idea",
+     "meaning": "To provide additional information or an example to improve understanding.",
+     "example": "To give you a better idea, imagine a system that automates all routine tasks.",
+     "plain": "Imagine a system that automates all routine tasks, so you understand it more clearly.",
+     "note": "Often precedes an example or a more detailed explanation."
+    },
+    {
+     "text": "To put it in context",
+     "kind": "collocation",
+     "form": "To put it in context",
+     "meaning": "To explain something by providing the surrounding circumstances or background information.",
+     "example": "To put it in context, this decision was made after extensive consultation with stakeholders.",
+     "plain": "This decision was made after extensive consultation with stakeholders, to explain the background.",
+     "note": "Essential for ensuring that a statement or event is understood within its proper setting."
+    },
+    {
+     "text": "To provide further insight",
+     "kind": "collocation",
+     "form": "To provide further insight",
+     "meaning": "To offer a deeper or more detailed understanding of a topic.",
+     "example": "The report aims to provide further insight into consumer behaviour trends.",
+     "plain": "The report aims to offer a deeper understanding of consumer behaviour trends.",
+     "note": "Formal and academic, used when presenting analysis or research findings."
+    },
+    {
+     "text": "Are we on the same page",
+     "kind": "chunk",
+     "form": "Are we on the same page",
+     "meaning": "To check if everyone has the same understanding or is in agreement.",
+     "example": "Before we move on, are we on the same page regarding the project timeline?",
+     "plain": "Before we move on, do we all understand and agree on the project timeline?",
+     "note": "Very common in collaborative settings, informal but professional."
+    },
+    {
+     "text": "Does that resonate with you",
+     "kind": "frame",
+     "form": "Does that resonate with you",
+     "meaning": "To ask if an idea or explanation feels right or makes sense to the listener on a deeper level.",
+     "example": "Given your experience, does that resonate with you as a viable strategy?",
+     "plain": "Given your experience, does that seem like a viable strategy to you?",
+     "note": "Asks for more than just intellectual understanding; seeks emotional or experiential agreement."
+    },
+    {
+     "text": "Have I lost you",
+     "kind": "chunk",
+     "form": "Have I lost you",
+     "meaning": "To ask if the listener is still following the explanation or has become confused.",
+     "example": "I've covered a lot of technical terms; have I lost you at any point?",
+     "plain": "I've covered a lot of technical terms; are you still following me or are you confused?",
+     "note": "Informal and direct, shows concern for the listener's understanding."
+    },
+    {
+     "text": "Is that making sense",
+     "kind": "frame",
+     "form": "Is that making sense",
+     "meaning": "To check if the explanation is clear and comprehensible to the listener.",
+     "example": "We're implementing a new agile workflow; is that making sense so far?",
+     "plain": "We're implementing a new agile workflow; is that clear and comprehensible so far?",
+     "note": "A common, slightly more active way to check understanding than \"Does that make sense?\"."
+    },
+    {
+     "text": "To check my understanding",
+     "kind": "collocation",
+     "form": "To check my understanding",
+     "meaning": "To confirm one's own comprehension of what has been said or explained.",
+     "example": "Just to check my understanding, you're proposing a complete overhaul of the system?",
+     "plain": "Just to confirm what I understand, you're proposing a complete overhaul of the system?",
+     "note": "Used by the listener to ensure they have correctly grasped the speaker's message."
+    },
+    {
+     "text": "Just to confirm",
+     "kind": "chunk",
+     "form": "Just to confirm",
+     "meaning": "To verify information or an agreement to ensure accuracy and avoid mistakes.",
+     "example": "Just to confirm, the meeting is at 10 AM tomorrow in Conference Room B?",
+     "plain": "The meeting is at 10 AM tomorrow in Conference Room B, can you verify that?",
+     "note": "A polite and efficient way to double-check details."
+    },
+    {
+     "text": "To ensure we're aligned",
+     "kind": "collocation",
+     "form": "To ensure we're aligned",
+     "meaning": "To make certain that all parties have the same goals, understanding, and direction.",
+     "example": "Let's review the project brief one last time to ensure we're aligned.",
+     "plain": "Let's review the project brief one last time to make sure we all agree on the goals.",
+     "note": "Formal, often used in business or team settings to confirm shared understanding and purpose."
+    },
+    {
+     "text": "Do you see what I mean",
+     "kind": "frame",
+     "form": "Do you see what I mean",
+     "meaning": "To ask if the listener understands the point or implication being made.",
+     "example": "The new software has a steep learning curve, do you see what I mean?",
+     "plain": "The new software has a steep learning curve, do you understand my point?",
+     "note": "A common, conversational way to check for comprehension and agreement."
+    },
+    {
+     "text": "To put it into perspective",
+     "kind": "collocation",
+     "form": "To put it into perspective",
+     "meaning": "To explain something by comparing it with other things, helping to judge its true importance or scale.",
+     "example": "To put it into perspective, our current sales figures are double what they were last year.",
+     "plain": "Our current sales figures are double what they were last year, which helps show their true importance.",
+     "note": "Provides context to help the listener understand the relative significance of information."
+    },
+    {
+     "text": "To draw a parallel",
+     "kind": "collocation",
+     "form": "To draw a parallel",
+     "meaning": "To point out a similarity or comparison between two different things to aid understanding.",
+     "example": "To draw a parallel, think of our new system like a highly efficient central nervous system.",
+     "plain": "Think of our new system like a highly efficient central nervous system, to show a similarity.",
+     "note": "Useful for explaining complex or abstract concepts by relating them to something familiar."
+    },
+    {
+     "text": "Consider this scenario",
+     "kind": "frame",
+     "form": "Consider this scenario",
+     "meaning": "To introduce a hypothetical situation or example for the listener to think about.",
+     "example": "Consider this scenario: what if our main competitor launched a similar product next month?",
+     "plain": "What if our main competitor launched a similar product next month? Think about that situation.",
+     "note": "A formal way to present a hypothetical situation to illustrate a point or explore possibilities."
+    },
+    {
+     "text": "Think of it this way",
+     "kind": "frame",
+     "form": "Think of it this way",
+     "meaning": "To offer an alternative, often simpler, perspective or analogy to explain something.",
+     "example": "Think of it this way: each team member is a gear, and we all need to turn together.",
+     "plain": "Each team member is a gear, and we all need to turn together; consider it from this perspective.",
+     "note": "A common, conversational phrase used to simplify a complex idea with a relatable comparison."
+    },
+    {
+     "text": "To use an analogy",
+     "kind": "collocation",
+     "form": "To use an analogy",
+     "meaning": "To explain a concept by comparing it to something else that is similar in some way.",
+     "example": "To use an analogy, our project management software is like a conductor leading an orchestra.",
+     "plain": "Our project management software is like a conductor leading an orchestra, to explain it with a comparison.",
+     "note": "Explicitly states that a comparison is being made to clarify a point."
+    },
+    {
+     "text": "To give you a concrete example",
+     "kind": "collocation",
+     "form": "To give you a concrete example",
+     "meaning": "To provide a specific, real-world instance to illustrate a general point.",
+     "example": "To give you a concrete example, last quarter's sales in Asia exceeded all expectations.",
+     "plain": "Last quarter's sales in Asia exceeded all expectations, which is a specific example.",
+     "note": "Emphasizes that the example is tangible and specific, not hypothetical."
+    },
+    {
+     "text": "To put things in perspective",
+     "kind": "collocation",
+     "form": "To put things in perspective",
+     "meaning": "To help someone understand the relative importance or context of a situation.",
+     "example": "To put things in perspective, while this setback is frustrating, it's a minor issue in the long run.",
+     "plain": "While this setback is frustrating, it's a minor issue in the long run, which helps understand its relative importance.",
+     "note": "Very similar to \"to put it into perspective,\" but \"things\" makes it slightly more general."
+    },
+    {
+     "text": "To add a layer of complexity",
+     "kind": "collocation",
+     "form": "To add a layer of complexity",
+     "meaning": "To introduce an additional factor or detail that makes a situation more complicated.",
+     "example": "To add a layer of complexity, we also need to consider the regulatory changes coming next year.",
+     "plain": "We also need to consider the regulatory changes coming next year, which makes the situation more complicated.",
+     "note": "Used when acknowledging or introducing additional challenges or nuances to an explanation."
+    },
+    {
+     "text": "It's important to note",
+     "kind": "frame",
+     "form": "It's important to note",
+     "meaning": "To highlight a particular piece of information as significant or crucial for understanding.",
+     "example": "It's important to note that this strategy requires significant upfront investment.",
+     "plain": "This strategy requires significant upfront investment, which is important to remember.",
+     "note": "A formal way to draw attention to a key piece of information."
+    },
+    {
+     "text": "It's worth considering",
+     "kind": "frame",
+     "form": "It's worth considering",
+     "meaning": "To suggest that a particular idea or factor should be given careful thought.",
+     "example": "It's worth considering the potential impact on employee morale before making a final decision.",
+     "plain": "We should carefully think about the potential impact on employee morale before making a final decision.",
+     "note": "A polite and diplomatic way to introduce a point that might have been overlooked or needs more attention."
+    },
+    {
+     "text": "To avoid any misunderstanding",
+     "kind": "collocation",
+     "form": "To avoid any misunderstanding",
+     "meaning": "To clarify a point proactively to prevent misinterpretation or confusion.",
+     "example": "To avoid any misunderstanding, I'm referring to the first quarter of next fiscal year.",
+     "plain": "I'm referring to the first quarter of next fiscal year, so there's no confusion.",
+     "note": "Used when you want to be very precise and leave no room for error in interpretation."
+    },
+    {
+     "text": "To set the record straight",
+     "kind": "chunk",
+     "form": "To set the record straight",
+     "meaning": "To correct inaccurate information or a misunderstanding that has arisen.",
+     "example": "Just to set the record straight, I never said we would cut salaries, only bonuses.",
+     "plain": "I never said we would cut salaries, only bonuses, I want to correct that misunderstanding.",
+     "note": "Used when there's a need to correct a factual error or a misrepresentation of what was said."
+    },
+    {
+     "text": "To give you the background",
+     "kind": "collocation",
+     "form": "To give you the background",
+     "meaning": "To provide the necessary historical or contextual information for better understanding.",
+     "example": "To give you the background, this project originated from a client request last year.",
+     "plain": "This project originated from a client request last year, which is the necessary contextual information.",
+     "note": "Useful for providing context before diving into the main topic or current situation."
+    },
+    {
+     "text": "To articulate it differently",
+     "kind": "chunk",
+     "form": "To articulate it differently",
+     "meaning": "To express the same idea using different words for better understanding.",
+     "example": "To articulate it differently, we need to prioritize long-term sustainability over short-term gains.",
+     "plain": "To say it another way, we should focus on long-term sustainability, not short-term gains.",
+     "note": "Formal and precise, used when rephrasing for clarity or emphasis."
+    },
+    {
+     "text": "To delve deeper into",
+     "kind": "frame",
+     "form": "To delve deeper into",
+     "meaning": "To explore a topic in more detail than previously discussed.",
+     "example": "To delve deeper into the budget, we should examine the departmental spending reports.",
+     "plain": "To look at the budget in more detail, we should check the departmental spending reports.",
+     "note": "Suggests a thorough, analytical approach; often used in professional settings."
+    },
+    {
+     "text": "The central point is",
+     "kind": "frame",
+     "form": "The central point is",
+     "meaning": "Introduces the most important idea or argument being made.",
+     "example": "The central point is that our current strategy isn't yielding the desired results.",
+     "plain": "The main idea is that our current strategy isn't working as we hoped.",
+     "note": "Direct and assertive, used to focus attention on the core message."
+    },
+    {
+     "text": "The core challenge",
+     "kind": "collocation",
+     "form": "The core challenge",
+     "meaning": "The most significant or fundamental difficulty that needs to be addressed.",
+     "example": "The core challenge for us is integrating the new software with our legacy systems.",
+     "plain": "The main difficulty for us is connecting the new software with our old systems.",
+     "note": "Highlights the primary obstacle; common in business and project discussions."
+    },
+    {
+     "text": "To simplify for clarity",
+     "kind": "chunk",
+     "form": "To simplify for clarity",
+     "meaning": "To make something less complicated to ensure it is easily understood.",
+     "example": "To simplify for clarity, we're talking about a phased rollout over six months.",
+     "plain": "To make it easier to understand, we're planning to launch it in stages over six months.",
+     "note": "Polite and professional, used when intentionally reducing complexity."
+    },
+    {
+     "text": "Are we aligned on this",
+     "kind": "chunk",
+     "form": "Are we aligned on this",
+     "meaning": "To check if everyone understands and agrees with the current plan or idea.",
+     "example": "Before moving on, are we aligned on this approach to client communication?",
+     "plain": "Before we continue, do we all agree on this way of talking to clients?",
+     "note": "Professional and collaborative, used to confirm mutual understanding and agreement."
+    },
+    {
+     "text": "Just to verify",
+     "kind": "chunk",
+     "form": "Just to verify",
+     "meaning": "To confirm information or understanding, often before proceeding.",
+     "example": "Just to verify, the deadline for submitting the proposal is Friday, correct?",
+     "plain": "To confirm, the proposal is due on Friday, right?",
+     "note": "A polite way to double-check facts or instructions."
+    },
+    {
+     "text": "To confirm mutual understanding",
+     "kind": "chunk",
+     "form": "To confirm mutual understanding",
+     "meaning": "To ensure that all parties involved comprehend the situation or agreement in the same way.",
+     "example": "Let's quickly review the action points to confirm mutual understanding.",
+     "plain": "Let's quickly check the action points to make sure we all understand them the same way.",
+     "note": "Formal and precise, used in professional contexts to avoid future disagreements."
+    },
+    {
+     "text": "To conceptualize it as",
+     "kind": "frame",
+     "form": "To conceptualize it as",
+     "meaning": "To think of or understand something in a particular way, often by comparing it to something else.",
+     "example": "To conceptualize it as a journey helps us appreciate the progress we've made.",
+     "plain": "Thinking of it like a journey helps us see how much progress we've made.",
+     "note": "Intellectual and analytical, used to introduce a specific mental model."
+    },
+    {
+     "text": "To view it broadly",
+     "kind": "chunk",
+     "form": "To view it broadly",
+     "meaning": "To consider a situation from a wider perspective, not focusing on small details.",
+     "example": "To view it broadly, our market share has actually increased over the last quarter.",
+     "plain": "If we look at the bigger picture, our market share has actually grown this quarter.",
+     "note": "Encourages a wider perspective, often used to reframe a discussion."
+    },
+    {
+     "text": "It's crucial to remember",
+     "kind": "chunk",
+     "form": "It's crucial to remember",
+     "meaning": "Emphasizes the importance of retaining a particular piece of information.",
+     "example": "It's crucial to remember that client satisfaction is our top priority.",
+     "plain": "It's very important to keep in mind that making clients happy is our main goal.",
+     "note": "Strong emphasis, used to highlight a key point that should not be forgotten."
+    },
+    {
+     "text": "To prevent misinterpretation",
+     "kind": "chunk",
+     "form": "To prevent misinterpretation",
+     "meaning": "To explain something carefully to ensure it is understood exactly as intended.",
+     "example": "I'll send a follow-up email to prevent misinterpretation of our discussion points.",
+     "plain": "I'll send an email afterwards so no one misunderstands what we talked about.",
+     "note": "Professional and cautious, used to avoid errors or confusion."
+    },
+    {
+     "text": "To resolve any ambiguity",
+     "kind": "chunk",
+     "form": "To resolve any ambiguity",
+     "meaning": "To clarify something that could be understood in more than one way.",
+     "example": "Let's review the contract terms again to resolve any ambiguity before signing.",
+     "plain": "Let's check the contract terms again to make sure there are no unclear parts before signing.",
+     "note": "Formal and precise, used when dealing with potentially unclear language."
+    },
+    {
+     "text": "To correct any inaccuracies",
+     "kind": "chunk",
+     "form": "To correct any inaccuracies",
+     "meaning": "To provide the correct information where there might be errors or misunderstandings.",
+     "example": "I'd like to correct any inaccuracies in the previous report regarding our sales figures.",
+     "plain": "I want to fix any mistakes in the last report about our sales numbers.",
+     "note": "Professional and direct, used to set the record straight politely."
+    },
+    {
+     "text": "To provide the necessary context",
+     "kind": "collocation",
+     "form": "To provide the necessary context",
+     "meaning": "To give background information essential for understanding a situation or statement.",
+     "example": "First, I need to provide the necessary context for these financial projections.",
+     "plain": "First, I need to give you the background information for these money predictions.",
+     "note": "Formal and helpful, used to ensure a complete understanding."
+    },
+    {
+     "text": "My main point is",
+     "kind": "frame",
+     "form": "My main point is",
+     "meaning": "Introduces the primary message or argument the speaker wants to convey.",
+     "example": "My main point is that we need to adapt quickly to changing market demands.",
+     "plain": "The most important thing I want to say is that we must adjust fast to market changes.",
+     "note": "Direct and clear, used to emphasize the core message."
+    },
+    {
+     "text": "The rationale behind this",
+     "kind": "collocation",
+     "form": "The rationale behind this",
+     "meaning": "The fundamental reason or logical basis for a decision, action, or belief.",
+     "example": "The rationale behind this policy change is to improve employee well-being.",
+     "plain": "The reason for this policy change is to make employees happier and healthier.",
+     "note": "Formal and analytical, used to explain the reasoning."
+    },
+    {
+     "text": "The fundamental issue",
+     "kind": "collocation",
+     "form": "The fundamental issue",
+     "meaning": "The basic or underlying problem that needs to be addressed.",
+     "example": "The fundamental issue is a lack of communication between departments.",
+     "plain": "The main problem is that departments aren't talking to each other enough.",
+     "note": "Highlights the root cause; often used in problem-solving discussions."
+    },
+    {
+     "text": "It's a multifaceted problem",
+     "kind": "collocation",
+     "form": "It's a multifaceted problem",
+     "meaning": "Describes a problem with many different aspects or dimensions.",
+     "example": "It's a multifaceted problem, involving technology, human resources, and budget constraints.",
+     "plain": "It's a problem with many parts, including technology, staff, and money limits.",
+     "note": "Sophisticated way to describe complexity, common in analytical discussions."
+    },
+    {
+     "text": "It's a subtle distinction",
+     "kind": "collocation",
+     "form": "It's a subtle distinction",
+     "meaning": "Refers to a small but important difference that is not immediately obvious.",
+     "example": "It's a subtle distinction, but \"effective\" isn't quite the same as \"efficient.\"",
+     "plain": "There's a small but important difference, \"effective\" isn't exactly \"efficient.\"",
+     "note": "Used to highlight fine points of meaning or difference, often in academic or precise contexts."
+    },
+    {
+     "text": "It presents a practical challenge",
+     "kind": "collocation",
+     "form": "It presents a practical challenge",
+     "meaning": "Indicates that something is difficult to implement or achieve in reality.",
+     "example": "While the idea is good, implementing it presents a practical challenge due to resource limitations.",
+     "plain": "The idea is good, but doing it is hard because we don't have enough resources.",
+     "note": "Professional and realistic, used to acknowledge difficulties in execution."
+    },
+    {
+     "text": "It requires careful navigation",
+     "kind": "collocation",
+     "form": "It requires careful navigation",
+     "meaning": "Suggests that a situation is delicate or complex and needs sensitive handling.",
+     "example": "This negotiation involves multiple stakeholders, so it requires careful navigation.",
+     "plain": "This negotiation has many people involved, so we need to handle it very carefully.",
+     "note": "Implies a need for skill and diplomacy in a tricky situation."
+    },
+    {
+     "text": "To place this in context",
+     "kind": "chunk",
+     "form": "To place this in context",
+     "meaning": "To provide the surrounding circumstances or background information for better understanding.",
+     "example": "To place this in context, our competitors launched a similar product last month.",
+     "plain": "To help you understand, our rivals released a similar product last month.",
+     "note": "Useful for providing perspective or background information."
+    },
+    {
+     "text": "The foundational concept",
+     "kind": "collocation",
+     "form": "The foundational concept",
+     "meaning": "The basic or underlying idea upon which something else is built.",
+     "example": "Understanding the foundational concept of supply and demand is key to economics.",
+     "plain": "Knowing the basic idea of supply and demand is crucial for economics.",
+     "note": "Academic or professional, refers to a core idea."
+    },
+    {
+     "text": "To add a bit more detail",
+     "kind": "chunk",
+     "form": "To add a bit more detail",
+     "meaning": "To provide additional specific information about a topic.",
+     "example": "To add a bit more detail, the project timeline has been extended by two weeks.",
+     "plain": "To give you more information, the project will now take two weeks longer.",
+     "note": "Informal and conversational, a common way to elaborate."
+    },
+    {
+     "text": "The essential point is",
+     "kind": "frame",
+     "form": "The essential point is",
+     "meaning": "Introduces the most crucial or fundamental idea.",
+     "example": "The essential point is that we must adapt our marketing strategy to new demographics.",
+     "plain": "The main idea is that we need to change our marketing for new groups of people.",
+     "note": "Emphatic and direct, similar to \"the central point is.\""
+    },
+    {
+     "text": "The main insight",
+     "kind": "collocation",
+     "form": "The main insight",
+     "meaning": "The most important or profound understanding gained from a situation or analysis.",
+     "example": "The main insight from our research is the shift in consumer preferences.",
+     "plain": "The most important thing we learned from our research is that what customers like has changed.",
+     "note": "Highlights a key discovery or realization."
+    },
+    {
+     "text": "To narrow it down",
+     "kind": "chunk",
+     "form": "To narrow it down",
+     "meaning": "To reduce the scope of a topic or choice to focus on specific aspects.",
+     "example": "Let's try to narrow it down to the top three priorities for next quarter.",
+     "plain": "Let's try to choose only the three most important things for next quarter.",
+     "note": "Practical and action-oriented, used to focus discussion."
+    },
+    {
+     "text": "The message I want to impart",
+     "kind": "collocation",
+     "form": "The message I want to impart",
+     "meaning": "The specific idea or information the speaker wishes to communicate.",
+     "example": "The message I want to impart is the importance of teamwork in achieving our goals.",
+     "plain": "I want to tell you that teamwork is very important for reaching our goals.",
+     "note": "Formal and intentional, emphasizes the speaker's purpose."
+    },
+    {
+     "text": "To speak candidly",
+     "kind": "chunk",
+     "form": "To speak candidly",
+     "meaning": "To speak openly and honestly, sometimes about difficult or sensitive topics.",
+     "example": "To speak candidly, I don't think this project is viable with our current resources.",
+     "plain": "To be honest, I don't believe this project can work with the resources we have.",
+     "note": "Signals honesty and directness, often used before delivering difficult news."
+    },
+    {
+     "text": "The fundamental nature",
+     "kind": "collocation",
+     "form": "The fundamental nature",
+     "meaning": "The basic and inherent characteristics or qualities of something.",
+     "example": "Understanding the fundamental nature of the problem is the first step to solving it.",
+     "plain": "Knowing the basic qualities of the problem is the first step to fixing it.",
+     "note": "Academic or analytical, refers to the core identity of something."
+    },
+    {
+     "text": "To specify further",
+     "kind": "chunk",
+     "form": "To specify further",
+     "meaning": "To give more precise or detailed information about something.",
+     "example": "To specify further, the changes will affect only employees in the sales department.",
+     "plain": "To be more exact, the changes will only impact staff in the sales department.",
+     "note": "Formal and precise, used to add exact details."
+    },
+    {
+     "text": "The overarching concept",
+     "kind": "collocation",
+     "form": "The overarching concept",
+     "meaning": "The main or dominant idea that encompasses all other related ideas.",
+     "example": "The overarching concept of this initiative is to foster a culture of innovation.",
+     "plain": "The main idea of this project is to create a culture where new ideas are encouraged.",
+     "note": "Academic or strategic, refers to a broad, unifying idea."
+    },
+    {
+     "text": "To simplify the terminology",
+     "kind": "chunk",
+     "form": "To simplify the terminology",
+     "meaning": "To explain complex or technical words in simpler language.",
+     "example": "To simplify the terminology, \"synergy\" just means working well together.",
+     "plain": "To make the words easier to understand, \"synergy\" means working well together.",
+     "note": "Helpful and considerate, used when addressing a non-expert audience."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "to put it simply": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "in a nutshell": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "boil it down to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "make sense of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "put another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i mean is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let me rephrase": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to spell it out": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the bottom line": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in simple terms": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to break it down": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the gist of it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it mildly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to clarify my point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give you a sense": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it bluntly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to illustrate my point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i'm getting at": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to recap briefly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be more precise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it succinctly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "does that make sense": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "am i making sense": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "are you with me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "do you follow": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "is that clear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just to be sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let me know if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "feel free to interrupt": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "any questions so far": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "does that clarify things": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "for instance": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to give you an example": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "take for example": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a case in point": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "by way of illustration": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "imagine a scenario where": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it visually": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you an idea": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The definition accurately describes how the phrase is used to offer context or an example."
+   },
+   "let's say for example": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in other words": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what i'm trying to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to reiterate": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it differently": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me put it this way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to phrase it another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i'm driving at": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to sum up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "in summary": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the takeaway here is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to conclude": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "all in all": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the upshot is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "having said that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not so much that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the caveat here is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to distinguish": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that being said": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth bearing in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me explain": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "the way i see it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what it comes down to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you some background": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the point is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "allow me to clarify": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i'm trying to get across": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the reason being": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to elaborate further": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the crux of the matter": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a complex issue": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a nuanced discussion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's easier said than done": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a fine line": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to contextualize this": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the underlying principle": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to elaborate a little": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it boils down to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you a clearer picture": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the key takeaway": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be more specific": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what i'm trying to convey": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly frank": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the essence of it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you a rough idea": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be more exact": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the general idea is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it in layman's terms": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give you a flavour": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the crux of the argument": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be perfectly clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give you the picture": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the way i see things": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be absolutely clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the gist of the argument": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you the full picture": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the bottom line is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to cut a long story short": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get to the heart of the matter": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the long and short of it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in essence": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the core idea": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the fundamental principle": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to elaborate on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it more simply": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to clarify what i mean": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to expand on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to flesh out the details": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you a better idea": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it in context": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to provide further insight": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "are we on the same page": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "does that resonate with you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "have i lost you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "is that making sense": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to check my understanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to confirm": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to ensure we're aligned": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "do you see what i mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it into perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to draw a parallel": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "consider this scenario": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "think of it this way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to use an analogy": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to give you a concrete example": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put things in perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to add a layer of complexity": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to note": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's worth considering": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to avoid any misunderstanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to set the record straight": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you the background": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to articulate it differently": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to delve deeper into": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the central point is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the core challenge": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to simplify for clarity": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "are we aligned on this": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "just to verify": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to confirm mutual understanding": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to conceptualize it as": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to view it broadly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's crucial to remember": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to prevent misinterpretation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to resolve any ambiguity": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to correct any inaccuracies": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to provide the necessary context": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my main point is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the rationale behind this": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the fundamental issue": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a multifaceted problem": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a subtle distinction": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it presents a practical challenge": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it requires careful navigation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to place this in context": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the foundational concept": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to add a bit more detail": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the essential point is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the main insight": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to narrow it down": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the message i want to impart": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to speak candidly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the fundamental nature": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to specify further": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the overarching concept": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to simplify the terminology": {
+    "status": "pass",
+    "level": "B1"
+   }
+  }
+ }
+}

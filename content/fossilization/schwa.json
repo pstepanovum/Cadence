@@ -1,0 +1,121 @@
+{
+ "format": 1,
+ "id": "fossil.schwa",
+ "area": "pronunciation",
+ "title": "The weak vowel schwa",
+ "what": "giving every vowel its full value, so function words and unstressed syllables are never reduced ('to', 'for', 'can', 'of', the second syllable of 'problem')",
+ "summary": "Advanced learners often retain full vowel sounds in unstressed syllables and function words, as this error doesn't hinder comprehension. However, it can make speech sound less natural and disrupt the rhythmic flow of English.",
+ "listenFor": "Pay attention to whether you are fully articulating vowels in unstressed syllables and common function words like 'to', 'for', 'a', and 'of'.",
+ "grammarPointIds": [],
+ "soundIds": [
+  "sound.ax",
+  "sound.axr"
+ ],
+ "contrasts": [
+  {
+   "wrong": "I need too go too the office.",
+   "right": "I need to go to the office.",
+   "note": "Unstressed 'to' reduces to schwa."
+  },
+  {
+   "wrong": "This report is fore the manager.",
+   "right": "This report is for the manager.",
+   "note": "Unstressed 'for' reduces to schwa."
+  },
+  {
+   "wrong": "A cup off coffee is essential.",
+   "right": "A cup of coffee is essential.",
+   "note": "Unstressed 'of' reduces to schwa."
+  },
+  {
+   "wrong": "I need ay new strategy.",
+   "right": "I need a new strategy.",
+   "note": "The indefinite article 'a' reduces to schwa."
+  },
+  {
+   "wrong": "The main prob-LEM was the budget.",
+   "right": "The main problem was the budget.",
+   "note": "The second syllable of 'problem' is unstressed and reduces to schwa."
+  },
+  {
+   "wrong": "What ah-BOWT the proposal?",
+   "right": "What about the proposal?",
+   "note": "The first syllable of 'about' is unstressed and reduces to schwa."
+  }
+ ],
+ "drills": [
+  "The manager asked us to prepare a summary of the project.",
+  "We need to consider all the factors before making a decision.",
+  "A thorough analysis of the data is essential for accurate predictions.",
+  "The committee decided to postpone the meeting until next month.",
+  "For a successful outcome, we must adhere to the established procedures.",
+  "About a quarter of the budget was allocated for research and development.",
+  "The problem with the current approach is its lack of flexibility.",
+  "They are about to embark on a journey to a remote location.",
+  "A number of proposals were submitted for consideration by the board.",
+  "We have to adjust our strategy to adapt to the changing market conditions."
+ ],
+ "probes": [
+  {
+   "sentence": "The purpose of the proposal is to address the fundamental issues."
+  },
+  {
+   "sentence": "A comprehensive review of the budget revealed a deficit."
+  },
+  {
+   "sentence": "We need to prepare for a potential shift in consumer behavior."
+  },
+  {
+   "sentence": "The director decided to defer the decision until a later date."
+  },
+  {
+   "sentence": "For a project of this magnitude, a detailed plan is absolutely essential."
+  },
+  {
+   "sentence": "About a dozen individuals contributed to the development of the new policy."
+  }
+ ],
+ "pairs": [
+  [
+   "of",
+   "off"
+  ],
+  [
+   "for",
+   "four"
+  ],
+  [
+   "to",
+   "too"
+  ],
+  [
+   "an",
+   "and"
+  ],
+  [
+   "alone",
+   "loan"
+  ],
+  [
+   "ago",
+   "go"
+  ],
+  [
+   "address",
+   "dress"
+  ],
+  [
+   "around",
+   "round"
+  ],
+  [
+   "support",
+   "sport"
+  ],
+  [
+   "police",
+   "lease"
+  ]
+ ],
+ "stress": []
+}

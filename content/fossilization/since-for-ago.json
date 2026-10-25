@@ -1,0 +1,91 @@
+{
+ "format": 1,
+ "id": "fossil.since-for-ago",
+ "area": "grammar",
+ "title": "For, since, ago and during",
+ "what": "mixing up time words ('since three years', 'before two weeks' for 'two weeks ago', 'during three hours')",
+ "summary": "Advanced learners often translate time expressions directly, leading to subtle but persistent errors with 'for,' 'since,' 'ago,' and 'during.' This impacts precision and can subtly undermine the speaker's fluency and credibility.",
+ "listenFor": "Notice how you express durations, starting points, and past events; specifically, check your use of 'for,' 'since,' 'ago,' and 'during.'",
+ "grammarPointIds": [
+  "gp.present-perfect-for-and-since"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "I've been working on this report since three hours.",
+   "right": "I've been working on this report for three hours.",
+   "note": "Use 'for' to express a duration; 'since' indicates a starting point in time."
+  },
+  {
+   "wrong": "We finalized the contract before two weeks.",
+   "right": "We finalized the contract two weeks ago.",
+   "note": "'Ago' correctly places an event in the past relative to the present moment."
+  },
+  {
+   "wrong": "The system was offline during a long time.",
+   "right": "The system was offline for a long time.",
+   "note": "'For' specifies the duration of an event; 'during' indicates when something happens."
+  },
+  {
+   "wrong": "She hasn't visited us for last Christmas.",
+   "right": "She hasn't visited us since last Christmas.",
+   "note": "'Since' marks the beginning of a period that continues to the present."
+  },
+  {
+   "wrong": "He completed the task during an hour.",
+   "right": "He completed the task in an hour.",
+   "note": "'In an hour' means it took one hour to complete. 'For an hour' also works for duration."
+  },
+  {
+   "wrong": "The decision was made since a moment.",
+   "right": "The decision was made a moment ago.",
+   "note": "'Ago' is used for a specific point in the past, not 'since' in this context."
+  }
+ ],
+ "drills": [
+  "We have been collaborating on this initiative for several months.",
+  "The company was founded over two decades ago, in 2003.",
+  "She has been managing the department since the restructuring last year.",
+  "The presentation will last for approximately forty-five minutes.",
+  "They completed the entire audit process during the first quarter.",
+  "I haven't seen him since our last conference call a month ago.",
+  "The project deadline was extended for another two weeks.",
+  "He joined the firm five years ago and has excelled since then.",
+  "We discussed the proposal thoroughly during the morning session.",
+  "This policy has been in effect for a considerable period."
+ ],
+ "probes": [
+  {
+   "sentence": "I started my current role since two years.",
+   "answers": [
+    "I started my current role two years ago."
+   ]
+  },
+  {
+   "sentence": "We haven't received any updates for last Tuesday.",
+   "answers": [
+    "We haven't received any updates since last Tuesday."
+   ]
+  },
+  {
+   "sentence": "He submitted his resignation before three days.",
+   "answers": [
+    "He submitted his resignation three days ago."
+   ]
+  },
+  {
+   "sentence": "The conference call lasted during two hours.",
+   "answers": [
+    "The conference call lasted for two hours."
+   ]
+  },
+  {
+   "sentence": "She has been working on this report since many hours.",
+   "answers": [
+    "She has been working on this report for many hours."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

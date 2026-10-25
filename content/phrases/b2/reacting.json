@@ -1,0 +1,1460 @@
+{
+ "format": 1,
+ "level": "B2",
+ "situation": "reacting",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "I'm so sorry to hear that",
+     "kind": "chunk",
+     "form": "I'm so sorry to hear that",
+     "meaning": "Expresses sympathy and regret upon receiving bad news.",
+     "example": "Oh, I'm so sorry to hear that your project didn't get approved after all your hard work.",
+     "plain": "Oh, I feel bad that your project didn't get approved after all your hard work.",
+     "note": "A very common and sincere way to express sympathy for someone's misfortune or disappointment."
+    },
+    {
+     "text": "That's a shame",
+     "kind": "chunk",
+     "form": "That's a shame",
+     "meaning": "Expresses mild disappointment or regret about a situation.",
+     "example": "That's a shame you won't be able to join us for dinner tonight, we'll miss you.",
+     "plain": "It's disappointing you won't be able to join us for dinner tonight, we'll miss you.",
+     "note": "Used for minor disappointments or when something good doesn't happen. Less intense than \"tragedy\"."
+    },
+    {
+     "text": "Poor you",
+     "kind": "chunk",
+     "form": "Poor you",
+     "meaning": "Expresses sympathy for someone experiencing a minor difficulty or discomfort.",
+     "example": "You had to work late again? Poor you, that sounds really exhausting.",
+     "plain": "You had to work late again? I feel bad for you, that sounds really exhausting.",
+     "note": "A casual, empathetic phrase, often used among friends or close colleagues. Can be slightly teasing if the problem is very minor."
+    },
+    {
+     "text": "It must be tough",
+     "kind": "frame",
+     "form": "it must be tough",
+     "meaning": "Shows empathy by acknowledging the difficulty of someone's situation.",
+     "example": "Losing your main client after so many years, it must be tough to deal with that.",
+     "plain": "Losing your main client after so many years, I imagine that's very difficult to deal with.",
+     "note": "A thoughtful way to express understanding without claiming to fully know their experience."
+    },
+    {
+     "text": "I know how you feel",
+     "kind": "chunk",
+     "form": "I know how you feel",
+     "meaning": "Expresses empathy by indicating shared experience or understanding of emotions.",
+     "example": "When my laptop crashed last week, I know how you feel about losing all that unsaved work.",
+     "plain": "When my laptop crashed last week, I understand your frustration about losing all that unsaved work.",
+     "note": "Can be comforting, but ensure you genuinely relate to avoid sounding dismissive."
+    },
+    {
+     "text": "I can only imagine",
+     "kind": "chunk",
+     "form": "I can only imagine",
+     "meaning": "Expresses empathy by acknowledging the difficulty or intensity of someone's experience.",
+     "example": "After working on that report for months, having it rejected, I can only imagine how frustrating that must be.",
+     "plain": "After working on that report for months, having it rejected, I understand how frustrating that must be.",
+     "note": "A polite and sincere way to show you understand the gravity of a situation, even if you haven't experienced it."
+    },
+    {
+     "text": "That's really awful",
+     "kind": "chunk",
+     "form": "that's really awful",
+     "meaning": "Expresses strong sympathy or dismay at bad news or a negative situation.",
+     "example": "Oh, that's really awful that your flight was cancelled and you missed the conference.",
+     "plain": "Oh, it's terrible that your flight was cancelled and you missed the conference.",
+     "note": "A direct and common expression of sympathy or shock at something negative."
+    },
+    {
+     "text": "I'm truly sorry",
+     "kind": "chunk",
+     "form": "I'm truly sorry",
+     "meaning": "Expresses sincere regret or apology, often for something significant.",
+     "example": "I'm truly sorry for the misunderstanding during the meeting; I didn't mean to cause any offense.",
+     "plain": "I sincerely regret the misunderstanding during the meeting; I didn't mean to cause any offense.",
+     "note": "A more formal or emphatic apology than \"I'm sorry,\" conveying deeper regret."
+    },
+    {
+     "text": "What a difficult situation",
+     "kind": "collocation",
+     "form": "what a difficult situation",
+     "meaning": "Expresses empathy and acknowledges the challenging nature of someone's circumstances.",
+     "example": "Having to choose between two job offers in different cities, what a difficult situation to be in.",
+     "plain": "Having to choose between two job offers in different cities, that's a very challenging situation.",
+     "note": "A common way to show understanding and compassion when someone is facing a tough choice or problem."
+    },
+    {
+     "text": "That's wonderful news",
+     "kind": "collocation",
+     "form": "That's wonderful news",
+     "meaning": "Expresses strong delight and happiness upon hearing positive information.",
+     "example": "You got the promotion? That's wonderful news, congratulations!",
+     "plain": "You got the promotion? That's excellent information, congratulations!",
+     "note": "A very common and enthusiastic way to react to good news."
+    },
+    {
+     "text": "I'm so pleased for you",
+     "kind": "chunk",
+     "form": "I'm so pleased for you",
+     "meaning": "Expresses genuine happiness and congratulations for someone else's success or good fortune.",
+     "example": "I'm so pleased for you that your visa application was finally approved after all that waiting.",
+     "plain": "I'm very happy for you that your visa application was finally approved after all that waiting.",
+     "note": "A warm and personal expression of joy for another person's positive outcome."
+    },
+    {
+     "text": "How exciting",
+     "kind": "chunk",
+     "form": "How exciting",
+     "meaning": "Expresses enthusiasm and anticipation about something new or interesting.",
+     "example": "You're moving to a new country next month? How exciting, I can't wait to hear all about it!",
+     "plain": "You're moving to a new country next month? That's very thrilling, I can't wait to hear all about it!",
+     "note": "A common, informal way to show enthusiasm. Can be used as a standalone exclamation."
+    },
+    {
+     "text": "I couldn't be happier",
+     "kind": "chunk",
+     "form": "I couldn't be happier",
+     "meaning": "Expresses extreme joy and contentment about a situation.",
+     "example": "With the project finished ahead of schedule and under budget, I couldn't be happier.",
+     "plain": "With the project finished ahead of schedule and under budget, I am extremely happy.",
+     "note": "A strong, emphatic way to convey maximum happiness."
+    },
+    {
+     "text": "I'm delighted to hear that",
+     "kind": "frame",
+     "form": "I'm delighted to hear that",
+     "meaning": "Expresses formal or sincere happiness about information received.",
+     "example": "I'm delighted to hear that your recovery is going so well after the surgery.",
+     "plain": "I'm very happy to hear that your recovery is going so well after the surgery.",
+     "note": "A slightly more formal or considered way to express happiness than \"That's wonderful news.\""
+    },
+    {
+     "text": "What a lovely surprise",
+     "kind": "collocation",
+     "form": "What a lovely surprise",
+     "meaning": "Expresses pleasant astonishment and happiness at an unexpected positive event.",
+     "example": "Oh, you brought me flowers? What a lovely surprise, thank you so much!",
+     "plain": "Oh, you brought me flowers? That's a very pleasant unexpected gift, thank you so much!",
+     "note": "A warm and appreciative reaction to an unexpected positive gesture or event."
+    },
+    {
+     "text": "I'm thrilled for you",
+     "kind": "chunk",
+     "form": "I'm thrilled for you",
+     "meaning": "Expresses intense excitement and happiness on behalf of someone else.",
+     "example": "You got accepted into your dream university! I'm thrilled for you, that's fantastic!",
+     "plain": "You got accepted into your dream university! I'm very excited and happy for you, that's fantastic!",
+     "note": "A strong, enthusiastic expression of happiness for another person's good fortune."
+    },
+    {
+     "text": "That's a bit annoying",
+     "kind": "chunk",
+     "form": "That's a bit annoying",
+     "meaning": "Expresses mild irritation or frustration about a minor inconvenience.",
+     "example": "The train is delayed again? That's a bit annoying, I have a meeting in twenty minutes.",
+     "plain": "The train is delayed again? That's slightly irritating, I have a meeting in twenty minutes.",
+     "note": "A common, understated way to express mild frustration without being overly dramatic."
+    },
+    {
+     "text": "Oh, for goodness sake",
+     "kind": "chunk",
+     "form": "Oh, for goodness sake",
+     "meaning": "Expresses exasperation, impatience, or mild annoyance.",
+     "example": "Oh, for goodness sake, the printer's jammed again right when I need to print these documents!",
+     "plain": "Oh, this is frustrating, the printer's jammed again right when I need to print these documents!",
+     "note": "A common exclamation of frustration, often used when something goes wrong repeatedly or unexpectedly."
+    },
+    {
+     "text": "You've got to be kidding me",
+     "kind": "chunk",
+     "form": "You've got to be kidding me",
+     "meaning": "Expresses disbelief, surprise, or annoyance at something unexpected or unreasonable.",
+     "example": "They cancelled our reservation at the last minute? You've got to be kidding me, we booked weeks ago!",
+     "plain": "They cancelled our reservation at the last minute? I can't believe it, we booked weeks ago!",
+     "note": "A strong, informal expression of disbelief or frustration. Can be used humorously or seriously."
+    },
+    {
+     "text": "It's a bit much",
+     "kind": "chunk",
+     "form": "that's a bit much",
+     "meaning": "Expresses that something is excessive, unreasonable, or overwhelming.",
+     "example": "Expecting us to work weekends without extra pay, that's a bit much, don't you think?",
+     "plain": "Expecting us to work weekends without extra pay, that's unreasonable, don't you think?",
+     "note": "Used to politely suggest that a demand or situation is unfair or goes beyond what is acceptable."
+    },
+    {
+     "text": "That's really frustrating",
+     "kind": "chunk",
+     "form": "that's really frustrating",
+     "meaning": "Expresses strong annoyance or disappointment when something prevents progress or success.",
+     "example": "The constant technical issues with the new software, that's really frustrating for the whole team.",
+     "plain": "The constant technical issues with the new software, that's very annoying for the whole team.",
+     "note": "A direct and common way to express strong frustration."
+    },
+    {
+     "text": "I can't believe it happened again",
+     "kind": "frame",
+     "form": "I can't believe it happened again",
+     "meaning": "Expresses exasperation or disbelief when a negative event recurs.",
+     "example": "The internet went down during our video call. I can't believe it happened again!",
+     "plain": "The internet went down during our video call. I'm so annoyed it recurred!",
+     "note": "Used when a recurring problem causes annoyance or disappointment."
+    },
+    {
+     "text": "It's not ideal",
+     "kind": "chunk",
+     "form": "it's not ideal",
+     "meaning": "Expresses that a situation is less than perfect or has drawbacks, often politely.",
+     "example": "Having to reschedule the meeting at such short notice, it's not ideal for everyone's calendars.",
+     "plain": "Having to reschedule the meeting at such short notice, it's inconvenient for everyone's calendars.",
+     "note": "A polite and understated way to express dissatisfaction or acknowledge a less-than-perfect situation."
+    },
+    {
+     "text": "That's just typical",
+     "kind": "chunk",
+     "form": "That's just typical",
+     "meaning": "Expresses resignation or mild annoyance when something predictable but undesirable occurs.",
+     "example": "The bus is late again. That's just typical, it always happens when I'm in a hurry.",
+     "plain": "The bus is late again. That's predictable, it always happens when I'm in a hurry.",
+     "note": "Used when a recurring negative event confirms a pattern, often with a sigh of resignation."
+    },
+    {
+     "text": "I'm a bit fed up with it",
+     "kind": "chunk",
+     "form": "I'm a bit fed up with it",
+     "meaning": "Expresses mild to moderate annoyance or boredom with a recurring situation.",
+     "example": "This constant noise from the construction site, I'm a bit fed up with it now.",
+     "plain": "This constant noise from the construction site, I'm quite annoyed by it now.",
+     "note": "An informal way to say you've had enough of something annoying."
+    },
+    {
+     "text": "What a relief",
+     "kind": "chunk",
+     "form": "What a relief",
+     "meaning": "Expresses sudden comfort and ease after a period of worry or stress.",
+     "example": "The test results came back negative. What a relief, I was so worried!",
+     "plain": "The test results came back negative. That's a great comfort, I was so worried!",
+     "note": "A very common and emphatic exclamation of relief."
+    },
+    {
+     "text": "Thank goodness",
+     "kind": "chunk",
+     "form": "Thank goodness",
+     "meaning": "Expresses relief or gratitude that something bad was avoided or something good happened.",
+     "example": "Thank goodness the rain held off until after our outdoor event finished.",
+     "plain": "I'm grateful the rain held off until after our outdoor event finished.",
+     "note": "A common, slightly informal expression of relief, often used as an exclamation."
+    },
+    {
+     "text": "I'm so relieved",
+     "kind": "chunk",
+     "form": "I was so relieved",
+     "meaning": "Expresses personal feeling of comfort and ease after a period of anxiety.",
+     "example": "When I heard the plane landed safely, I was so relieved.",
+     "plain": "When I heard the plane landed safely, I felt a great sense of comfort.",
+     "note": "A direct and common way to express personal relief."
+    },
+    {
+     "text": "That's a weight off my mind",
+     "kind": "chunk",
+     "form": "that's a weight off my mind",
+     "meaning": "Expresses great relief that a worry or burden has been removed.",
+     "example": "Knowing the children are safely home, that's a weight off my mind.",
+     "plain": "Knowing the children are safely home, I feel much less worried.",
+     "note": "A common idiom to describe feeling relieved after a concern is resolved."
+    },
+    {
+     "text": "You had me worried there",
+     "kind": "chunk",
+     "form": "you had me worried there",
+     "meaning": "Expresses relief after a moment of anxiety caused by someone or something.",
+     "example": "When you didn't answer your phone, you had me worried there for a moment.",
+     "plain": "When you didn't answer your phone, I was worried for a moment.",
+     "note": "A common, informal phrase used to express relief after a brief scare."
+    },
+    {
+     "text": "I'm glad to hear that",
+     "kind": "frame",
+     "form": "I'm glad to hear that",
+     "meaning": "Expresses happiness or relief about information received.",
+     "example": "I'm glad to hear that your presentation went well this morning.",
+     "plain": "I'm happy that your presentation went well this morning.",
+     "note": "A versatile and polite way to respond positively to news."
+    },
+    {
+     "text": "That's good to know",
+     "kind": "chunk",
+     "form": "That's good to know",
+     "meaning": "Expresses appreciation for useful or reassuring information.",
+     "example": "So the deadline has been extended? That's good to know, I was feeling a bit rushed.",
+     "plain": "So the deadline has been extended? That information is useful, I was feeling a bit rushed.",
+     "note": "A common, practical response to receiving helpful or comforting information."
+    },
+    {
+     "text": "You're kidding me",
+     "kind": "chunk",
+     "form": "You're kidding me",
+     "meaning": "Expresses strong surprise or disbelief, often in an informal context.",
+     "example": "You won the lottery? You're kidding me, that's incredible!",
+     "plain": "You won the lottery? I don't believe it, that's incredible!",
+     "note": "A very common, informal expression of surprise. Can be positive or negative."
+    },
+    {
+     "text": "No way",
+     "kind": "chunk",
+     "form": "No way",
+     "meaning": "Expresses strong disbelief or surprise, often informally.",
+     "example": "They offered you the job on the spot? No way, that's amazing!",
+     "plain": "They offered you the job on the spot? I can't believe it, that's amazing!",
+     "note": "A very informal and emphatic expression of disbelief or astonishment."
+    },
+    {
+     "text": "I can't believe it",
+     "kind": "chunk",
+     "form": "I can't believe it",
+     "meaning": "Expresses strong surprise, disbelief, or astonishment at an event or news.",
+     "example": "I can't believe it's already been five years since we started this company.",
+     "plain": "I'm so surprised it's already been five years since we started this company.",
+     "note": "A versatile phrase for expressing strong emotion, positive or negative, about something unexpected."
+    },
+    {
+     "text": "That's unexpected",
+     "kind": "chunk",
+     "form": "That's unexpected",
+     "meaning": "Expresses mild surprise or acknowledgement that something was not anticipated.",
+     "example": "They decided to close the branch office? That's unexpected, I thought it was doing well.",
+     "plain": "They decided to close the branch office? I didn't expect that, I thought it was doing well.",
+     "note": "A polite and neutral way to express surprise."
+    },
+    {
+     "text": "Are you serious",
+     "kind": "chunk",
+     "form": "Are you serious",
+     "meaning": "Expresses disbelief or surprise, asking for confirmation of surprising news.",
+     "example": "They're moving the deadline forward by a week? Are you serious?",
+     "plain": "They're moving the deadline forward by a week? Is that true?",
+     "note": "A common, informal way to check if surprising information is true."
+    },
+    {
+     "text": "I'm speechless",
+     "kind": "chunk",
+     "form": "I was completely speechless",
+     "meaning": "Expresses extreme surprise, shock, or overwhelming emotion, leaving one unable to speak.",
+     "example": "When they announced my name for the award, I was completely speechless.",
+     "plain": "When they announced my name for the award, I was so surprised I couldn't speak.",
+     "note": "Used when an event or news is so overwhelming that it renders one temporarily unable to respond verbally."
+    },
+    {
+     "text": "I'm taken aback",
+     "kind": "chunk",
+     "form": "took me aback",
+     "meaning": "Expresses surprise, shock, or momentary confusion, often in a negative sense.",
+     "example": "Her sudden resignation really took me aback; I had no idea she was unhappy.",
+     "plain": "Her sudden resignation really surprised me; I had no idea she was unhappy.",
+     "note": "A slightly more formal way to express surprise, often implying a moment of disorientation."
+    },
+    {
+     "text": "Well, I never",
+     "kind": "chunk",
+     "form": "Well, I never",
+     "meaning": "Expresses surprise, astonishment, or mild indignation at something unexpected.",
+     "example": "Well, I never, they actually finished the project a day early!",
+     "plain": "I'm surprised, they actually finished the project a day early!",
+     "note": "An older, but still used, informal expression of surprise, often with a hint of mild shock or admiration."
+    },
+    {
+     "text": "That's quite a surprise",
+     "kind": "collocation",
+     "form": "that's quite a surprise",
+     "meaning": "Expresses a moderate level of astonishment or unexpectedness.",
+     "example": "Finding out they're opening a new office overseas, that's quite a surprise.",
+     "plain": "Finding out they're opening a new office overseas, that's rather unexpected.",
+     "note": "A polite and common way to acknowledge something unexpected."
+    },
+    {
+     "text": "I see what you mean",
+     "kind": "chunk",
+     "form": "I see what you mean",
+     "meaning": "Expresses understanding or agreement with someone's point of view or explanation.",
+     "example": "Ah, I see what you mean about the new software update; it does make things more complicated.",
+     "plain": "Ah, I understand your point about the new software update; it does make things more complicated.",
+     "note": "A common phrase to indicate comprehension and often, agreement."
+    },
+    {
+     "text": "Fair enough",
+     "kind": "chunk",
+     "form": "Fair enough",
+     "meaning": "Expresses acceptance or acknowledgement of a point, even if not fully agreeing.",
+     "example": "You want to leave early to avoid traffic? Fair enough, that makes sense.",
+     "plain": "You want to leave early to avoid traffic? I accept your reason, that makes sense.",
+     "note": "A common, informal way to concede a point or acknowledge a reasonable argument."
+    },
+    {
+     "text": "That makes sense",
+     "kind": "chunk",
+     "form": "That makes sense",
+     "meaning": "Expresses understanding and logical agreement with an explanation or idea.",
+     "example": "Oh, so the delay was due to a technical issue. That makes sense now.",
+     "plain": "Oh, so the delay was due to a technical issue. I understand that now.",
+     "note": "A very common and useful phrase to indicate comprehension and logical acceptance."
+    },
+    {
+     "text": "I appreciate that",
+     "kind": "chunk",
+     "form": "I appreciate that",
+     "meaning": "Expresses gratitude or acknowledgement of someone's effort, offer, or understanding.",
+     "example": "Thank you for offering to help with the presentation; I appreciate that.",
+     "plain": "Thank you for offering to help with the presentation; I am grateful for that.",
+     "note": "A polite and common way to express thanks or acknowledge a kind gesture."
+    },
+    {
+     "text": "I suppose so",
+     "kind": "chunk",
+     "form": "I suppose so",
+     "meaning": "Expresses reluctant or hesitant agreement, often implying a lack of strong conviction.",
+     "example": "Should we just reschedule for next week? I suppose so, there's no other option.",
+     "plain": "Should we just reschedule for next week? I guess so, there's no other option.",
+     "note": "A common way to agree without much enthusiasm or when there's no better alternative."
+    },
+    {
+     "text": "I wouldn't say that",
+     "kind": "frame",
+     "form": "I wouldn't say that",
+     "meaning": "Expresses polite disagreement or a gentle correction of someone's statement.",
+     "example": "You think the new policy is a complete disaster? I wouldn't say that, it has some benefits.",
+     "plain": "You think the new policy is a complete disaster? I disagree, it has some benefits.",
+     "note": "A diplomatic way to express disagreement without being confrontational."
+    },
+    {
+     "text": "I'm not sure about that",
+     "kind": "frame",
+     "form": "I'm not sure about that",
+     "meaning": "Expresses polite doubt or disagreement with a statement or idea.",
+     "example": "He thinks the project will be finished by Friday, but I'm not sure about that.",
+     "plain": "He thinks the project will be finished by Friday, but I doubt it.",
+     "note": "A common and polite way to express uncertainty or mild disagreement."
+    },
+    {
+     "text": "To be honest",
+     "kind": "chunk",
+     "form": "To be honest",
+     "meaning": "Introduces a frank or sincere opinion, often one that might be slightly negative or surprising.",
+     "example": "To be honest, I found the workshop a bit boring, even though it was well-organized.",
+     "plain": "Frankly, I found the workshop a bit boring, even though it was well-organized.",
+     "note": "A common discourse marker used to introduce a candid opinion."
+    },
+    {
+     "text": "I have to say",
+     "kind": "frame",
+     "form": "I have to say",
+     "meaning": "Introduces a strong opinion or observation, often one that is important or surprising.",
+     "example": "I have to say, your presentation was incredibly clear and persuasive.",
+     "plain": "I must state, your presentation was incredibly clear and persuasive.",
+     "note": "A common way to introduce a strong, often positive, personal observation or opinion."
+    },
+    {
+     "text": "I must admit",
+     "kind": "frame",
+     "form": "I must admit",
+     "meaning": "Introduces an acknowledgement or confession, often of something slightly unexpected or reluctant.",
+     "example": "I must admit, I was skeptical at first, but the new system is actually quite efficient.",
+     "plain": "I confess, I was skeptical at first, but the new system is actually quite efficient.",
+     "note": "Used to introduce a concession or a slightly surprising personal admission."
+    },
+    {
+     "text": "I can relate to that",
+     "kind": "chunk",
+     "form": "I can relate to that",
+     "meaning": "Expresses understanding and shared experience with someone's feelings or situation.",
+     "example": "You're feeling overwhelmed with deadlines? I can relate to that, I've been there many times.",
+     "plain": "You're feeling overwhelmed with deadlines? I understand that feeling, I've been there many times.",
+     "note": "A common and empathetic way to show you understand someone's experience because you've had a similar one."
+    },
+    {
+     "text": "That's a good point",
+     "kind": "collocation",
+     "form": "That's a good point",
+     "meaning": "Expresses agreement and acknowledgement of a valid or insightful argument.",
+     "example": "You're right, we should consider the long-term costs. That's a good point.",
+     "plain": "You're right, we should consider the long-term costs. That's a valid argument.",
+     "note": "A common and polite way to acknowledge the validity of someone's contribution to a discussion."
+    },
+    {
+     "text": "I'm with you on that",
+     "kind": "chunk",
+     "form": "I'm with you on that",
+     "meaning": "Expresses strong agreement with someone's opinion or stance.",
+     "example": "I think we need to prioritize quality over speed, and I'm with you on that.",
+     "plain": "I think we need to prioritize quality over speed, and I agree with you.",
+     "note": "An informal but common way to express full agreement."
+    },
+    {
+     "text": "I couldn't agree more",
+     "kind": "chunk",
+     "form": "I couldn't agree more",
+     "meaning": "Expresses complete and emphatic agreement with someone's statement.",
+     "example": "You're absolutely right about the need for better communication; I couldn't agree more.",
+     "plain": "You're absolutely right about the need for better communication; I completely agree.",
+     "note": "A strong and common way to express full agreement."
+    },
+    {
+     "text": "I'm a bit concerned",
+     "kind": "chunk",
+     "form": "I'm a bit concerned",
+     "meaning": "Expresses mild worry or apprehension about a situation.",
+     "example": "The recent drop in sales, I'm a bit concerned about its impact on our quarterly targets.",
+     "plain": "The recent drop in sales, I'm slightly worried about its impact on our quarterly targets.",
+     "note": "A polite and common way to express mild worry without causing alarm."
+    },
+    {
+     "text": "That's worrying",
+     "kind": "chunk",
+     "form": "that's worrying",
+     "meaning": "Expresses that a situation or piece of news causes anxiety or concern.",
+     "example": "The sudden increase in global fuel prices, that's worrying for our shipping costs.",
+     "plain": "The sudden increase in global fuel prices, that causes anxiety for our shipping costs.",
+     "note": "A direct and common way to describe something as a cause for concern."
+    },
+    {
+     "text": "I hope everything's okay",
+     "kind": "frame",
+     "form": "I hope everything's okay",
+     "meaning": "Expresses concern and a wish for a positive outcome in a potentially difficult situation.",
+     "example": "Your colleague left the meeting looking upset; I hope everything's okay with her.",
+     "plain": "Your colleague left the meeting looking upset; I wish she is fine.",
+     "note": "A common and empathetic way to express concern for someone's well-being."
+    },
+    {
+     "text": "I'm worried about",
+     "kind": "frame",
+     "form": "I'm worried about",
+     "meaning": "Expresses personal anxiety or concern regarding a specific issue or person.",
+     "example": "I'm worried about the upcoming budget cuts and how they'll affect our department.",
+     "plain": "I'm anxious about the upcoming budget cuts and how they'll affect our department.",
+     "note": "A direct way to state a personal concern."
+    },
+    {
+     "text": "It's a bit worrying",
+     "kind": "chunk",
+     "form": "it's a bit worrying",
+     "meaning": "Expresses that a situation causes some degree of anxiety or concern.",
+     "example": "The lack of progress on the new project, it's a bit worrying, to be honest.",
+     "plain": "The lack of progress on the new project, it causes some anxiety, to be honest.",
+     "note": "Similar to \"I'm a bit concerned,\" but focuses on the situation itself rather than personal feeling."
+    },
+    {
+     "text": "That's a bit disappointing",
+     "kind": "chunk",
+     "form": "That's a bit disappointing",
+     "meaning": "Expresses mild disappointment or regret about an outcome.",
+     "example": "The sales figures for this quarter are lower than expected. That's a bit disappointing.",
+     "plain": "The sales figures for this quarter are lower than expected. That's slightly disheartening.",
+     "note": "A common and polite way to express mild disappointment."
+    },
+    {
+     "text": "It's a shame",
+     "kind": "chunk",
+     "form": "It's a shame",
+     "meaning": "Expresses regret or mild disappointment about a situation.",
+     "example": "It's a shame we couldn't get tickets for the concert, it sold out so fast.",
+     "plain": "It's disappointing we couldn't get tickets for the concert, it sold out so fast.",
+     "note": "Very similar to \"That's a shame,\" used interchangeably."
+    },
+    {
+     "text": "I was hoping for",
+     "kind": "frame",
+     "form": "I was hoping for",
+     "meaning": "Expresses a past expectation or desire that was not met, implying disappointment.",
+     "example": "I was hoping for a quick resolution to the issue, but it seems it will take longer.",
+     "plain": "I expected a quick resolution to the issue, but it seems it will take longer.",
+     "note": "A polite way to express disappointment by stating a previous, unfulfilled hope."
+    },
+    {
+     "text": "It didn't quite work out",
+     "kind": "chunk",
+     "form": "it didn't quite work out",
+     "meaning": "Expresses that a plan or attempt was unsuccessful, often implying mild disappointment.",
+     "example": "We tried to merge the two departments, but it didn't quite work out as planned.",
+     "plain": "We tried to merge the two departments, but it wasn't successful as planned.",
+     "note": "A common, understated way to describe a failed attempt or plan."
+    },
+    {
+     "text": "I'm sorry to interrupt",
+     "kind": "frame",
+     "form": "I'm sorry to interrupt",
+     "meaning": "A polite apology for breaking into someone's conversation or activity.",
+     "example": "I'm sorry to interrupt, but I have an urgent call coming in.",
+     "plain": "Please excuse me for interrupting, but I have an urgent call coming in.",
+     "note": "A standard polite phrase for interrupting."
+    },
+    {
+     "text": "I'm sorry to bother you",
+     "kind": "frame",
+     "form": "I'm sorry to bother you",
+     "meaning": "A polite apology for disturbing someone, often before making a request.",
+     "example": "I'm sorry to bother you, but could you help me with this spreadsheet?",
+     "plain": "Please excuse me for disturbing you, but could you help me with this spreadsheet?",
+     "note": "A common polite opening when you need to ask someone for something or interrupt their work."
+    },
+    {
+     "text": "I'm sorry for the delay",
+     "kind": "frame",
+     "form": "I'm sorry for the delay",
+     "meaning": "Expresses an apology for causing something to be late.",
+     "example": "I'm sorry for the delay in sending the report; I had some technical issues.",
+     "plain": "I apologize for the lateness in sending the report; I had some technical issues.",
+     "note": "A standard and polite apology for lateness."
+    },
+    {
+     "text": "I'm sorry for the confusion",
+     "kind": "frame",
+     "form": "I'm sorry for the confusion",
+     "meaning": "Expresses an apology for causing misunderstanding or lack of clarity.",
+     "example": "I'm sorry for the confusion regarding the meeting time; I sent out the wrong calendar invite.",
+     "plain": "I apologize for the misunderstanding regarding the meeting time; I sent out the wrong calendar invite.",
+     "note": "A polite and professional apology when a mistake has led to misunderstanding."
+    },
+    {
+     "text": "I'm sorry for the inconvenience",
+     "kind": "frame",
+     "form": "I'm sorry for the inconvenience",
+     "meaning": "Expresses an apology for causing trouble or difficulty for someone.",
+     "example": "We had to cancel the event at short notice, and I'm sorry for the inconvenience this caused.",
+     "plain": "We had to cancel the event at short notice, and I apologize for the trouble this caused.",
+     "note": "A standard, polite, and often formal apology for causing trouble."
+    },
+    {
+     "text": "I'm sorry to say",
+     "kind": "frame",
+     "form": "I'm sorry to say",
+     "meaning": "Introduces bad news or an unwelcome statement, softening the impact.",
+     "example": "I'm sorry to say that your application was not successful this time.",
+     "plain": "I regret to inform you that your application was not successful this time.",
+     "note": "A polite and common way to deliver negative news."
+    },
+    {
+     "text": "I hope you don't mind",
+     "kind": "frame",
+     "form": "I hope you don't mind",
+     "meaning": "A polite way to ask for permission or to soften a potentially intrusive action.",
+     "example": "I hope you don't mind, but I've already ordered coffee for everyone.",
+     "plain": "I hope you are okay with this, but I've already ordered coffee for everyone.",
+     "note": "Used to check if an action is acceptable, often when it's already been done or is about to be."
+    },
+    {
+     "text": "I'm afraid not",
+     "kind": "chunk",
+     "form": "I'm afraid not",
+     "meaning": "A polite and slightly regretful way to give a negative answer.",
+     "example": "Can you still make it to the workshop tomorrow? I'm afraid not, I have another commitment.",
+     "plain": "Can you still make it to the workshop tomorrow? Unfortunately no, I have another commitment.",
+     "note": "A common, polite, and slightly apologetic way to say \"no.\""
+    },
+    {
+     "text": "I'm afraid so",
+     "kind": "chunk",
+     "form": "I'm afraid so",
+     "meaning": "A polite and slightly regretful way to give an affirmative answer to unwelcome news.",
+     "example": "Is the meeting really going to run over time? I'm afraid so, we have a lot to cover.",
+     "plain": "Is the meeting really going to run over time? Unfortunately yes, we have a lot to cover.",
+     "note": "A common, polite, and slightly apologetic way to say \"yes\" to something undesirable."
+    },
+    {
+     "text": "That's really kind of you",
+     "kind": "chunk",
+     "form": "that's really kind of you",
+     "meaning": "Expresses sincere gratitude and appreciation for someone's generosity or thoughtfulness.",
+     "example": "Thank you for helping me move all those boxes; that's really kind of you.",
+     "plain": "Thank you for helping me move all those boxes; you are very thoughtful.",
+     "note": "A warm and common way to express appreciation for a helpful or generous act."
+    },
+    {
+     "text": "I'm touched",
+     "kind": "chunk",
+     "form": "I'm truly touched",
+     "meaning": "Expresses being deeply moved emotionally by someone's kindness, generosity, or words.",
+     "example": "Your thoughtful card and flowers, I'm truly touched by your support during this time.",
+     "plain": "Your thoughtful card and flowers, I'm deeply moved by your support during this time.",
+     "note": "A sincere expression of gratitude and emotional appreciation."
+    },
+    {
+     "text": "It's a pity",
+     "kind": "chunk",
+     "form": "It's a pity",
+     "meaning": "Expresses regret or sadness about a missed opportunity or an unfortunate situation.",
+     "example": "It's a pity we didn't get to see the exhibition before it closed last week.",
+     "plain": "It's regrettable we didn't get to see the exhibition before it closed last week.",
+     "note": "A common way to express mild regret or sadness. Similar to \"It's a shame.\""
+    },
+    {
+     "text": "What a shame",
+     "kind": "chunk",
+     "form": "What a shame",
+     "meaning": "Expresses regret or disappointment about an unfortunate event or missed opportunity.",
+     "example": "What a shame that the outdoor concert was cancelled due to the heavy rain.",
+     "plain": "It's disappointing that the outdoor concert was cancelled due to the heavy rain.",
+     "note": "A common expression of regret, often for something that could have been good but didn't happen."
+    },
+    {
+     "text": "I'm glad we could help",
+     "kind": "frame",
+     "form": "I'm glad we could help",
+     "meaning": "Expresses satisfaction and willingness to assist after providing aid.",
+     "example": "I'm glad we could help you sort out the technical issues with your presentation.",
+     "plain": "I'm happy that we were able to assist you with the technical issues with your presentation.",
+     "note": "A polite and common phrase used by someone who has provided assistance."
+    },
+    {
+     "text": "I'm so happy for you",
+     "kind": "chunk",
+     "form": "I'm so happy for you",
+     "meaning": "Expresses genuine joy and congratulations for someone else's success or good fortune.",
+     "example": "You passed your final exams with flying colours! I'm so happy for you!",
+     "plain": "You passed your final exams with flying colours! I'm very pleased for you!",
+     "note": "A warm and common way to express joy for another person's positive outcome."
+    },
+    {
+     "text": "That's fantastic",
+     "kind": "chunk",
+     "form": "That's fantastic",
+     "meaning": "Expresses strong enthusiasm and approval for something positive.",
+     "example": "The new project proposal got approved? That's fantastic!",
+     "plain": "The new project proposal got approved? That's excellent!",
+     "note": "A common, informal exclamation of delight or approval."
+    },
+    {
+     "text": "I'm absolutely thrilled",
+     "kind": "chunk",
+     "form": "I'm absolutely thrilled",
+     "meaning": "Expresses intense excitement and happiness about a personal event or news.",
+     "example": "I'm absolutely thrilled that my book was finally published after years of work.",
+     "plain": "I'm extremely excited that my book was finally published after years of work.",
+     "note": "A strong, emphatic way to convey personal joy and excitement."
+    },
+    {
+     "text": "What a relief to hear",
+     "kind": "frame",
+     "form": "What a relief to hear",
+     "meaning": "Expresses comfort and ease upon receiving reassuring news.",
+     "example": "What a relief to hear that your surgery went well and you're recovering quickly.",
+     "plain": "It's a great comfort to hear that your surgery went well and you're recovering quickly.",
+     "note": "A common way to express relief when hearing positive news after a period of worry."
+    },
+    {
+     "text": "I'm glad that's over",
+     "kind": "chunk",
+     "form": "I'm glad that's over",
+     "meaning": "Expresses relief that a difficult or unpleasant situation has ended.",
+     "example": "After weeks of intense negotiations, I'm glad that's over and we can move forward.",
+     "plain": "After weeks of intense negotiations, I'm happy it's finished and we can move forward.",
+     "note": "A common, informal expression of relief after a challenging period."
+    },
+    {
+     "text": "That's a pleasant surprise",
+     "kind": "collocation",
+     "form": "That's a pleasant surprise",
+     "meaning": "Expresses happiness and mild astonishment at an unexpected positive event.",
+     "example": "Oh, you finished the report early? That's a pleasant surprise!",
+     "plain": "Oh, you finished the report early? That's a nice unexpected event!",
+     "note": "A polite and common way to react positively to something unexpected."
+    },
+    {
+     "text": "I'm quite surprised",
+     "kind": "chunk",
+     "form": "I'm quite surprised",
+     "meaning": "Expresses a moderate level of astonishment or unexpectedness.",
+     "example": "I'm quite surprised by the sudden change in management; it was very quick.",
+     "plain": "I'm rather astonished by the sudden change in management; it was very quick.",
+     "note": "A polite and common way to express surprise without being overly dramatic."
+    },
+    {
+     "text": "I had no idea",
+     "kind": "chunk",
+     "form": "I had no idea",
+     "meaning": "Expresses surprise or ignorance about a piece of information.",
+     "example": "You're fluent in Japanese? I had no idea, that's impressive!",
+     "plain": "You're fluent in Japanese? I didn't know that, that's impressive!",
+     "note": "A common, informal way to express surprise at new information."
+    },
+    {
+     "text": "That's news to me",
+     "kind": "chunk",
+     "form": "That's news to me",
+     "meaning": "Expresses surprise or mild disbelief that one was unaware of certain information.",
+     "example": "They're closing the cafeteria next month? That's news to me!",
+     "plain": "They're closing the cafeteria next month? I didn't know that!",
+     "note": "A common, informal phrase indicating that information is new and surprising to the speaker."
+    },
+    {
+     "text": "I'm taken by surprise",
+     "kind": "chunk",
+     "form": "I was taken by surprise",
+     "meaning": "Expresses being unexpectedly astonished or shocked by an event.",
+     "example": "When they announced the unexpected bonus, I was taken by surprise.",
+     "plain": "When they announced the unexpected bonus, I was unexpectedly astonished.",
+     "note": "A slightly more formal way to express being caught off guard by something unexpected."
+    },
+    {
+     "text": "I can see why",
+     "kind": "chunk",
+     "form": "I can see why",
+     "meaning": "Expresses understanding of the reasons behind someone's feelings or actions.",
+     "example": "You're upset about the decision? I can see why, it affects your team directly.",
+     "plain": "You're upset about the decision? I understand the reasons, it affects your team directly.",
+     "note": "A common, empathetic phrase to show understanding of someone's perspective."
+    },
+    {
+     "text": "That's understandable",
+     "kind": "chunk",
+     "form": "That's understandable",
+     "meaning": "Expresses that someone's feelings or actions are reasonable and easy to comprehend.",
+     "example": "You're tired after working all weekend? That's understandable.",
+     "plain": "You're tired after working all weekend? That's reasonable.",
+     "note": "A polite and common way to validate someone's feelings or situation."
+    },
+    {
+     "text": "I get what you're saying",
+     "kind": "chunk",
+     "form": "I get what you're saying",
+     "meaning": "Expresses understanding of someone's point or argument, often informally.",
+     "example": "I get what you're saying about the need for more resources, it's a valid concern.",
+     "plain": "I understand your point about the need for more resources, it's a valid concern.",
+     "note": "A common, informal way to indicate comprehension and often, agreement."
+    },
+    {
+     "text": "I totally agree",
+     "kind": "chunk",
+     "form": "I totally agree",
+     "meaning": "Expresses complete and enthusiastic agreement with someone's statement.",
+     "example": "I totally agree that we need to prioritize employee well-being in this company.",
+     "plain": "I completely agree that we need to prioritize employee well-being in this company.",
+     "note": "A common, informal way to express strong agreement."
+    },
+    {
+     "text": "I'm not convinced",
+     "kind": "chunk",
+     "form": "I'm not convinced",
+     "meaning": "Expresses doubt or skepticism about an idea, argument, or plan.",
+     "example": "They say the new strategy will boost sales, but I'm not convinced it will work.",
+     "plain": "They say the new strategy will boost sales, but I doubt it will work.",
+     "note": "A polite way to express skepticism or partial disagreement."
+    },
+    {
+     "text": "I have my doubts",
+     "kind": "chunk",
+     "form": "I have my doubts",
+     "meaning": "Expresses skepticism or uncertainty about the likelihood or truth of something.",
+     "example": "He promised to finish the project by tomorrow, but I have my doubts.",
+     "plain": "He promised to finish the project by tomorrow, but I'm not sure he will.",
+     "note": "A common way to express personal skepticism or lack of confidence."
+    },
+    {
+     "text": "I'm not happy about that",
+     "kind": "chunk",
+     "form": "I'm not happy about that",
+     "meaning": "Expresses dissatisfaction or mild annoyance about a situation.",
+     "example": "The decision to cut our training budget, I'm not happy about that at all.",
+     "plain": "The decision to cut our training budget, I'm very dissatisfied with that at all.",
+     "note": "A direct, but polite, way to express displeasure."
+    },
+    {
+     "text": "That's a bit much to ask",
+     "kind": "frame",
+     "form": "That's a bit much to ask",
+     "meaning": "Expresses that a request or expectation is unreasonable or excessive.",
+     "example": "Expecting us to work overtime every day this week, that's a bit much to ask.",
+     "plain": "Expecting us to work overtime every day this week, that's an unreasonable request.",
+     "note": "A polite way to indicate that a request is unfair or goes beyond reasonable limits."
+    },
+    {
+     "text": "I'm sorry to hear that happened",
+     "kind": "frame",
+     "form": "I'm sorry to hear that happened",
+     "meaning": "Expresses sympathy or regret for an unfortunate event that occurred.",
+     "example": "I'm sorry to hear that happened with your car; that's really inconvenient.",
+     "plain": "I feel bad that happened with your car; that's really inconvenient.",
+     "note": "A common and empathetic way to respond to someone sharing a negative experience."
+    },
+    {
+     "text": "I'm sorry to bother you with this",
+     "kind": "frame",
+     "form": "I'm sorry to bother you with this",
+     "meaning": "A polite apology for bringing a potentially troublesome issue to someone's attention.",
+     "example": "I'm sorry to bother you with this, but the payment hasn't gone through yet.",
+     "plain": "Please excuse me for troubling you with this, but the payment hasn't gone through yet.",
+     "note": "Used when presenting a problem or request that might be inconvenient for the other person."
+    },
+    {
+     "text": "I'm sorry for my mistake",
+     "kind": "frame",
+     "form": "I'm sorry for my mistake",
+     "meaning": "Expresses an apology for an error or oversight made by the speaker.",
+     "example": "I'm sorry for my mistake in the report; I'll correct it immediately.",
+     "plain": "I apologize for my error in the report; I'll correct it immediately.",
+     "note": "A direct and common way to apologize for a personal error."
+    },
+    {
+     "text": "I'm sorry if I offended you",
+     "kind": "frame",
+     "form": "I'm sorry if I offended you",
+     "meaning": "Expresses a conditional apology, acknowledging potential offense caused.",
+     "example": "I'm sorry if I offended you with my direct feedback; that wasn't my intention.",
+     "plain": "I apologize if my direct feedback caused offense; that wasn't my intention.",
+     "note": "A polite way to apologize when unsure if offense was taken, or to soften directness."
+    },
+    {
+     "text": "I'm sorry to keep you waiting",
+     "kind": "frame",
+     "form": "I'm sorry to keep you waiting",
+     "meaning": "Expresses an apology for causing someone to wait.",
+     "example": "I'm sorry to keep you waiting; the previous meeting ran over schedule.",
+     "plain": "I apologize for making you wait; the previous meeting ran over schedule.",
+     "note": "A standard polite apology for lateness or causing a delay for someone."
+    },
+    {
+     "text": "I'm glad to be here",
+     "kind": "frame",
+     "form": "I'm glad to be here",
+     "meaning": "Expresses happiness or satisfaction about one's presence at an event or location.",
+     "example": "After a long journey, I'm glad to be here and finally relax.",
+     "plain": "After a long journey, I'm happy to be here and finally relax.",
+     "note": "A common and polite expression of contentment upon arrival or participation."
+    },
+    {
+     "text": "I'm glad to see you",
+     "kind": "frame",
+     "form": "I'm glad to see you",
+     "meaning": "Expresses happiness upon meeting or seeing someone.",
+     "example": "Oh, I didn't expect you here! I'm glad to see you.",
+     "plain": "Oh, I didn't expect you here! I'm happy to see you.",
+     "note": "A common and warm greeting, especially when seeing someone unexpectedly or after a while."
+    },
+    {
+     "text": "I'm glad it worked out",
+     "kind": "frame",
+     "form": "I'm glad it worked out",
+     "meaning": "Expresses satisfaction that a situation or plan had a successful outcome.",
+     "example": "Despite the initial challenges, I'm glad it worked out in the end.",
+     "plain": "Despite the initial challenges, I'm happy it was successful in the end.",
+     "note": "A common expression of relief and satisfaction after a successful resolution."
+    },
+    {
+     "text": "I'm glad we talked",
+     "kind": "frame",
+     "form": "I'm glad we talked",
+     "meaning": "Expresses satisfaction that a conversation took place, often resolving an issue.",
+     "example": "I'm glad we talked about the project concerns; I feel much clearer now.",
+     "plain": "I'm happy we discussed the project concerns; I feel much clearer now.",
+     "note": "A common phrase used to conclude a conversation, especially one that was important or difficult."
+    },
+    {
+     "text": "I'm glad you're okay",
+     "kind": "frame",
+     "form": "I'm glad you're okay",
+     "meaning": "Expresses relief and happiness that someone is safe or well after a potential danger.",
+     "example": "I heard about your accident, but I'm glad you're okay.",
+     "plain": "I heard about your accident, but I'm relieved you're safe.",
+     "note": "A common and sincere expression of relief for someone's well-being."
+    },
+    {
+     "text": "I'm glad to know that",
+     "kind": "frame",
+     "form": "I'm glad to know that",
+     "meaning": "Expresses happiness or relief about receiving specific information.",
+     "example": "I'm glad to know that the new security measures are already in place.",
+     "plain": "I'm happy to know that the new security measures are already in place.",
+     "note": "A common and polite way to acknowledge useful or reassuring information."
+    },
+    {
+     "text": "I'm glad to hear from you",
+     "kind": "frame",
+     "form": "I'm glad to hear from you",
+     "meaning": "Expresses happiness upon receiving communication from someone.",
+     "example": "It's been a while! I'm glad to hear from you, how have things been?",
+     "plain": "It's been a while! I'm happy to receive your communication, how have things been?",
+     "note": "A common and warm greeting, especially in written communication or after a long silence."
+    },
+    {
+     "text": "I'm glad to be of assistance",
+     "kind": "frame",
+     "form": "I'm glad to be of assistance",
+     "meaning": "Expresses satisfaction and willingness to help after providing aid.",
+     "example": "If you need anything else, just ask. I'm glad to be of assistance.",
+     "plain": "If you need anything else, just ask. I'm happy to help.",
+     "note": "A polite and slightly formal phrase used by someone who has provided help."
+    },
+    {
+     "text": "I'm glad to have helped",
+     "kind": "frame",
+     "form": "I'm glad to have helped",
+     "meaning": "Expresses satisfaction and willingness to assist after providing aid.",
+     "example": "I'm glad to have helped you with your presentation; it looks great now.",
+     "plain": "I'm happy that I was able to assist you with your presentation; it looks great now.",
+     "note": "A polite and common phrase used by someone who has provided assistance."
+    },
+    {
+     "text": "I'm glad to have met you",
+     "kind": "frame",
+     "form": "I'm glad to have met you",
+     "meaning": "Expresses pleasure at having made someone's acquaintance.",
+     "example": "It was a very insightful discussion. I'm glad to have met you.",
+     "plain": "It was a very insightful discussion. I'm happy that I met you.",
+     "note": "A polite and common phrase used at the end of a first meeting."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "i'm so sorry to hear that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a shame": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "poor you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it must be tough": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i know how you feel": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i can only imagine": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's really awful": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm truly sorry": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what a difficult situation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's wonderful news": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm so pleased for you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "how exciting": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i couldn't be happier": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm delighted to hear that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what a lovely surprise": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm thrilled for you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a bit annoying": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "oh, for goodness sake": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "you've got to be kidding me": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a bit much": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's really frustrating": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i can't believe it happened again": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not ideal": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's just typical": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit fed up with it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what a relief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "thank goodness": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm so relieved": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a weight off my mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "you had me worried there": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm glad to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "that's good to know": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "you're kidding me": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "no way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can't believe it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's unexpected": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "are you serious": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm speechless": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm taken aback": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "well, i never": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's quite a surprise": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i see what you mean": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "fair enough": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that makes sense": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i appreciate that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i suppose so": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i wouldn't say that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure about that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "to be honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i have to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i must admit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can relate to that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a good point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm with you on that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i couldn't agree more": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit concerned": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's worrying": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hope everything's okay": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm worried about": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's a bit worrying": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a bit disappointing": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a shame": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was hoping for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it didn't quite work out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm sorry to interrupt": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm sorry to bother you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm sorry for the delay": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm sorry for the confusion": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm sorry for the inconvenience": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm sorry to say": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hope you don't mind": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid not": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid so": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's really kind of you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm touched": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a pity": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what a shame": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad we could help": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm so happy for you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "that's fantastic": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm absolutely thrilled": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what a relief to hear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm glad that's over": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a pleasant surprise": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm quite surprised": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i had no idea": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "that's news to me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm taken by surprise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can see why": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's understandable": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i get what you're saying": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i totally agree": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not convinced": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i have my doubts": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not happy about that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a bit much to ask": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm sorry to hear that happened": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm sorry to bother you with this": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm sorry for my mistake": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm sorry if i offended you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm sorry to keep you waiting": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm glad to be here": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm glad to see you": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm glad it worked out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad we talked": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad you're okay": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm glad to know that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad to hear from you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm glad to have helped": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad to have met you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm glad to be of assistance": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes the expression's meaning as a polite statement of pleasure in helping."
+   }
+  }
+ }
+}

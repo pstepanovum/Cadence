@@ -12,6 +12,7 @@ export type NavKey =
   | "home"
   | "dashboard"
   | "practice"
+  | "phrases"
   | "grammar"
   | "sounds"
   | "learn"
@@ -42,6 +43,7 @@ export async function Navbar({ current, variant = "default" }: NavbarProps) {
     ? [
         { href: "/dashboard", key: "home", label: "Home" },
         { href: "/practice", key: "practice", label: "Practice" },
+        { href: "/today", key: "phrases", label: "Phrases" },
         { href: "/sounds", key: "sounds", label: "Sounds" },
         { href: "/learn", key: "learn", label: "Modules" },
         { href: "/coach", key: "coach", label: "Coach" },

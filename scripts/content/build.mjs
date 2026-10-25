@@ -41,6 +41,9 @@ function audioRefs(content) {
   for (const e of content.exercises ?? []) {
     for (const a of [e.audio, ...(Array.isArray(e.audio) ? e.audio : [])].flat()) if (typeof a === "string") out.add(a);
   }
+  // The phrase bank and slang packs (docs/PLATFORM.md section 17).
+  for (const p of content.phrases?.phrases ?? []) if (p.audio) out.add(p.audio);
+  for (const s of content.slang?.entries ?? []) if (s.audio) out.add(s.audio);
   return out;
 }
 

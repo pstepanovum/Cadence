@@ -1,0 +1,99 @@
+{
+ "format": 1,
+ "id": "fossil.question-word-order",
+ "area": "grammar",
+ "title": "Word order in indirect questions",
+ "what": "keeping question order inside indirect questions ('Can you tell me where is the station?', 'I wonder what does it mean')",
+ "summary": "This error persists because it's a subtle grammatical point often missed in advanced learning. It makes speech sound less natural and can subtly impede clarity, despite overall fluency.",
+ "listenFor": "Listen for instances where you invert the subject and verb within a question embedded in another statement or question.",
+ "grammarPointIds": [
+  "gp.indirect-questions",
+  "gp.reported-questions"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "Could you explain how does this system work?",
+   "right": "Could you explain how this system works?",
+   "note": "In indirect questions, use statement word order (subject-verb) after the question word."
+  },
+  {
+   "wrong": "I'm not sure what is the best approach for this project.",
+   "right": "I'm not sure what the best approach for this project is.",
+   "note": "Maintain subject-verb order; the verb 'is' follows the subject 'the best approach'."
+  },
+  {
+   "wrong": "Do you know when does the next flight depart?",
+   "right": "Do you know when the next flight departs?",
+   "note": "Avoid auxiliary verbs like 'does' in indirect questions; use simple present tense."
+  },
+  {
+   "wrong": "She asked me where did I find that information.",
+   "right": "She asked me where I found that information.",
+   "note": "In indirect questions, do not use 'did'; change the verb to past simple."
+  },
+  {
+   "wrong": "We need to determine why is the budget overspent.",
+   "right": "We need to determine why the budget is overspent.",
+   "note": "The subject 'the budget' precedes the verb 'is' in the embedded clause."
+  },
+  {
+   "wrong": "He wondered if is it possible to reschedule the meeting.",
+   "right": "He wondered if it is possible to reschedule the meeting.",
+   "note": "After 'if' or 'whether', use subject-verb order, not inverted."
+  }
+ ],
+ "drills": [
+  "Could you clarify what the main objective of this initiative is?",
+  "I need to understand how the new policy will affect our team.",
+  "Please tell me where the conference materials are located.",
+  "We should discuss when the final report is due for submission.",
+  "The manager inquired why the project timeline was extended.",
+  "It's important to know whether the proposal has been approved.",
+  "Could you confirm if the revised figures are accurate?",
+  "I often wonder how people manage such complex schedules.",
+  "Let's consider what the long-term implications of this decision are.",
+  "They asked me who was responsible for the client presentation."
+ ],
+ "probes": [
+  {
+   "sentence": "Can you tell me what is your current role in the company?",
+   "answers": [
+    "Can you tell me what your current role in the company is?",
+    "Can you tell me what your current role is in the company?"
+   ]
+  },
+  {
+   "sentence": "I'm curious how much does this software cost.",
+   "answers": [
+    "I'm curious how much this software costs."
+   ]
+  },
+  {
+   "sentence": "The team leader asked when are we submitting the proposal.",
+   "answers": [
+    "The team leader asked when we are submitting the proposal."
+   ]
+  },
+  {
+   "sentence": "We need to find out why did the system crash.",
+   "answers": [
+    "We need to find out why the system crashed."
+   ]
+  },
+  {
+   "sentence": "Could you explain to me where is the nearest exit?",
+   "answers": [
+    "Could you explain to me where the nearest exit is?"
+   ]
+  },
+  {
+   "sentence": "I wonder if is it a good time to discuss this.",
+   "answers": [
+    "I wonder if it is a good time to discuss this."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

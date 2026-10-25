@@ -7,6 +7,7 @@ import { CONTENT_DIR } from "./paths.mjs";
 import { LEVELS, sha256Hex } from "./text.mjs";
 import { TOPICS } from "../data/grammar-outline.mjs";
 import { loadPlacementBanks, passingItems } from "./placement-bank.mjs";
+import { advancedPacks } from "./advanced.mjs";
 
 /** TTS settings the audio is named by; audio.mjs synthesizes with the same. */
 export const AUDIO_VOICE = "en-US-Neural2-F";
@@ -216,5 +217,6 @@ export function assemblePacks() {
     const pack = corePack(level, allGrammar);
     if (pack.files["content.json"].exercises.length) packs.push(pack);
   }
+  packs.push(...advancedPacks());
   return packs;
 }

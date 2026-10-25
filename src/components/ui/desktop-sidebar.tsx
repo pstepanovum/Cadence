@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils'
 const navItems = [
   { href: '/dashboard',    label: 'Home'         },
   { href: '/practice',     label: 'Practice'     },
+  { href: '/today',        label: 'Phrases'      },
   { href: '/sounds',       label: 'Sounds'       },
   { href: '/learn',        label: 'Modules'      },
   { href: '/conversation', label: 'Conversation' },
@@ -19,6 +20,9 @@ const navItems = [
 
 const exploreItems = [
   { href: '/grammar', label: 'Grammar' },
+  { href: '/slang', label: 'Slang' },
+  { href: '/plateau', label: 'Plateau track' },
+  { href: '/recordings', label: 'Recordings' },
   { href: '/connect-phone', label: 'Connect your phone' },
   { href: '/just-speak', label: 'Just Speak' },
   { href: '/dictionary', label: 'Dictionary' },

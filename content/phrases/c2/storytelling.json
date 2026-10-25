@@ -1,0 +1,2206 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "storytelling",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "it all started when",
+     "kind": "frame",
+     "form": "it all started when",
+     "meaning": "introduces the beginning of a story or a sequence of events",
+     "example": "I was having a perfectly normal day, and then it all started when my phone rang.",
+     "plain": "I was having a perfectly normal day, and then my phone rang, beginning everything.",
+     "note": "A classic, straightforward way to begin an anecdote. Very common in spoken English."
+    },
+    {
+     "text": "as it turned out",
+     "kind": "chunk",
+     "form": "as it turned out",
+     "meaning": "introduces an unexpected outcome or revelation in a story",
+     "example": "I thought I'd just pop in for a quick chat, but as it turned out, I was there for hours.",
+     "plain": "I thought I'd just pop in for a quick chat, but unexpectedly, I was there for hours.",
+     "note": "Used to reveal an unforeseen consequence; common in casual storytelling."
+    },
+    {
+     "text": "little did I know",
+     "kind": "frame",
+     "form": "little did I know",
+     "meaning": "creates suspense by indicating the speaker was unaware of future events",
+     "example": "I accepted the offer without hesitation, little did I know the challenges ahead.",
+     "plain": "I accepted the offer without hesitation, unaware of the challenges ahead.",
+     "note": "A dramatic phrase to build tension, often used before a twist or difficulty."
+    },
+    {
+     "text": "to cut a long story short",
+     "kind": "chunk",
+     "form": "to cut a long story short",
+     "meaning": "used to summarize the main point of a story quickly",
+     "example": "We tried everything, but to cut a long story short, the project failed.",
+     "plain": "We tried everything, but in summary, the project failed.",
+     "note": "Signals you're skipping details to get to the conclusion. Very common."
+    },
+    {
+     "text": "that's quite something",
+     "kind": "chunk",
+     "form": "that's quite something",
+     "meaning": "expresses admiration or surprise at an impressive or unusual event",
+     "example": "You managed to finish the entire report in one night? Well, that's quite something!",
+     "plain": "You managed to finish the entire report in one night? That's very impressive!",
+     "note": "A polite, understated way to show admiration or surprise. Can be slightly ironic."
+    },
+    {
+     "text": "I remember distinctly",
+     "kind": "frame",
+     "form": "I remember distinctly",
+     "meaning": "emphasizes the clarity and certainty of a memory being shared",
+     "example": "I remember distinctly the moment I realized I'd left my passport at home.",
+     "plain": "I clearly remember the moment I realized I'd left my passport at home.",
+     "note": "Adds authority and detail to a memory. Slightly formal but common in speech."
+    },
+    {
+     "text": "the thing is",
+     "kind": "chunk",
+     "form": "the thing is",
+     "meaning": "introduces an important point or explanation in a narrative",
+     "example": "I wanted to help, but the thing is, I had my own deadline to meet.",
+     "plain": "I wanted to help, but the important point is, I had my own deadline to meet.",
+     "note": "A common conversational filler that signals a crucial piece of information."
+    },
+    {
+     "text": "it turned out that",
+     "kind": "frame",
+     "form": "it turned out that",
+     "meaning": "reveals the actual outcome or truth of a situation",
+     "example": "We thought he was lost, but it turned out that he'd just gone to the wrong gate.",
+     "plain": "We thought he was lost, but actually he'd just gone to the wrong gate.",
+     "note": "Similar to 'as it turned out' but often introduces a more direct revelation."
+    },
+    {
+     "text": "to make a long story short",
+     "kind": "chunk",
+     "form": "to make a long story short",
+     "meaning": "used to summarize the main point of a story quickly",
+     "example": "We debated for hours, but to make a long story short, we decided against it.",
+     "plain": "We debated for hours, but in summary, we decided against it.",
+     "note": "An alternative to 'to cut a long story short', equally common and informal."
+    },
+    {
+     "text": "you won't believe what happened",
+     "kind": "frame",
+     "form": "you won't believe what happened",
+     "meaning": "builds anticipation for an extraordinary or surprising event",
+     "example": "I was just walking down the street, and you won't believe what happened next.",
+     "plain": "I was just walking down the street, and something incredible happened next.",
+     "note": "An enthusiastic way to start a story, signaling something unexpected."
+    },
+    {
+     "text": "I can only imagine",
+     "kind": "chunk",
+     "form": "I can only imagine",
+     "meaning": "expresses empathy or understanding of a difficult or impressive situation",
+     "example": "You had to present to the entire board with no sleep? I can only imagine how tough that was.",
+     "plain": "You had to present to the entire board with no sleep? I understand how tough that was.",
+     "note": "A polite and empathetic response to someone's challenging experience."
+    },
+    {
+     "text": "the next thing I knew",
+     "kind": "frame",
+     "form": "the next thing I knew",
+     "meaning": "describes a sudden, often unexpected, shift in events or awareness",
+     "example": "I was just sitting there, and the next thing I knew, the fire alarm went off.",
+     "plain": "I was just sitting there, and suddenly, the fire alarm went off.",
+     "note": "Conveys a sense of immediacy and surprise, often used for quick transitions."
+    },
+    {
+     "text": "it was one of those",
+     "kind": "frame",
+     "form": "it was one of those",
+     "meaning": "introduces a situation that is typical of a certain type or category",
+     "example": "It was one of those meetings where everyone talks but nothing gets decided.",
+     "plain": "It was a typical meeting where everyone talks but nothing gets decided.",
+     "note": "Sets a relatable scene by categorizing an experience. Very conversational."
+    },
+    {
+     "text": "to be perfectly honest",
+     "kind": "chunk",
+     "form": "to be perfectly honest",
+     "meaning": "introduces a frank or candid statement, often a confession or opinion",
+     "example": "To be perfectly honest, I wasn't expecting such a positive outcome.",
+     "plain": "Honestly, I wasn't expecting such a positive outcome.",
+     "note": "Adds emphasis to a sincere or potentially surprising admission. Polite."
+    },
+    {
+     "text": "I'll never forget",
+     "kind": "frame",
+     "form": "I'll never forget",
+     "meaning": "emphasizes the lasting impact or vividness of a memory",
+     "example": "I'll never forget the look on his face when he realized his mistake.",
+     "plain": "I will always remember the look on his face when he realized his mistake.",
+     "note": "A strong way to introduce a memorable part of a story. Emotional."
+    },
+    {
+     "text": "the long and short of it",
+     "kind": "chunk",
+     "form": "the long and short of it",
+     "meaning": "summarizes the essential facts or outcome of a situation",
+     "example": "We had a lot of discussions, but the long and short of it is, we're moving forward.",
+     "plain": "We had a lot of discussions, but the main point is, we're moving forward.",
+     "note": "A slightly more formal way to summarize than 'to cut a long story short'."
+    },
+    {
+     "text": "you should have seen",
+     "kind": "frame",
+     "form": "you should have seen",
+     "meaning": "expresses that something was so remarkable it needed to be witnessed",
+     "example": "You should have seen the queue for tickets; it stretched around the block!",
+     "plain": "The queue for tickets was incredible; it stretched around the block!",
+     "note": "Invites the listener to imagine the scene, adding vividness to the story."
+    },
+    {
+     "text": "it was a moment when",
+     "kind": "frame",
+     "form": "it was a moment when",
+     "meaning": "highlights a specific, significant point in time within a narrative",
+     "example": "It was a moment when I realized that my priorities had completely shifted.",
+     "plain": "At that specific time, I realized that my priorities had completely shifted.",
+     "note": "Draws attention to a turning point or a profound realization in a story."
+    },
+    {
+     "text": "to be fair",
+     "kind": "chunk",
+     "form": "to be fair",
+     "meaning": "introduces a mitigating factor or a balanced perspective",
+     "example": "He was late, but to be fair, the traffic was absolutely terrible.",
+     "plain": "He was late, but it's also true that the traffic was absolutely terrible.",
+     "note": "Used to acknowledge another side of an argument or situation. Diplomatic."
+    },
+    {
+     "text": "I couldn't believe my eyes",
+     "kind": "chunk",
+     "form": "I couldn't believe my eyes",
+     "meaning": "expresses extreme surprise or astonishment at something seen",
+     "example": "I opened the door, and I couldn't believe my eyes; the whole room was decorated!",
+     "plain": "I opened the door, and I was incredibly surprised; the whole room was decorated!",
+     "note": "A common, emphatic way to convey shock or wonder at a visual experience."
+    },
+    {
+     "text": "the moral of the story",
+     "kind": "chunk",
+     "form": "the moral of the story",
+     "meaning": "states the lesson or main takeaway from an experience",
+     "example": "I learned a lot from that mistake; the moral of the story is to always double-check.",
+     "plain": "I learned a lot from that mistake; the lesson is to always double-check.",
+     "note": "Used to explicitly state the wisdom gained from an anecdote. Slightly formal."
+    },
+    {
+     "text": "it goes without saying",
+     "kind": "chunk",
+     "form": "it goes without saying",
+     "meaning": "states something that is obvious or generally understood",
+     "example": "It goes without saying that we need to improve our communication.",
+     "plain": "It's obvious that we need to improve our communication.",
+     "note": "Used to introduce a point that is so clear it doesn't need to be said, but is."
+    },
+    {
+     "text": "I'm not going to lie",
+     "kind": "chunk",
+     "form": "I'm not going to lie",
+     "meaning": "introduces a frank or honest admission, often about a negative feeling",
+     "example": "I'm not going to lie, I was pretty nervous before the presentation.",
+     "plain": "Honestly, I was pretty nervous before the presentation.",
+     "note": "A common, informal way to preface an honest, sometimes vulnerable, statement."
+    },
+    {
+     "text": "what happened was",
+     "kind": "frame",
+     "form": "what happened was",
+     "meaning": "introduces the core event or explanation of a situation",
+     "example": "I know it looks bad, but what happened was, the file corrupted unexpectedly.",
+     "plain": "I know it looks bad, but the file corrupted unexpectedly.",
+     "note": "A direct way to explain a situation, often used when clarifying or defending."
+    },
+    {
+     "text": "to put it mildly",
+     "kind": "chunk",
+     "form": "to put it mildly",
+     "meaning": "indicates that the speaker is using an understatement for emphasis",
+     "example": "The meeting was tense, to put it mildly; there were some very strong disagreements.",
+     "plain": "The meeting was extremely tense; there were some very strong disagreements.",
+     "note": "A sophisticated way to use understatement, implying the reality was worse."
+    },
+    {
+     "text": "I distinctly remember",
+     "kind": "frame",
+     "form": "I distinctly remember",
+     "meaning": "emphasizes the clarity and certainty of a memory being shared",
+     "example": "I distinctly remember him saying he'd handle the arrangements.",
+     "plain": "I clearly remember him saying he'd handle the arrangements.",
+     "note": "Similar to 'I remember distinctly', used for emphasis on a clear memory."
+    },
+    {
+     "text": "the funny thing is",
+     "kind": "chunk",
+     "form": "the funny thing is",
+     "meaning": "introduces an ironic or unexpected aspect of a situation",
+     "example": "I spent hours looking for my keys, and the funny thing is, they were in my hand.",
+     "plain": "I spent hours looking for my keys, and ironically, they were in my hand.",
+     "note": "Highlights an amusing or surprising twist in a story. Very conversational."
+    },
+    {
+     "text": "it dawned on me that",
+     "kind": "frame",
+     "form": "it dawned on me that",
+     "meaning": "describes a sudden realization or understanding",
+     "example": "After reviewing the data, it dawned on me that we had overlooked a key factor.",
+     "plain": "After reviewing the data, I suddenly realized that we had overlooked a key factor.",
+     "note": "Conveys a moment of insight or epiphany. Common in reflective storytelling."
+    },
+    {
+     "text": "I'm not sure if you know",
+     "kind": "frame",
+     "form": "I'm not sure if you know",
+     "meaning": "introduces information that might be new to the listener",
+     "example": "I'm not sure if you know, but Sarah actually worked on that project too.",
+     "plain": "You might not know this, but Sarah actually worked on that project too.",
+     "note": "A polite way to share new information or context without assuming knowledge."
+    },
+    {
+     "text": "to be honest with you",
+     "kind": "chunk",
+     "form": "to be honest with you",
+     "meaning": "introduces a frank or candid statement, often a confession or opinion",
+     "example": "To be honest with you, I found the presentation a bit confusing.",
+     "plain": "Honestly, I found the presentation a bit confusing.",
+     "note": "Similar to 'to be perfectly honest', used for directness. Slightly more personal."
+    },
+    {
+     "text": "it was touch and go",
+     "kind": "chunk",
+     "form": "it was touch and go",
+     "meaning": "describes a situation where the outcome was uncertain and potentially negative",
+     "example": "For a while, it was touch and go whether we'd meet the deadline.",
+     "plain": "For a while, it was uncertain whether we'd meet the deadline.",
+     "note": "Conveys a sense of suspense and risk. Often used for close calls."
+    },
+    {
+     "text": "the point is",
+     "kind": "chunk",
+     "form": "the point is",
+     "meaning": "emphasizes the most important idea or message being conveyed",
+     "example": "We can discuss the details later, but the point is, we need to act now.",
+     "plain": "We can discuss the details later, but the most important thing is, we need to act now.",
+     "note": "Used to refocus the conversation on the main idea. Direct and clear."
+    },
+    {
+     "text": "I'll keep it brief",
+     "kind": "chunk",
+     "form": "I'll keep it brief",
+     "meaning": "signals that the speaker intends to summarize or not elaborate",
+     "example": "I know you're busy, so I'll keep it brief: the client approved the proposal.",
+     "plain": "I know you're busy, so I'll be quick: the client approved the proposal.",
+     "note": "A polite way to indicate conciseness, often used when time is short."
+    },
+    {
+     "text": "it's a long story",
+     "kind": "chunk",
+     "form": "it's a long story",
+     "meaning": "indicates that a full explanation would be too lengthy or complicated",
+     "example": "Why did I leave early? Oh, it's a long story, I'll tell you later.",
+     "plain": "Why did I leave early? It's a complicated story, I'll tell you later.",
+     "note": "Used to defer a detailed explanation, often implying complexity or drama."
+    },
+    {
+     "text": "to be exact",
+     "kind": "chunk",
+     "form": "to be exact",
+     "meaning": "adds precision or specific detail to a previous statement",
+     "example": "I arrived around 9:00 AM, to be exact, it was 9:03 AM.",
+     "plain": "I arrived around 9:00 AM; precisely, it was 9:03 AM.",
+     "note": "Used to correct or refine a previous statement with more accurate information."
+    },
+    {
+     "text": "I was about to say",
+     "kind": "frame",
+     "form": "I was about to say",
+     "meaning": "indicates that the speaker was on the verge of making a point",
+     "example": "You just mentioned the budget, which is what I was about to say.",
+     "plain": "You just mentioned the budget, which is what I was going to say.",
+     "note": "A conversational phrase to show agreement or that you had the same thought."
+    },
+    {
+     "text": "the way I see it",
+     "kind": "frame",
+     "form": "the way I see it",
+     "meaning": "introduces the speaker's personal opinion or perspective",
+     "example": "The way I see it, we have two viable options for moving forward.",
+     "plain": "In my opinion, we have two viable options for moving forward.",
+     "note": "A common, slightly informal way to present one's viewpoint. Diplomatic."
+    },
+    {
+     "text": "it's not so much that",
+     "kind": "frame",
+     "form": "it's not so much that",
+     "meaning": "clarifies a situation by stating what is not the primary reason",
+     "example": "It's not so much that I disagree, but rather I have some reservations.",
+     "plain": "I don't entirely disagree, but rather I have some reservations.",
+     "note": "Used to refine an explanation, distinguishing between perceived and actual reasons."
+    },
+    {
+     "text": "I'm getting at is",
+     "kind": "frame",
+     "form": "I'm getting at is",
+     "meaning": "clarifies the main point or intention of the speaker's statement",
+     "example": "What I'm getting at is, we need to consider the long-term implications.",
+     "plain": "My main point is, we need to consider the long-term implications.",
+     "note": "Used to make one's underlying message clear, especially after a lengthy explanation."
+    },
+    {
+     "text": "it's worth noting that",
+     "kind": "frame",
+     "form": "it's worth noting that",
+     "meaning": "introduces an important piece of information that should be remembered",
+     "example": "It's worth noting that the initial budget was much lower.",
+     "plain": "It's important to note that the initial budget was much lower.",
+     "note": "A slightly formal way to highlight a significant detail or context."
+    },
+    {
+     "text": "I must admit",
+     "kind": "chunk",
+     "form": "I must admit",
+     "meaning": "introduces a confession or a reluctant acknowledgment",
+     "example": "I must admit, I was quite surprised by their decision.",
+     "plain": "I confess, I was quite surprised by their decision.",
+     "note": "A polite and slightly formal way to express a personal feeling or admission."
+    },
+    {
+     "text": "to be perfectly clear",
+     "kind": "chunk",
+     "form": "to be perfectly clear",
+     "meaning": "emphasizes the speaker's intention to be unambiguous and precise",
+     "example": "To be perfectly clear, we cannot proceed without their approval.",
+     "plain": "Let me be absolutely clear, we cannot proceed without their approval.",
+     "note": "Used to ensure there is no misunderstanding. Can sound firm."
+    },
+    {
+     "text": "it's fair to say that",
+     "kind": "frame",
+     "form": "it's fair to say that",
+     "meaning": "introduces a reasonable or generally accepted conclusion",
+     "example": "Given the circumstances, it's fair to say that we did our best.",
+     "plain": "Given the circumstances, it's reasonable to conclude that we did our best.",
+     "note": "A diplomatic way to state an opinion or conclusion that is likely to be agreed upon."
+    },
+    {
+     "text": "I'm not entirely sure",
+     "kind": "frame",
+     "form": "I'm not entirely sure",
+     "meaning": "expresses a degree of uncertainty or hesitation",
+     "example": "I'm not entirely sure how we're going to resolve this issue.",
+     "plain": "I'm quite uncertain how we're going to resolve this issue.",
+     "note": "A polite hedge, indicating a lack of complete certainty. Common."
+    },
+    {
+     "text": "I'm afraid to say",
+     "kind": "frame",
+     "form": "I'm afraid to say",
+     "meaning": "introduces an unwelcome or negative piece of information politely",
+     "example": "I'm afraid to say that the budget has been cut significantly.",
+     "plain": "Unfortunately, the budget has been cut significantly.",
+     "note": "A polite way to deliver bad news or an unpleasant truth. Formal."
+    },
+    {
+     "text": "it's a matter of time",
+     "kind": "collocation",
+     "form": "it's a matter of time",
+     "meaning": "indicates that something is inevitable and will happen eventually",
+     "example": "With the current market trends, it's a matter of time before prices increase.",
+     "plain": "With the current market trends, prices will inevitably increase.",
+     "note": "Suggests inevitability, often with a sense of resignation or prediction."
+    },
+    {
+     "text": "to put it another way",
+     "kind": "chunk",
+     "form": "to put it another way",
+     "meaning": "rephrases a statement for clarity or emphasis",
+     "example": "The project is behind schedule; to put it another way, we're not meeting our targets.",
+     "plain": "The project is behind schedule; in other words, we're not meeting our targets.",
+     "note": "Used to clarify or simplify a previous statement. Helpful for understanding."
+    },
+    {
+     "text": "I'm inclined to think",
+     "kind": "frame",
+     "form": "I'm inclined to think",
+     "meaning": "expresses a tentative opinion or a tendency to believe something",
+     "example": "Based on the evidence, I'm inclined to think the report is accurate.",
+     "plain": "Based on the evidence, I tend to think the report is accurate.",
+     "note": "A polite and slightly formal way to express a considered opinion."
+    },
+    {
+     "text": "it's safe to say that",
+     "kind": "frame",
+     "form": "it's safe to say that",
+     "meaning": "introduces a conclusion that is generally accepted or not controversial",
+     "example": "After all that effort, it's safe to say that we've learned a great deal.",
+     "plain": "After all that effort, we can confidently say that we've learned a great deal.",
+     "note": "Used to state an obvious or widely agreed-upon conclusion. Diplomatic."
+    },
+    {
+     "text": "I'm not going to pretend",
+     "kind": "frame",
+     "form": "I'm not going to pretend",
+     "meaning": "introduces an honest admission, often about a difficult truth",
+     "example": "I'm not going to pretend that this was an easy decision for me.",
+     "plain": "I won't pretend that this was an easy decision for me.",
+     "note": "Emphasizes sincerity and honesty, often when discussing challenges."
+    },
+    {
+     "text": "it's a fine line between",
+     "kind": "collocation",
+     "form": "it's a fine line between",
+     "meaning": "describes a subtle distinction between two similar things",
+     "example": "It's a fine line between being assertive and being aggressive in negotiations.",
+     "plain": "There's a subtle distinction between being assertive and being aggressive in negotiations.",
+     "note": "Highlights a delicate balance or a nuanced difference. Sophisticated."
+    },
+    {
+     "text": "I'm happy to report that",
+     "kind": "frame",
+     "form": "I'm happy to report that",
+     "meaning": "introduces positive news or a favorable outcome",
+     "example": "I'm happy to report that the project has been completed on time.",
+     "plain": "I'm pleased to announce that the project has been completed on time.",
+     "note": "A formal and positive way to deliver good news. Often used in professional settings."
+    },
+    {
+     "text": "it's a common misconception that",
+     "kind": "frame",
+     "form": "it's a common misconception that",
+     "meaning": "introduces a widely held but incorrect belief",
+     "example": "It's a common misconception that all successful people work 80-hour weeks.",
+     "plain": "Many people wrongly believe that all successful people work 80-hour weeks.",
+     "note": "Used to correct a popular but inaccurate idea. Informative and clarifying."
+    },
+    {
+     "text": "I'm just saying that",
+     "kind": "frame",
+     "form": "I'm just saying that",
+     "meaning": "introduces a suggestion or a mild opinion without being overly assertive",
+     "example": "I'm just saying that we might want to consider other options.",
+     "plain": "I'm merely suggesting that we might want to consider other options.",
+     "note": "A conversational hedge to soften a suggestion or criticism. Informal."
+    },
+    {
+     "text": "it's a given that",
+     "kind": "frame",
+     "form": "it's a given that",
+     "meaning": "states something that is assumed to be true or accepted without question",
+     "example": "It's a given that everyone will contribute to the team effort.",
+     "plain": "It's assumed that everyone will contribute to the team effort.",
+     "note": "Indicates a fundamental assumption or expectation. Slightly formal."
+    },
+    {
+     "text": "I'm not suggesting that",
+     "kind": "frame",
+     "form": "I'm not suggesting that",
+     "meaning": "clarifies what the speaker is not implying, often to avoid misunderstanding",
+     "example": "I'm not suggesting that you're wrong, but rather that there's another perspective.",
+     "plain": "I'm not implying that you're wrong, but rather that there's another perspective.",
+     "note": "A diplomatic way to offer an alternative view without directly contradicting."
+    },
+    {
+     "text": "I'm not entirely convinced",
+     "kind": "frame",
+     "form": "I'm not entirely convinced",
+     "meaning": "expresses a degree of doubt or skepticism about something",
+     "example": "I'm not entirely convinced that this strategy will yield the best results.",
+     "plain": "I'm somewhat doubtful that this strategy will yield the best results.",
+     "note": "A polite and understated way to express disagreement or reservation."
+    },
+    {
+     "text": "it's a matter of principle",
+     "kind": "collocation",
+     "form": "it's a matter of principle",
+     "meaning": "describes a decision or action based on a fundamental belief or value",
+     "example": "I refused to compromise on quality; for me, it's a matter of principle.",
+     "plain": "I refused to compromise on quality; for me, it's based on a fundamental belief.",
+     "note": "Indicates a strong, non-negotiable stance based on personal values."
+    },
+    {
+     "text": "I'm not sure how to put it",
+     "kind": "frame",
+     "form": "I'm not sure how to put it",
+     "meaning": "expresses hesitation when trying to articulate a difficult or sensitive idea",
+     "example": "I'm not sure how to put it, but I think we need to reconsider our approach.",
+     "plain": "I'm struggling to express this, but I think we need to reconsider our approach.",
+     "note": "A polite way to introduce a potentially awkward or critical point."
+    },
+    {
+     "text": "I'm just trying to understand",
+     "kind": "frame",
+     "form": "I'm just trying to understand",
+     "meaning": "expresses a desire for clarification, often in a complex or confusing situation",
+     "example": "I'm just trying to understand why the decision was made so abruptly.",
+     "plain": "I'm simply trying to comprehend why the decision was made so abruptly.",
+     "note": "A polite way to ask for more information or context without being accusatory."
+    },
+    {
+     "text": "it's a double-edged sword",
+     "kind": "collocation",
+     "form": "it's a double-edged sword",
+     "meaning": "describes something that has both positive and negative consequences",
+     "example": "Working from home offers flexibility, but it's a double-edged sword for team cohesion.",
+     "plain": "Working from home offers flexibility, but it also has negative consequences for team cohesion.",
+     "note": "A common idiom to describe a situation with inherent trade-offs."
+    },
+    {
+     "text": "I'm not trying to be",
+     "kind": "frame",
+     "form": "I'm not trying to be",
+     "meaning": "clarifies the speaker's intention, often to soften a potentially critical remark",
+     "example": "I'm not trying to be difficult, but I do have some serious concerns.",
+     "plain": "I don't intend to be difficult, but I do have some serious concerns.",
+     "note": "A polite way to preface a critical or challenging statement, showing good intent."
+    },
+    {
+     "text": "I'm not going to sugarcoat it",
+     "kind": "frame",
+     "form": "I'm not going to sugarcoat it",
+     "meaning": "indicates that the speaker will be direct and honest, even if the truth is unpleasant",
+     "example": "I'm not going to sugarcoat it; the project is facing significant delays.",
+     "plain": "I'm going to be direct; the project is facing significant delays.",
+     "note": "A direct and informal way to deliver bad news without softening the impact."
+    },
+    {
+     "text": "I'm just trying to make sure",
+     "kind": "frame",
+     "form": "I'm just trying to make sure",
+     "meaning": "expresses a desire to confirm details or prevent errors",
+     "example": "I'm just trying to make sure we're all on the same page regarding the timeline.",
+     "plain": "I'm simply trying to confirm we're all in agreement regarding the timeline.",
+     "note": "A polite way to seek confirmation or alignment, often in a professional context."
+    },
+    {
+     "text": "I'm not sure I follow",
+     "kind": "frame",
+     "form": "I'm not sure I follow",
+     "meaning": "expresses that the speaker does not understand what is being said",
+     "example": "I'm not sure I follow your reasoning for that particular approach.",
+     "plain": "I don't quite understand your reasoning for that particular approach.",
+     "note": "A polite way to ask for clarification or further explanation. Diplomatic."
+    },
+    {
+     "text": "I'm not going to lie to you",
+     "kind": "frame",
+     "form": "I'm not going to lie to you",
+     "meaning": "introduces a frank or honest admission, often about a negative feeling",
+     "example": "I'm not going to lie to you, the feedback was quite harsh.",
+     "plain": "Honestly, the feedback was quite harsh.",
+     "note": "Similar to 'I'm not going to lie', adding 'to you' makes it more direct and personal."
+    },
+    {
+     "text": "it's a vicious cycle",
+     "kind": "collocation",
+     "form": "it's a vicious cycle",
+     "meaning": "describes a recurring sequence of events where one problem leads to another",
+     "example": "Lack of sleep leads to poor concentration, which then causes more stress; it's a vicious cycle.",
+     "plain": "Lack of sleep leads to poor concentration, which then causes more stress; it's a recurring problem.",
+     "note": "A common idiom to describe a self-perpetuating negative pattern."
+    },
+    {
+     "text": "I'm just trying to be realistic",
+     "kind": "frame",
+     "form": "I'm just trying to be realistic",
+     "meaning": "introduces a pragmatic or cautious perspective, often in contrast to optimism",
+     "example": "I'm just trying to be realistic about the challenges we face.",
+     "plain": "I'm simply trying to be pragmatic about the challenges we face.",
+     "note": "Used to temper expectations or introduce a dose of pragmatism. Diplomatic."
+    },
+    {
+     "text": "I'm not trying to be rude",
+     "kind": "frame",
+     "form": "I'm not trying to be rude",
+     "meaning": "prefaces a potentially impolite or critical remark to soften its impact",
+     "example": "I'm not trying to be rude, but I think you've misunderstood the instructions.",
+     "plain": "I don't mean to be impolite, but I think you've misunderstood the instructions.",
+     "note": "A polite hedge used before delivering criticism or correction. Very common."
+    },
+    {
+     "text": "it's a grey area",
+     "kind": "collocation",
+     "form": "it's a grey area",
+     "meaning": "describes a situation that is unclear, undefined, or open to interpretation",
+     "example": "The company policy doesn't explicitly cover this, so it's a grey area.",
+     "plain": "The company policy doesn't explicitly cover this, so it's an unclear situation.",
+     "note": "A common idiom for situations lacking clear rules or definitions."
+    },
+    {
+     "text": "I'm just trying to help",
+     "kind": "frame",
+     "form": "I'm just trying to help",
+     "meaning": "expresses a benevolent intention, often when offering unsolicited advice",
+     "example": "I'm just trying to help, but perhaps you should review the data again.",
+     "plain": "I'm simply trying to assist, but perhaps you should review the data again.",
+     "note": "A polite way to offer assistance or advice, sometimes used defensively."
+    },
+    {
+     "text": "I'm just trying to be clear",
+     "kind": "frame",
+     "form": "I'm just trying to be clear",
+     "meaning": "emphasizes the speaker's intention to communicate unambiguously",
+     "example": "I'm just trying to be clear about the expectations for this project.",
+     "plain": "I'm simply trying to communicate clearly about the expectations for this project.",
+     "note": "Used to ensure understanding, often when explaining complex information."
+    },
+    {
+     "text": "I'm just trying to be fair",
+     "kind": "frame",
+     "form": "I'm just trying to be fair",
+     "meaning": "expresses an intention to be impartial and just in a situation",
+     "example": "I'm just trying to be fair to everyone involved in the decision-making process.",
+     "plain": "I'm simply trying to be impartial to everyone involved in the decision-making process.",
+     "note": "Used to justify a balanced approach or decision. Diplomatic."
+    },
+    {
+     "text": "I'm just trying to get a sense of",
+     "kind": "frame",
+     "form": "I'm just trying to get a sense of",
+     "meaning": "expresses a desire to understand or gauge a situation or feeling",
+     "example": "I'm just trying to get a sense of how everyone feels about the proposed changes.",
+     "plain": "I'm simply trying to understand how everyone feels about the proposed changes.",
+     "note": "A polite way to inquire about opinions or the general mood of a group."
+    },
+    {
+     "text": "it's a balancing act between",
+     "kind": "frame",
+     "form": "it's a balancing act between",
+     "meaning": "describes a situation requiring careful management of competing demands",
+     "example": "It's a balancing act between innovation and maintaining stability.",
+     "plain": "It requires careful management to balance innovation and maintaining stability.",
+     "note": "Expands on 'a balancing act' to specify the elements being balanced."
+    },
+    {
+     "text": "I'm just trying to be helpful",
+     "kind": "frame",
+     "form": "I'm just trying to be helpful",
+     "meaning": "expresses a benevolent intention, often when offering unsolicited advice",
+     "example": "I'm just trying to be helpful, so please don't take my comments personally.",
+     "plain": "I'm simply trying to assist, so please don't take my comments personally.",
+     "note": "Similar to 'I'm just trying to help', often used to soften criticism."
+    },
+    {
+     "text": "I'm just trying to be objective",
+     "kind": "frame",
+     "form": "I'm just trying to be objective",
+     "meaning": "expresses an intention to be impartial and base judgments on facts",
+     "example": "I'm just trying to be objective when evaluating the different proposals.",
+     "plain": "I'm simply trying to be impartial when evaluating the different proposals.",
+     "note": "Used to emphasize fairness and a fact-based approach. Professional."
+    },
+    {
+     "text": "I'm just trying to be realistic about",
+     "kind": "frame",
+     "form": "I'm just trying to be realistic about",
+     "meaning": "introduces a pragmatic or cautious perspective, often in contrast to optimism",
+     "example": "I'm just trying to be realistic about the project's timeline.",
+     "plain": "I'm simply trying to be pragmatic about the project's timeline.",
+     "note": "Specifies the subject of the realistic assessment."
+    },
+    {
+     "text": "I'm just trying to get a handle on",
+     "kind": "frame",
+     "form": "I'm just trying to get a handle on",
+     "meaning": "expresses a desire to understand or manage a complex situation",
+     "example": "I'm just trying to get a handle on all the new responsibilities.",
+     "plain": "I'm simply trying to understand and manage all the new responsibilities.",
+     "note": "A common, informal way to express the effort to comprehend or control something."
+    },
+    {
+     "text": "I'm just trying to be constructive",
+     "kind": "frame",
+     "form": "I'm just trying to be constructive",
+     "meaning": "expresses an intention to offer helpful criticism or suggestions",
+     "example": "I'm just trying to be constructive with my feedback, not critical.",
+     "plain": "I'm simply trying to offer helpful feedback, not critical comments.",
+     "note": "Used to frame criticism positively, indicating a desire for improvement."
+    },
+    {
+     "text": "I'm just trying to be clear about",
+     "kind": "frame",
+     "form": "I'm just trying to be clear about",
+     "meaning": "emphasizes the speaker's intention to communicate unambiguously regarding a specific topic",
+     "example": "I'm just trying to be clear about the expectations for this project.",
+     "plain": "I'm simply trying to communicate clearly about the expectations for this project.",
+     "note": "Specifies the subject of the clarification."
+    },
+    {
+     "text": "I'm just trying to get a clearer picture",
+     "kind": "frame",
+     "form": "I'm just trying to get a clearer picture",
+     "meaning": "expresses a desire for more detailed understanding or information",
+     "example": "I'm just trying to get a clearer picture of the project's overall progress.",
+     "plain": "I'm simply trying to understand the project's overall progress in more detail.",
+     "note": "Used to request more information to gain a better understanding."
+    },
+    {
+     "text": "I'm just trying to be transparent",
+     "kind": "frame",
+     "form": "I'm just trying to be transparent",
+     "meaning": "expresses an intention to be open and honest about information",
+     "example": "I'm just trying to be transparent about the challenges we're facing.",
+     "plain": "I'm simply trying to be open and honest about the challenges we're facing.",
+     "note": "Used to emphasize openness and honesty, especially in professional contexts."
+    },
+    {
+     "text": "I'm just trying to be respectful",
+     "kind": "frame",
+     "form": "I'm just trying to be respectful",
+     "meaning": "expresses an intention to show consideration and politeness",
+     "example": "I'm just trying to be respectful of everyone's time during this meeting.",
+     "plain": "I'm simply trying to show consideration for everyone's time during this meeting.",
+     "note": "Used to preface a statement, emphasizing politeness and consideration."
+    },
+    {
+     "text": "it's a matter of record",
+     "kind": "collocation",
+     "form": "it's a matter of record",
+     "meaning": "describes information that has been officially documented",
+     "example": "The decision was approved by the board, and it's a matter of record.",
+     "plain": "The decision was approved by the board, and it has been officially documented.",
+     "note": "Similar to 'public record' but doesn't necessarily imply public accessibility."
+    },
+    {
+     "text": "I'm just trying to be pragmatic",
+     "kind": "frame",
+     "form": "I'm just trying to be pragmatic",
+     "meaning": "expresses an intention to be practical and realistic in approach",
+     "example": "I'm just trying to be pragmatic about the resources we have available.",
+     "plain": "I'm simply trying to be practical about the resources we have available.",
+     "note": "Used to emphasize a practical, results-oriented approach. Professional."
+    },
+    {
+     "text": "I'm just trying to be brief",
+     "kind": "frame",
+     "form": "I'm just trying to be brief",
+     "meaning": "expresses an intention to be concise and to the point",
+     "example": "I'm just trying to be brief, so I'll summarize the key findings.",
+     "plain": "I'm simply trying to be concise, so I'll summarize the key findings.",
+     "note": "Similar to 'I'll keep it brief', emphasizing the effort to be short."
+    },
+    {
+     "text": "I'm just trying to be clear and concise",
+     "kind": "frame",
+     "form": "I'm just trying to be clear and concise",
+     "meaning": "expresses an intention to communicate both unambiguously and briefly",
+     "example": "I'm just trying to be clear and concise with my instructions.",
+     "plain": "I'm simply trying to communicate my instructions unambiguously and briefly.",
+     "note": "Combines clarity and brevity, often used in professional communication."
+    },
+    {
+     "text": "I'm just trying to be helpful and constructive",
+     "kind": "frame",
+     "form": "I'm just trying to be helpful and constructive",
+     "meaning": "expresses an intention to offer assistance and useful suggestions",
+     "example": "I'm just trying to be helpful and constructive with my feedback on your draft.",
+     "plain": "I'm simply trying to offer assistance and useful suggestions for your draft.",
+     "note": "Combines the desire to help with the aim of providing useful criticism."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "To set the scene",
+     "kind": "chunk",
+     "form": "To set the scene",
+     "meaning": "Introduces background information or context for a story.",
+     "example": "To set the scene, it was a sweltering August afternoon in Rome, and the air conditioning had just broken.",
+     "plain": "To give you the background, it was a very hot August afternoon in Rome, and the air conditioning had just broken.",
+     "note": "Common opening for an anecdote. Helps listeners visualize the initial situation."
+    },
+    {
+     "text": "If I recall correctly",
+     "kind": "chunk",
+     "form": "If I recall correctly",
+     "meaning": "Indicates that the speaker believes their memory is accurate, but allows for slight uncertainty.",
+     "example": "If I recall correctly, she mentioned the new policy during our last team meeting.",
+     "plain": "If my memory is right, she mentioned the new policy during our last team meeting.",
+     "note": "A polite hedge, often used when recounting details."
+    },
+    {
+     "text": "As luck would have it",
+     "kind": "chunk",
+     "form": "As luck would have it",
+     "meaning": "Introduces a fortunate or unfortunate coincidence that affects the story's outcome.",
+     "example": "As luck would have it, the train was delayed, giving me just enough time to catch my connection.",
+     "plain": "Fortunately, the train was delayed, giving me just enough time to catch my connection.",
+     "note": "Used to introduce a serendipitous or ironic turn of events."
+    },
+    {
+     "text": "Believe it or not",
+     "kind": "chunk",
+     "form": "Believe it or not",
+     "meaning": "Expresses that what is about to be said is surprising or hard to believe.",
+     "example": "Believe it or not, I actually ran into our old professor at the airport last week.",
+     "plain": "Surprisingly, I actually ran into our old professor at the airport last week.",
+     "note": "Used to heighten the impact of a surprising detail in a story."
+    },
+    {
+     "text": "For context",
+     "kind": "chunk",
+     "form": "For context",
+     "meaning": "Provides necessary background information to help the listener understand the situation.",
+     "example": "For context, this was before they implemented the new security protocols at the office.",
+     "plain": "To give you background, this was before they implemented the new security protocols at the office.",
+     "note": "A concise way to offer relevant background information."
+    },
+    {
+     "text": "Just to give you an idea",
+     "kind": "frame",
+     "form": "Just to give you an idea",
+     "meaning": "Prepares the listener for a descriptive detail that helps them visualize or understand the scale.",
+     "example": "Just to give you an idea, the queue for the concert stretched for over two blocks.",
+     "plain": "To help you understand, the queue for the concert stretched for over two blocks.",
+     "note": "Used to provide a vivid detail or example."
+    },
+    {
+     "text": "The thing about it was",
+     "kind": "frame",
+     "form": "The thing about it was",
+     "meaning": "Highlights a crucial or defining aspect of a situation or event.",
+     "example": "The thing about it was, nobody had expected such a sudden change in management.",
+     "plain": "The important point was, nobody had expected such a sudden change in management.",
+     "note": "Draws attention to a key element of the story."
+    },
+    {
+     "text": "It was one of those moments",
+     "kind": "chunk",
+     "form": "It was one of those moments",
+     "meaning": "Describes a memorable or significant point in time, often with a particular feeling or realization.",
+     "example": "It was one of those moments where you just knew things would never be the same again.",
+     "plain": "It was a significant moment where you just knew things would never be the same again.",
+     "note": "Evokes a sense of shared experience or understanding."
+    },
+    {
+     "text": "To give you some background",
+     "kind": "chunk",
+     "form": "To give you some background",
+     "meaning": "Offers introductory information to provide context for the main narrative.",
+     "example": "To give you some background, I'd been working on that project for months before the issue arose.",
+     "plain": "To provide context, I'd been working on that project for months before the issue arose.",
+     "note": "Slightly more formal than \"for context,\" used to set the scene."
+    },
+    {
+     "text": "I distinctly remember thinking",
+     "kind": "frame",
+     "form": "I distinctly remember thinking",
+     "meaning": "Recalls a specific thought or internal reaction at a particular moment in the past.",
+     "example": "I distinctly remember thinking, 'This can't be happening right now,' as the system crashed.",
+     "plain": "I clearly recall thinking, 'This can't be happening right now,' as the system crashed.",
+     "note": "Adds a personal, immediate dimension to the recounted event."
+    },
+    {
+     "text": "And then, out of nowhere",
+     "kind": "chunk",
+     "form": "And then, out of nowhere",
+     "meaning": "Introduces a sudden, unexpected event or appearance.",
+     "example": "And then, out of nowhere, a huge gust of wind nearly knocked me off my feet.",
+     "plain": "Suddenly, a huge gust of wind nearly knocked me off my feet.",
+     "note": "Builds suspense and emphasizes the unexpected nature of an event."
+    },
+    {
+     "text": "Before I knew it",
+     "kind": "chunk",
+     "form": "Before I knew it",
+     "meaning": "Describes something happening very quickly or unexpectedly, often implying a loss of control.",
+     "example": "Before I knew it, the entire presentation had gone completely off track.",
+     "plain": "Very quickly, the entire presentation had gone completely off track.",
+     "note": "Conveys a sense of rapid, unforeseen progression of events."
+    },
+    {
+     "text": "To my surprise",
+     "kind": "chunk",
+     "form": "To my surprise",
+     "meaning": "Expresses the speaker's unexpected reaction to an event or situation.",
+     "example": "To my surprise, the usually quiet colleague spoke up with a brilliant, innovative idea.",
+     "plain": "Unexpectedly, the usually quiet colleague spoke up with a brilliant, innovative idea.",
+     "note": "A common way to introduce an unexpected element in a story."
+    },
+    {
+     "text": "It was quite a scene",
+     "kind": "chunk",
+     "form": "It was quite a scene",
+     "meaning": "Describes an event that was remarkable, dramatic, or memorable.",
+     "example": "It was quite a scene when the CEO walked into the meeting wearing a Hawaiian shirt.",
+     "plain": "It was a memorable event when the CEO walked into the meeting wearing a Hawaiian shirt.",
+     "note": "Used to describe something visually striking or noteworthy."
+    },
+    {
+     "text": "The tension was palpable",
+     "kind": "collocation",
+     "form": "The tension was palpable",
+     "meaning": "Describes an atmosphere where the feeling of tension is so strong it can almost be felt.",
+     "example": "The tension was palpable as we waited for the final decision on the merger to be announced.",
+     "plain": "You could feel the tension as we waited for the final decision on the merger to be announced.",
+     "note": "A vivid way to describe a very tense situation."
+    },
+    {
+     "text": "I had a feeling that",
+     "kind": "frame",
+     "form": "I had a feeling that",
+     "meaning": "Expresses a premonition or intuition about a situation.",
+     "example": "I had a feeling that something wasn't quite right with the new project proposal.",
+     "plain": "I suspected that something wasn't quite right with the new project proposal.",
+     "note": "Often used to build suspense or explain a subsequent action."
+    },
+    {
+     "text": "Things took an unexpected turn",
+     "kind": "collocation",
+     "form": "Things took an unexpected turn",
+     "meaning": "Describes a sudden and unforeseen change in the course of events.",
+     "example": "Things took an unexpected turn when the client suddenly changed their requirements mid-project.",
+     "plain": "The situation changed suddenly when the client suddenly changed their requirements mid-project.",
+     "note": "A common way to introduce a plot twist in a narrative."
+    },
+    {
+     "text": "I couldn't help but notice",
+     "kind": "frame",
+     "form": "I couldn't help but notice",
+     "meaning": "Draws attention to an observation that was difficult or impossible to ignore.",
+     "example": "I couldn't help but notice the strange silence that fell over the room after his announcement.",
+     "plain": "I definitely noticed the strange silence that fell over the room after his announcement.",
+     "note": "Used to introduce a significant observation, often implying something unusual."
+    },
+    {
+     "text": "It was a moment of truth",
+     "kind": "chunk",
+     "form": "It was a moment of truth",
+     "meaning": "Describes a decisive or revealing point in a situation where a crucial test or decision occurs.",
+     "example": "It was a moment of truth when we had to present our findings to the board.",
+     "plain": "It was a critical moment when we had to present our findings to the board.",
+     "note": "Highlights a pivotal, often challenging, point in a story."
+    },
+    {
+     "text": "He went on to say",
+     "kind": "frame",
+     "form": "He went on to say",
+     "meaning": "Continues reporting someone's speech, indicating they said more after an initial statement.",
+     "example": "He went on to say that the project would require significant additional resources and time.",
+     "plain": "He continued by saying that the project would require significant additional resources and time.",
+     "note": "Useful for reporting extended speech or adding further details."
+    },
+    {
+     "text": "She made it clear that",
+     "kind": "frame",
+     "form": "She made it clear that",
+     "meaning": "Emphasizes that someone stated something directly and unambiguously.",
+     "example": "She made it clear that punctuality was non-negotiable for the new team members.",
+     "plain": "She stated directly that punctuality was non-negotiable for the new team members.",
+     "note": "Highlights the firmness and clarity of a statement."
+    },
+    {
+     "text": "I gathered that",
+     "kind": "frame",
+     "form": "I gathered that",
+     "meaning": "Conveys an inference or understanding derived from what was said or observed, rather than a direct statement.",
+     "example": "I gathered that they were planning to merge the two departments next quarter, though it wasn't official.",
+     "plain": "I understood that they were planning to merge the two departments next quarter, though it wasn't official.",
+     "note": "Implies an understanding based on hints or indirect information."
+    },
+    {
+     "text": "The general consensus was",
+     "kind": "frame",
+     "form": "The general consensus was",
+     "meaning": "Reports the widely held opinion or agreement among a group of people.",
+     "example": "The general consensus was that the new policy would be beneficial for everyone involved.",
+     "plain": "Most people agreed that the new policy would be beneficial for everyone involved.",
+     "note": "Useful for summarizing group opinion or a collective decision."
+    },
+    {
+     "text": "He stressed the importance of",
+     "kind": "frame",
+     "form": "He stressed the importance of",
+     "meaning": "Reports that someone emphasized the significance or necessity of something.",
+     "example": "He stressed the importance of clear communication throughout the entire project process.",
+     "plain": "He emphasized that clear communication was important throughout the entire project process.",
+     "note": "Highlights a point that was given particular emphasis."
+    },
+    {
+     "text": "She pointed out that",
+     "kind": "frame",
+     "form": "She pointed out that",
+     "meaning": "Introduces a specific observation, fact, or correction made by someone.",
+     "example": "She pointed out that we had overlooked a crucial detail in the budget proposal.",
+     "plain": "She noted that we had overlooked a crucial detail in the budget proposal.",
+     "note": "Used to introduce a specific piece of information or a correction."
+    },
+    {
+     "text": "I was told that",
+     "kind": "frame",
+     "form": "I was told that",
+     "meaning": "Reports information received from another person or source.",
+     "example": "I was told that the new software update would be rolled out by the end of the week.",
+     "plain": "Someone informed me that the new software update would be rolled out by the end of the week.",
+     "note": "A neutral way to report information without specifying the source."
+    },
+    {
+     "text": "They suggested that",
+     "kind": "frame",
+     "form": "They suggested that",
+     "meaning": "Reports a recommendation or idea put forward by others.",
+     "example": "They suggested that we consider alternative solutions before making a final decision.",
+     "plain": "They recommended that we consider alternative solutions before making a final decision.",
+     "note": "Used to convey advice or a proposal from others."
+    },
+    {
+     "text": "It was implied that",
+     "kind": "frame",
+     "form": "It was implied that",
+     "meaning": "Reports an indirect suggestion or hint, rather than a direct statement.",
+     "example": "It was implied that if we didn't meet the deadline, there would be consequences.",
+     "plain": "It was hinted that if we didn't meet the deadline, there would be consequences.",
+     "note": "Useful for conveying subtle communication or unspoken threats."
+    },
+    {
+     "text": "He made a point of saying",
+     "kind": "frame",
+     "form": "He made a point of saying",
+     "meaning": "Emphasizes that someone deliberately and specifically stated something.",
+     "example": "He made a point of saying how much he appreciated everyone's hard work on the project.",
+     "plain": "He specifically mentioned how much he appreciated everyone's hard work on the project.",
+     "note": "Highlights a statement that was intentionally emphasized."
+    },
+    {
+     "text": "You can imagine my surprise",
+     "kind": "chunk",
+     "form": "You can imagine my surprise",
+     "meaning": "Invites the listener to empathize with the speaker's unexpected reaction.",
+     "example": "You can imagine my surprise when I saw him working at the coffee shop after all these years.",
+     "plain": "You can understand how surprised I was when I saw him working at the coffee shop after all these years.",
+     "note": "A common way to build anticipation for a surprising revelation."
+    },
+    {
+     "text": "It was quite a revelation",
+     "kind": "chunk",
+     "form": "It was quite a revelation",
+     "meaning": "Describes a significant or surprising discovery or realization.",
+     "example": "It was quite a revelation to discover the true reason behind their sudden departure.",
+     "plain": "It was a significant discovery to find the true reason behind their sudden departure.",
+     "note": "Used for impactful, often unexpected, insights."
+    },
+    {
+     "text": "I couldn't help but laugh",
+     "kind": "frame",
+     "form": "I couldn't help but laugh",
+     "meaning": "Describes an uncontrollable or involuntary reaction of amusement.",
+     "example": "I couldn't help but laugh when he accidentally spilled coffee all over his boss's notes.",
+     "plain": "I had to laugh when he accidentally spilled coffee all over his boss's notes.",
+     "note": "Conveys a strong, spontaneous emotional response."
+    },
+    {
+     "text": "That's a good one",
+     "kind": "chunk",
+     "form": "That's a good one",
+     "meaning": "Expresses appreciation for a story, joke, or anecdote, often implying it's funny or memorable.",
+     "example": "That's a good one, I'll have to remember that story for later.",
+     "plain": "That's a funny story, I'll have to remember that for later.",
+     "note": "A casual, appreciative response to someone's story."
+    },
+    {
+     "text": "It just goes to show",
+     "kind": "frame",
+     "form": "It just goes to show",
+     "meaning": "Introduces a conclusion or lesson learned from the preceding events.",
+     "example": "It just goes to show that you should always double-check your assumptions before acting.",
+     "plain": "It demonstrates that you should always double-check your assumptions before acting.",
+     "note": "Used to draw a general moral or conclusion from a specific event."
+    },
+    {
+     "text": "What a coincidence",
+     "kind": "chunk",
+     "form": "What a coincidence",
+     "meaning": "Expresses surprise at a striking similarity or unexpected parallel between events.",
+     "example": "What a coincidence! The exact same thing happened to me last year on holiday.",
+     "plain": "How surprising! The exact same thing happened to me last year on holiday.",
+     "note": "A common exclamation when hearing a similar story."
+    },
+    {
+     "text": "I know exactly what you mean",
+     "kind": "chunk",
+     "form": "I know exactly what you mean",
+     "meaning": "Expresses strong understanding and empathy with another person's experience or feeling.",
+     "example": "I know exactly what you mean; I've had similar issues with that software update.",
+     "plain": "I understand completely; I've had similar issues with that software update.",
+     "note": "A strong expression of relatability and shared experience."
+    },
+    {
+     "text": "That reminds me of",
+     "kind": "frame",
+     "form": "That reminds me of",
+     "meaning": "Introduces a related personal anecdote or memory triggered by the current conversation.",
+     "example": "That reminds me of a time I almost missed my flight due to unexpected traffic.",
+     "plain": "That makes me think of a time I almost missed my flight due to unexpected traffic.",
+     "note": "A natural way to transition into telling one's own story."
+    },
+    {
+     "text": "It was a classic case of",
+     "kind": "frame",
+     "form": "It was a classic case of",
+     "meaning": "Categorizes a situation as a typical or archetypal example of a particular problem or phenomenon.",
+     "example": "It was a classic case of miscommunication leading to a completely avoidable error.",
+     "plain": "It was a typical example of miscommunication leading to a completely avoidable error.",
+     "note": "Used to generalize from a specific instance to a broader pattern."
+    },
+    {
+     "text": "You live and learn",
+     "kind": "chunk",
+     "form": "You live and learn",
+     "meaning": "Expresses acceptance of gaining experience and knowledge, often from mistakes or difficult situations.",
+     "example": "You live and learn, I suppose, especially when dealing with new, complex technology.",
+     "plain": "You gain experience and knowledge, I suppose, especially when dealing with new, complex technology.",
+     "note": "A philosophical, often slightly resigned, acknowledgement of learning."
+    },
+    {
+     "text": "To be perfectly frank",
+     "kind": "chunk",
+     "form": "To be perfectly frank",
+     "meaning": "Introduces an honest and direct opinion, often one that might be unwelcome or critical.",
+     "example": "To be perfectly frank, I found the presentation rather uninspiring and lacking in substance.",
+     "plain": "To be completely honest, I found the presentation rather uninspiring and lacking in substance.",
+     "note": "A polite but firm way to express a candid opinion."
+    },
+    {
+     "text": "In retrospect",
+     "kind": "chunk",
+     "form": "In retrospect",
+     "meaning": "Reflects on past events with the benefit of hindsight or current knowledge.",
+     "example": "In retrospect, I should have asked more questions before agreeing to the terms of the contract.",
+     "plain": "Looking back, I should have asked more questions before agreeing to the terms of the contract.",
+     "note": "Used for thoughtful reflection on past decisions or events."
+    },
+    {
+     "text": "On reflection",
+     "kind": "chunk",
+     "form": "On reflection",
+     "meaning": "Indicates that the speaker has thought about something further and is now offering a revised opinion.",
+     "example": "On reflection, perhaps my initial reaction to the news was a bit too strong.",
+     "plain": "After thinking about it, perhaps my initial reaction to the news was a bit too strong.",
+     "note": "Similar to \"in retrospect\" but often implies a more immediate re-evaluation."
+    },
+    {
+     "text": "Needless to say",
+     "kind": "chunk",
+     "form": "Needless to say",
+     "meaning": "States something that is obvious or already understood, but is mentioned for emphasis.",
+     "example": "Needless to say, the meeting ran much longer than anyone had anticipated.",
+     "plain": "It's obvious, the meeting ran much longer than anyone had anticipated.",
+     "note": "Used to introduce a self-evident fact or consequence."
+    },
+    {
+     "text": "I won't deny that",
+     "kind": "frame",
+     "form": "I won't deny that",
+     "meaning": "Acknowledges a fact or truth, often one that might be slightly negative or difficult to admit.",
+     "example": "I won't deny that the initial results were somewhat disappointing for the team.",
+     "plain": "I admit that the initial results were somewhat disappointing for the team.",
+     "note": "A polite way to concede a point or acknowledge a reality."
+    },
+    {
+     "text": "If you ask me",
+     "kind": "chunk",
+     "form": "If you ask me",
+     "meaning": "Introduces a personal opinion or judgment, often implying it's a strong one.",
+     "example": "If you ask me, they should have consulted more people before launching the new product.",
+     "plain": "In my opinion, they should have consulted more people before launching the new product.",
+     "note": "A common, slightly informal way to offer an opinion."
+    },
+    {
+     "text": "It's a tricky situation",
+     "kind": "chunk",
+     "form": "It's a tricky situation",
+     "meaning": "Describes a complex or delicate problem that requires careful handling.",
+     "example": "It's a tricky situation, balancing budget constraints with quality expectations on this project.",
+     "plain": "It's a difficult situation, balancing budget constraints with quality expectations on this project.",
+     "note": "Used to acknowledge the complexity and difficulty of a problem."
+    },
+    {
+     "text": "To say the least",
+     "kind": "chunk",
+     "form": "To say the least",
+     "meaning": "An understatement used to emphasize that a situation was much more extreme or significant than stated.",
+     "example": "The journey was eventful, to say the least, with several unexpected detours and delays.",
+     "plain": "The journey was very eventful, with several unexpected detours and delays.",
+     "note": "A sophisticated way to use understatement for emphasis."
+    },
+    {
+     "text": "I can see why",
+     "kind": "frame",
+     "form": "I can see why",
+     "meaning": "Expresses understanding of the reasons behind someone's feelings, actions, or a situation.",
+     "example": "I can see why you'd be frustrated after all that effort went unrewarded.",
+     "plain": "I understand why you'd be frustrated after all that effort went unrewarded.",
+     "note": "Shows empathy and comprehension of another's perspective."
+    },
+    {
+     "text": "It's a common occurrence",
+     "kind": "chunk",
+     "form": "It's a common occurrence",
+     "meaning": "Describes something that happens frequently or is a regular event.",
+     "example": "It's a common occurrence for new employees to feel overwhelmed initially by the workload.",
+     "plain": "It happens often for new employees to feel overwhelmed initially by the workload.",
+     "note": "Used to normalize a particular experience or event."
+    },
+    {
+     "text": "That's beside the point",
+     "kind": "chunk",
+     "form": "That's beside the point",
+     "meaning": "States that a particular comment or detail is irrelevant to the main topic being discussed.",
+     "example": "That's beside the point; the main issue of project delays is still unresolved.",
+     "plain": "That's not relevant; the main issue of project delays is still unresolved.",
+     "note": "Used to redirect a conversation back to the core topic."
+    },
+    {
+     "text": "To get back to my story",
+     "kind": "chunk",
+     "form": "To get back to my story",
+     "meaning": "Signals a return to the main narrative after a digression or interruption.",
+     "example": "To get back to my story, the flight was eventually cancelled due to heavy fog.",
+     "plain": "To continue my story, the flight was eventually cancelled due to heavy fog.",
+     "note": "A useful phrase for maintaining narrative flow."
+    },
+    {
+     "text": "I'm not sure how else to put it",
+     "kind": "frame",
+     "form": "I'm not sure how else to put it",
+     "meaning": "Expresses difficulty in finding the right words to describe a situation, often implying it's unusual or bad.",
+     "example": "I'm not sure how else to put it, but the meeting was a complete disaster from start to finish.",
+     "plain": "I don't know another way to say it, but the meeting was a complete disaster from start to finish.",
+     "note": "Used when struggling to articulate something, often negative."
+    },
+    {
+     "text": "It's worth bearing in mind",
+     "kind": "frame",
+     "form": "It's worth bearing in mind",
+     "meaning": "Suggests that a particular fact or consideration is important and should be remembered.",
+     "example": "It's worth bearing in mind that not everyone has the same level of experience with this software.",
+     "plain": "It's important to remember that not everyone has the same level of experience with this software.",
+     "note": "A polite way to introduce a crucial piece of information."
+    },
+    {
+     "text": "I wouldn't go so far as to say",
+     "kind": "frame",
+     "form": "I wouldn't go so far as to say",
+     "meaning": "Expresses a nuanced opinion, indicating that the speaker does not fully agree with an extreme statement.",
+     "example": "I wouldn't go so far as to say it was a failure, but it certainly wasn't a resounding success.",
+     "plain": "I wouldn't claim it was a failure, but it certainly wasn't a resounding success.",
+     "note": "Used for hedging or expressing a moderate viewpoint."
+    },
+    {
+     "text": "It's a testament to",
+     "kind": "frame",
+     "form": "It's a testament to",
+     "meaning": "Highlights something as strong evidence or proof of a particular quality, effort, or fact.",
+     "example": "It's a testament to her dedication that she finished the project on time despite all obstacles.",
+     "plain": "It shows her dedication that she finished the project on time despite all obstacles.",
+     "note": "Used to praise or acknowledge significant achievement."
+    },
+    {
+     "text": "I'm inclined to agree",
+     "kind": "chunk",
+     "form": "I'm inclined to agree",
+     "meaning": "Expresses agreement, often with a slight degree of hesitation or politeness.",
+     "example": "I'm inclined to agree with your assessment of the situation; it seems accurate.",
+     "plain": "I tend to agree with your assessment of the situation; it seems accurate.",
+     "note": "A polite and slightly formal way to express agreement."
+    },
+    {
+     "text": "That's a fair point",
+     "kind": "chunk",
+     "form": "That's a fair point",
+     "meaning": "Acknowledges the validity or reasonableness of another person's argument or observation.",
+     "example": "That's a fair point; I hadn't considered the logistical challenges of implementing that plan.",
+     "plain": "That's a valid point; I hadn't considered the logistical challenges of implementing that plan.",
+     "note": "Used to concede a point gracefully in a discussion."
+    },
+    {
+     "text": "It's easy to forget that",
+     "kind": "frame",
+     "form": "It's easy to forget that",
+     "meaning": "Points out a fact or detail that is often overlooked or not immediately apparent.",
+     "example": "It's easy to forget that they've only been in business for a year, given their rapid growth.",
+     "plain": "People often forget that they've only been in business for a year, given their rapid growth.",
+     "note": "Used to bring an important, often overlooked, detail to attention."
+    },
+    {
+     "text": "I can relate to that",
+     "kind": "chunk",
+     "form": "I can relate to that",
+     "meaning": "Expresses personal connection and understanding of another person's experience or feelings.",
+     "example": "I can relate to that feeling of being completely overwhelmed by multiple deadlines.",
+     "plain": "I understand that feeling of being completely overwhelmed by multiple deadlines.",
+     "note": "A common and empathetic response to someone sharing an experience."
+    },
+    {
+     "text": "To put it bluntly",
+     "kind": "chunk",
+     "form": "To put it bluntly",
+     "meaning": "Introduces a direct and straightforward statement, often one that might be considered impolite or harsh.",
+     "example": "To put it bluntly, the new strategy simply isn't working as intended and needs revision.",
+     "plain": "To state it directly, the new strategy simply isn't working as intended and needs revision.",
+     "note": "Used for directness, sometimes with a hint of impatience."
+    },
+    {
+     "text": "It's no exaggeration to say",
+     "kind": "frame",
+     "form": "It's no exaggeration to say",
+     "meaning": "Emphasizes that a statement is true and not overstated, despite how strong it may sound.",
+     "example": "It's no exaggeration to say that the presentation was a resounding success for the team.",
+     "plain": "It's true to say that the presentation was a resounding success for the team.",
+     "note": "Used to affirm the truth of a strong statement."
+    },
+    {
+     "text": "I wouldn't have thought so",
+     "kind": "chunk",
+     "form": "I wouldn't have thought so",
+     "meaning": "Expresses mild surprise or a change in expectation about a situation or fact.",
+     "example": "I wouldn't have thought so, but apparently, the new system is quite intuitive to use.",
+     "plain": "I wouldn't have expected it, but apparently, the new system is quite intuitive to use.",
+     "note": "Shows a slight shift from a previous assumption or expectation."
+    },
+    {
+     "text": "That's a whole other story",
+     "kind": "chunk",
+     "form": "That's a whole other story",
+     "meaning": "Indicates that a topic is separate and too complex or lengthy to discuss at the current moment.",
+     "example": "That's a whole other story, and one I don't have time to get into right now.",
+     "plain": "That's a completely different topic, and one I don't have time to discuss now.",
+     "note": "Used to politely defer a tangential discussion."
+    },
+    {
+     "text": "There's a fine line",
+     "kind": "chunk",
+     "form": "There's a fine line",
+     "meaning": "Describes a subtle and often difficult distinction between two similar things.",
+     "example": "There's a fine line between offering helpful advice and interfering in someone's choices.",
+     "plain": "There's a subtle difference between offering helpful advice and interfering in someone's choices.",
+     "note": "Highlights a delicate balance or distinction."
+    },
+    {
+     "text": "I'm not at liberty to say",
+     "kind": "frame",
+     "form": "I'm not at liberty to say",
+     "meaning": "States that the speaker is not permitted to disclose certain information due to confidentiality or rules.",
+     "example": "I'm not at liberty to say who made the final decision on that sensitive matter.",
+     "plain": "I'm not allowed to say who made the final decision on that sensitive matter.",
+     "note": "A formal and polite way to decline to share information."
+    },
+    {
+     "text": "It's a common pitfall",
+     "kind": "chunk",
+     "form": "It's a common pitfall",
+     "meaning": "Describes a frequent or typical mistake or difficulty that people encounter.",
+     "example": "It's a common pitfall to underestimate the time required for complex tasks.",
+     "plain": "It's a frequent mistake to underestimate the time required for complex tasks.",
+     "note": "Used to identify a recurring error or challenge."
+    },
+    {
+     "text": "To give you the full picture",
+     "kind": "chunk",
+     "form": "To give you the full picture",
+     "meaning": "Offers to provide all the relevant details and context for a complete understanding of a situation.",
+     "example": "To give you the full picture, we also had significant budget cuts to contend with last quarter.",
+     "plain": "To provide all the details, we also had significant budget cuts to contend with last quarter.",
+     "note": "Used when adding crucial, often complicating, information."
+    },
+    {
+     "text": "I'm just trying to illustrate",
+     "kind": "frame",
+     "form": "I'm just trying to illustrate",
+     "meaning": "Explains that the speaker is providing an example to clarify or demonstrate a point.",
+     "example": "I'm just trying to illustrate how quickly things can go wrong without proper planning.",
+     "plain": "I'm just trying to show how quickly things can go wrong without proper planning.",
+     "note": "Clarifies the purpose of an example or anecdote."
+    },
+    {
+     "text": "It's a testament to the fact that",
+     "kind": "frame",
+     "form": "It's a testament to the fact that",
+     "meaning": "Highlights something as strong evidence or proof of a general truth or principle.",
+     "example": "It's a testament to the fact that hard work pays off in the long run.",
+     "plain": "It shows that hard work pays off in the long run.",
+     "note": "Used to emphasize a general truth demonstrated by a specific event."
+    },
+    {
+     "text": "I wouldn't put it past him",
+     "kind": "frame",
+     "form": "I wouldn't put it past him",
+     "meaning": "Expresses a negative expectation about someone's character, implying they are capable of a bad action.",
+     "example": "I wouldn't put it past him to try and take credit for someone else's hard work.",
+     "plain": "I wouldn't be surprised if he tried to take credit for someone else's hard work.",
+     "note": "Used to express a cynical or knowing view of someone's likely behavior."
+    },
+    {
+     "text": "That's easier said than done",
+     "kind": "chunk",
+     "form": "That's easier said than done",
+     "meaning": "Expresses skepticism about the ease of a proposed action, implying it is more difficult in practice.",
+     "example": "That's easier said than done when you're dealing with multiple stakeholders and conflicting priorities.",
+     "plain": "That's difficult to do when you're dealing with multiple stakeholders and conflicting priorities.",
+     "note": "A common response to an overly simplistic suggestion."
+    },
+    {
+     "text": "It's a moot point",
+     "kind": "chunk",
+     "form": "It's a moot point",
+     "meaning": "States that a particular issue or argument is no longer relevant or worth discussing because it's already decided.",
+     "example": "It's a moot point now, as the deadline for submissions has already passed.",
+     "plain": "It's an irrelevant point now, as the deadline for submissions has already passed.",
+     "note": "Used to dismiss a discussion as no longer pertinent."
+    },
+    {
+     "text": "I have my reservations about",
+     "kind": "frame",
+     "form": "I have my reservations about",
+     "meaning": "Expresses doubts or hesitations regarding a plan, idea, or situation.",
+     "example": "I have my reservations about the feasibility of implementing such a large change quickly.",
+     "plain": "I have doubts about the feasibility of implementing such a large change quickly.",
+     "note": "A polite and professional way to express skepticism."
+    },
+    {
+     "text": "It's a slippery slope",
+     "kind": "chunk",
+     "form": "It's a slippery slope",
+     "meaning": "Warns that a seemingly small or harmless action could lead to a series of increasingly negative consequences.",
+     "example": "It's a slippery slope if we start making exceptions for every individual case.",
+     "plain": "It's a dangerous path if we start making exceptions for every individual case.",
+     "note": "Used to caution against a course of action due to potential negative progression."
+    },
+    {
+     "text": "To be perfectly candid",
+     "kind": "chunk",
+     "form": "To be perfectly candid",
+     "meaning": "Introduces a very honest and straightforward statement, often implying a degree of frankness.",
+     "example": "To be perfectly candid, I think we need to re-evaluate our entire marketing strategy.",
+     "plain": "To be completely frank, I think we need to re-evaluate our entire marketing strategy.",
+     "note": "A slightly more formal variant of \"to be perfectly frank.\""
+    },
+    {
+     "text": "I'm trying to gauge",
+     "kind": "frame",
+     "form": "I'm trying to gauge",
+     "meaning": "Explains that the speaker is attempting to assess or understand the extent of something, like opinions or reactions.",
+     "example": "I'm trying to gauge the team's reaction to the recent organizational changes.",
+     "plain": "I'm trying to assess the team's reaction to the recent organizational changes.",
+     "note": "Used when seeking to understand or measure a response."
+    },
+    {
+     "text": "It's a matter of perspective",
+     "kind": "chunk",
+     "form": "It's a matter of perspective",
+     "meaning": "Highlights that different people may view the same situation in different ways, depending on their viewpoint.",
+     "example": "It's a matter of perspective whether you see this challenge as a burden or an opportunity.",
+     "plain": "It depends on your viewpoint whether you see this challenge as a burden or an opportunity.",
+     "note": "Used to acknowledge subjectivity in interpretation."
+    },
+    {
+     "text": "Could you elaborate on that",
+     "kind": "chunk",
+     "form": "Could you elaborate on that",
+     "meaning": "Politely asks for more detailed information or a fuller explanation of a previous point.",
+     "example": "Could you elaborate on that point? I'm not quite grasping the connection you're making.",
+     "plain": "Could you explain that point in more detail? I'm not quite grasping the connection you're making.",
+     "note": "A polite and professional way to ask for clarification."
+    },
+    {
+     "text": "That's a fair assessment",
+     "kind": "chunk",
+     "form": "That's a fair assessment",
+     "meaning": "Expresses agreement that an evaluation or judgment of a situation is reasonable and accurate.",
+     "example": "That's a fair assessment of the situation, given the limited information we have right now.",
+     "plain": "That's a reasonable judgment of the situation, given the limited information we have right now.",
+     "note": "Used to acknowledge the validity of someone's analysis."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "it all started when": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as it turned out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "little did i know": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to cut a long story short": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's quite something": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i remember distinctly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the thing is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it turned out that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to make a long story short": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "you won't believe what happened": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i can only imagine": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the next thing i knew": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was one of those": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly honest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll never forget": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the long and short of it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "you should have seen": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was a moment when": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i couldn't believe my eyes": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the moral of the story": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it goes without saying": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not going to lie": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what happened was": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it mildly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i distinctly remember": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the funny thing is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it dawned on me that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure if you know": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be honest with you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was touch and go": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the point is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll keep it brief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a long story": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be exact": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i was about to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the way i see it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's not so much that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be perfectly clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's fair to say that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a matter of time": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm inclined to think": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's safe to say that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not going to pretend": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a fine line between": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm happy to report that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a common misconception that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just saying that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a given that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not suggesting that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely convinced": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a matter of principle": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure how to put it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to understand": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a double-edged sword": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not trying to be": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not going to sugarcoat it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to make sure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i follow": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not going to lie to you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a vicious cycle": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to be realistic": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not trying to be rude": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a grey area": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to help": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to be clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to be fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get a sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a balancing act between": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to be helpful": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to be objective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to be realistic about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get a handle on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to be constructive": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i must admit": {
+    "status": "pass",
+    "level": "C1",
+    "note": "Checker slip: The intended meaning accurately describes how 'I must admit' introduces an admission or acknowledgment in the sentence."
+   },
+   "i'm just trying to be clear about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get a clearer picture": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to be transparent": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to be respectful": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a matter of record": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to be pragmatic": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to be brief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to be clear and concise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to be helpful and constructive": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to set the scene": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "if i recall correctly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as luck would have it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "believe it or not": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "for context": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to give you an idea": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the thing about it was": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it was one of those moments": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you some background": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i distinctly remember thinking": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "and then, out of nowhere": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "before i knew it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to my surprise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was quite a scene": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the tension was palpable": {
+    "status": "pass",
+    "level": "C2"
+   },
+   "i had a feeling that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "things took an unexpected turn": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i couldn't help but notice": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was a moment of truth": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "he went on to say": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "she made it clear that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i gathered that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the general consensus was": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "he stressed the importance of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "she pointed out that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was told that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "they suggested that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it was implied that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "he made a point of saying": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "you can imagine my surprise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was quite a revelation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i couldn't help but laugh": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a good one": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it just goes to show": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what a coincidence": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i know exactly what you mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that reminds me of": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it was a classic case of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "you live and learn": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly frank": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in retrospect": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on reflection": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "needless to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i won't deny that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if you ask me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a tricky situation": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to say the least": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can see why": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a common occurrence": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's beside the point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get back to my story": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure how else to put it": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth bearing in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i wouldn't go so far as to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a testament to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm inclined to agree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a fair point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's easy to forget that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can relate to that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it bluntly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's no exaggeration to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i wouldn't have thought so": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a whole other story": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "there's a fine line": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not at liberty to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a common pitfall": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give you the full picture": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to illustrate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a testament to the fact that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i wouldn't put it past him": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's easier said than done": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a moot point": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i have my reservations about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a slippery slope": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be perfectly candid": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm trying to gauge": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a matter of perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you elaborate on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a fair assessment": {
+    "status": "pass",
+    "level": "B2"
+   }
+  }
+ }
+}

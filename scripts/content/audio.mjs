@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Pre-generated pack audio (flashcard words, dictation sentences, minimal
-// pairs) with Google Cloud Text-to-Speech. It costs money, so it runs only
+// pairs, phrase-bank examples, the first example of each slang entry) with
+// Google Cloud Text-to-Speech. It costs money, so it runs only
 // with --run and is the owner's step; without it, it prints what is missing.
 //
 //   node scripts/content/audio.mjs            what would be synthesized
@@ -27,6 +28,9 @@ for (const pack of assemblePacks()) {
     if (e.kind === "dictation") wanted.set(e.audio, e.text);
     if (e.kind === "minimal_pair") e.audio.forEach((a, i) => wanted.set(a, e.words[i]));
   }
+  const content = pack.files["content.json"];
+  for (const p of content.phrases?.phrases ?? []) if (p.audio) wanted.set(p.audio, p.example);
+  for (const s of content.slang?.entries ?? []) if (s.audio) wanted.set(s.audio, s.examples[0]);
 }
 const missing = [...wanted].filter(([path]) => !existsSync(join(AUDIO_DIR, path.slice("audio/".length))));
 const chars = missing.reduce((n, [, text]) => n + text.length, 0);

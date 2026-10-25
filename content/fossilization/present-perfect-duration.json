@@ -1,0 +1,98 @@
+{
+ "format": 1,
+ "id": "fossil.present-perfect-duration",
+ "area": "grammar",
+ "title": "Present perfect for duration",
+ "what": "using the present simple or continuous for something that started in the past and continues ('I live here since 2019', 'I am working here for five years')",
+ "summary": "This error often persists because the meaning is usually clear, even if the grammar is imprecise. However, it can make your English sound less natural and occasionally lead to subtle misunderstandings about duration.",
+ "listenFor": "Pay attention when you describe an action or state that began at a specific point in the past and is still ongoing in the present.",
+ "grammarPointIds": [
+  "gp.present-perfect-for-and-since",
+  "gp.present-perfect-continuous"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "I live here since 2019.",
+   "right": "I have lived here since 2019.",
+   "note": "Use present perfect for actions or states that started in the past and continue now."
+  },
+  {
+   "wrong": "She is working on this project for three months.",
+   "right": "She has been working on this project for three months.",
+   "note": "Present perfect continuous emphasizes the ongoing nature and duration of an activity."
+  },
+  {
+   "wrong": "They know each other for a long time.",
+   "right": "They have known each other for a long time.",
+   "note": "Stative verbs like 'know' use the present perfect, not continuous, for duration."
+  },
+  {
+   "wrong": "He studies English since he was a child.",
+   "right": "He has studied English since he was a child.",
+   "note": "The action of studying began in the past and continues up to the present moment."
+  },
+  {
+   "wrong": "We are waiting for the results for hours.",
+   "right": "We have been waiting for the results for hours.",
+   "note": "Use present perfect continuous for an activity that has been ongoing for a period."
+  },
+  {
+   "wrong": "The company exists for over fifty years.",
+   "right": "The company has existed for over fifty years.",
+   "note": "'Exist' is a stative verb; use present perfect to express its duration."
+  }
+ ],
+ "drills": [
+  "I have been managing this department for nearly a decade now.",
+  "She has lived in several different countries since graduating university.",
+  "We have known about the merger plans for quite some time.",
+  "They have been developing this innovative technology since last year.",
+  "He has held a senior position at the firm for over fifteen years.",
+  "Our team has been collaborating on this complex issue all morning.",
+  "The project has progressed significantly since the initial review.",
+  "I have always believed in the importance of continuous learning.",
+  "She has been traveling extensively for work since the pandemic eased.",
+  "We have understood the implications of this policy for months."
+ ],
+ "probes": [
+  {
+   "sentence": "My colleague works here since 2010.",
+   "answers": [
+    "My colleague has worked here since 2010."
+   ]
+  },
+  {
+   "sentence": "The software is in development for two years.",
+   "answers": [
+    "The software has been in development for two years."
+   ]
+  },
+  {
+   "sentence": "I am learning French for six months.",
+   "answers": [
+    "I have been learning French for six months."
+   ]
+  },
+  {
+   "sentence": "She owns that property since the market downturn.",
+   "answers": [
+    "She has owned that property since the market downturn."
+   ]
+  },
+  {
+   "sentence": "We are discussing this proposal for a long time.",
+   "answers": [
+    "We have been discussing this proposal for a long time."
+   ]
+  },
+  {
+   "sentence": "He is a member of the board for five years.",
+   "answers": [
+    "He has been a member of the board for five years."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

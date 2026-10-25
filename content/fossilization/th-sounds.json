@@ -1,0 +1,121 @@
+{
+ "format": 1,
+ "id": "fossil.th-sounds",
+ "area": "pronunciation",
+ "title": "The two TH sounds",
+ "what": "replacing /θ/ and /ð/ with /t/, /d/, /s/, /z/ or /f/ ('tink', 'dis', 'sink' for think)",
+ "summary": "The unique tongue placement for 'th' sounds often leads to their substitution with more familiar phonemes, even for advanced speakers. This can subtly obscure meaning and affect perceived fluency.",
+ "listenFor": "Actively monitor whether your tongue tip gently touches or slightly protrudes between your front teeth when producing 'th' sounds, rather than staying behind th",
+ "grammarPointIds": [],
+ "soundIds": [
+  "sound.th",
+  "sound.dh"
+ ],
+ "contrasts": [
+  {
+   "wrong": "I tink about it often.",
+   "right": "I think about it often.",
+   "note": "The voiceless 'th' /θ/ is often replaced by /t/."
+  },
+  {
+   "wrong": "Dis is a critical issue.",
+   "right": "This is a critical issue.",
+   "note": "The voiced 'th' /ð/ is often replaced by /d/."
+  },
+  {
+   "wrong": "I need to replace my sum drive.",
+   "right": "I need to replace my thumb drive.",
+   "note": "The voiceless 'th' /θ/ is sometimes replaced by /s/."
+  },
+  {
+   "wrong": "Zey are planning a conference.",
+   "right": "They are planning a conference.",
+   "note": "The voiced 'th' /ð/ is sometimes replaced by /z/."
+  },
+  {
+   "wrong": "I'm not finking clearly on this matter.",
+   "right": "I'm not thinking clearly on this matter.",
+   "note": "The voiceless 'th' /θ/ is sometimes replaced by /f/."
+  },
+  {
+   "wrong": "I need to breaze deeply.",
+   "right": "I need to breathe deeply.",
+   "note": "The voiced 'th' /ð/ is sometimes replaced by /z/."
+  }
+ ],
+ "drills": [
+  "The thoughtful architect thoroughly considered the aesthetic and functional aspects of the new building.",
+  "They theorized that the thorough research would strengthen their thesis.",
+  "This weather is rather bothersome; perhaps we should gather indoors.",
+  "Throughout their lengthy discussion, both brothers thoughtfully shared their perspectives.",
+  "The author's thesis thoroughly explored the ethical implications of these theories.",
+  "We thought that the three-month timeline was thoroughly ambitious but achievable.",
+  "Their wealthy father, though somewhat withdrawn, thoughtfully provided for them.",
+  "The health of the planet is something we should all think about thoughtfully.",
+  "These methods, though thoroughly tested, still require further theoretical refinement.",
+  "They gathered together to discuss the thorny ethical dilemmas facing their industry."
+ ],
+ "probes": [
+  {
+   "sentence": "The strength of their thesis was thoroughly demonstrated through extensive theoretical analysis."
+  },
+  {
+   "sentence": "They thoughtfully considered the ethical implications of their groundbreaking research."
+  },
+  {
+   "sentence": "Throughout the month, the team gathered data to strengthen their hypothesis."
+  },
+  {
+   "sentence": "This weather makes it difficult to think clearly about the path ahead."
+  },
+  {
+   "sentence": "Both brothers believe that thorough preparation is the key to their success."
+  },
+  {
+   "sentence": "The wealthy philanthropist thoughtfully contributed to various health initiatives."
+  }
+ ],
+ "pairs": [
+  [
+   "thin",
+   "tin"
+  ],
+  [
+   "thought",
+   "taught"
+  ],
+  [
+   "three",
+   "tree"
+  ],
+  [
+   "thank",
+   "tank"
+  ],
+  [
+   "math",
+   "mat"
+  ],
+  [
+   "with",
+   "wit"
+  ],
+  [
+   "then",
+   "den"
+  ],
+  [
+   "they",
+   "day"
+  ],
+  [
+   "breathe",
+   "breed"
+  ],
+  [
+   "though",
+   "dough"
+  ]
+ ],
+ "stress": []
+}

@@ -1,0 +1,2374 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "calls",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "you're breaking up",
+     "kind": "chunk",
+     "form": "You're breaking up",
+     "meaning": "Indicates that the audio quality of the other person's voice is poor and intermittent.",
+     "example": "I'm sorry, but you're breaking up quite badly; I can't hear what you're saying.",
+     "plain": "I can't hear you clearly because your audio is cutting in and out.",
+     "note": "Common informal phrase for poor call quality. Can be used in both personal and professional contexts."
+    },
+    {
+     "text": "I'm losing you",
+     "kind": "chunk",
+     "form": "I'm losing you",
+     "meaning": "Expresses that the connection is failing, and the other person's voice is becoming inaudible.",
+     "example": "Oh dear, I think I'm losing you; the signal here is terrible.",
+     "plain": "The connection is bad, and I can no longer hear you clearly.",
+     "note": "A polite way to indicate a failing connection. Suitable for most situations."
+    },
+    {
+     "text": "the line is cutting out",
+     "kind": "collocation",
+     "form": "the line is cutting out",
+     "meaning": "Describes an intermittent connection where parts of the conversation are missed.",
+     "example": "I keep missing words because the line is cutting out every few seconds.",
+     "plain": "Your voice keeps disappearing, making it hard to understand you.",
+     "note": "Slightly more formal than 'breaking up', often used for phone calls rather than video."
+    },
+    {
+     "text": "your video is frozen",
+     "kind": "collocation",
+     "form": "your video is frozen",
+     "meaning": "Informs someone that their video feed has stopped moving on a video call.",
+     "example": "Just to let you know, your video is frozen, so we can't see you moving.",
+     "plain": "Your picture on the video call has stopped moving.",
+     "note": "Direct and practical for video calls. Neutral tone."
+    },
+    {
+     "text": "the connection is a bit patchy",
+     "kind": "collocation",
+     "form": "the connection is a bit patchy",
+     "meaning": "Suggests that the internet or phone signal is inconsistent and unreliable.",
+     "example": "I apologize if I cut out; the connection is a bit patchy where I am today.",
+     "plain": "My internet signal is not very strong or consistent right now.",
+     "note": "A polite and slightly understated way to describe a poor connection. Common in professional settings."
+    },
+    {
+     "text": "can you hear me alright",
+     "kind": "chunk",
+     "form": "Can you hear me alright",
+     "meaning": "Asks if the other person can hear clearly, often after a connection issue or starting a call.",
+     "example": "Hello? Can you hear me alright, or is the audio still a problem?",
+     "plain": "Are you able to hear my voice clearly?",
+     "note": "A standard check for audio quality. 'Alright' is common in spoken English."
+    },
+    {
+     "text": "I'll call you right back",
+     "kind": "chunk",
+     "form": "I'll call you right back",
+     "meaning": "Promises to redial immediately, usually after a dropped call or connection issue.",
+     "example": "It seems we've lost the connection; I'll call you right back.",
+     "plain": "Our call ended unexpectedly, so I will phone you again immediately.",
+     "note": "A common and reassuring phrase when a call drops. Implies urgency."
+    },
+    {
+     "text": "my internet is acting up",
+     "kind": "collocation",
+     "form": "my internet is acting up",
+     "meaning": "Explains that one's internet service is not functioning correctly or reliably.",
+     "example": "I'm sorry for the delay, my internet is acting up again this morning.",
+     "plain": "My internet connection is not working properly at the moment.",
+     "note": "Informal but widely understood. Used to explain technical difficulties."
+    },
+    {
+     "text": "let me try reconnecting",
+     "kind": "collocation",
+     "form": "Let me try reconnecting",
+     "meaning": "Suggests restarting the call or video session to improve connection quality.",
+     "example": "Since the audio is so bad, let me try reconnecting to see if that helps.",
+     "plain": "I will end this call and start it again to fix the sound.",
+     "note": "A proactive suggestion to resolve connection issues. Professional and polite."
+    },
+    {
+     "text": "are you still there",
+     "kind": "chunk",
+     "form": "Are you still there",
+     "meaning": "Asks if the other person is still on the call, often after a period of silence or connection trouble.",
+     "example": "Hello? Are you still there? I haven't heard anything for a moment.",
+     "plain": "Have you remained on the call, or did we get disconnected?",
+     "note": "A common question when silence occurs unexpectedly on a call. Neutral tone."
+    },
+    {
+     "text": "I can barely hear you",
+     "kind": "chunk",
+     "form": "I can barely hear you",
+     "meaning": "Indicates that the other person's voice is very quiet or indistinct.",
+     "example": "Could you speak up a little? I can barely hear you over the background noise.",
+     "plain": "Your voice is very quiet, and it's difficult for me to understand you.",
+     "note": "Direct but polite way to request the other person to speak louder or clearer."
+    },
+    {
+     "text": "it sounds like you're underwater",
+     "kind": "frame",
+     "form": "It sounds like you're underwater",
+     "meaning": "Describes distorted audio that is muffled and unclear, as if speaking from a distance.",
+     "example": "I'm afraid it sounds like you're underwater; the audio is very distorted.",
+     "plain": "Your voice is muffled and unclear, making it hard to understand.",
+     "note": "An idiomatic and vivid description of poor audio quality. Informal but widely understood."
+    },
+    {
+     "text": "we keep losing each other",
+     "kind": "chunk",
+     "form": "We keep losing each other",
+     "meaning": "Notes that the call repeatedly disconnects or experiences severe interruptions.",
+     "example": "This is frustrating; we keep losing each other, maybe we should try another platform.",
+     "plain": "Our call keeps disconnecting, which is making communication difficult.",
+     "note": "Expresses shared frustration over persistent connection problems. Informal."
+    },
+    {
+     "text": "the signal is weak",
+     "kind": "collocation",
+     "form": "the signal is weak",
+     "meaning": "Explains that the wireless or cellular reception is poor, causing connection issues.",
+     "example": "I'm in an area where the signal is weak, so I might drop off unexpectedly.",
+     "plain": "The phone or internet reception here is not strong, so the call might end.",
+     "note": "A common explanation for poor call quality, especially on mobile phones. Neutral."
+    },
+    {
+     "text": "I'm having trouble hearing you",
+     "kind": "chunk",
+     "form": "I'm having trouble hearing you",
+     "meaning": "Politely states that one cannot hear the other person clearly.",
+     "example": "I'm having trouble hearing you; could you perhaps move closer to your microphone?",
+     "plain": "It is difficult for me to hear what you are saying.",
+     "note": "A polite and common way to address audio issues without blaming the other person."
+    },
+    {
+     "text": "my audio is cutting out",
+     "kind": "collocation",
+     "form": "my audio is cutting out",
+     "meaning": "Informs the other person that one's own voice is intermittently disappearing.",
+     "example": "Please bear with me if my audio is cutting out; I'm having some technical issues.",
+     "plain": "My sound is intermittently stopping, so you might miss some words.",
+     "note": "Useful for self-diagnosis of connection problems. Professional and clear."
+    },
+    {
+     "text": "you're freezing up",
+     "kind": "chunk",
+     "form": "You're freezing up",
+     "meaning": "Indicates that the other person's video or entire connection is temporarily stopping.",
+     "example": "I think you're freezing up again; your picture isn't moving at all.",
+     "plain": "Your video is stopping and starting, or your connection is pausing.",
+     "note": "Common for video calls. Similar to 'your video is frozen' but implies a temporary state."
+    },
+    {
+     "text": "the sound is breaking up",
+     "kind": "collocation",
+     "form": "the sound is breaking up",
+     "meaning": "Describes audio that is intermittent and unclear, making speech difficult to understand.",
+     "example": "I'm sorry, but the sound is breaking up quite badly on your end.",
+     "plain": "Your audio is not clear and keeps cutting out.",
+     "note": "A common and clear way to describe poor audio quality. Neutral tone."
+    },
+    {
+     "text": "may I just jump in here",
+     "kind": "frame",
+     "form": "May I just jump in here",
+     "meaning": "A polite way to ask for permission to interrupt and contribute to the conversation.",
+     "example": "May I just jump in here with a quick point about the budget?",
+     "plain": "Could I interrupt briefly to add something?",
+     "note": "Polite and slightly informal, used to interject without being rude. Common in meetings."
+    },
+    {
+     "text": "if I could just interject",
+     "kind": "frame",
+     "form": "If I could just interject",
+     "meaning": "A formal and polite way to ask for a moment to interrupt and make a point.",
+     "example": "If I could just interject for a moment, I have a slightly different perspective.",
+     "plain": "May I interrupt briefly to share my thoughts?",
+     "note": "More formal than 'jump in'. Used to politely assert one's turn in a discussion."
+    },
+    {
+     "text": "to circle back to your point",
+     "kind": "frame",
+     "form": "To circle back to your point",
+     "meaning": "Indicates a return to a previously mentioned topic or idea in the conversation.",
+     "example": "To circle back to your point about the timeline, I think we need more flexibility.",
+     "plain": "Returning to what you said earlier about the timeline, I have a thought.",
+     "note": "Professional and useful for managing discussion flow, ensuring all points are addressed."
+    },
+    {
+     "text": "I just wanted to add that",
+     "kind": "frame",
+     "form": "I just wanted to add that",
+     "meaning": "Introduces an additional piece of information or a supplementary comment.",
+     "example": "Before we move on, I just wanted to add that the client seemed very pleased.",
+     "plain": "I would like to include this extra piece of information.",
+     "note": "A common and polite way to contribute to a conversation, often after someone else has spoken."
+    },
+    {
+     "text": "you were saying",
+     "kind": "chunk",
+     "form": "You were saying",
+     "meaning": "Prompts the other person to continue speaking after an interruption or pause.",
+     "example": "Sorry, I interrupted you. You were saying about the new project?",
+     "plain": "Please continue speaking about what you were discussing.",
+     "note": "A polite way to hand the conversational turn back to someone. Neutral tone."
+    },
+    {
+     "text": "go ahead, I'm listening",
+     "kind": "chunk",
+     "form": "Go ahead, I'm listening",
+     "meaning": "Gives permission to the other person to speak and assures them of attention.",
+     "example": "Please, go ahead, I'm listening intently to your proposal.",
+     "plain": "You can speak now; I am paying attention to what you say.",
+     "note": "Encouraging and polite, often used when someone hesitates to speak."
+    },
+    {
+     "text": "I'll let you finish",
+     "kind": "chunk",
+     "form": "I'll let you finish",
+     "meaning": "Indicates a willingness to wait for the other person to complete their thought before speaking.",
+     "example": "I have a question, but I'll let you finish your explanation first.",
+     "plain": "I will wait for you to complete your statement before I speak.",
+     "note": "A polite way to manage turn-taking, showing respect for the other speaker."
+    },
+    {
+     "text": "sorry to interrupt, but",
+     "kind": "frame",
+     "form": "Sorry to interrupt, but",
+     "meaning": "A polite apology before breaking into someone else's speech to make a point.",
+     "example": "Sorry to interrupt, but we're running short on time for this agenda item.",
+     "plain": "I apologize for breaking in, however, I need to say something.",
+     "note": "A standard polite interruption. Essential for maintaining good conversational etiquette."
+    },
+    {
+     "text": "did you want to add anything",
+     "kind": "chunk",
+     "form": "Did you want to add anything",
+     "meaning": "Invites the other person to contribute further to the discussion.",
+     "example": "Before we conclude this topic, did you want to add anything, Sarah?",
+     "plain": "Do you have any further comments or points to make?",
+     "note": "A polite way to ensure everyone has a chance to speak. Inclusive."
+    },
+    {
+     "text": "I'll hand it over to you",
+     "kind": "chunk",
+     "form": "I'll hand it over to you",
+     "meaning": "Indicates that one is finished speaking and is passing the turn to another person.",
+     "example": "That's all from my side for now, so I'll hand it over to you, Mark.",
+     "plain": "I have finished speaking, and now it is your turn to talk.",
+     "note": "Common in presentations or structured discussions to transition speakers. Professional."
+    },
+    {
+     "text": "over to you",
+     "kind": "chunk",
+     "form": "Over to you",
+     "meaning": "A concise way to indicate that it is now the other person's turn to speak.",
+     "example": "I've finished my update, so over to you for the next section.",
+     "plain": "I am done speaking, so you may begin.",
+     "note": "More informal than 'I'll hand it over to you', but still professional. Direct."
+    },
+    {
+     "text": "I'll pause there",
+     "kind": "chunk",
+     "form": "I'll pause there",
+     "meaning": "Indicates a temporary stop in one's speech, inviting questions or comments.",
+     "example": "I'll pause there and see if anyone has any immediate questions.",
+     "plain": "I will stop speaking now to allow for questions or comments.",
+     "note": "Useful for managing the flow of a presentation or detailed explanation. Professional."
+    },
+    {
+     "text": "what are your thoughts on that",
+     "kind": "frame",
+     "form": "What are your thoughts on that",
+     "meaning": "Asks for the other person's opinion or perspective on a specific matter.",
+     "example": "I've shared my view, so what are your thoughts on that particular issue?",
+     "plain": "What is your opinion about that specific topic?",
+     "note": "An open-ended question to encourage discussion and gather feedback. Professional."
+    },
+    {
+     "text": "I'm happy to elaborate",
+     "kind": "collocation",
+     "form": "I'm happy to elaborate",
+     "meaning": "Offers to provide more details or a fuller explanation if needed.",
+     "example": "If that wasn't clear, I'm happy to elaborate further on the proposal.",
+     "plain": "I can give you more details if you need them.",
+     "note": "Polite and helpful, showing willingness to clarify. Professional."
+    },
+    {
+     "text": "let me just clarify",
+     "kind": "frame",
+     "form": "Let me just clarify",
+     "meaning": "Introduces an attempt to make something clearer or correct a misunderstanding.",
+     "example": "Before we proceed, let me just clarify the exact terms of the agreement.",
+     "plain": "I want to make sure this point is clear and understood correctly.",
+     "note": "A common phrase for ensuring accuracy and avoiding misinterpretation. Professional."
+    },
+    {
+     "text": "before we move on",
+     "kind": "frame",
+     "form": "Before we move on",
+     "meaning": "Signals a transition to a new topic, inviting final comments on the current one.",
+     "example": "Before we move on to the next agenda item, are there any other points?",
+     "plain": "Are there any final comments before we discuss the next topic?",
+     "note": "Useful for structuring discussions and ensuring all points are covered. Professional."
+    },
+    {
+     "text": "just to pick up on that",
+     "kind": "frame",
+     "form": "Just to pick up on that",
+     "meaning": "Introduces a comment that builds upon or refers back to something previously said.",
+     "example": "Just to pick up on that point about the budget, I think we have some flexibility.",
+     "plain": "Referring back to what you just said, I have a related comment.",
+     "note": "A smooth way to link one's contribution to a previous speaker's point. Professional."
+    },
+    {
+     "text": "I'd like to weigh in",
+     "kind": "collocation",
+     "form": "I'd like to weigh in",
+     "meaning": "Expresses a desire to contribute one's opinion or perspective to a discussion.",
+     "example": "If I may, I'd like to weigh in on the discussion about the new policy.",
+     "plain": "I would like to share my opinion on this topic.",
+     "note": "Polite and professional, indicating a desire to contribute meaningfully."
+    },
+    {
+     "text": "perhaps I could offer a perspective",
+     "kind": "frame",
+     "form": "Perhaps I could offer a perspective",
+     "meaning": "A very polite and humble way to introduce one's opinion or viewpoint.",
+     "example": "Perhaps I could offer a perspective on how this might impact our international team.",
+     "plain": "May I share my view on this matter?",
+     "note": "Highly diplomatic and formal, used to introduce a potentially differing opinion gently."
+    },
+    {
+     "text": "I'll keep my comments brief",
+     "kind": "collocation",
+     "form": "I'll keep my comments brief",
+     "meaning": "Promises to speak concisely and not take up too much time.",
+     "example": "I know we're short on time, so I'll keep my comments brief.",
+     "plain": "I will speak for only a short time.",
+     "note": "Polite and considerate, especially in time-sensitive meetings. Professional."
+    },
+    {
+     "text": "I think we've covered everything",
+     "kind": "chunk",
+     "form": "I think we've covered everything",
+     "meaning": "Suggests that all necessary topics have been discussed and the meeting can end.",
+     "example": "Well, I think we've covered everything on the agenda for today.",
+     "plain": "I believe we have discussed all the necessary points.",
+     "note": "A common way to signal the end of a discussion or meeting. Neutral and professional."
+    },
+    {
+     "text": "to wrap things up",
+     "kind": "frame",
+     "form": "To wrap things up",
+     "meaning": "Introduces the final part of a discussion or meeting, leading to its conclusion.",
+     "example": "To wrap things up, let's quickly review our action points.",
+     "plain": "To conclude our discussion, let's summarize our decisions.",
+     "note": "A very common and versatile phrase for ending conversations or meetings. Informal to semi-formal."
+    },
+    {
+     "text": "I'll let you go",
+     "kind": "chunk",
+     "form": "I'll let you go",
+     "meaning": "Politely ends a call, indicating that the other person is free to leave.",
+     "example": "It was good catching up, but I'll let you go now.",
+     "plain": "I will end our call now, so you can continue with your day.",
+     "note": "A polite and common way to end a call, especially when you initiated it. Friendly."
+    },
+    {
+     "text": "I won't keep you any longer",
+     "kind": "chunk",
+     "form": "I won't keep you any longer",
+     "meaning": "A polite way to end a conversation, implying respect for the other person's time.",
+     "example": "I think we've addressed all points, so I won't keep you any longer.",
+     "plain": "I will not take up any more of your time.",
+     "note": "Formal and considerate, often used in professional or slightly more formal personal calls."
+    },
+    {
+     "text": "it's been good catching up",
+     "kind": "chunk",
+     "form": "It's been good catching up",
+     "meaning": "Expresses pleasure at having spoken to someone, especially after a period of time.",
+     "example": "Thanks for the call, it's been good catching up with you.",
+     "plain": "I enjoyed talking to you and hearing your news.",
+     "note": "A warm and friendly closing, suitable for both personal and professional calls with acquaintances."
+    },
+    {
+     "text": "I think that's all for now",
+     "kind": "chunk",
+     "form": "I think that's all for now",
+     "meaning": "Suggests that there are no more immediate topics to discuss, signaling an end.",
+     "example": "Unless anyone has anything else, I think that's all for now.",
+     "plain": "I believe we have finished discussing everything for this moment.",
+     "note": "A polite and common way to conclude a meeting or discussion. Neutral."
+    },
+    {
+     "text": "we've run out of time",
+     "kind": "collocation",
+     "form": "we've run out of time",
+     "meaning": "States that the allotted time for the call or meeting has expired.",
+     "example": "Unfortunately, we've run out of time, so we'll have to continue this next week.",
+     "plain": "Our scheduled time for this discussion has finished.",
+     "note": "A direct but neutral way to end a meeting due to time constraints. Professional."
+    },
+    {
+     "text": "I'll follow up with an email",
+     "kind": "collocation",
+     "form": "I'll follow up with an email",
+     "meaning": "Promises to send an email containing further information or a summary.",
+     "example": "I'll follow up with an email containing the meeting minutes and action points.",
+     "plain": "I will send you an email later with more details.",
+     "note": "A standard professional closing, indicating next steps. Very common."
+    },
+    {
+     "text": "let's touch base again soon",
+     "kind": "collocation",
+     "form": "Let's touch base again soon",
+     "meaning": "Suggests having another brief contact or meeting in the near future.",
+     "example": "We've made good progress, so let's touch base again soon to review.",
+     "plain": "Let's talk again briefly sometime in the near future.",
+     "note": "A common professional phrase for scheduling a follow-up. Friendly and proactive."
+    },
+    {
+     "text": "I'll be in touch",
+     "kind": "chunk",
+     "form": "I'll be in touch",
+     "meaning": "Promises to contact the other person again at a later time.",
+     "example": "Thanks for the information; I'll be in touch once I have an update.",
+     "plain": "I will contact you again when I have new information.",
+     "note": "A standard and polite closing, implying future communication. Neutral."
+    },
+    {
+     "text": "thanks for your time",
+     "kind": "chunk",
+     "form": "Thanks for your time",
+     "meaning": "Expresses gratitude for the time the other person spent on the call.",
+     "example": "Thanks for your time today; I appreciate you fitting me in.",
+     "plain": "I am grateful that you spent your time speaking with me.",
+     "note": "A polite and professional closing, especially after a scheduled meeting or call."
+    },
+    {
+     "text": "I appreciate you taking the call",
+     "kind": "chunk",
+     "form": "I appreciate you taking the call",
+     "meaning": "Expresses gratitude to the other person for accepting and participating in the call.",
+     "example": "I appreciate you taking the call on such short notice.",
+     "plain": "Thank you for accepting and participating in this phone call.",
+     "note": "A polite and professional way to show appreciation, especially if the call was unexpected."
+    },
+    {
+     "text": "we should probably call it a day",
+     "kind": "chunk",
+     "form": "we should probably call it a day",
+     "meaning": "Suggests ending the work or discussion for the day.",
+     "example": "It's getting late, so I think we should probably call it a day.",
+     "plain": "It is time for us to stop working or discussing for today.",
+     "note": "Informal and friendly, often used to end a long or tiring session. Common."
+    },
+    {
+     "text": "I'll leave it there",
+     "kind": "chunk",
+     "form": "I'll leave it there",
+     "meaning": "Indicates that one has finished speaking on a particular topic or for the call.",
+     "example": "I think that covers my points, so I'll leave it there for now.",
+     "plain": "I have finished making my points on this topic.",
+     "note": "A concise way to conclude one's contribution or the entire call. Neutral."
+    },
+    {
+     "text": "is there anything else",
+     "kind": "chunk",
+     "form": "Is there anything else",
+     "meaning": "Asks if there are any remaining topics or questions before concluding.",
+     "example": "Before we hang up, is there anything else we need to discuss?",
+     "plain": "Do you have any other matters to talk about?",
+     "note": "A standard closing question to ensure nothing is overlooked. Neutral."
+    },
+    {
+     "text": "I'll get back to you on that",
+     "kind": "chunk",
+     "form": "I'll get back to you on that",
+     "meaning": "Promises to provide an answer or information about a specific query later.",
+     "example": "That's a good question; I'll get back to you on that after I check with the team.",
+     "plain": "I will find the answer to your question and contact you again.",
+     "note": "A common and professional way to defer an answer. Implies a follow-up."
+    },
+    {
+     "text": "it was good to connect",
+     "kind": "collocation",
+     "form": "It was good to connect",
+     "meaning": "Expresses satisfaction at having made contact or spoken with someone.",
+     "example": "Thank you for the productive discussion; it was good to connect.",
+     "plain": "I enjoyed our conversation and making contact with you.",
+     "note": "A professional and polite closing, especially for initial contacts or business calls."
+    },
+    {
+     "text": "I'll send over the notes",
+     "kind": "collocation",
+     "form": "I'll send over the notes",
+     "meaning": "Promises to transmit the written summary or minutes of the discussion.",
+     "example": "I'll send over the notes from our meeting by the end of the day.",
+     "plain": "I will email you the summary of our discussion.",
+     "note": "A common professional commitment at the end of a meeting. Clear and actionable."
+    },
+    {
+     "text": "looking forward to our next chat",
+     "kind": "chunk",
+     "form": "Looking forward to our next chat",
+     "meaning": "Expresses anticipation for a future conversation with the other person.",
+     "example": "This was helpful; looking forward to our next chat about the project.",
+     "plain": "I am eager to speak with you again soon.",
+     "note": "A friendly and positive closing, suitable for ongoing professional or personal relationships."
+    },
+    {
+     "text": "I'll let you get back to your day",
+     "kind": "chunk",
+     "form": "I'll let you get back to your day",
+     "meaning": "Politely ends a call, acknowledging the other person's schedule and responsibilities.",
+     "example": "Thanks for your time; I'll let you get back to your day now.",
+     "plain": "I will end our call so you can resume your other activities.",
+     "note": "A considerate and professional way to conclude a call, especially if it ran long."
+    },
+    {
+     "text": "I'll leave a message",
+     "kind": "collocation",
+     "form": "I'll leave a message",
+     "meaning": "States the intention to record a message for someone who is unavailable.",
+     "example": "Since she's not available, I'll leave a message with her assistant.",
+     "plain": "I will record or write down information for her.",
+     "note": "A standard phrase when someone is not reachable directly. Neutral."
+    },
+    {
+     "text": "please leave a message after the tone",
+     "kind": "chunk",
+     "form": "Please leave a message after the tone",
+     "meaning": "An instruction from an answering machine or voicemail system to record a message.",
+     "example": "You've reached my voicemail; please leave a message after the tone.",
+     "plain": "After you hear the beep, you may record your message.",
+     "note": "A very common phrase heard on voicemail systems. Passive voice."
+    },
+    {
+     "text": "I'll return your call",
+     "kind": "collocation",
+     "form": "I'll return your call",
+     "meaning": "Promises to call back someone who has previously called and left a message.",
+     "example": "Thanks for calling; I'll return your call as soon as I'm free.",
+     "plain": "I will phone you back because you called me.",
+     "note": "A standard and polite way to acknowledge a missed call and promise a callback. Professional."
+    },
+    {
+     "text": "I'm just calling to follow up",
+     "kind": "frame",
+     "form": "I'm just calling to follow up",
+     "meaning": "Explains the purpose of a call as a check-in or reminder about a previous interaction.",
+     "example": "Hi, I'm just calling to follow up on the email I sent last week.",
+     "plain": "I am phoning you to check on the status of something we discussed earlier.",
+     "note": "A common and polite opening for a follow-up call. Professional."
+    },
+    {
+     "text": "I'm calling in reference to",
+     "kind": "frame",
+     "form": "I'm calling in reference to",
+     "meaning": "States the specific subject or reason for making the phone call.",
+     "example": "Good morning, I'm calling in reference to the job application I submitted.",
+     "plain": "I am phoning you about the specific topic of...",
+     "note": "Formal and precise, used to clearly state the purpose of a call. Professional."
+    },
+    {
+     "text": "could you pass on a message",
+     "kind": "collocation",
+     "form": "Could you pass on a message",
+     "meaning": "Asks someone to relay information to another person who is unavailable.",
+     "example": "Could you pass on a message to John that I'll be late for the meeting?",
+     "plain": "Would you please tell John this information for me?",
+     "note": "A polite request when speaking to an intermediary. Common in offices."
+    },
+    {
+     "text": "I'll relay the message",
+     "kind": "collocation",
+     "form": "I'll relay the message",
+     "meaning": "Promises to transmit the information received to the intended recipient.",
+     "example": "Don't worry, I'll relay the message to her as soon as she gets back.",
+     "plain": "I will deliver your information to the person it is for.",
+     "note": "A professional and reassuring response when taking a message for someone else."
+    },
+    {
+     "text": "I'll make sure they get the message",
+     "kind": "chunk",
+     "form": "I'll make sure they get the message",
+     "meaning": "Assures the caller that their information will definitely reach the intended person.",
+     "example": "Yes, I'll make sure they get the message about the revised deadline.",
+     "plain": "I will ensure that the person receives your information.",
+     "note": "A strong assurance that the message will be delivered. Professional and helpful."
+    },
+    {
+     "text": "I'm just touching base",
+     "kind": "collocation",
+     "form": "I'm just touching base",
+     "meaning": "Explains the call is a brief check-in, not requiring a lengthy discussion.",
+     "example": "Hi Sarah, I'm just touching base about the project's progress.",
+     "plain": "I am calling for a quick update or check-in.",
+     "note": "Informal but professional, used for brief, non-urgent check-ins. Common."
+    },
+    {
+     "text": "I'll give you a call back",
+     "kind": "chunk",
+     "form": "I'll give you a call back",
+     "meaning": "Promises to phone the other person again at a later, more convenient time.",
+     "example": "I'm a bit tied up right now, but I'll give you a call back in an hour.",
+     "plain": "I will phone you again later.",
+     "note": "A common and polite way to end a call or promise a return call. Neutral."
+    },
+    {
+     "text": "I'm trying to reach",
+     "kind": "frame",
+     "form": "I'm trying to reach",
+     "meaning": "States the name of the person one is attempting to contact by phone.",
+     "example": "Hello, I'm trying to reach Mr. Henderson regarding a delivery.",
+     "plain": "I am attempting to speak with Mr. Henderson.",
+     "note": "A standard and polite opening when calling an organization to speak to a specific person."
+    },
+    {
+     "text": "I'll drop them a line",
+     "kind": "collocation",
+     "form": "I'll drop them a line",
+     "meaning": "Promises to send a short message, usually an email or text, to someone.",
+     "example": "I'll drop them a line to confirm the details of our meeting.",
+     "plain": "I will send them a brief message.",
+     "note": "Informal and friendly, implying a quick, non-urgent communication. Common."
+    },
+    {
+     "text": "I'll send them an email",
+     "kind": "collocation",
+     "form": "I'll send them an email",
+     "meaning": "Promises to communicate with someone via electronic mail.",
+     "example": "Instead of calling, I'll send them an email with all the necessary documents.",
+     "plain": "I will contact them by sending an electronic message.",
+     "note": "A direct and common way to promise communication, often preferred over calls for details."
+    },
+    {
+     "text": "I'll get them to call you",
+     "kind": "chunk",
+     "form": "I'll get them to call you",
+     "meaning": "Promises to arrange for the intended person to phone the caller.",
+     "example": "She's in a meeting, but I'll get them to call you back as soon as possible.",
+     "plain": "I will ask that person to phone you.",
+     "note": "A common and helpful response when taking a message for someone else. Neutral."
+    },
+    {
+     "text": "I'm returning your call about",
+     "kind": "frame",
+     "form": "I'm returning your call about",
+     "meaning": "States the purpose of a callback, referring to the original message.",
+     "example": "Hi, this is David. I'm returning your call about the invoice query.",
+     "plain": "I am phoning you back regarding the topic you mentioned in your message.",
+     "note": "A standard and professional opening for a return call. Clear and efficient."
+    },
+    {
+     "text": "thanks for getting back to me",
+     "kind": "chunk",
+     "form": "Thanks for getting back to me",
+     "meaning": "Expresses gratitude for someone returning a call or message.",
+     "example": "Thanks for getting back to me so quickly regarding my request.",
+     "plain": "I appreciate you contacting me again in response to my message.",
+     "note": "A polite and common expression of appreciation for a timely response. Neutral."
+    },
+    {
+     "text": "I just wanted to check in",
+     "kind": "frame",
+     "form": "I just wanted to check in",
+     "meaning": "Explains the call is a brief contact to see how things are progressing or if help is needed.",
+     "example": "Hi, I just wanted to check in on how the project was coming along.",
+     "plain": "I am calling simply to see how you are doing or how things are progressing.",
+     "note": "Informal and friendly, used for a quick, non-demanding contact. Common."
+    },
+    {
+     "text": "I'll be sure to pass that on",
+     "kind": "chunk",
+     "form": "I'll be sure to pass that on",
+     "meaning": "Assures the caller that their message or information will definitely be relayed.",
+     "example": "Yes, I'll be sure to pass that on to the relevant department.",
+     "plain": "I will certainly make sure that information is given to the correct people.",
+     "note": "A strong and polite assurance that a message will be delivered. Professional."
+    },
+    {
+     "text": "I'll let them know you called",
+     "kind": "chunk",
+     "form": "I'll let them know you called",
+     "meaning": "Promises to inform the unavailable person that someone tried to reach them.",
+     "example": "She's not at her desk, but I'll let them know you called.",
+     "plain": "I will tell the person that you phoned them.",
+     "note": "A standard and polite response when someone is unavailable. Neutral."
+    },
+    {
+     "text": "I'll give them your message",
+     "kind": "chunk",
+     "form": "I'll give them your message",
+     "meaning": "Promises to deliver the specific information provided by the caller.",
+     "example": "Certainly, I'll give them your message as soon as they're free.",
+     "plain": "I will deliver the information you provided to them.",
+     "note": "A direct and common way to confirm message delivery. Neutral."
+    },
+    {
+     "text": "I'll make a note of that",
+     "kind": "chunk",
+     "form": "I'll make a note of that",
+     "meaning": "Promises to write down the information for future reference.",
+     "example": "Thank you for the update; I'll make a note of that for the report.",
+     "plain": "I will write down this information so I don't forget it.",
+     "note": "A professional and reassuring phrase, indicating attention to detail. Common."
+    },
+    {
+     "text": "I'll get back to you shortly",
+     "kind": "chunk",
+     "form": "I'll get back to you shortly",
+     "meaning": "Promises to contact the other person again very soon.",
+     "example": "I need to check my calendar, but I'll get back to you shortly with a time.",
+     "plain": "I will contact you again very soon.",
+     "note": "A polite and professional way to promise a quick follow-up. Common."
+    },
+    {
+     "text": "I'll be sure to follow up",
+     "kind": "chunk",
+     "form": "I'll be sure to follow up",
+     "meaning": "Assures the other person that one will take the necessary next steps.",
+     "example": "Thanks for raising that; I'll be sure to follow up with the team.",
+     "plain": "I will definitely take the necessary actions regarding this.",
+     "note": "A strong and professional commitment to take action. Reassuring."
+    },
+    {
+     "text": "I'll keep you posted",
+     "kind": "chunk",
+     "form": "I'll keep you posted",
+     "meaning": "Promises to provide regular updates on a situation or development.",
+     "example": "The situation is still evolving, but I'll keep you posted on any changes.",
+     "plain": "I will regularly inform you of new developments.",
+     "note": "Informal but widely used in professional contexts. Friendly and proactive."
+    },
+    {
+     "text": "I'll let you know",
+     "kind": "chunk",
+     "form": "I'll let you know",
+     "meaning": "Promises to inform the other person about something in the future.",
+     "example": "Once I have the final decision, I'll let you know immediately.",
+     "plain": "I will tell you the information when I have it.",
+     "note": "A very common and versatile phrase for promising future information. Neutral."
+    },
+    {
+     "text": "I'll check on that for you",
+     "kind": "chunk",
+     "form": "I'll check on that for you",
+     "meaning": "Promises to investigate or find information on behalf of the other person.",
+     "example": "I'm not sure about that detail, but I'll check on that for you.",
+     "plain": "I will find the information you need.",
+     "note": "A helpful and polite offer to assist. Professional and proactive."
+    },
+    {
+     "text": "I'll get that sorted",
+     "kind": "chunk",
+     "form": "I'll get that sorted",
+     "meaning": "Promises to resolve a problem or organize something efficiently.",
+     "example": "Don't worry about the booking, I'll get that sorted for you by tomorrow.",
+     "plain": "I will arrange or fix that problem for you.",
+     "note": "Common in British English, implies efficiency and resolution. Informal but professional."
+    },
+    {
+     "text": "I'll look into it",
+     "kind": "chunk",
+     "form": "I'll look into it",
+     "meaning": "Promises to investigate a matter or problem.",
+     "example": "That's an interesting point; I'll look into it further and get back to you.",
+     "plain": "I will investigate that issue.",
+     "note": "A standard professional response when more information or action is required. Neutral."
+    },
+    {
+     "text": "I'll make sure to do that",
+     "kind": "chunk",
+     "form": "I'll make sure to do that",
+     "meaning": "Gives a strong assurance that a specific action will be taken.",
+     "example": "Yes, I'll make sure to do that before the end of the day.",
+     "plain": "I will definitely perform that action.",
+     "note": "A firm and reassuring commitment to complete a task. Professional."
+    },
+    {
+     "text": "I'll put you through",
+     "kind": "chunk",
+     "form": "I'll put you through",
+     "meaning": "Promises to connect the caller to another person or department.",
+     "example": "Certainly, I'll put you through to customer service now.",
+     "plain": "I will connect your call to the correct person or department.",
+     "note": "A standard phrase used by receptionists or operators. Professional."
+    },
+    {
+     "text": "I'll hold for a moment",
+     "kind": "chunk",
+     "form": "I'll hold for a moment",
+     "meaning": "Indicates willingness to wait on the line while the other person attends to something.",
+     "example": "No problem, I'll hold for a moment while you retrieve the file.",
+     "plain": "I will wait on the phone line for a short time.",
+     "note": "A polite and patient response when asked to wait during a call. Professional."
+    },
+    {
+     "text": "I'll be right back",
+     "kind": "chunk",
+     "form": "I'll be right back",
+     "meaning": "Promises to return to the call very quickly after a brief absence.",
+     "example": "Just a second, I need to grab a pen; I'll be right back.",
+     "plain": "I will return to the call immediately.",
+     "note": "A common phrase for a very short, temporary interruption. Informal but acceptable."
+    },
+    {
+     "text": "I'll get someone to call you",
+     "kind": "chunk",
+     "form": "I'll get someone to call you",
+     "meaning": "Promises to arrange for another person to contact the caller.",
+     "example": "I'm not the right person, but I'll get someone to call you who can help.",
+     "plain": "I will arrange for another person to phone you.",
+     "note": "A common phrase when redirecting a query. Professional and helpful."
+    },
+    {
+     "text": "I'll pass your details on",
+     "kind": "chunk",
+     "form": "I'll pass your details on",
+     "meaning": "Promises to provide the caller's contact information to another person.",
+     "example": "She's not available, but I'll pass your details on so she can call you.",
+     "plain": "I will give your contact information to her.",
+     "note": "A standard phrase when taking a message or facilitating a callback. Neutral."
+    },
+    {
+     "text": "I'll confirm that with you",
+     "kind": "chunk",
+     "form": "I'll confirm that with you",
+     "meaning": "Promises to verify information and communicate it back to the other person.",
+     "example": "I'm not certain of the exact date, but I'll confirm that with you by email.",
+     "plain": "I will check that information and then tell you it is correct.",
+     "note": "A professional commitment to provide accurate information. Reassuring."
+    },
+    {
+     "text": "I'll send you a reminder",
+     "kind": "chunk",
+     "form": "I'll send you a reminder",
+     "meaning": "Promises to send a message to help the other person remember something.",
+     "example": "Don't worry about forgetting; I'll send you a reminder closer to the date.",
+     "plain": "I will send you a message to help you remember.",
+     "note": "A helpful and proactive offer, especially for appointments or deadlines. Neutral."
+    },
+    {
+     "text": "I'll be available from",
+     "kind": "frame",
+     "form": "I'll be available from",
+     "meaning": "States the time or date when one will be free to take calls or meet.",
+     "example": "I'm in meetings until noon, but I'll be available from 1 PM onwards.",
+     "plain": "I will be free to talk or meet starting at this time.",
+     "note": "A clear and professional way to communicate one's availability. Common."
+    },
+    {
+     "text": "I'll be out of office",
+     "kind": "chunk",
+     "form": "I'll be out of office",
+     "meaning": "Informs that one will not be at work or reachable, usually for a period of time.",
+     "example": "Just so you know, I'll be out of office next week with limited access to email.",
+     "plain": "I will not be at work or reachable next week.",
+     "note": "A standard professional phrase for informing others of absence. Clear."
+    },
+    {
+     "text": "I'll be back in the office",
+     "kind": "chunk",
+     "form": "I'll be back in the office",
+     "meaning": "States the time or date when one will return to work and be available.",
+     "example": "I'm away until Monday, but I'll be back in the office then.",
+     "plain": "I will return to work at the office on that specific day.",
+     "note": "A common phrase for informing others of one's return from absence. Neutral."
+    },
+    {
+     "text": "I'll get straight to the point",
+     "kind": "chunk",
+     "form": "I'll get straight to the point",
+     "meaning": "Promises to be direct and concise, avoiding unnecessary preamble.",
+     "example": "I know you're busy, so I'll get straight to the point about the urgent matter.",
+     "plain": "I will discuss the main topic immediately without delay.",
+     "note": "A professional and efficient opening, showing respect for the other person's time."
+    },
+    {
+     "text": "I'll try again later",
+     "kind": "chunk",
+     "form": "I'll try again later",
+     "meaning": "States the intention to attempt contact again at a subsequent time.",
+     "example": "Since she's unavailable now, I'll try again later this afternoon.",
+     "plain": "I will attempt to contact her at a different time.",
+     "note": "A common and polite way to handle an unsuccessful attempt to reach someone. Neutral."
+    },
+    {
+     "text": "I'll give you a ring",
+     "kind": "chunk",
+     "form": "I'll give you a ring",
+     "meaning": "Promises to make a phone call to the other person.",
+     "example": "I'll give you a ring tomorrow morning to discuss the details.",
+     "plain": "I will phone you tomorrow morning.",
+     "note": "Informal and friendly, common in British English. Less formal than 'call you'."
+    },
+    {
+     "text": "I'll drop you a text",
+     "kind": "chunk",
+     "form": "I'll drop you a text",
+     "meaning": "Promises to send a short message via mobile phone.",
+     "example": "I'm heading out now, so I'll drop you a text when I arrive.",
+     "plain": "I will send you a text message.",
+     "note": "Informal and common, especially for quick updates or personal communication."
+    },
+    {
+     "text": "I'll be in touch shortly",
+     "kind": "chunk",
+     "form": "I'll be in touch shortly",
+     "meaning": "Promises to contact the other person very soon.",
+     "example": "Thanks for the information; I'll be in touch shortly with an update.",
+     "plain": "I will contact you again very soon.",
+     "note": "A polite and professional way to promise a quick follow-up. Common."
+    },
+    {
+     "text": "I'll get back to my desk",
+     "kind": "chunk",
+     "form": "I'll get back to my desk",
+     "meaning": "Indicates one is returning to their workspace, often to perform a task.",
+     "example": "I'm just stepping away for a moment, but I'll get back to my desk to send that email.",
+     "plain": "I will return to my work area.",
+     "note": "A common phrase in a professional context, implying a return to work tasks."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "poor audio quality",
+     "kind": "collocation",
+     "form": "poor audio quality",
+     "meaning": "The sound is not clear or good, making it hard to hear or be heard.",
+     "example": "We're experiencing poor audio quality on this call; can you hear me clearly?",
+     "plain": "The sound on this call is bad; can you hear me?",
+     "note": "A common way to describe sound problems, suitable for professional settings."
+    },
+    {
+     "text": "muffled voice",
+     "kind": "collocation",
+     "form": "muffled voice",
+     "meaning": "Speech that is unclear and difficult to hear, as if blocked.",
+     "example": "I'm afraid I'm hearing a muffled voice; could you speak closer to the microphone?",
+     "plain": "Your speech is unclear; please speak closer to the microphone.",
+     "note": "A polite way to describe unclear speech, suggesting a microphone adjustment."
+    },
+    {
+     "text": "choppy video feed",
+     "kind": "collocation",
+     "form": "choppy video feed",
+     "meaning": "The visual transmission is not smooth, appearing to jump or skip frames.",
+     "example": "The choppy video feed is making it difficult to see your screen share clearly.",
+     "plain": "Your video is not smooth, so I can't see your screen share well.",
+     "note": "Describes a common video call problem; polite and descriptive."
+    },
+    {
+     "text": "noticeable delay",
+     "kind": "collocation",
+     "form": "noticeable delay",
+     "meaning": "A clear lag between speaking and hearing, causing awkward pauses.",
+     "example": "There's a noticeable delay, so let's try to pause briefly after each speaker.",
+     "plain": "There's a lag, so let's pause after each speaker.",
+     "note": "A gentle way to acknowledge latency, suggesting a solution for turn-taking."
+    },
+    {
+     "text": "distorted sound",
+     "kind": "collocation",
+     "form": "distorted sound",
+     "meaning": "Audio quality that is poor, making voices or sounds unclear and unnatural.",
+     "example": "I'm finding the distorted sound makes it hard to understand your words.",
+     "plain": "The unclear sound makes it hard to understand you.",
+     "note": "A precise way to describe poor audio quality, indicating a technical issue."
+    },
+    {
+     "text": "could you repeat that please",
+     "kind": "chunk",
+     "form": "could you repeat that please",
+     "meaning": "Asking the other person to say something again because it wasn't heard or understood.",
+     "example": "Sorry, the connection dropped for a second; could you repeat that please?",
+     "plain": "I missed what you said; please say it again.",
+     "note": "A standard, polite request for repetition, suitable for any formal or informal context."
+    },
+    {
+     "text": "I didn't quite catch that",
+     "kind": "chunk",
+     "form": "I didn't quite catch that",
+     "meaning": "I didn't fully hear or understand what you just said.",
+     "example": "The audio cut out for a moment, so I didn't quite catch that last point.",
+     "plain": "I didn't hear your last point because the audio cut out.",
+     "note": "A polite and common way to indicate you missed part of the conversation."
+    },
+    {
+     "text": "let's switch to a phone call",
+     "kind": "chunk",
+     "form": "let's switch to a phone call",
+     "meaning": "Suggesting moving from a video call to an audio-only call due to technical issues.",
+     "example": "Given the persistent video issues, perhaps let's switch to a phone call instead.",
+     "plain": "The video problems are ongoing, so maybe we should just use the phone.",
+     "note": "A practical suggestion when video quality is poor, implying better audio."
+    },
+    {
+     "text": "my microphone is muted",
+     "kind": "chunk",
+     "form": "my microphone is muted",
+     "meaning": "My microphone is turned off, so you cannot hear me.",
+     "example": "Oh, apologies, my microphone is muted; I was talking to myself there.",
+     "plain": "Sorry, my microphone is off; I was speaking but you couldn't hear.",
+     "note": "A common self-correction in video calls, often said with a slight chuckle."
+    },
+    {
+     "text": "you're on mute",
+     "kind": "chunk",
+     "form": "you're on mute",
+     "meaning": "Your microphone is turned off, so we cannot hear you.",
+     "example": "Just a quick heads-up, I think you're on mute, as we can't hear you.",
+     "plain": "We can't hear you; your microphone is off.",
+     "note": "A common, polite way to inform someone their microphone is off."
+    },
+    {
+     "text": "briefly interject",
+     "kind": "collocation",
+     "form": "briefly interject",
+     "meaning": "To politely and quickly interrupt to add a point.",
+     "example": "If I may briefly interject, I think we should also consider the budget implications.",
+     "plain": "If I can interrupt quickly, we should consider the budget.",
+     "note": "A formal and polite way to add a point, often used in professional settings."
+    },
+    {
+     "text": "further elaborate",
+     "kind": "collocation",
+     "form": "further elaborate",
+     "meaning": "To provide more details or further explain a previous point.",
+     "example": "I'd like to further elaborate on that point regarding our initial findings.",
+     "plain": "I want to give more details about our initial findings.",
+     "note": "Used when expanding on a point, often after someone else has mentioned it."
+    },
+    {
+     "text": "revisit a point",
+     "kind": "collocation",
+     "form": "revisit a point",
+     "meaning": "To refer back to something previously said by another person and discuss it further.",
+     "example": "I wanted to revisit a point you made earlier about the project timeline.",
+     "plain": "I want to discuss your earlier comment about the project timeline.",
+     "note": "A polite way to bring a previous point back into discussion."
+    },
+    {
+     "text": "just to clarify",
+     "kind": "frame",
+     "form": "Just to clarify",
+     "meaning": "To ask for more specific information or confirm understanding of a point.",
+     "example": "Just to clarify, are we talking about the first quarter or the second?",
+     "plain": "I want to confirm if we mean the first or second quarter.",
+     "note": "Used to seek precision or ensure mutual understanding."
+    },
+    {
+     "text": "I'm happy to wait",
+     "kind": "chunk",
+     "form": "I'm happy to wait",
+     "meaning": "Signalling that you are not in a rush and can let the other person finish speaking.",
+     "example": "No worries, I'm happy to wait until you've finished your thought.",
+     "plain": "It's fine, I can wait for you to finish speaking.",
+     "note": "A polite and accommodating phrase, showing respect for the other speaker."
+    },
+    {
+     "text": "I'll hold my thought",
+     "kind": "chunk",
+     "form": "I'll hold my thought",
+     "meaning": "I will keep my idea or comment to myself for now and share it later.",
+     "example": "You seem to be on a roll, so I'll hold my thought until you're done.",
+     "plain": "You're speaking well, so I'll save my idea for later.",
+     "note": "Indicates a willingness to defer to the current speaker, showing politeness."
+    },
+    {
+     "text": "when you have a moment",
+     "kind": "frame",
+     "form": "When you have a moment",
+     "meaning": "A polite way to ask for someone's attention or to speak when they are free.",
+     "example": "When you have a moment, I'd like to discuss the upcoming presentation.",
+     "plain": "When you are free, I want to discuss the presentation.",
+     "note": "A gentle way to request attention without interrupting immediately."
+    },
+    {
+     "text": "I'll let you continue",
+     "kind": "chunk",
+     "form": "I'll let you continue",
+     "meaning": "Signalling that you are done speaking or have paused, and the other person can resume.",
+     "example": "That's all I wanted to say for now, so I'll let you continue.",
+     "plain": "I'm done speaking, so you can keep talking.",
+     "note": "A polite way to hand over the conversational floor."
+    },
+    {
+     "text": "I just wanted to chime in",
+     "kind": "chunk",
+     "form": "I just wanted to chime in",
+     "meaning": "To add a quick comment or opinion to a conversation.",
+     "example": "I just wanted to chime in and say I agree with your assessment.",
+     "plain": "I wanted to add that I agree with you.",
+     "note": "A slightly informal but common way to contribute to a discussion."
+    },
+    {
+     "text": "I'm all ears",
+     "kind": "chunk",
+     "form": "I'm all ears",
+     "meaning": "I am ready and eager to listen to what you have to say.",
+     "example": "Go ahead with your proposal; I'm all ears and ready to hear it.",
+     "plain": "Tell me your proposal; I'm ready to listen.",
+     "note": "An idiomatic expression indicating keen attention, suitable for informal to semi-formal."
+    },
+    {
+     "text": "I think we're good here",
+     "kind": "chunk",
+     "form": "I think we're good here",
+     "meaning": "I believe we have successfully completed our discussion or achieved our goal.",
+     "example": "I think we're good here; all my questions have been answered.",
+     "plain": "I think we're done; all my questions are answered.",
+     "note": "A casual but clear way to signal the end of a specific topic or the call itself."
+    },
+    {
+     "text": "I'll send a follow-up",
+     "kind": "chunk",
+     "form": "I'll send a follow-up",
+     "meaning": "I will send an email or message summarizing our discussion or next steps.",
+     "example": "To ensure we're aligned, I'll send a follow-up email with the key decisions.",
+     "plain": "I'll email a summary of our decisions to make sure we agree.",
+     "note": "A common professional closing, indicating concrete next steps."
+    },
+    {
+     "text": "I'll update you regularly",
+     "kind": "chunk",
+     "form": "I'll update you regularly",
+     "meaning": "I will provide you with frequent information on the progress or developments.",
+     "example": "I'll update you regularly on the project's status as soon as I have more information.",
+     "plain": "I'll give you regular updates on the project's status when I have more information.",
+     "note": "A clear and professional way to promise ongoing communication."
+    },
+    {
+     "text": "I think that covers it",
+     "kind": "chunk",
+     "form": "I think that covers it",
+     "meaning": "I believe we have discussed all necessary points and nothing important was missed.",
+     "example": "I think that covers it for today's agenda; thank you for your input.",
+     "plain": "I believe we discussed everything on the agenda today.",
+     "note": "A polite way to conclude a discussion, often inviting others to add anything missed."
+    },
+    {
+     "text": "I'll let you get on",
+     "kind": "chunk",
+     "form": "I'll let you get on",
+     "meaning": "I will end the call so you can continue with your other tasks or activities.",
+     "example": "Well, I'll let you get on with your busy schedule now.",
+     "plain": "I'll end the call so you can do your other work.",
+     "note": "A polite and considerate way to end a call, especially if the other person is busy."
+    },
+    {
+     "text": "it was a pleasure speaking",
+     "kind": "chunk",
+     "form": "it was a pleasure speaking",
+     "meaning": "Expressing enjoyment or satisfaction from the conversation.",
+     "example": "Thank you for your insights; it was a pleasure speaking with you today.",
+     "plain": "Thank you for your insights; I enjoyed talking with you today.",
+     "note": "A formal and polite closing, suitable for professional interactions."
+    },
+    {
+     "text": "I'll reach out to you",
+     "kind": "chunk",
+     "form": "I'll reach out to you",
+     "meaning": "I will contact you again soon, usually by phone or email.",
+     "example": "Thanks for the update; I'll reach out to you next week regarding the proposal.",
+     "plain": "Thank you; I will contact you next week about the proposal.",
+     "note": "A common, slightly more modern alternative to \"I'll be in touch\", indicating future communication."
+    },
+    {
+     "text": "let's reconvene next week",
+     "kind": "chunk",
+     "form": "let's reconvene next week",
+     "meaning": "Suggesting that the group or individuals meet again the following week.",
+     "example": "We've made good progress, so let's reconvene next week to finalize the plan.",
+     "plain": "We've done well, so let's meet again next week to finish the plan.",
+     "note": "A formal and efficient way to schedule the next meeting."
+    },
+    {
+     "text": "I'll jot that down",
+     "kind": "chunk",
+     "form": "I'll jot that down",
+     "meaning": "I will quickly write down or remember the information you just provided.",
+     "example": "Thank you for the details; I'll jot that down for the report.",
+     "plain": "Thanks for the details; I'll write them down for the report.",
+     "note": "A slightly more informal but common way to say you'll record information."
+    },
+    {
+     "text": "I'll get back to you",
+     "kind": "chunk",
+     "form": "I'll get back to you",
+     "meaning": "I will contact you again later with an answer or more information.",
+     "example": "I don't have that information right now, but I'll get back to you by end of day.",
+     "plain": "I don't know now, but I will contact you with the information later today.",
+     "note": "A standard, polite way to promise a future response."
+    },
+    {
+     "text": "I'm calling about",
+     "kind": "frame",
+     "form": "I'm calling about",
+     "meaning": "Stating the reason for your phone call.",
+     "example": "Hi, this is Sarah from Acme Corp; I'm calling about the recent invoice.",
+     "plain": "Hello, this is Sarah; I'm calling because of the invoice.",
+     "note": "A very common and direct way to state the purpose of a call."
+    },
+    {
+     "text": "could you take a message",
+     "kind": "chunk",
+     "form": "could you take a message",
+     "meaning": "Asking someone to write down and deliver a message to another person.",
+     "example": "Since he's not available, could you take a message for Mr. Henderson?",
+     "plain": "He's not here, so please write down a message for him.",
+     "note": "A polite and standard way to ask someone to relay information."
+    },
+    {
+     "text": "I'll pass on your message",
+     "kind": "chunk",
+     "form": "I'll pass on your message",
+     "meaning": "I will deliver your communication to the intended recipient.",
+     "example": "Yes, I'll pass on your message to her as soon as she returns to her desk.",
+     "plain": "I will give her your message when she's back at her desk.",
+     "note": "A common and reassuring phrase, confirming the message will be delivered."
+    },
+    {
+     "text": "I'm returning your call",
+     "kind": "chunk",
+     "form": "I'm returning your call",
+     "meaning": "I am calling you back because you previously called me.",
+     "example": "Hi Mark, I'm returning your call regarding the project update.",
+     "plain": "Hello Mark, you called me earlier, and I'm calling you back about the project.",
+     "note": "A standard and polite opening when calling someone back."
+    },
+    {
+     "text": "I'll try them again later",
+     "kind": "chunk",
+     "form": "I'll try them again later",
+     "meaning": "I will attempt to contact the person or people by phone at a subsequent time.",
+     "example": "They're not answering, so I'll try them again later this afternoon.",
+     "plain": "They're not picking up, so I'll call them later today.",
+     "note": "A common and practical phrase when someone is unavailable."
+    },
+    {
+     "text": "I'll drop them an email",
+     "kind": "chunk",
+     "form": "I'll drop them an email",
+     "meaning": "I will send an email to the person or people.",
+     "example": "Since I can't reach them by phone, I'll drop them an email instead.",
+     "plain": "I can't reach them by phone, so I'll send an email.",
+     "note": "A common, slightly informal but widely accepted way to say \"send an email\"."
+    },
+    {
+     "text": "I'll give them a call",
+     "kind": "chunk",
+     "form": "I'll give them a call",
+     "meaning": "I will phone the person or people.",
+     "example": "I need to confirm the details, so I'll give them a call shortly.",
+     "plain": "I need to confirm the details, so I'll phone them soon.",
+     "note": "A common and straightforward way to say you will make a phone call."
+    },
+    {
+     "text": "I'll be sure to tell her",
+     "kind": "chunk",
+     "form": "I'll be sure to tell her",
+     "meaning": "I will definitely inform her of your message or request.",
+     "example": "Don't worry, I'll be sure to tell her you called about the meeting.",
+     "plain": "I will definitely tell her you called about the meeting.",
+     "note": "A reassuring phrase, emphasizing certainty that the message will be delivered."
+    },
+    {
+     "text": "I'm just checking in",
+     "kind": "chunk",
+     "form": "I'm just checking in",
+     "meaning": "I am calling to see how things are going or to get an update.",
+     "example": "Hi, I'm just checking in to see if you received my previous email.",
+     "plain": "Hello, I'm calling to see if you got my email.",
+     "note": "A common, friendly way to initiate a call, often for a quick update."
+    },
+    {
+     "text": "I'll have them call you",
+     "kind": "chunk",
+     "form": "I'll have them call you",
+     "meaning": "I will arrange for the person or people to phone you.",
+     "example": "He's in a meeting right now, but I'll have them call you back.",
+     "plain": "He's busy, but I'll arrange for him to call you back.",
+     "note": "A common phrase used by receptionists or assistants to promise a return call."
+    },
+    {
+     "text": "We seem to be experiencing",
+     "kind": "frame",
+     "form": "We seem to be experiencing",
+     "meaning": "Indicates that there are technical issues affecting the call or video conference.",
+     "example": "We seem to be experiencing some technical difficulties with the platform today.",
+     "plain": "It looks like we are having some technical problems with the platform today.",
+     "note": "A polite, slightly formal way to acknowledge a problem, often used in professional settings."
+    },
+    {
+     "text": "I'm getting a lot of static",
+     "kind": "chunk",
+     "form": "I'm getting a lot of static",
+     "meaning": "Describes poor audio quality where there is a crackling or hissing sound.",
+     "example": "I'm getting a lot of static on my end, making it hard to hear you clearly.",
+     "plain": "There's a lot of noise on the line, so I can't hear you well.",
+     "note": "Common for phone calls, less so for video calls unless the audio is very poor."
+    },
+    {
+     "text": "The video is lagging a bit",
+     "kind": "chunk",
+     "form": "The video is lagging a bit",
+     "meaning": "Explains that the video feed is not smooth and is experiencing delays.",
+     "example": "The video is lagging a bit, so your movements appear jerky on my screen.",
+     "plain": "Your video is delayed and not moving smoothly on my screen.",
+     "note": "A common, informal way to describe video synchronization issues."
+    },
+    {
+     "text": "It's a bit difficult to make out",
+     "kind": "frame",
+     "form": "It's a bit difficult to make out",
+     "meaning": "Expresses that the speaker is having trouble understanding what is being said due to poor audio.",
+     "example": "It's a bit difficult to make out what you're saying with all the background noise.",
+     "plain": "I can't understand you well because of the noise in the background.",
+     "note": "A polite and slightly indirect way to indicate poor comprehension."
+    },
+    {
+     "text": "We're having some connectivity issues",
+     "kind": "chunk",
+     "form": "We're having some connectivity issues",
+     "meaning": "States that there are problems with the internet or network connection.",
+     "example": "We're having some connectivity issues, so I might drop off the call unexpectedly.",
+     "plain": "Our internet connection is bad, so I might get disconnected from the call.",
+     "note": "A professional and common way to describe general network problems."
+    },
+    {
+     "text": "I'm afraid I can't quite make you out",
+     "kind": "chunk",
+     "form": "I'm afraid I can't quite make you out",
+     "meaning": "Politely states that the speaker cannot understand what the other person is saying.",
+     "example": "I'm afraid I can't quite make you out; the sound quality is very poor.",
+     "plain": "I can't understand you because the sound quality is bad.",
+     "note": "A polite and common expression, often used when the audio is muffled or unclear."
+    },
+    {
+     "text": "I'm getting an echo",
+     "kind": "chunk",
+     "form": "I'm getting an echo",
+     "meaning": "Indicates that the speaker can hear their own voice or other sounds repeating back to them.",
+     "example": "I'm getting an echo on my end, which is making it hard to concentrate.",
+     "plain": "I can hear my own voice repeating, and it's distracting.",
+     "note": "A direct and common way to report a specific audio problem."
+    },
+    {
+     "text": "My screen is frozen",
+     "kind": "chunk",
+     "form": "My screen is frozen",
+     "meaning": "Describes a situation where the visual display on the speaker's device is stuck.",
+     "example": "My screen is frozen, so I can't see the presentation slides anymore.",
+     "plain": "The image on my computer is stuck, and I can't see the slides.",
+     "note": "A common and direct way to describe a visual technical issue."
+    },
+    {
+     "text": "The audio is cutting in and out",
+     "kind": "chunk",
+     "form": "The audio is cutting in and out",
+     "meaning": "Describes sound that is not continuous, repeatedly stopping and starting.",
+     "example": "The audio is cutting in and out, so I'm missing parts of what you're saying.",
+     "plain": "The sound keeps stopping and starting, so I'm not hearing everything.",
+     "note": "A very common and direct way to describe an unstable audio connection."
+    },
+    {
+     "text": "If I may offer a thought",
+     "kind": "frame",
+     "form": "If I may offer a thought",
+     "meaning": "A polite way to ask for permission to share an idea or opinion.",
+     "example": "If I may offer a thought, perhaps we should consider an alternative approach.",
+     "plain": "Can I share an idea? Maybe we should think about a different way.",
+     "note": "A very polite and slightly formal way to introduce a contribution."
+    },
+    {
+     "text": "I'd like to briefly comment",
+     "kind": "frame",
+     "form": "I'd like to briefly comment",
+     "meaning": "Expresses a desire to make a short remark or observation.",
+     "example": "I'd like to briefly comment on the last point before we move on.",
+     "plain": "I want to say something short about the last topic before we continue.",
+     "note": "A polite and professional way to signal an upcoming short contribution."
+    },
+    {
+     "text": "If I understand correctly",
+     "kind": "frame",
+     "form": "If I understand correctly",
+     "meaning": "Used to check comprehension before responding or continuing.",
+     "example": "If I understand correctly, you're suggesting we postpone the decision until next week.",
+     "plain": "So, you mean we should delay the decision until next week, right?",
+     "note": "A common and useful phrase for clarifying information and ensuring alignment."
+    },
+    {
+     "text": "Just to make sure I'm following",
+     "kind": "frame",
+     "form": "Just to make sure I'm following",
+     "meaning": "Indicates a need to confirm understanding of the discussion so far.",
+     "example": "Just to make sure I'm following, are we still on track for the original deadline?",
+     "plain": "To confirm I understand, is the original deadline still valid?",
+     "note": "A polite and collaborative way to seek clarification during a conversation."
+    },
+    {
+     "text": "I'll hold my questions",
+     "kind": "chunk",
+     "form": "I'll hold my questions",
+     "meaning": "States an intention to save questions for a later time in the discussion.",
+     "example": "I'll hold my questions until the end of your presentation, if that's alright.",
+     "plain": "I will ask my questions after your presentation, if that's okay.",
+     "note": "A polite way to manage turn-taking and avoid interruptions."
+    },
+    {
+     "text": "I just wanted to underscore that",
+     "kind": "frame",
+     "form": "I just wanted to underscore that",
+     "meaning": "Used to emphasize a point that has already been made.",
+     "example": "I just wanted to underscore that the budget constraints are quite strict this quarter.",
+     "plain": "I wanted to emphasize that the budget limits are very strict this quarter.",
+     "note": "A slightly formal and emphatic way to highlight an important point."
+    },
+    {
+     "text": "To reiterate what you said",
+     "kind": "frame",
+     "form": "To reiterate what you said",
+     "meaning": "Used to repeat or summarize a previous statement for emphasis or clarity.",
+     "example": "To reiterate what you said, the main challenge is indeed resource allocation.",
+     "plain": "As you mentioned, the biggest problem is definitely how we distribute resources.",
+     "note": "A formal and clear way to confirm understanding or reinforce a point."
+    },
+    {
+     "text": "I'd like to echo that sentiment",
+     "kind": "frame",
+     "form": "I'd like to echo that sentiment",
+     "meaning": "Expresses agreement with a feeling or opinion that someone else has stated.",
+     "example": "I'd like to echo that sentiment; teamwork is crucial for this project's success.",
+     "plain": "I agree with that feeling; working together is essential for this project.",
+     "note": "A polite and slightly formal way to express strong agreement."
+    },
+    {
+     "text": "If I could just add a quick point",
+     "kind": "frame",
+     "form": "If I could just add a quick point",
+     "meaning": "A polite way to ask for permission to insert a brief additional comment.",
+     "example": "If I could just add a quick point, the client feedback was overwhelmingly positive.",
+     "plain": "Can I quickly add that the client's feedback was very good?",
+     "note": "A common and polite way to interject briefly without disrupting the flow too much."
+    },
+    {
+     "text": "I'll defer to your expertise",
+     "kind": "frame",
+     "form": "I'll defer to your expertise",
+     "meaning": "Indicates that one trusts and respects another person's specialized knowledge on a topic.",
+     "example": "I'll defer to your expertise on the technical specifications for this new software.",
+     "plain": "I will let you decide on the technical details for this new software because you know more.",
+     "note": "A very polite and professional way to acknowledge someone's superior knowledge."
+    },
+    {
+     "text": "To bring things to a close",
+     "kind": "frame",
+     "form": "To bring things to a close",
+     "meaning": "Used to signal that the discussion or meeting is about to end.",
+     "example": "To bring things to a close, I think we've made good progress today.",
+     "plain": "To finish up, I believe we achieved a lot today.",
+     "note": "A formal and clear way to transition to the end of a conversation."
+    },
+    {
+     "text": "It was good to touch base",
+     "kind": "chunk",
+     "form": "It was good to touch base",
+     "meaning": "Expresses that it was productive or pleasant to briefly connect and discuss things.",
+     "example": "It was good to touch base about the project updates; I feel much clearer now.",
+     "plain": "It was helpful to talk briefly about the project updates; I understand better now.",
+     "note": "A common and friendly way to acknowledge a useful short conversation."
+    },
+    {
+     "text": "Let's schedule a follow-up",
+     "kind": "chunk",
+     "form": "Let's schedule a follow-up",
+     "meaning": "Suggests arranging another meeting or call to continue the discussion or review progress.",
+     "example": "Let's schedule a follow-up for next week to review the initial results.",
+     "plain": "We should plan another meeting next week to check the first results.",
+     "note": "A common and practical way to ensure continuity in a project or discussion."
+    },
+    {
+     "text": "I appreciate your insights",
+     "kind": "chunk",
+     "form": "I appreciate your insights",
+     "meaning": "Expresses gratitude for valuable ideas, perspectives, or understanding shared.",
+     "example": "I appreciate your insights on the market trends; they were very helpful.",
+     "plain": "Thank you for your valuable ideas about market trends; they helped a lot.",
+     "note": "A polite and professional way to thank someone for their contribution."
+    },
+    {
+     "text": "I think that concludes our discussion",
+     "kind": "frame",
+     "form": "I think that concludes our discussion",
+     "meaning": "A formal way to state that the conversation or meeting has reached its end.",
+     "example": "I think that concludes our discussion for today, unless anyone has further points.",
+     "plain": "I believe we are finished talking for today, unless there's anything else.",
+     "note": "A formal and definitive way to close a meeting or conversation."
+    },
+    {
+     "text": "We've reached the end of our allotted time",
+     "kind": "chunk",
+     "form": "We've reached the end of our allotted time",
+     "meaning": "States that the scheduled duration for the call or meeting has finished.",
+     "example": "We've reached the end of our allotted time, so I'll have to let you go now.",
+     "plain": "Our scheduled time is up, so I need to end the call.",
+     "note": "A polite and professional way to end a call when time is limited."
+    },
+    {
+     "text": "It was a productive call",
+     "kind": "chunk",
+     "form": "It was a productive call",
+     "meaning": "Describes the conversation as having achieved good results or progress.",
+     "example": "It was a productive call; we managed to resolve several key issues.",
+     "plain": "The call was useful; we solved many important problems.",
+     "note": "A common and positive way to summarize the outcome of a conversation."
+    },
+    {
+     "text": "I'll revert to you on that",
+     "kind": "chunk",
+     "form": "I'll revert to you on that",
+     "meaning": "Promises to get back to the person with information or a response.",
+     "example": "I'll revert to you on that budget query once I've spoken to finance.",
+     "plain": "I will get back to you about the budget question after I talk to finance.",
+     "note": "Common in British English, slightly formal. Means \"I'll get back to you\"."
+    },
+    {
+     "text": "I'll keep you in the loop",
+     "kind": "chunk",
+     "form": "I'll keep you in the loop",
+     "meaning": "Promises to regularly update someone with information about a situation or project.",
+     "example": "I'll keep you in the loop regarding any developments with the new client proposal.",
+     "plain": "I will regularly inform you about any news concerning the new client proposal.",
+     "note": "A common and friendly idiom, implying ongoing communication."
+    },
+    {
+     "text": "I'm calling on behalf of",
+     "kind": "frame",
+     "form": "I'm calling on behalf of",
+     "meaning": "States that the caller is making the call for another person or organization.",
+     "example": "I'm calling on behalf of Mr. Smith regarding the outstanding invoice.",
+     "plain": "I am calling for Mr. Smith about the unpaid bill.",
+     "note": "A formal and professional way to introduce the purpose of a call."
+    },
+    {
+     "text": "Could you ask them to call me back",
+     "kind": "frame",
+     "form": "Could you ask them to call me back",
+     "meaning": "A polite request for someone to relay a message for a return call.",
+     "example": "Could you ask them to call me back when they have a moment?",
+     "plain": "Please tell them to phone me back when they are free.",
+     "note": "A common and polite way to leave a message requesting a return call."
+    },
+    {
+     "text": "I'll leave my contact details",
+     "kind": "chunk",
+     "form": "I'll leave my contact details",
+     "meaning": "States an intention to provide phone number, email, or other ways to be reached.",
+     "example": "I'll leave my contact details with your assistant so they can reach me.",
+     "plain": "I will give your assistant my phone number and email so they can contact me.",
+     "note": "A practical and common phrase when leaving a message."
+    },
+    {
+     "text": "Please let them know I called",
+     "kind": "frame",
+     "form": "Please let them know I called",
+     "meaning": "A polite request to inform someone that the caller attempted to reach them.",
+     "example": "Please let them know I called about the meeting next Tuesday.",
+     "plain": "Tell them that I phoned about the meeting next Tuesday.",
+     "note": "A very common and simple way to leave a message."
+    },
+    {
+     "text": "I'll follow up with them directly",
+     "kind": "chunk",
+     "form": "I'll follow up with them directly",
+     "meaning": "States an intention to contact the person concerned without an intermediary.",
+     "example": "I'll follow up with them directly if I don't hear back by tomorrow afternoon.",
+     "plain": "I will contact them myself if they don't reply by tomorrow afternoon.",
+     "note": "A professional way to indicate taking personal responsibility for communication."
+    },
+    {
+     "text": "I'll give them a heads-up",
+     "kind": "chunk",
+     "form": "I'll give them a heads-up",
+     "meaning": "Promises to provide advance notice or a warning about something.",
+     "example": "I'll give them a heads-up that you'll be calling about the proposal.",
+     "plain": "I will tell them in advance that you will call about the proposal.",
+     "note": "A common and informal idiom for providing a pre-notification."
+    },
+    {
+     "text": "I'll ask them to get back to you",
+     "kind": "frame",
+     "form": "I'll ask them to get back to you",
+     "meaning": "Promises to request that the person you're trying to reach returns your call or message.",
+     "example": "I'll ask them to get back to you as soon as they're available.",
+     "plain": "I will tell them to contact you when they are free.",
+     "note": "A common and polite way to assure someone their message will be acted upon."
+    },
+    {
+     "text": "I'll make sure they're aware",
+     "kind": "chunk",
+     "form": "I'll make sure they're aware",
+     "meaning": "Promises to inform someone about a specific piece of information.",
+     "example": "I'll make sure they're aware of the updated delivery schedule.",
+     "plain": "I will ensure they know about the new delivery schedule.",
+     "note": "A professional and reassuring way to confirm information will be passed on."
+    },
+    {
+     "text": "I'll convey your message",
+     "kind": "chunk",
+     "form": "I'll convey your message",
+     "meaning": "Promises to communicate the exact content of a message to the intended recipient.",
+     "example": "I'll convey your message to the team leader as soon as she returns.",
+     "plain": "I will give your message to the team leader when she comes back.",
+     "note": "A formal and precise way to promise to pass on information."
+    },
+    {
+     "text": "I'll get back to you with an answer",
+     "kind": "frame",
+     "form": "I'll get back to you with an answer",
+     "meaning": "Promises to provide a response or solution after finding out the necessary information.",
+     "example": "I'll get back to you with an answer about the project timeline by end of day.",
+     "plain": "I will reply to you with information about the project timeline by the end of the day.",
+     "note": "A common and professional way to commit to providing a specific response."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "you're breaking up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm losing you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the line is cutting out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "your video is frozen": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the connection is a bit patchy": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "can you hear me alright": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll call you right back": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my internet is acting up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me try reconnecting": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "are you still there": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i can barely hear you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it sounds like you're underwater": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we keep losing each other": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the signal is weak": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm having trouble hearing you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "my audio is cutting out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "you're freezing up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the sound is breaking up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "may i just jump in here": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i could just interject": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to circle back to your point": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i just wanted to add that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "you were saying": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "go ahead, i'm listening": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll let you finish": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "sorry to interrupt, but": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "did you want to add anything": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll hand it over to you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "over to you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll pause there": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what are your thoughts on that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to elaborate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me just clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "before we move on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just to pick up on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to weigh in": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "perhaps i could offer a perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'll keep my comments brief": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i think we've covered everything": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to wrap things up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll let you go": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i won't keep you any longer": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's been good catching up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i think that's all for now": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we've run out of time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll follow up with an email": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's touch base again soon": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll be in touch": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "thanks for your time": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i appreciate you taking the call": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we should probably call it a day": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll leave it there": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "is there anything else": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll get back to you on that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it was good to connect": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll send over the notes": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "looking forward to our next chat": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll let you get back to your day": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll leave a message": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "please leave a message after the tone": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'll return your call": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just calling to follow up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling in reference to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you pass on a message": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll relay the message": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll make sure they get the message": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just touching base": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll give you a call back": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm trying to reach": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'll drop them a line": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll send them an email": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll get them to call you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm returning your call about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "thanks for getting back to me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i just wanted to check in": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be sure to pass that on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll let them know you called": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll give them your message": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll make a note of that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll get back to you shortly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be sure to follow up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll keep you posted": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll let you know": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll check on that for you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll get that sorted": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll look into it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll make sure to do that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll put you through": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll hold for a moment": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be right back": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll get someone to call you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll pass your details on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll confirm that with you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll send you a reminder": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be available from": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be out of office": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be back in the office": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll get straight to the point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll try again later": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll give you a ring": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll drop you a text": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll be in touch shortly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll get back to my desk": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "poor audio quality": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "muffled voice": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "choppy video feed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "noticeable delay": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "distorted sound": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you repeat that please": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i didn't quite catch that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's switch to a phone call": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my microphone is muted": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "you're on mute": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "briefly interject": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "further elaborate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "revisit a point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to wait": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll hold my thought": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "when you have a moment": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll let you continue": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i just wanted to chime in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm all ears": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i think we're good here": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll send a follow-up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll update you regularly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i think that covers it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll let you get on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it was a pleasure speaking": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll reach out to you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's reconvene next week": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'll jot that down": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll get back to you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling about": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "could you take a message": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll pass on your message": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm returning your call": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll try them again later": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll drop them an email": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll give them a call": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'll be sure to tell her": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just checking in": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll have them call you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we seem to be experiencing": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm getting a lot of static": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the video is lagging a bit": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a bit difficult to make out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we're having some connectivity issues": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i can't quite make you out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm getting an echo": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my screen is frozen": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the audio is cutting in and out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i may offer a thought": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to briefly comment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i understand correctly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just to make sure i'm following": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll hold my questions": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i just wanted to underscore that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to reiterate what you said": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to echo that sentiment": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "if i could just add a quick point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll defer to your expertise": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to bring things to a close": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was good to touch base": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's schedule a follow-up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i appreciate your insights": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i think that concludes our discussion": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we've reached the end of our allotted time": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was a productive call": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll revert to you on that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'll keep you in the loop": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling on behalf of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could you ask them to call me back": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll leave my contact details": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "please let them know i called": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll follow up with them directly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll give them a heads-up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll ask them to get back to you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll make sure they're aware": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll convey your message": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll get back to you with an answer": {
+    "status": "pass",
+    "level": "B1"
+   }
+  }
+ }
+}

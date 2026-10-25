@@ -1,0 +1,83 @@
+{
+ "format": 1,
+ "id": "fossil.would-for-wishes",
+ "area": "grammar",
+ "title": "Wish, if only and regrets",
+ "what": "using 'would' or the simple past wrongly after 'wish' ('I wish I would have more time', 'I wish I didn't say that')",
+ "summary": "This error persists because it mirrors conditional structures, making it feel intuitively correct. However, it subtly undermines the speaker's command of nuanced regret and hypothetical situations.",
+ "listenFor": "Pay close attention to the verb tense immediately following 'wish' or 'if only' when expressing a desire or regret about the present or past.",
+ "grammarPointIds": [
+  "gp.wish-and-if-only",
+  "gp.regrets-and-hypothetical-past",
+  "gp.should-have-and-could-have"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "I wish I would have a clearer understanding of the project scope.",
+   "right": "I wish I had a clearer understanding of the project scope.",
+   "note": "Use past simple for present desires."
+  },
+  {
+   "wrong": "I wish I didn't miss that crucial deadline last week.",
+   "right": "I wish I hadn't missed that crucial deadline last week.",
+   "note": "Use past perfect for past regrets."
+  },
+  {
+   "wrong": "I wish I didn't invest so much in that volatile stock.",
+   "right": "I wish I hadn't invested so much in that volatile stock.",
+   "note": "Use past perfect for past regrets."
+  },
+  {
+   "wrong": "I wish my commute would be shorter every morning.",
+   "right": "I wish my commute were shorter every morning.",
+   "note": "Use past subjunctive for hypothetical present states."
+  },
+  {
+   "wrong": "If only I didn't accept that challenging assignment.",
+   "right": "If only I hadn't accepted that challenging assignment.",
+   "note": "Use past perfect for past regrets."
+  }
+ ],
+ "drills": [
+  "I wish I had more time to dedicate to professional development.",
+  "If only I knew the answer to that complex problem.",
+  "I wish I hadn't overlooked those critical details in the report.",
+  "She wishes she were able to travel more for work.",
+  "We wish we had anticipated the market shift sooner.",
+  "He wishes he hadn't made that impulsive decision about his career.",
+  "If only they understood the implications of their proposal.",
+  "I wish I had saved more money during my early career.",
+  "They wish they hadn't signed the contract without legal review.",
+  "If only I were fluent in another language for international business."
+ ],
+ "probes": [
+  {
+   "sentence": "I wish I would be able to attend the conference next month.",
+   "answers": [
+    "I wish I were able to attend the conference next month.",
+    "I wish I could attend the conference next month."
+   ]
+  },
+  {
+   "sentence": "If only I didn't forget to submit the expense report on time.",
+   "answers": [
+    "If only I hadn't forgotten to submit the expense report on time."
+   ]
+  },
+  {
+   "sentence": "He wishes he would have a better work-life balance.",
+   "answers": [
+    "He wishes he had a better work-life balance."
+   ]
+  },
+  {
+   "sentence": "If only I didn't agree to work overtime every weekend.",
+   "answers": [
+    "If only I hadn't agreed to work overtime every weekend."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

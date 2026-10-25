@@ -8,10 +8,10 @@
 import { coverageProblems, fitProblems, loadTargets } from "./lib/articulation-check.mjs";
 import { assemblePacks } from "./lib/assemble.mjs";
 import { exportAvailable, readSentences } from "./lib/tatoeba.mjs";
-import { corpusProblems, packProblems, tatoebaProblems } from "./lib/validators.mjs";
+import { advancedProblems, corpusProblems, packProblems, tatoebaProblems } from "./lib/validators.mjs";
 
 const packs = assemblePacks();
-const problems = [...packs.flatMap(packProblems), ...corpusProblems(packs)];
+const problems = [...packs.flatMap(packProblems), ...corpusProblems(packs), ...advancedProblems(packs)];
 const { targets, references } = loadTargets();
 problems.push(...coverageProblems(targets), ...fitProblems(targets, references));
 
@@ -20,6 +20,10 @@ else console.warn("Tatoeba export not downloaded; skipping the attribution check
 
 for (const pack of packs) {
   const c = pack.files["content.json"];
+  if (c.phrases || c.slang || c.fossilization) {
+    console.log(`${pack.id.padEnd(13)} ${c.phrases ? `${c.phrases.phrases.length} phrases` : c.slang ? `${c.slang.entries.length} slang entries (${c.slang.entries.filter((e) => e.dated).length} dated)` : `${c.fossilization.errors.length} persistent errors`}`);
+    continue;
+  }
   const kinds = {};
   for (const e of c.exercises) kinds[e.kind] = (kinds[e.kind] ?? 0) + 1;
   console.log(

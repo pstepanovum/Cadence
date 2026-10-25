@@ -1,0 +1,1398 @@
+{
+ "format": 1,
+ "level": "B2",
+ "situation": "meetings",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "run through the agenda",
+     "kind": "collocation",
+     "form": "run through the agenda",
+     "meaning": "To quickly review the list of topics for discussion in a meeting.",
+     "example": "Before we start, let's quickly run through the agenda for today's session.",
+     "plain": "Before we start, let's quickly review the topics for today.",
+     "note": "Standard phrase for outlining meeting topics. Used by the meeting leader."
+    },
+    {
+     "text": "The aim of this meeting is",
+     "kind": "frame",
+     "form": "The aim of this meeting is",
+     "meaning": "Used to state the main purpose or objective of the discussion.",
+     "example": "The aim of this meeting is to finalize the project timeline.",
+     "plain": "The main purpose of this meeting is to finalize the project timeline.",
+     "note": "Clear and direct way to state the meeting's objective. Formal and professional."
+    },
+    {
+     "text": "I'd like to add",
+     "kind": "frame",
+     "form": "I'd like to add",
+     "meaning": "Used to contribute an additional point or idea to the discussion.",
+     "example": "If I may, I'd like to add a point about the budget implications.",
+     "plain": "If I may, I want to mention something about the budget implications.",
+     "note": "Polite way to interject or contribute. Can be used to support or introduce new ideas."
+    },
+    {
+     "text": "from my perspective",
+     "kind": "chunk",
+     "form": "from my perspective",
+     "meaning": "Used to introduce your personal opinion or viewpoint on a topic.",
+     "example": "From my perspective, the new strategy presents some significant risks.",
+     "plain": "In my opinion, the new strategy presents some significant risks.",
+     "note": "A common way to share an opinion, often implying it's one of several possible views."
+    },
+    {
+     "text": "I see your point",
+     "kind": "chunk",
+     "form": "I see your point",
+     "meaning": "To acknowledge and understand what someone is saying, even if you don't fully agree.",
+     "example": "I see your point about the tight deadline, but we still need to deliver.",
+     "plain": "I understand your concern about the tight deadline, but we still need to deliver.",
+     "note": "Shows you've listened and understood. Can precede a counter-argument."
+    },
+    {
+     "text": "Could you elaborate on",
+     "kind": "frame",
+     "form": "Could you elaborate on",
+     "meaning": "Used to ask someone to provide more details or explain something further.",
+     "example": "Could you elaborate on the potential challenges you foresee with this plan?",
+     "plain": "Could you explain in more detail the potential challenges you foresee?",
+     "note": "Polite and professional way to request more information. Useful for clarity."
+    },
+    {
+     "text": "let's move on to",
+     "kind": "frame",
+     "form": "let's move on to",
+     "meaning": "Used to transition the discussion to the next topic on the agenda.",
+     "example": "Okay, let's move on to the next item on our agenda: marketing strategies.",
+     "plain": "Okay, let's go to the next item on our agenda: marketing strategies.",
+     "note": "Common phrase for steering a meeting. Used by the chair or a participant."
+    },
+    {
+     "text": "to sum up",
+     "kind": "chunk",
+     "form": "to sum up",
+     "meaning": "To briefly summarize the main points that have been discussed.",
+     "example": "So, to sum up, we've agreed on the budget and the next steps.",
+     "plain": "So, in summary, we've agreed on the budget and the next steps.",
+     "note": "Used to conclude a section or the entire meeting. Clear and concise."
+    },
+    {
+     "text": "action point",
+     "kind": "collocation",
+     "form": "action point",
+     "meaning": "A specific task or step that needs to be taken after the meeting.",
+     "example": "The main action point from this discussion is to draft the proposal by Friday.",
+     "plain": "The main task from this discussion is to draft the proposal by Friday.",
+     "note": "Standard business term for a task assigned during a meeting. Professional."
+    },
+    {
+     "text": "I'm not sure about that",
+     "kind": "chunk",
+     "form": "I'm not sure about that",
+     "meaning": "To express polite disagreement or doubt about a statement or proposal.",
+     "example": "I'm not sure about that approach; it might be too risky for us.",
+     "plain": "I don't agree with that approach; it might be too risky for us.",
+     "note": "A softer way to disagree, inviting further discussion rather than direct confrontation."
+    },
+    {
+     "text": "What I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "Used to clarify or explain the main point you are trying to make.",
+     "example": "What I'm getting at is, we need to prioritize these tasks more effectively.",
+     "plain": "My main point is that we need to prioritize these tasks more effectively.",
+     "note": "Helps to rephrase or summarize your intention. Useful when you feel misunderstood."
+    },
+    {
+     "text": "Let's stick to the agenda",
+     "kind": "chunk",
+     "form": "Let's stick to the agenda",
+     "meaning": "To remind participants to focus on the planned topics and not digress.",
+     "example": "I know that's an interesting point, but let's stick to the agenda for now.",
+     "plain": "I know that's an interesting point, but let's keep to the planned topics.",
+     "note": "Used by the chair to keep the meeting on track. Can be firm but polite."
+    },
+    {
+     "text": "just to clarify",
+     "kind": "chunk",
+     "form": "just to clarify",
+     "meaning": "Used to ask for or provide a clearer explanation of something.",
+     "example": "Just to clarify, are we talking about the first or second quarter results?",
+     "plain": "To make it clear, are we talking about the first or second quarter results?",
+     "note": "Common phrase for seeking or offering precision. Neutral and professional."
+    },
+    {
+     "text": "Let's table that for now",
+     "kind": "chunk",
+     "form": "Let's table that for now",
+     "meaning": "To postpone discussion of a topic until a later time or meeting.",
+     "example": "That's a good point, but let's table that for now and revisit it next week.",
+     "plain": "That's a good point, but let's postpone that for now and revisit it next week.",
+     "note": "Common in American English for postponing. In British English, 'table' can mean to discuss."
+    },
+    {
+     "text": "I'd like to propose",
+     "kind": "frame",
+     "form": "I'd like to propose",
+     "meaning": "Used to formally suggest an idea or course of action.",
+     "example": "I'd like to propose that we allocate more resources to the marketing team.",
+     "plain": "I want to suggest that we allocate more resources to the marketing team.",
+     "note": "Formal and direct way to make a suggestion. Professional context."
+    },
+    {
+     "text": "What are your thoughts on",
+     "kind": "frame",
+     "form": "What are your thoughts on",
+     "meaning": "Used to invite others to share their opinions or ideas about a topic.",
+     "example": "What are your thoughts on the new project proposal, Sarah?",
+     "plain": "What do you think about the new project proposal, Sarah?",
+     "note": "Polite way to solicit input from others. Encourages participation."
+    },
+    {
+     "text": "Let's get started",
+     "kind": "chunk",
+     "form": "Let's get started",
+     "meaning": "A common phrase used to begin a meeting or activity.",
+     "example": "Everyone's here, so let's get started with the first item.",
+     "plain": "Everyone's here, so let's begin with the first item.",
+     "note": "Simple and direct way to initiate a meeting. Informal but widely used."
+    },
+    {
+     "text": "I'd like to point out",
+     "kind": "frame",
+     "form": "I'd like to point out",
+     "meaning": "Used to draw attention to a specific fact or detail.",
+     "example": "I'd like to point out that our budget is quite limited this quarter.",
+     "plain": "I want to mention that our budget is quite limited this quarter.",
+     "note": "Highlights an important piece of information. Can be used to raise a concern."
+    },
+    {
+     "text": "We're running out of time",
+     "kind": "chunk",
+     "form": "We're running out of time",
+     "meaning": "To indicate that the meeting needs to conclude soon or speed up.",
+     "example": "We're running out of time, so let's quickly cover the last two points.",
+     "plain": "We have little time left, so let's quickly cover the last two points.",
+     "note": "Used to manage time effectively. Can be said by the chair or a participant."
+    },
+    {
+     "text": "to recap briefly",
+     "kind": "chunk",
+     "form": "to recap briefly",
+     "meaning": "To quickly summarize the main points discussed so far.",
+     "example": "Just to recap briefly, we've decided on the new software vendor.",
+     "plain": "Just to summarize quickly, we've decided on the new software vendor.",
+     "note": "Useful for bringing everyone up to speed or confirming understanding."
+    },
+    {
+     "text": "I'm afraid I don't agree",
+     "kind": "chunk",
+     "form": "I'm afraid I don't agree",
+     "meaning": "A polite way to express disagreement with someone's statement or idea.",
+     "example": "I'm afraid I don't agree with your assessment of the market trends.",
+     "plain": "I don't agree with your assessment of the market trends.",
+     "note": "Softens the disagreement, making it less confrontational. Professional."
+    },
+    {
+     "text": "Let's take a vote",
+     "kind": "collocation",
+     "form": "Let's take a vote",
+     "meaning": "To decide on an issue by having participants formally express their choice.",
+     "example": "Since we can't reach a consensus, let's take a vote on the final decision.",
+     "plain": "Since we can't agree, let's vote on the final decision.",
+     "note": "Used when a decision needs to be made and consensus isn't possible."
+    },
+    {
+     "text": "What's your take on",
+     "kind": "frame",
+     "form": "What's your take on",
+     "meaning": "Used to ask for someone's opinion or perspective on a particular matter.",
+     "example": "What's your take on the latest sales figures, Mark?",
+     "plain": "What do you think about the latest sales figures, Mark?",
+     "note": "Informal but common way to ask for an opinion. Encourages open discussion."
+    },
+    {
+     "text": "I'd like to suggest",
+     "kind": "frame",
+     "form": "I'd like to suggest",
+     "meaning": "Used to offer an idea or recommendation for consideration.",
+     "example": "I'd like to suggest we explore alternative solutions before committing.",
+     "plain": "I want to suggest we explore alternative solutions before committing.",
+     "note": "Polite and common way to introduce a suggestion. Neutral register."
+    },
+    {
+     "text": "to get us started",
+     "kind": "chunk",
+     "form": "to get us started",
+     "meaning": "Used to introduce the first topic or activity of a meeting.",
+     "example": "To get us started, I'd like to review the progress from last week.",
+     "plain": "To begin, I'd like to review the progress from last week.",
+     "note": "A common introductory phrase. Often used by the meeting leader."
+    },
+    {
+     "text": "I'm happy to take that on",
+     "kind": "chunk",
+     "form": "I'm happy to take that on",
+     "meaning": "To volunteer to be responsible for a task or action.",
+     "example": "That sounds like a good idea; I'm happy to take that on as an action point.",
+     "plain": "That sounds like a good idea; I'm happy to be responsible for that task.",
+     "note": "Expresses willingness to accept responsibility. Collaborative tone."
+    },
+    {
+     "text": "Let's circle back to",
+     "kind": "frame",
+     "form": "Let's circle back to",
+     "meaning": "To return to a previous topic or issue later in the discussion.",
+     "example": "That's an important point, but let's circle back to it after we discuss the budget.",
+     "plain": "That's an important point, but let's return to it after we discuss the budget.",
+     "note": "Common in business English for deferring a topic. Professional."
+    },
+    {
+     "text": "I'd like to raise a point",
+     "kind": "frame",
+     "form": "I'd like to raise a point",
+     "meaning": "To introduce an idea or question for discussion.",
+     "example": "Before we move on, I'd like to raise a point about the budget allocation.",
+     "plain": "Before we move on, I'd like to mention something about the budget.",
+     "note": "Polite and common way to introduce a new topic or concern. Neutral register."
+    },
+    {
+     "text": "to be clear",
+     "kind": "chunk",
+     "form": "to be clear",
+     "meaning": "Used to ensure that what you are saying is understood without ambiguity.",
+     "example": "To be clear, we are aiming for a 15% increase in sales this quarter.",
+     "plain": "I want to make it clear that we are aiming for a 15% increase in sales.",
+     "note": "Emphasizes clarity. Can be used to correct misunderstandings."
+    },
+    {
+     "text": "I'm afraid I have to disagree",
+     "kind": "chunk",
+     "form": "I'm afraid I have to disagree",
+     "meaning": "A polite but firm way to state your opposition to an idea or statement.",
+     "example": "I'm afraid I have to disagree with the proposed timeline; it's unrealistic.",
+     "plain": "I must disagree with the proposed timeline; it's unrealistic.",
+     "note": "More direct than 'I'm not sure about that', but still polite. Professional."
+    },
+    {
+     "text": "Let's keep it brief",
+     "kind": "chunk",
+     "form": "Let's keep it brief",
+     "meaning": "To suggest that a discussion or presentation should be short and to the point.",
+     "example": "We have a lot to cover, so let's keep it brief on each item.",
+     "plain": "We have a lot to cover, so let's be concise on each item.",
+     "note": "Used to manage time and focus. Can be said by the chair or a participant."
+    },
+    {
+     "text": "What do you mean by",
+     "kind": "frame",
+     "form": "What do you mean by",
+     "meaning": "Used to ask for clarification or a more detailed explanation of a term or idea.",
+     "example": "What do you mean by 'synergy' in this context, John?",
+     "plain": "Could you explain what you mean by 'synergy' in this context, John?",
+     "note": "Direct but neutral way to seek clarification. Avoids assumptions."
+    },
+    {
+     "text": "I'd like to hear from",
+     "kind": "frame",
+     "form": "I'd like to hear from",
+     "meaning": "Used to invite a specific person to share their thoughts or input.",
+     "example": "Now, I'd like to hear from Sarah regarding the marketing campaign.",
+     "plain": "Now, I want to hear Sarah's thoughts regarding the marketing campaign.",
+     "note": "Encourages participation from specific individuals. Inclusive."
+    },
+    {
+     "text": "Let's wrap this up",
+     "kind": "chunk",
+     "form": "Let's wrap this up",
+     "meaning": "To conclude a discussion or meeting.",
+     "example": "We've covered everything, so let's wrap this up and confirm the next steps.",
+     "plain": "We've covered everything, so let's finish this and confirm the next steps.",
+     "note": "Informal but common way to end a meeting. Often used by the chair."
+    },
+    {
+     "text": "The way I see it",
+     "kind": "frame",
+     "form": "The way I see it",
+     "meaning": "Used to introduce your personal opinion or interpretation of a situation.",
+     "example": "The way I see it, we have two main options to consider.",
+     "plain": "In my opinion, we have two main options to consider.",
+     "note": "Common way to present a viewpoint. Can be used to offer a solution."
+    },
+    {
+     "text": "I'd like to suggest that",
+     "kind": "frame",
+     "form": "I'd like to suggest that",
+     "meaning": "Used to offer an idea or recommendation for consideration.",
+     "example": "I'd like to suggest that we postpone the decision until next week.",
+     "plain": "I want to suggest that we postpone the decision until next week.",
+     "note": "Polite and common way to introduce a suggestion. Neutral register."
+    },
+    {
+     "text": "Let's take five",
+     "kind": "chunk",
+     "form": "Let's take five",
+     "meaning": "To suggest a short break, usually five minutes, during a long meeting.",
+     "example": "We've been going for a while, so let's take five and then resume.",
+     "plain": "We've been going for a while, so let's take a short break and then resume.",
+     "note": "Informal way to suggest a break. Common in longer meetings."
+    },
+    {
+     "text": "I'm afraid I have a question",
+     "kind": "chunk",
+     "form": "I'm afraid I have a question",
+     "meaning": "A polite way to interrupt or introduce a question.",
+     "example": "I'm afraid I have a question about the budget figures you just presented.",
+     "plain": "I have a question about the budget figures you just presented.",
+     "note": "Softens the interruption, making it more polite. Professional."
+    },
+    {
+     "text": "to get back to",
+     "kind": "frame",
+     "form": "to get back to",
+     "meaning": "To return to a previous topic after a digression.",
+     "example": "Okay, to get back to the main point, what are our next steps?",
+     "plain": "Okay, to return to the main point, what are our next steps?",
+     "note": "Used to refocus the discussion. Can be used by the chair or a participant."
+    },
+    {
+     "text": "I'd like to clarify",
+     "kind": "frame",
+     "form": "I'd like to clarify",
+     "meaning": "Used to make something clearer or to ask for a clearer explanation.",
+     "example": "I'd like to clarify the timeline for the project deliverables.",
+     "plain": "I want to make the timeline for the project deliverables clearer.",
+     "note": "Professional way to seek or provide precision. Neutral register."
+    },
+    {
+     "text": "Let's hear from everyone",
+     "kind": "chunk",
+     "form": "Let's hear from everyone",
+     "meaning": "To encourage all participants to share their views or input.",
+     "example": "Before we decide, let's hear from everyone on this important matter.",
+     "plain": "Before we decide, let's get everyone's opinion on this important matter.",
+     "note": "Promotes inclusive discussion. Often used by the meeting leader."
+    },
+    {
+     "text": "to put it another way",
+     "kind": "chunk",
+     "form": "to put it another way",
+     "meaning": "Used to rephrase something for better understanding or emphasis.",
+     "example": "To put it another way, we need to reduce costs significantly.",
+     "plain": "In other words, we need to reduce costs significantly.",
+     "note": "Helps to clarify or simplify a complex idea. Useful for ensuring understanding."
+    },
+    {
+     "text": "I'm happy to help with that",
+     "kind": "chunk",
+     "form": "I'm happy to help with that",
+     "meaning": "To offer assistance with a task or problem.",
+     "example": "If you need someone to draft the report, I'm happy to help with that.",
+     "plain": "If you need someone to draft the report, I'm willing to help.",
+     "note": "Expresses willingness to contribute. Collaborative and supportive."
+    },
+    {
+     "text": "I'd like to move on",
+     "kind": "frame",
+     "form": "I'd like to move on",
+     "meaning": "Used to suggest transitioning to the next topic or stage of discussion.",
+     "example": "If there are no further comments, I'd like to move on to the next item.",
+     "plain": "If there are no further comments, I want to go to the next item.",
+     "note": "Polite way to steer the meeting forward. Often used by the chair."
+    },
+    {
+     "text": "I'm afraid I don't follow",
+     "kind": "chunk",
+     "form": "I'm afraid I don't follow",
+     "meaning": "A polite way to admit you don't understand what someone is saying.",
+     "example": "I'm afraid I don't follow your logic on that last point.",
+     "plain": "I don't understand your logic on that last point.",
+     "note": "Softens the admission of confusion, inviting further explanation. Professional."
+    },
+    {
+     "text": "Let's put a pin in that",
+     "kind": "chunk",
+     "form": "Let's put a pin in that",
+     "meaning": "To temporarily set aside a topic for later discussion.",
+     "example": "That's an interesting idea, but let's put a pin in that for now.",
+     "plain": "That's an interesting idea, but let's save that for later.",
+     "note": "Informal but common in American business English for postponing a topic."
+    },
+    {
+     "text": "What's the best way forward",
+     "kind": "frame",
+     "form": "What's the best way forward",
+     "meaning": "Used to ask for suggestions on the most effective course of action.",
+     "example": "Given these challenges, what's the best way forward for our team?",
+     "plain": "Given these challenges, what's the best plan for our team?",
+     "note": "Invites collaborative problem-solving. Focuses on solutions."
+    },
+    {
+     "text": "I'd like to propose a solution",
+     "kind": "frame",
+     "form": "I'd like to propose a solution",
+     "meaning": "Used to formally suggest a way to resolve a problem or issue.",
+     "example": "To address this, I'd like to propose a solution involving new software.",
+     "plain": "To address this, I want to suggest a solution involving new software.",
+     "note": "Direct and professional way to offer a resolution. Solution-oriented."
+    },
+    {
+     "text": "to be fair",
+     "kind": "chunk",
+     "form": "to be fair",
+     "meaning": "Used to introduce a point that considers another perspective or mitigates criticism.",
+     "example": "To be fair, the team has been working under immense pressure.",
+     "plain": "It's important to acknowledge that the team has been working under pressure.",
+     "note": "Introduces a balanced viewpoint. Often used to defend or explain."
+    },
+    {
+     "text": "I'm happy to take notes",
+     "kind": "chunk",
+     "form": "I'm happy to take notes",
+     "meaning": "To volunteer to record the key points and decisions of the meeting.",
+     "example": "If no one else is available, I'm happy to take notes for this session.",
+     "plain": "If no one else is available, I'm willing to write down the meeting notes.",
+     "note": "Expresses willingness to contribute administratively. Collaborative."
+    },
+    {
+     "text": "Let's keep this discussion focused",
+     "kind": "chunk",
+     "form": "Let's keep this discussion focused",
+     "meaning": "To remind participants to stay on topic and avoid digressions.",
+     "example": "I appreciate the input, but let's keep this discussion focused on the budget.",
+     "plain": "I appreciate the input, but let's keep this discussion only about the budget.",
+     "note": "Used by the chair to maintain control and efficiency. Professional."
+    },
+    {
+     "text": "I'd like to reiterate",
+     "kind": "frame",
+     "form": "I'd like to reiterate",
+     "meaning": "Used to repeat or emphasize a point for clarity or importance.",
+     "example": "I'd like to reiterate the importance of meeting these deadlines.",
+     "plain": "I want to repeat the importance of meeting these deadlines.",
+     "note": "Formal way to stress a point. Used when a message needs reinforcement."
+    },
+    {
+     "text": "What's the status of",
+     "kind": "frame",
+     "form": "What's the status of",
+     "meaning": "Used to ask for an update on the current situation or progress of something.",
+     "example": "What's the status of the new software implementation, David?",
+     "plain": "What is the current situation of the new software implementation, David?",
+     "note": "Common question for checking progress on tasks or projects. Professional."
+    },
+    {
+     "text": "I'd like to get your input",
+     "kind": "frame",
+     "form": "I'd like to get your input",
+     "meaning": "Used to ask someone for their opinion, ideas, or feedback.",
+     "example": "Before we finalize, I'd like to get your input on the design changes.",
+     "plain": "Before we finalize, I want to get your opinion on the design changes.",
+     "note": "Polite way to solicit feedback. Encourages collaboration."
+    },
+    {
+     "text": "Let's put it to a vote",
+     "kind": "chunk",
+     "form": "Let's put it to a vote",
+     "meaning": "To suggest deciding an issue by having participants formally express their choice.",
+     "example": "Since we're divided, let's put it to a vote and move forward.",
+     "plain": "Since we're divided, let's vote on it and move forward.",
+     "note": "Used when a decision needs to be made and consensus isn't possible."
+    },
+    {
+     "text": "I'm happy to clarify",
+     "kind": "chunk",
+     "form": "I'm happy to clarify",
+     "meaning": "To offer to provide a clearer explanation of something.",
+     "example": "If anything was unclear, I'm happy to clarify any points.",
+     "plain": "If anything was unclear, I'm willing to explain any points.",
+     "note": "Shows willingness to ensure understanding. Collaborative and helpful."
+    },
+    {
+     "text": "Let's take a quick look at",
+     "kind": "frame",
+     "form": "Let's take a quick look at",
+     "meaning": "To suggest a brief review or examination of a topic or document.",
+     "example": "Now, let's take a quick look at the revised budget proposal.",
+     "plain": "Now, let's briefly review the revised budget proposal.",
+     "note": "Common way to introduce a short review. Efficient and direct."
+    },
+    {
+     "text": "I'd like to make a suggestion",
+     "kind": "frame",
+     "form": "I'd like to make a suggestion",
+     "meaning": "Used to offer an idea or recommendation for consideration.",
+     "example": "I'd like to make a suggestion regarding the team's workflow.",
+     "plain": "I want to offer an idea regarding the team's workflow.",
+     "note": "Polite and common way to introduce a suggestion. Neutral register."
+    },
+    {
+     "text": "to be honest",
+     "kind": "chunk",
+     "form": "to be honest",
+     "meaning": "Used to introduce a frank or sincere opinion, sometimes a critical one.",
+     "example": "To be honest, I don't think this plan is feasible.",
+     "plain": "Frankly, I don't think this plan is feasible.",
+     "note": "Adds emphasis to an opinion. Can soften a negative statement."
+    },
+    {
+     "text": "I'm afraid I have to interrupt",
+     "kind": "chunk",
+     "form": "I'm afraid I have to interrupt",
+     "meaning": "A polite way to break into someone's speech.",
+     "example": "I'm afraid I have to interrupt, but we're running short on time.",
+     "plain": "I must interrupt, but we're running short on time.",
+     "note": "Softens the interruption, making it more polite. Professional."
+    },
+    {
+     "text": "Let's get this done",
+     "kind": "chunk",
+     "form": "Let's get this done",
+     "meaning": "To express a desire to complete a task or discussion efficiently.",
+     "example": "We've discussed enough; let's get this done and move to implementation.",
+     "plain": "We've discussed enough; let's complete this and move to implementation.",
+     "note": "Motivating phrase, often used to encourage action. Informal but common."
+    },
+    {
+     "text": "I'd like to confirm",
+     "kind": "frame",
+     "form": "I'd like to confirm",
+     "meaning": "Used to verify information or an agreement.",
+     "example": "I'd like to confirm the action points before we close the meeting.",
+     "plain": "I want to verify the action points before we close the meeting.",
+     "note": "Professional way to ensure accuracy and agreement. Neutral register."
+    },
+    {
+     "text": "What's the next step",
+     "kind": "frame",
+     "form": "What's the next step",
+     "meaning": "Used to ask about the subsequent action or stage in a process.",
+     "example": "We've made a decision, so what's the next step for implementation?",
+     "plain": "We've made a decision, so what should we do next for implementation?",
+     "note": "Common question for planning and moving forward. Action-oriented."
+    },
+    {
+     "text": "I'd like to open the floor",
+     "kind": "frame",
+     "form": "I'd like to open the floor",
+     "meaning": "To invite participants to ask questions or offer comments.",
+     "example": "Now, I'd like to open the floor for any questions or additional comments.",
+     "plain": "Now, I want to invite questions or additional comments from everyone.",
+     "note": "Formal way to invite general discussion. Used by the meeting leader."
+    },
+    {
+     "text": "to put it simply",
+     "kind": "chunk",
+     "form": "to put it simply",
+     "meaning": "Used to explain something in an easy-to-understand way.",
+     "example": "To put it simply, we need to cut costs to stay profitable.",
+     "plain": "In simple terms, we need to cut costs to stay profitable.",
+     "note": "Helps to clarify complex ideas. Useful for ensuring everyone understands."
+    },
+    {
+     "text": "I'm happy to share my screen",
+     "kind": "chunk",
+     "form": "I'm happy to share my screen",
+     "meaning": "To offer to display your computer screen to others in a virtual meeting.",
+     "example": "If it helps, I'm happy to share my screen to show the data.",
+     "plain": "If it helps, I'm willing to show my screen to display the data.",
+     "note": "Common phrase in online meetings. Collaborative and practical."
+    },
+    {
+     "text": "Let's keep an open mind",
+     "kind": "chunk",
+     "form": "Let's keep an open mind",
+     "meaning": "To encourage participants to be receptive to new ideas or perspectives.",
+     "example": "This is a new approach, so let's keep an open mind during the discussion.",
+     "plain": "This is a new approach, so let's be receptive to new ideas during the discussion.",
+     "note": "Promotes constructive and unbiased discussion. Collaborative."
+    },
+    {
+     "text": "I'd like to hear your thoughts",
+     "kind": "frame",
+     "form": "I'd like to hear your thoughts",
+     "meaning": "Used to invite someone to share their opinions or ideas.",
+     "example": "Before we decide, I'd like to hear your thoughts on this proposal.",
+     "plain": "Before we decide, I want to hear your opinions on this proposal.",
+     "note": "Polite way to solicit input. Encourages participation."
+    },
+    {
+     "text": "What's the main takeaway",
+     "kind": "frame",
+     "form": "What's the main takeaway",
+     "meaning": "Used to ask for the most important conclusion or key learning from a discussion.",
+     "example": "So, what's the main takeaway from our discussion on market trends?",
+     "plain": "So, what's the most important conclusion from our discussion on market trends?",
+     "note": "Common question for summarizing and identifying key insights. Professional."
+    },
+    {
+     "text": "I'd like to propose a vote",
+     "kind": "frame",
+     "form": "I'd like to propose a vote",
+     "meaning": "Used to formally suggest that a decision be made by voting.",
+     "example": "Since we have differing opinions, I'd like to propose a vote on the matter.",
+     "plain": "Since we have differing opinions, I want to suggest we vote on the matter.",
+     "note": "Formal way to move towards a decision when consensus is difficult."
+    },
+    {
+     "text": "to be perfectly honest",
+     "kind": "chunk",
+     "form": "to be perfectly honest",
+     "meaning": "Used to introduce a very frank or sincere opinion, often a critical one.",
+     "example": "To be perfectly honest, I think we've missed a crucial detail here.",
+     "plain": "Frankly, I think we've missed a crucial detail here.",
+     "note": "Stronger version of 'to be honest'. Emphasizes sincerity, can be blunt."
+    },
+    {
+     "text": "I'm happy to present",
+     "kind": "chunk",
+     "form": "I'm happy to present",
+     "meaning": "To offer to give a presentation or share information.",
+     "example": "If you'd like, I'm happy to present the latest sales figures.",
+     "plain": "If you'd like, I'm willing to present the latest sales figures.",
+     "note": "Expresses willingness to take on a presentation role. Collaborative."
+    },
+    {
+     "text": "Let's get straight to it",
+     "kind": "chunk",
+     "form": "Let's get straight to it",
+     "meaning": "To suggest starting the main discussion immediately without delay.",
+     "example": "We have a packed agenda, so let's get straight to it.",
+     "plain": "We have a packed agenda, so let's start immediately.",
+     "note": "Informal but common way to begin efficiently. Used by the chair."
+    },
+    {
+     "text": "I'd like to suggest a break",
+     "kind": "frame",
+     "form": "I'd like to suggest a break",
+     "meaning": "Used to propose taking a short pause during a meeting.",
+     "example": "We've been discussing for an hour, so I'd like to suggest a break.",
+     "plain": "We've been discussing for an hour, so I want to suggest a break.",
+     "note": "Polite way to propose a pause. Considers participant fatigue."
+    },
+    {
+     "text": "What's your opinion on",
+     "kind": "frame",
+     "form": "What's your opinion on",
+     "meaning": "Used to ask someone for their viewpoint or judgment on a topic.",
+     "example": "What's your opinion on the new marketing campaign, Sarah?",
+     "plain": "What do you think about the new marketing campaign, Sarah?",
+     "note": "Direct and neutral way to solicit an opinion. Professional."
+    },
+    {
+     "text": "I'd like to make a point",
+     "kind": "frame",
+     "form": "I'd like to make a point",
+     "meaning": "Used to introduce an important idea or argument for consideration.",
+     "example": "Before we conclude, I'd like to make a point about resource allocation.",
+     "plain": "Before we conclude, I want to mention something important about resources.",
+     "note": "Polite and common way to introduce a new topic or concern. Neutral register."
+    },
+    {
+     "text": "to cut a long story short",
+     "kind": "chunk",
+     "form": "to cut a long story short",
+     "meaning": "Used to summarize a lengthy explanation or narrative concisely.",
+     "example": "To cut a long story short, the project was a success despite initial challenges.",
+     "plain": "In summary, the project was a success despite initial challenges.",
+     "note": "Informal but common way to get to the main point quickly. Used in storytelling."
+    },
+    {
+     "text": "I'm happy to take questions",
+     "kind": "chunk",
+     "form": "I'm happy to take questions",
+     "meaning": "To invite participants to ask questions after a presentation or explanation.",
+     "example": "That concludes my presentation; I'm happy to take questions now.",
+     "plain": "That concludes my presentation; I'm willing to answer questions now.",
+     "note": "Standard phrase for inviting Q&A. Professional and open."
+    },
+    {
+     "text": "Let's move this offline",
+     "kind": "chunk",
+     "form": "Let's move this offline",
+     "meaning": "To suggest discussing a specific topic outside of the current meeting.",
+     "example": "That's a detailed issue, so let's move this offline to discuss further.",
+     "plain": "That's a detailed issue, so let's discuss this outside of the meeting.",
+     "note": "Common in business for managing time and relevance. Professional."
+    },
+    {
+     "text": "I'd like to suggest an alternative",
+     "kind": "frame",
+     "form": "I'd like to suggest an alternative",
+     "meaning": "Used to offer a different idea or course of action.",
+     "example": "I'd like to suggest an alternative approach to solving this problem.",
+     "plain": "I want to suggest a different way to solve this problem.",
+     "note": "Polite way to introduce a new option. Constructive and problem-solving."
+    },
+    {
+     "text": "What's the purpose of",
+     "kind": "frame",
+     "form": "What's the purpose of",
+     "meaning": "Used to ask about the reason or objective behind something.",
+     "example": "What's the purpose of this new reporting system, exactly?",
+     "plain": "What is the reason for this new reporting system, exactly?",
+     "note": "Direct question for understanding intent. Seeks clarity."
+    },
+    {
+     "text": "I'd like to propose a new idea",
+     "kind": "frame",
+     "form": "I'd like to propose a new idea",
+     "meaning": "Used to formally suggest a novel concept or plan.",
+     "example": "I'd like to propose a new idea for our next marketing campaign.",
+     "plain": "I want to suggest a new idea for our next marketing campaign.",
+     "note": "Direct and professional way to introduce innovation. Creative."
+    },
+    {
+     "text": "to be perfectly clear",
+     "kind": "chunk",
+     "form": "to be perfectly clear",
+     "meaning": "Used to emphasize that what you are saying is unambiguous and understood.",
+     "example": "To be perfectly clear, we cannot exceed the budget under any circumstances.",
+     "plain": "I want to make it absolutely clear that we cannot exceed the budget.",
+     "note": "Stronger version of 'to be clear'. Used for crucial information."
+    },
+    {
+     "text": "I'm happy to follow up",
+     "kind": "chunk",
+     "form": "I'm happy to follow up",
+     "meaning": "To offer to take further action or investigate something after the meeting.",
+     "example": "I'm happy to follow up with the client regarding their feedback.",
+     "plain": "I'm willing to take further action with the client regarding their feedback.",
+     "note": "Expresses willingness to take responsibility for next steps. Collaborative."
+    },
+    {
+     "text": "Let's keep it concise",
+     "kind": "chunk",
+     "form": "Let's keep it concise",
+     "meaning": "To suggest that contributions or discussions should be brief and to the point.",
+     "example": "We have limited time, so let's keep it concise when sharing updates.",
+     "plain": "We have limited time, so let's be brief when sharing updates.",
+     "note": "Used to manage time and focus. Professional and efficient."
+    },
+    {
+     "text": "I'd like to get your perspective",
+     "kind": "frame",
+     "form": "I'd like to get your perspective",
+     "meaning": "Used to ask someone for their viewpoint or way of looking at a situation.",
+     "example": "I'd like to get your perspective on the challenges we're facing.",
+     "plain": "I want to get your viewpoint on the challenges we're facing.",
+     "note": "Polite way to solicit input. Encourages diverse opinions."
+    },
+    {
+     "text": "What's the current situation",
+     "kind": "frame",
+     "form": "What's the current situation",
+     "meaning": "Used to ask for an update on the present state of affairs.",
+     "example": "Before we discuss solutions, what's the current situation with the project?",
+     "plain": "Before we discuss solutions, what is the project's current state?",
+     "note": "Common question for establishing context. Professional."
+    },
+    {
+     "text": "I'd like to make a comment",
+     "kind": "frame",
+     "form": "I'd like to make a comment",
+     "meaning": "Used to offer a remark or observation on a topic.",
+     "example": "If I may, I'd like to make a comment on the proposed changes.",
+     "plain": "If I may, I want to offer a remark on the proposed changes.",
+     "note": "Polite way to contribute to the discussion. Neutral register."
+    },
+    {
+     "text": "to be honest with you",
+     "kind": "chunk",
+     "form": "to be honest with you",
+     "meaning": "Used to introduce a frank or sincere opinion, often a critical one.",
+     "example": "To be honest with you, I have some serious reservations about this plan.",
+     "plain": "Frankly, I have some serious reservations about this plan.",
+     "note": "Adds a personal touch to 'to be honest'. Can soften a negative statement."
+    },
+    {
+     "text": "I'm happy to coordinate",
+     "kind": "chunk",
+     "form": "I'm happy to coordinate",
+     "meaning": "To offer to organize or manage a task or activity.",
+     "example": "If we need someone to manage the next steps, I'm happy to coordinate that.",
+     "plain": "If we need someone to manage the next steps, I'm willing to organize that.",
+     "note": "Expresses willingness to take on a leadership or organizational role."
+    },
+    {
+     "text": "Let's keep the momentum going",
+     "kind": "chunk",
+     "form": "Let's keep the momentum going",
+     "meaning": "To encourage continued progress and enthusiasm.",
+     "example": "We've had a productive discussion, so let's keep the momentum going into next week.",
+     "plain": "We've had a productive discussion, so let's continue this progress next week.",
+     "note": "Motivating phrase. Used to maintain energy and productivity."
+    },
+    {
+     "text": "I'd like to get your thoughts on",
+     "kind": "frame",
+     "form": "I'd like to get your thoughts on",
+     "meaning": "Used to invite someone to share their opinions or ideas about a topic.",
+     "example": "I'd like to get your thoughts on the new marketing strategy, Maria.",
+     "plain": "I want to hear your opinions on the new marketing strategy, Maria.",
+     "note": "Polite way to solicit input. Encourages participation."
+    },
+    {
+     "text": "What's the main challenge",
+     "kind": "frame",
+     "form": "What's the main challenge",
+     "meaning": "Used to ask about the primary difficulty or obstacle.",
+     "example": "What's the main challenge we're facing with the project timeline?",
+     "plain": "What is the biggest difficulty we're facing with the project timeline?",
+     "note": "Focuses on identifying key problems. Problem-solving oriented."
+    },
+    {
+     "text": "I'd like to propose a timeline",
+     "kind": "frame",
+     "form": "I'd like to propose a timeline",
+     "meaning": "Used to formally suggest a schedule or sequence of events.",
+     "example": "To ensure efficiency, I'd like to propose a timeline for the next phase.",
+     "plain": "To ensure efficiency, I want to suggest a schedule for the next phase.",
+     "note": "Professional way to introduce a project schedule. Planning-oriented."
+    },
+    {
+     "text": "to be frank",
+     "kind": "chunk",
+     "form": "to be frank",
+     "meaning": "Used to introduce a direct and honest opinion, sometimes a critical one.",
+     "example": "To be frank, I don't think we have enough resources for this.",
+     "plain": "Honestly, I don't think we have enough resources for this.",
+     "note": "Similar to 'to be honest', but can sound slightly more direct or blunt."
+    },
+    {
+     "text": "I'm happy to take the lead",
+     "kind": "chunk",
+     "form": "I'm happy to take the lead",
+     "meaning": "To offer to be the main person responsible for a task or project.",
+     "example": "If no one else is available, I'm happy to take the lead on this initiative.",
+     "plain": "If no one else is available, I'm willing to be in charge of this initiative.",
+     "note": "Expresses willingness to assume leadership. Proactive and responsible."
+    },
+    {
+     "text": "Let's keep it moving",
+     "kind": "chunk",
+     "form": "Let's keep it moving",
+     "meaning": "To encourage the discussion to progress and avoid getting stuck on one point.",
+     "example": "We're short on time, so let's keep it moving to the next topic.",
+     "plain": "We're short on time, so let's continue to the next topic.",
+     "note": "Informal but common way to maintain pace. Used by the chair."
+    },
+    {
+     "text": "I'd like to get your feedback",
+     "kind": "frame",
+     "form": "I'd like to get your feedback",
+     "meaning": "Used to ask someone for their opinion or reaction to something.",
+     "example": "I'd like to get your feedback on the draft proposal by end of day.",
+     "plain": "I want to get your opinion on the draft proposal by end of day.",
+     "note": "Polite way to solicit constructive criticism or input. Collaborative."
+    },
+    {
+     "text": "What's the best approach",
+     "kind": "frame",
+     "form": "What's the best approach",
+     "meaning": "Used to ask for suggestions on the most effective method or strategy.",
+     "example": "Given the new regulations, what's the best approach for compliance?",
+     "plain": "Given the new regulations, what's the best method for compliance?",
+     "note": "Invites collaborative problem-solving. Focuses on strategy."
+    },
+    {
+     "text": "I'd like to propose a budget",
+     "kind": "frame",
+     "form": "I'd like to propose a budget",
+     "meaning": "Used to formally suggest a financial plan or allocation of funds.",
+     "example": "Based on our needs, I'd like to propose a budget of 50,000 for this project.",
+     "plain": "Based on our needs, I want to suggest a budget of 50,000 for this project.",
+     "note": "Professional way to introduce a financial plan. Planning-oriented."
+    },
+    {
+     "text": "to be perfectly honest with you",
+     "kind": "chunk",
+     "form": "to be perfectly honest with you",
+     "meaning": "Used to introduce a very frank and sincere opinion, often a critical one.",
+     "example": "To be perfectly honest with you, I don't see this project succeeding.",
+     "plain": "Frankly, I don't see this project succeeding.",
+     "note": "Strongest version of 'to be honest'. Emphasizes sincerity, can be very blunt."
+    },
+    {
+     "text": "I'm happy to volunteer",
+     "kind": "chunk",
+     "form": "I'm happy to volunteer",
+     "meaning": "To offer to do a task or take on a responsibility without being asked.",
+     "example": "If you need someone to research this, I'm happy to volunteer.",
+     "plain": "If you need someone to research this, I'm willing to offer my help.",
+     "note": "Expresses willingness to contribute. Proactive and helpful."
+    },
+    {
+     "text": "Let's keep it positive",
+     "kind": "chunk",
+     "form": "Let's keep it positive",
+     "meaning": "To encourage a constructive and optimistic tone in the discussion.",
+     "example": "I know there are challenges, but let's keep it positive and focus on solutions.",
+     "plain": "I know there are challenges, but let's stay optimistic and focus on solutions.",
+     "note": "Used to manage the tone of the meeting. Encourages constructive dialogue."
+    },
+    {
+     "text": "I'd like to get your thoughts on this",
+     "kind": "frame",
+     "form": "I'd like to get your thoughts on this",
+     "meaning": "Used to invite someone to share their opinions or ideas about a specific topic.",
+     "example": "Before we finalize, I'd like to get your thoughts on this new proposal.",
+     "plain": "Before we finalize, I want to hear your opinions on this new proposal.",
+     "note": "Polite way to solicit input. Encourages participation."
+    },
+    {
+     "text": "What's the biggest obstacle",
+     "kind": "frame",
+     "form": "What's the biggest obstacle",
+     "meaning": "Used to ask about the most significant difficulty or barrier.",
+     "example": "What's the biggest obstacle preventing us from reaching our goals?",
+     "plain": "What is the most significant barrier preventing us from reaching our goals?",
+     "note": "Focuses on identifying major impediments. Problem-solving oriented."
+    },
+    {
+     "text": "I'd like to propose a meeting",
+     "kind": "frame",
+     "form": "I'd like to propose a meeting",
+     "meaning": "Used to formally suggest scheduling a discussion or gathering.",
+     "example": "To address these issues, I'd like to propose a meeting next week.",
+     "plain": "To address these issues, I want to suggest a meeting next week.",
+     "note": "Professional way to initiate further discussion. Action-oriented."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "run through the agenda": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the aim of this meeting is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to add": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "from my perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i see your point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could you elaborate on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's move on to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to sum up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "action point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure about that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's stick to the agenda": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's table that for now": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to propose": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's get started": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'd like to point out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're running out of time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to recap briefly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i don't agree": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's take a vote": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's your take on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to suggest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to get us started": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to take that on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's circle back to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to raise a point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be clear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i have to disagree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's keep it brief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what do you mean by": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'd like to hear from": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's wrap this up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the way i see it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to suggest that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's take five": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i have a question": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to get back to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what are your thoughts on": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key accurately describes the expression's usage in the provided example."
+   },
+   "let's hear from everyone": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to help with that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to move on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i don't follow": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's put a pin in that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what's the best way forward": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to propose a solution": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to take notes": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's keep this discussion focused": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to reiterate": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what's the status of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to get your input": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's take a quick look at": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to make a suggestion": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i have to interrupt": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's get this done": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to confirm": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's the next step": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to open the floor": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it simply": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to share my screen": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's keep an open mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to hear your thoughts": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's the main takeaway": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to propose a vote": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly honest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to present": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's get straight to it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to suggest a break": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's your opinion on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to make a point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to cut a long story short": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to take questions": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's move this offline": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd like to suggest an alternative": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's put it to a vote": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately captures the meaning of suggesting a vote to resolve a division."
+   },
+   "what's the purpose of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to propose a new idea": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to follow up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's keep it concise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to get your perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's the current situation": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to make a comment": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be honest with you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to coordinate": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's keep the momentum going": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's the main challenge": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to propose a timeline": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be frank": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm happy to take the lead": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's keep it moving": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to get your feedback": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's the best approach": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to propose a budget": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly honest with you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to volunteer": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's keep it positive": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what's the biggest obstacle": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to propose a meeting": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to get your thoughts on": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key definition accurately describes the expression as used in the example."
+   },
+   "i'd like to get your thoughts on this": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The key definition correctly captures the meaning of the expression in the given example."
+   }
+  }
+ }
+}

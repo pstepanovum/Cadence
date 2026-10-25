@@ -1,0 +1,88 @@
+{
+ "format": 1,
+ "id": "fossil.question-intonation",
+ "area": "intonation",
+ "title": "Intonation in questions and tags",
+ "what": "rising on every question, or not using a fall on question tags that ask for agreement ('It's cold, isn't it?')",
+ "summary": "This intonation error often persists because it doesn't impede comprehension, yet it can subtly convey uncertainty or a lack of conviction. It costs the speaker nuance and authority in their communication, potentially undermining their message.",
+ "listenFor": "Pay attention to whether your voice consistently rises at the end of all questions, especially tag questions seeking agreement.",
+ "grammarPointIds": [
+  "gp.question-tags"
+ ],
+ "soundIds": [],
+ "contrasts": [],
+ "drills": [
+  "The new regulations are quite complex, aren't they?",
+  "When will the board review the proposed budget?",
+  "You've completed the analysis, haven't you?",
+  "How do we ensure compliance with these guidelines?",
+  "This strategy seems viable, doesn't it?",
+  "What challenges do you anticipate in the next phase?",
+  "We should finalize this by tomorrow, shouldn't we?",
+  "Why did they decide to restructure the department?",
+  "The presentation went well, didn't it?"
+ ],
+ "probes": [
+  {
+   "sentence": "What is the most effective way to communicate this change?"
+  },
+  {
+   "sentence": "The project deadline is next week, isn't it?"
+  },
+  {
+   "sentence": "How will these adjustments impact our long-term objectives?"
+  },
+  {
+   "sentence": "You've already submitted the revised proposal, haven't you?"
+  },
+  {
+   "sentence": "When do you expect to receive feedback from the stakeholders?"
+  },
+  {
+   "sentence": "This approach offers a clear advantage, doesn't it?"
+  }
+ ],
+ "pairs": [],
+ "stress": [
+  {
+   "text": "The committee will convene next Tuesday to discuss the merger.",
+   "marked": "The comMITTEE will conVENE next TUESday to disCUSS the MERger.",
+   "note": "Main stress falls on key content words, emphasizing new or important information."
+  },
+  {
+   "text": "We need to prioritize tasks to meet the impending deadline.",
+   "marked": "We NEED to PRIORitize TASKS to MEET the imPENDing DEADline.",
+   "note": "Stress highlights the crucial elements of the statement."
+  },
+  {
+   "text": "The financial implications of this decision are substantial.",
+   "marked": "The fiNANcial imPLIcations of this deCISion are subSTANtial.",
+   "note": "Longer words often have internal stress patterns that contribute to overall sentence rhythm."
+  },
+  {
+   "text": "Have you considered all the potential risks involved?",
+   "marked": "HAVE you conSIDered all the poTENtial RISKS inVOLVED?",
+   "note": "In questions, stress often falls on the auxiliary verb or the main verb/noun."
+  },
+  {
+   "text": "It's imperative that we maintain a high level of confidentiality.",
+   "marked": "It's imPERative that we mainTAIN a HIGH level of conFIdenTIALity.",
+   "note": "Stress emphasizes words carrying significant meaning or urgency."
+  },
+  {
+   "text": "The new software significantly streamlines our workflow.",
+   "marked": "The NEW SOFTware sigNIFicantly STREAMlines our WORKflow.",
+   "note": "Stress helps to distinguish between new and old information, or to highlight contrast."
+  },
+  {
+   "text": "What are the key takeaways from the market research?",
+   "marked": "WHAT are the KEY takeAways from the MARket REsearch?",
+   "note": "Wh-words and important nouns/adjectives typically receive primary stress in questions."
+  },
+  {
+   "text": "This initiative requires a collaborative effort from all departments.",
+   "marked": "This iNITiative reQUIRES a colLABorative EFfort from all dePARTments.",
+   "note": "Stress patterns guide the listener to the most important parts of the message."
+  }
+ ]
+}

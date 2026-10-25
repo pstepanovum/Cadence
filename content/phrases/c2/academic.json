@@ -1,0 +1,2026 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "academic",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "It would seem that",
+     "kind": "frame",
+     "form": "It would seem that",
+     "meaning": "Introduces a cautious observation or conclusion, suggesting it's likely but not definite.",
+     "example": "It would seem that the initial findings require further statistical validation before we can draw firm conclusions.",
+     "plain": "The initial findings probably require more statistical validation before we can draw firm conclusions.",
+     "note": "A polite, academic way to present an observation or tentative conclusion, common in formal discussions."
+    },
+    {
+     "text": "It could be argued that",
+     "kind": "frame",
+     "form": "It could be argued that",
+     "meaning": "Presents a possible interpretation or viewpoint, inviting discussion rather than stating a fact.",
+     "example": "It could be argued that the methodology employed in the study introduced an unforeseen bias.",
+     "plain": "Someone might argue that the study's methodology introduced an unforeseen bias.",
+     "note": "Useful for introducing a point that is open to debate or not universally accepted, common in academic discourse."
+    },
+    {
+     "text": "To some extent",
+     "kind": "chunk",
+     "form": "To some extent",
+     "meaning": "Qualifies a statement, indicating it is true only partially or up to a certain point.",
+     "example": "To some extent, the previous research supports our hypothesis, but there are also notable differences.",
+     "plain": "The previous research partially supports our hypothesis, but there are also notable differences.",
+     "note": "A common, flexible phrase for hedging or qualifying a statement, suitable for both spoken and written English."
+    },
+    {
+     "text": "In some respects",
+     "kind": "chunk",
+     "form": "In some respects",
+     "meaning": "Specifies that a statement is true regarding certain aspects, but not necessarily all of them.",
+     "example": "In some respects, the new model offers significant improvements, though it still has limitations.",
+     "plain": "The new model offers significant improvements in certain areas, though it still has limitations.",
+     "note": "Similar to \"to some extent,\" but often used when discussing multiple facets of a topic."
+    },
+    {
+     "text": "One might contend that",
+     "kind": "frame",
+     "form": "One might contend that",
+     "meaning": "Introduces a possible argument or claim, often one that is debatable or not universally accepted.",
+     "example": "One might contend that the current policy overlooks the long-term socio-economic implications.",
+     "plain": "Someone could argue that the current policy overlooks the long-term socio-economic implications.",
+     "note": "A formal and academic way to present a potential argument, often used when discussing differing viewpoints."
+    },
+    {
+     "text": "It's worth noting that",
+     "kind": "chunk",
+     "form": "It's worth noting that",
+     "meaning": "Highlights a piece of information as important or relevant for consideration.",
+     "example": "It's worth noting that the sample size for the control group was considerably smaller.",
+     "plain": "We should note that the sample size for the control group was considerably smaller.",
+     "note": "A common phrase to draw attention to a specific detail or fact, used in both formal and informal contexts."
+    },
+    {
+     "text": "I would venture to say",
+     "kind": "frame",
+     "form": "I would venture to say",
+     "meaning": "Expresses a cautious opinion or suggestion, acknowledging it might be a bold or unproven claim.",
+     "example": "I would venture to say that the preliminary results indicate a significant paradigm shift.",
+     "plain": "I think the preliminary results indicate a significant paradigm shift, though I'm not entirely sure.",
+     "note": "A polite and slightly formal way to offer an opinion or hypothesis, often used when speculating."
+    },
+    {
+     "text": "This is not to say that",
+     "kind": "frame",
+     "form": "This is not to say that",
+     "meaning": "Clarifies a previous statement by explicitly ruling out a potential misinterpretation or extreme conclusion.",
+     "example": "This is not to say that the previous research was flawed, but rather that our understanding has evolved.",
+     "plain": "I'm not saying the previous research was flawed; instead, our understanding has evolved.",
+     "note": "A useful phrase for nuance, preventing misinterpretation and clarifying one's position in a discussion."
+    },
+    {
+     "text": "On the one hand",
+     "kind": "chunk",
+     "form": "On the one hand",
+     "meaning": "Introduces the first of two contrasting points or perspectives in a balanced discussion.",
+     "example": "On the one hand, the new regulations offer greater environmental protection, which is positive.",
+     "plain": "One positive aspect is that the new regulations offer greater environmental protection.",
+     "note": "Always followed by \"on the other hand\" to present a balanced argument, common in academic discourse."
+    },
+    {
+     "text": "On the other hand",
+     "kind": "chunk",
+     "form": "On the other hand",
+     "meaning": "Introduces the second contrasting point or perspective, balancing the previous statement.",
+     "example": "On the other hand, implementing these changes will undoubtedly incur substantial economic costs.",
+     "plain": "However, implementing these changes will undoubtedly incur substantial economic costs.",
+     "note": "Used in conjunction with \"on the one hand\" to present a balanced argument, common in academic discourse."
+    },
+    {
+     "text": "It's important to distinguish between",
+     "kind": "frame",
+     "form": "It's important to distinguish between",
+     "meaning": "Emphasizes the necessity of recognizing differences between two concepts to avoid confusion.",
+     "example": "It's important to distinguish between correlation and causation when interpreting these statistics.",
+     "plain": "We must differentiate between correlation and causation when interpreting these statistics.",
+     "note": "A common phrase in academic settings to highlight a crucial conceptual difference."
+    },
+    {
+     "text": "It's tempting to conclude that",
+     "kind": "frame",
+     "form": "It's tempting to conclude that",
+     "meaning": "Acknowledges a seemingly obvious conclusion while subtly suggesting it might be an oversimplification or incorrect.",
+     "example": "It's tempting to conclude that the intervention was successful, but we lack a robust control group.",
+     "plain": "One might want to conclude the intervention was successful, but we lack a robust control group.",
+     "note": "Used to introduce a conclusion that appears logical but requires further scrutiny or qualification."
+    },
+    {
+     "text": "A nuanced understanding",
+     "kind": "collocation",
+     "form": "a nuanced understanding",
+     "meaning": "A deep and subtle comprehension that recognizes complexities and fine distinctions.",
+     "example": "Achieving a nuanced understanding of the historical context is crucial for this analysis.",
+     "plain": "A deep and subtle understanding of the historical context is crucial for this analysis.",
+     "note": "A sophisticated way to refer to a detailed and complex comprehension, highly valued in academic work."
+    },
+    {
+     "text": "To a certain degree",
+     "kind": "chunk",
+     "form": "To a certain degree",
+     "meaning": "Qualifies a statement, indicating it is true only partially or up to a specific extent.",
+     "example": "To a certain degree, the findings corroborate earlier studies, but with some significant deviations.",
+     "plain": "The findings partially corroborate earlier studies, but with some significant deviations.",
+     "note": "A slightly more formal alternative to \"to some extent,\" used for hedging or qualifying."
+    },
+    {
+     "text": "It bears repeating that",
+     "kind": "frame",
+     "form": "It bears repeating that",
+     "meaning": "Emphasizes a point by stating it is important enough to be mentioned again.",
+     "example": "It bears repeating that these results are preliminary and should be interpreted with caution.",
+     "plain": "We should repeat that these results are preliminary and should be interpreted with caution.",
+     "note": "Used to underscore the importance of a particular point, often when summarizing or reinforcing."
+    },
+    {
+     "text": "It's fair to say that",
+     "kind": "frame",
+     "form": "It's fair to say that",
+     "meaning": "Introduces a statement that is generally accepted as true or reasonable, often as a summary.",
+     "example": "It's fair to say that the project exceeded expectations despite the initial resource constraints.",
+     "plain": "We can reasonably conclude that the project exceeded expectations despite the initial resource constraints.",
+     "note": "A common, slightly informal but acceptable phrase for introducing a reasonable conclusion or summary."
+    },
+    {
+     "text": "We should perhaps consider",
+     "kind": "frame",
+     "form": "We should perhaps consider",
+     "meaning": "Introduces a suggestion for further thought or investigation in a polite and tentative manner.",
+     "example": "We should perhaps consider the ethical implications of applying this technology more broadly.",
+     "plain": "We should think about the ethical implications of applying this technology more broadly.",
+     "note": "A polite and collaborative way to suggest an idea or area for discussion, common in group settings."
+    },
+    {
+     "text": "It's not entirely clear whether",
+     "kind": "frame",
+     "form": "It's not entirely clear whether",
+     "meaning": "Expresses uncertainty or ambiguity about a particular situation or outcome.",
+     "example": "It's not entirely clear whether the observed effects are directly attributable to the intervention.",
+     "plain": "We are not completely sure if the observed effects are directly attributable to the intervention.",
+     "note": "A useful phrase for hedging when there is insufficient evidence or conflicting data."
+    },
+    {
+     "text": "This is merely a hypothesis",
+     "kind": "collocation",
+     "form": "This is merely a hypothesis",
+     "meaning": "States that a proposed explanation is only a theory, not yet proven or confirmed.",
+     "example": "This is merely a hypothesis at this stage, requiring extensive empirical testing for validation.",
+     "plain": "This is only a theory at this stage, requiring extensive empirical testing for validation.",
+     "note": "Used to downplay the certainty of a claim, emphasizing its speculative nature."
+    },
+    {
+     "text": "To put it another way",
+     "kind": "chunk",
+     "form": "To put it another way",
+     "meaning": "Introduces a rephrasing of a previous statement, often for clarity or emphasis.",
+     "example": "To put it another way, the correlation does not imply causation in this specific dataset.",
+     "plain": "In other words, the correlation does not imply causation in this specific dataset.",
+     "note": "A common phrase for rephrasing, making an idea more accessible or emphasizing a point."
+    },
+    {
+     "text": "In light of this",
+     "kind": "chunk",
+     "form": "In light of this",
+     "meaning": "Introduces a consequence or conclusion that follows from previously mentioned information.",
+     "example": "In light of this new evidence, we must reconsider our initial assumptions about the phenomenon.",
+     "plain": "Given this new evidence, we must reconsider our initial assumptions about the phenomenon.",
+     "note": "A formal and academic way to link a conclusion or action to preceding information."
+    },
+    {
+     "text": "Drawing on the work of",
+     "kind": "frame",
+     "form": "Drawing on the work of",
+     "meaning": "Indicates that one's ideas or arguments are based on or inspired by another's research.",
+     "example": "Drawing on the work of Professor Chen, we developed a novel framework for data analysis.",
+     "plain": "Using Professor Chen's work, we developed a novel framework for data analysis.",
+     "note": "A standard academic phrase for citing or referencing previous research, common in papers and presentations."
+    },
+    {
+     "text": "As X points out",
+     "kind": "frame",
+     "form": "As Professor Lee points out",
+     "meaning": "Refers to a specific person's observation or argument to support one's own point.",
+     "example": "As Professor Lee points out, the long-term effects of this policy remain largely unexplored.",
+     "plain": "Professor Lee observes that the long-term effects of this policy remain largely unexplored.",
+     "note": "A common and direct way to cite an authority or source in academic discussions."
+    },
+    {
+     "text": "In contrast to X",
+     "kind": "frame",
+     "form": "In contrast to previous studies",
+     "meaning": "Highlights a difference or opposition between the current point and a previously mentioned one.",
+     "example": "In contrast to previous studies, our research indicates a significant positive correlation.",
+     "plain": "Unlike previous studies, our research indicates a significant positive correlation.",
+     "note": "Used to introduce a contrasting idea or finding, often when comparing research."
+    },
+    {
+     "text": "This aligns with",
+     "kind": "collocation",
+     "form": "This aligns with",
+     "meaning": "Indicates that a finding or idea is consistent or in agreement with something else.",
+     "example": "This aligns with the theoretical predictions outlined in the foundational literature on the subject.",
+     "plain": "This is consistent with the theoretical predictions outlined in the foundational literature on the subject.",
+     "note": "A formal and academic way to express agreement or consistency between different pieces of information."
+    },
+    {
+     "text": "This diverges from",
+     "kind": "collocation",
+     "form": "This diverges from",
+     "meaning": "Indicates that a finding or idea is different or inconsistent with something else.",
+     "example": "This diverges from the expected outcomes, suggesting a need for further investigation.",
+     "plain": "This is different from the expected outcomes, suggesting a need for further investigation.",
+     "note": "A formal and academic way to express disagreement or inconsistency between different pieces of information."
+    },
+    {
+     "text": "To elaborate on this",
+     "kind": "chunk",
+     "form": "To elaborate on this",
+     "meaning": "Introduces a more detailed explanation or expansion of a previously mentioned point.",
+     "example": "To elaborate on this, the statistical model accounts for several confounding variables.",
+     "plain": "To explain this in more detail, the statistical model accounts for several confounding variables.",
+     "note": "A common phrase used to signal that one is about to provide more details or explanation."
+    },
+    {
+     "text": "Building on this idea",
+     "kind": "chunk",
+     "form": "Building on this idea",
+     "meaning": "Introduces a new point or argument that develops or extends a previously mentioned concept.",
+     "example": "Building on this idea, we propose a new framework that integrates both qualitative and quantitative data.",
+     "plain": "Extending this idea, we propose a new framework that integrates both qualitative and quantitative data.",
+     "note": "A useful phrase for showing progression of thought or how one idea leads to another."
+    },
+    {
+     "text": "It's worth considering X's perspective",
+     "kind": "frame",
+     "form": "It's worth considering Dr. Smith's perspective",
+     "meaning": "Suggests that a particular person's viewpoint is valuable and should be taken into account.",
+     "example": "It's worth considering Dr. Smith's perspective on the ethical implications of gene editing.",
+     "plain": "We should consider Dr. Smith's perspective on the ethical implications of gene editing.",
+     "note": "A polite and academic way to introduce an alternative or important viewpoint for discussion."
+    },
+    {
+     "text": "A key distinction",
+     "kind": "collocation",
+     "form": "a key distinction",
+     "meaning": "Refers to a very important difference between two or more things.",
+     "example": "A key distinction between the two theories lies in their underlying assumptions about human behavior.",
+     "plain": "An important difference between the two theories lies in their underlying assumptions about human behavior.",
+     "note": "Used to highlight a crucial difference that is central to understanding a topic."
+    },
+    {
+     "text": "To reiterate my point",
+     "kind": "chunk",
+     "form": "To reiterate my point",
+     "meaning": "States that one is about to repeat a previously made argument or statement for emphasis.",
+     "example": "To reiterate my point, the long-term sustainability of this approach remains questionable.",
+     "plain": "To repeat my point, the long-term sustainability of this approach remains questionable.",
+     "note": "A formal way to repeat a point for clarity or emphasis, often used in presentations or debates."
+    },
+    {
+     "text": "This brings us to",
+     "kind": "frame",
+     "form": "This brings us to",
+     "meaning": "Transitions to a new topic or point that logically follows from the previous discussion.",
+     "example": "This brings us to the critical question of how these findings can be applied in practice.",
+     "plain": "Now we can discuss the critical question of how these findings can be applied in practice.",
+     "note": "A common and smooth way to transition between different parts of a presentation or argument."
+    },
+    {
+     "text": "It's important to acknowledge",
+     "kind": "frame",
+     "form": "It's important to acknowledge",
+     "meaning": "Emphasizes the necessity of recognizing or admitting a particular fact or aspect.",
+     "example": "It's important to acknowledge the limitations of our study when interpreting the results.",
+     "plain": "We must recognize the limitations of our study when interpreting the results.",
+     "note": "A formal phrase used to ensure that certain facts or constraints are recognized and considered."
+    },
+    {
+     "text": "The prevailing view is that",
+     "kind": "frame",
+     "form": "The prevailing view is that",
+     "meaning": "Introduces the most widely accepted or common opinion or belief on a particular subject.",
+     "example": "The prevailing view is that climate change is primarily driven by anthropogenic factors.",
+     "plain": "Most people believe that climate change is primarily driven by anthropogenic factors.",
+     "note": "Used to state the generally accepted opinion, often as a starting point for discussion or contrast."
+    },
+    {
+     "text": "A counter-argument might be",
+     "kind": "collocation",
+     "form": "A counter-argument might be",
+     "meaning": "Introduces a potential argument that opposes or challenges a previously stated point.",
+     "example": "A counter-argument might be that the sample size was too small to generalize the findings.",
+     "plain": "An opposing argument could be that the sample size was too small to generalize the findings.",
+     "note": "A useful phrase for introducing a contrasting or opposing viewpoint in a balanced discussion."
+    },
+    {
+     "text": "This raises the question of",
+     "kind": "frame",
+     "form": "This raises the question of",
+     "meaning": "Indicates that a previous statement or finding leads directly to a particular inquiry or issue.",
+     "example": "This raises the question of whether the current regulatory framework is adequate for emerging technologies.",
+     "plain": "This makes us ask whether the current regulatory framework is adequate for emerging technologies.",
+     "note": "A common phrase for introducing a follow-up question or an area for further discussion."
+    },
+    {
+     "text": "To contextualize this",
+     "kind": "chunk",
+     "form": "To contextualize this",
+     "meaning": "Introduces an explanation that provides background information to help understand a point.",
+     "example": "To contextualize this, we need to consider the historical development of similar policies.",
+     "plain": "To provide background for this, we need to consider the historical development of similar policies.",
+     "note": "A formal phrase used to provide necessary background information for better understanding."
+    },
+    {
+     "text": "It's often argued that",
+     "kind": "frame",
+     "form": "It's often argued that",
+     "meaning": "Introduces a common or frequently made argument, without necessarily endorsing it.",
+     "example": "It's often argued that economic growth inevitably leads to increased environmental degradation.",
+     "plain": "People often argue that economic growth inevitably leads to increased environmental degradation.",
+     "note": "Used to present a common argument, often as a starting point for analysis or counter-argument."
+    },
+    {
+     "text": "To summarize briefly",
+     "kind": "chunk",
+     "form": "To summarize briefly",
+     "meaning": "Introduces a concise overview of the main points discussed.",
+     "example": "To summarize briefly, our findings suggest a complex interplay of socio-economic factors.",
+     "plain": "In short, our findings suggest a complex interplay of socio-economic factors.",
+     "note": "A common phrase for introducing a concise summary, often used at the end of a section or presentation."
+    },
+    {
+     "text": "It's important to bear in mind",
+     "kind": "chunk",
+     "form": "It's important to bear in mind",
+     "meaning": "Used to introduce a crucial point that should not be forgotten when considering something.",
+     "example": "It's important to bear in mind that these findings are preliminary and require further validation.",
+     "plain": "We must remember that these findings are preliminary and need more validation.",
+     "note": "A common, slightly formal way to introduce a caveat or a key consideration."
+    },
+    {
+     "text": "We should perhaps qualify",
+     "kind": "collocation",
+     "form": "We should perhaps qualify",
+     "meaning": "To add a condition or limitation to a statement, making it less absolute.",
+     "example": "We should perhaps qualify our assertion by acknowledging the specific cultural context.",
+     "plain": "We should limit our assertion by acknowledging the specific cultural context.",
+     "note": "A polite and academic way to refine a previous statement or claim."
+    },
+    {
+     "text": "This is not to diminish",
+     "kind": "frame",
+     "form": "This is not to diminish",
+     "meaning": "To clarify that a preceding statement is not intended to lessen the importance of something else.",
+     "example": "This is not to diminish the efforts of the previous team, but rather to highlight new challenges.",
+     "plain": "I don't mean to lessen the previous team's efforts, but to highlight new challenges.",
+     "note": "Used to prevent misinterpretation, ensuring respect while introducing a different perspective."
+    },
+    {
+     "text": "It's worth considering the possibility",
+     "kind": "chunk",
+     "form": "It's worth considering the possibility",
+     "meaning": "To suggest that a particular outcome or idea should be taken into account.",
+     "example": "It's worth considering the possibility that external factors influenced the observed results.",
+     "plain": "We should consider that external factors might have influenced the observed results.",
+     "note": "A polite way to introduce an alternative explanation or a potential scenario."
+    },
+    {
+     "text": "One might also consider",
+     "kind": "frame",
+     "form": "One might also consider",
+     "meaning": "To introduce an additional point or perspective for consideration.",
+     "example": "One might also consider the ethical implications of such a widespread data collection strategy.",
+     "plain": "We could also think about the ethical implications of such a widespread data collection strategy.",
+     "note": "A formal and impersonal way to suggest another angle or factor."
+    },
+    {
+     "text": "It's difficult to ascertain",
+     "kind": "collocation",
+     "form": "It's difficult to ascertain",
+     "meaning": "To state that it is hard to find out or determine something with certainty.",
+     "example": "It's difficult to ascertain the precise impact of these policy changes without more data.",
+     "plain": "It's hard to determine the exact impact of these policy changes without more data.",
+     "note": "Used to express uncertainty or the challenge in obtaining clear information."
+    },
+    {
+     "text": "It's important to avoid overstating",
+     "kind": "collocation",
+     "form": "It's important to avoid overstating",
+     "meaning": "To advise against exaggerating the importance or extent of something.",
+     "example": "It's important to avoid overstating the significance of these preliminary findings at this stage.",
+     "plain": "We should not exaggerate the significance of these preliminary findings at this stage.",
+     "note": "A common academic caution against making claims that are too strong."
+    },
+    {
+     "text": "We must be careful not to conflate",
+     "kind": "frame",
+     "form": "We must be careful not to conflate",
+     "meaning": "To warn against mistakenly treating two distinct things as if they were the same.",
+     "example": "We must be careful not to conflate correlation with causation in our statistical analysis.",
+     "plain": "We must be careful not to confuse correlation with causation in our statistical analysis.",
+     "note": "A precise warning, often used in analytical or scientific contexts."
+    },
+    {
+     "text": "There is a strong case for",
+     "kind": "collocation",
+     "form": "There is a strong case for",
+     "meaning": "To suggest that there are compelling reasons or evidence supporting a particular argument or action.",
+     "example": "There is a strong case for implementing stricter ethical guidelines in AI development.",
+     "plain": "There are good reasons to implement stricter ethical guidelines in AI development.",
+     "note": "Used to introduce a well-supported argument or recommendation."
+    },
+    {
+     "text": "It's not unreasonable to suggest",
+     "kind": "chunk",
+     "form": "It's not unreasonable to suggest",
+     "meaning": "To propose an idea or conclusion that is logical and acceptable, often as a mild hedge.",
+     "example": "It's not unreasonable to suggest that environmental factors play a role in this phenomenon.",
+     "plain": "It is reasonable to suggest that environmental factors play a role in this phenomenon.",
+     "note": "A polite, understated way to introduce a plausible idea, often hedging slightly."
+    },
+    {
+     "text": "It's important to remain open to",
+     "kind": "collocation",
+     "form": "It's important to remain open to",
+     "meaning": "To emphasize the need to be receptive to new ideas, evidence, or possibilities.",
+     "example": "It's important to remain open to alternative interpretations of the data as new evidence emerges.",
+     "plain": "We should be open to alternative interpretations of the data as new evidence emerges.",
+     "note": "Encourages intellectual flexibility and a non-dogmatic approach."
+    },
+    {
+     "text": "It's important to acknowledge the limitations",
+     "kind": "collocation",
+     "form": "It's important to acknowledge the limitations",
+     "meaning": "To recognize and state the boundaries or weaknesses of a study, theory, or approach.",
+     "example": "It's important to acknowledge the limitations of our sample size when interpreting these results.",
+     "plain": "We must recognize the limitations of our sample size when interpreting these results.",
+     "note": "Essential for academic integrity and responsible reporting of research."
+    },
+    {
+     "text": "In line with X's findings",
+     "kind": "chunk",
+     "form": "In line with Dr. Smith's findings",
+     "meaning": "To state that something is consistent with or supported by the research of another person.",
+     "example": "In line with Dr. Smith's findings, our study also suggests a correlation between these variables.",
+     "plain": "Our study also suggests a correlation between these variables, similar to Dr. Smith's findings.",
+     "note": "A formal way to cite or refer to another's work, showing agreement."
+    },
+    {
+     "text": "Drawing a parallel between",
+     "kind": "collocation",
+     "form": "Drawing a parallel between",
+     "meaning": "To highlight similarities or connections between two different things or situations.",
+     "example": "Drawing a parallel between historical economic crises and current trends can offer valuable insights.",
+     "plain": "Highlighting similarities between historical economic crises and current trends can offer valuable insights.",
+     "note": "Used to make a comparison that illuminates understanding."
+    },
+    {
+     "text": "This stands in stark contrast to",
+     "kind": "chunk",
+     "form": "This stands in stark contrast to",
+     "meaning": "To emphasize a very clear and striking difference between two things.",
+     "example": "This stands in stark contrast to the previous administration's approach to environmental policy.",
+     "plain": "This is very different from the previous administration's approach to environmental policy.",
+     "note": "A strong way to highlight a significant difference, often used for emphasis."
+    },
+    {
+     "text": "To echo X's sentiments",
+     "kind": "frame",
+     "form": "To echo Professor Lee's sentiments",
+     "meaning": "To express agreement with or repeat the feelings or opinions previously stated by someone else.",
+     "example": "To echo Professor Lee's sentiments, the interdisciplinary approach is crucial for this research.",
+     "plain": "I agree with Professor Lee that the interdisciplinary approach is crucial for this research.",
+     "note": "A formal and respectful way to show agreement with an expert or respected figure."
+    },
+    {
+     "text": "As X rightly observes",
+     "kind": "frame",
+     "form": "As Dr. Chen rightly observes",
+     "meaning": "To introduce a point by attributing it to someone else, implying their observation is correct.",
+     "example": "As Dr. Chen rightly observes, the data clearly indicates a shift in consumer behavior.",
+     "plain": "Dr. Chen correctly observes that the data clearly indicates a shift in consumer behavior.",
+     "note": "A formal way to cite an expert, adding weight to the statement."
+    },
+    {
+     "text": "It's worth revisiting the idea",
+     "kind": "collocation",
+     "form": "It's worth revisiting the idea",
+     "meaning": "To suggest that a previously discussed or considered concept should be looked at again.",
+     "example": "Given the new evidence, it's worth revisiting the idea of a causal link between these variables.",
+     "plain": "Given the new evidence, we should look again at the idea of a causal link between these variables.",
+     "note": "Used to suggest a re-evaluation of a concept in light of new information."
+    },
+    {
+     "text": "This perspective is echoed by",
+     "kind": "collocation",
+     "form": "This perspective is echoed by",
+     "meaning": "To state that a particular viewpoint is also expressed or supported by other sources or people.",
+     "example": "This perspective is echoed by several leading scholars in the field of cognitive psychology.",
+     "plain": "Several leading scholars in cognitive psychology also express this perspective.",
+     "note": "A formal way to show that an idea has broader support."
+    },
+    {
+     "text": "To delve deeper into",
+     "kind": "frame",
+     "form": "To delve deeper into",
+     "meaning": "To indicate an intention to explore a topic or issue in more detail.",
+     "example": "To delve deeper into the implications of this policy, we need to analyze long-term societal effects.",
+     "plain": "To explore the implications of this policy in more detail, we need to analyze long-term societal effects.",
+     "note": "A formal and academic way to introduce a more in-depth discussion."
+    },
+    {
+     "text": "This brings us back to",
+     "kind": "frame",
+     "form": "This brings us back to",
+     "meaning": "To redirect the discussion to a previously mentioned point or a core theme.",
+     "example": "This brings us back to the fundamental question of how we define intelligence in artificial systems.",
+     "plain": "This reminds us of the fundamental question of how we define intelligence in artificial systems.",
+     "note": "Useful for maintaining coherence in a discussion or argument."
+    },
+    {
+     "text": "The central premise is that",
+     "kind": "collocation",
+     "form": "The central premise is that",
+     "meaning": "To state the main underlying assumption or argument of a theory, discussion, or work.",
+     "example": "The central premise is that human behavior is largely driven by unconscious motivations.",
+     "plain": "The main idea is that human behavior is largely driven by unconscious motivations.",
+     "note": "A formal way to introduce the core argument of a theory or paper."
+    },
+    {
+     "text": "What I'm trying to convey is",
+     "kind": "frame",
+     "form": "What I'm trying to convey is",
+     "meaning": "To clarify or rephrase one's point, often when it hasn't been fully understood.",
+     "example": "What I'm trying to convey is that the methodology, not the results, needs refinement.",
+     "plain": "I mean that the methodology, not the results, needs refinement.",
+     "note": "Used to clarify one's meaning, often in a discussion or Q&A."
+    },
+    {
+     "text": "Let me elaborate on that",
+     "kind": "chunk",
+     "form": "Let me elaborate on that",
+     "meaning": "To offer to provide more details or a fuller explanation of a previous statement.",
+     "example": "That's a good question; let me elaborate on that point regarding the data collection process.",
+     "plain": "That's a good question; I'll give more details about the data collection process.",
+     "note": "A polite and common way to offer further explanation."
+    },
+    {
+     "text": "To put it more precisely",
+     "kind": "chunk",
+     "form": "To put it more precisely",
+     "meaning": "To rephrase a statement with greater accuracy or specificity.",
+     "example": "The model predicts a slight increase in volatility, or to put it more precisely, a wider confidence interval.",
+     "plain": "The model predicts a slight increase in volatility, or more precisely, a wider confidence interval.",
+     "note": "Used to refine a statement, making it more accurate or technical."
+    },
+    {
+     "text": "This leads us to consider",
+     "kind": "frame",
+     "form": "This leads us to consider",
+     "meaning": "To introduce a logical next step in an argument or a new point for discussion.",
+     "example": "This leads us to consider the ethical implications of using AI in medical diagnostics.",
+     "plain": "This makes us think about the ethical implications of using AI in medical diagnostics.",
+     "note": "A formal way to transition to a new, related topic or question."
+    },
+    {
+     "text": "It's important to set the stage",
+     "kind": "collocation",
+     "form": "It's important to set the stage",
+     "meaning": "To provide necessary background information or context before presenting the main topic.",
+     "example": "Before discussing the results, it's important to set the stage by outlining the historical context.",
+     "plain": "Before discussing the results, we need to provide the historical context.",
+     "note": "Used to prepare the audience for the main discussion by giving background."
+    },
+    {
+     "text": "The fundamental issue here is",
+     "kind": "collocation",
+     "form": "The fundamental issue here is",
+     "meaning": "To identify the most basic or underlying problem or question in a discussion.",
+     "example": "The fundamental issue here is not just funding, but the lack of inter-departmental collaboration.",
+     "plain": "The main problem here is not just funding, but the lack of inter-departmental collaboration.",
+     "note": "Used to pinpoint the core problem or disagreement."
+    },
+    {
+     "text": "To begin with, I'd like to",
+     "kind": "frame",
+     "form": "To begin with, I'd like to",
+     "meaning": "To introduce the first point or action in a presentation or discussion.",
+     "example": "To begin with, I'd like to briefly outline the scope of our research project.",
+     "plain": "First, I want to briefly outline the scope of our research project.",
+     "note": "A polite and common way to start a formal presentation or discussion."
+    },
+    {
+     "text": "In broad terms",
+     "kind": "chunk",
+     "form": "In broad terms",
+     "meaning": "To describe something generally, without going into specific details.",
+     "example": "In broad terms, the study aims to understand the socio-economic factors influencing educational attainment.",
+     "plain": "Generally, the study aims to understand the socio-economic factors influencing educational attainment.",
+     "note": "Used to give an overview or a general idea before specifics."
+    },
+    {
+     "text": "To sum up, then",
+     "kind": "chunk",
+     "form": "To sum up, then",
+     "meaning": "To introduce a brief summary of the main points discussed.",
+     "example": "To sum up, then, our findings suggest a complex interplay of genetic and environmental factors.",
+     "plain": "In summary, our findings suggest a complex interplay of genetic and environmental factors.",
+     "note": "A common, slightly informal but acceptable way to conclude a point or discussion."
+    },
+    {
+     "text": "In conclusion, it appears that",
+     "kind": "frame",
+     "form": "In conclusion, it appears that",
+     "meaning": "To introduce the final summary of findings, often with a degree of hedging.",
+     "example": "In conclusion, it appears that the intervention had a modest but significant positive effect.",
+     "plain": "In conclusion, the intervention seems to have had a modest but significant positive effect.",
+     "note": "A formal way to present a final finding, often with a cautious tone."
+    },
+    {
+     "text": "The implications of this are",
+     "kind": "collocation",
+     "form": "The implications of this are",
+     "meaning": "To discuss the possible future effects or consequences of a particular finding or situation.",
+     "example": "The implications of this are far-reaching for public health policy and resource allocation.",
+     "plain": "The consequences of this are far-reaching for public health policy and resource allocation.",
+     "note": "Used to discuss the broader significance or future impact of a result."
+    },
+    {
+     "text": "This underscores the need for",
+     "kind": "collocation",
+     "form": "This underscores the need for",
+     "meaning": "To emphasize that something highlights or makes clear the necessity of a particular action or thing.",
+     "example": "This underscores the need for more robust data privacy regulations in the digital age.",
+     "plain": "This emphasizes the need for more robust data privacy regulations in the digital age.",
+     "note": "A formal way to stress the importance of a particular requirement."
+    },
+    {
+     "text": "Ultimately, the question remains",
+     "kind": "frame",
+     "form": "Ultimately, the question remains",
+     "meaning": "To introduce a fundamental, unresolved question at the end of a discussion.",
+     "example": "Ultimately, the question remains how these theoretical models translate into practical applications.",
+     "plain": "In the end, we still need to know how these theoretical models translate into practical applications.",
+     "note": "Used to highlight a persistent, overarching question, often at the conclusion."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "It could be argued",
+     "kind": "frame",
+     "form": "It could be argued",
+     "meaning": "Introduces a possible interpretation or claim, often to present an alternative view or soften a statement.",
+     "example": "It could be argued that the data, while compelling, doesn't fully account for external variables.",
+     "plain": "One might say the data is compelling but doesn't fully account for external variables.",
+     "note": "A common academic phrase to introduce a point without fully committing to it."
+    },
+    {
+     "text": "It would appear that",
+     "kind": "frame",
+     "form": "It would appear that",
+     "meaning": "Suggests an observation or conclusion based on available evidence, but with a degree of caution.",
+     "example": "It would appear that the initial findings support our hypothesis, though further testing is needed.",
+     "plain": "The initial findings seem to support our hypothesis, but more testing is needed.",
+     "note": "A polite, formal way to present a tentative conclusion."
+    },
+    {
+     "text": "It is often the case",
+     "kind": "frame",
+     "form": "It is often the case",
+     "meaning": "States a general tendency or common occurrence, acknowledging exceptions.",
+     "example": "It is often the case that early career researchers face significant funding challenges.",
+     "plain": "Early career researchers often face significant funding challenges.",
+     "note": "Useful for making generalizations while implicitly allowing for exceptions."
+    },
+    {
+     "text": "We must also consider",
+     "kind": "frame",
+     "form": "We must also consider",
+     "meaning": "Introduces an additional factor or perspective that needs to be taken into account.",
+     "example": "We must also consider the ethical implications of this technology before widespread implementation.",
+     "plain": "We should also think about the ethical implications of this technology before implementing it widely.",
+     "note": "Signals the introduction of a crucial, often overlooked, aspect."
+    },
+    {
+     "text": "It is important to stress",
+     "kind": "frame",
+     "form": "It is important to stress",
+     "meaning": "Emphasizes a particular point or aspect as significant.",
+     "example": "It is important to stress that these results are preliminary and require replication.",
+     "plain": "We need to emphasize that these results are preliminary and must be replicated.",
+     "note": "A direct way to highlight the significance of a specific detail."
+    },
+    {
+     "text": "This is not to suggest",
+     "kind": "frame",
+     "form": "This is not to suggest",
+     "meaning": "Clarifies that a previous statement should not be interpreted in a particular way.",
+     "example": "This is not to suggest that the previous model was entirely flawed, but rather incomplete.",
+     "plain": "I don't mean to imply the previous model was completely wrong, just incomplete.",
+     "note": "Used to prevent misinterpretation or to refine a previous point."
+    },
+    {
+     "text": "To a certain extent",
+     "kind": "chunk",
+     "form": "To a certain extent",
+     "meaning": "Qualifies a statement, indicating it is true only partially or within limits.",
+     "example": "To a certain extent, the findings confirm earlier research, but new variables emerged.",
+     "plain": "The findings partially confirm earlier research, but new variables emerged.",
+     "note": "A common, slightly formal hedge to show partial agreement or truth."
+    },
+    {
+     "text": "It's worth bearing in mind",
+     "kind": "frame",
+     "form": "It's worth bearing in mind",
+     "meaning": "Advises the listener to remember a particular fact or consideration.",
+     "example": "It's worth bearing in mind that cultural factors can significantly influence participant responses.",
+     "plain": "Remember that cultural factors can significantly influence participant responses.",
+     "note": "A polite and common way to introduce an important reminder."
+    },
+    {
+     "text": "We need to be mindful of",
+     "kind": "frame",
+     "form": "We need to be mindful of",
+     "meaning": "Highlights the necessity of being aware of or sensitive to something.",
+     "example": "We need to be mindful of the potential for bias in self-reported data.",
+     "plain": "We must be aware of the potential for bias in self-reported data.",
+     "note": "Suggests caution and careful consideration of a potential issue."
+    },
+    {
+     "text": "It's important to differentiate between",
+     "kind": "frame",
+     "form": "It's important to differentiate between",
+     "meaning": "Stresses the necessity of recognizing distinct differences between two or more things.",
+     "example": "It's important to differentiate between correlation and causation in these statistical analyses.",
+     "plain": "We must distinguish between correlation and causation in these statistical analyses.",
+     "note": "Used to clarify concepts and prevent confusion."
+    },
+    {
+     "text": "This is largely due to",
+     "kind": "frame",
+     "form": "This is largely due to",
+     "meaning": "Explains the primary reason for something, while allowing for other minor contributing factors.",
+     "example": "This is largely due to the methodological constraints inherent in longitudinal studies.",
+     "plain": "This is mostly because of the methodological limitations in longitudinal studies.",
+     "note": "A common way to attribute cause, with a slight hedge."
+    },
+    {
+     "text": "It's not uncommon for",
+     "kind": "frame",
+     "form": "It's not uncommon for",
+     "meaning": "States that something happens fairly often, using understatement.",
+     "example": "It's not uncommon for initial research findings to be revised after peer review.",
+     "plain": "Initial research findings are often revised after peer review.",
+     "note": "An understated way to say something is frequent or expected."
+    },
+    {
+     "text": "We should perhaps acknowledge",
+     "kind": "frame",
+     "form": "We should perhaps acknowledge",
+     "meaning": "Suggests that a particular point or fact ought to be recognized, often to add nuance.",
+     "example": "We should perhaps acknowledge the limitations of our sample size when interpreting these results.",
+     "plain": "We should probably recognize the limitations of our sample size when interpreting these results.",
+     "note": "A polite and diplomatic way to introduce a qualifying point."
+    },
+    {
+     "text": "It's worth emphasizing that",
+     "kind": "frame",
+     "form": "It's worth emphasizing that",
+     "meaning": "Highlights a point as particularly important and deserving of attention.",
+     "example": "It's worth emphasizing that these findings are specific to the cultural context studied.",
+     "plain": "We should emphasize that these findings are specific to the cultural context studied.",
+     "note": "A common way to draw attention to a crucial detail."
+    },
+    {
+     "text": "This is merely an observation",
+     "kind": "chunk",
+     "form": "This is merely an observation",
+     "meaning": "Presents a point as a simple remark rather than a definitive conclusion or strong claim.",
+     "example": "This is merely an observation, not a definitive statement about causality.",
+     "plain": "This is just an observation, not a definitive statement about causality.",
+     "note": "Used to downplay the strength or certainty of a statement."
+    },
+    {
+     "text": "It's important to avoid generalizations",
+     "kind": "frame",
+     "form": "It's important to avoid generalizations",
+     "meaning": "Advises against making broad statements that might not be universally true.",
+     "example": "It's important to avoid generalizations when discussing diverse populations.",
+     "plain": "We must not make broad statements when discussing diverse populations.",
+     "note": "A common academic caution against oversimplification."
+    },
+    {
+     "text": "We must take into account",
+     "kind": "frame",
+     "form": "We must take into account",
+     "meaning": "Stresses the necessity of considering specific factors or information.",
+     "example": "We must take into account the historical context when analyzing these social trends.",
+     "plain": "We need to consider the historical context when analyzing these social trends.",
+     "note": "A strong, formal way to introduce a crucial consideration."
+    },
+    {
+     "text": "It's important to clarify that",
+     "kind": "frame",
+     "form": "It's important to clarify that",
+     "meaning": "Introduces a statement intended to make something clearer or more precise.",
+     "example": "It's important to clarify that our study focused on a specific age demographic.",
+     "plain": "We need to make it clear that our study focused on a specific age demographic.",
+     "note": "Used to add precision or correct potential misunderstandings."
+    },
+    {
+     "text": "This suggests a potential link",
+     "kind": "collocation",
+     "form": "This suggests a potential link",
+     "meaning": "Indicates that there might be a connection, but without stating it as a certainty.",
+     "example": "This suggests a potential link between early exposure and later developmental outcomes.",
+     "plain": "This indicates there might be a connection between early exposure and later developmental outcomes.",
+     "note": "A common way to cautiously propose a relationship in research."
+    },
+    {
+     "text": "It's worth considering the implications",
+     "kind": "frame",
+     "form": "It's worth considering the implications",
+     "meaning": "Advises thinking about the possible consequences or effects of something.",
+     "example": "It's worth considering the implications of these policy changes for future research funding.",
+     "plain": "We should think about the consequences of these policy changes for future research funding.",
+     "note": "Encourages deeper thought about potential future effects."
+    },
+    {
+     "text": "As X has demonstrated",
+     "kind": "frame",
+     "form": "As Dr. Lee has demonstrated",
+     "meaning": "Refers to a specific person's work to support a point, highlighting their proof.",
+     "example": "As Dr. Lee has demonstrated, the phenomenon is more complex than initially assumed.",
+     "plain": "Dr. Lee has shown that the phenomenon is more complex than initially assumed.",
+     "note": "A formal way to cite an expert's established findings."
+    },
+    {
+     "text": "In line with X's argument",
+     "kind": "frame",
+     "form": "In line with Professor Smith's argument",
+     "meaning": "States that a point is consistent with or supported by another person's reasoning.",
+     "example": "In line with Professor Smith's argument, we find that social capital plays a crucial role.",
+     "plain": "Our findings are consistent with Professor Smith's argument that social capital plays a crucial role.",
+     "note": "Used to show agreement or support from an external source."
+    },
+    {
+     "text": "Drawing on X's framework",
+     "kind": "frame",
+     "form": "Drawing on Bourdieu's framework",
+     "meaning": "Indicates that one's analysis or discussion is based on a particular theoretical structure.",
+     "example": "Drawing on Bourdieu's framework, we can analyze the cultural capital within this community.",
+     "plain": "Using Bourdieu's framework, we can analyze the cultural capital within this community.",
+     "note": "Common in academic discourse to acknowledge theoretical foundations."
+    },
+    {
+     "text": "Consistent with previous research",
+     "kind": "chunk",
+     "form": "Consistent with previous research",
+     "meaning": "States that current findings align with what has been found in earlier studies.",
+     "example": "Consistent with previous research, our study found a significant correlation between these variables.",
+     "plain": "Our study found a significant correlation between these variables, which matches earlier research.",
+     "note": "A standard phrase to show continuity with existing literature."
+    },
+    {
+     "text": "As articulated by X",
+     "kind": "frame",
+     "form": "As articulated by Foucault",
+     "meaning": "Refers to a concept or idea as expressed clearly by a specific author or theorist.",
+     "example": "As articulated by Foucault, power structures are often subtle and pervasive.",
+     "plain": "Foucault clearly expressed that power structures are often subtle and pervasive.",
+     "note": "A formal way to credit the precise wording or formulation of an idea."
+    },
+    {
+     "text": "Building upon X's work",
+     "kind": "frame",
+     "form": "Building upon Dr. Chen's work",
+     "meaning": "Indicates that one's own research or ideas extend or develop from another's contributions.",
+     "example": "Building upon Dr. Chen's work, we explored the long-term effects of early intervention.",
+     "plain": "We extended Dr. Chen's work by exploring the long-term effects of early intervention.",
+     "note": "Used to show how current work advances previous scholarship."
+    },
+    {
+     "text": "In reference to X",
+     "kind": "frame",
+     "form": "In reference to the seminal paper",
+     "meaning": "Introduces a point by indicating it relates to a specific source or topic.",
+     "example": "In reference to the seminal paper, our methodology diverges slightly in data collection.",
+     "plain": "Regarding the seminal paper, our methodology differs slightly in data collection.",
+     "note": "A formal way to introduce a point by linking it to a specific source."
+    },
+    {
+     "text": "Echoing X's concerns",
+     "kind": "frame",
+     "form": "Echoing Professor Davies' concerns",
+     "meaning": "Expresses agreement with worries or issues previously raised by someone else.",
+     "example": "Echoing Professor Davies' concerns, the ethical implications of AI development warrant careful scrutiny.",
+     "plain": "Like Professor Davies, we are concerned that the ethical implications of AI development need careful scrutiny.",
+     "note": "Shows alignment with another's apprehension or critical view."
+    },
+    {
+     "text": "As X has observed",
+     "kind": "frame",
+     "form": "As Dr. Kim has observed",
+     "meaning": "Cites a specific person's insight or finding.",
+     "example": "As Dr. Kim has observed, the phenomenon exhibits significant variability across different contexts.",
+     "plain": "Dr. Kim noted that the phenomenon shows significant variability across different contexts.",
+     "note": "A common, slightly formal way to refer to an expert's insight."
+    },
+    {
+     "text": "Following X's methodology",
+     "kind": "frame",
+     "form": "Following Dr. Gupta's methodology",
+     "meaning": "States that one's research approach is based on or inspired by another's established method.",
+     "example": "Following Dr. Gupta's methodology, we employed a mixed-methods approach for data analysis.",
+     "plain": "We used a mixed-methods approach for data analysis, similar to Dr. Gupta's method.",
+     "note": "Used to credit the source of a research method."
+    },
+    {
+     "text": "In stark contrast to",
+     "kind": "chunk",
+     "form": "In stark contrast to",
+     "meaning": "Highlights a very strong difference between two things.",
+     "example": "In stark contrast to earlier theories, our findings suggest a more dynamic interaction.",
+     "plain": "Our findings suggest a more dynamic interaction, which is very different from earlier theories.",
+     "note": "Emphasizes a significant difference; quite strong."
+    },
+    {
+     "text": "Conversely, it can be argued",
+     "kind": "frame",
+     "form": "Conversely, it can be argued",
+     "meaning": "Introduces an opposing argument or viewpoint.",
+     "example": "Conversely, it can be argued that these interventions may inadvertently create new dependencies.",
+     "plain": "On the other hand, one could argue that these interventions might accidentally create new dependencies.",
+     "note": "A formal way to introduce a contrasting perspective."
+    },
+    {
+     "text": "While X focuses on",
+     "kind": "frame",
+     "form": "While X focuses on",
+     "meaning": "Introduces a comparison by stating what one entity emphasizes before presenting a different focus.",
+     "example": "While X focuses on individual agency, our research highlights systemic influences.",
+     "plain": "X emphasizes individual agency, but our research highlights systemic influences.",
+     "note": "Useful for setting up a direct comparison of different approaches."
+    },
+    {
+     "text": "A key difference lies in",
+     "kind": "frame",
+     "form": "A key difference lies in",
+     "meaning": "Points out the most important distinction between two or more things.",
+     "example": "A key difference lies in the conceptualization of 'well-being' across these two studies.",
+     "plain": "The most important difference is how 'well-being' is defined in these two studies.",
+     "note": "A formal way to highlight a crucial point of divergence."
+    },
+    {
+     "text": "This stands apart from",
+     "kind": "frame",
+     "form": "This stands apart from",
+     "meaning": "Indicates that something is distinct or different from something else.",
+     "example": "This stands apart from traditional approaches by integrating qualitative and quantitative methods.",
+     "plain": "This is different from traditional approaches because it integrates qualitative and quantitative methods.",
+     "note": "Emphasizes uniqueness or a significant departure."
+    },
+    {
+     "text": "In comparison with",
+     "kind": "chunk",
+     "form": "In comparison with",
+     "meaning": "Introduces a point by contrasting it with another.",
+     "example": "In comparison with the control group, the intervention group showed significant improvements.",
+     "plain": "The intervention group showed significant improvements when compared to the control group.",
+     "note": "A standard, formal phrase for making comparisons."
+    },
+    {
+     "text": "Unlike X, our study",
+     "kind": "frame",
+     "form": "Unlike previous studies, our study",
+     "meaning": "Highlights a distinction by stating how one's own work differs from others.",
+     "example": "Unlike previous studies, our study incorporates a longitudinal design, offering deeper insights.",
+     "plain": "Our study is different from previous ones because it uses a longitudinal design, offering deeper insights.",
+     "note": "A direct way to emphasize the novelty or unique aspect of one's work."
+    },
+    {
+     "text": "The distinction between X and Y",
+     "kind": "frame",
+     "form": "The distinction between explicit and implicit knowledge",
+     "meaning": "Refers to the difference between two concepts or categories.",
+     "example": "The distinction between explicit and implicit knowledge is crucial for understanding learning processes.",
+     "plain": "The difference between explicit and implicit knowledge is crucial for understanding learning processes.",
+     "note": "A formal way to refer to a conceptual difference."
+    },
+    {
+     "text": "This contrasts sharply with",
+     "kind": "frame",
+     "form": "This contrasts sharply with",
+     "meaning": "Points out a very clear and noticeable difference.",
+     "example": "This contrasts sharply with the findings from the urban population, suggesting regional variations.",
+     "plain": "This is very different from the findings from the urban population, suggesting regional variations.",
+     "note": "A strong phrase to highlight a significant difference."
+    },
+    {
+     "text": "On the contrary",
+     "kind": "chunk",
+     "form": "On the contrary",
+     "meaning": "Introduces a statement that is the opposite of what has just been said or implied.",
+     "example": "On the contrary, the evidence suggests a more complex interplay of factors than initially thought.",
+     "plain": "Actually, the evidence suggests a more complex interplay of factors than initially thought.",
+     "note": "Used to strongly contradict a previous statement or assumption."
+    },
+    {
+     "text": "What I mean by that is",
+     "kind": "frame",
+     "form": "What I mean by that is",
+     "meaning": "Clarifies a previous statement by rephrasing or explaining it in more detail.",
+     "example": "What I mean by that is, the theoretical framework needs to be more explicitly defined.",
+     "plain": "I mean that the theoretical framework needs to be more explicitly defined.",
+     "note": "A common, informal but acceptable way to clarify a point in spoken academic settings."
+    },
+    {
+     "text": "To put it differently",
+     "kind": "chunk",
+     "form": "To put it differently",
+     "meaning": "Introduces a rephrasing of a previous statement for clarity or emphasis.",
+     "example": "To put it differently, the causal relationship is not as straightforward as assumed.",
+     "plain": "In other words, the causal relationship is not as straightforward as assumed.",
+     "note": "A common phrase for rephrasing for better understanding."
+    },
+    {
+     "text": "The underlying assumption is",
+     "kind": "frame",
+     "form": "The underlying assumption is",
+     "meaning": "Identifies a fundamental belief or premise that forms the basis of an argument or theory.",
+     "example": "The underlying assumption is that participants will provide honest and accurate self-reports.",
+     "plain": "The basic belief is that participants will provide honest and accurate self-reports.",
+     "note": "Used to expose or discuss the foundational beliefs of a concept."
+    },
+    {
+     "text": "This brings me to",
+     "kind": "frame",
+     "form": "This brings me to",
+     "meaning": "Transitions to a new point or topic that is logically connected to the previous one.",
+     "example": "This brings me to the next section, which discusses the practical applications of our findings.",
+     "plain": "Now I will move to the next section, which discusses the practical applications of our findings.",
+     "note": "A smooth way to transition between related points in a presentation or discussion."
+    },
+    {
+     "text": "It's important to underscore",
+     "kind": "frame",
+     "form": "It's important to underscore",
+     "meaning": "Emphasizes a point as particularly significant or crucial.",
+     "example": "It's important to underscore the ethical considerations involved in data collection.",
+     "plain": "We need to emphasize the ethical considerations involved in data collection.",
+     "note": "A formal way to highlight the importance of a specific aspect."
+    },
+    {
+     "text": "Let me rephrase that",
+     "kind": "chunk",
+     "form": "Let me rephrase that",
+     "meaning": "Indicates an intention to say something again in a different, usually clearer, way.",
+     "example": "Let me rephrase that: the initial model was robust, but lacked predictive power for outliers.",
+     "plain": "I'll say that again in a different way: the initial model was robust, but lacked predictive power for outliers.",
+     "note": "Common in spoken discourse to clarify or correct oneself."
+    },
+    {
+     "text": "The crux of the matter is",
+     "kind": "frame",
+     "form": "The crux of the matter is",
+     "meaning": "Identifies the most essential or central point of an issue.",
+     "example": "The crux of the matter is whether these interventions are sustainable in the long term.",
+     "plain": "The main point is whether these interventions are sustainable in the long term.",
+     "note": "A slightly informal but common phrase to get to the core issue."
+    },
+    {
+     "text": "To elaborate further",
+     "kind": "chunk",
+     "form": "To elaborate further",
+     "meaning": "Indicates an intention to provide more details or explanation on a topic.",
+     "example": "To elaborate further, the qualitative data revealed unexpected participant motivations.",
+     "plain": "To explain more, the qualitative data revealed unexpected participant motivations.",
+     "note": "A formal way to signal additional detail is coming."
+    },
+    {
+     "text": "This leads me to conclude",
+     "kind": "frame",
+     "form": "This leads me to conclude",
+     "meaning": "Introduces a conclusion derived from the preceding discussion or evidence.",
+     "example": "This leads me to conclude that a multi-faceted approach is necessary for effective policy.",
+     "plain": "Based on this, I conclude that a multi-faceted approach is necessary for effective policy.",
+     "note": "A formal way to present a conclusion based on reasoning."
+    },
+    {
+     "text": "It's worth exploring",
+     "kind": "frame",
+     "form": "It's worth exploring",
+     "meaning": "Suggests that a particular idea or topic deserves further investigation.",
+     "example": "It's worth exploring the potential for cross-cultural applications of this theoretical model.",
+     "plain": "We should explore the potential for cross-cultural applications of this theoretical model.",
+     "note": "A polite way to suggest further research or discussion."
+    },
+    {
+     "text": "The primary concern is",
+     "kind": "frame",
+     "form": "The primary concern is",
+     "meaning": "Identifies the most important issue or worry.",
+     "example": "The primary concern is the generalizability of these findings to broader populations.",
+     "plain": "The main worry is whether these findings can be applied to broader populations.",
+     "note": "Used to highlight the most significant problem or consideration."
+    },
+    {
+     "text": "This raises an important point",
+     "kind": "collocation",
+     "form": "This raises an important point",
+     "meaning": "Indicates that a previous statement or observation brings up a significant issue for discussion.",
+     "example": "This raises an important point about the ethical responsibilities of researchers in data sharing.",
+     "plain": "This brings up a significant issue about the ethical responsibilities of researchers in data sharing.",
+     "note": "A common phrase to transition to a new, related discussion point."
+    },
+    {
+     "text": "It's crucial to recognize",
+     "kind": "frame",
+     "form": "It's crucial to recognize",
+     "meaning": "Emphasizes the vital importance of understanding or acknowledging something.",
+     "example": "It's crucial to recognize the historical context that shaped these social structures.",
+     "plain": "We must recognize the historical context that shaped these social structures.",
+     "note": "A strong, formal way to highlight a necessary understanding."
+    },
+    {
+     "text": "To recap briefly",
+     "kind": "chunk",
+     "form": "To recap briefly",
+     "meaning": "Introduces a short summary of previously discussed points.",
+     "example": "To recap briefly, we've discussed the theoretical underpinnings and methodological challenges.",
+     "plain": "To summarize quickly, we've discussed the theoretical underpinnings and methodological challenges.",
+     "note": "A common phrase for a quick summary, often in spoken contexts."
+    },
+    {
+     "text": "The evidence suggests that",
+     "kind": "frame",
+     "form": "The evidence suggests that",
+     "meaning": "Introduces a conclusion or inference based on available data, often with a degree of caution.",
+     "example": "The evidence suggests that early intervention programs have a positive, albeit modest, impact.",
+     "plain": "The data indicates that early intervention programs have a positive, but small, impact.",
+     "note": "A standard academic phrase for presenting findings tentatively."
+    },
+    {
+     "text": "It's worth considering",
+     "kind": "chunk",
+     "form": "It's worth considering",
+     "meaning": "Suggests that a particular idea or factor deserves attention and thought.",
+     "example": "It's worth considering the long-term sustainability of these proposed solutions.",
+     "plain": "We should consider the long-term sustainability of these proposed solutions.",
+     "note": "A polite way to introduce a point for discussion or reflection."
+    },
+    {
+     "text": "This is particularly relevant for",
+     "kind": "frame",
+     "form": "This is particularly relevant for",
+     "meaning": "Highlights the specific applicability or importance of a point to a certain area or group.",
+     "example": "This is particularly relevant for policymakers designing public health interventions.",
+     "plain": "This is especially important for policymakers designing public health interventions.",
+     "note": "Used to emphasize the specific impact or significance for a target audience."
+    },
+    {
+     "text": "We need to address the question of",
+     "kind": "frame",
+     "form": "We need to address the question of",
+     "meaning": "States the necessity of discussing or resolving a specific query or issue.",
+     "example": "We need to address the question of how these findings translate into practical applications.",
+     "plain": "We must discuss how these findings translate into practical applications.",
+     "note": "A formal way to introduce a key question that requires attention."
+    },
+    {
+     "text": "It's important to acknowledge the complexity",
+     "kind": "frame",
+     "form": "It's important to acknowledge the complexity",
+     "meaning": "Stresses the need to recognize that a situation or issue is intricate and multi-faceted.",
+     "example": "It's important to acknowledge the complexity of human behavior in any social science research.",
+     "plain": "We must recognize that human behavior is complex in any social science research.",
+     "note": "A common academic phrase to show awareness of intricate factors."
+    },
+    {
+     "text": "This brings us to the point",
+     "kind": "frame",
+     "form": "This brings us to the point",
+     "meaning": "Transitions to a specific idea or argument that follows logically from the previous discussion.",
+     "example": "This brings us to the point that interdisciplinary collaboration is increasingly vital.",
+     "plain": "This leads us to the idea that interdisciplinary collaboration is increasingly vital.",
+     "note": "A smooth way to introduce a new, related argument."
+    },
+    {
+     "text": "It's not entirely accurate to say",
+     "kind": "frame",
+     "form": "It's not entirely accurate to say",
+     "meaning": "Gently corrects or qualifies a statement, suggesting it's not fully correct.",
+     "example": "It's not entirely accurate to say that all participants showed improvement; some regressed.",
+     "plain": "It's not completely correct to say that all participants showed improvement; some regressed.",
+     "note": "A polite and diplomatic way to express disagreement or provide a correction."
+    },
+    {
+     "text": "We should be cautious about",
+     "kind": "frame",
+     "form": "We should be cautious about",
+     "meaning": "Advises carefulness or restraint regarding a particular action or conclusion.",
+     "example": "We should be cautious about extrapolating these results to different demographic groups.",
+     "plain": "We need to be careful about applying these results to different demographic groups.",
+     "note": "A common academic warning against overgeneralization or premature conclusions."
+    },
+    {
+     "text": "It's important to avoid oversimplification",
+     "kind": "frame",
+     "form": "It's important to avoid oversimplification",
+     "meaning": "Stresses the need to prevent reducing complex issues to overly simple terms.",
+     "example": "It's important to avoid oversimplification when discussing the causes of social inequality.",
+     "plain": "We must not simplify too much when discussing the causes of social inequality.",
+     "note": "A standard academic caution against reducing complexity."
+    },
+    {
+     "text": "This is subject to change",
+     "kind": "chunk",
+     "form": "This is subject to change",
+     "meaning": "States that something is not fixed and may be altered in the future.",
+     "example": "This is subject to change as more data becomes available and further analysis is conducted.",
+     "plain": "This might change as more data becomes available and further analysis is conducted.",
+     "note": "A common phrase to indicate provisionality, especially for plans or preliminary findings."
+    },
+    {
+     "text": "It's worth noting the caveat",
+     "kind": "frame",
+     "form": "It's worth noting the caveat",
+     "meaning": "Advises paying attention to a specific limitation or condition.",
+     "example": "It's worth noting the caveat that our study relied solely on self-reported measures.",
+     "plain": "We should note the warning that our study relied solely on self-reported measures.",
+     "note": "A formal way to highlight an important limitation or condition."
+    },
+    {
+     "text": "There is a strong indication that",
+     "kind": "frame",
+     "form": "There is a strong indication that",
+     "meaning": "Suggests that evidence points clearly towards a particular conclusion, though not definitively.",
+     "example": "There is a strong indication that early childhood education positively impacts long-term outcomes.",
+     "plain": "The evidence strongly suggests that early childhood education positively impacts long-term outcomes.",
+     "note": "A formal way to present a likely conclusion based on robust evidence."
+    },
+    {
+     "text": "It's important to consider the broader context",
+     "kind": "frame",
+     "form": "It's important to consider the broader context",
+     "meaning": "Stresses the need to look at the wider circumstances surrounding an issue.",
+     "example": "It's important to consider the broader context of global economic trends when analyzing local markets.",
+     "plain": "We must consider the wider global economic trends when analyzing local markets.",
+     "note": "A common academic phrase to encourage a holistic view."
+    },
+    {
+     "text": "This is not to imply",
+     "kind": "frame",
+     "form": "This is not to imply",
+     "meaning": "Clarifies that a previous statement should not be taken to mean something specific.",
+     "example": "This is not to imply that qualitative methods are inferior, merely that they serve different purposes.",
+     "plain": "I don't mean to suggest that qualitative methods are inferior, just that they serve different purposes.",
+     "note": "Used to prevent misinterpretation or to refine a previous point."
+    },
+    {
+     "text": "We must remain open to",
+     "kind": "frame",
+     "form": "We must remain open to",
+     "meaning": "Emphasizes the necessity of being receptive to new ideas, evidence, or possibilities.",
+     "example": "We must remain open to alternative interpretations of the data as new research emerges.",
+     "plain": "We need to be receptive to alternative interpretations of the data as new research emerges.",
+     "note": "Encourages intellectual flexibility and a non-dogmatic approach."
+    },
+    {
+     "text": "It's important to draw a distinction",
+     "kind": "frame",
+     "form": "It's important to draw a distinction",
+     "meaning": "Stresses the necessity of clearly separating two concepts or ideas.",
+     "example": "It's important to draw a distinction between correlation and causation in epidemiological studies.",
+     "plain": "We must clearly separate correlation and causation in epidemiological studies.",
+     "note": "A formal way to emphasize the need for conceptual clarity."
+    },
+    {
+     "text": "The central argument is that",
+     "kind": "frame",
+     "form": "The central argument is that",
+     "meaning": "States the main point or thesis being presented.",
+     "example": "The central argument is that policy interventions must be culturally sensitive to be effective.",
+     "plain": "The main point is that policy interventions must be culturally sensitive to be effective.",
+     "note": "Used to clearly state the core thesis of a discussion or paper."
+    },
+    {
+     "text": "To illustrate this point",
+     "kind": "chunk",
+     "form": "To illustrate this point",
+     "meaning": "Introduces an example or explanation to make a previous statement clearer.",
+     "example": "To illustrate this point, consider the case study of urban regeneration in post-industrial cities.",
+     "plain": "To show what I mean, consider the case study of urban regeneration in post-industrial cities.",
+     "note": "A common phrase to introduce an example."
+    },
+    {
+     "text": "This is predicated on the idea",
+     "kind": "frame",
+     "form": "This is predicated on the idea",
+     "meaning": "States that something is based on or depends on a particular concept or belief.",
+     "example": "This is predicated on the idea that individuals act rationally in economic decision-making.",
+     "plain": "This is based on the idea that individuals act rationally in economic decision-making.",
+     "note": "A formal way to explain the foundational concept of an argument."
+    },
+    {
+     "text": "It's worth reflecting on",
+     "kind": "frame",
+     "form": "It's worth reflecting on",
+     "meaning": "Suggests that a particular idea or situation deserves careful thought and consideration.",
+     "example": "It's worth reflecting on how these historical events continue to shape contemporary society.",
+     "plain": "We should think carefully about how these historical events continue to shape contemporary society.",
+     "note": "Encourages deeper, contemplative thought about a topic."
+    },
+    {
+     "text": "The implications are far-reaching",
+     "kind": "collocation",
+     "form": "The implications are far-reaching",
+     "meaning": "States that the consequences or effects of something are extensive and significant.",
+     "example": "The implications are far-reaching, affecting not only individuals but also entire communities.",
+     "plain": "The consequences are extensive, affecting not only individuals but also entire communities.",
+     "note": "A strong phrase to emphasize the broad impact of an issue."
+    },
+    {
+     "text": "This opens up new avenues for",
+     "kind": "frame",
+     "form": "This opens up new avenues for",
+     "meaning": "Indicates that a development or finding creates new possibilities for research or action.",
+     "example": "This opens up new avenues for interdisciplinary research into climate change adaptation.",
+     "plain": "This creates new possibilities for interdisciplinary research into climate change adaptation.",
+     "note": "A positive phrase to highlight future research directions."
+    },
+    {
+     "text": "It's important to consider the ethical dimensions",
+     "kind": "frame",
+     "form": "It's important to consider the ethical dimensions",
+     "meaning": "Stresses the necessity of examining the moral aspects of an issue.",
+     "example": "It's important to consider the ethical dimensions of using AI in medical diagnostics.",
+     "plain": "We must consider the moral aspects of using AI in medical diagnostics.",
+     "note": "A common academic phrase when discussing responsible research or application."
+    },
+    {
+     "text": "To put it mildly",
+     "kind": "chunk",
+     "form": "To put it mildly",
+     "meaning": "Used to indicate that a statement is an understatement, implying the reality is more extreme.",
+     "example": "To put it mildly, the initial experimental results were unexpected and challenging to interpret.",
+     "plain": "The initial experimental results were very unexpected and challenging to interpret.",
+     "note": "An idiomatic expression for understatement, often with a touch of irony."
+    },
+    {
+     "text": "This is a nuanced issue",
+     "kind": "collocation",
+     "form": "This is a nuanced issue",
+     "meaning": "States that a topic is complex and involves subtle distinctions.",
+     "example": "This is a nuanced issue, requiring careful consideration of multiple interacting factors.",
+     "plain": "This is a complex issue, requiring careful consideration of multiple interacting factors.",
+     "note": "Used to describe a topic that is not straightforward and has many subtle aspects."
+    },
+    {
+     "text": "We must not lose sight of",
+     "kind": "frame",
+     "form": "We must not lose sight of",
+     "meaning": "Emphasizes the importance of remembering or keeping a particular point in mind.",
+     "example": "We must not lose sight of the human element when discussing technological advancements.",
+     "plain": "We must remember the human element when discussing technological advancements.",
+     "note": "A strong reminder to keep a crucial aspect in focus."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "it would seem that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it could be argued that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to some extent": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in some respects": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "one might contend that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i would venture to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this is not to say that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the one hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to distinguish between": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's tempting to conclude that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a nuanced understanding": {
+    "status": "pass",
+    "level": "C2"
+   },
+   "it bears repeating that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we should perhaps consider": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not entirely clear whether": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this is merely a hypothesis": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in light of this": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "drawing on the work of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "as x points out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in contrast to x": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this aligns with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this diverges from": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to elaborate on this": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "building on this idea": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth considering x's perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a key distinction": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to reiterate my point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this brings us to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to acknowledge": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the prevailing view is that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a counter-argument might be": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this raises the question of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to contextualize this": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's often argued that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to summarize briefly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's important to bear in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to a certain degree": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes how the phrase qualifies a statement to a limited extent."
+   },
+   "it's fair to say that": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key correctly captures the phrase's function of introducing a reasonable conclusion or summary."
+   },
+   "we should perhaps qualify": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this is not to diminish": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth considering the possibility": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "one might also consider": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's difficult to ascertain": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to avoid overstating": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we must be careful not to conflate": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "there is a strong case for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not unreasonable to suggest": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to remain open to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to acknowledge the limitations": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in line with x's findings": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "drawing a parallel between": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this stands in stark contrast to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to echo x's sentiments": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "as x rightly observes": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth revisiting the idea": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this perspective is echoed by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to delve deeper into": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this brings us back to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the central premise is that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what i'm trying to convey is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me elaborate on that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it more precisely": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this leads us to consider": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to set the stage": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the fundamental issue here is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to begin with, i'd like to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "in broad terms": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to sum up, then": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "in conclusion, it appears that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the implications of this are": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this underscores the need for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "ultimately, the question remains": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it could be argued": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it would appear that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it is often the case": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we must also consider": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it is important to stress": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is not to suggest": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to a certain extent": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth bearing in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to be mindful of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to differentiate between": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is largely due to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not uncommon for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we should perhaps acknowledge": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth emphasizing that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is merely an observation": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to avoid generalizations": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we must take into account": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to clarify that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this suggests a potential link": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth considering the implications": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "as x has demonstrated": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in line with x's argument": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "drawing on x's framework": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "consistent with previous research": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as articulated by x": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "building upon x's work": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in reference to x": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "echoing x's concerns": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "as x has observed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "following x's methodology": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in stark contrast to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "conversely, it can be argued": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "while x focuses on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a key difference lies in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this stands apart from": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "in comparison with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "unlike x, our study": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the distinction between x and y": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this contrasts sharply with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the contrary": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put it differently": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the underlying assumption is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this brings me to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to underscore": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let me rephrase that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the crux of the matter is": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to elaborate further": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this leads me to conclude": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth exploring": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the primary concern is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this raises an important point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's crucial to recognize": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to recap briefly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the evidence suggests that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth considering": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is particularly relevant for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to address the question of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to acknowledge the complexity": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this brings us to the point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's not entirely accurate to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we should be cautious about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to avoid oversimplification": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this is subject to change": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's worth noting the caveat": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "there is a strong indication that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to consider the broader context": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this is not to imply": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we must remain open to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to draw a distinction": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "the central argument is that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to illustrate this point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is predicated on the idea": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's worth reflecting on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the implications are far-reaching": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "this opens up new avenues for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's important to consider the ethical dimensions": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it mildly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "this is a nuanced issue": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we must not lose sight of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what i mean by that is": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes how the phrase is used to clarify or elaborate on a statement."
+   }
+  }
+ }
+}

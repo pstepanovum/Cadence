@@ -1,0 +1,2426 @@
+{
+ "format": 1,
+ "level": "C1",
+ "situation": "travel",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "Could you point me in the right direction",
+     "kind": "chunk",
+     "form": "Could you point me in the right direction",
+     "meaning": "Asking for help to find a specific place or way.",
+     "example": "Excuse me, could you point me in the right direction for the train station?",
+     "plain": "Excuse me, could you tell me how to get to the train station?",
+     "note": "A polite way to ask for directions from a stranger."
+    },
+    {
+     "text": "Do you happen to know",
+     "kind": "frame",
+     "form": "Do you happen to know",
+     "meaning": "A polite way to ask if someone has specific information.",
+     "example": "Do you happen to know if there's a currency exchange nearby?",
+     "plain": "Is there a currency exchange nearby?",
+     "note": "Softens a direct question, implying you don't assume they know."
+    },
+    {
+     "text": "I'm trying to get to",
+     "kind": "frame",
+     "form": "I'm trying to get to",
+     "meaning": "Explaining your destination when asking for directions or transport.",
+     "example": "I'm trying to get to the city centre; which bus should I take?",
+     "plain": "I want to go to the city centre; which bus should I take?",
+     "note": "Common when asking for transport advice or directions."
+    },
+    {
+     "text": "I'd like to raise a concern",
+     "kind": "collocation",
+     "form": "I'd like to raise a concern",
+     "meaning": "To politely state that you have a problem or worry.",
+     "example": "I'd like to raise a concern about the cleanliness of our hotel room.",
+     "plain": "I want to mention a problem with the cleanliness of our hotel room.",
+     "note": "Formal and diplomatic, used when making a complaint or pointing out an issue."
+    },
+    {
+     "text": "I'm afraid there's been a misunderstanding",
+     "kind": "chunk",
+     "form": "I'm afraid there's been a misunderstanding",
+     "meaning": "Politely indicating that there is a mistake or incorrect information.",
+     "example": "I'm afraid there's been a misunderstanding regarding my booking details.",
+     "plain": "I think there's a mistake with my booking details.",
+     "note": "Used to correct an error or clarify a situation gently."
+    },
+    {
+     "text": "Could you look into this for me",
+     "kind": "chunk",
+     "form": "Could you look into this for me",
+     "meaning": "Asking someone to investigate a problem or situation.",
+     "example": "My flight was cancelled; could you look into this for me, please?",
+     "plain": "My flight was cancelled; could you investigate this for me, please?",
+     "note": "A polite request for assistance in resolving an issue."
+    },
+    {
+     "text": "I'm not entirely happy with",
+     "kind": "frame",
+     "form": "I'm not entirely happy with",
+     "meaning": "Expressing dissatisfaction in a polite and understated way.",
+     "example": "I'm not entirely happy with the service we received at dinner last night.",
+     "plain": "I'm quite unhappy with the service we received at dinner last night.",
+     "note": "A common British English softener for complaints; sounds less direct."
+    },
+    {
+     "text": "I'd appreciate it if you could",
+     "kind": "frame",
+     "form": "I'd appreciate it if you could",
+     "meaning": "A very polite way to make a request or suggest a solution.",
+     "example": "I'd appreciate it if you could arrange a taxi for us to the airport.",
+     "plain": "Please arrange a taxi for us to the airport.",
+     "note": "Highly polite and formal, often used when asking for a favour or service."
+    },
+    {
+     "text": "I need to speak to a manager",
+     "kind": "chunk",
+     "form": "I need to speak to a manager",
+     "meaning": "Requesting to talk to someone in authority to resolve a problem.",
+     "example": "Since the issue isn't resolved, I need to speak to a manager.",
+     "plain": "Since the issue isn't resolved, I want to talk to a manager.",
+     "note": "Used when frontline staff cannot or will not resolve an issue."
+    },
+    {
+     "text": "I'd like to make a complaint",
+     "kind": "chunk",
+     "form": "I'd like to make a complaint",
+     "meaning": "Formally stating your intention to register a grievance.",
+     "example": "I'd like to make a complaint about the noise from the room next door.",
+     "plain": "I want to complain about the noise from the room next door.",
+     "note": "Direct and formal way to initiate a complaint process."
+    },
+    {
+     "text": "It's not what I booked",
+     "kind": "chunk",
+     "form": "It's not what I booked",
+     "meaning": "Stating that what you received is different from what you reserved.",
+     "example": "This room has twin beds; it's not what I booked.",
+     "plain": "This room has twin beds; I did not book this.",
+     "note": "A direct but factual statement of discrepancy, often used in hotels."
+    },
+    {
+     "text": "The room isn't up to standard",
+     "kind": "chunk",
+     "form": "The room isn't up to standard",
+     "meaning": "Stating that the quality of a room is not good enough.",
+     "example": "The air conditioning is broken, so the room isn't up to standard.",
+     "plain": "The air conditioning is broken, so the room is not good enough.",
+     "note": "A common phrase for hotel complaints, implying a breach of expected quality."
+    },
+    {
+     "text": "I'm afraid I have to insist",
+     "kind": "chunk",
+     "form": "I'm afraid I have to insist",
+     "meaning": "Firmly stating that you require something to happen, despite resistance.",
+     "example": "I'm afraid I have to insist on a full refund for the cancelled tour.",
+     "plain": "I must have a full refund for the cancelled tour.",
+     "note": "Used when you need to be firm but still want to sound polite."
+    },
+    {
+     "text": "Could we find a solution",
+     "kind": "chunk",
+     "form": "Could we find a solution",
+     "meaning": "Asking to work together to resolve a problem.",
+     "example": "This flight delay is causing problems; could we find a solution together?",
+     "plain": "This flight delay is causing problems; can we solve this together?",
+     "note": "Collaborative and constructive, used when seeking a resolution."
+    },
+    {
+     "text": "I'm quite disappointed with",
+     "kind": "frame",
+     "form": "I'm quite disappointed with",
+     "meaning": "Expressing a strong but polite feeling of let-down.",
+     "example": "I'm quite disappointed with the lack of communication about the delay.",
+     "plain": "I'm very disappointed about the lack of communication about the delay.",
+     "note": "A polite but clear way to express significant dissatisfaction."
+    },
+    {
+     "text": "I'm afraid I can't accept that",
+     "kind": "chunk",
+     "form": "I'm afraid I can't accept that",
+     "meaning": "Politely but firmly refusing an offer or proposed solution.",
+     "example": "A voucher for future travel isn't suitable; I'm afraid I can't accept that.",
+     "plain": "A voucher for future travel isn't suitable; I cannot accept that.",
+     "note": "A polite but firm refusal, often used in negotiations or complaints."
+    },
+    {
+     "text": "I'd like to confirm my reservation",
+     "kind": "chunk",
+     "form": "I'd like to confirm my reservation",
+     "meaning": "To verify the details of a booking you have made.",
+     "example": "Before we leave, I'd like to confirm my reservation for the evening tour.",
+     "plain": "Before we leave, I want to check my booking for the evening tour.",
+     "note": "Standard phrase for checking bookings for hotels, tours, flights."
+    },
+    {
+     "text": "Do you have any availability for",
+     "kind": "frame",
+     "form": "Do you have any availability for",
+     "meaning": "Asking if there are open slots or rooms for a specific time or date.",
+     "example": "Do you have any availability for a single room next Tuesday night?",
+     "plain": "Is a single room available next Tuesday night?",
+     "note": "Common when trying to book a hotel, flight, or appointment."
+    },
+    {
+     "text": "How long does the journey take",
+     "kind": "chunk",
+     "form": "How long does the journey take",
+     "meaning": "Asking about the duration of travel from one place to another.",
+     "example": "From here to the airport, how long does the journey take by taxi?",
+     "plain": "From here to the airport, what is the taxi travel time?",
+     "note": "Essential question for planning travel time and connections."
+    },
+    {
+     "text": "Could I get a window seat",
+     "kind": "chunk",
+     "form": "Could I get a window seat",
+     "meaning": "Requesting a specific type of seat on a plane, train, or bus.",
+     "example": "When checking in, I asked, \"Could I get a window seat, please?\"",
+     "plain": "When checking in, I asked for a window seat.",
+     "note": "A common and polite request when checking in for travel."
+    },
+    {
+     "text": "Is breakfast included",
+     "kind": "chunk",
+     "form": "Is breakfast included",
+     "meaning": "Asking if breakfast is part of the price of accommodation.",
+     "example": "Before booking, I always check: is breakfast included in the room rate?",
+     "plain": "Before booking, I always check if breakfast is part of the room rate.",
+     "note": "A very common question when booking hotels or B&Bs."
+    },
+    {
+     "text": "What are the check-in times",
+     "kind": "chunk",
+     "form": "What are the check-in times",
+     "meaning": "Asking about the designated hours for arriving and registering at accommodation.",
+     "example": "We're arriving late, so I need to know what are the check-in times.",
+     "plain": "We're arriving late, so I need to know the check-in hours.",
+     "note": "Important for planning arrival at hotels or other accommodation."
+    },
+    {
+     "text": "I'd like to exchange some currency",
+     "kind": "chunk",
+     "form": "I'd like to exchange some currency",
+     "meaning": "Stating your intention to convert one country's money into another's.",
+     "example": "At the bank, I said, \"I'd like to exchange some currency, please.\"",
+     "plain": "At the bank, I said I want to convert some money.",
+     "note": "Standard phrase at a currency exchange or bank."
+    },
+    {
+     "text": "Could I have the bill, please",
+     "kind": "chunk",
+     "form": "Could I have the bill, please",
+     "meaning": "Politely requesting the check for food or services.",
+     "example": "After finishing our meal, I asked the waiter, \"Could I have the bill, please?\"",
+     "plain": "After finishing our meal, I asked the waiter for the check.",
+     "note": "Standard polite phrase for requesting the check in a restaurant."
+    },
+    {
+     "text": "Could you recommend a good restaurant",
+     "kind": "frame",
+     "form": "Could you recommend a good restaurant",
+     "meaning": "Asking for a suggestion for a dining place.",
+     "example": "We're new to the area; could you recommend a good restaurant for dinner?",
+     "plain": "We're new to the area; can you suggest a good restaurant for dinner?",
+     "note": "Standard polite way to ask for local recommendations."
+    },
+    {
+     "text": "What's the best way to get around",
+     "kind": "chunk",
+     "form": "What's the best way to get around",
+     "meaning": "Asking for advice on the most efficient or convenient mode of transport.",
+     "example": "We're staying downtown; what's the best way to get around the city?",
+     "plain": "We're staying downtown; what's the most efficient transport in the city?",
+     "note": "Useful question when arriving in a new city or area."
+    },
+    {
+     "text": "I'm having trouble connecting to the Wi-Fi",
+     "kind": "frame",
+     "form": "I'm having trouble connecting to the Wi-Fi",
+     "meaning": "Explaining that you are experiencing difficulty accessing the internet.",
+     "example": "Excuse me, I'm having trouble connecting to the Wi-Fi in my room.",
+     "plain": "Excuse me, I cannot connect to the Wi-Fi in my room.",
+     "note": "Common issue in hotels; this is a clear way to state the problem."
+    },
+    {
+     "text": "Is there a shuttle service",
+     "kind": "chunk",
+     "form": "Is there a shuttle service",
+     "meaning": "Asking if transport is provided, usually to/from an airport or attraction.",
+     "example": "We need to get to the airport; is there a shuttle service available?",
+     "plain": "We need to get to the airport; is transport provided?",
+     "note": "Useful for hotels or resorts that might offer complimentary transport."
+    },
+    {
+     "text": "I need to extend my stay",
+     "kind": "chunk",
+     "form": "I need to extend my stay",
+     "meaning": "Stating your desire to remain in accommodation for a longer period.",
+     "example": "My plans changed, so I need to extend my stay by two more nights.",
+     "plain": "My plans changed, so I want to stay two more nights.",
+     "note": "Common request at hotels, often requiring checking availability."
+    },
+    {
+     "text": "Could I get a late checkout",
+     "kind": "chunk",
+     "form": "Could I get a late checkout",
+     "meaning": "Requesting permission to leave your hotel room later than the standard time.",
+     "example": "My flight is in the evening, so could I get a late checkout, please?",
+     "plain": "My flight is in the evening, so can I leave my room later than usual?",
+     "note": "A common and polite request at hotels, often subject to availability."
+    },
+    {
+     "text": "I'd like to cancel my booking",
+     "kind": "chunk",
+     "form": "I'd like to cancel my booking",
+     "meaning": "Stating your intention to revoke a reservation you made.",
+     "example": "Due to unforeseen circumstances, I'd like to cancel my booking.",
+     "plain": "Due to unforeseen circumstances, I want to cancel my reservation.",
+     "note": "Standard phrase for cancelling any type of reservation."
+    },
+    {
+     "text": "Is there a charge for that",
+     "kind": "chunk",
+     "form": "Is there a charge for that",
+     "meaning": "Asking if a particular service or item incurs an additional cost.",
+     "example": "If I request an extra towel, is there a charge for that?",
+     "plain": "If I request an extra towel, does it cost extra?",
+     "note": "Important question to avoid unexpected fees."
+    },
+    {
+     "text": "I'm afraid I don't understand",
+     "kind": "chunk",
+     "form": "I'm afraid I don't understand",
+     "meaning": "Politely admitting that you haven't grasped what was said.",
+     "example": "The instructions were in a foreign language, so I'm afraid I don't understand.",
+     "plain": "The instructions were in a foreign language, so I don't understand them.",
+     "note": "A polite way to indicate a lack of comprehension, often used with a softener."
+    },
+    {
+     "text": "Could you repeat that, please",
+     "kind": "chunk",
+     "form": "Could you repeat that, please",
+     "meaning": "Politely asking someone to say something again.",
+     "example": "The announcement was unclear; could you repeat that, please?",
+     "plain": "The announcement was unclear; can you say it again, please?",
+     "note": "Standard polite phrase when you didn't hear or understand something."
+    },
+    {
+     "text": "Could you speak a bit slower",
+     "kind": "chunk",
+     "form": "Could you speak a bit slower",
+     "meaning": "Politely asking someone to reduce their speaking pace.",
+     "example": "I'm still learning the language, so could you speak a bit slower?",
+     "plain": "I'm still learning the language, so can you speak more slowly?",
+     "note": "Very useful when communicating in a foreign language."
+    },
+    {
+     "text": "I'm having difficulty with the language",
+     "kind": "frame",
+     "form": "I'm having difficulty with the language",
+     "meaning": "Explaining that you are struggling to communicate due to language barriers.",
+     "example": "Please bear with me, I'm having difficulty with the language here.",
+     "plain": "Please bear with me, I'm struggling with the language here.",
+     "note": "A polite way to explain communication challenges in a foreign country."
+    },
+    {
+     "text": "I really appreciate your assistance",
+     "kind": "chunk",
+     "form": "I really appreciate your assistance",
+     "meaning": "Expressing sincere gratitude for help received.",
+     "example": "Thank you so much; I really appreciate your assistance with my luggage.",
+     "plain": "Thank you so much; I am very grateful for your help with my luggage.",
+     "note": "A more formal and stronger expression of thanks than \"thank you\"."
+    },
+    {
+     "text": "I'm just making sure",
+     "kind": "chunk",
+     "form": "I'm just making sure",
+     "meaning": "Explaining that you are verifying something to avoid errors.",
+     "example": "I'm just making sure I have all the correct documents for customs.",
+     "plain": "I'm just checking that I have all the correct documents for customs.",
+     "note": "Used when double-checking something important."
+    },
+    {
+     "text": "I'm just confirming",
+     "kind": "chunk",
+     "form": "I'm just confirming",
+     "meaning": "Explaining that you are verifying details that you believe are correct.",
+     "example": "I'm just confirming our flight departure time for tomorrow morning.",
+     "plain": "I'm just verifying our flight departure time for tomorrow morning.",
+     "note": "Similar to \"making sure\" but often for details already known."
+    },
+    {
+     "text": "I'm just wondering if",
+     "kind": "frame",
+     "form": "I'm just wondering if",
+     "meaning": "A polite and indirect way to ask a question or make a suggestion.",
+     "example": "I'm just wondering if there's a possibility of an earlier check-in.",
+     "plain": "Is there a possibility of an earlier check-in?",
+     "note": "A very common softener for requests or questions, making them less direct."
+    },
+    {
+     "text": "I'm just calling about",
+     "kind": "frame",
+     "form": "I'm just calling about",
+     "meaning": "Stating the purpose of your phone call directly and politely.",
+     "example": "Hello, I'm just calling about my hotel reservation for next week.",
+     "plain": "Hello, I'm calling regarding my hotel reservation for next week.",
+     "note": "Standard opening for a phone call to state the reason."
+    },
+    {
+     "text": "I'm just trying to clarify",
+     "kind": "chunk",
+     "form": "I'm just trying to clarify",
+     "meaning": "Explaining that you are attempting to make something clearer or understand it better.",
+     "example": "I'm just trying to clarify the terms of the car rental agreement.",
+     "plain": "I'm just trying to understand the terms of the car rental agreement better.",
+     "note": "Used when seeking more precise information or understanding."
+    },
+    {
+     "text": "I'm just trying to understand",
+     "kind": "chunk",
+     "form": "I'm just trying to understand",
+     "meaning": "Explaining that you are making an effort to comprehend a situation or information.",
+     "example": "Please explain again; I'm just trying to understand the bus schedule.",
+     "plain": "Please explain again; I'm trying to comprehend the bus schedule.",
+     "note": "Used when you need more explanation to grasp something."
+    },
+    {
+     "text": "I'm just trying to sort out",
+     "kind": "chunk",
+     "form": "I'm just trying to sort out",
+     "meaning": "Explaining that you are attempting to resolve a problem or organize something.",
+     "example": "I'm just trying to sort out my travel insurance claim after the delay.",
+     "plain": "I'm just trying to resolve my travel insurance claim after the delay.",
+     "note": "Informal but common for dealing with problems or arrangements."
+    },
+    {
+     "text": "I'm just trying to resolve",
+     "kind": "chunk",
+     "form": "I'm just trying to resolve",
+     "meaning": "Explaining that you are actively working to find a solution to an issue.",
+     "example": "I'm just trying to resolve the issue with the incorrect flight booking.",
+     "plain": "I'm just trying to fix the problem with the incorrect flight booking.",
+     "note": "More formal than \"sort out,\" used for more significant problems."
+    },
+    {
+     "text": "I'm a bit lost",
+     "kind": "chunk",
+     "form": "I'm a bit lost",
+     "meaning": "Informing someone that you don't know where you are or how to get somewhere.",
+     "example": "Excuse me, I'm a bit lost; can you tell me how to reach the museum?",
+     "plain": "Excuse me, I don't know where I am; can you tell me how to reach the museum?",
+     "note": "A common and natural way to admit you need directions."
+    },
+    {
+     "text": "Is this the right way for",
+     "kind": "frame",
+     "form": "Is this the right way for",
+     "meaning": "Asking for confirmation that you are on the correct path to a destination.",
+     "example": "Excuse me, is this the right way for the train station?",
+     "plain": "Excuse me, am I going the correct way to the train station?",
+     "note": "Useful when you have a general idea but need confirmation."
+    },
+    {
+     "text": "I'm looking for",
+     "kind": "frame",
+     "form": "I'm looking for",
+     "meaning": "Stating what you are trying to find, often a place or item.",
+     "example": "I'm looking for a good coffee shop with Wi-Fi nearby.",
+     "plain": "I want to find a good coffee shop with Wi-Fi nearby.",
+     "note": "Simple and direct way to ask for directions or locate something."
+    },
+    {
+     "text": "I seem to have misplaced",
+     "kind": "chunk",
+     "form": "I seem to have misplaced",
+     "meaning": "Politely stating that you have lost something, implying it's temporary.",
+     "example": "Oh dear, I seem to have misplaced my boarding pass.",
+     "plain": "Oh dear, I think I've lost my boarding pass.",
+     "note": "Softer than \"I've lost,\" suggesting it might be found soon."
+    },
+    {
+     "text": "I'm having a bit of trouble with",
+     "kind": "frame",
+     "form": "I'm having a bit of trouble with",
+     "meaning": "Explaining that you are experiencing a minor problem or difficulty.",
+     "example": "I'm having a bit of trouble with the hotel safe; it won't open.",
+     "plain": "I'm having a small problem with the hotel safe; it won't open.",
+     "note": "A polite and understated way to report a problem."
+    },
+    {
+     "text": "There seems to be a problem with",
+     "kind": "frame",
+     "form": "There seems to be a problem with",
+     "meaning": "Politely indicating that an issue exists, without directly blaming.",
+     "example": "There seems to be a problem with the hot water in our room.",
+     "plain": "The hot water in our room isn't working.",
+     "note": "A diplomatic way to introduce a complaint or issue."
+    },
+    {
+     "text": "I'm here on business",
+     "kind": "chunk",
+     "form": "I'm here on business",
+     "meaning": "Stating the purpose of your visit is for work.",
+     "example": "When asked, I explained, \"I'm here on business, attending a conference.\"",
+     "plain": "When asked, I explained I am here for work, attending a conference.",
+     "note": "Common phrase when asked about the purpose of your travel."
+    },
+    {
+     "text": "I'm here on holiday",
+     "kind": "chunk",
+     "form": "I'm here on holiday",
+     "meaning": "Stating the purpose of your visit is for leisure or vacation.",
+     "example": "Yes, I'm here on holiday, enjoying the beautiful beaches.",
+     "plain": "Yes, I'm here for vacation, enjoying the beautiful beaches.",
+     "note": "Common phrase when asked about the purpose of your travel (British English)."
+    },
+    {
+     "text": "I'm just checking my itinerary",
+     "kind": "chunk",
+     "form": "I'm just checking my itinerary",
+     "meaning": "Explaining that you are reviewing your travel schedule.",
+     "example": "Please wait a moment; I'm just checking my itinerary for the next leg.",
+     "plain": "Please wait a moment; I'm just reviewing my travel schedule for the next leg.",
+     "note": "Used when you need a moment to consult your travel plans."
+    },
+    {
+     "text": "I'm trying to learn some phrases",
+     "kind": "chunk",
+     "form": "I'm trying to learn some phrases",
+     "meaning": "Explaining that you are making an effort to speak the local language.",
+     "example": "My pronunciation isn't perfect, but I'm trying to learn some phrases.",
+     "plain": "My pronunciation isn't perfect, but I'm attempting to learn some local expressions.",
+     "note": "A polite way to show respect for the local language and excuse mistakes."
+    },
+    {
+     "text": "Could you tell me how to get to",
+     "kind": "frame",
+     "form": "Could you tell me how to get to",
+     "meaning": "A direct and polite way to ask for directions to a specific place.",
+     "example": "Excuse me, could you tell me how to get to the nearest metro station?",
+     "plain": "Excuse me, where is the nearest metro station?",
+     "note": "Standard polite phrase for asking for directions."
+    },
+    {
+     "text": "What time does the train depart",
+     "kind": "chunk",
+     "form": "What time does the train depart",
+     "meaning": "Asking for the scheduled departure time of a train.",
+     "example": "I need to know what time does the train depart for Edinburgh.",
+     "plain": "I need to know the train's departure time for Edinburgh.",
+     "note": "Essential question for train travel."
+    },
+    {
+     "text": "Is there a direct train to",
+     "kind": "frame",
+     "form": "Is there a direct train to",
+     "meaning": "Asking if a train route goes straight to a destination without changes.",
+     "example": "Is there a direct train to London, or do I need to change?",
+     "plain": "Does a train go straight to London, or do I need to change?",
+     "note": "Useful for planning train journeys to avoid transfers."
+    },
+    {
+     "text": "I'd like to book a table for two",
+     "kind": "chunk",
+     "form": "I'd like to book a table for two",
+     "meaning": "Stating your intention to reserve a restaurant table for two people.",
+     "example": "For this evening, I'd like to book a table for two at 7 PM.",
+     "plain": "For this evening, I want to reserve a table for two at 7 PM.",
+     "note": "Standard phrase for making a restaurant reservation."
+    },
+    {
+     "text": "I'm having difficulty with",
+     "kind": "frame",
+     "form": "I'm having difficulty with",
+     "meaning": "Explaining that you are experiencing a problem or challenge with something.",
+     "example": "I'm having difficulty with the online check-in process.",
+     "plain": "I'm finding the online check-in process challenging.",
+     "note": "A polite and clear way to state a problem you are facing."
+    },
+    {
+     "text": "I'm afraid I have to",
+     "kind": "frame",
+     "form": "I'm afraid I have to",
+     "meaning": "Politely expressing that you are obliged to do something, often reluctantly.",
+     "example": "I'm afraid I have to cancel our dinner plans due to a sudden change.",
+     "plain": "I must cancel our dinner plans due to a sudden change.",
+     "note": "A common softener when delivering unwelcome news or stating an obligation."
+    },
+    {
+     "text": "catch a flight",
+     "kind": "collocation",
+     "form": "catch my flight",
+     "meaning": "To arrive in time to board an airplane.",
+     "example": "I need to leave now if I want to catch my flight to Rome.",
+     "plain": "I need to leave now if I want to get on my plane to Rome.",
+     "note": "Common phrase for making it to an airplane on time."
+    },
+    {
+     "text": "miss a connection",
+     "kind": "collocation",
+     "form": "miss our connection",
+     "meaning": "To fail to make a connecting flight, train, or bus.",
+     "example": "Due to the delay, we might miss our connection in Frankfurt.",
+     "plain": "Due to the delay, we might not make our next flight in Frankfurt.",
+     "note": "A common concern when travelling with multiple legs."
+    },
+    {
+     "text": "travel light",
+     "kind": "collocation",
+     "form": "travel light",
+     "meaning": "To take only a small amount of luggage when travelling.",
+     "example": "For this short trip, I decided to travel light with just a backpack.",
+     "plain": "For this short trip, I decided to take only a small amount of luggage.",
+     "note": "Useful advice for easier travel, especially with budget airlines."
+    },
+    {
+     "text": "clear customs",
+     "kind": "collocation",
+     "form": "clear customs",
+     "meaning": "To successfully pass through the inspection of goods and luggage at a border.",
+     "example": "It took us over an hour to clear customs at the busy airport.",
+     "plain": "It took us over an hour to get through the border inspection at the busy airport.",
+     "note": "Refers to the process of passing through border control."
+    },
+    {
+     "text": "board a plane",
+     "kind": "collocation",
+     "form": "board the plane",
+     "meaning": "To get onto an aircraft.",
+     "example": "We were called to the gate to board the plane for our journey.",
+     "plain": "We were called to the gate to get onto the plane for our journey.",
+     "note": "Standard phrase for getting on an aircraft."
+    },
+    {
+     "text": "check in luggage",
+     "kind": "collocation",
+     "form": "check in our luggage",
+     "meaning": "To register and hand over bags to the airline for transport.",
+     "example": "We arrived early to check in our luggage before the long queue formed.",
+     "plain": "We arrived early to register and hand over our bags to the airline.",
+     "note": "Refers to the process of handing over bags at the airport."
+    },
+    {
+     "text": "reach a destination",
+     "kind": "collocation",
+     "form": "reach our destination",
+     "meaning": "To arrive at the place you are travelling to.",
+     "example": "After a long journey, we were relieved to finally reach our destination.",
+     "plain": "After a long journey, we were relieved to finally arrive at our intended place.",
+     "note": "A slightly more formal way to say \"arrive\"."
+    },
+    {
+     "text": "experience delays",
+     "kind": "collocation",
+     "form": "experience delays",
+     "meaning": "To encounter unexpected postponements or slowdowns in travel.",
+     "example": "Unfortunately, we often experience delays when flying during peak season.",
+     "plain": "Unfortunately, our flights are often postponed when flying during peak season.",
+     "note": "Common phrase for travel disruptions."
+    },
+    {
+     "text": "seek assistance",
+     "kind": "collocation",
+     "form": "seek assistance",
+     "meaning": "To ask for help or support.",
+     "example": "If you have any issues, please don't hesitate to seek assistance from staff.",
+     "plain": "If you have any issues, please don't hesitate to ask for help from staff.",
+     "note": "Formal way to ask for help, often seen in official notices."
+    },
+    {
+     "text": "lodge a complaint",
+     "kind": "collocation",
+     "form": "lodge a complaint",
+     "meaning": "To formally register a grievance or dissatisfaction.",
+     "example": "I had to lodge a complaint about the poor condition of the rental car.",
+     "plain": "I had to formally complain about the poor condition of the rental car.",
+     "note": "Formal way to make a complaint, often in writing."
+    },
+    {
+     "text": "arrange transport",
+     "kind": "collocation",
+     "form": "arrange transport",
+     "meaning": "To make plans for how to travel from one place to another.",
+     "example": "The hotel can arrange transport to the airport for guests.",
+     "plain": "The hotel can organize how guests will travel to the airport.",
+     "note": "Common phrase for organizing travel logistics."
+    },
+    {
+     "text": "request a refund",
+     "kind": "collocation",
+     "form": "request a refund",
+     "meaning": "To formally ask for your money back for a product or service.",
+     "example": "Since the tour was cancelled, I decided to request a refund.",
+     "plain": "Since the tour was cancelled, I decided to ask for my money back.",
+     "note": "Standard phrase for asking for money back."
+    },
+    {
+     "text": "provide feedback",
+     "kind": "collocation",
+     "form": "provide feedback",
+     "meaning": "To offer comments or opinions on a product, service, or experience.",
+     "example": "We encourage guests to provide feedback on their stay to help us improve.",
+     "plain": "We encourage guests to give comments on their stay to help us improve.",
+     "note": "Common in customer service contexts for gathering opinions."
+    },
+    {
+     "text": "resolve an issue",
+     "kind": "collocation",
+     "form": "resolve the issue",
+     "meaning": "To find a solution to a problem or difficulty.",
+     "example": "We are working hard to resolve the issue with your lost luggage.",
+     "plain": "We are working hard to find a solution for your lost luggage problem.",
+     "note": "Formal and common in customer service for fixing problems."
+    },
+    {
+     "text": "I'm afraid I have to ask",
+     "kind": "frame",
+     "form": "I'm afraid I have to ask",
+     "meaning": "Politely introducing a question that might be sensitive or inconvenient.",
+     "example": "I'm afraid I have to ask if there's any chance of a room upgrade.",
+     "plain": "I need to ask if there's any chance of a room upgrade.",
+     "note": "Softens a request or question, showing awareness it might be difficult."
+    },
+    {
+     "text": "I'm just checking in",
+     "kind": "chunk",
+     "form": "I'm just checking in",
+     "meaning": "Informing someone you are arriving at a hotel or airport, or making contact.",
+     "example": "Hello, I'm just checking in for my flight to Dublin.",
+     "plain": "Hello, I'm here to check in for my flight to Dublin.",
+     "note": "Common at airports/hotels, or to briefly contact someone."
+    },
+    {
+     "text": "I'm looking to book",
+     "kind": "frame",
+     "form": "I'm looking to book",
+     "meaning": "Stating your intention to make a reservation for something.",
+     "example": "I'm looking to book a guided tour of the city for tomorrow.",
+     "plain": "I want to book a guided tour of the city for tomorrow.",
+     "note": "A common and natural way to express your booking intentions."
+    },
+    {
+     "text": "I'm having second thoughts about",
+     "kind": "frame",
+     "form": "I'm having second thoughts about",
+     "meaning": "Expressing that you are reconsidering a decision or plan.",
+     "example": "I'm having second thoughts about renting a car, given the traffic.",
+     "plain": "I'm reconsidering renting a car, given the traffic.",
+     "note": "Used when you are unsure about a previous decision."
+    },
+    {
+     "text": "I'm not sure I follow",
+     "kind": "chunk",
+     "form": "I'm not sure I follow",
+     "meaning": "Politely indicating that you don't understand what is being said.",
+     "example": "Could you explain that again? I'm not sure I follow the instructions.",
+     "plain": "Could you explain that again? I don't understand the instructions.",
+     "note": "A polite way to admit confusion or ask for clarification."
+    },
+    {
+     "text": "I'm trying to figure out",
+     "kind": "frame",
+     "form": "I'm trying to figure out",
+     "meaning": "Explaining that you are attempting to understand or solve something.",
+     "example": "I'm trying to figure out the best route to the museum on foot.",
+     "plain": "I'm attempting to find the best route to the museum on foot.",
+     "note": "Common when you are actively working to understand a problem."
+    },
+    {
+     "text": "I'm a bit confused about",
+     "kind": "frame",
+     "form": "I'm a bit confused about",
+     "meaning": "Politely stating that you are unclear or uncertain about something.",
+     "example": "I'm a bit confused about the train schedule; are there any changes?",
+     "plain": "I'm unclear about the train schedule; are there any changes?",
+     "note": "A polite way to express mild confusion and ask for clarification."
+    },
+    {
+     "text": "I'm just making an enquiry",
+     "kind": "chunk",
+     "form": "I'm just making an enquiry",
+     "meaning": "Explaining that you are simply asking for information.",
+     "example": "I'm just making an enquiry about the availability of rooms next month.",
+     "plain": "I'm just asking for information about the availability of rooms next month.",
+     "note": "A polite and formal way to ask for information without committing."
+    },
+    {
+     "text": "I'm having second thoughts",
+     "kind": "chunk",
+     "form": "I'm having second thoughts",
+     "meaning": "Expressing that you are reconsidering a decision or plan.",
+     "example": "I'm having second thoughts about the early morning excursion.",
+     "plain": "I'm reconsidering the early morning excursion.",
+     "note": "Used when you are unsure about a previous decision."
+    },
+    {
+     "text": "I'm just trying to get my bearings",
+     "kind": "chunk",
+     "form": "I'm just trying to get my bearings",
+     "meaning": "Explaining that you are trying to understand your location and direction.",
+     "example": "Please give me a moment; I'm just trying to get my bearings with this map.",
+     "plain": "Please give me a moment; I'm just trying to understand where I am with this map.",
+     "note": "Common when arriving in a new place and orienting yourself."
+    },
+    {
+     "text": "I'm a bit concerned about",
+     "kind": "frame",
+     "form": "I'm a bit concerned about",
+     "meaning": "Politely expressing a slight worry or apprehension about something.",
+     "example": "I'm a bit concerned about the weather forecast for our hiking trip.",
+     "plain": "I'm slightly worried about the weather forecast for our hiking trip.",
+     "note": "A softer way to express worry, often used to introduce a problem."
+    },
+    {
+     "text": "I'm just trying to make sense of",
+     "kind": "frame",
+     "form": "I'm just trying to make sense of",
+     "meaning": "Explaining that you are attempting to understand something confusing.",
+     "example": "I'm just trying to make sense of the complex public transport system.",
+     "plain": "I'm just trying to understand the complex public transport system.",
+     "note": "Used when grappling with complicated information or systems."
+    },
+    {
+     "text": "I'm afraid I can't help you there",
+     "kind": "chunk",
+     "form": "I'm afraid I can't help you there",
+     "meaning": "Politely stating that you are unable to provide assistance.",
+     "example": "I'm afraid I can't help you there; I'm also a tourist.",
+     "plain": "I cannot help you with that; I'm also a tourist.",
+     "note": "A polite way to decline a request for help."
+    },
+    {
+     "text": "I'm just looking for a place to",
+     "kind": "frame",
+     "form": "I'm just looking for a place to",
+     "meaning": "Stating what kind of location or facility you are trying to find.",
+     "example": "I'm just looking for a place to grab a quick coffee.",
+     "plain": "I want to find somewhere to get a quick coffee.",
+     "note": "Common when seeking a specific type of venue or service."
+    },
+    {
+     "text": "I'm having trouble finding",
+     "kind": "frame",
+     "form": "I'm having trouble finding",
+     "meaning": "Explaining that you are experiencing difficulty locating something.",
+     "example": "I'm having trouble finding the correct platform for my train.",
+     "plain": "I cannot easily find the correct platform for my train.",
+     "note": "A polite way to report difficulty in locating something."
+    },
+    {
+     "text": "I'm just trying to confirm",
+     "kind": "chunk",
+     "form": "I'm just trying to confirm",
+     "meaning": "Explaining that you are attempting to verify details.",
+     "example": "I'm just trying to confirm the opening hours of the museum.",
+     "plain": "I'm just attempting to verify the opening hours of the museum.",
+     "note": "Used when seeking to double-check information."
+    },
+    {
+     "text": "I'm just trying to get organised",
+     "kind": "chunk",
+     "form": "I'm just trying to get organised",
+     "meaning": "Explaining that you are attempting to arrange your plans or belongings.",
+     "example": "Please bear with me; I'm just trying to get organised for the day.",
+     "plain": "Please bear with me; I'm just attempting to arrange my plans for the day.",
+     "note": "Informal but common when preparing for an activity or journey."
+    },
+    {
+     "text": "I'm just trying to work out",
+     "kind": "frame",
+     "form": "I'm just trying to work out",
+     "meaning": "Explaining that you are attempting to calculate or understand something.",
+     "example": "I'm just trying to work out the total cost of the excursion.",
+     "plain": "I'm just attempting to calculate the total cost of the excursion.",
+     "note": "Used when trying to figure out a sum, plan, or solution."
+    },
+    {
+     "text": "I'm just trying to get a sense of",
+     "kind": "frame",
+     "form": "I'm just trying to get a sense of",
+     "meaning": "Explaining that you are attempting to understand the general feeling or situation.",
+     "example": "I'm just trying to get a sense of the local customs before I visit.",
+     "plain": "I'm just trying to understand the general local customs before I visit.",
+     "note": "Used when trying to grasp the overall atmosphere or rules of a place."
+    },
+    {
+     "text": "I'm just trying to get my head around",
+     "kind": "frame",
+     "form": "I'm just trying to get my head around",
+     "meaning": "Explaining that you are attempting to understand something complex or difficult.",
+     "example": "I'm just trying to get my head around the different ticket options.",
+     "plain": "I'm just trying to understand the different ticket options.",
+     "note": "Informal but common for understanding complex information."
+    },
+    {
+     "text": "I'm just trying to make sure that",
+     "kind": "frame",
+     "form": "I'm just trying to make sure that",
+     "meaning": "Explaining that you are attempting to verify something to prevent errors.",
+     "example": "I'm just trying to make sure that my passport is still valid.",
+     "plain": "I'm just attempting to verify that my passport is still valid.",
+     "note": "Used when double-checking an important detail."
+    },
+    {
+     "text": "I'm just trying to get some information about",
+     "kind": "frame",
+     "form": "I'm just trying to get some information about",
+     "meaning": "Explaining that you are seeking details on a particular topic.",
+     "example": "I'm just trying to get some information about local bus routes.",
+     "plain": "I'm just seeking details about local bus routes.",
+     "note": "A polite and clear way to state your purpose for asking questions."
+    },
+    {
+     "text": "I'm just trying to find out if",
+     "kind": "frame",
+     "form": "I'm just trying to find out if",
+     "meaning": "Explaining that you are attempting to discover whether something is true or possible.",
+     "example": "I'm just trying to find out if there's a vegetarian option on the menu.",
+     "plain": "I'm just attempting to discover if there's a vegetarian option on the menu.",
+     "note": "Used when seeking specific information or possibilities."
+    },
+    {
+     "text": "I'm just trying to see if",
+     "kind": "frame",
+     "form": "I'm just trying to see if",
+     "meaning": "Explaining that you are attempting to determine if something is possible or available.",
+     "example": "I'm just trying to see if I can book a later train.",
+     "plain": "I'm just attempting to determine if I can book a later train.",
+     "note": "Used when exploring options or possibilities."
+    },
+    {
+     "text": "I'm just trying to get a handle on",
+     "kind": "frame",
+     "form": "I'm just trying to get a handle on",
+     "meaning": "Explaining that you are attempting to understand or manage a situation.",
+     "example": "I'm just trying to get a handle on the local transport system.",
+     "plain": "I'm just attempting to understand the local transport system.",
+     "note": "Informal but common for understanding or managing something new."
+    },
+    {
+     "text": "I'm just trying to get organised for",
+     "kind": "frame",
+     "form": "I'm just trying to get organised for",
+     "meaning": "Explaining that you are attempting to prepare for a specific event or activity.",
+     "example": "I'm just trying to get organised for our early morning departure.",
+     "plain": "I'm just attempting to prepare for our early morning departure.",
+     "note": "Used when making preparations for a future event."
+    },
+    {
+     "text": "I'm just trying to get everything sorted",
+     "kind": "chunk",
+     "form": "I'm just trying to get everything sorted",
+     "meaning": "Explaining that you are attempting to arrange or resolve all outstanding matters.",
+     "example": "I'm just trying to get everything sorted before we leave for the airport.",
+     "plain": "I'm just attempting to arrange all matters before we leave for the airport.",
+     "note": "Informal but common for managing multiple tasks or problems."
+    },
+    {
+     "text": "I'm just trying to get some clarity on",
+     "kind": "frame",
+     "form": "I'm just trying to get some clarity on",
+     "meaning": "Explaining that you are attempting to gain a better understanding of something unclear.",
+     "example": "I'm just trying to get some clarity on the hotel's cancellation policy.",
+     "plain": "I'm just attempting to better understand the hotel's cancellation policy.",
+     "note": "Used when seeking to resolve ambiguity or confusion."
+    },
+    {
+     "text": "I'm just trying to get a feel for",
+     "kind": "frame",
+     "form": "I'm just trying to get a feel for",
+     "meaning": "Explaining that you are attempting to understand the general atmosphere or character.",
+     "example": "I'm just trying to get a feel for the neighbourhood before booking.",
+     "plain": "I'm just attempting to understand the general atmosphere of the neighbourhood before booking.",
+     "note": "Used when trying to grasp the overall vibe or nature of a place."
+    },
+    {
+     "text": "I'm just trying to get everything in order",
+     "kind": "chunk",
+     "form": "I'm just trying to get everything in order",
+     "meaning": "Explaining that you are attempting to arrange all your affairs or belongings neatly.",
+     "example": "Before leaving, I'm just trying to get everything in order in my room.",
+     "plain": "Before leaving, I'm just attempting to arrange all my belongings neatly in my room.",
+     "note": "Used when organizing personal items or plans."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "Could you let me know",
+     "kind": "frame",
+     "form": "Could you let me know",
+     "meaning": "A polite way to ask for information or confirmation.",
+     "example": "Could you let me know if the flight is still on schedule for this evening?",
+     "plain": "Please tell me if the flight is still on schedule.",
+     "note": "Very common polite request. Use when asking for information you expect someone to have."
+    },
+    {
+     "text": "I was wondering if",
+     "kind": "frame",
+     "form": "I was wondering if",
+     "meaning": "A very soft and indirect way to ask a question or make a request.",
+     "example": "I was wondering if there's a direct bus service to the city centre from here.",
+     "plain": "Is there a direct bus service to the city centre?",
+     "note": "Extremely polite and tentative. Good for sensitive requests or when you're unsure."
+    },
+    {
+     "text": "Do you happen to have",
+     "kind": "frame",
+     "form": "Do you happen to have",
+     "meaning": "A polite and indirect way to ask if someone possesses something.",
+     "example": "Do you happen to have a spare adapter I could borrow for my phone charger?",
+     "plain": "Do you have a spare adapter?",
+     "note": "Use when you're not sure if the person will have what you're asking for."
+    },
+    {
+     "text": "I'm looking for a way",
+     "kind": "frame",
+     "form": "I'm looking for a way",
+     "meaning": "Expressing that you are trying to find a method or route to achieve something.",
+     "example": "I'm looking for a way to get to the airport without taking a taxi.",
+     "plain": "I want to find a method to get to the airport without a taxi.",
+     "note": "Useful when seeking advice on transport or methods."
+    },
+    {
+     "text": "Could you possibly",
+     "kind": "frame",
+     "form": "Could you possibly",
+     "meaning": "A very polite and tentative way to make a request, suggesting it might be difficult.",
+     "example": "Could you possibly tell me where the nearest currency exchange office is located?",
+     "plain": "Please tell me where the nearest currency exchange is.",
+     "note": "Adds an extra layer of politeness, implying you understand it might be an inconvenience."
+    },
+    {
+     "text": "I'm struggling with",
+     "kind": "frame",
+     "form": "I'm struggling with",
+     "meaning": "To express that you are finding something very challenging or hard to manage.",
+     "example": "I'm struggling with the online check-in system; it keeps showing an error.",
+     "plain": "I'm finding the online check-in system very difficult.",
+     "note": "Implies a greater degree of difficulty than \"having trouble with\"."
+    },
+    {
+     "text": "I'd like to enquire about",
+     "kind": "frame",
+     "form": "I'd like to enquire about",
+     "meaning": "A formal and polite way to ask for information about something.",
+     "example": "I'd like to enquire about the possibility of upgrading my room for an extra charge.",
+     "plain": "I want to ask about upgrading my room.",
+     "note": "More formal than \"ask about\". Suitable for official settings like hotels or airlines."
+    },
+    {
+     "text": "Is there any chance",
+     "kind": "frame",
+     "form": "Is there any chance",
+     "meaning": "A polite and hopeful way to ask if something is possible, often when it seems unlikely.",
+     "example": "Is there any chance we could get a later check-out time tomorrow morning?",
+     "plain": "Can we get a later check-out time?",
+     "note": "Use when making a request that might be outside standard procedure."
+    },
+    {
+     "text": "I'm afraid I've lost",
+     "kind": "frame",
+     "form": "I'm afraid I've lost",
+     "meaning": "A polite and apologetic way to state that you cannot find something important.",
+     "example": "I'm afraid I've lost my boarding pass, and I can't find it anywhere.",
+     "plain": "I lost my boarding pass.",
+     "note": "\"I'm afraid\" softens the bad news. Use for lost items."
+    },
+    {
+     "text": "Could you clarify",
+     "kind": "frame",
+     "form": "Could you clarify",
+     "meaning": "A polite request for someone to explain something more clearly or provide more detail.",
+     "example": "Could you clarify what the baggage allowance is for international flights?",
+     "plain": "Please explain the baggage allowance.",
+     "note": "Useful when instructions or information are unclear."
+    },
+    {
+     "text": "I'm a bit unsure",
+     "kind": "frame",
+     "form": "I'm a bit unsure",
+     "meaning": "To express mild uncertainty or lack of confidence about something.",
+     "example": "I'm a bit unsure which platform the train to Edinburgh departs from.",
+     "plain": "I don't know which platform the train leaves from.",
+     "note": "A softer way to say \"I don't know\" or \"I'm not certain\"."
+    },
+    {
+     "text": "I'm trying to locate",
+     "kind": "frame",
+     "form": "I'm trying to locate",
+     "meaning": "To politely state that you are attempting to find the exact position of something.",
+     "example": "I'm trying to locate the baggage claim area for flight BA249.",
+     "plain": "I'm looking for the baggage claim area.",
+     "note": "More formal and precise than \"I'm looking for\"."
+    },
+    {
+     "text": "I'm running a bit late",
+     "kind": "chunk",
+     "form": "I'm running a bit late",
+     "meaning": "To inform someone that you will arrive after the scheduled time.",
+     "example": "I'm running a bit late for my reservation due to unexpected traffic.",
+     "plain": "I will be late for my reservation.",
+     "note": "Common informal apology for tardiness. \"A bit\" softens it."
+    },
+    {
+     "text": "I'm afraid I have to cancel",
+     "kind": "frame",
+     "form": "I'm afraid I have to cancel",
+     "meaning": "A polite and apologetic way to state that you must withdraw a booking or arrangement.",
+     "example": "I'm afraid I have to cancel my hotel booking for next week due to a change in plans.",
+     "plain": "I must cancel my hotel booking.",
+     "note": "\"I'm afraid\" softens the negative news."
+    },
+    {
+     "text": "I'm afraid I can't make it",
+     "kind": "frame",
+     "form": "I'm afraid I can't make it",
+     "meaning": "A polite and apologetic way to decline an invitation or state you cannot attend.",
+     "example": "I'm afraid I can't make it to the tour this afternoon; I'm feeling unwell.",
+     "plain": "I cannot attend the tour this afternoon.",
+     "note": "Common for declining invitations or appointments."
+    },
+    {
+     "text": "Could you direct me to",
+     "kind": "frame",
+     "form": "Could you direct me to",
+     "meaning": "A polite way to ask for instructions on how to get to a specific place.",
+     "example": "Could you direct me to the nearest subway station from here, please?",
+     "plain": "Please tell me how to get to the nearest subway station.",
+     "note": "Standard polite request for directions."
+    },
+    {
+     "text": "I'm experiencing issues with",
+     "kind": "frame",
+     "form": "I'm experiencing issues with",
+     "meaning": "A formal way to state that you are encountering problems with something.",
+     "example": "I'm experiencing issues with the air conditioning unit in my room; it's not working.",
+     "plain": "The air conditioning in my room is not working.",
+     "note": "More formal than \"having trouble\". Suitable for complaints or technical problems."
+    },
+    {
+     "text": "I'd like to double-check",
+     "kind": "frame",
+     "form": "I'd like to double-check",
+     "meaning": "To politely state that you want to verify information again to ensure accuracy.",
+     "example": "I'd like to double-check the departure time for my train to Paris tomorrow.",
+     "plain": "I want to confirm the train departure time.",
+     "note": "Implies a quick, final verification."
+    },
+    {
+     "text": "I'm just calling regarding",
+     "kind": "frame",
+     "form": "I'm just calling regarding",
+     "meaning": "To state the purpose of your phone call in a concise and polite way.",
+     "example": "I'm just calling regarding my flight booking for next month, reference number XYZ.",
+     "plain": "I'm calling about my flight booking.",
+     "note": "Slightly more formal than \"calling about\". Good for business calls."
+    },
+    {
+     "text": "Could you give me a hand",
+     "kind": "chunk",
+     "form": "Could you give me a hand",
+     "meaning": "A polite and informal way to ask for assistance with a task.",
+     "example": "Could you give me a hand with these suitcases? They're quite heavy.",
+     "plain": "Please help me with these heavy suitcases.",
+     "note": "Common informal request for physical help."
+    },
+    {
+     "text": "I'm trying to get a refund",
+     "kind": "frame",
+     "form": "I'm trying to get a refund",
+     "meaning": "To state your intention to recover money paid for a service or product.",
+     "example": "I'm trying to get a refund for the cancelled tour, as I paid upfront.",
+     "plain": "I want to get my money back for the cancelled tour.",
+     "note": "Direct and clear statement of purpose when seeking a refund."
+    },
+    {
+     "text": "I'm looking to reschedule",
+     "kind": "frame",
+     "form": "I'm looking to reschedule",
+     "meaning": "To express your desire to change the time or date of an appointment or booking.",
+     "example": "I'm looking to reschedule my flight to a later date if possible.",
+     "plain": "I want to change the date of my flight.",
+     "note": "Common for changing appointments, flights, or meetings."
+    },
+    {
+     "text": "I'm afraid that won't work",
+     "kind": "chunk",
+     "form": "I'm afraid that won't work",
+     "meaning": "A polite but firm way to reject a suggestion or solution.",
+     "example": "I'm afraid that won't work for me, as I have another appointment at that time.",
+     "plain": "That suggestion is not acceptable for me.",
+     "note": "Softens a refusal. Use when a proposed solution is unsuitable."
+    },
+    {
+     "text": "I'm afraid we're fully booked",
+     "kind": "chunk",
+     "form": "I'm afraid we're fully booked",
+     "meaning": "A polite way for staff to inform a customer that there are no more available spaces.",
+     "example": "I'm afraid we're fully booked for tonight, but we have availability tomorrow.",
+     "plain": "We have no more rooms available tonight.",
+     "note": "Standard phrase used by hotels, restaurants, etc., to decline a booking."
+    },
+    {
+     "text": "I'm just passing through",
+     "kind": "chunk",
+     "form": "I'm just passing through",
+     "meaning": "To explain that you are only in a place for a short time, on your way to somewhere else.",
+     "example": "I'm just passing through London on my way to Scotland, so I only have a few hours.",
+     "plain": "I am only in London briefly before going to Scotland.",
+     "note": "Useful for explaining a short stay or limited time."
+    },
+    {
+     "text": "I'm here for a conference",
+     "kind": "chunk",
+     "form": "I'm here for a conference",
+     "meaning": "To state the purpose of your visit, specifically for attending a professional meeting.",
+     "example": "I'm here for a conference at the convention centre, starting tomorrow morning.",
+     "plain": "I am attending a conference here.",
+     "note": "Direct and clear statement of purpose for business travel."
+    },
+    {
+     "text": "I'm looking forward to",
+     "kind": "frame",
+     "form": "I'm looking forward to",
+     "meaning": "To express anticipation and excitement about a future event or experience.",
+     "example": "I'm looking forward to exploring the city's historical sites this weekend.",
+     "plain": "I am excited to explore the city's historical sites.",
+     "note": "Common expression of positive anticipation."
+    },
+    {
+     "text": "I'm a bit short on time",
+     "kind": "chunk",
+     "form": "I'm a bit short on time",
+     "meaning": "To politely indicate that you have limited time available.",
+     "example": "I'm a bit short on time, so I need to find the quickest route to the station.",
+     "plain": "I don't have much time.",
+     "note": "A polite way to explain urgency or inability to linger."
+    },
+    {
+     "text": "I'm trying to orient myself",
+     "kind": "frame",
+     "form": "I'm trying to orient myself",
+     "meaning": "To attempt to understand your position relative to your surroundings.",
+     "example": "I'm trying to orient myself with this map; the streets here are quite confusing.",
+     "plain": "I'm trying to understand where I am using this map.",
+     "note": "More formal than \"get my bearings\". Useful when navigating."
+    },
+    {
+     "text": "I'm just verifying if",
+     "kind": "frame",
+     "form": "I'm just verifying if",
+     "meaning": "To state that you are confirming whether something is true or correct.",
+     "example": "I'm just verifying if my passport is still valid for international travel next year.",
+     "plain": "I'm confirming if my passport is valid.",
+     "note": "Slightly more formal than \"just checking\"."
+    },
+    {
+     "text": "I'm having trouble reaching",
+     "kind": "frame",
+     "form": "I'm having trouble reaching",
+     "meaning": "To state that you are finding it difficult to contact someone by phone or other means.",
+     "example": "I'm having trouble reaching the hotel reception; the line is constantly busy.",
+     "plain": "I can't get through to the hotel reception.",
+     "note": "Common for phone calls or attempts to contact someone."
+    },
+    {
+     "text": "I'm afraid I don't have",
+     "kind": "frame",
+     "form": "I'm afraid I don't have",
+     "meaning": "A polite way to state that you lack something requested or needed.",
+     "example": "I'm afraid I don't have any local currency on me right now, only euros.",
+     "plain": "I don't have any local currency.",
+     "note": "Softens a negative response."
+    },
+    {
+     "text": "I'm afraid I'm unable to assist",
+     "kind": "frame",
+     "form": "I'm afraid I'm unable to assist",
+     "meaning": "A formal and polite way to state that you cannot provide the requested help.",
+     "example": "I'm afraid I'm unable to assist with that specific request, as it's outside my department.",
+     "plain": "I cannot help with that request.",
+     "note": "More formal than \"I can't help\". Used in customer service."
+    },
+    {
+     "text": "Could you possibly tell me",
+     "kind": "frame",
+     "form": "Could you possibly tell me",
+     "meaning": "A very polite and tentative way to ask for information.",
+     "example": "Could you possibly tell me if there's a luggage storage facility at this station?",
+     "plain": "Please tell me if there's luggage storage here.",
+     "note": "Adds extra politeness, similar to \"I was wondering if\"."
+    },
+    {
+     "text": "I'm hoping to find a place to",
+     "kind": "frame",
+     "form": "I'm hoping to find a place to",
+     "meaning": "To express your desire to locate a suitable venue for a specific activity.",
+     "example": "I'm hoping to find a place to have a quiet dinner near the hotel tonight.",
+     "plain": "I want to find a quiet dinner place near the hotel.",
+     "note": "Expresses a wish or expectation, softer than \"I'm looking for\"."
+    },
+    {
+     "text": "I'm afraid I've forgotten",
+     "kind": "frame",
+     "form": "I'm afraid I've forgotten",
+     "meaning": "A polite and apologetic way to state that you cannot recall something.",
+     "example": "I'm afraid I've forgotten my room number; could you please look it up for me?",
+     "plain": "I forgot my room number.",
+     "note": "Softens the admission of forgetting."
+    },
+    {
+     "text": "I'm afraid I've left",
+     "kind": "frame",
+     "form": "I'm afraid I've left",
+     "meaning": "A polite and apologetic way to state that you have accidentally left something behind.",
+     "example": "I'm afraid I've left my passport in the taxi; do you have a lost and found?",
+     "plain": "I left my passport in the taxi.",
+     "note": "Softens the bad news of leaving something behind."
+    },
+    {
+     "text": "I'm afraid I've made a mistake",
+     "kind": "frame",
+     "form": "I'm afraid I've made a mistake",
+     "meaning": "A polite and apologetic way to admit an error.",
+     "example": "I'm afraid I've made a mistake with my booking dates; can they be changed?",
+     "plain": "I made a mistake with my booking dates.",
+     "note": "Softens the admission of an error."
+    },
+    {
+     "text": "I'm afraid I've run out of",
+     "kind": "frame",
+     "form": "I'm afraid I've run out of",
+     "meaning": "A polite way to state that you no longer have a supply of something.",
+     "example": "I'm afraid I've run out of local currency; is there an ATM nearby?",
+     "plain": "I have no more local currency.",
+     "note": "Softens the statement of lacking something."
+    },
+    {
+     "text": "I'm afraid I've lost my way",
+     "kind": "chunk",
+     "form": "I'm afraid I've lost my way",
+     "meaning": "A polite way to state that you are disoriented and do not know where you are going.",
+     "example": "I'm afraid I've lost my way to the museum; could you help me with directions?",
+     "plain": "I am lost and don't know how to get to the museum.",
+     "note": "More formal than \"I'm a bit lost\"."
+    },
+    {
+     "text": "I'm afraid I've missed",
+     "kind": "frame",
+     "form": "I'm afraid I've missed",
+     "meaning": "A polite and apologetic way to state that you failed to catch a transport or attend an event.",
+     "example": "I'm afraid I've missed my connecting flight due to the delay of the first leg.",
+     "plain": "I missed my connecting flight.",
+     "note": "Softens the bad news of missing something important."
+    },
+    {
+     "text": "I'm afraid I've been charged",
+     "kind": "frame",
+     "form": "I'm afraid I've been charged",
+     "meaning": "A polite way to state that you believe an incorrect amount has been billed to you.",
+     "example": "I'm afraid I've been charged for an extra night that I didn't stay here.",
+     "plain": "I was charged for an extra night.",
+     "note": "Softens a complaint about billing errors."
+    },
+    {
+     "text": "I'm afraid I've been given",
+     "kind": "frame",
+     "form": "I'm afraid I've been given",
+     "meaning": "A polite way to state that you received something incorrect or unsuitable.",
+     "example": "I'm afraid I've been given the wrong room key; this one doesn't work.",
+     "plain": "I received the wrong room key.",
+     "note": "Softens a complaint about receiving an incorrect item."
+    },
+    {
+     "text": "I'm afraid I've been told",
+     "kind": "frame",
+     "form": "I'm afraid I've been told",
+     "meaning": "A polite way to introduce information that contradicts what someone else has said.",
+     "example": "I'm afraid I've been told that breakfast is included, but your colleague says it's not.",
+     "plain": "I was told breakfast is included.",
+     "note": "Use when there's conflicting information, to gently challenge."
+    },
+    {
+     "text": "I'm afraid I've been waiting",
+     "kind": "frame",
+     "form": "I'm afraid I've been waiting",
+     "meaning": "A polite way to express dissatisfaction about a long delay.",
+     "example": "I'm afraid I've been waiting for over an hour for my luggage to arrive.",
+     "plain": "I have waited for over an hour for my luggage.",
+     "note": "Softens a complaint about a delay."
+    },
+    {
+     "text": "I'm afraid I've been delayed",
+     "kind": "frame",
+     "form": "I'm afraid I've been delayed",
+     "meaning": "A polite way to state that your journey or arrival has been held up.",
+     "example": "I'm afraid I've been delayed by traffic, so I'll arrive about 20 minutes late.",
+     "plain": "I was delayed by traffic.",
+     "note": "Softens the news of a delay."
+    },
+    {
+     "text": "I'm afraid I've been unable to",
+     "kind": "frame",
+     "form": "I'm afraid I've been unable to",
+     "meaning": "A polite way to state that you have not succeeded in doing something.",
+     "example": "I'm afraid I've been unable to connect to the hotel Wi-Fi despite several attempts.",
+     "plain": "I could not connect to the hotel Wi-Fi.",
+     "note": "Softens the admission of failure."
+    },
+    {
+     "text": "I'm afraid I've been trying to",
+     "kind": "frame",
+     "form": "I'm afraid I've been trying to",
+     "meaning": "A polite way to express frustration about an ongoing, unsuccessful attempt.",
+     "example": "I'm afraid I've been trying to call room service for ten minutes with no answer.",
+     "plain": "I have been trying to call room service for ten minutes.",
+     "note": "Softens a complaint about lack of service."
+    },
+    {
+     "text": "I'm afraid I've been hoping to",
+     "kind": "frame",
+     "form": "I'm afraid I've been hoping to",
+     "meaning": "A polite way to express a desire that has not been met or is now unlikely.",
+     "example": "I'm afraid I've been hoping to visit the museum today, but it seems to be closed.",
+     "plain": "I wanted to visit the museum today.",
+     "note": "Softens the expression of disappointment."
+    },
+    {
+     "text": "I'm afraid I've been looking for",
+     "kind": "frame",
+     "form": "I'm afraid I've been looking for",
+     "meaning": "A polite way to express that you have been searching for something without success.",
+     "example": "I'm afraid I've been looking for the bus stop for ages; could you point it out?",
+     "plain": "I have been looking for the bus stop for a long time.",
+     "note": "Softens a request for help after a long search."
+    },
+    {
+     "text": "I'm afraid I've been expecting",
+     "kind": "frame",
+     "form": "I'm afraid I've been expecting",
+     "meaning": "A polite way to state that something you anticipated has not occurred.",
+     "example": "I'm afraid I've been expecting a wake-up call at 6 AM, but it didn't happen.",
+     "plain": "I expected a wake-up call at 6 AM.",
+     "note": "Softens a complaint about a missed service."
+    },
+    {
+     "text": "I'm afraid I've been informed",
+     "kind": "frame",
+     "form": "I'm afraid I've been informed",
+     "meaning": "A polite way to introduce information that may be unwelcome or contradictory.",
+     "example": "I'm afraid I've been informed that my flight is cancelled due to a strike.",
+     "plain": "I was told my flight is cancelled.",
+     "note": "Softens the delivery of bad news, often from a third party."
+    },
+    {
+     "text": "I'm afraid I've been advised",
+     "kind": "frame",
+     "form": "I'm afraid I've been advised",
+     "meaning": "A polite way to introduce advice or instructions received from another source.",
+     "example": "I'm afraid I've been advised to check in at least three hours before my international flight.",
+     "plain": "I was told to check in three hours before my flight.",
+     "note": "Softens the delivery of a rule or recommendation."
+    },
+    {
+     "text": "I'm afraid I've been given incorrect information",
+     "kind": "chunk",
+     "form": "I'm afraid I've been given incorrect information",
+     "meaning": "A polite way to state that the details you received were wrong.",
+     "example": "I'm afraid I've been given incorrect information about the bus schedule to the airport.",
+     "plain": "I received wrong information about the bus schedule.",
+     "note": "Softens a complaint about misinformation."
+    },
+    {
+     "text": "I'm afraid I've been misinformed",
+     "kind": "chunk",
+     "form": "I'm afraid I've been misinformed",
+     "meaning": "A polite way to state that you were given wrong information.",
+     "example": "I'm afraid I've been misinformed about the hotel's pet policy; I was told dogs were allowed.",
+     "plain": "I was given wrong information about the pet policy.",
+     "note": "More concise than \"given incorrect information\". Softens a complaint."
+    },
+    {
+     "text": "I'm afraid I've been charged twice",
+     "kind": "chunk",
+     "form": "I'm afraid I've been charged twice",
+     "meaning": "A polite way to state that you believe you have been billed for the same item twice.",
+     "example": "I'm afraid I've been charged twice for the same meal at the hotel restaurant.",
+     "plain": "I was charged two times for the same meal.",
+     "note": "Softens a complaint about a billing error."
+    },
+    {
+     "text": "I'm afraid I've been overcharged",
+     "kind": "chunk",
+     "form": "I'm afraid I've been overcharged",
+     "meaning": "A polite way to state that you believe you have been billed too much.",
+     "example": "I'm afraid I've been overcharged for the taxi fare from the airport to the hotel.",
+     "plain": "I was charged too much for the taxi.",
+     "note": "Softens a complaint about an excessive charge."
+    },
+    {
+     "text": "I'm afraid I've been given a room",
+     "kind": "frame",
+     "form": "I'm afraid I've been given a room",
+     "meaning": "A polite way to introduce a complaint about the assigned accommodation.",
+     "example": "I'm afraid I've been given a room that doesn't match my booking description.",
+     "plain": "The room I received does not match my booking.",
+     "note": "Softens a complaint about room allocation."
+    },
+    {
+     "text": "I'm afraid I've been put on hold",
+     "kind": "frame",
+     "form": "I'm afraid I've been put on hold",
+     "meaning": "A polite way to express frustration about waiting on the phone.",
+     "example": "I'm afraid I've been put on hold for twenty minutes and still haven't spoken to anyone.",
+     "plain": "I have been waiting on hold for twenty minutes.",
+     "note": "Softens a complaint about poor phone service."
+    },
+    {
+     "text": "I'm afraid I've been cut off",
+     "kind": "frame",
+     "form": "I'm afraid I've been cut off",
+     "meaning": "A polite way to state that a phone call was disconnected unexpectedly.",
+     "example": "I'm afraid I've been cut off from our previous conversation; could you repeat that?",
+     "plain": "Our phone call was disconnected.",
+     "note": "Softens the interruption of a phone call."
+    },
+    {
+     "text": "I'm afraid I've been unable to get through",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to get through",
+     "meaning": "A polite way to state that you could not connect by phone or other means.",
+     "example": "I'm afraid I've been unable to get through to the airline's customer service line all morning.",
+     "plain": "I could not reach the airline's customer service.",
+     "note": "Softens a complaint about difficulty contacting someone."
+    },
+    {
+     "text": "I'm afraid I've been unable to find",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to find",
+     "meaning": "A polite way to state that you have searched for something without success.",
+     "example": "I'm afraid I've been unable to find the departure gate for my flight; it's not listed.",
+     "plain": "I could not find my flight's departure gate.",
+     "note": "Softens a request for help after a search."
+    },
+    {
+     "text": "I'm afraid I've been unable to access",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to access",
+     "meaning": "A polite way to state that you cannot gain entry or use something.",
+     "example": "I'm afraid I've been unable to access the hotel gym with my room key card.",
+     "plain": "I could not get into the hotel gym.",
+     "note": "Softens a complaint about restricted access."
+    },
+    {
+     "text": "I'm afraid I've been unable to use",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to use",
+     "meaning": "A polite way to state that something is not functioning or available for your use.",
+     "example": "I'm afraid I've been unable to use the shower in my room; there's no hot water.",
+     "plain": "I could not use the shower because there's no hot water.",
+     "note": "Softens a complaint about a non-functional amenity."
+    },
+    {
+     "text": "I'm afraid I've been unable to connect",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to connect",
+     "meaning": "A polite way to state that you cannot establish a link, often electronically.",
+     "example": "I'm afraid I've been unable to connect to the internet since I arrived at the hotel.",
+     "plain": "I could not connect to the internet.",
+     "note": "Softens a complaint about connectivity issues."
+    },
+    {
+     "text": "I'm afraid I've been unable to charge",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to charge",
+     "meaning": "A polite way to state that you cannot power up an electronic device.",
+     "example": "I'm afraid I've been unable to charge my laptop as the power outlet isn't working.",
+     "plain": "I could not charge my laptop.",
+     "note": "Softens a complaint about a non-functional power outlet."
+    },
+    {
+     "text": "I'm afraid I've been unable to open",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to open",
+     "meaning": "A polite way to state that you cannot unseal or unlock something.",
+     "example": "I'm afraid I've been unable to open the safe in my room; it seems to be jammed.",
+     "plain": "I could not open the safe.",
+     "note": "Softens a complaint about a jammed or locked item."
+    },
+    {
+     "text": "I'm afraid I've been unable to close",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to close",
+     "meaning": "A polite way to state that you cannot shut something.",
+     "example": "I'm afraid I've been unable to close the window properly, and it's quite noisy outside.",
+     "plain": "I could not close the window.",
+     "note": "Softens a complaint about a faulty window."
+    },
+    {
+     "text": "I'm afraid I've been unable to adjust",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to adjust",
+     "meaning": "A polite way to state that you cannot change a setting or position.",
+     "example": "I'm afraid I've been unable to adjust the temperature in my room; it's too cold.",
+     "plain": "I could not change the room temperature.",
+     "note": "Softens a complaint about climate control issues."
+    },
+    {
+     "text": "I'm afraid I've been unable to find anyone",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to find anyone",
+     "meaning": "A polite way to state that you have searched for staff without success.",
+     "example": "I'm afraid I've been unable to find anyone at the reception desk for the last ten minutes.",
+     "plain": "I could not find anyone at reception.",
+     "note": "Softens a complaint about absent staff."
+    },
+    {
+     "text": "I'm afraid I've been unable to book",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to book",
+     "meaning": "A polite way to state that you could not reserve something.",
+     "example": "I'm afraid I've been unable to book a table at the restaurant you recommended; it's full.",
+     "plain": "I could not book a table at the restaurant.",
+     "note": "Softens the news of an unsuccessful booking attempt."
+    },
+    {
+     "text": "I'm afraid I've been unable to confirm",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to confirm",
+     "meaning": "A polite way to state that you could not verify something.",
+     "example": "I'm afraid I've been unable to confirm my flight details online; the website is down.",
+     "plain": "I could not confirm my flight details.",
+     "note": "Softens the news of a failed confirmation attempt."
+    },
+    {
+     "text": "I'm afraid I've been unable to check in",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to check in",
+     "meaning": "A polite way to state that you could not complete the check-in process.",
+     "example": "I'm afraid I've been unable to check in online for my flight; there's an error.",
+     "plain": "I could not check in online for my flight.",
+     "note": "Softens a complaint about check-in issues."
+    },
+    {
+     "text": "I'm afraid I've been unable to retrieve",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to retrieve",
+     "meaning": "A polite way to state that you could not get something back.",
+     "example": "I'm afraid I've been unable to retrieve my luggage from the carousel; it's not there.",
+     "plain": "I could not get my luggage from the carousel.",
+     "note": "Softens a complaint about missing luggage."
+    },
+    {
+     "text": "I'm afraid I've been unable to understand",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to understand",
+     "meaning": "A polite way to state that you could not comprehend something.",
+     "example": "I'm afraid I've been unable to understand the instructions for the self-service kiosk.",
+     "plain": "I could not understand the kiosk instructions.",
+     "note": "Softens an admission of confusion."
+    },
+    {
+     "text": "I'm afraid I've been unable to communicate",
+     "kind": "chunk",
+     "form": "I'm afraid I've been unable to communicate",
+     "meaning": "A polite way to state that you are having difficulty conveying your message.",
+     "example": "I'm afraid I've been unable to communicate effectively with the taxi driver due to the language barrier.",
+     "plain": "I could not communicate with the taxi driver.",
+     "note": "Softens a statement about language difficulties."
+    },
+    {
+     "text": "I'm just trying to make sure",
+     "kind": "chunk",
+     "form": "I'm just trying to make sure",
+     "meaning": "To explain that you are verifying something to prevent errors or problems.",
+     "example": "I'm just trying to make sure I have all my travel documents before leaving for the airport.",
+     "plain": "I am verifying I have all my travel documents.",
+     "note": "Used to express caution and thoroughness."
+    },
+    {
+     "text": "I'm just trying to find out",
+     "kind": "frame",
+     "form": "I'm just trying to find out",
+     "meaning": "To explain that you are seeking specific information.",
+     "example": "I'm just trying to find out what time the last train departs for the city centre.",
+     "plain": "I want to know the last train departure time.",
+     "note": "Common for polite information gathering."
+    },
+    {
+     "text": "I'm just trying to get some information",
+     "kind": "chunk",
+     "form": "I'm just trying to get some information",
+     "meaning": "To explain that you are seeking general details or facts.",
+     "example": "I'm just trying to get some information about local bus routes to the main attractions.",
+     "plain": "I want some information about local bus routes.",
+     "note": "A polite way to initiate an information-seeking conversation."
+    },
+    {
+     "text": "I'm just trying to figure out",
+     "kind": "chunk",
+     "form": "I'm just trying to figure out",
+     "meaning": "To explain that you are attempting to understand or solve something.",
+     "example": "I'm just trying to figure out how to use this self-service check-in machine.",
+     "plain": "I am trying to understand how to use this machine.",
+     "note": "Very common for understanding how something works or solving a puzzle."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "could you point me in the right direction": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "do you happen to know": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to get to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'd like to raise a concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid there's been a misunderstanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you look into this for me": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely happy with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd appreciate it if you could": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i need to speak to a manager": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to make a complaint": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's not what i booked": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the room isn't up to standard": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i have to insist": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "could we find a solution": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm quite disappointed with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i can't accept that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to confirm my reservation": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "do you have any availability for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how long does the journey take": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "could i get a window seat": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "is breakfast included": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what are the check-in times": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'd like to exchange some currency": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "could i have the bill, please": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "could you recommend a good restaurant": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what's the best way to get around": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm having trouble connecting to the wi-fi": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "is there a shuttle service": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i need to extend my stay": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could i get a late checkout": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to cancel my booking": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "is there a charge for that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm afraid i don't understand": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "could you repeat that, please": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "could you speak a bit slower": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm having difficulty with the language": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i really appreciate your assistance": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just making sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just confirming": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just wondering if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just calling about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to clarify": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to understand": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to sort out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to resolve": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit lost": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "is this the right way for": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm looking for": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i seem to have misplaced": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm having a bit of trouble with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "there seems to be a problem with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm here on business": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm here on holiday": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just checking my itinerary": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to learn some phrases": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "could you tell me how to get to": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "what time does the train depart": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "is there a direct train to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'd like to book a table for two": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm having difficulty with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i have to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "catch a flight": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "miss a connection": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "travel light": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "clear customs": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "board a plane": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "check in luggage": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "reach a destination": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "experience delays": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "seek assistance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "lodge a complaint": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "arrange transport": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "request a refund": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "provide feedback": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "resolve an issue": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i have to ask": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just checking in": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm looking to book": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm having second thoughts about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i follow": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to figure out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit confused about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just making an enquiry": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm having second thoughts": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get my bearings": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit concerned about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to make sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i can't help you there": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just looking for a place to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm having trouble finding": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just trying to confirm": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get organised": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to work out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get a sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get my head around": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to make sure that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get some information about": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just trying to find out if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to see if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get a handle on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to get organised for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get everything sorted": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get some clarity on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to get a feel for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get everything in order": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you let me know": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was wondering if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "do you happen to have": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm looking for a way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could you possibly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm struggling with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to enquire about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "is there any chance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've lost": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could you clarify": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit unsure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to locate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm running a bit late": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i have to cancel": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i can't make it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could you direct me to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm experiencing issues with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to double-check": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just calling regarding": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "could you give me a hand": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to get a refund": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm looking to reschedule": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid that won't work": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid we're fully booked": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just passing through": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm here for a conference": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm looking forward to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm a bit short on time": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to orient myself": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just verifying if": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm having trouble reaching": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i don't have": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i'm unable to assist": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "could you possibly tell me": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm hoping to find a place to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i've forgotten": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i've left": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i've made a mistake": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i've run out of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i've lost my way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid i've missed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been charged": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been given": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been told": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid i've been waiting": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been delayed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been trying to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been hoping to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid i've been looking for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been expecting": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid i've been informed": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid i've been advised": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid i've been given incorrect information": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been misinformed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been charged twice": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been overcharged": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been given a room": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been put on hold": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been cut off": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to get through": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to find": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to access": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to use": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to connect": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to charge": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to open": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to close": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to adjust": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to find anyone": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to book": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to confirm": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to check in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to retrieve": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to understand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i've been unable to communicate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to make sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to find out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get some information": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to figure out": {
+    "status": "pass",
+    "level": "B1"
+   }
+  }
+ }
+}

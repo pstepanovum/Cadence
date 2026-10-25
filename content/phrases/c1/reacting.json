@@ -1,0 +1,1505 @@
+{
+ "format": 1,
+ "level": "C1",
+ "situation": "reacting",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "I must admit",
+     "kind": "chunk",
+     "form": "I must admit",
+     "meaning": "Used to confess something, often a feeling or opinion, that might be slightly surprising or reluctant.",
+     "example": "I must admit, I was a little disappointed with the outcome of the project.",
+     "plain": "I was a little disappointed with the outcome of the project.",
+     "note": "Signals a slight reluctance to share a feeling, often a negative one, but can also be positive."
+    },
+    {
+     "text": "a huge relief",
+     "kind": "collocation",
+     "form": "a huge relief",
+     "meaning": "Describes a feeling of great comfort and reassurance after a period of worry or stress.",
+     "example": "Hearing that the flight wasn't cancelled was a huge relief, as I really needed to get home.",
+     "plain": "Hearing that the flight wasn't cancelled made me feel much better, as I really needed to get home.",
+     "note": "Commonly used to express strong positive feelings after a negative situation is avoided."
+    },
+    {
+     "text": "I can only imagine",
+     "kind": "frame",
+     "form": "I can only imagine",
+     "meaning": "Expresses sympathy by acknowledging the difficulty of someone's experience, even if you haven't lived it.",
+     "example": "You've been through so much lately; I can only imagine how exhausted you must feel.",
+     "plain": "You've been through so much lately; I understand you must feel very exhausted.",
+     "note": "An empathetic phrase, used to show understanding and support for someone's difficult situation."
+    },
+    {
+     "text": "I'm so pleased to hear",
+     "kind": "chunk",
+     "form": "I'm so pleased to hear",
+     "meaning": "Expresses genuine happiness and satisfaction upon receiving good news or information.",
+     "example": "I'm so pleased to hear that your project was approved; you've put in a lot of effort.",
+     "plain": "I'm very happy that your project was approved; you've put in a lot of effort.",
+     "note": "A warm and sincere way to react positively to someone's good news or success."
+    },
+    {
+     "text": "That's a shame",
+     "kind": "chunk",
+     "form": "That's a shame",
+     "meaning": "Expresses mild disappointment or sympathy for an unfortunate situation.",
+     "example": "Oh, that's a shame you can't make it to the dinner party after all.",
+     "plain": "Oh, it's disappointing you can't make it to the dinner party after all.",
+     "note": "A common, gentle way to express regret or mild sadness about something."
+    },
+    {
+     "text": "It's not ideal",
+     "kind": "chunk",
+     "form": "is not ideal",
+     "meaning": "Indicates that a situation is less than perfect or causes some inconvenience, without being overly negative.",
+     "example": "Having to work late again is not ideal, but we need to meet the deadline.",
+     "plain": "Having to work late again is inconvenient, but we need to meet the deadline.",
+     "note": "A polite and understated way to express mild annoyance or dissatisfaction."
+    },
+    {
+     "text": "a genuine surprise",
+     "kind": "collocation",
+     "form": "a genuine surprise",
+     "meaning": "Describes something truly unexpected or astonishing.",
+     "example": "Her promotion was a genuine surprise to everyone, as she'd only been there a year.",
+     "plain": "Her promotion was truly unexpected to everyone, as she'd only been there a year.",
+     "note": "Used to convey authentic surprise, often when something positive or unexpected happens."
+    },
+    {
+     "text": "That makes sense",
+     "kind": "collocation",
+     "form": "that makes sense",
+     "meaning": "Indicates understanding and agreement with an explanation or a point of view.",
+     "example": "Ah, that makes sense now why the system was behaving so strangely.",
+     "plain": "Ah, I understand now why the system was behaving so strangely.",
+     "note": "A common phrase to acknowledge clarity and logical understanding."
+    },
+    {
+     "text": "I totally get it",
+     "kind": "chunk",
+     "form": "I totally get it",
+     "meaning": "Expresses complete understanding and empathy for someone's feelings or situation.",
+     "example": "I totally get it; it's frustrating when your hard work isn't recognized.",
+     "plain": "I completely understand; it's frustrating when your hard work isn't recognized.",
+     "note": "An informal but widely used phrase to show strong empathy and comprehension."
+    },
+    {
+     "text": "I appreciate that",
+     "kind": "chunk",
+     "form": "I appreciate that",
+     "meaning": "Expresses gratitude or acknowledgement for someone's effort, understanding, or offer.",
+     "example": "I appreciate that you stayed late to help me finish the report.",
+     "plain": "I'm grateful that you stayed late to help me finish the report.",
+     "note": "A polite and common way to show thanks or acknowledge a helpful gesture."
+    },
+    {
+     "text": "I'm glad to know",
+     "kind": "chunk",
+     "form": "I'm glad to know",
+     "meaning": "Expresses satisfaction or relief upon learning new information, often positive or reassuring.",
+     "example": "I'm glad to know that the project is back on track after all the delays.",
+     "plain": "I'm happy that the project is back on track after all the delays.",
+     "note": "Used to convey positive feelings about receiving information that resolves uncertainty."
+    },
+    {
+     "text": "I'm a bit taken aback",
+     "kind": "chunk",
+     "form": "I'm a bit taken aback",
+     "meaning": "Expresses mild surprise or shock, often implying a slight feeling of being unsettled or confused.",
+     "example": "I'm a bit taken aback by their sudden decision to change the entire strategy.",
+     "plain": "I'm slightly surprised by their sudden decision to change the entire strategy.",
+     "note": "Suggests a reaction of unexpectedness that leaves one momentarily speechless or disoriented."
+    },
+    {
+     "text": "It's a tricky situation",
+     "kind": "collocation",
+     "form": "It's a tricky situation",
+     "meaning": "Describes a complex or difficult circumstance that requires careful handling or thought.",
+     "example": "It's a tricky situation, and I'm not sure what the best course of action is.",
+     "plain": "It's a difficult situation, and I'm not sure what the best course of action is.",
+     "note": "A common way to acknowledge complexity and express a need for careful consideration."
+    },
+    {
+     "text": "I wouldn't have thought",
+     "kind": "frame",
+     "form": "I wouldn't have thought",
+     "meaning": "Expresses surprise or disbelief about something, implying it goes against one's expectations.",
+     "example": "I wouldn't have thought he'd be interested in that kind of research.",
+     "plain": "I didn't expect him to be interested in that kind of research.",
+     "note": "Used to convey mild surprise or to indicate that something was unexpected."
+    },
+    {
+     "text": "That's really kind of you",
+     "kind": "chunk",
+     "form": "That's really kind of you",
+     "meaning": "Expresses sincere gratitude and appreciation for someone's thoughtful gesture or offer.",
+     "example": "That's really kind of you to offer to help me move house this weekend.",
+     "plain": "It's very thoughtful of you to offer to help me move house this weekend.",
+     "note": "A warm and polite way to thank someone for their generosity or helpfulness."
+    },
+    {
+     "text": "a sense of disappointment",
+     "kind": "collocation",
+     "form": "a sense of disappointment",
+     "meaning": "Describes a feeling of sadness or dissatisfaction when expectations are not met.",
+     "example": "There was a sense of disappointment when the project deadline was extended again.",
+     "plain": "People felt sad when the project deadline was extended again.",
+     "note": "A common way to describe a general feeling of dissatisfaction or regret."
+    },
+    {
+     "text": "I'm relieved to say",
+     "kind": "chunk",
+     "form": "I'm relieved to say",
+     "meaning": "Introduces a piece of good news or a positive outcome that alleviates previous worry.",
+     "example": "I'm relieved to say that the test results came back negative.",
+     "plain": "I'm happy to say that the test results came back negative.",
+     "note": "Used to share reassuring news, often after a period of anxiety."
+    },
+    {
+     "text": "I'm not entirely sure",
+     "kind": "chunk",
+     "form": "I'm not entirely sure",
+     "meaning": "Expresses hesitation or uncertainty, often used as a softener before stating a potential problem or lack of knowledge.",
+     "example": "I'm not entirely sure that's the best approach for this particular problem.",
+     "plain": "I'm uncertain if that's the best approach for this particular problem.",
+     "note": "A polite way to express doubt or to gently disagree without being confrontational."
+    },
+    {
+     "text": "I'm afraid to say",
+     "kind": "chunk",
+     "form": "I'm afraid to say",
+     "meaning": "Used to introduce unwelcome or bad news, softening the impact by expressing reluctance to deliver it.",
+     "example": "I'm afraid to say we've run into a few unexpected issues with the budget.",
+     "plain": "Unfortunately, we've run into a few unexpected issues with the budget.",
+     "note": "A common and polite way to deliver negative information."
+    },
+    {
+     "text": "It's a bit frustrating",
+     "kind": "collocation",
+     "form": "It's a bit frustrating",
+     "meaning": "Describes a situation that causes mild annoyance or irritation due to obstacles or lack of progress.",
+     "example": "It's a bit frustrating when you put in so much effort and don't see immediate results.",
+     "plain": "It's slightly annoying when you put in so much effort and don't see immediate results.",
+     "note": "A common and understated way to express mild irritation or impatience."
+    },
+    {
+     "text": "I can see your point",
+     "kind": "frame",
+     "form": "I can see your point",
+     "meaning": "Acknowledges understanding of someone else's perspective, even if you don't fully agree.",
+     "example": "I can see your point about the workload, but we still need to prioritize this task.",
+     "plain": "I understand your perspective about the workload, but we still need to prioritize this task.",
+     "note": "A diplomatic phrase used to show understanding in a discussion or disagreement."
+    },
+    {
+     "text": "my sincere apologies",
+     "kind": "collocation",
+     "form": "my sincere apologies",
+     "meaning": "Expresses a genuine and heartfelt apology for a mistake or an unfortunate event.",
+     "example": "Please accept my sincere apologies for the misunderstanding earlier.",
+     "plain": "Please accept my true apologies for the misunderstanding earlier.",
+     "note": "A more formal and emphatic way to apologize than 'I'm sorry'."
+    },
+    {
+     "text": "That's wonderful news",
+     "kind": "collocation",
+     "form": "That's wonderful news",
+     "meaning": "Expresses strong positive reaction and delight upon hearing very good information.",
+     "example": "Oh, that's wonderful news! I knew you'd do great on your presentation.",
+     "plain": "Oh, that's very good news! I knew you'd do great on your presentation.",
+     "note": "A common and enthusiastic way to react to positive developments."
+    },
+    {
+     "text": "absolute delight",
+     "kind": "collocation",
+     "form": "absolute delight",
+     "meaning": "Describes a feeling of extreme happiness and joy about a particular event or outcome.",
+     "example": "Winning the award brought her absolute delight after years of hard work.",
+     "plain": "Winning the award made her extremely happy after years of hard work.",
+     "note": "A strong expression of joy, often used for significant positive events."
+    },
+    {
+     "text": "I'm a little concerned",
+     "kind": "collocation",
+     "form": "I'm a little concerned",
+     "meaning": "Expresses mild worry or apprehension about a situation or potential outcome.",
+     "example": "I'm a little concerned about the new changes to the company policy.",
+     "plain": "I'm slightly worried about the new changes to the company policy.",
+     "note": "A polite and common way to voice a moderate level of worry or unease."
+    },
+    {
+     "text": "I'm quite surprised by",
+     "kind": "frame",
+     "form": "I'm quite surprised by",
+     "meaning": "Expresses a moderate level of astonishment or unexpectedness regarding something.",
+     "example": "I'm quite surprised by how quickly they adapted to the new software.",
+     "plain": "I'm rather astonished by how quickly they adapted to the new software.",
+     "note": "Used to convey a genuine, but not overwhelming, sense of surprise."
+    },
+    {
+     "text": "I was under the impression that",
+     "kind": "frame",
+     "form": "I was under the impression that",
+     "meaning": "Used to express mild surprise or confusion when a belief turns out to be incorrect.",
+     "example": "I was under the impression that the meeting was scheduled for Tuesday, not Wednesday.",
+     "plain": "I thought the meeting was scheduled for Tuesday, not Wednesday.",
+     "note": "A polite way to correct a misunderstanding or express mild annoyance at a change."
+    },
+    {
+     "text": "a bit of a worry",
+     "kind": "collocation",
+     "form": "a bit of a worry",
+     "meaning": "Describes something that causes a slight degree of anxiety or apprehension.",
+     "example": "The unexpected delay in the shipment is a bit of a worry for our production schedule.",
+     "plain": "The unexpected delay in the shipment is slightly concerning for our production schedule.",
+     "note": "A common and understated way to express mild concern."
+    },
+    {
+     "text": "It's a real pity",
+     "kind": "collocation",
+     "form": "It's a real pity",
+     "meaning": "Expresses genuine regret or sadness about an unfortunate situation or missed opportunity.",
+     "example": "It's a real pity that they had to cancel the annual conference this year.",
+     "plain": "It's truly regrettable that they had to cancel the annual conference this year.",
+     "note": "A common phrase to express sincere regret or disappointment."
+    },
+    {
+     "text": "I can't help but feel",
+     "kind": "frame",
+     "form": "I can't help but feel",
+     "meaning": "Expresses an unavoidable or strong personal emotion or opinion about a situation.",
+     "example": "I can't help but feel a little sad that the project is finally over.",
+     "plain": "I feel a little sad that the project is finally over, and I can't avoid it.",
+     "note": "Used to convey a strong, often persistent, emotional reaction or intuition."
+    },
+    {
+     "text": "I'm quite pleased with",
+     "kind": "frame",
+     "form": "I'm quite pleased with",
+     "meaning": "Expresses a moderate level of satisfaction or contentment regarding an outcome or situation.",
+     "example": "I'm quite pleased with how the team handled the unexpected challenges.",
+     "plain": "I'm rather satisfied with how the team handled the unexpected challenges.",
+     "note": "A polite and common way to express positive evaluation or contentment."
+    },
+    {
+     "text": "I'm not sure what to say",
+     "kind": "frame",
+     "form": "I'm not sure what to say",
+     "meaning": "Expresses a feeling of being overwhelmed, surprised, or at a loss for words, often in response to unexpected news.",
+     "example": "When they told me I got the scholarship, I was so shocked, I'm not sure what to say.",
+     "plain": "When they told me I got the scholarship, I was so shocked, I didn't know how to react.",
+     "note": "Used to convey a strong emotional reaction that leaves one speechless."
+    },
+    {
+     "text": "I'm quite taken with",
+     "kind": "frame",
+     "form": "I'm quite taken with",
+     "meaning": "Expresses a strong positive impression, admiration, or liking for something or someone.",
+     "example": "I'm quite taken with the new design of the office space; it's very modern.",
+     "plain": "I'm rather impressed by the new design of the office space; it's very modern.",
+     "note": "A slightly more formal way to express strong positive feelings or admiration."
+    },
+    {
+     "text": "a feeling of being put out",
+     "kind": "collocation",
+     "form": "a feeling of being put out",
+     "meaning": "Describes mild annoyance or irritation, often because of an inconvenience or slight.",
+     "example": "I had a feeling of being put out when they changed the schedule without telling me.",
+     "plain": "I felt slightly annoyed when they changed the schedule without telling me.",
+     "note": "A common, understated way to express mild irritation or feeling inconvenienced."
+    },
+    {
+     "text": "I'm quite looking forward to",
+     "kind": "frame",
+     "form": "I'm quite looking forward to",
+     "meaning": "Expresses eager anticipation and positive expectation for a future event.",
+     "example": "I'm quite looking forward to the company retreat next month.",
+     "plain": "I'm really anticipating the company retreat next month.",
+     "note": "A common and polite way to express excitement about a future event."
+    },
+    {
+     "text": "I'm just so glad that",
+     "kind": "frame",
+     "form": "I'm just so glad that",
+     "meaning": "Expresses strong relief or happiness about a positive outcome or avoided negative situation.",
+     "example": "I'm just so glad that everyone arrived safely despite the bad weather.",
+     "plain": "I'm very relieved that everyone arrived safely despite the bad weather.",
+     "note": "A warm and sincere way to express strong positive feelings, often relief."
+    },
+    {
+     "text": "I'm quite touched by",
+     "kind": "frame",
+     "form": "I'm quite touched by",
+     "meaning": "Expresses a feeling of emotional warmth, gratitude, or sympathy in response to someone's kindness or story.",
+     "example": "I'm quite touched by your thoughtful gesture of bringing me flowers.",
+     "plain": "I'm rather moved by your thoughtful gesture of bringing me flowers.",
+     "note": "Used to convey a sincere emotional reaction to kindness or a moving story."
+    },
+    {
+     "text": "I'm not sure how to feel",
+     "kind": "frame",
+     "form": "I'm not sure how to feel",
+     "meaning": "Expresses confusion or mixed emotions in response to complex or unexpected news.",
+     "example": "After hearing both sides of the story, I'm not sure how to feel about the situation.",
+     "plain": "After hearing both sides of the story, I have mixed emotions about the situation.",
+     "note": "A common phrase to convey uncertainty or conflicting emotions."
+    },
+    {
+     "text": "I'm so sorry to hear",
+     "kind": "frame",
+     "form": "I'm so sorry to hear",
+     "meaning": "Expresses genuine sympathy or regret about someone's bad news or difficult situation.",
+     "example": "Oh, I'm so sorry to hear about your grandmother's illness; please let me know if there's anything I can do.",
+     "plain": "Oh, I feel bad about your grandmother's illness; please let me know if there's anything I can do.",
+     "note": "A common, heartfelt expression of sympathy. Use for serious or moderately serious bad news."
+    },
+    {
+     "text": "That's really tough",
+     "kind": "chunk",
+     "form": "That's really tough",
+     "meaning": "Acknowledges that someone's situation or experience is difficult and challenging.",
+     "example": "Losing your job and then having car trouble, that's really tough, I hope things improve soon.",
+     "plain": "Losing your job and then having car trouble, that's very difficult, I hope things improve soon.",
+     "note": "Informal and empathetic. Shows understanding of another's hardship."
+    },
+    {
+     "text": "I can't imagine how",
+     "kind": "frame",
+     "form": "I can't imagine how",
+     "meaning": "Expresses deep empathy, indicating that you understand the difficulty of someone's experience.",
+     "example": "I can't imagine how stressful it must be to manage two young children and a full-time job.",
+     "plain": "I don't know how stressful it must be to manage two young children and a full-time job.",
+     "note": "A strong expression of empathy, often used when someone is describing a challenging situation."
+    },
+    {
+     "text": "What a relief",
+     "kind": "chunk",
+     "form": "What a relief",
+     "meaning": "Expresses sudden comfort or reassurance after a period of worry or anxiety.",
+     "example": "The test results came back negative? Oh, what a relief! I was so worried for you.",
+     "plain": "The test results came back negative? Oh, I feel so much better! I was so worried for you.",
+     "note": "A very common, natural exclamation of relief. Can be used for small or large worries."
+    },
+    {
+     "text": "I'm thrilled for you",
+     "kind": "chunk",
+     "form": "I'm thrilled for you",
+     "meaning": "Expresses great happiness and excitement for someone else's good fortune or success.",
+     "example": "You got the promotion you wanted? I'm thrilled for you, you really deserve it!",
+     "plain": "You got the promotion you wanted? I'm very happy for you, you really deserve it!",
+     "note": "A warm and enthusiastic way to share in someone's joy. More intense than"
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "I'm sorry to hear about that",
+     "kind": "chunk",
+     "form": "I'm sorry to hear about that",
+     "meaning": "Expresses sympathy or regret upon receiving bad news.",
+     "example": "Oh, I'm sorry to hear about that; your flight was cancelled, which is really inconvenient.",
+     "plain": "Oh, I regret hearing that; your flight was cancelled, which is really inconvenient.",
+     "note": "A common, polite way to express sympathy for minor inconveniences or bad news."
+    },
+    {
+     "text": "That's too bad",
+     "kind": "chunk",
+     "form": "That's too bad",
+     "meaning": "Expresses mild disappointment or sympathy for a minor negative event.",
+     "example": "You missed the deadline? Oh, that's too bad, but I'm sure you'll do better next time.",
+     "plain": "You missed the deadline? Oh, that's disappointing, but I'm sure you'll do better next time.",
+     "note": "Casual and empathetic, suitable for everyday conversations among friends or colleagues."
+    },
+    {
+     "text": "What a nuisance",
+     "kind": "chunk",
+     "form": "What a nuisance",
+     "meaning": "Expresses mild annoyance or frustration about something bothersome.",
+     "example": "The printer's jammed again? What a nuisance, especially when I'm in a hurry.",
+     "plain": "The printer's jammed again? That's annoying, especially when I'm in a hurry.",
+     "note": "Used for minor, irritating problems; can be said to oneself or others."
+    },
+    {
+     "text": "I'm delighted for you",
+     "kind": "chunk",
+     "form": "I'm delighted for you",
+     "meaning": "Expresses strong happiness and pleasure for someone else's good fortune.",
+     "example": "You got the promotion? That's fantastic! I'm delighted for you and your hard work.",
+     "plain": "You got the promotion? That's fantastic! I'm very happy for you and your hard work.",
+     "note": "A warm and sincere expression of joy for another person's success."
+    },
+    {
+     "text": "I'm so happy for you",
+     "kind": "chunk",
+     "form": "I'm so happy for you",
+     "meaning": "Expresses strong happiness and pleasure for someone else's good news or success.",
+     "example": "Your daughter got into her dream university? I'm so happy for you all!",
+     "plain": "Your daughter got into her dream university? I'm very pleased for you all!",
+     "note": "A very common and heartfelt way to share in someone's joy."
+    },
+    {
+     "text": "I'm truly sorry",
+     "kind": "chunk",
+     "form": "I'm truly sorry",
+     "meaning": "Expresses deep regret or apology for something that has happened.",
+     "example": "I'm truly sorry that your project didn't get the funding it deserved this year.",
+     "plain": "I deeply regret that your project didn't get the funding it deserved this year.",
+     "note": "More emphatic than \"I'm sorry,\" conveying deeper regret or sympathy."
+    },
+    {
+     "text": "I can relate to that",
+     "kind": "chunk",
+     "form": "I can relate to that",
+     "meaning": "Expresses understanding and shared experience with someone's feelings or situation.",
+     "example": "Dealing with endless paperwork is exhausting; I can relate to that completely.",
+     "plain": "Dealing with endless paperwork is exhausting; I understand that feeling completely.",
+     "note": "Shows empathy by indicating you've had a similar experience or feeling."
+    },
+    {
+     "text": "That must be tough",
+     "kind": "chunk",
+     "form": "That must be tough",
+     "meaning": "Expresses sympathy and understanding for a difficult situation someone is facing.",
+     "example": "Losing your pet after so many years, that must be tough to go through.",
+     "plain": "Losing your pet after so many years, that must be difficult to go through.",
+     "note": "A compassionate way to acknowledge someone's hardship without being intrusive."
+    },
+    {
+     "text": "I'm genuinely surprised",
+     "kind": "chunk",
+     "form": "I'm genuinely surprised",
+     "meaning": "Expresses sincere astonishment at something unexpected.",
+     "example": "I'm genuinely surprised by how quickly they managed to resolve the issue.",
+     "plain": "I'm truly astonished by how quickly they managed to resolve the issue.",
+     "note": "Emphasizes the sincerity of the surprise, often positive or neutral."
+    },
+    {
+     "text": "I'm rather disappointed",
+     "kind": "chunk",
+     "form": "I'm rather disappointed",
+     "meaning": "Expresses a moderate level of unhappiness or dissatisfaction.",
+     "example": "I'm rather disappointed that the event was cancelled at the last minute.",
+     "plain": "I'm somewhat unhappy that the event was cancelled at the last minute.",
+     "note": "A polite and slightly formal way to express dissatisfaction."
+    },
+    {
+     "text": "I'm absolutely thrilled",
+     "kind": "chunk",
+     "form": "I'm absolutely thrilled",
+     "meaning": "Expresses extreme excitement and happiness.",
+     "example": "I'm absolutely thrilled that our team won the championship this year!",
+     "plain": "I'm extremely excited that our team won the championship this year!",
+     "note": "Conveys intense joy and enthusiasm, often for significant positive news."
+    },
+    {
+     "text": "I'm so relieved",
+     "kind": "chunk",
+     "form": "I'm so relieved",
+     "meaning": "Expresses great comfort and ease after a period of worry or stress.",
+     "example": "The test results came back negative, and I'm so relieved to hear that.",
+     "plain": "The test results came back negative, and I feel great comfort to hear that.",
+     "note": "A common and natural expression of relief, often after a scare."
+    },
+    {
+     "text": "I'm truly grateful",
+     "kind": "chunk",
+     "form": "I'm truly grateful",
+     "meaning": "Expresses sincere appreciation and thankfulness.",
+     "example": "For all your help with the move, I'm truly grateful; I couldn't have done it alone.",
+     "plain": "For all your help with the move, I'm sincerely thankful; I couldn't have done it alone.",
+     "note": "A more formal and emphatic way to express thanks than \"thank you.\""
+    },
+    {
+     "text": "I'm deeply saddened",
+     "kind": "chunk",
+     "form": "I'm deeply saddened",
+     "meaning": "Expresses profound sorrow or unhappiness.",
+     "example": "I'm deeply saddened to learn of your grandmother's passing; she was a wonderful woman.",
+     "plain": "I'm profoundly unhappy to learn of your grandmother's passing; she was a wonderful woman.",
+     "note": "Used for serious, often tragic, news; conveys strong empathy."
+    },
+    {
+     "text": "I'm quite concerned",
+     "kind": "chunk",
+     "form": "I'm quite concerned",
+     "meaning": "Expresses a moderate level of worry or anxiety about a situation.",
+     "example": "I'm quite concerned about the recent drop in sales figures for this quarter.",
+     "plain": "I'm somewhat worried about the recent drop in sales figures for this quarter.",
+     "note": "A polite and professional way to express worry without being alarmist."
+    },
+    {
+     "text": "I'm quite impressed",
+     "kind": "chunk",
+     "form": "I'm quite impressed",
+     "meaning": "Expresses admiration or respect for something or someone.",
+     "example": "I'm quite impressed with how quickly you mastered the new software.",
+     "plain": "I'm rather admiring of how quickly you mastered the new software.",
+     "note": "A polite and common way to give a compliment or express admiration."
+    },
+    {
+     "text": "I'm truly sorry for your loss",
+     "kind": "chunk",
+     "form": "I'm truly sorry for your loss",
+     "meaning": "Expresses deep sympathy and condolences to someone who has experienced a death.",
+     "example": "Please accept my deepest sympathies; I'm truly sorry for your loss.",
+     "plain": "Please accept my deepest sympathies; I deeply regret your bereavement.",
+     "note": "A standard and respectful phrase for expressing condolences."
+    },
+    {
+     "text": "I'm so sorry for that",
+     "kind": "chunk",
+     "form": "I'm so sorry for that",
+     "meaning": "Expresses regret or apology for a specific negative event or action.",
+     "example": "I'm so sorry for that misunderstanding during the meeting; it was my fault.",
+     "plain": "I deeply regret that misunderstanding during the meeting; it was my fault.",
+     "note": "A common way to apologize for a specific incident."
+    },
+    {
+     "text": "I'm quite pleased",
+     "kind": "chunk",
+     "form": "I'm quite pleased",
+     "meaning": "Expresses moderate satisfaction or happiness.",
+     "example": "I'm quite pleased with the outcome of the negotiations, all things considered.",
+     "plain": "I'm moderately satisfied with the outcome of the negotiations, all things considered.",
+     "note": "A polite and slightly formal way to express contentment."
+    },
+    {
+     "text": "I'm absolutely delighted",
+     "kind": "chunk",
+     "form": "I'm absolutely delighted",
+     "meaning": "Expresses extreme happiness and pleasure.",
+     "example": "I'm absolutely delighted that you'll be joining our team next month.",
+     "plain": "I'm extremely happy that you'll be joining our team next month.",
+     "note": "A strong expression of joy, often used for good news or positive events."
+    },
+    {
+     "text": "I'm quite taken by",
+     "kind": "frame",
+     "form": "I'm quite taken by",
+     "meaning": "Expresses a strong positive impression or attraction to something or someone.",
+     "example": "I'm quite taken by her innovative approach to problem-solving.",
+     "plain": "I have a strong positive impression of her innovative approach to problem-solving.",
+     "note": "Similar to \"quite taken with,\" often used for qualities or characteristics."
+    },
+    {
+     "text": "I'm a little disappointed",
+     "kind": "chunk",
+     "form": "I'm a little disappointed",
+     "meaning": "Expresses mild unhappiness or dissatisfaction.",
+     "example": "I'm a little disappointed that the concert was postponed until next year.",
+     "plain": "I'm slightly unhappy that the concert was postponed until next year.",
+     "note": "A gentle way to express dissatisfaction without being overly negative."
+    },
+    {
+     "text": "I'm quite upset",
+     "kind": "chunk",
+     "form": "I'm quite upset",
+     "meaning": "Expresses a moderate level of distress or unhappiness.",
+     "example": "I'm quite upset about the way I was treated during the customer service call.",
+     "plain": "I'm moderately distressed about the way I was treated during the customer service call.",
+     "note": "Indicates emotional disturbance, but not necessarily extreme anger."
+    },
+    {
+     "text": "I'm quite surprised",
+     "kind": "chunk",
+     "form": "I'm quite surprised",
+     "meaning": "Expresses a moderate level of astonishment or unexpectedness.",
+     "example": "I'm quite surprised by the sudden change in management's decision.",
+     "plain": "I'm moderately astonished by the sudden change in management's decision.",
+     "note": "A common and neutral way to express surprise."
+    },
+    {
+     "text": "I'm truly amazed",
+     "kind": "chunk",
+     "form": "I'm truly amazed",
+     "meaning": "Expresses sincere wonder and astonishment.",
+     "example": "I'm truly amazed by your dedication to learning a new language so quickly.",
+     "plain": "I'm sincerely astonished by your dedication to learning a new language so quickly.",
+     "note": "Conveys strong positive surprise and admiration."
+    },
+    {
+     "text": "I'm quite intrigued",
+     "kind": "chunk",
+     "form": "I'm quite intrigued",
+     "meaning": "Expresses curiosity and interest in something.",
+     "example": "I'm quite intrigued by your proposal for the new marketing campaign.",
+     "plain": "I'm moderately curious about your proposal for the new marketing campaign.",
+     "note": "Shows intellectual interest; polite and professional."
+    },
+    {
+     "text": "I'm rather pleased",
+     "kind": "chunk",
+     "form": "I'm rather pleased",
+     "meaning": "Expresses moderate satisfaction or happiness, often with a hint of formality.",
+     "example": "I'm rather pleased with the progress we've made on the project this week.",
+     "plain": "I'm somewhat satisfied with the progress we've made on the project this week.",
+     "note": "Slightly more formal than \"quite pleased,\" often used in professional contexts."
+    },
+    {
+     "text": "I'm quite content",
+     "kind": "chunk",
+     "form": "I'm quite content",
+     "meaning": "Expresses a state of moderate happiness and satisfaction.",
+     "example": "After a long day, I'm quite content just to relax at home with a book.",
+     "plain": "After a long day, I'm moderately happy just to relax at home with a book.",
+     "note": "Describes a peaceful and satisfied state of mind."
+    },
+    {
+     "text": "I'm absolutely thrilled for you",
+     "kind": "chunk",
+     "form": "I'm absolutely thrilled for you",
+     "meaning": "Expresses intense happiness and excitement for someone else's good news.",
+     "example": "You got the scholarship? I'm absolutely thrilled for you, that's incredible!",
+     "plain": "You got the scholarship? I'm extremely happy for you, that's incredible!",
+     "note": "A very enthusiastic way to share in someone else's joy."
+    },
+    {
+     "text": "I'm so sorry to hear about",
+     "kind": "frame",
+     "form": "I'm so sorry to hear about",
+     "meaning": "Expresses sympathy or regret regarding a specific negative event or situation.",
+     "example": "I'm so sorry to hear about your recent health issues; I hope you recover soon.",
+     "plain": "I regret hearing about your recent health issues; I hope you recover soon.",
+     "note": "A common and empathetic way to respond to bad news about someone's situation."
+    },
+    {
+     "text": "I'm quite taken by surprise",
+     "kind": "chunk",
+     "form": "I'm quite taken by surprise",
+     "meaning": "Expresses a moderate level of astonishment or unexpectedness.",
+     "example": "I'm quite taken by surprise by the sudden announcement of the merger.",
+     "plain": "I'm moderately astonished by the sudden announcement of the merger.",
+     "note": "Similar to \"quite surprised,\" emphasizing the unexpected nature of the event."
+    },
+    {
+     "text": "I'm truly sorry to hear",
+     "kind": "frame",
+     "form": "I'm truly sorry to hear",
+     "meaning": "Expresses deep sympathy or regret upon receiving unfortunate news.",
+     "example": "I'm truly sorry to hear that your grandmother is unwell; please send her my best.",
+     "plain": "I deeply regret hearing that your grandmother is unwell; please send her my best.",
+     "note": "More emphatic than \"I'm sorry to hear,\" conveying deeper concern."
+    },
+    {
+     "text": "I'm quite put out",
+     "kind": "chunk",
+     "form": "I'm quite put out",
+     "meaning": "Expresses mild annoyance or inconvenience, often feeling slightly offended.",
+     "example": "I'm quite put out that they changed the meeting time without telling me.",
+     "plain": "I'm moderately annoyed that they changed the meeting time without telling me.",
+     "note": "Indicates irritation, often with a sense of being unfairly treated."
+    },
+    {
+     "text": "I'm absolutely delighted to",
+     "kind": "frame",
+     "form": "I'm absolutely delighted to",
+     "meaning": "Expresses extreme happiness and pleasure about doing something.",
+     "example": "I'm absolutely delighted to accept your invitation to the conference next month.",
+     "plain": "I'm extremely happy to accept your invitation to the conference next month.",
+     "note": "A very enthusiastic way to express willingness or pleasure in an action."
+    },
+    {
+     "text": "I'm quite relieved",
+     "kind": "chunk",
+     "form": "I'm quite relieved",
+     "meaning": "Expresses a moderate feeling of comfort and ease after worry.",
+     "example": "I'm quite relieved that the project deadline has been extended by a week.",
+     "plain": "I'm moderately comforted that the project deadline has been extended by a week.",
+     "note": "A common and natural expression of relief for less intense situations."
+    },
+    {
+     "text": "I'm quite optimistic",
+     "kind": "chunk",
+     "form": "I'm quite optimistic",
+     "meaning": "Expresses a moderate belief that good things will happen.",
+     "example": "Despite the challenges, I'm quite optimistic about the future of our startup.",
+     "plain": "Despite the challenges, I'm moderately hopeful about the future of our startup.",
+     "note": "Indicates a positive outlook; polite and professional."
+    },
+    {
+     "text": "I'm rather concerned",
+     "kind": "chunk",
+     "form": "I'm rather concerned",
+     "meaning": "Expresses a moderate level of worry or anxiety, often with a formal tone.",
+     "example": "I'm rather concerned about the potential impact of these new regulations.",
+     "plain": "I'm somewhat worried about the potential impact of these new regulations.",
+     "note": "Slightly more formal than \"quite concerned,\" suitable for serious topics."
+    },
+    {
+     "text": "I'm absolutely thrilled with",
+     "kind": "frame",
+     "form": "I'm absolutely thrilled with",
+     "meaning": "Expresses extreme excitement and happiness about something specific.",
+     "example": "I'm absolutely thrilled with the results of the customer satisfaction survey.",
+     "plain": "I'm extremely happy with the results of the customer satisfaction survey.",
+     "note": "Conveys intense joy and satisfaction regarding a particular outcome."
+    },
+    {
+     "text": "I'm quite taken with the idea of",
+     "kind": "frame",
+     "form": "I'm quite taken with the idea of",
+     "meaning": "Expresses a strong positive impression or attraction to a concept or plan.",
+     "example": "I'm quite taken with the idea of collaborating with that innovative startup.",
+     "plain": "I have a strong positive impression of the idea of collaborating with that innovative startup.",
+     "note": "Indicates a strong liking or interest in a particular concept or plan."
+    },
+    {
+     "text": "I'm truly sorry to say",
+     "kind": "frame",
+     "form": "I'm truly sorry to say",
+     "meaning": "Expresses deep regret before delivering bad news or an unpleasant statement.",
+     "example": "I'm truly sorry to say that we won't be able to approve your request this time.",
+     "plain": "I deeply regret to say that we won't be able to approve your request this time.",
+     "note": "A polite but firm way to deliver negative information."
+    },
+    {
+     "text": "I'm quite annoyed by",
+     "kind": "frame",
+     "form": "I'm quite annoyed by",
+     "meaning": "Expresses a moderate level of irritation or displeasure caused by something.",
+     "example": "I'm quite annoyed by the constant interruptions during my presentation.",
+     "plain": "I'm moderately irritated by the constant interruptions during my presentation.",
+     "note": "Specifies the cause of annoyance; direct but not overly aggressive."
+    },
+    {
+     "text": "I'm absolutely delighted that",
+     "kind": "frame",
+     "form": "I'm absolutely delighted that",
+     "meaning": "Expresses extreme happiness and pleasure about a specific fact or event.",
+     "example": "I'm absolutely delighted that you decided to join us for the celebration.",
+     "plain": "I'm extremely happy that you decided to join us for the celebration.",
+     "note": "A very enthusiastic way to express joy about a particular situation."
+    },
+    {
+     "text": "I'm quite surprised to hear",
+     "kind": "frame",
+     "form": "I'm quite surprised to hear",
+     "meaning": "Expresses moderate astonishment upon receiving unexpected news.",
+     "example": "I'm quite surprised to hear that they're moving to another country next year.",
+     "plain": "I'm moderately astonished to hear that they're moving to another country next year.",
+     "note": "A common and polite way to react to unexpected verbal information."
+    },
+    {
+     "text": "I'm truly grateful for",
+     "kind": "frame",
+     "form": "I'm truly grateful for",
+     "meaning": "Expresses sincere appreciation and thankfulness for something specific.",
+     "example": "I'm truly grateful for your unwavering support throughout this challenging period.",
+     "plain": "I'm sincerely thankful for your unwavering support throughout this challenging period.",
+     "note": "A more formal and emphatic way to express thanks for a specific act."
+    },
+    {
+     "text": "I'm quite disappointed by",
+     "kind": "frame",
+     "form": "I'm quite disappointed by",
+     "meaning": "Expresses a moderate level of unhappiness or dissatisfaction caused by something.",
+     "example": "I'm quite disappointed by the lack of communication from the project team.",
+     "plain": "I'm moderately unhappy with the lack of communication from the project team.",
+     "note": "Specifies the cause of disappointment; polite but direct."
+    },
+    {
+     "text": "I'm absolutely thrilled to bits",
+     "kind": "chunk",
+     "form": "I'm absolutely thrilled to bits",
+     "meaning": "Expresses extreme happiness and excitement, often informally.",
+     "example": "My sister just had a baby, and I'm absolutely thrilled to bits for her!",
+     "plain": "My sister just had a baby, and I'm extremely happy for her!",
+     "note": "An informal but strong expression of joy, common in British English."
+    },
+    {
+     "text": "I'm quite taken with the concept",
+     "kind": "chunk",
+     "form": "I'm quite taken with the concept",
+     "meaning": "Expresses a strong positive impression or attraction to a general idea.",
+     "example": "I'm quite taken with the concept of flexible working hours for all employees.",
+     "plain": "I have a strong positive impression of the general idea of flexible working hours for all employees.",
+     "note": "Indicates a strong liking or interest in a broad idea or principle."
+    },
+    {
+     "text": "I'm truly sorry to inform you",
+     "kind": "frame",
+     "form": "I'm truly sorry to inform you",
+     "meaning": "Expresses deep regret before delivering formal bad news.",
+     "example": "I'm truly sorry to inform you that your application was unsuccessful this time.",
+     "plain": "I deeply regret to inform you that your application was unsuccessful this time.",
+     "note": "A formal and polite way to deliver negative news, often in writing or official settings."
+    },
+    {
+     "text": "I'm quite upset about",
+     "kind": "frame",
+     "form": "I'm quite upset about",
+     "meaning": "Expresses a moderate level of distress or unhappiness regarding a specific issue.",
+     "example": "I'm quite upset about the recent changes to our company's benefits package.",
+     "plain": "I'm moderately distressed about the recent changes to our company's benefits package.",
+     "note": "Specifies the cause of upset; direct but not overly emotional."
+    },
+    {
+     "text": "I'm absolutely delighted with the outcome",
+     "kind": "chunk",
+     "form": "I'm absolutely delighted with the outcome",
+     "meaning": "Expresses extreme happiness and satisfaction with a result.",
+     "example": "After all the hard work, I'm absolutely delighted with the outcome of the project.",
+     "plain": "After all the hard work, I'm extremely happy with the result of the project.",
+     "note": "A strong expression of joy and satisfaction for a successful conclusion."
+    },
+    {
+     "text": "I'm quite surprised at",
+     "kind": "frame",
+     "form": "I'm quite surprised at",
+     "meaning": "Expresses moderate astonishment or unexpectedness regarding something specific.",
+     "example": "I'm quite surprised at the sudden increase in demand for our product.",
+     "plain": "I'm moderately astonished at the sudden increase in demand for our product.",
+     "note": "Similar to \"surprised by,\" but often used for a specific event or statistic."
+    },
+    {
+     "text": "I'm truly amazed by",
+     "kind": "frame",
+     "form": "I'm truly amazed by",
+     "meaning": "Expresses sincere wonder and astonishment caused by something specific.",
+     "example": "I'm truly amazed by the resilience of the human spirit in challenging times.",
+     "plain": "I'm sincerely astonished by the resilience of the human spirit in challenging times.",
+     "note": "Conveys strong positive surprise and admiration for a specific quality or action."
+    },
+    {
+     "text": "I'm quite intrigued by",
+     "kind": "frame",
+     "form": "I'm quite intrigued by",
+     "meaning": "Expresses curiosity and interest in something specific.",
+     "example": "I'm quite intrigued by the new research findings on renewable energy.",
+     "plain": "I'm moderately curious about the new research findings on renewable energy.",
+     "note": "Shows intellectual interest in a particular subject or discovery."
+    },
+    {
+     "text": "I'm rather pleased with",
+     "kind": "frame",
+     "form": "I'm rather pleased with",
+     "meaning": "Expresses moderate satisfaction or happiness about something specific.",
+     "example": "I'm rather pleased with the progress we've made on the new software development.",
+     "plain": "I'm somewhat satisfied with the progress we've made on the new software development.",
+     "note": "Slightly more formal than \"quite pleased with,\" often in professional contexts."
+    },
+    {
+     "text": "I'm quite content with",
+     "kind": "frame",
+     "form": "I'm quite content with",
+     "meaning": "Expresses a state of moderate happiness and satisfaction regarding something specific.",
+     "example": "I'm quite content with my current work-life balance, it feels just right.",
+     "plain": "I'm moderately happy with my current work-life balance, it feels just right.",
+     "note": "Describes a peaceful and satisfied state of mind concerning a particular aspect."
+    },
+    {
+     "text": "I'm absolutely thrilled about",
+     "kind": "frame",
+     "form": "I'm absolutely thrilled about",
+     "meaning": "Expresses intense happiness and excitement regarding a specific topic or event.",
+     "example": "I'm absolutely thrilled about the upcoming company retreat to the mountains.",
+     "plain": "I'm extremely happy about the upcoming company retreat to the mountains.",
+     "note": "Conveys strong enthusiasm for a future event or prospect."
+    },
+    {
+     "text": "I'm so sorry to have to",
+     "kind": "frame",
+     "form": "I'm so sorry to have to",
+     "meaning": "Expresses regret before performing an unpleasant or difficult action.",
+     "example": "I'm so sorry to have to ask you to work late again, but it's urgent.",
+     "plain": "I regret that I must ask you to work late again, but it's urgent.",
+     "note": "A polite way to introduce an unwelcome request or task."
+    },
+    {
+     "text": "I'm quite taken with the idea of doing",
+     "kind": "frame",
+     "form": "I'm quite taken with the idea of doing",
+     "meaning": "Expresses a strong positive impression or attraction to a specific action or activity.",
+     "example": "I'm quite taken with the idea of doing a sabbatical next year to travel.",
+     "plain": "I have a strong positive impression of the idea of doing a sabbatical next year to travel.",
+     "note": "Indicates a strong liking or interest in a particular activity or plan."
+    },
+    {
+     "text": "I'm truly sorry for the inconvenience",
+     "kind": "chunk",
+     "form": "I'm truly sorry for the inconvenience",
+     "meaning": "Expresses sincere regret for causing trouble or difficulty.",
+     "example": "I'm truly sorry for the inconvenience caused by the system outage yesterday.",
+     "plain": "I sincerely regret the trouble caused by the system outage yesterday.",
+     "note": "A formal and polite apology for disruption, often in professional settings."
+    },
+    {
+     "text": "I'm quite put out by",
+     "kind": "frame",
+     "form": "I'm quite put out by",
+     "meaning": "Expresses mild annoyance or inconvenience, often feeling slightly offended by something.",
+     "example": "I'm quite put out by the lack of recognition for our team's efforts.",
+     "plain": "I'm moderately annoyed by the lack of recognition for our team's efforts.",
+     "note": "Specifies the cause of irritation, often implying unfairness."
+    },
+    {
+     "text": "I'm absolutely delighted at the prospect",
+     "kind": "chunk",
+     "form": "I'm absolutely delighted at the prospect",
+     "meaning": "Expresses extreme happiness and excitement about a future possibility.",
+     "example": "I'm absolutely delighted at the prospect of working on this groundbreaking research.",
+     "plain": "I'm extremely happy about the possibility of working on this groundbreaking research.",
+     "note": "Conveys strong enthusiasm for a future opportunity or event."
+    },
+    {
+     "text": "I'm quite relieved to hear",
+     "kind": "frame",
+     "form": "I'm quite relieved to hear",
+     "meaning": "Expresses moderate comfort and ease upon receiving reassuring news.",
+     "example": "I'm quite relieved to hear that your surgery went well and you're recovering.",
+     "plain": "I'm moderately comforted to hear that your surgery went well and you're recovering.",
+     "note": "A common and natural expression of relief for less intense situations."
+    },
+    {
+     "text": "I'm quite optimistic about",
+     "kind": "frame",
+     "form": "I'm quite optimistic about",
+     "meaning": "Expresses a moderate belief that good things will happen regarding something specific.",
+     "example": "I'm quite optimistic about the chances of our proposal being accepted.",
+     "plain": "I'm moderately hopeful about the chances of our proposal being accepted.",
+     "note": "Indicates a positive outlook for a particular situation or outcome."
+    },
+    {
+     "text": "I'm rather concerned about the implications",
+     "kind": "chunk",
+     "form": "I'm rather concerned about the implications",
+     "meaning": "Expresses moderate worry about the potential consequences of something.",
+     "example": "I'm rather concerned about the implications of this new policy on our long-term strategy.",
+     "plain": "I'm somewhat worried about the consequences of this new policy on our long-term strategy.",
+     "note": "A formal way to express worry about future effects, often in professional contexts."
+    },
+    {
+     "text": "I'm absolutely thrilled to be",
+     "kind": "frame",
+     "form": "I'm absolutely thrilled to be",
+     "meaning": "Expresses extreme happiness and excitement about being in a certain state or role.",
+     "example": "I'm absolutely thrilled to be part of such a dedicated and innovative team.",
+     "plain": "I'm extremely happy to be part of such a dedicated and innovative team.",
+     "note": "Conveys intense joy about one's current position or involvement."
+    },
+    {
+     "text": "I'm so sorry to bother you",
+     "kind": "chunk",
+     "form": "I'm so sorry to bother you",
+     "meaning": "Expresses polite regret before interrupting or making a request.",
+     "example": "I'm so sorry to bother you, but could you spare a moment to look at this?",
+     "plain": "I regret interrupting you, but could you spare a moment to look at this?",
+     "note": "A common and polite softener when initiating an interaction or request."
+    },
+    {
+     "text": "I'm quite taken with the notion",
+     "kind": "chunk",
+     "form": "I'm quite taken with the notion",
+     "meaning": "Expresses a strong positive impression or attraction to a specific thought or belief.",
+     "example": "I'm quite taken with the notion that creativity can be taught and developed.",
+     "plain": "I have a strong positive impression of the thought that creativity can be taught and developed.",
+     "note": "Indicates a strong liking or interest in a particular belief or abstract idea."
+    },
+    {
+     "text": "I'm truly sorry for any trouble",
+     "kind": "chunk",
+     "form": "I'm truly sorry for any trouble",
+     "meaning": "Expresses sincere regret for causing difficulty or problems.",
+     "example": "I'm truly sorry for any trouble my late submission may have caused the team.",
+     "plain": "I sincerely regret any difficulty my late submission may have caused the team.",
+     "note": "A polite and formal apology for potential or actual problems."
+    },
+    {
+     "text": "I'm quite put out by the fact that",
+     "kind": "frame",
+     "form": "I'm quite put out by the fact that",
+     "meaning": "Expresses mild annoyance or inconvenience, often feeling slightly offended by a specific fact.",
+     "example": "I'm quite put out by the fact that they didn't consult us before making the decision.",
+     "plain": "I'm moderately annoyed by the fact that they didn't consult us before making the decision.",
+     "note": "Specifies the cause of irritation, often implying a breach of expectation."
+    },
+    {
+     "text": "I'm absolutely delighted to announce",
+     "kind": "frame",
+     "form": "I'm absolutely delighted to announce",
+     "meaning": "Expresses extreme happiness and pleasure before making a public declaration.",
+     "example": "I'm absolutely delighted to announce that our new product line is now available.",
+     "plain": "I'm extremely happy to announce that our new product line is now available.",
+     "note": "A formal and enthusiastic way to deliver good news, often in presentations."
+    },
+    {
+     "text": "I'm quite relieved that",
+     "kind": "frame",
+     "form": "I'm quite relieved that",
+     "meaning": "Expresses moderate comfort and ease because a specific worry has been removed.",
+     "example": "I'm quite relieved that the project budget was approved without any cuts.",
+     "plain": "I'm moderately comforted that the project budget was approved without any cuts.",
+     "note": "A common and natural expression of relief for a specific positive outcome."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "i must admit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a huge relief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i can only imagine": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so pleased to hear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a shame": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's not ideal": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a genuine surprise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that makes sense": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i totally get it": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i appreciate that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad to know": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm a bit taken aback": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "it's a tricky situation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i wouldn't have thought": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's really kind of you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "a sense of disappointment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm relieved to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely sure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a bit frustrating": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i can see your point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "my sincere apologies": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's wonderful news": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "absolute delight": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm a little concerned": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm quite surprised by": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was under the impression that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a bit of a worry": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's a real pity": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can't help but feel": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite pleased with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure what to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite taken with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a feeling of being put out": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite looking forward to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just so glad that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm quite touched by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not sure how to feel": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so sorry to hear": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "that's really tough": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what a relief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm thrilled for you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can't imagine how": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately describes the phrase as an expression of empathy acknowledging someone's difficult situation."
+   },
+   "i'm sorry to hear about that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's too bad": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what a nuisance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm delighted for you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so happy for you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm truly sorry": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i can relate to that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that must be tough": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm genuinely surprised": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm rather disappointed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm absolutely thrilled": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm so relieved": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm truly grateful": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm deeply saddened": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite concerned": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite impressed": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm truly sorry for your loss": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm so sorry for that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm quite pleased": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm absolutely delighted": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite taken by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm a little disappointed": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm quite upset": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite surprised": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm truly amazed": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite intrigued": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite content": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm absolutely thrilled for you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm so sorry to hear about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm quite taken by surprise": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm truly sorry to hear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite put out": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm absolutely delighted to": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite relieved": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite optimistic": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm rather concerned": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm absolutely thrilled with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite taken with the idea of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm truly sorry to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm rather pleased": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately captures the meaning and slightly formal tone of the expression in the example."
+   },
+   "i'm quite annoyed by": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm absolutely delighted that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite surprised to hear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm truly grateful for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite disappointed by": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm absolutely thrilled to bits": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite taken with the concept": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm truly sorry to inform you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite upset about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm absolutely delighted with the outcome": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite surprised at": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm truly amazed by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite intrigued by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm rather pleased with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite content with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm absolutely thrilled about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so sorry to have to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite taken with the idea of doing": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm truly sorry for the inconvenience": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite put out by": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm absolutely delighted at the prospect": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite relieved to hear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite optimistic about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm rather concerned about the implications": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm absolutely thrilled to be": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm so sorry to bother you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm quite taken with the notion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm truly sorry for any trouble": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm quite put out by the fact that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm absolutely delighted to announce": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm quite relieved that": {
+    "status": "pass",
+    "level": "B2"
+   }
+  }
+ }
+}

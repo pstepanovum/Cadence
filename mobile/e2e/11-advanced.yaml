@@ -1,0 +1,53 @@
+# The advanced practice screens (docs/PLATFORM.md sections 17 to 19), from
+# the bundled packs with no server: the hub, the phrase bank and one phrase
+# with its drills, slang and one entry, the plateau track's intro and the
+# first diagnostic item, and the recordings library.
+appId: dev.pstepanov.cadence
+name: Advanced practice
+---
+- launchApp:
+    permissions:
+      microphone: allow
+- openLink: cadence:///advanced
+# iOS asks before an app opens its own link from outside.
+- extendedWaitUntil:
+    visible: "Open in .*"
+    timeout: 8000
+    optional: true
+- tapOn:
+    text: "Open"
+    optional: true
+- extendedWaitUntil:
+    visible: "Phrases, slang and the plateau"
+    timeout: 15000
+- takeScreenshot: 11-hub
+- tapOn: "Phrase bank"
+- extendedWaitUntil:
+    visible: "Learn phrases, not words"
+    timeout: 10000
+- takeScreenshot: 11-phrases
+- tapOn: "C1"
+- takeScreenshot: 11-phrases-c1
+- tapOn: "Back"
+- scrollUntilVisible:
+    element: "Modern slang"
+- tapOn: "Modern slang"
+- extendedWaitUntil:
+    visible: "The English nobody taught you"
+    timeout: 10000
+- takeScreenshot: 11-slang
+- tapOn: "Back"
+- scrollUntilVisible:
+    element: "Plateau track"
+- tapOn: "Plateau track"
+- assertVisible: "Take the diagnostic"
+- takeScreenshot: 11-plateau
+- tapOn: "Take the diagnostic"
+- takeScreenshot: 11-diagnostic
+- tapOn: "Stop and come back later"
+- tapOn: "Back"
+- scrollUntilVisible:
+    element: "Your recordings"
+- tapOn: "Your recordings"
+- assertVisible: "Your own voice, kept for comparison"
+- takeScreenshot: 11-recordings

@@ -1,0 +1,82 @@
+{
+ "format": 1,
+ "id": "fossil.sentence-stress",
+ "area": "stress",
+ "title": "Sentence stress and rhythm",
+ "what": "stressing every word evenly instead of the content words, so speech sounds flat and hard to follow",
+ "summary": "Even stress often persists because it's a rhythmic rather than a lexical error, making it difficult to self-correct. This flatness can make speech sound unnatural and less engaging, potentially obscuring the speaker's intended emphasis.",
+ "listenFor": "Pay attention to whether every word in your sentences receives similar emphasis, rather than allowing key content words to stand out.",
+ "grammarPointIds": [],
+ "soundIds": [],
+ "contrasts": [],
+ "drills": [
+  "The project manager meticulously reviewed the comprehensive financial report.",
+  "Effective communication is crucial for successful international business negotiations.",
+  "We must carefully consider all potential risks before making a final investment.",
+  "Developing innovative solutions requires creative thinking and persistent effort.",
+  "The economic forecast suggests a gradual recovery in the coming months.",
+  "She frequently travels for work, attending conferences and client meetings.",
+  "Understanding complex data analytics is essential for strategic decision-making.",
+  "The new policy significantly impacts employee benefits and compensation structures.",
+  "They successfully implemented a robust system to streamline operational processes.",
+  "Our primary objective is to enhance customer satisfaction and market share."
+ ],
+ "probes": [
+  {
+   "sentence": "The board meeting will address critical strategic initiatives and future growth."
+  },
+  {
+   "sentence": "He consistently demonstrates exceptional leadership qualities in challenging situations."
+  },
+  {
+   "sentence": "We anticipate a substantial increase in demand for our specialized services."
+  },
+  {
+   "sentence": "The research team published their findings in a highly respected academic journal."
+  },
+  {
+   "sentence": "It is imperative to prioritize sustainable practices in all corporate endeavors."
+  },
+  {
+   "sentence": "She meticulously prepared a detailed presentation outlining the proposed changes."
+  }
+ ],
+ "pairs": [],
+ "stress": [
+  {
+   "text": "The company's new strategy focuses on market diversification.",
+   "marked": "The COMpany's new STRAtegy FOcuses on MARket diVERsifiCAtion.",
+   "note": "Content words like 'company', 'strategy', 'focuses', 'market', 'diversification' receive stress."
+  },
+  {
+   "text": "We need to analyze the data thoroughly before making a recommendation.",
+   "marked": "We NEED to ANalyze the DAta THOroughly beFORE makING a recomMENdation.",
+   "note": "Verbs, nouns, and adverbs carry the primary stress, guiding the listener."
+  },
+  {
+   "text": "She presented a compelling argument for the proposed policy changes.",
+   "marked": "She preSENted a comPELling ARgument for the proPOSED POlicy CHANges.",
+   "note": "Stress highlights key descriptive and action words, enhancing clarity."
+  },
+  {
+   "text": "The economic outlook remains uncertain due to global political instability.",
+   "marked": "The ecoNOmic OUTlook reMAINS unCERtain DUE to GLObal poLItical instaBILity.",
+   "note": "Nouns, adjectives, and verbs are stressed to convey the core message."
+  },
+  {
+   "text": "It is essential to collaborate effectively across different departments.",
+   "marked": "It is esSENtial to colLABorate efFECtively aCROSS DIFferent dePARTments.",
+   "note": "Stress falls on words that carry significant meaning, not on every syllable."
+  },
+  {
+   "text": "They successfully launched their innovative product ahead of schedule.",
+   "marked": "They sucCESSfully LAUNCHED their INnovative PROduct aHEAD of SCHEDule.",
+   "note": "Verbs, adverbs, and nouns are stressed to emphasize actions and key items."
+  },
+  {
+   "text": "The committee will review the budget proposal during next week's session.",
+   "marked": "The comMITtee will reVIEW the BUDget proPOsal DURing NEXT week's SESsion.",
+   "note": "Content words like 'committee', 'review', 'budget', 'proposal', 'next', 'session' are stressed."
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "format": 1,
+ "id": "fossil.cup-cat-cot",
+ "area": "pronunciation",
+ "title": "Cup, cat and cot",
+ "what": "merging /ʌ/, /æ/ and /ɑ/ or /ɒ/, so 'cup', 'cap' and 'cop' sound alike",
+ "summary": "This subtle vowel distinction often goes unnoticed, as context usually clarifies meaning. However, merging these sounds can lead to ambiguity and requires listeners to exert more effort to understand. This can hinder clear communication in professional settings.",
+ "listenFor": "Notice if the vowels in words like \"cup,\" \"cap,\" and \"cop\" are clearly differentiated in your own speech.",
+ "grammarPointIds": [],
+ "soundIds": [
+  "sound.ah",
+  "sound.ae",
+  "sound.aa",
+  "sound.oh"
+ ],
+ "contrasts": [
+  {
+   "wrong": "He wore a blue cup to the game.",
+   "right": "He wore a blue cap to the game.",
+   "note": "The short 'a' in 'cap' is distinct from the 'u' in 'cup'."
+  },
+  {
+   "wrong": "The baby slept in the new cut.",
+   "right": "The baby slept in the new cot.",
+   "note": "The 'o' in 'cot' is distinct from the 'u' in 'cut'."
+  },
+  {
+   "wrong": "She gave the dog a gentle pot on the head.",
+   "right": "She gave the dog a gentle pat on the head.",
+   "note": "The 'a' in 'pat' is distinct from the 'o' in 'pot'."
+  },
+  {
+   "wrong": "The dog's new collar was a vibrant collar.",
+   "right": "The dog's new collar was a vibrant color.",
+   "note": "The 'u' in 'color' is distinct from the 'a' in 'collar'."
+  }
+ ],
+ "drills": [
+  "The company's annual budget allocation was a complex calculation.",
+  "Managing a large staff requires tact, patience, and a practical approach.",
+  "The architect's plan for the apartment complex had a rather grand facade.",
+  "Despite the challenges, they managed to accomplish their ambitious project.",
+  "A calm, analytical approach can often unravel complex financial problems.",
+  "The conference covered topics from global economics to local agricultural practices.",
+  "Her pragmatic attitude helped them adapt to the sudden market fluctuations.",
+  "We must accurately assess the impact of current policies on future growth.",
+  "The manager's candid feedback helped the team address critical performance gaps.",
+  "Understanding cultural nuances is paramount for successful international collaboration."
+ ],
+ "probes": [
+  {
+   "sentence": "The consultant's analysis highlighted a substantial gap in market penetration."
+  },
+  {
+   "sentence": "A pragmatic approach to budget allocation can prevent future financial strain."
+  },
+  {
+   "sentence": "The committee discussed the practical applications of the new academic research."
+  },
+  {
+   "sentence": "Careful planning can often avert catastrophic outcomes in complex projects."
+  },
+  {
+   "sentence": "The company's annual report accurately captured the challenges and accomplishments."
+  },
+  {
+   "sentence": "Adapting to rapid technological advancements is a constant challenge for many businesses."
+  }
+ ],
+ "pairs": [
+  [
+   "cup",
+   "cap"
+  ],
+  [
+   "cot",
+   "cut"
+  ],
+  [
+   "lack",
+   "luck"
+  ],
+  [
+   "pat",
+   "pot"
+  ],
+  [
+   "back",
+   "buck"
+  ],
+  [
+   "collar",
+   "color"
+  ],
+  [
+   "fan",
+   "fun"
+  ],
+  [
+   "match",
+   "much"
+  ],
+  [
+   "ran",
+   "run"
+  ],
+  [
+   "cat",
+   "cot"
+  ]
+ ],
+ "stress": []
+}

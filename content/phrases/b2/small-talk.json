@@ -1,0 +1,1316 @@
+{
+ "format": 1,
+ "level": "B2",
+ "situation": "small-talk",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "How are things",
+     "kind": "chunk",
+     "form": "How are things",
+     "meaning": "A common, informal way to ask someone how they are doing or how their life is going.",
+     "example": "Hi Mark, long time no see! How are things with you these days?",
+     "plain": "Hi Mark, long time no see! How are you doing these days?",
+     "note": "Very common, informal greeting. Good for starting a casual conversation with someone you know."
+    },
+    {
+     "text": "What have you been up to",
+     "kind": "frame",
+     "form": "What have you been up to",
+     "meaning": "An informal question asking what someone has been doing recently.",
+     "example": "It's been a while, Sarah. What have you been up to since we last met?",
+     "plain": "It's been a while, Sarah. What have you been doing since we last met?",
+     "note": "Casual and friendly. Excellent for reconnecting with acquaintances or friends."
+    },
+    {
+     "text": "catch up on",
+     "kind": "collocation",
+     "form": "catch up on",
+     "meaning": "To learn about recent events or news from someone you haven't spoken to in a while.",
+     "example": "It was great to catch up on all your news from the trip.",
+     "plain": "It was great to hear all your news from the trip.",
+     "note": "Used when you want to hear what someone has been doing. Often followed by 'news' or 'gossip'."
+    },
+    {
+     "text": "It's good to see you",
+     "kind": "chunk",
+     "form": "It's good to see you",
+     "meaning": "A friendly greeting expressing pleasure at meeting or seeing someone.",
+     "example": "Oh, hello! It's good to see you again after all this time.",
+     "plain": "Oh, hello! I'm happy to see you again after all this time.",
+     "note": "Standard polite greeting, suitable for both formal and informal situations."
+    },
+    {
+     "text": "How's your day going",
+     "kind": "frame",
+     "form": "How's your day going",
+     "meaning": "A casual question to ask someone about their current day.",
+     "example": "Morning, Tom. How's your day going so far?",
+     "plain": "Morning, Tom. How is your day so far?",
+     "note": "Common small talk opener, especially in the morning or early afternoon."
+    },
+    {
+     "text": "Can't complain",
+     "kind": "chunk",
+     "form": "Can't complain",
+     "meaning": "An informal response meaning things are generally good or satisfactory.",
+     "example": "How are you doing? Oh, can't complain, just busy with work.",
+     "plain": "How are you doing? Oh, I'm doing fine, just busy with work.",
+     "note": "A very common, understated positive response. Sounds natural and modest."
+    },
+    {
+     "text": "I was just wondering",
+     "kind": "frame",
+     "form": "I was just wondering",
+     "meaning": "A polite way to introduce a question or a tentative suggestion.",
+     "example": "I was just wondering if you'd heard anything about the new project.",
+     "plain": "I wanted to ask if you'd heard anything about the new project.",
+     "note": "Softens a question, making it less direct. Useful for gentle inquiries."
+    },
+    {
+     "text": "What do you think of",
+     "kind": "frame",
+     "form": "What do you think of",
+     "meaning": "A common way to ask for someone's opinion on a topic.",
+     "example": "So, what do you think of the new office layout?",
+     "plain": "So, what's your opinion on the new office layout?",
+     "note": "Direct but polite way to invite someone to share their views."
+    },
+    {
+     "text": "That's a good point",
+     "kind": "chunk",
+     "form": "That's a good point",
+     "meaning": "An expression of agreement, acknowledging the validity of someone's idea.",
+     "example": "You're right, that's a good point about the timing of the meeting.",
+     "plain": "You're right, that's a valid idea about the timing of the meeting.",
+     "note": "Shows you're listening and value their input. Encourages further conversation."
+    },
+    {
+     "text": "I see what you mean",
+     "kind": "chunk",
+     "form": "I see what you mean",
+     "meaning": "An expression indicating understanding of someone's perspective or argument.",
+     "example": "Ah, I see what you mean now; the earlier deadline makes more sense.",
+     "plain": "Ah, I understand your point now; the earlier deadline makes more sense.",
+     "note": "Commonly used to show comprehension, even if you don't fully agree."
+    },
+    {
+     "text": "If you ask me",
+     "kind": "frame",
+     "form": "If you ask me",
+     "meaning": "An informal way to introduce your personal opinion or suggestion.",
+     "example": "If you ask me, they should have started this project sooner.",
+     "plain": "In my opinion, they should have started this project sooner.",
+     "note": "Adds a personal touch to an opinion. Can sound a little strong if overused."
+    },
+    {
+     "text": "To be honest",
+     "kind": "chunk",
+     "form": "To be honest",
+     "meaning": "Used to introduce a frank or sincere statement, sometimes a mild criticism.",
+     "example": "To be honest, I'm not entirely happy with the new policy.",
+     "plain": "Frankly, I'm not entirely happy with the new policy.",
+     "note": "Signals sincerity. Can soften a negative comment or introduce a personal feeling."
+    },
+    {
+     "text": "I'm not sure about that",
+     "kind": "chunk",
+     "form": "I'm not sure about that",
+     "meaning": "A polite way to express disagreement or uncertainty without being confrontational.",
+     "example": "I'm not sure about that; I thought the report said something different.",
+     "plain": "I don't agree with that; I thought the report said something different.",
+     "note": "A gentle way to express doubt or a differing opinion. Very useful in polite conversation."
+    },
+    {
+     "text": "That reminds me of",
+     "kind": "frame",
+     "form": "That reminds me of",
+     "meaning": "Used to introduce a related thought or anecdote triggered by the current conversation.",
+     "example": "Oh, that reminds me of a similar situation I had last year.",
+     "plain": "Oh, that makes me think of a similar situation I had last year.",
+     "note": "Excellent for keeping a conversation flowing by linking topics."
+    },
+    {
+     "text": "Speaking of which",
+     "kind": "chunk",
+     "form": "Speaking of which",
+     "meaning": "Used to introduce a new topic that is related to what was just said.",
+     "example": "We were talking about holidays. Speaking of which, have you booked your trip yet?",
+     "plain": "We were talking about holidays. By the way, have you booked your trip yet?",
+     "note": "Smoothly transitions to a related subject. Very common in natural speech."
+    },
+    {
+     "text": "By the way",
+     "kind": "chunk",
+     "form": "By the way",
+     "meaning": "Used to introduce a new, often unrelated, piece of information or question.",
+     "example": "I'm heading to the shop. By the way, do you need anything?",
+     "plain": "I'm heading to the shop. Also, do you need anything?",
+     "note": "A very common way to change the subject or add an afterthought."
+    },
+    {
+     "text": "On the other hand",
+     "kind": "chunk",
+     "form": "On the other hand",
+     "meaning": "Used to introduce a contrasting point or an alternative perspective.",
+     "example": "It's a long commute, but on the other hand, the job is very rewarding.",
+     "plain": "It's a long commute, but alternatively, the job is very rewarding.",
+     "note": "Helps present a balanced view. Useful for discussing pros and cons."
+    },
+    {
+     "text": "I couldn't agree more",
+     "kind": "chunk",
+     "form": "I couldn't agree more",
+     "meaning": "An emphatic expression of complete agreement with someone's statement.",
+     "example": "That's exactly how I feel. I couldn't agree more with your assessment.",
+     "plain": "That's exactly how I feel. I completely agree with your assessment.",
+     "note": "Strong agreement. Use when you genuinely feel the same way."
+    },
+    {
+     "text": "That's a shame",
+     "kind": "chunk",
+     "form": "That's a shame",
+     "meaning": "An expression of mild disappointment or sympathy for an unfortunate situation.",
+     "example": "Oh, you missed the concert? That's a shame, it was fantastic.",
+     "plain": "Oh, you missed the concert? That's too bad, it was fantastic.",
+     "note": "Commonly used to express regret or sympathy for minor negative events."
+    },
+    {
+     "text": "No worries",
+     "kind": "chunk",
+     "form": "No worries",
+     "meaning": "An informal way of saying 'no problem' or 'it's alright'.",
+     "example": "Thanks for helping out. No worries at all, happy to do it.",
+     "plain": "Thanks for helping out. No problem at all, happy to do it.",
+     "note": "Very common in Australian English, now widely used in British and American English."
+    },
+    {
+     "text": "It's been a pleasure",
+     "kind": "chunk",
+     "form": "It's been a pleasure",
+     "meaning": "A polite way to say goodbye, indicating you enjoyed the interaction.",
+     "example": "Well, I must be going. It's been a pleasure chatting with you.",
+     "plain": "Well, I must be going. I enjoyed chatting with you.",
+     "note": "A polite and slightly formal way to end a conversation, especially with new acquaintances."
+    },
+    {
+     "text": "I should get going",
+     "kind": "chunk",
+     "form": "I should get going",
+     "meaning": "A common, polite way to signal that you need to leave.",
+     "example": "It's getting late, so I should get going now.",
+     "plain": "It's getting late, so I need to leave now.",
+     "note": "A gentle way to exit a conversation without being abrupt."
+    },
+    {
+     "text": "It was nice talking to you",
+     "kind": "chunk",
+     "form": "It was nice talking to you",
+     "meaning": "A polite closing remark when ending a conversation.",
+     "example": "Right, I'll catch you later. It was nice talking to you.",
+     "plain": "Right, I'll catch you later. I enjoyed our conversation.",
+     "note": "Standard polite farewell, suitable for most casual and semi-formal interactions."
+    },
+    {
+     "text": "Have a good one",
+     "kind": "chunk",
+     "form": "Have a good one",
+     "meaning": "An informal, general farewell wishing someone a good day, evening, etc.",
+     "example": "See you tomorrow! Have a good one!",
+     "plain": "See you tomorrow! Have a good day!",
+     "note": "Very common and friendly. Can refer to a day, evening, weekend, or general time."
+    },
+    {
+     "text": "Take care",
+     "kind": "chunk",
+     "form": "Take care",
+     "meaning": "A common, friendly farewell, wishing someone well.",
+     "example": "I'm off now. Take care, and see you next week!",
+     "plain": "I'm off now. Be well, and see you next week!",
+     "note": "A warm and personal way to say goodbye, suitable for friends and colleagues."
+    },
+    {
+     "text": "I'm afraid I have to",
+     "kind": "frame",
+     "form": "I'm afraid I have to",
+     "meaning": "A polite way to express regret when stating something you must do, often leave.",
+     "example": "I'm afraid I have to run, I have another meeting starting soon.",
+     "plain": "Unfortunately, I must leave, I have another meeting starting soon.",
+     "note": "Softens the message, making it sound more apologetic or regretful."
+    },
+    {
+     "text": "I'm really looking forward to",
+     "kind": "frame",
+     "form": "I'm really looking forward to",
+     "meaning": "Used to express strong anticipation or excitement about a future event.",
+     "example": "I'm really looking forward to the team dinner next month.",
+     "plain": "I'm very excited about the team dinner next month.",
+     "note": "A common and enthusiastic way to talk about future plans."
+    },
+    {
+     "text": "It sounds like",
+     "kind": "frame",
+     "form": "It sounds like",
+     "meaning": "Used to express an inference or impression based on what someone has said.",
+     "example": "It sounds like you had a fantastic holiday in Italy.",
+     "plain": "It seems you had a fantastic holiday in Italy.",
+     "note": "Shows you're listening and processing information. Good for empathetic responses."
+    },
+    {
+     "text": "You know what I mean",
+     "kind": "chunk",
+     "form": "You know what I mean",
+     "meaning": "Used to check if the listener understands or agrees with your point.",
+     "example": "It's just a bit overwhelming sometimes, you know what I mean?",
+     "plain": "It's just a bit overwhelming sometimes, do you understand?",
+     "note": "Very common in informal speech. Can be a filler or a genuine check for understanding."
+    },
+    {
+     "text": "I'm just popping out",
+     "kind": "chunk",
+     "form": "I'm just popping out",
+     "meaning": "An informal way to say you are leaving briefly, usually for a short errand.",
+     "example": "I'm just popping out to grab a coffee, back in five.",
+     "plain": "I'm just going out briefly to grab a coffee, back in five.",
+     "note": "Casual and friendly. Implies a quick return. Common in office settings."
+    },
+    {
+     "text": "How was your weekend",
+     "kind": "frame",
+     "form": "How was your weekend",
+     "meaning": "A common question to start a conversation on Monday morning.",
+     "example": "Good morning! How was your weekend, did you do anything fun?",
+     "plain": "Good morning! What did you do this weekend, did you do anything fun?",
+     "note": "Standard small talk for the start of the week. Expect a brief, light answer."
+    },
+    {
+     "text": "Did you hear about",
+     "kind": "frame",
+     "form": "Did you hear about",
+     "meaning": "Used to introduce a piece of news or gossip and ask if the listener knows.",
+     "example": "Did you hear about the new cafe opening down the street?",
+     "plain": "Are you aware of the new cafe opening down the street?",
+     "note": "Good for sharing news or starting a discussion on a current event."
+    },
+    {
+     "text": "I was wondering if",
+     "kind": "frame",
+     "form": "I was wondering if",
+     "meaning": "A polite and indirect way to ask a question or make a request.",
+     "example": "I was wondering if you'd be free for a quick chat later.",
+     "plain": "Would you be free for a quick chat later?",
+     "note": "Very polite and less demanding than a direct question. Useful for requests."
+    },
+    {
+     "text": "It's a small world",
+     "kind": "chunk",
+     "form": "It's a small world",
+     "meaning": "An expression used when you discover an unexpected connection with someone.",
+     "example": "You know my cousin? Wow, it's a small world!",
+     "plain": "You know my cousin? Wow, what an unexpected connection!",
+     "note": "Common and friendly. Expresses surprise at coincidences."
+    },
+    {
+     "text": "What a coincidence",
+     "kind": "chunk",
+     "form": "What a coincidence",
+     "meaning": "An expression of surprise at an unexpected occurrence or connection.",
+     "example": "We both went to the same university? What a coincidence!",
+     "plain": "We both went to the same university? How unexpected!",
+     "note": "Similar to 'It's a small world', but can be used for any surprising event."
+    },
+    {
+     "text": "I'm just about to",
+     "kind": "frame",
+     "form": "I'm just about to",
+     "meaning": "Used to indicate that you are going to do something very soon.",
+     "example": "I'm just about to head out for lunch, want to join?",
+     "plain": "I'm going to head out for lunch very soon, want to join?",
+     "note": "Common for describing immediate future actions. Can be an invitation."
+    },
+    {
+     "text": "How do you find",
+     "kind": "frame",
+     "form": "How do you find",
+     "meaning": "A polite way to ask someone for their opinion or experience of something.",
+     "example": "How do you find working from home these days?",
+     "plain": "What's your experience of working from home these days?",
+     "note": "Asks for a general impression or evaluation. More nuanced than 'What do you think?'"
+    },
+    {
+     "text": "I'm glad to hear that",
+     "kind": "chunk",
+     "form": "I'm glad to hear that",
+     "meaning": "An expression of pleasure or relief upon hearing good news.",
+     "example": "You got the promotion? I'm glad to hear that, congratulations!",
+     "plain": "You got the promotion? I'm happy to hear that, congratulations!",
+     "note": "A warm and supportive response to positive news. Very common."
+    },
+    {
+     "text": "I'm sorry to hear that",
+     "kind": "chunk",
+     "form": "I'm sorry to hear that",
+     "meaning": "An expression of sympathy or regret upon hearing bad news.",
+     "example": "Your flight was cancelled? I'm sorry to hear that, what a hassle.",
+     "plain": "Your flight was cancelled? I regret to hear that, what a hassle.",
+     "note": "A standard empathetic response to negative news. Polite and caring."
+    },
+    {
+     "text": "It's been a long day",
+     "kind": "chunk",
+     "form": "It's been a long day",
+     "meaning": "A common expression to indicate tiredness or that the day has been challenging.",
+     "example": "Phew, it's been a long day, I'm ready to go home.",
+     "plain": "Phew, this day has been tiring, I'm ready to go home.",
+     "note": "Relatable and often used to signal the end of a work day or a desire to rest."
+    },
+    {
+     "text": "I'm just about done",
+     "kind": "chunk",
+     "form": "I'm just about done",
+     "meaning": "Used to indicate that you are very close to finishing a task.",
+     "example": "I'm just about done with this report, then I can join you.",
+     "plain": "I'm almost finished with this report, then I can join you.",
+     "note": "Useful for coordinating activities or managing expectations about your availability."
+    },
+    {
+     "text": "What are your plans for",
+     "kind": "frame",
+     "form": "What are your plans for",
+     "meaning": "A common question to ask about someone's upcoming activities or intentions.",
+     "example": "What are your plans for the long weekend?",
+     "plain": "What will you do during the long weekend?",
+     "note": "Good for light conversation about future leisure time. Avoid overly personal questions."
+    },
+    {
+     "text": "I was just thinking about you",
+     "kind": "chunk",
+     "form": "I was just thinking about you",
+     "meaning": "A friendly expression used when you encounter someone you were recently considering.",
+     "example": "Oh, hi! I was just thinking about you and that project.",
+     "plain": "Oh, hi! I was recently considering you and that project.",
+     "note": "Creates an immediate connection and makes the other person feel acknowledged."
+    },
+    {
+     "text": "How's everything going with",
+     "kind": "frame",
+     "form": "How's everything going with",
+     "meaning": "A general question to ask about the status of a specific project or situation.",
+     "example": "How's everything going with the new software implementation?",
+     "plain": "What's the status of the new software implementation?",
+     "note": "Good for following up on a topic previously discussed. Shows interest."
+    },
+    {
+     "text": "I'm not really sure",
+     "kind": "chunk",
+     "form": "I'm not really sure",
+     "meaning": "A common way to express uncertainty or lack of knowledge about something.",
+     "example": "I'm not really sure what time the event starts, I'll check.",
+     "plain": "I don't know what time the event starts, I'll check.",
+     "note": "Polite and honest. Avoids making up information."
+    },
+    {
+     "text": "I'll keep you posted",
+     "kind": "chunk",
+     "form": "I'll keep you posted",
+     "meaning": "A promise to provide updates as new information becomes available.",
+     "example": "I'll let you know about the meeting time. I'll keep you posted.",
+     "plain": "I'll let you know about the meeting time. I'll give you updates.",
+     "note": "Common and professional. Assures the other person they won't be left out of the loop."
+    },
+    {
+     "text": "Let me know if",
+     "kind": "frame",
+     "form": "Let me know if",
+     "meaning": "Used to offer help or invite someone to inform you about something.",
+     "example": "Let me know if you need any help with the presentation.",
+     "plain": "Tell me if you need any help with the presentation.",
+     "note": "A polite and helpful offer. Encourages communication."
+    },
+    {
+     "text": "I'm just heading off",
+     "kind": "chunk",
+     "form": "I'm just heading off",
+     "meaning": "An informal way to announce that you are leaving a place.",
+     "example": "Right, I'm just heading off now, see you tomorrow.",
+     "plain": "Right, I'm leaving now, see you tomorrow.",
+     "note": "Casual and common. Good for signaling departure from work or a social gathering."
+    },
+    {
+     "text": "It's been a while",
+     "kind": "chunk",
+     "form": "It's been a while",
+     "meaning": "Used to acknowledge that a significant amount of time has passed since last meeting.",
+     "example": "Wow, it's been a while since we last saw each other!",
+     "plain": "Wow, a long time has passed since we last saw each other!",
+     "note": "A friendly way to start a conversation with someone you haven't seen in ages."
+    },
+    {
+     "text": "How's life treating you",
+     "kind": "frame",
+     "form": "How's life treating you",
+     "meaning": "An informal and friendly way to ask someone how they are doing generally.",
+     "example": "Hey, long time no talk! How's life treating you these days?",
+     "plain": "Hey, long time no talk! How are you doing these days?",
+     "note": "More personal than 'How are things?'. Good for closer acquaintances."
+    },
+    {
+     "text": "I'm just trying to",
+     "kind": "frame",
+     "form": "I'm just trying to",
+     "meaning": "Used to explain your current goal or intention, often with a hint of effort.",
+     "example": "I'm just trying to finish this report before the deadline.",
+     "plain": "My goal is to finish this report before the deadline.",
+     "note": "Explains your current focus. Can be used to politely decline an interruption."
+    },
+    {
+     "text": "I'm not really into",
+     "kind": "frame",
+     "form": "I'm not really into",
+     "meaning": "A polite way to say you don't enjoy or have an interest in something.",
+     "example": "Thanks for the invite, but I'm not really into hiking.",
+     "plain": "Thanks for the invite, but I don't really enjoy hiking.",
+     "note": "A gentle way to decline an offer or express disinterest without being rude."
+    },
+    {
+     "text": "That's interesting",
+     "kind": "chunk",
+     "form": "That's interesting",
+     "meaning": "A neutral response indicating you've heard something new or thought-provoking.",
+     "example": "Oh, you're moving to Canada? That's interesting!",
+     "plain": "Oh, you're moving to Canada? That's new information!",
+     "note": "Can be genuine or a polite filler. Use with appropriate tone to avoid sounding sarcastic."
+    },
+    {
+     "text": "I'm just about to leave",
+     "kind": "chunk",
+     "form": "I'm just about to leave",
+     "meaning": "Used to indicate that you are on the verge of departing.",
+     "example": "I'm just about to leave for my appointment, so I can't chat long.",
+     "plain": "I'm going to leave very soon for my appointment, so I can't chat long.",
+     "note": "A clear signal that you need to end the conversation soon."
+    },
+    {
+     "text": "It's good to catch up",
+     "kind": "chunk",
+     "form": "It's good to catch up",
+     "meaning": "A friendly expression used when you've had a chance to talk and share news.",
+     "example": "Well, it's good to catch up, let's do it again soon.",
+     "plain": "Well, it's good to talk and share news, let's do it again soon.",
+     "note": "Common closing remark after a conversation with someone you haven't seen in a while."
+    },
+    {
+     "text": "I'm just wondering if",
+     "kind": "frame",
+     "form": "I'm just wondering if",
+     "meaning": "A very polite and tentative way to ask a question or make a suggestion.",
+     "example": "I'm just wondering if you'd considered a different approach.",
+     "plain": "I wanted to ask if you'd considered a different approach.",
+     "note": "Softer than 'I was wondering if'. Good for sensitive topics or suggestions."
+    },
+    {
+     "text": "What's new with you",
+     "kind": "frame",
+     "form": "What's new with you",
+     "meaning": "An informal question asking for recent updates or news in someone's life.",
+     "example": "Hey, long time no see! What's new with you?",
+     "plain": "Hey, long time no see! What has happened recently in your life?",
+     "note": "Casual and friendly. Good for starting a conversation with an acquaintance."
+    },
+    {
+     "text": "I'm just trying to get",
+     "kind": "frame",
+     "form": "I'm just trying to get",
+     "meaning": "Used to explain your current effort or goal, often related to understanding or achieving something.",
+     "example": "I'm just trying to get my head around this new software.",
+     "plain": "I'm trying to understand this new software.",
+     "note": "Explains a current struggle or learning process. Can invite empathy or advice."
+    },
+    {
+     "text": "I'm not sure I follow",
+     "kind": "chunk",
+     "form": "I'm not sure I follow",
+     "meaning": "A polite way to say you don't understand what someone is explaining.",
+     "example": "Could you explain that again? I'm not sure I follow.",
+     "plain": "Could you explain that again? I don't understand.",
+     "note": "More polite than 'I don't understand'. Good for asking for clarification."
+    },
+    {
+     "text": "I'm just about ready",
+     "kind": "chunk",
+     "form": "I'm just about ready",
+     "meaning": "Used to indicate that you are almost prepared for something.",
+     "example": "Give me five minutes, I'm just about ready to go.",
+     "plain": "Give me five minutes, I'm almost prepared to go.",
+     "note": "Common for coordinating departures or starting activities."
+    },
+    {
+     "text": "I'm just popping in",
+     "kind": "chunk",
+     "form": "I'm just popping in",
+     "meaning": "An informal way to say you are making a brief, quick visit.",
+     "example": "Hi, I'm just popping in to say hello before my next meeting.",
+     "plain": "Hi, I'm visiting briefly to say hello before my next meeting.",
+     "note": "Casual and friendly. Implies a short stay. Common in office or neighborly contexts."
+    },
+    {
+     "text": "I'm just checking in",
+     "kind": "chunk",
+     "form": "I'm just checking in",
+     "meaning": "Used to briefly contact someone to see how they are or how things are going.",
+     "example": "Hi, I'm just checking in to see if you received my email.",
+     "plain": "Hi, I'm contacting you briefly to see if you received my email.",
+     "note": "Common in professional and personal contexts for a quick follow-up."
+    },
+    {
+     "text": "It's been a pleasure meeting you",
+     "kind": "chunk",
+     "form": "It's been a pleasure meeting you",
+     "meaning": "A polite closing remark when ending a conversation with someone you met for the first time.",
+     "example": "Well, I must go. It's been a pleasure meeting you, Sarah.",
+     "plain": "Well, I must go. I enjoyed meeting you, Sarah.",
+     "note": "Standard polite farewell for new acquaintances. Slightly more formal than 'talking to you'."
+    },
+    {
+     "text": "I'm just trying to figure out",
+     "kind": "frame",
+     "form": "I'm just trying to figure out",
+     "meaning": "Used to explain that you are currently attempting to understand or solve something.",
+     "example": "I'm just trying to figure out how to use this new coffee machine.",
+     "plain": "I'm trying to understand how to use this new coffee machine.",
+     "note": "Common for explaining a current mental task or problem-solving effort."
+    },
+    {
+     "text": "What are you up to",
+     "kind": "frame",
+     "form": "What are you up to",
+     "meaning": "An informal question asking what someone is currently doing or planning.",
+     "example": "Hey, what are you up to this evening?",
+     "plain": "Hey, what are you doing this evening?",
+     "note": "Very casual and friendly. Can be used to initiate plans or just chat."
+    },
+    {
+     "text": "I'm just about to start",
+     "kind": "chunk",
+     "form": "I'm just about to start",
+     "meaning": "Used to indicate that you are on the verge of beginning an activity.",
+     "example": "I'm just about to start my presentation, wish me luck!",
+     "plain": "I'm going to start my presentation very soon, wish me luck!",
+     "note": "Common for signaling the imminent beginning of a task or event."
+    },
+    {
+     "text": "It's a bit of a long story",
+     "kind": "chunk",
+     "form": "It's a bit of a long story",
+     "meaning": "Used to indicate that an explanation is complicated or lengthy, often to avoid giving details.",
+     "example": "Why did I change jobs? Oh, it's a bit of a long story.",
+     "plain": "Why did I change jobs? Oh, the explanation is complicated.",
+     "note": "Polite way to deflect a question without being rude, implying you don't have time or desire to explain."
+    },
+    {
+     "text": "I'm just getting started",
+     "kind": "chunk",
+     "form": "I'm just getting started",
+     "meaning": "Used to indicate that you have only recently begun an activity.",
+     "example": "I'm just getting started on this project, so I don't have much to report.",
+     "plain": "I've only recently begun this project, so I don't have much to report.",
+     "note": "Common for setting expectations about progress or availability."
+    },
+    {
+     "text": "I'm just trying to make sure",
+     "kind": "frame",
+     "form": "I'm just trying to make sure",
+     "meaning": "Used to explain your current effort to confirm or verify something.",
+     "example": "I'm just trying to make sure all the details are correct.",
+     "plain": "I'm trying to confirm all the details are correct.",
+     "note": "Explains a careful or diligent approach to a task."
+    },
+    {
+     "text": "I'm just about done with",
+     "kind": "frame",
+     "form": "I'm just about done with",
+     "meaning": "Used to indicate that you are very close to completing a specific task.",
+     "example": "I'm just about done with this email, then I'm free.",
+     "plain": "I'm almost finished with this email, then I'm free.",
+     "note": "Specific version of 'I'm just about done'. Useful for managing expectations."
+    },
+    {
+     "text": "It's been a busy week",
+     "kind": "chunk",
+     "form": "It's been a busy week",
+     "meaning": "A common phrase to explain why you might be tired or haven't done much else.",
+     "example": "I haven't had time for hobbies, it's been a busy week at work.",
+     "plain": "I haven't had time for hobbies, my work week was very active.",
+     "note": "Relatable and often used as a mild excuse or explanation for lack of free time."
+    },
+    {
+     "text": "I'm just trying to catch up",
+     "kind": "chunk",
+     "form": "I'm just trying to catch up",
+     "meaning": "Used to explain that you are working to get up to date after a period of absence or backlog.",
+     "example": "Sorry I'm slow, I'm just trying to catch up on emails after my holiday.",
+     "plain": "Sorry I'm slow, I'm trying to get up to date on emails after my holiday.",
+     "note": "Common in professional settings. Explains a current focus on clearing a backlog."
+    },
+    {
+     "text": "I'm just about to head out",
+     "kind": "chunk",
+     "form": "I'm just about to head out",
+     "meaning": "Used to indicate that you are on the verge of leaving a place.",
+     "example": "I'm just about to head out for the day, see you tomorrow.",
+     "plain": "I'm going to leave for the day very soon, see you tomorrow.",
+     "note": "A clear signal that you are departing. Similar to 'I'm just heading off'."
+    },
+    {
+     "text": "I'm just trying to get organised",
+     "kind": "chunk",
+     "form": "I'm just trying to get organised",
+     "meaning": "Used to explain that you are currently making an effort to arrange or plan things.",
+     "example": "I'm just trying to get organised for the big presentation next week.",
+     "plain": "I'm trying to arrange everything for the big presentation next week.",
+     "note": "Explains a current focus on preparation and planning."
+    },
+    {
+     "text": "It's been a pleasure working with you",
+     "kind": "chunk",
+     "form": "It's been a pleasure working with you",
+     "meaning": "A polite closing remark, especially when a project or collaboration ends.",
+     "example": "As this project wraps up, it's been a pleasure working with you all.",
+     "plain": "As this project wraps up, I enjoyed working with you all.",
+     "note": "Professional and polite. Good for ending a work-related interaction."
+    },
+    {
+     "text": "I'm just trying to get a handle on",
+     "kind": "frame",
+     "form": "I'm just trying to get a handle on",
+     "meaning": "Used to explain that you are currently attempting to understand or manage a situation.",
+     "example": "I'm just trying to get a handle on all these new responsibilities.",
+     "plain": "I'm trying to understand and manage all these new responsibilities.",
+     "note": "Implies a learning curve or a challenge in gaining control."
+    },
+    {
+     "text": "I'm just about to call it a day",
+     "kind": "chunk",
+     "form": "I'm just about to call it a day",
+     "meaning": "An informal way to say you are about to stop working for the day.",
+     "example": "I'm just about to call it a day, I'm exhausted.",
+     "plain": "I'm going to stop working for the day very soon, I'm exhausted.",
+     "note": "Very common and casual. Signals the end of the workday."
+    },
+    {
+     "text": "I'm just trying to get some work done",
+     "kind": "chunk",
+     "form": "I'm just trying to get some work done",
+     "meaning": "Used to politely indicate that you are busy and need to focus on your tasks.",
+     "example": "Sorry, I can't chat long, I'm just trying to get some work done.",
+     "plain": "Sorry, I can't chat long, I'm busy with my tasks.",
+     "note": "A polite way to end or avoid a conversation when you need to concentrate."
+    },
+    {
+     "text": "It's been a productive day",
+     "kind": "chunk",
+     "form": "It's been a productive day",
+     "meaning": "A common phrase to express satisfaction with what you've accomplished.",
+     "example": "I managed to finish three reports, it's been a productive day.",
+     "plain": "I managed to finish three reports, this day was very fruitful.",
+     "note": "Positive and professional. Good for light conversation about work."
+    },
+    {
+     "text": "I'm just trying to get my head around",
+     "kind": "frame",
+     "form": "I'm just trying to get my head around",
+     "meaning": "Used to explain that you are currently attempting to understand a complex idea or situation.",
+     "example": "I'm just trying to get my head around the new tax regulations.",
+     "plain": "I'm trying to understand the new tax regulations.",
+     "note": "Implies a mental effort to grasp something difficult. Very common."
+    },
+    {
+     "text": "I'm just about to grab some lunch",
+     "kind": "chunk",
+     "form": "I'm just about to grab some lunch",
+     "meaning": "Used to indicate that you are about to go and eat lunch.",
+     "example": "I'm just about to grab some lunch, want to join me?",
+     "plain": "I'm going to get some lunch very soon, want to join me?",
+     "note": "Common and casual. Can be an invitation or an explanation for leaving."
+    },
+    {
+     "text": "I'm just trying to sort out",
+     "kind": "frame",
+     "form": "I'm just trying to sort out",
+     "meaning": "Used to explain that you are currently attempting to organize or resolve something.",
+     "example": "I'm just trying to sort out my travel arrangements for next month.",
+     "plain": "I'm trying to organize my travel arrangements for next month.",
+     "note": "Common for explaining a current task involving organization or problem-solving."
+    },
+    {
+     "text": "It's been a pleasure having you",
+     "kind": "chunk",
+     "form": "It's been a pleasure having you",
+     "meaning": "A polite closing remark from a host to a guest, indicating enjoyment of their visit.",
+     "example": "Thanks for coming, it's been a pleasure having you over.",
+     "plain": "Thanks for coming, I enjoyed your visit.",
+     "note": "Used by a host. Polite and warm. Suitable for social gatherings."
+    },
+    {
+     "text": "I'm just trying to finish up",
+     "kind": "chunk",
+     "form": "I'm just trying to finish up",
+     "meaning": "Used to indicate that you are in the final stages of completing a task.",
+     "example": "I'm just trying to finish up this email, then I'm all yours.",
+     "plain": "I'm trying to complete this email, then I'm all yours.",
+     "note": "Common for signaling that you'll be available soon after a task."
+    },
+    {
+     "text": "I'm just about to head home",
+     "kind": "chunk",
+     "form": "I'm just about to head home",
+     "meaning": "Used to indicate that you are on the verge of leaving to go home.",
+     "example": "It's late, I'm just about to head home.",
+     "plain": "It's late, I'm going to leave for home very soon.",
+     "note": "A clear signal that you are departing for the day. Very common."
+    },
+    {
+     "text": "I'm just trying to get a feel for",
+     "kind": "frame",
+     "form": "I'm just trying to get a feel for",
+     "meaning": "Used to explain that you are currently attempting to understand the general nature of something.",
+     "example": "I'm just trying to get a feel for the team dynamics.",
+     "plain": "I'm trying to understand the general nature of the team dynamics.",
+     "note": "Implies an exploratory process of understanding a situation or environment."
+    },
+    {
+     "text": "It's been a while since",
+     "kind": "frame",
+     "form": "It's been a while since",
+     "meaning": "Used to acknowledge that a long time has passed since a particular event.",
+     "example": "It's been a while since I last visited my hometown.",
+     "plain": "A long time has passed since I last visited my hometown.",
+     "note": "Common for reminiscing or explaining a gap in activity."
+    },
+    {
+     "text": "I'm just trying to get organised for",
+     "kind": "frame",
+     "form": "I'm just trying to get organised for",
+     "meaning": "Used to explain that you are currently preparing or arranging things for a specific event.",
+     "example": "I'm just trying to get organised for the conference next week.",
+     "plain": "I'm trying to prepare everything for the conference next week.",
+     "note": "Specific version of 'I'm just trying to get organised'. Focuses on a future event."
+    },
+    {
+     "text": "I'm just about to start on",
+     "kind": "frame",
+     "form": "I'm just about to start on",
+     "meaning": "Used to indicate that you are on the verge of beginning a specific task or project.",
+     "example": "I'm just about to start on the new marketing campaign.",
+     "plain": "I'm going to begin the new marketing campaign very soon.",
+     "note": "Specific version of 'I'm just about to start'. Focuses on a particular task."
+    },
+    {
+     "text": "I'm just trying to get everything ready",
+     "kind": "chunk",
+     "form": "I'm just trying to get everything ready",
+     "meaning": "Used to explain that you are currently making an effort to prepare all necessary items.",
+     "example": "I'm just trying to get everything ready for the client meeting.",
+     "plain": "I'm trying to prepare all necessary items for the client meeting.",
+     "note": "Common for explaining a current focus on comprehensive preparation."
+    },
+    {
+     "text": "It's been a pleasure chatting with you",
+     "kind": "chunk",
+     "form": "It's been a pleasure chatting with you",
+     "meaning": "A polite closing remark when ending a casual conversation.",
+     "example": "Well, I should go. It's been a pleasure chatting with you.",
+     "plain": "Well, I should go. I enjoyed our casual conversation.",
+     "note": "Friendly and polite. Suitable for informal interactions with acquaintances."
+    },
+    {
+     "text": "I'm just trying to get through",
+     "kind": "frame",
+     "form": "I'm just trying to get through",
+     "meaning": "Used to explain that you are currently attempting to complete a difficult or lengthy task.",
+     "example": "I'm just trying to get through this pile of paperwork.",
+     "plain": "I'm trying to complete this large amount of paperwork.",
+     "note": "Implies a struggle or a large volume of work that needs to be done."
+    },
+    {
+     "text": "I'm just about to wrap up",
+     "kind": "chunk",
+     "form": "I'm just about to wrap up",
+     "meaning": "Used to indicate that you are in the final stages of completing a task or meeting.",
+     "example": "I'm just about to wrap up this call, then I'm free.",
+     "plain": "I'm going to finish this call very soon, then I'm free.",
+     "note": "Common in professional settings for signaling the end of a task or interaction."
+    },
+    {
+     "text": "I'm just trying to get a sense of",
+     "kind": "frame",
+     "form": "I'm just trying to get a sense of",
+     "meaning": "Used to explain that you are currently attempting to understand the general impression or feeling of something.",
+     "example": "I'm just trying to get a sense of the team's mood.",
+     "plain": "I'm trying to understand the general feeling of the team.",
+     "note": "Implies an effort to gauge an atmosphere or overall impression."
+    },
+    {
+     "text": "It's been a pleasure working alongside you",
+     "kind": "chunk",
+     "form": "It's been a pleasure working alongside you",
+     "meaning": "A polite closing remark, especially when a collaborative project ends.",
+     "example": "As the project concludes, it's been a pleasure working alongside you.",
+     "plain": "As the project concludes, I enjoyed collaborating with you.",
+     "note": "Professional and polite. Emphasizes collaboration. Slightly more formal."
+    },
+    {
+     "text": "I'm just trying to get everything in order",
+     "kind": "chunk",
+     "form": "I'm just trying to get everything in order",
+     "meaning": "Used to explain that you are currently making an effort to organize and arrange things properly.",
+     "example": "I'm just trying to get everything in order before I leave for vacation.",
+     "plain": "I'm trying to organize and arrange everything properly before I leave for vacation.",
+     "note": "Common for explaining a current focus on thorough organization."
+    },
+    {
+     "text": "I'm just about to head out the door",
+     "kind": "chunk",
+     "form": "I'm just about to head out the door",
+     "meaning": "Used to indicate that you are literally on the verge of leaving a place.",
+     "example": "I'm just about to head out the door, so I'll call you later.",
+     "plain": "I'm going to leave right now, so I'll call you later.",
+     "note": "Very clear signal of imminent departure. Often used to cut a conversation short."
+    },
+    {
+     "text": "I'm just about to call it a night",
+     "kind": "chunk",
+     "form": "I'm just about to call it a night",
+     "meaning": "An informal way to say you are about to stop an activity or go to bed for the evening.",
+     "example": "It's getting late, I'm just about to call it a night.",
+     "plain": "It's getting late, I'm going to stop my activities for the evening.",
+     "note": "Very common and casual. Signals the end of the evening's activities."
+    },
+    {
+     "text": "I'm just trying to get my bearings",
+     "kind": "chunk",
+     "form": "I'm just trying to get my bearings",
+     "meaning": "Used to explain that you are currently attempting to understand your position or situation.",
+     "example": "I'm new to the city, so I'm just trying to get my bearings.",
+     "plain": "I'm new to the city, so I'm trying to understand my position and surroundings.",
+     "note": "Implies a process of orientation, either literally or figuratively in a new situation."
+    },
+    {
+     "text": "I'm just about to get started on",
+     "kind": "frame",
+     "form": "I'm just about to get started on",
+     "meaning": "Used to indicate that you are on the verge of beginning a specific task or project.",
+     "example": "I'm just about to get started on the quarterly report.",
+     "plain": "I'm going to begin the quarterly report very soon.",
+     "note": "Emphasizes the initiation of a particular task. Very common."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "how are things": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what have you been up to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "catch up on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's good to see you": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "how's your day going": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "can't complain": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was just wondering": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what do you think of": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "that's a good point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i see what you mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if you ask me": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure about that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that reminds me of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "speaking of which": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "by the way": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i couldn't agree more": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a shame": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "no worries": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's been a pleasure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i should get going": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it was nice talking to you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "have a good one": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "take care": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm afraid i have to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm really looking forward to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it sounds like": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "you know what i mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just popping out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "how was your weekend": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "did you hear about": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i was wondering if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a small world": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what a coincidence": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just about to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "how do you find": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm glad to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm sorry to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's been a long day": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just about done": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what are your plans for": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i was just thinking about you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how's everything going with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not really sure": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll keep you posted": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let me know if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just heading off": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a while": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how's life treating you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm not really into": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's interesting": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just about to leave": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's good to catch up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just wondering if": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's new with you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not sure i follow": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just about ready": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just popping in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just checking in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's been a pleasure meeting you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to figure out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what are you up to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just about to start": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a bit of a long story": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just getting started": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to make sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just about done with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's been a busy week": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to catch up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just about to head out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get organised": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a pleasure working with you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get a handle on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just about to call it a day": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get some work done": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a productive day": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get my head around": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just about to grab some lunch": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to sort out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a pleasure having you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to finish up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just about to head home": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get a feel for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's been a while since": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get organised for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just about to start on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just trying to get everything ready": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a pleasure chatting with you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get through": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just about to wrap up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get a sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's been a pleasure working alongside you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just trying to get everything in order": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just about to head out the door": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just about to call it a night": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just trying to get my bearings": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm just about to get started on": {
+    "status": "pass",
+    "level": "B1"
+   }
+  }
+ }
+}

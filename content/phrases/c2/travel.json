@@ -1,0 +1,2999 @@
+{
+ "format": 1,
+ "level": "C2",
+ "situation": "travel",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "make a point of",
+     "kind": "chunk",
+     "form": "make a point of",
+     "meaning": "To ensure you do something because it's important or you want to.",
+     "example": "I always make a point of learning a few local phrases when I travel.",
+     "plain": "I always try to learn some local phrases when I travel.",
+     "note": "Emphasizes intentionality; shows a deliberate action."
+    },
+    {
+     "text": "get around to",
+     "kind": "chunk",
+     "form": "get around to",
+     "meaning": "To finally do something after a delay or procrastination.",
+     "example": "I need to get around to booking my train tickets for next week.",
+     "plain": "I need to book my train tickets for next week soon.",
+     "note": "Implies a task that has been pending for a while."
+    },
+    {
+     "text": "in due course",
+     "kind": "chunk",
+     "form": "in due course",
+     "meaning": "At the appropriate time in the future, eventually.",
+     "example": "Your luggage will be delivered to your hotel in due course.",
+     "plain": "Your luggage will be delivered to your hotel when it's ready.",
+     "note": "Formal and reassuring, often used by service staff."
+    },
+    {
+     "text": "bear in mind",
+     "kind": "chunk",
+     "form": "bear in mind",
+     "meaning": "To remember or consider something important.",
+     "example": "Bear in mind that the museum closes early on Sundays.",
+     "plain": "Remember that the museum closes early on Sundays.",
+     "note": "A polite way to give a reminder or important information."
+    },
+    {
+     "text": "for the time being",
+     "kind": "chunk",
+     "form": "for the time being",
+     "meaning": "For now; temporarily.",
+     "example": "We'll stay at this hotel for the time being until our apartment is ready.",
+     "plain": "We'll stay at this hotel temporarily.",
+     "note": "Indicates a temporary arrangement or situation."
+    },
+    {
+     "text": "as a matter of fact",
+     "kind": "chunk",
+     "form": "as a matter of fact",
+     "meaning": "Used to confirm or correct information, often with a slight surprise.",
+     "example": "\"Are you heading to the airport?\" \"As a matter of fact, I am.\"",
+     "plain": "\"Are you heading to the airport?\" \"Yes, I am.\"",
+     "note": "Adds emphasis or a touch of mild irony; can sound slightly formal."
+    },
+    {
+     "text": "by no means",
+     "kind": "chunk",
+     "form": "by no means",
+     "meaning": "Definitely not; not at all.",
+     "example": "The journey was by no means easy, but the destination was worth it.",
+     "plain": "The journey was not easy at all, but the destination was worth it.",
+     "note": "Strong emphasis on negation; sounds quite formal."
+    },
+    {
+     "text": "on second thought",
+     "kind": "chunk",
+     "form": "on second thought",
+     "meaning": "After reconsidering something; changing one's mind.",
+     "example": "I'll take the bus, but on second thought, maybe a taxi would be faster.",
+     "plain": "I'll take the bus, but I've changed my mind, a taxi might be faster.",
+     "note": "Common in casual speech when revising a decision."
+    },
+    {
+     "text": "to some extent",
+     "kind": "chunk",
+     "form": "to some extent",
+     "meaning": "Partially; not entirely.",
+     "example": "The new travel restrictions will affect our plans to some extent.",
+     "plain": "The new travel restrictions will partially affect our plans.",
+     "note": "A common hedge, softening a statement or making it less absolute."
+    },
+    {
+     "text": "in the long run",
+     "kind": "chunk",
+     "form": "in the long run",
+     "meaning": "Over a long period of time; eventually.",
+     "example": "Booking flights in advance might seem restrictive, but it saves money in the long run.",
+     "plain": "Booking flights in advance saves money eventually.",
+     "note": "Refers to future consequences or benefits."
+    },
+    {
+     "text": "at your earliest convenience",
+     "kind": "chunk",
+     "form": "at your earliest convenience",
+     "meaning": "As soon as you can; as soon as it is easy for you.",
+     "example": "Please contact the front desk at your earliest convenience to confirm your departure.",
+     "plain": "Please contact the front desk as soon as you can to confirm your departure.",
+     "note": "Very formal and polite, typically used in written or official requests."
+    },
+    {
+     "text": "get the hang of",
+     "kind": "chunk",
+     "form": "get the hang of",
+     "meaning": "To learn how to do something, especially something new or tricky.",
+     "example": "It took me a while to get the hang of using the local public transport system.",
+     "plain": "It took me a while to learn how to use the local public transport system.",
+     "note": "Informal and common, implies a learning curve."
+    },
+    {
+     "text": "for the record",
+     "kind": "chunk",
+     "form": "for the record",
+     "meaning": "To state something clearly and officially, often to ensure it's noted.",
+     "example": "For the record, I did try to call the airline multiple times about the delay.",
+     "plain": "I want to state that I called the airline many times about the delay.",
+     "note": "Used to emphasize a statement's importance or accuracy."
+    },
+    {
+     "text": "on the whole",
+     "kind": "chunk",
+     "form": "on the whole",
+     "meaning": "Generally speaking; considering everything.",
+     "example": "On the whole, our trip was fantastic despite a few minor hiccups.",
+     "plain": "Generally, our trip was fantastic despite a few minor problems.",
+     "note": "Used to summarize an overall impression or opinion."
+    },
+    {
+     "text": "by and large",
+     "kind": "chunk",
+     "form": "by and large",
+     "meaning": "Mostly; generally.",
+     "example": "By and large, the local cuisine here is delicious and very affordable.",
+     "plain": "Mostly, the local food here is delicious and very affordable.",
+     "note": "Similar to \"on the whole,\" often used for general observations."
+    },
+    {
+     "text": "as far as I'm concerned",
+     "kind": "chunk",
+     "form": "as far as I'm concerned",
+     "meaning": "In my opinion; from my perspective.",
+     "example": "As far as I'm concerned, the best way to see the city is on foot.",
+     "plain": "In my opinion, the best way to see the city is on foot.",
+     "note": "Expresses a personal opinion, can sometimes sound a little assertive."
+    },
+    {
+     "text": "in a nutshell",
+     "kind": "chunk",
+     "form": "in a nutshell",
+     "meaning": "To summarize something very briefly.",
+     "example": "In a nutshell, our flight was delayed, we missed our connection, and our luggage is lost.",
+     "plain": "To summarize, our flight was delayed, we missed our connection, and our luggage is lost.",
+     "note": "Informal and concise, used for quick summaries."
+    },
+    {
+     "text": "at your discretion",
+     "kind": "chunk",
+     "form": "at your discretion",
+     "meaning": "According to your own judgment or choice.",
+     "example": "You can choose your departure time at your discretion, within the operating hours.",
+     "plain": "You can choose your departure time yourself.",
+     "note": "Formal, grants freedom of choice to the other person."
+    },
+    {
+     "text": "without further ado",
+     "kind": "chunk",
+     "form": "without further ado",
+     "meaning": "Without any more delay or fuss.",
+     "example": "Without further ado, let's head to the airport to catch our flight.",
+     "plain": "Let's go to the airport now to catch our flight.",
+     "note": "Slightly formal, often used to transition to an action."
+    },
+    {
+     "text": "to cut a long story short",
+     "kind": "chunk",
+     "form": "to cut a long story short",
+     "meaning": "To tell the main points of a story quickly.",
+     "example": "To cut a long story short, we eventually found our way back to the hotel.",
+     "plain": "We eventually found our way back to the hotel.",
+     "note": "Informal, used when you want to get to the point quickly."
+    },
+    {
+     "text": "take into account",
+     "kind": "collocation",
+     "form": "take into account",
+     "meaning": "To consider something when making a decision or judgment.",
+     "example": "We need to take into account the local customs when planning our itinerary.",
+     "plain": "We need to consider the local customs when planning our itinerary.",
+     "note": "Important for planning and showing cultural sensitivity."
+    },
+    {
+     "text": "reach a compromise",
+     "kind": "collocation",
+     "form": "reach a compromise",
+     "meaning": "To come to an agreement where both sides give up something.",
+     "example": "We had to reach a compromise on our travel dates due to conflicting schedules.",
+     "plain": "We had to agree on travel dates by both giving in a little.",
+     "note": "Used when negotiating or resolving differences."
+    },
+    {
+     "text": "iron out the details",
+     "kind": "collocation",
+     "form": "iron out the details",
+     "meaning": "To resolve small problems or finalize specific arrangements.",
+     "example": "We still need to iron out the details for our airport transfer.",
+     "plain": "We still need to finalize the arrangements for our airport transfer.",
+     "note": "Informal and common, implies resolving minor issues."
+    },
+    {
+     "text": "seize the opportunity",
+     "kind": "collocation",
+     "form": "seize the opportunity",
+     "meaning": "To take advantage of a chance quickly and eagerly.",
+     "example": "We decided to seize the opportunity to visit the ancient ruins while we were nearby.",
+     "plain": "We decided to take the chance to visit the ancient ruins while we were nearby.",
+     "note": "Suggests enthusiasm and quick action."
+    },
+    {
+     "text": "draw a conclusion",
+     "kind": "collocation",
+     "form": "draw a conclusion",
+     "meaning": "To form an opinion or judgment after considering information.",
+     "example": "It's too early to draw a conclusion about the overall success of the trip.",
+     "plain": "It's too early to decide if the trip was successful.",
+     "note": "Formal, used in analytical or evaluative contexts."
+    },
+    {
+     "text": "strike a balance",
+     "kind": "collocation",
+     "form": "strike a balance",
+     "meaning": "To find a satisfactory compromise between two opposing things.",
+     "example": "We tried to strike a balance between sightseeing and relaxation on our vacation.",
+     "plain": "We tried to find a good mix of sightseeing and relaxation on our vacation.",
+     "note": "Common for describing efforts to achieve equilibrium."
+    },
+    {
+     "text": "put a strain on",
+     "kind": "collocation",
+     "form": "put a strain on",
+     "meaning": "To create pressure or tension, potentially causing difficulties.",
+     "example": "The unexpected flight delay really put a strain on our travel budget.",
+     "plain": "The unexpected flight delay really stressed our travel budget.",
+     "note": "Used to describe something that causes stress or difficulty."
+    },
+    {
+     "text": "come to terms with",
+     "kind": "collocation",
+     "form": "come to terms with",
+     "meaning": "To accept and deal with a difficult situation or fact.",
+     "example": "It took me a while to come to terms with the fact that my luggage was truly lost.",
+     "plain": "It took me a while to accept that my luggage was truly lost.",
+     "note": "Implies a process of acceptance, often for something negative."
+    },
+    {
+     "text": "pay attention to",
+     "kind": "collocation",
+     "form": "pay attention to",
+     "meaning": "To focus on or notice something carefully.",
+     "example": "You should pay attention to the safety briefing before the flight.",
+     "plain": "You should listen carefully to the safety briefing before the flight.",
+     "note": "A common instruction or recommendation."
+    },
+    {
+     "text": "take the initiative",
+     "kind": "collocation",
+     "form": "take the initiative",
+     "meaning": "To be the first to act or make a decision, without being told.",
+     "example": "When our tour guide was late, I decided to take the initiative and find out what was happening.",
+     "plain": "When our tour guide was late, I decided to act first and find out what was happening.",
+     "note": "Praises proactive behavior; often used in professional contexts."
+    },
+    {
+     "text": "follow suit",
+     "kind": "collocation",
+     "form": "followed suit",
+     "meaning": "To do the same thing as someone else has just done.",
+     "example": "When one passenger complained about the food, others quickly followed suit.",
+     "plain": "When one passenger complained about the food, others did the same.",
+     "note": "Common in describing group behavior or trends."
+    },
+    {
+     "text": "keep an eye on",
+     "kind": "collocation",
+     "form": "keep an eye on",
+     "meaning": "To watch something or someone carefully.",
+     "example": "Could you keep an eye on my bags while I go to the restroom?",
+     "plain": "Could you watch my bags while I go to the restroom?",
+     "note": "Informal and very common, used for temporary supervision."
+    },
+    {
+     "text": "lose track of",
+     "kind": "collocation",
+     "form": "lose track of",
+     "meaning": "To no longer know where something is or what is happening.",
+     "example": "I often lose track of time when I'm exploring a new city.",
+     "plain": "I often forget what time it is when I'm exploring a new city.",
+     "note": "Common for describing a lapse in awareness."
+    },
+    {
+     "text": "put off",
+     "kind": "collocation",
+     "form": "put off",
+     "meaning": "To postpone or delay doing something.",
+     "example": "We had to put off our trip until next month due to unforeseen circumstances.",
+     "plain": "We had to delay our trip until next month.",
+     "note": "Very common phrasal verb, informal."
+    },
+    {
+     "text": "get the impression",
+     "kind": "collocation",
+     "form": "get the impression",
+     "meaning": "To form an idea or opinion about something, often based on indirect evidence.",
+     "example": "I get the impression that the hotel staff are a bit overwhelmed today.",
+     "plain": "I think the hotel staff are a bit overwhelmed today.",
+     "note": "A polite way to express an observation or feeling without stating it as fact."
+    },
+    {
+     "text": "take a detour",
+     "kind": "collocation",
+     "form": "take a detour",
+     "meaning": "To take a longer, indirect route to a destination.",
+     "example": "We had to take a detour because the main road was closed for repairs.",
+     "plain": "We had to go a different, longer way because the main road was closed.",
+     "note": "Common in travel contexts, literal or figurative."
+    },
+    {
+     "text": "run into trouble",
+     "kind": "collocation",
+     "form": "run into trouble",
+     "meaning": "To encounter difficulties or problems.",
+     "example": "We might run into trouble if we don't have our visas sorted out before we leave.",
+     "plain": "We might have problems if we don't have our visas sorted out.",
+     "note": "Informal and common, implies unexpected difficulties."
+    },
+    {
+     "text": "keep abreast of",
+     "kind": "collocation",
+     "form": "keep abreast of",
+     "meaning": "To stay informed about the latest news or developments.",
+     "example": "It's important to keep abreast of the local travel advisories.",
+     "plain": "It's important to stay informed about the local travel advisories.",
+     "note": "Slightly formal, suggests staying current with information."
+    },
+    {
+     "text": "make arrangements",
+     "kind": "collocation",
+     "form": "make arrangements",
+     "meaning": "To plan and prepare for something.",
+     "example": "We need to make arrangements for our accommodation in advance.",
+     "plain": "We need to plan our accommodation in advance.",
+     "note": "Common for planning events or travel."
+    },
+    {
+     "text": "put one's mind at ease",
+     "kind": "collocation",
+     "form": "put my mind at ease",
+     "meaning": "To relieve someone's worry or anxiety.",
+     "example": "The hotel manager's quick response really put my mind at ease about the lost key.",
+     "plain": "The hotel manager's quick response made me stop worrying about the lost key.",
+     "note": "Used when someone's concerns are alleviated."
+    },
+    {
+     "text": "What I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "To clarify the main point or intention of what you are saying.",
+     "example": "What I'm getting at is, we should probably leave earlier to avoid traffic.",
+     "plain": "My main point is that we should probably leave earlier to avoid traffic.",
+     "note": "Used to explain or summarize your underlying message."
+    },
+    {
+     "text": "The thing is",
+     "kind": "frame",
+     "form": "The thing is",
+     "meaning": "To introduce an important point, explanation, or problem.",
+     "example": "The thing is, I don't have any local currency on me right now.",
+     "plain": "The problem is, I don't have any local currency on me right now.",
+     "note": "Very common and informal, often used to explain a difficulty."
+    },
+    {
+     "text": "It turns out that",
+     "kind": "frame",
+     "form": "It turns out that",
+     "meaning": "To reveal information that was previously unknown or unexpected.",
+     "example": "It turns out that our flight was actually delayed by three hours, not one.",
+     "plain": "We discovered that our flight was actually delayed by three hours.",
+     "note": "Used to introduce a discovery or unexpected fact."
+    },
+    {
+     "text": "I was wondering if",
+     "kind": "frame",
+     "form": "I was wondering if",
+     "meaning": "A very polite and indirect way to ask a question or make a request.",
+     "example": "I was wondering if you could recommend a good local restaurant.",
+     "plain": "Could you recommend a good local restaurant?",
+     "note": "Extremely polite, suitable for asking strangers or service staff."
+    },
+    {
+     "text": "If I could just",
+     "kind": "frame",
+     "form": "If I could just",
+     "meaning": "A polite way to interrupt or interject, often to ask a question or make a point.",
+     "example": "If I could just ask, what time does the last bus leave for the city center?",
+     "plain": "What time does the last bus leave for the city center?",
+     "note": "Used to politely gain attention or interject."
+    },
+    {
+     "text": "I'm calling about",
+     "kind": "frame",
+     "form": "I'm calling about",
+     "meaning": "To state the reason for a phone call directly.",
+     "example": "I'm calling about a reservation I made for next week.",
+     "plain": "I'm calling because of a reservation I made for next week.",
+     "note": "Standard and clear way to open a phone conversation."
+    },
+    {
+     "text": "What I mean is",
+     "kind": "frame",
+     "form": "What I mean is",
+     "meaning": "To clarify or rephrase something you've just said.",
+     "example": "The hotel is a bit far, what I mean is, it's not within walking distance of the attractions.",
+     "plain": "The hotel is a bit far; it's not within walking distance of the attractions.",
+     "note": "Used to elaborate or make a statement clearer."
+    },
+    {
+     "text": "The point is",
+     "kind": "frame",
+     "form": "The point is",
+     "meaning": "To emphasize the most important aspect of what you are saying.",
+     "example": "The point is, we need to find a solution to this luggage issue quickly.",
+     "plain": "The most important thing is that we need to solve this luggage issue quickly.",
+     "note": "Direct and assertive, used to highlight importance."
+    },
+    {
+     "text": "I'm afraid that",
+     "kind": "frame",
+     "form": "I'm afraid that",
+     "meaning": "A polite way to introduce bad news or a negative statement.",
+     "example": "I'm afraid that your flight has been cancelled due to bad weather.",
+     "plain": "Your flight has been cancelled due to bad weather.",
+     "note": "Softens negative information, showing regret."
+    },
+    {
+     "text": "It seems to me that",
+     "kind": "frame",
+     "form": "It seems to me that",
+     "meaning": "To express an opinion or observation, often cautiously.",
+     "example": "It seems to me that the train schedule has changed recently.",
+     "plain": "I think the train schedule has changed recently.",
+     "note": "A polite and indirect way to offer an opinion."
+    },
+    {
+     "text": "I'd like to inquire about",
+     "kind": "frame",
+     "form": "I'd like to inquire about",
+     "meaning": "A formal and polite way to ask for information.",
+     "example": "I'd like to inquire about the availability of a room for tonight.",
+     "plain": "I want to ask about the availability of a room for tonight.",
+     "note": "Formal and professional, suitable for customer service interactions."
+    },
+    {
+     "text": "Could you tell me",
+     "kind": "frame",
+     "form": "Could you tell me",
+     "meaning": "A polite and common way to ask for information.",
+     "example": "Could you tell me how to get to the nearest bus stop from here?",
+     "plain": "How do I get to the nearest bus stop from here?",
+     "note": "Standard polite question, widely applicable."
+    },
+    {
+     "text": "I'm having a bit of trouble with",
+     "kind": "frame",
+     "form": "I'm having a bit of trouble with",
+     "meaning": "A polite and understated way to explain a problem you are experiencing.",
+     "example": "I'm having a bit of trouble with the Wi-Fi connection in my room.",
+     "plain": "The Wi-Fi connection in my room isn't working well.",
+     "note": "Softens a complaint, making it less direct."
+    },
+    {
+     "text": "The problem is that",
+     "kind": "frame",
+     "form": "The problem is that",
+     "meaning": "To introduce the main difficulty or obstacle.",
+     "example": "The problem is that we don't have enough time to visit all the museums.",
+     "plain": "We don't have enough time to visit all the museums.",
+     "note": "Direct and clear, used to state a specific issue."
+    },
+    {
+     "text": "I'm calling to confirm",
+     "kind": "frame",
+     "form": "I'm calling to confirm",
+     "meaning": "To state the purpose of a call, specifically to verify details.",
+     "example": "I'm calling to confirm my flight details for tomorrow morning.",
+     "plain": "I'm calling to verify my flight details for tomorrow morning.",
+     "note": "Standard and efficient for phone calls."
+    },
+    {
+     "text": "It's worth noting that",
+     "kind": "frame",
+     "form": "It's worth noting that",
+     "meaning": "To introduce an important piece of information that should be remembered.",
+     "example": "It's worth noting that the local market is only open on weekends.",
+     "plain": "Remember that the local market is only open on weekends.",
+     "note": "Highlights important information, often a useful tip."
+    },
+    {
+     "text": "I'm looking for",
+     "kind": "frame",
+     "form": "I'm looking for",
+     "meaning": "To state what you are trying to find.",
+     "example": "I'm looking for a good coffee shop with Wi-Fi nearby.",
+     "plain": "I want to find a good coffee shop with Wi-Fi nearby.",
+     "note": "Simple and direct, common for asking directions or recommendations."
+    },
+    {
+     "text": "What I'd like to do is",
+     "kind": "frame",
+     "form": "What I'd like to do is",
+     "meaning": "To state your intention or preference.",
+     "example": "What I'd like to do is reschedule my train ticket for later today.",
+     "plain": "I want to reschedule my train ticket for later today.",
+     "note": "A polite and slightly indirect way to express a desire."
+    },
+    {
+     "text": "I'm trying to",
+     "kind": "frame",
+     "form": "I'm trying to",
+     "meaning": "To explain your current goal or effort.",
+     "example": "I'm trying to find the departure gate for flight BA249.",
+     "plain": "I want to find the departure gate for flight BA249.",
+     "note": "Common when asking for help with a task."
+    },
+    {
+     "text": "Could you possibly",
+     "kind": "frame",
+     "form": "Could you possibly",
+     "meaning": "A very polite and tentative way to make a request.",
+     "example": "Could you possibly help me with my luggage up the stairs?",
+     "plain": "Could you help me with my luggage up the stairs?",
+     "note": "Extremely polite, used for requests that might be inconvenient."
+    },
+    {
+     "text": "I'm calling to inquire about",
+     "kind": "frame",
+     "form": "I'm calling to inquire about",
+     "meaning": "A formal way to state the purpose of a call, seeking information.",
+     "example": "I'm calling to inquire about the status of my lost baggage claim.",
+     "plain": "I'm calling to ask about my lost baggage claim.",
+     "note": "Formal and professional, suitable for customer service."
+    },
+    {
+     "text": "It's important to remember that",
+     "kind": "frame",
+     "form": "It's important to remember that",
+     "meaning": "To emphasize a crucial piece of information.",
+     "example": "It's important to remember that some shops close for a siesta in the afternoon.",
+     "plain": "Remember that some shops close for a siesta in the afternoon.",
+     "note": "Highlights a key point, often a warning or useful tip."
+    },
+    {
+     "text": "I'm just checking if",
+     "kind": "frame",
+     "form": "I'm just checking if",
+     "meaning": "A casual and polite way to verify information.",
+     "example": "I'm just checking if my room reservation includes breakfast.",
+     "plain": "Does my room reservation include breakfast?",
+     "note": "Informal and common, used for quick verification."
+    },
+    {
+     "text": "I'd be grateful if",
+     "kind": "frame",
+     "form": "I'd be grateful if",
+     "meaning": "A very polite and formal way to make a request.",
+     "example": "I'd be grateful if you could provide a map of the local area.",
+     "plain": "Please provide a map of the local area.",
+     "note": "Formal and deferential, often used in written communication or formal requests."
+    },
+    {
+     "text": "I'm afraid I don't",
+     "kind": "frame",
+     "form": "I'm afraid I don't",
+     "meaning": "A polite way to decline or state a lack of knowledge.",
+     "example": "I'm afraid I don't speak the local language very well.",
+     "plain": "I don't speak the local language very well.",
+     "note": "Softens a negative statement, showing regret."
+    },
+    {
+     "text": "It's a good idea to",
+     "kind": "frame",
+     "form": "It's a good idea to",
+     "meaning": "To offer advice or a recommendation.",
+     "example": "It's a good idea to carry a copy of your passport when exploring.",
+     "plain": "You should carry a copy of your passport when exploring.",
+     "note": "Common for giving practical advice."
+    },
+    {
+     "text": "I'm calling regarding",
+     "kind": "frame",
+     "form": "I'm calling regarding",
+     "meaning": "A formal way to state the subject of a phone call.",
+     "example": "I'm calling regarding the delayed flight to London.",
+     "plain": "I'm calling about the delayed flight to London.",
+     "note": "Formal and professional, used in business or customer service."
+    },
+    {
+     "text": "I'm having difficulty with",
+     "kind": "frame",
+     "form": "I'm having difficulty with",
+     "meaning": "A polite and formal way to state a problem you are experiencing.",
+     "example": "I'm having difficulty with the online check-in process.",
+     "plain": "I'm finding the online check-in process difficult.",
+     "note": "More formal than \"a bit of trouble,\" suitable for official complaints."
+    },
+    {
+     "text": "I'm hoping to",
+     "kind": "frame",
+     "form": "I'm hoping to",
+     "meaning": "To express a desire or plan, often with a hint of uncertainty.",
+     "example": "I'm hoping to catch the early train to avoid the rush hour.",
+     "plain": "I want to catch the early train to avoid the rush hour.",
+     "note": "Softer than \"I want to,\" implies a wish or plan."
+    },
+    {
+     "text": "I'm just wondering if",
+     "kind": "frame",
+     "form": "I'm just wondering if",
+     "meaning": "A casual and polite way to ask a question or make a suggestion.",
+     "example": "I'm just wondering if there's a shuttle service to the airport.",
+     "plain": "Is there a shuttle service to the airport?",
+     "note": "Informal and friendly, often used for simple inquiries."
+    },
+    {
+     "text": "I'm trying to get to",
+     "kind": "frame",
+     "form": "I'm trying to get to",
+     "meaning": "To state your destination when asking for directions.",
+     "example": "I'm trying to get to the main square; could you show me on the map?",
+     "plain": "I want to go to the main square; could you show me on the map?",
+     "note": "Common and direct when asking for directions."
+    },
+    {
+     "text": "I'm calling about my",
+     "kind": "frame",
+     "form": "I'm calling about my",
+     "meaning": "To state the specific item or service you are calling about.",
+     "example": "I'm calling about my reservation for tomorrow night.",
+     "plain": "I'm calling because of my reservation for tomorrow night.",
+     "note": "Direct and efficient for phone calls."
+    },
+    {
+     "text": "I'm looking to",
+     "kind": "frame",
+     "form": "I'm looking to",
+     "meaning": "To express your intention or goal.",
+     "example": "I'm looking to book a guided tour of the city for next Tuesday.",
+     "plain": "I want to book a guided tour of the city for next Tuesday.",
+     "note": "Common for expressing plans or desires, especially for services."
+    },
+    {
+     "text": "I'm calling to follow up on",
+     "kind": "frame",
+     "form": "I'm calling to follow up on",
+     "meaning": "To state the purpose of a call, specifically to check on a previous matter.",
+     "example": "I'm calling to follow up on my complaint about the noisy room.",
+     "plain": "I'm calling to check on my complaint about the noisy room.",
+     "note": "Professional and persistent, used for ongoing issues."
+    },
+    {
+     "text": "I'm calling to change",
+     "kind": "frame",
+     "form": "I'm calling to change",
+     "meaning": "To state the purpose of a call, specifically to alter something.",
+     "example": "I'm calling to change my flight date to next month.",
+     "plain": "I'm calling to alter my flight date to next month.",
+     "note": "Direct and efficient for making changes over the phone."
+    },
+    {
+     "text": "I'm calling to cancel",
+     "kind": "frame",
+     "form": "I'm calling to cancel",
+     "meaning": "To state the purpose of a call, specifically to revoke a booking or service.",
+     "example": "I'm calling to cancel my hotel reservation for next weekend.",
+     "plain": "I'm calling to revoke my hotel reservation for next weekend.",
+     "note": "Direct and efficient for cancellations over the phone."
+    },
+    {
+     "text": "I'm calling to make a reservation",
+     "kind": "frame",
+     "form": "I'm calling to make a reservation",
+     "meaning": "To state the purpose of a call, specifically to book something.",
+     "example": "I'm calling to make a reservation for dinner tonight at 7 PM.",
+     "plain": "I'm calling to book dinner tonight at 7 PM.",
+     "note": "Direct and efficient for making bookings over the phone."
+    },
+    {
+     "text": "I'm calling to report",
+     "kind": "frame",
+     "form": "I'm calling to report",
+     "meaning": "To state the purpose of a call, specifically to inform about an issue.",
+     "example": "I'm calling to report that the shower in my room isn't working.",
+     "plain": "I'm calling to inform you that the shower in my room isn't working.",
+     "note": "Direct and formal, used for official complaints or issues."
+    },
+    {
+     "text": "I'm calling to ask about",
+     "kind": "frame",
+     "form": "I'm calling to ask about",
+     "meaning": "To state the purpose of a call, specifically to request information.",
+     "example": "I'm calling to ask about the shuttle service schedule.",
+     "plain": "I'm calling to request information about the shuttle service schedule.",
+     "note": "Direct and common for general inquiries over the phone."
+    },
+    {
+     "text": "I'm calling to arrange",
+     "kind": "frame",
+     "form": "I'm calling to arrange",
+     "meaning": "To state the purpose of a call, specifically to organize something.",
+     "example": "I'm calling to arrange a late check-out for tomorrow.",
+     "plain": "I'm calling to organize a late check-out for tomorrow.",
+     "note": "Direct and efficient for making arrangements over the phone."
+    },
+    {
+     "text": "raise a concern",
+     "kind": "collocation",
+     "form": "raise a concern",
+     "meaning": "To politely bring up an issue or worry.",
+     "example": "I need to raise a concern about the cleanliness of our room.",
+     "plain": "I need to mention a problem with our room's cleanliness.",
+     "note": "Diplomatic and formal, used when addressing issues with service providers."
+    },
+    {
+     "text": "there seems to be an issue",
+     "kind": "chunk",
+     "form": "there seems to be an issue",
+     "meaning": "A polite and indirect way to state that a problem exists.",
+     "example": "There seems to be an issue with the air conditioning in my room.",
+     "plain": "The air conditioning in my room isn't working.",
+     "note": "Softens a complaint, making it less confrontational."
+    },
+    {
+     "text": "I'm afraid there's been a misunderstanding",
+     "kind": "frame",
+     "form": "I'm afraid there's been a misunderstanding",
+     "meaning": "A polite way to correct someone or point out an error without blaming.",
+     "example": "I'm afraid there's been a misunderstanding regarding the tour departure time.",
+     "plain": "I think we have different information about the tour departure time.",
+     "note": "Useful for correcting errors gently, often when a booking is wrong."
+    },
+    {
+     "text": "point me in the right direction",
+     "kind": "collocation",
+     "form": "point me in the right direction",
+     "meaning": "To give someone instructions or advice on how to find something or proceed.",
+     "example": "Could you point me in the right direction for the nearest metro station?",
+     "plain": "Could you tell me how to get to the nearest metro station?",
+     "note": "A common, friendly way to ask for directions or guidance."
+    },
+    {
+     "text": "I'm a bit lost",
+     "kind": "chunk",
+     "form": "I'm a bit lost",
+     "meaning": "To admit you don't know where you are or what to do.",
+     "example": "I'm a bit lost; could you tell me how to get back to the hotel?",
+     "plain": "I don't know where I am; how do I get back to the hotel?",
+     "note": "A natural, slightly understated way to ask for help with directions."
+    },
+    {
+     "text": "immerse oneself in",
+     "kind": "collocation",
+     "form": "immerse myself in",
+     "meaning": "To fully engage with and experience a new culture or environment.",
+     "example": "I try to immerse myself in the local culture whenever I travel.",
+     "plain": "I try to fully experience the local culture when I travel.",
+     "note": "Suggests a deep engagement, often used for cultural experiences."
+    },
+    {
+     "text": "worth the effort",
+     "kind": "chunk",
+     "form": "worth the effort",
+     "meaning": "Something that justifies the time or energy spent on it.",
+     "example": "The hike to the viewpoint was challenging, but definitely worth the effort.",
+     "plain": "The hike was hard, but the view made it worthwhile.",
+     "note": "Used to describe something rewarding despite difficulty."
+    },
+    {
+     "text": "One thing I've noticed is",
+     "kind": "frame",
+     "form": "One thing I've noticed is",
+     "meaning": "To introduce an observation or comment about something.",
+     "example": "One thing I've noticed is how friendly everyone is here.",
+     "plain": "I've observed that everyone here is very friendly.",
+     "note": "A natural way to share an observation or insight."
+    },
+    {
+     "text": "express my gratitude",
+     "kind": "collocation",
+     "form": "express my gratitude",
+     "meaning": "To formally or politely thank someone.",
+     "example": "I'd like to express my gratitude for your excellent service.",
+     "plain": "I want to thank you for your excellent service.",
+     "note": "More formal than \"thank you,\" used for significant appreciation."
+    },
+    {
+     "text": "I really appreciate it",
+     "kind": "chunk",
+     "form": "I really appreciate it",
+     "meaning": "To show strong thanks for help or kindness.",
+     "example": "Thanks for helping with my luggage; I really appreciate it.",
+     "plain": "Thank you for helping with my luggage.",
+     "note": "A common, sincere way to show appreciation."
+    },
+    {
+     "text": "Would you mind",
+     "kind": "frame",
+     "form": "Would you mind",
+     "meaning": "A very polite way to ask someone to do something.",
+     "example": "Would you mind telling me where the nearest ATM is?",
+     "plain": "Could you tell me where the nearest ATM is?",
+     "note": "Extremely polite, often followed by a gerund."
+    },
+    {
+     "text": "double-check the booking",
+     "kind": "collocation",
+     "form": "double-check the booking",
+     "meaning": "To verify reservation details again to ensure accuracy.",
+     "example": "I'd like to double-check the booking for our flight tomorrow, just to be safe.",
+     "plain": "I want to confirm our flight reservation again for tomorrow.",
+     "note": "Common for important arrangements; shows diligence."
+    },
+    {
+     "text": "just to be on the safe side",
+     "kind": "chunk",
+     "form": "just to be on the safe side",
+     "meaning": "To take extra precautions to avoid potential problems.",
+     "example": "I packed an extra adapter, just to be on the safe side, in case one breaks.",
+     "plain": "I packed an extra adapter as a precaution.",
+     "note": "A common, informal way to explain a cautious action."
+    },
+    {
+     "text": "I was hoping to",
+     "kind": "frame",
+     "form": "I was hoping to",
+     "meaning": "A polite way to express a desire or request, often implying a slight uncertainty.",
+     "example": "I was hoping to extend my stay by one night, if that's possible.",
+     "plain": "I want to extend my stay by one night.",
+     "note": "Very polite and indirect, suitable for requests."
+    },
+    {
+     "text": "get a sense of",
+     "kind": "collocation",
+     "form": "get a sense of",
+     "meaning": "To begin to understand or form an impression of something.",
+     "example": "It takes a few days to get a sense of the city's rhythm.",
+     "plain": "It takes a few days to understand the city's rhythm.",
+     "note": "Common for understanding new environments or situations."
+    },
+    {
+     "text": "take a chance",
+     "kind": "collocation",
+     "form": "take a chance",
+     "meaning": "To do something risky, hoping for a positive outcome.",
+     "example": "We decided to take a chance and try the small local restaurant without a reservation.",
+     "plain": "We decided to risk it and try the local restaurant without a reservation.",
+     "note": "Informal and common, implies a willingness to risk."
+    },
+    {
+     "text": "miss out on",
+     "kind": "collocation",
+     "form": "miss out on",
+     "meaning": "To lose an opportunity to experience something good.",
+     "example": "I don't want to miss out on seeing the sunset from the castle.",
+     "plain": "I want to see the sunset from the castle and not miss it.",
+     "note": "Common for expressing regret or a desire not to miss an experience."
+    },
+    {
+     "text": "get the most out of",
+     "kind": "collocation",
+     "form": "get the most out of",
+     "meaning": "To gain the maximum benefit or enjoyment from something.",
+     "example": "We're trying to get the most out of our short trip by planning carefully.",
+     "plain": "We're trying to maximize our short trip by planning carefully.",
+     "note": "Common for optimizing experiences or resources."
+    },
+    {
+     "text": "keep an open mind",
+     "kind": "collocation",
+     "form": "keep an open mind",
+     "meaning": "To be willing to consider new ideas or opinions.",
+     "example": "It's good to keep an open mind when trying new foods abroad.",
+     "plain": "It's good to be receptive to new foods abroad.",
+     "note": "Encourages flexibility and receptiveness, especially in new cultures."
+    },
+    {
+     "text": "have a word with",
+     "kind": "collocation",
+     "form": "have a word with",
+     "meaning": "To speak briefly with someone, often to discuss a problem or request.",
+     "example": "I need to have a word with the hotel manager about the noise.",
+     "plain": "I need to speak briefly with the hotel manager about the noise.",
+     "note": "Informal and common, often used for a mild complaint or request."
+    },
+    {
+     "text": "make a mental note",
+     "kind": "collocation",
+     "form": "make a mental note",
+     "meaning": "To remember something important without writing it down.",
+     "example": "I'll make a mental note to bring a warmer jacket next time we visit this region.",
+     "plain": "I'll remember to bring a warmer jacket next time we visit this region.",
+     "note": "Common for remembering small but important details."
+    },
+    {
+     "text": "take a rain check",
+     "kind": "collocation",
+     "form": "take a rain check",
+     "meaning": "To decline an invitation but suggest doing it at a later time.",
+     "example": "I can't join the tour today, but I'd love to take a rain check for tomorrow.",
+     "plain": "I can't join the tour today, but I'd like to do it another day.",
+     "note": "Informal and polite, used for postponing an activity."
+    },
+    {
+     "text": "be in two minds",
+     "kind": "collocation",
+     "form": "am in two minds",
+     "meaning": "To be unable to decide between two courses of action.",
+     "example": "I am in two minds about whether to visit the museum or the art gallery.",
+     "plain": "I can't decide whether to visit the museum or the art gallery.",
+     "note": "Common for expressing indecision."
+    },
+    {
+     "text": "keep a low profile",
+     "kind": "collocation",
+     "form": "keep a low profile",
+     "meaning": "To avoid attracting attention or publicity.",
+     "example": "When traveling in crowded areas, it's sometimes best to keep a low profile.",
+     "plain": "When traveling in crowded areas, it's sometimes best to avoid attracting attention.",
+     "note": "Suggests discretion or caution, often for safety or privacy."
+    },
+    {
+     "text": "take a step back",
+     "kind": "collocation",
+     "form": "take a step back",
+     "meaning": "To temporarily stop an activity to consider it more carefully.",
+     "example": "Let's take a step back and re-evaluate our itinerary for tomorrow.",
+     "plain": "Let's pause and re-evaluate our itinerary for tomorrow.",
+     "note": "Common for gaining perspective or reconsidering plans."
+    },
+    {
+     "text": "get a handle on",
+     "kind": "collocation",
+     "form": "get a handle on",
+     "meaning": "To understand or manage a situation or problem.",
+     "example": "It took me a few days to get a handle on the local currency exchange rates.",
+     "plain": "It took me a few days to understand the local currency exchange rates.",
+     "note": "Informal and common, implies gaining control or understanding."
+    },
+    {
+     "text": "be on the same page",
+     "kind": "collocation",
+     "form": "are on the same page",
+     "meaning": "To have the same understanding or agreement as someone else.",
+     "example": "Before we book, let's make sure we are on the same page about our budget.",
+     "plain": "Before we book, let's make sure we agree on our budget.",
+     "note": "Common in planning, ensures mutual understanding."
+    },
+    {
+     "text": "have a good grasp of",
+     "kind": "collocation",
+     "form": "have a good grasp of",
+     "meaning": "To have a thorough understanding of something.",
+     "example": "Our tour guide seems to have a good grasp of the city's history.",
+     "plain": "Our tour guide seems to understand the city's history well.",
+     "note": "Formal, indicates comprehensive knowledge."
+    },
+    {
+     "text": "put things into perspective",
+     "kind": "collocation",
+     "form": "put things into perspective",
+     "meaning": "To help someone understand the true importance of something.",
+     "example": "Seeing the ancient ruins really put things into perspective about human history.",
+     "plain": "Seeing the ancient ruins helped me understand human history's true importance.",
+     "note": "Common for gaining a broader understanding or context."
+    },
+    {
+     "text": "take a mental break",
+     "kind": "collocation",
+     "form": "take a mental break",
+     "meaning": "To pause from mental effort or stress to relax one's mind.",
+     "example": "After a long day of sightseeing, I needed to take a mental break.",
+     "plain": "After a long day of sightseeing, I needed to relax my mind.",
+     "note": "Common for self-care and managing stress."
+    },
+    {
+     "text": "get the ball rolling",
+     "kind": "collocation",
+     "form": "get the ball rolling",
+     "meaning": "To start a process or activity.",
+     "example": "Let's get the ball rolling on planning our next adventure.",
+     "plain": "Let's start planning our next adventure.",
+     "note": "Informal and common, used to initiate action."
+    },
+    {
+     "text": "have a change of heart",
+     "kind": "collocation",
+     "form": "had a change of heart",
+     "meaning": "To change one's opinion or decision about something.",
+     "example": "I had a change of heart and decided to extend my stay for another week.",
+     "plain": "I changed my mind and decided to extend my stay for another week.",
+     "note": "Common for describing a shift in opinion or desire."
+    },
+    {
+     "text": "I'm just calling to",
+     "kind": "frame",
+     "form": "I'm just calling to",
+     "meaning": "A casual and direct way to state the purpose of a phone call.",
+     "example": "I'm just calling to see if my laundry is ready for pickup.",
+     "plain": "I'm calling to ask if my laundry is ready for pickup.",
+     "note": "Informal and efficient for routine phone inquiries."
+    },
+    {
+     "text": "I'm calling on behalf of",
+     "kind": "frame",
+     "form": "I'm calling on behalf of",
+     "meaning": "To state that you are making a call for another person.",
+     "example": "I'm calling on behalf of my friend who lost her passport.",
+     "plain": "I'm calling for my friend who lost her passport.",
+     "note": "Formal and polite, used when representing someone else."
+    },
+    {
+     "text": "I'm calling about an issue with",
+     "kind": "frame",
+     "form": "I'm calling about an issue with",
+     "meaning": "To state the purpose of a call, specifically to report a problem.",
+     "example": "I'm calling about an issue with my flight booking.",
+     "plain": "I'm calling because there's a problem with my flight booking.",
+     "note": "Direct and clear for reporting problems over the phone."
+    },
+    {
+     "text": "I'm calling to confirm my",
+     "kind": "frame",
+     "form": "I'm calling to confirm my",
+     "meaning": "To state the purpose of a call, specifically to verify a personal booking.",
+     "example": "I'm calling to confirm my hotel reservation for tonight.",
+     "plain": "I'm calling to verify my hotel reservation for tonight.",
+     "note": "Efficient for confirming personal arrangements."
+    },
+    {
+     "text": "I'm calling to ask for",
+     "kind": "frame",
+     "form": "I'm calling to ask for",
+     "meaning": "To state the purpose of a call, specifically to request something.",
+     "example": "I'm calling to ask for directions to the nearest train station.",
+     "plain": "I'm calling to request directions to the nearest train station.",
+     "note": "Direct and common for making requests over the phone."
+    },
+    {
+     "text": "I'm calling to see if",
+     "kind": "frame",
+     "form": "I'm calling to see if",
+     "meaning": "A casual way to inquire about a possibility or availability.",
+     "example": "I'm calling to see if there are any rooms available for tonight.",
+     "plain": "I'm calling to ask if there are any rooms available for tonight.",
+     "note": "Informal and polite, used for checking availability."
+    },
+    {
+     "text": "I'm calling to let you know that",
+     "kind": "frame",
+     "form": "I'm calling to let you know that",
+     "meaning": "To state the purpose of a call, specifically to provide information.",
+     "example": "I'm calling to let you know that I'll be checking in late.",
+     "plain": "I'm calling to inform you that I'll be checking in late.",
+     "note": "Common and direct for conveying information."
+    },
+    {
+     "text": "I'm calling to clarify",
+     "kind": "frame",
+     "form": "I'm calling to clarify",
+     "meaning": "To state the purpose of a call, specifically to make something clearer.",
+     "example": "I'm calling to clarify the terms of my travel insurance policy.",
+     "plain": "I'm calling to make the terms of my travel insurance policy clearer.",
+     "note": "Professional and direct, used for seeking clarification."
+    },
+    {
+     "text": "I'm calling to confirm the details of",
+     "kind": "frame",
+     "form": "I'm calling to confirm the details of",
+     "meaning": "To state the purpose of a call, specifically to verify specific arrangements.",
+     "example": "I'm calling to confirm the details of my airport transfer.",
+     "plain": "I'm calling to verify the specific arrangements for my airport transfer.",
+     "note": "Formal and precise, used for important arrangements."
+    },
+    {
+     "text": "I'm calling to reschedule my",
+     "kind": "frame",
+     "form": "I'm calling to reschedule my",
+     "meaning": "To state the purpose of a call, specifically to change an appointment time.",
+     "example": "I'm calling to reschedule my guided tour for next week.",
+     "plain": "I'm calling to change the time of my guided tour for next week.",
+     "note": "Direct and efficient for changing appointments."
+    },
+    {
+     "text": "I'm calling to check on my",
+     "kind": "frame",
+     "form": "I'm calling to check on my",
+     "meaning": "To state the purpose of a call, specifically to inquire about the status of something.",
+     "example": "I'm calling to check on my luggage that was delayed.",
+     "plain": "I'm calling to ask about the status of my delayed luggage.",
+     "note": "Common for following up on items or services."
+    },
+    {
+     "text": "I'm calling to report a problem with",
+     "kind": "frame",
+     "form": "I'm calling to report a problem with",
+     "meaning": "To state the purpose of a call, specifically to inform about an issue.",
+     "example": "I'm calling to report a problem with the plumbing in my room.",
+     "plain": "I'm calling to inform you about a plumbing issue in my room.",
+     "note": "Formal and direct, used for official complaints."
+    },
+    {
+     "text": "I'm calling to request a",
+     "kind": "frame",
+     "form": "I'm calling to request a",
+     "meaning": "To state the purpose of a call, specifically to ask for a service or item.",
+     "example": "I'm calling to request a wake-up call for 6 AM tomorrow.",
+     "plain": "I'm calling to ask for a wake-up call for 6 AM tomorrow.",
+     "note": "Direct and efficient for making specific requests."
+    },
+    {
+     "text": "I'm calling to confirm that",
+     "kind": "frame",
+     "form": "I'm calling to confirm that",
+     "meaning": "To state the purpose of a call, specifically to verify a fact or arrangement.",
+     "example": "I'm calling to confirm that my airport shuttle is booked for tomorrow.",
+     "plain": "I'm calling to verify that my airport shuttle is booked for tomorrow.",
+     "note": "Clear and efficient for confirming information."
+    },
+    {
+     "text": "I'm calling to make an inquiry about",
+     "kind": "frame",
+     "form": "I'm calling to make an inquiry about",
+     "meaning": "A formal way to state the purpose of a call, seeking information.",
+     "example": "I'm calling to make an inquiry about local transportation options.",
+     "plain": "I'm calling to ask about local transportation options.",
+     "note": "Formal and polite, suitable for detailed information requests."
+    },
+    {
+     "text": "I'm calling to arrange for",
+     "kind": "frame",
+     "form": "I'm calling to arrange for",
+     "meaning": "To state the purpose of a call, specifically to organize a service.",
+     "example": "I'm calling to arrange for a taxi to the airport this evening.",
+     "plain": "I'm calling to organize a taxi to the airport this evening.",
+     "note": "Direct and efficient for scheduling services."
+    },
+    {
+     "text": "I'm calling to follow up on a",
+     "kind": "frame",
+     "form": "I'm calling to follow up on a",
+     "meaning": "To state the purpose of a call, specifically to check on a previous request or issue.",
+     "example": "I'm calling to follow up on a request I made yesterday.",
+     "plain": "I'm calling to check on a request I made yesterday.",
+     "note": "Professional and persistent, used for ongoing matters."
+    },
+    {
+     "text": "I'm calling to see if I can",
+     "kind": "frame",
+     "form": "I'm calling to see if I can",
+     "meaning": "A polite and casual way to inquire about a possibility for yourself.",
+     "example": "I'm calling to see if I can get a late check-out tomorrow.",
+     "plain": "I'm calling to ask if I can get a late check-out tomorrow.",
+     "note": "Informal and polite, used for personal requests."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "to my understanding",
+     "kind": "chunk",
+     "form": "To my understanding",
+     "meaning": "Based on what I believe I know or have been told.",
+     "example": "To my understanding, the train to Florence departs from platform 7, is that correct?",
+     "plain": "I believe the train to Florence departs from platform 7, is that correct?",
+     "note": "Used to confirm information politely, often when there's a slight uncertainty."
+    },
+    {
+     "text": "if I'm not mistaken",
+     "kind": "chunk",
+     "form": "If I'm not mistaken",
+     "meaning": "Used to introduce a statement that you believe is correct, but you are not entirely sure.",
+     "example": "If I'm not mistaken, the museum closes at 5 PM on weekdays, so we have plenty of time.",
+     "plain": "I think the museum closes at 5 PM on weekdays, so we have plenty of time.",
+     "note": "A polite way to state something you think is true, inviting correction if wrong."
+    },
+    {
+     "text": "just to clarify",
+     "kind": "chunk",
+     "form": "Just to clarify",
+     "meaning": "Used to ask for more specific information or to ensure understanding.",
+     "example": "Just to clarify, does the shuttle service run hourly or only at specific times?",
+     "plain": "Can you tell me if the shuttle service runs hourly or only at specific times?",
+     "note": "Common in professional and polite interactions to seek precision."
+    },
+    {
+     "text": "I'm a little unclear on",
+     "kind": "frame",
+     "form": "I'm a little unclear on",
+     "meaning": "To state that you don't fully understand a specific detail or aspect.",
+     "example": "I'm a little unclear on the exact check-out procedure for early departures.",
+     "plain": "I don't fully understand the exact check-out procedure for early departures.",
+     "note": "A polite and understated way to admit confusion or ask for more information."
+    },
+    {
+     "text": "could you elaborate on",
+     "kind": "frame",
+     "form": "Could you elaborate on",
+     "meaning": "To ask someone to provide more details or explain something further.",
+     "example": "Could you elaborate on the options for public transport from the airport to the city centre?",
+     "plain": "Can you give me more details about the public transport options from the airport?",
+     "note": "A formal and polite request for more detailed information."
+    },
+    {
+     "text": "I'd appreciate it if",
+     "kind": "frame",
+     "form": "I'd appreciate it if",
+     "meaning": "A polite way to make a request or express a preference.",
+     "example": "I'd appreciate it if you could confirm our reservation via email before tomorrow.",
+     "plain": "Please confirm our reservation via email before tomorrow.",
+     "note": "A very common and polite way to make a request, slightly more formal than \"please\"."
+    },
+    {
+     "text": "I was hoping you could",
+     "kind": "frame",
+     "form": "I was hoping you could",
+     "meaning": "A gentle and indirect way to ask for help or a favour.",
+     "example": "I was hoping you could recommend a good local restaurant that serves vegetarian options.",
+     "plain": "Can you recommend a good local restaurant that serves vegetarian options?",
+     "note": "Very polite and less demanding than a direct question."
+    },
+    {
+     "text": "I'm having a slight issue",
+     "kind": "chunk",
+     "form": "I'm having a slight issue",
+     "meaning": "To politely report a minor problem or difficulty.",
+     "example": "I'm having a slight issue with the Wi-Fi connection in my room; it keeps dropping out.",
+     "plain": "The Wi-Fi connection in my room is not working well; it keeps dropping out.",
+     "note": "A polite and understated way to report a problem, implying it's not a major crisis."
+    },
+    {
+     "text": "to be perfectly honest",
+     "kind": "chunk",
+     "form": "To be perfectly honest",
+     "meaning": "Used to introduce a frank or direct statement, often one that might be slightly critical.",
+     "example": "To be perfectly honest, the room wasn't quite as advertised on your website.",
+     "plain": "The room was not quite as advertised on your website.",
+     "note": "Adds emphasis and sincerity, can soften a negative comment."
+    },
+    {
+     "text": "I'm a bit concerned about",
+     "kind": "frame",
+     "form": "I'm a bit concerned about",
+     "meaning": "To express mild worry or dissatisfaction about something.",
+     "example": "I'm a bit concerned about the lack of hot water this morning; it was completely cold.",
+     "plain": "I'm worried about the lack of hot water this morning; it was completely cold.",
+     "note": "A polite and understated way to express a problem or worry."
+    },
+    {
+     "text": "I'd like to suggest that",
+     "kind": "frame",
+     "form": "I'd like to suggest that",
+     "meaning": "A polite way to propose an idea or a course of action.",
+     "example": "I'd like to suggest that the hotel provide clearer signage for the breakfast area.",
+     "plain": "I think the hotel should provide clearer signage for the breakfast area.",
+     "note": "A formal and diplomatic way to offer advice or a recommendation."
+    },
+    {
+     "text": "I'm keen to",
+     "kind": "frame",
+     "form": "I'm keen to",
+     "meaning": "To express strong interest or eagerness to do something.",
+     "example": "I'm keen to explore the local markets, so any recommendations would be great.",
+     "plain": "I really want to explore the local markets, so any recommendations would be great.",
+     "note": "Common in British English, expresses enthusiasm."
+    },
+    {
+     "text": "I'm looking forward to",
+     "kind": "frame",
+     "form": "I'm looking forward to",
+     "meaning": "To express anticipation and excitement about a future event.",
+     "example": "I'm looking forward to trying the regional cuisine during my stay here.",
+     "plain": "I'm excited to try the regional cuisine during my stay here.",
+     "note": "A very common and natural way to express positive anticipation."
+    },
+    {
+     "text": "I'm happy to",
+     "kind": "frame",
+     "form": "I'm happy to",
+     "meaning": "To express willingness or readiness to do something.",
+     "example": "I'm happy to wait a few minutes if the table isn't quite ready yet.",
+     "plain": "I don't mind waiting a few minutes if the table isn't quite ready yet.",
+     "note": "A polite way to offer to do something or accept a minor inconvenience."
+    },
+    {
+     "text": "I'm not entirely sure",
+     "kind": "chunk",
+     "form": "I'm not entirely sure",
+     "meaning": "To express uncertainty or lack of complete knowledge about something.",
+     "example": "I'm not entirely sure which bus goes to the main square from here.",
+     "plain": "I don't know for certain which bus goes to the main square from here.",
+     "note": "A polite and common way to admit you don't know something."
+    },
+    {
+     "text": "I'm under the impression that",
+     "kind": "frame",
+     "form": "I'm under the impression that",
+     "meaning": "To state what you believe to be true, often based on what you've heard or observed.",
+     "example": "I'm under the impression that breakfast is included in our room rate.",
+     "plain": "I think breakfast is included in our room rate.",
+     "note": "A slightly formal way to state a belief, inviting confirmation or correction."
+    },
+    {
+     "text": "I'd be interested to know",
+     "kind": "frame",
+     "form": "I'd be interested to know",
+     "meaning": "A polite way to ask for information or express curiosity.",
+     "example": "I'd be interested to know if there are any local events happening this weekend.",
+     "plain": "I want to know if there are any local events happening this weekend.",
+     "note": "A polite and indirect way to ask a question."
+    },
+    {
+     "text": "I'd like to confirm",
+     "kind": "frame",
+     "form": "I'd like to confirm",
+     "meaning": "To verify information or an arrangement.",
+     "example": "I'd like to confirm the pick-up time for our airport transfer tomorrow morning.",
+     "plain": "I want to verify the pick-up time for our airport transfer tomorrow morning.",
+     "note": "A standard and polite way to check details."
+    },
+    {
+     "text": "I'd like to clarify",
+     "kind": "frame",
+     "form": "I'd like to clarify",
+     "meaning": "To make something clearer or to ask for clarification.",
+     "example": "I'd like to clarify the cancellation policy for this booking, just in case.",
+     "plain": "I want to make the cancellation policy for this booking clearer.",
+     "note": "A polite and direct way to seek or provide clarity."
+    },
+    {
+     "text": "I'd like to request",
+     "kind": "frame",
+     "form": "I'd like to request",
+     "meaning": "A polite and formal way to ask for something.",
+     "example": "I'd like to request a late check-out, if that's at all possible.",
+     "plain": "I want to ask for a late check-out, if that's at all possible.",
+     "note": "A standard, polite, and slightly formal way to make a request."
+    },
+    {
+     "text": "I'd like to point out",
+     "kind": "frame",
+     "form": "I'd like to point out",
+     "meaning": "To draw attention to a specific fact or detail, often to correct or inform.",
+     "example": "I'd like to point out that the air conditioning in our room isn't working.",
+     "plain": "I want to mention that the air conditioning in our room isn't working.",
+     "note": "Can be used to politely highlight a problem or discrepancy."
+    },
+    {
+     "text": "I'd like to bring to your attention",
+     "kind": "frame",
+     "form": "I'd like to bring to your attention",
+     "meaning": "A formal way to inform someone about something, often a problem or concern.",
+     "example": "I'd like to bring to your attention a discrepancy in the bill for our stay.",
+     "plain": "I want to tell you about a difference in the bill for our stay.",
+     "note": "Very formal and polite, used for more significant issues."
+    },
+    {
+     "text": "I'm having some difficulty",
+     "kind": "chunk",
+     "form": "I'm having some difficulty",
+     "meaning": "To politely state that you are experiencing a problem or challenge.",
+     "example": "I'm having some difficulty connecting to the hotel's Wi-Fi network.",
+     "plain": "I'm finding it hard to connect to the hotel's Wi-Fi network.",
+     "note": "A polite and common way to report a problem without being overly demanding."
+    },
+    {
+     "text": "I'm trying to ascertain",
+     "kind": "frame",
+     "form": "I'm trying to ascertain",
+     "meaning": "To attempt to find out or confirm information, often with some effort.",
+     "example": "I'm trying to ascertain the best route to the city centre during rush hour.",
+     "plain": "I'm trying to find out the best route to the city centre during rush hour.",
+     "note": "Formal and precise, implies a careful search for accurate information."
+    },
+    {
+     "text": "I'm hoping to arrange",
+     "kind": "frame",
+     "form": "I'm hoping to arrange",
+     "meaning": "To express a desire to organize or schedule something.",
+     "example": "I'm hoping to arrange a taxi for an early morning departure tomorrow.",
+     "plain": "I want to organize a taxi for an early morning departure tomorrow.",
+     "note": "A polite and slightly indirect way to state a request for an arrangement."
+    },
+    {
+     "text": "I'm just checking in on",
+     "kind": "frame",
+     "form": "I'm just checking in on",
+     "meaning": "To follow up on the status of something or to see how things are progressing.",
+     "example": "I'm just checking in on the status of my luggage, which hasn't arrived yet.",
+     "plain": "I'm checking the status of my luggage, which hasn't arrived yet.",
+     "note": "Informal and friendly, used to politely follow up."
+    },
+    {
+     "text": "I'm just confirming that",
+     "kind": "frame",
+     "form": "I'm just confirming that",
+     "meaning": "To verify a piece of information or an agreement.",
+     "example": "I'm just confirming that our flight is still scheduled to depart on time.",
+     "plain": "I'm verifying that our flight is still scheduled to depart on time.",
+     "note": "A common and polite way to double-check details."
+    },
+    {
+     "text": "I'm just wondering about",
+     "kind": "frame",
+     "form": "I'm just wondering about",
+     "meaning": "A casual and polite way to ask a question or express curiosity.",
+     "example": "I'm just wondering about the best way to get to the nearest supermarket from here.",
+     "plain": "I'm curious about the best way to get to the nearest supermarket from here.",
+     "note": "Very informal and friendly, softens a direct question."
+    },
+    {
+     "text": "I'm hoping you can help",
+     "kind": "frame",
+     "form": "I'm hoping you can help",
+     "meaning": "A polite and direct way to ask for assistance.",
+     "example": "I'm hoping you can help me find a pharmacy that's open late tonight.",
+     "plain": "Can you please help me find a pharmacy that's open late tonight?",
+     "note": "A common and polite way to request assistance."
+    },
+    {
+     "text": "I'm trying to locate",
+     "kind": "frame",
+     "form": "I'm trying to locate",
+     "meaning": "To attempt to find the position or whereabouts of something or someone.",
+     "example": "I'm trying to locate the nearest ATM, as I'm running low on cash.",
+     "plain": "I'm trying to find the nearest ATM, as I'm running low on cash.",
+     "note": "A polite and slightly formal way to ask for directions or help finding something."
+    },
+    {
+     "text": "I'm looking to book",
+     "kind": "frame",
+     "form": "I'm looking to book",
+     "meaning": "To express an intention or desire to make a reservation.",
+     "example": "I'm looking to book a table for two at your restaurant for Saturday evening.",
+     "plain": "I want to book a table for two at your restaurant for Saturday evening.",
+     "note": "A common and natural way to state your intention to make a reservation."
+    },
+    {
+     "text": "I'm looking for information on",
+     "kind": "frame",
+     "form": "I'm looking for information on",
+     "meaning": "To state that you are seeking details or facts about a particular topic.",
+     "example": "I'm looking for information on local hiking trails suitable for beginners.",
+     "plain": "I want information about local hiking trails suitable for beginners.",
+     "note": "A straightforward and polite way to ask for specific details."
+    },
+    {
+     "text": "I'm trying to get a refund",
+     "kind": "frame",
+     "form": "I'm trying to get a refund",
+     "meaning": "To state your intention to obtain money back for a purchase or service.",
+     "example": "I'm trying to get a refund for the cancelled tour, as it was not my fault.",
+     "plain": "I want to get my money back for the cancelled tour, as it was not my fault.",
+     "note": "A direct but polite way to state your objective when dealing with a problem."
+    },
+    {
+     "text": "I'm trying to resolve",
+     "kind": "frame",
+     "form": "I'm trying to resolve",
+     "meaning": "To state your intention to find a solution to a problem or issue.",
+     "example": "I'm trying to resolve the issue with my hotel key card, which isn't working.",
+     "plain": "I'm trying to fix the problem with my hotel key card, which isn't working.",
+     "note": "A professional and polite way to indicate you are working on a solution."
+    },
+    {
+     "text": "I'm trying to understand",
+     "kind": "frame",
+     "form": "I'm trying to understand",
+     "meaning": "To express an effort to comprehend something, often when it's complex or unclear.",
+     "example": "I'm trying to understand the local bus schedule, as it seems quite complicated.",
+     "plain": "I'm trying to make sense of the local bus schedule, as it seems quite complicated.",
+     "note": "A polite way to admit confusion and seek explanation."
+    },
+    {
+     "text": "I'm trying to make sense of",
+     "kind": "frame",
+     "form": "I'm trying to make sense of",
+     "meaning": "To attempt to comprehend or find meaning in something confusing.",
+     "example": "I'm trying to make sense of these directions, but they seem to contradict each other.",
+     "plain": "I'm trying to understand these directions, but they seem to contradict each other.",
+     "note": "Implies a struggle with complex or conflicting information."
+    },
+    {
+     "text": "I'm trying to get through to",
+     "kind": "frame",
+     "form": "I'm trying to get through to",
+     "meaning": "To attempt to contact someone by phone, often with difficulty.",
+     "example": "I'm trying to get through to the airline's customer service, but the line is always busy.",
+     "plain": "I'm trying to call the airline's customer service, but the line is always busy.",
+     "note": "Common when experiencing difficulty reaching someone by phone."
+    },
+    {
+     "text": "I'm trying to sort out",
+     "kind": "frame",
+     "form": "I'm trying to sort out",
+     "meaning": "To attempt to organize, resolve, or deal with a problem or situation.",
+     "example": "I'm trying to sort out my travel insurance claim after my bag was delayed.",
+     "plain": "I'm trying to deal with my travel insurance claim after my bag was delayed.",
+     "note": "Informal and common, implies dealing with a complex or messy situation."
+    },
+    {
+     "text": "I'm trying to arrange for",
+     "kind": "frame",
+     "form": "I'm trying to arrange for",
+     "meaning": "To attempt to organize or make preparations for something.",
+     "example": "I'm trying to arrange for a late check-out, as my flight isn't until evening.",
+     "plain": "I'm trying to organize a late check-out, as my flight isn't until evening.",
+     "note": "A polite way to state your intention to make a specific arrangement."
+    },
+    {
+     "text": "I'm trying to get hold of",
+     "kind": "frame",
+     "form": "I'm trying to get hold of",
+     "meaning": "To attempt to contact or find someone or something.",
+     "example": "I'm trying to get hold of the hotel manager to discuss my booking issue.",
+     "plain": "I'm trying to contact the hotel manager to discuss my booking issue.",
+     "note": "Informal and common, often implies some difficulty in reaching someone."
+    },
+    {
+     "text": "I'm trying to figure out",
+     "kind": "frame",
+     "form": "I'm trying to figure out",
+     "meaning": "To attempt to understand or solve something.",
+     "example": "I'm trying to figure out how to use this public transport card system.",
+     "plain": "I'm trying to understand how to use this public transport card system.",
+     "note": "Common and informal, implies a process of discovery or problem-solving."
+    },
+    {
+     "text": "I'm trying to make sure",
+     "kind": "frame",
+     "form": "I'm trying to make sure",
+     "meaning": "To attempt to ensure that something is correct or happens as planned.",
+     "example": "I'm trying to make sure I have all the necessary documents for customs.",
+     "plain": "I'm trying to ensure I have all the necessary documents for customs.",
+     "note": "Common and practical, used when verifying details to avoid problems."
+    },
+    {
+     "text": "I'm trying to confirm",
+     "kind": "frame",
+     "form": "I'm trying to confirm",
+     "meaning": "To attempt to verify the truth or accuracy of something.",
+     "example": "I'm trying to confirm my flight details, as I haven't received an email yet.",
+     "plain": "I'm trying to verify my flight details, as I haven't received an email yet.",
+     "note": "A standard and polite way to seek verification."
+    },
+    {
+     "text": "I'm trying to get directions to",
+     "kind": "frame",
+     "form": "I'm trying to get directions to",
+     "meaning": "To attempt to obtain instructions on how to reach a specific place.",
+     "example": "I'm trying to get directions to the nearest train station from here.",
+     "plain": "I'm trying to find out how to get to the nearest train station from here.",
+     "note": "A common and direct way to ask for navigational help."
+    },
+    {
+     "text": "I'm trying to find out",
+     "kind": "frame",
+     "form": "I'm trying to find out",
+     "meaning": "To attempt to discover information or facts.",
+     "example": "I'm trying to find out if there's a direct bus to the airport from this area.",
+     "plain": "I'm trying to discover if there's a direct bus to the airport from this area.",
+     "note": "A general and common way to state you are seeking information."
+    },
+    {
+     "text": "I'm trying to get an idea of",
+     "kind": "frame",
+     "form": "I'm trying to get an idea of",
+     "meaning": "To attempt to form a general understanding or estimate of something.",
+     "example": "I'm trying to get an idea of how long the journey will take by public transport.",
+     "plain": "I'm trying to understand roughly how long the journey will take by public transport.",
+     "note": "Similar to \"get a sense of\" but focuses more on estimation or general understanding."
+    },
+    {
+     "text": "I'm trying to get accustomed to",
+     "kind": "frame",
+     "form": "I'm trying to get accustomed to",
+     "meaning": "To attempt to become familiar with and adapt to new conditions or surroundings.",
+     "example": "I'm trying to get accustomed to the time difference, but jet lag is hitting hard.",
+     "plain": "I'm trying to adapt to the time difference, but jet lag is hitting hard.",
+     "note": "Used when adjusting to new environments or routines."
+    },
+    {
+     "text": "I'm trying to navigate",
+     "kind": "frame",
+     "form": "I'm trying to navigate",
+     "meaning": "To attempt to find one's way through a complex or unfamiliar area or situation.",
+     "example": "I'm trying to navigate the local public transport system, which is quite extensive.",
+     "plain": "I'm trying to find my way through the local public transport system, which is quite extensive.",
+     "note": "Implies dealing with complexity, not just simple directions."
+    },
+    {
+     "text": "I'm trying to get my bearings",
+     "kind": "frame",
+     "form": "I'm trying to get my bearings",
+     "meaning": "To attempt to understand one's position or situation relative to surroundings.",
+     "example": "I'm trying to get my bearings after arriving in this new city; everything feels unfamiliar.",
+     "plain": "I'm trying to understand where I am after arriving in this new city; everything feels unfamiliar.",
+     "note": "Common when feeling disoriented in a new place."
+    },
+    {
+     "text": "I'm trying to get clarity on",
+     "kind": "frame",
+     "form": "I'm trying to get clarity on",
+     "meaning": "To attempt to obtain a clear understanding or explanation of something.",
+     "example": "I'm trying to get clarity on the visa requirements for my next destination.",
+     "plain": "I'm trying to understand the visa requirements for my next destination clearly.",
+     "note": "Formal and precise, used when seeking unambiguous information."
+    },
+    {
+     "text": "I'm trying to get an update on",
+     "kind": "frame",
+     "form": "I'm trying to get an update on",
+     "meaning": "To attempt to receive the latest information about a situation or process.",
+     "example": "I'm trying to get an update on the status of my lost luggage claim.",
+     "plain": "I'm trying to receive the latest information about my lost luggage claim.",
+     "note": "Common when waiting for news or progress on an ongoing issue."
+    },
+    {
+     "text": "I'm trying to get a feel for",
+     "kind": "frame",
+     "form": "I'm trying to get a feel for",
+     "meaning": "To attempt to develop an intuitive understanding or impression of something.",
+     "example": "I'm trying to get a feel for the local culture by visiting markets and cafes.",
+     "plain": "I'm trying to understand the local culture intuitively by visiting markets and cafes.",
+     "note": "Implies a more experiential and less analytical understanding."
+    },
+    {
+     "text": "I'm trying to get a grasp of",
+     "kind": "frame",
+     "form": "I'm trying to get a grasp of",
+     "meaning": "To attempt to understand something thoroughly, especially a complex idea or system.",
+     "example": "I'm trying to get a grasp of the local public transport system before I venture out.",
+     "plain": "I'm trying to understand the local public transport system thoroughly before I venture out.",
+     "note": "Implies a deeper, more comprehensive understanding."
+    },
+    {
+     "text": "I'm trying to get a clear picture of",
+     "kind": "frame",
+     "form": "I'm trying to get a clear picture of",
+     "meaning": "To attempt to obtain a complete and accurate understanding of a situation.",
+     "example": "I'm trying to get a clear picture of the itinerary for the guided tour tomorrow.",
+     "plain": "I'm trying to understand the itinerary for the guided tour tomorrow completely and accurately.",
+     "note": "Used when seeking comprehensive and unambiguous information."
+    },
+    {
+     "text": "I'm trying to get a sense of urgency",
+     "kind": "frame",
+     "form": "I'm trying to get a sense of urgency",
+     "meaning": "To attempt to convey or understand the immediate importance of a situation.",
+     "example": "I'm trying to get a sense of urgency across to the airline about my missed connection.",
+     "plain": "I'm trying to make the airline understand the immediate importance of my missed connection.",
+     "note": "Used when emphasizing the need for prompt action."
+    },
+    {
+     "text": "I'm trying to get a sense of proportion",
+     "kind": "frame",
+     "form": "I'm trying to get a sense of proportion",
+     "meaning": "To attempt to understand the relative importance of different things in a situation.",
+     "example": "I'm trying to get a sense of proportion about this minor delay; it's not the end of the world.",
+     "plain": "I'm trying to understand the relative importance of this minor delay; it's not the end of the world.",
+     "note": "Used to put a problem into perspective, often to downplay its severity."
+    },
+    {
+     "text": "to address a concern",
+     "kind": "collocation",
+     "form": "to address a concern",
+     "meaning": "To deal with a worry or problem that has been raised.",
+     "example": "I'd like to speak with the manager to address a concern about our room service.",
+     "plain": "I'd like to speak with the manager to deal with a problem about our room service.",
+     "note": "Formal and polite, used when bringing up an issue for resolution."
+    },
+    {
+     "text": "I'm calling to follow up",
+     "kind": "frame",
+     "form": "I'm calling to follow up",
+     "meaning": "To state the purpose of a call is to check on progress or previous communication.",
+     "example": "I'm calling to follow up on my reservation request from last week.",
+     "plain": "I'm calling to check on my reservation request from last week.",
+     "note": "A common and polite way to initiate a follow-up call."
+    },
+    {
+     "text": "I'm calling to inquire",
+     "kind": "frame",
+     "form": "I'm calling to inquire",
+     "meaning": "To state the purpose of a call is to ask for information.",
+     "example": "I'm calling to inquire about the availability of a tour to the ancient ruins.",
+     "plain": "I'm calling to ask about the availability of a tour to the ancient ruins.",
+     "note": "A polite and slightly formal way to start a call seeking information."
+    },
+    {
+     "text": "I'm calling to make changes",
+     "kind": "frame",
+     "form": "I'm calling to make changes",
+     "meaning": "To state the purpose of a call is to alter an existing booking or arrangement.",
+     "example": "I'm calling to make changes to my flight booking for next month.",
+     "plain": "I'm calling to alter my flight booking for next month.",
+     "note": "Direct and clear, used when modifying existing plans."
+    },
+    {
+     "text": "I'm calling to confirm details",
+     "kind": "frame",
+     "form": "I'm calling to confirm details",
+     "meaning": "To state the purpose of a call is to verify specific information.",
+     "example": "I'm calling to confirm details of my car rental pick-up time tomorrow.",
+     "plain": "I'm calling to verify specific information about my car rental pick-up time tomorrow.",
+     "note": "Standard and efficient for checking arrangements."
+    },
+    {
+     "text": "I'm calling to report an incident",
+     "kind": "frame",
+     "form": "I'm calling to report an incident",
+     "meaning": "To state the purpose of a call is to inform about an unexpected or problematic event.",
+     "example": "I'm calling to report an incident of a broken window in my hotel room.",
+     "plain": "I'm calling to inform you about a broken window in my hotel room.",
+     "note": "Formal and direct, used for serious issues requiring official notification."
+    },
+    {
+     "text": "I'm calling to request assistance",
+     "kind": "frame",
+     "form": "I'm calling to request assistance",
+     "meaning": "To state the purpose of a call is to ask for help.",
+     "example": "I'm calling to request assistance with my luggage, as I have many bags.",
+     "plain": "I'm calling to ask for help with my luggage, as I have many bags.",
+     "note": "Polite and formal, suitable for various types of help."
+    },
+    {
+     "text": "I'm calling to clarify information",
+     "kind": "frame",
+     "form": "I'm calling to clarify information",
+     "meaning": "To state the purpose of a call is to make something clearer or get a clearer explanation.",
+     "example": "I'm calling to clarify information regarding the shuttle service schedule.",
+     "plain": "I'm calling to get a clearer explanation regarding the shuttle service schedule.",
+     "note": "Professional and polite, used when seeking precision."
+    },
+    {
+     "text": "I'm calling to reschedule",
+     "kind": "frame",
+     "form": "I'm calling to reschedule",
+     "meaning": "To state the purpose of a call is to change the time or date of an appointment or event.",
+     "example": "I'm calling to reschedule my spa appointment for later this week.",
+     "plain": "I'm calling to change the time of my spa appointment for later this week.",
+     "note": "Common and direct, used for changing planned times."
+    },
+    {
+     "text": "I'm calling to check availability",
+     "kind": "frame",
+     "form": "I'm calling to check availability",
+     "meaning": "To state the purpose of a call is to see if something is free or accessible.",
+     "example": "I'm calling to check availability for a room with a sea view next month.",
+     "plain": "I'm calling to see if a room with a sea view is free next month.",
+     "note": "Standard and practical for making new bookings or plans."
+    },
+    {
+     "text": "I'm calling to make a complaint",
+     "kind": "frame",
+     "form": "I'm calling to make a complaint",
+     "meaning": "To state the purpose of a call is to express dissatisfaction or report a problem.",
+     "example": "I'm calling to make a complaint about the noise from the room next door.",
+     "plain": "I'm calling to express my dissatisfaction about the noise from the room next door.",
+     "note": "Direct and formal, used for official grievances."
+    },
+    {
+     "text": "I'm calling to request a refund",
+     "kind": "frame",
+     "form": "I'm calling to request a refund",
+     "meaning": "To state the purpose of a call is to ask for money back.",
+     "example": "I'm calling to request a refund for the tour that was cancelled due to bad weather.",
+     "plain": "I'm calling to ask for my money back for the tour that was cancelled due to bad weather.",
+     "note": "Direct and formal, used for financial claims."
+    },
+    {
+     "text": "I'm calling to update you on",
+     "kind": "frame",
+     "form": "I'm calling to update you on",
+     "meaning": "To state the purpose of a call is to provide the latest information.",
+     "example": "I'm calling to update you on my flight delay, which means I'll arrive later.",
+     "plain": "I'm calling to give you the latest information about my flight delay, which means I'll arrive later.",
+     "note": "Professional and polite, used to share new developments."
+    },
+    {
+     "text": "I'm calling to confirm receipt of",
+     "kind": "frame",
+     "form": "I'm calling to confirm receipt of",
+     "meaning": "To state the purpose of a call is to verify that something has been received.",
+     "example": "I'm calling to confirm receipt of my booking confirmation email.",
+     "plain": "I'm calling to verify that I received my booking confirmation email.",
+     "note": "Formal and precise, used for official acknowledgements."
+    },
+    {
+     "text": "I'm calling to arrange a pick-up",
+     "kind": "frame",
+     "form": "I'm calling to arrange a pick-up",
+     "meaning": "To state the purpose of a call is to organize someone or something to be collected.",
+     "example": "I'm calling to arrange a pick-up from the airport for my arriving guests.",
+     "plain": "I'm calling to organize someone to collect my arriving guests from the airport.",
+     "note": "Direct and practical, used for transport arrangements."
+    },
+    {
+     "text": "I'm calling to check on my order",
+     "kind": "frame",
+     "form": "I'm calling to check on my order",
+     "meaning": "To state the purpose of a call is to inquire about the status of a purchase.",
+     "example": "I'm calling to check on my order for the custom-made souvenir.",
+     "plain": "I'm calling to ask about the status of my order for the custom-made souvenir.",
+     "note": "Common and polite, used for tracking purchases."
+    },
+    {
+     "text": "I'm calling to make an inquiry",
+     "kind": "frame",
+     "form": "I'm calling to make an inquiry",
+     "meaning": "To state the purpose of a call is to ask a question or seek information.",
+     "example": "I'm calling to make an inquiry about your hotel's pet policy.",
+     "plain": "I'm calling to ask a question about your hotel's pet policy.",
+     "note": "Formal and polite, a general way to ask for information."
+    },
+    {
+     "text": "I'm calling to book an appointment",
+     "kind": "frame",
+     "form": "I'm calling to book an appointment",
+     "meaning": "To state the purpose of a call is to schedule a meeting or service.",
+     "example": "I'm calling to book an appointment for a massage at your spa tomorrow.",
+     "plain": "I'm calling to schedule a massage at your spa tomorrow.",
+     "note": "Direct and common, used for scheduling services."
+    },
+    {
+     "text": "I'm calling to report a lost item",
+     "kind": "frame",
+     "form": "I'm calling to report a lost item",
+     "meaning": "To state the purpose of a call is to inform about a missing possession.",
+     "example": "I'm calling to report a lost item; I think I left my wallet in the taxi.",
+     "plain": "I'm calling to inform you that I lost an item; I think I left my wallet in the taxi.",
+     "note": "Direct and urgent, used for missing belongings."
+    },
+    {
+     "text": "I'm calling to request a booking",
+     "kind": "frame",
+     "form": "I'm calling to request a booking",
+     "meaning": "To state the purpose of a call is to ask for a reservation.",
+     "example": "I'm calling to request a booking for a double room for three nights next week.",
+     "plain": "I'm calling to ask for a reservation for a double room for three nights next week.",
+     "note": "Polite and formal, used for making reservations."
+    },
+    {
+     "text": "I'm calling to confirm my arrival",
+     "kind": "frame",
+     "form": "I'm calling to confirm my arrival",
+     "meaning": "To state the purpose of a call is to verify your planned time of reaching a destination.",
+     "example": "I'm calling to confirm my arrival time, as my flight is running a bit late.",
+     "plain": "I'm calling to verify my planned time of reaching, as my flight is running a bit late.",
+     "note": "Common courtesy when travel plans change slightly."
+    },
+    {
+     "text": "I'm calling to check on my reservation",
+     "kind": "frame",
+     "form": "I'm calling to check on my reservation",
+     "meaning": "To state the purpose of a call is to verify the status of a booking.",
+     "example": "I'm calling to check on my reservation for the restaurant tonight.",
+     "plain": "I'm calling to verify the status of my booking for the restaurant tonight.",
+     "note": "Polite and practical, used to ensure a booking is secure."
+    },
+    {
+     "text": "I'm calling to ask for directions",
+     "kind": "frame",
+     "form": "I'm calling to ask for directions",
+     "meaning": "To state the purpose of a call is to request navigational instructions.",
+     "example": "I'm calling to ask for directions to your hotel from the train station.",
+     "plain": "I'm calling to request navigational instructions to your hotel from the train station.",
+     "note": "Direct and common, used when lost or planning a route."
+    },
+    {
+     "text": "I'm calling to arrange transport",
+     "kind": "frame",
+     "form": "I'm calling to arrange transport",
+     "meaning": "To state the purpose of a call is to organize a means of getting from one place to another.",
+     "example": "I'm calling to arrange transport from the hotel to the airport for tomorrow morning.",
+     "plain": "I'm calling to organize a way to get from the hotel to the airport for tomorrow morning.",
+     "note": "Practical and direct, used for travel logistics."
+    },
+    {
+     "text": "I'm calling to confirm my departure",
+     "kind": "frame",
+     "form": "I'm calling to confirm my departure",
+     "meaning": "To state the purpose of a call is to verify your planned time of leaving.",
+     "example": "I'm calling to confirm my departure time from the hotel tomorrow.",
+     "plain": "I'm calling to verify my planned time of leaving the hotel tomorrow.",
+     "note": "Common courtesy, especially for early check-outs or specific arrangements."
+    },
+    {
+     "text": "I'm calling to request an extension",
+     "kind": "frame",
+     "form": "I'm calling to request an extension",
+     "meaning": "To state the purpose of a call is to ask for more time or a longer stay.",
+     "example": "I'm calling to request an extension on my hotel stay for one more night.",
+     "plain": "I'm calling to ask for a longer stay at my hotel for one more night.",
+     "note": "Polite and formal, used when needing more time for something."
+    },
+    {
+     "text": "I'm calling to report a malfunction",
+     "kind": "frame",
+     "form": "I'm calling to report a malfunction",
+     "meaning": "To state the purpose of a call is to inform about something not working correctly.",
+     "example": "I'm calling to report a malfunction with the air conditioning in my room.",
+     "plain": "I'm calling to inform you that the air conditioning in my room is not working correctly.",
+     "note": "Formal and direct, used for technical or equipment problems."
+    },
+    {
+     "text": "I'm calling to ask about services",
+     "kind": "frame",
+     "form": "I'm calling to ask about services",
+     "meaning": "To state the purpose of a call is to inquire about available facilities or help.",
+     "example": "I'm calling to ask about services like laundry and dry cleaning at your hotel.",
+     "plain": "I'm calling to inquire about available facilities like laundry and dry cleaning at your hotel.",
+     "note": "General and polite, used for understanding offerings."
+    },
+    {
+     "text": "I'm calling to make an appeal",
+     "kind": "frame",
+     "form": "I'm calling to make an appeal",
+     "meaning": "To state the purpose of a call is to make a serious request, often to reconsider a decision.",
+     "example": "I'm calling to make an appeal regarding the extra charges on my bill.",
+     "plain": "I'm calling to make a serious request regarding the extra charges on my bill.",
+     "note": "Formal and serious, used for challenging decisions or seeking reconsideration."
+    },
+    {
+     "text": "I'm calling to arrange a tour",
+     "kind": "frame",
+     "form": "I'm calling to arrange a tour",
+     "meaning": "To state the purpose of a call is to organize a guided visit.",
+     "example": "I'm calling to arrange a tour of the city for my family next Tuesday.",
+     "plain": "I'm calling to organize a guided visit of the city for my family next Tuesday.",
+     "note": "Direct and practical, used for booking sightseeing."
+    },
+    {
+     "text": "I'm calling to follow up on a query",
+     "kind": "frame",
+     "form": "I'm calling to follow up on a query",
+     "meaning": "To state the purpose of a call is to check the status of a previous question.",
+     "example": "I'm calling to follow up on a query I sent last week about airport transfers.",
+     "plain": "I'm calling to check the status of a question I sent last week about airport transfers.",
+     "note": "Professional and polite, used for checking on unanswered questions."
+    },
+    {
+     "text": "I'm calling to check if there's",
+     "kind": "frame",
+     "form": "I'm calling to check if there's",
+     "meaning": "To state the purpose of a call is to verify the existence or availability of something.",
+     "example": "I'm calling to check if there's a shuttle service running to the train station now.",
+     "plain": "I'm calling to verify if a shuttle service is running to the train station now.",
+     "note": "Common and practical, used for immediate information."
+    },
+    {
+     "text": "I'm calling to let you know",
+     "kind": "frame",
+     "form": "I'm calling to let you know",
+     "meaning": "To state the purpose of a call is to inform someone of something.",
+     "example": "I'm calling to let you know that I'll be arriving a bit later than planned.",
+     "plain": "I'm calling to inform you that I'll be arriving a bit later than planned.",
+     "note": "Common and polite, used for providing updates or information."
+    },
+    {
+     "text": "I'm calling to clarify my booking",
+     "kind": "frame",
+     "form": "I'm calling to clarify my booking",
+     "meaning": "To state the purpose of a call is to make the details of your reservation clearer.",
+     "example": "I'm calling to clarify my booking, specifically the room type I requested.",
+     "plain": "I'm calling to make the details of my reservation clearer, specifically the room type I requested.",
+     "note": "Professional and polite, used for ensuring accuracy of a booking."
+    },
+    {
+     "text": "I'm calling to confirm my payment",
+     "kind": "frame",
+     "form": "I'm calling to confirm my payment",
+     "meaning": "To state the purpose of a call is to verify that a payment has been processed.",
+     "example": "I'm calling to confirm my payment for the excursion, as I haven't received a receipt.",
+     "plain": "I'm calling to verify that my payment for the excursion has been processed.",
+     "note": "Practical and direct, used for financial verification."
+    },
+    {
+     "text": "I'm calling to reschedule an activity",
+     "kind": "frame",
+     "form": "I'm calling to reschedule an activity",
+     "meaning": "To state the purpose of a call is to change the time or date of a planned event.",
+     "example": "I'm calling to reschedule an activity, the cooking class, for another day.",
+     "plain": "I'm calling to change the time or date of the cooking class for another day.",
+     "note": "Direct and common, used for altering leisure plans."
+    },
+    {
+     "text": "I'm calling to check on my luggage",
+     "kind": "frame",
+     "form": "I'm calling to check on my luggage",
+     "meaning": "To state the purpose of a call is to inquire about the status of your bags.",
+     "example": "I'm calling to check on my luggage, as it didn't arrive on my flight.",
+     "plain": "I'm calling to inquire about the status of my luggage, as it didn't arrive on my flight.",
+     "note": "Urgent and common, used for lost or delayed bags."
+    },
+    {
+     "text": "I'm calling to report a maintenance issue",
+     "kind": "frame",
+     "form": "I'm calling to report a maintenance issue",
+     "meaning": "To state the purpose of a call is to inform about a problem requiring repair.",
+     "example": "I'm calling to report a maintenance issue with the shower in my room.",
+     "plain": "I'm calling to inform you about a problem with the shower in my room that needs repair.",
+     "note": "Formal and direct, used for property repairs."
+    },
+    {
+     "text": "I'm calling to request a wake-up call",
+     "kind": "frame",
+     "form": "I'm calling to request a wake-up call",
+     "meaning": "To state the purpose of a call is to ask for a phone call at a specific time to wake you up.",
+     "example": "I'm calling to request a wake-up call for 6 AM tomorrow morning.",
+     "plain": "I'm calling to ask for a phone call at 6 AM tomorrow morning to wake me up.",
+     "note": "Common and practical, used in hotels."
+    },
+    {
+     "text": "I'm calling to confirm my flight",
+     "kind": "frame",
+     "form": "I'm calling to confirm my flight",
+     "meaning": "To state the purpose of a call is to verify the details of your air travel.",
+     "example": "I'm calling to confirm my flight details for tomorrow's departure to London.",
+     "plain": "I'm calling to verify the details of my air travel for tomorrow's departure to London.",
+     "note": "Standard and practical, used for travel verification."
+    },
+    {
+     "text": "I'm calling to arrange a transfer",
+     "kind": "frame",
+     "form": "I'm calling to arrange a transfer",
+     "meaning": "To state the purpose of a call is to organize transportation between two points.",
+     "example": "I'm calling to arrange a transfer from the hotel to the port for our cruise.",
+     "plain": "I'm calling to organize transportation from the hotel to the port for our cruise.",
+     "note": "Practical and direct, used for specific transport needs."
+    },
+    {
+     "text": "I'm calling to follow up on a request",
+     "kind": "frame",
+     "form": "I'm calling to follow up on a request",
+     "meaning": "To state the purpose of a call is to check the status of a previous appeal.",
+     "example": "I'm calling to follow up on a request I made for an extra pillow.",
+     "plain": "I'm calling to check the status of my previous appeal for an extra pillow.",
+     "note": "Polite and common, used for checking on pending appeals."
+    },
+    {
+     "text": "I'm calling to see if I can extend",
+     "kind": "frame",
+     "form": "I'm calling to see if I can extend",
+     "meaning": "To state the purpose of a call is to ask if it's possible to prolong a stay or deadline.",
+     "example": "I'm calling to see if I can extend my check-out time by an hour.",
+     "plain": "I'm calling to ask if it's possible to prolong my check-out time by an hour.",
+     "note": "Polite and indirect, used for flexible arrangements."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "make a point of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "get around to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in due course": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "bear in mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "for the time being": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "as a matter of fact": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "by no means": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on second thought": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to some extent": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in the long run": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "at your earliest convenience": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "get the hang of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "for the record": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the whole": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "by and large": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "as far as i'm concerned": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in a nutshell": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "at your discretion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "without further ado": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to cut a long story short": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "take into account": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "reach a compromise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "iron out the details": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "seize the opportunity": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "draw a conclusion": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "strike a balance": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "put a strain on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "come to terms with": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "pay attention to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "take the initiative": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "follow suit": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "keep an eye on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "lose track of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "put off": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "get the impression": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "take a detour": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "run into trouble": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "keep abreast of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "make arrangements": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "put one's mind at ease": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the thing is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it turns out that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i was wondering if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i could just": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling about": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what i mean is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the point is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it seems to me that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to inquire about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you tell me": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm having a bit of trouble with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the problem is that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's worth noting that": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm looking for": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "what i'd like to do is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "could you possibly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to inquire about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it's important to remember that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just checking if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd be grateful if": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid i don't": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a good idea to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling regarding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm having difficulty with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm hoping to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just wondering if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to get to": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm calling about my": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm looking to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to follow up on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to change": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to cancel": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to make a reservation": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to report": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to ask about": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to arrange": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "raise a concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "there seems to be an issue": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid there's been a misunderstanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "point me in the right direction": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm a bit lost": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "immerse oneself in": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "worth the effort": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "one thing i've noticed is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "express my gratitude": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i really appreciate it": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "would you mind": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "double-check the booking": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just to be on the safe side": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was hoping to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "get a sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "take a chance": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "miss out on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "get the most out of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "keep an open mind": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "have a word with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "make a mental note": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "take a rain check": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "be in two minds": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "keep a low profile": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "take a step back": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "get a handle on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "be on the same page": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "have a good grasp of": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "put things into perspective": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "take a mental break": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "get the ball rolling": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "have a change of heart": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just calling to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling on behalf of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling about an issue with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm my": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to ask for": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to see if": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to let you know that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to reschedule my": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to check on my": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to report a problem with": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to request a": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to confirm that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to make an inquiry about": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to arrange for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to follow up on a": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to see if i can": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm the details of": {
+    "status": "pass",
+    "level": "B1",
+    "note": "Checker slip: The definition accurately describes the phrase used to state the purpose of a phone call to verify arrangements."
+   },
+   "to my understanding": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i'm not mistaken": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm a little unclear on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you elaborate on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd appreciate it if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was hoping you could": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm having a slight issue": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be perfectly honest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm a bit concerned about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to suggest that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm keen to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm looking forward to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm happy to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm not entirely sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm under the impression that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd be interested to know": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to confirm": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to request": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to point out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'd like to bring to your attention": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm having some difficulty": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to ascertain": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm hoping to arrange": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just checking in on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just confirming that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just wondering about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm hoping you can help": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to locate": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm looking to book": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm looking for information on": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm trying to get a refund": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to resolve": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to understand": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm trying to make sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to get through to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to sort out": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to arrange for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to get hold of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to figure out": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to make sure": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm trying to confirm": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm trying to get directions to": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm trying to find out": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm trying to get an idea of": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to get accustomed to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to navigate": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to get my bearings": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to get clarity on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm trying to get an update on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm trying to get a feel for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to get a grasp of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to get a clear picture of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm trying to get a sense of urgency": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm trying to get a sense of proportion": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to address a concern": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to follow up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to inquire": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to make changes": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to confirm details": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to report an incident": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to request assistance": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to clarify information": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to reschedule": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to check availability": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to make a complaint": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to request a refund": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to update you on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm receipt of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to arrange a pick-up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to check on my order": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to make an inquiry": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to book an appointment": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to report a lost item": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to request a booking": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm my arrival": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to check on my reservation": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to ask for directions": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm calling to arrange transport": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm my departure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to request an extension": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to report a malfunction": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to ask about services": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to make an appeal": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm calling to arrange a tour": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to follow up on a query": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to check if there's": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm calling to let you know": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm calling to clarify my booking": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm my payment": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to reschedule an activity": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to check on my luggage": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to report a maintenance issue": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to request a wake-up call": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to confirm my flight": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to arrange a transfer": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm calling to follow up on a request": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm calling to see if i can extend": {
+    "status": "pass",
+    "level": "B1"
+   }
+  }
+ }
+}

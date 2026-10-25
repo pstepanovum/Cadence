@@ -1,0 +1,91 @@
+{
+ "format": 1,
+ "id": "fossil.prepositions-dependent",
+ "area": "word-choice",
+ "title": "Dependent prepositions",
+ "what": "the wrong or an extra preposition with verbs and adjectives ('discuss about', 'depend of', 'married with', 'responsible of', 'explain me')",
+ "summary": "Dependent preposition errors persist because they often mirror L1 structures, becoming deeply ingrained. They subtly detract from fluency, making speech sound less natural and occasionally ambiguous.",
+ "listenFor": "Actively notice the prepositions you use directly after verbs and adjectives; check if they align with standard English usage.",
+ "grammarPointIds": [
+  "gp.complex-prepositions"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "We need to discuss about the budget implications.",
+   "right": "We need to discuss the budget implications.",
+   "note": "The verb 'discuss' is transitive and takes a direct object without a preposition."
+  },
+  {
+   "wrong": "Our success will depend of market conditions.",
+   "right": "Our success will depend on market conditions.",
+   "note": "The verb 'depend' is always followed by the preposition 'on' or 'upon'."
+  },
+  {
+   "wrong": "She is married with a prominent architect.",
+   "right": "She is married to a prominent architect.",
+   "note": "When referring to a spouse, the adjective 'married' is followed by 'to'."
+  },
+  {
+   "wrong": "He is responsible of the entire project.",
+   "right": "He is responsible for the entire project.",
+   "note": "The adjective 'responsible' is always followed by the preposition 'for'."
+  },
+  {
+   "wrong": "Could you explain me the new policy?",
+   "right": "Could you explain the new policy to me?",
+   "note": "When 'explain' has both a direct and indirect object, the indirect object uses 'to'."
+  },
+  {
+   "wrong": "I always listen at classical music while working.",
+   "right": "I always listen to classical music while working.",
+   "note": "The verb 'listen' is always followed by the preposition 'to'."
+  }
+ ],
+ "drills": [
+  "We must agree on the terms before proceeding.",
+  "She apologized for the delay in her response.",
+  "The team will focus on developing new strategies.",
+  "He insisted on reviewing all the documents personally.",
+  "Are you interested in pursuing further education?",
+  "They are accustomed to working under pressure.",
+  "The decision depends on several external factors.",
+  "I believe in the importance of continuous learning.",
+  "We need to account for every expenditure.",
+  "She is dedicated to her research and its impact."
+ ],
+ "probes": [
+  {
+   "sentence": "I will call to you later this evening.",
+   "answers": [
+    "I will call you later this evening."
+   ]
+  },
+  {
+   "sentence": "She insisted for a detailed explanation.",
+   "answers": [
+    "She insisted on a detailed explanation."
+   ]
+  },
+  {
+   "sentence": "Are you interested for the new position?",
+   "answers": [
+    "Are you interested in the new position?"
+   ]
+  },
+  {
+   "sentence": "The team consists from five members.",
+   "answers": [
+    "The team consists of five members."
+   ]
+  },
+  {
+   "sentence": "She is afraid from heights.",
+   "answers": [
+    "She is afraid of heights."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

@@ -1,0 +1,2439 @@
+{
+ "format": 1,
+ "level": "C1",
+ "situation": "small-talk",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "break the ice",
+     "kind": "collocation",
+     "form": "break the ice",
+     "meaning": "To initiate conversation in a new or awkward social situation, making people feel more comfortable.",
+     "example": "It's always a bit tricky to break the ice at these networking events, isn't it?",
+     "plain": "It's always a bit tricky to start conversations at these networking events.",
+     "note": "Commonly used when meeting new people; implies a slight initial awkwardness."
+    },
+    {
+     "text": "how's your day going",
+     "kind": "chunk",
+     "form": "how's your day going",
+     "meaning": "A common, friendly way to ask someone about their current experience or progress during the day.",
+     "example": "Hi Sarah, how's your day going so far? Anything interesting happening?",
+     "plain": "Hi Sarah, how is your day so far? Anything interesting happening?",
+     "note": "A very common and informal greeting, suitable for colleagues or acquaintances."
+    },
+    {
+     "text": "lovely to meet you",
+     "kind": "chunk",
+     "form": "Lovely to meet you",
+     "meaning": "A polite and warm expression used when introduced to someone for the first time.",
+     "example": "Oh, you're Mark from the London office? Lovely to meet you!",
+     "plain": "Oh, you're Mark from the London office? It's nice to meet you!",
+     "note": "Standard polite greeting; can be used at the beginning or end of a first conversation."
+    },
+    {
+     "text": "what brings you here",
+     "kind": "frame",
+     "form": "What brings you here",
+     "meaning": "A polite way to ask someone why they are at a particular event or location.",
+     "example": "So, what brings you here to the conference this year?",
+     "plain": "So, why are you at the conference this year?",
+     "note": "Good for starting conversations with strangers at events; can be slightly formal."
+    },
+    {
+     "text": "speaking of which",
+     "kind": "chunk",
+     "form": "Speaking of which",
+     "meaning": "Introduces a related topic that just came to mind because of the previous conversation point.",
+     "example": "Oh, you mentioned the new project. Speaking of which, have you heard about the latest update?",
+     "plain": "You mentioned the new project. Have you heard about the latest update?",
+     "note": "A smooth way to transition topics; often used to add a new piece of information."
+    },
+    {
+     "text": "on that note",
+     "kind": "chunk",
+     "form": "On that note",
+     "meaning": "Used to transition to a new, related topic or to conclude a discussion point.",
+     "example": "The weather's been great for cycling. On that note, I'm thinking of getting a new bike.",
+     "plain": "The weather's been great for cycling. I'm thinking of getting a new bike.",
+     "note": "Can be used to smoothly change direction or wrap up a segment of conversation."
+    },
+    {
+     "text": "if you don't mind me asking",
+     "kind": "frame",
+     "form": "If you don't mind me asking",
+     "meaning": "A polite way to introduce a potentially personal or sensitive question, seeking permission first.",
+     "example": "If you don't mind me asking, how long have you been working in this department?",
+     "plain": "How long have you been working in this department?",
+     "note": "A polite softener for questions; shows respect for the other person's privacy."
+    },
+    {
+     "text": "just out of curiosity",
+     "kind": "chunk",
+     "form": "Just out of curiosity",
+     "meaning": "Used to introduce a question, implying it's for general interest rather than a specific need.",
+     "example": "Just out of curiosity, how did you get into this line of work?",
+     "plain": "How did you get into this line of work?",
+     "note": "Makes a question sound less intrusive and more conversational."
+    },
+    {
+     "text": "get the ball rolling",
+     "kind": "collocation",
+     "form": "get the ball rolling",
+     "meaning": "To start an activity or process, especially one that involves other people.",
+     "example": "Let's get the ball rolling on planning the team outing for next month.",
+     "plain": "Let's start planning the team outing for next month.",
+     "note": "Informal and common in professional settings for initiating tasks."
+    },
+    {
+     "text": "catch up with",
+     "kind": "collocation",
+     "form": "catch up with",
+     "meaning": "To meet someone you know after a period of time and talk about what has happened.",
+     "example": "It was great to catch up with you at the conference; we should do it again soon.",
+     "plain": "It was great to talk to you at the conference; we should do it again soon.",
+     "note": "Implies a desire to reconnect and share recent life updates."
+    },
+    {
+     "text": "how have you been",
+     "kind": "chunk",
+     "form": "How have you been",
+     "meaning": "A common greeting used when you haven't seen someone for a while, asking about their well-being.",
+     "example": "Hi Tom, long time no see! How have you been?",
+     "plain": "Hi Tom, long time no see! How are you?",
+     "note": "Used after a period of absence; invites a brief update on their life."
+    },
+    {
+     "text": "long time no see",
+     "kind": "chunk",
+     "form": "Long time no see",
+     "meaning": "An informal greeting used when encountering someone you haven't seen for a considerable period.",
+     "example": "Oh, Mark! Long time no see! How have things been?",
+     "plain": "Oh, Mark! I haven't seen you in a long time! How have things been?",
+     "note": "Very common and friendly; implies a pleasant surprise at the reunion."
+    },
+    {
+     "text": "what have you been up to",
+     "kind": "frame",
+     "form": "What have you been up to",
+     "meaning": "An informal question asking what someone has been doing recently.",
+     "example": "It's been a while! What have you been up to since we last met?",
+     "plain": "It's been a while! What have you been doing since we last met?",
+     "note": "Encourages a brief summary of recent activities or life events."
+    },
+    {
+     "text": "can't complain",
+     "kind": "chunk",
+     "form": "Can't complain",
+     "meaning": "A common, informal response to 'How are you?' or 'How's it going?', meaning things are fine.",
+     "example": "How's work going? Can't complain, really; it's been busy but good.",
+     "plain": "How's work going? It's going well, really; it's been busy but good.",
+     "note": "A casual, positive, and understated response; implies satisfaction."
+    },
+    {
+     "text": "not too bad",
+     "kind": "chunk",
+     "form": "Not too bad",
+     "meaning": "An informal and modest response to 'How are you?', indicating things are reasonably good.",
+     "example": "How was your weekend? Not too bad, actually; I got a lot done.",
+     "plain": "How was your weekend? It was good, actually; I got a lot done.",
+     "note": "A common, understated positive response, often used in British English."
+    },
+    {
+     "text": "all things considered",
+     "kind": "chunk",
+     "form": "All things considered",
+     "meaning": "Taking all factors and circumstances into account; despite various challenges.",
+     "example": "All things considered, the project launch went quite smoothly.",
+     "plain": "Despite various challenges, the project launch went quite smoothly.",
+     "note": "A useful phrase for offering a balanced perspective or summary."
+    },
+    {
+     "text": "to be honest",
+     "kind": "chunk",
+     "form": "To be honest",
+     "meaning": "Used to introduce a frank or sincere statement, sometimes implying a slight hesitation.",
+     "example": "To be honest, I'm not entirely sure what the next steps are.",
+     "plain": "I'm not entirely sure what the next steps are.",
+     "note": "A common discourse marker; can soften a negative or uncertain statement."
+    },
+    {
+     "text": "if I'm being honest",
+     "kind": "frame",
+     "form": "If I'm being honest",
+     "meaning": "A slightly more emphatic way to introduce a sincere or candid opinion, often a mild criticism.",
+     "example": "If I'm being honest, I found the presentation a bit confusing.",
+     "plain": "I found the presentation a bit confusing.",
+     "note": "Adds a touch more emphasis than 'to be honest'; can soften a critical remark."
+    },
+    {
+     "text": "as a matter of fact",
+     "kind": "chunk",
+     "form": "As a matter of fact",
+     "meaning": "Used to introduce a statement that confirms or corrects something previously said, or adds detail.",
+     "example": "Are you new here? As a matter of fact, I just started last week.",
+     "plain": "Are you new here? I just started last week.",
+     "note": "Adds emphasis or a slight surprise to the information being shared."
+    },
+    {
+     "text": "by the way",
+     "kind": "chunk",
+     "form": "By the way",
+     "meaning": "Used to introduce a new topic or a piece of information that is not directly related to the current one.",
+     "example": "I'm heading to the coffee machine. By the way, did you finish that report?",
+     "plain": "I'm heading to the coffee machine. Did you finish that report?",
+     "note": "A very common and informal way to change the subject or add an afterthought."
+    },
+    {
+     "text": "that reminds me",
+     "kind": "chunk",
+     "form": "That reminds me",
+     "meaning": "Used to introduce a new topic or thought that has been triggered by the current conversation.",
+     "example": "You mentioned the new software. That reminds me, I need to update my system.",
+     "plain": "You mentioned the new software. I need to update my system.",
+     "note": "A natural way to shift topics smoothly based on a previous comment."
+    },
+    {
+     "text": "on the subject of",
+     "kind": "frame",
+     "form": "On the subject of",
+     "meaning": "Used to introduce a new point that is related to what was just discussed.",
+     "example": "We were talking about travel. On the subject of holidays, where are you going this year?",
+     "plain": "We were talking about travel. Where are you going on holiday this year?",
+     "note": "A slightly more formal way to transition topics than 'speaking of which'."
+    },
+    {
+     "text": "to cut a long story short",
+     "kind": "chunk",
+     "form": "To cut a long story short",
+     "meaning": "Used to indicate that you are going to give only the main points of a longer explanation.",
+     "example": "To cut a long story short, we ended up missing our flight but still made it to the meeting.",
+     "plain": "We ended up missing our flight but still made it to the meeting.",
+     "note": "Useful for summarizing quickly when you sense the listener's attention waning."
+    },
+    {
+     "text": "where were we",
+     "kind": "chunk",
+     "form": "Where were we",
+     "meaning": "Used to ask for a reminder of the last point discussed after an interruption or digression.",
+     "example": "Sorry, my phone rang. Where were we before that?",
+     "plain": "Sorry, my phone rang. What were we talking about before that?",
+     "note": "Helps to smoothly resume a conversation after a pause or interruption."
+    },
+    {
+     "text": "getting back to",
+     "kind": "frame",
+     "form": "Getting back to",
+     "meaning": "Used to return to a previous topic after a digression.",
+     "example": "Anyway, getting back to the budget, have we finalized the figures?",
+     "plain": "Anyway, about the budget, have we finalized the figures?",
+     "note": "A clear signal that you want to refocus the conversation."
+    },
+    {
+     "text": "I was just about to say",
+     "kind": "frame",
+     "form": "I was just about to say",
+     "meaning": "Used to express agreement or indicate that you were thinking the same thing.",
+     "example": "You're right, we should definitely try that. I was just about to say the same thing!",
+     "plain": "You're right, we should definitely try that. I was thinking the same thing!",
+     "note": "Shows strong agreement and a sense of shared thought."
+    },
+    {
+     "text": "I couldn't agree more",
+     "kind": "chunk",
+     "form": "I couldn't agree more",
+     "meaning": "Used to express complete and enthusiastic agreement with someone's statement or opinion.",
+     "example": "That's a brilliant idea for the new campaign. I couldn't agree more!",
+     "plain": "That's a brilliant idea for the new campaign. I completely agree!",
+     "note": "A strong and polite way to show full agreement."
+    },
+    {
+     "text": "I see what you mean",
+     "kind": "chunk",
+     "form": "I see what you mean",
+     "meaning": "Used to indicate understanding of someone's point, even if you don't fully agree.",
+     "example": "I see what you mean about the challenges, but I think we can overcome them.",
+     "plain": "I understand your point about the challenges, but I think we can overcome them.",
+     "note": "A useful phrase for acknowledging another's perspective without necessarily endorsing it."
+    },
+    {
+     "text": "that's a good point",
+     "kind": "chunk",
+     "form": "That's a good point",
+     "meaning": "Used to acknowledge that someone has made a valid or insightful observation.",
+     "example": "I hadn't thought of it that way. That's a good point.",
+     "plain": "I hadn't thought of it that way. That's a valid observation.",
+     "note": "Shows you are listening and value the other person's contribution."
+    },
+    {
+     "text": "I suppose so",
+     "kind": "chunk",
+     "form": "I suppose so",
+     "meaning": "Used to express reluctant or hesitant agreement, or a lack of strong conviction.",
+     "example": "Do you think we should reschedule? I suppose so, if everyone else is busy.",
+     "plain": "Do you think we should reschedule? Yes, if everyone else is busy.",
+     "note": "Indicates mild agreement, often with a hint of resignation or indifference."
+    },
+    {
+     "text": "I'm not so sure",
+     "kind": "chunk",
+     "form": "I'm not so sure",
+     "meaning": "Used to express doubt or mild disagreement without being confrontational.",
+     "example": "I'm not so sure that's the best approach for this particular client.",
+     "plain": "I doubt that's the best approach for this particular client.",
+     "note": "A polite way to express reservations or a differing opinion."
+    },
+    {
+     "text": "I beg to differ",
+     "kind": "chunk",
+     "form": "I beg to differ",
+     "meaning": "A formal and polite way to express disagreement, often used in more serious discussions.",
+     "example": "While I respect your view, I beg to differ on the feasibility of that plan.",
+     "plain": "While I respect your view, I disagree on the feasibility of that plan.",
+     "note": "Quite formal; use with caution in casual small talk, but good for polite disagreement."
+    },
+    {
+     "text": "with all due respect",
+     "kind": "chunk",
+     "form": "With all due respect",
+     "meaning": "Used to introduce a statement of disagreement or criticism in a polite and deferential manner.",
+     "example": "With all due respect, I think we need to reconsider the budget allocation.",
+     "plain": "I think we need to reconsider the budget allocation.",
+     "note": "Often signals that a polite but firm disagreement is coming; can sound slightly formal."
+    },
+    {
+     "text": "no offense",
+     "kind": "chunk",
+     "form": "No offense",
+     "meaning": "Used to soften a potentially critical or controversial statement, ensuring it's not taken personally.",
+     "example": "No offense, but I think your idea might be a bit too ambitious for our current resources.",
+     "plain": "I think your idea might be a bit too ambitious for our current resources.",
+     "note": "Informal; often used before a mild criticism or a direct statement."
+    },
+    {
+     "text": "don't get me wrong",
+     "kind": "chunk",
+     "form": "Don't get me wrong",
+     "meaning": "Used to clarify a previous statement, ensuring it's not misunderstood or taken negatively.",
+     "example": "I like the new office, don't get me wrong, but the commute is a nightmare.",
+     "plain": "I like the new office, but the commute is a nightmare.",
+     "note": "Helps to balance a negative comment with a positive one, or prevent misinterpretation."
+    },
+    {
+     "text": "I'm afraid not",
+     "kind": "chunk",
+     "form": "I'm afraid not",
+     "meaning": "A polite and slightly regretful way to say no or to deliver bad news.",
+     "example": "Can you make it to the meeting tomorrow? I'm afraid not, I have another commitment.",
+     "plain": "Can you make it to the meeting tomorrow? No, I have another commitment.",
+     "note": "A common softener for negative responses; sounds more polite than a direct 'no'."
+    },
+    {
+     "text": "I'm afraid so",
+     "kind": "chunk",
+     "form": "I'm afraid so",
+     "meaning": "A polite and slightly regretful way to say yes, often to something undesirable.",
+     "example": "Is the deadline still Friday? I'm afraid so, there's no extension.",
+     "plain": "Is the deadline still Friday? Yes, there's no extension.",
+     "note": "Used when confirming something unpleasant; softens the impact of the news."
+    },
+    {
+     "text": "it's a small world",
+     "kind": "chunk",
+     "form": "It's a small world",
+     "meaning": "Used to express surprise at an unexpected connection or coincidence with someone.",
+     "example": "You know my old boss? It's a small world, isn't it?",
+     "plain": "You know my old boss? What a coincidence!",
+     "note": "A common and friendly expression for shared acquaintances or unexpected links."
+    },
+    {
+     "text": "what a coincidence",
+     "kind": "chunk",
+     "form": "What a coincidence",
+     "meaning": "Used to express surprise when two unrelated things happen at the same time or are connected.",
+     "example": "We both ordered the same drink! What a coincidence!",
+     "plain": "We both ordered the same drink! That's surprising!",
+     "note": "A natural reaction to unexpected similarities or events; good for light conversation."
+    },
+    {
+     "text": "how do you find",
+     "kind": "frame",
+     "form": "How do you find",
+     "meaning": "Used to ask someone for their opinion or experience of something.",
+     "example": "You've been here a month now, how do you find working in the new office?",
+     "plain": "You've been here a month now, what do you think of working in the new office?",
+     "note": "A polite way to solicit an opinion or assessment; slightly more formal than 'what do you think'."
+    },
+    {
+     "text": "what do you make of",
+     "kind": "frame",
+     "form": "What do you make of",
+     "meaning": "Used to ask someone for their opinion or interpretation of something, often something new or unusual.",
+     "example": "Have you seen the new proposal? What do you make of it?",
+     "plain": "Have you seen the new proposal? What do you think of it?",
+     "note": "A common way to ask for an opinion, especially on something that requires thought."
+    },
+    {
+     "text": "I'm just wondering",
+     "kind": "frame",
+     "form": "I'm just wondering",
+     "meaning": "A polite and casual way to introduce a question or a thought you're considering.",
+     "example": "I'm just wondering if you've had a chance to look at those figures yet.",
+     "plain": "Have you had a chance to look at those figures yet?",
+     "note": "Softens a direct question, making it sound less demanding."
+    },
+    {
+     "text": "I was wondering if",
+     "kind": "frame",
+     "form": "I was wondering if",
+     "meaning": "A very polite and indirect way to ask a question or make a request.",
+     "example": "I was wondering if you might be free for a quick chat later today.",
+     "plain": "Are you free for a quick chat later today?",
+     "note": "Excellent for making requests or asking questions very politely."
+    },
+    {
+     "text": "do you happen to know",
+     "kind": "frame",
+     "form": "Do you happen to know",
+     "meaning": "A polite way to ask if someone has specific information, implying they might not.",
+     "example": "Do you happen to know if the coffee machine is working today?",
+     "plain": "Is the coffee machine working today?",
+     "note": "Softens a direct question, making it less demanding and more conversational."
+    },
+    {
+     "text": "could you tell me",
+     "kind": "frame",
+     "form": "Could you tell me",
+     "meaning": "A polite and common way to ask for information or directions.",
+     "example": "Excuse me, could you tell me where the nearest exit is?",
+     "plain": "Excuse me, where is the nearest exit?",
+     "note": "A standard polite request for information, suitable for strangers."
+    },
+    {
+     "text": "I'm afraid I don't know",
+     "kind": "chunk",
+     "form": "I'm afraid I don't know",
+     "meaning": "A polite and slightly regretful way to state that you don't have the requested information.",
+     "example": "Do you know when the next train is? I'm afraid I don't know.",
+     "plain": "Do you know when the next train is? I don't know.",
+     "note": "A polite refusal to a question, softening the directness of 'I don't know'."
+    },
+    {
+     "text": "I'm afraid I can't help you",
+     "kind": "chunk",
+     "form": "I'm afraid I can't help you",
+     "meaning": "A polite and regretful way to say you are unable to assist someone.",
+     "example": "I'm looking for Mr. Smith. I'm afraid I can't help you, he's not in today.",
+     "plain": "I'm looking for Mr. Smith. I can't help you, he's not in today.",
+     "note": "A polite way to decline a request or indicate inability to assist."
+    },
+    {
+     "text": "it's been a pleasure",
+     "kind": "chunk",
+     "form": "It's been a pleasure",
+     "meaning": "A polite and warm phrase used to express enjoyment of someone's company or a shared experience.",
+     "example": "Well, it's been a pleasure chatting with you, but I really must go.",
+     "plain": "Well, I enjoyed chatting with you, but I really must go.",
+     "note": "A common and polite way to end a conversation, especially with new acquaintances."
+    },
+    {
+     "text": "it was nice talking to you",
+     "kind": "chunk",
+     "form": "It was nice talking to you",
+     "meaning": "A common and polite phrase used to end a conversation, expressing enjoyment of the chat.",
+     "example": "Right, I should let you get back to it. It was nice talking to you!",
+     "plain": "Right, I should let you get back to it. I enjoyed talking to you!",
+     "note": "A standard and friendly way to conclude a conversation gracefully."
+    },
+    {
+     "text": "I should get going",
+     "kind": "chunk",
+     "form": "I should get going",
+     "meaning": "A common and polite way to signal that you need to leave a conversation or place.",
+     "example": "It's getting late, so I should get going now. See you next week!",
+     "plain": "It's getting late, so I need to leave now. See you next week!",
+     "note": "A gentle way to initiate the end of a conversation without being abrupt."
+    },
+    {
+     "text": "I must be off",
+     "kind": "chunk",
+     "form": "I must be off",
+     "meaning": "An informal and direct way to say you need to leave.",
+     "example": "Well, I must be off now, I have an appointment. Great to see you!",
+     "plain": "Well, I need to leave now, I have an appointment. Great to see you!",
+     "note": "Slightly more direct than 'I should get going', but still polite."
+    },
+    {
+     "text": "I'll let you go",
+     "kind": "chunk",
+     "form": "I'll let you go",
+     "meaning": "A polite way to end a conversation, implying the other person might be busy or need to leave.",
+     "example": "You look busy, so I'll let you go. Catch up soon!",
+     "plain": "You look busy, so I'll end our conversation. Catch up soon!",
+     "note": "Shows consideration for the other person's time; often used on the phone."
+    },
+    {
+     "text": "take care",
+     "kind": "chunk",
+     "form": "Take care",
+     "meaning": "A common and friendly farewell, wishing someone well.",
+     "example": "It was good to see you. Take care!",
+     "plain": "It was good to see you. Goodbye and be well!",
+     "note": "A versatile and warm closing, suitable for most informal situations."
+    },
+    {
+     "text": "have a good one",
+     "kind": "chunk",
+     "form": "Have a good one",
+     "meaning": "An informal and friendly farewell, wishing someone a good day, evening, or experience.",
+     "example": "Right, I'm off to lunch. Have a good one!",
+     "plain": "Right, I'm off to lunch. Have a good day!",
+     "note": "Very common in American English; a casual and positive way to say goodbye."
+    },
+    {
+     "text": "see you around",
+     "kind": "chunk",
+     "form": "See you around",
+     "meaning": "An informal farewell, implying you expect to see the person again soon, but not at a specific time.",
+     "example": "I'm heading out. See you around the office!",
+     "plain": "I'm heading out. I'll see you again soon in the office!",
+     "note": "Common among colleagues or neighbors; implies regular, informal encounters."
+    },
+    {
+     "text": "keep in touch",
+     "kind": "collocation",
+     "form": "Keep in touch",
+     "meaning": "To maintain communication with someone, usually after a period of not seeing them regularly.",
+     "example": "It was great catching up. Let's keep in touch!",
+     "plain": "It was great catching up. Let's stay in contact!",
+     "note": "Expresses a desire to continue the relationship; often used when parting ways."
+    },
+    {
+     "text": "it's been a while",
+     "kind": "chunk",
+     "form": "It's been a while",
+     "meaning": "Used to acknowledge that a significant amount of time has passed since you last saw someone.",
+     "example": "Wow, Sarah! It's been a while since we last met.",
+     "plain": "Wow, Sarah! A long time has passed since we last met.",
+     "note": "A common and friendly opening when reuniting with someone."
+    },
+    {
+     "text": "how's everything going",
+     "kind": "chunk",
+     "form": "How's everything going",
+     "meaning": "A general and friendly inquiry about someone's overall well-being and current situation.",
+     "example": "Hey Mark, how's everything going with the new project?",
+     "plain": "Hey Mark, how is the new project progressing?",
+     "note": "A broad question that invites a general update on their life or work."
+    },
+    {
+     "text": "what's new with you",
+     "kind": "frame",
+     "form": "What's new with you",
+     "meaning": "An informal question asking for recent updates or news in someone's life.",
+     "example": "It's good to see you! What's new with you these days?",
+     "plain": "It's good to see you! What has happened in your life recently?",
+     "note": "A common way to invite someone to share recent events or news."
+    },
+    {
+     "text": "nothing much",
+     "kind": "chunk",
+     "form": "Nothing much",
+     "meaning": "A common, informal response to 'What's new?' or 'What have you been up to?', meaning not a lot.",
+     "example": "What have you been up to? Nothing much, just the usual work and home routine.",
+     "plain": "What have you been up to? Not a lot, just the usual work and home routine.",
+     "note": "A casual, understated response, often used when there's no significant news."
+    },
+    {
+     "text": "same old same old",
+     "kind": "chunk",
+     "form": "Same old same old",
+     "meaning": "An informal response indicating that things are continuing as usual, without much change.",
+     "example": "How's life? Oh, you know, same old same old. Busy as ever.",
+     "plain": "How's life? Oh, you know, things are continuing as usual. Busy as ever.",
+     "note": "Very informal; implies a routine or predictable situation."
+    },
+    {
+     "text": "just the usual",
+     "kind": "chunk",
+     "form": "Just the usual",
+     "meaning": "An informal response indicating that things are normal and routine, without anything special.",
+     "example": "What are you up to this weekend? Just the usual, some errands and relaxing.",
+     "plain": "What are you up to this weekend? Just the normal things, some errands and relaxing.",
+     "note": "A casual way to say nothing out of the ordinary is happening."
+    },
+    {
+     "text": "can't complain really",
+     "kind": "chunk",
+     "form": "Can't complain really",
+     "meaning": "A slightly more emphatic version of 'can't complain', indicating things are genuinely good.",
+     "example": "How's business? Can't complain really, things are picking up.",
+     "plain": "How's business? Things are good, things are picking up.",
+     "note": "A common, positive, and understated response, often used in British English."
+    },
+    {
+     "text": "it's been hectic",
+     "kind": "chunk",
+     "form": "It's been hectic",
+     "meaning": "Used to describe a period of intense activity, busyness, or stress.",
+     "example": "How's work? It's been hectic lately with all the new projects.",
+     "plain": "How's work? It's been very busy lately with all the new projects.",
+     "note": "A common way to explain a lack of free time or energy."
+    },
+    {
+     "text": "things are looking up",
+     "kind": "chunk",
+     "form": "Things are looking up",
+     "meaning": "Used to express optimism that a situation is improving or will improve.",
+     "example": "After a tough quarter, things are looking up for the company.",
+     "plain": "After a tough quarter, the company's situation is improving.",
+     "note": "A positive and hopeful phrase, good for sharing good news or optimism."
+    },
+    {
+     "text": "fingers crossed",
+     "kind": "chunk",
+     "form": "Fingers crossed",
+     "meaning": "Used to express hope that something will happen as desired.",
+     "example": "I've got an interview tomorrow, so fingers crossed!",
+     "plain": "I've got an interview tomorrow, so I hope it goes well!",
+     "note": "A common, informal expression of hope or good luck."
+    },
+    {
+     "text": "touch wood",
+     "kind": "chunk",
+     "form": "Touch wood",
+     "meaning": "Used to ward off bad luck after mentioning something good or positive.",
+     "example": "The project is going smoothly, touch wood, we haven't had any major issues.",
+     "plain": "The project is going smoothly, we haven't had any major issues.",
+     "note": "Common in British English; equivalent to 'knock on wood' in American English."
+    },
+    {
+     "text": "knock on wood",
+     "kind": "chunk",
+     "form": "knock on wood",
+     "meaning": "Used to ward off bad luck after mentioning something good or positive.",
+     "example": "My car hasn't broken down in years, knock on wood!",
+     "plain": "My car hasn't broken down in years, I hope it continues that way!",
+     "note": "Common in American English; equivalent to 'touch wood' in British English."
+    },
+    {
+     "text": "it goes without saying",
+     "kind": "chunk",
+     "form": "It goes without saying",
+     "meaning": "Used to state that something is so obvious that it does not need to be said.",
+     "example": "It goes without saying that we need to prioritize customer satisfaction.",
+     "plain": "We obviously need to prioritize customer satisfaction.",
+     "note": "Emphasizes the self-evident nature of a point; can sound slightly formal."
+    },
+    {
+     "text": "to make a long story short",
+     "kind": "chunk",
+     "form": "To make a long story short",
+     "meaning": "Used to indicate that you are going to give only the main points of a longer explanation.",
+     "example": "To make a long story short, we decided to go with the original plan after all.",
+     "plain": "We decided to go with the original plan after all.",
+     "note": "A common way to summarize quickly, similar to 'to cut a long story short'."
+    },
+    {
+     "text": "if you ask me",
+     "kind": "frame",
+     "form": "If you ask me",
+     "meaning": "Used to introduce your personal opinion, often one that might be slightly critical or unsolicited.",
+     "example": "If you ask me, they should have started this project months ago.",
+     "plain": "They should have started this project months ago.",
+     "note": "Can sound a bit direct or opinionated; use with care in very formal settings."
+    },
+    {
+     "text": "from my perspective",
+     "kind": "chunk",
+     "form": "From my perspective",
+     "meaning": "Used to introduce your personal viewpoint or opinion on a matter.",
+     "example": "From my perspective, the new policy will create more efficiency.",
+     "plain": "I think the new policy will create more efficiency.",
+     "note": "A polite and slightly formal way to offer an opinion, emphasizing it's one view."
+    },
+    {
+     "text": "as far as I'm concerned",
+     "kind": "frame",
+     "form": "As far as I'm concerned",
+     "meaning": "Used to introduce your personal opinion, often implying that others might disagree.",
+     "example": "As far as I'm concerned, the meeting was a complete waste of time.",
+     "plain": "I think the meeting was a complete waste of time.",
+     "note": "Can sound quite strong or definitive; use when you have a firm opinion."
+    },
+    {
+     "text": "I'd say",
+     "kind": "frame",
+     "form": "I'd say",
+     "meaning": "A casual and polite way to introduce an opinion or an estimate.",
+     "example": "I'd say we're looking at about three more weeks to complete this phase.",
+     "plain": "I think we're looking at about three more weeks to complete this phase.",
+     "note": "Softens an opinion or estimate, making it sound less assertive."
+    },
+    {
+     "text": "I'm inclined to agree",
+     "kind": "chunk",
+     "form": "I'm inclined to agree",
+     "meaning": "Used to express a tendency to agree with someone, often after some consideration.",
+     "example": "After hearing your points, I'm inclined to agree with your assessment.",
+     "plain": "After hearing your points, I tend to agree with your assessment.",
+     "note": "A polite and thoughtful way to express agreement, often after deliberation."
+    },
+    {
+     "text": "I'm inclined to think",
+     "kind": "frame",
+     "form": "I'm inclined to think",
+     "meaning": "Used to express a tendency to believe something, often after some consideration.",
+     "example": "Given the data, I'm inclined to think we should proceed with caution.",
+     "plain": "Given the data, I tend to think we should proceed with caution.",
+     "note": "A polite and thoughtful way to express an opinion or belief."
+    },
+    {
+     "text": "I'm not entirely sure",
+     "kind": "chunk",
+     "form": "I'm not entirely sure",
+     "meaning": "Used to express uncertainty or a lack of complete knowledge about something.",
+     "example": "I'm not entirely sure what the best solution is for this problem.",
+     "plain": "I don't know what the best solution is for this problem.",
+     "note": "A polite way to admit uncertainty, softer than a direct 'I don't know'."
+    },
+    {
+     "text": "I'm not entirely convinced",
+     "kind": "chunk",
+     "form": "I'm not entirely convinced",
+     "meaning": "Used to express doubt or a lack of full belief in an idea or argument.",
+     "example": "I'm not entirely convinced that this strategy will yield the desired results.",
+     "plain": "I doubt that this strategy will yield the desired results.",
+     "note": "A polite way to express skepticism or mild disagreement."
+    },
+    {
+     "text": "how was your weekend",
+     "kind": "chunk",
+     "form": "How was your weekend",
+     "meaning": "A common and friendly question to ask someone about their recent weekend activities.",
+     "example": "Good morning! How was your weekend? Did you do anything fun?",
+     "plain": "Good morning! What did you do this weekend? Did you do anything fun?",
+     "note": "A standard conversation starter on a Monday or after a break."
+    },
+    {
+     "text": "anything exciting happening",
+     "kind": "chunk",
+     "form": "Anything exciting happening",
+     "meaning": "A casual way to ask if there's any interesting news or events in someone's life.",
+     "example": "Hey, long time no see! Anything exciting happening with you lately?",
+     "plain": "Hey, long time no see! Is there any interesting news with you lately?",
+     "note": "An informal way to invite someone to share recent positive news."
+    },
+    {
+     "text": "what are your plans for",
+     "kind": "frame",
+     "form": "What are your plans for",
+     "meaning": "A common question to ask about someone's upcoming activities or intentions.",
+     "example": "It's almost Friday! What are your plans for the weekend?",
+     "plain": "It's almost Friday! What will you do this weekend?",
+     "note": "A good way to keep a conversation going by looking ahead."
+    },
+    {
+     "text": "I hope you don't mind",
+     "kind": "frame",
+     "form": "I hope you don't mind",
+     "meaning": "A polite way to introduce a request or action that might inconvenience someone.",
+     "example": "I hope you don't mind, but I borrowed your stapler for a moment.",
+     "plain": "I borrowed your stapler for a moment.",
+     "note": "Softens a request or an admission of a minor transgression."
+    },
+    {
+     "text": "just checking in",
+     "kind": "chunk",
+     "form": "Just checking in",
+     "meaning": "Used to explain why you are contacting someone, usually to see how they are or if they need anything.",
+     "example": "Hi, I was just checking in to see how you're getting on with the report.",
+     "plain": "Hi, I wanted to see how you're getting on with the report.",
+     "note": "A casual and considerate way to initiate contact or follow up."
+    },
+    {
+     "text": "how do you feel about",
+     "kind": "frame",
+     "form": "How do you feel about",
+     "meaning": "A direct but polite way to ask for someone's opinion or emotional response to something.",
+     "example": "How do you feel about the new changes to the company policy?",
+     "plain": "What's your opinion on the new changes to the company policy?",
+     "note": "Invites a more personal or emotional response than 'what do you think'."
+    },
+    {
+     "text": "it's been a pleasure meeting you",
+     "kind": "chunk",
+     "form": "It's been a pleasure meeting you",
+     "meaning": "A polite and warm phrase used to express enjoyment of meeting someone for the first time.",
+     "example": "Well, I must be going. It's been a pleasure meeting you, Sarah.",
+     "plain": "Well, I must be going. I enjoyed meeting you, Sarah.",
+     "note": "A standard and polite way to end a first-time conversation."
+    },
+    {
+     "text": "I'll catch you later",
+     "kind": "chunk",
+     "form": "I'll catch you later",
+     "meaning": "An informal farewell, meaning you will see or speak to the person again at a later time.",
+     "example": "I'm off to a meeting now, I'll catch you later!",
+     "plain": "I'm off to a meeting now, I'll see you later!",
+     "note": "Very common and casual, suitable for colleagues or friends."
+    },
+    {
+     "text": "it's been a productive day",
+     "kind": "chunk",
+     "form": "It's been a productive day",
+     "meaning": "Used to describe a day where a lot of work or tasks were successfully completed.",
+     "example": "I'm ready to head home; it's been a productive day.",
+     "plain": "I'm ready to head home; I got a lot done today.",
+     "note": "A positive and professional way to summarize the day's work."
+    },
+    {
+     "text": "how's life treating you",
+     "kind": "chunk",
+     "form": "How's life treating you",
+     "meaning": "A friendly and informal way to ask someone about their general well-being and current circumstances.",
+     "example": "Hey, stranger! How's life treating you these days?",
+     "plain": "Hey, stranger! How are things going for you these days?",
+     "note": "A warm and slightly more personal greeting, often used with friends."
+    },
+    {
+     "text": "what's on your mind",
+     "kind": "frame",
+     "form": "What's on your mind",
+     "meaning": "A friendly and open question asking someone what they are thinking or worrying about.",
+     "example": "You seem a bit quiet today. What's on your mind?",
+     "plain": "You seem a bit quiet today. What are you thinking about?",
+     "note": "Shows concern and invites a deeper conversation, if appropriate."
+    },
+    {
+     "text": "I was just thinking about you",
+     "kind": "chunk",
+     "form": "I was just thinking about you",
+     "meaning": "Used to express a pleasant coincidence when you encounter someone you were just thinking of.",
+     "example": "Oh, hi! I was just thinking about you and that project.",
+     "plain": "Oh, hi! I was just thinking about you and that project.",
+     "note": "A warm and friendly way to start a conversation, implying a connection."
+    },
+    {
+     "text": "fancy meeting you here",
+     "kind": "chunk",
+     "form": "Fancy meeting you here",
+     "meaning": "An informal expression of surprise at seeing someone unexpectedly in a particular place.",
+     "example": "Well, fancy meeting you here! I didn't expect to see you at this event.",
+     "plain": "I'm surprised to see you here! I didn't expect to see you at this event.",
+     "note": "Common in British English; expresses pleasant surprise at an unexpected encounter."
+    },
+    {
+     "text": "what a pleasant surprise",
+     "kind": "chunk",
+     "form": "What a pleasant surprise",
+     "meaning": "Used to express happiness or delight at an unexpected event or encounter.",
+     "example": "Oh, it's you! What a pleasant surprise to see you here.",
+     "plain": "Oh, it's you! I'm happy to see you here unexpectedly.",
+     "note": "A warm and positive reaction to an unexpected meeting or good news."
+    },
+    {
+     "text": "I'm glad we ran into each other",
+     "kind": "chunk",
+     "form": "I'm glad we ran into each other",
+     "meaning": "Used to express pleasure at an unplanned meeting with someone.",
+     "example": "I'm glad we ran into each other; I've been meaning to ask you something.",
+     "plain": "I'm glad we met unexpectedly; I've been meaning to ask you something.",
+     "note": "A friendly way to acknowledge an unplanned meeting and open conversation."
+    },
+    {
+     "text": "how do you know",
+     "kind": "frame",
+     "form": "How do you know",
+     "meaning": "A direct but polite question asking about the source of someone's information or acquaintance.",
+     "example": "You know Sarah? How do you know her?",
+     "plain": "You know Sarah? Where did you meet her?",
+     "note": "Common for finding common ground or understanding connections."
+    },
+    {
+     "text": "I'm just passing through",
+     "kind": "chunk",
+     "form": "I'm just passing through",
+     "meaning": "Used to explain that you are only in a place temporarily, not staying long.",
+     "example": "I can't stay long, I'm just passing through on my way to another meeting.",
+     "plain": "I can't stay long, I'm only here temporarily on my way to another meeting.",
+     "note": "Useful for setting expectations about your availability in a conversation."
+    },
+    {
+     "text": "I'm running a bit late",
+     "kind": "chunk",
+     "form": "I'm running a bit late",
+     "meaning": "Used to politely inform someone that you will arrive after the scheduled time.",
+     "example": "Sorry, I'm running a bit late for our coffee chat.",
+     "plain": "Sorry, I will be a bit late for our coffee chat.",
+     "note": "A common and polite apology for tardiness."
+    },
+    {
+     "text": "I'll keep you posted",
+     "kind": "chunk",
+     "form": "I'll keep you posted",
+     "meaning": "Used to promise to provide updates or new information as it becomes available.",
+     "example": "I don't have all the details yet, but I'll keep you posted.",
+     "plain": "I don't have all the details yet, but I'll give you updates.",
+     "note": "A common and reassuring phrase for ongoing situations."
+    },
+    {
+     "text": "let me know if",
+     "kind": "frame",
+     "form": "Let me know if",
+     "meaning": "Used to invite someone to inform you about a specific condition or need.",
+     "example": "Let me know if you need any help with that presentation.",
+     "plain": "Tell me if you need any help with that presentation.",
+     "note": "A polite and helpful way to offer assistance or request information."
+    },
+    {
+     "text": "I'm looking forward to",
+     "kind": "frame",
+     "form": "I'm looking forward to",
+     "meaning": "Used to express anticipation and excitement for a future event or activity.",
+     "example": "I'm looking forward to the team building event next month.",
+     "plain": "I'm excited about the team building event next month.",
+     "note": "A positive way to express enthusiasm for future plans."
+    },
+    {
+     "text": "it's been a while since",
+     "kind": "frame",
+     "form": "It's been a while since",
+     "meaning": "Used to indicate that a long period has passed since a particular event occurred.",
+     "example": "It's been a while since we last had lunch together.",
+     "plain": "We haven't had lunch together for a long time.",
+     "note": "A gentle way to suggest reconnecting or reminiscing."
+    },
+    {
+     "text": "how about you",
+     "kind": "chunk",
+     "form": "How about you",
+     "meaning": "Used to turn a question back to the other person after you've answered it yourself.",
+     "example": "I had a great weekend, how about you?",
+     "plain": "I had a great weekend, what about your weekend?",
+     "note": "A simple and effective way to maintain conversational flow."
+    },
+    {
+     "text": "what do you think",
+     "kind": "frame",
+     "form": "What do you think",
+     "meaning": "A common and direct way to ask for someone's opinion or thoughts on a topic.",
+     "example": "The new coffee machine is great, what do you think?",
+     "plain": "The new coffee machine is great, what's your opinion?",
+     "note": "A versatile phrase for inviting participation and opinions."
+    },
+    {
+     "text": "I'm just curious",
+     "kind": "chunk",
+     "form": "I'm just curious",
+     "meaning": "Used to soften a question, implying it's for general interest rather than a specific need.",
+     "example": "I'm just curious, how did you manage to finish that so quickly?",
+     "plain": "How did you manage to finish that so quickly?",
+     "note": "Similar to 'just out of curiosity', makes a question less intrusive."
+    },
+    {
+     "text": "I'm glad to hear that",
+     "kind": "chunk",
+     "form": "I'm glad to hear that",
+     "meaning": "Used to express happiness or relief about something positive someone has said.",
+     "example": "You got the promotion? I'm glad to hear that!",
+     "plain": "You got the promotion? That makes me happy!",
+     "note": "A common and polite way to respond positively to good news."
+    },
+    {
+     "text": "I'm sorry to hear that",
+     "kind": "chunk",
+     "form": "I'm sorry to hear that",
+     "meaning": "Used to express sympathy or regret about something negative someone has said.",
+     "example": "Your project got delayed? I'm sorry to hear that.",
+     "plain": "Your project got delayed? That's unfortunate.",
+     "note": "A common and polite way to respond with empathy to bad news."
+    },
+    {
+     "text": "it's been a pleasure working with you",
+     "kind": "chunk",
+     "form": "It's been a pleasure working with you",
+     "meaning": "A polite and professional phrase used to express enjoyment of a collaborative work experience.",
+     "example": "As I'm leaving, I wanted to say, it's been a pleasure working with you all.",
+     "plain": "As I'm leaving, I wanted to say, I enjoyed working with you all.",
+     "note": "A standard and warm farewell in a professional context."
+    },
+    {
+     "text": "I'll be in touch",
+     "kind": "chunk",
+     "form": "I'll be in touch",
+     "meaning": "Used to promise to contact someone again in the future.",
+     "example": "I'll look into that for you and I'll be in touch soon.",
+     "plain": "I'll look into that for you and I'll contact you soon.",
+     "note": "A common and professional way to end a conversation with a promise of follow-up."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "to be fair",
+     "kind": "chunk",
+     "form": "to be fair",
+     "meaning": "Used to introduce a point that balances or mitigates a previous statement, often acknowledging another perspective.",
+     "example": "To be fair, the project had a very tight deadline, which made things challenging for the team.",
+     "plain": "The project had a very tight deadline, which made things challenging for the team.",
+     "note": "A common softener, used to introduce a mitigating factor or a balanced view."
+    },
+    {
+     "text": "if you will",
+     "kind": "chunk",
+     "form": "if you will",
+     "meaning": "Used to ask for agreement or to introduce a slightly unusual or metaphorical way of describing something.",
+     "example": "The new policy is a paradigm shift, if you will, in how we approach customer service.",
+     "plain": "The new policy is a paradigm shift in how we approach customer service.",
+     "note": "Adds a touch of formality or self-awareness when using a strong or slightly unusual term."
+    },
+    {
+     "text": "for what it's worth",
+     "kind": "chunk",
+     "form": "for what it's worth",
+     "meaning": "Used to offer an opinion or piece of information that may or may not be helpful or important.",
+     "example": "For what it's worth, I heard they're planning to open a new coffee shop on the corner.",
+     "plain": "I heard they're planning to open a new coffee shop on the corner.",
+     "note": "A humble way to offer information or an opinion, suggesting it might not be highly significant."
+    },
+    {
+     "text": "just to clarify",
+     "kind": "chunk",
+     "form": "just to clarify",
+     "meaning": "Used to politely ask for more specific information or to confirm understanding of something said.",
+     "example": "Just to clarify, are we meeting at 9 AM or 9:30 AM tomorrow for the presentation?",
+     "plain": "Are we meeting at 9 AM or 9:30 AM tomorrow for the presentation?",
+     "note": "A polite way to seek precision, often used in professional or semi-formal settings."
+    },
+    {
+     "text": "if I recall correctly",
+     "kind": "chunk",
+     "form": "if I recall correctly",
+     "meaning": "Used to introduce a piece of information that the speaker believes to be true, but isn't entirely certain of.",
+     "example": "If I recall correctly, the deadline for that report was actually next Friday, not this Friday.",
+     "plain": "The deadline for that report was actually next Friday, not this Friday.",
+     "note": "A polite way to offer information while acknowledging a slight possibility of error."
+    },
+    {
+     "text": "on the whole",
+     "kind": "chunk",
+     "form": "on the whole",
+     "meaning": "Used to indicate that a statement is generally true, despite some exceptions or minor details.",
+     "example": "On the whole, the conference was a great success, even with a few minor technical glitches.",
+     "plain": "The conference was a great success, even with a few minor technical glitches.",
+     "note": "Summarizes a general impression, often used when giving an overall assessment."
+    },
+    {
+     "text": "as a rule of thumb",
+     "kind": "chunk",
+     "form": "as a rule of thumb",
+     "meaning": "Used to introduce a practical, approximate principle or guideline, not a strict rule.",
+     "example": "As a rule of thumb, always double-check your work before submitting it to the client.",
+     "plain": "Always double-check your work before submitting it to the client.",
+     "note": "Implies practical advice based on experience, not a formal regulation."
+    },
+    {
+     "text": "having said that",
+     "kind": "chunk",
+     "form": "having said that",
+     "meaning": "Used to introduce a statement that contrasts with or qualifies what was just said.",
+     "example": "The new software is quite complex; having said that, it offers powerful features once you learn it.",
+     "plain": "The new software is quite complex, but it offers powerful features once you learn it.",
+     "note": "A common discourse marker for introducing a concession or counterpoint."
+    },
+    {
+     "text": "that being said",
+     "kind": "chunk",
+     "form": "that being said",
+     "meaning": "Similar to \"having said that,\" it introduces a contrasting or qualifying point.",
+     "example": "The weather was terrible for our trip. That being said, we still managed to have a good time.",
+     "plain": "The weather was terrible for our trip, but we still managed to have a good time.",
+     "note": "Interchangeable with \"having said that,\" often used to soften a previous negative statement."
+    },
+    {
+     "text": "in other words",
+     "kind": "chunk",
+     "form": "in other words",
+     "meaning": "Used to rephrase something in a simpler or clearer way, or to explain its true meaning.",
+     "example": "The new system is designed for optimal user experience; in other words, it's very intuitive.",
+     "plain": "The new system is designed for optimal user experience; it's very intuitive.",
+     "note": "Useful for clarifying or simplifying a previous statement for better understanding."
+    },
+    {
+     "text": "if I may say so",
+     "kind": "chunk",
+     "form": "if I may say so",
+     "meaning": "A polite way to offer an opinion or observation, often when it might be slightly critical or bold.",
+     "example": "That was a rather ambitious goal, if I may say so, given the limited resources we had.",
+     "plain": "That was a rather ambitious goal, given the limited resources we had.",
+     "note": "Adds politeness and a touch of deference when expressing a potentially sensitive opinion."
+    },
+    {
+     "text": "just to be clear",
+     "kind": "chunk",
+     "form": "just to be clear",
+     "meaning": "Used to ensure that there is no misunderstanding about what is being said or agreed upon.",
+     "example": "Just to be clear, we're aiming for completion by Friday, not just starting the final review.",
+     "plain": "We're aiming for completion by Friday, not just starting the final review.",
+     "note": "Emphasizes the need for precise understanding, often used in professional contexts."
+    },
+    {
+     "text": "if I understand correctly",
+     "kind": "chunk",
+     "form": "if I understand correctly",
+     "meaning": "A polite way to check if you have accurately grasped what someone has said.",
+     "example": "If I understand correctly, you're suggesting we pivot to a different marketing strategy.",
+     "plain": "You're suggesting we pivot to a different marketing strategy.",
+     "note": "Shows active listening and seeks confirmation, useful for avoiding miscommunication."
+    },
+    {
+     "text": "to put it another way",
+     "kind": "chunk",
+     "form": "to put it another way",
+     "meaning": "Used to rephrase something in a different manner, often to make it clearer or emphasize a point.",
+     "example": "The project is behind schedule; to put it another way, we need to accelerate our efforts significantly.",
+     "plain": "The project is behind schedule; we need to accelerate our efforts significantly.",
+     "note": "Offers an alternative phrasing, useful for clarity or emphasis."
+    },
+    {
+     "text": "on second thought",
+     "kind": "chunk",
+     "form": "on second thought",
+     "meaning": "Used to indicate that you have changed your mind or reconsidered a previous statement or decision.",
+     "example": "I'll have the chicken salad. On second thought, maybe I'll go for the pasta instead.",
+     "plain": "I'll have the chicken salad. Maybe I'll go for the pasta instead.",
+     "note": "Common in informal settings when making a quick change of mind."
+    },
+    {
+     "text": "as it happens",
+     "kind": "chunk",
+     "form": "as it happens",
+     "meaning": "Used to introduce a piece of information that is relevant or surprising in the current context.",
+     "example": "I was just thinking about that. As it happens, I have some news regarding the budget.",
+     "plain": "I was just thinking about that. I have some news regarding the budget.",
+     "note": "Often used to reveal a coincidence or a piece of timely information."
+    },
+    {
+     "text": "to be precise",
+     "kind": "chunk",
+     "form": "to be precise",
+     "meaning": "Used to add more specific or exact information to a previous statement.",
+     "example": "The meeting starts at 10 AM, to be precise, in Conference Room B.",
+     "plain": "The meeting starts at 10 AM in Conference Room B.",
+     "note": "Adds a level of detail or exactness, often used in professional communication."
+    },
+    {
+     "text": "for the record",
+     "kind": "chunk",
+     "form": "for the record",
+     "meaning": "Used to state something clearly and officially, often to ensure it is noted or remembered.",
+     "example": "For the record, I did submit my report before the deadline, despite the technical issues.",
+     "plain": "I did submit my report before the deadline, despite the technical issues.",
+     "note": "Implies a desire for accuracy and official acknowledgment, can be slightly formal."
+    },
+    {
+     "text": "on the flip side",
+     "kind": "chunk",
+     "form": "on the flip side",
+     "meaning": "Used to introduce a contrasting or opposite aspect of a situation or argument.",
+     "example": "The new office is closer to home. On the flip side, the rent is significantly higher.",
+     "plain": "The new office is closer to home, but the rent is significantly higher.",
+     "note": "Informal way to present a counterpoint or a different perspective."
+    },
+    {
+     "text": "to some extent",
+     "kind": "chunk",
+     "form": "to some extent",
+     "meaning": "Used to qualify a statement, indicating it is true only partially or up to a certain degree.",
+     "example": "The new policy will help, to some extent, but it won't solve all our problems.",
+     "plain": "The new policy will help partially, but it won't solve all our problems.",
+     "note": "A common softener, used to express partial agreement or limited impact."
+    },
+    {
+     "text": "in a sense",
+     "kind": "chunk",
+     "form": "in a sense",
+     "meaning": "Used to qualify a statement, suggesting it is true in one way but perhaps not entirely or literally.",
+     "example": "The project was a success, in a sense, though we didn't meet all our initial targets.",
+     "plain": "The project was a success, though we didn't meet all our initial targets.",
+     "note": "A softener that acknowledges a partial truth or a specific interpretation."
+    },
+    {
+     "text": "as far as I know",
+     "kind": "chunk",
+     "form": "as far as I know",
+     "meaning": "Used to indicate that the information being given is based on the speaker's current knowledge, which may be incomplete.",
+     "example": "As far as I know, the meeting is still scheduled for Tuesday morning.",
+     "plain": "The meeting is still scheduled for Tuesday morning.",
+     "note": "A common way to qualify information, showing awareness of potential gaps in knowledge."
+    },
+    {
+     "text": "if I'm not mistaken",
+     "kind": "chunk",
+     "form": "if I'm not mistaken",
+     "meaning": "Used to introduce a piece of information that the speaker believes to be true, but isn't entirely certain of.",
+     "example": "If I'm not mistaken, you used to work for a competitor a few years back.",
+     "plain": "You used to work for a competitor a few years back.",
+     "note": "A polite way to offer information while acknowledging a slight possibility of error."
+    },
+    {
+     "text": "needless to say",
+     "kind": "chunk",
+     "form": "needless to say",
+     "meaning": "Used to introduce a statement that is obvious or expected, often to emphasize its importance.",
+     "example": "Needless to say, the success of the event depends heavily on everyone's participation.",
+     "plain": "The success of the event depends heavily on everyone's participation.",
+     "note": "Similar to \"it goes without saying,\" but not in the bank. Slightly more formal."
+    },
+    {
+     "text": "to put it mildly",
+     "kind": "chunk",
+     "form": "to put it mildly",
+     "meaning": "Used to suggest that the reality of a situation is much more extreme or serious than the words used to describe it.",
+     "example": "The presentation was a disaster, to put it mildly; the projector didn't even work.",
+     "plain": "The presentation was a disaster; the projector didn't even work.",
+     "note": "An understatement, implying the situation was worse than described."
+    },
+    {
+     "text": "you know what I mean",
+     "kind": "chunk",
+     "form": "you know what I mean",
+     "meaning": "Used to check if the listener understands or agrees with what is being implied rather than explicitly stated.",
+     "example": "The new system is a bit clunky, you know what I mean, not very user-friendly.",
+     "plain": "The new system is a bit clunky, not very user-friendly.",
+     "note": "Informal, seeks implicit agreement or understanding, often used when describing something vaguely."
+    },
+    {
+     "text": "if you catch my drift",
+     "kind": "chunk",
+     "form": "if you catch my drift",
+     "meaning": "Used to check if the listener understands an indirect suggestion or implication.",
+     "example": "We need to be more proactive with our clients, if you catch my drift, before they look elsewhere.",
+     "plain": "We need to be more proactive with our clients before they look elsewhere.",
+     "note": "Informal, implies a subtle or indirect message, often used to avoid being too direct."
+    },
+    {
+     "text": "just for the record",
+     "kind": "chunk",
+     "form": "just for the record",
+     "meaning": "Used to state something clearly and officially, often to ensure it is noted or remembered.",
+     "example": "Just for the record, I did submit my report before the deadline, despite the technical issues.",
+     "plain": "I did submit my report before the deadline, despite the technical issues.",
+     "note": "Slightly more informal than \"for the record,\" but serves the same purpose of clarity."
+    },
+    {
+     "text": "to be perfectly frank",
+     "kind": "chunk",
+     "form": "to be perfectly frank",
+     "meaning": "Used to introduce a direct and honest opinion, often one that might be critical or sensitive.",
+     "example": "To be perfectly frank, I don't think that approach will yield the results we're hoping for.",
+     "plain": "I don't think that approach will yield the results we're hoping for.",
+     "note": "Emphasizes honesty, can sound quite direct, use with caution in sensitive situations."
+    },
+    {
+     "text": "on the one hand",
+     "kind": "chunk",
+     "form": "on the one hand",
+     "meaning": "Used to introduce one side of a two-sided argument or consideration.",
+     "example": "On the one hand, the new policy offers flexibility, but on the other hand, it creates confusion.",
+     "plain": "The new policy offers flexibility, but it creates confusion.",
+     "note": "Always paired with \"on the other hand\" (or implied), for presenting balanced views."
+    },
+    {
+     "text": "on the other hand",
+     "kind": "chunk",
+     "form": "on the other hand",
+     "meaning": "Used to introduce the contrasting or opposing side of an argument or consideration.",
+     "example": "The new policy offers flexibility, but on the other hand, it creates confusion for some staff.",
+     "plain": "The new policy offers flexibility, but it creates confusion for some staff.",
+     "note": "Always paired with \"on the one hand\" (or implied), for presenting balanced views."
+    },
+    {
+     "text": "to cut to the chase",
+     "kind": "chunk",
+     "form": "to cut to the chase",
+     "meaning": "Used to indicate that you are going to get straight to the main point without unnecessary details.",
+     "example": "To cut to the chase, we need to secure additional funding to complete the project on time.",
+     "plain": "We need to secure additional funding to complete the project on time.",
+     "note": "Informal, used when you want to get to the point quickly, often in a slightly impatient tone."
+    },
+    {
+     "text": "what I mean is",
+     "kind": "frame",
+     "form": "What I mean is",
+     "meaning": "Used to clarify or explain a previous statement, often because it was misunderstood or unclear.",
+     "example": "I said it was challenging. What I mean is, it requires a lot of dedication and problem-solving.",
+     "plain": "I said it was challenging. It requires a lot of dedication and problem-solving.",
+     "note": "A common way to rephrase or elaborate on a point for clarity."
+    },
+    {
+     "text": "the thing is",
+     "kind": "chunk",
+     "form": "The thing is",
+     "meaning": "Used to introduce an important point, explanation, or problem that needs to be considered.",
+     "example": "The thing is, we don't have enough resources to take on another big client right now.",
+     "plain": "We don't have enough resources to take on another big client right now.",
+     "note": "Informal, often used to explain a difficulty or a crucial aspect of a situation."
+    },
+    {
+     "text": "the point is",
+     "kind": "chunk",
+     "form": "The point is",
+     "meaning": "Used to emphasize the most important idea or message being conveyed.",
+     "example": "We can debate the details, but the point is, we need to act quickly to avoid further delays.",
+     "plain": "We can debate the details, but we need to act quickly to avoid further delays.",
+     "note": "More direct than \"the thing is,\" used to highlight the core message."
+    },
+    {
+     "text": "I'm just saying",
+     "kind": "chunk",
+     "form": "I'm just saying",
+     "meaning": "Used to soften a statement or opinion, implying it's just an observation and not a strong demand.",
+     "example": "Maybe we should consider other options. I'm just saying, it's worth exploring alternatives.",
+     "plain": "Maybe we should consider other options; it's worth exploring alternatives.",
+     "note": "Informal, often used to offer a suggestion without being pushy."
+    },
+    {
+     "text": "I'll be brief",
+     "kind": "chunk",
+     "form": "I'll be brief",
+     "meaning": "Used to indicate that you intend to speak for only a short time.",
+     "example": "I'll be brief, but I wanted to share a quick update on the project's progress.",
+     "plain": "I wanted to share a quick update on the project's progress.",
+     "note": "Polite and efficient, often used at the start of a short intervention."
+    },
+    {
+     "text": "as I was saying",
+     "kind": "chunk",
+     "form": "As I was saying",
+     "meaning": "Used to resume a previous point or narrative after an interruption or digression.",
+     "example": "As I was saying, the new marketing campaign is set to launch next month.",
+     "plain": "The new marketing campaign is set to launch next month.",
+     "note": "Polite and common, used to smoothly pick up a thread of conversation."
+    },
+    {
+     "text": "if I may interject",
+     "kind": "chunk",
+     "form": "If I may interject",
+     "meaning": "A polite way to interrupt someone to add a point or ask a question.",
+     "example": "If I may interject, I have a quick question about the budget allocation.",
+     "plain": "I have a quick question about the budget allocation.",
+     "note": "Formal and polite, used to politely break into a conversation."
+    },
+    {
+     "text": "just a thought",
+     "kind": "chunk",
+     "form": "just a thought",
+     "meaning": "Used to offer a suggestion or idea tentatively, without strong conviction.",
+     "example": "Maybe we could try a different approach, just a thought, but it might save time.",
+     "plain": "Maybe we could try a different approach, it might save time.",
+     "note": "Informal and humble, used to float an idea without demanding it be taken seriously."
+    },
+    {
+     "text": "I'm not sure if",
+     "kind": "frame",
+     "form": "I'm not sure if",
+     "meaning": "Used to introduce a tentative statement or question, expressing uncertainty.",
+     "example": "I'm not sure if this is the right time, but I wanted to discuss the upcoming project.",
+     "plain": "I wanted to discuss the upcoming project.",
+     "note": "A polite softener, useful for introducing a potentially sensitive topic."
+    },
+    {
+     "text": "I almost forgot",
+     "kind": "chunk",
+     "form": "I almost forgot",
+     "meaning": "Used to introduce a piece of information that suddenly came to mind and is relevant.",
+     "example": "I almost forgot, the client called earlier and left a message for you.",
+     "plain": "The client called earlier and left a message for you.",
+     "note": "Informal, used to add a piece of information that was nearly overlooked."
+    },
+    {
+     "text": "just to recap",
+     "kind": "chunk",
+     "form": "just to recap",
+     "meaning": "Used to briefly summarize the main points that have been discussed so far.",
+     "example": "Just to recap, we've agreed on the budget and the initial project timeline.",
+     "plain": "We've agreed on the budget and the initial project timeline.",
+     "note": "Useful for ensuring everyone is on the same page, often in meetings or discussions."
+    },
+    {
+     "text": "if I may add",
+     "kind": "chunk",
+     "form": "If I may add",
+     "meaning": "A polite way to contribute an additional point or piece of information to a discussion.",
+     "example": "If I may add, the market research also indicates a strong demand for this feature.",
+     "plain": "The market research also indicates a strong demand for this feature.",
+     "note": "Formal and polite, used to contribute to a conversation without interrupting rudely."
+    },
+    {
+     "text": "to be frank with you",
+     "kind": "chunk",
+     "form": "to be frank with you",
+     "meaning": "Used to introduce a direct and honest opinion, often one that might be critical or sensitive.",
+     "example": "To be frank with you, I think we need to reconsider our approach to this problem.",
+     "plain": "I think we need to reconsider our approach to this problem.",
+     "note": "Emphasizes honesty, can sound quite direct, use with caution in sensitive situations."
+    },
+    {
+     "text": "I'm afraid to say",
+     "kind": "chunk",
+     "form": "I'm afraid to say",
+     "meaning": "Used to introduce unwelcome or negative news or an opinion, softening the impact.",
+     "example": "I'm afraid to say, the budget for the new initiative has been significantly cut.",
+     "plain": "The budget for the new initiative has been significantly cut.",
+     "note": "A polite softener for delivering bad news or a negative assessment."
+    },
+    {
+     "text": "I'm happy to say",
+     "kind": "chunk",
+     "form": "I'm happy to say",
+     "meaning": "Used to introduce positive or welcome news, expressing pleasure.",
+     "example": "I'm happy to say, we've successfully secured the funding for the next phase of the project.",
+     "plain": "We've successfully secured the funding for the next phase of the project.",
+     "note": "A polite way to deliver good news, expressing personal satisfaction."
+    },
+    {
+     "text": "if I may be so bold",
+     "kind": "chunk",
+     "form": "If I may be so bold",
+     "meaning": "A very polite and formal way to introduce a potentially daring or presumptuous suggestion or question.",
+     "example": "If I may be so bold, perhaps we should consider a complete overhaul of the current system.",
+     "plain": "Perhaps we should consider a complete overhaul of the current system.",
+     "note": "Very formal, used when offering a strong opinion or suggestion that might challenge the status quo."
+    },
+    {
+     "text": "I'm just trying to",
+     "kind": "frame",
+     "form": "I'm just trying to",
+     "meaning": "Used to explain your intention or purpose, often to justify an action or question.",
+     "example": "I'm just trying to understand the rationale behind this sudden change in direction.",
+     "plain": "I'm trying to understand the rationale behind this sudden change in direction.",
+     "note": "A common softener, used to explain one's motives in a non-confrontational way."
+    },
+    {
+     "text": "I'm not going to lie",
+     "kind": "chunk",
+     "form": "I'm not going to lie",
+     "meaning": "Used to introduce a frank and honest statement, often one that might be surprising or slightly negative.",
+     "example": "I'm not going to lie, the presentation was a bit dull, but the content was solid.",
+     "plain": "The presentation was a bit dull, but the content was solid.",
+     "note": "Informal, emphasizes honesty, often used before a slightly critical or unexpected remark."
+    },
+    {
+     "text": "to be fair to",
+     "kind": "frame",
+     "form": "To be fair to",
+     "meaning": "Used to acknowledge someone's perspective or circumstances, often to defend or explain their actions.",
+     "example": "To be fair to John, he was under immense pressure to deliver the results quickly.",
+     "plain": "John was under immense pressure to deliver the results quickly.",
+     "note": "A diplomatic way to offer a mitigating explanation for someone's behavior."
+    },
+    {
+     "text": "I'm just making sure",
+     "kind": "frame",
+     "form": "I'm just making sure",
+     "meaning": "Used to explain that you are confirming something, often to avoid errors or misunderstandings.",
+     "example": "I'm just making sure I have the correct version of the document before I start editing.",
+     "plain": "I need to confirm I have the correct version of the document before I start editing.",
+     "note": "A polite way to double-check information, often in a professional context."
+    },
+    {
+     "text": "if you'll excuse me",
+     "kind": "chunk",
+     "form": "If you'll excuse me",
+     "meaning": "A polite way to ask for permission to leave or to briefly step away from a conversation.",
+     "example": "If you'll excuse me, I need to make a quick phone call before the meeting starts.",
+     "plain": "I need to make a quick phone call before the meeting starts.",
+     "note": "A polite and common way to temporarily or permanently exit a conversation."
+    },
+    {
+     "text": "I'm just about to",
+     "kind": "frame",
+     "form": "I'm just about to",
+     "meaning": "Used to indicate that you are on the verge of doing something.",
+     "example": "I'm just about to send out the meeting agenda, so let me know if you have any last-minute points.",
+     "plain": "I'm sending out the meeting agenda soon, so let me know if you have any last-minute points.",
+     "note": "Useful for indicating immediate future actions, often in a helpful context."
+    },
+    {
+     "text": "I'm pleased to hear",
+     "kind": "frame",
+     "form": "I'm pleased to hear",
+     "meaning": "Used to express pleasure or satisfaction about something you have just learned.",
+     "example": "I'm pleased to hear that your project is progressing so well and on schedule.",
+     "plain": "Your project is progressing so well and on schedule, which makes me happy.",
+     "note": "A slightly more formal alternative to \"I'm glad to hear,\" expressing satisfaction."
+    },
+    {
+     "text": "I regret to inform you",
+     "kind": "frame",
+     "form": "I regret to inform you",
+     "meaning": "A formal way to deliver bad news, expressing sorrow or reluctance.",
+     "example": "I regret to inform you that your application for the grant was not successful this time.",
+     "plain": "Your application for the grant was not successful this time.",
+     "note": "Very formal and serious, used for official bad news."
+    },
+    {
+     "text": "I'm happy to report",
+     "kind": "frame",
+     "form": "I'm happy to report",
+     "meaning": "Used to deliver positive news, expressing pleasure or satisfaction.",
+     "example": "I'm happy to report that our team exceeded all sales targets for the last quarter.",
+     "plain": "Our team exceeded all sales targets for the last quarter.",
+     "note": "A slightly formal way to deliver good news, often in a professional context."
+    },
+    {
+     "text": "I'm unable to",
+     "kind": "frame",
+     "form": "I'm unable to",
+     "meaning": "A polite and slightly formal way to state an inability to do something.",
+     "example": "I'm unable to provide a definitive answer on that matter until I consult with legal.",
+     "plain": "I cannot provide a definitive answer on that matter until I consult with legal.",
+     "note": "More formal than \"I can't,\" used to politely decline or state a limitation."
+    },
+    {
+     "text": "I'm afraid I have to",
+     "kind": "frame",
+     "form": "I'm afraid I have to",
+     "meaning": "A polite way to express that you must do something, often implying reluctance or a necessity.",
+     "example": "I'm afraid I have to cut our conversation short; I have another appointment.",
+     "plain": "I have to cut our conversation short; I have another appointment.",
+     "note": "A polite softener for ending a conversation or stating an unavoidable obligation."
+    },
+    {
+     "text": "I'm afraid I must",
+     "kind": "frame",
+     "form": "I'm afraid I must",
+     "meaning": "A polite and slightly more formal way to express that you must do something.",
+     "example": "I'm afraid I must leave now to catch my train, but it was lovely chatting.",
+     "plain": "I must leave now to catch my train, but it was lovely chatting.",
+     "note": "A polite and slightly formal way to excuse oneself from a conversation."
+    },
+    {
+     "text": "I don't quite follow",
+     "kind": "chunk",
+     "form": "I don't quite follow",
+     "meaning": "A polite way to indicate that you don't fully understand what someone is saying.",
+     "example": "I don't quite follow your reasoning for that decision; could you elaborate a bit?",
+     "plain": "I don't understand your reasoning for that decision; could you elaborate a bit?",
+     "note": "A polite and common way to ask for clarification without sounding rude."
+    },
+    {
+     "text": "I'm not sure I follow",
+     "kind": "chunk",
+     "form": "I'm not sure I follow",
+     "meaning": "A polite way to indicate that you don't fully understand what someone is saying.",
+     "example": "I'm not sure I follow your logic on that point; could you explain it differently?",
+     "plain": "I don't understand your logic on that point; could you explain it differently?",
+     "note": "Similar to \"I don't quite follow,\" used to politely request further explanation."
+    },
+    {
+     "text": "I'm not sure I understand",
+     "kind": "chunk",
+     "form": "I'm not sure I understand",
+     "meaning": "A polite way to indicate that you don't fully grasp a concept or statement.",
+     "example": "I'm not sure I understand the implications of that new regulation for our department.",
+     "plain": "I don't understand the implications of that new regulation for our department.",
+     "note": "A polite way to admit confusion and invite further explanation."
+    },
+    {
+     "text": "I'm not sure I agree",
+     "kind": "chunk",
+     "form": "I'm not sure I agree",
+     "meaning": "A polite way to express disagreement without being confrontational.",
+     "example": "I'm not sure I agree with the proposed timeline for the project; it seems a bit ambitious.",
+     "plain": "I don't agree with the proposed timeline for the project; it seems a bit ambitious.",
+     "note": "A common softener for expressing a differing opinion respectfully."
+    },
+    {
+     "text": "I'm not sure I can",
+     "kind": "frame",
+     "form": "I'm not sure I can",
+     "meaning": "A polite way to express doubt about one's ability to do something.",
+     "example": "I'm not sure I can commit to that deadline, given my current workload.",
+     "plain": "I doubt I can commit to that deadline, given my current workload.",
+     "note": "A polite softener for declining a request or expressing a limitation."
+    },
+    {
+     "text": "I'm not sure I want to",
+     "kind": "frame",
+     "form": "I'm not sure I want to",
+     "meaning": "A polite way to express reluctance or hesitation about doing something.",
+     "example": "I'm not sure I want to take on another big responsibility right now, to be honest.",
+     "plain": "I'm hesitant to take on another big responsibility right now.",
+     "note": "A polite way to express disinclination without being blunt."
+    },
+    {
+     "text": "I'm not sure I like",
+     "kind": "frame",
+     "form": "I'm not sure I like",
+     "meaning": "A polite way to express mild disapproval or dislike.",
+     "example": "I'm not sure I like the new color scheme for the website; it feels a bit too bright.",
+     "plain": "I don't like the new color scheme for the website; it feels a bit too bright.",
+     "note": "A polite softener for expressing a negative opinion about something."
+    },
+    {
+     "text": "I'm not sure I'm comfortable",
+     "kind": "frame",
+     "form": "I'm not sure I'm comfortable",
+     "meaning": "A polite way to express hesitation or unease about a situation or topic.",
+     "example": "I'm not sure I'm comfortable discussing my personal finances in a public setting.",
+     "plain": "I'm uneasy discussing my personal finances in a public setting.",
+     "note": "A polite way to set boundaries or express discomfort."
+    },
+    {
+     "text": "I'm not sure I'm ready",
+     "kind": "frame",
+     "form": "I'm not sure I'm ready",
+     "meaning": "A polite way to express that you feel unprepared or unwilling to do something yet.",
+     "example": "I'm not sure I'm ready to take on a management role just yet; I need more experience.",
+     "plain": "I don't feel prepared to take on a management role just yet; I need more experience.",
+     "note": "A polite way to express hesitation about a new challenge or commitment."
+    },
+    {
+     "text": "I'm not sure I've heard",
+     "kind": "frame",
+     "form": "I'm not sure I've heard",
+     "meaning": "A polite way to indicate unfamiliarity with a piece of information or a person.",
+     "example": "I'm not sure I've heard about that new initiative; could you tell me more?",
+     "plain": "I haven't heard about that new initiative; could you tell me more?",
+     "note": "A polite way to admit lack of knowledge and invite further explanation."
+    },
+    {
+     "text": "I'm not sure I've seen",
+     "kind": "frame",
+     "form": "I'm not sure I've seen",
+     "meaning": "A polite way to indicate unfamiliarity with something visual or a document.",
+     "example": "I'm not sure I've seen the updated project timeline; is it available online?",
+     "plain": "I haven't seen the updated project timeline; is it available online?",
+     "note": "A polite way to admit lack of visual information and request it."
+    },
+    {
+     "text": "I'm not sure I've met",
+     "kind": "frame",
+     "form": "I'm not sure I've met",
+     "meaning": "A polite way to indicate that you don't recall meeting someone before.",
+     "example": "I'm not sure I've met you before; my name is Sarah, I work in marketing.",
+     "plain": "I don't recall meeting you before; my name is Sarah, I work in marketing.",
+     "note": "A polite way to initiate an introduction or re-introduction."
+    },
+    {
+     "text": "I'm not sure I've had",
+     "kind": "frame",
+     "form": "I'm not sure I've had",
+     "meaning": "A polite way to indicate that you don't recall having a particular experience or item.",
+     "example": "I'm not sure I've had the chance to review those figures yet; I'll check my inbox.",
+     "plain": "I don't recall reviewing those figures yet; I'll check my inbox.",
+     "note": "A polite way to admit something hasn't been done or experienced."
+    },
+    {
+     "text": "I'm not sure I've got",
+     "kind": "frame",
+     "form": "I'm not sure I've got",
+     "meaning": "A polite way to indicate uncertainty about possessing something or understanding.",
+     "example": "I'm not sure I've got all the necessary documents for the application.",
+     "plain": "I'm uncertain if I have all the necessary documents for the application.",
+     "note": "A polite way to express doubt about having something."
+    },
+    {
+     "text": "I'm not sure I've got it",
+     "kind": "chunk",
+     "form": "I'm not sure I've got it",
+     "meaning": "A polite way to indicate that you don't fully understand something.",
+     "example": "Could you explain that again? I'm not sure I've got it completely.",
+     "plain": "Could you explain that again? I don't understand it completely.",
+     "note": "Informal, used to politely ask for re-explanation."
+    },
+    {
+     "text": "I'm not sure I've got time",
+     "kind": "frame",
+     "form": "I'm not sure I've got time",
+     "meaning": "A polite way to express that you are busy or have limited availability.",
+     "example": "I'm not sure I've got time for a long discussion right now, but I can spare a few minutes.",
+     "plain": "I might not have time for a long discussion right now, but I can spare a few minutes.",
+     "note": "A polite way to manage expectations about your availability."
+    },
+    {
+     "text": "I'm not sure I've got the energy",
+     "kind": "frame",
+     "form": "I'm not sure I've got the energy",
+     "meaning": "A polite way to express that you are tired or lack the enthusiasm for something.",
+     "example": "I'm not sure I've got the energy for another late-night brainstorming session tonight.",
+     "plain": "I might not have the energy for another late-night brainstorming session tonight.",
+     "note": "Informal, used to politely decline due to fatigue or lack of enthusiasm."
+    },
+    {
+     "text": "I'm not sure I've got the patience",
+     "kind": "frame",
+     "form": "I'm not sure I've got the patience",
+     "meaning": "A polite way to express that you are feeling impatient or easily annoyed.",
+     "example": "I'm not sure I've got the patience for another round of revisions on this document.",
+     "plain": "I might not have the patience for another round of revisions on this document.",
+     "note": "Informal, used to politely express frustration or a limit to one's tolerance."
+    },
+    {
+     "text": "I'm not sure I've got the right idea",
+     "kind": "chunk",
+     "form": "I'm not sure I've got the right idea",
+     "meaning": "A polite way to express uncertainty about one's understanding or approach to something.",
+     "example": "I'm not sure I've got the right idea about how to tackle this complex problem.",
+     "plain": "I'm uncertain about how to tackle this complex problem.",
+     "note": "A polite way to express doubt and invite input or clarification."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "break the ice": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "how's your day going": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "lovely to meet you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what brings you here": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "speaking of which": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on that note": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if you don't mind me asking": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just out of curiosity": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "get the ball rolling": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "catch up with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how have you been": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "long time no see": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what have you been up to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "can't complain": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "not too bad": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "all things considered": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i'm being honest": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as a matter of fact": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "by the way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that reminds me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "on the subject of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to cut a long story short": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "where were we": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "getting back to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was just about to say": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i couldn't agree more": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i see what you mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a good point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i suppose so": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not so sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i beg to differ": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "with all due respect": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "no offense": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "don't get me wrong": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid not": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid so": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's a small world": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what a coincidence": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how do you find": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what do you make of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just wondering": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was wondering if": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "do you happen to know": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "could you tell me": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm afraid i don't know": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm afraid i can't help you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a pleasure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it was nice talking to you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i should get going": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i must be off": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll let you go": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "take care": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "have a good one": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "see you around": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "keep in touch": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a while": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "how's everything going": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "what's new with you": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "nothing much": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "same old same old": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just the usual": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "can't complain really": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been hectic": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "things are looking up": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "fingers crossed": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "touch wood": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "knock on wood": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "it goes without saying": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to make a long story short": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if you ask me": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "from my perspective": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as far as i'm concerned": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'd say": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm inclined to agree": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm inclined to think": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not entirely sure": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not entirely convinced": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "how was your weekend": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "anything exciting happening": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "what are your plans for": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i hope you don't mind": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just checking in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "how do you feel about": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a pleasure meeting you": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'll catch you later": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "it's been a productive day": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "how's life treating you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's on your mind": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i was just thinking about you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "fancy meeting you here": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what a pleasant surprise": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad we ran into each other": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "how do you know": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm just passing through": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm running a bit late": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'll keep you posted": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let me know if": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm looking forward to": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's been a while since": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "how about you": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "what do you think": {
+    "status": "drop",
+    "note": "Too basic (A1)."
+   },
+   "i'm just curious": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm glad to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "i'm sorry to hear that": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "it's been a pleasure working with you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll be in touch": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be fair": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if you will": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "for what it's worth": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "just to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i recall correctly": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the whole": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "as a rule of thumb": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "having said that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that being said": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in other words": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i may say so": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "just to be clear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i understand correctly": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to put it another way": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on second thought": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "as it happens": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be precise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "for the record": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the flip side": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to some extent": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "in a sense": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "as far as i know": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i'm not mistaken": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "needless to say": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put it mildly": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "you know what i mean": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if you catch my drift": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "just for the record": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be perfectly frank": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "on the one hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "on the other hand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to cut to the chase": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what i mean is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the thing is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "the point is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just saying": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'll be brief": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "as i was saying": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if i may interject": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "just a thought": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure if": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i almost forgot": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "just to recap": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i may add": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be frank with you": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm happy to say": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "if i may be so bold": {
+    "status": "pass",
+    "level": "C2"
+   },
+   "i'm just trying to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not going to lie": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be fair to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm just making sure": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "if you'll excuse me": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm just about to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm pleased to hear": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i regret to inform you": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm happy to report": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm unable to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i have to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i must": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i don't quite follow": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i follow": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i understand": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i agree": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i can": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i want to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i like": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i'm comfortable": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i'm ready": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've heard": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've seen": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've met": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've had": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've got": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've got it": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've got time": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've got the energy": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've got the patience": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm not sure i've got the right idea": {
+    "status": "pass",
+    "level": "B2"
+   }
+  }
+ }
+}

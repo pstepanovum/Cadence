@@ -1,0 +1,80 @@
+{
+ "format": 1,
+ "id": "fossil.make-do",
+ "area": "word-choice",
+ "title": "Make, do, take, have",
+ "what": "translated verb-noun collocations ('make a photo', 'do a mistake', 'make sport', 'take a decision' in American English, 'make a party')",
+ "summary": "This error persists due to direct translation from native languages and early learning habits. It subtly undermines fluency and can make communication sound less natural, despite advanced grammatical proficiency.",
+ "listenFor": "Pay close attention to your verb choices when combining them with common nouns, especially for actions, decisions, and social events.",
+ "grammarPointIds": [
+  "gp.intensifying-collocations"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "I always make a photo of the sunset when I am on vacation.",
+   "right": "I always take a photo of the sunset when I am on vacation.",
+   "note": "Take a photo is the standard collocation for capturing an image."
+  },
+  {
+   "wrong": "It is important to learn from the mistakes we do.",
+   "right": "It is important to learn from the mistakes we make.",
+   "note": "Make a mistake is the correct idiom for committing an error."
+  },
+  {
+   "wrong": "Many people make sport to stay healthy and active.",
+   "right": "Many people do sport to stay healthy and active.",
+   "note": "Do sport or exercise is the correct verb for engaging in physical activity."
+  },
+  {
+   "wrong": "We are planning to make a party for her birthday next month.",
+   "right": "We are planning to have a party for her birthday next month.",
+   "note": "Have a party or throw a party is used for hosting a social gathering."
+  },
+  {
+   "wrong": "Could you please make me a favor and pick up the dry cleaning?",
+   "right": "Could you please do me a favor and pick up the dry cleaning?",
+   "note": "Do a favor is the correct idiom for performing a helpful act."
+  }
+ ],
+ "drills": [
+  "We need to make a concerted effort to address these issues.",
+  "She always makes a good impression during client meetings.",
+  "It's crucial to make a clear distinction between the two concepts.",
+  "They decided to take a break from their demanding work schedule.",
+  "Please take a seat while I prepare the documents for you.",
+  "We must take responsibility for our collective actions.",
+  "He often does business with international partners.",
+  "I need to do some serious thinking before I make a final choice.",
+  "They will have a discussion about the project's future tomorrow.",
+  "We should have a look at the latest market trends."
+ ],
+ "probes": [
+  {
+   "sentence": "I need to do a phone call to my manager about the new proposal.",
+   "answers": [
+    "I need to make a phone call to my manager about the new proposal."
+   ]
+  },
+  {
+   "sentence": "She always makes her homework right after school.",
+   "answers": [
+    "She always does her homework right after school."
+   ]
+  },
+  {
+   "sentence": "We will make a meeting to discuss the budget adjustments.",
+   "answers": [
+    "We will have a meeting to discuss the budget adjustments."
+   ]
+  },
+  {
+   "sentence": "He did a lot of progress on his dissertation this semester.",
+   "answers": [
+    "He made a lot of progress on his dissertation this semester."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

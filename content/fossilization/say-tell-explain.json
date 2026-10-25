@@ -1,0 +1,105 @@
+{
+ "format": 1,
+ "id": "fossil.say-tell-explain",
+ "area": "grammar",
+ "title": "Say, tell, explain and suggest",
+ "what": "the wrong pattern after reporting verbs ('He said me that', 'She told that she was late', 'Can you explain me', 'He suggested me to wait')",
+ "summary": "These errors persist due to L1 interference and overgeneralization of 'tell' patterns. They subtly disrupt natural English flow, making communication less precise and marking speech as non-native.",
+ "listenFor": "Pay close attention to the grammatical structures immediately following 'say,' 'tell,' 'explain,' and 'suggest' in your own speech.",
+ "grammarPointIds": [
+  "gp.reported-statements",
+  "gp.reporting-verbs",
+  "gp.nuanced-reporting-verbs"
+ ],
+ "soundIds": [],
+ "contrasts": [
+  {
+   "wrong": "He said me that the meeting was postponed until next week.",
+   "right": "He said that the meeting was postponed until next week.",
+   "note": "'Say' does not take a direct object pronoun before a 'that' clause."
+  },
+  {
+   "wrong": "She told that she would be late for the presentation.",
+   "right": "She told us that she would be late for the presentation.",
+   "note": "'Tell' usually requires an indirect object (person) before a 'that' clause."
+  },
+  {
+   "wrong": "Could you explain me the new policy changes?",
+   "right": "Could you explain the new policy changes to me?",
+   "note": "'Explain' takes a direct object (thing) then 'to' + indirect object (person)."
+  },
+  {
+   "wrong": "My manager suggested me to consider the alternative proposal.",
+   "right": "My manager suggested that I consider the alternative proposal.",
+   "note": "'Suggest' uses a 'that' clause with a subjunctive or a gerund, not 'to' + infinitive."
+  },
+  {
+   "wrong": "The client said me that the project timeline was too ambitious.",
+   "right": "The client said to me that the project timeline was too ambitious.",
+   "note": "'Say' can take 'to' + indirect object, but not a direct object pronoun."
+  },
+  {
+   "wrong": "Please explain me how this new software integrates with our existing systems.",
+   "right": "Please explain to me how this new software integrates with our existing systems.",
+   "note": "'Explain' requires 'to' before the indirect object when followed by 'how' or 'what'."
+  }
+ ],
+ "drills": [
+  "The CEO said that market conditions were improving steadily.",
+  "She told her team that the deadline was firm.",
+  "Could you explain the complex financial model to the new intern?",
+  "I suggested that we postpone the decision until next quarter.",
+  "He said to his colleague that the report needed revisions.",
+  "The consultant explained the strategy to the board members.",
+  "They told us that the merger would proceed as planned.",
+  "I suggested reviewing the budget before making commitments.",
+  "She said that her flight was delayed due to bad weather.",
+  "Please explain the process for submitting expense reports."
+ ],
+ "probes": [
+  {
+   "sentence": "The professor explained us the theory in great detail.",
+   "answers": [
+    "The professor explained the theory to us in great detail.",
+    "The professor explained to us the theory in great detail."
+   ]
+  },
+  {
+   "sentence": "My colleague suggested me to take a break from the intense work.",
+   "answers": [
+    "My colleague suggested that I take a break from the intense work.",
+    "My colleague advised me to take a break from the intense work."
+   ]
+  },
+  {
+   "sentence": "He said me that he would handle the negotiations personally.",
+   "answers": [
+    "He said that he would handle the negotiations personally.",
+    "He told me that he would handle the negotiations personally."
+   ]
+  },
+  {
+   "sentence": "The manager told that the project was behind schedule.",
+   "answers": [
+    "The manager told us that the project was behind schedule.",
+    "The manager said that the project was behind schedule."
+   ]
+  },
+  {
+   "sentence": "Can you explain me the implications of this new regulation?",
+   "answers": [
+    "Can you explain the implications of this new regulation to me?",
+    "Can you explain to me the implications of this new regulation?"
+   ]
+  },
+  {
+   "sentence": "She suggested me to look into alternative investment opportunities.",
+   "answers": [
+    "She suggested looking into alternative investment opportunities.",
+    "She advised me to look into alternative investment opportunities."
+   ]
+  }
+ ],
+ "pairs": [],
+ "stress": []
+}

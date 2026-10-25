@@ -9,8 +9,10 @@
 //   content/articulation/*.json                            the mouth-map targets
 //
 // The bundled packs are `sounds`, `placement` (the placement test's bank,
-// needed offline in setup) and `core-a1` to `core-b2`; C1 and C2 are
-// downloaded on demand. Pack files are copied as `.cpack` so Metro treats them
+// needed offline in setup), `core-a1` to `core-b2`, and the advanced packs
+// (`phrases-b2` to `phrases-c2`, `slang`, `fossilization`: docs/PLATFORM.md
+// sections 17 and 18), which have no level and are read only by the advanced
+// screens; core C1 and C2 are downloaded on demand. Pack files are copied as `.cpack` so Metro treats them
 // as assets (read from disk when a level is opened) rather than parsing them
 // into the JS bundle at launch.
 //
@@ -27,7 +29,9 @@ const mobile = resolve(here, "..");
 const repo = resolve(mobile, "..");
 const check = process.argv.includes("--check");
 
-const BUNDLED = ["sounds", "placement", "core-a1", "core-a2", "core-b1", "core-b2"];
+const BUNDLED = ["sounds", "placement", "core-a1", "core-a2", "core-b1", "core-b2", "slang", "fossilization"];
+/** Every part of the phrase bank (phrases-b2, phrases-c1, phrases-c1-2, ...). */
+const isBundled = (id) => BUNDLED.includes(id) || /^phrases-[a-z0-9-]+$/.test(id);
 const PACKS_SRC = join(repo, "public/packs");
 const FIXTURE_PACKS = join(mobile, "src/content/fixtures/packs");
 const ARTICULATION_SRC = join(repo, "content/articulation");
@@ -46,7 +50,7 @@ function collectPacks() {
     const index = readJson(indexPath);
     const packs = [];
     for (const entry of index.packs) {
-      if (!BUNDLED.includes(entry.id)) continue;
+      if (!isBundled(entry.id)) continue;
       const manifestPath = join(PACKS_SRC, entry.manifest.replace(/^\/?packs\//, ""));
       const manifest = readJson(manifestPath);
       packs.push({ id: entry.id, version: manifest.version, level: manifest.level, title: manifest.title, dir: dirname(manifestPath), manifest });

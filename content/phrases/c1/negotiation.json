@@ -1,0 +1,1883 @@
+{
+ "format": 1,
+ "level": "C1",
+ "situation": "negotiation",
+ "rounds": [
+  {
+   "round": 1,
+   "items": [
+    {
+     "text": "put on the table",
+     "kind": "collocation",
+     "form": "put on the table",
+     "meaning": "To formally propose an offer or a condition for discussion during a negotiation.",
+     "example": "We're ready to put on the table a revised proposal for the project scope.",
+     "plain": "We're ready to propose a revised plan for the project scope.",
+     "note": "Common in formal and informal negotiations, indicating a willingness to discuss a specific point."
+    },
+    {
+     "text": "draw a line",
+     "kind": "collocation",
+     "form": "draw a line",
+     "meaning": "To set a firm limit or boundary beyond which one is unwilling to go or compromise.",
+     "example": "We have to draw a line on the budget; we can't exceed this amount.",
+     "plain": "We have to set a firm limit on the budget; we can't exceed this amount.",
+     "note": "Signals a non-negotiable point, often used to hold firm on a position."
+    },
+    {
+     "text": "meet halfway",
+     "kind": "chunk",
+     "form": "meet halfway",
+     "meaning": "To compromise by agreeing to some of the other party's demands or conditions.",
+     "example": "If you can adjust the delivery date, we can meet halfway on the price.",
+     "plain": "If you can adjust the delivery date, we can compromise on the price.",
+     "note": "Suggests a willingness to concede, often in exchange for a concession from the other side."
+    },
+    {
+     "text": "from our perspective",
+     "kind": "frame",
+     "form": "From our perspective",
+     "meaning": "Introduces a statement that reflects one's own viewpoint or understanding of the situation.",
+     "example": "From our perspective, the current timeline is simply not feasible.",
+     "plain": "We believe the current timeline is simply not feasible.",
+     "note": "A polite way to state your opinion, emphasizing it's one viewpoint among others."
+    },
+    {
+     "text": "on the condition that",
+     "kind": "frame",
+     "form": "on the condition that",
+     "meaning": "Introduces a specific requirement that must be met for an offer or agreement to be valid.",
+     "example": "We can agree to the extended deadline on the condition that the quality remains high.",
+     "plain": "We can agree to the extended deadline if the quality remains high.",
+     "note": "Used to make a conditional offer, clearly stating what is required in return."
+    },
+    {
+     "text": "take into account",
+     "kind": "collocation",
+     "form": "take into account",
+     "meaning": "To consider specific factors or information when making a decision or judgment.",
+     "example": "We need to take into account the team's current workload before committing.",
+     "plain": "We need to consider the team's current workload before committing.",
+     "note": "Suggests a thorough and fair approach, considering all relevant aspects."
+    },
+    {
+     "text": "as a gesture of goodwill",
+     "kind": "chunk",
+     "form": "as a gesture of goodwill",
+     "meaning": "Indicates an action taken to show friendliness or a desire for a positive relationship.",
+     "example": "As a gesture of goodwill, we're willing to absorb some of the initial setup costs.",
+     "plain": "We're willing to absorb some of the initial setup costs to show our good intentions.",
+     "note": "Often used when making a small concession to build trust or improve relations."
+    },
+    {
+     "text": "what I'm getting at is",
+     "kind": "frame",
+     "form": "What I'm getting at is",
+     "meaning": "Used to clarify or state the main point you are trying to make after some explanation.",
+     "example": "What I'm getting at is, we need to adjust the project timeline to be realistic.",
+     "plain": "We need to adjust the project timeline to be realistic.",
+     "note": "Helps to steer the conversation back to the core issue or to make your point explicit."
+    },
+    {
+     "text": "find common ground",
+     "kind": "collocation",
+     "form": "find common ground",
+     "meaning": "To discover shared interests or beliefs that can serve as a basis for agreement.",
+     "example": "I'm confident we can find common ground on the key deliverables.",
+     "plain": "I'm confident we can discover shared interests on the key deliverables.",
+     "note": "A positive phrase, suggesting a collaborative approach to negotiation."
+    },
+    {
+     "text": "push back on",
+     "kind": "collocation",
+     "form": "push back on",
+     "meaning": "To resist or oppose a proposal, demand, or idea, often with an argument.",
+     "example": "We might need to push back on their request for an immediate start date.",
+     "plain": "We might need to resist their request for an immediate start date.",
+     "note": "Informal but common in business; implies a firm but not aggressive refusal."
+    },
+    {
+     "text": "at this juncture",
+     "kind": "chunk",
+     "form": "at this juncture",
+     "meaning": "At this particular point in time or stage of the discussion.",
+     "example": "At this juncture, we're not prepared to make any further concessions.",
+     "plain": "At this point, we're not prepared to make any further concessions.",
+     "note": "Slightly formal, used to emphasize the current stage of a negotiation."
+    },
+    {
+     "text": "to be frank",
+     "kind": "chunk",
+     "form": "To be frank",
+     "meaning": "Used to indicate that you are about to state your honest opinion, even if it's direct.",
+     "example": "To be frank, the proposed budget is simply too high for us.",
+     "plain": "Honestly, the proposed budget is simply too high for us.",
+     "note": "Signals directness and honesty, often used before stating a difficult truth."
+    },
+    {
+     "text": "my understanding is that",
+     "kind": "frame",
+     "form": "My understanding is that",
+     "meaning": "Used to state what you believe to be the current situation or agreement, often to confirm.",
+     "example": "My understanding is that we agreed on a two-week review period.",
+     "plain": "I believe we agreed on a two-week review period.",
+     "note": "A polite way to confirm or clarify a point, inviting correction if mistaken."
+    },
+    {
+     "text": "strike a balance",
+     "kind": "collocation",
+     "form": "strike a balance",
+     "meaning": "To find a satisfactory compromise between two opposing or conflicting elements.",
+     "example": "We need to strike a balance between speed and quality for this project.",
+     "plain": "We need to find a satisfactory compromise between speed and quality for this project.",
+     "note": "Highlights the need for careful consideration to achieve an optimal outcome."
+    },
+    {
+     "text": "walk away from",
+     "kind": "collocation",
+     "form": "walk away from",
+     "meaning": "To abandon a negotiation or deal because the terms are unacceptable.",
+     "example": "If we can't agree on the core terms, we may have to walk away from the deal.",
+     "plain": "If we can't agree on the core terms, we may have to abandon the deal.",
+     "note": "A strong statement, indicating a willingness to end discussions if necessary."
+    },
+    {
+     "text": "give some ground",
+     "kind": "collocation",
+     "form": "give some ground",
+     "meaning": "To make concessions or yield on some points during a negotiation.",
+     "example": "We're prepared to give some ground on the payment schedule if you can commit now.",
+     "plain": "We're prepared to make some concessions on the payment schedule if you can commit now.",
+     "note": "Suggests flexibility and a willingness to compromise on certain aspects."
+    },
+    {
+     "text": "have some reservations",
+     "kind": "collocation",
+     "form": "have some reservations",
+     "meaning": "To have doubts or concerns about a particular aspect of a proposal or agreement.",
+     "example": "I have some reservations about the proposed budget allocation for marketing.",
+     "plain": "I have some doubts about the proposed budget allocation for marketing.",
+     "note": "A polite way to express concerns without outright rejecting an idea."
+    },
+    {
+     "text": "let's be clear",
+     "kind": "chunk",
+     "form": "Let's be clear",
+     "meaning": "Used to emphasize a point or to state something directly and unambiguously.",
+     "example": "Let's be clear, our priority is the long-term success of this partnership.",
+     "plain": "Our priority is the long-term success of this partnership.",
+     "note": "Often used to assert a position or clarify a misunderstanding firmly."
+    },
+    {
+     "text": "the bottom line is",
+     "kind": "frame",
+     "form": "The bottom line is",
+     "meaning": "Used to introduce the most important fact or the essential point of a situation.",
+     "example": "The bottom line is, we need to secure this contract to meet our quarterly targets.",
+     "plain": "Ultimately, we need to secure this contract to meet our quarterly targets.",
+     "note": "Emphasizes the crucial, non-negotiable aspect of a situation."
+    },
+    {
+     "text": "come to terms with",
+     "kind": "collocation",
+     "form": "come to terms with",
+     "meaning": "To accept and deal with a difficult situation or reality.",
+     "example": "We need to come to terms with the fact that the original deadline is no longer viable.",
+     "plain": "We need to accept that the original deadline is no longer viable.",
+     "note": "Implies acknowledging a difficult truth, often a necessary step before moving forward."
+    },
+    {
+     "text": "make a counter-offer",
+     "kind": "collocation",
+     "form": "make a counter-offer",
+     "meaning": "To respond to an offer with a different proposal, usually more favorable to oneself.",
+     "example": "We're going to make a counter-offer that includes a longer payment term.",
+     "plain": "We're going to respond with a different proposal that includes a longer payment term.",
+     "note": "A standard negotiation tactic, indicating a desire to continue discussions."
+    },
+    {
+     "text": "for the sake of argument",
+     "kind": "chunk",
+     "form": "For the sake of argument",
+     "meaning": "Used to introduce a hypothetical situation or point for discussion, without necessarily agreeing with it.",
+     "example": "For the sake of argument, let's say we agree to your price; what about the timeline?",
+     "plain": "Let's assume we agree to your price; what about the timeline?",
+     "note": "Allows exploration of possibilities without commitment, useful for testing scenarios."
+    },
+    {
+     "text": "where do we stand",
+     "kind": "chunk",
+     "form": "Where do we stand",
+     "meaning": "Asks for an update on the current status or position in a negotiation.",
+     "example": "So, after our discussion, where do we stand on the project deliverables?",
+     "plain": "So, after our discussion, what is our current position on the project deliverables?",
+     "note": "A direct question to assess progress and clarify the current situation."
+    },
+    {
+     "text": "I'm prepared to",
+     "kind": "frame",
+     "form": "I'm prepared to",
+     "meaning": "Indicates a willingness to do something, often a concession or a firm action.",
+     "example": "I'm prepared to offer a discount if you sign the contract by Friday.",
+     "plain": "I am willing to offer a discount if you sign the contract by Friday.",
+     "note": "Shows readiness to act, often used when making a conditional offer."
+    },
+    {
+     "text": "iron out the details",
+     "kind": "collocation",
+     "form": "iron out the details",
+     "meaning": "To resolve minor problems or disagreements in a plan or agreement.",
+     "example": "Once we agree on the main points, we can iron out the details next week.",
+     "plain": "Once we agree on the main points, we can resolve the minor problems next week.",
+     "note": "Suggests that the major hurdles are overcome, and only smaller issues remain."
+    },
+    {
+     "text": "a sticking point",
+     "kind": "collocation",
+     "form": "a sticking point",
+     "meaning": "A point of disagreement that prevents progress in a negotiation or discussion.",
+     "example": "The payment schedule seems to be a sticking point for both parties.",
+     "plain": "The payment schedule seems to be a point of disagreement for both parties.",
+     "note": "Highlights a specific issue that is causing difficulty in reaching an agreement."
+    },
+    {
+     "text": "what if we were to",
+     "kind": "frame",
+     "form": "What if we were to",
+     "meaning": "Used to introduce a hypothetical suggestion or alternative proposal for consideration.",
+     "example": "What if we were to extend the project by two weeks and keep the original budget?",
+     "plain": "How about we extend the project by two weeks and keep the original budget?",
+     "note": "A soft way to float a new idea, inviting discussion rather than demanding agreement."
+    },
+    {
+     "text": "I'm open to",
+     "kind": "frame",
+     "form": "I'm open to",
+     "meaning": "Indicates a willingness to consider or accept new ideas, suggestions, or changes.",
+     "example": "I'm open to discussing alternative solutions for the software integration.",
+     "plain": "I am willing to discuss alternative solutions for the software integration.",
+     "note": "Shows flexibility and a collaborative spirit, encouraging further proposals."
+    },
+    {
+     "text": "that's a fair point",
+     "kind": "chunk",
+     "form": "That's a fair point",
+     "meaning": "Acknowledges that the other person's argument or observation is reasonable and valid.",
+     "example": "That's a fair point about the potential impact on our existing clients.",
+     "plain": "Your point about the potential impact on our existing clients is reasonable.",
+     "note": "A diplomatic way to show you've heard and understood the other side's argument."
+    },
+    {
+     "text": "we can't budge on",
+     "kind": "chunk",
+     "form": "we can't budge on",
+     "meaning": "Indicates that a particular term or condition is non-negotiable and cannot be changed.",
+     "example": "I'm afraid we can't budge on the core functionality requirements.",
+     "plain": "I'm afraid we cannot change the core functionality requirements.",
+     "note": "A firm statement, signaling a fixed position on a specific issue."
+    },
+    {
+     "text": "let's revisit this",
+     "kind": "chunk",
+     "form": "Let's revisit this",
+     "meaning": "Suggests postponing discussion of a particular topic to a later time or stage.",
+     "example": "Let's revisit this pricing discussion once we've finalized the scope.",
+     "plain": "Let's discuss this pricing again once we've finalized the scope.",
+     "note": "Useful for managing the flow of a negotiation, focusing on one issue at a time."
+    },
+    {
+     "text": "to recap",
+     "kind": "chunk",
+     "form": "To recap",
+     "meaning": "Used to summarize the main points that have been discussed or agreed upon.",
+     "example": "To recap, we've agreed on the deliverables and the initial payment structure.",
+     "plain": "To summarize, we've agreed on the deliverables and the initial payment structure.",
+     "note": "Helps ensure clarity and mutual understanding before moving forward."
+    },
+    {
+     "text": "I'd like to propose",
+     "kind": "frame",
+     "form": "I'd like to propose",
+     "meaning": "A polite way to introduce a suggestion or a formal offer for consideration.",
+     "example": "I'd like to propose a phased approach to the implementation.",
+     "plain": "I want to suggest a phased approach to the implementation.",
+     "note": "Formal and polite, suitable for introducing new ideas or solutions."
+    },
+    {
+     "text": "we're prepared to offer",
+     "kind": "frame",
+     "form": "We're prepared to offer",
+     "meaning": "Indicates a specific concession or benefit that one is willing to provide.",
+     "example": "We're prepared to offer a 10% discount for an upfront payment.",
+     "plain": "We are willing to give a 10% discount for an upfront payment.",
+     "note": "A direct way to present a concession, often conditional on another action."
+    },
+    {
+     "text": "what are your thoughts on",
+     "kind": "frame",
+     "form": "What are your thoughts on",
+     "meaning": "Asks for the other party's opinion or perspective on a specific matter.",
+     "example": "What are your thoughts on extending the pilot phase by another month?",
+     "plain": "What do you think about extending the pilot phase by another month?",
+     "note": "Invites collaboration and shows respect for the other party's input."
+    },
+    {
+     "text": "come to an agreement",
+     "kind": "collocation",
+     "form": "come to an agreement",
+     "meaning": "To reach a mutual understanding or resolution after discussion or negotiation.",
+     "example": "I'm hopeful we can come to an agreement by the end of the day.",
+     "plain": "I'm hopeful we can reach a mutual understanding by the end of the day.",
+     "note": "The ultimate goal of negotiation, signifying a successful outcome."
+    },
+    {
+     "text": "raise a concern",
+     "kind": "collocation",
+     "form": "raise a concern",
+     "meaning": "To bring up an issue or worry that needs to be addressed or discussed.",
+     "example": "I'd like to raise a concern about the proposed delivery timeline.",
+     "plain": "I'd like to mention a worry about the proposed delivery timeline.",
+     "note": "A polite and professional way to introduce a problem or difficulty."
+    },
+    {
+     "text": "we're willing to consider",
+     "kind": "frame",
+     "form": "We're willing to consider",
+     "meaning": "Indicates openness to discussing or accepting alternative ideas or proposals.",
+     "example": "We're willing to consider a different payment structure if it helps.",
+     "plain": "We are open to discussing a different payment structure if it helps.",
+     "note": "Shows flexibility and a desire to find a mutually beneficial solution."
+    },
+    {
+     "text": "that being said",
+     "kind": "chunk",
+     "form": "That being said",
+     "meaning": "Used to introduce a statement that contrasts with or qualifies what was just said.",
+     "example": "The budget is tight; that being said, we value quality above all else.",
+     "plain": "The budget is tight; however, we value quality above all else.",
+     "note": "A useful discourse marker for introducing a nuanced or contrasting point."
+    },
+    {
+     "text": "what's your take on",
+     "kind": "frame",
+     "form": "What's your take on",
+     "meaning": "Asks for someone's opinion or perspective on a particular issue.",
+     "example": "What's your take on the proposed changes to the project scope?",
+     "plain": "What is your opinion on the proposed changes to the project scope?",
+     "note": "Informal but professional, used to solicit input and gauge understanding."
+    },
+    {
+     "text": "a win-win situation",
+     "kind": "collocation",
+     "form": "a win-win situation",
+     "meaning": "A scenario where all parties involved benefit from the outcome.",
+     "example": "Our goal is to create a win-win situation for both companies.",
+     "plain": "Our goal is to create a situation where both companies benefit.",
+     "note": "Emphasizes a collaborative and mutually beneficial approach to negotiation."
+    },
+    {
+     "text": "I hear what you're saying",
+     "kind": "chunk",
+     "form": "I hear what you're saying",
+     "meaning": "Acknowledges understanding of the other person's point, often before presenting a different view.",
+     "example": "I hear what you're saying about the cost, but our quality is unmatched.",
+     "plain": "I understand your point about the cost, but our quality is unmatched.",
+     "note": "A softener, showing empathy and active listening, even if you disagree."
+    },
+    {
+     "text": "we're prepared to concede",
+     "kind": "frame",
+     "form": "We're prepared to concede",
+     "meaning": "Indicates a willingness to give up a point or demand in a negotiation.",
+     "example": "We're prepared to concede on the minor features to secure the core deal.",
+     "plain": "We are willing to give up the minor features to secure the core deal.",
+     "note": "A direct way to signal a concession, often to move the negotiation forward."
+    },
+    {
+     "text": "let's explore options",
+     "kind": "chunk",
+     "form": "Let's explore options",
+     "meaning": "Suggests looking at various possibilities or alternatives to find a solution.",
+     "example": "If that's not working, let's explore options for a different approach.",
+     "plain": "If that's not working, let's look at different possibilities for an approach.",
+     "note": "Encourages creative problem-solving when faced with a difficulty."
+    },
+    {
+     "text": "I'm afraid we can't",
+     "kind": "frame",
+     "form": "I'm afraid we can't",
+     "meaning": "A polite but firm way to refuse a request or state an inability to comply.",
+     "example": "I'm afraid we can't accommodate that tight a turnaround time.",
+     "plain": "We cannot accommodate that tight a turnaround time.",
+     "note": "Softens a refusal, making it sound less abrupt or confrontational."
+    },
+    {
+     "text": "we need to factor in",
+     "kind": "collocation",
+     "form": "we need to factor in",
+     "meaning": "To include a particular element or consideration when making calculations or plans.",
+     "example": "We need to factor in the potential for delays due to supply chain issues.",
+     "plain": "We need to include the potential for delays due to supply chain issues.",
+     "note": "Highlights the importance of considering all relevant variables."
+    },
+    {
+     "text": "to be perfectly honest",
+     "kind": "chunk",
+     "form": "To be perfectly honest",
+     "meaning": "Used to introduce a very direct and sincere statement, often about a difficult truth.",
+     "example": "To be perfectly honest, we're not seeing enough value in the current proposal.",
+     "plain": "Honestly, we're not seeing enough value in the current proposal.",
+     "note": "Emphasizes sincerity and directness, often used before delivering bad news."
+    },
+    {
+     "text": "let's table that for now",
+     "kind": "chunk",
+     "form": "Let's table that for now",
+     "meaning": "Suggests postponing discussion of a topic to a later time.",
+     "example": "Let's table that for now and focus on the immediate deliverables.",
+     "plain": "Let's postpone discussing that for now and focus on the immediate deliverables.",
+     "note": "Common in meetings, used to manage agenda and prioritize discussions."
+    },
+    {
+     "text": "I'm confident that",
+     "kind": "frame",
+     "form": "I'm confident that",
+     "meaning": "Expresses a strong belief or assurance about a future outcome or possibility.",
+     "example": "I'm confident that we can find a mutually beneficial solution.",
+     "plain": "I strongly believe that we can find a mutually beneficial solution.",
+     "note": "Conveys optimism and a positive outlook, useful for building morale."
+    },
+    {
+     "text": "we're looking for",
+     "kind": "frame",
+     "form": "We're looking for",
+     "meaning": "States what one is seeking or hoping to achieve from the negotiation.",
+     "example": "We're looking for a long-term partnership, not just a one-off project.",
+     "plain": "We want a long-term partnership, not just a one-off project.",
+     "note": "Clearly defines objectives and helps align expectations."
+    },
+    {
+     "text": "we need to be realistic",
+     "kind": "chunk",
+     "form": "We need to be realistic",
+     "meaning": "Emphasizes the importance of considering practical limitations and possibilities.",
+     "example": "We need to be realistic about what we can achieve within this timeframe.",
+     "plain": "We need to consider what is practically achievable within this timeframe.",
+     "note": "Used to temper expectations or introduce a dose of practicality."
+    },
+    {
+     "text": "I'd be willing to",
+     "kind": "frame",
+     "form": "I'd be willing to",
+     "meaning": "Indicates a readiness to perform an action or make a concession.",
+     "example": "I'd be willing to adjust the payment terms if you can guarantee a larger volume.",
+     "plain": "I would adjust the payment terms if you can guarantee a larger volume.",
+     "note": "A polite way to offer a concession, often conditional."
+    },
+    {
+     "text": "let's try to find",
+     "kind": "frame",
+     "form": "Let's try to find",
+     "meaning": "Suggests a collaborative effort to discover a solution or common ground.",
+     "example": "Let's try to find a solution that works for both our teams.",
+     "plain": "Let's attempt to discover a solution that works for both our teams.",
+     "note": "Encourages teamwork and a constructive approach to problem-solving."
+    },
+    {
+     "text": "we're prepared to go as far as",
+     "kind": "frame",
+     "form": "We're prepared to go as far as",
+     "meaning": "Indicates the maximum extent of a concession or offer one is willing to make.",
+     "example": "We're prepared to go as far as a 15% discount, but no further.",
+     "plain": "We are willing to offer up to a 15% discount, but no more.",
+     "note": "Sets a clear limit on concessions, signaling a firm boundary."
+    },
+    {
+     "text": "we need to clarify",
+     "kind": "frame",
+     "form": "We need to clarify",
+     "meaning": "States the necessity of making something clearer or more precise.",
+     "example": "We need to clarify the responsibilities of each team member.",
+     "plain": "We must make the responsibilities of each team member clearer.",
+     "note": "Used to address ambiguity and ensure mutual understanding."
+    },
+    {
+     "text": "I'm not comfortable with",
+     "kind": "frame",
+     "form": "I'm not comfortable with",
+     "meaning": "Expresses unease or disagreement with a particular proposal or situation.",
+     "example": "I'm not comfortable with the proposed payment terms; they're too aggressive.",
+     "plain": "I disagree with the proposed payment terms; they're too aggressive.",
+     "note": "A polite but firm way to express dissent or objection."
+    },
+    {
+     "text": "let's get this straight",
+     "kind": "chunk",
+     "form": "Let's get this straight",
+     "meaning": "Used to ensure that everyone understands the facts or agreement clearly.",
+     "example": "Let's get this straight: you're proposing a three-month extension?",
+     "plain": "Let's confirm: you're proposing a three-month extension?",
+     "note": "A direct way to seek clarification and avoid misunderstandings."
+    },
+    {
+     "text": "we're prepared to compromise on",
+     "kind": "frame",
+     "form": "We're prepared to compromise on",
+     "meaning": "Indicates a willingness to make concessions on a specific point.",
+     "example": "We're prepared to compromise on the delivery date if the price is firm.",
+     "plain": "We are willing to make concessions on the delivery date if the price is firm.",
+     "note": "Shows flexibility and a desire to find a middle ground."
+    },
+    {
+     "text": "we need to bridge the gap",
+     "kind": "collocation",
+     "form": "we need to bridge the gap",
+     "meaning": "To find a way to reconcile differences or disagreements between parties.",
+     "example": "We need to bridge the gap between our expectations and their capabilities.",
+     "plain": "We need to find a way to reconcile our expectations and their capabilities.",
+     "note": "Emphasizes the need to find common ground and overcome differences."
+    },
+    {
+     "text": "I'm afraid that won't work",
+     "kind": "chunk",
+     "form": "I'm afraid that won't work",
+     "meaning": "A polite but firm way to reject a proposal or suggestion.",
+     "example": "I'm afraid that won't work for our current operational structure.",
+     "plain": "That will not work for our current operational structure.",
+     "note": "Softens a direct refusal, making it sound less confrontational."
+    },
+    {
+     "text": "let's consider this",
+     "kind": "frame",
+     "form": "Let's consider this",
+     "meaning": "Suggests taking a moment to think about a particular aspect or proposal.",
+     "example": "Let's consider this from a long-term strategic perspective.",
+     "plain": "Let's think about this from a long-term strategic perspective.",
+     "note": "Encourages careful thought and a broader view of the situation."
+    },
+    {
+     "text": "we're prepared to adjust",
+     "kind": "frame",
+     "form": "We're prepared to adjust",
+     "meaning": "Indicates a willingness to make changes to one's position or proposal.",
+     "example": "We're prepared to adjust the scope if it helps meet your budget.",
+     "plain": "We are willing to change the scope if it helps meet your budget.",
+     "note": "Shows flexibility and a desire to accommodate the other party's needs."
+    },
+    {
+     "text": "that's a reasonable request",
+     "kind": "chunk",
+     "form": "That's a reasonable request",
+     "meaning": "Acknowledges that a demand or suggestion is fair and justifiable.",
+     "example": "That's a reasonable request for additional reporting, we can implement that.",
+     "plain": "Your request for additional reporting is fair, we can implement that.",
+     "note": "A diplomatic way to accept a point, showing willingness to cooperate."
+    },
+    {
+     "text": "we need to be clear on",
+     "kind": "frame",
+     "form": "We need to be clear on",
+     "meaning": "Emphasizes the importance of having a precise understanding of a specific point.",
+     "example": "We need to be clear on the exact deliverables before we proceed.",
+     "plain": "We must have a precise understanding of the exact deliverables before we proceed.",
+     "note": "Used to ensure no ambiguity remains on critical aspects."
+    },
+    {
+     "text": "I'm willing to go as far as",
+     "kind": "frame",
+     "form": "I'm willing to go as far as",
+     "meaning": "States the maximum concession or offer one is personally prepared to make.",
+     "example": "I'm willing to go as far as a 5% reduction, but that's my limit.",
+     "plain": "I am prepared to offer up to a 5% reduction, but that's my limit.",
+     "note": "Sets a personal boundary, indicating a firm but not entirely inflexible position."
+    },
+    {
+     "text": "let's look at it this way",
+     "kind": "chunk",
+     "form": "Let's look at it this way",
+     "meaning": "Introduces an alternative perspective or a reframing of the situation.",
+     "example": "Let's look at it this way: a slightly higher initial investment could save costs later.",
+     "plain": "Consider it this way: a slightly higher initial investment could save costs later.",
+     "note": "Used to persuade by offering a different angle or benefit."
+    },
+    {
+     "text": "we're prepared to make a concession",
+     "kind": "frame",
+     "form": "We're prepared to make a concession",
+     "meaning": "Indicates a readiness to yield on a point to facilitate agreement.",
+     "example": "We're prepared to make a concession on the payment terms for a quicker sign-off.",
+     "plain": "We are willing to yield on the payment terms for a quicker sign-off.",
+     "note": "A formal way to signal flexibility and a desire to move forward."
+    },
+    {
+     "text": "that's not ideal",
+     "kind": "chunk",
+     "form": "That's not ideal",
+     "meaning": "A polite way to express dissatisfaction or indicate that something is less than perfect.",
+     "example": "That's not ideal for our current resource allocation, but we can discuss it.",
+     "plain": "That is not perfect for our current resource allocation, but we can discuss it.",
+     "note": "Softens a negative reaction, leaving room for further discussion."
+    },
+    {
+     "text": "we need to find a middle ground",
+     "kind": "collocation",
+     "form": "we need to find a middle ground",
+     "meaning": "To discover a compromise or a solution that satisfies both parties to some extent.",
+     "example": "We need to find a middle ground between your budget and our service level.",
+     "plain": "We need to discover a compromise between your budget and our service level.",
+     "note": "Emphasizes the need for compromise and mutual adjustment."
+    },
+    {
+     "text": "I'm afraid we're unable to",
+     "kind": "frame",
+     "form": "I'm afraid we're unable to",
+     "meaning": "A polite and formal way to state an inability to fulfill a request or condition.",
+     "example": "I'm afraid we're unable to meet that specific delivery date.",
+     "plain": "We cannot meet that specific delivery date.",
+     "note": "Formal and polite, used to convey a firm refusal without being abrupt."
+    },
+    {
+     "text": "let's focus on",
+     "kind": "frame",
+     "form": "Let's focus on",
+     "meaning": "Suggests directing attention to a particular topic or aspect of the negotiation.",
+     "example": "Let's focus on the key objectives for this quarter first.",
+     "plain": "Let's direct our attention to the key objectives for this quarter first.",
+     "note": "Used to steer the conversation and maintain focus on priorities."
+    },
+    {
+     "text": "we're prepared to absorb",
+     "kind": "frame",
+     "form": "We're prepared to absorb",
+     "meaning": "Indicates a willingness to take on costs or responsibilities that might otherwise fall to the other party.",
+     "example": "We're prepared to absorb the initial training costs for your team.",
+     "plain": "We are willing to cover the initial training costs for your team.",
+     "note": "A significant concession, often used to sweeten a deal or build trust."
+    },
+    {
+     "text": "that's a tough one",
+     "kind": "chunk",
+     "form": "That's a tough one",
+     "meaning": "Acknowledges that a particular issue or request is difficult to resolve or agree upon.",
+     "example": "That's a tough one, as it impacts our core operational efficiency.",
+     "plain": "That is a difficult issue, as it impacts our core operational efficiency.",
+     "note": "Informal but professional, used to express empathy for a difficult situation."
+    },
+    {
+     "text": "we need to consider the implications",
+     "kind": "collocation",
+     "form": "we need to consider the implications",
+     "meaning": "To think about the possible future effects or consequences of a decision or action.",
+     "example": "We need to consider the implications of this change on our long-term strategy.",
+     "plain": "We need to think about the possible future effects of this change on our long-term strategy.",
+     "note": "Emphasizes a cautious and forward-thinking approach."
+    },
+    {
+     "text": "I'm not in a position to",
+     "kind": "frame",
+     "form": "I'm not in a position to",
+     "meaning": "States an inability to do something due to lack of authority or resources.",
+     "example": "I'm not in a position to approve that level of discount right now.",
+     "plain": "I cannot approve that level of discount right now.",
+     "note": "A polite way to decline a request by citing limitations."
+    },
+    {
+     "text": "let's take a step back",
+     "kind": "chunk",
+     "form": "Let's take a step back",
+     "meaning": "Suggests pausing to review the overall situation or strategy from a broader perspective.",
+     "example": "Let's take a step back and look at the bigger picture before we decide.",
+     "plain": "Let's pause and look at the bigger picture before we decide.",
+     "note": "Useful for de-escalating tension or gaining perspective in a complex negotiation."
+    },
+    {
+     "text": "we're prepared to make an exception",
+     "kind": "frame",
+     "form": "We're prepared to make an exception",
+     "meaning": "Indicates a willingness to deviate from standard rules or procedures for a specific case.",
+     "example": "We're prepared to make an exception for your company on the payment terms.",
+     "plain": "We are willing to deviate from our standard payment terms for your company.",
+     "note": "A significant concession, highlighting the special nature of the offer."
+    },
+    {
+     "text": "we need to align on",
+     "kind": "collocation",
+     "form": "we need to align on",
+     "meaning": "To ensure that all parties agree on or are in harmony regarding a specific point.",
+     "example": "We need to align on the project's key performance indicators.",
+     "plain": "We need to agree on the project's key performance indicators.",
+     "note": "Emphasizes the importance of shared understanding and agreement."
+    },
+    {
+     "text": "I'm afraid I can't agree to that",
+     "kind": "chunk",
+     "form": "I'm afraid I can't agree to that",
+     "meaning": "A polite but firm way to refuse a proposal or condition.",
+     "example": "I'm afraid I can't agree to that short a turnaround time for development.",
+     "plain": "I cannot agree to that short a turnaround time for development.",
+     "note": "Softens a direct refusal, maintaining a polite tone."
+    },
+    {
+     "text": "we're prepared to explore",
+     "kind": "frame",
+     "form": "We're prepared to explore",
+     "meaning": "Indicates openness to investigating different possibilities or solutions.",
+     "example": "We're prepared to explore alternative technologies if the current one is too costly.",
+     "plain": "We are willing to investigate alternative technologies if the current one is too costly.",
+     "note": "Shows flexibility and a proactive approach to problem-solving."
+    },
+    {
+     "text": "we need to find a way to",
+     "kind": "frame",
+     "form": "We need to find a way to",
+     "meaning": "Expresses the necessity of discovering a method or solution for a challenge.",
+     "example": "We need to find a way to reduce costs without compromising quality.",
+     "plain": "We must discover a method to reduce costs without compromising quality.",
+     "note": "Encourages collaborative problem-solving and innovation."
+    },
+    {
+     "text": "I'm afraid that's not possible",
+     "kind": "chunk",
+     "form": "I'm afraid that's not possible",
+     "meaning": "A polite but definitive way to state that something cannot be done.",
+     "example": "I'm afraid that's not possible with our current resource constraints.",
+     "plain": "That is not possible with our current resource constraints.",
+     "note": "A firm but polite refusal, often citing practical limitations."
+    },
+    {
+     "text": "we're prepared to make a trade-off",
+     "kind": "frame",
+     "form": "We're prepared to make a trade-off",
+     "meaning": "Indicates a willingness to exchange one benefit for another, accepting a compromise.",
+     "example": "We're prepared to make a trade-off on features for a faster delivery.",
+     "plain": "We are willing to exchange some features for a faster delivery.",
+     "note": "Highlights a strategic decision to prioritize one aspect over another."
+    },
+    {
+     "text": "that's a fair compromise",
+     "kind": "chunk",
+     "form": "That's a fair compromise",
+     "meaning": "Acknowledges that a proposed solution or agreement is reasonable and balanced.",
+     "example": "That's a fair compromise on the payment schedule; we can work with that.",
+     "plain": "That is a reasonable compromise on the payment schedule; we can work with that.",
+     "note": "Expresses acceptance of a middle ground, signaling progress."
+    },
+    {
+     "text": "we need to be flexible on",
+     "kind": "frame",
+     "form": "We need to be flexible on",
+     "meaning": "Emphasizes the necessity of being adaptable regarding a specific point.",
+     "example": "We need to be flexible on the exact specifications to stay within budget.",
+     "plain": "We must be adaptable regarding the exact specifications to stay within budget.",
+     "note": "Suggests a willingness to adjust, often to achieve a larger goal."
+    },
+    {
+     "text": "I'm afraid we have to insist on",
+     "kind": "frame",
+     "form": "I'm afraid we have to insist on",
+     "meaning": "A polite but firm way to state a non-negotiable requirement.",
+     "example": "I'm afraid we have to insist on the security audit before launch.",
+     "plain": "We must insist on the security audit before launch.",
+     "note": "Used to convey a firm demand while maintaining a polite tone."
+    },
+    {
+     "text": "let's clarify the terms",
+     "kind": "chunk",
+     "form": "Let's clarify the terms",
+     "meaning": "Suggests making the conditions or details of an agreement more precise.",
+     "example": "Before we proceed, let's clarify the terms of the service agreement.",
+     "plain": "Before we proceed, let's make the conditions of the service agreement more precise.",
+     "note": "Ensures mutual understanding and prevents future disputes."
+    },
+    {
+     "text": "we're prepared to make an adjustment",
+     "kind": "frame",
+     "form": "We're prepared to make an adjustment",
+     "meaning": "Indicates a willingness to modify a proposal or position slightly.",
+     "example": "We're prepared to make an adjustment to the delivery schedule if needed.",
+     "plain": "We are willing to modify the delivery schedule if needed.",
+     "note": "Shows flexibility and a readiness to fine-tune details."
+    },
+    {
+     "text": "we need to be mindful of",
+     "kind": "frame",
+     "form": "We need to be mindful of",
+     "meaning": "Emphasizes the importance of being aware of and considering certain factors.",
+     "example": "We need to be mindful of the budget constraints throughout this process.",
+     "plain": "We must be aware of the budget constraints throughout this process.",
+     "note": "Highlights a crucial consideration that should not be overlooked."
+    },
+    {
+     "text": "I'm afraid that's our final offer",
+     "kind": "chunk",
+     "form": "I'm afraid that's our final offer",
+     "meaning": "A polite but firm statement indicating that no further concessions will be made.",
+     "example": "I'm afraid that's our final offer on the pricing for this volume.",
+     "plain": "That is our final offer on the pricing for this volume.",
+     "note": "A strong statement used to signal the end of negotiation on a specific point."
+    },
+    {
+     "text": "we're prepared to revisit",
+     "kind": "frame",
+     "form": "We're prepared to revisit",
+     "meaning": "Indicates a willingness to re-examine a previously discussed topic or decision.",
+     "example": "We're prepared to revisit the timeline if new information comes to light.",
+     "plain": "We are willing to re-examine the timeline if new information comes to light.",
+     "note": "Shows flexibility and openness to adapting to changing circumstances."
+    },
+    {
+     "text": "that's a deal",
+     "kind": "chunk",
+     "form": "That's a deal",
+     "meaning": "A concise way to express agreement and finalize a negotiation.",
+     "example": "You agree to the new terms? Excellent, that's a deal!",
+     "plain": "You agree to the new terms? Excellent, we have an agreement!",
+     "note": "Informal and direct, used to confirm an agreement has been reached."
+    },
+    {
+     "text": "we need to find a solution",
+     "kind": "frame",
+     "form": "We need to find a solution",
+     "meaning": "Emphasizes the necessity of resolving a problem or challenge.",
+     "example": "We need to find a solution to the integration issues quickly.",
+     "plain": "We must resolve the integration issues quickly.",
+     "note": "Focuses on problem-solving and moving forward."
+    },
+    {
+     "text": "I'm afraid we can't go lower than",
+     "kind": "frame",
+     "form": "I'm afraid we can't go lower than",
+     "meaning": "A polite but firm way to state a minimum acceptable price or condition.",
+     "example": "I'm afraid we can't go lower than this price point for the premium package.",
+     "plain": "We cannot accept a price lower than this for the premium package.",
+     "note": "Sets a clear boundary on price or other quantifiable terms."
+    },
+    {
+     "text": "let's move forward with",
+     "kind": "chunk",
+     "form": "Let's move forward with",
+     "meaning": "Suggests proceeding with a particular plan or aspect of the agreement.",
+     "example": "Given our agreement, let's move forward with the initial phase of the project.",
+     "plain": "Given our agreement, let's proceed with the initial phase of the project.",
+     "note": "Indicates a decision has been made and it's time for action."
+    },
+    {
+     "text": "we're prepared to offer a discount",
+     "kind": "frame",
+     "form": "We're prepared to offer a discount",
+     "meaning": "Indicates a willingness to reduce the price as a concession.",
+     "example": "We're prepared to offer a discount for a long-term commitment.",
+     "plain": "We are willing to reduce the price for a long-term commitment.",
+     "note": "A common negotiation tactic to incentivize agreement."
+    },
+    {
+     "text": "that's a fair assessment",
+     "kind": "chunk",
+     "form": "That's a fair assessment",
+     "meaning": "Acknowledges that an evaluation or judgment is accurate and reasonable.",
+     "example": "That's a fair assessment of the risks involved; we should address them.",
+     "plain": "Your evaluation of the risks involved is accurate; we should address them.",
+     "note": "Shows agreement and validates the other party's analysis."
+    },
+    {
+     "text": "we need to consider all angles",
+     "kind": "collocation",
+     "form": "we need to consider all angles",
+     "meaning": "To examine a situation or proposal from every possible perspective.",
+     "example": "Before making a final decision, we need to consider all angles of this proposal.",
+     "plain": "Before making a final decision, we need to examine every perspective of this proposal.",
+     "note": "Emphasizes thoroughness and a comprehensive approach to decision-making."
+    },
+    {
+     "text": "I'm afraid we can't make an exception",
+     "kind": "chunk",
+     "form": "I'm afraid we can't make an exception",
+     "meaning": "A polite but firm refusal to deviate from standard rules or policies.",
+     "example": "I'm afraid we can't make an exception to our standard payment terms.",
+     "plain": "We cannot deviate from our standard payment terms.",
+     "note": "Used to uphold established rules, often to maintain fairness or consistency."
+    },
+    {
+     "text": "we're prepared to be flexible on",
+     "kind": "frame",
+     "form": "We're prepared to be flexible on",
+     "meaning": "Indicates a willingness to adapt or change one's position on a specific point.",
+     "example": "We're prepared to be flexible on the exact specifications if the budget is tight.",
+     "plain": "We are willing to adapt on the exact specifications if the budget is tight.",
+     "note": "Shows a cooperative attitude and a desire to find a workable solution."
+    },
+    {
+     "text": "that's a good point",
+     "kind": "chunk",
+     "form": "That's a good point",
+     "meaning": "Acknowledges that the other person has made a valid and relevant observation.",
+     "example": "That's a good point about the long-term maintenance costs; we hadn't considered that.",
+     "plain": "Your observation about the long-term maintenance costs is valid; we hadn't considered that.",
+     "note": "A simple, positive acknowledgment that encourages further discussion."
+    },
+    {
+     "text": "we need to ensure that",
+     "kind": "frame",
+     "form": "We need to ensure that",
+     "meaning": "Emphasizes the necessity of guaranteeing a particular outcome or condition.",
+     "example": "We need to ensure that all legal requirements are met before signing.",
+     "plain": "We must guarantee that all legal requirements are met before signing.",
+     "note": "Highlights a critical requirement that must be satisfied."
+    },
+    {
+     "text": "I'm afraid we're at our limit",
+     "kind": "chunk",
+     "form": "I'm afraid we're at our limit",
+     "meaning": "A polite but firm statement indicating that no further concessions can be made.",
+     "example": "I'm afraid we're at our limit regarding the budget for this project.",
+     "plain": "We cannot make any further concessions regarding the budget for this project.",
+     "note": "Signals a firm boundary, often used when a negotiation is nearing its end."
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "items": [
+    {
+     "text": "to sweeten the deal",
+     "kind": "chunk",
+     "form": "to sweeten the deal",
+     "meaning": "To make an offer more attractive or appealing to the other party.",
+     "example": "We could extend the warranty to sweeten the deal, if that helps you decide.",
+     "plain": "We could extend the warranty to make the offer more attractive, if that helps you decide.",
+     "note": "Informal but common in business. Used when making an additional offer."
+    },
+    {
+     "text": "a non-starter",
+     "kind": "chunk",
+     "form": "a non-starter",
+     "meaning": "Something that is completely unacceptable or impossible to consider from the outset.",
+     "example": "Unfortunately, that particular clause is a non-starter for us; we simply cannot agree to it.",
+     "plain": "Unfortunately, that particular clause is completely unacceptable for us; we simply cannot agree to it.",
+     "note": "Direct and firm. Used to reject a proposal or term decisively."
+    },
+    {
+     "text": "to drive a hard bargain",
+     "kind": "collocation",
+     "form": "to drive a hard bargain",
+     "meaning": "To negotiate very assertively and refuse to make concessions easily.",
+     "example": "They are known to drive a hard bargain, so we need to be well-prepared for this negotiation.",
+     "plain": "They are known to negotiate very assertively, so we need to be well-prepared for this negotiation.",
+     "note": "Describes a negotiating style. Can be admiring or slightly critical."
+    },
+    {
+     "text": "to hold firm",
+     "kind": "collocation",
+     "form": "to hold firm",
+     "meaning": "To maintain one's position or demands without yielding during a negotiation.",
+     "example": "We need to hold firm on the delivery date; any delay would impact our launch schedule.",
+     "plain": "We need to maintain our position on the delivery date; any delay would impact our launch schedule.",
+     "note": "Indicates resolve. Used when refusing to concede on a specific point."
+    },
+    {
+     "text": "to come to a consensus",
+     "kind": "chunk",
+     "form": "to come to a consensus",
+     "meaning": "To reach a general agreement among all members of a group.",
+     "example": "Our goal is to come to a consensus on the project scope by the end of this meeting.",
+     "plain": "Our goal is to reach a general agreement on the project scope by the end of this meeting.",
+     "note": "Formal and collaborative. Used when seeking broad agreement."
+    },
+    {
+     "text": "to be upfront",
+     "kind": "chunk",
+     "form": "to be upfront",
+     "meaning": "To be direct and honest about one's intentions or limitations.",
+     "example": "I want to be upfront about our budget constraints before we discuss further options.",
+     "plain": "I want to be direct about our budget constraints before we discuss further options.",
+     "note": "Encourages transparency. Used to state facts clearly from the start."
+    },
+    {
+     "text": "to get a sense of",
+     "kind": "chunk",
+     "form": "to get a sense of",
+     "meaning": "To understand or form an impression about something.",
+     "example": "I'm trying to get a sense of your priorities before we delve into the specifics.",
+     "plain": "I'm trying to understand your priorities before we delve into the specifics.",
+     "note": "Exploratory and polite. Used to gather information or gauge feelings."
+    },
+    {
+     "text": "to make a case for",
+     "kind": "collocation",
+     "form": "to make a case for",
+     "meaning": "To argue in favor of something or explain why it should be done.",
+     "example": "I'd like to make a case for extending the deadline, given the unforeseen challenges.",
+     "plain": "I'd like to argue for extending the deadline, given the unforeseen challenges.",
+     "note": "Used when presenting a persuasive argument."
+    },
+    {
+     "text": "to give a little",
+     "kind": "chunk",
+     "form": "to give a little",
+     "meaning": "To make a small concession or compromise.",
+     "example": "Both sides need to give a little to reach a mutually beneficial deal.",
+     "plain": "Both sides need to make a small concession to reach a mutually beneficial deal.",
+     "note": "Informal and collaborative. Encourages flexibility from both parties."
+    },
+    {
+     "text": "to reach a settlement",
+     "kind": "collocation",
+     "form": "to reach a settlement",
+     "meaning": "To achieve a formal agreement, especially after a dispute or negotiation.",
+     "example": "Our aim is to reach a settlement on the contract details by the end of the week.",
+     "plain": "Our aim is to achieve a formal agreement on the contract details by the end of the week.",
+     "note": "Formal. Often used in legal or complex business contexts."
+    },
+    {
+     "text": "to lose ground",
+     "kind": "collocation",
+     "form": "to lose ground",
+     "meaning": "To lose an advantage or position previously held.",
+     "example": "We can't afford to lose ground on our market share by delaying this launch.",
+     "plain": "We can't afford to lose our advantage on our market share by delaying this launch.",
+     "note": "Negative. Used when one's position weakens."
+    },
+    {
+     "text": "to hold all the cards",
+     "kind": "chunk",
+     "form": "to hold all the cards",
+     "meaning": "To be in a very strong position, having all the advantages.",
+     "example": "They seem to hold all the cards in this negotiation, which makes it tough for us.",
+     "plain": "They seem to have all the advantages in this negotiation, which makes it tough for us.",
+     "note": "Informal. Describes a dominant negotiating position."
+    },
+    {
+     "text": "to sweeten the pot",
+     "kind": "chunk",
+     "form": "to sweeten the pot",
+     "meaning": "To make an offer more appealing by adding extra benefits or value.",
+     "example": "We might need to sweeten the pot with a longer support period to get them to agree.",
+     "plain": "We might need to make the offer more appealing with a longer support period to get them to agree.",
+     "note": "Informal. Similar to 'sweeten the deal', often implies adding more money or value."
+    },
+    {
+     "text": "to draw a line in the sand",
+     "kind": "chunk",
+     "form": "to draw a line in the sand",
+     "meaning": "To set a limit beyond which one will not go, or a point at which one will stop.",
+     "example": "We need to draw a line in the sand regarding the budget; we cannot exceed this amount.",
+     "plain": "We need to set a limit regarding the budget; we cannot exceed this amount.",
+     "note": "Emphatic. Used to establish a clear, firm boundary."
+    },
+    {
+     "text": "to secure an agreement",
+     "kind": "collocation",
+     "form": "to secure an agreement",
+     "meaning": "To successfully obtain or finalize an agreement.",
+     "example": "Our goal is to secure an agreement on all terms by the end of the day.",
+     "plain": "Our goal is to successfully finalize an agreement on all terms by the end of the day.",
+     "note": "Formal. Used when the objective is to conclude negotiations."
+    },
+    {
+     "text": "to seal the deal",
+     "kind": "chunk",
+     "form": "to seal the deal",
+     "meaning": "To finalize an agreement or negotiation successfully.",
+     "example": "I think we're ready to seal the deal on this project if we can agree on the timeline.",
+     "plain": "I think we're ready to finalize the agreement on this project if we can agree on the timeline.",
+     "note": "Informal and positive. Used when an agreement is imminent."
+    },
+    {
+     "text": "to narrow the differences",
+     "kind": "collocation",
+     "form": "to narrow the differences",
+     "meaning": "To reduce the disagreements or discrepancies between parties.",
+     "example": "Let's try to narrow the differences on these minor points to move forward.",
+     "plain": "Let's try to reduce the disagreements on these minor points to move forward.",
+     "note": "Collaborative. Used to focus on resolving specific points of contention."
+    },
+    {
+     "text": "to put pressure on",
+     "kind": "collocation",
+     "form": "to put pressure on",
+     "meaning": "To try to persuade or force someone to do something.",
+     "example": "They are trying to put pressure on us to agree quickly, but we need more time.",
+     "plain": "They are trying to force us to agree quickly, but we need more time.",
+     "note": "Can be negative. Describes an attempt to influence through force or urgency."
+    },
+    {
+     "text": "to buy time",
+     "kind": "collocation",
+     "form": "to buy time",
+     "meaning": "To delay something in order to gain more time to prepare or decide.",
+     "example": "We need to buy time to properly evaluate their revised offer before responding.",
+     "plain": "We need to delay our response to properly evaluate their revised offer.",
+     "note": "Strategic. Used when more time is needed for consideration."
+    },
+    {
+     "text": "to wrap things up",
+     "kind": "chunk",
+     "form": "to wrap things up",
+     "meaning": "To finish or conclude a meeting, discussion, or task.",
+     "example": "Let's try to wrap things up by lunchtime so everyone can attend their next meeting.",
+     "plain": "Let's try to finish by lunchtime so everyone can attend their next meeting.",
+     "note": "Informal. Used to signal the end of a discussion or meeting."
+    },
+    {
+     "text": "to proceed with",
+     "kind": "collocation",
+     "form": "to proceed with",
+     "meaning": "To continue with a plan or action.",
+     "example": "Are we ready to proceed with the revised terms, or do we need further discussion?",
+     "plain": "Are we ready to continue with the revised terms, or do we need further discussion?",
+     "note": "Formal. Used to ask if it's time to move forward."
+    },
+    {
+     "text": "to give the green light",
+     "kind": "chunk",
+     "form": "to give the green light",
+     "meaning": "To give permission to go ahead with a project or plan.",
+     "example": "We're waiting for management to give the green light on the budget increase.",
+     "plain": "We're waiting for management to give permission on the budget increase.",
+     "note": "Informal. Used when granting approval to start."
+    },
+    {
+     "text": "to take a firm stance",
+     "kind": "collocation",
+     "form": "to take a firm stance",
+     "meaning": "To adopt a resolute and unyielding position on an issue.",
+     "example": "We need to take a firm stance on this issue to protect our long-term interests.",
+     "plain": "We need to adopt a resolute position on this issue to protect our long-term interests.",
+     "note": "Formal. Used to describe a determined position."
+    },
+    {
+     "text": "to make a strong case",
+     "kind": "collocation",
+     "form": "to make a strong case",
+     "meaning": "To present a convincing argument in favor of something.",
+     "example": "You'll need to make a strong case for that budget increase to get it approved.",
+     "plain": "You'll need to present a convincing argument for that budget increase to get it approved.",
+     "note": "Used when a persuasive argument is required."
+    },
+    {
+     "text": "to be at loggerheads",
+     "kind": "chunk",
+     "form": "to be at loggerheads",
+     "meaning": "To be in strong disagreement or dispute with someone.",
+     "example": "We seem to be at loggerheads over the intellectual property rights; we need a mediator.",
+     "plain": "We seem to be in strong disagreement over the intellectual property rights; we need a mediator.",
+     "note": "Formal. Describes a situation of deep disagreement."
+    },
+    {
+     "text": "to break the deadlock",
+     "kind": "collocation",
+     "form": "to break the deadlock",
+     "meaning": "To find a way to resolve a situation where no progress can be made.",
+     "example": "We need a new approach to break the deadlock on the pricing structure.",
+     "plain": "We need a new approach to resolve the situation where no progress can be made on the pricing structure.",
+     "note": "Used when seeking a solution to an impasse."
+    },
+    {
+     "text": "to reach a compromise",
+     "kind": "collocation",
+     "form": "to reach a compromise",
+     "meaning": "To arrive at an agreement where both sides give up something to meet in the middle.",
+     "example": "We need to reach a compromise on the payment terms that works for both parties.",
+     "plain": "We need to arrive at an agreement on the payment terms where both sides give up something.",
+     "note": "Collaborative. Used when seeking a middle ground."
+    },
+    {
+     "text": "to put forward an offer",
+     "kind": "collocation",
+     "form": "to put forward an offer",
+     "meaning": "To formally present a proposal or price.",
+     "example": "We'd like to put forward an offer for your consideration regarding the new contract.",
+     "plain": "We'd like to formally present a proposal for your consideration regarding the new contract.",
+     "note": "Formal. Used when making a proposal."
+    },
+    {
+     "text": "to make an offer",
+     "kind": "collocation",
+     "form": "to make an offer",
+     "meaning": "To propose a price or terms for something.",
+     "example": "We'd like to make an offer for the property, subject to a final inspection.",
+     "plain": "We'd like to propose a price for the property, subject to a final inspection.",
+     "note": "Standard phrase for proposing terms, often financial."
+    },
+    {
+     "text": "to consider all options",
+     "kind": "collocation",
+     "form": "to consider all options",
+     "meaning": "To evaluate every available choice or alternative.",
+     "example": "We need to consider all options before making a final decision on the project scope.",
+     "plain": "We need to evaluate every available choice before making a final decision on the project scope.",
+     "note": "Thorough and strategic. Used when a comprehensive review is needed."
+    },
+    {
+     "text": "to hold out for",
+     "kind": "collocation",
+     "form": "to hold out for",
+     "meaning": "To insist on getting a particular thing, especially after a long negotiation.",
+     "example": "We're going to hold out for a better price, as we know they need this deal.",
+     "plain": "We're going to insist on getting a better price, as we know they need this deal.",
+     "note": "Shows determination. Used when refusing to settle for less than desired."
+    },
+    {
+     "text": "to put a proposal forward",
+     "kind": "collocation",
+     "form": "to put a proposal forward",
+     "meaning": "To formally suggest a plan or idea for consideration.",
+     "example": "I'd like to put a proposal forward for adjusting the payment schedule.",
+     "plain": "I'd like to formally suggest a plan for adjusting the payment schedule.",
+     "note": "Formal and proactive. Used when presenting an idea for discussion."
+    },
+    {
+     "text": "to get buy-in",
+     "kind": "collocation",
+     "form": "to get buy-in",
+     "meaning": "To obtain agreement and support from others for a plan or decision.",
+     "example": "We need to get buy-in from all stakeholders before implementing these changes.",
+     "plain": "We need to obtain agreement and support from all stakeholders before implementing these changes.",
+     "note": "Common in business. Used when seeking broad acceptance."
+    },
+    {
+     "text": "to factor that in",
+     "kind": "chunk",
+     "form": "to factor that in",
+     "meaning": "To include a particular fact or element when making a calculation or decision.",
+     "example": "We need to factor that in when calculating the total project cost.",
+     "plain": "We need to include that when calculating the total project cost.",
+     "note": "Used to ensure all relevant information is considered."
+    },
+    {
+     "text": "to put a cap on",
+     "kind": "collocation",
+     "form": "to put a cap on",
+     "meaning": "To set an upper limit on an amount or quantity.",
+     "example": "We need to put a cap on the total expenses for this phase of the project.",
+     "plain": "We need to set an upper limit on the total expenses for this phase of the project.",
+     "note": "Common in financial negotiations. Used to limit costs."
+    },
+    {
+     "text": "to be flexible",
+     "kind": "chunk",
+     "form": "to be flexible",
+     "meaning": "To be willing to change or adapt to new circumstances.",
+     "example": "We need to be flexible on the payment schedule to accommodate their cash flow.",
+     "plain": "We need to be willing to adapt on the payment schedule to accommodate their cash flow.",
+     "note": "Positive. Encourages adaptability in negotiations."
+    },
+    {
+     "text": "to be firm",
+     "kind": "chunk",
+     "form": "to be firm",
+     "meaning": "To be resolute and unyielding in one's position.",
+     "example": "We have to be firm on the quality standards; there's no room for compromise there.",
+     "plain": "We have to be resolute on the quality standards; there's no room for compromise there.",
+     "note": "Direct and assertive. Used to state a non-negotiable aspect."
+    },
+    {
+     "text": "to get to the heart of",
+     "kind": "chunk",
+     "form": "to get to the heart of",
+     "meaning": "To understand the most important or fundamental part of a problem or issue.",
+     "example": "Let's try to get to the heart of their concerns about the proposed timeline.",
+     "plain": "Let's try to understand the most important part of their concerns about the proposed timeline.",
+     "note": "Used when seeking to understand the core issue."
+    },
+    {
+     "text": "to put a hold on",
+     "kind": "collocation",
+     "form": "to put a hold on",
+     "meaning": "To temporarily stop or postpone something.",
+     "example": "We need to put a hold on further discussions until we have the updated figures.",
+     "plain": "We need to temporarily stop further discussions until we have the updated figures.",
+     "note": "Used to pause a process or discussion."
+    },
+    {
+     "text": "to be a zero-sum game",
+     "kind": "chunk",
+     "form": "to be a zero-sum game",
+     "meaning": "To be a situation where one person's gain is exactly equivalent to another's loss.",
+     "example": "Negotiations don't have to be a zero-sum game; we can both achieve our objectives.",
+     "plain": "Negotiations don't have to be a situation where one person's gain is another's loss; we can both achieve our objectives.",
+     "note": "Formal. Describes a competitive situation with fixed resources."
+    }
+   ]
+  }
+ ],
+ "check": {
+  "results": {
+   "put on the table": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "draw a line": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "meet halfway": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "from our perspective": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "on the condition that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "take into account": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "as a gesture of goodwill": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "what i'm getting at is": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "find common ground": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "push back on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "at this juncture": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be frank": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "my understanding is that": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "strike a balance": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "walk away from": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "have some reservations": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's be clear": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "the bottom line is": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "come to terms with": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "make a counter-offer": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "for the sake of argument": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "where do we stand": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm prepared to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "iron out the details": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "a sticking point": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what if we were to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm open to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a fair point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we can't budge on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's revisit this": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to recap": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd like to propose": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're prepared to offer": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what are your thoughts on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "come to an agreement": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "raise a concern": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're willing to consider": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that being said": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "what's your take on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "give some ground": {
+    "status": "pass",
+    "level": "C1",
+    "note": "Checker slip: The definition accurately reflects the meaning of making concessions in a negotiation as used in the example."
+   },
+   "a win-win situation": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i hear what you're saying": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we're prepared to concede": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's explore options": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid we can't": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "we need to factor in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be perfectly honest": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's table that for now": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm confident that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're looking for": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "we need to be realistic": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'd be willing to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's try to find": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "we're prepared to go as far as": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we need to clarify": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm not comfortable with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's get this straight": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we're prepared to compromise on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to bridge the gap": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm afraid that won't work": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "let's consider this": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're prepared to adjust": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a reasonable request": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to be clear on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm willing to go as far as": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's look at it this way": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're prepared to make a concession": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's not ideal": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to find a middle ground": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid we're unable to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "let's focus on": {
+    "status": "drop",
+    "note": "Too basic (A2)."
+   },
+   "we're prepared to absorb": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "that's a tough one": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to consider the implications": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "i'm not in a position to": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "let's take a step back": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we're prepared to make an exception": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we need to align on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid i can't agree to that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're prepared to explore": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The key accurately captures the meaning of being open to investigating alternative solutions in this context."
+   },
+   "we need to find a way to": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid that's not possible": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're prepared to make a trade-off": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a fair compromise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to be flexible on": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid we have to insist on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's clarify the terms": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're prepared to make an adjustment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to be mindful of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid that's our final offer": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we're prepared to revisit": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a deal": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to find a solution": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid we can't go lower than": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "let's move forward with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we're prepared to offer a discount": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "that's a fair assessment": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "we need to consider all angles": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "i'm afraid we can't make an exception": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "we're prepared to be flexible on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "that's a good point": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "we need to ensure that": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "i'm afraid we're at our limit": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to sweeten the deal": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "a non-starter": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to drive a hard bargain": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to hold firm": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to come to a consensus": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be upfront": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get a sense of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to make a case for": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to reach a settlement": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to lose ground": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to hold all the cards": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to sweeten the pot": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to draw a line in the sand": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to secure an agreement": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to seal the deal": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to narrow the differences": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put pressure on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to buy time": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to wrap things up": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to proceed with": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to give the green light": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to take a firm stance": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to make a strong case": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be at loggerheads": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to break the deadlock": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to reach a compromise": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put forward an offer": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to make an offer": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to consider all options": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to hold out for": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to put a proposal forward": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to get buy-in": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to factor that in": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put a cap on": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to be flexible": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to be firm": {
+    "status": "pass",
+    "level": "B1"
+   },
+   "to get to the heart of": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to put a hold on": {
+    "status": "pass",
+    "level": "B2"
+   },
+   "to be a zero-sum game": {
+    "status": "pass",
+    "level": "C1"
+   },
+   "to give a little": {
+    "status": "pass",
+    "level": "B2",
+    "note": "Checker slip: The intended meaning accurately describes making a small compromise in the given context."
+   }
+  }
+ }
+}

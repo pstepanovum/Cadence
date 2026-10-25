@@ -1,0 +1,87 @@
+{
+ "format": 1,
+ "id": "fossil.linking",
+ "area": "intonation",
+ "title": "Linking and connected speech",
+ "what": "pronouncing every word separately instead of linking ('turn_it_off', 'an_apple', 'what do you' as 'whaddya' in casual speech)",
+ "summary": "Advanced learners often focus on articulating each word distinctly, overlooking the natural flow of connected speech. This can make communication sound less fluid and occasionally impede listener comprehension.",
+ "listenFor": "Pay attention to whether your words flow together smoothly or if there are noticeable pauses and breaks between them.",
+ "grammarPointIds": [],
+ "soundIds": [],
+ "contrasts": [],
+ "drills": [
+  "Could you tell me about it, if you have a moment?",
+  "We need to iron out all the details before we sign off on it.",
+  "It's an important issue that affects us all, isn't it?",
+  "I often find myself thinking about what it all means.",
+  "They're planning to open up a new office in another city.",
+  "What are you going to do about it, if anything at all?",
+  "She always takes an interest in what her colleagues are working on.",
+  "We ought to put an end to this misunderstanding immediately.",
+  "He asked if I'd be able to assist him with the upcoming project.",
+  "It's a good idea to write it all down, isn't it, for future reference?"
+ ],
+ "probes": [
+  {
+   "sentence": "What are you planning to do about it this afternoon?"
+  },
+  {
+   "sentence": "She always takes an interest in every aspect of her work."
+  },
+  {
+   "sentence": "We need to put an end to this immediately, don't you agree?"
+  },
+  {
+   "sentence": "Could you tell me if it's all set for the meeting tomorrow?"
+  },
+  {
+   "sentence": "He often asks if I'd like to join him for a coffee break."
+  },
+  {
+   "sentence": "It's an excellent opportunity to improve our overall efficiency."
+  }
+ ],
+ "pairs": [],
+ "stress": [
+  {
+   "text": "The project deadline is approaching rapidly.",
+   "marked": "The PROJECT DEADline is apPROACHing RAPidly.",
+   "note": "Main stress falls on key content words conveying new information."
+  },
+  {
+   "text": "We need to implement these changes immediately.",
+   "marked": "We need to IMplement these CHANges imMEDiately.",
+   "note": "Stress highlights the action and the object of the action."
+  },
+  {
+   "text": "She presented a compelling argument for the new strategy.",
+   "marked": "She preSENTed a comPELLing ARgument for the new STRATegy.",
+   "note": "Stress emphasizes the nature of the argument and the strategy."
+  },
+  {
+   "text": "His innovative ideas often challenge conventional thinking.",
+   "marked": "His INnovative IDEas OFten CHALlenge conVENtional THINKing.",
+   "note": "Stress falls on words carrying the most significant meaning."
+  },
+  {
+   "text": "The economic forecast indicates a period of sustained growth.",
+   "marked": "The ecoNOMic FOREcast INdicates a PEriod of susTAINED GROWTH.",
+   "note": "Key terms related to the forecast and its outcome receive stress."
+  },
+  {
+   "text": "They decided to postpone the conference until next quarter.",
+   "marked": "They deCIDed to postPONE the CONference unTIL next QUARter.",
+   "note": "Stress highlights the decision, the action, and the new timeframe."
+  },
+  {
+   "text": "It's crucial to understand the underlying principles.",
+   "marked": "It's CRUcial to unDERstand the UNderLYing PRINciples.",
+   "note": "Emphasis is placed on the importance and the core concepts."
+  },
+  {
+   "text": "We must adapt to these evolving market conditions.",
+   "marked": "We must aDAPT to these eVOLVing MARket conDItions.",
+   "note": "Stress falls on the necessity of adaptation and the nature of the conditions."
+  }
+ ]
+}
