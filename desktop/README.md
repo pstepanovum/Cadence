@@ -4,7 +4,7 @@ Electron wrapper for the Cadence Next.js app. Packages into a macOS `.dmg` and W
 
 ## Prerequisites
 
-- Node.js 20+
+- Node.js 24+
 - pnpm
 
 ## Development
