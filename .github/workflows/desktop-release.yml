@@ -92,7 +92,7 @@ jobs:
           cat release-notes.md
 
       - name: Keep the notes for the publish job
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: release-notes
           path: release-notes.md
@@ -153,7 +153,7 @@ jobs:
           if [ -n "${CSC_LINK:-}" ]; then pnpm build:release --mac --signed; else pnpm build:release --mac; fi
 
       - name: Keep the macOS files
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: desktop-macos
           path: |
@@ -216,7 +216,7 @@ jobs:
           fi
 
       - name: Keep the Windows files
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: desktop-windows
           path: |
