@@ -8,6 +8,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { signOut } from "firebase/auth";
+import { ConnectedApps } from "@/components/account/ConnectedApps";
 import { PLAN_NAMES, readMe, type Me } from "@/components/account/me";
 import { PlanButton, PortalButton } from "@/components/billing/PlanButton";
 import { subscribeToNewsletter, unsubscribeFromNewsletter } from "@/components/newsletter/newsletter-api";
@@ -41,6 +42,7 @@ export function AccountPanel({ email, checkout }: { email: string | null; checko
       </div>
       <div className="flex flex-col gap-4">
         <SignInMethods />
+        <ConnectedApps />
         <DataCard />
         <DeleteCard email={email} />
       </div>
