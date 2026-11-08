@@ -10,7 +10,7 @@
 //           opt-in reminders; then deliver mail
 //   mail    deliver whatever is waiting in mailQueue
 import { createHash, timingSafeEqual } from "node:crypto";
-import { FieldValue, type Firestore } from "firebase-admin/firestore";
+import { FieldValue, type DocumentSnapshot, type Firestore } from "firebase-admin/firestore";
 
 import { currentStreak, shiftDay } from "../platform/progress-model";
 import { runDeletion } from "./account";
@@ -126,9 +126,17 @@ export async function runDailyJob(options: { db?: Firestore; now?: number } = {}
   // 5. Opt-in reminders.
   const optedIn = await firestore.collection("users").where("emailPrefs.reminders", "==", true).limit(2000).get();
   const weekday = new Date(now).getUTCDay();
+  // Summaries are read in batches (getAll), not one round trip per learner,
+  // so two thousand opted-in learners fit well inside the request timeout.
+  const summaries = new Map<string, DocumentSnapshot>();
+  for (let start = 0; start < optedIn.docs.length; start += 300) {
+    const refs = optedIn.docs.slice(start, start + 300).map((doc) => doc.ref.collection("progress").doc("summary"));
+    if (refs.length === 0) continue;
+    for (const snapshot of await firestore.getAll(...refs)) summaries.set(snapshot.ref.parent.parent?.id ?? "", snapshot);
+  }
   for (const doc of optedIn.docs) {
-    const summarySnapshot = await doc.ref.collection("progress").doc("summary").get();
-    if (!summarySnapshot.exists) continue;
+    const summarySnapshot = summaries.get(doc.id);
+    if (!summarySnapshot?.exists) continue;
     const summary = readSummary(summarySnapshot.data());
     const data = doc.data();
     const lastWeeklyMinutes = typeof data.weekly?.lastTotalMinutes === "number" ? data.weekly.lastTotalMinutes : null;
