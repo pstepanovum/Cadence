@@ -11,7 +11,8 @@ export function getMe(): Promise<unknown> {
 }
 
 export function setNewsletter(subscribed: boolean): Promise<unknown> {
-  return apiJson<unknown>("/api/newsletter", "POST", { subscribed }, appCheck);
+  // The newsletter route spends its App Check token (replay protection).
+  return apiJson<unknown>("/api/newsletter", "POST", { subscribed }, { appCheck: "limited-use" });
 }
 
 /** The JSON export of everything the account holds, as text. */

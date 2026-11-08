@@ -3,6 +3,7 @@ import { signOut } from "firebase/auth";
 
 import { requireAiTransport, requireTransport, type Transport } from "@/api/transport";
 import { appCheckHeaders } from "@/lib/app-check";
+import { APP_CHECK_REFUSED, isAppCheckRefusal } from "@/lib/app-check-rest";
 import { getFirebaseAuth } from "@/lib/firebase";
 
 export class ApiError extends Error {
@@ -50,22 +51,37 @@ function send(
 export interface FetchOptions {
   /** An AI request: goes to the paired server when it is connected. */
   ai?: boolean;
-  /** Attach a Firebase App Check token (cloud AI, sync and newsletter routes). */
-  appCheck?: boolean;
+  /**
+   * Attach a Firebase App Check token (cloud AI, sync and newsletter routes).
+   * "limited-use" sends a token of its own, for routes that spend it.
+   */
+  appCheck?: boolean | "limited-use";
 }
 
 async function headersFor(transport: Transport, options: FetchOptions, forceRefresh = false) {
   const auth = await authHeader(transport, forceRefresh);
   // App Check proves the request comes from this app; only the hosted API
   // checks it, so a paired server never gets one.
-  const appCheck = transport.mode === "cloud" && (options.appCheck || options.ai) ? await appCheckHeaders() : {};
+  const appCheck = transport.mode === "cloud" && (options.appCheck || options.ai) ? await appCheckHeaders({ limitedUse: options.appCheck === "limited-use" }) : {};
   return { ...auth, ...appCheck };
+}
+
+async function throwIfAppCheckRefused(response: Response): Promise<void> {
+  const body: unknown = await response.clone().json().catch(() => null);
+  if (isAppCheckRefusal(body)) {
+    throw new ApiError(401, "Cadence couldn't verify this copy of the app. Update Cadence, or try again in a minute.", APP_CHECK_REFUSED);
+  }
 }
 
 export async function apiFetch(path: string, init: RequestInit = {}, options: FetchOptions = {}): Promise<Response> {
   const transport = options.ai ? requireAiTransport() : requireTransport();
 
   let response = await send(transport, path, init, await headersFor(transport, options));
+
+  // App Check refusing this build is not the account's token running out, so
+  // it never signs anyone out: that ended every new account's session the
+  // moment it was made, when the phone could not get an App Check token yet.
+  if (response.status === 401 && transport.mode === "cloud") await throwIfAppCheckRefused(response);
 
   // A token can be revoked or expire between the SDK's check and the server's,
   // so a cloud 401 gets one retry with a freshly minted token before the
@@ -75,6 +91,7 @@ export async function apiFetch(path: string, init: RequestInit = {}, options: Fe
     const refreshed = await headersFor(transport, options, true).catch(() => null);
     if (refreshed) {
       response = await send(transport, path, init, refreshed);
+      if (response.status === 401) await throwIfAppCheckRefused(response);
     }
   }
 
@@ -114,8 +131,10 @@ export async function api<T>(path: string, init: RequestInit = {}, options: Fetc
         message?: string;
         code?: string;
       };
-      message = body.error ?? body.message ?? message;
-      code = body.code ?? null;
+      // The hosted API answers {error: code, message}; older routes send the
+      // sentence itself as `error`.
+      message = body.message ?? body.error ?? message;
+      code = body.code ?? (body.message && body.error ? body.error : null);
     } catch {
       // Non-JSON error body; keep the default message.
     }

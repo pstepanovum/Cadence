@@ -11,11 +11,13 @@
 //   App Attest): EXPO_PUBLIC_APPCHECK_DEBUG_TOKEN, a debug token registered in
 //   the Firebase console. Ignored in release builds.
 //
-// Without a token the header is simply left off and the server answers 401;
-// a paired Cadence server never asks for one.
+// Without a token the header is simply left off and the server answers 401
+// app_check_failed, which src/api/client.ts reports without signing anyone
+// out; a paired Cadence server never asks for one.
 import { requireOptionalNativeModule } from "expo";
 import * as SecureStore from "expo-secure-store";
 
+import { assertionBody, attestationBody } from "@/lib/app-check-rest";
 import { config } from "@/lib/config";
 
 interface AppAttestModule {
@@ -33,9 +35,16 @@ const KEY_ID = "cadence.appcheck.keyId";
 const ARTIFACT = "cadence.appcheck.artifact";
 /** Refresh a little before the token runs out. */
 const MARGIN_MS = 5 * 60 * 1000;
+/**
+ * After a failed exchange, wait this long before attesting again: Apple
+ * rate-limits attestations, and every call on a screen would otherwise make a
+ * new key.
+ */
+const FAILURE_BACKOFF_MS = 60 * 1000;
 
 let cached: { token: string; expiresAt: number } | null = null;
 let inflight: Promise<string | null> | null = null;
+let failedAt = 0;
 
 function endpoint(method: string): string | null {
   const appId = IOS_APP_ID ?? config.firebase?.appId ?? null;
@@ -72,7 +81,7 @@ async function viaAppAttest(module: AppAttestModule): Promise<TokenResponse> {
   if (keyId && artifact) {
     try {
       const assertion = await module.generateAssertion(keyId, [artifact, challenge]);
-      return await post<TokenResponse>("exchangeAppAttestAssertion", { artifact, assertion, challenge });
+      return await post<TokenResponse>("exchangeAppAttestAssertion", assertionBody(artifact, assertion, challenge));
     } catch {
       // The key may have been invalidated (a restore to a new device); attest a new one.
     }
@@ -80,39 +89,46 @@ async function viaAppAttest(module: AppAttestModule): Promise<TokenResponse> {
 
   const newKey = await module.generateKey();
   const attestation = await module.attestKey(newKey, [challenge]);
-  const result = await post<{ artifact: string; appCheckToken: TokenResponse }>("exchangeAppAttestAttestation", {
-    attestation_statement: attestation,
-    challenge,
-    // Firebase takes the key id's own (ASCII, base64) text as bytes.
-    key_id: btoa(newKey),
-  });
+  // The key id goes as Apple returned it, already base64 (app-check-rest.ts).
+  const result = await post<{ artifact: string; appCheckToken: TokenResponse }>("exchangeAppAttestAttestation", attestationBody(newKey, attestation, challenge));
   await SecureStore.setItemAsync(KEY_ID, newKey);
   await SecureStore.setItemAsync(ARTIFACT, result.artifact);
   return result.appCheckToken;
 }
 
-async function fetchToken(): Promise<string | null> {
+/** A fresh token from App Check; `keep` makes it the cached one. */
+async function fetchToken(keep: boolean): Promise<string | null> {
   try {
     const result = DEBUG_TOKEN ? await viaDebug(DEBUG_TOKEN) : attest?.isSupported ? await viaAppAttest(attest) : null;
     if (!result) return null;
-    cached = { token: result.token, expiresAt: Date.now() + ttlMs(result.ttl) };
+    if (keep) cached = { token: result.token, expiresAt: Date.now() + ttlMs(result.ttl) };
+    failedAt = 0;
     return result.token;
-  } catch {
+  } catch (cause) {
+    failedAt = Date.now();
+    if (__DEV__) console.warn("App Check token exchange failed:", cause instanceof Error ? cause.message : cause);
     return null;
   }
 }
 
-/** A current App Check token, or null when this build or device cannot get one. */
-export async function getAppCheckToken(): Promise<string | null> {
+/**
+ * A current App Check token, or null when this build or device cannot get one.
+ * `limitedUse` asks for a token of its own, for the routes that spend it
+ * (replay protection, the newsletter): sending the shared cached one there
+ * would spend it, and the next such call within the hour would be refused.
+ */
+export async function getAppCheckToken({ limitedUse = false }: { limitedUse?: boolean } = {}): Promise<string | null> {
+  if (failedAt && Date.now() - failedAt < FAILURE_BACKOFF_MS) return null;
+  if (limitedUse) return fetchToken(false);
   if (cached && cached.expiresAt - MARGIN_MS > Date.now()) return cached.token;
-  inflight ??= fetchToken().finally(() => {
+  inflight ??= fetchToken(true).finally(() => {
     inflight = null;
   });
   return inflight;
 }
 
-export async function appCheckHeaders(): Promise<Record<string, string>> {
-  const token = await getAppCheckToken();
+export async function appCheckHeaders(options: { limitedUse?: boolean } = {}): Promise<Record<string, string>> {
+  const token = await getAppCheckToken(options);
   return token ? { "X-Firebase-AppCheck": token } : {};
 }
 
