@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-FROM node:24-bookworm-slim AS base
+FROM node:25-bookworm-slim AS base
 
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
@@ -45,7 +45,7 @@ COPY . .
 RUN pnpm build
 
 # The runner starts from the plain Node image: it needs no pnpm.
-FROM node:24-bookworm-slim AS runner
+FROM node:25-bookworm-slim AS runner
 
 WORKDIR /app
 
