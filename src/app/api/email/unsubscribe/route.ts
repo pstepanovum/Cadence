@@ -35,15 +35,40 @@ function page(title: string, body: string, status = 200) {
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }
 
-export async function GET(request: Request) {
-  const list = await unsubscribe(new URL(request.url).searchParams.get("token")).catch(() => null);
-  if (!list) return page("Link not recognised", "This unsubscribe link isn't valid. You can change email settings on your account page.", 400);
+function done(list: "reminders" | "newsletter") {
   return list === "reminders"
     ? page("Reminders turned off", "You won't get practice reminders or weekly summaries any more. Account and billing email still arrives.")
     : page("Unsubscribed", "You won't get the Cadence newsletter any more.");
 }
 
+const invalid = () => page("Link not recognised", "This unsubscribe link isn't valid. You can change email settings on your account page.", 400);
+
+/**
+ * GET only asks: mail scanners and link previews follow links, and a GET that
+ * unsubscribed turned learners' email off without them. The button posts back
+ * here; mail clients use RFC 8058 one-click POST directly.
+ */
+export async function GET(request: Request) {
+  const token = new URL(request.url).searchParams.get("token");
+  let claim: ReturnType<typeof verifyUnsubscribeToken> = null;
+  try {
+    claim = verifyUnsubscribeToken(token);
+  } catch {
+    // No signing secret on this server: the link cannot be checked.
+  }
+  if (!claim) return invalid();
+  const what = claim.list === "reminders" ? "practice reminders and weekly summaries" : "the Cadence newsletter";
+  const action = `/api/email/unsubscribe?token=${encodeURIComponent(token ?? "")}`;
+  return page(
+    "Unsubscribe?",
+    `Stop sending ${what} to this address.</p><form method="post" action="${action.replace(/&/g, "&amp;").replace(/"/g, "&quot;")}"><input type="hidden" name="source" value="page"><button type="submit" style="font:inherit;font-weight:600;padding:12px 20px;border:0;border-radius:14px;background:#386641;color:#fff;cursor:pointer">Unsubscribe</button></form><p>`,
+  );
+}
+
 export async function POST(request: Request) {
   const list = await unsubscribe(new URL(request.url).searchParams.get("token")).catch(() => null);
+  const form = await request.formData().catch(() => null);
+  // The confirmation page's button: answer with a page. One-click: status only.
+  if (form?.get("source") === "page") return list ? done(list) : invalid();
   return new Response(null, { status: list ? 200 : 400 });
 }

@@ -80,15 +80,9 @@ export async function POST(request: Request) {
 }
 
 function getSubscriptionUpdateErrorMessage(error: unknown) {
-  if (error instanceof Stripe.errors.StripeError) {
-    return error.message;
-  }
-
-  if (error instanceof Error && error.message.trim()) {
-    return error.message;
-  }
-
-  return "Failed to update subscription.";
+  // Stripe's own message can name ids and account details; it is logged above.
+  if (error instanceof Stripe.errors.StripeCardError) return error.message;
+  return "The subscription couldn't be updated. Try again, or manage it from the billing portal.";
 }
 
 function shouldProxyDesktopBillingRequest(request: Request) {
