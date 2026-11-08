@@ -8,7 +8,7 @@ import { Alert, StyleSheet, View } from "react-native";
 import { SvgXml } from "react-native-svg";
 
 import { Banner, Body, Button, Eyebrow, Screen, Title, TopBar } from "@/components/ui";
-import { appleLogo, AuthField, GOOGLE_G, MIN_PASSWORD } from "@/components/auth/SignInOptions";
+import { appleLogo, AuthField, GOOGLE_G, MAX_PASSWORD, MIN_PASSWORD } from "@/components/auth/SignInOptions";
 import { useAuth } from "@/context/auth";
 import { describeAuthError, isCancelledSignIn } from "@/copy/auth-errors";
 import { config } from "@/lib/config";
@@ -72,6 +72,7 @@ export default function SignInMethodsScreen() {
   const savePassword = () =>
     run("password", async () => {
       if (next.length < MIN_PASSWORD) throw new Error(`Choose a password of at least ${MIN_PASSWORD} characters.`);
+      if (next.length > MAX_PASSWORD) throw new Error(`Choose a password of at most ${MAX_PASSWORD} characters.`);
       if (hasPassword) {
         if (!current) throw new Error("Enter your current password.");
         await changePassword(current, next);

@@ -44,6 +44,10 @@ describe("describeAuthError", () => {
     assert.match(describeAuthError({ code: "auth/email-already-in-use" }, FALLBACK), /Apple or Google/);
   });
 
+  it("states the project's password policy when a new password breaks it", () => {
+    assert.match(describeAuthError({ code: "auth/password-does-not-meet-requirements" }, FALLBACK), /8 to 128 characters/);
+  });
+
   it("falls back for codes it does not know and for plain errors", () => {
     assert.equal(describeAuthError({ code: "auth/internal-error" }, FALLBACK), FALLBACK);
     assert.equal(describeAuthError(new Error("Firebase: Error (auth/x)."), FALLBACK), FALLBACK);

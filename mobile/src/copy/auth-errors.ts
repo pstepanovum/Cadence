@@ -54,6 +54,11 @@ export function describeAuthError(cause: unknown, fallback: string, context: Aut
       return "There is already an account with that email. Sign in instead, with your password, Apple or Google.";
     case "auth/weak-password":
       return "Choose a longer password.";
+    case "auth/password-does-not-meet-requirements":
+      // The project's password policy: 8 to 128 characters.
+      return "Choose a password of 8 to 128 characters.";
+    case "auth/missing-password":
+      return "Enter your password.";
     case "auth/too-many-requests":
       return "Too many attempts. Wait a few minutes and try again.";
     case "auth/network-request-failed":

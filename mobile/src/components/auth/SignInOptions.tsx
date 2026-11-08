@@ -32,6 +32,8 @@ import { continueLabel, pendingLinkMessage } from "@/platform/sign-in-methods";
 import { colors, currentScheme, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
 
 export const MIN_PASSWORD = 8;
+/** The Firebase project's password policy caps a password here; longer is refused on the server. */
+export const MAX_PASSWORD = 128;
 
 /**
  * A text field drawn the way the design system draws fields on a plain page:
@@ -109,7 +111,7 @@ export function SignInOptions({
   const creating = intent === "signup";
   const trimmed = email.trim();
   const emailOk = EMAIL.test(trimmed);
-  const canSubmit = emailOk && (creating ? password.length >= MIN_PASSWORD : password.length > 0);
+  const canSubmit = emailOk && (creating ? password.length >= MIN_PASSWORD && password.length <= MAX_PASSWORD : password.length > 0);
   const missing = MIN_PASSWORD - password.length;
 
   function fail(cause: unknown, fallback: string) {
@@ -142,7 +144,15 @@ export function SignInOptions({
     if (busy) return;
     if (!canSubmit) {
       haptics.error();
-      setError(!emailOk ? "Enter your email address." : creating ? `Choose a password of at least ${MIN_PASSWORD} characters.` : "Enter your password.");
+      setError(
+        !emailOk
+          ? "Enter your email address."
+          : creating
+            ? password.length > MAX_PASSWORD
+              ? `Choose a password of at most ${MAX_PASSWORD} characters.`
+              : `Choose a password of at least ${MIN_PASSWORD} characters.`
+            : "Enter your password.",
+      );
       return;
     }
     setBusy("email");
