@@ -1,7 +1,7 @@
 # FILE: src/ai-engine/requirements.desktop.arm64.txt
 fastapi
 uvicorn[standard]
-transformers==5.3.0
+transformers==5.22.1
 torch==2.8.*
 torchaudio==2.8.*
 accelerate==1.13.0
