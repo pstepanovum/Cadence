@@ -6,6 +6,6 @@ torch==2.8.*
 torchaudio==2.8.*
 accelerate==1.13.0
 python-multipart
-numpy<2.0
+numpy<3.0
 soundfile
 omnivoice==0.1.2
