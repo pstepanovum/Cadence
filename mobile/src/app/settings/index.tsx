@@ -100,11 +100,16 @@ export default function SettingsScreen() {
         style: "destructive",
         onPress: () =>
           void (async () => {
-            // This phone stops getting the account's push messages.
-            const installId = await getInstallId();
-            await Promise.race([unregisterPushDevice(installId).catch(() => {}), new Promise((resolve) => setTimeout(resolve, 3000))]);
-            await forgetPushRegistration();
-            await signOut();
+            try {
+              // This phone stops getting the account's push messages.
+              const installId = await getInstallId();
+              await Promise.race([unregisterPushDevice(installId).catch(() => {}), new Promise((resolve) => setTimeout(resolve, 3000))]);
+              await forgetPushRegistration();
+            } catch {
+              // Best effort: signing out must never depend on the push cleanup.
+            } finally {
+              await signOut();
+            }
           })(),
       },
     ]);

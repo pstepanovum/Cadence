@@ -23,8 +23,12 @@ export function useEnterAppWhenPaired() {
       return;
     }
     if (mode === "local") router.dismissTo("/(tabs)");
-    // Paired a home server while signed in: back to wherever it was opened from.
-    else if (mode === "cloud" && router.canGoBack()) router.back();
+    // Paired a home server while signed in: back to wherever it was opened
+    // from, or to the tabs when a pairing link opened the app cold.
+    else if (mode === "cloud") {
+      if (router.canGoBack()) router.back();
+      else router.replace("/(tabs)");
+    }
   }, [paired, mode]);
 
   return useCallback(() => setPaired(true), []);

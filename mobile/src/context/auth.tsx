@@ -5,6 +5,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { getProfile, patchProfile } from "@/api/endpoints";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { signOutOfProviders } from "@/lib/firebase-providers";
+import { clearPlan } from "@/notifications/schedule";
 import {
   parseProfile,
   toProfile,
@@ -202,6 +203,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = useCallback(async () => {
     const auth = getFirebaseAuth();
     if (!auth) return;
+    // The account's streak and review reminders stop with the account; the
+    // watcher that would re-plan them unmounts once signed out.
+    await clearPlan().catch(() => {});
     await signOutOfProviders();
     await firebaseSignOut(auth);
   }, []);

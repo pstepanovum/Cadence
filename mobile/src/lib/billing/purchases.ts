@@ -151,7 +151,8 @@ export async function purchasePlan(id: PlusPlanId): Promise<StoreStatus | null> 
   const entry = packages.get(id);
   if (!entry) throw new PurchaseError("That plan isn't available right now. Try again in a moment.");
   try {
-    return statusFrom((await Purchases.purchasePackage(entry)).customerInfo);
+    // Queued behind a pending logIn, so the purchase lands on the account.
+    return await serial(async () => statusFrom((await Purchases.purchasePackage(entry)).customerInfo));
   } catch (error) {
     if (isCancelled(error)) return null;
     throw new PurchaseError(purchaseMessage(error), isPaymentPending(error));
@@ -162,7 +163,7 @@ export async function restorePurchases(): Promise<StoreStatus> {
   if (purchasesStubbed) return stubStatus;
   if (!configure()) throw new PurchaseError("Purchases aren't available in this build.");
   try {
-    return statusFrom(await Purchases.restorePurchases());
+    return await serial(async () => statusFrom(await Purchases.restorePurchases()));
   } catch (error) {
     throw new PurchaseError(purchaseMessage(error));
   }

@@ -21,7 +21,7 @@ import {
 import { signOut } from "firebase/auth";
 import { AppState } from "react-native";
 
-import { setLocalAiTransport, setTransport } from "@/api/transport";
+import { onPairingRefused, setLocalAiTransport, setTransport } from "@/api/transport";
 import { config } from "@/lib/config";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { claimPairing, probeServer, verifySession } from "@/pairing/client";
@@ -352,6 +352,14 @@ export function ConnectionProvider({ children }: { children: React.ReactNode }) 
     sweeping.current = false;
     dispatch({ type: "connect_requested" });
   }, [dispatch]);
+
+  // A paired server that refuses the token mid-session: re-check now. The
+  // sweep's own session check clears a pairing that is really gone.
+  useEffect(() => {
+    if (!deviceToken) return;
+    onPairingRefused(reconnect);
+    return () => onPairingRefused(null);
+  }, [deviceToken, reconnect]);
 
   // Publish the active transport so the plain-function API layer knows where to
   // send calls. Cleared the moment the connection drops, so a screen that fires

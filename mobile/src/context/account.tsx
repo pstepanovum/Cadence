@@ -63,7 +63,9 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
   });
   const me = signedIn ? (meQuery.data ?? null) : null;
 
-  const [store, setStore] = useState<StoreStatus>(NO_STORE_STATUS);
+  // Tagged with the account it was read for, so one account's entitlement is
+  // never shown for the next one while (or if) the store login is pending.
+  const [store, setStoreFor] = useState<{ uid: string | null; status: StoreStatus }>({ uid: null, status: NO_STORE_STATUS });
 
   // The store follows the account: logIn after sign-in, logOut on sign-out.
   useEffect(() => {
@@ -74,11 +76,11 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
     }
     signInToStore(uid)
       .then((status) => {
-        if (active && status) setStore(status);
+        if (active && status) setStoreFor({ uid, status });
       })
       .catch(() => {});
     const unsubscribe = onStoreStatus((status) => {
-      if (active) setStore(status);
+      if (active) setStoreFor({ uid, status });
     });
     return () => {
       active = false;
@@ -94,7 +96,7 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
   }, [uid, mode]);
 
   const serverPlus = me?.plusActive ?? false;
-  const storeShown = uid ? store : NO_STORE_STATUS;
+  const storeShown = uid && store.uid === uid ? store.status : NO_STORE_STATUS;
   const plus = signedIn && (serverPlus || storeShown.active);
   // Detail syncs only once the server itself says Plus.
   const tier: DataTier = dataTier(signedIn, serverPlus);
@@ -105,9 +107,9 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
 
   const [pollKey, setPollKey] = useState(0);
   const noteStoreStatus = useCallback((status: StoreStatus) => {
-    setStore(status);
+    setStoreFor({ uid, status });
     setPollKey((n) => n + 1);
-  }, []);
+  }, [uid]);
 
   useEffect(() => {
     if (pollKey === 0) return;

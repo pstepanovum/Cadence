@@ -1,7 +1,7 @@
 // FILE: mobile/src/api/client.ts
 import { signOut } from "firebase/auth";
 
-import { requireAiTransport, requireTransport, type Transport } from "@/api/transport";
+import { notePairingRefused, requireAiTransport, requireTransport, type Transport } from "@/api/transport";
 import { appCheckHeaders } from "@/lib/app-check";
 import { APP_CHECK_REFUSED, isAppCheckRefusal } from "@/lib/app-check-rest";
 import { getFirebaseAuth } from "@/lib/firebase";
@@ -66,6 +66,14 @@ async function headersFor(transport: Transport, options: FetchOptions, forceRefr
   return { ...auth, ...appCheck };
 }
 
+/** Firebase refresh errors that mean the account's session is really over. */
+const SESSION_ENDING_AUTH_CODES = new Set([
+  "auth/user-token-expired",
+  "auth/user-disabled",
+  "auth/user-not-found",
+  "auth/invalid-user-token",
+]);
+
 async function throwIfAppCheckRefused(response: Response): Promise<void> {
   const body: unknown = await response.clone().json().catch(() => null);
   if (isAppCheckRefusal(body)) {
@@ -88,7 +96,16 @@ export async function apiFetch(path: string, init: RequestInit = {}, options: Fe
   // person is signed out. The retry resends the same body, which is fine for
   // the strings and FormData this client sends.
   if (response.status === 401 && transport.mode === "cloud" && getFirebaseAuth()?.currentUser) {
-    const refreshed = await headersFor(transport, options, true).catch(() => null);
+    let refreshed: Awaited<ReturnType<typeof headersFor>> | null = null;
+    try {
+      refreshed = await headersFor(transport, options, true);
+    } catch (cause) {
+      // Only Firebase saying the account itself is finished ends the session;
+      // a dropped connection during the refresh must not sign anyone out.
+      if (!SESSION_ENDING_AUTH_CODES.has((cause as { code?: string } | null)?.code ?? "")) {
+        throw new ApiError(401, "Cadence couldn't renew your sign-in. Check your connection and try again.", "token_refresh_failed");
+      }
+    }
     if (refreshed) {
       response = await send(transport, path, init, refreshed);
       if (response.status === 401) await throwIfAppCheckRefused(response);
@@ -109,11 +126,9 @@ export async function apiFetch(path: string, init: RequestInit = {}, options: Fe
       | { error?: string; code?: string }
       | null;
 
-    throw new ApiError(
-      401,
-      body?.error ?? "This phone is no longer paired with your computer.",
-      body?.code ?? "device_revoked",
-    );
+    const code = body?.code ?? "device_revoked";
+    if (code === "device_revoked" || code === "token_expired") notePairingRefused();
+    throw new ApiError(401, body?.error ?? "This phone is no longer paired with your computer.", code);
   }
 
   return response;

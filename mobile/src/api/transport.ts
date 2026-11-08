@@ -64,3 +64,19 @@ export function requireTransport(): Transport {
   }
   return active;
 }
+
+/**
+ * Called when a paired server refuses this phone's token during normal use
+ * (the computer unpaired it, or the pairing aged out). The connection provider
+ * listens and re-checks the pairing, which clears it when it is really gone;
+ * otherwise every call would keep failing until the next foreground sweep.
+ */
+let pairingRefused: (() => void) | null = null;
+
+export function onPairingRefused(listener: (() => void) | null): void {
+  pairingRefused = listener;
+}
+
+export function notePairingRefused(): void {
+  pairingRefused?.();
+}
