@@ -52,8 +52,19 @@ export interface TakeRecorder {
  * what the panel says, whether a tap is allowed — lives in the reducer, which
  * is unit tested. This hook only performs the effects the reducer asks for.
  */
-export function useTakeRecorder(): TakeRecorder {
+export function useTakeRecorder(
+  /**
+   * Receives a take the duration cap stopped. Handle it exactly like one from
+   * `toggle()` (score or save it, then `settle()`); without a handler the take
+   * is discarded and the recorder returns to idle rather than staying busy.
+   */
+  onAutoStop?: (audio: RecordedAudio) => void,
+): TakeRecorder {
   const [state, dispatch] = useReducer(takeReducer, initialTakeState);
+  const onAutoStopRef = useRef(onAutoStop);
+  useEffect(() => {
+    onAutoStopRef.current = onAutoStop;
+  }, [onAutoStop]);
 
   // Lets the async callbacks and the native status listener read the current
   // state without being re-created on every render. Both are written in an
@@ -173,9 +184,18 @@ export function useTakeRecorder(): TakeRecorder {
       return;
     }
     autoStoppingRef.current = true;
-    stopRecording("attempt").finally(() => {
-      autoStoppingRef.current = false;
-    });
+    stopRecording("attempt")
+      .then((audio) => {
+        if (!audio) return;
+        // The machine is now "processing": someone has to finish the take, or
+        // every later tap is ignored as busy.
+        const handler = onAutoStopRef.current;
+        if (handler) handler(audio);
+        else dispatch({ type: "RESET" });
+      })
+      .finally(() => {
+        autoStoppingRef.current = false;
+      });
   }, [recorderState.isRecording, recorderState.durationMillis, stopRecording]);
 
   const settle = useCallback((failure?: string) => {

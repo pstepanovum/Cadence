@@ -1,5 +1,5 @@
 import { Mic, Play, Settings, Square, Trash2, Volume2 } from "lucide-react-native";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Animated, Pressable, StyleSheet, Text, View } from "react-native";
 import type { RecordedAudio } from "@/api/endpoints";
 import { formatElapsed } from "@/audio/take-machine";
@@ -39,7 +39,9 @@ export function RecorderPanel({
   captureMode = "target",
   prefetch = true,
 }: RecorderPanelProps) {
-  const recorder = useTakeRecorder();
+  // A take the 30-second cap stopped goes through the same path as a tap.
+  const finishRef = useRef<(take: RecordedAudio) => Promise<void>>(async () => {});
+  const recorder = useTakeRecorder((audio) => void finishRef.current(audio));
   const playback = usePlayback();
   const speech = useSpeech();
   const { prefetch: warm } = speech;
@@ -73,11 +75,8 @@ export function RecorderPanel({
     }).start();
   }, [halo, recorder.level, recording]);
 
-  const handlePress = useCallback(async () => {
-    if (recorder.isRecording) {
-      haptics.thud();
-      const finished = await recorder.toggle();
-      if (!finished) return;
+  const finish = useCallback(
+    async (finished: RecordedAudio) => {
       setTake(finished);
       try {
         await onTake(finished);
@@ -88,6 +87,19 @@ export function RecorderPanel({
           cause instanceof Error ? cause.message : "That take could not be scored. Try again.",
         );
       }
+    },
+    [onTake, recorder],
+  );
+  useEffect(() => {
+    finishRef.current = finish;
+  }, [finish]);
+
+  const handlePress = useCallback(async () => {
+    if (recorder.isRecording) {
+      haptics.thud();
+      const finished = await recorder.toggle();
+      if (!finished) return;
+      await finish(finished);
       return;
     }
 
@@ -96,7 +108,7 @@ export function RecorderPanel({
     haptics.thud();
     setTake(null);
     await recorder.toggle();
-  }, [onTake, playback, recorder, speech]);
+  }, [finish, playback, recorder, speech]);
 
   const hint = recorder.hint({
     fallback: disabled

@@ -2,11 +2,13 @@
 // target: Target, You, or both back to back (A/B). Takes go to the phone's
 // documents directory (store.ts) and are never uploaded.
 import { Mic, Pause, Play, Repeat2, Square } from "lucide-react-native";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { Body } from "@/components/ui";
 import { usePlayback } from "@/hooks/usePlayback";
+import type { RecordedAudio } from "@/api/endpoints";
+import { MAX_TAKE_MS } from "@/audio/take-machine";
 import { useTakeRecorder } from "@/hooks/useTakeRecorder";
 import { haptics } from "@/lib/haptics";
 import { useTarget, type TargetSource } from "@/learning/useTarget";
@@ -36,7 +38,9 @@ function Pill({ label, icon, onPress, primary, danger, disabled }: { label: stri
 }
 
 export function RecordCompare({ itemId, target, compact = false }: { itemId: string; target: TargetSource; compact?: boolean }) {
-  const recorder = useTakeRecorder();
+  // A take the 30-second cap stopped is saved like one stopped by a tap.
+  const keepRef = useRef<(audio: RecordedAudio, durationMs: number) => Promise<void>>(async () => {});
+  const recorder = useTakeRecorder((audio) => void keepRef.current(audio, MAX_TAKE_MS));
   const playback = usePlayback();
   const targetAudio = useTarget();
   const index = useRecordingIndex();
@@ -77,14 +81,21 @@ export function RecordCompare({ itemId, target, compact = false }: { itemId: str
     const durationMs = recorder.elapsedMs;
     const audio = await recorder.toggle(itemId.replace(/[^a-z0-9]+/gi, "-").slice(0, 40));
     if (!wasRecording || !audio) return;
+    await keep(audio, Math.max(durationMs, recorder.elapsedMs));
+  }
+
+  async function keep(audio: RecordedAudio, durationMs: number) {
     try {
-      await saveTake({ uri: audio.uri, mime: audio.type, itemId, text: target.text, durationMs: Math.max(durationMs, recorder.elapsedMs) });
+      await saveTake({ uri: audio.uri, mime: audio.type, itemId, text: target.text, durationMs });
       recorder.settle();
     } catch {
       recorder.settle("The take couldn't be saved. Check the phone has free space.");
       setError("The take couldn't be saved. Check the phone has free space.");
     }
   }
+  useEffect(() => {
+    keepRef.current = keep;
+  });
 
   const hint = recorder.hint({ fallback: compact ? "" : "Record yourself, then compare." });
 
