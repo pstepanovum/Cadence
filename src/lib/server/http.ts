@@ -50,6 +50,21 @@ export async function readBytesCapped(request: Request, maxBytes: number): Promi
   return out;
 }
 
+/**
+ * A multipart body read no further than the cap (a chunked upload declares no
+ * length), "too_large" past it, or null when it is not form data.
+ */
+export async function readFormCapped(request: Request, maxBytes: number): Promise<FormData | "too_large" | null> {
+  let body: Uint8Array;
+  try {
+    body = await readBytesCapped(request, maxBytes);
+  } catch (error) {
+    return error instanceof BodyTooLargeError ? "too_large" : null;
+  }
+  const contentType = request.headers.get("content-type") ?? "";
+  return new Response(body as BodyInit, { headers: { "content-type": contentType } }).formData().catch(() => null);
+}
+
 /** A JSON object body, or null when it is not one. Throws BodyTooLargeError past the cap. */
 export async function readJsonObject(request: Request, maxBytes = 64 * 1024): Promise<Record<string, unknown> | null> {
   const text = await readTextCapped(request, maxBytes);

@@ -38,9 +38,8 @@ export async function POST(request: Request) {
     const sessionId = await startLessonSession(session.user.id, lesson.id, lesson.module_id);
     return NextResponse.json({ sessionId }, { status: 201 });
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to start session." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/sessions failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to start session." }, { status: 500 });
   }
 }

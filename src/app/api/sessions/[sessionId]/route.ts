@@ -70,9 +70,8 @@ export async function PATCH(
 
     return NextResponse.json(finished);
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to end session." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/sessions/[sessionId] failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to end session." }, { status: 500 });
   }
 }

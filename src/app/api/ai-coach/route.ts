@@ -6,6 +6,7 @@ import { authorizeAi, runCharged } from "@/lib/server/ai-route";
 import { coachFor } from "@/lib/server/engines";
 import { isCefrLevel } from "@/lib/platform/content-model";
 import { isHostedCloud } from "@/lib/server/env";
+import { readJsonObject } from "@/lib/server/http";
 import { contentLibrary } from "@/lib/server/packs";
 
 export const runtime = "nodejs";
@@ -72,7 +73,8 @@ export async function POST(request: Request) {
   const access = await authorizeAi(request, "coach");
   if (!access.ok) return access.response;
 
-  const raw = (await request.json().catch(() => null)) as Record<string, unknown> | null;
+  // Capped while reading: 40 turns of 2,000 characters fit well inside it.
+  const raw = await readJsonObject(request, 256 * 1024).catch(() => null);
   if (!raw || typeof raw !== "object") {
     return NextResponse.json({ error: "Invalid AI Coach request payload." }, { status: 400 });
   }

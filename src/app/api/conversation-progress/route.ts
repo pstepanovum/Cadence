@@ -32,15 +32,9 @@ export async function GET() {
       modules: getConversationModulesWithProgress(progress),
     });
   } catch (error) {
-    return NextResponse.json(
-      {
-        error:
-          error instanceof Error
-            ? error.message
-            : "Failed to load conversation progress.",
-      },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/conversation-progress failed:", error instanceof Error ? error.message : error);
+    return NextResponse.json({ error: "Failed to load conversation progress." }, { status: 500 });
   }
 }
 
@@ -125,14 +119,8 @@ export async function PATCH(request: Request) {
       progress: progress[moduleSlug],
     });
   } catch (error) {
-    return NextResponse.json(
-      {
-        error:
-          error instanceof Error
-            ? error.message
-            : "Failed to update conversation progress.",
-      },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/conversation-progress failed:", error instanceof Error ? error.message : error);
+    return NextResponse.json({ error: "Failed to update conversation progress." }, { status: 500 });
   }
 }

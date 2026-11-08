@@ -59,9 +59,8 @@ export async function GET(
 
     return NextResponse.json(withSummary);
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to fetch lessons." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/modules/[moduleId]/lessons failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to fetch lessons." }, { status: 500 });
   }
 }

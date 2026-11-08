@@ -9,17 +9,22 @@ import { authorizeAi, chargeAi, type AiAccess } from "./ai-gate";
 import { readAudioField, type AudioUpload } from "./engines/audio";
 import { EngineError } from "./engines/index";
 import { GeminiError } from "./engines/gemini";
-import { errorResponse } from "./http";
+import { errorResponse, readFormCapped } from "./http";
 
 export type Granted = Extract<AiAccess, { ok: true }>;
 
-/** Multipart bodies are refused by declared size before they are read. */
+const FORM_MAX_BYTES = AUDIO_MAX_BYTES + 64 * 1024;
+
+/**
+ * Multipart bodies are refused by declared size before they are read, and by
+ * the bytes actually read otherwise: a chunked upload declares no length.
+ */
 export async function readCappedForm(request: Request): Promise<FormData | Response> {
+  const tooLarge = () => errorResponse(413, "audio_too_large", "That recording is too large. Keep it under 30 seconds.");
   const declared = Number(request.headers.get("content-length") ?? "");
-  if (Number.isFinite(declared) && declared > AUDIO_MAX_BYTES + 64 * 1024) {
-    return errorResponse(413, "audio_too_large", "That recording is too large. Keep it under 30 seconds.");
-  }
-  const form = await request.formData().catch(() => null);
+  if (Number.isFinite(declared) && declared > FORM_MAX_BYTES) return tooLarge();
+  const form = await readFormCapped(request, FORM_MAX_BYTES);
+  if (form === "too_large") return tooLarge();
   return form ?? errorResponse(400, "bad_request", "Send the recording as multipart form data.");
 }
 

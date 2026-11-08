@@ -15,9 +15,8 @@ export async function GET() {
     const stats = await getLearningStatsForMode(session.mode, session.user.id);
     return NextResponse.json(stats);
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to fetch stats." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/stats failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to fetch stats." }, { status: 500 });
   }
 }

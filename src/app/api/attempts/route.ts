@@ -76,9 +76,8 @@ export async function POST(request: Request) {
       { status: 201 },
     );
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to save attempt." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/attempts failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to save attempt." }, { status: 500 });
   }
 }

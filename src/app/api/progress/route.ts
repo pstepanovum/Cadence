@@ -31,10 +31,9 @@ export async function POST() {
     await bootstrapModuleProgress(session.user.id);
     return NextResponse.json({ ok: true }, { status: 201 });
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to bootstrap progress." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/progress failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to bootstrap progress." }, { status: 500 });
   }
 }
 
@@ -94,9 +93,8 @@ export async function PATCH(request: Request) {
 
     return NextResponse.json({ passed: result.passed, best_exam_score: result.bestExamScore });
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to update progress." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/progress failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to update progress." }, { status: 500 });
   }
 }

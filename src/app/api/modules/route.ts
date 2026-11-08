@@ -25,9 +25,8 @@ export async function GET() {
     );
     return NextResponse.json(result);
   } catch (err) {
-    return NextResponse.json(
-      { error: err instanceof Error ? err.message : "Failed to fetch modules." },
-      { status: 500 },
-    );
+    // The message can carry Firestore paths or credential details; log it only.
+    console.error("/api/modules failed:", err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: "Failed to fetch modules." }, { status: 500 });
   }
 }
