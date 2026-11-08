@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import logging
 import os
+import threading
 import time
 from typing import Any
 
@@ -44,6 +45,7 @@ class QwenCoachEngine:
         self.max_new_tokens = int(os.getenv("COACH_LLM_MAX_NEW_TOKENS", "160"))
         self.temperature = float(os.getenv("COACH_LLM_TEMPERATURE", "0.78"))
         self.top_p = float(os.getenv("COACH_LLM_TOP_P", "0.9"))
+        self._warmup_lock = threading.Lock()
 
     # ------------------------------------------------------------------
     # Device detection
@@ -101,6 +103,14 @@ class QwenCoachEngine:
 
     def warmup(self, force: bool = False) -> None:
         if self.model_loaded and not force:
+            return
+        # One load at a time: a turn that arrives during the startup load waits
+        # for it rather than loading a second copy of the model.
+        with self._warmup_lock:
+            self._warmup_unlocked()
+
+    def _warmup_unlocked(self) -> None:
+        if self.model_loaded and self.model and self.tokenizer:
             return
         try:
             self._load_model()

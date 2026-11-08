@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 import os
+import threading
 import time
 from typing import Any
 
@@ -22,11 +23,23 @@ class SpeechTranscriber:
         self.model: Any | None = None
         self.last_warmup_seconds: float | None = None
         self.last_generation_seconds: float | None = None
+        self._warmup_lock = threading.Lock()
+        self._warmup_attempts = 0
 
     def warmup(self, force: bool = False) -> None:
+        """Loads Whisper once; a caller arriving mid-load waits for that load."""
         if self.model_loaded and not force:
             return
+        attempt = self._warmup_attempts
+        with self._warmup_lock:
+            if self.model_loaded and (not force or self._warmup_attempts != attempt):
+                return
+            try:
+                self._load()
+            finally:
+                self._warmup_attempts += 1
 
+    def _load(self) -> None:
         load_start = time.perf_counter()
         logger.info("ASR warmup started model=%s", self.model_name)
 

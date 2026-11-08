@@ -8,7 +8,6 @@ from contextlib import asynccontextmanager
 from threading import Lock, Thread
 
 from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 
 from coach_llm import GemmaCoachEngine
 
@@ -91,13 +90,29 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# No CORS middleware: only the Cadence server calls this engine, never a browser.
+
+# Matches the web's own limits (src/lib/server/engines/prompts.ts); the prompt
+# only reads the last eight turns.
+HISTORY_MAX_TURNS = 20
+TURN_MAX_CHARS = 1200
+TOPIC_MAX_CHARS = 200
+
+
+def sanitize_payload(payload: dict[str, object]) -> dict[str, object]:
+    """Keeps well-formed history turns and caps every length, so a malformed
+    or oversized request is answered or refused, never a 500 or a long stall."""
+    history = payload.get("history")
+    turns = [
+        {"role": str(entry.get("role") or "user")[:16], "content": str(entry.get("content") or "")[:TURN_MAX_CHARS]}
+        for entry in (history if isinstance(history, list) else [])
+        if isinstance(entry, dict)
+    ][-HISTORY_MAX_TURNS:]
+    return {
+        **payload,
+        "topic": str(payload.get("topic") or "")[:TOPIC_MAX_CHARS],
+        "history": turns,
+    }
 
 
 @app.get("/health")
@@ -131,6 +146,7 @@ async def coach_turn(payload: dict[str, object]) -> dict[str, object]:
         len(payload.get("history") or []) if isinstance(payload.get("history"), list) else 0,
     )
 
+    payload = sanitize_payload(payload)
     try:
         result = coach_llm.generate_turn(payload)
     except RuntimeError as exc:
@@ -154,7 +170,7 @@ if __name__ == "__main__":
 
     uvicorn.run(
         app,
-        host=os.getenv("COACH_ENGINE_HOST", "0.0.0.0"),
+        host=os.getenv("COACH_ENGINE_HOST", "127.0.0.1"),
         port=int(os.getenv("COACH_ENGINE_PORT", "8001")),
         log_config=None,
     )

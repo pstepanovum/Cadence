@@ -11,6 +11,7 @@ import re
 import shutil
 import subprocess
 import sys
+import threading
 from typing import Any
 
 import pathlib
@@ -540,6 +541,10 @@ def _build_live_assessment_from_target(
     }
 
 
+# Targets come from learner-chosen text, so the cache must not grow without bound.
+DYNAMIC_TARGET_CACHE_MAX = 512
+
+
 class PhonemeScorer:
     def __init__(
         self,
@@ -557,6 +562,8 @@ class PhonemeScorer:
         self.id_to_token: dict[int, str] = {}
         self.blank_id: int | None = None
         self.dynamic_target_cache: dict[str, dict[str, Any]] = {}
+        self._warmup_lock = threading.Lock()
+        self._warmup_attempts = 0
 
     def get_diagnostics(self) -> dict[str, Any]:
         phonemizer_spec = importlib.util.find_spec("phonemizer")
@@ -588,10 +595,23 @@ class PhonemeScorer:
         }
 
     def warmup(self, force: bool = False) -> None:
-        """Prepare the transformer objects lazily when you're ready for real inference."""
+        """Prepare the transformer objects lazily when you're ready for real inference.
+
+        One load at a time: a request that arrives while the background warmup
+        is loading waits for it instead of loading a second copy of the model.
+        """
         if self.model_loaded and not force:
             return
+        attempt = self._warmup_attempts
+        with self._warmup_lock:
+            if self.model_loaded and (not force or self._warmup_attempts != attempt):
+                return
+            try:
+                self._load()
+            finally:
+                self._warmup_attempts += 1
 
+    def _load(self) -> None:
         logger.info("Warmup started for model %s", self.model_name)
         logger.info("Dependency diagnostics: %s", self.get_diagnostics())
 
@@ -656,6 +676,12 @@ class PhonemeScorer:
             len(self.id_to_token),
             self.model_revision,
         )
+
+    def _remember_target(self, key: str, target: dict[str, Any]) -> None:
+        """Caches a derived target, dropping the oldest once the cache is full."""
+        self.dynamic_target_cache[key] = target
+        while len(self.dynamic_target_cache) > DYNAMIC_TARGET_CACHE_MAX:
+            self.dynamic_target_cache.pop(next(iter(self.dynamic_target_cache)))
 
     def _decode_waveform(self, waveform: np.ndarray) -> str:
         import torch
@@ -728,7 +754,7 @@ class PhonemeScorer:
                 target_text,
                 resolved_target["ipa"],
             )
-            self.dynamic_target_cache[normalized_target] = resolved_target
+            self._remember_target(normalized_target, resolved_target)
             return resolved_target
         except Exception as exc:
             logger.warning(
@@ -745,7 +771,7 @@ class PhonemeScorer:
                 target_text,
                 resolved_target["ipa"],
             )
-            self.dynamic_target_cache[normalized_target] = resolved_target
+            self._remember_target(normalized_target, resolved_target)
             return resolved_target
         except Exception as exc:
             logger.warning(
@@ -761,7 +787,7 @@ class PhonemeScorer:
             "ipa": "",
             "segments": _build_segments_from_words(target_text, 0),
         }
-        self.dynamic_target_cache[normalized_target] = fallback_target
+        self._remember_target(normalized_target, fallback_target)
         return fallback_target
 
     def assess(

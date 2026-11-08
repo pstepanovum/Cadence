@@ -85,3 +85,22 @@ def test_accepts_a_short_clip_whatever_type_it_claims(client):
     response = http.post("/transcribe", files={"audio": ("clip.txt", wav(2), "text/plain")})
     assert response.status_code == 200
     assert response.json()["transcript"] == "hello"
+
+
+def test_refuses_oversized_target_text_before_the_model(client):
+    http, main = client
+    before = main.scorer.calls
+    response = http.post(
+        "/assess",
+        files={"audio": ("clip.wav", wav(1), "audio/wav")},
+        data={"text": "a" * (main.TEXT_MAX_CHARS + 1)},
+    )
+    assert response.status_code == 400
+    assert main.scorer.calls == before
+    assert http.get("/reference-audio", params={"text": "a" * (main.TEXT_MAX_CHARS + 1)}).status_code == 400
+
+
+def test_engine_answers_no_cross_origin_reads(client):
+    http, _ = client
+    response = http.get("/not-a-route", headers={"Origin": "https://example.com"})
+    assert "access-control-allow-origin" not in response.headers

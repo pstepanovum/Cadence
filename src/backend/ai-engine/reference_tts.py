@@ -141,6 +141,10 @@ def normalize_reference_word_text(text: str) -> str:
     return normalized
 
 
+# Clips are keyed by request text and held in memory, so the cache is bounded.
+REFERENCE_AUDIO_CACHE_MAX = 256
+
+
 class ReferenceSpeechSynthesizer:
     def __init__(
         self,
@@ -161,6 +165,12 @@ class ReferenceSpeechSynthesizer:
         self.last_warmup_seconds: float | None = None
         self.last_generation_seconds: float | None = None
         self._available_macos_voices: list[str] | None = None
+
+    def _remember(self, key: str, audio_bytes: bytes) -> None:
+        """Caches generated audio, dropping the oldest clip once the cache is full."""
+        self.cache[key] = audio_bytes
+        while len(self.cache) > REFERENCE_AUDIO_CACHE_MAX:
+            self.cache.pop(next(iter(self.cache)))
 
     def _model_provider_required(self) -> bool:
         return TTS_REQUIRE_MODEL
@@ -568,7 +578,7 @@ class ReferenceSpeechSynthesizer:
                 mode,
                 effective_instruct,
             )
-            self.cache[cache_key] = audio_bytes
+            self._remember(cache_key, audio_bytes)
             self.last_generation_seconds = round(
                 time.perf_counter() - generation_start,
                 2,
@@ -620,7 +630,7 @@ class ReferenceSpeechSynthesizer:
                 buffer = io.BytesIO()
                 sf.write(buffer, audio_array, sample_rate, format="WAV", subtype="PCM_16")
                 audio_bytes = buffer.getvalue()
-                self.cache[cache_key] = audio_bytes
+                self._remember(cache_key, audio_bytes)
                 self.last_generation_seconds = round(
                     time.perf_counter() - generation_start,
                     2,

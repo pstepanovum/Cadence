@@ -9,7 +9,6 @@ from threading import Lock, Thread
 from uuid import uuid4
 
 from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
 from audio_limits import AUDIO_MAX_BYTES, AudioRejected, check_audio
@@ -152,13 +151,11 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# No CORS middleware: only the Cadence server calls this engine, never a
+# browser, so no web page may read its responses.
+
+# The web routes cap target text at 500 characters; the engine enforces it too.
+TEXT_MAX_CHARS = 500
 
 
 async def read_checked_audio(audio: UploadFile) -> bytes:
@@ -174,12 +171,9 @@ async def read_checked_audio(audio: UploadFile) -> bytes:
 
 @app.get("/health")
 async def health() -> dict[str, object]:
-    if (
-        not scorer.model_loaded
-        or not reference_tts.model_loaded
-        or not speech_transcriber.model_loaded
-    ):
-        ensure_runtime_warmup_started(force=True)
+    # Never force: a forced warmup reloads models that are already serving
+    # requests. Components that are loaded return at once; the rest retry.
+    ensure_runtime_warmup_started()
 
     tts_status = reference_tts.get_status()
     tts_ready = tts_status.get("ttsReady") is True
@@ -222,6 +216,8 @@ async def assess(audio: UploadFile = File(...), text: str = Form(...)) -> dict[s
     if not text.strip():
         logger.warning("Assess rejected because target text was empty")
         raise HTTPException(status_code=400, detail="Target text is required.")
+    if len(text) > TEXT_MAX_CHARS:
+        raise HTTPException(status_code=400, detail=f"Keep the target text under {TEXT_MAX_CHARS} characters.")
 
     try:
         result = scorer.assess(
@@ -299,6 +295,8 @@ async def reference_audio(
     if not stripped_text:
         logger.warning("Reference audio rejected because target text was empty")
         raise HTTPException(status_code=400, detail="Target text is required.")
+    if len(stripped_text) > TEXT_MAX_CHARS:
+        raise HTTPException(status_code=400, detail=f"Keep the text under {TEXT_MAX_CHARS} characters.")
 
     try:
         start_time = time.perf_counter()
@@ -368,7 +366,7 @@ if __name__ == "__main__":
 
     uvicorn.run(
         app,
-        host=os.getenv("AI_ENGINE_HOST", "0.0.0.0"),
+        host=os.getenv("AI_ENGINE_HOST", "127.0.0.1"),
         port=int(os.getenv("AI_ENGINE_PORT", "8000")),
         log_config=None,
     )
