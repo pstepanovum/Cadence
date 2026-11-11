@@ -5,5 +5,5 @@ transformers==4.57.6
 torch==2.2.2
 accelerate==1.12.0
 python-multipart
-numpy<2.0
+numpy<3.0
 soundfile
