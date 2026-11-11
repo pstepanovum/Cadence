@@ -1,7 +1,7 @@
 # FILE: src/ai-engine/requirements.desktop.txt
 fastapi
 uvicorn[standard]
-transformers==4.57.6
+transformers==5.22.1
 torch==2.2.2
 accelerate==1.12.0
 python-multipart
