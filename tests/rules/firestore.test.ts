@@ -42,6 +42,8 @@ const PATHS = [
   "supportRequests/s1",
   "friendCodes/c1",
   "friendCodes/c1/redemptions/u1",
+  "users/u1/emailLog/lifecycle-day1",
+  "passwordResets/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
 ];
 
 describe("security rules deny every client", { skip }, () => {

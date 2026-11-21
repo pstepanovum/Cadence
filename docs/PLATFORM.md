@@ -341,8 +341,11 @@ pull with the push, or skipping it when a `detailChangedAt` on the summary
 says nothing changed elsewhere, brings Plus under 10; both need the app.
 
 Other server routes (code in `src/lib/server/`): `PATCH /api/me`
-`{reminders}`; `POST /api/auth/password-reset` `{email}`,
-`/api/auth/verify-email`, `/api/auth/password-changed` `{email}`,
+`{reminders, lifecycle}`; `POST /api/auth/password-reset` `{email}` (our own
+reset: a hashed, single-use, 60-minute token in `passwordResets`, never a
+Firebase link), `/api/auth/password-reset/check` `{token}`,
+`/api/auth/password-reset/confirm` `{token, password}`,
+`/api/auth/verify-email`,
 `/api/auth/sign-in-failed` `{email}` (the sign-in forms report failures; ten
 in an hour sends one `suspicious-activity` a day); `GET /api/account/export`,
 `DELETE /api/account`, `POST /api/account/email` `{newEmail}`,

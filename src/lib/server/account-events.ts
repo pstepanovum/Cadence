@@ -131,34 +131,10 @@ export async function noteSignIn(context: SignInContext, deps: SignInDeps = {}):
 }
 
 /**
- * The reset page reports a finished reset with the address; an email goes out
- * only if Firebase really moved tokensValidAfterTime since we last looked, so
- * nobody can trigger it for an account they do not control.
- */
-export async function notePasswordChanged(email: string, deps: SignInDeps = {}): Promise<string[]> {
-  const firestore = deps.db ?? defaultDb();
-  let uid: string;
-  try {
-    uid = (await defaultAuth().getUserByEmail(email)).uid;
-  } catch {
-    return [];
-  }
-  const record = await (deps.getUser ?? loadUser)(uid);
-  const userRef = firestore.collection("users").doc(uid);
-  const security = ((await userRef.get()).data()?.security ?? {}) as { tokensValidAfter?: number };
-  if (!record.tokensValidAfter || (typeof security.tokensValidAfter === "number" && record.tokensValidAfter <= security.tokensValidAfter)) return [];
-  if (Date.now() - record.tokensValidAfter > 15 * 60 * 1000) return [];
-  const key = mailKey("password-changed", uid, String(record.tokensValidAfter));
-  const queued = await queueMail(key, { template: "password-changed", uid, props: { email: record.email ?? email, changedAt: record.tokensValidAfter } }, { db: firestore });
-  await userRef.set({ security: { tokensValidAfter: record.tokensValidAfter } }, { merge: true });
-  return queued ? [key] : [];
-}
-
-/**
  * Firebase's one-time action code from a generated link, placed on our own
  * page, so learners never see Firebase's default handler.
  */
-export function ownActionLink(firebaseLink: string, page: "/reset-password" | "/verify-email", origin = appOrigin()): string {
+export function ownActionLink(firebaseLink: string, page: "/verify-email", origin = appOrigin()): string {
   const source = new URL(firebaseLink);
   const code = source.searchParams.get("oobCode");
   const mode = source.searchParams.get("mode");

@@ -1,19 +1,18 @@
 // FILE: src/app/api/auth/password-reset/route.ts
 //
-// POST {email}: sends Cadence's own password-reset email. Firebase makes the
-// one-time code (generatePasswordResetLink); the link in the email opens our
-// /reset-password page, never Firebase's default page, and the email is ours,
-// never Firebase's. Always answers 200 the same way, so it says nothing about
-// which addresses have accounts. Limited per IP and per address.
-import { isNoAccountForLinkError } from "@/lib/server/action-link-errors";
-import { ownActionLink } from "@/lib/server/account-events";
+// POST {email}: starts Cadence's own password reset (src/lib/server/password-reset.ts).
+// A password account gets our link to /reset-password?token=…, an Apple or
+// Google account a note that it has no password, an unknown address nothing.
+// The work happens after the response, and the answer is always the same,
+// so neither the words nor the timing say which addresses have accounts.
+// Limited per IP and per address. The web form and the iPhone app both call it.
+import { after } from "next/server";
+
 import { requireAppCheck } from "@/lib/server/app-check";
-import { sendEmail } from "@/lib/server/email/brevo";
 import { isEmailAddress } from "@/lib/server/email/senders";
-import { renderTemplate } from "@/lib/server/email/templates/index";
-import { appOrigin } from "@/lib/server/env";
-import { auth } from "@/lib/server/firebase";
 import { clientIp, errorResponse, json, readJsonObject } from "@/lib/server/http";
+import { issuePasswordReset } from "@/lib/server/password-reset";
+import { deliverResetPlan } from "@/lib/server/password-reset-mail";
 import { LIMITS, hitAll } from "@/lib/server/rate-limit";
 import { handled } from "@/lib/server/route";
 
@@ -36,17 +35,13 @@ export function POST(request: Request) {
     ]);
     if (!limit.allowed) return errorResponse(429, "rate_limited", "Too many requests. Try again later.", { retryAfterSeconds: limit.retryAfterSeconds });
 
-    let link: string;
-    try {
-      link = await auth().generatePasswordResetLink(email, { url: `${appOrigin()}/login` });
-    } catch (error) {
-      // No account, including the internal assertion Firebase throws for an
-      // unknown address under email enumeration protection.
-      if (isNoAccountForLinkError(error)) return json(SAME_ANSWER);
-      throw error;
-    }
-    // Sent directly, not queued: the link is a credential and is not stored anywhere.
-    await sendEmail({ to: { email }, email: renderTemplate("password-reset", { email, resetUrl: ownActionLink(link, "/reset-password"), expiresInMinutes: 60 }), tags: ["password-reset"] });
+    after(async () => {
+      try {
+        await deliverResetPlan(await issuePasswordReset(email));
+      } catch (error) {
+        console.error("Password reset failed:", error instanceof Error ? error.message : error);
+      }
+    });
     return json(SAME_ANSWER);
   });
 }

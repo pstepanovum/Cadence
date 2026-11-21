@@ -15,6 +15,7 @@ export interface TemplateProps {
   welcome: account.WelcomeProps;
   "verify-email": account.VerifyEmailProps;
   "password-reset": account.PasswordResetProps;
+  "password-reset-social": account.PasswordResetSocialProps;
   "password-changed": account.PasswordChangedProps;
   "email-changed": account.EmailChangedProps;
   "new-sign-in": account.NewSignInProps;
@@ -69,7 +70,8 @@ const SALE = { code: "CADENCEHALF", label: "50% off", endsAt: Date.UTC(2026, 10,
 export const TEMPLATES: { [Id in TemplateId]: TemplateEntry<Id> } = {
   welcome: { id: "welcome", name: "Welcome", group: "account", category: "transactional", render: account.renderWelcome, fixture: { name: "Maria Lopez" } },
   "verify-email": { id: "verify-email", name: "Verify email", group: "account", category: "transactional", render: account.renderVerifyEmail, fixture: { email: "maria@example.com", verifyUrl: "https://cadence.pstepanov.dev/verify-email?mode=verifyEmail&oobCode=PREVIEW" } },
-  "password-reset": { id: "password-reset", name: "Password reset", group: "account", category: "transactional", render: account.renderPasswordReset, fixture: { email: "maria@example.com", resetUrl: "https://cadence.pstepanov.dev/reset-password?mode=resetPassword&oobCode=PREVIEW", expiresInMinutes: 60 } },
+  "password-reset": { id: "password-reset", name: "Password reset", group: "account", category: "transactional", render: account.renderPasswordReset, fixture: { email: "maria@example.com", resetUrl: "https://cadence.pstepanov.dev/reset-password?token=PREVIEW", expiresInMinutes: 60 } },
+  "password-reset-social": { id: "password-reset-social", name: "Password reset (Apple or Google account)", group: "account", category: "transactional", render: account.renderPasswordResetSocial, fixture: { email: "maria@example.com", providers: ["apple"] } },
   "password-changed": { id: "password-changed", name: "Password changed", group: "account", category: "transactional", render: account.renderPasswordChanged, fixture: { email: "maria@example.com", changedAt: T0 } },
   "email-changed": { id: "email-changed", name: "Email changed", group: "account", category: "transactional", render: account.renderEmailChanged, fixture: { audience: "old", oldEmail: "maria@example.com", newEmail: "maria.lopez@example.org", changedAt: T0 } },
   "new-sign-in": { id: "new-sign-in", name: "New sign-in", group: "account", category: "transactional", render: account.renderNewSignIn, fixture: { device: "Safari on macOS", at: T0 } },

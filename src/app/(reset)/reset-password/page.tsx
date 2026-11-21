@@ -1,4 +1,4 @@
-// FILE: src/app/(auth)/reset-password/page.tsx
+// FILE: src/app/(reset)/reset-password/page.tsx
 import type { Metadata } from "next";
 import { ResetPasswordForm } from "@/components/auth/ResetPasswordForm";
 

@@ -145,7 +145,7 @@ scheduler() {
 
 ttl() {
   # Documents carry their own expiry; these policies let Firestore delete them.
-  for group in days webhookEvents rateLimits mailQueue; do
+  for group in days webhookEvents rateLimits mailQueue passwordResets; do
     run gcloud firestore fields ttls update expireAt --collection-group "$group" --enable-ttl --project "$PROJECT"
   done
   for group in oauthTokens oauthCodes; do

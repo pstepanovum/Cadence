@@ -3,20 +3,18 @@
 // Always answers the same way, whether or not the address has an account, so
 // the page cannot be used to find out who uses Cadence. The server route
 // (POST /api/auth/password-reset) is rate limited per IP and per address and
-// sends a Cadence link to /reset-password through Brevo. A build without that
-// route falls back to Firebase's own reset email. The browser adds a short
-// cooldown of its own so a double click sends one email.
+// sends Cadence's own link to /reset-password through Brevo (never a Firebase
+// reset email). The browser adds a short cooldown of its own so a double
+// click sends one email.
 "use client";
 
 import Link from "next/link";
 import { useEffect, useId, useState, type FormEvent } from "react";
-import { sendPasswordResetEmail } from "firebase/auth";
 import { AUTH_INPUT_CLASS, AuthCard, AuthNotice, FieldLabel } from "@/components/auth/AuthCard";
 import { looksLikeEmail } from "@/components/newsletter/newsletter-api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cloudFetch } from "@/hooks/cloud-fetch";
-import { getFirebaseAuth } from "@/lib/firebase/client";
 
 const COOLDOWN_MS = 60_000;
 const COOLDOWN_KEY = "cadence.reset-requested-at";
@@ -41,15 +39,8 @@ async function requestReset(email: string): Promise<"sent" | "rate_limited"> {
     json: { email },
   }).catch(() => null);
 
-  if (response?.status === 429) return "rate_limited";
-  if (response && response.status !== 404 && response.status !== 405) return "sent";
-
-  // No server route in this build: let Firebase send its own email. Any error
-  // (including "no such user") is swallowed so the answer stays the same.
-  await sendPasswordResetEmail(getFirebaseAuth(), email, {
-    url: `${window.location.origin}/login`,
-  }).catch(() => {});
-  return "sent";
+  // Any other answer, even a failure, reads as sent: the page never says whether an address has an account.
+  return response?.status === 429 ? "rate_limited" : "sent";
 }
 
 export function ForgotPasswordForm() {

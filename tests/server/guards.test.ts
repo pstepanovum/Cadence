@@ -291,8 +291,8 @@ describe("unsubscribe and sign-in notices", () => {
     assert.equal(deviceLabel("Cadence/2 CFNetwork Darwin iPhone"), "Cadence app on iOS");
   });
   it("puts Firebase's action code on our own page", () => {
-    const link = ownActionLink("https://cadence-pstepanov.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=ABC&apiKey=k&continueUrl=x", "/reset-password", "https://cadence.pstepanov.dev");
-    assert.equal(link, "https://cadence.pstepanov.dev/reset-password?mode=resetPassword&oobCode=ABC");
+    const link = ownActionLink("https://cadence-pstepanov.firebaseapp.com/__/auth/action?mode=verifyEmail&oobCode=ABC&apiKey=k&continueUrl=x", "/verify-email", "https://cadence.pstepanov.dev");
+    assert.equal(link, "https://cadence.pstepanov.dev/verify-email?mode=verifyEmail&oobCode=ABC");
   });
 });
 

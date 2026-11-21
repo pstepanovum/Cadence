@@ -110,10 +110,18 @@ deletion calls `DELETE /v1/subscribers/{uid}`).
 **Firebase Auth emails**: every account email comes from Cadence's own
 templates through Brevo, so Firebase's built-in emails must never reach
 anyone:
-- The server generates the one-time codes with the Admin SDK
-  (`generatePasswordResetLink`, `generateEmailVerificationLink`,
-  `generateVerifyAndChangeEmailLink`) and puts them on Cadence's own pages, so
-  no Firebase template is used for reset, verification or email change.
+- Password reset is Cadence's own, with no Firebase link at all
+  (`src/lib/server/password-reset.ts`): a random 32-byte token, stored only as
+  its SHA-256 in `passwordResets` (60 minutes, single use, a new link turns
+  older ones off), emailed as `https://cadence.pstepanov.dev/reset-password?token=…`.
+  Apple- or Google-only accounts get a note saying how they sign in instead.
+  Confirming sets the password, marks the address verified and revokes every
+  session. Records go a day after they expire (daily job), with a TTL policy
+  on `passwordResets.expireAt` as the backstop (`deploy/cloudrun.sh ttl`).
+- Verification and email change use one-time codes the server generates with
+  the Admin SDK (`generateEmailVerificationLink`,
+  `generateVerifyAndChangeEmailLink`), placed on Cadence's own pages, so no
+  Firebase template is used.
 - Clients must not call `sendPasswordResetEmail`, `sendEmailVerification` or
   `verifyBeforeUpdateEmail`; they call `POST /api/auth/password-reset`,
   `POST /api/auth/verify-email` and `POST /api/account/email`.

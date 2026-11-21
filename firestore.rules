@@ -8,10 +8,11 @@ rules_version = '2';
 //   users/{uid} and everything under it (profile, plus, plusSources,
 //     progress/summary, inbox, srs, mastery, attempts, coachSessions, devices,
 //     and the older moduleProgress, lessonSessions, lessonAttempts,
-//     conversationProgress)
+//     conversationProgress, emailLog)
 //   usage/{uid}/days, system/aiBudget/days, rateLimits
 //   webhookEvents, mailQueue, deletions
 //   oauthClients, oauthCodes, oauthTokens, oauthGrants
+//   passwordResets (hashed reset tokens; server-only like everything else)
 //
 // Entitlement in particular is written only by the verified Stripe and
 // RevenueCat webhooks on the server; a rule that let a client write it would

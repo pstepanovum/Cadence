@@ -6,8 +6,9 @@
 //
 //   daily   purge detailed progress 90 days after Plus lapsed; retry account
 //           deletions that did not finish; drop inbox cards nobody collected
-//           in 90 days; queue trial-ending (web trials, 2 days ahead) and the
-//           reminders (on unless turned off); then deliver mail
+//           in 90 days; drop password-reset records a day past expiry;
+//           queue trial-ending (web trials, 2 days ahead) and the reminders
+//           (on unless turned off); then deliver mail
 //   mail    deliver whatever is waiting in mailQueue
 import { createHash, timingSafeEqual } from "node:crypto";
 import { FieldValue, type DocumentSnapshot, type Firestore } from "firebase-admin/firestore";
@@ -16,6 +17,7 @@ import { currentStreak, shiftDay } from "../platform/progress-model";
 import { runDeletion } from "./account";
 import { BADGE_STREAKS } from "./badges";
 import { readEmailPrefs } from "../platform/email-consent";
+import { purgeExpiredResets as purgePasswordResets } from "./password-reset";
 import { readAccount } from "./entitlement";
 import { appOrigin } from "./env";
 import { db as defaultDb } from "./firebase";
@@ -40,6 +42,7 @@ export interface DailyReport {
   purged: number;
   deletionsRetried: number;
   inboxesCleared: number;
+  resetsPurged: number;
   queued: Record<string, number>;
   mail: Record<string, number>;
 }
@@ -85,7 +88,7 @@ export async function runDailyJob(options: { db?: Firestore; now?: number } = {}
   const firestore = options.db ?? defaultDb();
   const now = options.now ?? Date.now();
   const today = new Date(now).toISOString().slice(0, 10);
-  const report: DailyReport = { purged: 0, deletionsRetried: 0, inboxesCleared: 0, queued: {}, mail: {} };
+  const report: DailyReport = { purged: 0, deletionsRetried: 0, inboxesCleared: 0, resetsPurged: 0, queued: {}, mail: {} };
   const count = (template: string) => (report.queued[template] = (report.queued[template] ?? 0) + 1);
 
   // 1. Detail kept 90 days after Plus lapsed.
@@ -113,6 +116,9 @@ export async function runDailyJob(options: { db?: Firestore; now?: number } = {}
     await doc.ref.delete();
     report.inboxesCleared += 1;
   }
+
+  // 3b. Password reset records a day past their expiry.
+  report.resetsPurged = await purgePasswordResets({ db: firestore, now });
 
   // 4. Web trials ending in about two days. App Store trials are Apple's to announce.
   const trials = await firestore.collection("users").where("plusSources.stripe.trial", "==", true).limit(500).get();

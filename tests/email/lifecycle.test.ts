@@ -3,12 +3,10 @@
 // The lifecycle sequence: which step is due (local evening, days since
 // signup, a day of grace, consent per category, the offer, the stops for
 // Plus and inactivity), the offer config, the delivery-time consent check,
-// the queued props, Brevo's UUID idempotency keys, and the password-reset
-// "no account" errors.
+// the queued props, and Brevo's UUID idempotency keys.
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
-import { isNoAccountForLinkError } from "../../src/lib/server/action-link-errors.ts";
 import { brevoIdempotencyKey, brevoPayload } from "../../src/lib/server/email/brevo.ts";
 import { offerRedeemUrl, parseOfferEnd, readOffer } from "../../src/lib/server/email/offer.ts";
 import { consentBlock } from "../../src/lib/server/email/queue.ts";
@@ -185,16 +183,5 @@ describe("Brevo idempotency keys", () => {
     assert.equal(brevoIdempotencyKey("3F2504E0-4F89-41D3-9A0C-0305E82C3301"), "3f2504e0-4f89-41d3-9a0c-0305e82c3301");
     const payload = brevoPayload({ to: { email: "maria@example.com" }, email: renderFixture("welcome"), idempotencyKey: "welcome:uid_1" }, {});
     assert.match(payload.headers?.idempotencyKey ?? "", SHAPE);
-  });
-});
-
-describe("password reset for an unknown address", () => {
-  it("treats every no-account error as no account", () => {
-    assert.ok(isNoAccountForLinkError({ code: "auth/user-not-found" }));
-    assert.ok(isNoAccountForLinkError({ code: "auth/email-not-found" }));
-    assert.ok(isNoAccountForLinkError(new Error("INTERNAL ASSERT FAILED: Unable to create the email action link")));
-    assert.ok(isNoAccountForLinkError({ code: "auth/internal-error", message: "INTERNAL ASSERT FAILED: Unable to create the email action link" }));
-    assert.ok(!isNoAccountForLinkError(new Error("Network down")));
-    assert.ok(!isNoAccountForLinkError({ code: "auth/too-many-requests" }));
   });
 });

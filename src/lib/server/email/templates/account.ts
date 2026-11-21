@@ -100,6 +100,34 @@ export function renderPasswordReset(props: PasswordResetProps): RenderedEmail {
   });
 }
 
+// Password reset for an Apple or Google account ----------------------------------
+
+export interface PasswordResetSocialProps {
+  email: string;
+  /** How the account signs in; it has no password to reset. */
+  providers: ("apple" | "google")[];
+}
+
+const PROVIDER_NAMES = { apple: "Apple", google: "Google" } as const;
+
+export function renderPasswordResetSocial(props: PasswordResetSocialProps): RenderedEmail {
+  const email = cleanText(props.email, 254);
+  const names = (props.providers ?? []).filter((p): p is "apple" | "google" => p === "apple" || p === "google").map((p) => PROVIDER_NAMES[p]);
+  const how = names.length ? names.join(" or ") : "Apple or Google";
+  const lead = `Someone asked to reset the password for ${email}, but this account doesn't use a password: you sign in with ${how}.`;
+  const next = `To sign in, choose "Continue with ${names[0] ?? "Apple"}" on the Cadence sign-in page or in the app. There's nothing to reset.`;
+  const ignore = "Didn't ask for this? Ignore this email. Nothing about your account has changed.";
+  return compose({
+    subject: `You sign in to Cadence with ${how}`,
+    preheader: "Your account has no password to reset.",
+    kicker: "",
+    title: `You sign in with ${how}`,
+    body: [paragraph(`Someone asked to reset the password for ${strong(email)}, but this account doesn't use a password: you sign in with ${escapeHtml(how)}.`), paragraph(escapeHtml(next), { spaceAfter: 20 }), button("Go to sign in", appUrl("/login")), paragraph(escapeHtml(ignore), { muted: true, small: true, spaceBefore: 16, spaceAfter: 0 })],
+    text: [lead, next, `Go to sign in: ${appUrl("/login")}`, ignore],
+    footer: { category: "transactional", reason: "You're getting this because a password reset was requested for your Cadence account." },
+  });
+}
+
 // Password changed ------------------------------------------------------------------
 
 export interface PasswordChangedProps {

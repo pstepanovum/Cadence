@@ -1,32 +1,36 @@
 import { router } from "expo-router";
-import { sendPasswordResetEmail } from "firebase/auth";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 
 import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/auth/layout";
 import { AuthField, TestBuildNote, Wordmark } from "@/components/auth/SignInOptions";
 import { Banner, Body, Button, Title, TopBar } from "@/components/ui";
-import { authErrorCode, describeAuthError } from "@/copy/auth-errors";
+import { appCheckHeaders } from "@/lib/app-check";
 import { config } from "@/lib/config";
-import { requireFirebaseAuth } from "@/lib/firebase";
 import { haptics } from "@/lib/haptics";
 import { colors, spacing, type } from "@/theme/theme";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+/**
+ * Cadence's own reset (POST /api/auth/password-reset on the hosted server),
+ * the same route the website uses: never Firebase's reset email. The answer
+ * is the same whether or not the address has an account.
+ */
 async function sendResetEmail(email: string): Promise<void> {
-  const auth = requireFirebaseAuth();
-  if (!config.apiUrl) return sendPasswordResetEmail(auth, email);
-  try {
-    await sendPasswordResetEmail(auth, email, { url: `${config.apiUrl}/login` });
-  } catch (cause) {
-    // The continue link only works once its domain is authorised in the
-    // Firebase project. Until it is, send the plain reset email instead.
-    const code = authErrorCode(cause);
-    if (code !== "auth/unauthorized-continue-uri" && code !== "auth/invalid-continue-uri") {
-      throw cause;
-    }
-    await sendPasswordResetEmail(auth, email);
+  if (!config.apiUrl) throw new ResetUnavailableError();
+  const response = await fetch(`${config.apiUrl}/api/auth/password-reset`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...(await appCheckHeaders()) },
+    body: JSON.stringify({ email }),
+  });
+  if (response.status === 429) throw new ResetUnavailableError("Too many tries. Wait a few minutes and try again.");
+  if (!response.ok) throw new ResetUnavailableError();
+}
+
+class ResetUnavailableError extends Error {
+  constructor(message = "Couldn't send the reset email. Try again.") {
+    super(message);
   }
 }
 
@@ -50,21 +54,14 @@ export default function ForgotPasswordScreen() {
     setError(null);
     setSubmitting(true);
     try {
-      // The reset form is Firebase's own page; once the new password is set it
-      // links back to the web app's sign-in.
+      // The link opens Cadence's reset page on the web; once the new password
+      // is set, sign in here with it.
       await sendResetEmail(trimmed);
       haptics.success();
       setSent(true);
     } catch (cause) {
-      // Firebase does not say whether an account exists, and neither should
-      // this screen, so a missing account reads the same as a sent link.
-      if (authErrorCode(cause) === "auth/user-not-found") {
-        haptics.success();
-        setSent(true);
-        return;
-      }
       haptics.error();
-      setError(describeAuthError(cause, "Couldn't send the reset email. Try again.", { emulator: config.authEmulator }));
+      setError(cause instanceof ResetUnavailableError ? cause.message : "Couldn't send the reset email. Check your connection and try again.");
     } finally {
       setSubmitting(false);
     }
