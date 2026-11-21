@@ -1,7 +1,7 @@
 // FILE: src/components/account/AccountPanel.tsx
 //
-// The cloud account page: Plus status and its controls, the newsletter
-// switch, download my data, delete account. Plus is read from GET /api/me;
+// The cloud account page: Plus status and its controls, the email switches
+// (getting-started tips, newsletter), download my data, delete account. Plus is read from GET /api/me;
 // the page never decides entitlement itself.
 "use client";
 
@@ -39,6 +39,7 @@ export function AccountPanel({ email, checkout }: { email: string | null; checko
         ) : null}
         <PlusCard me={me} />
         <NewsletterCard email={email} me={me} />
+        {me?.isPlus ? null : <TipsCard me={me} />}
       </div>
       <div className="flex flex-col gap-4">
         <SignInMethods />
@@ -151,6 +152,53 @@ function NewsletterCard({ email, me }: { email: string | null; me: Me | null | u
         </button>
       </div>
       {state === "pending" ? <p role="status" className="mt-3 text-sm text-carbon-black">Check your email and click the link to confirm.</p> : null}
+      {error ? <p role="alert" className="mt-3 text-sm text-blushed-brick">{error}</p> : null}
+    </Card>
+  );
+}
+
+function TipsCard({ me }: { me: Me | null | undefined }) {
+  const [override, setOn] = useState<boolean | null>(null);
+  const on = override ?? (me === undefined ? null : (me?.lifecycle ?? true));
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const id = useId();
+
+  async function toggle() {
+    if (on === null) return;
+    setError(null);
+    setBusy(true);
+    try {
+      const response = await cloudFetch("/api/me", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ lifecycle: !on }) });
+      if (!response.ok) throw new Error();
+      setOn(!on);
+    } catch {
+      setError("Could not update that. Try again, or use the unsubscribe link in any tips email.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <Card className="bg-white">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h2 id={`${id}-t`} className="font-kicker text-xl text-carbon-black">Getting-started tips</h2>
+          <p id={`${id}-d`} className="mt-1 text-sm leading-6 text-iron-grey">A few short emails in your first two weeks on getting the most from Cadence.</p>
+        </div>
+        <button
+          type="button"
+          role="switch"
+          aria-checked={on === true}
+          aria-labelledby={`${id}-t`}
+          aria-describedby={`${id}-d`}
+          disabled={on === null || busy}
+          onClick={() => void toggle()}
+          className={`relative h-8 w-14 shrink-0 cursor-pointer rounded-full transition-colors disabled:cursor-default disabled:opacity-60 ${on ? "bg-sage-green" : "bg-pale-slate"}`}
+        >
+          <span className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-[left] on-color ${on ? "left-7" : "left-1"}`} />
+        </button>
+      </div>
       {error ? <p role="alert" className="mt-3 text-sm text-blushed-brick">{error}</p> : null}
     </Card>
   );

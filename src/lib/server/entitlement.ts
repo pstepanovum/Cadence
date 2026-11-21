@@ -50,8 +50,10 @@ export interface AccountState {
 export interface EmailPrefs {
   /** Streak at risk, weekly summary, badges, inactive nudge. Off until the learner turns them on. */
   reminders: boolean;
-  /** Set by the newsletter double opt-in. */
+  /** Set by the newsletter double opt-in. Also the consent for offers (the lifecycle sale emails). */
   newsletter: boolean;
+  /** Getting-started tips in the first two weeks. On unless the learner turned them off. */
+  lifecycle: boolean;
 }
 
 function millis(value: unknown): number | null {
@@ -104,7 +106,7 @@ export function readAccount(data: DocumentData | undefined, now = Date.now()): A
     stripeCustomerId: typeof data?.stripeCustomerId === "string" ? data.stripeCustomerId : null,
     createdAt: millis(data?.createdAt),
     detailPurgeAt: millis(data?.detailPurgeAt),
-    emailPrefs: { reminders: prefs.reminders === true, newsletter: prefs.newsletter === true },
+    emailPrefs: { reminders: prefs.reminders === true, newsletter: prefs.newsletter === true, lifecycle: prefs.lifecycle !== false },
     deletion: deletion && typeof deletion.status === "string" ? { requestedAt: millis(deletion.requestedAt) ?? 0, status: deletion.status } : null,
   };
 }

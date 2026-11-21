@@ -5,6 +5,7 @@
 // Apple's to remind about, so `trial-ending` is only ever sent for web trials.
 import {
   appUrl,
+  bigNumber,
   button,
   cleanText,
   compose,
@@ -12,7 +13,6 @@ import {
   escapeHtml,
   formatDate,
   formatMoney,
-  heading,
   paragraph,
   safeUrl,
   type RenderedEmail,
@@ -56,8 +56,9 @@ export function renderPlusWelcome(props: PlusWelcomeProps): RenderedEmail {
   return compose({
     subject: "Welcome to Cadence Plus",
     preheader: "Everything is unlocked on every device.",
-    body: [heading("You're on Cadence Plus"), paragraph(escapeHtml(PLUS_FEATURES)), detailRows([["Plan", plan], ["Price", priceLabel(props.productId)], ["Renews", renews]]), paragraph(escapeHtml(manageLine(props.store)), { muted: true, small: true, spaceAfter: 20 }), button("Open Cadence", appUrl("/dashboard"))],
-    text: ["You're on Cadence Plus", PLUS_FEATURES, [`Plan: ${plan}`, priceLabel(props.productId) && `Price: ${priceLabel(props.productId)}`, renews && `Renews: ${renews}`].filter(Boolean).join("\n"), manageLine(props.store), `Open Cadence: ${appUrl("/dashboard")}`],
+    kicker: "Cadence Plus", title: "You're on Cadence Plus",
+    body: [paragraph(escapeHtml(PLUS_FEATURES)), detailRows([["Plan", plan], ["Price", priceLabel(props.productId)], ["Renews", renews]]), paragraph(escapeHtml(manageLine(props.store)), { muted: true, small: true, spaceAfter: 20 }), button("Open Cadence", appUrl("/dashboard"))],
+    text: [PLUS_FEATURES, [`Plan: ${plan}`, priceLabel(props.productId) && `Price: ${priceLabel(props.productId)}`, renews && `Renews: ${renews}`].filter(Boolean).join("\n"), manageLine(props.store), `Open Cadence: ${appUrl("/dashboard")}`],
     footer: { category: "transactional", reason: PLUS_REASON },
   });
 }
@@ -76,8 +77,9 @@ export function renderTrialStarted(props: TrialStartedProps): RenderedEmail {
   return compose({
     subject: "Your Cadence Plus trial has started",
     preheader: `Free until ${ends}.`,
-    body: [heading("Your free trial has started"), paragraph(escapeHtml(PLUS_FEATURES)), detailRows([["Plan", planLabel(props.productId)], ["Trial ends", ends]]), paragraph(escapeHtml(charge)), paragraph(escapeHtml(reminder), { muted: true, small: true, spaceAfter: 20 }), button("Open Cadence", appUrl("/dashboard"))],
-    text: ["Your free trial has started", PLUS_FEATURES, charge, reminder, `Open Cadence: ${appUrl("/dashboard")}`],
+    kicker: "Cadence Plus · Free trial", title: "Your free trial has started",
+    body: [paragraph(escapeHtml(PLUS_FEATURES)), detailRows([["Plan", planLabel(props.productId)], ["Trial ends", ends]]), paragraph(escapeHtml(charge)), paragraph(escapeHtml(reminder), { muted: true, small: true, spaceAfter: 20 }), button("Open Cadence", appUrl("/dashboard"))],
+    text: [PLUS_FEATURES, charge, reminder, `Open Cadence: ${appUrl("/dashboard")}`],
     footer: { category: "transactional", reason: PLUS_REASON },
   });
 }
@@ -98,8 +100,9 @@ export function renderTrialEnding(props: TrialEndingProps): RenderedEmail {
   return compose({
     subject: "Your Cadence Plus trial ends in 2 days",
     preheader: `Charged ${price} on ${ends} unless you cancel.`,
-    body: [heading("Your trial ends in 2 days"), paragraph(escapeHtml(line)), paragraph(escapeHtml(cancel), { spaceAfter: 20 }), button("Manage subscription", props.portalUrl)],
-    text: ["Your trial ends in 2 days", line, cancel, `Manage subscription: ${safeUrl(props.portalUrl)}`],
+    kicker: "Cadence Plus · Heads up", title: "Your trial ends in 2 days",
+    body: [paragraph(escapeHtml(line)), paragraph(escapeHtml(cancel), { spaceAfter: 20 }), button("Manage subscription", props.portalUrl)],
+    text: [line, cancel, `Manage subscription: ${safeUrl(props.portalUrl)}`],
     footer: { category: "transactional", reason: "You're getting this because you started a Cadence Plus trial on the web." },
   });
 }
@@ -123,8 +126,9 @@ export function renderPaymentReceipt(props: PaymentReceiptProps): RenderedEmail 
   return compose({
     subject: `Receipt for Cadence Plus: ${amount}`,
     preheader: `Paid ${paid}. Thank you.`,
-    body: [heading("Thanks for your payment"), detailRows([["Plan", planLabel(props.productId)], ["Amount", amount], ["Paid", paid], ["Invoice", number]]), button("View receipt", props.invoiceUrl)],
-    text: ["Thanks for your payment", [`Plan: ${planLabel(props.productId)}`, `Amount: ${amount}`, `Paid: ${paid}`, number && `Invoice: ${number}`].filter(Boolean).join("\n"), `View receipt: ${safeUrl(props.invoiceUrl)}`],
+    kicker: "Cadence Plus · Receipt", title: "Thanks for your payment",
+    body: [bigNumber({ value: amount, label: "Paid", caption: paid }), detailRows([["Plan", planLabel(props.productId)], ["Amount", amount], ["Paid", paid], ["Invoice", number]]), button("View receipt", props.invoiceUrl)],
+    text: [[`Plan: ${planLabel(props.productId)}`, `Amount: ${amount}`, `Paid: ${paid}`, number && `Invoice: ${number}`].filter(Boolean).join("\n"), `View receipt: ${safeUrl(props.invoiceUrl)}`],
     footer: { category: "transactional", reason: PLUS_REASON },
   });
 }
@@ -146,8 +150,9 @@ export function renderBillingIssue(props: BillingIssueProps): RenderedEmail {
   return compose({
     subject: "Your Cadence Plus payment didn't go through",
     preheader: keep,
-    body: [heading("Your payment didn't go through"), paragraph(`We couldn't take the latest payment for Cadence Plus. ${escapeHtml(keep)}`), paragraph(escapeHtml(fix), { spaceAfter: props.store === "web" ? 20 : 0 }), props.store === "web" && button("Update card", props.updateUrl)],
-    text: ["Your payment didn't go through", `We couldn't take the latest payment for Cadence Plus. ${keep}`, fix, props.store === "web" ? `Update card: ${safeUrl(props.updateUrl)}` : ""],
+    kicker: "Billing · Action needed", title: "Your payment didn't go through",
+    body: [paragraph(`We couldn't take the latest payment for Cadence Plus. ${escapeHtml(keep)}`), paragraph(escapeHtml(fix), { spaceAfter: props.store === "web" ? 20 : 0 }), props.store === "web" && button("Update card", props.updateUrl)],
+    text: [`We couldn't take the latest payment for Cadence Plus. ${keep}`, fix, props.store === "web" ? `Update card: ${safeUrl(props.updateUrl)}` : ""],
     footer: { category: "transactional", reason: PLUS_REASON },
   });
 }
@@ -167,8 +172,9 @@ export function renderPlusCanceled(props: PlusCanceledProps): RenderedEmail {
   return compose({
     subject: "Your Cadence Plus subscription is canceled",
     preheader: ends ? `Plus stays on until ${ends}.` : "Thanks for trying Plus.",
-    body: [heading("Your subscription is canceled"), paragraph(escapeHtml(line)), paragraph(escapeHtml(after)), paragraph(escapeHtml(undo), { muted: true, small: true, spaceAfter: props.store === "web" ? 20 : 0 }), props.store === "web" && button("Keep Plus", appUrl("/account"))],
-    text: ["Your subscription is canceled", line, after, undo, props.store === "web" ? `Keep Plus: ${appUrl("/account")}` : ""],
+    kicker: "Cadence Plus · Canceled", title: "Your subscription is canceled",
+    body: [paragraph(escapeHtml(line)), paragraph(escapeHtml(after)), paragraph(escapeHtml(undo), { muted: true, small: true, spaceAfter: props.store === "web" ? 20 : 0 }), props.store === "web" && button("Keep Plus", appUrl("/account"))],
+    text: [line, after, undo, props.store === "web" ? `Keep Plus: ${appUrl("/account")}` : ""],
     footer: { category: "transactional", reason: PLUS_REASON },
   });
 }
@@ -185,8 +191,9 @@ export function renderPlusEnded(props: PlusEndedProps): RenderedEmail {
   return compose({
     subject: "Your Cadence Plus subscription has ended",
     preheader: "Your practice and streak carry on.",
-    body: [heading("Cadence Plus has ended"), paragraph(escapeHtml(line)), paragraph(escapeHtml(keep), { spaceAfter: 20 }), button("Renew Plus", appUrl("/account"))],
-    text: ["Cadence Plus has ended", line, keep, `Renew Plus: ${appUrl("/account")}`],
+    kicker: "Cadence Plus · Ended", title: "Cadence Plus has ended",
+    body: [paragraph(escapeHtml(line)), paragraph(escapeHtml(keep), { spaceAfter: 20 }), button("Renew Plus", appUrl("/account"))],
+    text: [line, keep, `Renew Plus: ${appUrl("/account")}`],
     footer: { category: "transactional", reason: "You're getting this because you had Cadence Plus." },
   });
 }
@@ -205,8 +212,9 @@ export function renderPlanChanged(props: PlanChangedProps): RenderedEmail {
   return compose({
     subject: "Your Cadence Plus plan has changed",
     preheader: `Now on ${to}.`,
-    body: [heading("Your plan has changed"), detailRows([["Was", from], ["Now", to], ["Price", priceLabel(props.toProductId)], ["From", when]]), paragraph(escapeHtml(manageLine(props.store)), { muted: true, small: true, spaceAfter: 0 })],
-    text: ["Your plan has changed", [`Was: ${from}`, `Now: ${to}`, priceLabel(props.toProductId) && `Price: ${priceLabel(props.toProductId)}`, when && `From: ${when}`].filter(Boolean).join("\n"), manageLine(props.store)],
+    kicker: "Cadence Plus · Plan", title: "Your plan has changed",
+    body: [detailRows([["Was", from], ["Now", to], ["Price", priceLabel(props.toProductId)], ["From", when]]), paragraph(escapeHtml(manageLine(props.store)), { muted: true, small: true, spaceAfter: 0 })],
+    text: [[`Was: ${from}`, `Now: ${to}`, priceLabel(props.toProductId) && `Price: ${priceLabel(props.toProductId)}`, when && `From: ${when}`].filter(Boolean).join("\n"), manageLine(props.store)],
     footer: { category: "transactional", reason: PLUS_REASON },
   });
 }
@@ -223,8 +231,9 @@ export function renderRefundIssued(props: RefundIssuedProps): RenderedEmail {
   return compose({
     subject: `Refund issued: ${amount}`,
     preheader: "It should reach you within 5 to 10 days.",
-    body: [heading("Your refund is on its way"), paragraph(escapeHtml(line)), detailRows([["Amount", amount], ["Issued", formatDate(props.refundedAt)]])],
-    text: ["Your refund is on its way", line, `Issued: ${formatDate(props.refundedAt)}`],
+    kicker: "Billing · Refund", title: "Your refund is on its way",
+    body: [bigNumber({ value: amount, label: "Refunded" }), paragraph(escapeHtml(line)), detailRows([["Amount", amount], ["Issued", formatDate(props.refundedAt)]])],
+    text: [line, `Issued: ${formatDate(props.refundedAt)}`],
     footer: { category: "transactional", reason: "You're getting this because a Cadence payment was refunded." },
   });
 }

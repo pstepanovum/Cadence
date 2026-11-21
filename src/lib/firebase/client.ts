@@ -36,7 +36,8 @@ export async function startServerSession(user: User) {
   const response = await fetch("/api/auth/session", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ idToken }),
+    // The zone lets evening email arrive in the learner's evening.
+    body: JSON.stringify({ idToken, timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }),
   });
 
   if (!response.ok) {

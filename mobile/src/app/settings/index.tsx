@@ -9,6 +9,7 @@ import { Alert, AppState, Linking, StyleSheet, View } from "react-native";
 
 import { unregisterPushDevice } from "@/api/account";
 import { forgetPushRegistration } from "@/components/EngagementWatcher";
+import { LifecycleTipsToggle } from "@/components/LifecycleTipsToggle";
 import { NewsletterToggle } from "@/components/NewsletterToggle";
 import { SettingsRow, SwitchRow } from "@/components/settings";
 import { TimePicker } from "@/components/TimePicker";
@@ -195,6 +196,7 @@ export default function SettingsScreen() {
             {user.email ?? ""}
           </Body>
           <NewsletterToggle />
+          {account.me?.plusActive ? null : <LifecycleTipsToggle />}
           <SettingsRow
             icon={<KeyRound color={colors.carbon} size={20} />}
             title="Sign-in methods"

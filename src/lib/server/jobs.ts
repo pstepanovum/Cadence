@@ -14,6 +14,7 @@ import { FieldValue, type DocumentSnapshot, type Firestore } from "firebase-admi
 
 import { currentStreak, shiftDay } from "../platform/progress-model";
 import { runDeletion } from "./account";
+import { BADGE_STREAKS } from "./badges";
 import { readAccount } from "./entitlement";
 import { appOrigin } from "./env";
 import { db as defaultDb } from "./firebase";
@@ -23,7 +24,7 @@ import { readSummary } from "./sync";
 /** Collections that are Plus detail, purged after a lapse. */
 export const DETAIL_COLLECTIONS = ["srs", "mastery", "attempts", "coachSessions", "devices", "advanced", "lessonAttempts", "lessonSessions", "conversationProgress", "moduleProgress"] as const;
 
-export const BADGE_STREAKS = [7, 14, 30, 60, 100, 200, 365] as const;
+export { BADGE_STREAKS };
 
 export function isJobAuthorized(header: string | null, env: Record<string, string | undefined> = process.env): boolean {
   const secret = env.JOBS_SECRET?.trim();

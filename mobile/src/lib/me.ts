@@ -26,6 +26,8 @@ export interface Me {
   cloudPaused: boolean;
   /** Opted in to product news and offers. */
   newsletter: boolean;
+  /** Getting-started tips by email: on unless turned off. */
+  lifecycleTips: boolean;
 }
 
 const isObject = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null;
@@ -79,6 +81,7 @@ export function parseMe(body: unknown, now: number): Me {
     limits,
     cloudPaused: root.cloudPaused === true || quota.paused === true,
     newsletter: root.newsletter === true || (isObject(root.profile) && root.profile.newsletter === true),
+    lifecycleTips: !(isObject(root.emailPrefs) && root.emailPrefs.lifecycle === false),
   };
 }
 

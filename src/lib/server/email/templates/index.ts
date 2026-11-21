@@ -7,6 +7,7 @@ import type { EmailCategory, EmailList, RenderedEmail } from "../layout";
 import * as account from "./account";
 import * as billing from "./billing";
 import * as engagement from "./engagement";
+import * as lifecycle from "./lifecycle";
 import * as security from "./security";
 import * as support from "./support";
 
@@ -40,6 +41,11 @@ export interface TemplateProps {
   "newsletter-welcome": engagement.NewsletterWelcomeProps;
   "support-request": support.SupportRequestProps;
   "support-reply": support.SupportReplyProps;
+  "lifecycle-start": lifecycle.LifecycleStartProps;
+  "lifecycle-habit": lifecycle.LifecycleHabitProps;
+  "lifecycle-plus": lifecycle.LifecyclePlusProps;
+  "sale-offer": lifecycle.SaleProps;
+  "sale-reminder": lifecycle.SaleProps;
 }
 
 export type TemplateId = keyof TemplateProps;
@@ -47,7 +53,7 @@ export type TemplateId = keyof TemplateProps;
 export interface TemplateEntry<Id extends TemplateId> {
   id: Id;
   name: string;
-  group: "account" | "billing" | "security" | "engagement" | "support";
+  group: "account" | "billing" | "security" | "engagement" | "support" | "lifecycle";
   category: EmailCategory;
   /** The list an opt-in template belongs to; its unsubscribe link leaves that list. */
   list?: EmailList;
@@ -58,6 +64,7 @@ export interface TemplateEntry<Id extends TemplateId> {
 const T0 = Date.UTC(2026, 9, 24, 9, 30);
 const DAY = 24 * 60 * 60 * 1000;
 const UNSUB = "https://cadence.pstepanov.dev/api/email/unsubscribe?token=preview";
+const SALE = { code: "CADENCEHALF", label: "50% off", endsAt: Date.UTC(2026, 10, 30, 23, 59, 59) };
 
 export const TEMPLATES: { [Id in TemplateId]: TemplateEntry<Id> } = {
   welcome: { id: "welcome", name: "Welcome", group: "account", category: "transactional", render: account.renderWelcome, fixture: { name: "Maria Lopez" } },
@@ -83,12 +90,17 @@ export const TEMPLATES: { [Id in TemplateId]: TemplateEntry<Id> } = {
   "suspicious-activity": { id: "suspicious-activity", name: "Suspicious activity", group: "security", category: "transactional", render: security.renderSuspiciousActivity, fixture: { summary: "12 failed sign-ins in an hour", at: T0 } },
   "streak-at-risk": { id: "streak-at-risk", name: "Streak at risk", group: "engagement", category: "reminder", list: "reminders", render: engagement.renderStreakAtRisk, fixture: { name: "Maria", streak: 12, unsubscribeUrl: UNSUB } },
   "weekly-summary": { id: "weekly-summary", name: "Weekly summary", group: "engagement", category: "reminder", list: "reminders", render: engagement.renderWeeklySummary, fixture: { name: "Maria", minutes: 86, activeDays: 5, streak: 12, focus: "the TH sounds in think and this", unsubscribeUrl: UNSUB } },
-  "badge-earned": { id: "badge-earned", name: "Badge earned", group: "engagement", category: "reminder", list: "reminders", render: engagement.renderBadgeEarned, fixture: { name: "Maria", badge: "Two-week streak", description: "14 days of practice in a row.", unsubscribeUrl: UNSUB } },
+  "badge-earned": { id: "badge-earned", name: "Badge earned", group: "engagement", category: "reminder", list: "reminders", render: engagement.renderBadgeEarned, fixture: { name: "Maria", badge: "14-day streak", description: "14 days of practice in a row.", unsubscribeUrl: UNSUB } },
   "inactive-nudge": { id: "inactive-nudge", name: "Inactive nudge", group: "engagement", category: "reminder", list: "reminders", render: engagement.renderInactiveNudge, fixture: { name: "Maria", daysAway: 9, unsubscribeUrl: UNSUB } },
   "newsletter-confirm": { id: "newsletter-confirm", name: "Newsletter confirmation", group: "engagement", category: "transactional", render: engagement.renderNewsletterConfirm, fixture: { confirmUrl: "https://cadence.pstepanov.dev/newsletter/confirmed" } },
   "newsletter-welcome": { id: "newsletter-welcome", name: "Newsletter welcome", group: "engagement", category: "marketing", list: "newsletter", render: engagement.renderNewsletterWelcome, fixture: { unsubscribeUrl: UNSUB } },
   "support-request": { id: "support-request", name: "Support request (to the inbox)", group: "support", category: "transactional", render: support.renderSupportRequest, fixture: { requestId: "preview", topic: "help", email: "maria@example.com", name: "Maria Lopez", message: "The TH score stays at 60 however I place my tongue.\n\nIs the microphone the problem?", uid: "uid-preview", platform: "web", userAgent: "Safari on macOS", at: T0 } },
   "support-reply": { id: "support-reply", name: "Support reply", group: "support", category: "transactional", render: support.renderSupportReply, fixture: { name: "Maria Lopez", topic: "help", message: "Try the compare view on the TH page: it shows where the tongue tip should sit.\n\nIf the score still stays flat, send a recording and we'll look.", original: "The TH score stays at 60 however I place my tongue." } },
+  "lifecycle-start": { id: "lifecycle-start", name: "Day 1: start here", group: "lifecycle", category: "lifecycle", list: "lifecycle", render: lifecycle.renderLifecycleStart, fixture: { name: "Maria Lopez", unsubscribeUrl: UNSUB } },
+  "lifecycle-habit": { id: "lifecycle-habit", name: "Day 3: habit", group: "lifecycle", category: "lifecycle", list: "lifecycle", render: lifecycle.renderLifecycleHabit, fixture: { name: "Maria Lopez", streak: 3, minutes: 42, lessons: 4, unsubscribeUrl: UNSUB } },
+  "lifecycle-plus": { id: "lifecycle-plus", name: "Day 6: Plus", group: "lifecycle", category: "lifecycle", list: "lifecycle", render: lifecycle.renderLifecyclePlus, fixture: { name: "Maria Lopez", unsubscribeUrl: UNSUB } },
+  "sale-offer": { id: "sale-offer", name: "Day 10: sale", group: "lifecycle", category: "marketing", list: "newsletter", render: lifecycle.renderSaleOffer, fixture: { name: "Maria Lopez", ...SALE, unsubscribeUrl: UNSUB } },
+  "sale-reminder": { id: "sale-reminder", name: "Day 13: sale reminder", group: "lifecycle", category: "marketing", list: "newsletter", render: lifecycle.renderSaleReminder, fixture: { name: "Maria Lopez", ...SALE, unsubscribeUrl: UNSUB } },
 };
 
 export const TEMPLATE_IDS = Object.keys(TEMPLATES) as TemplateId[];

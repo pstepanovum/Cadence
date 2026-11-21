@@ -8,7 +8,7 @@
 // Everything the writer typed is escaped and cleaned like any other prop, and
 // the request's subject carries only the topic, never their words, so nothing
 // they write can reach a header.
-import { cleanText, compose, detailRows, escapeHtml, formatDateTime, heading, paragraph, type RenderedEmail } from "../layout";
+import { cleanText, compose, detailRows, escapeHtml, formatDateTime, paragraph, type RenderedEmail } from "../layout";
 
 export interface SupportRequestProps {
   /** The request's id in supportRequests. */
@@ -68,8 +68,9 @@ export function renderSupportRequest(props: SupportRequestProps): RenderedEmail 
   return compose({
     subject: `Support: ${topic}`,
     preheader: cleanText(props.message, 110) || topic,
-    body: [heading(topic), ...paragraphs.map((text) => paragraph(escapeHtml(text))), detailRows(rows), paragraph("Reply to this email, or answer it from the dashboard.", { muted: true, small: true, spaceAfter: 0 })],
-    text: [topic, ...paragraphs, rows.filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`).join("\n")],
+    kicker: "Support request", title: topic,
+    body: [...paragraphs.map((text) => paragraph(escapeHtml(text))), detailRows(rows), paragraph("Reply to this email, or answer it from the dashboard.", { muted: true, small: true, spaceAfter: 0 })],
+    text: [...paragraphs, rows.filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`).join("\n")],
     footer: { category: "transactional", reason: "Sent from the contact form on cadence.pstepanov.dev." },
   });
 }
@@ -82,6 +83,8 @@ export function renderSupportReply(props: SupportReplyProps): RenderedEmail {
   return compose({
     subject: `Re: ${topic}`,
     preheader: cleanText(props.message, 110) || "An answer from Cadence support.",
+    kicker: "Cadence support",
+    title: "Here's our answer",
     body: [
       greeting ? paragraph(`Hi ${escapeHtml(greeting)},`) : false,
       ...paragraphs.map((text) => paragraph(escapeHtml(text))),

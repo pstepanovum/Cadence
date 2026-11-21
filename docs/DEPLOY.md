@@ -17,7 +17,7 @@ Firebase project `cadence-pstepanov`, region `us-central1`.
 | Vertex AI | Gemini 2.5 Flash-Lite (coach, transcription), Gemini 2.5 Flash (spoken grammar, placement) | called by `cadence-web` with its service account, no API key |
 | Cloud Text-to-Speech | request-time reference audio, cached in `gs://cadence-pstepanov-tts-cache` (180-day lifecycle) | |
 | Firestore | everything in `docs/PLATFORM.md` section 5; rules deny every client | `firestore.rules`, `firestore.indexes.json` |
-| Cloud Scheduler | `POST /api/jobs/daily` at 17:00 UTC, `POST /api/jobs/mail` every 5 minutes, `Authorization: Bearer <JOBS_SECRET>` | |
+| Cloud Scheduler | `POST /api/jobs/daily` at 17:00 UTC, `POST /api/jobs/mail` every 5 minutes, `POST /api/jobs/lifecycle` every hour (`0 * * * *`, job `cadence-lifecycle`, 300 s deadline), `Authorization: Bearer <JOBS_SECRET>` | |
 
 `cadence-web` calls `cadence-ai` with a Google ID token for the `cadence-ai`
 URL, fetched from the metadata server (`src/lib/server/engines/google-auth.ts`).
@@ -134,6 +134,24 @@ account), 5 "Cadence newsletter" (double opt-in only). Contact attributes
 `PLAN`, `PLATFORM`, `CEFR_LEVEL`. Set `CADENCE_POSTAL_ADDRESS` before any
 marketing email goes out (it prints the postal line marketing email needs).
 
+**Lifecycle email** (`src/lib/server/lifecycle.ts`, `lifecycle-plan.ts`,
+templates in `src/lib/server/email/templates/lifecycle.ts`): accounts without
+Plus get getting-started tips on days 1, 3 and 6 (list `lifecycle`, on unless
+the learner turns it off on the account page, in the app's Settings, or by
+unsubscribing), and, only with the "product news and offers" opt-in
+(`emailPrefs.newsletter`), a sale on day 10 and a reminder on day 13. Each goes
+out in the learner's local evening (18:00 to 21:00; the zone comes from the
+browser at sign-in or the phone's push registration, UTC otherwise), exactly
+once (`users/{uid}/emailLog/lifecycle-<step>`), and the sequence stops on Plus
+from any source or after 21 days without practice. It needs the hourly
+`cadence-lifecycle` Scheduler job (`deploy/cloudrun.sh scheduler` creates it
+with the others). The sale is an App Store offer code made in App Store
+Connect, set on `cadence-web` as `CADENCE_OFFER_CODE`, `CADENCE_OFFER_LABEL`
+("50% off") and `CADENCE_OFFER_ENDS` (YYYY-MM-DD, last day, UTC); the email
+links to `https://apps.apple.com/redeem?ctx=offercodes&id=6826485399&code=<CODE>`.
+Unset or past, the sale emails are skipped. The web has no Stripe discount,
+so web-only learners get the same App Store link.
+
 **App Check**: register the iOS app with App Attest, the web app with
 reCAPTCHA Enterprise (site key in `NEXT_PUBLIC_RECAPTCHA_ENTERPRISE_SITE_KEY`),
 and debug tokens for development and the iOS simulator. Enforcement is in the
@@ -180,6 +198,8 @@ stripe trigger checkout.session.completed
 node --import ./tests/register.mjs scripts/email/preview.ts
 node --import ./tests/register.mjs scripts/email/lint.ts
 BREVO_API_KEY=... node --import ./tests/register.mjs scripts/email/send-test.ts you@example.com all
+# Screenshots at 375 and 600 px, light and dark (after preview.ts)
+node scripts/email/screenshots.mjs
 ```
 
 Run the server against the emulators with `FIREBASE_PROJECT_ID=demo-cadence`,

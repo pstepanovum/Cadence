@@ -39,14 +39,24 @@ export function GET(request: Request) {
   });
 }
 
-/** PATCH {reminders: boolean}: practice reminders and summaries are opt-in. */
+/**
+ * PATCH {reminders?: boolean, lifecycle?: boolean}: email choices that live on
+ * the account. Practice reminders are opt-in; the getting-started tips are on
+ * until turned off. The newsletter has its own route (double opt-in).
+ */
 export function PATCH(request: Request) {
   return handled("Email preferences", async () => {
     const guard = await requireCloudUser(request, { appCheck: true });
     if (!guard.ok) return guard.response;
     const body = await readJsonObject(request, 1024).catch(() => null);
-    if (typeof body?.reminders !== "boolean") return errorResponse(400, "bad_request", "reminders must be true or false.");
-    await db().collection("users").doc(guard.identity.uid).set({ emailPrefs: { reminders: body.reminders } }, { merge: true });
+    const patch: Record<string, boolean> = {};
+    for (const key of ["reminders", "lifecycle"] as const) {
+      if (body?.[key] === undefined) continue;
+      if (typeof body[key] !== "boolean") return errorResponse(400, "bad_request", `${key} must be true or false.`);
+      patch[key] = body[key] as boolean;
+    }
+    if (Object.keys(patch).length === 0) return errorResponse(400, "bad_request", "Send reminders or lifecycle as true or false.");
+    await db().collection("users").doc(guard.identity.uid).set({ emailPrefs: patch }, { merge: true });
     return json({ emailPrefs: { ...(await getAccount(guard.identity.uid)).emailPrefs } });
   });
 }

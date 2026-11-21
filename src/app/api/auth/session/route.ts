@@ -15,6 +15,8 @@ import { ensureUserRecord } from "@/lib/cloud/store";
 import { CONVERSATION_PROGRESS_COOKIE } from "@/lib/conversation";
 import { getAdminAuth, isCloudServerReady } from "@/lib/firebase/admin";
 import { noteSignIn } from "@/lib/server/account-events";
+import { db } from "@/lib/server/firebase";
+import { cleanTimeZone } from "@/lib/server/lifecycle-plan";
 import { deliverSoon } from "@/lib/server/email/queue";
 import { clientIp } from "@/lib/server/http";
 import { LIMITS, hitRateLimit } from "@/lib/server/rate-limit";
@@ -41,7 +43,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Too many sign-ins from here. Try again later." }, { status: 429 });
   }
 
-  const body = (await request.json().catch(() => null)) as { idToken?: unknown } | null;
+  const body = (await request.json().catch(() => null)) as { idToken?: unknown; timeZone?: unknown } | null;
   const idToken = typeof body?.idToken === "string" ? body.idToken : null;
 
   if (!idToken) {
@@ -65,6 +67,9 @@ export async function POST(request: Request) {
       expiresIn: SESSION_COOKIE_MAX_AGE_SECONDS * 1000,
     });
     await ensureUserRecord(decoded.uid, decoded.email ?? null);
+    // The browser's zone, so evening email arrives in the learner's evening.
+    const timeZone = cleanTimeZone(body?.timeZone);
+    if (timeZone) await db().collection("users").doc(decoded.uid).set({ timeZone }, { merge: true }).catch(() => undefined);
     // Welcome, new-device, password- and email-change notices, after the response.
     const userAgent = request.headers.get("user-agent");
     after(async () => {

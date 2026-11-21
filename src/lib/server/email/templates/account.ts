@@ -13,7 +13,6 @@ import {
   firstName,
   formatDate,
   formatDateTime,
-  heading,
   linkFallback,
   paragraph,
   safeUrl,
@@ -48,8 +47,9 @@ export function renderWelcome(props: WelcomeProps): RenderedEmail {
   return compose({
     subject: name ? `Welcome to Cadence, ${name}` : "Welcome to Cadence",
     preheader: "Three first steps, about ten minutes in all.",
-    body: [heading(name ? `Welcome, ${name}` : "Welcome to Cadence"), paragraph(escapeHtml(intro), { spaceAfter: 24 }), steps(WELCOME_STEPS), button("Start the placement test", appUrl("/placement"))],
-    text: [name ? `Welcome, ${name}` : "Welcome to Cadence", intro, WELCOME_STEPS.map((s, i) => `${i + 1}. ${s.title}\n   ${s.body}`).join("\n\n"), `Start the placement test: ${appUrl("/placement")}`, `Your dashboard: ${url}`],
+    kicker: "Welcome · Start here", title: name ? `Welcome, ${name}` : "Welcome to Cadence",
+    body: [paragraph(escapeHtml(intro), { spaceAfter: 24 }), steps(WELCOME_STEPS), button("Start the placement test", appUrl("/account/level/placement"))],
+    text: [intro, WELCOME_STEPS.map((s, i) => `${i + 1}. ${s.title}\n   ${s.body}`).join("\n\n"), `Start the placement test: ${appUrl("/account/level/placement")}`, `Your dashboard: ${url}`],
     footer: { category: "transactional", reason: "You're getting this because you just made a Cadence account." },
   });
 }
@@ -68,8 +68,9 @@ export function renderVerifyEmail(props: VerifyEmailProps): RenderedEmail {
   return compose({
     subject: "Confirm your email for Cadence",
     preheader: "One tap to confirm it's really you.",
-    body: [heading("Confirm your email"), paragraph(`Tap below to confirm ${strong(email)} for your Cadence account.`), button("Confirm email", url), paragraph(escapeHtml(ignore), { muted: true, small: true, spaceBefore: 16, spaceAfter: 20 }), linkFallback(url)],
-    text: ["Confirm your email", `Confirm ${email} for your Cadence account: ${url}`, ignore],
+    kicker: "Account · One tap", title: "Confirm your email",
+    body: [paragraph(`Tap below to confirm ${strong(email)} for your Cadence account.`), button("Confirm email", url), paragraph(escapeHtml(ignore), { muted: true, small: true, spaceBefore: 16, spaceAfter: 20 }), linkFallback(url)],
+    text: [`Confirm ${email} for your Cadence account: ${url}`, ignore],
     footer: { category: "transactional", reason: "You're getting this because this address was used to sign up for Cadence." },
   });
 }
@@ -92,8 +93,9 @@ export function renderPasswordReset(props: PasswordResetProps): RenderedEmail {
   return compose({
     subject: "Reset your Cadence password",
     preheader: expiry,
-    body: [heading("Reset your password"), paragraph(`Someone asked to reset the password for ${strong(email)}. If that was you, choose a new one.`), button("Choose a new password", url), paragraph(escapeHtml(expiry), { muted: true, small: true, spaceBefore: 16, spaceAfter: 8 }), paragraph(escapeHtml(ignore), { muted: true, small: true, spaceAfter: 20 }), linkFallback(url)],
-    text: ["Reset your password", `Someone asked to reset the password for ${email}. If that was you, choose a new one: ${url}`, expiry, ignore],
+    kicker: "Account · Password", title: "Reset your password",
+    body: [paragraph(`Someone asked to reset the password for ${strong(email)}. If that was you, choose a new one.`), button("Choose a new password", url), paragraph(escapeHtml(expiry), { muted: true, small: true, spaceBefore: 16, spaceAfter: 8 }), paragraph(escapeHtml(ignore), { muted: true, small: true, spaceAfter: 20 }), linkFallback(url)],
+    text: [`Someone asked to reset the password for ${email}. If that was you, choose a new one: ${url}`, expiry, ignore],
     footer: { category: "transactional", reason: "You're getting this because a password reset was requested for your Cadence account." },
   });
 }
@@ -111,8 +113,9 @@ export function renderPasswordChanged(props: PasswordChangedProps): RenderedEmai
   return compose({
     subject: "Your Cadence password was changed",
     preheader: "If this was you, there's nothing to do.",
-    body: [heading("Your password was changed"), paragraph(`The password for ${strong(cleanText(props.email, 254))} was changed${when ? ` on ${escapeHtml(when)}` : ""}. If this was you, there's nothing to do.`), paragraph(escapeHtml(notYou), { muted: true, spaceAfter: 20 }), button("Reset password", appUrl("/forgot-password"))],
-    text: ["Your password was changed", `The password for ${cleanText(props.email, 254)} was changed${when ? ` on ${when}` : ""}. If this was you, there's nothing to do.`, notYou, `Reset password: ${appUrl("/forgot-password")}`],
+    kicker: "Security · Password", title: "Your password was changed",
+    body: [paragraph(`The password for ${strong(cleanText(props.email, 254))} was changed${when ? ` on ${escapeHtml(when)}` : ""}. If this was you, there's nothing to do.`), paragraph(escapeHtml(notYou), { muted: true, spaceAfter: 20 }), button("Reset password", appUrl("/forgot-password"))],
+    text: [`The password for ${cleanText(props.email, 254)} was changed${when ? ` on ${when}` : ""}. If this was you, there's nothing to do.`, notYou, `Reset password: ${appUrl("/forgot-password")}`],
     footer: { category: "transactional", reason: ACCOUNT_REASON },
   });
 }
@@ -142,8 +145,9 @@ export function renderEmailChanged(props: EmailChangedProps): RenderedEmail {
   return compose({
     subject: isOld ? "Your Cadence email was changed" : "Your new Cadence email is confirmed",
     preheader: isOld ? `Account email now ${newEmail}.` : "Account email will come here from now on.",
-    body: [heading(isOld ? "Your email was changed" : "New email confirmed"), paragraph(lead), detailRows([["Changed", when]]), paragraph(escapeHtml(notYou), { muted: !isOld, spaceAfter: 0 })],
-    text: [isOld ? "Your email was changed" : "New email confirmed", leadText, when ? `Changed: ${when}` : "", notYou],
+    kicker: "Security · Email", title: isOld ? "Your email was changed" : "New email confirmed",
+    body: [paragraph(lead), detailRows([["Changed", when]]), paragraph(escapeHtml(notYou), { muted: !isOld, spaceAfter: 0 })],
+    text: [leadText, when ? `Changed: ${when}` : "", notYou],
     footer: { category: "transactional", reason: isOld ? "You're getting this because this address was the sign-in email for a Cadence account." : ACCOUNT_REASON },
   });
 }
@@ -164,8 +168,9 @@ export function renderNewSignIn(props: NewSignInProps): RenderedEmail {
   return compose({
     subject: "New sign-in to your Cadence account",
     preheader: `${device}${when ? `, ${when}` : ""}`,
-    body: [heading("New sign-in"), paragraph("Your Cadence account was just used on a device we haven't seen before."), detailRows([["Device", device], ["Where", where], ["When", when]]), paragraph(escapeHtml(notYou), { muted: true, spaceAfter: 20 }), button("Change password", appUrl("/forgot-password"))],
-    text: ["New sign-in", "Your Cadence account was just used on a device we haven't seen before.", [`Device: ${device}`, where && `Where: ${where}`, when && `When: ${when}`].filter(Boolean).join("\n"), notYou, `Change password: ${appUrl("/forgot-password")}`],
+    kicker: "Security · New device", title: "New sign-in",
+    body: [paragraph("Your Cadence account was just used on a device we haven't seen before."), detailRows([["Device", device], ["Where", where], ["When", when]]), paragraph(escapeHtml(notYou), { muted: true, spaceAfter: 20 }), button("Change password", appUrl("/forgot-password"))],
+    text: ["Your Cadence account was just used on a device we haven't seen before.", [`Device: ${device}`, where && `Where: ${where}`, when && `When: ${when}`].filter(Boolean).join("\n"), notYou, `Change password: ${appUrl("/forgot-password")}`],
     footer: { category: "transactional", reason: "You're getting this because we let you know about every new device on your account." },
   });
 }
@@ -187,8 +192,9 @@ export function renderDeletionScheduled(props: DeletionScheduledProps): Rendered
   return compose({
     subject: "Your Cadence account is being deleted",
     preheader: by ? `Everything is removed by ${by}.` : "Everything is being removed.",
-    body: [heading("We're deleting your account"), paragraph(`As you asked, we're removing your Cadence account and all its progress${by ? ` by ${escapeHtml(by)}` : ""}. You'll get one more email when it's done.`), billing && paragraph(escapeHtml(billing)), paragraph(escapeHtml(notYou), { muted: true, small: true, spaceAfter: 0 })],
-    text: ["We're deleting your account", `As you asked, we're removing your Cadence account and all its progress${by ? ` by ${by}` : ""}. You'll get one more email when it's done.`, billing, notYou],
+    kicker: "Account · Deletion", title: "We're deleting your account",
+    body: [paragraph(`As you asked, we're removing your Cadence account and all its progress${by ? ` by ${escapeHtml(by)}` : ""}. You'll get one more email when it's done.`), billing && paragraph(escapeHtml(billing)), paragraph(escapeHtml(notYou), { muted: true, small: true, spaceAfter: 0 })],
+    text: [`As you asked, we're removing your Cadence account and all its progress${by ? ` by ${by}` : ""}. You'll get one more email when it's done.`, billing, notYou],
     footer: { category: "transactional", reason: "You're getting this because you asked us to delete your Cadence account." },
   });
 }
@@ -203,8 +209,9 @@ export function renderDeletionCompleted(props: DeletionCompletedProps): Rendered
   return compose({
     subject: "Your Cadence account has been deleted",
     preheader: "Your account and progress are gone.",
-    body: [heading("Your account is deleted"), paragraph(`Your Cadence account and its progress were removed${when ? ` on ${escapeHtml(when)}` : ""}. This is the last email you'll get from us.`), paragraph(escapeHtml(kept), { muted: true, small: true, spaceAfter: 20 }), paragraph("Thanks for practising with Cadence. You're welcome back any time.", { spaceAfter: 0 })],
-    text: ["Your account is deleted", `Your Cadence account and its progress were removed${when ? ` on ${when}` : ""}. This is the last email you'll get from us.`, kept, "Thanks for practising with Cadence. You're welcome back any time."],
+    kicker: "Account · Goodbye", title: "Your account is deleted",
+    body: [paragraph(`Your Cadence account and its progress were removed${when ? ` on ${escapeHtml(when)}` : ""}. This is the last email you'll get from us.`), paragraph(escapeHtml(kept), { muted: true, small: true, spaceAfter: 20 }), paragraph("Thanks for practising with Cadence. You're welcome back any time.", { spaceAfter: 0 })],
+    text: [`Your Cadence account and its progress were removed${when ? ` on ${when}` : ""}. This is the last email you'll get from us.`, kept, "Thanks for practising with Cadence. You're welcome back any time."],
     footer: { category: "transactional", reason: "You're getting this because your Cadence account was deleted." },
   });
 }
@@ -223,8 +230,9 @@ export function renderDataExportReady(props: DataExportReadyProps): RenderedEmai
   return compose({
     subject: "Your Cadence data is ready",
     preheader: "Download your progress as a JSON file.",
-    body: [heading("Your data is ready"), paragraph("The copy of your Cadence data you asked for is ready to download."), button("Download my data", url), paragraph(escapeHtml(note), { muted: true, small: true, spaceBefore: 16, spaceAfter: 20 }), linkFallback(url)],
-    text: ["Your data is ready", "The copy of your Cadence data you asked for is ready to download.", `Download: ${url}`, note],
+    kicker: "Account · Your data", title: "Your data is ready",
+    body: [paragraph("The copy of your Cadence data you asked for is ready to download."), button("Download my data", url), paragraph(escapeHtml(note), { muted: true, small: true, spaceBefore: 16, spaceAfter: 20 }), linkFallback(url)],
+    text: ["The copy of your Cadence data you asked for is ready to download.", `Download: ${url}`, note],
     footer: { category: "transactional", reason: "You're getting this because you asked for a copy of your Cadence data." },
   });
 }

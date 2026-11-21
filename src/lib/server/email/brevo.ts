@@ -9,6 +9,8 @@
 // EMAIL_DRY_RUN=1 sends nothing and logs only the template subject and a
 // masked recipient, never the body, which may hold a reset link. The key is
 // read per call and never logged or echoed in an error.
+import { createHash } from "node:crypto";
+
 import type { RenderedEmail } from "./layout";
 import { isEmailAddress, senders, type Mailbox } from "./senders";
 
@@ -54,7 +56,7 @@ export interface OutgoingEmail {
   tags?: string[];
   /** Required for marketing and reminder mail: the one-click unsubscribe target. */
   unsubscribeUrl?: string;
-  /** Brevo drops a second send with the same key, so a retry cannot mail twice. */
+  /** Brevo drops a second send with the same key, so a retry cannot mail twice. Mapped to a UUID by brevoIdempotencyKey. */
   idempotencyKey?: string;
   /** Prepended to the subject, e.g. "[TEST] " for the test sender. */
   subjectPrefix?: string;
@@ -84,6 +86,23 @@ export function isBrevoConfigured(env: Env = process.env): boolean {
 
 const HEADER_UNSAFE = /[\r\n]/;
 
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+/**
+ * Brevo's idempotencyKey only accepts a UUID, and our keys are readable
+ * ("lifecycle:<uid>:day1"). A UUID passes through; anything else becomes a
+ * deterministic UUID: the first 16 bytes of its SHA-256 with the version 4 and
+ * RFC 4122 variant bits set, so the same key always maps to the same UUID.
+ */
+export function brevoIdempotencyKey(key: string): string {
+  if (UUID.test(key)) return key.toLowerCase();
+  const bytes = createHash("sha256").update(key, "utf8").digest().subarray(0, 16);
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = bytes.toString("hex");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
 export function brevoPayload(message: OutgoingEmail, env: Env = process.env) {
   const { email } = message;
   const needsUnsubscribe = email.category !== "transactional";
@@ -100,7 +119,7 @@ export function brevoPayload(message: OutgoingEmail, env: Env = process.env) {
     headers["List-Unsubscribe"] = `<${message.unsubscribeUrl}>`;
     headers["List-Unsubscribe-Post"] = "List-Unsubscribe=One-Click";
   }
-  if (message.idempotencyKey) headers.idempotencyKey = message.idempotencyKey.slice(0, 128);
+  if (message.idempotencyKey) headers.idempotencyKey = brevoIdempotencyKey(message.idempotencyKey);
 
   const name = message.to.name?.replace(/[\r\n"<>]/g, " ").trim().slice(0, 80);
   const tags = [...new Set((message.tags ?? []).map((tag) => tag.replace(/[^A-Za-z0-9:_.-]/g, "-").slice(0, 60)).filter(Boolean))].slice(0, 10);

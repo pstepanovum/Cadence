@@ -2,15 +2,22 @@
 //
 // Signed unsubscribe links: `<payload>.<signature>`, base64url, where the
 // payload is `v1:<list>:<subject>` and the signature HMAC-SHA256 over it with
-// EMAIL_UNSUBSCRIBE_SECRET. The subject is a uid (reminders) or an email
-// address (newsletter, which people can join without an account). A token can
-// only ever turn one list off for one subject, so it does not expire: an old
-// email's link has to keep working.
+// EMAIL_UNSUBSCRIBE_SECRET. The subject is a uid (reminders, lifecycle) or an
+// email address (newsletter, which people can join without an account). A
+// token can only ever turn one list off for one subject, so it does not
+// expire: an old email's link has to keep working. Without the secret nobody
+// can make one, and a uid is not guessable from outside.
+//
+// TEST_UNSUBSCRIBE_SUBJECT is the subject test sends carry: the handler
+// accepts its token and answers as usual, but changes nothing anywhere.
 import { createHmac, timingSafeEqual } from "node:crypto";
 
 import type { EmailList } from "./layout";
 
-export const EMAIL_LISTS: readonly EmailList[] = ["reminders", "newsletter"];
+export const EMAIL_LISTS: readonly EmailList[] = ["reminders", "lifecycle", "newsletter"];
+
+/** The subject of test sends' unsubscribe links. Its token unsubscribes no one. */
+export const TEST_UNSUBSCRIBE_SUBJECT = "test-recipient-noop";
 export const UNSUBSCRIBE_PATH = "/api/email/unsubscribe";
 
 type Env = Record<string, string | undefined>;
@@ -44,7 +51,7 @@ export function verifyUnsubscribeToken(token: unknown, env: Env = process.env): 
   const given = Buffer.from(signature);
   if (expected.length !== given.length || !timingSafeEqual(expected, given)) return null;
   const decoded = Buffer.from(payload, "base64url").toString("utf8");
-  const match = /^v1:(reminders|newsletter):(.+)$/.exec(decoded);
+  const match = /^v1:(reminders|lifecycle|newsletter):(.+)$/.exec(decoded);
   if (!match || !SUBJECT.test(match[2])) return null;
   return { list: match[1] as EmailList, subject: match[2] };
 }

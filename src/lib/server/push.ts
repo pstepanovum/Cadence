@@ -19,6 +19,8 @@ export async function savePushDevice(uid: string, device: PushDevice, firestore:
     { platform: device.platform, push: { token: device.expoPushToken, timeZone: device.timeZone, updatedAt: now } },
     { merge: true },
   );
+  // The account's zone, for mail sent in the learner's evening (lifecycle.ts).
+  if (device.timeZone && device.timeZone !== "UTC") await firestore.collection("users").doc(uid).set({ timeZone: device.timeZone }, { merge: true });
 }
 
 export async function removePushDevice(uid: string, installId: string, firestore: Firestore = defaultDb()): Promise<void> {

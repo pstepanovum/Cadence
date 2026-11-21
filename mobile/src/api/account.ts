@@ -15,6 +15,11 @@ export function setNewsletter(subscribed: boolean): Promise<unknown> {
   return apiJson<unknown>("/api/newsletter", "POST", { subscribed }, { appCheck: "limited-use" });
 }
 
+/** Turns the getting-started tips email on or off (PATCH /api/me). */
+export function setLifecycleTips(on: boolean): Promise<unknown> {
+  return apiJson<unknown>("/api/me", "PATCH", { lifecycle: on }, appCheck);
+}
+
 /** The JSON export of everything the account holds, as text. */
 export async function exportAccount(): Promise<string> {
   const response = await apiFetch("/api/account/export", {}, appCheck);

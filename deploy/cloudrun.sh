@@ -9,7 +9,7 @@
 #   deploy/cloudrun.sh build        build and push both images with Cloud Build
 #   deploy/cloudrun.sh deploy-ai    cadence-ai: private, IAM only, scale to zero
 #   deploy/cloudrun.sh deploy-web   cadence-web: public, scale to zero, secrets from Secret Manager
-#   deploy/cloudrun.sh scheduler    Cloud Scheduler jobs for /api/jobs/daily and /api/jobs/mail
+#   deploy/cloudrun.sh scheduler    Cloud Scheduler jobs for /api/jobs/daily, /api/jobs/mail and /api/jobs/lifecycle
 #   deploy/cloudrun.sh ttl          Firestore TTL policies on expireAt / expiresAt
 #   deploy/cloudrun.sh firebase     Hosting rewrite, Firestore rules and indexes, Storage rules
 #   deploy/cloudrun.sh all          build, deploy-ai, deploy-web, scheduler, firebase
@@ -133,7 +133,7 @@ scheduler() {
   else
     jobs_secret="$(gcloud secrets versions access latest --secret jobs-secret --project "$PROJECT")"
   fi
-  for job in "cadence-daily|0 17 * * *|/api/jobs/daily|300s" "cadence-mail|*/5 * * * *|/api/jobs/mail|120s"; do
+  for job in "cadence-daily|0 17 * * *|/api/jobs/daily|300s" "cadence-mail|*/5 * * * *|/api/jobs/mail|120s" "cadence-lifecycle|0 * * * *|/api/jobs/lifecycle|300s"; do
     IFS='|' read -r name schedule path deadline <<<"$job"
     run gcloud scheduler jobs create http "$name" --project "$PROJECT" --location "$REGION" \
       --schedule "$schedule" --time-zone "Etc/UTC" --uri "${web_url}${path}" --http-method POST \

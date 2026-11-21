@@ -1,25 +1,37 @@
 // FILE: src/lib/server/email/layout.ts
 //
-// The frame every Cadence email is drawn in, and the small pieces templates
-// build their bodies from.
+// The frame every Cadence email is drawn in, and the pieces templates build
+// their bodies from.
+//
+// The look is editorial: a solid hunter-green header band carrying the
+// yellow-green logo, an uppercase letter-spaced kicker and a big tight
+// headline; then a white card with big-number moments, card sections and one
+// strong call to action that runs full width on a phone.
 //
 // Email clients are old browsers with odd rules, so the markup is tables with
-// inline styles, at most 560 pixels wide, every colour set inline for light
+// inline styles, at most 600 pixels wide, every colour set inline for light
 // mode. Two things live in <head>: one stylesheet link for Funnel Display
 // (clients that block it fall back to the system stack below) and one small
-// <style> block with the dark palette under prefers-color-scheme plus the
-// phone padding. Apple Mail, iOS Mail and Outlook for Mac honour it; Gmail
-// ignores it and darkens on its own, which the light palette survives because
-// nothing depends on a background image. Outlook for Windows gets a fixed
-// 560 px ghost table.
+// <style> block with the phone sizes and the dark palette under
+// prefers-color-scheme. Apple Mail and iOS Mail honour it; Gmail ignores the
+// dark part and darkens on its own, which the light palette survives because
+// nothing depends on a background image and the band keeps its green.
+// Outlook for Windows gets a fixed 600 px ghost table.
 //
 // Everything here is pure: templates take typed props and return strings, so
 // the server, the preview script and the tests render exactly the same thing.
 
-export type EmailCategory = "transactional" | "marketing" | "reminder";
+export type EmailCategory = "transactional" | "marketing" | "reminder" | "lifecycle";
 
-/** The lists a reader can leave. Account and billing mail is not on one. */
-export type EmailList = "reminders" | "newsletter";
+/**
+ * The lists a reader can leave, each with its own consent. Account, billing
+ * and security mail is on none.
+ *
+ *   reminders    streaks, weekly summary, badges, nudges         opt-in, off by default
+ *   lifecycle    getting-started tips for accounts without Plus  on by default
+ *   newsletter   product news and offers (sales)                 double opt-in
+ */
+export type EmailList = "reminders" | "lifecycle" | "newsletter";
 
 export interface RenderedEmail {
   subject: string;
@@ -33,6 +45,7 @@ export interface RenderedEmail {
 export const SITE_URL = "https://cadence.pstepanov.dev";
 export const SITE_LABEL = "cadence.pstepanov.dev";
 export const EMAIL_ASSET_ORIGIN = `${SITE_URL}/email/`;
+export const MAX_WIDTH = 600;
 
 /** Production addresses as the footer names them. Where mail really leaves from is in senders.ts. */
 export const FOOTER_ADDRESSES = {
@@ -47,39 +60,50 @@ export const FOOTER_ADDRESSES = {
 export const BREVO_DOI_PLACEHOLDER = "{{ doubleoptin }}";
 
 /**
- * Cadence's palette (src/app/globals.css) for mail: the grayscale carries the
- * frame (platinum page, white card, snow panels, alabaster rules, carbon and
- * iron text) and there is one accent, hunter green in light mode and
- * yellow-green in dark. Button text is white on hunter (6.9:1) and carbon on
- * yellow-green (9.6:1).
+ * Cadence's palette (src/app/globals.css) for mail. Hunter green carries the
+ * header band in both modes; yellow-green is the logo, the kicker and the
+ * offer block; the grayscale carries the card. Button text is white on hunter
+ * (6.9:1) and carbon on yellow-green (9.6:1); the white headline on the band
+ * is 6.9:1, the yellow-green kicker on it 3.6:1 at bold uppercase.
  */
 export const tone = {
   light: {
     page: "#E9ECEF",
+    band: "#386641",
+    onBand: "#FFFFFF",
+    kicker: "#A7C957",
     card: "#FFFFFF",
-    panel: "#F8F9FA",
+    panel: "#F1F3F5",
     rule: "#DEE2E6",
     text: "#212529",
     secondary: "#495057",
-    tertiary: "#5C656D",
+    tertiary: "#5A636B",
     accent: "#386641",
     onAccent: "#FFFFFF",
+    offer: "#A7C957",
+    onOffer: "#212529",
   },
   dark: {
-    page: "#16191C",
-    card: "#212529",
-    panel: "#2B3035",
+    page: "#101214",
+    band: "#1F3A25",
+    onBand: "#F8F9FA",
+    kicker: "#A7C957",
+    card: "#1A1D20",
+    panel: "#24282C",
     rule: "#343A40",
     text: "#F8F9FA",
     secondary: "#CED4DA",
     tertiary: "#ADB5BD",
     accent: "#A7C957",
-    onAccent: "#212529",
+    onAccent: "#16191C",
+    offer: "#A7C957",
+    onOffer: "#16191C",
   },
 } as const;
 
 export const FONT_STACK = "'Funnel Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif";
-const FONT_LINK = "https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600;700&display=swap";
+const MONO_STACK = "'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace";
+const FONT_LINK = "https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600;700;800&display=swap";
 
 const L = tone.light;
 const D = tone.dark;
@@ -162,115 +186,188 @@ export function appUrl(path: `/${string}`, origin = SITE_URL): string {
 }
 
 // Pieces ----------------------------------------------------------------------
+//
+// Every piece below is a full-width block for the card. Text classes (c-text,
+// c-muted, c-faint, c-accent) are what the dark palette and the phone sizes
+// hook onto; the inline style is the light default every client sees.
 
+const p = (style: string) => `margin:0;font-family:${FONT_STACK};${style}`;
+
+/** A second-level heading inside the card. The page headline lives in the band (compose's `title`). */
 export function heading(text: string): string {
-  return `<h1 class="c-text c-h1" style="margin:0 0 16px;font-family:${FONT_STACK};font-size:28px;line-height:34px;font-weight:700;letter-spacing:-0.4px;color:${L.text};">${escapeHtml(text)}</h1>`;
+  return `<h2 class="c-text" style="${p(`margin:0 0 12px;font-size:24px;line-height:28px;font-weight:800;letter-spacing:-0.5px;color:${L.text};`)}">${escapeHtml(text)}</h2>`;
 }
 
 export function subheading(text: string): string {
-  return `<h2 class="c-text" style="margin:0 0 8px;font-family:${FONT_STACK};font-size:17px;line-height:24px;font-weight:600;color:${L.text};">${escapeHtml(text)}</h2>`;
+  return `<h3 class="c-text" style="${p(`margin:0 0 8px;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(text)}</h3>`;
+}
+
+/** A small uppercase label above a section. */
+export function eyebrow(text: string, options: { spaceAfter?: number } = {}): string {
+  return `<p class="c-accent" style="${p(`margin:0 0 ${options.spaceAfter ?? 12}px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.accent};`)}">${escapeHtml(text.toUpperCase())}</p>`;
 }
 
 /** A paragraph. `html` is trusted markup built from escaped strings. */
-export function paragraph(html: string, options: { muted?: boolean; small?: boolean; spaceBefore?: number; spaceAfter?: number } = {}): string {
+export function paragraph(html: string, options: { muted?: boolean; small?: boolean; lead?: boolean; spaceBefore?: number; spaceAfter?: number } = {}): string {
   const color = options.muted ? L.secondary : L.text;
   const className = options.muted ? "c-muted" : "c-text";
-  const size = options.small ? "14px;line-height:22px" : "16px;line-height:26px";
-  return `<p class="${className}" style="margin:${options.spaceBefore ?? 0}px 0 ${options.spaceAfter ?? 16}px;font-family:${FONT_STACK};font-size:${size};color:${color};">${html}</p>`;
+  const size = options.lead ? "19px;line-height:29px" : options.small ? "14px;line-height:22px" : "16px;line-height:26px";
+  return `<p class="${className}" style="${p(`margin:${options.spaceBefore ?? 0}px 0 ${options.spaceAfter ?? 16}px;font-size:${size};color:${color};`)}">${html}</p>`;
 }
 
 export function strong(text: string): string {
-  return `<strong style="font-weight:600;">${escapeHtml(text)}</strong>`;
+  return `<strong style="font-weight:700;">${escapeHtml(text)}</strong>`;
 }
 
-/** The one call to action: a filled table cell, so it shows even with CSS stripped. */
-export function button(label: string, href: string): string {
+/** A thin rule across the card. */
+export function divider(options: { spaceBefore?: number; spaceAfter?: number } = {}): string {
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:${options.spaceBefore ?? 8}px 0 ${options.spaceAfter ?? 28}px;"><tr><td class="c-rule" height="1" style="height:1px;font-size:0;line-height:0;border-top:1px solid ${L.rule};">&nbsp;</td></tr></table>`;
+}
+
+/**
+ * The one call to action: a filled table cell, so it shows even with CSS
+ * stripped. On a phone it runs the full width of the card.
+ */
+export function button(label: string, href: string, options: { spaceBefore?: number; spaceAfter?: number } = {}): string {
   const url = escapeHtml(safeUrl(href));
-  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 8px;">
-<tr><td class="c-btn" bgcolor="${L.accent}" style="background-color:${L.accent};border-radius:14px;mso-padding-alt:14px 26px;">
-<a class="c-btn-text" href="${url}" target="_blank" style="display:inline-block;padding:14px 26px;font-family:${FONT_STACK};font-size:16px;line-height:20px;font-weight:600;color:${L.onAccent};text-decoration:none;border-radius:14px;">${escapeHtml(label)}</a>
+  return `<table role="presentation" class="c-btn-table" cellpadding="0" cellspacing="0" border="0" style="margin:${options.spaceBefore ?? 8}px 0 ${options.spaceAfter ?? 8}px;">
+<tr><td class="c-btn" align="center" bgcolor="${L.accent}" style="background-color:${L.accent};border-radius:12px;mso-padding-alt:18px 32px;">
+<a class="c-btn-text" href="${url}" target="_blank" style="display:inline-block;padding:18px 32px;font-family:${FONT_STACK};font-size:17px;line-height:20px;font-weight:700;letter-spacing:0.2px;color:${L.onAccent};text-decoration:none;border-radius:12px;">${escapeHtml(label)}&nbsp;&rarr;</a>
 </td></tr></table>`;
 }
 
-/** A soft block inside the card. `html` is trusted markup. */
+/** A card section inside the card. `html` is trusted markup. */
 export function panel(html: string, options: { spaceAfter?: number } = {}): string {
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 ${options.spaceAfter ?? 24}px;">
-<tr><td class="c-panel" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:14px;padding:18px 20px;">${html}</td></tr></table>`;
+<tr><td class="c-panel c-pad" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:16px;padding:20px 22px;">${html}</td></tr></table>`;
 }
 
-/** Label and value rows in a panel: plan, amount, date. Values are plain text. */
+/** Label and value rows in a card: plan, amount, date. Values are plain text. */
 export function detailRows(rows: [string, string][]): string {
-  const cells = rows
-    .filter(([, value]) => value)
-    .map(
-      ([label, value], index, all) => `<tr>
-<td class="c-muted" valign="top" style="padding:0 12px ${index === all.length - 1 ? 0 : 10}px 0;font-family:${FONT_STACK};font-size:14px;line-height:22px;color:${L.secondary};">${escapeHtml(label)}</td>
-<td class="c-text" valign="top" align="right" style="padding:0 0 ${index === all.length - 1 ? 0 : 10}px;font-family:${FONT_STACK};font-size:14px;line-height:22px;font-weight:600;color:${L.text};">${escapeHtml(value)}</td>
-</tr>`,
-    )
+  const shown = rows.filter(([, value]) => value);
+  const cells = shown
+    .map(([label, value], index) => {
+      const last = index === shown.length - 1;
+      const edge = last ? "" : `border-bottom:1px solid ${L.rule};`;
+      const pad = `${index === 0 ? 0 : 12}px`;
+      const bottom = `${last ? 0 : 12}px`;
+      return `<tr>
+<td class="c-muted c-rule" valign="top" style="padding:${pad} 12px ${bottom} 0;${edge}font-family:${FONT_STACK};font-size:11px;line-height:22px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:${L.secondary};">${escapeHtml(label.toUpperCase())}</td>
+<td class="c-text c-rule" valign="top" align="right" style="padding:${pad} 0 ${bottom};${edge}font-family:${FONT_STACK};font-size:15px;line-height:22px;font-weight:700;color:${L.text};">${escapeHtml(value)}</td>
+</tr>`;
+    })
     .join("");
   return panel(`<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${cells}</table>`);
 }
 
-/** Numbered steps: a small accent number, a title and a line of explanation. */
+/** Numbered steps, editorial style: a big "01" in the accent, a title, a line. */
 export function steps(items: readonly { title: string; body: string }[]): string {
   const rows = items
     .map((item, index) => {
       const last = index === items.length - 1;
+      const edge = last ? "" : `border-bottom:1px solid ${L.rule};`;
+      const pad = `${index === 0 ? 0 : 18}px 0 ${last ? 0 : 18}px`;
       return `<tr>
-<td valign="top" width="28" style="padding:0 14px ${last ? 0 : 18}px 0;">
-<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="c-chip" align="center" valign="middle" width="28" height="28" bgcolor="${L.panel}" style="width:28px;height:28px;border-radius:9px;background-color:${L.panel};font-family:${FONT_STACK};font-size:14px;line-height:28px;font-weight:700;color:${L.accent};"><span class="c-accent" style="color:${L.accent};">${index + 1}</span></td></tr></table>
+<td class="c-rule" valign="top" width="56" style="width:56px;padding:${pad};${edge}">
+<p class="c-accent" style="${p(`font-size:30px;line-height:30px;font-weight:800;letter-spacing:-1px;color:${L.accent};`)}">${String(index + 1).padStart(2, "0")}</p>
 </td>
-<td valign="top" style="padding:0 0 ${last ? 0 : 18}px;">
-<p class="c-text" style="margin:0 0 2px;font-family:${FONT_STACK};font-size:16px;line-height:24px;font-weight:600;color:${L.text};">${escapeHtml(item.title)}</p>
-<p class="c-muted" style="margin:0;font-family:${FONT_STACK};font-size:15px;line-height:23px;color:${L.secondary};">${escapeHtml(item.body)}</p>
+<td class="c-rule" valign="top" style="padding:${pad};${edge}">
+<p class="c-text" style="${p(`margin:0 0 4px;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(item.title)}</p>
+<p class="c-muted" style="${p(`font-size:15px;line-height:23px;color:${L.secondary};`)}">${escapeHtml(item.body)}</p>
 </td></tr>`;
     })
     .join("");
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 28px;">${rows}</table>`;
 }
 
-/** Up to three big numbers side by side, for the weekly summary. */
+/** A list with square accent markers: Plus features, what a tip covers. */
+export function checklist(items: readonly string[]): string {
+  const rows = items
+    .map(
+      (item, index) => `<tr>
+<td valign="top" width="24" style="width:24px;padding:${index === 0 ? 7 : 19}px 0 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="c-btn" width="10" height="10" bgcolor="${L.accent}" style="width:10px;height:10px;font-size:0;line-height:0;background-color:${L.accent};border-radius:2px;">&nbsp;</td></tr></table></td>
+<td valign="top" style="padding:${index === 0 ? 0 : 12}px 0 0;"><p class="c-text" style="${p(`font-size:16px;line-height:24px;color:${L.text};`)}">${escapeHtml(item)}</p></td>
+</tr>`,
+    )
+    .join("");
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:6px 0 26px;">${rows}</table>`;
+}
+
+/**
+ * The hero moment: one big number with an uppercase label under it, on a card
+ * with a yellow-green edge. `value` is short ("12", "86", "7").
+ */
+export function bigNumber(input: { value: string; label: string; caption?: string }): string {
+  const caption = cleanText(input.caption, 160);
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;">
+<tr><td class="c-panel c-pad" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:16px;border-left:6px solid ${L.offer};padding:24px 24px 22px;">
+<p class="c-accent c-big" style="${p(`font-size:80px;line-height:76px;font-weight:800;letter-spacing:-3px;color:${L.accent};`)}">${escapeHtml(input.value)}</p>
+<p class="c-text" style="${p(`margin:10px 0 0;font-size:13px;line-height:18px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.text};`)}">${escapeHtml(input.label.toUpperCase())}</p>
+${caption ? `<p class="c-muted" style="${p(`margin:6px 0 0;font-size:15px;line-height:22px;color:${L.secondary};`)}">${escapeHtml(caption)}</p>` : ""}
+</td></tr></table>`;
+}
+
+/** Up to three big numbers side by side: the weekly summary, a habit check-in. */
 export function stats(items: readonly { value: string; label: string }[]): string {
   const width = Math.floor(100 / Math.max(1, items.length));
   const cells = items
     .map(
-      (item) => `<td class="c-panel" width="${width}%" valign="top" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:14px;padding:16px 14px;">
-<p class="c-accent" style="margin:0 0 2px;font-family:${FONT_STACK};font-size:26px;line-height:32px;font-weight:700;color:${L.accent};">${escapeHtml(item.value)}</p>
-<p class="c-muted" style="margin:0;font-family:${FONT_STACK};font-size:13px;line-height:18px;color:${L.secondary};">${escapeHtml(item.label)}</p></td>`,
+      (item) => `<td class="c-panel" width="${width}%" valign="top" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:16px;border-top:4px solid ${L.offer};padding:16px 14px 14px;">
+<p class="c-accent c-stat" style="${p(`margin:0 0 6px;font-size:40px;line-height:40px;font-weight:800;letter-spacing:-1.5px;color:${L.accent};`)}">${escapeHtml(item.value)}</p>
+<p class="c-muted" style="${p(`font-size:11px;line-height:15px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:${L.secondary};`)}">${escapeHtml(item.label.toUpperCase())}</p></td>`,
     )
     .join(`<td width="8" style="width:8px;font-size:0;line-height:0;">&nbsp;</td>`);
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 24px;"><tr>${cells}</tr></table>`;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 28px;"><tr>${cells}</tr></table>`;
+}
+
+/**
+ * The offer block: a solid yellow-green slab with the discount huge, the code
+ * in a dashed ticket and the end date. Same colours in both modes, on purpose.
+ */
+export function offerBlock(input: { kicker: string; headline: string; code: string; ends: string }): string {
+  const headline = cleanText(input.headline, 24).toUpperCase();
+  const size = headline.length <= 8 ? "88px;line-height:82px" : headline.length <= 14 ? "60px;line-height:58px" : "44px;line-height:46px";
+  const ink = L.onOffer;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;">
+<tr><td class="c-pad" bgcolor="${L.offer}" style="background-color:${L.offer};border-radius:16px;padding:28px 28px 26px;">
+<p style="${p(`margin:0 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:${ink};`)}">${escapeHtml(cleanText(input.kicker, 60).toUpperCase())}</p>
+<p class="${headline.length <= 8 ? "c-offer-big" : ""}" style="${p(`font-size:${size};font-weight:800;letter-spacing:-3px;color:${ink};`)}">${escapeHtml(headline)}</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0 0;"><tr>
+<td style="border:2px dashed ${ink};border-radius:10px;padding:10px 16px;"><p style="margin:0;font-family:${MONO_STACK};font-size:20px;line-height:24px;font-weight:700;letter-spacing:3px;color:${ink};">${escapeHtml(input.code)}</p></td>
+</tr></table>
+<p style="${p(`margin:14px 0 0;font-size:14px;line-height:20px;font-weight:600;color:${ink};`)}">${escapeHtml(input.ends)}</p>
+</td></tr></table>`;
 }
 
 /** The raw link under a button, for clients that do not render the button. */
 export function linkFallback(href: string): string {
   const url = escapeHtml(safeUrl(href));
-  return `<p class="c-faint" style="margin:0;font-family:${FONT_STACK};font-size:13px;line-height:20px;color:${L.tertiary};">If the button doesn't work, paste this link into your browser:<br><a class="c-faint" href="${url}" target="_blank" style="color:${L.tertiary};word-break:break-all;text-decoration:underline;">${url}</a></p>`;
+  return `<p class="c-faint" style="${p(`font-size:13px;line-height:20px;color:${L.tertiary};`)}">If the button doesn't work, paste this link into your browser:<br><a class="c-faint" href="${url}" target="_blank" style="color:${L.tertiary};word-break:break-all;text-decoration:underline;">${url}</a></p>`;
 }
 
 // Footer ----------------------------------------------------------------------
 
 export type FooterOptions =
   | { category: "transactional"; reason: string }
-  | { category: "marketing" | "reminder"; reason: string; unsubscribeUrl: string };
+  | { category: "marketing" | "reminder" | "lifecycle"; reason: string; unsubscribeUrl: string };
 
 /** The postal line marketing mail needs (CAN-SPAM). Set CADENCE_POSTAL_ADDRESS; empty hides the line. */
 export function postalAddress(env: Record<string, string | undefined> = process.env): string {
   return cleanText(env.CADENCE_POSTAL_ADDRESS ?? "", 200);
 }
 
+const PREFERENCES_URL = `${SITE_URL}/account`;
+
 function footerHtml(options: FooterOptions): string {
-  const line = (html: string, spaceAfter = 6) =>
-    `<p class="c-faint" style="margin:0 0 ${spaceAfter}px;font-family:${FONT_STACK};font-size:12px;line-height:19px;color:${L.tertiary};">${html}</p>`;
-  const anchor = (href: string, label: string) =>
-    `<a class="c-faint" href="${escapeHtml(href)}" target="_blank" style="color:${L.tertiary};text-decoration:underline;">${escapeHtml(label)}</a>`;
+  const line = (html: string, spaceAfter = 6) => `<p class="c-faint" style="${p(`margin:0 0 ${spaceAfter}px;font-size:12px;line-height:19px;color:${L.tertiary};`)}">${html}</p>`;
+  const anchor = (href: string, label: string, bold = false) =>
+    `<a class="c-faint" href="${escapeHtml(href)}" target="_blank" style="color:${L.tertiary};text-decoration:underline;${bold ? "font-weight:700;" : ""}">${escapeHtml(label)}</a>`;
   const address = postalAddress();
 
   return [
-    line(`Cadence · ${anchor(SITE_URL, SITE_LABEL)}`, 10),
+    `<p class="c-faint" style="${p(`margin:0 0 12px;font-size:11px;line-height:16px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.tertiary};`)}">Cadence &middot; ${anchor(SITE_URL, SITE_LABEL)}</p>`,
     line(escapeHtml(options.reason)),
-    options.category === "transactional" ? "" : line(anchor(safeUrl(options.unsubscribeUrl), "Unsubscribe")),
+    options.category === "transactional" ? "" : line(`${anchor(safeUrl(options.unsubscribeUrl), "Unsubscribe", true)} &middot; ${anchor(PREFERENCES_URL, "Email settings")}`),
     line(`Questions? Reply to this email or write to ${anchor(`mailto:${FOOTER_ADDRESSES.support}`, FOOTER_ADDRESSES.support)}.`, address ? 6 : 0),
     address ? line(escapeHtml(address), 0) : "",
   ].join("");
@@ -281,7 +378,7 @@ function footerText(options: FooterOptions): string {
   return [
     `Cadence · ${SITE_URL}`,
     options.reason,
-    options.category === "transactional" ? "" : `Unsubscribe: ${safeUrl(options.unsubscribeUrl)}`,
+    options.category === "transactional" ? "" : `Unsubscribe: ${safeUrl(options.unsubscribeUrl)}\nEmail settings: ${PREFERENCES_URL}`,
     `Questions? Reply to this email or write to ${FOOTER_ADDRESSES.support}.`,
     address,
   ]
@@ -295,8 +392,10 @@ export const DARK_MEDIA = "@media (prefers-color-scheme: dark)";
 
 const DARK_CSS = `
 .c-page { background-color:${D.page} !important; }
+.c-band { background-color:${D.band} !important; }
+.c-headline { color:${D.onBand} !important; }
 .c-card { background-color:${D.card} !important; }
-.c-panel, .c-chip { background-color:${D.panel} !important; }
+.c-panel { background-color:${D.panel} !important; }
 .c-text { color:${D.text} !important; }
 .c-muted { color:${D.secondary} !important; }
 .c-faint { color:${D.tertiary} !important; }
@@ -304,8 +403,6 @@ const DARK_CSS = `
 .c-btn { background-color:${D.accent} !important; }
 .c-btn-text { color:${D.onAccent} !important; }
 .c-rule { border-color:${D.rule} !important; }
-.c-logo-light { display:none !important; }
-.c-logo-dark { display:block !important; max-height:none !important; overflow:visible !important; }
 `;
 
 const HEAD_CSS = `
@@ -314,25 +411,46 @@ body { margin:0 !important; padding:0 !important; width:100% !important; -webkit
 table, td { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
 img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
 a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !important; }
-@media only screen and (max-width:480px) {
-  .c-outer { padding:20px 8px 28px !important; }
-  .c-card { padding:28px 22px 26px !important; }
+@media only screen and (max-width:520px) {
+  .c-outer { padding:12px 8px 28px !important; }
+  .c-band { padding:24px 22px 30px !important; }
+  .c-card { padding:28px 22px 30px !important; }
   .c-edge { padding-left:22px !important; padding-right:22px !important; }
-  .c-h1 { font-size:24px !important; line-height:30px !important; }
+  .c-pad { padding:20px 18px !important; }
+  .c-headline { font-size:36px !important; line-height:37px !important; letter-spacing:-1.2px !important; }
+  .c-kicker { margin-top:30px !important; }
+  .c-big { font-size:64px !important; line-height:62px !important; }
+  .c-stat { font-size:30px !important; line-height:32px !important; }
+  .c-offer-big { font-size:64px !important; line-height:62px !important; }
+  .c-btn-table { width:100% !important; }
+  .c-btn-text { display:block !important; text-align:center !important; padding-left:16px !important; padding-right:16px !important; }
 }
 ${DARK_MEDIA} {${DARK_CSS}}
 [data-ogsc] .c-text { color:${D.text} !important; }
 [data-ogsc] .c-muted { color:${D.secondary} !important; }
+[data-ogsc] .c-headline { color:${D.onBand} !important; }
 `;
 
 const PREHEADER_PAD = "&#8199;&#65279;&#847; ".repeat(40);
 
-export const LOGO = { width: 140, height: 34, light: `${EMAIL_ASSET_ORIGIN}logo.png`, dark: `${EMAIL_ASSET_ORIGIN}logo-dark.png` } as const;
+/** The yellow-green logo (public/email/logo-dark.png), which sits on the green band in both modes. */
+export const LOGO = { width: 124, height: 30, src: `${EMAIL_ASSET_ORIGIN}logo-dark.png` } as const;
 
-export function renderDocument(input: { subject: string; preheader: string; body: string; footer: FooterOptions }): string {
-  const logo = (src: string, className: string) =>
-    `<img class="${className}" src="${escapeHtml(src)}" width="${LOGO.width}" height="${LOGO.height}" alt="Cadence" style="display:block;width:${LOGO.width}px;height:${LOGO.height}px;border:0;outline:none;text-decoration:none;font-family:${FONT_STACK};font-size:20px;line-height:34px;font-weight:700;color:${L.accent};">`;
-  const wordmark = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;">${logo(LOGO.light, "c-logo-light")}<!--[if !mso]><!--><div class="c-logo-dark" style="display:none;max-height:0;overflow:hidden;mso-hide:all;">${logo(LOGO.dark, "")}</div><!--<![endif]--></a>`;
+export interface DocumentInput {
+  subject: string;
+  preheader: string;
+  /** The uppercase line above the headline: "Day 1 · Start here", "Security". */
+  kicker: string;
+  /** The headline in the band. */
+  title: string;
+  body: string;
+  footer: FooterOptions;
+}
+
+export function renderDocument(input: DocumentInput): string {
+  const logo = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(LOGO.src)}" width="${LOGO.width}" height="${LOGO.height}" alt="Cadence" style="display:block;width:${LOGO.width}px;height:${LOGO.height}px;border:0;outline:none;text-decoration:none;font-family:${FONT_STACK};font-size:24px;line-height:30px;font-weight:800;color:${L.kicker};"></a>`;
+  const kicker = cleanText(input.kicker, 60).toUpperCase();
+  const width = MAX_WIDTH;
 
   return `<!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -352,14 +470,18 @@ export function renderDocument(input: { subject: string; preheader: string; body
 <body class="c-page" style="margin:0;padding:0;background-color:${L.page};">
 <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${escapeHtml(input.preheader)}${PREHEADER_PAD}</div>
 <table role="presentation" class="c-page" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${L.page}" style="background-color:${L.page};">
-<tr><td class="c-outer" align="center" style="padding:36px 12px 44px;">
-<!--[if mso]><table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:560px;">
-<tr><td class="c-edge" style="padding:0 36px 20px;">${wordmark}</td></tr>
-<tr><td class="c-card" bgcolor="${L.card}" style="background-color:${L.card};border-radius:20px;padding:38px 36px 34px;">
+<tr><td class="c-outer" align="center" style="padding:32px 12px 44px;">
+<!--[if mso]><table role="presentation" width="${width}" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:${width}px;">
+<tr><td class="c-band" bgcolor="${L.band}" style="background-color:${L.band};border-radius:20px 20px 0 0;padding:30px 40px 40px;">
+${logo}
+<p class="c-kicker" style="${p(`margin:44px 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:${L.kicker};`)}">${escapeHtml(kicker || "Cadence")}</p>
+<h1 class="c-headline" style="${p(`font-size:46px;line-height:47px;font-weight:800;letter-spacing:-1.6px;color:${L.onBand};`)}">${escapeHtml(input.title)}</h1>
+</td></tr>
+<tr><td class="c-card" bgcolor="${L.card}" style="background-color:${L.card};border-radius:0 0 20px 20px;padding:36px 40px 40px;">
 ${input.body}
 </td></tr>
-<tr><td class="c-edge" style="padding:24px 36px 0;">${footerHtml(input.footer)}</td></tr>
+<tr><td class="c-edge" style="padding:26px 40px 0;">${footerHtml(input.footer)}</td></tr>
 </table>
 <!--[if mso]></td></tr></table><![endif]-->
 </td></tr>
@@ -368,8 +490,8 @@ ${input.body}
 </html>`;
 }
 
-export function renderText(blocks: (string | false | null | undefined)[], footer: FooterOptions): string {
-  const body = blocks.filter((block): block is string => typeof block === "string" && block.length > 0).join("\n\n");
+export function renderText(title: string, blocks: (string | false | null | undefined)[], footer: FooterOptions): string {
+  const body = [title, ...blocks].filter((block): block is string => typeof block === "string" && block.length > 0).join("\n\n");
   return `${body}\n\n--\n${footerText(footer)}\n`;
 }
 
@@ -377,7 +499,12 @@ export function renderText(blocks: (string | false | null | undefined)[], footer
 export function compose(input: {
   subject: string;
   preheader: string;
+  /** The uppercase line above the headline. */
+  kicker: string;
+  /** The headline in the band; also the first line of the plain-text part. */
+  title: string;
   body: (string | false | null | undefined)[];
+  /** The plain-text part, without the title (compose puts it first). */
   text: (string | false | null | undefined)[];
   footer: FooterOptions;
 }): RenderedEmail {
@@ -385,8 +512,8 @@ export function compose(input: {
   return {
     subject: input.subject,
     preheader: input.preheader,
-    html: renderDocument({ subject: input.subject, preheader: input.preheader, body, footer: input.footer }),
-    text: renderText(input.text, input.footer),
+    html: renderDocument({ subject: input.subject, preheader: input.preheader, kicker: input.kicker, title: input.title, body, footer: input.footer }),
+    text: renderText(input.title, input.text, input.footer),
     category: input.footer.category,
   };
 }

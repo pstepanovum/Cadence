@@ -5,6 +5,7 @@
 // /reset-password page, never Firebase's default page, and the email is ours,
 // never Firebase's. Always answers 200 the same way, so it says nothing about
 // which addresses have accounts. Limited per IP and per address.
+import { isNoAccountForLinkError } from "@/lib/server/action-link-errors";
 import { ownActionLink } from "@/lib/server/account-events";
 import { requireAppCheck } from "@/lib/server/app-check";
 import { sendEmail } from "@/lib/server/email/brevo";
@@ -39,8 +40,9 @@ export function POST(request: Request) {
     try {
       link = await auth().generatePasswordResetLink(email, { url: `${appOrigin()}/login` });
     } catch (error) {
-      const code = (error as { code?: string })?.code ?? "";
-      if (code.includes("user-not-found") || code.includes("email-not-found") || code.includes("invalid-email")) return json(SAME_ANSWER);
+      // No account, including the internal assertion Firebase throws for an
+      // unknown address under email enumeration protection.
+      if (isNoAccountForLinkError(error)) return json(SAME_ANSWER);
       throw error;
     }
     // Sent directly, not queued: the link is a credential and is not stored anywhere.

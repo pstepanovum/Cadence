@@ -3,7 +3,7 @@
 // Checks every rendered template for what breaks in real mail clients:
 // styles inline on elements (the one <style> block in <head> carries only the
 // dark palette and phone padding), no stylesheet but the Funnel Display font
-// link, alt text on every image, absolute https images, a 560 px frame, no
+// link, alt text on every image, absolute https images, a 600 px frame, no
 // script, and under Gmail's 102 KB clip.
 //
 //   node --import ./tests/register.mjs scripts/email/lint.ts
@@ -26,11 +26,11 @@ for (const id of TEMPLATE_IDS) {
     if (!/\ssrc="https:\/\//.test(img)) say(`image not on https: ${img.slice(0, 80)}`);
     if (!/\swidth="\d+"/.test(img)) say("image without a width attribute");
   }
-  for (const tag of bodyPart.match(/<(p|h1|h2|td|a)\b[^>]*>/g) ?? []) {
+  for (const tag of bodyPart.match(/<(p|h1|h2|h3|td|a)\b[^>]*>/g) ?? []) {
     if (tag.startsWith("<td") && !/style=/.test(tag) && !/width=|align=/.test(tag)) say(`unstyled ${tag.slice(0, 60)}`);
     if (!tag.startsWith("<td") && !/style=/.test(tag)) say(`no inline style: ${tag.slice(0, 60)}`);
   }
-  if (!/max-width:560px/.test(html)) say("not framed at 560 px");
+  if (!/max-width:600px/.test(html)) say("not framed at 600 px");
   if (Buffer.byteLength(html) > 100 * 1024) say(`${(Buffer.byteLength(html) / 1024).toFixed(1)} KB, over 100 KB`);
 }
 

@@ -2,7 +2,7 @@
 //
 // Every email template renders from its fixture into an HTML and a plain-text
 // part, with nothing left unreplaced, inline styles, alt text on every image,
-// at most 560 px wide, under Gmail's 102 KB clip, an unsubscribe link exactly
+// at most 600 px wide, under Gmail's 102 KB clip, an unsubscribe link exactly
 // when the mail is opt-in, and hostile props escaped.
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
@@ -24,7 +24,10 @@ describe("email templates", () => {
       }
       assert.ok(Buffer.byteLength(email.html) < 100 * 1024, "under 100 KB");
       for (const img of email.html.match(/<img\b[^>]*>/g) ?? []) assert.match(img, /\salt="[^"]+"/, "img alt");
-      assert.match(email.html, /max-width:560px/);
+      assert.match(email.html, /max-width:600px/);
+      assert.match(email.html, /class="c-band"/, "header band");
+      assert.match(email.html, /class="c-headline"/, "headline in the band");
+      assert.doesNotMatch(email.subject, /\p{Extended_Pictographic}/u, "no emoji in the subject");
       assert.equal((email.html.match(/<style>/g) ?? []).length, 1, "one head style block only");
       assert.equal((email.html.match(/<link /g) ?? []).length, 1, "one font link only");
       const hasUnsubscribe = /Unsubscribe/.test(email.html);
@@ -46,6 +49,7 @@ describe("email templates", () => {
       "plus-welcome", "trial-started", "trial-ending", "payment-receipt", "billing-issue", "plus-canceled", "plus-ended", "plan-changed", "refund-issued",
       "mcp-authorized", "device-paired", "suspicious-activity",
       "streak-at-risk", "weekly-summary", "badge-earned", "inactive-nudge", "newsletter-confirm", "newsletter-welcome",
+      "lifecycle-start", "lifecycle-habit", "lifecycle-plus", "sale-offer", "sale-reminder",
     ]) {
       assert.ok(TEMPLATE_IDS.includes(id as never), id);
     }

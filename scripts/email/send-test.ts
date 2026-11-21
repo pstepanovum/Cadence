@@ -1,16 +1,25 @@
 // FILE: scripts/email/send-test.ts
 //
 // Sends templates, rendered from their fixtures, through Brevo to one address,
-// each subject prefixed "[TEST] ". For reviewing the real thing in Gmail,
+// each subject prefixed "[Test] ". For reviewing the real thing in Gmail,
 // Apple Mail and Outlook after checking build/email-previews.
+//
+// Opt-in templates carry a real signed unsubscribe link (and the List-
+// Unsubscribe headers) for TEST_UNSUBSCRIBE_SUBJECT, which unsubscribes no
+// one. Without EMAIL_UNSUBSCRIBE_SECRET the link is signed with a throwaway
+// secret, so the server answers "Link not recognised": still no one.
 //
 //   BREVO_API_KEY=... node --import ./tests/register.mjs scripts/email/send-test.ts you@example.com [template|all]
 //
 // Needs BREVO_API_KEY in the environment (never pass it on the command line,
 // never commit it). EMAIL_DRY_RUN=1 renders and logs without sending.
+import { randomBytes } from "node:crypto";
+
 import { sendEmail } from "../../src/lib/server/email/brevo.ts";
+import { appOrigin } from "../../src/lib/server/env.ts";
+import { TEST_UNSUBSCRIBE_SUBJECT, unsubscribeUrl } from "../../src/lib/server/email/unsubscribe.ts";
 import { isEmailAddress } from "../../src/lib/server/email/senders.ts";
-import { TEMPLATE_IDS, TEMPLATES, isTemplateId, renderFixture } from "../../src/lib/server/email/templates/index.ts";
+import { TEMPLATE_IDS, TEMPLATES, isTemplateId, renderTemplate } from "../../src/lib/server/email/templates/index.ts";
 
 const [to, which = "all"] = process.argv.slice(2);
 if (!isEmailAddress(to)) {
@@ -23,12 +32,15 @@ if (which !== "all" && !isTemplateId(which)) {
 }
 
 const ids = which === "all" ? TEMPLATE_IDS : [which];
+const signing = { EMAIL_UNSUBSCRIBE_SECRET: process.env.EMAIL_UNSUBSCRIBE_SECRET?.trim() || randomBytes(32).toString("base64url") };
 let failed = 0;
 for (const id of ids) {
-  const email = renderFixture(id as (typeof TEMPLATE_IDS)[number]);
-  const fixture = TEMPLATES[id as (typeof TEMPLATE_IDS)[number]].fixture as { unsubscribeUrl?: string };
+  const entry = TEMPLATES[id as (typeof TEMPLATE_IDS)[number]];
+  const link = entry.list ? unsubscribeUrl(TEST_UNSUBSCRIBE_SUBJECT, entry.list, appOrigin(), signing) : undefined;
+  const props = { ...(entry.fixture as object), ...(link ? { unsubscribeUrl: link } : {}) };
+  const email = renderTemplate(id as never, props as never);
   try {
-    const result = await sendEmail({ to: { email: to }, email, subjectPrefix: "[TEST] ", tags: ["test", id], unsubscribeUrl: fixture.unsubscribeUrl });
+    const result = await sendEmail({ to: { email: to }, email, subjectPrefix: "[Test] ", tags: ["test", id], unsubscribeUrl: link });
     console.log(`${id}: ${result.dryRun ? "dry run" : `sent ${result.messageId ?? ""}`}`);
   } catch (error) {
     failed += 1;

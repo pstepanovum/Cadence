@@ -15,6 +15,8 @@ export interface Me {
   tier: DataTier;
   trial: boolean;
   newsletter: boolean | null;
+  /** Getting-started tips: on unless turned off. */
+  lifecycle: boolean | null;
 }
 
 function toMillis(value: unknown): number | null {
@@ -52,6 +54,7 @@ export function parseMe(body: unknown): Me {
     tier,
     trial: rawPlus?.trial === true,
     newsletter: typeof prefs?.newsletter === "boolean" ? prefs.newsletter : null,
+    lifecycle: prefs ? prefs.lifecycle !== false : null,
   };
 }
 

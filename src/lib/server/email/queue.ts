@@ -8,13 +8,16 @@
 // gets the key as its idempotency key, so a delivery retried after a timeout
 // cannot send twice either.
 //
-// Opt-in templates (reminders, newsletter) are checked again at delivery
-// against the learner's current choice, and get their unsubscribe link then.
-import { FieldValue, Timestamp, type Firestore, type Transaction } from "firebase-admin/firestore";
+// Templates on a list (reminders, lifecycle tips, newsletter) are checked
+// again at delivery against the learner's current choice (consentBlock), and
+// get their unsubscribe link then.
+import { FieldValue, Timestamp, type DocumentData, type Firestore, type Transaction } from "firebase-admin/firestore";
 
 import { appOrigin } from "../env";
 import { auth as defaultAuth, db as defaultDb, isAlreadyExists } from "../firebase";
+import { readAccount } from "../entitlement";
 import { EmailError, sendEmail, type BrevoDeps } from "./brevo";
+import type { EmailList } from "./layout";
 import { TEMPLATES, isTemplateId, renderTemplate, type TemplateId, type TemplateProps } from "./templates/index";
 import { unsubscribeUrl } from "./unsubscribe";
 
@@ -90,6 +93,24 @@ async function lookupEmail(uid: string): Promise<string | null> {
   }
 }
 
+/**
+ * Why a message on a list may not go out now, or null when it may. Pure.
+ * Reminders are opt-in, the lifecycle tips opt-out, the newsletter (sales)
+ * opt-in through Brevo's double opt-in.
+ */
+export function consentBlock(list: EmailList, group: string, data: DocumentData | undefined, props: Record<string, unknown>, now: number): string | null {
+  if (!data) return "no account";
+  const prefs = (data.emailPrefs ?? {}) as Record<string, unknown>;
+  if (list === "reminders" && prefs.reminders !== true) return "reminders off";
+  if (list === "lifecycle" && prefs.lifecycle === false) return "lifecycle off";
+  if (list === "newsletter" && prefs.newsletter !== true) return "newsletter off";
+  if (group === "lifecycle") {
+    if (readAccount(data, now).isPlus) return "has plus";
+    if (typeof props.endsAt === "number" && props.endsAt <= now) return "offer ended";
+  }
+  return null;
+}
+
 /** Delivers one queued message. Safe to call twice at once: a lease lets one through. */
 export async function deliverMail(key: string, deps: DeliverDeps = {}): Promise<DeliveryOutcome> {
   const firestore = deps.db ?? defaultDb();
@@ -120,14 +141,19 @@ export async function deliverMail(key: string, deps: DeliverDeps = {}): Promise<
   const props = { ...(claimed.props as Record<string, unknown>) };
 
   // Opt-in mail is checked against the learner's choice now, not when queued.
-  if (entry.list === "reminders") {
+  // Mail about an account (uid set) on a list is skipped when that list is
+  // off; the lifecycle sequence also stops once the account has Plus or its
+  // offer has ended. A newsletter signup without an account (no uid) was
+  // checked by Brevo's double opt-in.
+  if (entry.list === "reminders" || entry.list === "lifecycle" || (entry.list === "newsletter" && uid)) {
     if (!uid) {
       await finish("skipped", { reason: "no account" });
       return "skipped";
     }
-    const user = await firestore.collection("users").doc(uid).get();
-    if ((user.data()?.emailPrefs as Record<string, unknown> | undefined)?.reminders !== true) {
-      await finish("skipped", { reason: "reminders off" });
+    const data = (await firestore.collection("users").doc(uid).get()).data();
+    const reason = consentBlock(entry.list, entry.group, data, props, now);
+    if (reason) {
+      await finish("skipped", { reason });
       return "skipped";
     }
   }
@@ -140,7 +166,8 @@ export async function deliverMail(key: string, deps: DeliverDeps = {}): Promise<
 
   try {
     if (entry.list) {
-      const subject = entry.list === "reminders" ? (uid as string) : to;
+      // Account lists are keyed by uid; the newsletter by address, since people join it without an account.
+      const subject = entry.list === "newsletter" ? to : (uid as string);
       props.unsubscribeUrl = unsubscribeUrl(subject, entry.list, appOrigin(deps.env), deps.env);
     }
     const email = renderTemplate(template, props as never);
