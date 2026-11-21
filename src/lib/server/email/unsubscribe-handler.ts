@@ -70,7 +70,7 @@ export function unsubscribePage(input: { kicker: string; title: string; body: st
 body{margin:0;min-height:100vh;font-family:'Funnel Display',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:${L.page};color:${L.text};-webkit-font-smoothing:antialiased}
 main{max-width:560px;margin:0 auto;padding:56px 20px}
 .logo{display:block;width:36px;height:36px;border-radius:9px;margin:0 0 32px}
-.kicker{margin:0 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:${L.accent}}
+.kicker{margin:0 0 10px;font-size:15px;line-height:22px;font-weight:700;color:${L.accent}}
 h1{margin:0 0 24px;font-size:40px;line-height:42px;font-weight:800;letter-spacing:-1.3px}
 p{margin:0 0 16px;font-size:17px;line-height:27px}
 .muted{color:${L.secondary};font-size:15px;line-height:23px}

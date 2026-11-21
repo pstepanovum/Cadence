@@ -37,8 +37,8 @@ export function renderStreakAtRisk(props: StreakAtRiskProps): RenderedEmail {
   return compose({
     subject: `Keep your ${plural(days, "day")} streak going`,
     preheader: "Five minutes is enough.",
-    kicker: "Streak check", title: name ? `${name}, your streak is waiting` : "Your streak is waiting",
-    body: [bigNumber({ value: String(days), label: "day streak", caption: "Practise today to keep it." }), paragraph(escapeHtml(line), { spaceAfter: 20 }), button("Practise for 5 minutes", appUrl("/dashboard"))],
+    kicker: "", title: name ? `${name}, your streak is waiting` : "Your streak is waiting",
+    body: [bigNumber({ value: String(days), label: "day streak", caption: "Practise today to keep it.", icon: "flame" }), paragraph(escapeHtml(line), { spaceAfter: 20 }), button("Practise for 5 minutes", appUrl("/dashboard"))],
     text: [line, `Practise for 5 minutes: ${appUrl("/dashboard")}`],
     footer: { category: "reminder", reason: REMINDER_REASON, unsubscribeUrl: props.unsubscribeUrl },
   });
@@ -65,8 +65,8 @@ export function renderWeeklySummary(props: WeeklySummaryProps): RenderedEmail {
   return compose({
     subject: minutes > 0 ? `Your week: ${plural(minutes, "minute")} of practice` : "Your week in Cadence",
     preheader: `${plural(active, "active day")}, ${plural(streak, "day")} streak.`,
-    kicker: "Your week in Cadence", title: name ? `Your week, ${name}` : "Your week",
-    body: [paragraph(escapeHtml(lead), { spaceAfter: 20 }), stats([{ value: String(minutes), label: "minutes" }, { value: `${active}/7`, label: "active days" }, { value: String(streak), label: "day streak" }]), paragraph(escapeHtml(next), { spaceAfter: 20 }), button("See today's plan", appUrl("/dashboard"))],
+    kicker: "", title: name ? `Your week, ${name}` : "Your week",
+    body: [paragraph(escapeHtml(lead), { spaceAfter: 20 }), stats([{ value: String(minutes), label: "minutes", icon: "clock" }, { value: `${active}/7`, label: "active days", icon: "check-circle" }, { value: String(streak), label: "day streak", icon: "flame" }]), paragraph(escapeHtml(next), { spaceAfter: 20 }), button("See today's plan", appUrl("/dashboard"))],
     text: [lead, `Minutes: ${minutes}\nActive days: ${active}/7\nStreak: ${streak}`, next, `See today's plan: ${appUrl("/dashboard")}`],
     footer: { category: "reminder", reason: REMINDER_REASON, unsubscribeUrl: props.unsubscribeUrl },
   });
@@ -87,8 +87,8 @@ export function renderBadgeEarned(props: BadgeEarnedProps): RenderedEmail {
   return compose({
     subject: `You earned a badge: ${badge}`,
     preheader: description || "A new badge on your Cadence account.",
-    kicker: "New badge", title: `You earned ${badge}`,
-    body: [days ? bigNumber({ value: days, label: "day streak", caption: description }) : description && paragraph(escapeHtml(description)), paragraph("Keep the rhythm going.", { spaceAfter: 20 }), button("See your progress", appUrl("/dashboard"))],
+    kicker: "", title: `You earned ${badge}`,
+    body: [days ? bigNumber({ value: days, label: "day streak", caption: description, icon: "award" }) : description && paragraph(escapeHtml(description)), paragraph("Keep the rhythm going.", { spaceAfter: 20 }), button("See your progress", appUrl("/dashboard"))],
     text: [description, "Keep the rhythm going.", `See your progress: ${appUrl("/dashboard")}`],
     footer: { category: "reminder", reason: REMINDER_REASON, unsubscribeUrl: props.unsubscribeUrl },
   });
@@ -107,7 +107,7 @@ export function renderInactiveNudge(props: InactiveNudgeProps): RenderedEmail {
   return compose({
     subject: "Your English practice is waiting",
     preheader: "Ten minutes picks up where you left off.",
-    kicker: "It's been a while", title: name ? `Welcome back, ${name}` : "Ready when you are",
+    kicker: "", title: name ? `Welcome back, ${name}` : "Ready when you are",
     body: [paragraph(`It's been ${escapeHtml(plural(away, "day"))}. ${escapeHtml(line)}`, { spaceAfter: 20 }), button("Start today's plan", appUrl("/dashboard"))],
     text: [`It's been ${plural(away, "day")}. ${line}`, `Start today's plan: ${appUrl("/dashboard")}`],
     footer: { category: "reminder", reason: REMINDER_REASON, unsubscribeUrl: props.unsubscribeUrl },
@@ -131,7 +131,7 @@ export function renderNewsletterConfirm(props: NewsletterConfirmProps): Rendered
   return compose({
     subject: "Confirm your Cadence newsletter subscription",
     preheader: "One tap to confirm.",
-    kicker: "Newsletter · Confirm", title: "Confirm your subscription",
+    kicker: "Newsletter", title: "Confirm your subscription",
     body: [paragraph(escapeHtml(what), { spaceAfter: 20 }), button("Yes, subscribe me", url), paragraph(escapeHtml(ignore), { muted: true, small: true, spaceBefore: 16, spaceAfter: 20 }), linkFallback(url)],
     text: [what, `Yes, subscribe me: ${url}`, ignore],
     // Not marketing yet: nobody is on the list until they confirm.

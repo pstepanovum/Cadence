@@ -3,8 +3,8 @@
 // The frame every Cadence email is drawn in, and the pieces templates build
 // their bodies from.
 //
-// The look is clean and editorial, on white: the app icon, an
-// uppercase kicker in the accent, a big tight near-black headline, big
+// The look is clean and editorial, on white: the app icon, an optional
+// short line of context in the accent, a big tight near-black headline, big
 // numbers in the accent, light-gray cards with hairlines, and one strong
 // hunter-green call to action that runs full width on a phone. The footer is
 // the app icon and the small gray lines mail needs, nothing more.
@@ -188,7 +188,39 @@ export function appUrl(path: `/${string}`, origin = SITE_URL): string {
 // phone sizes hook onto; the inline style is the light default every client
 // sees.
 
+/** "day streak" -> "Day streak". */
+export function sentenceCase(text: string): string {
+  return text ? text.charAt(0).toUpperCase() + text.slice(1) : text;
+}
+
 const p = (style: string) => `margin:0;font-family:${FONT_STACK};${style}`;
+
+/**
+ * The icons mail may show: lucide icons the iPhone app itself uses, rendered
+ * by scripts/email/assets.mjs into public/email/icons/ as transparent PNGs,
+ * hunter green for light mode and yellow-green (`-dark`) for dark mode.
+ */
+export const EMAIL_ICONS = ["clock", "flame", "list-checks", "award", "mic", "messages-square", "audio-lines", "cloud", "layers", "book-open", "check-circle", "sparkles", "gamepad"] as const;
+export type EmailIcon = (typeof EMAIL_ICONS)[number];
+
+/**
+ * A small decorative icon (empty alt, presentation role): the light image,
+ * with the dark one swapped in where the client honours prefers-color-scheme.
+ */
+export function icon(name: EmailIcon, size = 24): string {
+  const image = (file: string, className: string) =>
+    `<img class="${className}" src="${escapeHtml(`${EMAIL_ASSET_ORIGIN}icons/${file}.png`)}" width="${size}" height="${size}" alt="" role="presentation" style="display:block;width:${size}px;height:${size}px;border:0;outline:none;text-decoration:none;">`;
+  return `${image(name, "c-icon-light")}<!--[if !mso]><!--><div class="c-icon-dark" style="display:none;max-height:0;overflow:hidden;mso-hide:all;">${image(`${name}-dark`, "")}</div><!--<![endif]-->`;
+}
+
+/** An icon beside a block of trusted markup, top-aligned. */
+export function withIcon(name: EmailIcon, html: string, options: { size?: number; gap?: number } = {}): string {
+  const size = options.size ?? 24;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="${size + (options.gap ?? 14)}" style="width:${size + (options.gap ?? 14)}px;padding:1px 0 0;">${icon(name, size)}</td>
+<td valign="top" style="padding:0;">${html}</td>
+</tr></table>`;
+}
 
 /** A section heading inside the body. The page headline is compose's `title`. */
 export function heading(text: string): string {
@@ -199,9 +231,9 @@ export function subheading(text: string): string {
   return `<h3 class="c-text" style="${p(`margin:0 0 8px;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(text)}</h3>`;
 }
 
-/** A small uppercase label above a section, in the accent. */
+/** A short sentence-case label above a section, in the accent. */
 export function eyebrow(text: string, options: { spaceAfter?: number } = {}): string {
-  return `<p class="c-accent" style="${p(`margin:0 0 ${options.spaceAfter ?? 12}px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.accent};`)}">${escapeHtml(text.toUpperCase())}</p>`;
+  return `<p class="c-accent" style="${p(`margin:0 0 ${options.spaceAfter ?? 10}px;font-size:15px;line-height:22px;font-weight:700;color:${L.accent};`)}">${escapeHtml(text)}</p>`;
 }
 
 /** A paragraph. `html` is trusted markup built from escaped strings. */
@@ -235,7 +267,7 @@ export function button(label: string, href: string, options: { spaceBefore?: num
   const url = escapeHtml(safeUrl(href));
   return `<table role="presentation" class="c-btn-table" cellpadding="0" cellspacing="0" border="0" style="margin:${options.spaceBefore ?? 8}px 0 ${options.spaceAfter ?? 8}px;">
 <tr><td class="c-btn" align="center" bgcolor="${L.button}" style="background-color:${L.button};border-radius:12px;mso-padding-alt:18px 32px;">
-<a class="c-btn-text" href="${url}" target="_blank" style="display:inline-block;padding:18px 32px;font-family:${FONT_STACK};font-size:17px;line-height:20px;font-weight:700;letter-spacing:0.2px;color:${L.onButton};text-decoration:none;border-radius:12px;">${escapeHtml(label)}&nbsp;&rarr;</a>
+<a class="c-btn-text" href="${url}" target="_blank" style="display:inline-block;padding:18px 32px;font-family:${FONT_STACK};font-size:17px;line-height:20px;font-weight:700;color:${L.onButton};text-decoration:none;border-radius:12px;">${escapeHtml(label)}&nbsp;&rarr;</a>
 </td></tr></table>`;
 }
 
@@ -255,7 +287,7 @@ export function detailRows(rows: [string, string][]): string {
       const top = `${index === 0 ? 0 : 12}px`;
       const bottom = `${last ? 0 : 12}px`;
       return `<tr>
-<td class="c-muted c-rule" valign="top" style="padding:${top} 12px ${bottom} 0;${edge}font-family:${FONT_STACK};font-size:11px;line-height:22px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:${L.secondary};">${escapeHtml(label.toUpperCase())}</td>
+<td class="c-muted c-rule" valign="top" style="padding:${top} 12px ${bottom} 0;${edge}font-family:${FONT_STACK};font-size:14px;line-height:22px;color:${L.secondary};">${escapeHtml(label)}</td>
 <td class="c-text c-rule" valign="top" align="right" style="padding:${top} 0 ${bottom};${edge}font-family:${FONT_STACK};font-size:15px;line-height:22px;font-weight:700;color:${L.text};">${escapeHtml(value)}</td>
 </tr>`;
     })
@@ -271,7 +303,7 @@ export function steps(items: readonly { title: string; body: string }[]): string
       const pad = `${index === 0 ? 0 : 16}px 0 16px`;
       return `<tr>
 <td class="c-rule" valign="top" width="48" style="width:48px;padding:${pad};${edge}">
-<p class="c-accent" style="${p(`font-size:20px;line-height:24px;font-weight:800;letter-spacing:0.2px;color:${L.accent};`)}">${String(index + 1).padStart(2, "0")}</p>
+<p class="c-accent" style="${p(`font-size:20px;line-height:24px;font-weight:800;color:${L.accent};`)}">${String(index + 1).padStart(2, "0")}</p>
 </td>
 <td class="c-rule" valign="top" style="padding:${pad};${edge}">
 <p class="c-text" style="${p(`margin:0 0 3px;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(item.title)}</p>
@@ -282,38 +314,49 @@ export function steps(items: readonly { title: string; body: string }[]): string
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">${rows}</table>`;
 }
 
-/** A list with small square accent markers: Plus features, habit tips. */
-export function checklist(items: readonly string[]): string {
+/** A list item: plain text, with one of the app's icons as its marker. */
+export type ChecklistItem = string | { icon: EmailIcon; text: string };
+
+/** A list with the app's icons as markers (small accent squares for plain strings): Plus features, habit tips. */
+export function checklist(items: readonly ChecklistItem[]): string {
   const rows = items
-    .map(
-      (item, index) => `<tr>
-<td valign="top" width="22" style="width:22px;padding:${index === 0 ? 8 : 20}px 0 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="c-fill" width="8" height="8" bgcolor="${L.accent}" style="width:8px;height:8px;font-size:0;line-height:0;background-color:${L.accent};border-radius:2px;">&nbsp;</td></tr></table></td>
-<td valign="top" style="padding:${index === 0 ? 0 : 12}px 0 0;"><p class="c-text" style="${p(`font-size:16px;line-height:24px;color:${L.text};`)}">${escapeHtml(item)}</p></td>
-</tr>`,
-    )
+    .map((item, index) => {
+      const text = typeof item === "string" ? item : item.text;
+      const marker =
+        typeof item === "string"
+          ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 0;"><tr><td class="c-fill" width="8" height="8" bgcolor="${L.accent}" style="width:8px;height:8px;font-size:0;line-height:0;background-color:${L.accent};border-radius:2px;">&nbsp;</td></tr></table>`
+          : icon(item.icon, 22);
+      const top = index === 0 ? 0 : 14;
+      return `<tr>
+<td valign="top" width="36" style="width:36px;padding:${top}px 0 0;">${marker}</td>
+<td valign="top" style="padding:${top}px 0 0;"><p class="c-text" style="${p(`font-size:16px;line-height:24px;color:${L.text};`)}">${escapeHtml(text)}</p></td>
+</tr>`;
+    })
     .join("");
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 26px;">${rows}</table>`;
 }
 
-/** A big-number moment on white: the number huge in the accent, an uppercase label, a line under it. */
-export function bigNumber(input: { value: string; label: string; caption?: string }): string {
+/** A big-number moment on white: the number huge in the accent, a bold label, a line under it. */
+export function bigNumber(input: { value: string; label: string; caption?: string; icon?: EmailIcon }): string {
   const caption = cleanText(input.caption, 160);
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;">
 <tr><td style="padding:0;">
+${input.icon ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 10px;"><tr><td style="padding:0;">${icon(input.icon, 32)}</td></tr></table>` : ""}
 <p class="c-accent c-big" style="${p(`font-size:88px;line-height:84px;font-weight:800;letter-spacing:-4px;color:${L.accent};`)}">${escapeHtml(input.value)}</p>
-<p class="c-text" style="${p(`margin:10px 0 0;font-size:13px;line-height:18px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.text};`)}">${escapeHtml(input.label.toUpperCase())}</p>
+<p class="c-text" style="${p(`margin:8px 0 0;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(sentenceCase(input.label))}</p>
 ${caption ? `<p class="c-muted" style="${p(`margin:6px 0 0;font-size:15px;line-height:22px;color:${L.secondary};`)}">${escapeHtml(caption)}</p>` : ""}
 </td></tr></table>`;
 }
 
 /** Up to three numbers side by side on light-gray cards. */
-export function stats(items: readonly { value: string; label: string }[]): string {
+export function stats(items: readonly { value: string; label: string; icon?: EmailIcon }[]): string {
   const width = Math.floor(100 / Math.max(1, items.length));
   const cells = items
     .map(
       (item) => `<td class="c-panel" width="${width}%" valign="top" bgcolor="${L.panel}" style="background-color:${L.panel};border:1px solid ${L.hairline};border-radius:14px;padding:16px 14px 14px;">
+${item.icon ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 10px;"><tr><td style="padding:0;">${icon(item.icon, 22)}</td></tr></table>` : ""}
 <p class="c-accent c-stat" style="${p(`margin:0 0 6px;font-size:36px;line-height:38px;font-weight:800;letter-spacing:-1.4px;color:${L.accent};`)}">${escapeHtml(item.value)}</p>
-<p class="c-muted" style="${p(`font-size:11px;line-height:15px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:${L.secondary};`)}">${escapeHtml(item.label.toUpperCase())}</p></td>`,
+<p class="c-muted" style="${p(`font-size:14px;line-height:19px;color:${L.secondary};`)}">${escapeHtml(sentenceCase(item.label))}</p></td>`,
     )
     .join(`<td width="8" style="width:8px;font-size:0;line-height:0;">&nbsp;</td>`);
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;border-collapse:separate;"><tr>${cells}</tr></table>`;
@@ -324,7 +367,7 @@ export function stats(items: readonly { value: string; label: string }[]): strin
  * dashed ticket as live text a reader can select, then the end date.
  */
 export function offerBlock(input: { kicker: string; headline: string; code: string; ends: string }): string {
-  const headline = cleanText(input.headline, 24).toUpperCase();
+  const headline = cleanText(input.headline, 24);
   const size = headline.length <= 8 ? "88px;line-height:84px;letter-spacing:-4px" : headline.length <= 14 ? "60px;line-height:60px;letter-spacing:-2.5px" : "44px;line-height:46px;letter-spacing:-1.5px";
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;">
 <tr><td style="padding:0;">
@@ -332,8 +375,9 @@ export function offerBlock(input: { kicker: string; headline: string; code: stri
 </td></tr></table>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;border-collapse:separate;">
 <tr><td class="c-ticket" align="center" style="border:2px dashed ${L.accent};border-radius:16px;padding:20px 18px 22px;">
-<p class="c-accent" style="${p(`margin:0 0 8px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:${L.accent};`)}">${escapeHtml(cleanText(input.kicker, 60).toUpperCase())}</p>
-<p class="c-text c-code" style="margin:0;font-family:${MONO_STACK};font-size:30px;line-height:36px;font-weight:700;letter-spacing:4px;color:${L.text};">${escapeHtml(input.code)}</p>
+<table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 10px;"><tr><td style="padding:0;">${icon("sparkles", 24)}</td></tr></table>
+<p class="c-accent" style="${p(`margin:0 0 8px;font-size:15px;line-height:22px;font-weight:700;color:${L.accent};`)}">${escapeHtml(cleanText(input.kicker, 60))}</p>
+<p class="c-text c-code" style="margin:0;font-family:${MONO_STACK};font-size:30px;line-height:36px;font-weight:700;color:${L.text};">${escapeHtml(input.code)}</p>
 <p class="c-muted" style="${p(`margin:10px 0 0;font-size:14px;line-height:20px;font-weight:600;color:${L.secondary};`)}">${escapeHtml(input.ends)}</p>
 </td></tr></table>`;
 }
@@ -355,8 +399,8 @@ export function postalAddress(env: Record<string, string | undefined> = process.
   return cleanText(env.CADENCE_POSTAL_ADDRESS ?? "", 200);
 }
 
-/** The app icon in the footer: hosted, small, rounded. */
-export const APP_ICON = { src: `${SITE_URL}/favicon/apple-touch-icon.png`, size: 36 } as const;
+/** The App Store icon (mobile/assets/images/ios-icon.png, rendered by scripts/email/assets.mjs), small and rounded. */
+export const APP_ICON = { src: `${EMAIL_ASSET_ORIGIN}app-icon.png`, size: 36 } as const;
 
 /**
  * Just the app icon and the small gray lines the law and good manners need:
@@ -366,7 +410,7 @@ export const APP_ICON = { src: `${SITE_URL}/favicon/apple-touch-icon.png`, size:
 function footerHtml(options: FooterOptions): string {
   const line = (html: string, spaceAfter = 8) => `<p class="c-footer" style="${p(`margin:0 0 ${spaceAfter}px;font-size:12px;line-height:19px;color:${L.footer};`)}">${html}</p>`;
   const address = postalAddress();
-  const icon = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(APP_ICON.src)}" width="${APP_ICON.size}" height="${APP_ICON.size}" alt="Cadence" style="display:block;width:${APP_ICON.size}px;height:${APP_ICON.size}px;border:0;outline:none;text-decoration:none;border-radius:9px;margin:0 0 14px;font-family:${FONT_STACK};font-size:11px;line-height:${APP_ICON.size}px;color:${L.footer};"></a>`;
+  const icon = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(APP_ICON.src)}" width="${APP_ICON.size}" height="${APP_ICON.size}" alt="Cadence" style="display:block;width:${APP_ICON.size}px;height:${APP_ICON.size}px;border:0;outline:none;text-decoration:none;border-radius:8px;margin:0 0 14px;font-family:${FONT_STACK};font-size:11px;line-height:${APP_ICON.size}px;color:${L.footer};"></a>`;
   const unsubscribe =
     options.category === "transactional"
       ? ""
@@ -400,6 +444,8 @@ const DARK_CSS = `
 .c-rule { border-color:${D.hairline} !important; }
 .c-rule-bg { background-color:${D.hairline} !important; }
 .c-ticket { border-color:${D.accent} !important; }
+.c-icon-light { display:none !important; }
+.c-icon-dark { display:block !important; max-height:none !important; overflow:visible !important; }
 `;
 
 const HEAD_CSS = `
@@ -415,7 +461,7 @@ a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !impo
   .c-headline { font-size:36px !important; line-height:38px !important; letter-spacing:-1.3px !important; }
   .c-big { font-size:72px !important; line-height:70px !important; letter-spacing:-3px !important; }
   .c-stat { font-size:28px !important; line-height:30px !important; }
-  .c-code { font-size:24px !important; letter-spacing:3px !important; }
+  .c-code { font-size:24px !important; }
   .c-btn-table { width:100% !important; }
   .c-btn-text { display:block !important; text-align:center !important; padding-left:16px !important; padding-right:16px !important; }
 }
@@ -434,7 +480,7 @@ const PREHEADER_PAD = "&#8199;&#65279;&#847; ".repeat(40);
 export interface DocumentInput {
   subject: string;
   preheader: string;
-  /** The uppercase line above the headline: "Day 1 · Start here", "Security". */
+  /** An optional short line above the headline, sentence case: "Day 1 of 13", "Security". Empty leaves it out. */
   kicker: string;
   /** The headline. */
   title: string;
@@ -443,9 +489,9 @@ export interface DocumentInput {
 }
 
 export function renderDocument(input: DocumentInput): string {
-  const kicker = cleanText(input.kicker, 60).toUpperCase() || "CADENCE";
+  const kicker = cleanText(input.kicker, 60);
   const width = MAX_WIDTH;
-  const logo = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(APP_ICON.src)}" width="${APP_ICON.size}" height="${APP_ICON.size}" alt="Cadence" style="display:block;width:${APP_ICON.size}px;height:${APP_ICON.size}px;border:0;outline:none;text-decoration:none;border-radius:9px;margin:0 0 32px;font-family:${FONT_STACK};font-size:11px;line-height:${APP_ICON.size}px;color:${L.footer};"></a>`;
+  const logo = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(APP_ICON.src)}" width="${APP_ICON.size}" height="${APP_ICON.size}" alt="Cadence" style="display:block;width:${APP_ICON.size}px;height:${APP_ICON.size}px;border:0;outline:none;text-decoration:none;border-radius:8px;margin:0 0 32px;font-family:${FONT_STACK};font-size:11px;line-height:${APP_ICON.size}px;color:${L.footer};"></a>`;
 
   return `<!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -470,7 +516,7 @@ export function renderDocument(input: DocumentInput): string {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:${width}px;">
 <tr><td class="c-card c-edge" bgcolor="${L.card}" style="background-color:${L.card};padding:0 36px 8px;">
 ${logo}
-<p class="c-accent" style="${p(`margin:0 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:${L.accent};`)}">${escapeHtml(kicker)}</p>
+${kicker ? `<p class="c-accent" style="${p(`margin:0 0 10px;font-size:15px;line-height:22px;font-weight:700;color:${L.accent};`)}">${escapeHtml(kicker)}</p>` : ""}
 <h1 class="c-text c-headline" style="${p(`font-size:46px;line-height:48px;font-weight:800;letter-spacing:-1.7px;color:${L.text};`)}">${escapeHtml(input.title)}</h1>
 </td></tr>
 <tr><td class="c-card c-edge" bgcolor="${L.card}" style="background-color:${L.card};padding:28px 36px 36px;">
@@ -494,7 +540,7 @@ export function renderText(title: string, blocks: (string | false | null | undef
 export function compose(input: {
   subject: string;
   preheader: string;
-  /** The uppercase line above the headline. */
+  /** An optional short line above the headline, sentence case. Empty leaves it out. */
   kicker: string;
   /** The headline; also the first line of the plain-text part. */
   title: string;

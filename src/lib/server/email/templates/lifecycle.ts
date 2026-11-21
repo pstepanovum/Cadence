@@ -30,6 +30,8 @@ import {
   firstName,
   formatDate,
   inlineLink,
+  withIcon,
+  type EmailIcon,
   offerBlock,
   panel,
   paragraph,
@@ -72,15 +74,15 @@ export function renderLifecycleStart(props: LifecycleStartProps): RenderedEmail 
   return compose({
     subject: "The fastest way to start with Cadence",
     preheader: "A five-minute first session: one sound, one comparison, a few flashcards.",
-    kicker: "Day 1 · Start here",
+    kicker: "",
     title: name ? `${name}, start with five minutes` : "Start with five minutes",
     body: [
       paragraph(escapeHtml(lead), { lead: true, spaceAfter: 24 }),
-      bigNumber({ value: "5", label: "minutes, start to finish", caption: "One sound, one comparison, a few cards." }),
+      bigNumber({ value: "5", label: "minutes, start to finish", caption: "One sound, one comparison, a few cards.", icon: "clock" }),
       steps(START_STEPS),
       button("Open the mouth map", url, { spaceAfter: 20 }),
       paragraph(`${escapeHtml(PLACEMENT)} ${inlineLink("Take it now", placement)}`, { muted: true, small: true, spaceAfter: 28 }),
-      panel(`${eyebrow("Tip", { spaceAfter: 8 })}${paragraph(escapeHtml(PLAY_TIP), { spaceAfter: 0 })}`, { spaceAfter: 0 }),
+      panel(withIcon("gamepad", `${eyebrow("Tip", { spaceAfter: 6 })}${paragraph(escapeHtml(PLAY_TIP), { spaceAfter: 0 })}`), { spaceAfter: 0 }),
     ],
     text: [lead, START_STEPS.map((s, i) => `${i + 1}. ${s.title}\n   ${s.body}`).join("\n\n"), `Open the mouth map: ${url}`, `${PLACEMENT} ${placement}`, `Tip: ${PLAY_TIP}`],
     footer: { category: "lifecycle", reason: TIPS_REASON, unsubscribeUrl: props.unsubscribeUrl },
@@ -100,12 +102,12 @@ export interface LifecycleHabitProps {
   unsubscribeUrl: string;
 }
 
-export function habitTips(): string[] {
+export function habitTips(): { icon: EmailIcon; text: string }[] {
   return [
-    "Practise at about the same time each day. Any day with practice in it counts towards your streak.",
-    "Turn on reminders in the iPhone app's Settings: a daily reminder at the time you choose, and an evening streak check.",
-    "Set a daily goal in Settings and let Today's plan fill it. Five minutes is enough on a busy day.",
-    `Streaks earn badges at ${BADGE_STREAKS.slice(0, -1).join(", ")} and ${BADGE_STREAKS.at(-1)} days.`,
+    { icon: "clock", text: "Practise at about the same time each day. Any day with practice in it counts towards your streak." },
+    { icon: "flame", text: "Turn on reminders in the iPhone app's Settings: a daily reminder at the time you choose, and an evening streak check." },
+    { icon: "list-checks", text: "Set a daily goal in Settings and let Today's plan fill it. Five minutes is enough on a busy day." },
+    { icon: "award", text: `Streaks earn badges at ${BADGE_STREAKS.slice(0, -1).join(", ")} and ${BADGE_STREAKS.at(-1)} days.` },
   ];
 }
 
@@ -116,19 +118,19 @@ export function renderLifecycleHabit(props: LifecycleHabitProps): RenderedEmail 
   const lessons = count(props.lessons);
   const going = streak >= 2;
   const hero = going
-    ? bigNumber({ value: String(streak), label: "day streak", caption: "Practise once today and it keeps growing." })
-    : bigNumber({ value: "5", label: "minutes a day", caption: "Enough to keep a streak going and hear the difference within a week." });
+    ? bigNumber({ value: String(streak), label: "day streak", caption: "Practise once today and it keeps growing.", icon: "flame" })
+    : bigNumber({ value: "5", label: "minutes a day", caption: "Enough to keep a streak going and hear the difference within a week.", icon: "clock" });
   const lead = going ? "You've started a rhythm. Here's how to keep it without thinking about it." : "Short and daily beats long and rare. Here's how to make practice something you just do.";
   const tips = habitTips();
   const url = appUrl("/today");
   return compose({
     subject: going ? `You're on a ${streak}-day streak. Here's how to keep it` : "Make English practice a daily habit",
     preheader: "Same time each day, a reminder, a small goal. That's the whole trick.",
-    kicker: "Day 3 · Habit",
+    kicker: "",
     title: name ? `${name}, make it daily` : "Make it daily",
     body: [
       hero,
-      minutes > 0 ? stats([{ value: String(minutes), label: "minutes practised" }, { value: String(lessons), label: plural(lessons, "lesson").replace(/^\d+ /, "") + " done" }]) : false,
+      minutes > 0 ? stats([{ value: String(minutes), label: "minutes practised", icon: "clock" }, { value: String(lessons), label: plural(lessons, "lesson").replace(/^\d+ /, "") + " done", icon: "book-open" }]) : false,
       paragraph(escapeHtml(lead), { lead: true, spaceAfter: 20 }),
       checklist(tips),
       button("Practise now", url),
@@ -137,7 +139,7 @@ export function renderLifecycleHabit(props: LifecycleHabitProps): RenderedEmail 
       going ? `Streak: ${streak} days` : "Five minutes a day is enough.",
       minutes > 0 ? `Minutes practised: ${minutes}\nLessons done: ${lessons}` : false,
       lead,
-      tips.map((tip) => `- ${tip}`).join("\n"),
+      tips.map((tip) => `- ${tip.text}`).join("\n"),
       `Practise now: ${url}`,
     ],
     footer: { category: "lifecycle", reason: TIPS_REASON, unsubscribeUrl: props.unsubscribeUrl },
@@ -151,13 +153,13 @@ export interface LifecyclePlusProps {
   unsubscribeUrl: string;
 }
 
-export const PLUS_BENEFITS = [
-  "Pronunciation scoring down to the sound, on every recording",
-  "The AI coach for open conversation, with spoken grammar feedback",
-  "Transcription and natural voices, wherever you practise",
-  "Your full progress synced across your devices",
-  "Every sound and grammar point tracked over time",
-] as const;
+export const PLUS_BENEFITS: readonly { icon: EmailIcon; text: string }[] = [
+  { icon: "mic", text: "Pronunciation scoring down to the sound, on every recording" },
+  { icon: "messages-square", text: "The AI coach for open conversation, with spoken grammar feedback" },
+  { icon: "audio-lines", text: "Transcription and natural voices, wherever you practise" },
+  { icon: "cloud", text: "Your full progress synced across your devices" },
+  { icon: "layers", text: "Every sound and grammar point tracked over time" },
+];
 
 export function plusTerms(): string {
   return `Plus renews automatically at the plan price until you cancel. The ${YEARLY_TRIAL_DAYS}-day free trial is for the yearly plan and first-time subscribers; cancel before it ends and you won't be charged (on iPhone, at least 24 hours before). Cancel any time: on the web from your account page, on iPhone in Settings, your name, Subscriptions. Prices in US dollars; the App Store shows your local price.`;
@@ -172,11 +174,11 @@ export function renderLifecyclePlus(props: LifecyclePlusProps): RenderedEmail {
   return compose({
     subject: "What Cadence Plus adds to your practice",
     preheader: `Scoring, the AI coach and sync. ${YEARLY_TRIAL_DAYS} days free on the yearly plan.`,
-    kicker: "Day 6 · Cadence Plus",
+    kicker: "Cadence Plus",
     title: name ? `${name}, practise with AI anywhere` : "Practise with AI anywhere",
     body: [
       paragraph(escapeHtml(lead), { lead: true, spaceAfter: 24 }),
-      bigNumber({ value: String(YEARLY_TRIAL_DAYS), label: "days free on yearly", caption: `Then ${YEARLY}, or ${MONTHLY} on the monthly plan.` }),
+      bigNumber({ value: String(YEARLY_TRIAL_DAYS), label: "days free on yearly", caption: `Then ${YEARLY}, or ${MONTHLY} on the monthly plan.`, icon: "sparkles" }),
       eyebrow("What Plus adds"),
       checklist(PLUS_BENEFITS),
       detailRows([["Monthly", MONTHLY], ["Yearly", YEARLY], ["Free trial", `${YEARLY_TRIAL_DAYS} days, yearly plan`]]),
@@ -187,7 +189,7 @@ export function renderLifecyclePlus(props: LifecyclePlusProps): RenderedEmail {
     text: [
       lead,
       `${YEARLY_TRIAL_DAYS} days free on the yearly plan. Then ${YEARLY}, or ${MONTHLY} on the monthly plan.`,
-      `What Plus adds:\n${PLUS_BENEFITS.map((b) => `- ${b}`).join("\n")}`,
+      `What Plus adds:\n${PLUS_BENEFITS.map((b) => `- ${b.text}`).join("\n")}`,
       allowance,
       `See Cadence Plus: ${url}`,
       terms,
@@ -235,10 +237,10 @@ export function renderSaleOffer(props: SaleProps): RenderedEmail {
   return compose({
     subject: `${label} Cadence Plus, until ${short}`,
     preheader: `Use code ${code} in the App Store. Ends ${ends}.`,
-    kicker: "Offer · Limited time",
+    kicker: "Limited-time offer",
     title: name ? `${name}, an offer on Plus` : "An offer on Cadence Plus",
     body: [
-      offerBlock({ kicker: "Cadence Plus · App Store code", headline: label, code, ends: `Ends ${ends}` }),
+      offerBlock({ kicker: "Your App Store code", headline: label, code, ends: `Ends ${ends}` }),
       paragraph(escapeHtml(lead), { lead: true, spaceAfter: 24 }),
       eyebrow("How to redeem"),
       steps(REDEEM_STEPS),
@@ -257,10 +259,10 @@ export function renderSaleReminder(props: SaleProps): RenderedEmail {
   return compose({
     subject: `Last days: ${label} Cadence Plus ends ${short}`,
     preheader: `Code ${code} works until ${ends}.`,
-    kicker: "Offer · Ends soon",
+    kicker: "Offer ends soon",
     title: name ? `${name}, last call` : "Last call",
     body: [
-      offerBlock({ kicker: "Cadence Plus · Ends soon", headline: label, code, ends: `Ends ${ends}` }),
+      offerBlock({ kicker: "Your App Store code", headline: label, code, ends: `Ends ${ends}` }),
       paragraph(escapeHtml(lead), { lead: true, spaceAfter: 20 }),
       button("Redeem on iPhone", url, { spaceAfter: 20 }),
       paragraph(escapeHtml(BY_HAND), { muted: true, small: true, spaceAfter: 12 }),

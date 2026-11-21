@@ -22,7 +22,7 @@ for (const id of TEMPLATE_IDS) {
   if (links.length !== 1 || !links[0].includes("https://fonts.googleapis.com/")) say("the only <link> is the Google Fonts stylesheet");
   if (/<script\b/i.test(html)) say("no scripts");
   for (const img of html.match(/<img\b[^>]*>/g) ?? []) {
-    if (!/\salt="[^"]+"/.test(img)) say(`image without alt: ${img.slice(0, 80)}`);
+    if (!/\salt="[^"]*"/.test(img) || (/\salt=""/.test(img) && !/role="presentation"/.test(img))) say(`image without alt (empty alt only on decorative icons): ${img.slice(0, 80)}`);
     if (!/\ssrc="https:\/\//.test(img)) say(`image not on https: ${img.slice(0, 80)}`);
     if (!/\swidth="\d+"/.test(img)) say("image without a width attribute");
   }

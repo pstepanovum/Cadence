@@ -24,7 +24,7 @@ export function renderMcpAuthorized(props: McpAuthorizedProps): RenderedEmail {
   return compose({
     subject: `${name} can now use your Cadence account`,
     preheader: `${access}. Disconnect it any time.`,
-    kicker: "Security · Connected apps", title: "New app connected",
+    kicker: "Security", title: "New app connected",
     body: [paragraph(`${escapeHtml(name)} was connected to your Cadence account through the Cadence connector.`), detailRows([["App", name], ["Sends sign-ins to", destination], ["Access", access], ["When", when]]), paragraph(escapeHtml(revoke), { muted: true, spaceAfter: 20 }), button("Review connected apps", appUrl("/account/connections"))],
     text: [`${name} was connected to your Cadence account through the Cadence connector.`, [`App: ${name}`, destination && `Sends sign-ins to: ${destination}`, `Access: ${access}`, when && `When: ${when}`].filter(Boolean).join("\n"), revoke, `Review connected apps: ${appUrl("/account/connections")}`],
     footer: { category: "transactional", reason: SECURITY_REASON },
@@ -44,7 +44,7 @@ export function renderDevicePaired(props: DevicePairedProps): RenderedEmail {
   return compose({
     subject: "A new device is syncing with your Cadence account",
     preheader: `${device} now syncs your progress.`,
-    kicker: "Security · Devices", title: "New device added",
+    kicker: "Security", title: "New device added",
     body: [paragraph("A device started syncing your Cadence progress."), detailRows([["Device", device], ["Platform", cleanText(props.platform, 40)], ["When", when]]), paragraph(escapeHtml(notYou), { muted: true, spaceAfter: 20 }), button("Review devices", appUrl("/account"))],
     text: ["A device started syncing your Cadence progress.", [`Device: ${device}`, `Platform: ${cleanText(props.platform, 40)}`, when && `When: ${when}`].filter(Boolean).join("\n"), notYou, `Review devices: ${appUrl("/account")}`],
     footer: { category: "transactional", reason: SECURITY_REASON },
@@ -64,7 +64,7 @@ export function renderSuspiciousActivity(props: SuspiciousActivityProps): Render
   return compose({
     subject: "Unusual activity on your Cadence account",
     preheader: summary,
-    kicker: "Security alert", title: "We noticed unusual activity",
+    kicker: "Security", title: "We noticed unusual activity",
     body: [paragraph(`${escapeHtml(summary)}${when ? `, around ${escapeHtml(when)}` : ""}. We've slowed down further attempts.`), paragraph(escapeHtml(advice), { spaceAfter: 20 }), button("Change password", appUrl("/forgot-password"))],
     text: [`${summary}${when ? `, around ${when}` : ""}. We've slowed down further attempts.`, advice, `Change password: ${appUrl("/forgot-password")}`],
     footer: { category: "transactional", reason: "You're getting this because we watch for attacks on Cadence accounts." },

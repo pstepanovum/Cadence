@@ -5,11 +5,24 @@
 // at most 600 px wide, under Gmail's 102 KB clip, an unsubscribe link exactly
 // when the mail is opt-in, and hostile props escaped.
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { describe, it } from "node:test";
+import { fileURLToPath } from "node:url";
 
+import { EMAIL_ICONS } from "../../src/lib/server/email/layout.ts";
 import { TEMPLATES, TEMPLATE_IDS, renderFixture, renderTemplate } from "../../src/lib/server/email/templates/index.ts";
 
+const PUBLIC_EMAIL = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "public", "email");
+
 describe("email templates", () => {
+  it("has a light and a dark PNG for every icon mail may use", () => {
+    for (const name of EMAIL_ICONS) {
+      assert.ok(existsSync(join(PUBLIC_EMAIL, "icons", `${name}.png`)), name);
+      assert.ok(existsSync(join(PUBLIC_EMAIL, "icons", `${name}-dark.png`)), `${name}-dark`);
+    }
+  });
+
   for (const id of TEMPLATE_IDS) {
     it(`${id} renders a complete message`, () => {
       const email = renderFixture(id);
@@ -23,9 +36,23 @@ describe("email templates", () => {
         assert.doesNotMatch(part, /undefined|NaN|\[object Object\]|\$\{|\{\{(?! doubleoptin)/, "unreplaced value");
       }
       assert.ok(Buffer.byteLength(email.html) < 100 * 1024, "under 100 KB");
-      for (const img of email.html.match(/<img\b[^>]*>/g) ?? []) assert.match(img, /\salt="[^"]+"/, "img alt");
+      for (const img of email.html.match(/<img\b[^>]*>/g) ?? []) {
+        // Decorative icons carry an empty alt and role="presentation"; every other image says what it is.
+        assert.match(img, /\salt="[^"]*"/, "img alt");
+        if (/\salt=""/.test(img)) assert.match(img, /role="presentation"/, "empty alt only on decorative icons");
+        // Every image is one Cadence hosts with its email assets, and exists in public/email.
+        const src = /\ssrc="https:\/\/cadence\.pstepanov\.dev\/email\/([^"]+)"/.exec(img)?.[1];
+        assert.ok(src, `image not from the email assets: ${img.slice(0, 80)}`);
+        assert.ok(existsSync(join(PUBLIC_EMAIL, src)), `missing public/email/${src}`);
+      }
       assert.match(email.html, /max-width:600px/);
       assert.doesNotMatch(email.html, /c-band|c-offer/, "no colour bands or blocks");
+      // No uppercase styling or wide tracking anywhere; tight negative tracking on big type is fine.
+      assert.doesNotMatch(email.html, /text-transform:\s*uppercase/i, "no uppercase styling");
+      assert.doesNotMatch(email.html, /letter-spacing:\s*[0-9.]*[1-9]/, "no positive letter-spacing");
+      const visible = email.html.replace(/<head>[\s\S]*?<\/head>/, "").replace(/<[^>]+>/g, " ");
+      const shouted = (visible.match(/\b[A-Z]{4,}\b/g) ?? []).filter((word) => word !== "CADENCEHALF" && word !== "JSON" && word !== "PREVIEW");
+      assert.deepEqual(shouted, [], "no words set in capitals");
       // White page and cards, gray panels and hairlines; the only colour fill is hunter green (the button and bullet squares).
       const fills = new Set((email.html.match(/bgcolor="(#[0-9A-Fa-f]{6})"/g) ?? []).map((m) => m.slice(9, 16).toUpperCase()));
       for (const fill of fills) assert.ok(["#FFFFFF", "#F4F5F6", "#E3E6E9", "#386641"].includes(fill), `unexpected fill ${fill}`);
@@ -35,7 +62,7 @@ describe("email templates", () => {
       assert.equal((email.html.match(/<link /g) ?? []).length, 1, "one font link only");
       const hasUnsubscribe = /Unsubscribe/.test(email.html);
       assert.equal(hasUnsubscribe, entry.category !== "transactional", "unsubscribe only on opt-in mail");
-      assert.equal((email.html.match(/favicon\/apple-touch-icon\.png" width="36" height="36" alt="Cadence"/g) ?? []).length, 2, "app icon at the top and in the footer");
+      assert.equal((email.html.match(/email\/app-icon\.png" width="36" height="36" alt="Cadence"/g) ?? []).length, 2, "App Store icon at the top and in the footer");
     });
   }
 
