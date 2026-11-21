@@ -1,7 +1,8 @@
 // FILE: src/components/account/AccountPanel.tsx
 //
-// The cloud account page: Plus status and its controls, the email switches
-// (getting-started tips, newsletter), download my data, delete account. Plus is read from GET /api/me;
+// The cloud account page: Plus status and its controls, Account › Email (a
+// switch per email category, each on until turned off), download my data,
+// delete account. Plus is read from GET /api/me;
 // the page never decides entitlement itself.
 "use client";
 
@@ -11,7 +12,7 @@ import { signOut } from "firebase/auth";
 import { ConnectedApps } from "@/components/account/ConnectedApps";
 import { PLAN_NAMES, readMe, type Me } from "@/components/account/me";
 import { PlanButton, PortalButton } from "@/components/billing/PlanButton";
-import { subscribeToNewsletter, unsubscribeFromNewsletter } from "@/components/newsletter/newsletter-api";
+import { setAccountNewsletter } from "@/components/newsletter/newsletter-api";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cloudFetch } from "@/hooks/cloud-fetch";
@@ -19,6 +20,7 @@ import { describeAuthError } from "@/lib/firebase/auth-errors";
 import { SignInMethods } from "@/components/auth/SignInMethods";
 import { getFirebaseAuth } from "@/lib/firebase/client";
 import { providerIds, reauthenticate } from "@/lib/firebase/providers";
+import { EMAIL_PREF_KEYS, EMAIL_PREF_LABELS, readEmailPrefs, type EmailPrefKey } from "@/lib/platform/email-consent";
 import { linkedMethods, methodLabel, type SignInMethod } from "@/lib/platform/sign-in-methods";
 
 const dateFormat = (ms: number) => new Date(ms).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
@@ -38,8 +40,7 @@ export function AccountPanel({ email, checkout }: { email: string | null; checko
           </p>
         ) : null}
         <PlusCard me={me} />
-        <NewsletterCard email={email} me={me} />
-        {me?.isPlus ? null : <TipsCard me={me} />}
+        <EmailCard me={me} />
       </div>
       <div className="flex flex-col gap-4">
         <SignInMethods />
@@ -104,103 +105,72 @@ function PlusCard({ me }: { me: Me | null | undefined }) {
   );
 }
 
-function NewsletterCard({ email, me }: { email: string | null; me: Me | null | undefined }) {
-  const [override, setOn] = useState<boolean | null>(null);
-  const on = override ?? (me === undefined ? null : (me?.newsletter ?? false));
-  const [state, setState] = useState<"idle" | "busy" | "pending">("idle");
+/**
+ * Account › Email: one switch per category, each on unless turned off
+ * (src/lib/platform/email-consent.ts). Tips and reminders are stored on the
+ * account (PATCH /api/me); news and offers also update Brevo list 5
+ * (POST /api/newsletter). Account and billing email cannot be turned off.
+ */
+function EmailCard({ me }: { me: Me | null | undefined }) {
+  const [override, setOverride] = useState<Partial<Record<EmailPrefKey, boolean>>>({});
+  const [busy, setBusy] = useState<EmailPrefKey | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const id = useId();
+  const loaded = me === undefined ? null : (me?.emailPrefs ?? readEmailPrefs(undefined));
+  // Getting-started tips stop by themselves once Plus is on, so Plus accounts don't see that switch.
+  const keys = EMAIL_PREF_KEYS.filter((key) => key !== "lifecycle" || !me?.isPlus);
 
-  async function toggle() {
-    if (on === null || !email) return;
+  async function toggle(key: EmailPrefKey) {
+    if (!loaded) return;
+    const next = !(override[key] ?? loaded[key]);
     setError(null);
-    setState("busy");
-    if (on) {
-      const outcome = await unsubscribeFromNewsletter();
-      setState("idle");
-      if (outcome === "done") setOn(false);
-      else if (outcome === "link") setError("To stop the newsletter, use the unsubscribe link at the bottom of any newsletter email.");
-      else setError("Could not update that. Try again, or use the unsubscribe link in any email.");
-      return;
-    }
-    const result = await subscribeToNewsletter(email, "account");
-    if (result.ok) setState("pending");
-    else {
-      setState("idle");
-      setError("Could not sign you up right now. Try again later.");
-    }
+    setBusy(key);
+    const ok =
+      key === "newsletter"
+        ? await setAccountNewsletter(next)
+        : await cloudFetch("/api/me", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ [key]: next }) })
+            .then((response) => response.ok)
+            .catch(() => false);
+    setBusy(null);
+    if (ok) setOverride((current) => ({ ...current, [key]: next }));
+    else setError("Could not update that. Try again, or use the unsubscribe link in any email.");
   }
 
   return (
-    <Card className="bg-white">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h2 id={`${id}-t`} className="font-kicker text-xl text-carbon-black">Newsletter</h2>
-          <p id={`${id}-d`} className="mt-1 text-sm leading-6 text-iron-grey">Product updates and occasional offers. A few emails a month at most.</p>
-        </div>
-        <button
-          type="button"
-          role="switch"
-          aria-checked={on === true}
-          aria-labelledby={`${id}-t`}
-          aria-describedby={`${id}-d`}
-          disabled={on === null || state !== "idle" || !email}
-          onClick={() => void toggle()}
-          className={`relative h-8 w-14 shrink-0 cursor-pointer rounded-full transition-colors disabled:cursor-default disabled:opacity-60 ${on ? "bg-sage-green" : "bg-pale-slate"}`}
-        >
-          <span className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-[left] on-color ${on ? "left-7" : "left-1"}`} />
-        </button>
-      </div>
-      {state === "pending" ? <p role="status" className="mt-3 text-sm text-carbon-black">Check your email and click the link to confirm.</p> : null}
+    <Card className="bg-white" id="email">
+      <h2 className="font-kicker text-xl text-carbon-black">Email</h2>
+      <p className="mt-1 text-sm leading-6 text-iron-grey">Account, security and billing email always arrives. Everything else is up to you.</p>
+      <ul className="mt-4 flex flex-col gap-4">
+        {keys.map((key) => (
+          <EmailSwitch key={key} prefKey={key} on={loaded ? (override[key] ?? loaded[key]) : null} busy={busy !== null} onToggle={() => void toggle(key)} />
+        ))}
+      </ul>
       {error ? <p role="alert" className="mt-3 text-sm text-blushed-brick">{error}</p> : null}
     </Card>
   );
 }
 
-function TipsCard({ me }: { me: Me | null | undefined }) {
-  const [override, setOn] = useState<boolean | null>(null);
-  const on = override ?? (me === undefined ? null : (me?.lifecycle ?? true));
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+function EmailSwitch({ prefKey, on, busy, onToggle }: { prefKey: EmailPrefKey; on: boolean | null; busy: boolean; onToggle: () => void }) {
   const id = useId();
-
-  async function toggle() {
-    if (on === null) return;
-    setError(null);
-    setBusy(true);
-    try {
-      const response = await cloudFetch("/api/me", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ lifecycle: !on }) });
-      if (!response.ok) throw new Error();
-      setOn(!on);
-    } catch {
-      setError("Could not update that. Try again, or use the unsubscribe link in any tips email.");
-    } finally {
-      setBusy(false);
-    }
-  }
-
+  const label = EMAIL_PREF_LABELS[prefKey];
   return (
-    <Card className="bg-white">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h2 id={`${id}-t`} className="font-kicker text-xl text-carbon-black">Getting-started tips</h2>
-          <p id={`${id}-d`} className="mt-1 text-sm leading-6 text-iron-grey">A few short emails in your first two weeks on getting the most from Cadence.</p>
-        </div>
-        <button
-          type="button"
-          role="switch"
-          aria-checked={on === true}
-          aria-labelledby={`${id}-t`}
-          aria-describedby={`${id}-d`}
-          disabled={on === null || busy}
-          onClick={() => void toggle()}
-          className={`relative h-8 w-14 shrink-0 cursor-pointer rounded-full transition-colors disabled:cursor-default disabled:opacity-60 ${on ? "bg-sage-green" : "bg-pale-slate"}`}
-        >
-          <span className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-[left] on-color ${on ? "left-7" : "left-1"}`} />
-        </button>
+    <li className="flex items-start justify-between gap-4">
+      <div>
+        <h3 id={`${id}-t`} className="font-semibold text-carbon-black">{label.title}</h3>
+        <p id={`${id}-d`} className="mt-0.5 text-sm leading-6 text-iron-grey">{label.detail}</p>
       </div>
-      {error ? <p role="alert" className="mt-3 text-sm text-blushed-brick">{error}</p> : null}
-    </Card>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={on === true}
+        aria-labelledby={`${id}-t`}
+        aria-describedby={`${id}-d`}
+        disabled={on === null || busy}
+        onClick={onToggle}
+        className={`relative h-8 w-14 shrink-0 cursor-pointer rounded-full transition-colors disabled:cursor-default disabled:opacity-60 ${on ? "bg-sage-green" : "bg-pale-slate"}`}
+      >
+        <span className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-[left] on-color ${on ? "left-7" : "left-1"}`} />
+      </button>
+    </li>
   );
 }
 

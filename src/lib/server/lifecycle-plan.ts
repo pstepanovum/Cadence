@@ -3,10 +3,10 @@
 // Which lifecycle email an account is due right now, if any. Pure: the runner
 // (./lifecycle.ts) gathers the facts and this decides.
 //
-//   day 1    lifecycle-start   tips list   (on unless unsubscribed)
+//   day 1    lifecycle-start   tips list   (on unless turned off)
 //   day 3    lifecycle-habit   tips list
 //   day 6    lifecycle-plus    tips list
-//   day 10   sale-offer        newsletter  (only with the offers opt-in, and an offer running)
+//   day 10   sale-offer        newsletter  (unless news and offers are off, and only while an offer runs)
 //   day 13   sale-reminder     newsletter  (only after sale-offer went out)
 //
 // Days count the learner's own calendar days since signing up, and mail goes

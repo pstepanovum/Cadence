@@ -18,6 +18,7 @@ import {
   type PlusRecord,
   type PlusSource,
 } from "../platform/engine-routing";
+import { readEmailPrefs, type EmailPrefs } from "../platform/email-consent";
 import { db as defaultDb } from "./firebase";
 
 /** What a webhook stores per source: the spec's record plus where it came from. */
@@ -47,14 +48,12 @@ export interface AccountState {
   deletion: { requestedAt: number; status: string } | null;
 }
 
-export interface EmailPrefs {
-  /** Streak at risk, weekly summary, badges, inactive nudge. Off until the learner turns them on. */
-  reminders: boolean;
-  /** Set by the newsletter double opt-in. Also the consent for offers (the lifecycle sale emails). */
-  newsletter: boolean;
-  /** Getting-started tips in the first two weeks. On unless the learner turned them off. */
-  lifecycle: boolean;
-}
+/**
+ * reminders (streak, weekly summary, badges, nudges), lifecycle (getting-started
+ * tips) and newsletter (news and offers, including the lifecycle sale): each
+ * on unless the learner stored false (src/lib/platform/email-consent.ts).
+ */
+export type { EmailPrefs };
 
 function millis(value: unknown): number | null {
   if (value instanceof Timestamp) return value.toMillis();
@@ -106,7 +105,7 @@ export function readAccount(data: DocumentData | undefined, now = Date.now()): A
     stripeCustomerId: typeof data?.stripeCustomerId === "string" ? data.stripeCustomerId : null,
     createdAt: millis(data?.createdAt),
     detailPurgeAt: millis(data?.detailPurgeAt),
-    emailPrefs: { reminders: prefs.reminders === true, newsletter: prefs.newsletter === true, lifecycle: prefs.lifecycle !== false },
+    emailPrefs: readEmailPrefs(prefs),
     deletion: deletion && typeof deletion.status === "string" ? { requestedAt: millis(deletion.requestedAt) ?? 0, status: deletion.status } : null,
   };
 }

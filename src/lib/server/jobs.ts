@@ -7,7 +7,7 @@
 //   daily   purge detailed progress 90 days after Plus lapsed; retry account
 //           deletions that did not finish; drop inbox cards nobody collected
 //           in 90 days; queue trial-ending (web trials, 2 days ahead) and the
-//           opt-in reminders; then deliver mail
+//           reminders (on unless turned off); then deliver mail
 //   mail    deliver whatever is waiting in mailQueue
 import { createHash, timingSafeEqual } from "node:crypto";
 import { FieldValue, type DocumentSnapshot, type Firestore } from "firebase-admin/firestore";
@@ -15,6 +15,7 @@ import { FieldValue, type DocumentSnapshot, type Firestore } from "firebase-admi
 import { currentStreak, shiftDay } from "../platform/progress-model";
 import { runDeletion } from "./account";
 import { BADGE_STREAKS } from "./badges";
+import { readEmailPrefs } from "../platform/email-consent";
 import { readAccount } from "./entitlement";
 import { appOrigin } from "./env";
 import { db as defaultDb } from "./firebase";
@@ -124,8 +125,11 @@ export async function runDailyJob(options: { db?: Firestore; now?: number } = {}
     if (await queueMail(key, { template: "trial-ending", uid: doc.id, props: { productId: record.productId, trialEndsAt: record.expiresAt, portalUrl: `${appOrigin()}/account` } }, { db: firestore, now })) count("trial-ending");
   }
 
-  // 5. Opt-in reminders.
-  const optedIn = await firestore.collection("users").where("emailPrefs.reminders", "==", true).limit(2000).get();
+  // 5. Reminders, on for every account that did not turn them off. Firestore
+  // cannot query "not false" and still match an unset field, so the accounts
+  // are read (only the fields needed) and filtered here.
+  const accounts = await firestore.collection("users").select("emailPrefs", "displayName", "weekly").limit(5000).get();
+  const optedIn = { docs: accounts.docs.filter((doc) => readEmailPrefs(doc.data().emailPrefs).reminders) };
   const weekday = new Date(now).getUTCDay();
   // Summaries are read in batches (getAll), not one round trip per learner,
   // so two thousand opted-in learners fit well inside the request timeout.
@@ -138,14 +142,19 @@ export async function runDailyJob(options: { db?: Firestore; now?: number } = {}
   for (const doc of optedIn.docs) {
     const summarySnapshot = summaries.get(doc.id);
     if (!summarySnapshot?.exists) continue;
-    const summary = readSummary(summarySnapshot.data());
-    const data = doc.data();
-    const lastWeeklyMinutes = typeof data.weekly?.lastTotalMinutes === "number" ? data.weekly.lastTotalMinutes : null;
-    const due = remindersFor({ uid: doc.id, name: typeof data.displayName === "string" ? data.displayName : undefined, summary, today, weekday, lastWeeklyMinutes, now });
-    for (const item of due) {
-      if (await queueMail(item.key, { template: item.template, uid: doc.id, props: item.props as never }, { db: firestore, now })) count(item.template);
+    // Every account is read now, so one malformed summary must not stop the rest.
+    try {
+      const summary = readSummary(summarySnapshot.data());
+      const data = doc.data();
+      const lastWeeklyMinutes = typeof data.weekly?.lastTotalMinutes === "number" ? data.weekly.lastTotalMinutes : null;
+      const due = remindersFor({ uid: doc.id, name: typeof data.displayName === "string" ? data.displayName : undefined, summary, today, weekday, lastWeeklyMinutes, now });
+      for (const item of due) {
+        if (await queueMail(item.key, { template: item.template, uid: doc.id, props: item.props as never }, { db: firestore, now })) count(item.template);
+      }
+      if (weekday === 1) await doc.ref.set({ weekly: { lastTotalMinutes: summary.totalMinutes, at: now } }, { merge: true });
+    } catch (error) {
+      console.error(`Reminders for ${doc.id} skipped:`, error instanceof Error ? error.message : error);
     }
-    if (weekday === 1) await doc.ref.set({ weekly: { lastTotalMinutes: summary.totalMinutes, at: now } }, { merge: true });
   }
 
   report.mail = await deliverPending({ db: firestore });

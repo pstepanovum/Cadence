@@ -55,7 +55,7 @@ export interface TemplateEntry<Id extends TemplateId> {
   name: string;
   group: "account" | "billing" | "security" | "engagement" | "support" | "lifecycle";
   category: EmailCategory;
-  /** The list an opt-in template belongs to; its unsubscribe link leaves that list. */
+  /** The list a template belongs to (each on unless turned off); its unsubscribe link leaves that list. */
   list?: EmailList;
   render: (props: TemplateProps[Id]) => RenderedEmail;
   fixture: TemplateProps[Id];

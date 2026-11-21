@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "What Cadence keeps, why, for how long, and how to download or delete it.",
 };
 
-const UPDATED = "October 24, 2026";
+const UPDATED = "November 21, 2026";
 
 const sections: LegalSection[] = [
   {
@@ -87,12 +87,15 @@ const sections: LegalSection[] = [
     ),
   },
   {
-    id: "newsletter",
-    title: "Email and the newsletter",
+    id: "emails",
+    title: "Emails",
     body: (
       <>
-        <p>We send emails your account needs: confirming your address, resetting your password, and receipts or notices about your subscription. They go through Brevo.</p>
-        <p>The newsletter (product updates and occasional offers) is opt-in. You are added only after clicking the confirmation link we send, and every newsletter email has an unsubscribe link. You can also turn it off on your <Link href="/account" className="underline">account page</Link>.</p>
+        <p><strong>Emails your account needs.</strong> Confirming your address, resetting your password, notices about sign-ins and connected apps, and receipts and notices about your subscription. These always arrive while you have an account.</p>
+        <p><strong>Emails you can turn off.</strong> Getting-started tips (a few short emails in your first two weeks), practice reminders (streak checks, a weekly summary, badges, and a nudge when you have been away), and product news and offers (new lessons, what changed in Cadence, and occasional discounts on Cadence Plus). For an account, each of these is on unless you turn it off, and we say so when you create the account. Turn any of them off on your <Link href="/account#email" className="underline">account page</Link> under Email, in the iPhone app under Settings, Email, or with the one-click unsubscribe link at the bottom of every one of these emails. Turning one off leaves the others as they are.</p>
+        <p><strong>Without an account.</strong> If you sign up for the newsletter on the website without an account, you are added only after clicking the confirmation link we send.</p>
+        <p><strong>Who sends them.</strong> Email goes through Brevo (Sendinblue SAS, France), which processes, on our behalf, your email address, your name if you gave one, the message, and what happens to it: whether it was delivered, bounced, or marked as spam. Brevo also records when an email is opened (with a small image in the message) and which links are clicked (links pass through Brevo first); we use these only to see whether our emails work. Your plan, platform and level go along with the newsletter so it can fit you.</p>
+        <p><strong>How long we keep it.</strong> Each email waiting to be sent is kept on our servers for at most 60 days. A short log of which getting-started emails your account has had, so none is sent twice, is kept until your account is deleted. Brevo keeps its delivery records for the time its own policy sets, and removes you as a contact when your account is deleted.</p>
       </>
     ),
   },

@@ -6,7 +6,6 @@
 // same. While the keyboard is up only the email form shows, so the fields and
 // the button stay above it on an iPhone SE.
 import * as AppleAuthentication from "expo-apple-authentication";
-import { Check } from "lucide-react-native";
 import { useRef, useState } from "react";
 import { Platform, Pressable, StyleSheet, Text, View, type TextInput } from "react-native";
 import { SvgXml } from "react-native-svg";
@@ -28,8 +27,9 @@ import {
   type ProviderMethod,
 } from "@/lib/firebase-providers";
 import { haptics } from "@/lib/haptics";
+import { SIGNUP_EMAIL_NOTICE } from "@/platform/email-consent";
 import { continueLabel, pendingLinkMessage } from "@/platform/sign-in-methods";
-import { colors, currentScheme, fonts, maxScale, radii, spacing, TAP_TARGET, type, themed } from "@/theme/theme";
+import { colors, currentScheme, fonts, maxScale, radii, spacing, type, themed } from "@/theme/theme";
 
 export const MIN_PASSWORD = 8;
 /** The Firebase project's password policy caps a password here; longer is refused on the server. */
@@ -79,8 +79,6 @@ export type AuthIntent = "signin" | "signup";
 export interface SignedIn {
   /** True for a new email account. */
   created: boolean;
-  /** The product-news box, ticked only by the person. */
-  newsletter: boolean;
 }
 
 export function SignInOptions({
@@ -103,7 +101,6 @@ export function SignInOptions({
   const typing = useKeyboardVisible();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [news, setNews] = useState(false);
   const [busy, setBusy] = useState<ProviderMethod | "email" | null>(null);
   const [error, setError] = useState<string | null>(null);
   const passwordRef = useRef<TextInput>(null);
@@ -128,7 +125,7 @@ export function SignInOptions({
     try {
       const outcome = await signInWithProvider(method);
       if (outcome === "signed-in") {
-        await onSignedIn?.({ created: false, newsletter: false });
+        await onSignedIn?.({ created: false });
         haptics.success();
       } else if (outcome === "link-needed") {
         haptics.warning();
@@ -160,7 +157,7 @@ export function SignInOptions({
     try {
       if (creating) await createAccountWithEmail(trimmed, password);
       else await signInWithEmail(trimmed, password);
-      await onSignedIn?.({ created: creating, newsletter: creating && news });
+      await onSignedIn?.({ created: creating });
       haptics.success();
     } catch (cause) {
       fail(cause, creating ? "Couldn't create your account. Try again." : "Couldn't sign in. Try again.");
@@ -234,7 +231,14 @@ export function SignInOptions({
         ) : null}
       </View>
 
-      {creating ? <NewsCheckbox checked={news} onChange={setNews} /> : null}
+      {creating ? (
+        // Email is on by default for accounts; this is where they are told (no checkbox).
+        <View testID={`${testIDPrefix}-email-notice`}>
+          <Body size={type.footnote} tone="muted" style={styles.center}>
+            {SIGNUP_EMAIL_NOTICE}
+          </Body>
+        </View>
+      ) : null}
 
       {error ? (
         <View accessibilityRole="alert" accessibilityLiveRegion="polite">
@@ -271,25 +275,6 @@ export function SignInOptions({
         </View>
       ) : null}
     </View>
-  );
-}
-
-function NewsCheckbox({ checked, onChange }: { checked: boolean; onChange: (next: boolean) => void }) {
-  return (
-    <Pressable
-      accessibilityRole="checkbox"
-      accessibilityState={{ checked }}
-      accessibilityLabel="Send me product news and offers"
-      onPress={() => {
-        haptics.select();
-        onChange(!checked);
-      }}
-      style={styles.checkRow}>
-      <View style={[styles.box, checked && styles.boxOn]}>{checked ? <Check color={colors.snow} size={15} strokeWidth={3} /> : null}</View>
-      <Text maxFontSizeMultiplier={maxScale.control} style={styles.checkLabel}>
-        Send me product news and offers
-      </Text>
-    </Pressable>
   );
 }
 
@@ -363,10 +348,6 @@ const styles = themed(() =>
     field: { backgroundColor: colors.platinum, borderColor: colors.platinum },
     fieldFocused: { borderColor: colors.hunter },
     centerRow: { alignItems: "center" },
-    checkRow: { flexDirection: "row", alignItems: "center", gap: spacing.md, minHeight: TAP_TARGET },
-    box: { width: 24, height: 24, borderRadius: 7, backgroundColor: colors.platinum, alignItems: "center", justifyContent: "center" },
-    boxOn: { backgroundColor: colors.hunter },
-    checkLabel: { flex: 1, fontFamily: fonts.body, fontSize: type.callout, color: colors.iron },
     switchRow: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", justifyContent: "center", columnGap: spacing.sm },
   }),
 );

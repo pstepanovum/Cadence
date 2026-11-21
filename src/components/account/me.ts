@@ -5,6 +5,7 @@
 "use client";
 
 import { cloudFetch } from "@/hooks/cloud-fetch";
+import { readEmailPrefs, type EmailPrefs } from "@/lib/platform/email-consent.ts";
 import type { DataTier, PlusRecord } from "@/lib/platform/engine-routing.ts";
 
 export interface Me {
@@ -14,9 +15,9 @@ export interface Me {
   isPlus: boolean;
   tier: DataTier;
   trial: boolean;
+  /** Email categories, each on unless turned off; null when the server did not say. */
+  emailPrefs: EmailPrefs | null;
   newsletter: boolean | null;
-  /** Getting-started tips: on unless turned off. */
-  lifecycle: boolean | null;
 }
 
 function toMillis(value: unknown): number | null {
@@ -53,8 +54,8 @@ export function parseMe(body: unknown): Me {
     isPlus,
     tier,
     trial: rawPlus?.trial === true,
-    newsletter: typeof prefs?.newsletter === "boolean" ? prefs.newsletter : null,
-    lifecycle: prefs ? prefs.lifecycle !== false : null,
+    emailPrefs: prefs ? readEmailPrefs(prefs) : null,
+    newsletter: prefs ? readEmailPrefs(prefs).newsletter : null,
   };
 }
 

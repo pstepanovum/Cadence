@@ -1,16 +1,21 @@
 // FILE: src/app/api/newsletter/route.ts
 //
 // POST, two shapes:
-//   {email, consent: true, platform?}   the site's signup form, anyone
-//   {subscribed: true|false}            the app's toggle, signed-in accounts,
-//                                       for the account's own address
-// Subscribing starts Brevo's double opt-in (list 5); nobody is added before
-// they click the confirmation. Needs App Check with replay protection and
-// stays under per-IP and per-address limits. A signed-in subscriber's PLAN,
-// PLATFORM and CEFR_LEVEL go along as contact attributes. Unsubscribing
-// removes the address from list 5 at once.
+//   {email, consent: true, platform?}   the site's public signup form, anyone
+//                                       without an account: Brevo's double
+//                                       opt-in (list 5), nobody added before
+//                                       they click the confirmation
+//   {subscribed: true|false}            the switch in Account › Email and the
+//                                       app's Settings, signed-in accounts, for
+//                                       the account's own address: sets
+//                                       emailPrefs.newsletter and list 5 at
+//                                       once (accounts are on by default; see
+//                                       src/lib/platform/email-consent.ts)
+// Needs App Check with replay protection and stays under per-IP and
+// per-address limits. A signed-in subscriber's PLAN, PLATFORM and CEFR_LEVEL
+// go along as contact attributes.
 import { requireAppCheck } from "@/lib/server/app-check";
-import { BREVO_LISTS, removeFromList } from "@/lib/server/email/brevo";
+import { BREVO_LISTS, removeFromList, upsertContact } from "@/lib/server/email/brevo";
 import { db } from "@/lib/server/firebase";
 import { getAccount } from "@/lib/server/entitlement";
 import { isEmailAddress } from "@/lib/server/email/senders";
@@ -26,7 +31,6 @@ export const dynamic = "force-dynamic";
 
 export function POST(request: Request) {
   return handled("Newsletter", async () => {
-    if (!doiTemplateId()) return errorResponse(503, "not_configured", "The newsletter isn't set up yet.");
     const check = await requireAppCheck(request, { consume: true });
     if (!check.ok) return check.response;
 
@@ -41,8 +45,9 @@ export function POST(request: Request) {
       await db().collection("users").doc(identity!.uid).set({ emailPrefs: { newsletter: false } }, { merge: true });
       return json({ ok: true, subscribed: false });
     }
-    // The app's toggle is the explicit opt-in; the site's form sends consent.
+    // The site's public form sends consent and goes through double opt-in.
     if (!toggle && body?.consent !== true) return errorResponse(400, "consent_required", "Tick the box to say you'd like the newsletter.");
+    if (!toggle && !doiTemplateId()) return errorResponse(503, "not_configured", "The newsletter isn't set up yet.");
 
     const limit = await hitAll([
       { rule: LIMITS.newsletterIpHour, subject: clientIp(request) },
@@ -58,6 +63,13 @@ export function POST(request: Request) {
       if (summary.placementLevel) attributes.CEFR_LEVEL = summary.placementLevel;
     }
 
+    if (toggle) {
+      // An account holder turning news and offers back on: their own choice
+      // on their own address, so no confirmation email.
+      await upsertContact(email, [BREVO_LISTS.newsletter], attributes);
+      await db().collection("users").doc(identity!.uid).set({ emailPrefs: { newsletter: true } }, { merge: true });
+      return json({ ok: true, subscribed: true });
+    }
     await subscribe(email, attributes);
     return json({ ok: true, pending: true, message: "Check your inbox to confirm." });
   });

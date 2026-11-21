@@ -9,9 +9,10 @@
 //   day 10   sale-offer        the App Store offer code          list: newsletter
 //   day 13   sale-reminder     the same offer, ending soon       list: newsletter
 //
-// The tips go to every account without Plus unless it unsubscribed (consent
-// on by default, its own list); the sale only to accounts that opted in to
-// product news and offers. Every feature named here exists in the app, and
+// Every category is on unless the account turned it off (unset means on, see
+// src/lib/platform/email-consent.ts): the tips go to every account without
+// Plus that did not turn them off, the sale to every account without Plus
+// that did not turn off product news and offers. Every feature named here exists in the app, and
 // every price and trial comes from the billing code, not from copy.
 import { YEARLY_TRIAL_DAYS } from "../../billing/stripe-map";
 import { PLUS_DAILY_LIMITS } from "../../../platform/engine-routing";
@@ -45,7 +46,7 @@ import { offerRedeemUrl } from "../offer";
 import { PLUS_PRODUCTS } from "./billing";
 
 const TIPS_REASON = "You're getting this because you made a Cadence account. It's one of a few short getting-started emails in your first two weeks.";
-const OFFERS_REASON = "You're getting this because you opted in to product news and offers from Cadence.";
+const OFFERS_REASON = "You're getting this because product news and offers are on for your Cadence account.";
 
 const MONTHLY = PLUS_PRODUCTS["dev.pstepanov.cadence.plus.monthly"].price;
 const YEARLY = PLUS_PRODUCTS["dev.pstepanov.cadence.plus.yearly"].price;

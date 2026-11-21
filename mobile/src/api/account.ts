@@ -15,9 +15,9 @@ export function setNewsletter(subscribed: boolean): Promise<unknown> {
   return apiJson<unknown>("/api/newsletter", "POST", { subscribed }, { appCheck: "limited-use" });
 }
 
-/** Turns the getting-started tips email on or off (PATCH /api/me). */
-export function setLifecycleTips(on: boolean): Promise<unknown> {
-  return apiJson<unknown>("/api/me", "PATCH", { lifecycle: on }, appCheck);
+/** Turns the getting-started tips or practice reminder email on or off (PATCH /api/me). */
+export function setEmailPref(pref: "lifecycle" | "reminders", on: boolean): Promise<unknown> {
+  return apiJson<unknown>("/api/me", "PATCH", { [pref]: on }, appCheck);
 }
 
 /** The JSON export of everything the account holds, as text. */

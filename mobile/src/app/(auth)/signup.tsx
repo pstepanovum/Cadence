@@ -1,7 +1,6 @@
 import { router } from "expo-router";
 import { StyleSheet, View } from "react-native";
 
-import { setNewsletter } from "@/api/account";
 import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/auth/layout";
 import { SignInOptions, TestBuildNote, Wordmark } from "@/components/auth/SignInOptions";
 import { SwitchLine } from "@/components/auth/SwitchLine";
@@ -23,14 +22,8 @@ export default function SignupScreen() {
           <Title size={type.title1} style={[styles.centerText, { color: colors.carbon }]}>Create your account</Title>
           <Body tone="muted" style={styles.centerText}>Free. Your streak follows you to every device.</Body>
         </View>
-        <SignInOptions
-          intent="signup"
-          onSignedIn={({ newsletter }) => {
-            // Firebase signs the new account in straight away and the navigator
-            // moves on to setup; the opt-in is sent once, unticked by default.
-            if (newsletter) setNewsletter(true).catch(() => {});
-          }}
-        />
+        {/* Firebase signs the new account in straight away and the navigator moves on to setup. */}
+        <SignInOptions intent="signup" />
         <TestBuildNote />
       </View>
     </FitScreen>

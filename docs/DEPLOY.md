@@ -130,16 +130,23 @@ anyone:
 **Brevo**: senders `hello@cadence.pstepanov.dev` (from) and
 `support@cadence.pstepanov.dev` (reply-to) verified, domain authenticated
 (SPF, DKIM, DMARC). Lists: 4 "Cadence users" (account email only, every
-account), 5 "Cadence newsletter" (double opt-in only). Contact attributes
+account), 5 "Cadence newsletter" (accounts join at sign-up unless they turned
+news and offers off; people without an account through double opt-in).
+Existing accounts made before this change are not on list 5 yet; the lifecycle
+sale reaches them through the app's own sends, and Brevo campaigns to list 5
+need a one-off import of accounts whose `emailPrefs.newsletter` is not false. Contact attributes
 `PLAN`, `PLATFORM`, `CEFR_LEVEL`. Set `CADENCE_POSTAL_ADDRESS` before any
 marketing email goes out (it prints the postal line marketing email needs).
 
 **Lifecycle email** (`src/lib/server/lifecycle.ts`, `lifecycle-plan.ts`,
 templates in `src/lib/server/email/templates/lifecycle.ts`): accounts without
-Plus get getting-started tips on days 1, 3 and 6 (list `lifecycle`, on unless
-the learner turns it off on the account page, in the app's Settings, or by
-unsubscribing), and, only with the "product news and offers" opt-in
-(`emailPrefs.newsletter`), a sale on day 10 and a reminder on day 13. Each goes
+Plus get getting-started tips on days 1, 3 and 6 (list `lifecycle`) and a
+sale on day 10 with a reminder on day 13 (list `newsletter`). Every email
+category (tips, reminders, news and offers) is on for an account unless it
+stored false (`src/lib/platform/email-consent.ts`): the sign-up forms say so
+in one line, Account › Email and the app's Settings show a switch for each,
+and every such email has a one-click unsubscribe. Only the public newsletter
+form, for people without an account, uses Brevo's double opt-in. Each goes
 out in the learner's local evening (18:00 to 21:00; the zone comes from the
 browser at sign-in or the phone's push registration, UTC otherwise), exactly
 once (`users/{uid}/emailLog/lifecycle-<step>`), and the sequence stops on Plus

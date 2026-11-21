@@ -1,5 +1,5 @@
-// The account step: Apple, Google, or an email and password (the news box
-// starts unticked), creating an account or signing in to one. Optional with
+// The account step: Apple, Google, or an email and password (with the line
+// saying email is on, switches in Settings), creating an account or signing in to one. Optional with
 // your own server, where it keeps a summary of progress in sync (Skip is in
 // the top bar); needed for the cloud.
 import { useState } from "react";
@@ -21,7 +21,7 @@ export function AccountStep({
    * Runs once the account exists (switching the phone to the cloud while
    * keeping a paired server). After, so a failed sign-in changes nothing.
    */
-  afterAccount: (choices: { newsletter: boolean }) => Promise<void>;
+  afterAccount: () => Promise<void>;
 }) {
   const [intent, setIntent] = useState<AuthIntent>("signup");
   const typing = useKeyboardVisible();
@@ -48,8 +48,7 @@ export function AccountStep({
         intent={intent}
         onIntentChange={setIntent}
         testIDPrefix="account"
-        // The news opt-in is sent when setup finishes, once the phone talks to the cloud.
-        onSignedIn={({ newsletter }) => afterAccount({ newsletter })}
+        onSignedIn={() => afterAccount()}
       />
       {optional && !typing ? (
         <Body size={type.caption} tone="muted" style={styles.center}>

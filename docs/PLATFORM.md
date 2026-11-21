@@ -741,24 +741,32 @@ billing (`plus-welcome`, `trial-started`, `trial-ending` for web trials only,
 `payment-receipt`, `billing-issue`, `plus-canceled`, `plus-ended`,
 `plan-changed`, `refund-issued`), security (`mcp-authorized`, `device-paired`,
 `suspicious-activity`), support (`support-request` to the inbox with the
-writer as reply-to, `support-reply` to the writer) and opt-in
-(`streak-at-risk`, `weekly-summary`, `badge-earned`, `inactive-nudge`,
-`newsletter-confirm`, `newsletter-welcome`).
+writer as reply-to, `support-reply` to the writer), the ones a reader can
+turn off (`streak-at-risk`, `weekly-summary`, `badge-earned`, `inactive-nudge`,
+`newsletter-welcome`, and the lifecycle `lifecycle-start`, `lifecycle-habit`,
+`lifecycle-plus`, `sale-offer`, `sale-reminder`), and `newsletter-confirm`.
+Every category is on for an account unless it stored false
+(`src/lib/platform/email-consent.ts`); sign-up says so in one line.
 
-Design: tables, at most 560 px, the hosted 2x logo PNG with alt text, one
-accent (hunter green, yellow-green in dark mode), Funnel Display through one
-Google Fonts link with a system stack behind it, and a single `<style>` block
-for the dark palette and phone padding; every other style is inline, so
-Gmail (which drops both) still gets the light design. Every email has a
-plain-text part; only opt-in mail has an unsubscribe link (and
-`List-Unsubscribe` one-click headers).
+Design: tables, at most 600 px, white with near-black text, the App Store
+icon at the top and in the footer, sentence case throughout, one accent
+(hunter green, yellow-green in dark mode) for the kicker, big numbers, the
+button and the app's own icons (`public/email/icons`, from
+`scripts/email/assets.mjs`), Funnel Display through one Google Fonts link
+with a system stack behind it, and a single `<style>` block for the dark
+palette and phone sizes; every other style is inline. Every email has a
+plain-text part; every email a reader can turn off has a one-click
+unsubscribe link (and `List-Unsubscribe` one-click headers).
 
 Firebase's own emails are never used: the server generates the one-time
 codes with the Admin SDK and puts them on `/reset-password` and
 `/verify-email`; docs/DEPLOY.md has the console setting.
 
-Newsletter: list 5, Brevo double opt-in only (`POST /api/newsletter`); list 4
-holds every account for account email and is never used for marketing.
+Newsletter: list 5. Accounts join at sign-up unless they turn news and offers
+off; the switch in Account › Email and Settings posts
+`POST /api/newsletter {subscribed}`. People without an account join through
+Brevo's double opt-in on the public form. List 4 holds every account for
+account email and is never used for marketing.
 `BREVO_API_URL` points every Brevo call at a local stub for end-to-end tests;
 only a loopback `http` address is accepted.
 
@@ -801,7 +809,7 @@ Cloud Scheduler ──▶ cadence-web /api/jobs/daily (17:00 UTC), /api/jobs/mai
 | --- | --- | --- |
 | `cadence-web` | Next.js standalone (`Dockerfile`): web, API, sync, MCP, webhooks | `--allow-unauthenticated --min-instances 0 --max-instances 10 --concurrency 80 --cpu 1 --memory 1Gi --cpu-boost --timeout 60`; service account `cadence-web` with Firestore user, `run.invoker` on `cadence-ai`, Vertex AI user, TTS, the TTS cache bucket, and its own secrets only |
 | `cadence-ai` | `src/backend/ai-engine/Dockerfile.cloud` (CPU PyTorch, phoneme model at its pinned safetensors revision and Whisper-small baked in, PyTorch weights only, offline at runtime; `--build-arg ASR_MODEL=` leaves Whisper out) | `--no-allow-unauthenticated --ingress internal --min-instances 0 --max-instances 3 --concurrency 4 --cpu 2 --memory 4Gi --cpu-boost --timeout 60`; no secrets; private until launch |
-| jobs | routes on `cadence-web`, called by Cloud Scheduler with `Authorization: Bearer <JOBS_SECRET>` | daily: purge lapsed detail after 90 days, retry deletions, drop uncollected inboxes after 90 days, `trial-ending`, opt-in reminders; every 5 minutes: deliver queued mail |
+| jobs | routes on `cadence-web`, called by Cloud Scheduler with `Authorization: Bearer <JOBS_SECRET>` | daily: purge lapsed detail after 90 days, retry deletions, drop uncollected inboxes after 90 days, `trial-ending`, reminders (on unless turned off); every 5 minutes: deliver queued mail |
 
 - **Service to service.** `cadence-web` fetches a Google ID token for the
   `cadence-ai` URL from the metadata server and sends it as a Bearer token.
@@ -977,7 +985,7 @@ and, when signed in, the Firebase ID token.
 | `/forgot-password` | `POST /api/auth/password-reset {email}`; same answer whether or not the account exists; 60 s browser cooldown; Firebase's own email if the route is missing |
 | `/reset-password` | Firebase `confirmPasswordReset` (revokes every session), then `POST /api/auth/password-changed {email}`, then signs this device in; passes `verifyEmail`, `verifyAndChangeEmail` and `recoverEmail` links on to `/verify-email` |
 | `/verify-email` | `applyActionCode` for the link; resend is `POST /api/auth/verify-email` |
-| `/newsletter`, footer, sign-up box, `/account` switch | `POST /api/newsletter {email, source, consent: true, platform}` (Brevo double opt-in, list 5); Brevo's confirmation lands on `/api/newsletter/confirmed`, which redirects to `/newsletter/confirmed`; the account switch turns it off with `DELETE /api/newsletter` (**Open**: not built yet; the page points to the unsubscribe link meanwhile) |
+| `/newsletter`, footer, sign-up box, `/account` switch | `POST /api/newsletter {email, source, consent: true, platform}` (Brevo double opt-in, list 5); Brevo's confirmation lands on `/api/newsletter/confirmed`, which redirects to `/newsletter/confirmed`; the Account › Email switch posts `{subscribed: true|false}` for the signed-in account's own address, no confirmation email |
 | `/pricing`, `/checkout?plan=`, `/account` | `POST /api/billing/checkout {interval}` and `POST /api/billing/portal`, both `{url}`; Plus status from `GET /api/me` |
 | `/account` | `GET /api/account/export`; `DELETE /api/account` after re-entering the password |
 | `/contact` | `POST /api/support` (the form; `/support` holds the quick answers and links here) |

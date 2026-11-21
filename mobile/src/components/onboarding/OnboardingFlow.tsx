@@ -15,7 +15,6 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { BackHandler, Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from "react-native-reanimated";
 
-import { setNewsletter } from "@/api/account";
 import { PlusPaywall } from "@/components/billing/PlusPaywall";
 import { Illustration } from "@/components/Illustration";
 import { FitScreen, useCompactHeight, useKeyboardVisible } from "@/components/auth/layout";
@@ -93,7 +92,6 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
   const [direction, setDirection] = useState<1 | -1>(1);
   const [notice, setNotice] = useState<string | null>(null);
   const [finishing, setFinishing] = useState(false);
-  const [wantsNews, setWantsNews] = useState(false);
 
   const signedIn = connection.mode === "cloud" && !!user;
   const steps = useMemo(
@@ -146,7 +144,6 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
       const patch = { ...goals, practiceCadence: cadenceForMinutes(answers.minutes), ...(replay ? {} : { onboardingCompleted: true }) };
       const changed = (answers.goals.length > 0 && !sameGoals(answers.goals, profile.learningGoals)) || patch.practiceCadence !== profile.practiceCadence;
       if (!replay || changed) await updateProfile(patch).catch(() => {});
-      if (wantsNews) setNewsletter(true).catch(() => {});
     }
     haptics.success();
     // Keeps the first run's date; on a first run the navigator then swaps
@@ -340,8 +337,7 @@ export function OnboardingFlow({ replay = false }: { replay?: boolean }) {
           <AccountStep
             signedInEmail={signedIn ? (user?.email ?? "your account") : null}
             optional={optional}
-            afterAccount={async ({ newsletter: news }) => {
-              setWantsNews(news);
+            afterAccount={async () => {
               if (connection.mode !== "cloud") await connection.chooseCloud({ keepServer: true });
               afterSigningIn();
             }}

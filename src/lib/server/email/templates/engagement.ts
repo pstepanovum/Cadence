@@ -1,9 +1,10 @@
 // FILE: src/lib/server/email/templates/engagement.ts
 //
-// Opt-in mail. Reminders (streak at risk, weekly summary, badges, the inactive
-// nudge) go only to learners who turned reminders on; the newsletter only to
-// people who confirmed it through Brevo's double opt-in. Every one carries an
-// unsubscribe link for its own list, and the footer says why it came.
+// Mail a reader can turn off. Reminders (streak at risk, weekly summary,
+// badges, the inactive nudge) go to every account that did not turn them off;
+// the newsletter to accounts that did not turn it off and to people without an
+// account who confirmed it through Brevo's double opt-in. Every one carries a
+// one-click unsubscribe link for its own list, and the footer says why it came.
 import {
   BREVO_DOI_PLACEHOLDER,
   appUrl,
@@ -21,7 +22,7 @@ import {
   type RenderedEmail,
 } from "../layout";
 
-const REMINDER_REASON = "You're getting this because you turned on practice reminders in Cadence.";
+const REMINDER_REASON = "You're getting this because practice reminders are on for your Cadence account.";
 const NEWSLETTER_REASON = "You're getting this because you subscribed to the Cadence newsletter.";
 
 export interface StreakAtRiskProps {

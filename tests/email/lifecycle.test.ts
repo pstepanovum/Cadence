@@ -136,15 +136,16 @@ describe("the offer", () => {
 describe("delivery-time consent", () => {
   const now = Date.UTC(2026, 10, 21);
   const plus = { plusSources: { code: { active: true, source: "code", productId: "friend", expiresAt: now + DAY, willRenew: false, updatedAt: now } } };
-  it("blocks by category, Plus and an ended offer", () => {
-    assert.equal(consentBlock("lifecycle", "lifecycle", {}, {}, now), null, "tips are on by default");
+  it("treats unset as on, a stored false as off, and stops for Plus or an ended offer", () => {
+    assert.equal(consentBlock("lifecycle", "lifecycle", {}, {}, now), null, "tips on when unset");
+    assert.equal(consentBlock("reminders", "engagement", {}, {}, now), null, "reminders on when unset");
+    assert.equal(consentBlock("newsletter", "lifecycle", {}, { endsAt: now + DAY }, now), null, "news and offers on when unset");
     assert.equal(consentBlock("lifecycle", "lifecycle", { emailPrefs: { lifecycle: false } }, {}, now), "lifecycle off");
-    assert.equal(consentBlock("newsletter", "lifecycle", {}, {}, now), "newsletter off", "sales are opt-in");
-    assert.equal(consentBlock("newsletter", "lifecycle", { emailPrefs: { newsletter: true } }, { endsAt: now - 1 }, now), "offer ended");
-    assert.equal(consentBlock("newsletter", "lifecycle", { emailPrefs: { newsletter: true } }, { endsAt: now + DAY }, now), null);
+    assert.equal(consentBlock("reminders", "engagement", { emailPrefs: { reminders: false } }, {}, now), "reminders off");
+    assert.equal(consentBlock("newsletter", "lifecycle", { emailPrefs: { newsletter: false } }, {}, now), "newsletter off");
+    assert.equal(consentBlock("newsletter", "lifecycle", {}, { endsAt: now - 1 }, now), "offer ended");
     assert.equal(consentBlock("lifecycle", "lifecycle", plus, {}, now), "has plus");
-    assert.equal(consentBlock("reminders", "engagement", {}, {}, now), "reminders off");
-    assert.equal(consentBlock("reminders", "engagement", plus, {}, now), "reminders off");
+    assert.equal(consentBlock("reminders", "engagement", plus, {}, now), null, "reminders still go to Plus accounts");
     assert.equal(consentBlock("lifecycle", "lifecycle", undefined, {}, now), "no account");
   });
 });

@@ -2,6 +2,7 @@
 // record, its data tier and today's cloud quota. Parsed defensively, so a
 // field the server has not shipped yet reads as "not known" rather than
 // crashing, and anything malformed counts as no Plus. Pure; tests/me.test.ts.
+import { readEmailPrefs, type EmailPrefs } from "../platform/email-consent.ts";
 import {
   dataTier,
   EMPTY_USAGE,
@@ -26,8 +27,8 @@ export interface Me {
   cloudPaused: boolean;
   /** Opted in to product news and offers. */
   newsletter: boolean;
-  /** Getting-started tips by email: on unless turned off. */
-  lifecycleTips: boolean;
+  /** Email categories, each on unless turned off. */
+  emailPrefs: EmailPrefs;
 }
 
 const isObject = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null;
@@ -80,8 +81,8 @@ export function parseMe(body: unknown, now: number): Me {
     usage,
     limits,
     cloudPaused: root.cloudPaused === true || quota.paused === true,
-    newsletter: root.newsletter === true || (isObject(root.profile) && root.profile.newsletter === true),
-    lifecycleTips: !(isObject(root.emailPrefs) && root.emailPrefs.lifecycle === false),
+    newsletter: readEmailPrefs(root.emailPrefs).newsletter,
+    emailPrefs: readEmailPrefs(root.emailPrefs),
   };
 }
 

@@ -5,7 +5,10 @@
 //
 //   first sign-in of a new account   welcome (and verify-email when unverified),
 //                                    and the address joins Brevo list 4
-//                                    (account email only, never marketing)
+//                                    (account email) and list 5 (news and
+//                                    offers, on by default for accounts, as
+//                                    the sign-up form says; off in Account ›
+//                                    Email or by any unsubscribe link)
 //   a device we have not seen        new-sign-in
 //   the sign-in email changed        email-changed, to the old and the new address
 //   the password changed             password-changed (Firebase moves
@@ -19,6 +22,7 @@ import type { Firestore } from "firebase-admin/firestore";
 
 import { appOrigin } from "./env";
 import { auth as defaultAuth, db as defaultDb } from "./firebase";
+import { readEmailPrefs } from "../platform/email-consent";
 import { BREVO_LISTS, sendEmail, upsertContact } from "./email/brevo";
 import { mailKey, queueMail, type QueueInput } from "./email/queue";
 import { renderTemplate, type TemplateId } from "./email/templates/index";
@@ -96,7 +100,8 @@ export async function noteSignIn(context: SignInContext, deps: SignInDeps = {}):
     if (now - record.creationTime < NEW_ACCOUNT_MS) {
       await queue(mailKey("welcome", context.uid), { template: "welcome", uid: context.uid, props: { name: snapshot.data()?.displayName ?? undefined } });
       if (email) {
-        await (deps.addContact ?? ((address: string) => upsertContact(address, [BREVO_LISTS.users], { PLAN: "free" })))(email).catch((error) =>
+        const lists = readEmailPrefs(snapshot.data()?.emailPrefs).newsletter ? [BREVO_LISTS.users, BREVO_LISTS.newsletter] : [BREVO_LISTS.users];
+        await (deps.addContact ?? ((address: string) => upsertContact(address, lists, { PLAN: "free" })))(email).catch((error) =>
           console.error("Could not add the account to Brevo:", error instanceof Error ? error.message : error),
         );
         if (!context.emailVerified) {

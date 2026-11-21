@@ -93,7 +93,7 @@ export function NewsletterForm({ source, tone = "default", className }: Newslett
       ) : null}
       <p id={`${id}-note`} className={cn("text-xs leading-5", onDark ? "text-bright-snow/84" : "text-slate-grey")}>
         A few emails a month at most. Unsubscribe from any email.{" "}
-        <Link href="/privacy#newsletter" className="underline underline-offset-2">
+        <Link href="/privacy#emails" className="underline underline-offset-2">
           Privacy
         </Link>
       </p>

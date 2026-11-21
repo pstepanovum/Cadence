@@ -39,16 +39,16 @@ export async function subscribeToNewsletter(email: string, source: NewsletterSou
 }
 
 /**
- * DELETE /api/newsletter for the signed-in account. "link" means this server
- * has no such route; the unsubscribe link in every email still works.
+ * The signed-in account's news-and-offers switch (POST /api/newsletter
+ * {subscribed}). Accounts are on by default and switch without a
+ * confirmation email; only the public form uses double opt-in.
  */
-export async function unsubscribeFromNewsletter(): Promise<"done" | "link" | "failed"> {
+export async function setAccountNewsletter(subscribed: boolean): Promise<boolean> {
   try {
-    const response = await cloudFetch("/api/newsletter", { method: "DELETE" });
-    if (response.ok) return "done";
-    return response.status === 404 || response.status === 405 ? "link" : "failed";
+    const response = await cloudFetch("/api/newsletter", { method: "POST", appCheck: "limited", json: { subscribed } });
+    return response.ok;
   } catch {
-    return "failed";
+    return false;
   }
 }
 

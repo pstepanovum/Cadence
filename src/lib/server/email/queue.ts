@@ -15,6 +15,7 @@ import { FieldValue, Timestamp, type DocumentData, type Firestore, type Transact
 
 import { appOrigin } from "../env";
 import { auth as defaultAuth, db as defaultDb, isAlreadyExists } from "../firebase";
+import { readEmailPrefs } from "../../platform/email-consent";
 import { readAccount } from "../entitlement";
 import { EmailError, sendEmail, type BrevoDeps } from "./brevo";
 import type { EmailList } from "./layout";
@@ -95,15 +96,11 @@ async function lookupEmail(uid: string): Promise<string | null> {
 
 /**
  * Why a message on a list may not go out now, or null when it may. Pure.
- * Reminders are opt-in, the lifecycle tips opt-out, the newsletter (sales)
- * opt-in through Brevo's double opt-in.
+ * Every list is on unless the account stored false for it.
  */
 export function consentBlock(list: EmailList, group: string, data: DocumentData | undefined, props: Record<string, unknown>, now: number): string | null {
   if (!data) return "no account";
-  const prefs = (data.emailPrefs ?? {}) as Record<string, unknown>;
-  if (list === "reminders" && prefs.reminders !== true) return "reminders off";
-  if (list === "lifecycle" && prefs.lifecycle === false) return "lifecycle off";
-  if (list === "newsletter" && prefs.newsletter !== true) return "newsletter off";
+  if (!readEmailPrefs(data.emailPrefs)[list]) return `${list} off`;
   if (group === "lifecycle") {
     if (readAccount(data, now).isPlus) return "has plus";
     if (typeof props.endsAt === "number" && props.endsAt <= now) return "offer ended";

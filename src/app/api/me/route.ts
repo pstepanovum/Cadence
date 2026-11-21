@@ -41,8 +41,8 @@ export function GET(request: Request) {
 
 /**
  * PATCH {reminders?: boolean, lifecycle?: boolean}: email choices that live on
- * the account. Practice reminders are opt-in; the getting-started tips are on
- * until turned off. The newsletter has its own route (double opt-in).
+ * the account, each on until turned off. News and offers have their own route
+ * (POST /api/newsletter {subscribed}), which also updates Brevo list 5.
  */
 export function PATCH(request: Request) {
   return handled("Email preferences", async () => {

@@ -9,8 +9,7 @@ import { Alert, AppState, Linking, StyleSheet, View } from "react-native";
 
 import { unregisterPushDevice } from "@/api/account";
 import { forgetPushRegistration } from "@/components/EngagementWatcher";
-import { LifecycleTipsToggle } from "@/components/LifecycleTipsToggle";
-import { NewsletterToggle } from "@/components/NewsletterToggle";
+import { EmailPrefToggle } from "@/components/EmailPrefToggle";
 import { SettingsRow, SwitchRow } from "@/components/settings";
 import { TimePicker } from "@/components/TimePicker";
 import { Banner, Body, Button, Chip, Eyebrow, HorizontalPicker, Screen, TopBar } from "@/components/ui";
@@ -30,6 +29,7 @@ import { levelSummary, useLevelPrefs } from "@/learning/level-store";
 import { useConnection } from "@/pairing/context";
 import { linkedMethods, methodLabel } from "@/platform/sign-in-methods";
 import { colors, spacing, type } from "@/theme/theme";
+import { EMAIL_PREF_KEYS } from "@/platform/email-consent";
 
 export default function SettingsScreen() {
   const reminders = useReminderSettings();
@@ -191,12 +191,22 @@ export default function SettingsScreen() {
 
       {cloud && user ? (
         <View style={styles.group}>
+          <Eyebrow>Email</Eyebrow>
+          <Body size={type.footnote} tone="muted">
+            Account, security and billing email always arrives. Everything else is up to you.
+          </Body>
+          {EMAIL_PREF_KEYS.filter((pref) => pref !== "lifecycle" || !account.me?.plusActive).map((pref) => (
+            <EmailPrefToggle key={pref} pref={pref} />
+          ))}
+        </View>
+      ) : null}
+
+      {cloud && user ? (
+        <View style={styles.group}>
           <Eyebrow>Account</Eyebrow>
           <Body size={type.footnote} tone="muted">
             {user.email ?? ""}
           </Body>
-          <NewsletterToggle />
-          {account.me?.plusActive ? null : <LifecycleTipsToggle />}
           <SettingsRow
             icon={<KeyRound color={colors.carbon} size={20} />}
             title="Sign-in methods"

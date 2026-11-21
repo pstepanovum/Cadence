@@ -9,7 +9,7 @@ import { AUTH_INPUT_CLASS, AuthCard, AuthNotice, FieldLabel } from "@/components
 import { PasswordChecklist } from "@/components/auth/PasswordChecklist";
 import { OrDivider, ProviderButton } from "@/components/auth/ProviderButtons";
 import { isPasswordAcceptable } from "@/components/auth/password-rules";
-import { subscribeToNewsletter } from "@/components/newsletter/newsletter-api";
+import { SIGNUP_EMAIL_NOTICE } from "@/lib/platform/email-consent";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { safeNextPath } from "@/lib/auth/safe-next";
@@ -38,7 +38,6 @@ export function AuthForm({ mode }: AuthFormProps) {
   const intent = isLogin ? "signin" : "signup";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [newsletter, setNewsletter] = useState(false);
   const [busy, setBusy] = useState<ProviderMethod | "email" | "redirect" | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -113,7 +112,6 @@ export function AuthForm({ mode }: AuthFormProps) {
       const user = await createAccountWithEmail(email, password);
       // The server sends the verify-email message on the first sign-in it
       // sees; verifying is offered, not required.
-      if (newsletter) void subscribeToNewsletter(email, "signup");
       await enter(user, true);
     } catch (nextError) {
       setError(describeAuthError(nextError, "Something went wrong. Please try again."));
@@ -198,15 +196,10 @@ export function AuthForm({ mode }: AuthFormProps) {
         </div>
 
         {!isLogin ? (
-          <label className="flex cursor-pointer items-start gap-3 rounded-3xl bg-vanilla-cream px-4 py-3 text-sm leading-6 text-iron-grey">
-            <input
-              type="checkbox"
-              checked={newsletter}
-              onChange={(event) => setNewsletter(event.target.checked)}
-              className="mt-1 h-4 w-4 shrink-0 accent-[var(--sage-green)]"
-            />
-            <span>Email me product updates and occasional offers. Unsubscribe any time.</span>
-          </label>
+          // Email is on by default for accounts; this is where they are told (no checkbox).
+          <p data-testid="signup-email-notice" className="rounded-3xl bg-vanilla-cream px-4 py-3 text-sm leading-6 text-iron-grey">
+            {SIGNUP_EMAIL_NOTICE}
+          </p>
         ) : null}
 
         {message ? <AuthNotice tone="success">{message}</AuthNotice> : null}
