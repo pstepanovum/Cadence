@@ -13,7 +13,7 @@
 //
 // A token names one list and one subject, so each kind of email has its own
 // consent: leaving the tips leaves reminders and the newsletter as they were.
-import { escapeHtml, SITE_URL, tone } from "./layout";
+import { APP_ICON, escapeHtml, SITE_URL, tone } from "./layout";
 import type { EmailList } from "./layout";
 import { TEST_UNSUBSCRIBE_SUBJECT, UNSUBSCRIBE_PATH, verifyUnsubscribeToken } from "./unsubscribe";
 
@@ -64,26 +64,25 @@ export function unsubscribePage(input: { kicker: string; title: string; body: st
     ? `<form method="post" action="${escapeHtml(input.action.href)}"><input type="hidden" name="source" value="page"><button type="submit">${escapeHtml(input.action.label)}</button></form>`
     : "";
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="color-scheme" content="light dark"><title>${escapeHtml(input.title)} · Cadence</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;font-family:'Funnel Display',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:${L.page};color:${L.text};-webkit-font-smoothing:antialiased}
-main{max-width:560px;margin:0 auto;padding:48px 16px}
-.band{background:${L.band};border-radius:20px 20px 0 0;padding:28px 32px 36px}
-.logo{font-weight:800;font-size:22px;letter-spacing:-0.5px;color:${L.kicker};text-decoration:none}
-.kicker{margin:40px 0 12px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:${L.kicker}}
-h1{margin:0;font-size:42px;line-height:44px;font-weight:800;letter-spacing:-1.4px;color:${L.onBand}}
-.card{background:${L.card};border-radius:0 0 20px 20px;padding:32px}
+main{max-width:560px;margin:0 auto;padding:56px 20px}
+.logo{display:block;width:36px;height:36px;border-radius:9px;margin:0 0 32px}
+.kicker{margin:0 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:${L.accent}}
+h1{margin:0 0 24px;font-size:40px;line-height:42px;font-weight:800;letter-spacing:-1.3px}
 p{margin:0 0 16px;font-size:17px;line-height:27px}
 .muted{color:${L.secondary};font-size:15px;line-height:23px}
-button{display:block;width:100%;margin:8px 0 20px;padding:18px 24px;font:inherit;font-size:17px;font-weight:700;border:0;border-radius:12px;background:${L.accent};color:${L.onAccent};cursor:pointer}
-button:focus-visible,a:focus-visible{outline:3px solid ${L.kicker};outline-offset:3px}
+button{display:block;width:100%;margin:8px 0 28px;padding:18px 24px;font:inherit;font-size:17px;font-weight:700;border:0;border-radius:12px;background:${L.button};color:${L.onButton};cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid ${L.accent};outline-offset:3px}
 a{color:${L.accent};font-weight:700}
 @media (min-width:520px){button{display:inline-block;width:auto}}
-@media (prefers-color-scheme:dark){body{background:${D.page};color:${D.text}}.band{background:${D.band}}h1{color:${D.onBand}}.card{background:${D.card}}.muted{color:${D.secondary}}button{background:${D.accent};color:${D.onAccent}}a{color:${D.accent}}}
+@media (prefers-color-scheme:dark){body{background:${D.page};color:${D.text}}.kicker,a{color:${D.accent}}.muted{color:${D.secondary}}}
 </style></head>
-<body><main><div class="band"><a class="logo" href="${SITE_URL}">Cadence</a><p class="kicker">${escapeHtml(input.kicker)}</p><h1>${escapeHtml(input.title)}</h1></div>
-<div class="card">${input.body}${form}<p class="muted">Change any email choice on your <a href="${SITE_URL}/account">account page</a>, or go <a href="${SITE_URL}/">back to Cadence</a>.</p></div></main></body></html>`;
+<body><main><a href="${SITE_URL}/"><img class="logo" src="${APP_ICON.src}" width="36" height="36" alt="Cadence"></a><p class="kicker">${escapeHtml(input.kicker)}</p><h1>${escapeHtml(input.title)}</h1>
+${input.body}${form}<p class="muted">Change any email choice on your <a href="${SITE_URL}/account">account page</a>, or go <a href="${SITE_URL}/">back to Cadence</a>.</p>
+</main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex" } });
 }
 

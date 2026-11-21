@@ -25,14 +25,17 @@ describe("email templates", () => {
       assert.ok(Buffer.byteLength(email.html) < 100 * 1024, "under 100 KB");
       for (const img of email.html.match(/<img\b[^>]*>/g) ?? []) assert.match(img, /\salt="[^"]+"/, "img alt");
       assert.match(email.html, /max-width:600px/);
-      assert.match(email.html, /class="c-band"/, "header band");
-      assert.match(email.html, /class="c-headline"/, "headline in the band");
+      assert.doesNotMatch(email.html, /c-band|c-offer/, "no colour bands or blocks");
+      // White page and cards, gray panels and hairlines; the only colour fill is hunter green (the button and bullet squares).
+      const fills = new Set((email.html.match(/bgcolor="(#[0-9A-Fa-f]{6})"/g) ?? []).map((m) => m.slice(9, 16).toUpperCase()));
+      for (const fill of fills) assert.ok(["#FFFFFF", "#F4F5F6", "#E3E6E9", "#386641"].includes(fill), `unexpected fill ${fill}`);
+      assert.match(email.html, /class="c-text c-headline"/, "headline");
       assert.doesNotMatch(email.subject, /\p{Extended_Pictographic}/u, "no emoji in the subject");
       assert.equal((email.html.match(/<style>/g) ?? []).length, 1, "one head style block only");
       assert.equal((email.html.match(/<link /g) ?? []).length, 1, "one font link only");
       const hasUnsubscribe = /Unsubscribe/.test(email.html);
       assert.equal(hasUnsubscribe, entry.category !== "transactional", "unsubscribe only on opt-in mail");
-      assert.match(email.text, /Questions\? Reply to this email/);
+      assert.equal((email.html.match(/favicon\/apple-touch-icon\.png" width="36" height="36" alt="Cadence"/g) ?? []).length, 2, "app icon at the top and in the footer");
     });
   }
 

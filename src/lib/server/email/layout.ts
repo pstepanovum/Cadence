@@ -3,19 +3,20 @@
 // The frame every Cadence email is drawn in, and the pieces templates build
 // their bodies from.
 //
-// The look is editorial: a solid hunter-green header band carrying the
-// yellow-green logo, an uppercase letter-spaced kicker and a big tight
-// headline; then a white card with big-number moments, card sections and one
-// strong call to action that runs full width on a phone.
+// The look is clean and editorial, on white: the app icon, an
+// uppercase kicker in the accent, a big tight near-black headline, big
+// numbers in the accent, light-gray cards with hairlines, and one strong
+// hunter-green call to action that runs full width on a phone. The footer is
+// the app icon and the small gray lines mail needs, nothing more.
 //
 // Email clients are old browsers with odd rules, so the markup is tables with
 // inline styles, at most 600 pixels wide, every colour set inline for light
 // mode. Two things live in <head>: one stylesheet link for Funnel Display
 // (clients that block it fall back to the system stack below) and one small
 // <style> block with the phone sizes and the dark palette under
-// prefers-color-scheme. Apple Mail and iOS Mail honour it; Gmail ignores the
-// dark part and darkens on its own, which the light palette survives because
-// nothing depends on a background image and the band keeps its green.
+// prefers-color-scheme (near-black, white text, the button unchanged). Apple
+// Mail and iOS Mail honour it; Gmail ignores it and darkens on its own, which
+// a white design with no colour fills behind text survives.
 // Outlook for Windows gets a fixed 600 px ghost table.
 //
 // Everything here is pure: templates take typed props and return strings, so
@@ -60,44 +61,38 @@ export const FOOTER_ADDRESSES = {
 export const BREVO_DOI_PLACEHOLDER = "{{ doubleoptin }}";
 
 /**
- * Cadence's palette (src/app/globals.css) for mail. Hunter green carries the
- * header band in both modes; yellow-green is the logo, the kicker and the
- * offer block; the grayscale carries the card. Button text is white on hunter
- * (6.9:1) and carbon on yellow-green (9.6:1); the white headline on the band
- * is 6.9:1, the yellow-green kicker on it 3.6:1 at bold uppercase.
+ * Cadence's palette (src/app/globals.css) for mail, on white: near-black
+ * text, light-gray cards with hairlines, and the accent only for the kicker,
+ * big numbers, the button and small details. Yellow-green is too light for
+ * text on white (1.9:1), so in light mode the accent is hunter green (6.9:1
+ * on white); in dark mode it is yellow-green on near-black. The button is hunter
+ * green with a white label in both modes. Text never sits on a colour fill
+ * except that label, and there are no decorative rules.
  */
 export const tone = {
   light: {
-    page: "#E9ECEF",
-    band: "#386641",
-    onBand: "#FFFFFF",
-    kicker: "#A7C957",
+    page: "#FFFFFF",
     card: "#FFFFFF",
-    panel: "#F1F3F5",
-    rule: "#DEE2E6",
-    text: "#212529",
-    secondary: "#495057",
-    tertiary: "#5A636B",
+    panel: "#F4F5F6",
+    hairline: "#E3E6E9",
+    text: "#111315",
+    secondary: "#454B51",
+    footer: "#6B7178",
     accent: "#386641",
-    onAccent: "#FFFFFF",
-    offer: "#A7C957",
-    onOffer: "#212529",
+    button: "#386641",
+    onButton: "#FFFFFF",
   },
   dark: {
-    page: "#101214",
-    band: "#1F3A25",
-    onBand: "#F8F9FA",
-    kicker: "#A7C957",
-    card: "#1A1D20",
-    panel: "#24282C",
-    rule: "#343A40",
-    text: "#F8F9FA",
-    secondary: "#CED4DA",
-    tertiary: "#ADB5BD",
+    page: "#0B0D0E",
+    card: "#0B0D0E",
+    panel: "#17191B",
+    hairline: "#2A2D31",
+    text: "#FFFFFF",
+    secondary: "#C9CDD1",
+    footer: "#9AA0A6",
     accent: "#A7C957",
-    onAccent: "#16191C",
-    offer: "#A7C957",
-    onOffer: "#16191C",
+    button: "#386641",
+    onButton: "#FFFFFF",
   },
 } as const;
 
@@ -185,15 +180,17 @@ export function appUrl(path: `/${string}`, origin = SITE_URL): string {
   return `${origin}${path}`;
 }
 
+
 // Pieces ----------------------------------------------------------------------
 //
-// Every piece below is a full-width block for the card. Text classes (c-text,
-// c-muted, c-faint, c-accent) are what the dark palette and the phone sizes
-// hook onto; the inline style is the light default every client sees.
+// Every piece below is a full-width block on the white page. Classes (c-text,
+// c-muted, c-accent, c-panel, c-rule...) are what the dark palette and the
+// phone sizes hook onto; the inline style is the light default every client
+// sees.
 
 const p = (style: string) => `margin:0;font-family:${FONT_STACK};${style}`;
 
-/** A second-level heading inside the card. The page headline lives in the band (compose's `title`). */
+/** A section heading inside the body. The page headline is compose's `title`. */
 export function heading(text: string): string {
   return `<h2 class="c-text" style="${p(`margin:0 0 12px;font-size:24px;line-height:28px;font-weight:800;letter-spacing:-0.5px;color:${L.text};`)}">${escapeHtml(text)}</h2>`;
 }
@@ -202,7 +199,7 @@ export function subheading(text: string): string {
   return `<h3 class="c-text" style="${p(`margin:0 0 8px;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(text)}</h3>`;
 }
 
-/** A small uppercase label above a section. */
+/** A small uppercase label above a section, in the accent. */
 export function eyebrow(text: string, options: { spaceAfter?: number } = {}): string {
   return `<p class="c-accent" style="${p(`margin:0 0 ${options.spaceAfter ?? 12}px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.accent};`)}">${escapeHtml(text.toUpperCase())}</p>`;
 }
@@ -219,27 +216,33 @@ export function strong(text: string): string {
   return `<strong style="font-weight:700;">${escapeHtml(text)}</strong>`;
 }
 
-/** A thin rule across the card. */
+/** An inline link in the accent, for a sentence. */
+export function inlineLink(label: string, href: string): string {
+  return `<a class="c-accent" href="${escapeHtml(safeUrl(href))}" target="_blank" style="color:${L.accent};font-weight:700;text-decoration:underline;">${escapeHtml(label)}</a>`;
+}
+
+/** A hairline across the body. */
 export function divider(options: { spaceBefore?: number; spaceAfter?: number } = {}): string {
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:${options.spaceBefore ?? 8}px 0 ${options.spaceAfter ?? 28}px;"><tr><td class="c-rule" height="1" style="height:1px;font-size:0;line-height:0;border-top:1px solid ${L.rule};">&nbsp;</td></tr></table>`;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:${options.spaceBefore ?? 8}px 0 ${options.spaceAfter ?? 28}px;"><tr><td class="c-rule-bg" height="1" bgcolor="${L.hairline}" style="height:1px;background-color:${L.hairline};font-size:0;line-height:0;">&nbsp;</td></tr></table>`;
 }
 
 /**
- * The one call to action: a filled table cell, so it shows even with CSS
- * stripped. On a phone it runs the full width of the card.
+ * The one call to action: a hunter-green fill with a white label in both
+ * modes, as a table cell with a fill so it shows even with CSS stripped.
+ * Inline on a wide screen, the full width of the column on a phone.
  */
 export function button(label: string, href: string, options: { spaceBefore?: number; spaceAfter?: number } = {}): string {
   const url = escapeHtml(safeUrl(href));
   return `<table role="presentation" class="c-btn-table" cellpadding="0" cellspacing="0" border="0" style="margin:${options.spaceBefore ?? 8}px 0 ${options.spaceAfter ?? 8}px;">
-<tr><td class="c-btn" align="center" bgcolor="${L.accent}" style="background-color:${L.accent};border-radius:12px;mso-padding-alt:18px 32px;">
-<a class="c-btn-text" href="${url}" target="_blank" style="display:inline-block;padding:18px 32px;font-family:${FONT_STACK};font-size:17px;line-height:20px;font-weight:700;letter-spacing:0.2px;color:${L.onAccent};text-decoration:none;border-radius:12px;">${escapeHtml(label)}&nbsp;&rarr;</a>
+<tr><td class="c-btn" align="center" bgcolor="${L.button}" style="background-color:${L.button};border-radius:12px;mso-padding-alt:18px 32px;">
+<a class="c-btn-text" href="${url}" target="_blank" style="display:inline-block;padding:18px 32px;font-family:${FONT_STACK};font-size:17px;line-height:20px;font-weight:700;letter-spacing:0.2px;color:${L.onButton};text-decoration:none;border-radius:12px;">${escapeHtml(label)}&nbsp;&rarr;</a>
 </td></tr></table>`;
 }
 
-/** A card section inside the card. `html` is trusted markup. */
+/** A light-gray card with a hairline. `html` is trusted markup. */
 export function panel(html: string, options: { spaceAfter?: number } = {}): string {
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 ${options.spaceAfter ?? 24}px;">
-<tr><td class="c-panel c-pad" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:16px;padding:20px 22px;">${html}</td></tr></table>`;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 ${options.spaceAfter ?? 24}px;border-collapse:separate;">
+<tr><td class="c-panel c-pad" bgcolor="${L.panel}" style="background-color:${L.panel};border:1px solid ${L.hairline};border-radius:16px;padding:20px 22px;">${html}</td></tr></table>`;
 }
 
 /** Label and value rows in a card: plan, amount, date. Values are plain text. */
@@ -248,101 +251,97 @@ export function detailRows(rows: [string, string][]): string {
   const cells = shown
     .map(([label, value], index) => {
       const last = index === shown.length - 1;
-      const edge = last ? "" : `border-bottom:1px solid ${L.rule};`;
-      const pad = `${index === 0 ? 0 : 12}px`;
+      const edge = last ? "" : `border-bottom:1px solid ${L.hairline};`;
+      const top = `${index === 0 ? 0 : 12}px`;
       const bottom = `${last ? 0 : 12}px`;
       return `<tr>
-<td class="c-muted c-rule" valign="top" style="padding:${pad} 12px ${bottom} 0;${edge}font-family:${FONT_STACK};font-size:11px;line-height:22px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:${L.secondary};">${escapeHtml(label.toUpperCase())}</td>
-<td class="c-text c-rule" valign="top" align="right" style="padding:${pad} 0 ${bottom};${edge}font-family:${FONT_STACK};font-size:15px;line-height:22px;font-weight:700;color:${L.text};">${escapeHtml(value)}</td>
+<td class="c-muted c-rule" valign="top" style="padding:${top} 12px ${bottom} 0;${edge}font-family:${FONT_STACK};font-size:11px;line-height:22px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:${L.secondary};">${escapeHtml(label.toUpperCase())}</td>
+<td class="c-text c-rule" valign="top" align="right" style="padding:${top} 0 ${bottom};${edge}font-family:${FONT_STACK};font-size:15px;line-height:22px;font-weight:700;color:${L.text};">${escapeHtml(value)}</td>
 </tr>`;
     })
     .join("");
   return panel(`<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">${cells}</table>`);
 }
 
-/** Numbered steps, editorial style: a big "01" in the accent, a title, a line. */
+/** Numbered steps, editorial style: 01, 02, 03 in the accent, a bold line and a plain one, hairlines between. */
 export function steps(items: readonly { title: string; body: string }[]): string {
   const rows = items
     .map((item, index) => {
-      const last = index === items.length - 1;
-      const edge = last ? "" : `border-bottom:1px solid ${L.rule};`;
-      const pad = `${index === 0 ? 0 : 18}px 0 ${last ? 0 : 18}px`;
+      const edge = index === 0 ? "" : `border-top:1px solid ${L.hairline};`;
+      const pad = `${index === 0 ? 0 : 16}px 0 16px`;
       return `<tr>
-<td class="c-rule" valign="top" width="56" style="width:56px;padding:${pad};${edge}">
-<p class="c-accent" style="${p(`font-size:30px;line-height:30px;font-weight:800;letter-spacing:-1px;color:${L.accent};`)}">${String(index + 1).padStart(2, "0")}</p>
+<td class="c-rule" valign="top" width="48" style="width:48px;padding:${pad};${edge}">
+<p class="c-accent" style="${p(`font-size:20px;line-height:24px;font-weight:800;letter-spacing:0.2px;color:${L.accent};`)}">${String(index + 1).padStart(2, "0")}</p>
 </td>
 <td class="c-rule" valign="top" style="padding:${pad};${edge}">
-<p class="c-text" style="${p(`margin:0 0 4px;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(item.title)}</p>
+<p class="c-text" style="${p(`margin:0 0 3px;font-size:17px;line-height:24px;font-weight:700;color:${L.text};`)}">${escapeHtml(item.title)}</p>
 <p class="c-muted" style="${p(`font-size:15px;line-height:23px;color:${L.secondary};`)}">${escapeHtml(item.body)}</p>
 </td></tr>`;
     })
     .join("");
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 28px;">${rows}</table>`;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px;">${rows}</table>`;
 }
 
-/** A list with square accent markers: Plus features, what a tip covers. */
+/** A list with small square accent markers: Plus features, habit tips. */
 export function checklist(items: readonly string[]): string {
   const rows = items
     .map(
       (item, index) => `<tr>
-<td valign="top" width="24" style="width:24px;padding:${index === 0 ? 7 : 19}px 0 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="c-btn" width="10" height="10" bgcolor="${L.accent}" style="width:10px;height:10px;font-size:0;line-height:0;background-color:${L.accent};border-radius:2px;">&nbsp;</td></tr></table></td>
+<td valign="top" width="22" style="width:22px;padding:${index === 0 ? 8 : 20}px 0 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td class="c-fill" width="8" height="8" bgcolor="${L.accent}" style="width:8px;height:8px;font-size:0;line-height:0;background-color:${L.accent};border-radius:2px;">&nbsp;</td></tr></table></td>
 <td valign="top" style="padding:${index === 0 ? 0 : 12}px 0 0;"><p class="c-text" style="${p(`font-size:16px;line-height:24px;color:${L.text};`)}">${escapeHtml(item)}</p></td>
 </tr>`,
     )
     .join("");
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:6px 0 26px;">${rows}</table>`;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 26px;">${rows}</table>`;
 }
 
-/**
- * The hero moment: one big number with an uppercase label under it, on a card
- * with a yellow-green edge. `value` is short ("12", "86", "7").
- */
+/** A big-number moment on white: the number huge in the accent, an uppercase label, a line under it. */
 export function bigNumber(input: { value: string; label: string; caption?: string }): string {
   const caption = cleanText(input.caption, 160);
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;">
-<tr><td class="c-panel c-pad" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:16px;border-left:6px solid ${L.offer};padding:24px 24px 22px;">
-<p class="c-accent c-big" style="${p(`font-size:80px;line-height:76px;font-weight:800;letter-spacing:-3px;color:${L.accent};`)}">${escapeHtml(input.value)}</p>
+<tr><td style="padding:0;">
+<p class="c-accent c-big" style="${p(`font-size:88px;line-height:84px;font-weight:800;letter-spacing:-4px;color:${L.accent};`)}">${escapeHtml(input.value)}</p>
 <p class="c-text" style="${p(`margin:10px 0 0;font-size:13px;line-height:18px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.text};`)}">${escapeHtml(input.label.toUpperCase())}</p>
 ${caption ? `<p class="c-muted" style="${p(`margin:6px 0 0;font-size:15px;line-height:22px;color:${L.secondary};`)}">${escapeHtml(caption)}</p>` : ""}
 </td></tr></table>`;
 }
 
-/** Up to three big numbers side by side: the weekly summary, a habit check-in. */
+/** Up to three numbers side by side on light-gray cards. */
 export function stats(items: readonly { value: string; label: string }[]): string {
   const width = Math.floor(100 / Math.max(1, items.length));
   const cells = items
     .map(
-      (item) => `<td class="c-panel" width="${width}%" valign="top" bgcolor="${L.panel}" style="background-color:${L.panel};border-radius:16px;border-top:4px solid ${L.offer};padding:16px 14px 14px;">
-<p class="c-accent c-stat" style="${p(`margin:0 0 6px;font-size:40px;line-height:40px;font-weight:800;letter-spacing:-1.5px;color:${L.accent};`)}">${escapeHtml(item.value)}</p>
+      (item) => `<td class="c-panel" width="${width}%" valign="top" bgcolor="${L.panel}" style="background-color:${L.panel};border:1px solid ${L.hairline};border-radius:14px;padding:16px 14px 14px;">
+<p class="c-accent c-stat" style="${p(`margin:0 0 6px;font-size:36px;line-height:38px;font-weight:800;letter-spacing:-1.4px;color:${L.accent};`)}">${escapeHtml(item.value)}</p>
 <p class="c-muted" style="${p(`font-size:11px;line-height:15px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:${L.secondary};`)}">${escapeHtml(item.label.toUpperCase())}</p></td>`,
     )
     .join(`<td width="8" style="width:8px;font-size:0;line-height:0;">&nbsp;</td>`);
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 28px;"><tr>${cells}</tr></table>`;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;border-collapse:separate;"><tr>${cells}</tr></table>`;
 }
 
 /**
- * The offer block: a solid yellow-green slab with the discount huge, the code
- * in a dashed ticket and the end date. Same colours in both modes, on purpose.
+ * The offer on white: the discount huge in the accent, then the code on a
+ * dashed ticket as live text a reader can select, then the end date.
  */
 export function offerBlock(input: { kicker: string; headline: string; code: string; ends: string }): string {
   const headline = cleanText(input.headline, 24).toUpperCase();
-  const size = headline.length <= 8 ? "88px;line-height:82px" : headline.length <= 14 ? "60px;line-height:58px" : "44px;line-height:46px";
-  const ink = L.onOffer;
+  const size = headline.length <= 8 ? "88px;line-height:84px;letter-spacing:-4px" : headline.length <= 14 ? "60px;line-height:60px;letter-spacing:-2.5px" : "44px;line-height:46px;letter-spacing:-1.5px";
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;">
-<tr><td class="c-pad" bgcolor="${L.offer}" style="background-color:${L.offer};border-radius:16px;padding:28px 28px 26px;">
-<p style="${p(`margin:0 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:${ink};`)}">${escapeHtml(cleanText(input.kicker, 60).toUpperCase())}</p>
-<p class="${headline.length <= 8 ? "c-offer-big" : ""}" style="${p(`font-size:${size};font-weight:800;letter-spacing:-3px;color:${ink};`)}">${escapeHtml(headline)}</p>
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0 0;"><tr>
-<td style="border:2px dashed ${ink};border-radius:10px;padding:10px 16px;"><p style="margin:0;font-family:${MONO_STACK};font-size:20px;line-height:24px;font-weight:700;letter-spacing:3px;color:${ink};">${escapeHtml(input.code)}</p></td>
-</tr></table>
-<p style="${p(`margin:14px 0 0;font-size:14px;line-height:20px;font-weight:600;color:${ink};`)}">${escapeHtml(input.ends)}</p>
+<tr><td style="padding:0;">
+<p class="c-accent ${headline.length <= 8 ? "c-big" : ""}" style="${p(`font-size:${size};font-weight:800;color:${L.accent};`)}">${escapeHtml(headline)}</p>
+</td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;border-collapse:separate;">
+<tr><td class="c-ticket" align="center" style="border:2px dashed ${L.accent};border-radius:16px;padding:20px 18px 22px;">
+<p class="c-accent" style="${p(`margin:0 0 8px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:${L.accent};`)}">${escapeHtml(cleanText(input.kicker, 60).toUpperCase())}</p>
+<p class="c-text c-code" style="margin:0;font-family:${MONO_STACK};font-size:30px;line-height:36px;font-weight:700;letter-spacing:4px;color:${L.text};">${escapeHtml(input.code)}</p>
+<p class="c-muted" style="${p(`margin:10px 0 0;font-size:14px;line-height:20px;font-weight:600;color:${L.secondary};`)}">${escapeHtml(input.ends)}</p>
 </td></tr></table>`;
 }
 
 /** The raw link under a button, for clients that do not render the button. */
 export function linkFallback(href: string): string {
   const url = escapeHtml(safeUrl(href));
-  return `<p class="c-faint" style="${p(`font-size:13px;line-height:20px;color:${L.tertiary};`)}">If the button doesn't work, paste this link into your browser:<br><a class="c-faint" href="${url}" target="_blank" style="color:${L.tertiary};word-break:break-all;text-decoration:underline;">${url}</a></p>`;
+  return `<p class="c-muted" style="${p(`font-size:13px;line-height:20px;color:${L.secondary};`)}">If the button doesn't work, paste this link into your browser:<br><a class="c-muted" href="${url}" target="_blank" style="color:${L.secondary};word-break:break-all;text-decoration:underline;">${url}</a></p>`;
 }
 
 // Footer ----------------------------------------------------------------------
@@ -356,34 +355,31 @@ export function postalAddress(env: Record<string, string | undefined> = process.
   return cleanText(env.CADENCE_POSTAL_ADDRESS ?? "", 200);
 }
 
-const PREFERENCES_URL = `${SITE_URL}/account`;
+/** The app icon in the footer: hosted, small, rounded. */
+export const APP_ICON = { src: `${SITE_URL}/favicon/apple-touch-icon.png`, size: 36 } as const;
 
+/**
+ * Just the app icon and the small gray lines the law and good manners need:
+ * why this came, the unsubscribe link on its own line (opt-in mail only), and
+ * the company and postal address when it is set. No wordmark.
+ */
 function footerHtml(options: FooterOptions): string {
-  const line = (html: string, spaceAfter = 6) => `<p class="c-faint" style="${p(`margin:0 0 ${spaceAfter}px;font-size:12px;line-height:19px;color:${L.tertiary};`)}">${html}</p>`;
-  const anchor = (href: string, label: string, bold = false) =>
-    `<a class="c-faint" href="${escapeHtml(href)}" target="_blank" style="color:${L.tertiary};text-decoration:underline;${bold ? "font-weight:700;" : ""}">${escapeHtml(label)}</a>`;
+  const line = (html: string, spaceAfter = 8) => `<p class="c-footer" style="${p(`margin:0 0 ${spaceAfter}px;font-size:12px;line-height:19px;color:${L.footer};`)}">${html}</p>`;
   const address = postalAddress();
-
-  return [
-    `<p class="c-faint" style="${p(`margin:0 0 12px;font-size:11px;line-height:16px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:${L.tertiary};`)}">Cadence &middot; ${anchor(SITE_URL, SITE_LABEL)}</p>`,
-    line(escapeHtml(options.reason)),
-    options.category === "transactional" ? "" : line(`${anchor(safeUrl(options.unsubscribeUrl), "Unsubscribe", true)} &middot; ${anchor(PREFERENCES_URL, "Email settings")}`),
-    line(`Questions? Reply to this email or write to ${anchor(`mailto:${FOOTER_ADDRESSES.support}`, FOOTER_ADDRESSES.support)}.`, address ? 6 : 0),
-    address ? line(escapeHtml(address), 0) : "",
-  ].join("");
+  const icon = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(APP_ICON.src)}" width="${APP_ICON.size}" height="${APP_ICON.size}" alt="Cadence" style="display:block;width:${APP_ICON.size}px;height:${APP_ICON.size}px;border:0;outline:none;text-decoration:none;border-radius:9px;margin:0 0 14px;font-family:${FONT_STACK};font-size:11px;line-height:${APP_ICON.size}px;color:${L.footer};"></a>`;
+  const unsubscribe =
+    options.category === "transactional"
+      ? ""
+      : line(`<a class="c-footer" href="${escapeHtml(safeUrl(options.unsubscribeUrl))}" target="_blank" style="color:${L.footer};font-weight:700;text-decoration:underline;">Unsubscribe</a>`);
+  const lines = [line(escapeHtml(options.reason)), unsubscribe, address ? line(`Cadence, ${escapeHtml(address)}`) : ""].filter(Boolean);
+  // The last line closes without a gap.
+  if (lines.length) lines[lines.length - 1] = lines[lines.length - 1].replace("margin:0 0 8px;", "margin:0;");
+  return icon + lines.join("");
 }
 
 function footerText(options: FooterOptions): string {
   const address = postalAddress();
-  return [
-    `Cadence · ${SITE_URL}`,
-    options.reason,
-    options.category === "transactional" ? "" : `Unsubscribe: ${safeUrl(options.unsubscribeUrl)}\nEmail settings: ${PREFERENCES_URL}`,
-    `Questions? Reply to this email or write to ${FOOTER_ADDRESSES.support}.`,
-    address,
-  ]
-    .filter(Boolean)
-    .join("\n");
+  return [options.reason, options.category === "transactional" ? "" : `Unsubscribe: ${safeUrl(options.unsubscribeUrl)}`, address ? `Cadence, ${address}` : ""].filter(Boolean).join("\n");
 }
 
 // Document --------------------------------------------------------------------
@@ -392,17 +388,18 @@ export const DARK_MEDIA = "@media (prefers-color-scheme: dark)";
 
 const DARK_CSS = `
 .c-page { background-color:${D.page} !important; }
-.c-band { background-color:${D.band} !important; }
-.c-headline { color:${D.onBand} !important; }
 .c-card { background-color:${D.card} !important; }
-.c-panel { background-color:${D.panel} !important; }
+.c-panel { background-color:${D.panel} !important; border-color:${D.hairline} !important; }
 .c-text { color:${D.text} !important; }
 .c-muted { color:${D.secondary} !important; }
-.c-faint { color:${D.tertiary} !important; }
+.c-footer { color:${D.footer} !important; }
 .c-accent { color:${D.accent} !important; }
-.c-btn { background-color:${D.accent} !important; }
-.c-btn-text { color:${D.onAccent} !important; }
-.c-rule { border-color:${D.rule} !important; }
+.c-fill { background-color:${D.accent} !important; }
+.c-btn { background-color:${D.button} !important; }
+.c-btn-text { color:${D.onButton} !important; }
+.c-rule { border-color:${D.hairline} !important; }
+.c-rule-bg { background-color:${D.hairline} !important; }
+.c-ticket { border-color:${D.accent} !important; }
 `;
 
 const HEAD_CSS = `
@@ -412,45 +409,43 @@ table, td { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt
 img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
 a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !important; }
 @media only screen and (max-width:520px) {
-  .c-outer { padding:12px 8px 28px !important; }
-  .c-band { padding:24px 22px 30px !important; }
-  .c-card { padding:28px 22px 30px !important; }
-  .c-edge { padding-left:22px !important; padding-right:22px !important; }
-  .c-pad { padding:20px 18px !important; }
-  .c-headline { font-size:36px !important; line-height:37px !important; letter-spacing:-1.2px !important; }
-  .c-kicker { margin-top:30px !important; }
-  .c-big { font-size:64px !important; line-height:62px !important; }
-  .c-stat { font-size:30px !important; line-height:32px !important; }
-  .c-offer-big { font-size:64px !important; line-height:62px !important; }
+  .c-outer { padding:20px 8px 28px !important; }
+  .c-edge { padding-left:20px !important; padding-right:20px !important; }
+  .c-pad { padding:18px 18px !important; }
+  .c-headline { font-size:36px !important; line-height:38px !important; letter-spacing:-1.3px !important; }
+  .c-big { font-size:72px !important; line-height:70px !important; letter-spacing:-3px !important; }
+  .c-stat { font-size:28px !important; line-height:30px !important; }
+  .c-code { font-size:24px !important; letter-spacing:3px !important; }
   .c-btn-table { width:100% !important; }
   .c-btn-text { display:block !important; text-align:center !important; padding-left:16px !important; padding-right:16px !important; }
 }
 ${DARK_MEDIA} {${DARK_CSS}}
+[data-ogsc] .c-page, [data-ogsc] .c-card { background-color:${D.page} !important; }
 [data-ogsc] .c-text { color:${D.text} !important; }
 [data-ogsc] .c-muted { color:${D.secondary} !important; }
-[data-ogsc] .c-headline { color:${D.onBand} !important; }
+[data-ogsc] .c-footer { color:${D.footer} !important; }
+[data-ogsc] .c-accent { color:${D.accent} !important; }
+[data-ogsc] .c-btn { background-color:${D.button} !important; }
+[data-ogsc] .c-btn-text { color:${D.onButton} !important; }
 `;
 
 const PREHEADER_PAD = "&#8199;&#65279;&#847; ".repeat(40);
-
-/** The yellow-green logo (public/email/logo-dark.png), which sits on the green band in both modes. */
-export const LOGO = { width: 124, height: 30, src: `${EMAIL_ASSET_ORIGIN}logo-dark.png` } as const;
 
 export interface DocumentInput {
   subject: string;
   preheader: string;
   /** The uppercase line above the headline: "Day 1 · Start here", "Security". */
   kicker: string;
-  /** The headline in the band. */
+  /** The headline. */
   title: string;
   body: string;
   footer: FooterOptions;
 }
 
 export function renderDocument(input: DocumentInput): string {
-  const logo = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(LOGO.src)}" width="${LOGO.width}" height="${LOGO.height}" alt="Cadence" style="display:block;width:${LOGO.width}px;height:${LOGO.height}px;border:0;outline:none;text-decoration:none;font-family:${FONT_STACK};font-size:24px;line-height:30px;font-weight:800;color:${L.kicker};"></a>`;
-  const kicker = cleanText(input.kicker, 60).toUpperCase();
+  const kicker = cleanText(input.kicker, 60).toUpperCase() || "CADENCE";
   const width = MAX_WIDTH;
+  const logo = `<a href="${escapeHtml(SITE_URL)}" target="_blank" style="text-decoration:none;"><img src="${escapeHtml(APP_ICON.src)}" width="${APP_ICON.size}" height="${APP_ICON.size}" alt="Cadence" style="display:block;width:${APP_ICON.size}px;height:${APP_ICON.size}px;border:0;outline:none;text-decoration:none;border-radius:9px;margin:0 0 32px;font-family:${FONT_STACK};font-size:11px;line-height:${APP_ICON.size}px;color:${L.footer};"></a>`;
 
   return `<!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -470,18 +465,18 @@ export function renderDocument(input: DocumentInput): string {
 <body class="c-page" style="margin:0;padding:0;background-color:${L.page};">
 <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${escapeHtml(input.preheader)}${PREHEADER_PAD}</div>
 <table role="presentation" class="c-page" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${L.page}" style="background-color:${L.page};">
-<tr><td class="c-outer" align="center" style="padding:32px 12px 44px;">
+<tr><td class="c-outer" align="center" style="padding:40px 12px 48px;">
 <!--[if mso]><table role="presentation" width="${width}" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:${width}px;">
-<tr><td class="c-band" bgcolor="${L.band}" style="background-color:${L.band};border-radius:20px 20px 0 0;padding:30px 40px 40px;">
+<tr><td class="c-card c-edge" bgcolor="${L.card}" style="background-color:${L.card};padding:0 36px 8px;">
 ${logo}
-<p class="c-kicker" style="${p(`margin:44px 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:${L.kicker};`)}">${escapeHtml(kicker || "Cadence")}</p>
-<h1 class="c-headline" style="${p(`font-size:46px;line-height:47px;font-weight:800;letter-spacing:-1.6px;color:${L.onBand};`)}">${escapeHtml(input.title)}</h1>
+<p class="c-accent" style="${p(`margin:0 0 14px;font-size:12px;line-height:16px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:${L.accent};`)}">${escapeHtml(kicker)}</p>
+<h1 class="c-text c-headline" style="${p(`font-size:46px;line-height:48px;font-weight:800;letter-spacing:-1.7px;color:${L.text};`)}">${escapeHtml(input.title)}</h1>
 </td></tr>
-<tr><td class="c-card" bgcolor="${L.card}" style="background-color:${L.card};border-radius:0 0 20px 20px;padding:36px 40px 40px;">
+<tr><td class="c-card c-edge" bgcolor="${L.card}" style="background-color:${L.card};padding:28px 36px 36px;">
 ${input.body}
 </td></tr>
-<tr><td class="c-edge" style="padding:26px 40px 0;">${footerHtml(input.footer)}</td></tr>
+<tr><td class="c-edge" style="padding:0 36px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="c-rule" style="border-top:1px solid ${L.hairline};padding:28px 0 0;">${footerHtml(input.footer)}</td></tr></table></td></tr>
 </table>
 <!--[if mso]></td></tr></table><![endif]-->
 </td></tr>
@@ -501,7 +496,7 @@ export function compose(input: {
   preheader: string;
   /** The uppercase line above the headline. */
   kicker: string;
-  /** The headline in the band; also the first line of the plain-text part. */
+  /** The headline; also the first line of the plain-text part. */
   title: string;
   body: (string | false | null | undefined)[];
   /** The plain-text part, without the title (compose puts it first). */

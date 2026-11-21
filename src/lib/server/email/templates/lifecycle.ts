@@ -29,6 +29,7 @@ import {
   eyebrow,
   firstName,
   formatDate,
+  inlineLink,
   offerBlock,
   panel,
   paragraph,
@@ -78,7 +79,7 @@ export function renderLifecycleStart(props: LifecycleStartProps): RenderedEmail 
       bigNumber({ value: "5", label: "minutes, start to finish", caption: "One sound, one comparison, a few cards." }),
       steps(START_STEPS),
       button("Open the mouth map", url, { spaceAfter: 20 }),
-      paragraph(`${escapeHtml(PLACEMENT)} <a class="c-accent" href="${escapeHtml(placement)}" target="_blank" style="color:#386641;font-weight:700;text-decoration:underline;">Take it now</a>`, { muted: true, small: true, spaceAfter: 28 }),
+      paragraph(`${escapeHtml(PLACEMENT)} ${inlineLink("Take it now", placement)}`, { muted: true, small: true, spaceAfter: 28 }),
       panel(`${eyebrow("Tip", { spaceAfter: 8 })}${paragraph(escapeHtml(PLAY_TIP), { spaceAfter: 0 })}`, { spaceAfter: 0 }),
     ],
     text: [lead, START_STEPS.map((s, i) => `${i + 1}. ${s.title}\n   ${s.body}`).join("\n\n"), `Open the mouth map: ${url}`, `${PLACEMENT} ${placement}`, `Tip: ${PLAY_TIP}`],
@@ -225,18 +226,17 @@ function saleParts(props: SaleProps) {
   const label = cleanText(props.label, 40);
   const ends = formatDate(props.endsAt);
   const short = ends.replace(/ \d{4}$/, "");
-  // A no-break space keeps "50% off" on one line in the headline.
-  return { code, label, glued: label.replace(/ /g, "\u00a0"), ends, short, url: safeUrl(offerRedeemUrl(code)), name: firstName(props.name) };
+  return { code, label, ends, short, url: safeUrl(offerRedeemUrl(code)), name: firstName(props.name) };
 }
 
 export function renderSaleOffer(props: SaleProps): RenderedEmail {
-  const { code, label, glued, ends, short, url, name } = saleParts(props);
+  const { code, label, ends, short, url, name } = saleParts(props);
   const lead = "Everything that makes practice faster: scoring down to the sound, the AI coach and your progress synced across your devices.";
   return compose({
     subject: `${label} Cadence Plus, until ${short}`,
     preheader: `Use code ${code} in the App Store. Ends ${ends}.`,
     kicker: "Offer · Limited time",
-    title: name ? `${name}, Plus is ${glued}` : `Cadence Plus, ${glued}`,
+    title: name ? `${name}, an offer on Plus` : "An offer on Cadence Plus",
     body: [
       offerBlock({ kicker: "Cadence Plus · App Store code", headline: label, code, ends: `Ends ${ends}` }),
       paragraph(escapeHtml(lead), { lead: true, spaceAfter: 24 }),
@@ -252,13 +252,13 @@ export function renderSaleOffer(props: SaleProps): RenderedEmail {
 }
 
 export function renderSaleReminder(props: SaleProps): RenderedEmail {
-  const { code, label, glued, ends, short, url, name } = saleParts(props);
+  const { code, label, ends, short, url, name } = saleParts(props);
   const lead = `One reminder, and that's it: your code still works until ${ends}. After that, Plus is back to its regular price.`;
   return compose({
     subject: `Last days: ${label} Cadence Plus ends ${short}`,
     preheader: `Code ${code} works until ${ends}.`,
     kicker: "Offer · Ends soon",
-    title: name ? `${name}, last call for ${glued}` : `Last call for ${glued}`,
+    title: name ? `${name}, last call` : "Last call",
     body: [
       offerBlock({ kicker: "Cadence Plus · Ends soon", headline: label, code, ends: `Ends ${ends}` }),
       paragraph(escapeHtml(lead), { lead: true, spaceAfter: 20 }),
