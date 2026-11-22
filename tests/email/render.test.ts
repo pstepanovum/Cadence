@@ -10,7 +10,7 @@ import { dirname, join } from "node:path";
 import { describe, it } from "node:test";
 import { fileURLToPath } from "node:url";
 
-import { EMAIL_ICONS } from "../../src/lib/server/email/layout.ts";
+import { EMAIL_ICONS, POSTAL_ADDRESS, postalAddress } from "../../src/lib/server/email/layout.ts";
 import { TEMPLATES, TEMPLATE_IDS, renderFixture, renderTemplate } from "../../src/lib/server/email/templates/index.ts";
 
 const PUBLIC_EMAIL = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "public", "email");
@@ -63,8 +63,18 @@ describe("email templates", () => {
       const hasUnsubscribe = /Unsubscribe/.test(email.html);
       assert.equal(hasUnsubscribe, entry.category !== "transactional", "unsubscribe only on opt-in mail");
       assert.equal((email.html.match(/email\/app-icon\.png" width="36" height="36" alt="Cadence"/g) ?? []).length, 2, "App Store icon at the top and in the footer");
+      assert.ok(email.html.includes(postalAddress()), "postal address in the html footer");
+      assert.ok(email.text.trimEnd().endsWith(postalAddress()), "postal address closes the text footer");
     });
   }
+
+  it("prints the postal address in marketing mail, with the env override kept", () => {
+    const sale = renderFixture("sale-offer");
+    assert.equal(TEMPLATES["sale-offer"].category, "marketing");
+    assert.ok(sale.html.includes(POSTAL_ADDRESS) && sale.text.includes(POSTAL_ADDRESS));
+    assert.equal(postalAddress({}), POSTAL_ADDRESS);
+    assert.equal(postalAddress({ CADENCE_POSTAL_ADDRESS: "1 Main St, Springfield" }), "1 Main St, Springfield");
+  });
 
   it("escapes hostile props and refuses unsafe links", () => {
     const email = renderTemplate("mcp-authorized", { clientName: '<script>alert(1)</script>"', destination: "evil.example", scopes: ["cadence:read"], at: Date.UTC(2026, 0, 1) });

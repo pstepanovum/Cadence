@@ -143,8 +143,9 @@ news and offers off; people without an account through double opt-in).
 Existing accounts made before this change are not on list 5 yet; the lifecycle
 sale reaches them through the app's own sends, and Brevo campaigns to list 5
 need a one-off import of accounts whose `emailPrefs.newsletter` is not false. Contact attributes
-`PLAN`, `PLATFORM`, `CEFR_LEVEL`. Set `CADENCE_POSTAL_ADDRESS` before any
-marketing email goes out (it prints the postal line marketing email needs).
+`PLAN`, `PLATFORM`, `CEFR_LEVEL`. Every footer ends with the postal line
+marketing email needs (`POSTAL_ADDRESS` in `src/lib/server/email/layout.ts`);
+`CADENCE_POSTAL_ADDRESS` overrides it.
 
 **Lifecycle email** (`src/lib/server/lifecycle.ts`, `lifecycle-plan.ts`,
 templates in `src/lib/server/email/templates/lifecycle.ts`): accounts without

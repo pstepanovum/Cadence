@@ -54,6 +54,9 @@ export const FOOTER_ADDRESSES = {
   support: "support@cadence.pstepanov.dev",
 } as const;
 
+/** The postal address US law (CAN-SPAM) asks commercial mail to carry, on the last footer line. CADENCE_POSTAL_ADDRESS overrides it. */
+export const POSTAL_ADDRESS = "7901 4th St N Ste 300, St. Petersburg, FL 33702";
+
 /**
  * Brevo's double opt-in placeholder. It is the one href that is not a URL when
  * rendered, because Brevo swaps in the confirmation link at send time.
@@ -394,9 +397,9 @@ export type FooterOptions =
   | { category: "transactional"; reason: string }
   | { category: "marketing" | "reminder" | "lifecycle"; reason: string; unsubscribeUrl: string };
 
-/** The postal line marketing mail needs (CAN-SPAM). Set CADENCE_POSTAL_ADDRESS; empty hides the line. */
+/** The postal line every footer carries (CAN-SPAM): CADENCE_POSTAL_ADDRESS when set, POSTAL_ADDRESS otherwise. */
 export function postalAddress(env: Record<string, string | undefined> = process.env): string {
-  return cleanText(env.CADENCE_POSTAL_ADDRESS ?? "", 200);
+  return cleanText(env.CADENCE_POSTAL_ADDRESS ?? "", 200) || POSTAL_ADDRESS;
 }
 
 /** The App Store icon (mobile/assets/images/ios-icon.png, rendered by scripts/email/assets.mjs), small and rounded. */
@@ -405,7 +408,7 @@ export const APP_ICON = { src: `${EMAIL_ASSET_ORIGIN}app-icon.png`, size: 36 } a
 /**
  * Just the app icon and the small gray lines the law and good manners need:
  * why this came, the unsubscribe link on its own line (opt-in mail only), and
- * the company and postal address when it is set. No wordmark.
+ * the company and postal address, last. No wordmark.
  */
 function footerHtml(options: FooterOptions): string {
   const line = (html: string, spaceAfter = 8) => `<p class="c-footer" style="${p(`margin:0 0 ${spaceAfter}px;font-size:12px;line-height:19px;color:${L.footer};`)}">${html}</p>`;
