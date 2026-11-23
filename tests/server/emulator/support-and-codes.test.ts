@@ -1,17 +1,21 @@
 // FILE: tests/server/emulator/support-and-codes.test.ts
 //
-// The contact form, the owner's support and friend-code endpoints, and
-// redeeming a code, run through their real handlers against the emulators.
+// The contact form, the owner's support, friend-code and account-list
+// endpoints, emailing a code, and redeeming a code, run through their real
+// handlers against the emulators.
 // Mail is queued only (EMAIL_DRY_RUN=1 in helpers.ts): nothing leaves the machine.
 import assert from "node:assert/strict";
 import { beforeEach, describe, it } from "node:test";
 
 import { DAY, clearAuth, clearFirestore, plusRecord, signUp, skip } from "./helpers.ts";
+import { Timestamp } from "firebase-admin/firestore";
+
 import { db } from "../../../src/lib/server/firebase.ts";
 import { readAccount } from "../../../src/lib/server/entitlement.ts";
 import { deliverMail } from "../../../src/lib/server/email/queue.ts";
 import { handleAdminSupportGet, handleAdminSupportPatch, handleAdminSupportReply, handleSupportPost } from "../../../src/lib/server/support-http.ts";
-import { handleAdminCodesGet, handleAdminCodesPatch, handleAdminCodesPost, handleRedeemGet, handleRedeemPost } from "../../../src/lib/server/codes/http.ts";
+import { handleAdminCodeEmailPost, handleAdminCodesGet, handleAdminCodesPatch, handleAdminCodesPost, handleRedeemGet, handleRedeemPost } from "../../../src/lib/server/codes/http.ts";
+import { handleAdminUsersGet } from "../../../src/lib/server/users/http.ts";
 import { redeemCode, revokeRedemption, deleteRedemptionsFor } from "../../../src/lib/server/codes/store.ts";
 import { hashCode } from "../../../src/lib/server/codes/logic.ts";
 
@@ -313,5 +317,111 @@ describe("redeeming a code", { skip }, () => {
     await redeemCode(uid, code.code, { email: "gone@example.com" });
     await deleteRedemptionsFor(uid);
     assert.equal((await db().collection("friendCodes").doc(code.id).collection("redemptions").get()).size, 0);
+  });
+});
+
+describe("emailing a code from the dashboard", { skip }, () => {
+  beforeEach(async () => {
+    await clearFirestore();
+    await clearAuth();
+  });
+
+  it("refuses without the admin secret", async () => {
+    assert.equal((await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: "CADENCE-ABCD", to: "a@b.co", dryRun: true }))).status, 401);
+    assert.equal((await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: "CADENCE-ABCD", to: "a@b.co" }, { Authorization: "Bearer wrong" }))).status, 401);
+  });
+
+  it("renders a dry run, sends, and remembers who it went to", async () => {
+    const code = await makeCode({ durationDays: 90, maxRedemptions: 5, expiresAt: Date.now() + 30 * DAY });
+    const dry = await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: code.code.toLowerCase(), to: "maria@example.com", name: "Maria Lopez", dryRun: true }, admin));
+    assert.equal(dry.status, 200);
+    const preview = (await dry.json()) as Record<string, string>;
+    assert.deepEqual(Object.keys(preview).sort(), ["html", "subject", "text"]);
+    assert.equal(preview.subject, "A gift: 3 months of Cadence Plus");
+    assert.ok(preview.html.includes(code.code) && preview.html.includes("Hi Maria,"));
+    assert.deepEqual((await db().collection("friendCodes").doc(code.id).get()).data()?.emailedTo, undefined, "a dry run records nothing");
+
+    const sent = await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: code.code, to: "maria@example.com" }, admin));
+    assert.equal(sent.status, 200);
+    const body = (await sent.json()) as Record<string, unknown>;
+    assert.equal(body.ok, true);
+    assert.equal(body.subject, "A gift: 3 months of Cadence Plus");
+
+    const listed = (await (await handleAdminCodesGet(get("/api/admin/codes", admin))).json()) as { codes: { id: string; emailedTo: { to: string; at: number }[] }[] };
+    const entry = listed.codes.find((c) => c.id === code.id)!;
+    assert.equal(entry.emailedTo.length, 1);
+    assert.equal(entry.emailedTo[0].to, "maria@example.com");
+    assert.equal(typeof entry.emailedTo[0].at, "number");
+  });
+
+  it("refuses unknown and unusable codes and bad addresses", async () => {
+    assert.equal((await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: "CADENCE-NONE-HERE", to: "a@b.co", dryRun: true }, admin))).status, 404);
+    const code = await makeCode();
+    assert.equal((await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: code.code, to: "nope", dryRun: true }, admin))).status, 400);
+    await handleAdminCodesPatch(patch("/api/admin/codes", { action: "disable", codeId: code.id }, admin));
+    const disabled = await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: code.code, to: "a@b.co", dryRun: true }, admin));
+    assert.equal(disabled.status, 409);
+    assert.equal(((await disabled.json()) as { error: string }).error, "code_unusable");
+    const expired = await makeCode({ expiresAt: Date.now() + 1000 });
+    const later = await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: expired.code, to: "a@b.co", dryRun: true }, admin), { now: Date.now() + 2 * DAY });
+    assert.equal(later.status, 409);
+    const used = await makeCode({ maxRedemptions: 1 });
+    const { idToken } = await signUp();
+    await handleRedeemPost(post("/api/codes/redeem", { code: used.code }, { Authorization: `Bearer ${idToken}` }));
+    assert.equal((await handleAdminCodeEmailPost(post("/api/admin/codes/email", { code: used.code, to: "a@b.co", dryRun: true }, admin))).status, 409);
+  });
+});
+
+describe("the owner's account list", { skip }, () => {
+  beforeEach(async () => {
+    await clearFirestore();
+    await clearAuth();
+  });
+
+  async function account(email: string, createdAt: number, extra: Record<string, unknown> = {}) {
+    const { uid } = await signUp(email);
+    await db().collection("users").doc(uid).set({ email, displayName: null, createdAt: Timestamp.fromMillis(createdAt), ...extra });
+    return uid;
+  }
+
+  it("refuses without the admin secret", async () => {
+    assert.equal((await handleAdminUsersGet(get("/api/admin/users"))).status, 401);
+    assert.equal((await handleAdminUsersGet(get("/api/admin/users", { Authorization: "Bearer wrong" }))).status, 401);
+  });
+
+  it("lists accounts newest first with their plan, pages with a cursor, and filters", async () => {
+    const now = Date.now();
+    const free = await account("free@example.com", now - 3 * DAY);
+    const paid = await account("paid@example.com", now - 2 * DAY, { displayName: "Paid Person", plusSources: { stripe: plusRecord("stripe", now) } });
+    const coded = await account("coded@example.com", now - DAY, { plusSources: { code: { ...plusRecord("stripe", now), source: "code", willRenew: false, codeId: "c" } } });
+    await db().collection("users").doc(free).collection("progress").doc("summary").set({ lastActiveAt: now - 3600_000 });
+    await db().collection("users").doc(paid).collection("devices").doc("install-1").set({ platform: "ios", lastSyncAt: now - 60_000 });
+
+    const first = (await (await handleAdminUsersGet(get("/api/admin/users?limit=2", admin))).json()) as { users: Record<string, unknown>[]; nextCursor: string | null; total: number | null };
+    assert.equal(first.total, 3);
+    assert.deepEqual(first.users.map((u) => u.id), [coded, paid]);
+    assert.equal(first.users[0].plan, "code");
+    assert.equal(first.users[1].plan, "plus");
+    assert.equal(first.users[1].name, "Paid Person");
+    assert.equal(first.users[1].platform, "ios");
+    assert.equal(first.users[1].lastActiveAt, now - 60_000);
+    assert.deepEqual(first.users[1].alsoUses, []);
+    assert.deepEqual(Object.keys(first.users[0]).sort(), ["alsoUses", "createdAt", "email", "id", "lastActiveAt", "name", "plan", "planUntil", "platform"]);
+    assert.ok(first.nextCursor);
+
+    const second = (await (await handleAdminUsersGet(get(`/api/admin/users?limit=2&cursor=${first.nextCursor}`, admin))).json()) as { users: Record<string, unknown>[]; nextCursor: string | null };
+    assert.deepEqual(second.users.map((u) => u.id), [free]);
+    assert.equal(second.users[0].plan, "free");
+    assert.equal(second.users[0].planUntil, null);
+    assert.equal(second.users[0].lastActiveAt, now - 3600_000);
+    assert.equal(second.nextCursor, null);
+
+    const paidOnly = (await (await handleAdminUsersGet(get("/api/admin/users?plan=paid", admin))).json()) as { users: { id: string }[] };
+    assert.deepEqual(paidOnly.users.map((u) => u.id), [coded, paid]);
+    const freeOnly = (await (await handleAdminUsersGet(get("/api/admin/users?plan=free", admin))).json()) as { users: { id: string }[] };
+    assert.deepEqual(freeOnly.users.map((u) => u.id), [free]);
+    const search = (await (await handleAdminUsersGet(get("/api/admin/users?q=PAID", admin))).json()) as { users: { id: string }[] };
+    assert.deepEqual(search.users.map((u) => u.id), [paid]);
+    assert.equal((await handleAdminUsersGet(get("/api/admin/users?limit=500", admin))).status, 400);
   });
 });

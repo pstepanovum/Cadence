@@ -10,6 +10,10 @@
 //   POST  /api/admin/codes   {label, code?, durationDays, maxRedemptions, expiresAt: ms|null, createdBy?}   201 {code}
 //   PATCH /api/admin/codes   {action: "disable"|"enable", codeId}   {ok}
 //                            {action: "revoke", codeId, uid}        {ok, result, grantDeleted}
+//   POST  /api/admin/codes/email  {code, to, name?, dryRun?}         {subject, html, text}, or after a real send
+//                                 {ok, subject, html, text, messageId?}; the send is added to the code's emailedTo
+//
+// Every code in GET carries emailedTo: [{to, at}], newest last.
 //
 // For the website's /redeem page only (the iPhone app never offers codes),
 // with the signed-in account's Firebase ID token:
@@ -24,8 +28,10 @@ import { firebaseProjectId } from "../env";
 import { BodyTooLargeError, clientIp, json, readJsonObject } from "../http";
 import { cloudIdentity } from "../identity";
 import { LIMITS, hitRateLimit } from "../rate-limit";
-import { describeGrantDuration, parseCreateCodeInput, redeemFailureMessage } from "./logic";
-import { createCode, listCodes, previewCode, redeemCode, revokeRedemption, setCodeDisabled } from "./store";
+import { EmailError, sendEmail } from "../email/brevo";
+import { renderCodeGift } from "../email/templates/codes";
+import { codeUnusableMessage, codeUnusableReason, describeGrantDuration, parseCodeEmailInput, parseCreateCodeInput, redeemFailureMessage } from "./logic";
+import { createCode, findCode, listCodes, previewCode, recordCodeEmailed, redeemCode, revokeRedemption, setCodeDisabled } from "./store";
 
 const ID_PATTERN = /^[a-f0-9]{64}$/;
 const UID_PATTERN = /^[A-Za-z0-9_-]{1,128}$/;
@@ -92,6 +98,47 @@ export async function handleAdminCodesPatch(request: Request): Promise<Response>
   }
 
   return error(400, "invalid_request", 'action is "disable", "enable", or "revoke".');
+}
+
+/**
+ * Sends one code to one person, from the owner by hand. Sent straight through
+ * Brevo rather than the mail queue, so the dashboard learns at once whether it
+ * went and gets Brevo's message id. A dry run only renders. Real sends are
+ * capped at fifty an hour.
+ */
+export async function handleAdminCodeEmailPost(request: Request, options: { now?: number } = {}): Promise<Response> {
+  const refusal = denied(request);
+  if (refusal) return refusal;
+  const body = await readBody(request);
+  if (body instanceof Response) return body;
+
+  const input = parseCodeEmailInput(body);
+  if (typeof input === "string") return error(400, "invalid_request", input);
+
+  const now = options.now ?? Date.now();
+  const code = await findCode(input.code);
+  if (!code) return error(404, "not_found", "No such code.");
+  const unusable = codeUnusableReason(code, now);
+  if (unusable) return error(409, "code_unusable", codeUnusableMessage(unusable));
+
+  const email = renderCodeGift({ code: code.code, durationDays: code.durationDays, expiresAt: code.expiresAt, name: input.name });
+  const rendered = { subject: email.subject, html: email.html, text: email.text };
+  if (input.dryRun) return json(rendered);
+
+  if (!(await hitRateLimit(LIMITS.codeEmailHour, "owner", { now })).allowed) return error(429, "rate_limited", "Fifty codes an hour have been sent. Try again later.");
+
+  let messageId: string | null;
+  try {
+    ({ messageId } = await sendEmail({ to: input.name ? { email: input.to, name: input.name } : { email: input.to }, email, tags: ["code-gift"] }));
+  } catch (caught) {
+    if (caught instanceof EmailError) {
+      const status = caught.kind === "not_configured" ? 503 : caught.kind === "invalid" ? 400 : 502;
+      return error(status, "email_failed", caught.kind === "invalid" ? caught.message : "The email could not be sent. Try again.");
+    }
+    throw caught;
+  }
+  await recordCodeEmailed(code.id, { to: input.to, at: now });
+  return json({ ok: true, ...rendered, ...(messageId ? { messageId } : {}) });
 }
 
 const TOO_MANY = "Too many tries. Try again in an hour.";

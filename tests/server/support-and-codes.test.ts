@@ -197,3 +197,77 @@ describe("a code grant is one more Plus source", () => {
     assert.equal(readAccount({ plusSources: { code: grant }, plus }, NOW + 31 * DAY_MS).isPlus, false);
   });
 });
+
+describe("emailing a code from the dashboard", () => {
+  it("checks the request", async () => {
+    const { parseCodeEmailInput } = await import("../../src/lib/server/codes/logic.ts");
+    assert.deepEqual(parseCodeEmailInput({ code: " cadence–abcd efgh ", to: " maria@example.com ", name: "  Maria\n<Lopez>\u200b ", dryRun: true }), {
+      code: "CADENCE-ABCDEFGH",
+      to: "maria@example.com",
+      name: "Maria Lopez",
+      dryRun: true,
+    });
+    assert.deepEqual(parseCodeEmailInput({ code: "CADENCE-ABCD", to: "a@b.co" }), { code: "CADENCE-ABCD", to: "a@b.co", dryRun: false });
+    assert.equal((parseCodeEmailInput({ code: "CADENCE-ABCD", to: "a@b.co", name: "x".repeat(90) }) as { name: string }).name.length, 60);
+    for (const bad of [null, { to: "a@b.co" }, { code: "CADENCE-ABCD" }, { code: "CADENCE-ABCD", to: "a@b.co, c@d.co" }, { code: "CADENCE-ABCD", to: "not an address" }, { code: "CADENCE-ABCD", to: "a@b.co", dryRun: "yes" }, { code: "CADENCE-ABCD", to: "a@b.co", name: 4 }]) {
+      assert.equal(typeof parseCodeEmailInput(bad as Record<string, unknown> | null), "string", JSON.stringify(bad));
+    }
+  });
+
+  it("refuses codes that would not work", async () => {
+    const { codeUnusableReason, codeUnusableMessage } = await import("../../src/lib/server/codes/logic.ts");
+    const stored: FriendCode = { code: "CADENCE-ABCD", codeHash: "h", label: "x", durationDays: 30, maxRedemptions: 2, redemptions: 0, expiresAt: null, disabled: false, createdAt: NOW, createdBy: "owner" };
+    assert.equal(codeUnusableReason(stored, NOW), null);
+    assert.equal(codeUnusableReason({ ...stored, disabled: true }, NOW), "disabled");
+    assert.equal(codeUnusableReason({ ...stored, expiresAt: NOW }, NOW), "expired");
+    assert.equal(codeUnusableReason({ ...stored, redemptions: 2 }, NOW), "exhausted");
+    assert.equal(codeUnusableReason({ ...stored, durationDays: 0 }, NOW), "no_duration");
+    assert.match(codeUnusableMessage("exhausted"), /used up/);
+  });
+
+  it("remembers who it went to, newest last, capped", async () => {
+    const { appendEmailedTo, parseEmailedTo } = await import("../../src/lib/server/codes/logic.ts");
+    assert.deepEqual(appendEmailedTo(undefined, { to: "a@b.co", at: 1 }), [{ to: "a@b.co", at: 1 }]);
+    assert.deepEqual(parseEmailedTo([{ to: "a@b.co", at: 1 }, { to: 3 }, null, "x", { to: "c@d.co", at: Number.NaN }]), [{ to: "a@b.co", at: 1 }]);
+    const full = Array.from({ length: 200 }, (_, index) => ({ to: `p${index}@b.co`, at: index }));
+    const next = appendEmailedTo(full, { to: "new@b.co", at: 999 });
+    assert.equal(next.length, 200);
+    assert.deepEqual(next[0], { to: "p1@b.co", at: 1 });
+    assert.deepEqual(next[199], { to: "new@b.co", at: 999 });
+  });
+
+  it("renders a short gift from Pavel with the code, the redeem link and the date", async () => {
+    const { giftDuration, redeemUrl } = await import("../../src/lib/server/email/templates/codes.ts");
+    assert.equal(giftDuration(7), "7 days");
+    assert.equal(giftDuration(30), "1 month");
+    assert.equal(giftDuration(90), "3 months");
+    assert.equal(giftDuration(180), "6 months");
+    assert.equal(giftDuration(365), "12 months");
+    assert.equal(giftDuration(45), "45 days");
+    assert.equal(redeemUrl("CADENCE-ABCD-EFGH"), "https://cadence.pstepanov.dev/redeem?code=CADENCE-ABCD-EFGH");
+
+    const email = renderTemplate("code-gift", { code: "CADENCE-ABCD-EFGH", durationDays: 90, expiresAt: Date.UTC(2026, 11, 31, 23), name: "Maria <Lopez>" });
+    assert.equal(email.subject, "A gift: 3 months of Cadence Plus");
+    assert.equal(email.preheader, "Use CADENCE-ABCD-EFGH by 31 December 2026.");
+    assert.equal(email.category, "transactional");
+    assert.match(email.html, /Pavel sent you 3 months of Cadence Plus/);
+    assert.match(email.html, /Hi Maria,/);
+    assert.match(email.html, /class="c-ticket"/);
+    assert.match(email.html, /icons\/gift\.png/);
+    assert.match(email.html, />CADENCE-ABCD-EFGH</);
+    assert.match(email.html, /href="https:\/\/cadence\.pstepanov\.dev\/redeem\?code=CADENCE-ABCD-EFGH"/);
+    assert.match(email.html, /by 31 December 2026/);
+    assert.match(email.text, /Your code: CADENCE-ABCD-EFGH/);
+    assert.match(email.text, /Redeem: https:\/\/cadence\.pstepanov\.dev\/redeem\?code=CADENCE-ABCD-EFGH/);
+    for (const part of [email.html, email.text]) {
+      assert.doesNotMatch(part, /iPhone|iOS|Android|App Store|in the app/i, "redeemed on the website only");
+      assert.doesNotMatch(part, /Unsubscribe/);
+    }
+
+    const open = renderTemplate("code-gift", { code: "CADENCE-ABCD-EFGH", durationDays: 7, expiresAt: null });
+    assert.equal(open.subject, "A gift: 7 days of Cadence Plus");
+    assert.equal(open.preheader, "Use CADENCE-ABCD-EFGH on cadence.pstepanov.dev.");
+    assert.match(open.html, /Hi,/);
+    assert.doesNotMatch(open.html, / by \d/);
+  });
+});

@@ -203,7 +203,7 @@ const p = (style: string) => `margin:0;font-family:${FONT_STACK};${style}`;
  * by scripts/email/assets.mjs into public/email/icons/ as transparent PNGs,
  * hunter green for light mode and yellow-green (`-dark`) for dark mode.
  */
-export const EMAIL_ICONS = ["clock", "flame", "list-checks", "award", "mic", "messages-square", "audio-lines", "cloud", "layers", "book-open", "check-circle", "sparkles", "gamepad"] as const;
+export const EMAIL_ICONS = ["clock", "flame", "list-checks", "award", "mic", "messages-square", "audio-lines", "cloud", "layers", "book-open", "check-circle", "sparkles", "gamepad", "gift"] as const;
 export type EmailIcon = (typeof EMAIL_ICONS)[number];
 
 /**
@@ -382,6 +382,20 @@ export function offerBlock(input: { kicker: string; headline: string; code: stri
 <p class="c-accent" style="${p(`margin:0 0 8px;font-size:15px;line-height:22px;font-weight:700;color:${L.accent};`)}">${escapeHtml(cleanText(input.kicker, 60))}</p>
 <p class="c-text c-code" style="margin:0;font-family:${MONO_STACK};font-size:30px;line-height:36px;font-weight:700;color:${L.text};">${escapeHtml(input.code)}</p>
 <p class="c-muted" style="${p(`margin:10px 0 0;font-size:14px;line-height:20px;font-weight:600;color:${L.secondary};`)}">${escapeHtml(input.ends)}</p>
+</td></tr></table>`;
+}
+
+/**
+ * A friend code on white, the way Heft draws it: a gift icon, a short caption
+ * in the accent ("3 months of Cadence Plus"), and the code big and bold on a
+ * dashed ticket, as live text a reader can select and copy.
+ */
+export function codeBlock(code: string, caption: string): string {
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 24px;border-collapse:separate;">
+<tr><td class="c-ticket" align="center" style="border:2px dashed ${L.accent};border-radius:16px;padding:22px 18px 24px;">
+<table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 10px;"><tr><td style="padding:0;">${icon("gift", 28)}</td></tr></table>
+<p class="c-accent" style="${p(`margin:0 0 8px;font-size:15px;line-height:22px;font-weight:700;color:${L.accent};`)}">${escapeHtml(cleanText(caption, 60))}</p>
+<p class="c-text c-code" dir="ltr" style="${p(`font-size:34px;line-height:40px;font-weight:800;color:${L.text};word-break:break-all;`)}">${escapeHtml(cleanText(code, 40))}</p>
 </td></tr></table>`;
 }
 

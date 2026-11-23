@@ -50,7 +50,9 @@ describe("email templates", () => {
       // No uppercase styling or wide tracking anywhere; tight negative tracking on big type is fine.
       assert.doesNotMatch(email.html, /text-transform:\s*uppercase/i, "no uppercase styling");
       assert.doesNotMatch(email.html, /letter-spacing:\s*[0-9.]*[1-9]/, "no positive letter-spacing");
-      const visible = email.html.replace(/<head>[\s\S]*?<\/head>/, "").replace(/<[^>]+>/g, " ");
+      // A friend code is printed as it is typed, in capitals; only the code itself is let through.
+      const code = (entry.fixture as { code?: unknown }).code;
+      const visible = email.html.replace(/<head>[\s\S]*?<\/head>/, "").replace(/<[^>]+>/g, " ").replaceAll(typeof code === "string" ? code : "\u0000", " ");
       const shouted = (visible.match(/\b[A-Z]{4,}\b/g) ?? []).filter((word) => word !== "CADENCEHALF" && word !== "JSON" && word !== "PREVIEW");
       assert.deepEqual(shouted, [], "no words set in capitals");
       // White page and cards, gray panels and hairlines; the only colour fill is hunter green (the button and bullet squares).

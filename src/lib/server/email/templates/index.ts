@@ -6,6 +6,7 @@
 import type { EmailCategory, EmailList, RenderedEmail } from "../layout";
 import * as account from "./account";
 import * as billing from "./billing";
+import * as codes from "./codes";
 import * as engagement from "./engagement";
 import * as lifecycle from "./lifecycle";
 import * as security from "./security";
@@ -31,6 +32,7 @@ export interface TemplateProps {
   "plus-ended": billing.PlusEndedProps;
   "plan-changed": billing.PlanChangedProps;
   "refund-issued": billing.RefundIssuedProps;
+  "code-gift": codes.CodeGiftProps;
   "mcp-authorized": security.McpAuthorizedProps;
   "device-paired": security.DevicePairedProps;
   "suspicious-activity": security.SuspiciousActivityProps;
@@ -87,6 +89,7 @@ export const TEMPLATES: { [Id in TemplateId]: TemplateEntry<Id> } = {
   "plus-ended": { id: "plus-ended", name: "Subscription expired", group: "billing", category: "transactional", render: billing.renderPlusEnded, fixture: { purgeAt: T0 + 90 * DAY } },
   "plan-changed": { id: "plan-changed", name: "Plan changed", group: "billing", category: "transactional", render: billing.renderPlanChanged, fixture: { fromProductId: "dev.pstepanov.cadence.plus.monthly", toProductId: "dev.pstepanov.cadence.plus.yearly", effectiveAt: T0, store: "web" } },
   "refund-issued": { id: "refund-issued", name: "Refund issued", group: "billing", category: "transactional", render: billing.renderRefundIssued, fixture: { amountMinor: 1499, currency: "usd", refundedAt: T0 } },
+  "code-gift": { id: "code-gift", name: "Friend code (sent from the dashboard)", group: "billing", category: "transactional", render: codes.renderCodeGift, fixture: { code: "CADENCE-7KQ2-XH9D", durationDays: 90, expiresAt: Date.UTC(2026, 11, 31, 23, 59, 59), name: "Maria Lopez" } },
   "mcp-authorized": { id: "mcp-authorized", name: "Connector authorized", group: "security", category: "transactional", render: security.renderMcpAuthorized, fixture: { clientName: "Study Notes", destination: "notes.example.com", scopes: ["cadence:read", "cadence:write"], at: T0 } },
   "device-paired": { id: "device-paired", name: "Device added", group: "security", category: "transactional", render: security.renderDevicePaired, fixture: { device: "iPhone", platform: "iOS", at: T0 } },
   "suspicious-activity": { id: "suspicious-activity", name: "Suspicious activity", group: "security", category: "transactional", render: security.renderSuspiciousActivity, fixture: { summary: "12 failed sign-ins in an hour", at: T0 } },

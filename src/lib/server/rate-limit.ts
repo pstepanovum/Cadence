@@ -115,4 +115,6 @@ export const LIMITS = {
   redeemPreviewUserHour: { name: "redeem-preview-user-hour", limit: 10, windowSeconds: 3600 },
   /** Looking up and redeeming together, per address, so a stack of fresh accounts cannot guess codes ten at a time each. */
   redeemIpHour: { name: "redeem-ip-hour", limit: 30, windowSeconds: 3600 },
+  /** The owner emailing friend codes from the dashboard: generous, but a leaked secret cannot turn Cadence into a mailer. */
+  codeEmailHour: { name: "code-email-hour", limit: 50, windowSeconds: 3600 },
 } as const satisfies Record<string, RateLimitRule>;

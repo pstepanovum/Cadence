@@ -30,7 +30,8 @@ for (const [source, target] of renders) {
 // Icons: the lucide icons the iPhone app itself uses (lucide-react-native in
 // mobile/, so run `npm ci` there first), drawn at 24 px and saved at 3x as
 // transparent PNGs, one in hunter green for light mail and one in
-// yellow-green for dark. Only icons the app already shows belong here.
+// yellow-green for dark. Only icons the app already shows belong here, and
+// gift, for the friend-code ticket the owner sends from the dashboard.
 export const EMAIL_ICONS = {
   clock: "clock-3",
   flame: "flame",
@@ -45,6 +46,7 @@ export const EMAIL_ICONS = {
   "check-circle": "circle-check",
   sparkles: "sparkles",
   gamepad: "gamepad-2",
+  gift: "gift",
 };
 const lucide = join(root, "mobile", "node_modules", "lucide-react-native", "dist", "esm", "icons");
 const iconsOut = join(out, "icons");

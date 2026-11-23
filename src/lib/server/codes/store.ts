@@ -7,6 +7,7 @@
 //   friendCodes/{codeId}/redemptions/{uid}  who redeemed it and until when
 //   users/{uid}.plusSources.code            the grant, a Plus record like the purchases'
 //   rateLimits/redeem-*                     ten tries an hour per account, looking up and redeeming counted apart
+//   friendCodes/{codeId}.emailedTo          who the owner emailed it to, {to, at}, newest last, at most 200
 //
 // The grant is written with the resolved `plus` in the same transaction, the
 // way the billing webhooks write theirs, so entitlement is still decided in
@@ -22,6 +23,9 @@ import { LIMITS, hitRateLimit } from "../rate-limit";
 import {
   CODE_PRODUCT_ID,
   DAY_MS,
+  appendEmailedTo,
+  parseEmailedTo,
+  type CodeEmailed,
   extendedGrantExpiry,
   generateCode,
   hashCode,
@@ -129,7 +133,7 @@ export async function previewCode(uid: string, input: unknown, options: Options 
   return { ok: true, durationDays: code.durationDays };
 }
 
-export type FriendCodeSummary = FriendCode & { id: string; redemptionList: FriendCodeRedemption[] };
+export type FriendCodeSummary = FriendCode & { id: string; redemptionList: FriendCodeRedemption[]; emailedTo: CodeEmailed[] };
 
 /** Creates a code. A custom code that already exists is refused; a generated one is drawn again. */
 export async function createCode(input: CreateCodeInput, createdBy: string, options: Options = {}): Promise<FriendCodeSummary | "taken"> {
@@ -153,7 +157,7 @@ export async function createCode(input: CreateCodeInput, createdBy: string, opti
     try {
       // create() fails when the document exists, which is the uniqueness check.
       await firestore.collection(CODES).doc(codeHash).create(document);
-      return { ...document, id: codeHash, redemptionList: [] };
+      return { ...document, id: codeHash, redemptionList: [], emailedTo: [] };
     } catch (error) {
       if (!isAlreadyExists(error)) throw error;
       if (input.code) return "taken";
@@ -171,10 +175,31 @@ export async function listCodes(options: { limit?: number; db?: Firestore } = {}
       const code = parseStoredCode(doc.data());
       if (!code) return null;
       const redemptions = await doc.ref.collection(REDEMPTIONS).orderBy("redeemedAt", "desc").get();
-      return { ...code, id: doc.id, redemptionList: redemptions.docs.map((entry) => entry.data() as FriendCodeRedemption) };
+      return { ...code, id: doc.id, redemptionList: redemptions.docs.map((entry) => entry.data() as FriendCodeRedemption), emailedTo: parseEmailedTo(doc.get("emailedTo")) };
     }),
   );
   return codes.filter((code): code is FriendCodeSummary => code !== null);
+}
+
+/** One code by what was typed, read leniently like the owner's list; null when there is no such code. */
+export async function findCode(input: unknown, options: { db?: Firestore } = {}): Promise<(FriendCode & { id: string }) | null> {
+  const normalized = normalizeCode(input);
+  if (!isWellFormedCode(normalized)) return null;
+  const id = hashCode(normalized);
+  const snapshot = await (options.db ?? defaultDb()).collection(CODES).doc(id).get();
+  const code = snapshot.exists ? parseStoredCode(snapshot.data()) : null;
+  return code ? { ...code, id } : null;
+}
+
+/** Remembers one send of a code on its document, newest last, capped. */
+export async function recordCodeEmailed(codeId: string, entry: CodeEmailed, options: { db?: Firestore } = {}): Promise<void> {
+  const firestore = options.db ?? defaultDb();
+  const ref = firestore.collection(CODES).doc(codeId);
+  await firestore.runTransaction(async (tx) => {
+    const snapshot = await tx.get(ref);
+    if (!snapshot.exists) return;
+    tx.update(ref, { emailedTo: appendEmailedTo(snapshot.get("emailedTo"), entry) });
+  });
 }
 
 /** Stops (or restarts) a code working. Grants already given are kept. False when there is no such code. */

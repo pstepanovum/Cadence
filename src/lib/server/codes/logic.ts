@@ -214,3 +214,94 @@ export function parseFriendCode(data: unknown): FriendCode | null {
   const stored = parseStoredCode(data);
   return stored && isUsableDuration(stored.durationDays) ? stored : null;
 }
+
+// Emailing a code -------------------------------------------------------------
+//
+// The owner's dashboard can send a code to one person
+// (POST /api/admin/codes/email). Each send is remembered on the code as
+// `emailedTo`, newest last, so the dashboard can show who has it.
+
+/** friendCodes/{codeId}.emailedTo[]. */
+export interface CodeEmailed {
+  to: string;
+  at: number;
+}
+
+export const CODE_EMAIL_LIMITS = {
+  /** How many sends a code remembers; the oldest drop off. */
+  emailedToCap: 200,
+  nameLength: 60,
+} as const;
+
+/** The stored list, read leniently: anything that is not {to, at} is dropped. */
+export function parseEmailedTo(value: unknown): CodeEmailed[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((entry): entry is CodeEmailed => Boolean(entry) && typeof entry === "object" && typeof (entry as CodeEmailed).to === "string" && typeof (entry as CodeEmailed).at === "number" && Number.isFinite((entry as CodeEmailed).at))
+    .map((entry) => ({ to: entry.to, at: entry.at }));
+}
+
+/** The list with one more send, capped to the newest CODE_EMAIL_LIMITS.emailedToCap. */
+export function appendEmailedTo(list: unknown, entry: CodeEmailed, cap: number = CODE_EMAIL_LIMITS.emailedToCap): CodeEmailed[] {
+  const next = [...parseEmailedTo(list), entry];
+  return next.slice(Math.max(0, next.length - cap));
+}
+
+export type CodeUnusable = "disabled" | "expired" | "exhausted" | "no_duration";
+
+/** Why a code is not worth emailing now, or null when it is. */
+export function codeUnusableReason(code: FriendCode, now: number): CodeUnusable | null {
+  if (code.disabled) return "disabled";
+  if (code.expiresAt !== null && code.expiresAt <= now) return "expired";
+  if (code.redemptions >= code.maxRedemptions) return "exhausted";
+  if (!isUsableDuration(code.durationDays)) return "no_duration";
+  return null;
+}
+
+export function codeUnusableMessage(reason: CodeUnusable): string {
+  switch (reason) {
+    case "disabled":
+      return "That code is turned off.";
+    case "expired":
+      return "That code has expired.";
+    case "exhausted":
+      return "That code has been used up.";
+    default:
+      return "That code gives no Plus.";
+  }
+}
+
+export interface CodeEmailInput {
+  /** Normalized. */
+  code: string;
+  to: string;
+  name?: string;
+  dryRun: boolean;
+}
+
+const EMAIL_ADDRESS = /^[^\s@<>"(),;:]{1,64}@[A-Za-z0-9.-]{1,190}\.[A-Za-z]{2,}$/;
+
+/** Checks a request to email a code. The input, or a sentence saying what is wrong. */
+export function parseCodeEmailInput(body: Record<string, unknown> | null): CodeEmailInput | string {
+  if (!body) return "Send a JSON object.";
+  const code = normalizeCode(body.code);
+  if (!isWellFormedCode(code)) return "code is required.";
+  const to = typeof body.to === "string" ? body.to.trim() : "";
+  if (!to || to.length > 254 || !EMAIL_ADDRESS.test(to)) return "to is one email address.";
+  if (body.name !== undefined && body.name !== null && typeof body.name !== "string") return "name is text.";
+  const name = cleanName(body.name);
+  if (body.dryRun !== undefined && typeof body.dryRun !== "boolean") return "dryRun is true or false.";
+  return { code, to, ...(name ? { name } : {}), dryRun: body.dryRun === true };
+}
+
+/** A name fit for a greeting: invisible and markup characters dropped, spaces collapsed, at most 60 characters. */
+export function cleanName(value: unknown): string {
+  if (typeof value !== "string") return "";
+  return value
+    .normalize("NFKC")
+    .replace(/[\u0000-\u001f\u007f-\u009f\u200b-\u200f\u2028-\u202e\u2060-\u206f\ufeff<>"]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, CODE_EMAIL_LIMITS.nameLength)
+    .trim();
+}
