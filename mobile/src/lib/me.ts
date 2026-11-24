@@ -29,6 +29,14 @@ export interface Me {
   newsletter: boolean;
   /** Email categories, each on unless turned off. */
   emailPrefs: EmailPrefs;
+  /**
+   * Plus from a grant (plusSources.code) while it lasts, null for none, or
+   * undefined when the server does not send it yet (lib/plus-gift.ts falls
+   * back to the resolved record then).
+   */
+  plusGrant?: { expiresAt: number | null } | null;
+  /** Plus bought through a store is active, or null when the server does not say. */
+  plusPaid: boolean | null;
 }
 
 const isObject = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null;
@@ -36,8 +44,8 @@ const num = (value: unknown, fallback: number) => (typeof value === "number" && 
 
 function parsePlus(value: unknown): PlusRecord | null {
   if (!isObject(value)) return null;
-  const source = value.source === "stripe" || value.source === "app_store" ? value.source : "app_store";
-  const expiresAt = typeof value.expiresAt === "number" ? value.expiresAt : typeof value.expiresAt === "string" ? Date.parse(value.expiresAt) || null : null;
+  const source = value.source === "stripe" || value.source === "app_store" || value.source === "code" ? value.source : "app_store";
+  const expiresAt = readTime(value.expiresAt);
   return {
     active: value.active === true,
     source,
@@ -46,6 +54,17 @@ function parsePlus(value: unknown): PlusRecord | null {
     willRenew: value.willRenew === true,
     updatedAt: num(value.updatedAt, 0),
   };
+}
+
+function readTime(value: unknown): number | null {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  return typeof value === "string" ? Date.parse(value) || null : null;
+}
+
+function parseGrant(value: unknown): { expiresAt: number | null } | null | undefined {
+  if (value === undefined) return undefined;
+  if (!isObject(value)) return null;
+  return { expiresAt: readTime(value.expiresAt) };
 }
 
 function parseUsage(value: unknown): DailyUsage | null {
@@ -83,6 +102,8 @@ export function parseMe(body: unknown, now: number): Me {
     cloudPaused: root.cloudPaused === true || quota.paused === true,
     newsletter: readEmailPrefs(root.emailPrefs).newsletter,
     emailPrefs: readEmailPrefs(root.emailPrefs),
+    ...("plusGrant" in root ? { plusGrant: parseGrant(root.plusGrant) } : {}),
+    plusPaid: typeof root.plusPaid === "boolean" ? root.plusPaid : null,
   };
 }
 

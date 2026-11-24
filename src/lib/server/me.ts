@@ -2,13 +2,14 @@
 //
 // GET /api/me's body: the account as every client needs it (profile basics,
 // Plus resolved from verified webhooks only, the data tier, today's cloud AI
-// quota). It runs on every app open, so it reads as little as it can: the
+// quota, and a friend-code grant on its own for the phone's "Plus is on"
+// sheet). It runs on every app open, so it reads as little as it can: the
 // user document always, and today's usage and the breaker only for an account
 // that can use the cloud AI at all (Plus on the hosted cloud). The summary is
 // not here; POST /api/sync/summary returns it with the round that changes it.
 import type { Firestore } from "firebase-admin/firestore";
 
-import { dataTier, EMPTY_USAGE } from "../platform/engine-routing";
+import { dataTier, EMPTY_USAGE, isRecordActive } from "../platform/engine-routing";
 import { getAccount } from "./entitlement";
 import { db as defaultDb } from "./firebase";
 import type { CloudIdentity } from "./identity";
@@ -19,6 +20,8 @@ export async function loadMe(identity: Pick<CloudIdentity, "uid" | "email" | "em
   const { uid, email, emailVerified } = identity;
   const account = await getAccount(uid, firestore);
   const cloudAi = options.hosted && account.isPlus;
+  const now = options.now ?? Date.now();
+  const grant = account.plusSources.code;
   const [usage, paused] = cloudAi
     ? await Promise.all([todaysUsage(uid, { db: firestore, now: options.now }), isBreakerTripped({ db: firestore, now: options.now })])
     : [{ ...EMPTY_USAGE }, false];
@@ -29,6 +32,11 @@ export async function loadMe(identity: Pick<CloudIdentity, "uid" | "email" | "em
     displayName: account.displayName,
     plus: account.plus,
     isPlus: account.isPlus,
+    // A friend-code grant while it lasts, and whether Plus is also bought
+    // through a store: the phone says "Plus is on" once for a grant, never
+    // for a subscriber.
+    plusGrant: grant && isRecordActive(grant, now) ? { expiresAt: grant.expiresAt } : null,
+    plusPaid: isRecordActive(account.plusSources.stripe, now) || isRecordActive(account.plusSources.app_store, now),
     tier: dataTier(true, account.isPlus),
     cloudAi,
     quota: { ...quotaSummary(usage), paused },

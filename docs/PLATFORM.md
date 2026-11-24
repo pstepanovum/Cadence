@@ -321,7 +321,7 @@ All under App Check (section 14) and the Firebase ID token.
 
 | Route | Tier | Does |
 | --- | --- | --- |
-| `GET /api/me` | all | profile, `plus`, data tier, today's quota left (`src/lib/server/me.ts`; usage and the breaker are read only for Plus on the hosted cloud) |
+| `GET /api/me` | all | profile, `plus`, `plusGrant` (an active friend-code grant, `{expiresAt}` or null) and `plusPaid` (a store subscription is active), data tier, today's quota left (`src/lib/server/me.ts`; usage and the breaker are read only for Plus on the hosted cloud) |
 | `POST /api/sync/summary` | summary, full | `{activities: Activity[]}` (at most 50) applied with `applyActivity` in one transaction, with the per-minute rate limit kept on the same document (`syncSummary`); returns the summary |
 | `GET /api/sync/inbox` | all | pending MCP flashcards; `DELETE` acknowledges them |
 | `POST /api/sync/push` | full | `{installId, srs?, attempts?, mastery?, coach?}`; cards merge last-writer-wins by `updatedAt`; rate limited on the device document (a new install also against the account) |

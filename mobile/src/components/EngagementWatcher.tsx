@@ -2,7 +2,8 @@
 // them, writes the widgets' snapshot, re-plans the local reminders, opens the
 // screen a tapped notification points to, registers this device's push
 // token with the account, and keeps the level settings in step with the
-// account. Draws nothing but the badge moment.
+// account. Draws nothing but the badge moment and, once per grant, the
+// "Plus is on" sheet (PlusGiftWatcher), which waits for the badge to go.
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Notifications from "expo-notifications";
 import { router, type Href } from "expo-router";
@@ -11,6 +12,7 @@ import { AppState, Platform } from "react-native";
 
 import { registerPushDevice } from "@/api/account";
 import { BadgeCelebration } from "@/components/BadgeCelebration";
+import { PlusGiftWatcher } from "@/components/PlusGiftWatcher";
 import { useAccount } from "@/context/account";
 import { useAuth } from "@/context/auth";
 import { newlyEarned, type Badge } from "@/engagement/badges";
@@ -144,7 +146,12 @@ export function EngagementWatcher() {
     };
   }, [uid, foreground]);
 
-  return <BadgeCelebration badges={celebrating} onDone={() => setCelebrating([])} />;
+  return (
+    <>
+      <BadgeCelebration badges={celebrating} onDone={() => setCelebrating([])} />
+      <PlusGiftWatcher held={celebrating.length > 0} />
+    </>
+  );
 }
 
 /** Forgets the push registration marker, so the next account registers afresh. */
